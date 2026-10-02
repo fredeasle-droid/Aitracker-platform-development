@@ -11,7 +11,9 @@ const kickoff = (daysFromNow: number, hour: number) => {
 function randomizedOdds(seed: number) {
   const variation = (Math.sin(seed * 12.9898) * 43758.5453) % 1
   const first = 2.05 + Math.abs(variation) * 0.75
-  const target = 1.015 + (Math.abs(Math.sin(seed * 7.13)) * 0.045)
+  // Keep the generated two-way arbitrage inside the preview test range.
+  // target is the combined implied probability; values below 1 produce a positive margin.
+  const target = 0.93 + (Math.abs(Math.sin(seed * 7.13)) * 0.04)
   const second = 1 / (target - 1 / first)
   return { a: Number(first.toFixed(2)), b: Number(second.toFixed(2)) }
 }

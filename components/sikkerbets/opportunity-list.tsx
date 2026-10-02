@@ -103,7 +103,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const moreActive = sport === 'Favoritter' || (MORE_SPORTS as readonly string[]).includes(sport)
 
   return (
-    <section aria-label="SikkerBets" className="px-4">
+    <section aria-label="SikkerBets" className="min-w-0 px-4">
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none]" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
           Alle
