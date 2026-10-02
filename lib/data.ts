@@ -1,6 +1,6 @@
 import 'server-only'
 import { cache } from 'react'
-import { and, desc, eq, lt, sql } from 'drizzle-orm'
+import { and, desc, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
@@ -39,16 +39,6 @@ export type BetRow = {
   placedTs: number
 }
 
-async function rollPastKickoffs() {
-  await db
-    .update(opportunities)
-    .set({
-      kickoff: sql`${opportunities.kickoff} + ceil(extract(epoch from (now() - ${opportunities.kickoff})) / 86400) * interval '1 day'`,
-      updatedAt: sql`now()`,
-    })
-    .where(lt(opportunities.kickoff, sql`now()`))
-}
-
 function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date): Opportunity {
   const aOdds = Number(row.aOdds)
   const bOdds = Number(row.bOdds)
@@ -81,7 +71,6 @@ async function getFavoriteIds(userId: string) {
 
 export const getOpportunities = cache(async () => {
   const userId = await getUserId()
-  await rollPastKickoffs()
   const [rows, favIds] = await Promise.all([
     db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
     getFavoriteIds(userId),
