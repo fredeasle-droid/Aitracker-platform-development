@@ -6,6 +6,7 @@ import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
 import { marginPercent } from '@/lib/odds'
 import { formatKickoff, formatShortDate } from '@/lib/dates'
+import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 
 export type Opportunity = {
   id: number
@@ -23,6 +24,7 @@ export type Opportunity = {
   b: { label: string; bookmaker: string; odds: number }
   margin: number
   favorite: boolean
+  isDemo?: boolean
 }
 
 export type BetRow = {
@@ -71,6 +73,19 @@ async function getFavoriteIds(userId: string) {
 
 export const getOpportunities = cache(async () => {
   const userId = await getUserId()
+  if (isDemoMode()) {
+    try {
+      const favIds = await getFavoriteIds(userId)
+      return demoOpportunities.map((opportunity) => ({
+        ...opportunity,
+        favorite: favIds.has(opportunity.id),
+      }))
+    } catch (error) {
+      console.error('[data] demo favorites unavailable', error)
+      return demoOpportunities
+    }
+  }
+
   try {
     const [rows, favIds] = await Promise.all([
       db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
