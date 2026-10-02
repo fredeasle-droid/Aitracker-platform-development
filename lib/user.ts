@@ -12,10 +12,15 @@ export const getUserId = cache(async () => {
   const uid = store.get(USER_COOKIE)?.value
   if (!uid || !UUID_RE.test(uid)) throw new Error('Missing user session')
 
-  const inserted = await db
-    .insert(appUsers)
-    .values({ id: uid })
-    .onConflictDoNothing()
-    .returning({ id: appUsers.id })
-  return inserted[0]?.id ?? uid
+  try {
+    const inserted = await db
+      .insert(appUsers)
+      .values({ id: uid })
+      .onConflictDoNothing()
+      .returning({ id: appUsers.id })
+    return inserted[0]?.id ?? uid
+  } catch (error) {
+    console.error('[user] database unavailable during session bootstrap', error)
+    return uid
+  }
 })

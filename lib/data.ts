@@ -71,12 +71,17 @@ async function getFavoriteIds(userId: string) {
 
 export const getOpportunities = cache(async () => {
   const userId = await getUserId()
-  const [rows, favIds] = await Promise.all([
-    db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
-    getFavoriteIds(userId),
-  ])
-  const now = new Date()
-  return rows.map((r) => toOpportunity(r, favIds, now))
+  try {
+    const [rows, favIds] = await Promise.all([
+      db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
+      getFavoriteIds(userId),
+    ])
+    const now = new Date()
+    return rows.map((r) => toOpportunity(r, favIds, now))
+  } catch (error) {
+    console.error('[data] opportunities unavailable', error)
+    return []
+  }
 })
 
 export async function getOpportunity(id?: number) {
@@ -90,13 +95,14 @@ export async function getOpportunity(id?: number) {
 
 export async function getBets(): Promise<BetRow[]> {
   const userId = await getUserId()
-  const rows = await db
-    .select()
-    .from(bets)
-    .where(eq(bets.userId, userId))
-    .orderBy(desc(bets.kickoff))
-  const now = new Date()
-  return rows.map((r) => ({
+  try {
+    const rows = await db
+      .select()
+      .from(bets)
+      .where(eq(bets.userId, userId))
+      .orderBy(desc(bets.kickoff))
+    const now = new Date()
+    return rows.map((r) => ({
     id: r.id,
     sport: r.sport,
     match: r.match,
@@ -107,8 +113,12 @@ export async function getBets(): Promise<BetRow[]> {
     status: r.status as BetRow['status'],
     kickoffLabel: formatKickoff(r.kickoff, now),
     dateLabel: formatShortDate(r.kickoff),
-    placedTs: (r.settledAt ?? r.kickoff).getTime(),
-  }))
+      placedTs: (r.settledAt ?? r.kickoff).getTime(),
+    }))
+  } catch (error) {
+    console.error('[data] bets unavailable', error)
+    return []
+  }
 }
 
 export async function getBetForUser(id: number, userId: string) {
