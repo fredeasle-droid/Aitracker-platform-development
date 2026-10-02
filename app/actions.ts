@@ -6,6 +6,7 @@ import { db } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
 import { getBetForUser } from '@/lib/data'
+import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 
 export async function toggleFavorite(opportunityId: number) {
@@ -38,20 +39,28 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
   }
 
   const [opp] = await db.select().from(opportunities).where(eq(opportunities.id, opportunityId)).limit(1)
-  if (!opp) return { ok: false as const, error: 'Kampen findes ikke længere' }
+  const demo = isDemoMode() ? demoOpportunities.find((item) => item.id === opportunityId) : undefined
+  if (!opp && !demo) return { ok: false as const, error: 'Kampen findes ikke længere' }
 
-  const profit = guaranteedProfit(stakeA, stakeB, Number(opp.aOdds), Number(opp.bOdds))
-  await db.insert(bets).values({
-    userId,
-    opportunityId,
-    sport: opp.sport,
-    match: `${opp.homeTeam} vs ${opp.awayTeam}`,
-    market: `${opp.aLabel} / ${opp.bLabel}`,
-    stake: String(stakeA + stakeB),
-    expectedProfit: profit.toFixed(2),
-    status: 'open',
-    kickoff: opp.kickoff,
-  })
+  const aOdds = opp ? Number(opp.aOdds) : demo!.a.odds
+  const bOdds = opp ? Number(opp.bOdds) : demo!.b.odds
+  const profit = guaranteedProfit(stakeA, stakeB, aOdds, bOdds)
+  try {
+    await db.insert(bets).values({
+      userId,
+      opportunityId,
+      sport: opp?.sport ?? demo!.sport,
+      match: `${opp?.homeTeam ?? demo!.homeTeam} vs ${opp?.awayTeam ?? demo!.awayTeam}`,
+      market: opp ? `${opp.aLabel} / ${opp.bLabel}` : `${demo!.a.label} / ${demo!.b.label}`,
+      stake: String(stakeA + stakeB),
+      expectedProfit: profit.toFixed(2),
+      status: 'open',
+      kickoff: opp?.kickoff ?? new Date(demo!.kickoffTs),
+    })
+  } catch (error) {
+    console.error('[actions] unable to save open bet', error)
+    return { ok: false as const, error: 'Væddemålet kunne ikke gemmes lige nu' }
+  }
   revalidatePath('/stats')
   return { ok: true as const }
 }
