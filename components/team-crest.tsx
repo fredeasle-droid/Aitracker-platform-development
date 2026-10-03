@@ -1,5 +1,16 @@
 import { cn } from '@/lib/utils'
 
+const TEAM_LOGOS: Record<string, string> = {
+  'FC København': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/fc-kobenhavn/default.svg',
+  'Brøndby IF': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/brondby-if/default.svg',
+  'Manchester City': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/manchester-city/default.svg',
+  Arsenal: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/arsenal/default.svg',
+  'Real Madrid': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/real-madrid/default.svg',
+  Barcelona: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/barcelona/default.svg',
+  Inter: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/inter-milan/default.svg',
+  'AC Milan': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/ac-milan/default.svg',
+}
+
 const TEAM_COLORS: Record<string, [string, string]> = {
   'FC København': ['#ffffff', '#1d4ed8'],
   'Brøndby IF': ['#facc15', '#1e3a8a'],
@@ -36,6 +47,16 @@ function initials(name: string) {
 export function TeamCrest({ name, className }: { name: string; className?: string }) {
   const [bg, fg] = TEAM_COLORS[name] ?? ['#1e293b', '#e2e8f0']
   const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
+  const logo = TEAM_LOGOS[name]
+
+  if (logo) {
+    return (
+      <span className={cn('flex size-11 shrink-0 items-center justify-center', className)}>
+        <img src={logo} alt="" aria-hidden="true" className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]" />
+      </span>
+    )
+  }
+
   return (
     <span
       aria-hidden="true"

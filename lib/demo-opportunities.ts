@@ -13,7 +13,7 @@ function randomizedOdds(seed: number) {
   const first = 2.05 + Math.abs(variation) * 0.75
   // Keep the generated two-way arbitrage inside the preview test range.
   // target is the combined implied probability; values below 1 produce a positive margin.
-  const target = 0.93 + (Math.abs(Math.sin(seed * 7.13)) * 0.04)
+  const target = 0.935 + (Math.abs(Math.sin(seed * 7.13)) * 0.02)
   const second = 1 / (target - 1 / first)
   return { a: Number(first.toFixed(2)), b: Number(second.toFixed(2)) }
 }
@@ -42,9 +42,9 @@ export const demoOpportunities: Opportunity[] = [
   {
     id: 9002,
     sport: 'Football',
-    country: 'Spain',
-    countryCode: 'ES',
-    league: 'La Liga',
+    country: 'England',
+    countryCode: 'GB',
+    league: 'Premier League',
     homeTeam: 'Manchester City',
     awayTeam: 'Arsenal',
     market: '2-way result',
@@ -60,9 +60,9 @@ export const demoOpportunities: Opportunity[] = [
   {
     id: 9003,
     sport: 'Football',
-    country: 'Sweden',
-    countryCode: 'SE',
-    league: 'Allsvenskan',
+    country: 'Spain',
+    countryCode: 'ES',
+    league: 'La Liga',
     homeTeam: 'Real Madrid',
     awayTeam: 'Barcelona',
     market: '2-way result',
@@ -78,9 +78,9 @@ export const demoOpportunities: Opportunity[] = [
   {
     id: 9004,
     sport: 'Football',
-    country: 'France',
-    countryCode: 'FR',
-    league: 'Ligue 1',
+    country: 'Italy',
+    countryCode: 'IT',
+    league: 'Serie A',
     homeTeam: 'Inter',
     awayTeam: 'AC Milan',
     market: '2-way result',
