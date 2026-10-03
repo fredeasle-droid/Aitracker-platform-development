@@ -8,13 +8,24 @@ export async function GET(request: Request) {
   const fixtureId = params.get('fixtureId')
   if (!fixtureId) {
     const sportId = params.get('sportId') || '10'
-    const from = params.get('from') || new Date().toISOString().slice(0, 10)
-    const to = params.get('to') || new Date(Date.now() + 3 * 86400000).toISOString().slice(0, 10)
-    const fixtures = await fetch(`https://api.oddspapi.io/v4/fixtures?sportId=${encodeURIComponent(sportId)}&from=${encodeURIComponent(from)}&to=${encodeURIComponent(to)}&apiKey=${encodeURIComponent(apiKey)}`, { cache: 'no-store' })
-    const text = await fixtures.text()
+    const bookmaker = params.get('bookmaker') || 'pinnacle'
+    const tournamentsParams = new URLSearchParams({ sportId, apiKey })
+    const tournamentsResponse = await fetch(`https://api.oddspapi.io/v4/tournaments?${tournamentsParams.toString()}`, { cache: 'no-store' })
+    const tournamentsText = await tournamentsResponse.text()
+    let tournaments: any
+    try { tournaments = JSON.parse(tournamentsText) } catch { tournaments = { raw: tournamentsText } }
+    const tournamentIds = (Array.isArray(tournaments) ? tournaments : tournaments?.data ?? tournaments?.tournaments ?? [])
+      .map((t: any) => t.tournamentId ?? t.id)
+      .filter(Boolean)
+      .slice(0, 10)
+      .join(',')
+    if (!tournamentIds) return NextResponse.json({ ok: tournamentsResponse.ok, status: tournamentsResponse.status, data: tournaments }, { status: tournamentsResponse.ok ? 200 : tournamentsResponse.status })
+    const oddsParams = new URLSearchParams({ bookmaker, tournamentIds, oddsFormat: 'decimal', language: 'en', apiKey })
+    const oddsResponse = await fetch(`https://api.oddspapi.io/v4/odds-by-tournaments?${oddsParams.toString()}`, { cache: 'no-store' })
+    const text = await oddsResponse.text()
     let data: unknown
     try { data = JSON.parse(text) } catch { data = { raw: text } }
-    return NextResponse.json({ ok: fixtures.ok, status: fixtures.status, data }, { status: fixtures.ok ? 200 : fixtures.status })
+    return NextResponse.json({ ok: oddsResponse.ok, status: oddsResponse.status, data, tournamentIds, bookmaker }, { status: oddsResponse.ok ? 200 : oddsResponse.status })
   }
 
   const oddsParams = new URLSearchParams({
