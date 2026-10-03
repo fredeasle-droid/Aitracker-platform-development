@@ -38,7 +38,10 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
     return { ok: false as const, error: 'Ugyldig indsats' }
   }
 
-  const demo = isDemoMode() ? demoOpportunities.find((item) => item.id === opportunityId) : undefined
+  // TEST opportunities are intentionally resolved from the development dataset when
+  // no live provider is configured; they must never require a database opportunity row.
+  const demoEnabled = !process.env.ODDS_API_KEY && process.env.VERCEL_ENV !== 'production'
+  const demo = demoEnabled ? demoOpportunities.find((item) => item.id === opportunityId) : undefined
   const opp = demo
     ? undefined
     : (await db.select().from(opportunities).where(eq(opportunities.id, opportunityId)).limit(1))[0]
