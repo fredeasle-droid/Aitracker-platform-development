@@ -8,7 +8,7 @@ import { getUserId } from '@/lib/user'
 import { getBetForUser } from '@/lib/data'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
-import { addDemoBet, isDemoOpportunityId } from '@/lib/demo-bets'
+import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
 
 export async function toggleFavorite(opportunityId: number) {
   if (!Number.isInteger(opportunityId) || opportunityId <= 0) throw new Error('Ugyldigt id')
@@ -92,7 +92,8 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
 
 export async function settleBet(id: number, result: 'won' | 'lost', amount?: number) {
   const userId = await getUserId()
-  const bet = await getBetForUser(id, userId)
+  const demoBet = getDemoBets(userId).find((item) => item.id === id)
+  const bet = demoBet ?? (await getBetForUser(id, userId))
   if (!bet) return { ok: false as const, error: 'Væddemål ikke fundet' }
 
   let profit: number
@@ -104,10 +105,20 @@ export async function settleBet(id: number, result: 'won' | 'lost', amount?: num
   }
   if (Math.abs(profit) > MAX_STAKE) return { ok: false as const, error: 'Ugyldigt beløb' }
 
-  await db
-    .update(bets)
-    .set({ status: result, profit: profit.toFixed(2), settledAt: new Date() })
-    .where(and(eq(bets.id, id), eq(bets.userId, userId)))
+  if (demoBet) {
+    updateDemoBet(userId, id, {
+      status: result,
+      profit,
+      placedTs: Date.now(),
+      dateLabel: new Date().toLocaleDateString('da-DK'),
+      kickoffLabel: 'Afgjort nu',
+    })
+  } else {
+    await db
+      .update(bets)
+      .set({ status: result, profit: profit.toFixed(2), settledAt: new Date() })
+      .where(and(eq(bets.id, id), eq(bets.userId, userId)))
+  }
   revalidatePath('/stats')
   return { ok: true as const }
 }
