@@ -24,6 +24,7 @@ function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; labe
 export function OpportunityCard({
   opportunity: o,
   onToggleFavorite,
+  loggedIn,
 }: {
   opportunity: Opportunity
   onToggleFavorite: (id: number) => void
