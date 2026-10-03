@@ -17,7 +17,7 @@ export async function GET(request: Request) {
     const tournamentIds = (Array.isArray(tournaments) ? tournaments : tournaments?.data ?? tournaments?.tournaments ?? [])
       .map((t: any) => t.tournamentId ?? t.id)
       .filter(Boolean)
-      .slice(0, 10)
+      .slice(0, 1)
       .join(',')
     if (!tournamentIds) return NextResponse.json({ ok: tournamentsResponse.ok, status: tournamentsResponse.status, data: tournaments }, { status: tournamentsResponse.ok ? 200 : tournamentsResponse.status })
     const oddsParams = new URLSearchParams({ bookmaker, tournamentIds, oddsFormat: 'decimal', language: 'en', apiKey })
