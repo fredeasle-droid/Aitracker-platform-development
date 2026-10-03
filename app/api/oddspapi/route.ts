@@ -17,7 +17,14 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: fixtures.ok, status: fixtures.status, data }, { status: fixtures.ok ? 200 : fixtures.status })
   }
 
-  const response = await fetch(`https://api.oddspapi.io/v4/odds?fixtureId=${encodeURIComponent(fixtureId)}&apiKey=${encodeURIComponent(apiKey)}`, { cache: 'no-store' })
+  const oddsParams = new URLSearchParams({
+    fixtureId,
+    oddsFormat: 'decimal',
+    language: 'en',
+    verbosity: '2',
+    apiKey,
+  })
+  const response = await fetch(`https://api.oddspapi.io/v4/odds?${oddsParams.toString()}`, { cache: 'no-store' })
   const text = await response.text()
   let data: unknown
   try { data = JSON.parse(text) } catch { data = { raw: text } }
