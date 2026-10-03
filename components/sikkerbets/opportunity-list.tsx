@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState, useTransition } from 'react'
+import { useEffect, useMemo, useState, useTransition } from 'react'
 import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
 import { toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
@@ -57,6 +57,11 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [minMargin, setMinMargin] = useState(3)
   const [sort, setSort] = useState<SortId>('newest')
   const [, startTransition] = useTransition()
+  const [loggedIn, setLoggedIn] = useState(false)
+
+  useEffect(() => {
+    setLoggedIn(document.cookie.includes('bettracker_logged_in=true'))
+  }, [])
 
   const [prevInitial, setPrevInitial] = useState(initial)
   if (initial !== prevInitial) {
@@ -224,7 +229,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             </button>
           </div>
         ) : (
-          visible.map((o) => <OpportunityCard key={o.id} opportunity={o} onToggleFavorite={handleFavorite} />)
+          visible.map((o) => <OpportunityCard key={o.id} opportunity={o} onToggleFavorite={handleFavorite} loggedIn={loggedIn} />)
         )}
       </div>
     </section>

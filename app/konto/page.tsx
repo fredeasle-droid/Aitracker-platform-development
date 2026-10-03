@@ -38,7 +38,7 @@ export default function AccountFlowPage() {
           ))}
         </div>
 
-        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => setStep(2)} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => { document.cookie = 'bettracker_logged_in=true; Path=/; Max-Age=2592000; SameSite=Lax'; window.location.assign('/') }} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => window.location.assign('/login')} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
   )

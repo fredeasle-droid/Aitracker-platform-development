@@ -37,7 +37,7 @@ export function HeaderControls() {
           {countries.map((item) => <button key={item.code} type="button" role="option" aria-selected={country.code === item.code} onClick={() => { setCountry(item); setOpen(false) }} className="flex min-h-10 w-full items-center gap-2 rounded-lg px-2 text-left text-sm hover:bg-[#123253]"><span className="text-lg">{item.flag}</span>{item.name}</button>)}
         </div>}
       </div>
-      <Link href="/konto" className="flex min-h-11 items-center gap-1.5 rounded-xl border border-[#159cff] px-3 text-[13px] font-bold text-[#8dd0ff] shadow-[0_0_14px_-8px_#159cff] transition-colors hover:bg-[#102e4e] sm:gap-2 sm:px-4 sm:text-[15px]">
+      <Link href="/login" className="flex min-h-11 items-center gap-1.5 rounded-xl border border-[#159cff] px-3 text-[13px] font-bold text-[#8dd0ff] shadow-[0_0_14px_-8px_#159cff] transition-colors hover:bg-[#102e4e] sm:gap-2 sm:px-4 sm:text-[15px]">
         <UserRound className="size-[18px]" /> <span>Log ind</span>
       </Link>
     </div>
