@@ -2,13 +2,14 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartPie } from 'lucide-react'
+import { ChartPie, Gift } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { cn } from '@/lib/utils'
 
 const ITEMS = [
   { href: '/', label: 'SikkerBets', icon: BarsIcon },
   { href: '/stats', label: 'Stats', icon: ChartPie },
+  { href: '/bonus', label: 'Bonus', icon: Gift },
 ] as const
 
 export function BottomNav() {
