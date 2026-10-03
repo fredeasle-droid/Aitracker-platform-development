@@ -3,7 +3,7 @@ import { cache } from 'react'
 import { and, desc, eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
-import { getUserId } from '@/lib/user'
+import { getOptionalUserId, getUserId } from '@/lib/user'
 import { marginPercent } from '@/lib/odds'
 import { formatKickoff, formatShortDate } from '@/lib/dates'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
@@ -73,10 +73,10 @@ async function getFavoriteIds(userId: string) {
 }
 
 export const getOpportunities = cache(async () => {
-  const userId = await getUserId()
+  const userId = await getOptionalUserId()
   if (isDemoMode()) {
     try {
-      const favIds = await getFavoriteIds(userId)
+      const favIds = userId ? await getFavoriteIds(userId) : new Set<number>()
       return demoOpportunities.map((opportunity) => ({
         ...opportunity,
         favorite: favIds.has(opportunity.id),
@@ -90,7 +90,7 @@ export const getOpportunities = cache(async () => {
   try {
     const [rows, favIds] = await Promise.all([
       db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
-      getFavoriteIds(userId),
+      userId ? getFavoriteIds(userId) : Promise.resolve(new Set<number>()),
     ])
     const now = new Date()
     return rows.map((r) => toOpportunity(r, favIds, now))
@@ -110,7 +110,8 @@ export async function getOpportunity(id?: number) {
 }
 
 export async function getBets(): Promise<BetRow[]> {
-  const userId = await getUserId()
+  const userId = await getOptionalUserId()
+  if (!userId) return []
   try {
     const rows = await db
       .select()
