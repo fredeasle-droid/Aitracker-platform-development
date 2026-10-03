@@ -60,7 +60,11 @@ function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], i
 }
 
 function extractEvents(payload: any): ProviderEvent[] {
-  return Array.isArray(payload?.data) ? payload.data : Array.isArray(payload?.data?.events) ? payload.data.events : Array.isArray(payload?.events) ? payload.events : []
+  return Array.isArray(payload?.data) ? payload.data : Array.isArray(payload?.data?.data) ? payload.data.data : Array.isArray(payload?.data?.events) ? payload.data.events : Array.isArray(payload?.events) ? payload.events : []
+}
+
+function nextCursor(payload: any) {
+  return payload?.nextCursor ?? payload?.data?.nextCursor ?? payload?.data?.data?.nextCursor ?? payload?.pagination?.nextCursor ?? payload?.data?.pagination?.nextCursor
 }
 
 export async function getLiveSurebets(): Promise<Opportunity[]> {
@@ -75,7 +79,7 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
     if (!response.ok) break
     const payload = await response.json()
     events.push(...extractEvents(payload))
-    cursor = payload?.nextCursor ?? payload?.data?.nextCursor ?? payload?.pagination?.nextCursor
+    cursor = nextCursor(payload)
     if (!cursor || extractEvents(payload).length === 0) break
   }
 
@@ -85,7 +89,10 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
     Object.entries(event.odds ?? {}).forEach(([oddID, market]) => {
       const parts = oddID.split('-')
       const outcome = parts.pop() ?? oddID
-      const group = parts.join('-')
+      const betType = parts.pop() ?? ''
+      const period = parts.pop() ?? ''
+      parts.pop()
+      const group = [...parts, period, betType].filter(Boolean).join('-')
       ;(groups[group] ||= []).push({ outcome, market })
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
