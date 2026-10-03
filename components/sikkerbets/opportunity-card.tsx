@@ -82,7 +82,7 @@ export function OpportunityCard({
       <div className="mt-1.5 flex items-center gap-2">
         <Link
           href="/konto"
-          className="flex min-h-[58px] flex-1 items-center justify-center gap-2 rounded-[18px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-2 text-center text-[15px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-[14px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-1.5 text-center text-[13px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
           <LockKeyhole className="size-4 shrink-0" />
           Opret gratis konto for at se oddsene
