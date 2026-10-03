@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { ArrowLeft, ArrowRight, Check, CreditCard, Crown, LockKeyhole, ShieldCheck, Sparkles, UserRound, X } from 'lucide-react'
 import { LoginStep } from './login-step'
+import { authClient } from '@/lib/auth-client'
 
 const plans = {
   basis: { name: 'Basis', price: '149', detail: 'SikkerBets op til 5% margin' },
@@ -38,31 +39,40 @@ export default function AccountFlowPage() {
           ))}
         </div>
 
-        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => { document.cookie = 'bettracker_logged_in=true; Path=/; Max-Age=2592000; SameSite=Lax'; window.location.assign('/') }} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => window.location.assign('/login')} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
   )
 }
 
 function SignupStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => void }) {
-  return <section>
+  const [error, setError] = useState('')
+  async function submit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const data = new FormData(event.currentTarget)
+    const result = await authClient.signUp.email({ name: String(data.get('name')), email: String(data.get('email')), password: String(data.get('password')) })
+    if (result.error) { setError('Kontoen kunne ikke oprettes. Prøv igen.'); return }
+    onNext()
+  }
+  return <form onSubmit={submit}><section>
     <h1 className="text-[27px] font-extrabold leading-tight">Opret gratis konto</h1>
     <p className="mt-2 text-[16px] leading-6 text-[#e2e7f1]">Få 7 dages gratis adgang til alle funktioner. Ingen binding.</p>
     <div className="mt-7 space-y-3">
-      <Field icon={<UserRound />} label="Brugernavn" />
-      <Field icon={<span className="text-[22px]">@</span>} label="Email" type="email" />
-      <Field icon={<LockKeyhole />} label="Adgangskode" type="password" />
+<Field name="name" icon={<UserRound />} label="Brugernavn" />
+  <Field name="email" icon={<span className="text-[22px]">@</span>} label="Email" type="email" />
+  <Field name="password" icon={<LockKeyhole />} label="Adgangskode" type="password" />
     </div>
     <label className="mt-5 flex items-start gap-2 text-[13px] leading-5 text-[#d6deeb]"><input type="checkbox" defaultChecked className="mt-1 size-4 accent-[#159cff]" /> <span>Jeg accepterer <u className="text-[#51b5ff]">vilkår og privatlivspolitik</u>.</span></label>
-    <button type="button" onClick={onNext} className="mt-5 flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#138cff] text-[17px] font-bold shadow-[0_8px_22px_-10px_#138cff]">Opret konto <ArrowRight className="size-5" /></button>
+    {error && <p className="mt-3 text-sm text-[#ff8290]" role="alert">{error}</p>}
+  <button type="submit" className="mt-5 flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#138cff] text-[17px] font-bold shadow-[0_8px_22px_-10px_#138cff]">Opret konto <ArrowRight className="size-5" /></button>
     <div className="my-5 flex items-center gap-3 text-sm text-[#d7deeb]"><span className="h-px flex-1 bg-[#243650]" /> eller <span className="h-px flex-1 bg-[#243650]" /></div>
     <div className="space-y-3"><button type="button" className="min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] text-[15px]">Google&nbsp;&nbsp; Fortsæt med Google</button><button type="button" className="min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] text-[15px]">&nbsp;&nbsp; Fortsæt med Apple</button></div>
     <div className="mt-6 flex items-center gap-3 rounded-xl border border-[#123b61] bg-[#071a2b] p-3"><ShieldCheck className="size-9 shrink-0 text-[#159cff]" /><p className="text-[12px] text-[#cbd6e7]"><b className="text-[#159cff]">100% sikkert</b><br />Dine data er beskyttet og bruges kun til din konto.</p></div>
     <button type="button" onClick={onLogin} className="mt-5 min-h-11 w-full text-sm text-[#8cb3d9]">Har du allerede en konto? <span className="text-[#42aeff] underline">Log ind</span></button>
-  </section>
+  </section></form>
 }
 
-function Field({ icon, label, type = 'text' }: { icon: React.ReactNode; label: string; type?: string }) { return <label className="flex h-12 items-center gap-3 rounded-xl border border-[#38506b] bg-[#081725] px-3"><span className="text-[#e3ebf8]">{icon}</span><input required type={type} placeholder={label} className="min-w-0 flex-1 bg-transparent text-[16px] text-white outline-none placeholder:text-[#e1e5ee]" /></label> }
+function Field({ name, icon, label, type = 'text' }: { name: string; icon: React.ReactNode; label: string; type?: string }) { return <label className="flex h-12 items-center gap-3 rounded-xl border border-[#38506b] bg-[#081725] px-3"><span className="text-[#e3ebf8]">{icon}</span><input name={name} required type={type} placeholder={label} className="min-w-0 flex-1 bg-transparent text-[16px] text-white outline-none placeholder:text-[#e1e5ee]" /></label> }
 
 function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void }) {
   return <section className="pb-4">

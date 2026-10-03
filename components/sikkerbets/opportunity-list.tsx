@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState, useTransition } from 'react'
+import { useMemo, useState, useTransition } from 'react'
 import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
 import { toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
@@ -8,6 +8,7 @@ import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
+import { authClient } from '@/lib/auth-client'
 
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
@@ -57,11 +58,8 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [minMargin, setMinMargin] = useState(3)
   const [sort, setSort] = useState<SortId>('newest')
   const [, startTransition] = useTransition()
-  const [loggedIn, setLoggedIn] = useState(false)
-
-  useEffect(() => {
-    setLoggedIn(document.cookie.includes('bettracker_logged_in=true'))
-  }, [])
+  const { data: session } = authClient.useSession()
+  const loggedIn = Boolean(session?.user)
 
   const [prevInitial, setPrevInitial] = useState(initial)
   if (initial !== prevInitial) {
