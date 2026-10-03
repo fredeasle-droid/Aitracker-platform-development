@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils'
 
 function OddsBox({ bookmaker, label, odds }: { bookmaker: string; label: string; odds: number }) {
   return (
-    <div className="flex min-w-0 flex-1 items-center gap-2 rounded-xl border border-border bg-[#081123] p-2">
-      <BookmakerLogo name={bookmaker} className="size-10" />
+    <div className="flex min-w-0 flex-1 items-center gap-2.5 rounded-2xl border border-border bg-[#081123] px-3 py-2.5">
+      <BookmakerLogo name={bookmaker} className="size-11 rounded-xl" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[13px] font-semibold leading-tight">{bookmaker}</p>
         <p className="truncate text-[12px] leading-tight text-[#a9b6d3]">{label}</p>
@@ -29,7 +29,7 @@ export function OpportunityCard({
   onToggleFavorite: (id: number) => void
 }) {
   return (
-    <article className="rounded-2xl border border-border bg-card/80 p-3 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)]">
+    <article className="rounded-3xl border border-border bg-card/80 p-4 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.6)]">
       <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3]">
         <span className="flex min-w-0 items-center gap-2">
           <Flag code={o.countryCode} label={o.country} />
@@ -44,22 +44,22 @@ export function OpportunityCard({
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-1">
             <span className="flex min-w-0 flex-1 items-center gap-1.5">
-              <TeamCrest name={o.homeTeam} className="size-8 shrink-0 text-[10px]" />
-              <span className="min-w-0 break-words text-[12.5px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
+              <TeamCrest name={o.homeTeam} className="size-11 shrink-0 text-[11px]" />
+              <span className="min-w-0 break-words text-[15px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
             </span>
             <span className="shrink-0 text-xs text-muted-foreground">vs</span>
             <span className="flex min-w-0 flex-1 items-center gap-1.5">
-              <TeamCrest name={o.awayTeam} className="size-8 shrink-0 text-[10px]" />
-              <span className="min-w-0 break-words text-[12.5px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
+              <TeamCrest name={o.awayTeam} className="size-11 shrink-0 text-[11px]" />
+              <span className="min-w-0 break-words text-[15px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
             </span>
           </div>
-          <p className="mt-2 flex items-center gap-1.5 text-[13px] text-[#d5ddef]">
+          <p className="mt-3 flex items-center gap-2 text-[15px] text-[#d5ddef]">
             <SmallBarsIcon className="size-4 text-[#8fa3cc]" />
             {o.market}
           </p>
         </div>
 
-        <div className="flex w-[100px] shrink-0 flex-col items-stretch justify-center rounded-xl border border-success/50 bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.16),rgba(8,30,30,0.6))] px-2 py-2 shadow-[0_0_24px_-10px_var(--success)]">
+        <div className="flex w-[104px] shrink-0 flex-col items-stretch justify-center rounded-2xl border border-success/50 bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.16),rgba(8,30,30,0.6))] px-2 py-2 shadow-[0_0_24px_-10px_var(--success)]">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-semibold tracking-wide text-success">MARGIN</span>
             <SmallBarsIcon className="size-3.5 text-success/80" />
@@ -82,7 +82,7 @@ export function OpportunityCard({
       <div className="mt-2.5 flex items-center gap-2.5">
         <Link
           href={`/beregn?id=${o.id}`}
-          className="flex min-h-12 flex-1 items-center justify-center gap-2.5 rounded-xl bg-primary text-[17px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          className="flex min-h-14 flex-1 items-center justify-center gap-3 rounded-2xl bg-primary text-[18px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
           <Calculator className="size-5" />
           Beregn indsats
