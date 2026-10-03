@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils'
 
 function OddsBox({ bookmaker, label, odds }: { bookmaker: string; label: string; odds: number }) {
   return (
-    <div className="flex min-w-0 flex-1 items-center gap-2.5 rounded-2xl border border-border bg-[#081123] px-3 py-2.5">
-      <BookmakerLogo name={bookmaker} className="size-11 rounded-xl" />
+    <div className="flex min-w-0 flex-1 items-center gap-2.5 rounded-2xl border border-border bg-[#081123] px-3 py-3">
+      <BookmakerLogo name={bookmaker} className="size-12 rounded-xl" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[13px] font-semibold leading-tight">{bookmaker}</p>
         <p className="truncate text-[12px] leading-tight text-[#a9b6d3]">{label}</p>
@@ -59,7 +59,7 @@ export function OpportunityCard({
           </p>
         </div>
 
-        <div className="flex w-[104px] shrink-0 flex-col items-stretch justify-center rounded-2xl border border-success/50 bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.16),rgba(8,30,30,0.6))] px-2 py-2 shadow-[0_0_24px_-10px_var(--success)]">
+        <div className="flex w-[116px] shrink-0 flex-col items-stretch justify-center rounded-2xl border border-success/50 bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.16),rgba(8,30,30,0.6))] px-2 py-2 shadow-[0_0_24px_-10px_var(--success)]">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-semibold tracking-wide text-success">MARGIN</span>
             <SmallBarsIcon className="size-3.5 text-success/80" />
