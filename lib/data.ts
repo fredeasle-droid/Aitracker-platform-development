@@ -7,6 +7,7 @@ import { getUserId } from '@/lib/user'
 import { marginPercent } from '@/lib/odds'
 import { formatKickoff, formatShortDate } from '@/lib/dates'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
+import { getDemoBets } from '@/lib/demo-bets'
 
 export type Opportunity = {
   id: number
@@ -131,6 +132,9 @@ export async function getBets(): Promise<BetRow[]> {
       placedTs: (r.settledAt ?? r.kickoff).getTime(),
     }))
   } catch (error) {
+    if (!process.env.ODDS_API_KEY && process.env.VERCEL_ENV !== 'production') {
+      return getDemoBets(userId)
+    }
     console.error('[data] bets unavailable', error)
     return []
   }

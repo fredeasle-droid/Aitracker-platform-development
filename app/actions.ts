@@ -8,6 +8,7 @@ import { getUserId } from '@/lib/user'
 import { getBetForUser } from '@/lib/data'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
+import { addDemoBet, isDemoOpportunityId } from '@/lib/demo-bets'
 
 export async function toggleFavorite(opportunityId: number) {
   if (!Number.isInteger(opportunityId) || opportunityId <= 0) throw new Error('Ugyldigt id')
@@ -63,6 +64,25 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
       kickoff: opp?.kickoff ?? new Date(demo!.kickoffTs),
     })
   } catch (error) {
+    // The v0 preview may intentionally run without Postgres. Keep TEST bets
+    // usable for the review flow, while live/production bets still require DB.
+    if (demo && isDemoOpportunityId(opportunityId)) {
+      addDemoBet(userId, {
+        id: Date.now(),
+        sport: demo.sport,
+        match: `${demo.homeTeam} vs ${demo.awayTeam}`,
+        market: `${demo.a.label} / ${demo.b.label}`,
+        stake: stakeA + stakeB,
+        expectedProfit: profit,
+        profit: null,
+        status: 'open',
+        kickoffLabel: demo.kickoffLabel,
+        dateLabel: new Date(demo.kickoffTs).toLocaleDateString('da-DK'),
+        placedTs: Date.now(),
+      })
+      revalidatePath('/stats')
+      return { ok: true as const }
+    }
     console.error('[actions] unable to save open bet', error)
     return { ok: false as const, error: 'Væddemålet kunne ikke gemmes lige nu' }
   }
