@@ -18,9 +18,9 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Hovedmenu"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-[#060d1c]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[#193451] bg-[#050d1b]/95 px-2 pt-2 shadow-[0_-10px_30px_-20px_#159cff] backdrop-blur-xl pb-[env(safe-area-inset-bottom)]"
     >
-      <ul className="mx-auto flex max-w-2xl items-stretch">
+      <ul className="mx-auto flex max-w-2xl items-stretch gap-1.5 rounded-2xl border border-[#102945] bg-[#071524]/90 p-1.5">
         {ITEMS.map(({ href, label, icon: Icon }) => {
           const active = href === '/' ? pathname === '/' : pathname.startsWith(href)
           return (
@@ -29,13 +29,13 @@ export function BottomNav() {
                 href={href}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'flex min-h-16 flex-col items-center justify-center gap-1 py-2 text-sm font-semibold transition-colors',
-                  active ? 'text-primary' : 'text-muted-foreground hover:text-foreground',
+                  'relative flex min-h-14 flex-col items-center justify-center gap-1 rounded-xl px-2 py-1.5 text-[12px] font-bold tracking-[0.01em] transition-all',
+                  active ? 'bg-[#102f4d] text-[#55b7ff] shadow-[inset_0_0_0_1px_#1d6594,0_4px_14px_-8px_#159cff]' : 'text-[#71839d] hover:bg-[#0b2136] hover:text-[#d7e8fa]',
                 )}
               >
                 <Icon
-                  className={cn('size-7', active ? 'text-primary' : 'text-[#6b7894]')}
-                  strokeWidth={Icon === BarsIcon ? undefined : 2}
+                  className={cn('size-5.5 transition-transform', active ? 'scale-105 text-[#55b7ff]' : 'text-[#6b7894]')}
+                  strokeWidth={Icon === BarsIcon ? undefined : 2.25}
                   fill={Icon === ChartPie ? 'currentColor' : Icon === BarsIcon ? 'currentColor' : 'none'}
                 />
                 {label}
