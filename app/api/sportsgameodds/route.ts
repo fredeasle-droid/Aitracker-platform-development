@@ -7,13 +7,13 @@ export async function GET(request: Request) {
   const params = new URL(request.url).searchParams
   const query = new URLSearchParams({
     oddsAvailable: 'true',
-    limit: params.get('limit') || '10',
+    limit: params.get('limit') || '100',
     includeAltLines: 'false',
   })
   const sportID = params.get('sportID')
-  const leagueID = params.get('leagueID') || 'EPL'
-  if (sportID) query.set('sportID', sportID)
-  query.set('leagueID', leagueID)
+  const leagueID = params.get('leagueID')
+  if (sportID && sportID !== 'ALL') query.set('sportID', sportID)
+  if (leagueID) query.set('leagueID', leagueID)
 
   const response = await fetch(`https://api.sportsgameodds.com/v2/events?${query.toString()}`, {
     headers: { 'x-api-key': apiKey, accept: 'application/json' },
