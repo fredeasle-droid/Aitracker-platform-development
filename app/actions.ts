@@ -38,8 +38,10 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
     return { ok: false as const, error: 'Ugyldig indsats' }
   }
 
-  const [opp] = await db.select().from(opportunities).where(eq(opportunities.id, opportunityId)).limit(1)
   const demo = isDemoMode() ? demoOpportunities.find((item) => item.id === opportunityId) : undefined
+  const opp = demo
+    ? undefined
+    : (await db.select().from(opportunities).where(eq(opportunities.id, opportunityId)).limit(1))[0]
   if (!opp && !demo) return { ok: false as const, error: 'Kampen findes ikke længere' }
 
   const aOdds = opp ? Number(opp.aOdds) : demo!.a.odds
@@ -48,7 +50,7 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
   try {
     await db.insert(bets).values({
       userId,
-      opportunityId,
+      opportunityId: opp ? opportunityId : null,
       sport: opp?.sport ?? demo!.sport,
       match: `${opp?.homeTeam ?? demo!.homeTeam} vs ${opp?.awayTeam ?? demo!.awayTeam}`,
       market: opp ? `${opp.aLabel} / ${opp.bLabel}` : `${demo!.a.label} / ${demo!.b.label}`,
