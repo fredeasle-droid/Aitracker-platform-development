@@ -10,8 +10,8 @@ import { cn } from '@/lib/utils'
 
 function OddsBox({ bookmaker, label, odds }: { bookmaker: string; label: string; odds: number }) {
   return (
-    <div className="flex h-[80px] min-w-0 flex-1 items-center gap-2.5 rounded-[18px] border border-[#1a3557] bg-[#081123] px-3">
-      <BookmakerLogo name={bookmaker} className="size-12 shrink-0 rounded-xl" />
+    <div className="flex h-[68px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3">
+      <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
         <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]">{label}</p>
@@ -29,7 +29,7 @@ export function OpportunityCard({
   onToggleFavorite: (id: number) => void
 }) {
   return (
-    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-4 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)]">
+    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)]">
       <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3]">
         <span className="flex min-w-0 items-center gap-2">
           <Flag code={o.countryCode} label={o.country} />
@@ -40,26 +40,26 @@ export function OpportunityCard({
         <span className="shrink-0">{o.kickoffLabel}</span>
       </div>
 
-      <div className="mt-2.5 flex min-h-[106px] gap-2">
+      <div className="mt-1.5 flex min-h-[94px] gap-1.5">
         <div className="min-w-0 flex-1">
-          <div className="flex items-center gap-1">
-            <span className="flex min-w-0 flex-1 items-center gap-1.5">
-              <TeamCrest name={o.homeTeam} className="size-11 shrink-0 text-[11px]" />
-              <span className="min-w-0 break-words text-[15px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
+          <div className="flex items-start gap-1">
+            <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
+              <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
+              <TeamCrest name={o.homeTeam} className="size-[54px] shrink-0 text-[11px]" />
             </span>
-            <span className="shrink-0 text-xs text-muted-foreground">vs</span>
-            <span className="flex min-w-0 flex-1 items-center gap-1.5">
-              <TeamCrest name={o.awayTeam} className="size-11 shrink-0 text-[11px]" />
-              <span className="min-w-0 break-words text-[15px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
+            <span className="mt-7 shrink-0 text-xs text-muted-foreground">vs</span>
+            <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
+              <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
+              <TeamCrest name={o.awayTeam} className="size-[54px] shrink-0 text-[11px]" />
             </span>
           </div>
-          <p className="mt-3 flex items-center gap-2 text-[15px] text-[#d5ddef]">
+          <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
             <SmallBarsIcon className="size-4 text-[#8fa3cc]" />
             {o.market}
           </p>
         </div>
 
-        <div className="flex w-[116px] shrink-0 flex-col items-stretch justify-center rounded-[20px] border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-3 py-2 shadow-[0_0_24px_-10px_var(--success)]">
+        <div className="flex w-[108px] shrink-0 flex-col items-stretch justify-center rounded-[18px] border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 py-1.5 shadow-[0_0_24px_-10px_var(--success)]">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-semibold tracking-wide text-success">MARGIN</span>
             <SmallBarsIcon className="size-3.5 text-success/80" />
@@ -74,15 +74,15 @@ export function OpportunityCard({
         </div>
       </div>
 
-      <div className="mt-2.5 flex h-[80px] gap-2">
+      <div className="mt-1.5 flex h-[68px] gap-1.5">
         <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} />
         <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} />
       </div>
 
-      <div className="mt-2.5 flex items-center gap-2.5">
+      <div className="mt-1.5 flex items-center gap-2">
         <Link
           href={`/beregn?id=${o.id}`}
-          className="flex min-h-[68px] flex-1 items-center justify-center gap-3 rounded-[20px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[18px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          className="flex min-h-[58px] flex-1 items-center justify-center gap-2.5 rounded-[18px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[18px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
           <Calculator className="size-5" />
           Beregn indsats
