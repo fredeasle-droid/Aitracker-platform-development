@@ -11,11 +11,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
       - run: pip install -r requirements.txt
+
+      - name: Verify API key is available
+        env:
+          SGO_KEY: ${{ secrets.SPORTSGAMEODDS_API_KEY || secrets.SPORTSGAMEODDS_KEY }}
+        run: |
+          if [ -z "$SGO_KEY" ]; then
+            echo "ERROR: No SportsGameOdds repository secret was provided."
+            exit 1
+          fi
+          echo "SportsGameOdds secret is present."
+
       - name: Run original calculator
         env:
-          SPORTSGAMEODDS_KEY: ${{ secrets.SPORTSGAMEODDS_API_KEY }}
+          SPORTSGAMEODDS_KEY: ${{ secrets.SPORTSGAMEODDS_API_KEY || secrets.SPORTSGAMEODDS_KEY }}
         run: python arb_calculator.py
