@@ -2,28 +2,31 @@
 
 import { useEffect, useState } from "react"
 
+type ApiPayload = { data?: unknown; error?: string }
+
 export default function OddsApiTestPage() {
-  const [output, setOutput] = useState("")
+  const [payload, setPayload] = useState<ApiPayload | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    fetch("/api/arbitrage")
-      .then((response) => response.json().then((payload) => ({ response, payload })))
-      .then(({ response, payload }) => {
-        if (!response.ok || !payload.ok) throw new Error(payload.error || "Calculator failed")
-        setOutput(payload.stdout)
+    fetch("/api/sportsgameodds?sportID=SOCCER&leagueID=EPL&limit=100")
+      .then(async (response) => {
+        const body = await response.json()
+        if (!response.ok) throw new Error(body.error || "API-request fejlede")
+        return body
       })
-      .catch((reason) => setError(reason instanceof Error ? reason.message : "Calculator failed"))
+      .then(setPayload)
+      .catch((reason) => setError(reason instanceof Error ? reason.message : "API-request fejlede"))
   }, [])
 
   return (
     <main className="min-h-screen bg-slate-950 px-4 py-8 text-slate-100">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">SportsGameOdds</p>
-        <h1 className="mt-2 text-3xl font-bold">GitHub arbitrage calculator</h1>
-        <p className="mt-2 text-slate-400">Output fra den originale arb_calculator.py uden ændringer i beregningskoden.</p>
+        <h1 className="mt-2 text-3xl font-bold">Rå API-data</h1>
+        <p className="mt-2 text-slate-400">SOCCER · EPL · limit=100</p>
         <section className="mt-6 overflow-x-auto rounded-xl border border-slate-700 bg-slate-900 p-4">
-          {error ? <p className="text-red-400">{error}</p> : output ? <pre className="whitespace-pre-wrap font-mono text-sm leading-6 text-slate-200">{output}</pre> : <p className="text-slate-400">Kører GitHub-kalkulatoren…</p>}
+          {error ? <p className="text-red-400">{error}</p> : payload ? <pre className="whitespace-pre-wrap break-words font-mono text-sm leading-6 text-slate-200">{JSON.stringify(payload.data ?? payload, null, 2)}</pre> : <p className="text-slate-400">Henter rå API-data…</p>}
         </section>
       </div>
     </main>
