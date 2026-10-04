@@ -13,16 +13,22 @@ function toDecimal(value: unknown) {
 
 function findSurebets(events: Event[]): Surebet[] {
   return events.flatMap((event) => {
-    const groups: Record<string, { outcome: string; market: any }[]> = {}
+    const groups: Record<string, { outcome: string; market: any; betType: string }[]> = {}
     Object.entries(event.odds ?? {}).forEach(([oddID, market]) => {
       const parts = oddID.split('-')
       const outcome = parts.pop() ?? oddID
-      const marketID = parts.join('-')
-      ;(groups[marketID] ||= []).push({ outcome, market })
+      const betType = parts.pop() ?? ''
+      const period = parts.pop() ?? ''
+      const entity = parts.pop() ?? ''
+      const marketID = [parts.join('-'), period, betType].filter(Boolean).join('-')
+      ;(groups[marketID] ||= []).push({ outcome, market, betType })
     })
 
     return Object.entries(groups).flatMap(([market, outcomes]) => {
-      const picks = outcomes.map(({ outcome, market: outcomeMarket }) => {
+      const betType = outcomes[0]?.betType
+      const requiredOutcomes = betType === 'ml3way' ? ['home', 'draw', 'away'] : betType === 'ou' ? ['over', 'under'] : betType === 'ml2way' ? ['home', 'away'] : null
+      if (!requiredOutcomes || !requiredOutcomes.every((outcome) => outcomes.some((item) => item.outcome === outcome))) return []
+      const picks = requiredOutcomes.map((requiredOutcome) => { const match = outcomes.find(({ outcome }) => outcome === requiredOutcome); const outcome = match?.outcome ?? requiredOutcome; const outcomeMarket = match?.market
         const best = Object.entries(outcomeMarket?.byBookmaker ?? {}).map(([bookmaker, quote]: [string, any]) => {
           const decimal = toDecimal(quote?.odds)
           return decimal ? { outcome, bookmaker, odds: Number(quote.odds), decimal } : null
