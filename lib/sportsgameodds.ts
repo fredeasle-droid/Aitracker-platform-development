@@ -39,9 +39,12 @@ function outcomeLabel(outcome: string) {
   const normalized = value.toLowerCase()
   if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
   if (normalized.startsWith('under ')) return `Under ${danishNumber(value.slice(6).trim())}`
-  if (normalized === 'home' || normalized === 'h' || normalized === 'home team') return 'Hjemmeholdet'
-  if (normalized === 'away' || normalized === 'a' || normalized === 'away team') return 'Udeholdet'
-  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort'
+  if (normalized === 'home' || normalized === 'h' || normalized === 'home team' || normalized === '1') return 'Hjemmeholdet (1)'
+  if (normalized === 'away' || normalized === 'a' || normalized === 'away team' || normalized === '2') return 'Udeholdet (2)'
+  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort (X)'
+  if (normalized === '1x' || normalized === 'home or draw' || normalized === 'home/draw') return 'Dobbeltchance: Hjemmeholdet eller uafgjort (1X)'
+  if (normalized === 'x2' || normalized === 'draw or away' || normalized === 'draw/away') return 'Dobbeltchance: Uafgjort eller udeholdet (X2)'
+  if (normalized === '12' || normalized === 'home or away' || normalized === 'home/away') return 'Dobbeltchance: Hjemmeholdet eller udeholdet (12)'
   if (normalized === 'yes' || normalized === 'y') return 'Ja'
   if (normalized === 'no' || normalized === 'n') return 'Nej'
   if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
@@ -58,6 +61,7 @@ function marketLabel(marketID: string, picks: Quote[]) {
     return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
   }
   if (source.includes('btts') || source.includes('both-teams-to-score')) return 'Begge hold scorer'
+  if (picks.some((pick) => pick.label.startsWith('Dobbeltchance:'))) return 'Dobbeltchance på kampresultat'
   if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
   if (source.includes('spread') || source.includes('handicap') || source.endsWith('-sp')) return 'Handicap på kamp'
   if (source.includes('odd-even') || source.includes('oddeven')) return 'Lige/Ulige antal'

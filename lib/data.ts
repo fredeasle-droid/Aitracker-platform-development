@@ -44,9 +44,12 @@ export type BetRow = {
 
 function displayOutcome(value: string) {
   const normalized = value.replace(/[_-]+/g, ' ').trim().toLowerCase()
-  if (normalized === 'home' || normalized === 'h') return 'Hjemmeholdet'
-  if (normalized === 'away' || normalized === 'a') return 'Udeholdet'
-  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort'
+  if (normalized === 'home' || normalized === 'h' || normalized === '1') return 'Hjemmeholdet (1)'
+  if (normalized === 'away' || normalized === 'a' || normalized === '2') return 'Udeholdet (2)'
+  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort (X)'
+  if (normalized === '1x' || normalized === 'home or draw' || normalized === 'home/draw') return 'Dobbeltchance: Hjemmeholdet eller uafgjort (1X)'
+  if (normalized === 'x2' || normalized === 'draw or away' || normalized === 'draw/away') return 'Dobbeltchance: Uafgjort eller udeholdet (X2)'
+  if (normalized === '12' || normalized === 'home or away' || normalized === 'home/away') return 'Dobbeltchance: Hjemmeholdet eller udeholdet (12)'
   if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
   if (normalized.startsWith('over ')) return `Over ${normalized.slice(5).replace('.', ',')}`
   if (normalized.startsWith('under ')) return `Under ${normalized.slice(6).replace('.', ',')}`
