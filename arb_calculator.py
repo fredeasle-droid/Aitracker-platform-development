@@ -107,16 +107,21 @@ def find_arbitrage_opportunities(events):
         home_name = event['teams']['home']['names']['long']
         matchup = f"{away_name} @ {home_name}"
 
-        # Group by bet type -> period -> exact line -> side -> bookmaker offers
+        # Group by the complete API market identity (stat/entity), then period,
+        # exact line, side, and bookmaker offers. The entity is required so
+        # home-team totals cannot be paired with away-team totals.
         markets = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
 
         for odd_id, odd in (event.get('odds') or {}).items():
             bet_type = odd['betTypeID']
             side = odd['sideID']
             period_id = odd.get('periodID', 'game')
+            odd_parts = odd_id.rsplit('-', 3)
+            market_identity = odd_parts[0] if len(odd_parts) == 4 else odd_id
 
-            # Full-game markets only
-            if period_id != 'game':
+            # Full-match markets use `reg` in SportsGameOdds soccer data.
+            # Keep `game` for feeds that use the generic period name.
+            if period_id not in ('game', 'reg'):
                 continue
 
             for bookmaker_id, bm_data in (odd.get('byBookmaker') or {}).items():
@@ -135,7 +140,7 @@ def find_arbitrage_opportunities(events):
                 line = bm_data.get('spread') if bet_type == 'sp' else bm_data.get('overUnder')
                 line_key = str(line) if line is not None else 'none'
 
-                markets[bet_type][period_id][line_key][side].append({
+                markets[f'{market_identity}|{bet_type}'][period_id][line_key][side].append({
                     'bookmaker': bookmaker_id,
                     'american': price,
                     'decimal': american_to_decimal(price),
@@ -143,7 +148,8 @@ def find_arbitrage_opportunities(events):
                 })
 
         # Check each market for arbitrage
-        for bet_type, periods in markets.items():
+        for market_key, periods in markets.items():
+            market_identity, bet_type = market_key.rsplit('|', 1)
             for period_id, lines in periods.items():
                 for line_key, sides in lines.items():
 
