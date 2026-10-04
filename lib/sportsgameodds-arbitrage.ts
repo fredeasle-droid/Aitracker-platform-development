@@ -40,8 +40,11 @@ export function findArbitrage(events: SportsGameOddsEvent[]) {
       const betType = String(odd?.betTypeID ?? '')
       const side = String(odd?.sideID ?? '')
       const period = String(odd?.periodID ?? 'game')
-      if (!['sp', 'ou', 'ml'].includes(betType) || period !== 'game') continue
-      const key = `${betType}:${period}`
+      const statID = String(odd?.statID ?? '')
+      if (!['sp', 'ou', 'ml'].includes(betType) || period !== 'game' || !statID) continue
+      // statID identifies the exact market/line family. Never combine quotes
+      // from different statIDs, even when betTypeID and periodID match.
+      const key = `${betType}:${period}:${statID}`
       const sides = groups.get(key) ?? {}
       sides[side] ??= []
       for (const [bookmaker, quote] of Object.entries(odd?.byBookmaker ?? {})) {
