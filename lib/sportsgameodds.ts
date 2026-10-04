@@ -99,7 +99,8 @@ function isComplementaryPair(marketID: string, picks: Quote[]) {
 
   if (labels.every((label) => ['ja', 'nej'].includes(label))) return true
   if (labels.every((label) => ['lige', 'ulige'].includes(label))) return true
-  if (labels.includes('hjemmeholdet (1)') && labels.includes('udeholdet (2)')) return true
+  // A normal football 1X2 market is not covered by only 1 + 2 because X (draw) is missing.
+  // Double-chance combinations remain valid because they explicitly cover the draw.
   if (labels.includes('dobbeltchance: hjemmeholdet eller uafgjort (1x)') && labels.includes('udeholdet (2)')) return true
   if (labels.includes('dobbeltchance: uafgjort eller udeholdet (x2)') && labels.includes('hjemmeholdet (1)')) return true
   if (labels.includes('dobbeltchance: hjemmeholdet eller udeholdet (12)') && labels.includes('uafgjort (x)')) return true
