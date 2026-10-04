@@ -6,7 +6,7 @@ const API_URL = 'https://api.sportsgameodds.com/v2/events'
 
 type ProviderEvent = Record<string, any>
 
-type Quote = { bookmaker: string; odds: number; label: string; deeplink?: string; marketName?: string }
+type Quote = { bookmaker: string; odds: number; label: string; deeplink?: string; marketName?: string; spread?: string | number }
 
 type RawMarket = { marketName?: string; sideID?: string; outcome?: string; line?: string | number; points?: string | number; [key: string]: any }
 
@@ -147,7 +147,9 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
         const rawMarket = market as RawMarket
         const offers = Object.entries(rawMarket?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
-          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, rawMarket), marketName: rawMarket?.marketName, deeplink: quote?.deeplink as string | undefined })
+          const spread = quote?.spread ?? rawMarket?.bookSpread ?? rawMarket?.fairSpread
+          const labelMarket = spread === undefined ? rawMarket : { ...rawMarket, line: spread }
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: rawMarket?.marketName, spread, deeplink: quote?.deeplink as string | undefined })
           return best
         }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
