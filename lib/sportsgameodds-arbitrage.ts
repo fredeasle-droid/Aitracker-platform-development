@@ -30,9 +30,17 @@ function eventName(event: SportsGameOddsEvent) {
 }
 
 function lineFor(betType: string, quote: any) {
-  if (betType === 'sp') return quote?.spread
-  if (betType === 'ou') return quote?.overUnder
+  if (betType === 'sp') return quote?.spread ?? quote?.line ?? quote?.points
+  if (betType === 'ou') return quote?.overUnder ?? quote?.line ?? quote?.points
   return undefined
+}
+
+function normalizeLine(value: unknown, betType: string) {
+  if (value == null || value === '') return 'none'
+  const parsed = Number(String(value).replace(',', '.'))
+  if (!Number.isFinite(parsed)) return String(value).trim().toLowerCase()
+  const normalized = Math.abs(parsed).toFixed(3).replace(/0+$/, '').replace(/\.$/, '')
+  return betType === 'sp' ? normalized : parsed.toFixed(3).replace(/0+$/, '').replace(/\.$/, '')
 }
 
 export function findArbitrage(events: SportsGameOddsEvent[]) {
@@ -45,10 +53,13 @@ export function findArbitrage(events: SportsGameOddsEvent[]) {
       const side = String(odd?.sideID ?? '')
       const period = String(odd?.periodID ?? 'game')
       const statID = String(odd?.statID ?? '')
+      const statEntityID = String(odd?.statEntityID ?? odd?.statEntityId ?? '')
       if (!['sp', 'ou', 'ml'].includes(betType) || period !== 'game' || !statID) continue
-      // statID identifies the exact market/line family. Never combine quotes
-      // from different statIDs, even when betTypeID and periodID match.
-      const key = `${betType}:${period}:${statID}`
+      const sampleQuote = Object.values(odd?.byBookmaker ?? {})[0] as any
+      const line = lineFor(betType, sampleQuote)
+      // The line belongs in the market identity. For spreads, opposite sides
+      // use opposite signs, so normalize both to the same absolute line.
+      const key = `${statID}:${statEntityID}:${betType}:${period}:${normalizeLine(line, betType)}`
       const sides = groups.get(key) ?? {}
       sides[side] ??= []
       for (const [bookmaker, quote] of Object.entries(odd?.byBookmaker ?? {})) {
