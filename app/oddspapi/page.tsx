@@ -34,8 +34,12 @@ function getSurebet(event: Event) {
   const groups = Object.entries(event.odds ?? {}).reduce((result, [oddID, market]: [string, any]) => {
     const parts = oddID.split('-')
     const outcome = parts.pop() ?? oddID
+    const betType = parts.at(-1) ?? ''
+    const period = parts.at(-2) ?? ''
+    const entity = parts.at(-3) ?? ''
+    if (['home', 'away', 'all'].includes(entity)) parts.splice(-3, 1)
     const group = parts.join('-')
-    ;(result[group] ||= []).push({ outcome, market })
+    ;(result[group] ||= []).push({ outcome, market, betType, period })
     return result
   }, {} as Record<string, any[]>)
 
@@ -45,13 +49,14 @@ function getSurebet(event: Event) {
   }
 
   return Object.entries(groups).map(([marketID, outcomes]) => {
-    const picks = outcomes.map(({ outcome, market }) => {
+    const picks = outcomes.filter(({ outcome, betType }) => { const allowed = betType === 'ml3way' ? ['home', 'away', 'draw'] : betType === 'ou' ? ['over', 'under'] : ['home', 'away']; return allowed.includes(outcome) }).map(({ outcome, market }) => {
       const offers = Object.entries(market?.byBookmaker ?? {}).map(([bookmaker, quote]: [string, any]) => ({ bookmaker, quote, decimal: toDecimal(quote?.odds) })).filter((offer): offer is Pick => offer.decimal !== null)
       return offers.sort((a, b) => b.decimal - a.decimal)[0] ? { ...offers[0], outcome } : null
     }).filter(Boolean) as Pick[]
     const implied = picks.reduce((sum, pick) => sum + 1 / pick.decimal, 0)
-    return { marketID, picks, profit: (1 - implied) * 100 }
-  }).filter((item) => item.picks.length >= 2 && item.profit > 0).sort((a, b) => b.profit - a.profit)[0]
+    const requiredOutcomes = outcomes[0]?.betType === 'ml3way' ? 3 : 2
+    return { marketID, picks, profit: (1 - implied) * 100, complete: new Set(picks.map((pick) => pick.outcome)).size === requiredOutcomes }
+  }).filter((item) => item.complete && item.profit > 0).sort((a, b) => b.profit - a.profit)[0]
 }
 
 export default function OddsApiTestPage() {
