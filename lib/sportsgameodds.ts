@@ -8,7 +8,7 @@ type ProviderEvent = Record<string, any>
 
 type Quote = { bookmaker: string; odds: number; label: string; deeplink?: string; marketName?: string }
 
-type RawMarket = { marketName?: string; sideID?: string; line?: string | number; [key: string]: any }
+type RawMarket = { marketName?: string; sideID?: string; outcome?: string; line?: string | number; points?: string | number; [key: string]: any }
 
 function decimalOdds(value: unknown) {
   const american = Number(value)
@@ -36,8 +36,11 @@ function danishNumber(value: string) {
   return value.replace(/(\\d+)\\.(\\d+)/g, '$1,$2')
 }
 
-function outcomeLabel(outcome: string) {
-  const value = outcome.replace(/[_-]+/g, ' ').trim()
+function outcomeLabel(outcome: string, market?: RawMarket) {
+  const source = String(market?.sideID ?? market?.outcome ?? outcome)
+  const rawLine = market?.line ?? market?.points
+  const line = rawLine === undefined || rawLine === null || rawLine === '' ? '' : ` ${danishNumber(String(rawLine))}`
+  const value = `${source.replace(/[_-]+/g, ' ').trim()}${line}`
   const normalized = value.toLowerCase()
   if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
   if (normalized.startsWith('under ')) return `Under ${danishNumber(value.slice(6).trim())}`
@@ -137,9 +140,10 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
     Object.entries(groups).forEach(([marketID, entries]) => {
       if (entries.length !== 2) return
       const picks = entries.map(({ outcome, market }) => {
-        const offers = Object.entries((market as any)?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
+        const rawMarket = market as RawMarket
+        const offers = Object.entries(rawMarket?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
-          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome), marketName: market?.marketName, deeplink: quote?.deeplink as string | undefined })
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, rawMarket), marketName: rawMarket?.marketName, deeplink: quote?.deeplink as string | undefined })
           return best
         }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
