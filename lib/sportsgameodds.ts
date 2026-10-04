@@ -79,7 +79,36 @@ function marketLabel(marketID: string, picks: Quote[]) {
   return readable.charAt(0).toUpperCase() + readable.slice(1)
 }
 
+function isComplementaryPair(marketID: string, picks: Quote[]) {
+  if (picks.length !== 2) return false
+  const labels = picks.map((pick) => pick.label.trim().toLowerCase())
+  const market = `${marketID} ${picks[0].marketName ?? ''}`.toLowerCase()
+
+  if (/spread|handicap|points-game-sp/.test(market)) {
+    const handicaps = labels.map((label) => {
+      const match = label.match(/^([+-]?\d+(?:,\d+)?)$/)
+      return match ? Number(match[1].replace(',', '.')) : null
+    })
+    return handicaps.every((value) => value !== null) && Math.abs((handicaps[0] ?? 0) + (handicaps[1] ?? 0)) < 0.001
+  }
+
+  if (labels.every((label) => /^(over|under)\s/.test(label))) {
+    const lines = labels.map((label) => label.replace(/^(over|under)\s+/, ''))
+    return lines[0] === lines[1] && labels[0].split(/\s+/)[0] !== labels[1].split(/\s+/)[0]
+  }
+
+  if (labels.every((label) => ['ja', 'nej'].includes(label))) return true
+  if (labels.every((label) => ['lige', 'ulige'].includes(label))) return true
+  if (labels.includes('hjemmeholdet (1)') && labels.includes('udeholdet (2)')) return true
+  if (labels.includes('dobbeltchance: hjemmeholdet eller uafgjort (1x)') && labels.includes('udeholdet (2)')) return true
+  if (labels.includes('dobbeltchance: uafgjort eller udeholdet (x2)') && labels.includes('hjemmeholdet (1)')) return true
+  if (labels.includes('dobbeltchance: hjemmeholdet eller udeholdet (12)') && labels.includes('uafgjort (x)')) return true
+
+  return false
+}
+
 function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], index: number): Opportunity | null {
+  if (!isComplementaryPair(marketID, picks)) return null
   if (picks.length < 2) return null
   const implied = picks.reduce((sum, pick) => sum + 1 / pick.odds, 0)
   const margin = (1 - implied) * 100
