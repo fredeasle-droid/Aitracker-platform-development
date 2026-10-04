@@ -107,8 +107,8 @@ def find_arbitrage_opportunities(events):
         home_name = event['teams']['home']['names']['long']
         matchup = f"{away_name} @ {home_name}"
 
-        # Group by bet type -> period -> side -> list of bookmaker offers
-        markets = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
+        # Group by bet type -> period -> exact line -> side -> bookmaker offers
+        markets = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: defaultdict(list))))
 
         for odd_id, odd in (event.get('odds') or {}).items():
             bet_type = odd['betTypeID']
@@ -133,8 +133,9 @@ def find_arbitrage_opportunities(events):
                     continue
 
                 line = bm_data.get('spread') if bet_type == 'sp' else bm_data.get('overUnder')
+                line_key = str(line) if line is not None else 'none'
 
-                markets[bet_type][period_id][side].append({
+                markets[bet_type][period_id][line_key][side].append({
                     'bookmaker': bookmaker_id,
                     'american': price,
                     'decimal': american_to_decimal(price),
@@ -143,54 +144,55 @@ def find_arbitrage_opportunities(events):
 
         # Check each market for arbitrage
         for bet_type, periods in markets.items():
-            for period_id, sides in periods.items():
+            for period_id, lines in periods.items():
+                for line_key, sides in lines.items():
 
-                if bet_type in ('sp', 'ml'):
-                    side_a, side_b = 'home', 'away'
-                    market_label = 'spread' if bet_type == 'sp' else 'moneyline'
-                elif bet_type == 'ou':
-                    side_a, side_b = 'over', 'under'
-                    market_label = 'total'
-                else:
-                    continue
+                    if bet_type in ('sp', 'ml'):
+                        side_a, side_b = 'home', 'away'
+                        market_label = 'spread' if bet_type == 'sp' else 'moneyline'
+                    elif bet_type == 'ou':
+                        side_a, side_b = 'over', 'under'
+                        market_label = 'total'
+                    else:
+                        continue
 
-                if not (sides.get(side_a) and sides.get(side_b)):
-                    continue
+                    if not (sides.get(side_a) and sides.get(side_b)):
+                        continue
 
-                best_a = max(sides[side_a], key=lambda x: x['decimal'])
-                best_b = max(sides[side_b], key=lambda x: x['decimal'])
+                    best_a = max(sides[side_a], key=lambda x: x['decimal'])
+                    best_b = max(sides[side_b], key=lambda x: x['decimal'])
 
-                has_arb, profit_pct, stakes = calculate_arbitrage(
-                    [best_a['decimal'], best_b['decimal']]
-                )
+                    has_arb, profit_pct, stakes = calculate_arbitrage(
+                        [best_a['decimal'], best_b['decimal']]
+                    )
 
-                if has_arb and profit_pct >= MIN_PROFIT_PCT:
-                    opp = {
-                        'matchup': matchup,
-                        'market': market_label,
-                        'profit_pct': profit_pct,
-                        'legs': [
-                            {
-                                'side': side_a,
-                                'bookmaker': best_a['bookmaker'],
-                                'odds': best_a['american'],
-                                'line': best_a.get('line'),
-                                'stake_pct': stakes[0],
-                            },
-                            {
-                                'side': side_b,
-                                'bookmaker': best_b['bookmaker'],
-                                'odds': best_b['american'],
-                                'line': best_b.get('line'),
-                                'stake_pct': stakes[1],
-                            },
-                        ],
-                    }
-                    try:
-                        validate_arbitrage(opp)
-                        opportunities.append(opp)
-                    except AssertionError as e:
-                        print(f'  Validation failed for {matchup}: {e}')
+                    if has_arb and profit_pct >= MIN_PROFIT_PCT:
+                        opp = {
+                            'matchup': matchup,
+                            'market': market_label,
+                            'profit_pct': profit_pct,
+                            'legs': [
+                                {
+                                    'side': side_a,
+                                    'bookmaker': best_a['bookmaker'],
+                                    'odds': best_a['american'],
+                                    'line': best_a.get('line'),
+                                    'stake_pct': stakes[0],
+                                },
+                                {
+                                    'side': side_b,
+                                    'bookmaker': best_b['bookmaker'],
+                                    'odds': best_b['american'],
+                                    'line': best_b.get('line'),
+                                    'stake_pct': stakes[1],
+                                },
+                            ],
+                        }
+                        try:
+                            validate_arbitrage(opp)
+                            opportunities.append(opp)
+                        except AssertionError as e:
+                            print(f'  Validation failed for {matchup}: {e}')
 
     opportunities.sort(key=lambda x: x['profit_pct'], reverse=True)
     return opportunities
