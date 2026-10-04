@@ -88,10 +88,15 @@ export const getOpportunities = cache(async () => {
   }
 
   try {
-    const [rows, favIds] = await Promise.all([
-      db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
-      userId ? getFavoriteIds(userId) : Promise.resolve(new Set<number>()),
-    ])
+    const rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+    let favIds = new Set<number>()
+    if (userId) {
+      try {
+        favIds = await getFavoriteIds(userId)
+      } catch (error) {
+        console.error('[data] favorites unavailable; continuing with opportunities', error)
+      }
+    }
     if (rows.length === 0 && process.env.SPORTSGAMEODDS_API_KEY) {
       const { getLiveSurebets } = await import('@/lib/sportsgameodds')
       return getLiveSurebets()
