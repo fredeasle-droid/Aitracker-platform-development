@@ -70,9 +70,9 @@ function nextCursor(payload: any) {
 export async function getLiveSurebets(): Promise<Opportunity[]> {
   const apiKey = process.env.SPORTSGAMEODDS_API_KEY
   if (!apiKey) return []
-  const events: ProviderEvent[] = []
   const sports = ['SOCCER', 'FOOTBALL', 'BASKETBALL', 'TENNIS', 'HOCKEY', 'BASEBALL', 'GOLF']
-  for (const sportID of sports) {
+  const eventPages = await Promise.all(sports.map(async (sportID) => {
+    const sportEvents: ProviderEvent[] = []
     let cursor: string | undefined
     for (let page = 0; page < 100; page += 1) {
       const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100', sportID })
@@ -81,11 +81,13 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       if (!response.ok) break
       const payload = await response.json()
       const pageEvents = extractEvents(payload)
-      events.push(...pageEvents)
+      sportEvents.push(...pageEvents)
       cursor = nextCursor(payload)
       if (!cursor || pageEvents.length === 0) break
     }
-  }
+    return sportEvents
+  }))
+  const events = Array.from(new Map(eventPages.flat().map((event) => [event.eventID ?? JSON.stringify(event), event])).values())
 
   const opportunities: Opportunity[] = []
   events.forEach((event, eventIndex) => {
