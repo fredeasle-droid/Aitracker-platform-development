@@ -94,7 +94,12 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
     Object.entries(event.odds ?? {}).forEach(([oddID, market]) => {
       const parts = oddID.split('-')
       const outcome = parts.pop() ?? oddID
-      const group = parts.join('-')
+      const betType = parts.pop() ?? ''
+      const period = parts.pop() ?? ''
+      const entity = parts.pop() ?? ''
+      const stat = parts.join('-')
+      const normalizedEntity = ['home', 'away', 'all'].includes(entity) ? '' : entity
+      const group = [stat, normalizedEntity, period, betType].filter(Boolean).join('-')
       ;(groups[group] ||= []).push({ outcome, market })
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
