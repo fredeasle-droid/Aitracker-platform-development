@@ -6,7 +6,9 @@ const API_URL = 'https://api.sportsgameodds.com/v2/events'
 
 type ProviderEvent = Record<string, any>
 
-type Quote = { bookmaker: string; odds: number; label: string; deeplink?: string }
+type Quote = { bookmaker: string; odds: number; label: string; deeplink?: string; marketName?: string }
+
+type RawMarket = { marketName?: string; sideID?: string; line?: string | number; [key: string]: any }
 
 function decimalOdds(value: unknown) {
   const american = Number(value)
@@ -54,18 +56,18 @@ function outcomeLabel(outcome: string) {
 }
 
 function marketLabel(marketID: string, picks: Quote[]) {
-  const source = marketID.toLowerCase()
+  const source = (picks[0]?.marketName ?? marketID).toLowerCase()
   const hasTotals = /(^|[-_])(ou|total|totals|over|under)([-_]|$)/.test(source) || picks.some((pick) => /^(over|under)\\s/i.test(pick.label))
   if (hasTotals) {
     const line = picks.map((pick) => pick.label.match(/(?:over|under)\\s+(.+)/i)?.[1]).find(Boolean)
     return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
   }
-  if (source.includes('btts') || source.includes('both-teams-to-score')) return 'Begge hold scorer'
-  if (picks.some((pick) => pick.label.startsWith('Dobbeltchance:'))) return 'Dobbeltchance på kampresultat'
+  if (source.includes('both teams') || source.includes('btts')) return 'Begge hold scorer'
+  if (source.includes('double chance')) return 'Dobbeltchance på kampresultat'
   if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
   if (source.includes('spread') || source.includes('handicap') || source.endsWith('-sp')) return 'Handicap på kamp'
-  if (source.includes('odd-even') || source.includes('oddeven')) return 'Lige/Ulige antal'
-  const readable = marketID.replace(/[-_]+/g, ' ').replace(/\\bsp\\b/gi, 'handicap')
+  if (source.includes('odd') && source.includes('even')) return 'Lige/Ulige antal'
+  const readable = (picks[0]?.marketName ?? marketID).replace(/[-_]+/g, ' ')
   return readable.charAt(0).toUpperCase() + readable.slice(1)
 }
 
@@ -137,7 +139,7 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       const picks = entries.map(({ outcome, market }) => {
         const offers = Object.entries((market as any)?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
-          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome), deeplink: quote?.deeplink as string | undefined })
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome), marketName: market?.marketName, deeplink: quote?.deeplink as string | undefined })
           return best
         }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
