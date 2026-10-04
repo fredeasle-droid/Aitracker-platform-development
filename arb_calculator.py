@@ -90,7 +90,7 @@ def validate_arbitrage(opportunity):
     assert abs(total - 100) < 0.01, f"Stakes sum to {total:.2f}%, expected 100%"
 
     for leg in opportunity['legs']:
-        payout = leg['stake_pct'] * american_to_decimal(leg['odds'])
+        payout = leg['stake_pct'] * leg['decimal_odds']
         assert payout > 100, f"Negative profit on {leg['side']}: payout {payout:.2f}"
 
 # ─── Scanner ──────────────────────────────────────────────────────────────────
@@ -175,14 +175,16 @@ def find_arbitrage_opportunities(events):
                                 {
                                     'side': side_a,
                                     'bookmaker': best_a['bookmaker'],
-                                    'odds': best_a['american'],
+                                    'odds': round(best_a['decimal'], 3),
+                                    'decimal_odds': best_a['decimal'],
                                     'line': best_a.get('line'),
                                     'stake_pct': stakes[0],
                                 },
                                 {
                                     'side': side_b,
                                     'bookmaker': best_b['bookmaker'],
-                                    'odds': best_b['american'],
+                                    'odds': round(best_b['decimal'], 3),
+                                    'decimal_odds': best_b['decimal'],
                                     'line': best_b.get('line'),
                                     'stake_pct': stakes[1],
                                 },
@@ -297,9 +299,9 @@ def display_opportunities(opportunities):
 
         for leg in opp['legs']:
             stake = TOTAL_STAKE * (leg['stake_pct'] / 100)
-            payout = stake * american_to_decimal(leg['odds'])
+            payout = stake * leg['decimal_odds']
             line_str = f" {leg['line']}" if leg.get('line') else ''
-            print(f"  {leg['side'].upper()}{line_str} @ {leg['odds']:+d} ({leg['bookmaker']})")
+            print(f"  {leg['side'].upper()}{line_str} @ {leg['odds']:.2f} ({leg['bookmaker']})")
             print(f"  Stake: ${stake:.2f}  →  Payout: ${payout:.2f}")
             print()
 
