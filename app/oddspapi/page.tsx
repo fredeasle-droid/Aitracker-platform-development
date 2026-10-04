@@ -26,7 +26,12 @@ function findSurebets(events: Event[]): Surebet[] {
 
     return Object.entries(groups).flatMap(([market, outcomes]) => {
       const betType = outcomes[0]?.betType
-      const requiredOutcomes = betType === 'ml3way' ? ['home', 'draw', 'away'] : betType === 'ou' ? ['over', 'under'] : betType === 'ml2way' ? ['home', 'away'] : null
+      const outcomePairs: Record<string, [string, string]> = {
+        ou: ['over', 'under'],
+        yn: ['yes', 'no'],
+        eo: ['even', 'odd'],
+      }
+      const requiredOutcomes = outcomePairs[betType]
       if (!requiredOutcomes || !requiredOutcomes.every((outcome) => outcomes.some((item) => item.outcome === outcome))) return []
       const picks = requiredOutcomes.map((requiredOutcome) => { const match = outcomes.find(({ outcome }) => outcome === requiredOutcome); const outcome = match?.outcome ?? requiredOutcome; const outcomeMarket = match?.market
         const best = Object.entries(outcomeMarket?.byBookmaker ?? {}).map(([bookmaker, quote]: [string, any]) => {
@@ -70,9 +75,9 @@ export default function OddsApiTestPage() {
         <h1 className="mt-2 text-3xl font-bold">Raw API-data</h1>
         <p className="mt-2 text-slate-600">SOCCER · EPL · oddsAvailable=true · includeAltLines=false · limit=100</p>
         <div className="mt-6 rounded-lg border border-slate-200 bg-slate-50 p-4 text-sm">
-          <strong>Status:</strong> {loading ? 'Henter…' : error ? 'Fejl' : `${events.length} events hentet`} · <strong>Top 30 surebets:</strong> {surebets.length}
+          <strong>Status:</strong> {loading ? 'Henter…' : error ? 'Fejl' : `${events.length} events hentet`} · <strong>Ægte 2-udfalds-surebets:</strong> {surebets.length}
         </div>
-        {!loading && !error && surebets.length > 0 && <section className="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 p-4"><h2 className="text-lg font-bold">Surebets efter profit</h2><div className="mt-3 space-y-2">{surebets.map((surebet, index) => <div key={`${surebet.event}-${surebet.market}`} className="rounded-md bg-white p-3"><div className="flex justify-between gap-3"><strong>#{index + 1} · {surebet.event}</strong><strong className="text-emerald-700">+{surebet.profit.toFixed(2)}%</strong></div><p className="mt-1 text-xs text-slate-500">{surebet.league} · {surebet.market}</p><p className="mt-2 text-sm">{surebet.picks.map((pick) => `${pick.outcome}: ${pick.bookmaker} ${pick.odds}`).join(' · ')}</p></div>)}</div></section>}
+        {!loading && !error && surebets.length > 0 && <section className="mt-6 rounded-lg border border-emerald-200 bg-emerald-50 p-4"><h2 className="text-lg font-bold">Ægte 2-udfalds-surebets efter profit</h2><div className="mt-3 space-y-2">{surebets.map((surebet, index) => <div key={`${surebet.event}-${surebet.market}`} className="rounded-md bg-white p-3"><div className="flex justify-between gap-3"><strong>#{index + 1} · {surebet.event}</strong><strong className="text-emerald-700">+{surebet.profit.toFixed(2)}%</strong></div><p className="mt-1 text-xs text-slate-500">{surebet.league} · {surebet.market}</p><p className="mt-2 text-sm">{surebet.picks.map((pick) => `${pick.outcome}: ${pick.bookmaker} ${pick.odds}`).join(' · ')}</p></div>)}</div></section>}
         {error && <p className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4 text-red-700">{error}</p>}
         <div className="mt-6 space-y-6">
           {events.map((event) => {
