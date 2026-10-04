@@ -169,7 +169,11 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
   const leagueIDs = ['EPL', 'LA_LIGA', 'BUNDESLIGA', 'IT_SERIE_A', 'FR_LIGUE_1', 'UEFA_CHAMPIONS_LEAGUE', 'NBA', 'EHF_EURO']
   const eventPages = await Promise.all(leagueIDs.map(async (leagueID) => {
     const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100', leagueID })
-    const response = await fetch(`${API_URL}?${query}`, { headers: { 'x-api-key': apiKey, accept: 'application/json' }, cache: 'no-store' })
+    const response = await fetch(`${API_URL}?${query}`, {
+      headers: { 'x-api-key': apiKey, accept: 'application/json' },
+      cache: 'no-store',
+      signal: AbortSignal.timeout(8000),
+    })
     if (!response.ok) return []
     return extractEvents(await response.json())
   }))
