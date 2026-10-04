@@ -14,7 +14,7 @@ function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; labe
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1 self-stretch py-1">
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-1 break-words text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
+        <p className="mt-1 break-words text-[12px] leading-tight text-[#a9b6d3]" title={label}>{label}</p>
       </div>
       {loggedIn ? (
         <div className="shrink-0 text-right">
@@ -64,7 +64,7 @@ export function OpportunityCard({
           </div>
           <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
             <SmallBarsIcon className="size-4 text-[#8fa3cc]" />
-            <span className="break-words">Marked: {o.market}</span>
+            <span className="break-words">{o.market}</span>
           </p>
         </div>
 

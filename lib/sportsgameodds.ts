@@ -39,7 +39,11 @@ function danishNumber(value: string) {
 function outcomeLabel(outcome: string, market?: RawMarket) {
   const source = String(market?.sideID ?? market?.outcome ?? outcome)
   const rawLine = market?.line ?? market?.points
-  const line = rawLine === undefined || rawLine === null || rawLine === '' ? '' : ` ${danishNumber(String(rawLine))}`
+  const lineText = rawLine === undefined || rawLine === null || rawLine === '' ? '' : danishNumber(String(rawLine))
+  const marketText = String(market?.marketName ?? '').toLowerCase()
+  const handicapLine = lineText || source.match(/[+-]?\d+(?:\.\d+)?/)?.[0] || ''
+  if (/spread|handicap/.test(marketText) && handicapLine) return handicapLine.startsWith('-') || handicapLine.startsWith('+') ? handicapLine : `${source.toLowerCase().includes('away') || source.toLowerCase() === '2' ? '+' : '-'}${handicapLine}`
+  const line = lineText ? ` ${lineText}` : ''
   const value = `${source.replace(/[_-]+/g, ' ').trim()}${line}`
   const normalized = value.toLowerCase()
   if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
