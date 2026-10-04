@@ -194,25 +194,25 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       ;(groups[group] ||= []).push({ outcome, market: rawMarket })
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
-      const quotes = entries.map(({ outcome, market }) => {
-        const offers = Object.entries(market.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
-          const odds = decimalOdds(quote?.odds)
-          const spread = quote?.spread ?? quote?.line ?? quote?.points ?? quote?.handicap ?? market.spread ?? market.line ?? market.points ?? market.bookSpread ?? market.fairSpread
-          const numericLine = Number(String(spread ?? '').replace(',', '.').replace(/^([+-]?\d+(?:\.\d+)?).*$/, '$1'))
-          const lineValue = Number.isFinite(numericLine) ? numericLine : undefined
-          const labelMarket = spread === undefined ? market : { ...market, line: spread, spread }
-          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: market.marketName, spread, lineValue, outcomeKey: outcome, deeplink: quote?.deeplink as string | undefined })
-          return best
-        }, [])
-        return offers.sort((a, b) => b.odds - a.odds)[0]
-      }).filter(Boolean) as Quote[]
+      // Keep every bookmaker quote. A single oddID can contain several lines
+      // (for example -0.5 and +0.5), and selecting one quote before pairing
+      // can discard the only mathematically compatible surebet.
+      const quotes = entries.flatMap(({ outcome, market }) => Object.entries(market.byBookmaker ?? {}).flatMap(([bookmaker, quote]: [string, any]) => {
+        const odds = decimalOdds(quote?.odds)
+        const spread = quote?.spread ?? quote?.line ?? quote?.points ?? quote?.handicap ?? market.spread ?? market.line ?? market.points ?? market.bookSpread ?? market.fairSpread
+        const numericLine = Number(String(spread ?? '').replace(',', '.').match(/^[+-]?\d+(?:\.\d+)?/)?.[0])
+        const lineValue = Number.isFinite(numericLine) ? numericLine : undefined
+        const labelMarket = spread === undefined ? market : { ...market, line: spread, spread }
+        if (odds === null) return []
+        return [{ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: market.marketName, spread, lineValue, outcomeKey: outcome, deeplink: quote?.deeplink as string | undefined }]
+      }))
 
-      // Test every pair instead of assuming the API returned exactly two
-      // records. This preserves valid Over/Under, handicap and double-chance
-      // pairs while rejecting unmatched 1X2/alternate-line combinations.
+      // Test every cross-bookmaker pair. Compatibility is checked from the
+      // original side and line values, never from the displayed text alone.
       let bestOpportunity: Opportunity | null = null
       for (let i = 0; i < quotes.length; i += 1) {
         for (let j = i + 1; j < quotes.length; j += 1) {
+          if (quotes[i].bookmaker === quotes[j].bookmaker && quotes[i].outcomeKey === quotes[j].outcomeKey) continue
           const opportunity = toOpportunity(event, marketID, [quotes[i], quotes[j]], eventIndex)
           if (opportunity && (!bestOpportunity || opportunity.margin > bestOpportunity.margin)) bestOpportunity = opportunity
         }
