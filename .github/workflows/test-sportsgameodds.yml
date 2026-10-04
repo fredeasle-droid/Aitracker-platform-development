@@ -1,6 +1,9 @@
 name: Test SportsGameOdds calculator
 
 on:
+  push:
+    branches:
+      - v0/bettracker-project-completion
   workflow_dispatch:
 
 jobs:
