@@ -92,6 +92,10 @@ export const getOpportunities = cache(async () => {
       db.select().from(opportunities).orderBy(desc(opportunities.createdAt)),
       userId ? getFavoriteIds(userId) : Promise.resolve(new Set<number>()),
     ])
+    if (rows.length === 0 && process.env.SPORTSGAMEODDS_API_KEY) {
+      const { getLiveSurebets } = await import('@/lib/sportsgameodds')
+      return getLiveSurebets()
+    }
     const now = new Date()
     return rows.map((r) => toOpportunity(r, favIds, now))
   } catch (error) {
