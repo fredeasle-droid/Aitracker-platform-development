@@ -137,8 +137,14 @@ def find_arbitrage_opportunities(events):
                 except (ValueError, TypeError):
                     continue
 
-                line = bm_data.get('spread') if bet_type == 'sp' else bm_data.get('overUnder')
-                line_key = str(line) if line is not None else 'none'
+                raw_line = bm_data.get('spread') if bet_type == 'sp' else bm_data.get('overUnder')
+                try:
+                    line = float(raw_line) if raw_line is not None else None
+                except (TypeError, ValueError):
+                    continue
+                if bet_type in ('sp', 'ou') and line is None:
+                    continue
+                line_key = f'{line:.4f}' if line is not None else 'none'
 
                 markets[f'{market_identity}|{bet_type}'][period_id][line_key][side].append({
                     'bookmaker': bookmaker_id,
@@ -163,6 +169,8 @@ def find_arbitrage_opportunities(events):
                         continue
 
                     if not (sides.get(side_a) and sides.get(side_b)):
+                        continue
+                    if bet_type in ('sp', 'ou') and any(offer.get('line') != float(line_key) for side in (side_a, side_b) for offer in (sides.get(side) or [])):
                         continue
 
                     best_a = max(sides[side_a], key=lambda x: x['decimal'])
