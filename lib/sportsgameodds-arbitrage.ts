@@ -14,6 +14,10 @@ export type ArbitrageOpportunity = {
   legs: ArbitrageLeg[]
 }
 
+export type MarketSide = { odds: number; american: number; spread?: string | number; available: boolean }
+export type GroupedMarket = { key: string; statID: string; betTypeID: string; sides: Record<string, MarketSide> }
+export type GroupedBookmaker = { bookmakerID: string; markets: GroupedMarket[] }
+
 function decimal(american: unknown) {
   const value = Number(american)
   if (!Number.isFinite(value) || value === 0) return null
@@ -92,7 +96,30 @@ export function findArbitrage(events: SportsGameOddsEvent[]) {
   return opportunities.sort((a, b) => b.profitPercent - a.profitPercent)
 }
 
-export async function fetchArbitrageOpportunities(leagueID = 'EPL') {
+export function groupAllMarketsByBookmaker(event: SportsGameOddsEvent): GroupedBookmaker[] {
+  const grouped: Record<string, Record<string, GroupedMarket>> = {}
+  for (const odd of Object.values((event.odds ?? {}) as Record<string, any>)) {
+    if (String(odd?.periodID ?? 'game') !== 'game' || !odd?.statID || !odd?.betTypeID) continue
+    const marketKey = `${odd.statID}-${odd.betTypeID}`
+    for (const [bookmakerID, bookmakerOdds] of Object.entries(odd.byBookmaker ?? {})) {
+      const quote = bookmakerOdds as any
+      if (quote?.available === false) continue
+      const american = Number(quote?.odds)
+      const odds = decimal(american)
+      if (!odds) continue
+      grouped[bookmakerID] ??= {}
+      grouped[bookmakerID][marketKey] ??= { key: marketKey, statID: String(odd.statID), betTypeID: String(odd.betTypeID), sides: {} }
+      grouped[bookmakerID][marketKey].sides[String(odd.sideID)] = { odds, american, spread: quote?.spread, available: quote?.available !== false }
+    }
+  }
+  return Object.entries(grouped).map(([bookmakerID, markets]) => ({ bookmakerID, markets: Object.values(markets) }))
+}
+
+export async function fetchArbitrageDashboard(leagueID = 'EPL') {
   const { data } = await fetchSportsGameOddsEvents({ leagueID, limit: 100 })
-  return findArbitrage(data)
+  return { opportunities: findArbitrage(data), events: data.map((event) => ({ event, markets: groupAllMarketsByBookmaker(event) })) }
+}
+
+export async function fetchArbitrageOpportunities(leagueID = 'EPL') {
+  return (await fetchArbitrageDashboard(leagueID)).opportunities
 }
