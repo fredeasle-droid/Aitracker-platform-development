@@ -1,38 +1,51 @@
-import type { TestGameEvent, TestSurebetOpportunity } from '@/types/surebet-test'
-import { scanTestFeedForSurebets } from '@/lib/surebetTestEngine'
+import { GameEvent, SurebetOpportunity } from "@/types/surebet";
+import { scanForSurebets } from "./surebetEngine";
 
-export async function getFeedTestOpportunities(bankroll = 1000): Promise<TestSurebetOpportunity[]> {
-  const apiKey = process.env.SPORTS_GAME_ODDS_API_KEY || process.env.SPORTSGAMEODDS_API_KEY
+export async function getFeedTestOpportunities(bankroll: number = 1000): Promise<SurebetOpportunity[]> {
+  const apiKey = process.env.SPORTS_GAME_ODDS_API_KEY;
 
   if (!apiKey) {
-    console.warn('[Feed-test] Mangler SPORTS_GAME_ODDS_API_KEY/SPORTSGAMEODDS_API_KEY')
-    return []
+    console.warn("Mangler SPORTS_GAME_ODDS_API_KEY i miljøvariabler (.env.local).");
+    return [];
   }
 
   try {
-    const response = await fetch('https://api.sportsgameodds.com/v2/events?include=odds,markets', {
-      headers: { 'x-api-key': apiKey, Accept: 'application/json' },
-      cache: 'no-store',
-    })
+    const response = await fetch("https://api.sportsgameodds.com/v2/events?include=odds,markets", {
+      headers: {
+        "x-api-key": apiKey,
+        "Accept": "application/json",
+      },
+      next: { revalidate: 10 },
+    });
 
-    if (!response.ok) throw new Error('SportsGameOdds API fejl: ' + response.status)
+    if (!response.ok) {
+      throw new Error(`SportsGameOdds API fejl: ${response.statusText}`);
+    }
 
-    const data = await response.json()
-    const rawEvents = Array.isArray(data) ? data : Array.isArray(data.events) ? data.events : []
+    const json = await response.json();
+    
+    console.log("SportsGameOdds API Raw Response:", JSON.stringify(json).slice(0, 300));
 
-    const events: TestGameEvent[] = rawEvents.map((ev: any, index: number) => ({
-      id: String(ev.id ?? index),
-      homeTeam: ev.homeTeam ?? ev.home_team ?? 'Hjemmehold',
-      awayTeam: ev.awayTeam ?? ev.away_team ?? 'Udehold',
-      commenceTime: ev.commenceTime ?? ev.commence_time ?? new Date().toISOString(),
-      league: ev.leagueName ?? ev.league ?? 'Diverse',
-      sport: ev.sportName ?? ev.sport ?? 'Sport',
-      markets: Array.isArray(ev.markets) ? ev.markets : [],
-    }))
+    const rawEvents = json.events || json.data || json || [];
 
-    return scanTestFeedForSurebets(events, bankroll)
+    const events: GameEvent[] = Array.isArray(rawEvents) 
+      ? rawEvents.map((ev: any) => ({
+          id: ev.id || ev.eventID || Math.random().toString(),
+          homeTeam: ev.homeTeam || ev.home_team || ev.homeParticipant || "Hjemmehold",
+          awayTeam: ev.awayTeam || ev.away_team || ev.awayParticipant || "Udehold",
+          commenceTime: ev.commenceTime || ev.commence_time || ev.startDate || new Date().toISOString(),
+          league: ev.leagueName || ev.league?.name || ev.league || "Diverse",
+          sport: ev.sportName || ev.sport?.name || ev.sport || "Sport",
+          markets: ev.markets || ev.oddsMarkets || [],
+        }))
+      : [];
+
+    const surebets = scanForSurebets(events, bankroll);
+    console.log(`Fundet ${surebets.length} surebets ud af ${events.length} begivenheder.`);
+    
+    return surebets;
   } catch (error) {
-    console.error('[Feed-test] Feed-fejl', error)
-    return []
+    console.error("Fejl ved hentning af feed-test odds:", error);
+    return [];
   }
 }
