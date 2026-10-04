@@ -159,8 +159,9 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
 
   const opportunities: Opportunity[] = []
   events.forEach((event, eventIndex) => {
-    const groups: Record<string, Array<{ outcome: string; market: any }>> = {}
+    const groups: Record<string, Array<{ outcome: string; market: RawMarket }>> = {}
     Object.entries(event.odds ?? {}).forEach(([oddID, market]) => {
+      const rawMarket = market as RawMarket
       const parts = oddID.split('-')
       const outcome = parts.pop() ?? oddID
       const betType = parts.pop() ?? ''
@@ -168,24 +169,36 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       const entity = parts.pop() ?? ''
       const stat = parts.join('-')
       const normalizedEntity = ['home', 'away', 'all'].includes(entity) ? '' : entity
-      const group = [stat, normalizedEntity, period, betType].filter(Boolean).join('-')
-      ;(groups[group] ||= []).push({ outcome, market })
+      // Keep every line/outcome in the same market family. The API may return
+      // three-way markets or several alternate lines, so filtering on exactly
+      // two raw entries here incorrectly discarded valid two-way surebets.
+      const marketName = String(rawMarket.marketName ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-')
+      const group = [stat, normalizedEntity, period, betType, marketName].filter(Boolean).join('-')
+      ;(groups[group] ||= []).push({ outcome, market: rawMarket })
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
-      if (entries.length !== 2) return
-      const picks = entries.map(({ outcome, market }) => {
-        const rawMarket = market as RawMarket
-        const offers = Object.entries(rawMarket?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
+      const quotes = entries.map(({ outcome, market }) => {
+        const offers = Object.entries(market.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
-          const spread = quote?.spread ?? rawMarket?.bookSpread ?? rawMarket?.fairSpread
-          const labelMarket = spread === undefined ? rawMarket : { ...rawMarket, line: spread }
-          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: rawMarket?.marketName, spread, deeplink: quote?.deeplink as string | undefined })
+          const spread = quote?.spread ?? market.spread ?? market.bookSpread ?? market.fairSpread
+          const labelMarket = spread === undefined ? market : { ...market, line: spread }
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: market.marketName, spread, deeplink: quote?.deeplink as string | undefined })
           return best
         }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
       }).filter(Boolean) as Quote[]
-      const opportunity = toOpportunity(event, marketID, picks, eventIndex)
-      if (opportunity) opportunities.push(opportunity)
+
+      // Test every pair instead of assuming the API returned exactly two
+      // records. This preserves valid Over/Under, handicap and double-chance
+      // pairs while rejecting unmatched 1X2/alternate-line combinations.
+      let bestOpportunity: Opportunity | null = null
+      for (let i = 0; i < quotes.length; i += 1) {
+        for (let j = i + 1; j < quotes.length; j += 1) {
+          const opportunity = toOpportunity(event, marketID, [quotes[i], quotes[j]], eventIndex)
+          if (opportunity && (!bestOpportunity || opportunity.margin > bestOpportunity.margin)) bestOpportunity = opportunity
+        }
+      }
+      if (bestOpportunity) opportunities.push(bestOpportunity)
     })
   })
   return opportunities.sort((a, b) => b.margin - a.margin)
