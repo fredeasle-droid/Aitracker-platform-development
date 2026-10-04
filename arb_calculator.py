@@ -16,7 +16,7 @@ load_dotenv()
 API_KEY = os.environ.get('SPORTSGAMEODDS_KEY')
 API_BASE = 'https://api.sportsgameodds.com/v2'
 
-LEAGUES = ['NBA', 'NFL', 'NHL']   # Leagues to scan — add 'MLB', 'EPL' etc.
+LEAGUES = ['EPL']              # Only scan the English Premier League
 TOTAL_STAKE = 100                  # Total stake in dollars for profit calculations
 MIN_PROFIT_PCT = 0.0               # Minimum profit % to display (0 = show all arbs)
 MONITOR_MODE = False               # Set True to run continuously
@@ -195,7 +195,7 @@ def find_arbitrage_opportunities(events):
     opportunities.sort(key=lambda x: x['profit_pct'], reverse=True)
     return opportunities
 
-# ─── Middle finder ────────────────────────────────────────────────────────────
+# ─── Middle finder ────��───────────────────────────────────────────────────────
 
 def find_middles(events):
     """
