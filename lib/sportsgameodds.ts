@@ -104,7 +104,10 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
       const picks = entries.map(({ outcome, market }) => {
-        const offers = Object.entries((market as any)?.byBookmaker ?? {}).map(([bookmaker, quote]: [string, any]) => ({ bookmaker, odds: decimalOdds(quote?.odds), label: outcome, deeplink: quote?.deeplink })).filter((quote): quote is Quote => quote.odds !== null)
+        const offers: Quote[] = Object.entries((market as any)?.byBookmaker ?? {}).map(([bookmaker, quote]: [string, any]) => {
+          const odds = decimalOdds(quote?.odds)
+          return odds === null ? null : { bookmaker, odds, label: outcome, deeplink: quote?.deeplink as string | undefined }
+        }).filter((quote): quote is Quote => quote !== null)
         return offers.sort((a, b) => b.odds - a.odds)[0]
       }).filter(Boolean) as Quote[]
       const opportunity = toOpportunity(event, marketID, picks, eventIndex)
