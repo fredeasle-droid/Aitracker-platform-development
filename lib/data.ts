@@ -47,7 +47,7 @@ function displayOutcome(value: string) {
   if (normalized === 'home' || normalized === 'h') return 'Hjemmeholdet'
   if (normalized === 'away' || normalized === 'a') return 'Udeholdet'
   if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort'
-  if (normalized === 'sp' || normalized === 'spread') return 'Pointspread'
+  if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
   if (normalized.startsWith('over ')) return `Over ${normalized.slice(5).replace('.', ',')}`
   if (normalized.startsWith('under ')) return `Under ${normalized.slice(6).replace('.', ',')}`
   return value.replace(/[_-]+/g, ' ')
@@ -55,7 +55,7 @@ function displayOutcome(value: string) {
 
 function displayMarket(value: string) {
   const normalized = value.toLowerCase()
-  if (normalized.includes('points-game-sp') || normalized.includes('pointspread') || normalized.endsWith('-sp')) return 'Pointspread (kamp)'
+  if (normalized.includes('points-game-sp') || normalized.includes('pointspread') || normalized.includes('spread') || normalized.includes('handicap') || normalized.endsWith('-sp')) return 'Handicap på kamp'
   if (normalized.includes('over') || normalized.includes('under') || normalized.includes('total') || normalized.includes('ou')) return 'Over/Under mål'
   if (normalized.includes('moneyline') || normalized.includes('winner') || normalized.includes('result')) return 'Kampresultat'
   return value.replace(/[_-]+/g, ' ')

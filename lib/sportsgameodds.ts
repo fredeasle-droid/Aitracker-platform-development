@@ -39,12 +39,14 @@ function outcomeLabel(outcome: string) {
   const normalized = value.toLowerCase()
   if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
   if (normalized.startsWith('under ')) return `Under ${danishNumber(value.slice(6).trim())}`
-  if (normalized === 'home' || normalized === 'h') return 'Hjemmeholdet'
-  if (normalized === 'away' || normalized === 'a') return 'Udeholdet'
+  if (normalized === 'home' || normalized === 'h' || normalized === 'home team') return 'Hjemmeholdet'
+  if (normalized === 'away' || normalized === 'a' || normalized === 'away team') return 'Udeholdet'
   if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort'
   if (normalized === 'yes' || normalized === 'y') return 'Ja'
   if (normalized === 'no' || normalized === 'n') return 'Nej'
-  if (normalized === 'sp' || normalized === 'spread') return 'Pointspread'
+  if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
+  if (normalized === 'odd') return 'Ulige'
+  if (normalized === 'even') return 'Lige'
   return danishNumber(value)
 }
 
@@ -55,9 +57,12 @@ function marketLabel(marketID: string, picks: Quote[]) {
     const line = picks.map((pick) => pick.label.match(/(?:over|under)\\s+(.+)/i)?.[1]).find(Boolean)
     return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
   }
+  if (source.includes('btts') || source.includes('both-teams-to-score')) return 'Begge hold scorer'
   if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
-  if (source.includes('points-game-sp') || source.includes('pointspread') || source.endsWith('-sp')) return 'Pointspread (kamp)'
-  return marketID.replace(/[-_]+/g, ' ')
+  if (source.includes('spread') || source.includes('handicap') || source.endsWith('-sp')) return 'Handicap på kamp'
+  if (source.includes('odd-even') || source.includes('oddeven')) return 'Lige/Ulige antal'
+  const readable = marketID.replace(/[-_]+/g, ' ').replace(/\\bsp\\b/gi, 'handicap')
+  return readable.charAt(0).toUpperCase() + readable.slice(1)
 }
 
 function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], index: number): Opportunity | null {
@@ -124,6 +129,7 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       ;(groups[group] ||= []).push({ outcome, market })
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
+      if (entries.length !== 2) return
       const picks = entries.map(({ outcome, market }) => {
         const offers = Object.entries((market as any)?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
