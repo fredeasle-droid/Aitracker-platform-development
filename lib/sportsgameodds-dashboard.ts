@@ -36,6 +36,7 @@ export async function fetchSportsGameOddsEvents(params: { leagueID?: string; cur
   if (!apiKey) throw new Error('SPORTSGAMEODDS_API_KEY is not configured')
 
   const search = new URLSearchParams({
+    apiKey,
     oddsAvailable: 'true',
     limit: String(params.limit ?? 100),
   })
