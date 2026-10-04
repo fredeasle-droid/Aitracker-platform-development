@@ -10,7 +10,7 @@ export default function OddsApiTestPage() {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('/api/sportsgameodds?sportID=SOCCER&leagueID=EPL&limit=1')
+    fetch('/api/sportsgameodds?sportID=SOCCER&leagueID=EPL&limit=100')
       .then(async (response) => {
         const payload = await response.json()
         if (!response.ok || !payload.ok) throw new Error(payload.data?.error?.message || `API-fejl (${response.status})`)
@@ -26,9 +26,9 @@ export default function OddsApiTestPage() {
       <div className="mx-auto max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-slate-500">SportsGameOdds</p>
         <h1 className="mt-2 text-3xl font-bold">Ren API-test</h1>
-        <p className="mt-2 text-slate-600">Automatisk test af ét kommende EPL-event med odds. Ingen SikkerBets-design eller surebet-filtrering.</p>
+        <p className="mt-2 text-slate-600">Automatisk test af kommende EPL-events med odds. Ingen SikkerBets-design eller ekstra brugerfiltre.</p>
         <div className="mt-6 rounded-lg border border-slate-200 p-4 text-sm">
-          <p><strong>Request:</strong> SOCCER · EPL · limit 1 · oddsAvailable true</p>
+          <p><strong>Request:</strong> SOCCER · EPL · limit 100 · oddsAvailable true</p>
           <p className="mt-1"><strong>Status:</strong> {loading ? 'Henter…' : error ? 'Fejl' : `${events.length} event hentet`}</p>
         </div>
         {error && <p className="mt-4 rounded-lg bg-red-50 p-4 text-red-700">{error}</p>}
