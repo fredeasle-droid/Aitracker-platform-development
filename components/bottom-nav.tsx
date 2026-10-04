@@ -2,13 +2,15 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartPie } from 'lucide-react'
+import { ChartPie, Database, Gift } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { cn } from '@/lib/utils'
 
 const ITEMS = [
   { href: '/', label: 'SikkerBets', icon: BarsIcon },
   { href: '/stats', label: 'Stats', icon: ChartPie },
+  { href: '/bonus', label: 'Bonus', icon: Gift },
+  { href: '/oddspapi', label: 'Feed-test', icon: Database },
 ] as const
 
 export function BottomNav() {
@@ -17,9 +19,9 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Hovedmenu"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-[#060d1c]/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-[#193451] bg-[#050d1b]/95 px-2 pt-2 shadow-[0_-10px_30px_-20px_#159cff] backdrop-blur-xl pb-[env(safe-area-inset-bottom)]"
     >
-      <ul className="mx-auto flex max-w-2xl items-stretch">
+      <ul className="mx-auto flex max-w-2xl items-stretch gap-1.5 px-1">
         {ITEMS.map(({ href, label, icon: Icon }) => {
           const active = href === '/' ? pathname === '/' : pathname.startsWith(href)
           return (
@@ -28,13 +30,13 @@ export function BottomNav() {
                 href={href}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'flex min-h-16 flex-col items-center justify-center gap-1 py-2 text-sm font-semibold transition-colors',
-                  active ? 'text-primary' : 'text-muted-foreground hover:text-foreground',
+                  'relative flex min-h-14 flex-col items-center justify-center gap-1 px-2 py-1.5 text-[12px] font-bold tracking-[0.01em] transition-all',
+                  active ? 'text-[#65c1ff] drop-shadow-[0_0_8px_rgba(21,156,255,0.75)]' : 'text-[#71839d] hover:text-[#d7e8fa]',
                 )}
               >
                 <Icon
-                  className={cn('size-7', active ? 'text-primary' : 'text-[#6b7894]')}
-                  strokeWidth={Icon === BarsIcon ? undefined : 2}
+                  className={cn('size-5.5 transition-transform', active ? 'scale-105 text-[#65c1ff] drop-shadow-[0_0_7px_rgba(21,156,255,0.85)]' : 'text-[#6b7894]')}
+                  strokeWidth={Icon === BarsIcon ? undefined : 2.25}
                   fill={Icon === ChartPie ? 'currentColor' : Icon === BarsIcon ? 'currentColor' : 'none'}
                 />
                 {label}

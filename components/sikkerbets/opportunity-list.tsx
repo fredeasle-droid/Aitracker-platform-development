@@ -8,6 +8,7 @@ import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
+import { authClient } from '@/lib/auth-client'
 
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
@@ -57,6 +58,8 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [minMargin, setMinMargin] = useState(3)
   const [sort, setSort] = useState<SortId>('newest')
   const [, startTransition] = useTransition()
+  const { data: session } = authClient.useSession()
+  const loggedIn = Boolean(session?.user)
 
   const [prevInitial, setPrevInitial] = useState(initial)
   if (initial !== prevInitial) {
@@ -224,7 +227,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             </button>
           </div>
         ) : (
-          visible.map((o) => <OpportunityCard key={o.id} opportunity={o} onToggleFavorite={handleFavorite} />)
+          visible.map((o) => <OpportunityCard key={o.id} opportunity={o} onToggleFavorite={handleFavorite} loggedIn={loggedIn} />)
         )}
       </div>
     </section>

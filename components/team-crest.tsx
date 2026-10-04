@@ -1,14 +1,14 @@
 import { cn } from '@/lib/utils'
 
 const TEAM_LOGOS: Record<string, string> = {
-  'FC København': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/fc-kobenhavn/default.svg',
-  'Brøndby IF': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/brondby-if/default.svg',
-  'Manchester City': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/manchester-city/default.svg',
-  Arsenal: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/arsenal/default.svg',
-  'Real Madrid': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/real-madrid/default.svg',
-  Barcelona: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/barcelona/default.svg',
-  Inter: 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/inter-milan/default.svg',
-  'AC Milan': 'https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/ac-milan/default.svg',
+  'FC København': 'https://media.api-sports.io/football/teams/400.png',
+  'Brøndby IF': 'https://media.api-sports.io/football/teams/403.png',
+  'Manchester City': 'https://media.api-sports.io/football/teams/50.png',
+  Arsenal: 'https://media.api-sports.io/football/teams/42.png',
+  'Real Madrid': 'https://media.api-sports.io/football/teams/541.png',
+  Barcelona: 'https://media.api-sports.io/football/teams/529.png',
+  Inter: 'https://media.api-sports.io/football/teams/505.png',
+  'AC Milan': 'https://media.api-sports.io/football/teams/489.png',
 }
 
 const TEAM_COLORS: Record<string, [string, string]> = {

@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils'
 
 function FlagArt({ code }: { code: string }) {
-  switch (code) {
+  switch (code.toLowerCase()) {
     case 'dk':
       return (
         <>
