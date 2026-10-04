@@ -42,6 +42,25 @@ export type BetRow = {
   placedTs: number
 }
 
+function displayOutcome(value: string) {
+  const normalized = value.replace(/[_-]+/g, ' ').trim().toLowerCase()
+  if (normalized === 'home' || normalized === 'h') return 'Hjemmeholdet'
+  if (normalized === 'away' || normalized === 'a') return 'Udeholdet'
+  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort'
+  if (normalized === 'sp' || normalized === 'spread') return 'Pointspread'
+  if (normalized.startsWith('over ')) return `Over ${normalized.slice(5).replace('.', ',')}`
+  if (normalized.startsWith('under ')) return `Under ${normalized.slice(6).replace('.', ',')}`
+  return value.replace(/[_-]+/g, ' ')
+}
+
+function displayMarket(value: string) {
+  const normalized = value.toLowerCase()
+  if (normalized.includes('points-game-sp') || normalized.includes('pointspread') || normalized.endsWith('-sp')) return 'Pointspread (kamp)'
+  if (normalized.includes('over') || normalized.includes('under') || normalized.includes('total') || normalized.includes('ou')) return 'Over/Under mål'
+  if (normalized.includes('moneyline') || normalized.includes('winner') || normalized.includes('result')) return 'Kampresultat'
+  return value.replace(/[_-]+/g, ' ')
+}
+
 function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date): Opportunity {
   const aOdds = Number(row.aOdds)
   const bOdds = Number(row.bOdds)
@@ -53,12 +72,12 @@ function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<numbe
     league: row.league,
     homeTeam: row.homeTeam,
     awayTeam: row.awayTeam,
-    market: row.market,
+    market: displayMarket(row.market),
     kickoffLabel: formatKickoff(row.kickoff, now),
     kickoffTs: row.kickoff.getTime(),
     createdTs: row.createdAt.getTime(),
-    a: { label: row.aLabel, bookmaker: row.aBookmaker, odds: aOdds },
-    b: { label: row.bLabel, bookmaker: row.bBookmaker, odds: bOdds },
+    a: { label: displayOutcome(row.aLabel), bookmaker: row.aBookmaker, odds: aOdds },
+    b: { label: displayOutcome(row.bLabel), bookmaker: row.bBookmaker, odds: bOdds },
     margin: marginPercent(aOdds, bOdds),
     favorite: favIds.has(row.id),
   }

@@ -10,11 +10,11 @@ import { cn } from '@/lib/utils'
 
 function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
   return (
-    <div className="flex h-[68px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3">
+    <div className="flex min-h-[92px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3 py-2">
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
-      <div className="min-w-0 flex-1">
+      <div className="min-w-0 flex-1 self-stretch py-1">
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
+        <p className="mt-1 break-words text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
       </div>
       {loggedIn ? (
         <div className="shrink-0 text-right">
@@ -64,7 +64,7 @@ export function OpportunityCard({
           </div>
           <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
             <SmallBarsIcon className="size-4 text-[#8fa3cc]" />
-            {o.market}
+            <span className="break-words">Marked: {o.market}</span>
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export function OpportunityCard({
         </div>
       </div>
 
-      <div className="mt-1.5 flex h-[68px] gap-1.5">
+      <div className="mt-1.5 flex items-stretch gap-1.5">
         <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} />
         <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} />
       </div>

@@ -39,9 +39,12 @@ function outcomeLabel(outcome: string) {
   const normalized = value.toLowerCase()
   if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
   if (normalized.startsWith('under ')) return `Under ${danishNumber(value.slice(6).trim())}`
-  if (normalized === 'home') return 'Hjemme'
-  if (normalized === 'away') return 'Ude'
-  if (normalized === 'draw') return 'Uafgjort'
+  if (normalized === 'home' || normalized === 'h') return 'Hjemmeholdet'
+  if (normalized === 'away' || normalized === 'a') return 'Udeholdet'
+  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort'
+  if (normalized === 'yes' || normalized === 'y') return 'Ja'
+  if (normalized === 'no' || normalized === 'n') return 'Nej'
+  if (normalized === 'sp' || normalized === 'spread') return 'Pointspread'
   return danishNumber(value)
 }
 
@@ -53,6 +56,7 @@ function marketLabel(marketID: string, picks: Quote[]) {
     return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
   }
   if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
+  if (source.includes('points-game-sp') || source.includes('pointspread') || source.endsWith('-sp')) return 'Pointspread (kamp)'
   return marketID.replace(/[-_]+/g, ' ')
 }
 
