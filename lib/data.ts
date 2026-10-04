@@ -51,6 +51,7 @@ function displayOutcome(value: string) {
   if (normalized === 'x2' || normalized === 'draw or away' || normalized === 'draw/away') return 'Dobbeltchance: Uafgjort eller udeholdet (X2)'
   if (normalized === '12' || normalized === 'home or away' || normalized === 'home/away') return 'Dobbeltchance: Hjemmeholdet eller udeholdet (12)'
   if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
+  if (/^(hjemmehold|udehold)\s+[+-]\d/.test(normalized)) return value.replace(/\./g, ',')
   if (normalized.startsWith('over ')) return `Over ${normalized.slice(5).replace('.', ',')}`
   if (normalized.startsWith('under ')) return `Under ${normalized.slice(6).replace('.', ',')}`
   return value.replace(/[_-]+/g, ' ')

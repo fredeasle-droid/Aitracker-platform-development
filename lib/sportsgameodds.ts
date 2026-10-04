@@ -42,7 +42,14 @@ function outcomeLabel(outcome: string, market?: RawMarket) {
   const lineText = rawLine === undefined || rawLine === null || rawLine === '' ? '' : danishNumber(String(rawLine))
   const marketText = String(market?.marketName ?? '').toLowerCase()
   const handicapLine = lineText || source.match(/[+-]?\d+(?:\.\d+)?/)?.[0] || ''
-  if (/spread|handicap/.test(marketText) && handicapLine) return handicapLine.startsWith('-') || handicapLine.startsWith('+') ? handicapLine : `${source.toLowerCase().includes('away') || source.toLowerCase() === '2' ? '+' : '-'}${handicapLine}`
+  if (/spread|handicap/.test(marketText) && handicapLine) {
+    const normalizedSource = source.toLowerCase()
+    const signedLine = handicapLine.startsWith('-') || handicapLine.startsWith('+')
+      ? handicapLine
+      : `${normalizedSource.includes('away') || normalizedSource === '2' ? '+' : '-'}${handicapLine}`
+    const side = normalizedSource.includes('away') || normalizedSource === '2' ? 'Udehold' : 'Hjemmehold'
+    return `${side} ${signedLine}`
+  }
   const line = lineText ? ` ${lineText}` : ''
   const value = `${source.replace(/[_-]+/g, ' ').trim()}${line}`
   const normalized = value.toLowerCase()
@@ -86,7 +93,7 @@ function isComplementaryPair(marketID: string, picks: Quote[]) {
 
   if (/spread|handicap|points-game-sp/.test(market)) {
     const handicaps = labels.map((label) => {
-      const match = label.match(/^([+-]?\d+(?:,\d+)?)$/)
+      const match = label.match(/([+-]\d+(?:,\d+)?)$/)
       return match ? Number(match[1].replace(',', '.')) : null
     })
     return handicaps.every((value) => value !== null) && Math.abs((handicaps[0] ?? 0) + (handicaps[1] ?? 0)) < 0.001
