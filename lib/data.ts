@@ -110,6 +110,14 @@ export const getOpportunities = cache(async () => {
   }
 
   try {
+    if (process.env.SPORTSGAMEODDS_API_KEY) {
+      const { getLiveSurebets } = await import('@/lib/sportsgameodds')
+      const live = await getLiveSurebets()
+      if (live.length > 0) {
+        const favIds = userId ? await getFavoriteIds(userId).catch(() => new Set<number>()) : new Set<number>()
+        return live.map((opportunity) => ({ ...opportunity, favorite: favIds.has(opportunity.id) }))
+      }
+    }
     const rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
     let favIds = new Set<number>()
     if (userId) {

@@ -64,7 +64,8 @@ function outcomeLabel(outcome: string, market?: RawMarket) {
 
 function marketLabel(marketID: string, picks: Quote[]) {
   const source = (picks[0]?.marketName ?? marketID).toLowerCase()
-  const hasTotals = /(^|[-_])(ou|total|totals|over|under)([-_]|$)/.test(source) || picks.some((pick) => /^(over|under)\\s/i.test(pick.label))
+  const marketSource = `${source} ${marketID.toLowerCase()}`
+  const hasTotals = /(^|[-_\s])(ou|o\/u|total|totals|over|under)([-_\s]|$)/.test(marketSource) || picks.some((pick) => /^(over|under)\s/i.test(pick.label))
   if (hasTotals) {
     const line = picks.map((pick) => pick.label.match(/(?:over|under)\\s+(.+)/i)?.[1]).find(Boolean)
     return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
@@ -72,7 +73,7 @@ function marketLabel(marketID: string, picks: Quote[]) {
   if (source.includes('both teams') || source.includes('btts')) return 'Begge hold scorer'
   if (source.includes('double chance')) return 'Dobbeltchance på kampresultat'
   if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
-  if (source.includes('spread') || source.includes('handicap') || source.endsWith('-sp')) return 'Handicap på kamp'
+  if (source.includes('spread') || source.includes('handicap') || source.includes('points-game-sp')) return 'Handicap på kamp'
   if (source.includes('odd') && source.includes('even')) return 'Lige/Ulige antal'
   const readable = (picks[0]?.marketName ?? marketID).replace(/[-_]+/g, ' ')
   return readable.charAt(0).toUpperCase() + readable.slice(1)
