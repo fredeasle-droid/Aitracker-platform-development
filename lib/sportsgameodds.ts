@@ -71,16 +71,20 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
   const apiKey = process.env.SPORTSGAMEODDS_API_KEY
   if (!apiKey) return []
   const events: ProviderEvent[] = []
-  let cursor: string | undefined
-  for (let page = 0; page < 100; page += 1) {
-    const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100' })
-    if (cursor) query.set('cursor', cursor)
-    const response = await fetch(`${API_URL}?${query}`, { headers: { 'x-api-key': apiKey, accept: 'application/json' }, cache: 'no-store' })
-    if (!response.ok) break
-    const payload = await response.json()
-    events.push(...extractEvents(payload))
-    cursor = nextCursor(payload)
-    if (!cursor || extractEvents(payload).length === 0) break
+  const sports = ['SOCCER', 'FOOTBALL', 'BASKETBALL', 'TENNIS', 'HOCKEY', 'BASEBALL', 'GOLF']
+  for (const sportID of sports) {
+    let cursor: string | undefined
+    for (let page = 0; page < 100; page += 1) {
+      const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100', sportID })
+      if (cursor) query.set('cursor', cursor)
+      const response = await fetch(`${API_URL}?${query}`, { headers: { 'x-api-key': apiKey, accept: 'application/json' }, cache: 'no-store' })
+      if (!response.ok) break
+      const payload = await response.json()
+      const pageEvents = extractEvents(payload)
+      events.push(...pageEvents)
+      cursor = nextCursor(payload)
+      if (!cursor || pageEvents.length === 0) break
+    }
   }
 
   const opportunities: Opportunity[] = []
