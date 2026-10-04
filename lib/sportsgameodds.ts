@@ -30,6 +30,32 @@ function eventTeams(event: ProviderEvent) {
   }
 }
 
+function danishNumber(value: string) {
+  return value.replace(/(\\d+)\\.(\\d+)/g, '$1,$2')
+}
+
+function outcomeLabel(outcome: string) {
+  const value = outcome.replace(/[_-]+/g, ' ').trim()
+  const normalized = value.toLowerCase()
+  if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
+  if (normalized.startsWith('under ')) return `Under ${danishNumber(value.slice(6).trim())}`
+  if (normalized === 'home') return 'Hjemme'
+  if (normalized === 'away') return 'Ude'
+  if (normalized === 'draw') return 'Uafgjort'
+  return danishNumber(value)
+}
+
+function marketLabel(marketID: string, picks: Quote[]) {
+  const source = marketID.toLowerCase()
+  const hasTotals = /(^|[-_])(ou|total|totals|over|under)([-_]|$)/.test(source) || picks.some((pick) => /^(over|under)\\s/i.test(pick.label))
+  if (hasTotals) {
+    const line = picks.map((pick) => pick.label.match(/(?:over|under)\\s+(.+)/i)?.[1]).find(Boolean)
+    return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
+  }
+  if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
+  return marketID.replace(/[-_]+/g, ' ')
+}
+
 function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], index: number): Opportunity | null {
   if (picks.length < 2) return null
   const implied = picks.reduce((sum, pick) => sum + 1 / pick.odds, 0)
@@ -47,7 +73,7 @@ function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], i
     league: event.leagueID ?? 'Global',
     homeTeam: home,
     awayTeam: away,
-    market: marketID,
+    market: marketLabel(marketID, picks),
     kickoffLabel: startsAt.toLocaleString('da-DK', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
     kickoffTs: startsAt.getTime(),
     createdTs: Date.now(),
@@ -97,7 +123,7 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       const picks = entries.map(({ outcome, market }) => {
         const offers = Object.entries((market as any)?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
-          if (odds !== null) best.push({ bookmaker, odds, label: outcome, deeplink: quote?.deeplink as string | undefined })
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome), deeplink: quote?.deeplink as string | undefined })
           return best
         }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
