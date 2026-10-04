@@ -6,7 +6,16 @@ const API_URL = 'https://api.sportsgameodds.com/v2/events'
 
 type ProviderEvent = Record<string, any>
 
-type Quote = { bookmaker: string; odds: number; label: string; deeplink?: string; marketName?: string; spread?: string | number }
+type Quote = {
+  bookmaker: string
+  odds: number
+  label: string
+  deeplink?: string
+  marketName?: string
+  spread?: string | number
+  lineValue?: number
+  outcomeKey?: string
+}
 
 type RawMarket = { marketName?: string; sideID?: string; outcome?: string; line?: string | number; points?: string | number; [key: string]: any }
 
@@ -92,11 +101,9 @@ function isComplementaryPair(marketID: string, picks: Quote[]) {
   const market = `${marketID} ${picks[0].marketName ?? ''}`.toLowerCase()
 
   if (/spread|handicap|points-game-sp/.test(market)) {
-    const handicaps = labels.map((label) => {
-      const match = label.match(/([+-]\d+(?:,\d+)?)$/)
-      return match ? Number(match[1].replace(',', '.')) : null
-    })
-    return handicaps.every((value) => value !== null) && Math.abs((handicaps[0] ?? 0) + (handicaps[1] ?? 0)) < 0.001
+    const handicaps = picks.map((pick) => pick.lineValue ?? Number(pick.label.match(/([+-]\d+(?:,\d+)?)/)?.[1]?.replace(',', '.')))
+    const hasTwoLines = handicaps.every((value) => Number.isFinite(value))
+    return hasTwoLines && Math.abs((handicaps[0] ?? 0) + (handicaps[1] ?? 0)) < 0.001 && labels[0] !== labels[1]
   }
 
   if (labels.every((label) => /^(over|under)\s/.test(label))) {
@@ -176,21 +183,25 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
       const period = parts.pop() ?? ''
       const entity = parts.pop() ?? ''
       const stat = parts.join('-')
-      const normalizedEntity = ['home', 'away', 'all'].includes(entity) ? '' : entity
-      // Keep every line/outcome in the same market family. The API may return
-      // three-way markets or several alternate lines, so filtering on exactly
-      // two raw entries here incorrectly discarded valid two-way surebets.
+      // Keep both sides in one market family. The entity (home/away) is the
+      // side of a handicap, not a separate market, so including it here can
+      // prevent the two opposing lines from ever being matched.
       const marketName = String(rawMarket.marketName ?? '').toLowerCase().replace(/[^a-z0-9]+/g, '-')
-      const group = [stat, normalizedEntity, period, betType, marketName].filter(Boolean).join('-')
+      // SportsGameOdds uses different oddID segments for each side and for
+      // some bookmaker feeds. The provider's marketName plus period is the
+      // stable market identity; outcome/side belongs inside that group.
+      const group = [marketName || stat || betType || 'market', period].filter(Boolean).join('-')
       ;(groups[group] ||= []).push({ outcome, market: rawMarket })
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
       const quotes = entries.map(({ outcome, market }) => {
         const offers = Object.entries(market.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
           const odds = decimalOdds(quote?.odds)
-          const spread = quote?.spread ?? market.spread ?? market.bookSpread ?? market.fairSpread
-          const labelMarket = spread === undefined ? market : { ...market, line: spread }
-          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: market.marketName, spread, deeplink: quote?.deeplink as string | undefined })
+          const spread = quote?.spread ?? quote?.line ?? quote?.points ?? quote?.handicap ?? market.spread ?? market.line ?? market.points ?? market.bookSpread ?? market.fairSpread
+          const numericLine = Number(String(spread ?? '').replace(',', '.').replace(/^([+-]?\d+(?:\.\d+)?).*$/, '$1'))
+          const lineValue = Number.isFinite(numericLine) ? numericLine : undefined
+          const labelMarket = spread === undefined ? market : { ...market, line: spread, spread }
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome, labelMarket), marketName: market.marketName, spread, lineValue, outcomeKey: outcome, deeplink: quote?.deeplink as string | undefined })
           return best
         }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
