@@ -54,43 +54,44 @@ export function findArbitrage(events: SportsGameOddsEvent[]) {
       const period = String(odd?.periodID ?? 'game')
       const statID = String(odd?.statID ?? '')
       const statEntityID = String(odd?.statEntityID ?? odd?.statEntityId ?? '')
-      if (!['sp', 'ou', 'ml'].includes(betType) || period !== 'game' || !statID) continue
-      const sampleQuote = Object.values(odd?.byBookmaker ?? {})[0] as any
-      const line = lineFor(betType, sampleQuote)
-      // The line belongs in the market identity. For spreads, opposite sides
-      // use opposite signs, so normalize both to the same absolute line.
-      const key = `${statID}:${statEntityID}:${betType}:${period}:${normalizeLine(line, betType)}`
-      const sides = groups.get(key) ?? {}
-      sides[side] ??= []
+      const supportedBetTypes = new Set(['sp', 'ou', 'ml', 'ml2way', 'ml3way', 'yn'])
+      if (!supportedBetTypes.has(betType) || !['game', 'reg'].includes(period) || !statID) continue
+      // statEntityID identifies the side, not the market. Build the key per
+      // bookmaker quote because different bookmakers can expose different lines.
       for (const [bookmaker, quote] of Object.entries(odd?.byBookmaker ?? {})) {
         if ((quote as any)?.available === false) continue
+        const quoteLine = lineFor(betType, quote)
+        const marketEntity = ['ou', 'yn'].includes(betType) ? statEntityID : 'all'
+        const key = `${statID}:${marketEntity}:${betType}:${period}:${normalizeLine(quoteLine, betType)}`
         const american = Number((quote as any)?.odds)
         const odds = decimal(american)
-        if (odds) sides[side].push({ bookmaker, american, decimal: odds, line: lineFor(betType, quote) })
+        if (!odds) continue
+        const sides = groups.get(key) ?? {}
+        sides[side] ??= []
+        sides[side].push({ bookmaker, american, decimal: odds, line: quoteLine })
+        groups.set(key, sides)
       }
-      groups.set(key, sides)
     }
 
     for (const [key, sides] of groups) {
-      const [betType] = key.split(':')
-      const pair = betType === 'ou' ? ['over', 'under'] : ['home', 'away']
-      if (!sides[pair[0]]?.length || !sides[pair[1]]?.length) continue
-      // A valid arb must use the same total line, or opposing spread lines.
-      // Pair every quote instead of combining unrelated alternate lines.
-      let best: [BookmakerQuote, BookmakerQuote] | null = null
-      for (const first of sides[pair[0]]) for (const second of sides[pair[1]]) {
-        const firstLine = first.line == null ? null : Number(String(first.line).replace(',', '.'))
-        const secondLine = second.line == null ? null : Number(String(second.line).replace(',', '.'))
-        const compatible = betType === 'ou'
-          ? firstLine !== null && secondLine !== null && Math.abs(firstLine - secondLine) < 0.001
-          : betType === 'sp'
-            ? firstLine !== null && secondLine !== null && Math.abs(firstLine + secondLine) < 0.001
-            : event.sportID !== 'soccer'
-        if (!compatible) continue
-        if (!best || first.decimal * second.decimal > best[0].decimal * best[1].decimal) best = [first, second]
-      }
-      if (!best) continue
-      const implied = best.reduce((sum, quote) => sum + 1 / quote.decimal, 0)
+      const [, , betType] = key.split(':')
+      const sidesToCover = betType === 'ml3way' ? ['home', 'draw', 'away'] : betType === 'ou' ? ['over', 'under'] : ['home', 'away']
+      if (sidesToCover.some((requiredSide) => !sides[requiredSide]?.length)) continue
+      const candidates = sidesToCover.map((requiredSide) => sides[requiredSide])
+      const compatiblePairs = betType === 'sp'
+        ? candidates[0].flatMap((home) => candidates[1].map((away) => ({ home, away }))).filter(({ home, away }) => Math.abs(Number(home.line) + Number(away.line)) < 0.001)
+        : candidates[0].flatMap((first) => candidates[1].map((second) => ({ first, second })))
+      if (!compatiblePairs.length) continue
+      const selected = compatiblePairs.reduce((bestPair, pair) => {
+        const quotes = 'home' in pair ? [pair.home, pair.away] : [pair.first, pair.second]
+        if (betType === 'ml3way') return bestPair
+        return !bestPair || quotes[0].decimal * quotes[1].decimal > bestPair[0].decimal * bestPair[1].decimal ? quotes : bestPair
+      }, null as BookmakerQuote[] | null)
+      const finalQuotes = betType === 'ml3way'
+        ? sidesToCover.map((requiredSide) => sides[requiredSide].reduce((a, b) => b.decimal > a.decimal ? b : a))
+        : selected
+      if (!finalQuotes) continue
+      const implied = finalQuotes.reduce((sum, quote) => sum + 1 / quote.decimal, 0)
       if (implied >= 1) continue
       const profitPercent = (1 / implied - 1) * 100
       opportunities.push({
@@ -100,7 +101,7 @@ export function findArbitrage(events: SportsGameOddsEvent[]) {
         league: String(event.leagueID ?? ''),
         market: betType === 'sp' ? 'spread' : betType === 'ou' ? 'total' : 'moneyline',
         profitPercent,
-        legs: best.map((quote, index) => ({ ...quote, side: pair[index], stakePercent: (1 / quote.decimal / implied) * 100 })),
+        legs: finalQuotes.map((quote, index) => ({ ...quote, side: sidesToCover[index], stakePercent: (1 / quote.decimal / implied) * 100 })),
       })
     }
   }
