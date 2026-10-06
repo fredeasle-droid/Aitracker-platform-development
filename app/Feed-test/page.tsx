@@ -1,27 +1,23 @@
-import { SiteHeader } from '@/components/site-header';
-import { OpportunityList } from '@/components/sikkerbets/opportunity-list';
-import { getFeedTestOpportunities } from '@/lib/feedTestApi';
+import { SiteHeader } from '@/components/site-header'
+import { FeedTestOpportunityList } from '@/components/feed-test/opportunity-list'
+import { getFeedTestOpportunities } from '@/lib/feedTestApi'
 
-export const dynamic = 'force-dynamic';
+export const dynamic = 'force-dynamic'
 
 export default async function FeedTestPage() {
-  const opportunities = await getFeedTestOpportunities(1000);
+  const opportunities = await getFeedTestOpportunities()
 
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
+    <main>
       <SiteHeader />
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <div className="mb-6 flex justify-between items-center">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full">
-              Testmiljø
-            </span>
-            <h1 className="text-2xl font-bold mt-2">SportsGameOdds Surebet Scanner</h1>
-            <p className="text-sm text-zinc-400">Viser aktive surebets på tværs af alle sportsgrene, markeder og bookmakere.</p>
-          </div>
-        </div>
-        <OpportunityList initial={opportunities} />
-      </div>
+      <section className="px-4 pb-4 pt-5">
+        <span className="inline-flex rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-300">
+          Oddspedia Feed
+        </span>
+        <h1 className="mt-2 text-2xl font-extrabold">Oddspedia Sure Bets</h1>
+        <p className="mt-1 text-sm text-muted-foreground">Live feed fra Oddspedia's offentlige Sure Bets-side. Ingen egen surebet-beregning.</p>
+      </section>
+      <FeedTestOpportunityList initial={opportunities} />
     </main>
-  );
+  )
 }
