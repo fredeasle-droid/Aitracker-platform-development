@@ -1,64 +1,99 @@
-// lib/feedTestApi.ts
+import { chromium } from "playwright";
 
-const API_KEY = process.env.SPORTS_GAME_ODDS_API_KEY || '';
-const BASE_URL = 'https://api.sportsgameodds.com/v2';
+export type OddspediaSurebet = {
+  id: string;
+  sport: string;
+  country: string;
+  countryCode: string;
+  league: string;
+  homeTeam: string;
+  awayTeam: string;
+  market: string;
+  kickoffLabel: string;
+  kickoffTs: number;
+  createdTs: number;
+  a: { label: string; bookmaker: string; odds: number };
+  b: { label: string; bookmaker: string; odds: number };
+  margin: number;
+  favorite: boolean;
+  source: "oddspedia";
+  sourceUrl: string;
+};
 
-export async function fetchFootballFeed() {
+function parseCard(text: string, index: number): OddspediaSurebet | null {
+  const lines = text.split(/\r?\n/).map(x => x.trim()).filter(Boolean);
+  const profitLine = lines.find(x => /GUARANTEED\s+PROFIT/i.test(x));
+  const profitMatch = profitLine?.match(/([\d]+(?:[.,]\d+)?)\s*%\s*GUARANTEED/i);
+  if (!profitMatch) return null;
+  const profit = Number(profitMatch[1].replace(",", "."));
+  if (!Number.isFinite(profit)) return null;
+
+  const odds: { odds: number; bookmaker: string }[] = [];
+  for (let i = 1; i < lines.length; i++) {
+    if (/^[0-9]+(?:[.,][0-9]+)?$/.test(lines[i])) {
+      const value = Number(lines[i].replace(",", "."));
+      if (value > 1 && value < 100) odds.push({ odds: value, bookmaker: lines[i - 1] });
+    }
+  }
+  if (odds.length < 2) return null;
+
+  const matchIndex = lines.findIndex(x => /Home\/Away|1X2|Moneyline/i.test(x));
+  const market = matchIndex >= 0 ? lines[matchIndex] : "Sure Bet";
+  const candidates = lines.filter(x =>
+    x.length > 3 &&
+    !/GUARANTEED|PROFIT|Calculate|Home|Away|^\d+(?:[.,]\d+)?$|Sure Bets/i.test(x)
+  );
+  const match = candidates[0] || "Ukendt kamp";
+  const teams = match.split(/\s{2,}|\s+vs\.?\s+/i).map(x => x.trim()).filter(Boolean);
+
+  return {
+    id: `oddspedia-${index}-${Buffer.from(match).toString("base64url").slice(0, 16)}`,
+    sport: "Sport",
+    country: "International",
+    countryCode: "un",
+    league: "Oddspedia Sure Bets",
+    homeTeam: teams[0] || "Hjemmehold",
+    awayTeam: teams[1] || "Udehold",
+    market,
+    kickoffLabel: "",
+    kickoffTs: Date.now(),
+    createdTs: Date.now(),
+    a: { label: "Udfald 1", bookmaker: odds[0].bookmaker, odds: odds[0].odds },
+    b: { label: "Udfald 2", bookmaker: odds[1].bookmaker, odds: odds[1].odds },
+    margin: profit,
+    favorite: false,
+    source: "oddspedia",
+    sourceUrl: "https://oddspedia.com/surebets",
+  };
+}
+
+export async function getFeedTestOpportunities(): Promise<OddspediaSurebet[]> {
+  const browser = await chromium.launch({ headless: true });
   try {
-    // Trin 1: Hent den opdaterede liste over ligaer, som din API-nøgle har adgang til
-    const leaguesResponse = await fetch(`${BASE_URL}/leagues?apiKey=${API_KEY}`, {
-      method: 'GET',
-      headers: { 'Accept': 'application/json' },
-      next: { revalidate: 3600 }, // Cacher i 1 time, da ligaer sjældent ændrer sig
+    const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+    await page.goto("https://oddspedia.com/surebets", { waitUntil: "domcontentloaded", timeout: 45000 });
+    await page.waitForLoadState("networkidle", { timeout: 15000 }).catch(() => {});
+    await page.waitForTimeout(1200);
+
+    const cards = await page.evaluate(() => {
+      const elements = Array.from(document.querySelectorAll<HTMLElement>("body *"))
+        .filter(el => {
+          const t = (el.innerText || "").trim();
+          return /GUARANTEED\s+PROFIT/i.test(t) && /\d+(?:[.,]\d+)?\s*%/.test(t) && t.length > 40 && t.length < 2500;
+        })
+        .sort((a, b) => a.innerText.length - b.innerText.length);
+
+      const result: string[] = [];
+      for (const el of elements) {
+        const t = el.innerText.trim();
+        if (!result.some(x => x === t || x.includes(t) || t.includes(x))) result.push(t);
+        if (result.length >= 100) break;
+      }
+      return result;
     });
 
-    if (!leaguesResponse.ok) {
-      throw new Error(`Fejl ved hentning af liga-oversigt: ${leaguesResponse.statusText}`);
-    }
-
-    const leaguesJson = await leaguesResponse.json();
-    const leaguesArray = leaguesJson.leagues || leaguesJson.data || leaguesJson;
-
-    if (!Array.isArray(leaguesArray)) {
-      console.warn('Uventet format fra /leagues endpointet');
-      return null;
-    }
-
-    // Trin 2: Filtrér udelukkende fodbold/soccer league ID'er ud
-    const soccerLeagueIDs = leaguesArray
-      .filter((l: any) => {
-        const sportName = (l.sport || l.sportName || '').toLowerCase();
-        return sportName.includes('soccer') || sportName.includes('football');
-      })
-      .map((l: any) => l.leagueID || l.id)
-      .filter(Boolean);
-
-    if (soccerLeagueIDs.length === 0) {
-      console.warn('Ingen fodbold-ligaer fundet for denne nøgle.');
-      return null;
-    }
-
-    // Sæt dem sammen til en komma-separeret streng
-    const leagueIDString = soccerLeagueIDs.join(',');
-
-    // Trin 3: Hent events og odds for præcis de fundne ligaer
-    const eventsUrl = `${BASE_URL}/events?leagueID=${leagueIDString}&oddsAvailable=true&apiKey=${API_KEY}`;
-    
-    const eventsResponse = await fetch(eventsUrl, {
-      method: 'GET',
-      headers: { 'Accept': 'application/json' },
-      next: { revalidate: 60 }, // Cacher i 60 sekunder
-    });
-
-    if (!eventsResponse.ok) {
-      throw new Error(`Fejl ved hentning af events: ${eventsResponse.statusText}`);
-    }
-
-    const data = await eventsResponse.json();
-    return data;
-
-  } catch (error) {
-    console.error('Fejl i fetchFootballFeed:', error);
-    return null;
+    return cards.map(parseCard).filter((x): x is OddspediaSurebet => Boolean(x));
+  } finally {
+    await browser.close();
   }
 }
