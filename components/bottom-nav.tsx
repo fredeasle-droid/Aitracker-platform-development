@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartPie, Database, Gift } from 'lucide-react'
+import { ChartPie, FlaskConical, Gift } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { cn } from '@/lib/utils'
 
@@ -10,7 +10,7 @@ const ITEMS = [
   { href: '/', label: 'SikkerBets', icon: BarsIcon },
   { href: '/stats', label: 'Stats', icon: ChartPie },
   { href: '/bonus', label: 'Bonus', icon: Gift },
-  { href: '/oddspapi', label: 'Feed-test', icon: Database },
+  { href: '/Feed-test', label: 'Test Feed', icon: FlaskConical },
 ] as const
 
 export function BottomNav() {
@@ -30,7 +30,7 @@ export function BottomNav() {
                 href={href}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'relative flex min-h-14 flex-col items-center justify-center gap-1 px-2 py-1.5 text-[12px] font-bold tracking-[0.01em] transition-all',
+                  'relative flex min-h-14 flex-col items-center justify-center gap-1 px-1 py-1.5 text-[11px] font-bold tracking-[0.01em] transition-all',
                   active ? 'text-[#65c1ff] drop-shadow-[0_0_8px_rgba(21,156,255,0.75)]' : 'text-[#71839d] hover:text-[#d7e8fa]',
                 )}
               >

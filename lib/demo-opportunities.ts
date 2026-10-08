@@ -96,6 +96,7 @@ export const demoOpportunities: Opportunity[] = [
 ]
 
 export function isDemoMode() {
-  return !process.env.ODDS_API_KEY &&
+  const hasLiveProvider = Boolean(process.env.ODDS_API_KEY || process.env.SPORTSGAMEODDS_API_KEY)
+  return !hasLiveProvider &&
     (process.env.NODE_ENV !== 'production' || process.env.VERCEL_ENV === 'preview' || Boolean(process.env.V0_RUNTIME_URL))
 }
