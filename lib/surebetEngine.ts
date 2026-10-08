@@ -72,7 +72,7 @@ function coverageForOutcome(outcome: OddOutcome, states: State[]): Coverage | nu
 function compatibleKey(market: MarketOdds): string {
   return [
     norm(market.marketId), norm(market.marketType), norm(market.marketName),
-    norm(market.period), numeric(market.line ?? market.handicap ?? market.point) ?? ""
+    norm(market.period), numeric(market.line) ?? ""
   ].join("|");
 }
 
