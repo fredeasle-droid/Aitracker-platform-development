@@ -106,7 +106,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const moreActive = sport === 'Favoritter' || (MORE_SPORTS as readonly string[]).includes(sport)
 
   return (
-    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4">
+    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4 md:px-8 lg:px-10">
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none]" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
           Alle
@@ -210,7 +210,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         {visible.length} SikkerBets fundet
       </p>
 
-      <div className="mt-3 flex flex-col gap-3">
+      <div className="mt-3 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
         {visible.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-8 text-center">
             <p className="font-semibold">Ingen SikkerBets matcher</p>
