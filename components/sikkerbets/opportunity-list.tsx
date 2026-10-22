@@ -7,6 +7,7 @@ import { toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
 import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
+import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { authClient } from '@/lib/auth-client'
@@ -129,6 +130,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
 
   return (
     <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4 lg:flex-1 lg:px-0">
+      <DesktopHero loggedIn={loggedIn} />
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
           Alle
@@ -271,7 +273,13 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         {visible.length} SikkerBets fundet
       </p>
 
-      <div className="mt-3 flex flex-col gap-3">
+      <div
+        className={cn(
+          'mt-3 flex flex-col gap-3',
+          visible.length > 0 &&
+            'lg:gap-0 lg:divide-y lg:divide-[#13294a] lg:overflow-hidden lg:rounded-2xl lg:border lg:border-[#183252] lg:bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)]',
+        )}
+      >
         {visible.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-8 text-center">
             <p className="font-semibold">Ingen SikkerBets matcher</p>

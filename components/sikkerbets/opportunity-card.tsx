@@ -28,7 +28,29 @@ function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: s
   )
 }
 
-export function OpportunityCard({
+function RowOdds({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
+  return (
+    <div className="relative flex h-[72px] min-w-0 items-center gap-2.5 rounded-xl border border-[#1a3557] bg-[#081123] px-2.5">
+      <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
+      <div className="min-w-0 flex-1 pr-4">
+        <p className="truncate text-[11px] font-semibold uppercase tracking-wide text-[#d5ddef]">{bookmaker}</p>
+        <p className="truncate text-[12px] text-[#a9b6d3]" title={label}>
+          {label}
+        </p>
+        {loggedIn ? (
+          <p className="text-[19px] font-extrabold leading-tight tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
+        ) : (
+          <p className="select-none text-[19px] font-extrabold leading-tight text-[#55a8ff]/40 blur-[3px]" aria-hidden="true">
+            0.00
+          </p>
+        )}
+      </div>
+      {!loggedIn && <LockKeyhole className="absolute right-2.5 top-2.5 size-4 text-[#f5c84b]" aria-label="Odds låst" />}
+    </div>
+  )
+}
+
+function DesktopRow({
   opportunity: o,
   onToggleFavorite,
   loggedIn,
@@ -38,7 +60,84 @@ export function OpportunityCard({
   loggedIn: boolean
 }) {
   return (
-    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(180px,0.62fr)] lg:gap-x-3 lg:rounded-[18px] lg:px-4 lg:py-3">
+    <article className="hidden items-center gap-3 px-4 py-3 transition-colors hover:bg-[#0a1830] lg:grid lg:grid-cols-[minmax(0,104px)_minmax(0,1.1fr)_minmax(0,1fr)_minmax(0,1fr)_108px_auto]">
+      <div className="min-w-0 text-[13px]">
+        <p className="flex items-center gap-2 font-medium text-foreground">
+          <Flag code={o.countryCode} label={o.country} />
+          <span className="truncate">{o.league}</span>
+        </p>
+        <p className="mt-1.5 text-[#a9b6d3]">{o.kickoffLabel}</p>
+      </div>
+
+      <div className="flex min-w-0 flex-col gap-2">
+        {[o.homeTeam, o.awayTeam].map((team) => (
+          <span key={team} className="flex min-w-0 items-center gap-2.5">
+            <TeamCrest name={team} className="size-7 shrink-0 text-[9px]" />
+            <span className="truncate text-[14px] font-medium">{team}</span>
+          </span>
+        ))}
+      </div>
+
+      <RowOdds {...o.a} loggedIn={loggedIn} />
+      <RowOdds {...o.b} loggedIn={loggedIn} />
+
+      <div className="flex h-[72px] flex-col justify-center rounded-xl border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 shadow-[0_0_24px_-12px_var(--success)]">
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-semibold tracking-wide text-success">MARGIN</span>
+          <SmallBarsIcon className="size-3.5 text-success/80" />
+        </div>
+        <p className="text-[20px] font-extrabold leading-tight tabular-nums text-success">{formatPct(o.margin)}</p>
+        <span className="flex items-center justify-center gap-1 text-[10px] text-[#d5ddef]" title="Begge mulige udfald er dækket">
+          2 udfald <Info className="size-3" aria-hidden="true" />
+        </span>
+      </div>
+
+      <div className="flex items-center gap-2">
+        <Link
+          href={loggedIn ? `/beregn?id=${o.id}` : '/konto'}
+          className="flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-xl border border-border bg-[#081123] px-3.5 text-[13px] font-semibold transition-colors hover:border-primary hover:bg-accent"
+        >
+          Se detaljer
+          <ArrowRight className="size-4" aria-hidden="true" />
+        </Link>
+        <button
+          type="button"
+          onClick={() => onToggleFavorite(o.id)}
+          aria-pressed={o.favorite}
+          aria-label={o.favorite ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}
+          className="hidden size-9 items-center justify-center rounded-full transition-colors hover:bg-accent 2xl:flex"
+        >
+          <Star className={cn('size-5', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#8fa3cc]')} />
+        </button>
+      </div>
+    </article>
+  )
+}
+
+export function OpportunityCard(props: {
+  opportunity: Opportunity
+  onToggleFavorite: (id: number) => void
+  loggedIn: boolean
+}) {
+  return (
+    <>
+      <MobileCard {...props} />
+      <DesktopRow {...props} />
+    </>
+  )
+}
+
+function MobileCard({
+  opportunity: o,
+  onToggleFavorite,
+  loggedIn,
+}: {
+  opportunity: Opportunity
+  onToggleFavorite: (id: number) => void
+  loggedIn: boolean
+}) {
+  return (
+    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:hidden">
       <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3] lg:col-span-2">
         <span className="flex min-w-0 items-center gap-2">
           <Flag code={o.countryCode} label={o.country} />
