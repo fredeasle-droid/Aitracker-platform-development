@@ -36,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="da" className={`${inter.variable} bg-background`}>
       <body className="min-h-dvh overflow-x-hidden antialiased">
-        <div className="mx-auto min-h-dvh w-full max-w-2xl pb-[calc(6rem+env(safe-area-inset-bottom))] md:max-w-7xl md:pb-10">
+        <div className="mx-auto min-h-dvh w-full max-w-2xl pb-[calc(6rem+env(safe-area-inset-bottom))]">
           {children}
         </div>
         <BottomNav />

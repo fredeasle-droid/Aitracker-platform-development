@@ -42,29 +42,6 @@ export type BetRow = {
   placedTs: number
 }
 
-function displayOutcome(value: string) {
-  const normalized = value.replace(/[_-]+/g, ' ').trim().toLowerCase()
-  if (normalized === 'home' || normalized === 'h' || normalized === '1') return 'Hjemmeholdet (1)'
-  if (normalized === 'away' || normalized === 'a' || normalized === '2') return 'Udeholdet (2)'
-  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort (X)'
-  if (normalized === '1x' || normalized === 'home or draw' || normalized === 'home/draw') return 'Dobbeltchance: Hjemmeholdet eller uafgjort (1X)'
-  if (normalized === 'x2' || normalized === 'draw or away' || normalized === 'draw/away') return 'Dobbeltchance: Uafgjort eller udeholdet (X2)'
-  if (normalized === '12' || normalized === 'home or away' || normalized === 'home/away') return 'Dobbeltchance: Hjemmeholdet eller udeholdet (12)'
-  if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
-  if (/^(hjemmehold|udehold)\s+[+-]\d/.test(normalized)) return value.replace(/\./g, ',')
-  if (normalized.startsWith('over ')) return `Over ${normalized.slice(5).replace('.', ',')}`
-  if (normalized.startsWith('under ')) return `Under ${normalized.slice(6).replace('.', ',')}`
-  return value.replace(/[_-]+/g, ' ')
-}
-
-function displayMarket(value: string) {
-  const normalized = value.toLowerCase()
-  if (normalized.includes('points-game-sp') || normalized.includes('pointspread') || normalized.includes('spread') || normalized.includes('handicap') || normalized.endsWith('-sp')) return 'Handicap på kamp'
-  if (normalized.includes('over') || normalized.includes('under') || normalized.includes('total') || normalized.includes('ou')) return 'Over/Under mål'
-  if (normalized.includes('moneyline') || normalized.includes('winner') || normalized.includes('result')) return 'Kampresultat'
-  return value.replace(/[_-]+/g, ' ')
-}
-
 function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date): Opportunity {
   const aOdds = Number(row.aOdds)
   const bOdds = Number(row.bOdds)
@@ -76,12 +53,12 @@ function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<numbe
     league: row.league,
     homeTeam: row.homeTeam,
     awayTeam: row.awayTeam,
-    market: displayMarket(row.market),
+    market: row.market,
     kickoffLabel: formatKickoff(row.kickoff, now),
     kickoffTs: row.kickoff.getTime(),
     createdTs: row.createdAt.getTime(),
-    a: { label: displayOutcome(row.aLabel), bookmaker: row.aBookmaker, odds: aOdds },
-    b: { label: displayOutcome(row.bLabel), bookmaker: row.bBookmaker, odds: bOdds },
+    a: { label: row.aLabel, bookmaker: row.aBookmaker, odds: aOdds },
+    b: { label: row.bLabel, bookmaker: row.bBookmaker, odds: bOdds },
     margin: marginPercent(aOdds, bOdds),
     favorite: favIds.has(row.id),
   }
@@ -111,14 +88,6 @@ export const getOpportunities = cache(async () => {
   }
 
   try {
-    if (process.env.SPORTSGAMEODDS_API_KEY) {
-      const { getLiveSurebets } = await import('@/lib/sportsgameodds')
-      const live = await getLiveSurebets()
-      if (live.length > 0) {
-        const favIds = userId ? await getFavoriteIds(userId).catch(() => new Set<number>()) : new Set<number>()
-        return live.map((opportunity) => ({ ...opportunity, favorite: favIds.has(opportunity.id) }))
-      }
-    }
     const rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
     let favIds = new Set<number>()
     if (userId) {
