@@ -8,9 +8,9 @@ import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
+function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: string; label: string; odds: number; loggedIn: boolean; className?: string }) {
   return (
-    <div className="flex h-[68px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3">
+    <div className={cn('flex h-[68px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3', className)}>
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
@@ -38,8 +38,8 @@ export function OpportunityCard({
   loggedIn: boolean
 }) {
   return (
-    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)]">
-      <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3]">
+    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)_minmax(180px,0.62fr)] lg:gap-x-3 lg:rounded-[18px] lg:px-4 lg:py-3">
+      <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3] lg:col-span-2">
         <span className="flex min-w-0 items-center gap-2">
           <Flag code={o.countryCode} label={o.country} />
           <span className="truncate">
@@ -49,8 +49,8 @@ export function OpportunityCard({
         <span className="shrink-0">{o.kickoffLabel}</span>
       </div>
 
-      <div className="mt-1.5 flex min-h-[94px] gap-1.5">
-        <div className="min-w-0 flex-1">
+      <div className="mt-1.5 flex min-h-[94px] gap-1.5 lg:contents">
+        <div className="min-w-0 flex-1 lg:col-start-1 lg:row-start-2 lg:mt-0.5">
           <div className="flex items-start gap-1">
             <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
               <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
@@ -68,7 +68,7 @@ export function OpportunityCard({
           </p>
         </div>
 
-        <div className="flex w-[108px] shrink-0 flex-col items-stretch justify-center rounded-[18px] border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 py-1.5 shadow-[0_0_24px_-10px_var(--success)]">
+        <div className="flex w-[108px] shrink-0 flex-col items-stretch justify-center self-center lg:col-start-2 lg:row-start-2 lg:w-[142px] lg:justify-self-center lg:py-2 rounded-[18px] border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 py-1.5 shadow-[0_0_24px_-10px_var(--success)]">
           <div className="flex items-center justify-between">
             <span className="text-[11px] font-semibold tracking-wide text-success">MARGIN</span>
             <SmallBarsIcon className="size-3.5 text-success/80" />
@@ -83,18 +83,21 @@ export function OpportunityCard({
         </div>
       </div>
 
-      <div className="mt-1.5 flex h-[68px] gap-1.5">
-        <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} />
-        <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} />
+      <div className="mt-1.5 flex h-[68px] gap-1.5 lg:contents">
+        <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} className="lg:col-start-1 lg:row-start-3 lg:mt-2" />
+        <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} className="lg:col-start-2 lg:row-start-3 lg:mt-2" />
       </div>
 
-      <div className="mt-1.5 flex items-center gap-2">
+      <div className="mt-1.5 flex items-center gap-2 lg:col-start-3 lg:row-start-3 lg:mt-2 lg:self-center">
         <Link
           href={loggedIn ? `/beregn?id=${o.id}` : '/konto'}
           className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-[14px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-1.5 text-center text-[13px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
-          {loggedIn ? <Calculator className="size-4 shrink-0" /> : <LockKeyhole className="size-4 shrink-0" />}
-          {loggedIn ? 'Beregn indsats' : 'Opret gratis konto for at se oddsene'}
+          <span className="contents lg:hidden">
+            {loggedIn ? <Calculator className="size-4 shrink-0" /> : <LockKeyhole className="size-4 shrink-0" />}
+            {loggedIn ? 'Beregn indsats' : 'Opret gratis konto for at se oddsene'}
+          </span>
+          <span className="hidden lg:inline">Se detaljer</span>
           <ArrowRight className="size-4 shrink-0" />
         </Link>
         <button

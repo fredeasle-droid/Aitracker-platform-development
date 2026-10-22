@@ -1,7 +1,10 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
+import { Suspense } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
+import { DesktopHeader } from '@/components/desktop/desktop-header'
+import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -36,8 +39,14 @@ export default function RootLayout({
   return (
     <html lang="da" className={`${inter.variable} bg-background`}>
       <body className="min-h-dvh overflow-x-hidden antialiased">
-        <div className="mx-auto min-h-dvh w-full max-w-2xl pb-[calc(6rem+env(safe-area-inset-bottom))]">
-          {children}
+        <DesktopHeader />
+        <div className="lg:flex">
+          <Suspense fallback={null}>
+            <DesktopSidebar />
+          </Suspense>
+          <div className="mx-auto min-h-dvh w-full max-w-2xl pb-[calc(6rem+env(safe-area-inset-bottom))] lg:mx-0 lg:min-h-0 lg:min-w-0 lg:max-w-none lg:flex-1 lg:pb-6">
+            {children}
+          </div>
         </div>
         <BottomNav />
         {process.env.NODE_ENV === 'production' && <Analytics />}
