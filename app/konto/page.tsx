@@ -20,7 +20,7 @@ export default function AccountFlowPage() {
   const [loginMode, setLoginMode] = useState(false)
 
   return (
-    <main className="min-h-dvh bg-[#050b17] px-3 pb-8 pt-2 text-[#f3f6fc] sm:px-5">
+    <main className="min-h-dvh bg-[#050b17] px-3 pb-8 pt-2 text-[#f3f6fc] sm:px-5 lg:px-8 lg:pt-5">
       <div className="mx-auto w-full max-w-[390px]">
         <header className="flex h-14 items-center justify-between">
           <Link href="/" aria-label="Tilbage til BetTracker" className="flex size-11 items-center justify-center rounded-full hover:bg-white/5">
