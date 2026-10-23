@@ -6,7 +6,6 @@ import { LoginStep } from '@/app/konto/login-step'
 
 export default function LoginPage() {
   function completeLogin() {
-    document.cookie = 'bettracker_logged_in=true; Path=/; Max-Age=2592000; SameSite=Lax'
     window.location.assign('/')
   }
 
