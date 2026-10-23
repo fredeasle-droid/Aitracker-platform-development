@@ -1,12 +1,21 @@
 import 'server-only'
-import { inArray } from 'drizzle-orm'
+import { inArray, max } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
 import { scrapeAll } from '@/lib/scrapers'
 
 const rowKey = (home: string, away: string, market: string) => `${home}|${away}|${market}`.toLowerCase()
 
+const MIN_REFRESH_INTERVAL_MS = 45_000
+
+async function refreshedRecently() {
+  const [latest] = await db.select({ at: max(opportunities.updatedAt) }).from(opportunities)
+  return latest?.at ? Date.now() - new Date(latest.at).getTime() < MIN_REFRESH_INTERVAL_MS : false
+}
+
 export async function refreshOpportunities() {
+  if (await refreshedRecently()) return { ok: true as const, skipped: true as const, count: 0 }
+
   const { items, reports } = await scrapeAll()
   if (items.length === 0) return { ok: false as const, count: 0, reports }
 
