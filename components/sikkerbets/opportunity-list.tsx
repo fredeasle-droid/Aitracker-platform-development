@@ -1,9 +1,10 @@
 'use client'
 
-import { useMemo, useState, useTransition } from 'react'
+import { useMemo, useRef, useState, useTransition } from 'react'
 import { useSearchParams } from 'next/navigation'
+import useSWR from 'swr'
 import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
-import { loadMoreOpportunities, toggleFavorite } from '@/app/actions'
+import { loadMoreOpportunities, refreshOpportunityList, toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
 import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
@@ -12,6 +13,7 @@ import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { authClient } from '@/lib/auth-client'
 
+const AUTO_REFRESH_MS = 2 * 60_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
 const MARGINS = [0, 1, 2, 3, 4, 5]
@@ -63,6 +65,19 @@ export function OpportunityList({ initial, total: initialTotal }: { initial: Opp
   const [, startTransition] = useTransition()
   const [loadingMore, startLoadMore] = useTransition()
   const [loadError, setLoadError] = useState(false)
+  const loadedCount = useRef(items.length)
+  loadedCount.current = items.length
+
+  useSWR('opportunity-auto-refresh', () => refreshOpportunityList(loadedCount.current), {
+    refreshInterval: AUTO_REFRESH_MS,
+    revalidateOnMount: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    onSuccess: (next) => {
+      setItems(next.items)
+      setTotal(next.total)
+    },
+  })
   const { data: session } = authClient.useSession()
   const loggedIn = Boolean(session?.user)
 
