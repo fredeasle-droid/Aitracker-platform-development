@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, Layers, LockKeyhole, Trophy, Zap } from 'lucide-react'
+import { ArrowRight, Layers, Trophy, Zap } from 'lucide-react'
 
 const FEATURES = [
   { icon: Zap, value: 'Live scanning', label: '24/7 overvågning' },
@@ -8,7 +8,7 @@ const FEATURES = [
   { icon: Trophy, value: '30+', label: 'Sportsgrene' },
 ] as const
 
-export function DesktopHero({ loggedIn }: { loggedIn: boolean }) {
+export function DesktopHero() {
   return (
     <section
       aria-labelledby="hero-title"
@@ -33,11 +33,10 @@ export function DesktopHero({ loggedIn }: { loggedIn: boolean }) {
             Vi scanner over <strong className="text-foreground">2.000+</strong> bookmakere 24/7 og finder forskelle, du kan udnytte.
           </p>
           <Link
-            href={loggedIn ? '/beregn' : '/konto'}
+            href="/beregn"
             className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-xl bg-primary px-5 text-[14px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-primary/90"
           >
-            {!loggedIn && <LockKeyhole className="size-4" aria-hidden="true" />}
-            {loggedIn ? 'Beregn indsats' : 'Opret gratis konto'}
+            Beregn indsats
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>

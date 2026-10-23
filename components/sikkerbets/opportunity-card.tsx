@@ -99,7 +99,7 @@ function DesktopRow({
 
       <div className="flex items-center gap-2">
         <Link
-          href={loggedIn ? `/beregn?id=${o.id}` : '/konto'}
+          href={`/beregn?id=${o.id}`}
           className="flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-xl border border-border bg-[#081123] px-3.5 text-[13px] font-semibold transition-colors hover:border-primary hover:bg-accent"
         >
           Se detaljer
@@ -194,12 +194,12 @@ function MobileCard({
 
       <div className="mt-1.5 flex items-center gap-2 lg:col-start-3 lg:row-start-3 lg:mt-2 lg:self-center">
         <Link
-          href={loggedIn ? `/beregn?id=${o.id}` : '/konto'}
+          href={`/beregn?id=${o.id}`}
           className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-[14px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-1.5 text-center text-[13px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
           <span className="contents lg:hidden">
-            {loggedIn ? <Calculator className="size-4 shrink-0" /> : <LockKeyhole className="size-4 shrink-0" />}
-            {loggedIn ? 'Beregn indsats' : 'Opret gratis konto for at se oddsene'}
+            <Calculator className="size-4 shrink-0" />
+            Beregn indsats
           </span>
           <span className="hidden lg:inline">Se detaljer</span>
           <ArrowRight className="size-4 shrink-0" />

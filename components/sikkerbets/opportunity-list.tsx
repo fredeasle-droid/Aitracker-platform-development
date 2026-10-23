@@ -130,7 +130,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
 
   return (
     <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4 lg:flex-1 lg:px-0">
-      <DesktopHero loggedIn={loggedIn} />
+      <DesktopHero />
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
           Alle
