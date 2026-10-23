@@ -57,24 +57,28 @@ export function TeamCrest({ name, className }: { name: string; className?: strin
   const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
   const logo = TEAM_LOGOS[name]
 
-  if (logo) {
-    return (
-      <span className={cn('flex size-11 shrink-0 items-center justify-center', className)}>
-        <img src={logo} alt="" aria-hidden="true" className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]" />
-      </span>
-    )
-  }
-
-  return (
+  const badge = (
     <span
       aria-hidden="true"
       className={cn(
         'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight shadow-[0_0_0_2px_rgba(255,255,255,0.08)]',
         className,
+        logo && 'lg:hidden',
       )}
       style={{ background: bg, borderColor: fg, color: dark ? fg : '#ffffff' }}
     >
       {initials(name)}
     </span>
+  )
+
+  if (!logo) return badge
+
+  return (
+    <>
+      {badge}
+      <span className={cn('hidden size-11 shrink-0 items-center justify-center lg:flex', className)}>
+        <img src={logo} alt="" aria-hidden="true" className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]" />
+      </span>
+    </>
   )
 }
