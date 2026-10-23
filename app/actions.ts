@@ -71,6 +71,7 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
       stake: String(stakeA + stakeB),
       expectedProfit: profit.toFixed(2),
       status: 'open',
+      bookmakers: opp ? `${opp.aBookmaker} / ${opp.bBookmaker}` : `${demo!.a.bookmaker} / ${demo!.b.bookmaker}`,
       kickoff: opp?.kickoff ?? new Date(demo!.kickoffTs),
     })
   } catch (error) {
@@ -86,6 +87,7 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
         expectedProfit: profit,
         profit: null,
         status: 'open',
+        bookmakers: `${demo.a.bookmaker} / ${demo.b.bookmaker}`,
         kickoffLabel: demo.kickoffLabel,
         dateLabel: new Date(demo.kickoffTs).toLocaleDateString('da-DK'),
         placedTs: Date.now(),

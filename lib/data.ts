@@ -41,8 +41,9 @@ export type BetRow = {
   expectedProfit: number
   profit: number | null
   status: 'open' | 'won' | 'lost'
+  bookmakers?: string | null
   kickoffLabel: string
-  dateLabel: string
+ dateLabel: string
   placedTs: number
 }
 
@@ -162,6 +163,7 @@ export async function getBets(): Promise<BetRow[]> {
     expectedProfit: Number(r.expectedProfit),
     profit: r.profit === null ? null : Number(r.profit),
     status: r.status as BetRow['status'],
+    bookmakers: r.bookmakers,
     kickoffLabel: formatKickoff(r.kickoff, now),
     dateLabel: formatShortDate(r.kickoff),
       placedTs: (r.settledAt ?? r.kickoff).getTime(),
