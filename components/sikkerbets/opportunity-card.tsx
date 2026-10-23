@@ -3,6 +3,7 @@ import { ArrowRight, Calculator, Info, LockKeyhole, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { Flag } from '@/components/flag'
 import { SmallBarsIcon } from '@/components/icons'
+import { LockTile } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
 import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
@@ -16,17 +17,15 @@ function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: s
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
         <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
       </div>
-      <div className="relative shrink-0 text-right">
+      <div className="shrink-0 text-right">
         <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
         {loggedIn ? (
           <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
         ) : (
-          <>
-            <p className="select-none text-[19px] font-extrabold text-[#55a8ff]/40 blur-[4px]" aria-hidden="true">
-              0.00
-            </p>
-            <LockKeyhole className="absolute -right-0.5 -top-0.5 size-3.5 text-[#f5c84b]" aria-label="Odds låst" />
-          </>
+          <Link href="/konto" className="mt-0.5 flex items-center justify-end gap-1 text-[12px] font-medium text-[#55a8ff] underline underline-offset-2">
+            <LockKeyhole className="size-4" aria-hidden="true" />
+            Lås op
+          </Link>
         )}
       </div>
     </div>
@@ -34,23 +33,18 @@ function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: s
 }
 
 function RowOdds({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
+  if (!loggedIn) return <LockTile bookmaker={bookmaker} className="h-[72px] min-w-0" />
+
   return (
-    <div className="relative flex h-[72px] min-w-0 items-center gap-2.5 rounded-xl border border-[#1a3557] bg-[#081123] px-2.5">
+    <div className="flex h-[72px] min-w-0 items-center gap-2.5 rounded-xl border border-[#1a3557] bg-[#081123] px-2.5">
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1 pr-4">
         <p className="truncate text-[11px] font-semibold uppercase tracking-wide text-[#d5ddef]">{bookmaker}</p>
         <p className="truncate text-[12px] text-[#a9b6d3]" title={label}>
           {label}
         </p>
-        {loggedIn ? (
-          <p className="text-[19px] font-extrabold leading-tight tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
-        ) : (
-          <p className="select-none text-[19px] font-extrabold leading-tight text-[#55a8ff]/40 blur-[3px]" aria-hidden="true">
-            0.00
-          </p>
-        )}
+        <p className="text-[19px] font-extrabold leading-tight tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
       </div>
-      {!loggedIn && <LockKeyhole className="absolute right-2.5 top-2.5 size-4 text-[#f5c84b]" aria-label="Odds låst" />}
     </div>
   )
 }
