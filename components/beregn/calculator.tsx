@@ -122,8 +122,8 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
   ] as const
 
   return (
-    <div className="mt-3 flex flex-col gap-3">
-      <section aria-label="Indsatser" className="rounded-2xl border border-border bg-card/80 p-2">
+    <div className="mt-3 flex flex-col gap-3 lg:mt-3 lg:gap-3">
+      <section aria-label="Indsatser" className="rounded-2xl border border-[#1d4e8f] bg-[linear-gradient(135deg,#071426,#06101e)] p-3 lg:p-4">
         <div className="flex flex-col gap-3 p-1.5 pb-3 min-[380px]:flex-row min-[380px]:items-end">
           <div className="min-w-0 flex-1">
             <label htmlFor="total" className="mb-2 block text-[16px] font-semibold">
@@ -152,7 +152,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-3 lg:gap-4">
           {sides.map(({ key, side, value, onChange }) => (
             <div key={key} className="flex flex-col gap-2 rounded-xl border border-border bg-[#081123] p-2">
                 <div className="flex items-center gap-1.5 p-0.5 min-[400px]:gap-2 min-[400px]:p-1">
