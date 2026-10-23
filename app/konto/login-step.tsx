@@ -10,12 +10,21 @@ type Props = { onBack: () => void; onNext: () => void }
 
 export function LoginStep({ onBack, onNext }: Props) {
   const [error, setError] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
   async function submit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault()
+    setError('')
+    setIsSubmitting(true)
     const data = new FormData(event.currentTarget)
-    const result = await authClient.signIn.email({ email: String(data.get('email')), password: String(data.get('password')) })
-    if (result.error) { setError('Loginoplysningerne kunne ikke godkendes.'); return }
-    onNext()
+    try {
+      const result = await authClient.signIn.email({ email: String(data.get('email')), password: String(data.get('password')) })
+      if (result.error) { setError('Loginoplysningerne kunne ikke godkendes. Tjek email og adgangskode.'); return }
+      onNext()
+    } catch {
+      setError('Der opstod en forbindelsesfejl. Kontrollér din internetforbindelse og prøv igen.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
   return <form onSubmit={submit}><section>
     <h1 className="text-[27px] font-extrabold leading-tight">Log ind</h1>
@@ -26,7 +35,7 @@ export function LoginStep({ onBack, onNext }: Props) {
     </div>
     <label className="mt-3 flex items-center gap-2 text-sm text-[#d6deeb]"><input type="checkbox" defaultChecked className="size-4 accent-[#159cff]" /> Husk mig <span className="ml-auto text-[#42aeff] underline">Glemt adgangskode?</span></label>
     {error && <p className="mt-3 text-sm text-[#ff8290]" role="alert">{error}</p>}
-    <button type="submit" className="mt-5 flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#138cff] text-[17px] font-bold">Log ind <ArrowRight className="size-5" /></button>
+    <button type="submit" disabled={isSubmitting} className="mt-5 flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#138cff] text-[17px] font-bold disabled:cursor-not-allowed disabled:opacity-60">{isSubmitting ? 'Logger ind…' : 'Log ind'} {!isSubmitting && <ArrowRight className="size-5" />}</button>
     <div className="my-5 flex items-center gap-3 text-sm text-[#d7deeb]"><span className="h-px flex-1 bg-[#243650]" /> eller <span className="h-px flex-1 bg-[#243650]" /></div>
     <div className="flex flex-col gap-3"><button type="button" onClick={onNext} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-[#344861] bg-[#0a1725] text-[15px]"><GoogleMark /> Fortsæt med Google</button><button type="button" onClick={onNext} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-xl border border-[#344861] bg-[#0a1725] text-[15px]"><Apple className="size-5" /> Fortsæt med Apple</button></div>
     <div className="mt-6 flex items-center gap-3 rounded-xl border border-[#123b61] bg-[#071a2b] p-3"><ShieldCheck className="size-9 shrink-0 text-[#159cff]" /><p className="text-[12px] text-[#cbd6e7]"><b className="text-[#159cff]">100% sikkert</b><br />Dine data er beskyttet og bruges kun til din konto.</p></div>
