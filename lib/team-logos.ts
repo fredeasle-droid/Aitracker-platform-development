@@ -4,7 +4,7 @@ import { isNotNull } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities, teamLogos } from '@/lib/db/schema'
 
-type Source = 'espn' | 'thesportsdb'
+type Source = 'espn' | 'thesportsdb' | 'wikipedia'
 
 const ESPN_LEAGUES: { sport: string; path: string; leagues: string[] }[] = [
   { sport: 'Ishockey', path: 'hockey', leagues: ['nhl'] },
@@ -107,6 +107,54 @@ async function lookupTheSportsDb(sport: string, name: string): Promise<LookupRes
   }
 }
 
+const WIKI_SPORT_HINT: Record<string, string> = {
+  Fodbold: 'football club',
+  Ishockey: 'ice hockey team',
+  Basketball: 'basketball team',
+  'Håndbold': 'handball club',
+  Baseball: 'baseball team',
+  Cricket: 'cricket team',
+  'American football': 'american football team',
+}
+const WIKI_NOISE_TITLE = /\b(list of|season|seasons|squad|stadium|arena|league|cup|championship|national)\b/i
+const WIKI_LOGO_FILE = /logo|crest|badge|emblem|wordmark|shield|seal|coat[_ ]of[_ ]arms/i
+const WIKI_SPACING_MS = 1_000
+
+function titleMatchesTeam(title: string, name: string) {
+  const a = new Set(normalizeTeamName(title.replace(/\(.*?\)/g, ' ')).split(' ').filter(Boolean))
+  const b = new Set(normalizeTeamName(name).split(' ').filter(Boolean))
+  if (a.size === 0 || b.size === 0) return false
+  const [small, large] = a.size <= b.size ? [a, b] : [b, a]
+  return [...small].every((token) => large.has(token))
+}
+
+async function lookupWikipedia(sport: string, name: string): Promise<LookupResult> {
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const search = `${query} ${WIKI_SPORT_HINT[sport] ?? ''}`.trim()
+    const url =
+      'https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&gsrlimit=5&prop=pageimages&piprop=thumbnail&pithumbsize=200' +
+      `&gsrsearch=${encodeURIComponent(search)}`
+    const res = await fetch(url, {
+      headers: { 'User-Agent': 'BetTracker/1.0 (team logo lookup)' },
+      signal: AbortSignal.timeout(8_000),
+    })
+    if (!res.ok) return { status: 'limited' }
+    const data = await res.json()
+    const pages: { index?: number; title: string; thumbnail?: { source?: string } }[] = Object.values(data.query?.pages ?? {})
+    pages.sort((a, b) => (a.index ?? 0) - (b.index ?? 0))
+    const match = pages.find((page) => {
+      const image = page.thumbnail?.source
+      return image && !WIKI_NOISE_TITLE.test(page.title) && titleMatchesTeam(page.title, query) && WIKI_LOGO_FILE.test(decodeURIComponent(image))
+    })
+    const image = match?.thumbnail?.source
+    return image ? { status: 'found', url: image } : { status: 'none' }
+  } catch (error) {
+    console.error('[logos] wikipedia lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
 async function saveLogos(entries: { key: string; sport: string; name: string; url: string | null; source: Source | null }[]) {
   for (const entry of entries) {
     await db
@@ -136,7 +184,7 @@ async function run() {
       if (!previous || retry) pending.set(key, { key, sport: row.sport, name })
     }
   }
-  if (pending.size === 0) return { pending: 0, fromEspn: 0, fromSportsDb: 0, misses: 0, limited: false }
+  if (pending.size === 0) return { pending: 0, fromEspn: 0, fromSportsDb: 0, fromWikipedia: 0, misses: 0, limited: false }
 
   const espn = await getEspnIndex()
   const fromEspn: Parameters<typeof saveLogos>[0] = []
@@ -148,30 +196,46 @@ async function run() {
   }
   await saveLogos(fromEspn)
 
+  const pause = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
   const found: Parameters<typeof saveLogos>[0] = []
   let misses = 0
-  let limited = false
+  let sportsDbLimited = false
+  let wikiLimited = false
   for (const team of remaining.slice(0, LOOKUPS_PER_RUN)) {
-    const result = await lookupTheSportsDb(team.sport, team.name)
-    if (result.status === 'limited') {
-      limited = true
-      break
+    let result: LookupResult = { status: 'none' }
+    let source: Source = 'thesportsdb'
+
+    if (!sportsDbLimited) {
+      result = await lookupTheSportsDb(team.sport, team.name)
+      if (result.status === 'limited') sportsDbLimited = true
+      else await pause(LOOKUP_SPACING_MS)
     }
-    if (result.status === 'found') found.push({ ...team, url: result.url, source: 'thesportsdb' })
-    else {
+    if (result.status !== 'found' && !wikiLimited) {
+      const wiki = await lookupWikipedia(team.sport, team.name)
+      if (wiki.status === 'limited') wikiLimited = true
+      else {
+        result = wiki
+        source = 'wikipedia'
+        await pause(WIKI_SPACING_MS)
+      }
+    }
+
+    if (result.status === 'found') found.push({ ...team, url: result.url, source })
+    else if (!sportsDbLimited && !wikiLimited) {
       misses++
       found.push({ ...team, url: null, source: null })
     }
-    await new Promise((resolve) => setTimeout(resolve, LOOKUP_SPACING_MS))
+    if (sportsDbLimited && wikiLimited) break
   }
   await saveLogos(found)
 
   return {
     pending: pending.size,
     fromEspn: fromEspn.length,
-    fromSportsDb: found.filter((entry) => entry.url).length,
+    fromSportsDb: found.filter((entry) => entry.source === 'thesportsdb').length,
+    fromWikipedia: found.filter((entry) => entry.source === 'wikipedia').length,
     misses,
-    limited,
+    limited: sportsDbLimited && wikiLimited,
   }
 }
 
