@@ -1,4 +1,5 @@
 import 'server-only'
+import { after } from 'next/server'
 import { inArray, max } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
@@ -13,7 +14,7 @@ async function refreshedRecently() {
   return latest?.at ? Date.now() - new Date(latest.at).getTime() < MIN_REFRESH_INTERVAL_MS : false
 }
 
-export async function refreshOpportunities() {
+async function runRefresh() {
   if (await refreshedRecently()) return { ok: true as const, skipped: true as const, count: 0 }
 
   const { items, reports } = await scrapeAll()
@@ -61,4 +62,33 @@ export async function refreshOpportunities() {
   })
 
   return { ok: true as const, count: items.length, ...stats, reports }
+}
+
+let inFlight: ReturnType<typeof runRefresh> | null = null
+
+export function refreshOpportunities() {
+  if (!inFlight) inFlight = runRefresh().finally(() => { inFlight = null })
+  return inFlight
+}
+
+const STALE_AFTER_MS = 2 * 60_000
+const RETRY_AFTER_MS = 60_000
+let lastVisitAttempt = 0
+
+export function scheduleStaleRefresh(latestUpdateMs: number | null) {
+  const now = Date.now()
+  if (latestUpdateMs !== null && now - latestUpdateMs < STALE_AFTER_MS) return
+  if (now - lastVisitAttempt < RETRY_AFTER_MS) return
+  lastVisitAttempt = now
+  try {
+    after(async () => {
+      try {
+        await refreshOpportunities()
+      } catch (error) {
+        console.error('[scanner] background refresh failed', error)
+      }
+    })
+  } catch (error) {
+    console.error('[scanner] could not schedule background refresh', error)
+  }
 }

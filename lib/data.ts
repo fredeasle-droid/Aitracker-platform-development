@@ -93,6 +93,9 @@ export const getOpportunities = cache(async () => {
       const { refreshOpportunities } = await import('@/lib/scanner-sync')
       const refreshed = await refreshOpportunities()
       if (refreshed.ok) rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+    } else {
+      const { scheduleStaleRefresh } = await import('@/lib/scanner-sync')
+      scheduleStaleRefresh(Math.max(...rows.map((r) => r.updatedAt.getTime())))
     }
     let favIds = new Set<number>()
     if (userId) {
