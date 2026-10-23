@@ -8,6 +8,7 @@ import { marginPercent } from '@/lib/odds'
 import { formatKickoff, formatShortDate } from '@/lib/dates'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getDemoBets } from '@/lib/demo-bets'
+import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
 
 export type Opportunity = {
   id: number
@@ -17,6 +18,8 @@ export type Opportunity = {
   league: string
   homeTeam: string
   awayTeam: string
+  homeLogo?: string | null
+  awayLogo?: string | null
   market: string
   kickoffLabel: string
   kickoffTs: number
@@ -42,7 +45,7 @@ export type BetRow = {
   placedTs: number
 }
 
-function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date): Opportunity {
+function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date, logos: Map<string, string>): Opportunity {
   const aOdds = Number(row.aOdds)
   const bOdds = Number(row.bOdds)
   return {
@@ -53,6 +56,8 @@ function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<numbe
     league: row.league,
     homeTeam: row.homeTeam,
     awayTeam: row.awayTeam,
+    homeLogo: logos.get(logoKey(row.sport, row.homeTeam)) ?? null,
+    awayLogo: logos.get(logoKey(row.sport, row.awayTeam)) ?? null,
     market: row.market,
     kickoffLabel: formatKickoff(row.kickoff, now),
     kickoffTs: row.kickoff.getTime(),
@@ -105,8 +110,15 @@ export const getOpportunities = cache(async () => {
         console.error('[data] favorites unavailable; continuing with opportunities', error)
       }
     }
+    let logos = new Map<string, string>()
+    try {
+      logos = await getLogoMap()
+      scheduleLogoRefresh()
+    } catch (error) {
+      console.error('[data] team logos unavailable; continuing without them', error)
+    }
     const now = new Date()
-    return rows.map((r) => toOpportunity(r, favIds, now))
+    return rows.map((r) => toOpportunity(r, favIds, now, logos))
   } catch (error) {
     console.error('[data] opportunities unavailable', error)
     return []

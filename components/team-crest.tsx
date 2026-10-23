@@ -52,10 +52,10 @@ function initials(name: string) {
     .toUpperCase()
 }
 
-export function TeamCrest({ name, className }: { name: string; className?: string }) {
+export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?: string | null; className?: string }) {
   const [bg, fg] = TEAM_COLORS[name] ?? ['#1e293b', '#e2e8f0']
   const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
-  const logo = TEAM_LOGOS[name]
+  const logo = logoUrl ?? TEAM_LOGOS[name]
 
   const badge = (
     <span

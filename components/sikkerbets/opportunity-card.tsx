@@ -69,9 +69,12 @@ function DesktopRow({
       </div>
 
       <div className="flex min-w-0 flex-col gap-2">
-        {[o.homeTeam, o.awayTeam].map((team) => (
+        {[
+          { team: o.homeTeam, logo: o.homeLogo },
+          { team: o.awayTeam, logo: o.awayLogo },
+        ].map(({ team, logo }) => (
           <span key={team} className="flex min-w-0 items-center gap-2.5">
-            <TeamCrest name={team} className="size-7 shrink-0 text-[9px]" />
+            <TeamCrest name={team} logoUrl={logo} className="size-7 shrink-0 text-[9px]" />
             <span className="truncate text-[14px] font-medium">{team}</span>
           </span>
         ))}
@@ -152,12 +155,12 @@ function MobileCard({
           <div className="flex items-start gap-1">
             <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
               <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
-              <TeamCrest name={o.homeTeam} className="size-[54px] shrink-0 text-[11px]" />
+              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-[54px] shrink-0 text-[11px]" />
             </span>
             <span className="mt-7 shrink-0 text-xs text-muted-foreground">vs</span>
             <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
               <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
-              <TeamCrest name={o.awayTeam} className="size-[54px] shrink-0 text-[11px]" />
+              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-[54px] shrink-0 text-[11px]" />
             </span>
           </div>
           <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
