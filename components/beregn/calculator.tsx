@@ -6,6 +6,7 @@ import { ArrowLeftRight, Check, Copy, Database, ExternalLink, Info, BookmarkPlus
 import { placeBet } from '@/app/actions'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { SmallBarsIcon } from '@/components/icons'
+import { LockedOdds, useLoggedIn } from '@/components/locked-odds'
 import { getBookmaker } from '@/lib/bookmakers'
 import type { Opportunity } from '@/lib/data'
 import { formatInt, formatOdds, formatPct, guaranteedProfit, splitStake } from '@/lib/odds'
@@ -52,6 +53,7 @@ function AmountInput({
 
 export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
   const router = useRouter()
+  const loggedIn = useLoggedIn()
   const initial = splitStake(1500, o.a.odds, o.b.odds)
   const [total, setTotal] = useState('1500')
   const [stakeA, setStakeA] = useState(String(initial.a))
@@ -92,8 +94,8 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
   async function copyStakes() {
     const text = [
       `${o.homeTeam} vs ${o.awayTeam} – ${o.market}`,
-      `${o.a.bookmaker} (${o.a.label} @ ${formatOdds(o.a.odds)}): ${formatInt(a)} DKK`,
-      `${o.b.bookmaker} (${o.b.label} @ ${formatOdds(o.b.odds)}): ${formatInt(b)} DKK`,
+      `${o.a.bookmaker} (${o.a.label}${loggedIn ? ` @ ${formatOdds(o.a.odds)}` : ''}): ${formatInt(a)} DKK`,
+      `${o.b.bookmaker} (${o.b.label}${loggedIn ? ` @ ${formatOdds(o.b.odds)}` : ''}): ${formatInt(b)} DKK`,
       `Sikker gevinst: ${formatInt(profit)} DKK (${formatPct(margin)})`,
     ].join('\n')
     try {
@@ -174,8 +176,11 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
                     <p className="break-words text-[13px] font-semibold leading-tight lg:text-[18px]">{side.bookmaker}</p>
                     <p className="break-words text-[12px] leading-tight text-[#a9b6d3] lg:mt-0.5 lg:text-[14px]">{side.label}</p>
                   </div>
-                  <p className="shrink-0 text-[19px] font-extrabold tabular-nums text-primary min-[400px]:text-[22px] lg:text-[32px]">
-                    {formatOdds(side.odds)}
+                  <p className="shrink-0">
+                    <LockedOdds
+                      odds={side.odds}
+                      className="text-[19px] font-extrabold tabular-nums text-primary min-[400px]:text-[22px] lg:text-[32px]"
+                    />
                   </p>
                 </div>
               <div className="rounded-xl border border-border bg-[#0a1426]/60 p-2">

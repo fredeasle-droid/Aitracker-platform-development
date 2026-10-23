@@ -16,14 +16,19 @@ function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: s
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
         <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
       </div>
-      {loggedIn ? (
-        <div className="shrink-0 text-right">
-          <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
+      <div className="relative shrink-0 text-right">
+        <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
+        {loggedIn ? (
           <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
-        </div>
-      ) : (
-        <LockKeyhole className="size-4 shrink-0 text-[#f5c84b]" aria-label="Odds låst" />
-      )}
+        ) : (
+          <>
+            <p className="select-none text-[19px] font-extrabold text-[#55a8ff]/40 blur-[4px]" aria-hidden="true">
+              0.00
+            </p>
+            <LockKeyhole className="absolute -right-0.5 -top-0.5 size-3.5 text-[#f5c84b]" aria-label="Odds låst" />
+          </>
+        )}
+      </div>
     </div>
   )
 }

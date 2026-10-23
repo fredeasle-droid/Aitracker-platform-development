@@ -1,9 +1,10 @@
 import { CircleHelp, Layers, Target, TrendingUp, Trophy, Zap } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { BarsIcon } from '@/components/icons'
+import { LockedOdds } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
 import type { Opportunity } from '@/lib/data'
-import { formatOdds, formatPct } from '@/lib/odds'
+import { formatPct } from '@/lib/odds'
 
 const card = 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)]'
 
@@ -22,7 +23,9 @@ function ExampleOdds({ bookmaker, label, odds }: { bookmaker: string; label: str
       <div className="min-w-0">
         <p className="truncate text-[12px] text-[#d5ddef]">{bookmaker}</p>
         <p className="truncate text-[12px] text-[#d5ddef]">{label}</p>
-        <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
+        <p>
+          <LockedOdds odds={odds} className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]" />
+        </p>
       </div>
     </div>
   )
