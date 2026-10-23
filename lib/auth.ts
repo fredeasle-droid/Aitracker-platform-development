@@ -7,7 +7,11 @@ export const auth = betterAuth({
   emailAndPassword: { enabled: true, autoSignIn: true },
   trustedOrigins: [
     ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000', 'https://api-integration-til-surebets.v0.build', ...['V0_RUNTIME_URL', 'V0_DEV_APP_URL', 'V0_BUILD_URL', 'V0_SANDBOX_URL'].flatMap((key) => process.env[key] ? [process.env[key]!] : [])] : []),
-    ...(process.env.NODE_ENV === 'production' ? [process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '', process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : ''].filter(Boolean) : []),
+    ...(process.env.NODE_ENV === 'production' ? [
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
+      process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '',
+      'https://aitracker-platform-development-git-v0-api-in-6722dc-bettracker1.vercel.app',
+    ].filter(Boolean) : []),
   ],
   session: { expiresIn: 60 * 60 * 24 * 7, updateAge: 60 * 60 * 24 },
   ...(process.env.NODE_ENV === 'development' ? { advanced: { defaultCookieAttributes: { sameSite: 'none' as const, secure: true } } } : {}),
