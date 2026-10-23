@@ -9,6 +9,14 @@ const TEAM_LOGOS: Record<string, string> = {
   Barcelona: 'https://media.api-sports.io/football/teams/529.png',
   Inter: 'https://media.api-sports.io/football/teams/505.png',
   'AC Milan': 'https://media.api-sports.io/football/teams/489.png',
+  Fulham: 'https://media.api-sports.io/football/teams/36.png',
+  'Hull City': 'https://media.api-sports.io/football/teams/64.png',
+  Napoli: 'https://media.api-sports.io/football/teams/492.png',
+  Leeds: 'https://media.api-sports.io/football/teams/63.png',
+  Leicester: 'https://media.api-sports.io/football/teams/46.png',
+  PSG: 'https://media.api-sports.io/football/teams/85.png',
+  Marseille: 'https://media.api-sports.io/football/teams/81.png',
+  Atalanta: 'https://media.api-sports.io/football/teams/499.png',
 }
 
 const TEAM_COLORS: Record<string, [string, string]> = {

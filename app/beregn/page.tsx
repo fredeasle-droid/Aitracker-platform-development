@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { ArrowLeft, Calculator as CalculatorIcon } from 'lucide-react'
 import { Calculator } from '@/components/beregn/calculator'
 import { MatchCard } from '@/components/beregn/match-card'
 import { SiteHeader } from '@/components/site-header'
@@ -18,16 +20,27 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
   return (
     <main className="min-h-dvh bg-[#030914]">
       <SiteHeader />
-      <div className="mx-auto flex w-full max-w-[1450px] gap-5 px-4 py-5 lg:px-6 xl:gap-8">
-          <section className="min-w-0 flex-1 lg:max-w-[925px]">
+      <div className="flex w-full gap-4 px-4 py-5 lg:items-start lg:px-4 lg:pb-6 lg:pt-4">
+          <section className="min-w-0 flex-1">
             {opportunity ? (
               <>
-                <div className="mb-5 flex items-center justify-between gap-4 px-1">
+                <div className="mb-4 flex items-center justify-between gap-4 px-1 lg:mb-5">
                   <div className="flex items-center gap-4">
-                    <span className="flex size-12 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-[0_0_24px_-8px_var(--primary)]">▦</span>
-                    <div><h1 className="text-[30px] font-extrabold tracking-tight">Beregner</h1><p className="text-[16px] text-[#bdc9e1]">Find din sikre indsatsfordeling og beregn din profit.</p></div>
+                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-[0_0_24px_-8px_var(--primary)] lg:size-14">
+                      <CalculatorIcon className="size-7" aria-hidden="true" />
+                    </span>
+                    <div>
+                      <h1 className="text-[28px] font-extrabold leading-tight tracking-tight lg:text-[34px]">Beregner</h1>
+                      <p className="text-[15px] text-[#bdc9e1] lg:text-[17px]">Find din sikre indsatsfordeling og beregn din profit.</p>
+                    </div>
                   </div>
-                  <a href="/" className="hidden min-h-12 items-center rounded-xl border border-[#1d4c91] px-5 text-[15px] font-semibold text-primary hover:bg-[#0b1d39] lg:flex">← Vælg anden kamp</a>
+                  <Link
+                    href="/"
+                    className="hidden min-h-14 items-center gap-3 rounded-xl border border-[#1d4c91] bg-[#071428] px-6 text-[16px] font-semibold text-primary transition-colors hover:bg-[#0b1d39] lg:flex"
+                  >
+                    <ArrowLeft className="size-5" aria-hidden="true" />
+                    Vælg anden kamp
+                  </Link>
                 </div>
                 <MatchCard opportunity={opportunity} />
                 <Calculator key={opportunity.id} opportunity={opportunity} />
