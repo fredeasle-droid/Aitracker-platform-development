@@ -18,13 +18,14 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
   ])
 
   return (
-    <main className="min-h-dvh bg-[#030914]">
+    <main className="lg:min-h-dvh lg:bg-[#030914]">
       <SiteHeader />
-      <div className="flex w-full gap-4 px-4 py-5 lg:items-start lg:px-4 lg:pb-6 lg:pt-4">
+      <div className="flex w-full gap-4 px-4 lg:items-start lg:pb-6 lg:pt-4">
           <section className="min-w-0 flex-1">
             {opportunity ? (
               <>
-                <div className="mb-4 flex items-center justify-between gap-4 px-1 lg:mb-5">
+                <h1 className="sr-only lg:hidden">Beregner</h1>
+                <div className="mb-4 hidden items-center justify-between gap-4 px-1 lg:mb-5 lg:flex">
                   <div className="flex items-center gap-4">
                     <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-[0_0_24px_-8px_var(--primary)] lg:size-14">
                       <CalculatorIcon className="size-7" aria-hidden="true" />

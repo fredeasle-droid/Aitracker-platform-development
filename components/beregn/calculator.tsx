@@ -125,7 +125,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
 
   return (
     <div className="mt-3 flex flex-col gap-3 lg:mt-3 lg:gap-3">
-      <section aria-label="Indsatser" className="rounded-2xl border border-[#1d4e8f] bg-[linear-gradient(135deg,#071426,#06101e)] p-3 lg:p-4">
+      <section aria-label="Indsatser" className="rounded-2xl border border-border bg-card/80 p-2 lg:border-[#1d4e8f] lg:bg-[linear-gradient(135deg,#071426,#06101e)] lg:p-4">
         <div className="flex flex-col gap-3 p-1.5 pb-3 min-[380px]:flex-row min-[380px]:items-end">
           <div className="min-w-0 flex-1">
             <label htmlFor="total" className="mb-2 block text-[16px] font-semibold">
@@ -154,7 +154,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-3 min-[560px]:grid-cols-2 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
+        <div className="grid grid-cols-2 gap-2 lg:grid-cols-[1fr_auto_1fr] lg:items-center lg:gap-4">
           {sides.map(({ key, side, value, onChange }, index) => (
             <Fragment key={key}>
             {index === 1 && (
@@ -171,10 +171,10 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
                 <div className="flex items-center gap-1.5 p-0.5 min-[400px]:gap-2 min-[400px]:p-1 lg:p-0">
                   <BookmakerLogo name={side.bookmaker} className="size-9 shrink-0 min-[400px]:size-11 lg:size-12" />
                   <div className="min-w-0 flex-1">
-                    <p className="break-words text-[15px] font-semibold leading-tight lg:text-[18px]">{side.bookmaker}</p>
-                    <p className="break-words text-[13px] leading-tight text-[#a9b6d3] lg:mt-0.5 lg:text-[14px]">{side.label}</p>
+                    <p className="break-words text-[13px] font-semibold leading-tight lg:text-[18px]">{side.bookmaker}</p>
+                    <p className="break-words text-[12px] leading-tight text-[#a9b6d3] lg:mt-0.5 lg:text-[14px]">{side.label}</p>
                   </div>
-                  <p className="shrink-0 text-[24px] font-extrabold tabular-nums text-primary lg:text-[32px]">
+                  <p className="shrink-0 text-[19px] font-extrabold tabular-nums text-primary min-[400px]:text-[22px] lg:text-[32px]">
                     {formatOdds(side.odds)}
                   </p>
                 </div>
