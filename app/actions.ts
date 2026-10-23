@@ -5,25 +5,19 @@ import { revalidatePath } from 'next/cache'
 import { db } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
-import { OPPORTUNITY_PAGE_SIZE, getBetForUser, getOpportunityPage } from '@/lib/data'
+import { getBetForUser, getTopOpportunities } from '@/lib/data'
 import { refreshOpportunities } from '@/lib/scanner-sync'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
 
-export async function loadMoreOpportunities(offset: number) {
-  if (!Number.isInteger(offset) || offset < 0) throw new Error('Ugyldig offset')
-  return getOpportunityPage(offset)
-}
-
-export async function refreshOpportunityList(loadedCount: number) {
-  const count = Number.isInteger(loadedCount) && loadedCount > 0 ? Math.min(loadedCount, 500) : OPPORTUNITY_PAGE_SIZE
+export async function refreshOpportunityList() {
   try {
     await refreshOpportunities()
   } catch (error) {
     console.error('[scanner] auto refresh failed', error)
   }
-  return getOpportunityPage(0, Math.max(count, OPPORTUNITY_PAGE_SIZE))
+  return getTopOpportunities()
 }
 
 export async function toggleFavorite(opportunityId: number) {

@@ -9,6 +9,7 @@ import { formatKickoff, formatShortDate } from '@/lib/dates'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getDemoBets } from '@/lib/demo-bets'
 import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
+import { MAX_OPPORTUNITIES } from '@/lib/limits'
 
 export type Opportunity = {
   id: number
@@ -118,19 +119,19 @@ export const getOpportunities = cache(async () => {
       console.error('[data] team logos unavailable; continuing without them', error)
     }
     const now = new Date()
-    return rows.map((r) => toOpportunity(r, favIds, now, logos))
+    return rows
+      .map((r) => toOpportunity(r, favIds, now, logos))
+      .sort((a, b) => b.margin - a.margin || a.id - b.id)
+      .slice(0, MAX_OPPORTUNITIES)
   } catch (error) {
     console.error('[data] opportunities unavailable', error)
     return []
   }
 })
 
-export const OPPORTUNITY_PAGE_SIZE = 30
-
-export async function getOpportunityPage(offset = 0, limit = OPPORTUNITY_PAGE_SIZE) {
+export async function getTopOpportunities() {
   const all = await getOpportunities()
-  const ranked = [...all].sort((a, b) => b.margin - a.margin || a.id - b.id)
-  return { items: ranked.slice(offset, offset + limit), total: ranked.length }
+  return [...all].sort((a, b) => b.margin - a.margin || a.id - b.id).slice(0, MAX_OPPORTUNITIES)
 }
 
 export async function getOpportunity(id?: number) {

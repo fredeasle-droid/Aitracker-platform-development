@@ -4,6 +4,8 @@ import { inArray, max } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
 import { scrapeAll } from '@/lib/scrapers'
+import { marginPercent } from '@/lib/odds'
+import { MAX_OPPORTUNITIES } from '@/lib/limits'
 
 const rowKey = (home: string, away: string, market: string) => `${home}|${away}|${market}`.toLowerCase()
 
@@ -17,8 +19,12 @@ async function refreshedRecently() {
 async function runRefresh() {
   if (await refreshedRecently()) return { ok: true as const, skipped: true as const, count: 0 }
 
-  const { items, reports } = await scrapeAll()
-  if (items.length === 0) return { ok: false as const, count: 0, reports }
+  const { items: scraped, reports } = await scrapeAll()
+  if (scraped.length === 0) return { ok: false as const, count: 0, reports }
+
+  const items = [...scraped]
+    .sort((x, y) => marginPercent(y.legs[0].odds, y.legs[1].odds) - marginPercent(x.legs[0].odds, x.legs[1].odds))
+    .slice(0, MAX_OPPORTUNITIES)
 
   const stats = await db.transaction(async (tx) => {
     const existing = await tx.select().from(opportunities)
