@@ -3,7 +3,7 @@
 import { useMemo, useState, useTransition } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
-import { toggleFavorite } from '@/app/actions'
+import { loadMoreOpportunities, toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
 import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
@@ -53,13 +53,16 @@ const chipActive = 'border-primary bg-primary text-primary-foreground'
 const filterBtn =
   'flex min-h-11 w-full items-center justify-between gap-2 rounded-xl border border-border bg-[#081123] px-3 text-[14px] text-foreground hover:bg-accent'
 
-export function OpportunityList({ initial }: { initial: Opportunity[] }) {
+export function OpportunityList({ initial, total: initialTotal }: { initial: Opportunity[]; total: number }) {
   const [items, setItems] = useState(initial)
+  const [total, setTotal] = useState(initialTotal)
   const [sport, setSport] = useState<string>('Alle')
   const [league, setLeague] = useState<string>('Alle')
   const [minMargin, setMinMargin] = useState(0)
-  const [sort, setSort] = useState<SortId>('newest')
+  const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
+  const [loadingMore, startLoadMore] = useTransition()
+  const [loadError, setLoadError] = useState(false)
   const { data: session } = authClient.useSession()
   const loggedIn = Boolean(session?.user)
 
@@ -73,6 +76,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   if (initial !== prevInitial) {
     setPrevInitial(initial)
     setItems(initial)
+    setTotal(initialTotal)
   }
 
   const [prevUrlKey, setPrevUrlKey] = useState(urlKey)
@@ -114,6 +118,24 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     setLeague('Alle')
     setMarket('Alle')
   }
+
+  function handleLoadMore() {
+    setLoadError(false)
+    startLoadMore(async () => {
+      try {
+        const next = await loadMoreOpportunities(items.length)
+        setItems((prev) => {
+          const known = new Set(prev.map((o) => o.id))
+          return [...prev, ...next.items.filter((o) => !known.has(o.id))]
+        })
+        setTotal(next.total)
+      } catch {
+        setLoadError(true)
+      }
+    })
+  }
+
+  const remaining = Math.max(total - items.length, 0)
 
   function handleFavorite(id: number) {
     setItems((prev) => prev.map((o) => (o.id === id ? { ...o, favorite: !o.favorite } : o)))
@@ -299,6 +321,24 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           visible.map((o) => <OpportunityCard key={o.id} opportunity={o} onToggleFavorite={handleFavorite} loggedIn={loggedIn} />)
         )}
       </div>
+
+      {remaining > 0 && (
+        <div className="mt-4 flex flex-col items-center gap-2 pb-6">
+          <button
+            type="button"
+            onClick={handleLoadMore}
+            disabled={loadingMore}
+            className="min-h-11 rounded-xl border border-border bg-[#081123] px-8 text-[15px] font-semibold text-foreground transition-colors hover:bg-accent disabled:opacity-60"
+          >
+            {loadingMore ? 'Henter...' : `Vis flere (${remaining})`}
+          </button>
+          {loadError && (
+            <p role="alert" className="text-sm text-destructive">
+              Kunne ikke hente flere. Prøv igen.
+            </p>
+          )}
+        </div>
+      )}
     </section>
   )
 }

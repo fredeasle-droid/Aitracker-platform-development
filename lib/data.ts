@@ -110,6 +110,14 @@ export const getOpportunities = cache(async () => {
   }
 })
 
+export const OPPORTUNITY_PAGE_SIZE = 30
+
+export async function getOpportunityPage(offset = 0, limit = OPPORTUNITY_PAGE_SIZE) {
+  const all = await getOpportunities()
+  const ranked = [...all].sort((a, b) => b.margin - a.margin || a.id - b.id)
+  return { items: ranked.slice(offset, offset + limit), total: ranked.length }
+}
+
 export async function getOpportunity(id?: number) {
   const all = await getOpportunities()
   if (id) {

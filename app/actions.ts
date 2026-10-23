@@ -5,10 +5,15 @@ import { revalidatePath } from 'next/cache'
 import { db } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
-import { getBetForUser } from '@/lib/data'
+import { getBetForUser, getOpportunityPage } from '@/lib/data'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
+
+export async function loadMoreOpportunities(offset: number) {
+  if (!Number.isInteger(offset) || offset < 0) throw new Error('Ugyldig offset')
+  return getOpportunityPage(offset)
+}
 
 export async function toggleFavorite(opportunityId: number) {
   if (!Number.isInteger(opportunityId) || opportunityId <= 0) throw new Error('Ugyldigt id')
