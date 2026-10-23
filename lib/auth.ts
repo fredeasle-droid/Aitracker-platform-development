@@ -4,7 +4,13 @@ import { pool } from '@/lib/db'
 export const auth = betterAuth({
   database: pool,
   baseURL: process.env.BETTER_AUTH_URL ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : process.env.V0_RUNTIME_URL),
-  emailAndPassword: { enabled: true, autoSignIn: true },
+  emailAndPassword: { enabled: true, autoSignIn: true, minPasswordLength: 6 },
+  user: {
+    additionalFields: {
+      username: { type: 'string', required: false },
+      phone: { type: 'string', required: false },
+    },
+  },
   trustedOrigins: [
     ...(process.env.NODE_ENV === 'development' ? ['http://localhost:3000', 'https://api-integration-til-surebets.v0.build', ...['V0_RUNTIME_URL', 'V0_DEV_APP_URL', 'V0_BUILD_URL', 'V0_SANDBOX_URL'].flatMap((key) => process.env[key] ? [process.env[key]!] : [])] : []),
     ...(process.env.NODE_ENV === 'production' ? [
