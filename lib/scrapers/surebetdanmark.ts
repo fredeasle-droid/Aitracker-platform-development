@@ -46,6 +46,7 @@ function parseRow(row: FeedRow): ScrapedSurebet | null {
 export async function scrapeSureBetDanmark() {
   const cookie = process.env.SUREBETDANMARK_COOKIE?.trim()
   if (!cookie) throw new Error('SUREBETDANMARK_COOKIE mangler')
+  if (/[^\x20-\x7e]/.test(cookie)) throw new Error('SUREBETDANMARK_COOKIE er afkortet eller indeholder ugyldige tegn (fx "…"). Kopiér hele Cookie-headeren igen')
 
   const response = await fetch(FEED_URL, {
     headers: { ...SCRAPER_HEADERS, Accept: 'application/json', Cookie: cookie },
