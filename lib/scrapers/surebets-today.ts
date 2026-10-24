@@ -1,4 +1,4 @@
-import { SCRAPER_HEADERS, decodeHtml, displayBookmaker, displaySport, type ScrapedSurebet } from './types'
+import { SCRAPER_HEADERS, decodeHtml, displayBookmaker, displaySport, normalizeLegLabel, type ScrapedSurebet } from './types'
 
 const SOURCE_URL = 'https://www.sure-bets.today/sure-bets'
 
@@ -40,8 +40,13 @@ function parseCards(html: string): ScrapedSurebet[] {
     const market = decodeHtml(pick(block, /class=["']sb-bet-market["'][^>]*>([\s\S]*?)<\/div>/i)).replace(/\s*·\s*\d+\s+legs?\s+across\s+\d+\s+books?/i, '').trim()
     const profit = Number(decodeHtml(pick(block, /class=["']sb-pct["'][^>]*>([\s\S]*?)<\/div>/i)).replace(',', '.').match(/\d+(?:\.\d+)?/)?.[0])
     const minutes = minutesUntil(decodeHtml(pick(block, /class=["']sb-bet-time["'][^>]*>([\s\S]*?)<\/div>/i)).replace(/^Begins in\s*/i, ''))
-    const legs = (sourceOdds[index] ?? [])
-      .map((leg, legIndex) => ({ label: leg.bet || `Udfald ${legIndex + 1}`, bookmaker: displayBookmaker(leg.bookmaker ?? ''), odds: Number(leg.odds) }))
+    const sourceLegs = sourceOdds[index] ?? []
+    const legs = sourceLegs
+      .map((leg, legIndex) => ({
+        label: leg.bet ? normalizeLegLabel(leg.bet, market, sourceLegs.length) : `Udfald ${legIndex + 1}`,
+        bookmaker: displayBookmaker(leg.bookmaker ?? ''),
+        odds: Number(leg.odds),
+      }))
       .filter((leg) => leg.odds > 1)
     if (teams.length !== 2 || !teams[0] || !teams[1] || !profit || !market || minutes === null || legs.length < 2) return
 

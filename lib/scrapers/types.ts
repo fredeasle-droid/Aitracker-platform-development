@@ -45,6 +45,20 @@ export function displaySport(value: string) {
   return value ? value.charAt(0).toUpperCase() + value.slice(1) : 'Sport'
 }
 
+const TOTALS_MARKET = /^(corners?|cards?|bookings?|shots?|o\/u|over\/under|total)\b/i
+const SIMPLE_LABELS: Record<string, string> = { o: 'Over', u: 'Under', y: 'Ja', n: 'Nej', x: 'X' }
+
+export function normalizeLegLabel(raw: string, market: string, legCount: number) {
+  const value = raw.trim().toLowerCase()
+  if (SIMPLE_LABELS[value]) return SIMPLE_LABELS[value]
+  const isTotalsMarket = TOTALS_MARKET.test(market.trim()) && /\d/.test(market) && !/handicap/i.test(market)
+  if (isTotalsMarket && legCount === 2) {
+    if (value === '1') return 'Over'
+    if (value === '2') return 'Under'
+  }
+  return raw.trim()
+}
+
 export function displayBookmaker(name: string) {
   const clean = name.trim()
   if (!clean) return 'Ukendt'
