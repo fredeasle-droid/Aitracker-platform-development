@@ -1,24 +1,31 @@
 'use client'
 
 import { useActionState } from 'react'
-import { saveSureBetDanmarkCookie, type SaveState } from './actions'
+import type { SaveState } from './actions'
 
-export function CookieForm() {
-  const [state, action, pending] = useActionState<SaveState, FormData>(saveSureBetDanmarkCookie, null)
+type CookieFormProps = {
+  id: string
+  label: string
+  placeholder: string
+  action: (previous: SaveState, formData: FormData) => Promise<SaveState>
+}
+
+export function CookieForm({ id, label, placeholder, action }: CookieFormProps) {
+  const [state, formAction, pending] = useActionState<SaveState, FormData>(action, null)
 
   return (
-    <form action={action} className="flex flex-col gap-3">
-      <label htmlFor="cookie" className="text-sm font-semibold">
-        Cookie-værdi fra feed-kaldet
+    <form action={formAction} className="flex flex-col gap-3">
+      <label htmlFor={id} className="text-sm font-semibold">
+        {label}
       </label>
       <textarea
-        id="cookie"
+        id={id}
         name="cookie"
         required
-        rows={6}
+        rows={5}
         spellCheck={false}
         autoComplete="off"
-        placeholder="sb-…-auth-token.0=…; sb-…-auth-token.1=…"
+        placeholder={placeholder}
         className="w-full resize-y rounded-xl border border-[#38506b] bg-[#081725] p-3 font-mono text-xs leading-5 text-white outline-none placeholder:text-[#8da2bc] focus:border-[#138cff]"
       />
       {state && (

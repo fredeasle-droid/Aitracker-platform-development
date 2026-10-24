@@ -53,6 +53,15 @@ export async function getSessionInfo(source: string) {
   return row ?? null
 }
 
+export function cleanCookieInput(raw: string) {
+  return raw
+    .replace(/\s*\r?\n\s*/g, '')
+    .replace(/^-H\s+/i, '')
+    .replace(/^['"]|['"]$/g, '')
+    .replace(/^cookie:\s*/i, '')
+    .trim()
+}
+
 export function parseCookieHeader(header: string) {
   const cookies = new Map<string, string>()
   for (const part of header.split(';')) {
