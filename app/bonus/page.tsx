@@ -3,7 +3,11 @@ import Link from 'next/link'
 import { ArrowRight, Check, Clock3, Gift, Info, ShieldCheck, Sparkles } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { SiteHeader } from '@/components/site-header'
+import { DesktopAside } from '@/components/desktop/desktop-aside'
+import { DesktopBonus } from '@/components/desktop/desktop-bonus'
+import { getOpportunities } from '@/lib/data'
 
+export const dynamic = 'force-dynamic'
 export const metadata: Metadata = {
   title: 'Bonusser – BetTracker',
   description: 'Sammenlign velkomstbonusser og kampagner hos danske bookmakere.',
@@ -35,9 +39,15 @@ const offers = [
   { bookmaker: 'Campobet', badge: 'Ny kampagne', amount: '500 kr.', requirement: 'Indbetal min. 100 kr.', wagering: 'Omsætning 5x bonus', terms: ['Kun for nye kunder', 'Kampagnen skal aktiveres'], accent: 'violet' },
 ] as const
 
-export default function BonusPage() {
+export default async function BonusPage() {
+  const opportunities = await getOpportunities()
   return (
-    <main>
+    <main className="lg:min-h-dvh lg:bg-[#030914]">
+      <div className="hidden w-full gap-4 px-4 lg:flex lg:items-start lg:pb-6 lg:pt-4">
+        <DesktopBonus />
+        <DesktopAside opportunities={opportunities} />
+      </div>
+      <div className="lg:hidden">
       <SiteHeader />
       <section className="relative overflow-hidden px-4 pb-5 pt-3">
         <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-[#1682ff]/15 blur-3xl" />
@@ -63,6 +73,7 @@ export default function BonusPage() {
         ))}
       </section>
       <p id="claim" className="mx-4 mt-5 flex items-start gap-2 rounded-xl border border-[#1a2846] bg-[#081322] p-3 text-[11px] leading-4 text-[#8298b2]"><Info className="mt-0.5 size-4 shrink-0 text-[#54b8ff]" />Spil ansvarligt. Bonusser er underlagt bookmakerens fulde vilkår. 18+.</p>
+      </div>
     </main>
   )
 }

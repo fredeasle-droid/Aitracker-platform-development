@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { ChevronDown, UserRound } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { authClient } from '@/lib/auth-client'
 
 const countries = [
@@ -12,7 +12,7 @@ const countries = [
   { code: 'DE', name: 'Tyskland', flag: '🇩🇪' },
 ]
 
-export function HeaderControls() {
+export function HeaderControls({ beforeAccount }: { beforeAccount?: ReactNode } = {}) {
   const [country, setCountry] = useState(countries[0])
   const [open, setOpen] = useState(false)
   const [online, setOnline] = useState(1247)
@@ -40,6 +40,7 @@ export function HeaderControls() {
           {countries.map((item) => <button key={item.code} type="button" role="option" aria-selected={country.code === item.code} onClick={() => { setCountry(item); setOpen(false) }} className="flex min-h-10 w-full items-center gap-2 rounded-lg px-2 text-left text-sm hover:bg-[#123253]"><span className="text-lg">{item.flag}</span>{item.name}</button>)}
         </div>}
       </div>
+      {beforeAccount}
       <Link href={session?.user ? "/konto" : "/login"} className={`flex min-h-11 items-center gap-1.5 rounded-xl border px-3 text-[13px] font-bold shadow-[0_0_14px_-8px_#159cff] transition-colors hover:bg-[#102e4e] sm:gap-2 sm:px-4 sm:text-[15px] ${session?.user ? 'border-[#16ee93] text-[#b8ffd9]' : 'border-[#159cff] text-[#8dd0ff]'}`}>
         <UserRound className="size-[18px]" /> <span>{session?.user ? username : 'Log ind'}</span>{session?.user && <span className="size-1.5 rounded-full bg-[#16ee93] shadow-[0_0_8px_#16ee93]" aria-label="Logget ind" />}
       </Link>
