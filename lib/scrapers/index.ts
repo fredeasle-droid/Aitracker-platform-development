@@ -1,6 +1,7 @@
 import 'server-only'
 import { scrapeBetMonitor } from './betmonitor'
 import { scrapeOddsator } from './oddsator'
+import { scrapeSureBetDanmark } from './surebetdanmark'
 import { scrapeSureBetsToday } from './surebets-today'
 import type { ScrapedSurebet } from './types'
 import { isAllowedBookmaker } from '@/lib/allowed-bookmakers'
@@ -11,6 +12,7 @@ const SOURCES = [
   { source: 'betmonitor', run: scrapeBetMonitor },
   { source: 'surebets-today', run: scrapeSureBetsToday },
   { source: 'oddsator', run: scrapeOddsator },
+  { source: 'surebetdanmark', run: scrapeSureBetDanmark },
 ]
 
 const MAX_PROFIT_PERCENT = 25

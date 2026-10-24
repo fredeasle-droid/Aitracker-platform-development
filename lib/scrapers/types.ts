@@ -1,7 +1,7 @@
 export type ScrapedLeg = { label: string; bookmaker: string; odds: number }
 
 export type ScrapedSurebet = {
-  source: 'betmonitor' | 'surebets-today' | 'oddsator'
+  source: 'betmonitor' | 'surebets-today' | 'oddsator' | 'surebetdanmark'
   homeTeam: string
   awayTeam: string
   league: string
