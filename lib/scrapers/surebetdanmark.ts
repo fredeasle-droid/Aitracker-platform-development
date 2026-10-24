@@ -1,3 +1,4 @@
+import { applySetCookies, getStoredCookie, parseCookieHeader, recordSessionStatus, saveStoredCookie, serializeCookies } from '@/lib/scraper-session'
 import { SCRAPER_HEADERS, displayBookmaker, displaySport, splitTeams, type ScrapedSurebet } from './types'
 
 const FEED_URL = 'https://surebetdanmark.dk/api/internal/feed'
@@ -43,11 +44,14 @@ function parseRow(row: FeedRow): ScrapedSurebet | null {
   }
 }
 
-export async function scrapeSureBetDanmark() {
-  const cookie = process.env.SUREBETDANMARK_COOKIE?.trim()
-  if (!cookie) throw new Error('SUREBETDANMARK_COOKIE mangler')
-  if (/[^\x20-\x7e]/.test(cookie)) throw new Error('SUREBETDANMARK_COOKIE er afkortet eller indeholder ugyldige tegn (fx "…"). Kopiér hele Cookie-headeren igen')
+export const SUREBETDANMARK_SOURCE = 'surebetdanmark'
 
+export function assertValidCookie(cookie: string) {
+  if (/[^\x20-\x7e]/.test(cookie)) throw new Error('Cookien er afkortet eller indeholder ugyldige tegn (fx "…"). Kopiér hele Cookie-headeren igen')
+}
+
+export async function requestFeed(cookie: string) {
+  assertValidCookie(cookie)
   const response = await fetch(FEED_URL, {
     headers: { ...SCRAPER_HEADERS, Accept: 'application/json', Cookie: cookie },
     cache: 'no-store',
@@ -59,5 +63,25 @@ export async function scrapeSureBetDanmark() {
   const data = (await response.json()) as FeedResponse
   if (data.state === 'ACCESS_DENIED') throw new Error('Surebet Danmark nægtede adgang (session udløbet eller intet medlemskab)')
 
-  return (data.feed?.rows ?? []).map(parseRow).filter((item): item is ScrapedSurebet => item !== null)
+  const surebets = (data.feed?.rows ?? []).map(parseRow).filter((item): item is ScrapedSurebet => item !== null)
+  return { surebets, setCookies: response.headers.getSetCookie() }
+}
+
+export async function scrapeSureBetDanmark() {
+  const stored = await getStoredCookie(SUREBETDANMARK_SOURCE).catch(() => null)
+  const cookie = stored ?? process.env.SUREBETDANMARK_COOKIE?.trim()
+  if (!cookie) throw new Error('Ingen Surebet Danmark-session. Indsæt cookien på /kilder')
+
+  try {
+    const { surebets, setCookies } = await requestFeed(cookie)
+    if (stored) {
+      const cookies = parseCookieHeader(stored)
+      if (applySetCookies(cookies, setCookies)) await saveStoredCookie(SUREBETDANMARK_SOURCE, serializeCookies(cookies), `OK, ${surebets.length} surebets (session fornyet)`)
+      else await recordSessionStatus(SUREBETDANMARK_SOURCE, `OK, ${surebets.length} surebets`)
+    }
+    return surebets
+  } catch (error) {
+    if (stored) await recordSessionStatus(SUREBETDANMARK_SOURCE, error instanceof Error ? error.message : 'Ukendt fejl').catch(() => {})
+    throw error
+  }
 }

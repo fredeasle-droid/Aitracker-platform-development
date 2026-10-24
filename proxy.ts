@@ -3,7 +3,7 @@ import { getSessionCookie } from 'better-auth/cookies'
 
 export const USER_COOKIE = 'bt_uid'
 
-const MEMBERS_ONLY_PATHS = ['/beregn']
+const MEMBERS_ONLY_PATHS = ['/beregn', '/kilder']
 
 function isMembersOnly(pathname: string) {
   return MEMBERS_ONLY_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))
