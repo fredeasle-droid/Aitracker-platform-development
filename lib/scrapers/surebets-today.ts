@@ -17,13 +17,16 @@ function minutesUntil(label: string) {
 }
 
 function parseCards(html: string): ScrapedSurebet[] {
-  const sourceOdds = [...html.matchAll(/"odds":(\[[\s\S]*?\]),"profit"/gi)].map((match) => {
+  const sourceOdds = new Map<string, SourceLeg[]>()
+  for (const match of html.matchAll(/"teams":("(?:[^"\\]|\\.)*"),"league":"(?:[^"\\]|\\.)*","betType":("(?:[^"\\]|\\.)*"),"odds":(\[[\s\S]*?\]),"profit"/gi)) {
     try {
-      return JSON.parse(match[1]) as SourceLeg[]
+      const teams = (JSON.parse(match[1]) as string).replace(/\s*[—–-]\s*/, '|').toLowerCase()
+      const betType = (JSON.parse(match[2]) as string).trim().toLowerCase()
+      sourceOdds.set(`${teams}|${betType}`, JSON.parse(match[3]) as SourceLeg[])
     } catch {
-      return []
+      continue
     }
-  })
+  }
   const blocks = html
     .split(/<div\s+class=["']sb-bet["'][^>]*>/i)
     .slice(1)
@@ -31,7 +34,7 @@ function parseCards(html: string): ScrapedSurebet[] {
   const now = Date.now()
   const rows: ScrapedSurebet[] = []
 
-  blocks.forEach((block, index) => {
+  blocks.forEach((block) => {
     const metaParts = [...pick(block, /class=["']sb-bet-meta["'][^>]*>([\s\S]*?)<\/div>/i).matchAll(/<span>([^<]+)<\/span>/g)]
       .map((part) => decodeHtml(part[1]))
       .filter((part) => part && part !== '·')
@@ -40,7 +43,7 @@ function parseCards(html: string): ScrapedSurebet[] {
     const market = decodeHtml(pick(block, /class=["']sb-bet-market["'][^>]*>([\s\S]*?)<\/div>/i)).replace(/\s*·\s*\d+\s+legs?\s+across\s+\d+\s+books?/i, '').trim()
     const profit = Number(decodeHtml(pick(block, /class=["']sb-pct["'][^>]*>([\s\S]*?)<\/div>/i)).replace(',', '.').match(/\d+(?:\.\d+)?/)?.[0])
     const minutes = minutesUntil(decodeHtml(pick(block, /class=["']sb-bet-time["'][^>]*>([\s\S]*?)<\/div>/i)).replace(/^Begins in\s*/i, ''))
-    const sourceLegs = sourceOdds[index] ?? []
+    const sourceLegs = sourceOdds.get(`${teams[0]}|${teams[1]}|${market}`.toLowerCase()) ?? []
     const legs = sourceLegs
       .map((leg, legIndex) => ({
         label: leg.bet ? normalizeLegLabel(leg.bet, market, sourceLegs.length) : `Udfald ${legIndex + 1}`,
