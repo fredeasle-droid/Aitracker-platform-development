@@ -13,6 +13,21 @@ function hasRows(message: unknown) {
   return Object.values(message).some((value) => Array.isArray(value) && value.length > 0)
 }
 
+function describeValue(value: unknown, depth = 0): string {
+  if (Array.isArray(value)) return `liste(${value.length})`
+  if (value && typeof value === 'object') {
+    if (depth >= 1) return 'objekt'
+    return `{${Object.entries(value).map(([key, inner]) => `${key}: ${describeValue(inner, depth + 1)}`).join(', ')}}`
+  }
+  return typeof value
+}
+
+export function describeBetHeroMessages(messages: unknown[]) {
+  if (messages.length === 0) return 'Bet Hero sendte ingen beskeder inden for 8 sekunder.'
+  const shapes = messages.slice(0, 4).map((message) => describeValue(message))
+  return `Bet Hero sendte ${messages.length} beskeder: ${shapes.join(' | ')}`.slice(0, 400)
+}
+
 export function fetchBetHeroMessages(cookie: string, waitMs = 8000) {
   return new Promise<unknown[]>((resolve, reject) => {
     const messages: unknown[] = []

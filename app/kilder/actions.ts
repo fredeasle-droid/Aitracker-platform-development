@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { getAdminState } from '@/lib/admin'
 import { cleanCookieInput, saveStoredCookie } from '@/lib/scraper-session'
-import { BETHERO_SOURCE, fetchBetHeroMessages } from '@/lib/scrapers/bethero'
+import { BETHERO_SOURCE, describeBetHeroMessages, fetchBetHeroMessages } from '@/lib/scrapers/bethero'
 import { SUREBETDANMARK_SOURCE, requestFeed } from '@/lib/scrapers/surebetdanmark'
 
 export type SaveState = { ok: boolean; message: string } | null
@@ -44,7 +44,7 @@ export async function saveBetHeroCookie(_previous: SaveState, formData: FormData
       .map((message) => (message && typeof message === 'object' ? (message as { total?: unknown }).total : undefined))
       .find((value): value is number => typeof value === 'number')
     if (!total) {
-      return { ok: false, message: 'Forbindelsen virker, men Bet Hero gav ingen surebets. Kontoen har muligvis ikke adgang endnu, så cookien blev ikke gemt.' }
+      return { ok: false, message: `Cookien blev ikke gemt, fordi Bet Hero ikke gav et antal surebets. ${describeBetHeroMessages(messages)}` }
     }
     await saveStoredCookie(BETHERO_SOURCE, cookie, `Forbundet, ${total} surebets hos Bet Hero (lige gemt)`)
     revalidatePath('/kilder')
