@@ -19,6 +19,7 @@ function describeValue(value: unknown, depth = 0): string {
     if (depth >= 1) return 'objekt'
     return `{${Object.entries(value).map(([key, inner]) => `${key}: ${describeValue(inner, depth + 1)}`).join(', ')}}`
   }
+  if (typeof value === 'number' || typeof value === 'boolean') return String(value)
   return typeof value
 }
 
