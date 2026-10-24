@@ -46,6 +46,19 @@ function parseRow(row: FeedRow): ScrapedSurebet | null {
 
 export const SUREBETDANMARK_SOURCE = 'surebetdanmark'
 
+const ME_URL = 'https://surebetdanmark.dk/api/auth/me'
+
+class SessionExpiredError extends Error {}
+
+async function refreshSession(cookie: string) {
+  const response = await fetch(ME_URL, {
+    headers: { ...SCRAPER_HEADERS, Accept: 'application/json', Cookie: cookie },
+    cache: 'no-store',
+    signal: AbortSignal.timeout(15000),
+  })
+  return response.headers.getSetCookie()
+}
+
 export function assertValidCookie(cookie: string) {
   if (/[^\x20-\x7e]/.test(cookie)) throw new Error('Cookien er afkortet eller indeholder ugyldige tegn (fx "…"). Kopiér hele Cookie-headeren igen')
 }
@@ -57,11 +70,11 @@ export async function requestFeed(cookie: string) {
     cache: 'no-store',
     signal: AbortSignal.timeout(15000),
   })
-  if (response.status === 401 || response.status === 403) throw new Error('Surebet Danmark-sessionen er udløbet')
+  if (response.status === 401 || response.status === 403) throw new SessionExpiredError('Surebet Danmark-sessionen er udløbet')
   if (!response.ok) throw new Error(`Surebet Danmark svarede ${response.status}`)
 
   const data = (await response.json()) as FeedResponse
-  if (data.state === 'ACCESS_DENIED') throw new Error('Surebet Danmark nægtede adgang (session udløbet eller intet medlemskab)')
+  if (data.state === 'ACCESS_DENIED') throw new SessionExpiredError('Surebet Danmark nægtede adgang (session udløbet eller intet medlemskab)')
 
   const surebets = (data.feed?.rows ?? []).map(parseRow).filter((item): item is ScrapedSurebet => item !== null)
   return { surebets, setCookies: response.headers.getSetCookie() }
@@ -73,13 +86,30 @@ export async function scrapeSureBetDanmark() {
   if (!cookie) throw new Error('Ingen Surebet Danmark-session. Indsæt cookien på /kilder')
 
   try {
-    const { surebets, setCookies } = await requestFeed(cookie)
-    if (stored) {
-      const cookies = parseCookieHeader(stored)
-      if (applySetCookies(cookies, setCookies)) await saveStoredCookie(SUREBETDANMARK_SOURCE, serializeCookies(cookies), `OK, ${surebets.length} surebets (session fornyet)`)
-      else await recordSessionStatus(SUREBETDANMARK_SOURCE, `OK, ${surebets.length} surebets`)
+    let activeCookie = cookie
+    let renewed = false
+    let result: Awaited<ReturnType<typeof requestFeed>>
+    try {
+      result = await requestFeed(activeCookie)
+    } catch (error) {
+      if (!(error instanceof SessionExpiredError)) throw error
+      const cookies = parseCookieHeader(activeCookie)
+      if (!applySetCookies(cookies, await refreshSession(activeCookie))) throw error
+      activeCookie = serializeCookies(cookies)
+      renewed = true
+      result = await requestFeed(activeCookie)
     }
-    return surebets
+
+    if (stored) {
+      const cookies = parseCookieHeader(activeCookie)
+      if (applySetCookies(cookies, result.setCookies)) {
+        activeCookie = serializeCookies(cookies)
+        renewed = true
+      }
+      if (renewed) await saveStoredCookie(SUREBETDANMARK_SOURCE, activeCookie, `OK, ${result.surebets.length} surebets (session fornyet)`)
+      else await recordSessionStatus(SUREBETDANMARK_SOURCE, `OK, ${result.surebets.length} surebets`)
+    }
+    return result.surebets
   } catch (error) {
     if (stored) await recordSessionStatus(SUREBETDANMARK_SOURCE, error instanceof Error ? error.message : 'Ukendt fejl').catch(() => {})
     throw error
