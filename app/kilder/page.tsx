@@ -44,7 +44,7 @@ export default async function SourcesPage() {
 
   const requestHeaders = await headers()
   const host = requestHeaders.get('x-forwarded-host') ?? requestHeaders.get('host') ?? ''
-  const snippet = buildConsoleSnippet(`https://${host}/api/ingest/bethero`)
+  const snippet = buildConsoleSnippet(`https://${host}/bethero-bro`)
   const [surebetInfo, snapshot] = await Promise.all([getSessionInfo(SUREBETDANMARK_SOURCE), getBetHeroSnapshot()])
 
   return (
@@ -88,12 +88,12 @@ export default async function SourcesPage() {
           <h2 className="mb-1 font-semibold text-white">Sådan bruger du den</h2>
           <ol className="list-decimal pl-5">
             <li>Klik på Kopiér koden.</li>
-            <li>Åbn betherosports.com/arbitrage i Firefox, og vær logget ind.</li>
+            <li>Åbn betherosports.com/arbitrage i Chrome, og vær logget ind.</li>
             <li>Tryk F12 og åbn fanen Console.</li>
             <li>Skriv allow pasting, tryk Enter, indsæt koden med Ctrl+V og tryk Enter.</li>
-            <li>Efter ca. 10 sekunder står der en linje, der starter med BetTracker. Genindlæs denne side for at se rækkerne.</li>
+            <li>Der åbner et lille vindue, &quot;BetTracker modtager&quot;. Lad det stå åbent. Efter ca. 10 sekunder står der en grøn linje i det. Genindlæs denne side for at se rækkerne.</li>
           </ol>
-          <p className="mt-2">Koden sender nye data hvert minut, så længe fanen er åben.</p>
+          <p className="mt-2">Koden sender nye data hvert minut, så længe begge faner er åbne.</p>
         </div>
         {snapshot?.sample && (
           <details className="text-xs text-[#9fb2cc]">
