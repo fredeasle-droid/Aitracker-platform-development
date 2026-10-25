@@ -93,7 +93,7 @@ export function buildConsoleSnippet(bridgeUrl: string) {
   const BRIDGE = ${JSON.stringify(bridgeUrl)};
   const BRIDGE_ORIGIN = new URL(BRIDGE).origin;
   const TOKEN = ${JSON.stringify(ingestToken())};
-  const SOCKET = ${JSON.stringify(BETHERO_SOCKET_URL)};
+  const MAX_MESSAGES = 60;
   const toB64 = (buffer) => {
     const bytes = new Uint8Array(buffer);
     let text = '';
@@ -111,6 +111,12 @@ export function buildConsoleSnippet(bridgeUrl: string) {
     window.__betTrackerPopup = window.open(BRIDGE, 'bettracker-bridge', 'width=460,height=360');
     if (!window.__betTrackerPopup) console.log('BetTracker: Chrome blokerede vinduet. Tillad pop-ups for betherosports.com og kør koden igen.');
   };
+  const deliver = (messages) => {
+    pending = messages;
+    const popup = window.__betTrackerPopup;
+    if (popup && !popup.closed) send();
+    else openBridge();
+  };
   if (window.__betTrackerListener) window.removeEventListener('message', window.__betTrackerListener);
   window.__betTrackerListener = (event) => {
     if (event.origin !== BRIDGE_ORIGIN || !event.data) return;
@@ -118,25 +124,43 @@ export function buildConsoleSnippet(bridgeUrl: string) {
     if (event.data.type === 'bettracker-result') console.log('BetTracker:', event.data.text);
   };
   window.addEventListener('message', window.__betTrackerListener);
-  const run = () => {
-    const messages = [];
-    const socket = new WebSocket(SOCKET);
-    socket.binaryType = 'arraybuffer';
-    socket.onmessage = (event) => messages.push(typeof event.data === 'string' ? { text: event.data } : { b64: toB64(event.data) });
-    socket.onerror = () => console.log('BetTracker: kunne ikke forbinde til Bet Hero');
+  const collect = (socket) => {
+    const parts = [];
+    socket.addEventListener('message', (event) => {
+      if (parts.length >= MAX_MESSAGES) return;
+      parts.push(Promise.resolve(event.data instanceof Blob ? event.data.arrayBuffer() : event.data).then((data) => (typeof data === 'string' ? { text: data } : { b64: toB64(data) })));
+    });
     setTimeout(() => {
-      socket.close();
-      console.log('BetTracker:', messages.length, 'beskeder hentet fra Bet Hero');
-      pending = messages;
-      const popup = window.__betTrackerPopup;
-      if (popup && !popup.closed) send();
-      else openBridge();
+      Promise.all(parts).then((messages) => {
+        console.log('BetTracker:', messages.length, 'beskeder hentet fra Bet Hero');
+        deliver(messages);
+      });
     }, 6000);
+  };
+  if (!window.__betTrackerNative) window.__betTrackerNative = window.WebSocket;
+  const Native = window.__betTrackerNative;
+  window.WebSocket = class extends Native {
+    constructor(url, protocols) {
+      super(url, protocols);
+      if (String(url).includes('surebets')) {
+        window.__betTrackerSocketUrl = String(url);
+        console.log('BetTracker: fandt Bet Hero-forbindelsen, henter data i 6 sekunder');
+        collect(this);
+      }
+    }
+  };
+  const run = () => {
+    const url = window.__betTrackerSocketUrl;
+    if (!url) return;
+    const socket = new Native(url);
+    socket.binaryType = 'arraybuffer';
+    socket.onerror = () => console.log('BetTracker: kunne ikke forbinde til Bet Hero');
+    collect(socket);
+    setTimeout(() => socket.close(), 6500);
   };
   clearInterval(window.__betTrackerTimer);
   openBridge();
-  run();
   window.__betTrackerTimer = setInterval(run, 60000);
-  console.log('BetTracker: sender Bet Hero-data hvert minut. Stop med clearInterval(window.__betTrackerTimer)');
+  console.log('BetTracker: klar. Klik nu én gang på den blå opdater-knap øverst på Bet Hero-siden (eller skift mellem Prematch og Live og tilbage). Stop med clearInterval(window.__betTrackerTimer)');
 })();`
 }
