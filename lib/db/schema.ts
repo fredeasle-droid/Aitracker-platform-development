@@ -13,4 +13,6 @@ export const bets = pgTable('bets', { id: serial('id').primaryKey(), userId: tex
 
 export const scraperSessions = pgTable('scraper_sessions', { source: text('source').primaryKey(), cookieEnc: text('cookie_enc').notNull(), updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow(), lastStatus: text('last_status'), lastCheckedAt: timestamp('last_checked_at', { withTimezone: true }) })
 
-export const schema = { user, session, account, verification, opportunities, teamLogos, appUsers, favorites, bets, scraperSessions }
+export const sourceSnapshots = pgTable('source_snapshots', { source: text('source').primaryKey(), payload: text('payload').notNull(), summary: text('summary').notNull(), rowCount: integer('row_count').notNull().default(0), updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow() })
+
+export const schema = { user, session, account, verification, opportunities, teamLogos, appUsers, favorites, bets, scraperSessions, sourceSnapshots }
