@@ -145,11 +145,15 @@ export function buildConsoleSnippet(bridgeUrl: string) {
       if (messages.length) deliver(messages);
     });
   };
+  let current = null;
   const attach = (socket) => {
     if (seen.has(socket)) return;
     seen.add(socket);
+    current = socket;
+    buffer = [];
     console.log('BetTracker: fandt Bet Hero-forbindelsen, samler data');
     socket.addEventListener('message', (event) => {
+      if (socket !== current) return;
       buffer.push(Promise.resolve(event.data instanceof Blob ? event.data.arrayBuffer() : event.data).then((data) => (typeof data === 'string' ? { text: data } : { b64: toB64(data) })));
       if (buffer.length > MAX_MESSAGES) buffer.shift();
       if (!flushTimer) flushTimer = setTimeout(flush, Math.max(4000, 60000 - (Date.now() - lastFlush)));
@@ -164,6 +168,18 @@ export function buildConsoleSnippet(bridgeUrl: string) {
     clearTimeout(flushTimer);
   };
   openBridge();
-  console.log('BetTracker: klar. Skift nu et filter på Bet Hero-siden (eller klik på Live og tilbage til Prematch), så fanger koden den åbne forbindelse. Stop med window.__betTrackerStop()');
+  const findTab = (label) => Array.from(document.querySelectorAll('button')).find((button) => button.textContent.trim().toLowerCase() === label);
+  const refresh = () => {
+    const live = findTab('live');
+    const prematch = findTab('prematch');
+    if (!live || !prematch) {
+      console.log('BetTracker: fandt ikke Prematch/Live-knapperne. Skift selv et filter på siden.');
+      return;
+    }
+    live.click();
+    setTimeout(() => prematch.click(), 2500);
+  };
+  setTimeout(refresh, 1500);
+  console.log('BetTracker: klar. Koden skifter selv kort til Live og tilbage til Prematch for at fange data. Stop med window.__betTrackerStop()');
 })();`
 }
