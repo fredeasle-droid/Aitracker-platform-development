@@ -1,11 +1,28 @@
 import WebSocket from 'ws'
+import { zstdDecompressSync } from 'node:zlib'
+import { decode as decodeMsgpack } from '@msgpack/msgpack'
 
 export const BETHERO_SOURCE = 'bethero'
 
-const SOCKET_URL = 'wss://ws-prematch.betherosports.com/ws/surebets?pin=1&view=1&rows=100&sort=profit-desc'
+const SOCKET_URL =
+  'wss://ws-prematch.betherosports.com/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=event-asc&rows=30&touch=1'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
 const SETTLE_AFTER_ROWS_MS = 800
-const FALLBACK_AFTER_MS = 3000
+
+function toBuffer(data: WebSocket.RawData) {
+  if (Buffer.isBuffer(data)) return data
+  if (Array.isArray(data)) return Buffer.concat(data)
+  return Buffer.from(data)
+}
+
+function decodeBinaryMessage(data: WebSocket.RawData): unknown {
+  const buffer = toBuffer(data)
+  try {
+    return decodeMsgpack(zstdDecompressSync(buffer))
+  } catch {
+    return decodeMsgpack(buffer)
+  }
+}
 
 export class BetHeroSessionError extends Error {}
 
@@ -55,28 +72,26 @@ export function fetchBetHeroMessages(cookie: string, waitMs = 8000) {
       if (response.statusCode === 401 || response.statusCode === 403) finish(new BetHeroSessionError('Bet Hero-sessionen er udløbet'))
       else finish(new Error(`Bet Hero svarede ${response.statusCode}`))
     })
-    socket.on('open', () => {
-      socket.send(JSON.stringify({ ping: Date.now() }))
-      setTimeout(() => {
-        if (done || messages.some(hasRows)) return
-        socket.send(JSON.stringify({ filters: [], ping: Date.now() }))
-      }, FALLBACK_AFTER_MS)
-    })
     socket.on('error', (error) => finish(error))
     socket.on('close', () => finish())
     socket.on('message', (data, isBinary) => {
-      if (isBinary) return
-      const text = data.toString()
-      if (text === 'Unauthorized') return finish(new BetHeroSessionError('Bet Hero-sessionen er udløbet'))
+      let message: unknown
       try {
-        const message: unknown = JSON.parse(text)
-        messages.push(message)
-        if (hasRows(message)) {
-          clearTimeout(settleTimer)
-          settleTimer = setTimeout(() => finish(), SETTLE_AFTER_ROWS_MS)
+        if (isBinary) {
+          message = decodeBinaryMessage(data)
+        } else {
+          const text = data.toString()
+          if (text === 'Unauthorized') return finish(new BetHeroSessionError('Bet Hero-sessionen er udløbet'))
+          message = JSON.parse(text)
         }
       } catch {
-        // Ikke-JSON-beskeder som "Unavailable" ignoreres.
+        messages.push(`ukendt format (${toBuffer(data).length} bytes)`)
+        return
+      }
+      messages.push(message)
+      if (hasRows(message)) {
+        clearTimeout(settleTimer)
+        settleTimer = setTimeout(() => finish(), SETTLE_AFTER_ROWS_MS)
       }
     })
   })
