@@ -5,6 +5,7 @@ export const BETHERO_SOURCE = 'bethero'
 const SOCKET_URL = 'wss://ws-prematch.betherosports.com/ws/surebets?pin=1&view=1&rows=100&sort=profit-desc'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
 const SETTLE_AFTER_ROWS_MS = 800
+const FALLBACK_AFTER_MS = 3000
 
 export class BetHeroSessionError extends Error {}
 
@@ -54,7 +55,13 @@ export function fetchBetHeroMessages(cookie: string, waitMs = 8000) {
       if (response.statusCode === 401 || response.statusCode === 403) finish(new BetHeroSessionError('Bet Hero-sessionen er udløbet'))
       else finish(new Error(`Bet Hero svarede ${response.statusCode}`))
     })
-    socket.on('open', () => socket.send(JSON.stringify({ filters: [], ping: Date.now() })))
+    socket.on('open', () => {
+      socket.send(JSON.stringify({ ping: Date.now() }))
+      setTimeout(() => {
+        if (done || messages.some(hasRows)) return
+        socket.send(JSON.stringify({ filters: [], ping: Date.now() }))
+      }, FALLBACK_AFTER_MS)
+    })
     socket.on('error', (error) => finish(error))
     socket.on('close', () => finish())
     socket.on('message', (data, isBinary) => {
