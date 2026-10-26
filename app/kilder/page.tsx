@@ -87,10 +87,13 @@ export default async function SourcesPage() {
           placeholder="auth_session=…; bh_auth=1"
           action={saveBetHeroCookie}
         />
+        <a href="/api/bethero/userscript" download className="flex items-center justify-center rounded-xl bg-[#1769ff] px-4 py-3 text-center font-semibold text-white transition hover:bg-[#2f7bff]">
+          Hent automatisk Bet Hero-bridge
+        </a>
         <div className="text-sm leading-relaxed text-[#9fb2cc]">
-          <h2 className="mb-1 font-semibold text-white">Sådan finder du den</h2>
+          <h2 className="mb-1 font-semibold text-white">Automatisk løsning</h2>
           <p>
-            Firefox på pc: åbn betherosports.com/arbitrage og vær logget ind. Tryk F12, vælg Storage, derefter Cookies. Kopiér værdien af auth_session og bh_auth, og indsæt dem som auth_session=VÆRDI; bh_auth=1. Du kan også indsætte hele Cookie-headeren fra et kald i Network.
+            Hent scriptet én gang og installer det i Tampermonkey/Violentmonkey. Det åbner BetTracker automatisk, sender Bet Hero-data videre og opdaterer Bet Hero-fanen hvert 5. minut. Du skal ikke bruge Console eller kopiere cookies.
           </p>
         </div>
         {snapshot?.sample && (
