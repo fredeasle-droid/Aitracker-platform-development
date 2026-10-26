@@ -127,12 +127,12 @@ function parse(row: Obj): ScrapedSurebet | null {
   const teams = obj(get(event, ['teams']))
   let home = text(get(event, ['homeTeam', 'home_team', 'home', 'team1', 'participant1', 'home_name', 'team_home']) ?? get(teams ?? {}, ['home', 'homeTeam', 'home_team']))
   let away = text(get(event, ['awayTeam', 'away_team', 'away', 'team2', 'participant2', 'away_name', 'team_away']) ?? get(teams ?? {}, ['away', 'awayTeam', 'away_team']))
-  const eventName = text(get(event, ['event_name', 'eventName', 'match_name', 'matchName', 'name', 'title', 'fixture_name']))
+  const eventName = text(get(event, ['event_name', 'eventName', 'match_name', 'matchName', 'fixture_name', 'event_title', 'match', 'name', 'title']))
   if ((!home || !away) && eventName) {
     const split = eventName.split(/\s+(?:vs?\.?|[-–—])\s+/i).map(s => s.trim())
     if (split.length === 2) [home, away] = split
   }
-  const rawTime = get(event, ['startTime', 'start_time', 'start_date', 'startDate', 'kickoff', 'commenceTime', 'commence_time', 'date', 'timestamp', 'time'])
+  const rawTime = get(event, ['startTime', 'start_time', 'start_date', 'startDate', 'kickoff', 'commenceTime', 'commence_time', 'date', 'timestamp', 'time', 'event_start', 'datetime', 'start_at'])
   const kickoff = typeof rawTime === 'number' ? new Date(rawTime < 1e10 ? rawTime * 1000 : rawTime) : new Date(text(rawTime))
   if (!home || !away || !Number.isFinite(kickoff.getTime()) || kickoff.getTime() < Date.now()) return null
 
@@ -166,7 +166,7 @@ function parse(row: Obj): ScrapedSurebet | null {
     awayTeam: away,
     league: text(get(event, ['league', 'competition', 'tournament'])) || 'Ukendt liga',
     sport: displaySport(text(get(event, ['sport', 'sportName', 'sport_name'])) || 'Fodbold'),
-    market: text(get(row, ['market', 'marketName', 'market_name', 'betType'])) || '1X2',
+    market: text(get(row, ['market', 'marketName', 'market_name', 'betType', 'bet_name_1'])) || '1X2',
     kickoff, profit, legs,
   }
 }
