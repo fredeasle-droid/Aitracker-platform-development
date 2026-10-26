@@ -27,6 +27,7 @@ function decodeBinaryMessage(data: WebSocket.RawData): unknown {
 export class BetHeroSessionError extends Error {}
 
 function hasRows(message: unknown) {
+  if (Array.isArray(message)) return message.length > 0
   if (!message || typeof message !== 'object') return false
   return Object.values(message).some((value) => Array.isArray(value) && value.length > 0)
 }
