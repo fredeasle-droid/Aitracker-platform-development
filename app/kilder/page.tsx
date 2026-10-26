@@ -48,10 +48,17 @@ export default async function SourcesPage() {
   const [surebetInfo, snapshot] = await Promise.all([getSessionInfo(SUREBETDANMARK_SOURCE), getBetHeroSnapshot()])
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-10 bg-[#06111d] px-5 py-10 text-white">
-      <section className="flex flex-col gap-6" aria-labelledby="surebetdanmark-heading">
+    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 bg-[#06111d] px-5 py-10 text-white">
+      <header className="flex flex-col gap-2">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6f86a3]">Datakilder</p>
+        <h1 className="text-3xl font-extrabold tracking-tight">Forbindelser</h1>
+        <p className="leading-relaxed text-[#d6deeb]">Administrér hver feed separat. Cookies og browserforbindelser holdes adskilt.</p>
+      </header>
+
+      <section className="flex flex-col gap-6 rounded-2xl border border-[#243650] bg-[#081725] p-5" aria-labelledby="surebetdanmark-heading">
         <header className="flex flex-col gap-2">
-          <h1 id="surebetdanmark-heading" className="text-2xl font-extrabold">Surebet Danmark-session</h1>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#49d6a8]">Kilde 1</p>
+          <h2 id="surebetdanmark-heading" className="text-2xl font-extrabold">Surebet Danmark</h2>
           <p className="leading-relaxed text-[#d6deeb]">
             Indsæt Cookie-headeren én gang. Den gemmes krypteret i databasen, og scanneren gemmer selv fornyede cookies, hvis siden sender dem.
           </p>
@@ -71,9 +78,10 @@ export default async function SourcesPage() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-6 border-t border-[#243650] pt-10" aria-labelledby="bethero-heading">
+      <section className="flex flex-col gap-6 rounded-2xl border border-[#243650] bg-[#081725] p-5" aria-labelledby="bethero-heading">
         <header className="flex flex-col gap-2">
-          <h2 id="bethero-heading" className="text-2xl font-extrabold">Bet Hero via din browser</h2>
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#49d6a8]">Kilde 2</p>
+          <h2 id="bethero-heading" className="text-2xl font-extrabold">Bet Hero</h2>
           <p className="leading-relaxed text-[#d6deeb]">
             Bet Hero afviser vores server, men ikke din browser. Kør koden nedenfor på betherosports.com/arbitrage, så sender din browser surebets videre hertil. Der gemmes ingen cookie.
           </p>
