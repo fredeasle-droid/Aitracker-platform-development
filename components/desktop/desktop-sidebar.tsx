@@ -47,7 +47,7 @@ const row =
 export function DesktopSidebar() {
   const pathname = usePathname()
   const params = useSearchParams()
-  const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
+  const activeSport = params.get('sport')
   const activeCountry = params.get('country')
   const [leaguesOpen, setLeaguesOpen] = useState(true)
   const { data: session } = authClient.useSession()
@@ -132,24 +132,6 @@ export function DesktopSidebar() {
             </Link>
           </li>
         </ul>
-      )}
-
-      {session?.user && (
-        <div className="mt-auto rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3">
-          <div className="flex gap-2.5">
-            <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
-            <div>
-              <p className="text-[15px] font-bold leading-tight">Premium</p>
-              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">Få adgang til flere funktioner og eksklusive SikkerBets.</p>
-            </div>
-          </div>
-          <Link
-            href="/konto"
-            className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
-          >
-            Opgrader nu
-          </Link>
-        </div>
       )}
 
       {!session?.user && (

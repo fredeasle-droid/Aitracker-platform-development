@@ -3,7 +3,6 @@ import { ArrowRight, Calculator, Info, LockKeyhole, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { Flag } from '@/components/flag'
 import { SmallBarsIcon } from '@/components/icons'
-import { LockTile } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
 import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
@@ -17,34 +16,36 @@ function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: s
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
         <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
       </div>
-      <div className="shrink-0 text-right">
-        <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
-        {loggedIn ? (
+      {loggedIn ? (
+        <div className="shrink-0 text-right">
+          <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
           <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
-        ) : (
-          <Link href="/konto" className="mt-0.5 flex items-center justify-end gap-1 text-[12px] font-medium text-[#55a8ff] underline underline-offset-2">
-            <LockKeyhole className="size-4" aria-hidden="true" />
-            Lås op
-          </Link>
-        )}
-      </div>
+        </div>
+      ) : (
+        <LockKeyhole className="size-4 shrink-0 text-[#f5c84b]" aria-label="Odds låst" />
+      )}
     </div>
   )
 }
 
 function RowOdds({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
-  if (!loggedIn) return <LockTile bookmaker={bookmaker} className="h-[72px] min-w-0" />
-
   return (
-    <div className="flex h-[72px] min-w-0 items-center gap-2.5 rounded-xl border border-[#1a3557] bg-[#081123] px-2.5">
+    <div className="relative flex h-[72px] min-w-0 items-center gap-2.5 rounded-xl border border-[#1a3557] bg-[#081123] px-2.5">
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1 pr-4">
         <p className="truncate text-[11px] font-semibold uppercase tracking-wide text-[#d5ddef]">{bookmaker}</p>
         <p className="truncate text-[12px] text-[#a9b6d3]" title={label}>
           {label}
         </p>
-        <p className="text-[19px] font-extrabold leading-tight tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
+        {loggedIn ? (
+          <p className="text-[19px] font-extrabold leading-tight tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
+        ) : (
+          <p className="select-none text-[19px] font-extrabold leading-tight text-[#55a8ff]/40 blur-[3px]" aria-hidden="true">
+            0.00
+          </p>
+        )}
       </div>
+      {!loggedIn && <LockKeyhole className="absolute right-2.5 top-2.5 size-4 text-[#f5c84b]" aria-label="Odds låst" />}
     </div>
   )
 }
@@ -69,12 +70,9 @@ function DesktopRow({
       </div>
 
       <div className="flex min-w-0 flex-col gap-2">
-        {[
-          { team: o.homeTeam, logo: o.homeLogo },
-          { team: o.awayTeam, logo: o.awayLogo },
-        ].map(({ team, logo }) => (
+        {[o.homeTeam, o.awayTeam].map((team) => (
           <span key={team} className="flex min-w-0 items-center gap-2.5">
-            <TeamCrest name={team} logoUrl={logo} className="size-7 shrink-0 text-[9px]" />
+            <TeamCrest name={team} className="size-7 shrink-0 text-[9px]" />
             <span className="truncate text-[14px] font-medium">{team}</span>
           </span>
         ))}
@@ -96,7 +94,7 @@ function DesktopRow({
 
       <div className="flex items-center gap-2">
         <Link
-          href={`/beregn?id=${o.id}`}
+          href={loggedIn ? `/beregn?id=${o.id}` : '/konto'}
           className="flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-xl border border-border bg-[#081123] px-3.5 text-[13px] font-semibold transition-colors hover:border-primary hover:bg-accent"
         >
           Se detaljer
@@ -155,12 +153,12 @@ function MobileCard({
           <div className="flex items-start gap-1">
             <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
               <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
-              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-[54px] shrink-0 text-[11px]" />
+              <TeamCrest name={o.homeTeam} className="size-[54px] shrink-0 text-[11px]" />
             </span>
             <span className="mt-7 shrink-0 text-xs text-muted-foreground">vs</span>
             <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
               <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
-              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-[54px] shrink-0 text-[11px]" />
+              <TeamCrest name={o.awayTeam} className="size-[54px] shrink-0 text-[11px]" />
             </span>
           </div>
           <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
@@ -191,12 +189,12 @@ function MobileCard({
 
       <div className="mt-1.5 flex items-center gap-2 lg:col-start-3 lg:row-start-3 lg:mt-2 lg:self-center">
         <Link
-          href={`/beregn?id=${o.id}`}
+          href={loggedIn ? `/beregn?id=${o.id}` : '/konto'}
           className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-[14px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-1.5 text-center text-[13px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
           <span className="contents lg:hidden">
-            <Calculator className="size-4 shrink-0" />
-            Beregn indsats
+            {loggedIn ? <Calculator className="size-4 shrink-0" /> : <LockKeyhole className="size-4 shrink-0" />}
+            {loggedIn ? 'Beregn indsats' : 'Opret gratis konto for at se oddsene'}
           </span>
           <span className="hidden lg:inline">Se detaljer</span>
           <ArrowRight className="size-4 shrink-0" />

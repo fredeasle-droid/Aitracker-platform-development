@@ -1,21 +1,8 @@
 import { NextResponse, type NextRequest } from 'next/server'
-import { getSessionCookie } from 'better-auth/cookies'
 
 export const USER_COOKIE = 'bt_uid'
 
-const MEMBERS_ONLY_PATHS = ['/beregn', '/kilder']
-
-function isMembersOnly(pathname: string) {
-  return MEMBERS_ONLY_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))
-}
-
 export function proxy(request: NextRequest) {
-  const { pathname } = request.nextUrl
-
-  if (isMembersOnly(pathname) && !getSessionCookie(request)) {
-    return NextResponse.redirect(new URL('/konto', request.url))
-  }
-
   if (request.cookies.get(USER_COOKIE)?.value) return NextResponse.next()
 
   const uid = crypto.randomUUID()

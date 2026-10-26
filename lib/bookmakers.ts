@@ -16,7 +16,6 @@ const BRANDS: Record<string, BookmakerBrand> = {
   LeoVegas: { name: 'LeoVegas', url: 'https://www.leovegas.dk', bg: '#f6e3cf', fg: '#c2410c', mark: 'LV' },
   Betsson: { name: 'Betsson', url: 'https://www.betsson.dk', bg: '#ff6a13', fg: '#ffffff', mark: 'b' },
   Betano: { name: 'Betano', url: 'https://www.betano.dk', bg: '#ff4f00', fg: '#ffffff', mark: 'B' },
-  Casumo: { name: 'Casumo', url: 'https://www.casumo.dk', bg: '#1f5bff', fg: '#ffffff', mark: 'C' },
   'Danske Spil': { name: 'Danske Spil', url: 'https://danskespil.dk/oddset', bg: '#ffd100', fg: '#d62a1e', mark: '', style: 'dice' },
 }
 

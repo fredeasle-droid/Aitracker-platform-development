@@ -8,16 +8,16 @@ import type { BetRow } from '@/lib/data'
 import { formatInt, formatSigned } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-export const PERIODS = [
+const PERIODS = [
   { id: 7, label: '7 dage' },
   { id: 30, label: '30 dage' },
   { id: 90, label: '90 dage' },
   { id: 0, label: 'Alle' },
 ] as const
 
-export const DAY = 86_400_000
+const DAY = 86_400_000
 
-export function summarize(list: BetRow[]) {
+function summarize(list: BetRow[]) {
   const profit = list.reduce((s, b) => s + (b.profit ?? 0), 0)
   const staked = list.reduce((s, b) => s + b.stake, 0)
   const won = list.filter((b) => b.status === 'won')
@@ -28,11 +28,11 @@ export function summarize(list: BetRow[]) {
   return { profit, roi, avg, winRate, won: won.length, lost }
 }
 
-export function fmt1(n: number) {
+function fmt1(n: number) {
   return n.toLocaleString('da-DK', { minimumFractionDigits: 1, maximumFractionDigits: 1 })
 }
 
-export function Trend({ value, unit = '%' }: { value: number | null; unit?: string }) {
+function Trend({ value, unit = '%' }: { value: number | null; unit?: string }) {
   if (value === null || !Number.isFinite(value)) return <span className="text-[13px] text-muted-foreground">Ingen sammenligning</span>
   const up = value >= 0
   const Icon = up ? ArrowUpRight : ArrowDownRight
@@ -86,7 +86,7 @@ function StatCard({
   )
 }
 
-export function StatusPill({ status }: { status: BetRow['status'] }) {
+function StatusPill({ status }: { status: BetRow['status'] }) {
   if (status === 'open')
     return <span className="rounded-lg border border-primary px-2.5 py-1 text-[12px] font-medium text-primary">I gang</span>
   if (status === 'won')

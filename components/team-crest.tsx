@@ -9,14 +9,6 @@ const TEAM_LOGOS: Record<string, string> = {
   Barcelona: 'https://media.api-sports.io/football/teams/529.png',
   Inter: 'https://media.api-sports.io/football/teams/505.png',
   'AC Milan': 'https://media.api-sports.io/football/teams/489.png',
-  Fulham: 'https://media.api-sports.io/football/teams/36.png',
-  'Hull City': 'https://media.api-sports.io/football/teams/64.png',
-  Napoli: 'https://media.api-sports.io/football/teams/492.png',
-  Leeds: 'https://media.api-sports.io/football/teams/63.png',
-  Leicester: 'https://media.api-sports.io/football/teams/46.png',
-  PSG: 'https://media.api-sports.io/football/teams/85.png',
-  Marseille: 'https://media.api-sports.io/football/teams/81.png',
-  Atalanta: 'https://media.api-sports.io/football/teams/499.png',
 }
 
 const TEAM_COLORS: Record<string, [string, string]> = {
@@ -52,33 +44,29 @@ function initials(name: string) {
     .toUpperCase()
 }
 
-export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?: string | null; className?: string }) {
+export function TeamCrest({ name, className }: { name: string; className?: string }) {
   const [bg, fg] = TEAM_COLORS[name] ?? ['#1e293b', '#e2e8f0']
   const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
-  const logo = logoUrl ?? TEAM_LOGOS[name]
+  const logo = TEAM_LOGOS[name]
 
-  const badge = (
+  if (logo) {
+    return (
+      <span className={cn('flex size-11 shrink-0 items-center justify-center', className)}>
+        <img src={logo} alt="" aria-hidden="true" className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]" />
+      </span>
+    )
+  }
+
+  return (
     <span
       aria-hidden="true"
       className={cn(
         'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight shadow-[0_0_0_2px_rgba(255,255,255,0.08)]',
         className,
-        logo && 'lg:hidden',
       )}
       style={{ background: bg, borderColor: fg, color: dark ? fg : '#ffffff' }}
     >
       {initials(name)}
     </span>
-  )
-
-  if (!logo) return badge
-
-  return (
-    <>
-      {badge}
-      <span className={cn('hidden size-11 shrink-0 items-center justify-center lg:flex', className)}>
-        <img src={logo} alt="" aria-hidden="true" className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]" />
-      </span>
-    </>
   )
 }
