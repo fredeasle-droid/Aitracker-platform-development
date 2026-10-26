@@ -9,8 +9,6 @@ import { displayBookmaker, displaySport, type ScrapedSurebet } from './types'
 
 export const BETHERO_SOURCE = 'bethero'
 
-export const BETHERO_SOURCE = 'bethero'
-
 const SOCKET_URL =
   'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=30&touch=1'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
