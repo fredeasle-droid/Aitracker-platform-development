@@ -52,11 +52,15 @@ const jsonSafe = (_key: string, value: unknown) => (typeof value === 'bigint' ? 
 export function firstRows(messages: unknown[], limit = 2) {
   const rows: unknown[] = []
   for (const message of messages) {
-    if (!message || typeof message !== 'object') continue
-    for (const value of Object.values(message)) {
-      if (Array.isArray(value)) rows.push(...value.slice(0, limit - rows.length))
-      if (rows.length >= limit) return rows
+    if (Array.isArray(message)) {
+      rows.push(...message.slice(0, limit - rows.length))
+    } else if (message && typeof message === 'object') {
+      for (const value of Object.values(message)) {
+        if (Array.isArray(value)) rows.push(...value.slice(0, limit - rows.length))
+        if (rows.length >= limit) return rows
+      }
     }
+    if (rows.length >= limit) return rows
   }
   return rows
 }
@@ -67,6 +71,7 @@ export async function saveBetHeroSnapshot(rawMessages: BrowserMessage[]) {
 
 export async function saveBetHeroMessages(messages: unknown[]) {
   const rowCount = messages.reduce<number>((sum, message) => {
+    if (Array.isArray(message)) return sum + message.length
     if (!message || typeof message !== 'object') return sum
     const lists = Object.values(message).filter(Array.isArray) as unknown[][]
     return sum + lists.reduce((inner, list) => inner + list.length, 0)
