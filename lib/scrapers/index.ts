@@ -38,7 +38,7 @@ export async function scrapeAll() {
   const best = new Map<string, ScrapedSurebet>()
   for (const item of all) {
     if (item.legs.length !== 2 || item.profit <= 0 || item.profit > MAX_PROFIT_PERCENT || item.kickoff.getTime() < now) continue
-    if (item.source !== 'surebetdanmark' && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
+    if (item.source !== 'surebetdanmark' && item.source !== 'bethero' && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
     const key = `${item.homeTeam}|${item.awayTeam}|${item.market}`.toLowerCase()
     const current = best.get(key)
     if (!current || item.profit > current.profit) best.set(key, item)
