@@ -30,7 +30,7 @@ function parse(row: Obj): ScrapedSurebet | null {
   let away = text(get(event, ['awayTeam', 'away_team', 'away', 'team2', 'participant2']) ?? get(teams ?? {}, ['away', 'awayTeam', 'away_team']))
   const eventName = text(get(event, ['name', 'title', 'matchName', 'match_name', 'eventName']))
   if ((!home || !away) && eventName) {
-    const split = eventName.split(/\s+(?:vs?\\.?|[-–—])\s+/i).map(s => s.trim())
+    const split = eventName.split(/\s+(?:vs?\.?|[-–—])\s+/i).map(s => s.trim())
     if (split.length === 2) [home, away] = split
   }
   const rawTime = get(event, ['startTime', 'start_time', 'kickoff', 'commenceTime', 'commence_time', 'date', 'timestamp'])
