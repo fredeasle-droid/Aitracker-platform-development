@@ -62,7 +62,10 @@ export function firstRows(messages: unknown[], limit = 2) {
 }
 
 export async function saveBetHeroSnapshot(rawMessages: BrowserMessage[]) {
-  const messages = rawMessages.map(decodeBrowserMessage)
+  return saveBetHeroMessages(rawMessages.map(decodeBrowserMessage))
+}
+
+export async function saveBetHeroMessages(messages: unknown[]) {
   const rowCount = messages.reduce<number>((sum, message) => {
     if (!message || typeof message !== 'object') return sum
     const lists = Object.values(message).filter(Array.isArray) as unknown[][]
