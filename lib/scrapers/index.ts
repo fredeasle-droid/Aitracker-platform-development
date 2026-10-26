@@ -1,5 +1,6 @@
 import 'server-only'
 import { scrapeBetMonitor } from './betmonitor'
+import { scrapeBetHeroSnapshot } from './bethero'
 import { scrapeOddsator } from './oddsator'
 import { scrapeSureBetDanmark } from './surebetdanmark'
 import { scrapeSureBetsToday } from './surebets-today'
@@ -10,6 +11,7 @@ export type SourceReport = { source: string; ok: boolean; count: number; error?:
 
 const SOURCES = [
   { source: 'betmonitor', run: scrapeBetMonitor },
+  { source: 'bethero', run: scrapeBetHeroSnapshot },
   { source: 'surebets-today', run: scrapeSureBetsToday },
   { source: 'oddsator', run: scrapeOddsator },
   { source: 'surebetdanmark', run: scrapeSureBetDanmark },
