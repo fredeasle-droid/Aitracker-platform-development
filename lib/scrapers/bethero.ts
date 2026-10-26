@@ -30,7 +30,7 @@ function parse(row: Obj): ScrapedSurebet | null {
   let away = text(get(event, ['awayTeam', 'away_team', 'away', 'team2', 'participant2']) ?? get(teams ?? {}, ['away', 'awayTeam', 'away_team']))
   const eventName = text(get(event, ['name', 'title', 'matchName', 'match_name', 'eventName']))
   if ((!home || !away) && eventName) {
-    const split = eventName.split(/\\s+(?:vs?\\.?|[-–—])\\s+/i).map(s => s.trim())
+    const split = eventName.split(/\s+(?:vs?\\.?|[-–—])\s+/i).map(s => s.trim())
     if (split.length === 2) [home, away] = split
   }
   const rawTime = get(event, ['startTime', 'start_time', 'kickoff', 'commenceTime', 'commence_time', 'date', 'timestamp'])
@@ -45,7 +45,7 @@ function parse(row: Obj): ScrapedSurebet | null {
     const bookmaker = text(get(leg, ['bookmaker', 'bookmakerName', 'bookmaker_name', 'site', 'provider', 'book']))
     const odds = number(get(leg, ['decimalOdds', 'decimal_odds', 'odds', 'odd', 'price', 'rate']))
     const label = text(get(leg, ['selection', 'label', 'outcome', 'name', 'side', 'marketOutcome'])) || 'Udfald'
-    return bookmaker && odds > 1 && Number.isFinite(odds) ? { label, bookmaker: displayBookmaker(bookmaker.replace(/\\s+DK$/i, '')), odds } : null
+    return bookmaker && odds > 1 && Number.isFinite(odds) ? { label, bookmaker: displayBookmaker(bookmaker.replace(/\s+DK$/i, '')), odds } : null
   }).filter((v): v is NonNullable<typeof v> => v !== null)
   if (legs.length !== 2) return null
   const inv = 1 / legs[0].odds + 1 / legs[1].odds
