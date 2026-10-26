@@ -1,9 +1,9 @@
 import { CircleHelp, Layers, Target, TrendingUp, Trophy, Zap } from 'lucide-react'
-import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { BarsIcon } from '@/components/icons'
+import { ExampleOdds } from '@/components/desktop/example-odds'
 import { TeamCrest } from '@/components/team-crest'
 import type { Opportunity } from '@/lib/data'
-import { formatOdds, formatPct } from '@/lib/odds'
+import { formatPct } from '@/lib/odds'
 
 const card = 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)]'
 
@@ -14,19 +14,6 @@ const FEATURES = [
 ] as const
 
 const timeFormat = new Intl.DateTimeFormat('da-DK', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Copenhagen' })
-
-function ExampleOdds({ bookmaker, label, odds }: { bookmaker: string; label: string; odds: number }) {
-  return (
-    <div className="flex min-w-0 flex-1 items-center gap-2.5 rounded-xl border border-[#1a3557] bg-[#081123] p-2.5">
-      <BookmakerLogo name={bookmaker} className="size-11 shrink-0 rounded-[10px]" />
-      <div className="min-w-0">
-        <p className="truncate text-[12px] text-[#d5ddef]">{bookmaker}</p>
-        <p className="truncate text-[12px] text-[#d5ddef]">{label}</p>
-        <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
-      </div>
-    </div>
-  )
-}
 
 export function DesktopAside({ opportunities }: { opportunities: Opportunity[] }) {
   const startOfToday = new Date()

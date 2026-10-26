@@ -2,8 +2,9 @@
 
 import { useMemo, useState, useTransition } from 'react'
 import { useSearchParams } from 'next/navigation'
+import useSWR from 'swr'
 import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
-import { toggleFavorite } from '@/app/actions'
+import { refreshOpportunityList, toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
 import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
@@ -12,6 +13,7 @@ import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { authClient } from '@/lib/auth-client'
 
+const AUTO_REFRESH_MS = 2 * 60_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
 const MARGINS = [0, 1, 2, 3, 4, 5]
@@ -58,8 +60,16 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [sport, setSport] = useState<string>('Alle')
   const [league, setLeague] = useState<string>('Alle')
   const [minMargin, setMinMargin] = useState(0)
-  const [sort, setSort] = useState<SortId>('newest')
+  const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
+
+  useSWR('opportunity-auto-refresh', () => refreshOpportunityList(), {
+    refreshInterval: AUTO_REFRESH_MS,
+    revalidateOnMount: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    onSuccess: (next) => setItems(next),
+  })
   const { data: session } = authClient.useSession()
   const loggedIn = Boolean(session?.user)
 
@@ -130,7 +140,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
 
   return (
     <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4 lg:flex-1 lg:px-0">
-      <DesktopHero loggedIn={loggedIn} />
+      <DesktopHero />
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
           Alle
