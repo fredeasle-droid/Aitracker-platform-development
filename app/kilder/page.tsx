@@ -14,15 +14,6 @@ export const metadata: Metadata = { title: 'Kilder – BetTracker', robots: { in
 const formatTime = (date: Date | null) =>
   date ? new Intl.DateTimeFormat('da-DK', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Copenhagen' }).format(date) : 'Aldrig'
 
-function Notice({ title, children }: { title: string; children: React.ReactNode }) {
-  return (
-    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-3 bg-[#06111d] px-5 py-10 text-white">
-      <h1 className="text-2xl font-extrabold">{title}</h1>
-      <p className="leading-relaxed text-[#d6deeb]">{children}</p>
-    </main>
-  )
-}
-
 type SessionInfo = Awaited<ReturnType<typeof getSessionInfo>>
 
 function StatusBox({ info }: { info: SessionInfo }) {
@@ -38,8 +29,6 @@ function StatusBox({ info }: { info: SessionInfo }) {
 export default async function SourcesPage() {
   const state = await getAdminState()
   if (state === 'signed-out') redirect('/konto')
-  if (state === 'not-configured') return <Notice title="Kilder">Siden er låst, indtil miljøvariablen ADMIN_EMAILS er sat til din e-mail.</Notice>
-  if (state === 'forbidden') return <Notice title="Ingen adgang">Din konto har ikke adgang til denne side.</Notice>
 
   const [surebetInfo, betHeroInfo, snapshot] = await Promise.all([
     getSessionInfo(SUREBETDANMARK_SOURCE),
