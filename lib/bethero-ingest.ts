@@ -70,14 +70,22 @@ export async function saveBetHeroSnapshot(rawMessages: BrowserMessage[]) {
 }
 
 export async function saveBetHeroMessages(messages: unknown[]) {
-  const rowCount = messages.reduce<number>((sum, message) => {
+  const [existing] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
+  let previous: unknown[] = []
+  try {
+    if (existing?.payload) previous = JSON.parse(existing.payload) as unknown[]
+  } catch {}
+
+  const merged = [...previous, ...messages]
+  const unique = Array.from(new Map(merged.map((message) => [JSON.stringify(message, jsonSafe), message])).values()).slice(-200)
+  const rowCount = unique.reduce<number>((sum, message) => {
     if (Array.isArray(message)) return sum + message.length
     if (!message || typeof message !== 'object') return sum
     const lists = Object.values(message).filter(Array.isArray) as unknown[][]
     return sum + lists.reduce((inner, list) => inner + list.length, 0)
   }, 0)
-  const summary = describeBetHeroMessages(messages)
-  const payload = JSON.stringify(messages, jsonSafe)
+  const summary = describeBetHeroMessages(unique)
+  const payload = JSON.stringify(unique, jsonSafe)
   const values = { payload, summary, rowCount, updatedAt: new Date() }
   await db
     .insert(sourceSnapshots)
