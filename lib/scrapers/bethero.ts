@@ -5,7 +5,7 @@ import { decode as decodeMsgpack } from '@msgpack/msgpack'
 export const BETHERO_SOURCE = 'bethero'
 
 const SOCKET_URL =
-  'wss://ws-prematch.betherosports.com/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=event-asc&rows=30&touch=1'
+  'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=30&touch=1'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
 const SETTLE_AFTER_ROWS_MS = 800
 
