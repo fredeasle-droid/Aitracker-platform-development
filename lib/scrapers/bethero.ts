@@ -114,7 +114,7 @@ function candidates(value: unknown, output: Obj[] = [], depth = 0): Obj[] {
   if (Array.isArray(value)) { for (const item of value) candidates(item, output, depth + 1); return output }
   const row = obj(value)
   if (!row) return output
-  if (Array.isArray(get(row, ['legs', 'outcomes', 'selections', 'bets', 'variants']))) output.push(row)
+  if (Array.isArray(get(row, ['legs', 'outcomes', 'selections', 'bets', 'variants'])) || (get(row, ['adjusted_odds_1']) !== undefined && get(row, ['adjusted_odds_2']) !== undefined)) output.push(row)
   for (const [key, child] of Object.entries(row)) {
     if (['debug', 'headers', 'cookies'].includes(key.toLowerCase())) continue
     if (child && typeof child === 'object') candidates(child, output, depth + 1)
@@ -123,29 +123,37 @@ function candidates(value: unknown, output: Obj[] = [], depth = 0): Obj[] {
 }
 
 function parse(row: Obj): ScrapedSurebet | null {
-  const event = obj(get(row, ['event', 'fixture', 'match', 'game'])) ?? row
+  const event = obj(get(row, ['event', 'fixture', 'match', 'game', 'event_data'])) ?? row
   const teams = obj(get(event, ['teams']))
-  let home = text(get(event, ['homeTeam', 'home_team', 'home', 'team1', 'participant1']) ?? get(teams ?? {}, ['home', 'homeTeam', 'home_team']))
-  let away = text(get(event, ['awayTeam', 'away_team', 'away', 'team2', 'participant2']) ?? get(teams ?? {}, ['away', 'awayTeam', 'away_team']))
-  const eventName = text(get(event, ['name', 'title', 'matchName', 'match_name', 'eventName']))
+  let home = text(get(event, ['homeTeam', 'home_team', 'home', 'team1', 'participant1', 'home_name', 'team_home']) ?? get(teams ?? {}, ['home', 'homeTeam', 'home_team']))
+  let away = text(get(event, ['awayTeam', 'away_team', 'away', 'team2', 'participant2', 'away_name', 'team_away']) ?? get(teams ?? {}, ['away', 'awayTeam', 'away_team']))
+  const eventName = text(get(event, ['event_name', 'eventName', 'match_name', 'matchName', 'name', 'title', 'fixture_name']))
   if ((!home || !away) && eventName) {
     const split = eventName.split(/\s+(?:vs?\.?|[-–—])\s+/i).map(s => s.trim())
     if (split.length === 2) [home, away] = split
   }
-  const rawTime = get(event, ['startTime', 'start_time', 'kickoff', 'commenceTime', 'commence_time', 'date', 'timestamp'])
+  const rawTime = get(event, ['startTime', 'start_time', 'start_date', 'startDate', 'kickoff', 'commenceTime', 'commence_time', 'date', 'timestamp', 'time'])
   const kickoff = typeof rawTime === 'number' ? new Date(rawTime < 1e10 ? rawTime * 1000 : rawTime) : new Date(text(rawTime))
   if (!home || !away || !Number.isFinite(kickoff.getTime()) || kickoff.getTime() < Date.now()) return null
 
+  const isBetHeroShape = get(row, ['adjusted_odds_1']) !== undefined && get(row, ['adjusted_odds_2']) !== undefined
   const rawLegs = get(row, ['legs', 'outcomes', 'selections', 'bets', 'variants'])
-  if (!Array.isArray(rawLegs)) return null
-  const legs = rawLegs.map((v) => {
+  const legs = isBetHeroShape ? [1, 2].map((n) => {
+    const books = get(row, [`books_${n}`])
+    const firstBook = Array.isArray(books) ? obj(books[0]) : null
+    const allBooks = get(row, ['book_names'])
+    const bookmaker = text(get(firstBook ?? {}, ['name', 'bookmaker', 'book'])) || (Array.isArray(allBooks) ? text(allBooks[n - 1]) : '')
+    const odds = number(get(row, [`adjusted_odds_${n}`]))
+    const label = text(get(row, [`bet_name_short_${n}`, `bet_name_${n}`])) || `Udfald ${n}`
+    return bookmaker && odds > 1 && Number.isFinite(odds) ? { label, bookmaker: displayBookmaker(bookmaker), odds } : null
+  }).filter((v): v is NonNullable<typeof v> => v !== null) : (Array.isArray(rawLegs) ? rawLegs.map((v) => {
     const leg = obj(v)
     if (!leg) return null
     const bookmaker = text(get(leg, ['bookmaker', 'bookmakerName', 'bookmaker_name', 'site', 'provider', 'book']))
     const odds = number(get(leg, ['decimalOdds', 'decimal_odds', 'odds', 'odd', 'price', 'rate']))
     const label = text(get(leg, ['selection', 'label', 'outcome', 'name', 'side', 'marketOutcome'])) || 'Udfald'
     return bookmaker && odds > 1 && Number.isFinite(odds) ? { label, bookmaker: displayBookmaker(bookmaker.replace(/\s+DK$/i, '')), odds } : null
-  }).filter((v): v is NonNullable<typeof v> => v !== null)
+  }).filter((v): v is NonNullable<typeof v> => v !== null) : [])
   if (legs.length !== 2) return null
   const inv = 1 / legs[0].odds + 1 / legs[1].odds
   const calculated = (1 / inv - 1) * 100
