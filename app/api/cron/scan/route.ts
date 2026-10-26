@@ -4,6 +4,7 @@ import { refreshOpportunities } from '@/lib/scanner-sync'
 import { refreshTeamLogos } from '@/lib/team-logos'
 import { fetchBetHeroMessages, describeBetHeroMessages } from '@/lib/scrapers/bethero'
 import { saveBetHeroMessages } from '@/lib/bethero-ingest'
+import { recordBetHeroStatus, resolveBetHeroCookie } from '@/lib/bethero-cookie'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
@@ -14,15 +15,19 @@ export async function GET(request: Request) {
     const [result, bethero] = await Promise.all([
       refreshOpportunities(),
       (async () => {
-        const cookie = process.env.BETHERO_COOKIE?.trim()
-        if (!cookie) return { ok: false, error: 'BETHERO_COOKIE is missing' }
+        const cookie = await resolveBetHeroCookie()
+        if (!cookie) return { ok: false, error: 'Ingen Bet Hero-cookie gemt under Kilder' }
         try {
           const messages = await fetchBetHeroMessages(cookie)
           const saved = await saveBetHeroMessages(messages)
-          return { ok: true, ...saved, summary: describeBetHeroMessages(messages) }
+          const summary = describeBetHeroMessages(messages)
+          await recordBetHeroStatus(`OK: ${summary}`)
+          return { ok: true, ...saved, summary }
         } catch (error) {
           console.error('[bethero] shared cron refresh failed', error)
-          return { ok: false, error: error instanceof Error ? error.message : 'Bet Hero refresh failed' }
+          const message = error instanceof Error ? error.message : 'Bet Hero refresh failed'
+          await recordBetHeroStatus(`Fejl: ${message}`)
+          return { ok: false, error: message }
         }
       })(),
     ])

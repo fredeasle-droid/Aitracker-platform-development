@@ -1,13 +1,12 @@
 import type { Metadata } from 'next'
-import { headers } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { getAdminState } from '@/lib/admin'
-import { buildConsoleSnippet, getBetHeroSnapshot } from '@/lib/bethero-ingest'
+import { getBetHeroSnapshot } from '@/lib/bethero-ingest'
 import { getSessionInfo } from '@/lib/scraper-session'
+import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
 import { SUREBETDANMARK_SOURCE } from '@/lib/scrapers/surebetdanmark'
-import { saveSureBetDanmarkCookie } from './actions'
+import { saveBetHeroCookie, saveSureBetDanmarkCookie } from './actions'
 import { CookieForm } from './cookie-form'
-import { SnippetBox } from './snippet-box'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Kilder – BetTracker', robots: { index: false, follow: false } }
@@ -42,10 +41,11 @@ export default async function SourcesPage() {
   if (state === 'not-configured') return <Notice title="Kilder">Siden er låst, indtil miljøvariablen ADMIN_EMAILS er sat til din e-mail.</Notice>
   if (state === 'forbidden') return <Notice title="Ingen adgang">Din konto har ikke adgang til denne side.</Notice>
 
-  const requestHeaders = await headers()
-  const host = requestHeaders.get('x-forwarded-host') ?? requestHeaders.get('host') ?? ''
-  const snippet = buildConsoleSnippet(`https://${host}/bethero-bro`)
-  const [surebetInfo, snapshot] = await Promise.all([getSessionInfo(SUREBETDANMARK_SOURCE), getBetHeroSnapshot()])
+  const [surebetInfo, betHeroInfo, snapshot] = await Promise.all([
+    getSessionInfo(SUREBETDANMARK_SOURCE),
+    getSessionInfo(BETHERO_SOURCE),
+    getBetHeroSnapshot(),
+  ])
 
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 bg-[#06111d] px-5 py-10 text-white">
@@ -83,25 +83,26 @@ export default async function SourcesPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#49d6a8]">Kilde 2</p>
           <h2 id="bethero-heading" className="text-2xl font-extrabold">Bet Hero</h2>
           <p className="leading-relaxed text-[#d6deeb]">
-            Bet Hero afviser vores server, men ikke din browser. Kør koden nedenfor på betherosports.com/arbitrage, så sender din browser surebets videre hertil. Der gemmes ingen cookie.
+            Indsæt din Bet Hero-cookie én gang, ligesom for Surebet Danmark. Serveren henter derefter data hvert minut uden at du skal have noget åbent.
           </p>
         </header>
+        <StatusBox info={betHeroInfo} />
         <section aria-label="Seneste data" className="flex flex-col gap-2 rounded-xl border border-[#243650] bg-[#0a1725] p-4 text-sm">
           <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Sidst modtaget</span><span>{formatTime(snapshot?.updatedAt ?? null)}</span></div>
           <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Rækker</span><span>{snapshot?.rowCount ?? 0}</span></div>
-          <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Status</span><span className="text-right">{snapshot ? snapshot.summary : 'Intet modtaget endnu'}</span></div>
+          <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Data</span><span className="text-right">{snapshot ? snapshot.summary : 'Intet modtaget endnu'}</span></div>
         </section>
-        <SnippetBox code={snippet} />
+        <CookieForm
+          id="bethero-cookie"
+          label="Cookie-værdi fra Bet Hero"
+          placeholder="auth_session=…; bh_auth=1"
+          action={saveBetHeroCookie}
+        />
         <div className="text-sm leading-relaxed text-[#9fb2cc]">
-          <h2 className="mb-1 font-semibold text-white">Sådan bruger du den</h2>
-          <ol className="list-decimal pl-5">
-            <li>Klik på Kopiér koden.</li>
-            <li>Åbn betherosports.com/arbitrage i Chrome, og vær logget ind.</li>
-            <li>Tryk F12 og åbn fanen Console.</li>
-            <li>Skriv allow pasting, tryk Enter, indsæt koden med Ctrl+V og tryk Enter.</li>
-            <li>Der åbner et lille vindue, &quot;BetTracker modtager&quot;. Lad det stå åbent. Efter ca. 10 sekunder står der en grøn linje i det. Genindlæs denne side for at se rækkerne.</li>
-          </ol>
-          <p className="mt-2">Koden sender nye data hvert minut, så længe begge faner er åbne.</p>
+          <h2 className="mb-1 font-semibold text-white">Sådan finder du den</h2>
+          <p>
+            Firefox på pc: åbn betherosports.com/arbitrage og vær logget ind. Tryk F12, vælg Storage, derefter Cookies. Kopiér værdien af auth_session og bh_auth, og indsæt dem som auth_session=VÆRDI; bh_auth=1. Du kan også indsætte hele Cookie-headeren fra et kald i Network.
+          </p>
         </div>
         {snapshot?.sample && (
           <details className="text-xs text-[#9fb2cc]">
