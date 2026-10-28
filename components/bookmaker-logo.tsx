@@ -12,20 +12,17 @@ export function BookmakerLogo({ name, className }: { name: string; className?: s
       )}
       style={{ background: brand.bg, color: brand.fg }}
     >
-      {brand.style === 'ring' ? (
-        <span className="block size-[55%] rounded-full border-[3px] border-white shadow-[inset_0_0_0_2px_rgba(255,255,255,0.35)]" />
-      ) : brand.style === 'dice' ? (
-        <span className="grid size-[60%] rotate-12 grid-cols-2 place-items-center gap-0.5 rounded-md bg-[#ffb000] p-1 shadow">
-          {[0, 1, 2, 3].map((i) => (
-            <span key={i} className="size-1.5 rounded-full bg-[#d62a1e]" />
-          ))}
-        </span>
-      ) : brand.style === 'text' ? (
-        <span className="text-[11px] tracking-tight">
-          Bet<span style={{ color: brand.accent }}>365</span>
-        </span>
+      {brand.logo ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={brand.logo}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className={cn('size-full object-cover', brand.inset && 'p-[22%] object-contain')}
+        />
       ) : (
-        <span className={cn(brand.mark.length > 1 ? 'text-lg' : 'text-2xl', 'italic')}>{brand.mark}</span>
+        <span className="text-[0.9em]">{brand.mark}</span>
       )}
     </span>
   )
