@@ -79,9 +79,24 @@ type StoredRow = {
   start?: number
   live?: boolean
   seenAt?: number
+  fresh_until?: number
 }
 
 const ROW_TTL_MS = 3 * 60 * 60_000
+// Bet Hero keeps re-sending rows that still exist (each one is fresh for about a minute),
+// so a row that has not been refreshed for this long has vanished from Bet Hero.
+const STALE_AFTER_FRESH_MS = 10 * 60_000
+
+function freshUntilMs(row: StoredRow) {
+  const value = Number(row.fresh_until)
+  if (!Number.isFinite(value) || value <= 0) return null
+  return value > 1e12 ? value : value * 1000
+}
+
+function isStaleRow(row: StoredRow, now: number) {
+  const freshUntil = freshUntilMs(row)
+  return freshUntil !== null && now - freshUntil > STALE_AFTER_FRESH_MS
+}
 const MAX_STORED_ROWS = 1500
 const FULL_LIST_MIN_ROWS = 25
 
@@ -132,7 +147,7 @@ export async function saveBetHeroMessages(messages: unknown[]) {
 
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
-    if (row.live || kickedOff || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
+    if (row.live || kickedOff || isStaleRow(row, now) || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
   }
 
   const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)
@@ -158,7 +173,9 @@ export async function getBetHeroMessages() {
   const [row] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
   if (!row) return []
   try {
-    return JSON.parse(row.payload) as unknown[]
+    const messages = JSON.parse(row.payload) as unknown[]
+    const now = Date.now()
+    return messages.map((message, index) => (index === 0 && Array.isArray(message) ? (message as StoredRow[]).filter((item) => !isStaleRow(item, now)) : message))
   } catch {
     return []
   }
