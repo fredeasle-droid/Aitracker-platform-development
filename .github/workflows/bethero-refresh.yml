@@ -16,4 +16,4 @@ jobs:
             --retry 2 \
             --connect-timeout 15 \
             --max-time 45 \
-            "https://aitracker-platform-development.vercel.app/api/cron/bethero"
+            "https://bettracker-platform-development.vercel.app/api/cron/bethero"
