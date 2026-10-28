@@ -5,7 +5,6 @@ import { decode as decodeMsgpack } from '@msgpack/msgpack'
 import { eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { sourceSnapshots } from '@/lib/db/schema'
-import { describeBetHeroMessages } from '@/lib/scrapers/bethero'
 
 export const BETHERO_SNAPSHOT_SOURCE = 'bethero'
 export const BETHERO_SOCKET_URL =
@@ -69,29 +68,71 @@ export async function saveBetHeroSnapshot(rawMessages: BrowserMessage[]) {
   return saveBetHeroMessages(rawMessages.map(decodeBrowserMessage))
 }
 
+type StoredRow = {
+  _id?: string
+  parent_id?: string
+  event?: string
+  books_1?: unknown
+  market_1?: string
+  bet_name_1?: string
+  profit?: number
+  start?: number
+  live?: boolean
+  seenAt?: number
+}
+
+const ROW_TTL_MS = 3 * 60 * 60_000
+const MAX_STORED_ROWS = 1500
+
+const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
+
+// Bet Hero only sends a row when it changes and announces removals in `gone`,
+// so the current state has to be rebuilt from every message, not just the latest ones.
+function applyMessage(state: Map<string, StoredRow>, message: unknown, now: number) {
+  if (Array.isArray(message)) {
+    for (const item of message) {
+      if (Array.isArray(item)) applyMessage(state, item, now)
+      else if (item && typeof item === 'object') {
+        const row = item as StoredRow
+        if (typeof row.event === 'string' && row.books_1) state.set(rowKey(row), { ...row, seenAt: row.seenAt ?? now })
+      }
+    }
+  } else if (message && typeof message === 'object') {
+    const gone = (message as { gone?: unknown }).gone
+    if (Array.isArray(gone)) for (const id of gone) if (typeof id === 'string') state.delete(id)
+  }
+}
+
 export async function saveBetHeroMessages(messages: unknown[]) {
-  const [existing] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
+  const [existing] = await db.select({ payload: sourceSnapshots.payload, updatedAt: sourceSnapshots.updatedAt }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
   let previous: unknown[] = []
   try {
     if (existing?.payload) previous = JSON.parse(existing.payload) as unknown[]
   } catch {}
 
-  const merged = [...previous, ...messages]
-  const unique = Array.from(new Map(merged.map((message) => [JSON.stringify(message, jsonSafe), message])).values()).slice(-200)
-  const rowCount = unique.reduce<number>((sum, message) => {
-    if (Array.isArray(message)) return sum + message.length
-    if (!message || typeof message !== 'object') return sum
-    const lists = Object.values(message).filter(Array.isArray) as unknown[][]
-    return sum + lists.reduce((inner, list) => inner + list.length, 0)
-  }, 0)
-  const summary = describeBetHeroMessages(unique)
-  const payload = JSON.stringify(unique, jsonSafe)
-  const values = { payload, summary, rowCount, updatedAt: new Date() }
+  const now = Date.now()
+  const state = new Map<string, StoredRow>()
+  for (const message of previous) applyMessage(state, message, existing?.updatedAt.getTime() ?? now)
+  const before = state.size
+  for (const message of messages) applyMessage(state, message, now)
+
+  for (const [key, row] of state) {
+    const kickedOff = !row.start || row.start * 1000 < now
+    if (row.live || kickedOff || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
+  }
+
+  const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)
+  const lastTotal = [...messages].reverse().find((message) => message && typeof message === 'object' && !Array.isArray(message) && 'total' in message)
+  const stored: unknown[] = lastTotal ? [rows, lastTotal] : [rows]
+  const top = rows[0] ? `, højeste ${Number(rows[0].profit).toFixed(1)}%` : ''
+  const summary = `Bet Hero: ${rows.length} rækker gemt (${messages.length} nye beskeder, før ${before})${top}`
+  const payload = JSON.stringify(stored, jsonSafe)
+  const values = { payload, summary, rowCount: rows.length, updatedAt: new Date() }
   await db
     .insert(sourceSnapshots)
     .values({ source: BETHERO_SNAPSHOT_SOURCE, ...values })
     .onConflictDoUpdate({ target: sourceSnapshots.source, set: values })
-  return { rowCount, summary }
+  return { rowCount: rows.length, summary }
 }
 
 export async function getBetHeroSnapshotAgeMs() {
