@@ -1,6 +1,6 @@
 import WebSocket from 'ws'
 import { zstdDecompressSync } from 'node:zlib'
-import { decode as decodeMsgpack } from '@msgpack/msgpack'
+import { decode as decodeMsgpack, encode as encodeMsgpack } from '@msgpack/msgpack'
 
 export const BETHERO_SOURCE = 'bethero'
 
@@ -8,6 +8,26 @@ const SOCKET_URL =
   'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=30&touch=1'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
 const SETTLE_AFTER_ROWS_MS = 800
+const DEFAULT_FILTER_ID = 'zOUILG38'
+
+function subscribeMessage() {
+  const filterId = process.env.BETHERO_FILTER_ID || DEFAULT_FILTER_ID
+  return encodeMsgpack({
+    filters: [filterId],
+    ping: Date.now(),
+    view: {
+      sort: 'profit-desc',
+      rows: 30,
+      search: null,
+      exhaustive: false,
+      group: null,
+      pin_leagues: null,
+      pin_events: null,
+      hide: [],
+      id: 1,
+    },
+  })
+}
 
 function toBuffer(data: WebSocket.RawData) {
   if (Buffer.isBuffer(data)) return data
@@ -73,6 +93,7 @@ export function fetchBetHeroMessages(cookie: string, waitMs = 8000) {
       if (response.statusCode === 401 || response.statusCode === 403) finish(new BetHeroSessionError('Bet Hero-sessionen er udløbet'))
       else finish(new Error(`Bet Hero svarede ${response.statusCode}`))
     })
+    socket.on('open', () => socket.send(subscribeMessage()))
     socket.on('error', (error) => finish(error))
     socket.on('close', () => finish())
     socket.on('message', (data, isBinary) => {
