@@ -94,6 +94,11 @@ export async function saveBetHeroMessages(messages: unknown[]) {
   return { rowCount, summary }
 }
 
+export async function getBetHeroSnapshotAgeMs() {
+  const [row] = await db.select({ updatedAt: sourceSnapshots.updatedAt }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
+  return row ? Date.now() - row.updatedAt.getTime() : Number.POSITIVE_INFINITY
+}
+
 export async function getBetHeroSnapshot() {
   const [row] = await db.select().from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
   if (!row) return null
