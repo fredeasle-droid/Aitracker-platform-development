@@ -99,6 +99,16 @@ export async function getBetHeroSnapshotAgeMs() {
   return row ? Date.now() - row.updatedAt.getTime() : Number.POSITIVE_INFINITY
 }
 
+export async function getBetHeroMessages() {
+  const [row] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
+  if (!row) return []
+  try {
+    return JSON.parse(row.payload) as unknown[]
+  } catch {
+    return []
+  }
+}
+
 export async function getBetHeroSnapshot() {
   const [row] = await db.select().from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
   if (!row) return null
