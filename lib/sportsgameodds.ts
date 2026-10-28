@@ -19,7 +19,7 @@ function sportName(id: string) {
 }
 
 function teamName(team: any, fallback: string) {
-  return team?.name ?? team?.displayName ?? team?.teamName ?? team?.teamID ?? fallback
+  return team?.names?.long ?? team?.names?.medium ?? team?.name ?? team?.displayName ?? team?.teamName ?? team?.teamID ?? fallback
 }
 
 function eventTeams(event: ProviderEvent) {
@@ -28,6 +28,32 @@ function eventTeams(event: ProviderEvent) {
     home: teamName(teams.home, 'Hjemme'),
     away: teamName(teams.away, 'Ude'),
   }
+}
+
+function danishNumber(value: string) {
+  return value.replace(/(\\d+)\\.(\\d+)/g, '$1,$2')
+}
+
+function outcomeLabel(outcome: string) {
+  const value = outcome.replace(/[_-]+/g, ' ').trim()
+  const normalized = value.toLowerCase()
+  if (normalized.startsWith('over ')) return `Over ${danishNumber(value.slice(5).trim())}`
+  if (normalized.startsWith('under ')) return `Under ${danishNumber(value.slice(6).trim())}`
+  if (normalized === 'home') return 'Hjemme'
+  if (normalized === 'away') return 'Ude'
+  if (normalized === 'draw') return 'Uafgjort'
+  return danishNumber(value)
+}
+
+function marketLabel(marketID: string, picks: Quote[]) {
+  const source = marketID.toLowerCase()
+  const hasTotals = /(^|[-_])(ou|total|totals|over|under)([-_]|$)/.test(source) || picks.some((pick) => /^(over|under)\\s/i.test(pick.label))
+  if (hasTotals) {
+    const line = picks.map((pick) => pick.label.match(/(?:over|under)\\s+(.+)/i)?.[1]).find(Boolean)
+    return line ? `Over/Under ${danishNumber(line)} mål` : 'Over/Under mål'
+  }
+  if (source.includes('moneyline') || source.includes('winner') || source.includes('result')) return 'Kampresultat'
+  return marketID.replace(/[-_]+/g, ' ')
 }
 
 function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], index: number): Opportunity | null {
@@ -47,7 +73,7 @@ function toOpportunity(event: ProviderEvent, marketID: string, picks: Quote[], i
     league: event.leagueID ?? 'Global',
     homeTeam: home,
     awayTeam: away,
-    market: marketID,
+    market: marketLabel(marketID, picks),
     kickoffLabel: startsAt.toLocaleString('da-DK', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' }),
     kickoffTs: startsAt.getTime(),
     createdTs: Date.now(),
@@ -70,23 +96,14 @@ function nextCursor(payload: any) {
 export async function getLiveSurebets(): Promise<Opportunity[]> {
   const apiKey = process.env.SPORTSGAMEODDS_API_KEY
   if (!apiKey) return []
-  const sports = ['SOCCER', 'FOOTBALL', 'BASKETBALL', 'TENNIS', 'HOCKEY', 'BASEBALL', 'GOLF']
-  const eventPages = await Promise.all(sports.map(async (sportID) => {
-    const sportEvents: ProviderEvent[] = []
-    const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100', sportID })
+  const leagueIDs = ['EPL', 'LA_LIGA', 'BUNDESLIGA', 'IT_SERIE_A', 'FR_LIGUE_1', 'UEFA_CHAMPIONS_LEAGUE', 'NBA', 'EHF_EURO']
+  const eventPages = await Promise.all(leagueIDs.map(async (leagueID) => {
+    const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100', leagueID })
     const response = await fetch(`${API_URL}?${query}`, { headers: { 'x-api-key': apiKey, accept: 'application/json' }, cache: 'no-store' })
-    if (response.ok) {
-      const payload = await response.json()
-      sportEvents.push(...extractEvents(payload))
-    }
-    return sportEvents
+    if (!response.ok) return []
+    return extractEvents(await response.json())
   }))
-  let events = Array.from(new Map(eventPages.flat().map((event) => [event.eventID ?? JSON.stringify(event), event])).values())
-  if (!events.length) {
-    const query = new URLSearchParams({ oddsAvailable: 'true', includeAltLines: 'false', limit: '100', sportID: 'SOCCER' })
-    const response = await fetch(`${API_URL}?${query}`, { headers: { 'x-api-key': apiKey, accept: 'application/json' }, cache: 'no-store' })
-    if (response.ok) events = extractEvents(await response.json())
-  }
+  const events = Array.from(new Map(eventPages.flat().map((event) => [event.eventID ?? JSON.stringify(event), event])).values())
 
   const opportunities: Opportunity[] = []
   events.forEach((event, eventIndex) => {
@@ -104,7 +121,11 @@ export async function getLiveSurebets(): Promise<Opportunity[]> {
     })
     Object.entries(groups).forEach(([marketID, entries]) => {
       const picks = entries.map(({ outcome, market }) => {
-        const offers = Object.entries((market as any)?.byBookmaker ?? {}).map(([bookmaker, quote]: [string, any]) => ({ bookmaker, odds: decimalOdds(quote?.odds), label: outcome, deeplink: quote?.deeplink })).filter((quote): quote is Quote => quote.odds !== null)
+        const offers = Object.entries((market as any)?.byBookmaker ?? {}).reduce<Quote[]>((best, [bookmaker, quote]: [string, any]) => {
+          const odds = decimalOdds(quote?.odds)
+          if (odds !== null) best.push({ bookmaker, odds, label: outcomeLabel(outcome), deeplink: quote?.deeplink as string | undefined })
+          return best
+        }, [])
         return offers.sort((a, b) => b.odds - a.odds)[0]
       }).filter(Boolean) as Quote[]
       const opportunity = toOpportunity(event, marketID, picks, eventIndex)

@@ -1,15 +1,19 @@
 'use client'
 
 import { useMemo, useState, useTransition } from 'react'
+import { useSearchParams } from 'next/navigation'
+import useSWR from 'swr'
 import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
-import { toggleFavorite } from '@/app/actions'
+import { refreshOpportunityList, toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
 import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
+import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { authClient } from '@/lib/auth-client'
 
+const AUTO_REFRESH_MS = 30_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
 const MARGINS = [0, 1, 2, 3, 4, 5]
@@ -55,11 +59,25 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [items, setItems] = useState(initial)
   const [sport, setSport] = useState<string>('Alle')
   const [league, setLeague] = useState<string>('Alle')
-  const [minMargin, setMinMargin] = useState(3)
-  const [sort, setSort] = useState<SortId>('newest')
+  const [minMargin, setMinMargin] = useState(0)
+  const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
+
+  useSWR('opportunity-auto-refresh', () => refreshOpportunityList(), {
+    refreshInterval: AUTO_REFRESH_MS,
+    revalidateOnMount: false,
+    revalidateOnFocus: false,
+    revalidateOnReconnect: false,
+    onSuccess: (next) => setItems(next),
+  })
   const { data: session } = authClient.useSession()
   const loggedIn = Boolean(session?.user)
+
+  const [market, setMarket] = useState<string>('Alle')
+  const params = useSearchParams()
+  const urlKey = params.toString()
+  const country = params.get('country')?.toLowerCase() ?? null
+  const query = params.get('q')?.trim().toLowerCase() ?? ''
 
   const [prevInitial, setPrevInitial] = useState(initial)
   if (initial !== prevInitial) {
@@ -67,29 +85,44 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     setItems(initial)
   }
 
+  const [prevUrlKey, setPrevUrlKey] = useState(urlKey)
+  if (urlKey !== prevUrlKey) {
+    setPrevUrlKey(urlKey)
+    setSport(params.get('sport') ?? 'Alle')
+    setLeague('Alle')
+  }
+
   const bySport = useMemo(
     () =>
-      items.filter((o) =>
-        sport === 'Alle' ? true : sport === 'Favoritter' ? o.favorite : o.sport === sport,
+      items.filter(
+        (o) =>
+          (sport === 'Alle' ? true : sport === 'Favoritter' ? o.favorite : o.sport === sport) &&
+          (!country || o.countryCode.toLowerCase() === country) &&
+          (!query || `${o.homeTeam} ${o.awayTeam} ${o.league} ${o.country}`.toLowerCase().includes(query)),
       ),
-    [items, sport],
+    [items, sport, country, query],
   )
   const leagues = useMemo(() => Array.from(new Set(bySport.map((o) => o.league))).sort(), [bySport])
+  const markets = useMemo(() => Array.from(new Set(bySport.map((o) => o.market))).sort(), [bySport])
 
   const visible = useMemo(() => {
     const list = bySport.filter(
-      (o) => (league === 'Alle' || o.league === league) && o.margin >= minMargin,
+      (o) =>
+        (league === 'Alle' || o.league === league) &&
+        (market === 'Alle' || o.market === market) &&
+        o.margin >= minMargin,
     )
     const sorted = [...list]
     if (sort === 'margin') sorted.sort((a, b) => b.margin - a.margin)
     else if (sort === 'kickoff') sorted.sort((a, b) => a.kickoffTs - b.kickoffTs)
     else sorted.sort((a, b) => b.createdTs - a.createdTs || b.margin - a.margin)
     return sorted
-  }, [bySport, league, minMargin, sort])
+  }, [bySport, league, market, minMargin, sort])
 
   function selectSport(next: string) {
     setSport(next)
     setLeague('Alle')
+    setMarket('Alle')
   }
 
   function handleFavorite(id: number) {
@@ -106,8 +139,9 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const moreActive = sport === 'Favoritter' || (MORE_SPORTS as readonly string[]).includes(sport)
 
   return (
-    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4">
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none]" role="toolbar" aria-label="Sportsgren">
+    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4 lg:flex-1 lg:px-0">
+      <DesktopHero />
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
           Alle
         </button>
@@ -117,6 +151,18 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             {s}
           </button>
         ))}
+        {[...MORE_SPORTS, 'Favoritter'].map((s) => (
+          <button
+            key={s}
+            type="button"
+            onClick={() => selectSport(s)}
+            aria-pressed={sport === s}
+            className={cn(chip, 'hidden lg:flex', sport === s ? chipActive : chipIdle)}
+          >
+            {s}
+          </button>
+        ))}
+        <div className="lg:hidden">
         <Popover
           align="right"
           label="Flere sportsgrene"
@@ -136,9 +182,10 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             ))
           }
         </Popover>
+        </div>
       </div>
 
-      <div className="mt-3 grid grid-cols-[1fr_1.35fr_1.3fr] gap-2">
+      <div className="mt-3 grid grid-cols-[1fr_1.35fr_1.3fr] gap-2 lg:grid-cols-4 lg:gap-3">
         <Popover
           label="Vælg liga"
           triggerClassName={filterBtn}
@@ -184,6 +231,32 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             ))
           }
         </Popover>
+        <div className="hidden lg:block">
+          <Popover
+            label="Marked"
+            triggerClassName={filterBtn}
+            trigger={
+              <>
+                <ArrowDownWideNarrow className="size-5 shrink-0" />
+                <span className="truncate">{market === 'Alle' ? 'Alle markeder' : market}</span>
+                <ChevronDown className="size-4 shrink-0" />
+              </>
+            }
+          >
+            {(close) => (
+              <div className="max-h-72 overflow-y-auto">
+                <MenuOption selected={market === 'Alle'} onSelect={() => (setMarket('Alle'), close())}>
+                  Alle markeder
+                </MenuOption>
+                {markets.map((m) => (
+                  <MenuOption key={m} selected={market === m} onSelect={() => (setMarket(m), close())}>
+                    {m}
+                  </MenuOption>
+                ))}
+              </div>
+            )}
+          </Popover>
+        </div>
         <Popover
           align="right"
           label="Sortering"
@@ -210,7 +283,13 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         {visible.length} SikkerBets fundet
       </p>
 
-      <div className="mt-3 flex flex-col gap-3">
+      <div
+        className={cn(
+          'mt-3 flex flex-col gap-3',
+          visible.length > 0 &&
+            'lg:gap-0 lg:divide-y lg:divide-[#13294a] lg:overflow-hidden lg:rounded-2xl lg:border lg:border-[#183252] lg:bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)]',
+        )}
+      >
         {visible.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-8 text-center">
             <p className="font-semibold">Ingen SikkerBets matcher</p>

@@ -1,28 +1,25 @@
 import { NextResponse } from 'next/server'
-import { db } from '@/lib/db'
-import { opportunities } from '@/lib/db/schema'
-import { scanLiveOpportunities, scannerStatus } from '@/lib/odds-provider'
+import { isAuthorizedScan } from '@/lib/cron-auth'
+import { refreshOpportunities } from '@/lib/scanner-sync'
 
 export const dynamic = 'force-dynamic'
+export const maxDuration = 60
 
 export async function GET() {
-  return NextResponse.json(scannerStatus())
+  return NextResponse.json({
+    configured: true,
+    provider: 'scraper',
+    sources: ['betmonitor', 'surebets-today', 'oddsator', 'surebetdanmark'],
+  })
 }
 
-export async function POST() {
-  if (!process.env.ODDS_API_KEY) {
-    return NextResponse.json({ ok: false, ...scannerStatus(), opportunities: [], error: 'ODDS_API_KEY is not configured' }, { status: 503 })
-  }
-
+export async function POST(request: Request) {
+  if (!isAuthorizedScan(request)) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   try {
-    const live = await scanLiveOpportunities()
-    await db.transaction(async (tx) => {
-      await tx.delete(opportunities)
-      if (live.length > 0) await tx.insert(opportunities).values(live)
-    })
-    return NextResponse.json({ ok: true, ...scannerStatus(), count: live.length })
+    const result = await refreshOpportunities()
+    return NextResponse.json(result, { status: result.ok ? 200 : 502 })
   } catch (error) {
     console.error('[scanner] odds refresh failed', error)
-    return NextResponse.json({ ok: false, ...scannerStatus(), error: 'Could not refresh odds' }, { status: 502 })
+    return NextResponse.json({ ok: false, error: 'Could not refresh odds' }, { status: 502 })
   }
 }

@@ -5,10 +5,22 @@ import { revalidatePath } from 'next/cache'
 import { db } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
-import { getBetForUser } from '@/lib/data'
+import { getBetForUser, getTopOpportunities } from '@/lib/data'
+import { refreshOpportunities } from '@/lib/scanner-sync'
+import { syncBetHero } from '@/lib/bethero-sync'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
+
+export async function refreshOpportunityList() {
+  try {
+    await syncBetHero({ authorized: false })
+    await refreshOpportunities()
+  } catch (error) {
+    console.error('[scanner] auto refresh failed', error)
+  }
+  return getTopOpportunities()
+}
 
 export async function toggleFavorite(opportunityId: number) {
   if (!Number.isInteger(opportunityId) || opportunityId <= 0) throw new Error('Ugyldigt id')
@@ -61,6 +73,7 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
       stake: String(stakeA + stakeB),
       expectedProfit: profit.toFixed(2),
       status: 'open',
+      bookmakers: opp ? `${opp.aBookmaker} / ${opp.bBookmaker}` : `${demo!.a.bookmaker} / ${demo!.b.bookmaker}`,
       kickoff: opp?.kickoff ?? new Date(demo!.kickoffTs),
     })
   } catch (error) {
@@ -76,6 +89,7 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
         expectedProfit: profit,
         profit: null,
         status: 'open',
+        bookmakers: `${demo.a.bookmaker} / ${demo.b.bookmaker}`,
         kickoffLabel: demo.kickoffLabel,
         dateLabel: new Date(demo.kickoffTs).toLocaleDateString('da-DK'),
         placedTs: Date.now(),

@@ -1,4 +1,6 @@
+import { Suspense } from 'react'
 import { SiteHeader } from '@/components/site-header'
+import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { OpportunityList } from '@/components/sikkerbets/opportunity-list'
 import { getOpportunities } from '@/lib/data'
 
@@ -10,7 +12,12 @@ export default async function HomePage() {
     <main>
       <SiteHeader />
       <h1 className="sr-only">SikkerBets</h1>
-      <OpportunityList initial={opportunities} />
+      <div className="lg:flex lg:items-start lg:gap-4 lg:px-4 lg:pt-4">
+        <Suspense fallback={null}>
+          <OpportunityList initial={opportunities} />
+        </Suspense>
+        <DesktopAside opportunities={opportunities} />
+      </div>
     </main>
   )
 }

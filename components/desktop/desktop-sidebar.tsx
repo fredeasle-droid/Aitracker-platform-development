@@ -1,0 +1,174 @@
+'use client'
+
+import Link from 'next/link'
+import { usePathname, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
+import { ArrowRight, ChartPie, ChevronDown, Crown, Ellipsis, Gamepad2, Gift, Radio, Star } from 'lucide-react'
+import { BarsIcon } from '@/components/icons'
+import { Flag } from '@/components/flag'
+import { authClient } from '@/lib/auth-client'
+import { cn } from '@/lib/utils'
+
+const NAV = [
+  { href: '/', label: 'SikkerBets', icon: BarsIcon },
+  { href: '/#live-scanning', label: 'Live scanning', icon: Radio },
+  { href: '/stats', label: 'Stats', icon: ChartPie },
+  { href: '/bonus', label: 'Bonus', icon: Gift },
+  { href: '/konto', label: 'Mine spil', icon: Star },
+] as const
+
+const SPORTS = ['Fodbold', 'Basketball', 'Tennis', 'Ishockey', 'Esport'] as const
+
+const COUNTRIES = [
+  { code: 'dk', name: 'Danmark' },
+  { code: 'gb-eng', name: 'England' },
+  { code: 'de', name: 'Tyskland' },
+  { code: 'es', name: 'Spanien' },
+  { code: 'it', name: 'Italien' },
+  { code: 'fr', name: 'Frankrig' },
+] as const
+
+function SportIcon({ sport }: { sport: string }) {
+  if (sport === 'Esport') return <Gamepad2 className="size-6" aria-hidden="true" />
+  return (
+    <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+      <circle cx="12" cy="12" r="9.5" />
+      {sport === 'Fodbold' && <path d="M12 7.5l3.3 2.4-1.3 3.9h-4l-1.3-3.9zM12 2.5v5M15.3 9.9l5-1.5M14 13.8l2.8 4.4M10 13.8l-2.8 4.4M8.7 9.9l-5-1.5" />}
+      {sport === 'Basketball' && <path d="M2.5 12h19M12 2.5v19M5.5 5.2c3 3 3 10.6 0 13.6M18.5 5.2c-3 3-3 10.6 0 13.6" />}
+      {sport === 'Tennis' && <path d="M5 5.5c4.5 2.5 4.5 10.5 0 13M19 5.5c-4.5 2.5-4.5 10.5 0 13" />}
+      {sport === 'Ishockey' && <path d="M3 14c3-3 15-3 18 0" />}
+    </svg>
+  )
+}
+
+const row =
+  'flex min-h-10 items-center gap-4 rounded-xl px-4 text-[15px] text-[#e6ecf7] transition-colors hover:bg-[#0d1f38]'
+
+export function DesktopSidebar() {
+  const pathname = usePathname()
+  const params = useSearchParams()
+  const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
+  const activeCountry = params.get('country')
+  const [leaguesOpen, setLeaguesOpen] = useState(true)
+  const { data: session } = authClient.useSession()
+
+  return (
+    <aside
+      aria-label="Sidemenu"
+      className="sticky top-[70px] hidden h-[calc(100dvh-70px)] w-[255px] shrink-0 flex-col overflow-y-auto border-r border-[#102b49] bg-[#050d1b] px-3 py-4 [scrollbar-width:thin] lg:flex"
+    >
+      <nav aria-label="Hovedmenu">
+        <ul className="flex flex-col gap-1">
+          {NAV.map(({ href, label, icon: Icon }) => {
+            const active = href === '/' ? pathname === '/' && !activeSport && !activeCountry : pathname === href
+            return (
+              <li key={href}>
+                <Link
+                  href={href}
+                  aria-current={active ? 'page' : undefined}
+                  className={cn(
+                    row,
+                    'min-h-12',
+                    active && 'bg-[linear-gradient(100deg,#1682ff,#1372ee)] font-semibold text-primary-foreground shadow-[0_8px_24px_-10px_var(--primary)] hover:bg-primary',
+                  )}
+                >
+                  <Icon className="size-6" fill={Icon === BarsIcon || Icon === ChartPie ? 'currentColor' : 'none'} />
+                  {label}
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
+
+      <div className="my-4 border-t border-[#13294a]" />
+
+      <h2 className="px-4 pb-2 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]">Sport</h2>
+      <ul className="flex flex-col gap-0.5">
+        {SPORTS.map((s) => (
+          <li key={s}>
+            <Link
+              href={`/?sport=${encodeURIComponent(s)}`}
+              aria-current={activeSport === s ? 'true' : undefined}
+              className={cn(row, activeSport === s && 'bg-[#0d1f38] text-[#65c1ff]')}
+            >
+              <SportIcon sport={s} />
+              {s}
+            </Link>
+          </li>
+        ))}
+      </ul>
+
+      <div className="my-4 border-t border-[#13294a]" />
+
+      <button
+        type="button"
+        onClick={() => setLeaguesOpen((v) => !v)}
+        aria-expanded={leaguesOpen}
+        aria-controls="sidebar-leagues"
+        className="flex min-h-9 items-center justify-between px-4 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]"
+      >
+        Ligaer
+        <ChevronDown className={cn('size-4 text-[#d5ddef] transition-transform', !leaguesOpen && '-rotate-90')} />
+      </button>
+      {leaguesOpen && (
+        <ul id="sidebar-leagues" className="flex flex-col gap-0.5">
+          {COUNTRIES.map((c) => (
+            <li key={c.code}>
+              <Link
+                href={`/?country=${c.code}`}
+                aria-current={activeCountry === c.code ? 'true' : undefined}
+                className={cn(row, activeCountry === c.code && 'bg-[#0d1f38] text-[#65c1ff]')}
+              >
+                <Flag code={c.code} label="" className="size-6 rounded-md" />
+                {c.name}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link href="/" className={row}>
+              <Ellipsis className="size-6" aria-hidden="true" />
+              Flere ligaer
+            </Link>
+          </li>
+        </ul>
+      )}
+
+      {session?.user && (
+        <div className="mt-auto rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3">
+          <div className="flex gap-2.5">
+            <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
+            <div>
+              <p className="text-[15px] font-bold leading-tight">Premium</p>
+              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">Få adgang til flere funktioner og eksklusive SikkerBets.</p>
+            </div>
+          </div>
+          <Link
+            href="/konto"
+            className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
+          >
+            Opgrader nu
+          </Link>
+        </div>
+      )}
+
+      {!session?.user && (
+        <div className="mt-auto rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3">
+          <div className="flex gap-2.5">
+            <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
+            <div>
+              <p className="text-[15px] font-bold leading-tight">Opret gratis konto</p>
+              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">Få fuld adgang til alle odds og funktioner.</p>
+            </div>
+          </div>
+          <Link
+            href="/konto"
+            className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
+          >
+            Opret konto <ArrowRight className="size-4" />
+          </Link>
+        </div>
+      )}
+    </aside>
+  )
+}
