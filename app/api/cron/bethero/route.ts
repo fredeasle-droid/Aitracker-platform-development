@@ -10,8 +10,8 @@ import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
 export const dynamic = 'force-dynamic'
 export const maxDuration = 30
 
-const PUBLIC_MIN_INTERVAL_MS = 4 * 60 * 1000
-const BROWSER_FRESH_MS = 3 * 60 * 1000
+const PUBLIC_MIN_INTERVAL_MS = 50 * 1000
+const BROWSER_FRESH_MS = 90 * 1000
 
 // The GitHub Actions schedule calls this without a secret (GitHub secrets are unavailable),
 // so unauthenticated calls are throttled and never expose scraped data.
