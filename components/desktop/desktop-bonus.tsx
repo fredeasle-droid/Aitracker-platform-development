@@ -13,6 +13,7 @@ import {
   Undo2,
   type LucideIcon,
 } from 'lucide-react'
+import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { BONUS_CATEGORIES, BONUS_OFFERS, type BonusCategory, type BonusOffer } from '@/lib/bonus-offers'
 import { getBookmaker } from '@/lib/bookmakers'
 import { cn } from '@/lib/utils'
@@ -124,10 +125,14 @@ function OfferRow({ offer }: { offer: BonusOffer }) {
       <div className="flex items-center gap-4">
         <div
           aria-hidden="true"
-          className="flex h-[84px] w-[142px] shrink-0 items-center justify-center overflow-hidden rounded-xl px-2 text-center text-[22px] font-black italic leading-none tracking-tight"
-          style={{ background: brand.bg, color: brand.fg }}
+          className="flex h-[84px] w-[142px] shrink-0 items-center justify-center gap-3 overflow-hidden rounded-xl px-3 text-center font-black leading-none tracking-tight"
+          style={{ background: brand.logo ? '#0b1a31' : brand.bg, color: brand.fg }}
         >
-          {offer.bookmaker}
+          {brand.logo ? (
+            <BookmakerLogo name={offer.bookmaker} className="size-14 rounded-xl" />
+          ) : (
+            <span className="text-[22px] italic">{offer.bookmaker}</span>
+          )}
         </div>
 
         <div className="min-w-0 flex-1">

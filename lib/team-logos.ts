@@ -29,9 +29,9 @@ const THESPORTSDB_SPORT: Record<string, string> = {
 }
 
 const THESPORTSDB_KEY = process.env.THESPORTSDB_API_KEY || '123'
-const LOOKUPS_PER_RUN = 8
+const LOOKUPS_PER_RUN = 10
 const LOOKUP_SPACING_MS = 2_200
-const RETRY_MISSES_AFTER_MS = 7 * 24 * 60 * 60 * 1000
+const RETRY_MISSES_AFTER_MS = 24 * 60 * 60 * 1000
 const ESPN_INDEX_TTL_MS = 12 * 60 * 60 * 1000
 
 export function normalizeTeamName(name: string) {
@@ -47,6 +47,48 @@ export function normalizeTeamName(name: string) {
 }
 
 export const logoKey = (sport: string, name: string) => `${sport}|${normalizeTeamName(name)}`
+
+const ANY_SPORT = '*'
+const anySportKey = (name: string) => `${ANY_SPORT}|${normalizeTeamName(name)}`
+
+const CITY_ABBREVIATIONS: Record<string, string> = {
+  tb: 'Tampa Bay',
+  ny: 'New York',
+  la: 'Los Angeles',
+  sf: 'San Francisco',
+  sd: 'San Diego',
+  kc: 'Kansas City',
+  stl: 'St. Louis',
+  wsh: 'Washington',
+  chi: 'Chicago',
+  gs: 'Golden State',
+  okc: 'Oklahoma City',
+  lv: 'Las Vegas',
+  nj: 'New Jersey',
+  no: 'New Orleans',
+  sa: 'San Antonio',
+  ari: 'Arizona',
+}
+
+const TEAM_SUFFIX_NOISE = /\s+(basketball club|basketball|hockey club|hockey|handball club|handball|football club|bc|hc)$/i
+
+export function nameVariants(name: string) {
+  const base = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+  const variants = new Set<string>([base])
+
+  const withoutSuffix = base.replace(TEAM_SUFFIX_NOISE, '').trim()
+  variants.add(withoutSuffix)
+
+  const [first, ...rest] = withoutSuffix.split(/\s+/)
+  const city = CITY_ABBREVIATIONS[first.toLowerCase().replace(/\./g, '')]
+  if (city && rest.length > 0) variants.add(`${city} ${rest.join(' ')}`)
+
+  const words = withoutSuffix.split(/\s+/)
+  if (words.length >= 2) variants.add(words.slice(0, -1).join(' '))
+  if (words.length >= 3) variants.add(words.slice(1).join(' '))
+
+  return [...variants].filter((variant) => variant.length >= 3)
+}
 
 export async function getLogoMap() {
   const rows = await db.select({ key: teamLogos.key, url: teamLogos.logoUrl }).from(teamLogos).where(isNotNull(teamLogos.logoUrl))
@@ -72,7 +114,11 @@ async function getEspnIndex() {
           const logo = team.logos?.[0]?.href
           if (!logo) continue
           const names = [team.displayName, team.shortDisplayName, team.name, team.location && team.name ? `${team.location} ${team.name}` : undefined]
-          for (const name of names) if (name) map.set(logoKey(sport, name), logo)
+          for (const name of names) {
+            if (!name) continue
+            map.set(logoKey(sport, name), logo)
+            if (!map.has(anySportKey(name))) map.set(anySportKey(name), logo)
+          }
         }
       } catch (error) {
         console.error('[logos] espn league failed', league, error)
@@ -90,17 +136,22 @@ async function lookupTheSportsDb(sport: string, name: string): Promise<LookupRes
   const wanted = THESPORTSDB_SPORT[sport]
   if (!wanted) return { status: 'none' }
   try {
-    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
-    const res = await fetch(`https://www.thesportsdb.com/api/v1/json/${THESPORTSDB_KEY}/searchteams.php?t=${encodeURIComponent(query)}`, {
-      signal: AbortSignal.timeout(8_000),
-    })
-    if (res.status === 429 || res.status === 403) return { status: 'limited' }
-    if (!res.ok) return { status: 'limited' }
-    const data = await res.json()
-    const teams: { strSport?: string; strBadge?: string; strTeamBadge?: string }[] = data.teams ?? []
-    const match = teams.find((team) => team.strSport === wanted && (team.strBadge || team.strTeamBadge))
-    const url = match?.strBadge || match?.strTeamBadge
-    return url ? { status: 'found', url } : { status: 'none' }
+    for (const query of nameVariants(name).slice(0, 3)) {
+      const res = await fetch(`https://www.thesportsdb.com/api/v1/json/${THESPORTSDB_KEY}/searchteams.php?t=${encodeURIComponent(query)}`, {
+        signal: AbortSignal.timeout(8_000),
+      })
+      if (res.status === 429 || res.status === 403) return { status: 'limited' }
+      if (!res.ok) return { status: 'limited' }
+      const data = await res.json()
+      const teams: { strTeam?: string; strSport?: string; strBadge?: string; strTeamBadge?: string }[] = data.teams ?? []
+      const badge = (team: { strBadge?: string; strTeamBadge?: string }) => team.strBadge || team.strTeamBadge
+      const sameSport = teams.find((team) => team.strSport === wanted && badge(team))
+      const sameName = teams.find((team) => badge(team) && team.strTeam && normalizeTeamName(team.strTeam) === normalizeTeamName(query))
+      const url = (sameSport && badge(sameSport)) || (sameName && badge(sameName))
+      if (url) return { status: 'found', url }
+      await new Promise((resolve) => setTimeout(resolve, LOOKUP_SPACING_MS))
+    }
+    return { status: 'none' }
   } catch (error) {
     console.error('[logos] thesportsdb lookup failed', name, error)
     return { status: 'limited' }
@@ -189,8 +240,20 @@ async function run() {
   const espn = await getEspnIndex()
   const fromEspn: Parameters<typeof saveLogos>[0] = []
   const remaining: { key: string; sport: string; name: string }[] = []
+  const knownAnySport = new Map<string, string>()
+  for (const row of known) {
+    if (!row.url) continue
+    const name = row.key.slice(row.key.indexOf('|') + 1)
+    if (!knownAnySport.has(name)) knownAnySport.set(name, row.url)
+  }
+
   for (const team of pending.values()) {
-    const url = espn.get(team.key)
+    const variants = nameVariants(team.name)
+    const url =
+      espn.get(team.key) ??
+      variants.map((variant) => espn.get(logoKey(team.sport, variant))).find(Boolean) ??
+      variants.map((variant) => espn.get(anySportKey(variant))).find(Boolean) ??
+      variants.map((variant) => knownAnySport.get(normalizeTeamName(variant))).find(Boolean)
     if (url) fromEspn.push({ ...team, url, source: 'espn' })
     else remaining.push(team)
   }
