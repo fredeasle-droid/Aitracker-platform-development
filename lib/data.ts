@@ -8,6 +8,8 @@ import { marginPercent } from '@/lib/odds'
 import { formatKickoff, formatShortDate } from '@/lib/dates'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getDemoBets } from '@/lib/demo-bets'
+import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
+import { MAX_OPPORTUNITIES } from '@/lib/limits'
 
 export type Opportunity = {
   id: number
@@ -17,6 +19,8 @@ export type Opportunity = {
   league: string
   homeTeam: string
   awayTeam: string
+  homeLogo?: string | null
+  awayLogo?: string | null
   market: string
   kickoffLabel: string
   kickoffTs: number
@@ -37,35 +41,13 @@ export type BetRow = {
   expectedProfit: number
   profit: number | null
   status: 'open' | 'won' | 'lost'
+  bookmakers?: string | null
   kickoffLabel: string
-  dateLabel: string
+ dateLabel: string
   placedTs: number
 }
 
-function displayOutcome(value: string) {
-  const normalized = value.replace(/[_-]+/g, ' ').trim().toLowerCase()
-  if (normalized === 'home' || normalized === 'h' || normalized === '1') return 'Hjemmeholdet (1)'
-  if (normalized === 'away' || normalized === 'a' || normalized === '2') return 'Udeholdet (2)'
-  if (normalized === 'draw' || normalized === 'tie' || normalized === 'x') return 'Uafgjort (X)'
-  if (normalized === '1x' || normalized === 'home or draw' || normalized === 'home/draw') return 'Dobbeltchance: Hjemmeholdet eller uafgjort (1X)'
-  if (normalized === 'x2' || normalized === 'draw or away' || normalized === 'draw/away') return 'Dobbeltchance: Uafgjort eller udeholdet (X2)'
-  if (normalized === '12' || normalized === 'home or away' || normalized === 'home/away') return 'Dobbeltchance: Hjemmeholdet eller udeholdet (12)'
-  if (normalized === 'sp' || normalized === 'spread') return 'Handicap'
-  if (/^(hjemmehold|udehold)\s+[+-]\d/.test(normalized)) return value.replace(/\./g, ',')
-  if (normalized.startsWith('over ')) return `Over ${normalized.slice(5).replace('.', ',')}`
-  if (normalized.startsWith('under ')) return `Under ${normalized.slice(6).replace('.', ',')}`
-  return value.replace(/[_-]+/g, ' ')
-}
-
-function displayMarket(value: string) {
-  const normalized = value.toLowerCase()
-  if (normalized.includes('points-game-sp') || normalized.includes('pointspread') || normalized.includes('spread') || normalized.includes('handicap') || normalized.endsWith('-sp')) return 'Handicap på kamp'
-  if (normalized.includes('over') || normalized.includes('under') || normalized.includes('total') || normalized.includes('ou')) return 'Over/Under mål'
-  if (normalized.includes('moneyline') || normalized.includes('winner') || normalized.includes('result')) return 'Kampresultat'
-  return value.replace(/[_-]+/g, ' ')
-}
-
-function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date): Opportunity {
+function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date, logos: Map<string, string>): Opportunity {
   const aOdds = Number(row.aOdds)
   const bOdds = Number(row.bOdds)
   return {
@@ -76,12 +58,14 @@ function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<numbe
     league: row.league,
     homeTeam: row.homeTeam,
     awayTeam: row.awayTeam,
-    market: displayMarket(row.market),
+    homeLogo: logos.get(logoKey(row.sport, row.homeTeam)) ?? null,
+    awayLogo: logos.get(logoKey(row.sport, row.awayTeam)) ?? null,
+    market: row.market,
     kickoffLabel: formatKickoff(row.kickoff, now),
     kickoffTs: row.kickoff.getTime(),
     createdTs: row.createdAt.getTime(),
-    a: { label: displayOutcome(row.aLabel), bookmaker: row.aBookmaker, odds: aOdds },
-    b: { label: displayOutcome(row.bLabel), bookmaker: row.bBookmaker, odds: bOdds },
+    a: { label: row.aLabel, bookmaker: row.aBookmaker, odds: aOdds },
+    b: { label: row.bLabel, bookmaker: row.bBookmaker, odds: bOdds },
     margin: marginPercent(aOdds, bOdds),
     favorite: favIds.has(row.id),
   }
@@ -111,15 +95,15 @@ export const getOpportunities = cache(async () => {
   }
 
   try {
-    if (process.env.SPORTSGAMEODDS_API_KEY) {
-      const { getLiveSurebets } = await import('@/lib/sportsgameodds')
-      const live = await getLiveSurebets()
-      if (live.length > 0) {
-        const favIds = userId ? await getFavoriteIds(userId).catch(() => new Set<number>()) : new Set<number>()
-        return live.map((opportunity) => ({ ...opportunity, favorite: favIds.has(opportunity.id) }))
-      }
+    let rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+    if (rows.length === 0) {
+      const { refreshOpportunities } = await import('@/lib/scanner-sync')
+      const refreshed = await refreshOpportunities()
+      if (refreshed.ok) rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+    } else {
+      const { scheduleStaleRefresh } = await import('@/lib/scanner-sync')
+      scheduleStaleRefresh(Math.max(...rows.map((r) => r.updatedAt.getTime())))
     }
-    const rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
     let favIds = new Set<number>()
     if (userId) {
       try {
@@ -128,17 +112,28 @@ export const getOpportunities = cache(async () => {
         console.error('[data] favorites unavailable; continuing with opportunities', error)
       }
     }
-    if (rows.length === 0 && process.env.SPORTSGAMEODDS_API_KEY) {
-      const { getLiveSurebets } = await import('@/lib/sportsgameodds')
-      return getLiveSurebets()
+    let logos = new Map<string, string>()
+    try {
+      logos = await getLogoMap()
+      scheduleLogoRefresh()
+    } catch (error) {
+      console.error('[data] team logos unavailable; continuing without them', error)
     }
     const now = new Date()
-    return rows.map((r) => toOpportunity(r, favIds, now))
+    return rows
+      .map((r) => toOpportunity(r, favIds, now, logos))
+      .sort((a, b) => b.margin - a.margin || a.id - b.id)
+      .slice(0, MAX_OPPORTUNITIES)
   } catch (error) {
     console.error('[data] opportunities unavailable', error)
     return []
   }
 })
+
+export async function getTopOpportunities() {
+  const all = await getOpportunities()
+  return [...all].sort((a, b) => b.margin - a.margin || a.id - b.id).slice(0, MAX_OPPORTUNITIES)
+}
 
 export async function getOpportunity(id?: number) {
   const all = await getOpportunities()
@@ -168,6 +163,7 @@ export async function getBets(): Promise<BetRow[]> {
     expectedProfit: Number(r.expectedProfit),
     profit: r.profit === null ? null : Number(r.profit),
     status: r.status as BetRow['status'],
+    bookmakers: r.bookmakers,
     kickoffLabel: formatKickoff(r.kickoff, now),
     dateLabel: formatShortDate(r.kickoff),
       placedTs: (r.settledAt ?? r.kickoff).getTime(),

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartPie, FlaskConical, Gift } from 'lucide-react'
+import { ChartPie, Database, Gift } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { cn } from '@/lib/utils'
 
@@ -10,7 +10,7 @@ const ITEMS = [
   { href: '/', label: 'SikkerBets', icon: BarsIcon },
   { href: '/stats', label: 'Stats', icon: ChartPie },
   { href: '/bonus', label: 'Bonus', icon: Gift },
-  { href: '/Feed-test', label: 'Test Feed', icon: FlaskConical },
+  { href: '/oddspapi', label: 'Feed-test', icon: Database },
 ] as const
 
 export function BottomNav() {
@@ -19,7 +19,7 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Hovedmenu"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-[#193451] bg-[#050d1b]/95 px-2 pt-2 shadow-[0_-10px_30px_-20px_#159cff] backdrop-blur-xl pb-[env(safe-area-inset-bottom)]"
+      className="fixed inset-x-0 bottom-0 z-40 lg:hidden border-t border-[#193451] bg-[#050d1b]/95 px-2 pt-2 shadow-[0_-10px_30px_-20px_#159cff] backdrop-blur-xl pb-[env(safe-area-inset-bottom)]"
     >
       <ul className="mx-auto flex max-w-2xl items-stretch gap-1.5 px-1">
         {ITEMS.map(({ href, label, icon: Icon }) => {
@@ -30,7 +30,7 @@ export function BottomNav() {
                 href={href}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'relative flex min-h-14 flex-col items-center justify-center gap-1 px-1 py-1.5 text-[11px] font-bold tracking-[0.01em] transition-all',
+                  'relative flex min-h-14 flex-col items-center justify-center gap-1 px-2 py-1.5 text-[12px] font-bold tracking-[0.01em] transition-all',
                   active ? 'text-[#65c1ff] drop-shadow-[0_0_8px_rgba(21,156,255,0.75)]' : 'text-[#71839d] hover:text-[#d7e8fa]',
                 )}
               >
