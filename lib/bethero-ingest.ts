@@ -83,18 +83,23 @@ type StoredRow = {
 
 const ROW_TTL_MS = 3 * 60 * 60_000
 const MAX_STORED_ROWS = 1500
+const FULL_LIST_MIN_ROWS = 25
 
 const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
 
 // Bet Hero only sends a row when it changes and announces removals in `gone`,
 // so the current state has to be rebuilt from every message, not just the latest ones.
-function applyMessage(state: Map<string, StoredRow>, message: unknown, now: number) {
+function applyMessage(state: Map<string, StoredRow>, message: unknown, now: number, touched?: Set<string>) {
   if (Array.isArray(message)) {
     for (const item of message) {
-      if (Array.isArray(item)) applyMessage(state, item, now)
+      if (Array.isArray(item)) applyMessage(state, item, now, touched)
       else if (item && typeof item === 'object') {
         const row = item as StoredRow
-        if (typeof row.event === 'string' && row.books_1) state.set(rowKey(row), { ...row, seenAt: row.seenAt ?? now })
+        if (typeof row.event === 'string' && row.books_1) {
+          const key = rowKey(row)
+          state.set(key, { ...row, seenAt: row.seenAt ?? now })
+          touched?.add(key)
+        }
       }
     }
   } else if (message && typeof message === 'object') {
@@ -114,7 +119,16 @@ export async function saveBetHeroMessages(messages: unknown[]) {
   const state = new Map<string, StoredRow>()
   for (const message of previous) applyMessage(state, message, existing?.updatedAt.getTime() ?? now)
   const before = state.size
-  for (const message of messages) applyMessage(state, message, now)
+  const touched = new Set<string>()
+  for (const message of messages) applyMessage(state, message, now, touched)
+
+  // The feed is sorted by profit, so a full list (many rows in one batch) must contain every
+  // stored row at or above its lowest profit. Anything missing from it is gone from Bet Hero,
+  // even when no `gone` message arrived.
+  if (touched.size >= FULL_LIST_MIN_ROWS) {
+    const lowest = Math.min(...[...touched].map((key) => Number(state.get(key)?.profit ?? Infinity)))
+    for (const [key, row] of state) if (!touched.has(key) && Number(row.profit ?? 0) >= lowest) state.delete(key)
+  }
 
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
