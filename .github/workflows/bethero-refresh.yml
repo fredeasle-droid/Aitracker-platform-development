@@ -10,16 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Refresh Bet Hero data
-        env:
-          CRON_URL: ${{ secrets.BETTRACKER_CRON_URL }}
-          CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           set -euo pipefail
-          test -n "$CRON_URL"
-          test -n "$CRON_SECRET"
           curl --fail-with-body --silent --show-error \
             --retry 2 \
             --connect-timeout 15 \
             --max-time 45 \
-            -H "Authorization: Bearer $CRON_SECRET" \
-            "$CRON_URL/api/cron/bethero"
+            "https://aitracker-platform-development.vercel.app/api/cron/bethero"
