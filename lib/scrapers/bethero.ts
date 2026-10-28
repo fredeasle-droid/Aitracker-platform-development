@@ -12,7 +12,21 @@ const DEFAULT_FILTER_ID = 'zOUILG38'
 
 function subscribeMessage() {
   const filterId = process.env.BETHERO_FILTER_ID || DEFAULT_FILTER_ID
-  return encodeMsgpack({ filters: [filterId], ping: Date.now(), view: 1 })
+  return encodeMsgpack({
+    filters: [filterId],
+    ping: Date.now(),
+    view: {
+      sort: 'profit-desc',
+      rows: 30,
+      search: null,
+      exhaustive: false,
+      group: null,
+      pin_leagues: null,
+      pin_events: null,
+      hide: [],
+      id: 1,
+    },
+  })
 }
 
 function toBuffer(data: WebSocket.RawData) {
