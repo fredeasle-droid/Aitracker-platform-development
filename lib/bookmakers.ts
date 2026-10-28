@@ -6,6 +6,7 @@ export type BookmakerBrand = {
   mark: string
   logo?: string
   inset?: boolean
+  small?: boolean
 }
 
 type BrandSeed = Omit<BookmakerBrand, 'name' | 'bg' | 'fg' | 'mark'> & {
@@ -51,6 +52,9 @@ const SEEDS: Record<string, BrandSeed> = {
   '1xbet': { name: '1xBet', url: 'https://1xbet.com', logo: '/bookmakers/1xbet.png' },
   campobet: { name: 'Campobet', url: 'https://www.campobet.com', logo: '/bookmakers/campobet.png' },
   tonybet: { name: 'TonyBet', url: 'https://www.tonybet.com', logo: '/bookmakers/tonybet.png' },
+  skybet: { name: 'Sky Bet', url: 'https://www.skybet.com', logo: '/bookmakers/skybet.png' },
+  '18bet': { name: '18bet', url: 'https://www.18bet.com', logo: '/bookmakers/18bet.png' },
+  bet9ja: { name: 'Bet9ja', url: 'https://www.bet9ja.com', logo: '/bookmakers/bet9ja.png', small: true },
 }
 
 const SEED_KEYS_LONGEST_FIRST = Object.keys(SEEDS).sort((a, b) => b.length - a.length)
@@ -77,6 +81,7 @@ export function getBookmaker(name: string): BookmakerBrand {
     url: seed.url,
     logo: seed.logo,
     inset: seed.inset,
+    small: seed.small,
     bg: seed.bg ?? NAVY,
     fg: seed.fg ?? WHITE,
     mark: seed.mark ?? initials(name),

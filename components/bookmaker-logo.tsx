@@ -19,7 +19,11 @@ export function BookmakerLogo({ name, className }: { name: string; className?: s
           alt=""
           loading="lazy"
           decoding="async"
-          className={cn('size-full object-cover', brand.inset && 'p-[22%] object-contain')}
+          className={cn(
+            'size-full object-cover',
+            brand.inset && 'p-[22%] object-contain',
+            brand.small && 'p-[30%] object-contain [image-rendering:pixelated]',
+          )}
         />
       ) : (
         <span className="text-[0.9em]">{brand.mark}</span>
