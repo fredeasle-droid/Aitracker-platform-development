@@ -39,6 +39,7 @@ export async function GET(request: Request) {
     console.error('[bethero] cron refresh failed', error)
     const message = error instanceof Error ? error.message : 'Bet Hero refresh failed'
     if (!browserDataIsFresh) await recordBetHeroStatus(`Fejl: ${message}`)
+    await refreshOpportunities().catch((refreshError) => console.error('[bethero] opportunities refresh failed', refreshError))
     return NextResponse.json({ ok: false, error: message }, { status: 502 })
   }
 }
