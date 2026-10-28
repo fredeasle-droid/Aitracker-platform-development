@@ -1,4 +1,5 @@
 import { isValidIngestToken, saveBetHeroSnapshot, type BrowserMessage } from '@/lib/bethero-ingest'
+import { recordBetHeroStatus } from '@/lib/bethero-cookie'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 30
@@ -32,6 +33,7 @@ export async function POST(request: Request) {
 
   try {
     const { rowCount, summary } = await saveBetHeroSnapshot(body.messages.slice(0, 200) as BrowserMessage[])
+    await recordBetHeroStatus(`OK (fra browser): ${summary}`)
     return reply(`gemt, ${rowCount} rækker. ${summary}`, 200)
   } catch (error) {
     console.error('[bethero-ingest] failed', error)

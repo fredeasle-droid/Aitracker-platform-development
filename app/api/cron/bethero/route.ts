@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import { isAuthorizedScan } from '@/lib/cron-auth'
 import { fetchBetHeroMessages, describeBetHeroMessages } from '@/lib/scrapers/bethero'
-import { saveBetHeroMessages } from '@/lib/bethero-ingest'
+import { getBetHeroSnapshotAgeMs, saveBetHeroMessages } from '@/lib/bethero-ingest'
 import { recordBetHeroStatus, resolveBetHeroCookie } from '@/lib/bethero-cookie'
 import { getSessionInfo } from '@/lib/scraper-session'
 import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
@@ -10,6 +10,7 @@ export const dynamic = 'force-dynamic'
 export const maxDuration = 30
 
 const PUBLIC_MIN_INTERVAL_MS = 4 * 60 * 1000
+const BROWSER_FRESH_MS = 3 * 60 * 1000
 
 // The GitHub Actions schedule calls this without a secret (GitHub secrets are unavailable),
 // so unauthenticated calls are throttled and never expose scraped data.
@@ -22,6 +23,8 @@ async function isThrottled() {
 export async function GET(request: Request) {
   const authorized = isAuthorizedScan(request)
   if (!authorized && (await isThrottled())) return NextResponse.json({ ok: true, skipped: true })
+  const browserDataIsFresh = (await getBetHeroSnapshotAgeMs().catch(() => Number.POSITIVE_INFINITY)) < BROWSER_FRESH_MS
+  if (browserDataIsFresh && !authorized) return NextResponse.json({ ok: true, skipped: true })
   const cookie = await resolveBetHeroCookie()
   if (!cookie) return NextResponse.json({ ok: false, error: 'Ingen Bet Hero-cookie gemt under Kilder' }, { status: 503 })
   try {
@@ -33,7 +36,7 @@ export async function GET(request: Request) {
   } catch (error) {
     console.error('[bethero] cron refresh failed', error)
     const message = error instanceof Error ? error.message : 'Bet Hero refresh failed'
-    await recordBetHeroStatus(`Fejl: ${message}`)
+    if (!browserDataIsFresh) await recordBetHeroStatus(`Fejl: ${message}`)
     return NextResponse.json({ ok: false, error: message }, { status: 502 })
   }
 }
