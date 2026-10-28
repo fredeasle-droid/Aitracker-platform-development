@@ -4,6 +4,7 @@ import { fetchBetHeroMessages, describeBetHeroMessages } from '@/lib/scrapers/be
 import { getBetHeroSnapshotAgeMs, saveBetHeroMessages } from '@/lib/bethero-ingest'
 import { recordBetHeroStatus, resolveBetHeroCookie } from '@/lib/bethero-cookie'
 import { getSessionInfo } from '@/lib/scraper-session'
+import { refreshOpportunities } from '@/lib/scanner-sync'
 import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
 
 export const dynamic = 'force-dynamic'
@@ -32,6 +33,7 @@ export async function GET(request: Request) {
     const saved = await saveBetHeroMessages(messages)
     const summary = describeBetHeroMessages(messages)
     await recordBetHeroStatus(`OK: ${summary}`)
+    await refreshOpportunities().catch((error) => console.error('[bethero] opportunities refresh failed', error))
     return NextResponse.json(authorized ? { ok: true, ...saved, summary } : { ok: true })
   } catch (error) {
     console.error('[bethero] cron refresh failed', error)

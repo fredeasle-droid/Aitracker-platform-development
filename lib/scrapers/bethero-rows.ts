@@ -1,0 +1,103 @@
+import 'server-only'
+import { getBetHeroMessages } from '@/lib/bethero-ingest'
+import { isAllowedBookmaker } from '@/lib/allowed-bookmakers'
+import { displaySport, splitTeams, type ScrapedLeg, type ScrapedSurebet } from './types'
+
+type BetHeroBook = { name?: string }
+type BetHeroRow = {
+  parent_id?: string
+  event?: string
+  league?: string
+  sport?: string
+  live?: boolean
+  start?: number
+  timestamp?: number
+  profit?: number
+  market_1?: string
+  market_2?: string
+  bet_name_1?: string
+  bet_name_short_1?: string
+  bet_name_short_2?: string
+  adjusted_odds_1?: number
+  adjusted_odds_2?: number
+  odds_1?: number
+  odds_2?: number
+  books_1?: BetHeroBook[]
+  books_2?: BetHeroBook[]
+}
+
+const MAX_ROW_AGE_MS = 30 * 60_000
+
+const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
+
+function pickAllowedBook(books: BetHeroBook[] | undefined) {
+  const names = (books ?? []).map((book) => book.name).filter((name): name is string => Boolean(name))
+  const danish = names.find((name) => /\(DK\)$/i.test(name) && isAllowedBookmaker(baseName(name)))
+  if (danish) return baseName(danish)
+  const plain = names.find((name) => !/\(.*\)$/.test(name) && isAllowedBookmaker(name))
+  return plain ?? null
+}
+
+function collectRows(value: unknown, rows: BetHeroRow[]) {
+  if (Array.isArray(value)) {
+    for (const item of value) collectRows(item, rows)
+  } else if (value && typeof value === 'object') {
+    const candidate = value as BetHeroRow
+    if (typeof candidate.event === 'string' && candidate.books_1) rows.push(candidate)
+    else for (const inner of Object.values(value)) collectRows(inner, rows)
+  }
+}
+
+function parseRow(row: BetHeroRow, now: number): ScrapedSurebet | null {
+  if (row.live || !row.start || !row.timestamp) return null
+  const kickoff = new Date(row.start * 1000)
+  if (kickoff.getTime() < now || now - row.timestamp * 1000 > MAX_ROW_AGE_MS) return null
+
+  const teams = splitTeams(row.event ?? '')
+  const profit = Number(row.profit)
+  const oddsA = Number(row.adjusted_odds_1 ?? row.odds_1)
+  const oddsB = Number(row.adjusted_odds_2 ?? row.odds_2)
+  if (!teams || !(profit > 0) || !(oddsA > 1) || !(oddsB > 1)) return null
+
+  const bookA = pickAllowedBook(row.books_1)
+  const bookB = pickAllowedBook(row.books_2)
+  if (!bookA || !bookB || bookA === bookB) return null
+
+  const line = row.bet_name_1?.match(/([+-]?\d+(?:\.\d+)?)\s*$/)?.[1]
+  const baseMarket = row.market_1 || row.market_2 || 'Marked'
+  const market = line ? `${baseMarket} ${Math.abs(Number(line))}` : baseMarket
+  const legs: ScrapedLeg[] = [
+    { label: row.bet_name_short_1 || 'Udfald 1', bookmaker: bookA, odds: oddsA },
+    { label: row.bet_name_short_2 || 'Udfald 2', bookmaker: bookB, odds: oddsB },
+  ]
+
+  return {
+    source: 'bethero',
+    homeTeam: teams[0],
+    awayTeam: teams[1],
+    league: row.league || 'Ukendt liga',
+    sport: displaySport(row.sport ?? ''),
+    market,
+    kickoff,
+    profit,
+    legs,
+  }
+}
+
+export async function scrapeBetHero() {
+  const messages = await getBetHeroMessages()
+  if (messages.length === 0) throw new Error('Ingen Bet Hero-data gemt endnu')
+
+  const rows: BetHeroRow[] = []
+  collectRows(messages, rows)
+
+  const latest = new Map<string, BetHeroRow>()
+  for (const row of rows) {
+    const key = row.parent_id ?? `${row.event}|${row.market_1}|${row.bet_name_1}`
+    const current = latest.get(key)
+    if (!current || (row.timestamp ?? 0) >= (current.timestamp ?? 0)) latest.set(key, row)
+  }
+
+  const now = Date.now()
+  return [...latest.values()].map((row) => parseRow(row, now)).filter((item): item is ScrapedSurebet => item !== null)
+}

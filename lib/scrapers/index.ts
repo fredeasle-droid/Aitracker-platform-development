@@ -1,4 +1,5 @@
 import 'server-only'
+import { scrapeBetHero } from './bethero-rows'
 import { scrapeBetMonitor } from './betmonitor'
 import { scrapeOddsator } from './oddsator'
 import { scrapeSureBetDanmark } from './surebetdanmark'
@@ -13,6 +14,7 @@ const SOURCES = [
   { source: 'surebets-today', run: scrapeSureBetsToday },
   { source: 'oddsator', run: scrapeOddsator },
   { source: 'surebetdanmark', run: scrapeSureBetDanmark },
+  { source: 'bethero', run: scrapeBetHero },
 ]
 
 const MAX_PROFIT_PERCENT = 25
