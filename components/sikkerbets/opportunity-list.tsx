@@ -13,7 +13,7 @@ import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { authClient } from '@/lib/auth-client'
 
-const AUTO_REFRESH_MS = 2 * 60_000
+const AUTO_REFRESH_MS = 30_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
 const MARGINS = [0, 1, 2, 3, 4, 5]

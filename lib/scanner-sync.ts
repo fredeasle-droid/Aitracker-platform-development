@@ -9,7 +9,7 @@ import { MAX_OPPORTUNITIES } from '@/lib/limits'
 
 const rowKey = (home: string, away: string, market: string) => `${home}|${away}|${market}`.toLowerCase()
 
-const MIN_REFRESH_INTERVAL_MS = 45_000
+const MIN_REFRESH_INTERVAL_MS = 20_000
 
 async function refreshedRecently() {
   const [latest] = await db.select({ at: max(opportunities.updatedAt) }).from(opportunities)
@@ -77,8 +77,8 @@ export function refreshOpportunities() {
   return inFlight
 }
 
-const STALE_AFTER_MS = 2 * 60_000
-const RETRY_AFTER_MS = 60_000
+const STALE_AFTER_MS = 60_000
+const RETRY_AFTER_MS = 30_000
 let lastVisitAttempt = 0
 
 export function scheduleStaleRefresh(latestUpdateMs: number | null) {

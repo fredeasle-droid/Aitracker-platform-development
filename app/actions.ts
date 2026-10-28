@@ -7,12 +7,14 @@ import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
 import { getBetForUser, getTopOpportunities } from '@/lib/data'
 import { refreshOpportunities } from '@/lib/scanner-sync'
+import { syncBetHero } from '@/lib/bethero-sync'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
 
 export async function refreshOpportunityList() {
   try {
+    await syncBetHero({ authorized: false })
     await refreshOpportunities()
   } catch (error) {
     console.error('[scanner] auto refresh failed', error)
