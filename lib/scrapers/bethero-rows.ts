@@ -25,8 +25,6 @@ type BetHeroRow = {
   books_2?: BetHeroBook[]
 }
 
-const MAX_ROW_AGE_MS = 30 * 60_000
-
 const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 
 function pickAllowedBook(books: BetHeroBook[] | undefined) {
@@ -48,9 +46,9 @@ function collectRows(value: unknown, rows: BetHeroRow[]) {
 }
 
 function parseRow(row: BetHeroRow, now: number): ScrapedSurebet | null {
-  if (row.live || !row.start || !row.timestamp) return null
+  if (row.live || !row.start) return null
   const kickoff = new Date(row.start * 1000)
-  if (kickoff.getTime() < now || now - row.timestamp * 1000 > MAX_ROW_AGE_MS) return null
+  if (kickoff.getTime() < now) return null
 
   const teams = splitTeams(row.event ?? '')
   const profit = Number(row.profit)
@@ -94,7 +92,7 @@ export async function scrapeBetHero() {
   for (const row of rows) {
     const key = row.parent_id ?? `${row.event}|${row.market_1}|${row.bet_name_1}`
     const current = latest.get(key)
-    if (!current || (row.timestamp ?? 0) >= (current.timestamp ?? 0)) latest.set(key, row)
+    if (!current || Number(row.profit ?? 0) > Number(current.profit ?? 0)) latest.set(key, row)
   }
 
   const now = Date.now()
