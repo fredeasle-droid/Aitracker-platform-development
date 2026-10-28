@@ -32,7 +32,7 @@ export function GET(request: Request) {
       this.addEventListener('message', (event) => { Promise.resolve(event.data instanceof Blob ? event.data.arrayBuffer() : event.data).then(data => pending.push(typeof data === 'string' ? { text: data } : { b64: toB64(data) })).then(scheduleSend); });
     }
   };
-  setInterval(() => { if (location.pathname.includes('/arbitrage')) location.reload(); }, 300000);
+  setInterval(() => { if (location.pathname.includes('/arbitrage')) location.reload(); }, 60000);
   setTimeout(open, 2500);
 })();
 `
