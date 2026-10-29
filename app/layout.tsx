@@ -6,6 +6,7 @@ import { BottomNav } from '@/components/bottom-nav'
 import { LocaleProvider } from '@/components/locale-provider'
 import { DesktopHeader } from '@/components/desktop/desktop-header'
 import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
+import { SupportChat } from '@/components/support/support-chat'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -51,6 +52,7 @@ export default function RootLayout({
           </div>
         </div>
         <BottomNav />
+        <SupportChat />
         {process.env.NODE_ENV === 'production' && <Analytics />}
         </LocaleProvider>
       </body>
