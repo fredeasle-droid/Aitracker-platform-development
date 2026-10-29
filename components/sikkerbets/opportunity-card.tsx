@@ -3,15 +3,28 @@ import { ArrowRight, Calculator, Info, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { Flag } from '@/components/flag'
 import { SmallBarsIcon } from '@/components/icons'
-import { LockTile } from '@/components/locked-odds'
+import { LockBadge, LockTile } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
 import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-function OddsBox({ bookmaker, label, odds }: { bookmaker: string; label: string; odds: number }) {
-  return (
-    <div className="relative flex h-10 min-w-0 items-center gap-[7px] rounded-[11px] border border-[#1a3557] bg-[#07101f] pl-[5px] pr-2">
+function OddsBox({
+  bookmaker,
+  label,
+  odds,
+  loggedIn,
+}: {
+  bookmaker: string
+  label: string
+  odds: number
+  loggedIn: boolean
+}) {
+  const boxClass =
+    'relative flex h-10 min-w-0 items-center gap-[7px] rounded-[11px] border border-[#1a3557] bg-[#07101f] pl-[5px] pr-2'
+
+  const details = (
+    <>
       <BookmakerLogo name={bookmaker} className="size-[26px] shrink-0 rounded-[7px]" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[9.5px] font-semibold leading-3 text-[#f3f6fc]">{bookmaker}</p>
@@ -19,6 +32,25 @@ function OddsBox({ bookmaker, label, odds }: { bookmaker: string; label: string;
           {label}
         </p>
       </div>
+    </>
+  )
+
+  if (!loggedIn) {
+    return (
+      <Link
+        href="/konto"
+        aria-label={`Opret gratis konto for at se oddsene fra ${bookmaker}`}
+        className={cn(boxClass, 'transition-colors hover:border-primary')}
+      >
+        {details}
+        <LockBadge className="size-[22px] shrink-0" />
+      </Link>
+    )
+  }
+
+  return (
+    <div className={boxClass}>
+      {details}
       <p className="mt-2 shrink-0 text-[14.5px] font-extrabold leading-none tracking-tight tabular-nums text-[#4aa3ff]">
         {formatOdds(odds)}
       </p>
@@ -127,6 +159,7 @@ export function OpportunityCard(props: {
 function MobileCard({
   opportunity: o,
   onToggleFavorite,
+  loggedIn,
 }: {
   opportunity: Opportunity
   onToggleFavorite: (id: number) => void
@@ -166,8 +199,8 @@ function MobileCard({
             <span className="truncate">{o.market}</span>
           </p>
           <div className="mt-[6.5px] grid grid-cols-2 gap-1.5">
-            <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} />
-            <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} />
+            <OddsBox {...o.a} loggedIn={loggedIn} />
+            <OddsBox {...o.b} loggedIn={loggedIn} />
           </div>
         </div>
 

@@ -74,7 +74,7 @@ export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?
             // The image can fail before hydration attaches onError.
             if (el?.complete && el.naturalWidth === 0) setFailed(true)
           }}
-          className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]"
+          className="size-full object-contain"
         />
       </span>
     )
@@ -84,7 +84,7 @@ export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?
     <span
       aria-hidden="true"
       className={cn(
-        'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight shadow-[0_0_0_2px_rgba(255,255,255,0.08)]',
+        'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight',
         className,
       )}
       style={{ background: bg, borderColor: fg, color: dark ? fg : '#ffffff' }}
