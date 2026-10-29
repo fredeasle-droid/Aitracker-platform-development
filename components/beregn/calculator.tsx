@@ -60,6 +60,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
   const [stakeB, setStakeB] = useState(String(initial.b))
   const [swapped, setSwapped] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [handedOff, setHandedOff] = useState<'a' | 'b' | null>(null)
   const [message, setMessage] = useState<{ ok: boolean; text: string } | null>(null)
   const [saving, startSaving] = useTransition()
 
@@ -105,6 +106,13 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
     } catch {
       setMessage({ ok: false, text: 'Kunne ikke kopiere. Prøv igen.' })
     }
+  }
+
+  function handOff(key: 'a' | 'b', value: string) {
+    navigator.clipboard
+      .writeText(String(parseAmount(value)))
+      .then(() => setHandedOff(key))
+      .catch(() => setHandedOff(null))
   }
 
   function save() {
@@ -193,12 +201,25 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
                 href={getBookmaker(side.bookmaker).url}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => handOff(key, value)}
                 className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-primary px-2 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff]"
               >
                 Gå til bookmaker
                 <ExternalLink className="size-4 shrink-0" />
-                <span className="sr-only">(åbner {side.bookmaker} i ny fane)</span>
+                <span className="sr-only">(åbner {side.bookmaker} i ny fane og kopierer indsatsen)</span>
               </a>
+              <p aria-live="polite" className="min-h-[2.5em] text-pretty text-center text-[12px] leading-snug text-[#a9b6d3]">
+                {handedOff === key ? (
+                  <>
+                    <span className="font-semibold text-success">{formatInt(parseAmount(value))} kr. kopieret.</span>{' '}
+                    {'Søg efter '}
+                    <span className="font-semibold text-foreground">{o.homeTeam}</span>
+                    {` og vælg ${side.label}.`}
+                  </>
+                ) : (
+                  'Indsatsen kopieres automatisk, så du kan indsætte den på kuponen.'
+                )}
+              </p>
             </div>
             </Fragment>
           ))}

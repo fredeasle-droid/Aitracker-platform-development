@@ -1,8 +1,14 @@
+'use client'
+
+import { useState } from 'react'
 import { getBookmaker } from '@/lib/bookmakers'
 import { cn } from '@/lib/utils'
 
 export function BookmakerLogo({ name, className }: { name: string; className?: string }) {
   const brand = getBookmaker(name)
+  const [failed, setFailed] = useState(false)
+  const showLogo = brand.logo && !failed
+
   return (
     <span
       aria-hidden="true"
@@ -12,17 +18,19 @@ export function BookmakerLogo({ name, className }: { name: string; className?: s
       )}
       style={{ background: brand.bg, color: brand.fg }}
     >
-      {brand.logo ? (
+      {showLogo ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={brand.logo}
           alt=""
           loading="lazy"
           decoding="async"
+          onError={() => setFailed(true)}
           className={cn(
             'size-full object-cover',
             brand.inset && 'p-[22%] object-contain',
             brand.small && 'p-[30%] object-contain [image-rendering:pixelated]',
+            brand.favicon && 'rounded-[22%] p-[16%] object-contain',
           )}
         />
       ) : (

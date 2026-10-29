@@ -7,9 +7,10 @@ export type BookmakerBrand = {
   logo?: string
   inset?: boolean
   small?: boolean
+  favicon?: boolean
 }
 
-type BrandSeed = Omit<BookmakerBrand, 'name' | 'bg' | 'fg' | 'mark'> & {
+type BrandSeed = Omit<BookmakerBrand, 'name' | 'bg' | 'fg' | 'mark' | 'favicon'> & {
   name: string
   bg?: string
   fg?: string
@@ -55,7 +56,52 @@ const SEEDS: Record<string, BrandSeed> = {
   skybet: { name: 'Sky Bet', url: 'https://www.skybet.com', logo: '/bookmakers/skybet.png' },
   '18bet': { name: '18bet', url: 'https://www.18bet.com', logo: '/bookmakers/18bet.png' },
   bet9ja: { name: 'Bet9ja', url: 'https://www.bet9ja.com', logo: '/bookmakers/bet9ja.png', small: true },
+  sportsbetio: { name: 'Sportsbet.io', url: 'https://sportsbet.io/sports', logo: '/bookmakers/sportsbet.png' },
+  dbbet: { name: 'DBbet', url: 'https://dbbet.com' },
+  shuffle: { name: 'Shuffle', url: 'https://shuffle.com/sports' },
+  wildio: { name: 'Wild.io', url: 'https://wild.io/sports' },
+  mystake: { name: 'MyStake', url: 'https://mystake.com' },
+  vave: { name: 'Vave', url: 'https://vave.com/sportsbook' },
+  '20bet': { name: '20bet', url: 'https://20bet.com/sport' },
+  '22bet': { name: '22bet', url: 'https://22bet.com' },
+  bcgame: { name: 'BC.Game', url: 'https://bc.game/sports' },
+  bcbet: { name: 'BC.Game', url: 'https://bc.game/sports' },
+  ggbet: { name: 'GGBet', url: 'https://gg.bet' },
+  dafabet: { name: 'Dafabet', url: 'https://www.dafabet.com' },
+  cloudbet: { name: 'Cloudbet', url: 'https://www.cloudbet.com/en/sports' },
+  stake: { name: 'Stake', url: 'https://stake.com/sports/home' },
+  roobet: { name: 'Roobet', url: 'https://roobet.com/sports' },
+  rollbit: { name: 'Rollbit', url: 'https://rollbit.com/sports' },
+  thunderpick: { name: 'Thunderpick', url: 'https://thunderpick.io' },
+  betpanda: { name: 'Betpanda', url: 'https://betpanda.io/sports' },
+  melbet: { name: 'Melbet', url: 'https://melbet.com' },
+  betwinner: { name: 'Betwinner', url: 'https://betwinner.com' },
+  parimatch: { name: 'Parimatch', url: 'https://parimatch.com' },
+  coolbet: { name: 'Coolbet', url: 'https://www.coolbet.com' },
+  betsafe: { name: 'Betsafe', url: 'https://www.betsafe.com' },
+  superbet: { name: 'Superbet', url: 'https://superbet.com' },
+  '1win': { name: '1win', url: 'https://1win.com' },
+  mostbet: { name: 'Mostbet', url: 'https://mostbet.com' },
+  megapari: { name: 'Megapari', url: 'https://megapari.com' },
+  rabona: { name: 'Rabona', url: 'https://rabona.com' },
 }
+
+function hostOf(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '')
+  } catch {
+    return null
+  }
+}
+
+function guessDomain(name: string) {
+  const clean = name.trim().toLowerCase().replace(/\s+/g, '')
+  if (/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(clean)) return clean
+  const key = normalize(name)
+  return key.length >= 3 ? `${key}.com` : null
+}
+
+const faviconLogo = (domain: string | null) => (domain ? `/api/bookmaker-logo?domain=${encodeURIComponent(domain)}` : undefined)
 
 const SEED_KEYS_LONGEST_FIRST = Object.keys(SEEDS).sort((a, b) => b.length - a.length)
 
@@ -73,13 +119,23 @@ export function getBookmaker(name: string): BookmakerBrand {
   const seed = matchedKey ? SEEDS[matchedKey] : undefined
 
   if (!seed) {
-    return { name, url: '#', bg: NAVY, fg: WHITE, mark: initials(name) }
+    const domain = guessDomain(name)
+    return {
+      name,
+      url: domain ? `https://${domain}` : '#',
+      logo: faviconLogo(domain),
+      favicon: Boolean(domain),
+      bg: NAVY,
+      fg: WHITE,
+      mark: initials(name),
+    }
   }
 
   return {
     name,
     url: seed.url,
-    logo: seed.logo,
+    logo: seed.logo ?? faviconLogo(hostOf(seed.url)),
+    favicon: !seed.logo,
     inset: seed.inset,
     small: seed.small,
     bg: seed.bg ?? NAVY,

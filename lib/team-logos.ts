@@ -4,7 +4,7 @@ import { isNotNull } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities, teamLogos } from '@/lib/db/schema'
 
-type Source = 'espn' | 'thesportsdb' | 'wikipedia'
+type Source = 'espn' | 'thesportsdb' | 'wikipedia' | 'wikidata'
 
 const ESPN_LEAGUES: { sport: string; path: string; leagues: string[] }[] = [
   { sport: 'Ishockey', path: 'hockey', leagues: ['nhl'] },
@@ -206,6 +206,38 @@ async function lookupWikipedia(sport: string, name: string): Promise<LookupResul
   }
 }
 
+async function lookupWikidata(name: string): Promise<LookupResult> {
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const headers = { 'User-Agent': 'BetTracker/1.0 (team logo lookup)' }
+    const search = await fetch(
+      `https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&type=item&limit=5&search=${encodeURIComponent(query)}`,
+      { headers, signal: AbortSignal.timeout(8_000) },
+    )
+    if (!search.ok) return { status: 'limited' }
+    const hits: { id: string; label?: string }[] = (await search.json()).search ?? []
+    const ids = hits.filter((hit) => hit.label && titleMatchesTeam(hit.label, query)).map((hit) => hit.id)
+    if (ids.length === 0) return { status: 'none' }
+
+    const entities = await fetch(
+      `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims&ids=${ids.join('|')}`,
+      { headers, signal: AbortSignal.timeout(8_000) },
+    )
+    if (!entities.ok) return { status: 'limited' }
+    const data = await entities.json()
+    for (const id of ids) {
+      const file = data.entities?.[id]?.claims?.P154?.[0]?.mainsnak?.datavalue?.value
+      if (typeof file === 'string') {
+        return { status: 'found', url: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file.replace(/ /g, '_'))}?width=200` }
+      }
+    }
+    return { status: 'none' }
+  } catch (error) {
+    console.error('[logos] wikidata lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
 async function saveLogos(entries: { key: string; sport: string; name: string; url: string | null; source: Source | null }[]) {
   for (const entry of entries) {
     await db
@@ -281,6 +313,14 @@ async function run() {
         source = 'wikipedia'
         await pause(WIKI_SPACING_MS)
       }
+    }
+    if (result.status !== 'found') {
+      const wikidata = await lookupWikidata(team.name)
+      if (wikidata.status === 'found') {
+        result = wikidata
+        source = 'wikidata'
+      }
+      await pause(WIKI_SPACING_MS)
     }
 
     if (result.status === 'found') found.push({ ...team, url: result.url, source })
