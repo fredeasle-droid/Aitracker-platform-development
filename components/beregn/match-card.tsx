@@ -1,6 +1,7 @@
 import { FlagImage } from '@/components/flag-image'
 import { SmallBarsIcon } from '@/components/icons'
 import { TeamCrest } from '@/components/team-crest'
+import { isIndividualSport } from '@/lib/individual-sports'
 import type { Opportunity } from '@/lib/data'
 
 const crest = 'lg:size-[76px] lg:rounded-full lg:bg-[#0b1b34] lg:p-2.5 lg:ring-1 lg:ring-[#1d3a63]'
@@ -31,12 +32,12 @@ export function MatchCard({ opportunity: o }: { opportunity: Opportunity }) {
         </div>
         <h2 className="mt-3 flex items-center gap-2 lg:mt-5">
           <span className="flex min-w-0 flex-1 items-center gap-2.5 lg:gap-5">
-            <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className={`size-12 ${crest}`} />
+            <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} player={isIndividualSport(o.sport)} className={`size-12 ${crest}`} />
             <span className="text-[16px] font-bold leading-tight lg:text-[28px]">{o.homeTeam}</span>
           </span>
           <span className="shrink-0 text-lg font-bold text-[#6b7ba0] lg:px-6 lg:text-[24px]">VS</span>
           <span className="flex min-w-0 flex-1 items-center justify-end gap-2.5 sm:justify-start lg:gap-5">
-            <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className={`size-12 ${crest}`} />
+            <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} player={isIndividualSport(o.sport)} className={`size-12 ${crest}`} />
             <span className="text-[16px] font-bold leading-tight lg:text-[28px]">{o.awayTeam}</span>
           </span>
         </h2>

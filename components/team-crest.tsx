@@ -60,8 +60,10 @@ export function TeamCrest({
   logoUrl,
   className,
   fallbackClassName,
+  player = false,
 }: {
   name: string
+  player?: boolean
   logoUrl?: string | null
   className?: string
   fallbackClassName?: string
@@ -84,7 +86,7 @@ export function TeamCrest({
             // The image can fail before hydration attaches onError.
             if (el?.complete && el.naturalWidth === 0) setFailed(true)
           }}
-          className="size-full object-contain"
+          className={cn('size-full', player ? 'rounded-full bg-[#14233f] object-cover object-top' : 'object-contain')}
         />
       </span>
     )

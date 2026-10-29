@@ -5,6 +5,7 @@ import { FlagImage } from '@/components/flag-image'
 import { SmallBarsIcon } from '@/components/icons'
 import { LockBadge, LockTile } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
+import { isIndividualSport } from '@/lib/individual-sports'
 import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
 import { cn } from '@/lib/utils'
@@ -107,7 +108,7 @@ function DesktopRow({
           { team: o.awayTeam, logo: o.awayLogo },
         ].map(({ team, logo }) => (
           <span key={team} className="flex min-w-0 items-center gap-2.5">
-            <TeamCrest name={team} logoUrl={logo} className="size-7 shrink-0 text-[9px]" />
+            <TeamCrest name={team} logoUrl={logo} player={isIndividualSport(o.sport)} className="size-7 shrink-0 text-[9px]" />
             <span className="truncate text-[14px] font-medium">{team}</span>
           </span>
         ))}
@@ -187,14 +188,14 @@ function MobileCard({
         <div className="flex min-w-0 flex-col">
           <div className="grid h-7 grid-cols-[minmax(0,1.12fr)_auto_minmax(0,1fr)] items-center">
             <span className="flex min-w-0 items-center gap-2.5">
-              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
+              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} player={isIndividualSport(o.sport)} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
               <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
                 {o.homeTeam}
               </span>
             </span>
             <span className="px-3 text-[9.5px] text-[#6b7da3]">vs</span>
             <span className="flex min-w-0 items-center gap-2.5 pl-1">
-              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
+              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} player={isIndividualSport(o.sport)} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
               <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
                 {o.awayTeam}
               </span>

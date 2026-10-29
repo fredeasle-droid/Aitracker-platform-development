@@ -238,6 +238,77 @@ async function lookupWikidata(name: string): Promise<LookupResult> {
   }
 }
 
+const PLAYER_SPORT: Record<string, { sportsDb: string; wiki: string; extract: RegExp }> = {
+  Tennis: { sportsDb: 'Tennis', wiki: 'tennis player', extract: /tennis/i },
+  Badminton: { sportsDb: 'Badminton', wiki: 'badminton player', extract: /badminton/i },
+  Bordtennis: { sportsDb: 'Table Tennis', wiki: 'table tennis player', extract: /table tennis/i },
+  Golf: { sportsDb: 'Golf', wiki: 'golfer', extract: /golf/i },
+  Snooker: { sportsDb: 'Snooker', wiki: 'snooker player', extract: /snooker/i },
+  Dart: { sportsDb: 'Darts', wiki: 'darts player', extract: /darts/i },
+  Darts: { sportsDb: 'Darts', wiki: 'darts player', extract: /darts/i },
+  MMA: { sportsDb: 'Fighting', wiki: 'mixed martial artist', extract: /martial|fighter/i },
+  Boksning: { sportsDb: 'Boxing', wiki: 'boxer', extract: /box/i },
+}
+
+const WIKI_NOT_A_PORTRAIT = /flag|logo|map|coat[_ ]of[_ ]arms|\.svg/i
+
+async function lookupPlayerSportsDb(sport: string, name: string): Promise<LookupResult> {
+  const config = PLAYER_SPORT[sport]
+  if (!config) return { status: 'none' }
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const res = await fetch(`https://www.thesportsdb.com/api/v1/json/${THESPORTSDB_KEY}/searchplayers.php?p=${encodeURIComponent(query)}`, {
+      signal: AbortSignal.timeout(8_000),
+    })
+    if (!res.ok) return { status: 'limited' }
+    const data = await res.json()
+    const players: { strPlayer?: string; strSport?: string; strCutout?: string; strThumb?: string }[] = data.player ?? []
+    const match = players.find(
+      (player) =>
+        player.strPlayer &&
+        normalizeTeamName(player.strPlayer) === normalizeTeamName(query) &&
+        player.strSport === config.sportsDb &&
+        (player.strCutout || player.strThumb),
+    )
+    const url = match?.strCutout || match?.strThumb
+    return url ? { status: 'found', url } : { status: 'none' }
+  } catch (error) {
+    console.error('[logos] thesportsdb player lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
+async function lookupPlayerWikipedia(sport: string, name: string): Promise<LookupResult> {
+  const config = PLAYER_SPORT[sport]
+  if (!config) return { status: 'none' }
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const url =
+      'https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&gsrlimit=5&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=240&exintro=1&explaintext=1&exchars=400&exlimit=max' +
+      `&gsrsearch=${encodeURIComponent(`${query} ${config.wiki}`)}`
+    const res = await fetch(url, { headers: { 'User-Agent': 'BetTracker/1.0 (player photo lookup)' }, signal: AbortSignal.timeout(8_000) })
+    if (!res.ok) return { status: 'limited' }
+    const data = await res.json()
+    const pages: { index?: number; title: string; extract?: string; thumbnail?: { source?: string } }[] = Object.values(data.query?.pages ?? {})
+    pages.sort((a, b) => (a.index ?? 0) - (b.index ?? 0))
+    const match = pages.find((page) => {
+      const image = page.thumbnail?.source
+      return (
+        image &&
+        !WIKI_NOT_A_PORTRAIT.test(decodeURIComponent(image)) &&
+        titleMatchesTeam(page.title, query) &&
+        normalizeTeamName(page.title.replace(/\(.*?\)/g, ' ')) === normalizeTeamName(query) &&
+        config.extract.test(page.extract ?? '')
+      )
+    })
+    const image = match?.thumbnail?.source
+    return image ? { status: 'found', url: image } : { status: 'none' }
+  } catch (error) {
+    console.error('[logos] wikipedia player lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
 async function saveLogos(entries: { key: string; sport: string; name: string; url: string | null; source: Source | null }[]) {
   for (const entry of entries) {
     await db
@@ -259,7 +330,7 @@ async function run() {
   const knownByKey = new Map(known.map((row) => [row.key, row]))
   const pending = new Map<string, { key: string; sport: string; name: string }>()
   for (const row of rows) {
-    if (!THESPORTSDB_SPORT[row.sport] && !ESPN_LEAGUES.some((league) => league.sport === row.sport)) continue
+    if (!THESPORTSDB_SPORT[row.sport] && !PLAYER_SPORT[row.sport] && !ESPN_LEAGUES.some((league) => league.sport === row.sport)) continue
     for (const name of [row.home, row.away]) {
       const key = logoKey(row.sport, name)
       const previous = knownByKey.get(key)
@@ -280,6 +351,10 @@ async function run() {
   }
 
   for (const team of pending.values()) {
+    if (PLAYER_SPORT[team.sport]) {
+      remaining.push(team)
+      continue
+    }
     const variants = nameVariants(team.name)
     const url =
       espn.get(team.key) ??
@@ -300,13 +375,15 @@ async function run() {
     let result: LookupResult = { status: 'none' }
     let source: Source = 'thesportsdb'
 
+    const isPlayer = Boolean(PLAYER_SPORT[team.sport])
+
     if (!sportsDbLimited) {
-      result = await lookupTheSportsDb(team.sport, team.name)
+      result = isPlayer ? await lookupPlayerSportsDb(team.sport, team.name) : await lookupTheSportsDb(team.sport, team.name)
       if (result.status === 'limited') sportsDbLimited = true
       else await pause(LOOKUP_SPACING_MS)
     }
     if (result.status !== 'found' && !wikiLimited) {
-      const wiki = await lookupWikipedia(team.sport, team.name)
+      const wiki = isPlayer ? await lookupPlayerWikipedia(team.sport, team.name) : await lookupWikipedia(team.sport, team.name)
       if (wiki.status === 'limited') wikiLimited = true
       else {
         result = wiki
@@ -314,7 +391,7 @@ async function run() {
         await pause(WIKI_SPACING_MS)
       }
     }
-    if (result.status !== 'found') {
+    if (result.status !== 'found' && !isPlayer) {
       const wikidata = await lookupWikidata(team.name)
       if (wikidata.status === 'found') {
         result = wikidata
