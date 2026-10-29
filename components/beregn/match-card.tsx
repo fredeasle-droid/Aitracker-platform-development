@@ -1,4 +1,4 @@
-import { Flag } from '@/components/flag'
+import { FlagImage } from '@/components/flag-image'
 import { SmallBarsIcon } from '@/components/icons'
 import { TeamCrest } from '@/components/team-crest'
 import type { Opportunity } from '@/lib/data'
@@ -22,7 +22,7 @@ export function MatchCard({ opportunity: o }: { opportunity: Opportunity }) {
       <div className="relative">
         <div className="flex items-center justify-between gap-2 text-[14px] text-[#a9b6d3] lg:text-[16px]">
           <span className="flex min-w-0 items-center gap-2">
-            <Flag code={o.countryCode} label={o.country} />
+            <FlagImage code={o.countryCode} label={o.country} />
             <span className="truncate">
               {o.country} · {o.league}
             </span>

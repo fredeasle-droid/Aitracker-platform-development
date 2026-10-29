@@ -1,0 +1,68 @@
+type CountryRule = { code: string; name: string; country: RegExp; league?: RegExp }
+
+const RULES: CountryRule[] = [
+  { code: 'dk', name: 'Danmark', country: /\b(denmark|danish|danmark)\b/, league: /\bsuperliga(en)?\b/ },
+  { code: 'gb-eng', name: 'England', country: /\b(england|english)\b/, league: /\b(premier league|championship|efl|fa cup)\b/ },
+  { code: 'gb-sct', name: 'Skotland', country: /\b(scotland|scottish)\b/ },
+  { code: 'es', name: 'Spanien', country: /\b(spain|spanish)\b/, league: /\b(la ?liga|copa del rey)\b/ },
+  { code: 'it', name: 'Italien', country: /\b(italy|italian)\b/, league: /\b(serie [ab]|coppa italia)\b/ },
+  { code: 'de', name: 'Tyskland', country: /\b(germany|german)\b/, league: /\b(bundesliga|dfb)\b/ },
+  { code: 'fr', name: 'Frankrig', country: /\b(france|french)\b/, league: /\bligue [12]\b/ },
+  { code: 'se', name: 'Sverige', country: /\b(sweden|swedish)\b/, league: /\b(allsvenskan|superettan)\b/ },
+  { code: 'no', name: 'Norge', country: /\b(norway|norwegian)\b/, league: /\b(eliteserien|obos)\b/ },
+  { code: 'fi', name: 'Finland', country: /\b(finland|finnish)\b/, league: /\bveikkausliiga\b/ },
+  { code: 'pt', name: 'Portugal', country: /\b(portugal|portuguese)\b/, league: /\bprimeira liga\b/ },
+  { code: 'nl', name: 'Holland', country: /\b(netherlands|dutch)\b/, league: /\beredivisie\b/ },
+  { code: 'be', name: 'Belgien', country: /\b(belgium|belgian)\b/, league: /\bpro league\b/ },
+  { code: 'tr', name: 'Tyrkiet', country: /\b(turkey|turkish)\b/, league: /\bsuper lig\b/ },
+  { code: 'at', name: 'Østrig', country: /\b(austria|austrian)\b/ },
+  { code: 'ch', name: 'Schweiz', country: /\b(switzerland|swiss)\b/ },
+  { code: 'pl', name: 'Polen', country: /\b(poland|polish)\b/, league: /\bekstraklasa\b/ },
+  { code: 'cz', name: 'Tjekkiet', country: /\b(czech|czechia)\b/ },
+  { code: 'sk', name: 'Slovakiet', country: /\b(slovakia|slovak)\b/ },
+  { code: 'hu', name: 'Ungarn', country: /\b(hungary|hungarian)\b/ },
+  { code: 'ro', name: 'Rumænien', country: /\b(romania|romanian)\b/ },
+  { code: 'bg', name: 'Bulgarien', country: /\b(bulgaria|bulgarian)\b/ },
+  { code: 'gr', name: 'Grækenland', country: /\b(greece|greek)\b/ },
+  { code: 'hr', name: 'Kroatien', country: /\b(croatia|croatian)\b/ },
+  { code: 'rs', name: 'Serbien', country: /\b(serbia|serbian)\b/ },
+  { code: 'si', name: 'Slovenien', country: /\b(slovenia|slovenian)\b/ },
+  { code: 'ua', name: 'Ukraine', country: /\b(ukraine|ukrainian)\b/ },
+  { code: 'ru', name: 'Rusland', country: /\b(russia|russian)\b/ },
+  { code: 'ie', name: 'Irland', country: /\b(ireland|irish)\b/ },
+  { code: 'is', name: 'Island', country: /\b(iceland|icelandic)\b/ },
+  { code: 'ee', name: 'Estland', country: /\b(estonia|estonian)\b/ },
+  { code: 'lv', name: 'Letland', country: /\b(latvia|latvian)\b/ },
+  { code: 'lt', name: 'Litauen', country: /\b(lithuania|lithuanian)\b/ },
+  { code: 'il', name: 'Israel', country: /\b(israel|israeli)\b/ },
+  { code: 'mn', name: 'Mongoliet', country: /\b(mongolia|mongolian)\b/ },
+  { code: 'tn', name: 'Tunesien', country: /\b(tunisia|tunisian)\b/ },
+  { code: 'eg', name: 'Egypten', country: /\b(egypt|egyptian)\b/ },
+  { code: 'ma', name: 'Marokko', country: /\b(morocco|moroccan)\b/ },
+  { code: 'za', name: 'Sydafrika', country: /\bsouth africa\b/ },
+  { code: 'co', name: 'Colombia', country: /\b(colombia|colombian)\b/ },
+  { code: 'br', name: 'Brasilien', country: /\b(brazil|brazilian)\b|brasileir/ },
+  { code: 'ar', name: 'Argentina', country: /\b(argentina|argentinian|argentine)\b/ },
+  { code: 'cl', name: 'Chile', country: /\b(chile|chilean)\b/ },
+  { code: 'mx', name: 'Mexico', country: /\b(mexico|mexican)\b/, league: /\bliga mx\b/ },
+  { code: 'us', name: 'USA', country: /\b(usa|united states)\b/, league: /\b(mls|nba|nfl|nhl|mlb|ncaa|wnba)\b/ },
+  { code: 'ca', name: 'Canada', country: /\b(canada|canadian)\b/ },
+  { code: 'cn', name: 'Kina', country: /\b(china|chinese)\b/, league: /\bcba\b/ },
+  { code: 'jp', name: 'Japan', country: /\b(japan|japanese)\b/ },
+  { code: 'kr', name: 'Sydkorea', country: /\b(korea|korean)\b/ },
+  { code: 'au', name: 'Australien', country: /\b(australia|australian)\b/ },
+  { code: 'in', name: 'Indien', country: /\b(india|indian)\b/ },
+  {
+    code: 'eu',
+    name: 'Europa',
+    country: /\b(europe|european)\b/,
+    league: /\b(champions league|europa league|conference league|euroleague)\b/,
+  },
+]
+
+// Country words win over bare league names, so "Mongolia Premier League" is not read as England.
+export function deriveCountry(league: string): { code: string; name: string } | null {
+  const text = league.toLowerCase()
+  const rule = RULES.find((r) => r.country.test(text)) ?? RULES.find((r) => r.league?.test(text))
+  return rule ? { code: rule.code, name: rule.name } : null
+}

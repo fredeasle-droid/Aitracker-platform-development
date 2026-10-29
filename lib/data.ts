@@ -10,6 +10,7 @@ import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getDemoBets } from '@/lib/demo-bets'
 import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
+import { deriveCountry } from '@/lib/countries'
 
 export type Opportunity = {
   id: number
@@ -50,11 +51,12 @@ export type BetRow = {
 function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<number>, now: Date, logos: Map<string, string>): Opportunity {
   const aOdds = Number(row.aOdds)
   const bOdds = Number(row.bOdds)
+  const derived = row.countryCode ? null : deriveCountry(row.league)
   return {
     id: row.id,
     sport: row.sport,
-    country: row.country,
-    countryCode: row.countryCode,
+    country: derived?.name ?? row.country,
+    countryCode: derived?.code ?? row.countryCode,
     league: row.league,
     homeTeam: row.homeTeam,
     awayTeam: row.awayTeam,

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ArrowRight, Calculator, Info, Lock, LockOpen, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
-import { Flag } from '@/components/flag'
+import { FlagImage } from '@/components/flag-image'
 import { SmallBarsIcon } from '@/components/icons'
 import { LockBadge, LockTile } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
@@ -93,8 +93,10 @@ function DesktopRow({
     <article className="hidden items-center gap-3 px-4 py-3 transition-colors hover:bg-[#0a1830] lg:grid lg:grid-cols-[minmax(0,104px)_minmax(0,1.1fr)_minmax(0,1fr)_minmax(0,1fr)_108px_auto]">
       <div className="min-w-0 text-[13px]">
         <p className="flex items-center gap-2 font-medium text-foreground">
-          <Flag code={o.countryCode} label={o.country} />
-          <span className="truncate">{o.league}</span>
+          <FlagImage code={o.countryCode} label={o.country} />
+          <span className="truncate" title={o.country !== 'International' ? `${o.country} · ${o.league}` : o.league}>
+            {o.league}
+          </span>
         </p>
         <p className="mt-1.5 text-[#a9b6d3]">{o.kickoffLabel}</p>
       </div>
@@ -173,8 +175,10 @@ function MobileCard({
     <article className="w-full rounded-[14px] border border-[#183252] bg-[linear-gradient(135deg,#0a1628_0%,#07111f_55%,#08182a_100%)] pb-[6.5px] pl-2.5 pr-[5.5px] pt-[7.5px] lg:hidden">
       <div className="flex h-4 items-center justify-between gap-2 pl-px pr-[7.5px] text-[9.5px] text-[#a9b6d3]">
         <span className="flex min-w-0 items-center gap-[5px]">
-          <Flag code={o.countryCode} label={o.country} className="size-4" />
-          <span className="truncate">{o.league}</span>
+          <FlagImage code={o.countryCode} label={o.country} className="size-4" />
+          <span className="truncate">
+            {o.country !== 'International' ? `${o.country} · ${o.league}` : o.league}
+          </span>
         </span>
         <span className="shrink-0 tabular-nums">{o.kickoffLabel}</span>
       </div>
