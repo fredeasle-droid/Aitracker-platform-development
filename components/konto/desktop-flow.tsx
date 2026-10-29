@@ -27,6 +27,7 @@ import { Flag } from '@/components/flag'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import { plans, type Plan } from '@/app/konto/plans'
+import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { LoginStep } from '@/app/konto/login-step'
 
 const STEPS = ['Dine oplysninger', 'Vælg abonnement', 'Betalingsoplysninger'] as const
@@ -420,7 +421,6 @@ function PaymentStep({
   onChangePlan: () => void
   onSubmit: () => void
 }) {
-  const [method, setMethod] = useState<'card' | 'mobilepay'>('card')
   const selected = plans[plan]
 
   return (
@@ -451,72 +451,9 @@ function PaymentStep({
         </div>
       </div>
 
-      <div role="tablist" aria-label="Betalingsmetode" className="mt-5 flex overflow-hidden rounded-xl border border-[#1d3a5f] bg-[#071428]">
-        <button
-          type="button"
-          role="tab"
-          aria-selected={method === 'card'}
-          onClick={() => setMethod('card')}
-          className={cn(
-            'flex h-14 flex-1 items-center justify-center gap-3 text-[17px] font-semibold transition-colors',
-            method === 'card' ? 'bg-[linear-gradient(100deg,#1682ff,#1a5ff0_70%,#4a45f0)] text-white' : 'text-[#c3cde2] hover:text-white',
-          )}
-        >
-          <CreditCard className="size-6" aria-hidden="true" />
-          Kort
-        </button>
-        <button
-          type="button"
-          role="tab"
-          aria-selected={method === 'mobilepay'}
-          onClick={() => setMethod('mobilepay')}
-          className={cn(
-            'flex h-14 flex-1 items-center justify-center gap-3 text-[17px] font-semibold transition-colors',
-            method === 'mobilepay' ? 'bg-[linear-gradient(100deg,#1682ff,#1a5ff0_70%,#4a45f0)] text-white' : 'text-[#c3cde2] hover:text-white',
-          )}
-        >
-          <Smartphone className="size-6" aria-hidden="true" />
-          MobilePay
-        </button>
+      <div className="mt-6">
+        <StripeCheckout plan={plan} onComplete={onSubmit} />
       </div>
-
-      {method === 'card' ? (
-        <div className="mt-6 grid grid-cols-2 gap-x-5 gap-y-5">
-          <Field id="card-number" label="Kortnummer" icon={<CreditCard />} className="col-span-2">
-            <input id="card-number" inputMode="numeric" autoComplete="cc-number" placeholder="1234 5678 9012 3456" className={input} />
-            <CardBrands />
-          </Field>
-          <Field id="card-expiry" label="Udløbsdato" icon={<Calendar />}>
-            <input id="card-expiry" inputMode="numeric" autoComplete="cc-exp" placeholder="MM / ÅÅ" className={input} />
-          </Field>
-          <Field id="card-cvc" label="CVC" icon={<LockKeyhole />}>
-            <input id="card-cvc" inputMode="numeric" autoComplete="cc-csc" placeholder="123" className={input} />
-            <CircleHelp className="size-6 shrink-0 text-[#c3cde2]" aria-label="CVC står på bagsiden af dit kort" />
-          </Field>
-          <Field id="card-name" label="Navn på kort" icon={<UserRound />} className="col-span-2">
-            <input id="card-name" autoComplete="cc-name" placeholder="Navn som står på kortet" className={input} />
-          </Field>
-        </div>
-      ) : (
-        <p className={cn(panel, 'mt-6 px-6 py-8 text-center text-[17px] text-[#e6ecf7]')}>
-          Du bliver sendt videre til MobilePay for at godkende din gratis prøveperiode.
-        </p>
-      )}
-
-      {method === 'card' && (
-        <label className="mt-5 flex items-start gap-3">
-          <input type="checkbox" defaultChecked className="mt-1 size-6 shrink-0 rounded-md accent-[#1682ff]" />
-          <span>
-            <span className="block text-[17px] text-white">Gem kortoplysninger til fremtidige betalinger</span>
-            <span className="mt-0.5 block text-[14px] text-[#c3cde2]">Det gør det nemt at fortsætte dit abonnement.</span>
-          </span>
-        </label>
-      )}
-
-      <button type="button" onClick={onSubmit} className={cn(primaryButton, 'mt-6 w-full')}>
-        Start 7 dage gratis
-        <ArrowRight className="size-6" aria-hidden="true" />
-      </button>
       <BackButton onClick={onBack} className="mx-auto mt-5" />
       <p className="mt-5 text-center text-[14px] text-[#c3cde2]">
         Du betaler ikke i dag. Abonnementet starter automatisk efter 7 dage. Du kan opsige når som helst.

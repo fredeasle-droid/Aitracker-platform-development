@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight, Check, CreditCard, Crown, LockKeyhole, ShieldChe
 import { LoginStep } from './login-step'
 import { authClient } from '@/lib/auth-client'
 import { DesktopFlow } from '@/components/konto/desktop-flow'
+import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { plans, type Plan } from './plans'
 
 
@@ -51,7 +52,7 @@ export function AccountFlow({ aside }: { aside: React.ReactNode }) {
           ))}
         </div>
 
-        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
     </>
@@ -122,5 +123,15 @@ function PlanCard({ id, selected, onClick, popular = false }: { id: Plan; select
 }
 function Mini({ icon, label, detail }: { icon: string; label: string; detail: string }) { return <div><div className="mx-auto mb-2 flex size-9 items-center justify-center rounded-full border border-[#145e91] text-lg text-[#36aaff]">{icon}</div><b>{label}</b><br />{detail}</div> }
 
-function PaymentStep({ plan, onBack, onSubmit }: { plan: typeof plans[Plan]; onBack: () => void; onSubmit: () => void }) { return <section><h1 className="text-[27px] font-extrabold leading-tight">Betalingsoplysninger</h1><p className="mt-2 text-[16px] leading-6 text-[#e2e7f1]">Du betaler ikke i dag.<br />Din 7 dages gratis prøve starter nu, og herefter {plan.price} kr./md.</p><div className="mt-7 flex rounded-xl border border-[#334a66] bg-[#071624] p-1"><button className="min-h-11 flex-1 rounded-lg bg-white text-sm font-bold text-[#172131]" type="button"><CreditCard className="mr-2 inline size-4" />Kort</button><button className="min-h-11 flex-1 text-sm text-[#a9bed7]" type="button">MobilePay</button></div><div className="mt-5 space-y-3"><Field name="cardNumber" label="Kortnummer" icon={<CreditCard />} /><div className="grid grid-cols-2 gap-3"><Field name="expiry" label="Udløbsdato" icon={<span>◫</span>} /><Field name="cvc" label="CVC" icon={<span>•••</span>} /></div><Field name="cardName" label="Navn på kort" icon={<UserRound />} /></div><label className="mt-5 flex items-start gap-2 text-[13px] text-[#d7deeb]"><input type="checkbox" defaultChecked className="mt-1 size-4 accent-[#159cff]" /> Gem kortoplysninger til fremtidige betalinger</label><button type="button" onClick={onSubmit} className="mt-6 flex min-h-13 w-full items-center justify-center gap-2 rounded-xl bg-[#138cff] text-[17px] font-bold">Start 7 dage gratis <ArrowRight className="size-5" /></button><button type="button" onClick={onBack} className="mt-2 min-h-11 w-full text-sm text-[#8cb3d9]">Tilbage</button><p className="mt-5 text-center text-[12px] leading-5 text-[#c3cede]">Du bliver ikke trukket i dag.<br />Abonnementet starter automatisk efter 7 dage. Du kan opsige når som helst.</p></section> }
+function PaymentStep({ plan, planId, onBack, onSubmit }: { plan: typeof plans[Plan]; planId: Plan; onBack: () => void; onSubmit: () => void }) {
+  return (
+    <section>
+      <h1 className="text-[27px] font-extrabold leading-tight">Betalingsoplysninger</h1>
+      <p className="mt-2 text-[16px] leading-6 text-[#e2e7f1]">Du betaler ikke i dag.<br />Din 7 dages gratis prøve starter nu, og herefter {plan.price} kr./md.</p>
+      <div className="mt-6"><StripeCheckout plan={planId} onComplete={onSubmit} /></div>
+      <button type="button" onClick={onBack} className="mt-3 min-h-11 w-full text-sm text-[#8cb3d9]">Tilbage</button>
+      <p className="mt-4 text-center text-[12px] leading-5 text-[#c3cede]">Du bliver ikke trukket i dag.<br />Abonnementet starter automatisk efter 7 dage. Du kan opsige når som helst.</p>
+    </section>
+  )
+}
 function SuccessState({ plan }: { plan: typeof plans[Plan] }) { return <section className="pt-16 text-center"><div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#159cff] text-[#04111e]"><Check className="size-8" /></div><h1 className="mt-5 text-[27px] font-extrabold">Du er klar</h1><p className="mt-2 text-[#dce5f2]">Din {plan.name}-prøveperiode er startet. God fornøjelse med BetTracker.</p><Link href="/" className="mt-7 flex min-h-13 items-center justify-center rounded-xl bg-[#138cff] text-[17px] font-bold">Gå til BetTracker</Link></section> }
