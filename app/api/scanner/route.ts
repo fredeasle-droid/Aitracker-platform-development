@@ -9,7 +9,7 @@ export async function GET() {
   return NextResponse.json({
     configured: true,
     provider: 'scraper',
-    sources: ['betmonitor', 'surebets-today', 'oddsator', 'surebetdanmark'],
+    sources: ['surebetdanmark', 'bethero'],
   })
 }
 
