@@ -32,10 +32,16 @@ const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 // so the first plain name is not necessarily the one the user bets with.
 const PREFERRED_BOOKS = ['dbbet']
 
+// Bookmakers that appear in Bet Hero's shared feed lists but are not visible in the user's own Bet Hero view.
+const EXCLUDED_BOOKS = ['tonybet']
+
 const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
 
 function pickAllowedBook(books: BetHeroBook[] | undefined) {
-  const names = (books ?? []).map((book) => book.name).filter((name): name is string => Boolean(name))
+  const names = (books ?? [])
+    .map((book) => book.name)
+    .filter((name): name is string => Boolean(name))
+    .filter((name) => !EXCLUDED_BOOKS.includes(normalizeBook(name)))
   const danish = names.find((name) => /\(DK\)$/i.test(name))
   if (danish) return baseName(danish)
   const preferred = names.find((name) => PREFERRED_BOOKS.includes(normalizeBook(name)))
