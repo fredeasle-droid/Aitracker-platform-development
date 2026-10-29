@@ -1,6 +1,5 @@
 import 'server-only'
 import { getBetHeroMessages } from '@/lib/bethero-ingest'
-import { isKnownBookmaker } from '@/lib/bookmakers'
 import { displaySport, splitTeams, type ScrapedLeg, type ScrapedSurebet } from './types'
 
 type BetHeroBook = { name?: string }
@@ -28,12 +27,34 @@ type BetHeroRow = {
 
 const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 
-// Bet Hero lists every bookmaker sharing the same odds feed (1xBet clones etc.) in arbitrary order,
-// so the first plain name is not necessarily the one the user bets with.
-const PREFERRED_BOOKS = ['dbbet']
-
-// Bookmakers that appear in Bet Hero's shared feed lists but are not visible in the user's own Bet Hero view.
-const EXCLUDED_BOOKS = ['tonybet']
+// Bet Hero lists every bookmaker sharing the same odds feed (1xBet clones etc.) in arbitrary order.
+// Only the bookmakers the user has selected in Bet Hero may be picked, so the shared list is filtered
+// down to this whitelist (normalized names, regional suffix like "(DK)" ignored).
+const ALLOWED_BOOKS = new Set([
+  'bwin',
+  'unibet',
+  'leovegas',
+  '888sport',
+  'mrgreen',
+  'betinia',
+  'campobet',
+  'oddset',
+  'betsson',
+  'nordicbet',
+  'betfairexchange',
+  'betfair',
+  'bet365',
+  'marathonbet',
+  'dbbet',
+  'rainbet',
+  'mystake',
+  '20bet',
+  'vave',
+  'wildio',
+  'cloudbet',
+  'shuffle',
+  'sportsbetio',
+])
 
 const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
 
@@ -41,13 +62,9 @@ function pickAllowedBook(books: BetHeroBook[] | undefined) {
   const names = (books ?? [])
     .map((book) => book.name)
     .filter((name): name is string => Boolean(name))
-    .filter((name) => !EXCLUDED_BOOKS.includes(normalizeBook(name)))
-  const danish = names.find((name) => /\(DK\)$/i.test(name))
-  if (danish) return baseName(danish)
-  const preferred = names.find((name) => PREFERRED_BOOKS.includes(normalizeBook(name)))
-  if (preferred) return baseName(preferred)
-  const known = names.find((name) => !/\(.*\)$/.test(name) && isKnownBookmaker(baseName(name)))
-  return known ? baseName(known) : null
+    .filter((name) => ALLOWED_BOOKS.has(normalizeBook(name)))
+  const chosen = names.find((name) => /\(DK\)$/i.test(name)) ?? names[0]
+  return chosen ? baseName(chosen) : null
 }
 
 function collectRows(value: unknown, rows: BetHeroRow[]) {
