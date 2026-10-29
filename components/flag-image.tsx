@@ -6,9 +6,15 @@ import { Flag } from '@/components/flag'
 
 export function FlagImage({ code, label, className }: { code: string; label: string; className?: string }) {
   const [failed, setFailed] = useState(false)
-  const normalized = code.trim().toLowerCase()
+  const rawCode = code.trim().toLowerCase()
+  const normalized = ({
+    'gb-eng': 'gb',
+    'gb-sct': 'gb',
+    'gb-wls': 'gb',
+    'gb-nir': 'gb',
+  } as Record<string, string>)[rawCode] ?? rawCode
 
-  if (!normalized || failed) return <Flag code={normalized} label={label} className={className} />
+  if (!normalized || failed) return <Flag code={rawCode} label={label} className={className} />
 
   return (
     <img
