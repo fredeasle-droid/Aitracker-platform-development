@@ -52,11 +52,11 @@ export function SupportChat() {
         aria-expanded={open}
         aria-controls="support-chat-panel"
         aria-label={open ? 'Luk live support' : 'Åbn live support'}
-        className="fixed right-4 bottom-[calc(5.75rem+env(safe-area-inset-bottom))] z-50 flex h-14 items-center gap-2 rounded-full bg-[#138cff] pr-5 pl-4 text-[15px] font-bold text-white shadow-[0_12px_30px_-10px_#138cff] transition-transform hover:scale-[1.03] lg:right-6 lg:bottom-6"
+        className="fixed right-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-50 flex size-12 items-center justify-center gap-2 rounded-full bg-[#138cff] text-[15px] font-bold text-white shadow-[0_12px_30px_-10px_#138cff] transition-transform hover:scale-[1.03] lg:right-6 lg:bottom-6 lg:h-14 lg:w-auto lg:pr-5 lg:pl-4"
       >
         {open ? <X className="size-5" aria-hidden="true" /> : <MessageCircle className="size-5" aria-hidden="true" />}
-        <span>{open ? 'Luk' : 'Support'}</span>
-        {!open && <span className="size-2 rounded-full bg-[#16ee93]" aria-hidden="true" />}
+        <span className="hidden lg:inline">{open ? 'Luk' : 'Support'}</span>
+        {!open && <span className="absolute top-0.5 right-0.5 size-2.5 rounded-full border-2 border-[#138cff] bg-[#16ee93] lg:static lg:size-2 lg:border-0" aria-hidden="true" />}
       </button>
 
       {open && (

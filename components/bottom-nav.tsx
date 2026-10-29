@@ -2,16 +2,15 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartPie, Database, Gift } from 'lucide-react'
+import { Calculator, ChartPie } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
 
 const ITEMS = [
   { href: '/', key: 'home', icon: BarsIcon },
+  { href: '/beregn', key: 'calc', icon: Calculator },
   { href: '/stats', key: 'stats', icon: ChartPie },
-  { href: '/bonus', key: 'bonus', icon: Gift },
-  { href: '/oddspapi', key: 'market', icon: Database },
 ] as const
 
 export function BottomNav() {

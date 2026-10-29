@@ -11,11 +11,11 @@ import { cn } from '@/lib/utils'
 
 function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
   return (
-    <div className="flex h-16 min-w-0 flex-1 items-center gap-2 rounded-2xl border border-[#1a3557] bg-[#081123] pl-2 pr-2.5">
+    <div className="flex min-h-16 min-w-0 flex-1 items-center gap-2 rounded-2xl border border-[#1a3557] bg-[#081123] py-1.5 pl-2 pr-2.5">
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={label}>
+        <p className="mt-0.5 line-clamp-2 text-[12px] leading-tight text-[#a9b6d3]" title={label}>
           {label}
         </p>
       </div>
@@ -25,7 +25,7 @@ function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; labe
         <Link
           href="/konto"
           aria-label={`Lås odds op hos ${bookmaker}`}
-          className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#1f4a7a] text-[#55a8ff] transition-colors hover:bg-accent"
+          className="flex shrink-0 items-center gap-0.5 text-[#55a8ff]"
         >
           <LockKeyhole className="size-4" aria-hidden="true" />
         </Link>

@@ -70,7 +70,16 @@ function FlagArt({ code }: { code: string }) {
         </>
       )
     default:
-      return <rect width="24" height="24" fill="#334155" />
+      return (
+        <>
+          <rect width="24" height="24" fill="#12335c" />
+          <g fill="none" stroke="#6fb4ff" strokeWidth="1.3">
+            <circle cx="12" cy="12" r="8.5" />
+            <ellipse cx="12" cy="12" rx="3.8" ry="8.5" />
+            <path d="M3.5 12h17M5 7.5h14M5 16.5h14" />
+          </g>
+        </>
+      )
   }
 }
 
