@@ -9,25 +9,27 @@ import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: string; label: string; odds: number; loggedIn: boolean; className?: string }) {
+function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
   return (
-    <div className={cn('flex h-[68px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3', className)}>
+    <div className="flex h-16 min-w-0 flex-1 items-center gap-2 rounded-2xl border border-[#1a3557] bg-[#081123] pl-2 pr-2.5">
       <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
+        <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={label}>
+          {label}
+        </p>
       </div>
-      <div className="shrink-0 text-right">
-        <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
-        {loggedIn ? (
-          <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
-        ) : (
-          <Link href="/konto" className="mt-0.5 flex items-center justify-end gap-1 text-[12px] font-medium text-[#55a8ff] underline underline-offset-2">
-            <LockKeyhole className="size-4" aria-hidden="true" />
-            Lås op
-          </Link>
-        )}
-      </div>
+      {loggedIn ? (
+        <p className="shrink-0 text-[20px] font-extrabold leading-none tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
+      ) : (
+        <Link
+          href="/konto"
+          aria-label={`Lås odds op hos ${bookmaker}`}
+          className="flex size-9 shrink-0 items-center justify-center rounded-full border border-[#1f4a7a] text-[#55a8ff] transition-colors hover:bg-accent"
+        >
+          <LockKeyhole className="size-4" aria-hidden="true" />
+        </Link>
+      )}
     </div>
   )
 }
@@ -139,44 +141,48 @@ function MobileCard({
   loggedIn: boolean
 }) {
   return (
-    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:hidden">
-      <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3] lg:col-span-2">
+    <article className="w-full rounded-3xl border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:hidden">
+      <div className="flex items-center justify-between gap-2 px-0.5 text-[13px] text-[#a9b6d3]">
         <span className="flex min-w-0 items-center gap-2">
           <Flag code={o.countryCode} label={o.country} />
           <span className="truncate">
             {o.country} · {o.league}
           </span>
         </span>
-        <span className="shrink-0">{o.kickoffLabel}</span>
+        <span className="shrink-0 tabular-nums">{o.kickoffLabel}</span>
       </div>
 
-      <div className="mt-1.5 flex min-h-[94px] gap-1.5 lg:contents">
-        <div className="min-w-0 flex-1 lg:col-start-1 lg:row-start-2 lg:mt-0.5">
-          <div className="flex items-start gap-1">
-            <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-              <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
-              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-[54px] shrink-0 text-[11px]" />
+      <div className="mt-2 flex gap-2">
+        <div className="flex min-w-0 flex-1 flex-col gap-2">
+          <div className="flex items-center gap-1">
+            <span className="flex min-w-0 flex-1 items-center gap-1.5">
+              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-9 border-2 text-[10px]" />
+              <span className="line-clamp-2 min-w-0 text-[13.5px] font-bold leading-tight [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
+                {o.homeTeam}
+              </span>
             </span>
-            <span className="mt-7 shrink-0 text-xs text-muted-foreground">vs</span>
-            <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-              <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
-              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-[54px] shrink-0 text-[11px]" />
+            <span className="shrink-0 text-[11px] text-muted-foreground">vs</span>
+            <span className="flex min-w-0 flex-1 items-center gap-1.5">
+              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-9 border-2 text-[10px]" />
+              <span className="line-clamp-2 min-w-0 text-[13.5px] font-bold leading-tight [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
+                {o.awayTeam}
+              </span>
             </span>
           </div>
-          <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
-            <SmallBarsIcon className="size-4 text-[#8fa3cc]" />
-            {o.market}
+          <p className="flex min-w-0 items-center gap-1.5 text-[14px] text-[#d5ddef]">
+            <SmallBarsIcon className="size-4 shrink-0 text-[#8fa3cc]" />
+            <span className="truncate">{o.market}</span>
           </p>
         </div>
 
-        <div className="flex w-[108px] shrink-0 flex-col items-stretch justify-center self-center lg:col-start-2 lg:row-start-2 lg:w-[142px] lg:justify-self-center lg:py-2 rounded-[18px] border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 py-1.5 shadow-[0_0_24px_-10px_var(--success)]">
+        <div className="flex w-[96px] shrink-0 flex-col justify-center gap-1 rounded-2xl border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2 py-2 shadow-[0_0_24px_-10px_var(--success)]">
           <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold tracking-wide text-success">MARGIN</span>
+            <span className="text-[10px] font-semibold tracking-wide text-success">MARGIN</span>
             <SmallBarsIcon className="size-3.5 text-success/80" />
           </div>
-          <p className="text-[26px] font-extrabold leading-tight tabular-nums text-success">{formatPct(o.margin)}</p>
+          <p className="text-[22px] font-extrabold leading-none tabular-nums tracking-tight text-success">{formatPct(o.margin)}</p>
           <span
-            className="mt-1 flex items-center justify-center gap-1 rounded-full border border-border bg-[#0a1426] py-0.5 text-[11px] text-[#d5ddef]"
+            className="flex items-center justify-center gap-1 rounded-full border border-border bg-[#0a1426] py-0.5 text-[11px] text-[#d5ddef]"
             title="Begge mulige udfald er dækket"
           >
             2 udfald <Info className="size-3" aria-hidden="true" />
@@ -184,22 +190,19 @@ function MobileCard({
         </div>
       </div>
 
-      <div className="mt-1.5 flex h-[68px] gap-1.5 lg:contents">
-        <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} className="lg:col-start-1 lg:row-start-3 lg:mt-2" />
-        <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} className="lg:col-start-2 lg:row-start-3 lg:mt-2" />
+      <div className="mt-2 flex gap-2">
+        <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} />
+        <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} />
       </div>
 
-      <div className="mt-1.5 flex items-center gap-2 lg:col-start-3 lg:row-start-3 lg:mt-2 lg:self-center">
+      <div className="mt-2 flex items-center gap-2">
         <Link
           href={`/beregn?id=${o.id}`}
-          className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-[14px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-1.5 text-center text-[13px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
-          <span className="contents lg:hidden">
-            <Calculator className="size-4 shrink-0" />
-            Beregn indsats
-          </span>
-          <span className="hidden lg:inline">Se detaljer</span>
-          <ArrowRight className="size-4 shrink-0" />
+          <Calculator className="size-5 shrink-0" aria-hidden="true" />
+          Beregn indsats
+          <ArrowRight className="size-5 shrink-0" aria-hidden="true" />
         </Link>
         <button
           type="button"

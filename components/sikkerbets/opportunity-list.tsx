@@ -29,7 +29,7 @@ type SortId = (typeof SORTS)[number]['id']
 function SportGlyph({ sport }: { sport: string }) {
   if (sport === 'Fodbold')
     return (
-      <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true">
         <circle cx="12" cy="12" r="10" fill="#fff" />
         <path d="M12 7.5l3.3 2.4-1.3 3.9h-4l-1.3-3.9z" fill="#0a1426" />
         <path d="M12 2v5.5M15.3 9.9l5.2-1.6M14 13.8l3 4.6M10 13.8l-3 4.6M8.7 9.9L3.5 8.3" stroke="#0a1426" strokeWidth="1.5" />
@@ -37,13 +37,13 @@ function SportGlyph({ sport }: { sport: string }) {
     )
   if (sport === 'Basketball')
     return (
-      <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true" fill="none">
+      <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true" fill="none">
         <circle cx="12" cy="12" r="10" fill="#fff" />
         <path d="M2 12h20M12 2v20M5 5c3 3 3 11 0 14M19 5c-3 3-3 11 0 14" stroke="#0a1426" strokeWidth="1.6" />
       </svg>
     )
   return (
-    <svg viewBox="0 0 24 24" className="size-6" aria-hidden="true" fill="none">
+    <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true" fill="none">
       <circle cx="12" cy="12" r="10" fill="#fff" />
       <path d="M4 6c5 2 5 10 0 12M20 6c-5 2-5 10 0 12" stroke="#0a1426" strokeWidth="1.6" />
     </svg>
@@ -51,11 +51,11 @@ function SportGlyph({ sport }: { sport: string }) {
 }
 
 const chip =
-  'flex min-h-11 items-center justify-center gap-2 rounded-xl border px-3.5 text-[15px] font-medium transition-colors whitespace-nowrap'
+  'flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-xl border px-3 text-[14px] font-medium transition-colors whitespace-nowrap lg:gap-2 lg:px-3.5 lg:text-[15px]'
 const chipIdle = 'border-border bg-[#081123] text-foreground hover:bg-accent'
-const chipActive = 'border-primary bg-primary text-primary-foreground'
+const chipActive = 'border-primary bg-primary text-primary-foreground shadow-[0_6px_18px_-8px_var(--primary)]'
 const filterBtn =
-  'flex min-h-11 w-full items-center justify-between gap-2 rounded-xl border border-border bg-[#081123] px-3 text-[14px] text-foreground hover:bg-accent'
+  'flex min-h-11 w-full min-w-0 items-center justify-between gap-1.5 rounded-xl border border-border bg-[#081123] px-2.5 text-[14px] text-foreground hover:bg-accent lg:gap-2 lg:px-3'
 
 export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [items, setItems] = useState(initial)
@@ -188,8 +188,9 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         </div>
       </div>
 
-      <div className="mt-3 grid grid-cols-[1fr_1.35fr_1.3fr] gap-2 lg:grid-cols-4 lg:gap-3">
+      <div className="mt-3 grid grid-cols-3 gap-2 lg:grid-cols-4 lg:gap-3">
         <Popover
+          className="min-w-0"
           label="Vælg liga"
           triggerClassName={filterBtn}
           trigger={
@@ -214,13 +215,16 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           )}
         </Popover>
         <Popover
+          className="min-w-0"
           label="Minimum margin"
           triggerClassName={filterBtn}
           trigger={
             <>
-              <SmallBarsIcon className="size-5 shrink-0" />
+              <SmallBarsIcon className="hidden size-5 shrink-0 min-[440px]:block" />
               <span className="truncate">
-                {t('minMargin')}: <span className="text-primary">{minMargin}%</span>
+                <span className="lg:hidden">Margin</span>
+                <span className="hidden lg:inline">{t('minMargin')}</span>:{' '}
+                <span className="text-primary">{minMargin}%</span>
               </span>
               <ChevronDown className="size-4 shrink-0" />
             </>
@@ -261,13 +265,17 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           </Popover>
         </div>
         <Popover
+          className="min-w-0"
           align="right"
           label={t('sorting')}
           triggerClassName={filterBtn}
           trigger={
             <>
               <ArrowDownWideNarrow className="size-5 shrink-0" />
-              <span className="truncate">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest')}</span>
+              <span className="truncate">
+                <span className="lg:hidden">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest').split(' ')[0]}</span>
+                <span className="hidden lg:inline">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest')}</span>
+              </span>
               <ChevronDown className="size-4 shrink-0" />
             </>
           }

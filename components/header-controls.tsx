@@ -9,6 +9,23 @@ import { useLocale } from '@/components/locale-provider'
 
 const countries = (Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]).map(([locale, value]) => ({ locale, code: value.countryCode, name: value.label, flag: value.flag }))
 
+export function AccountIconLink() {
+  const { t } = useLocale()
+  const { data: session } = authClient.useSession()
+  const loggedIn = Boolean(session?.user)
+
+  return (
+    <Link
+      href={loggedIn ? '/konto' : '/login'}
+      aria-label={loggedIn ? 'Min side' : t('login')}
+      className={`relative flex size-11 shrink-0 items-center justify-center rounded-full border transition-colors hover:bg-[#102e4e] ${loggedIn ? 'border-[#16ee93] text-[#b8ffd9]' : 'border-[#159cff] text-[#8dd0ff]'}`}
+    >
+      <UserRound className="size-5" aria-hidden="true" />
+      {loggedIn && <span className="absolute right-1 top-1 size-2 rounded-full bg-[#16ee93] shadow-[0_0_8px_#16ee93]" />}
+    </Link>
+  )
+}
+
 export function HeaderControls({ beforeAccount }: { beforeAccount?: ReactNode } = {}) {
   const { locale, setLocale, t } = useLocale()
   const [open, setOpen] = useState(false)

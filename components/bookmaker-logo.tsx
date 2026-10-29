@@ -26,6 +26,10 @@ export function BookmakerLogo({ name, className }: { name: string; className?: s
           loading="lazy"
           decoding="async"
           onError={() => setFailed(true)}
+          ref={(el) => {
+            // The image can fail before hydration attaches onError.
+            if (el?.complete && el.naturalWidth === 0) setFailed(true)
+          }}
           className={cn(
             'size-full object-cover',
             brand.inset && 'p-[22%] object-contain',
