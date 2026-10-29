@@ -8,16 +8,23 @@ import { BarsIcon } from '@/components/icons'
 import { Flag } from '@/components/flag'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
+import { useLocale } from '@/components/locale-provider'
 
 const NAV = [
-  { href: '/', label: 'SikkerBets', icon: BarsIcon },
-  { href: '/#live-scanning', label: 'Live scanning', icon: Radio },
-  { href: '/stats', label: 'Stats', icon: ChartPie },
-  { href: '/bonus', label: 'Bonus', icon: Gift },
-  { href: '/konto', label: 'Mine spil', icon: Star },
+  { href: '/', key: 'home', icon: BarsIcon },
+  { href: '/#live-scanning', key: 'live', icon: Radio },
+  { href: '/stats', key: 'stats', icon: ChartPie },
+  { href: '/bonus', key: 'bonus', icon: Gift },
+  { href: '/konto', key: 'games', icon: Star },
 ] as const
 
-const SPORTS = ['Fodbold', 'Basketball', 'Tennis', 'Ishockey', 'Esport'] as const
+const SPORTS = [
+  { key: 'football', value: 'Fodbold' },
+  { key: 'basketball', value: 'Basketball' },
+  { key: 'tennis', value: 'Tennis' },
+  { key: 'hockey', value: 'Ishockey' },
+  { key: 'esports', value: 'Esport' },
+] as const
 
 const COUNTRIES = [
   { code: 'dk', name: 'Danmark' },
@@ -51,6 +58,7 @@ export function DesktopSidebar() {
   const activeCountry = params.get('country')
   const [leaguesOpen, setLeaguesOpen] = useState(true)
   const { data: session } = authClient.useSession()
+  const { t } = useLocale()
 
   return (
     <aside
@@ -59,7 +67,8 @@ export function DesktopSidebar() {
     >
       <nav aria-label="Hovedmenu">
         <ul className="flex flex-col gap-1">
-          {NAV.map(({ href, label, icon: Icon }) => {
+          {NAV.map(({ href, key, icon: Icon }) => {
+            const label = t(key)
             const active = href === '/' ? pathname === '/' && !activeSport && !activeCountry : pathname === href
             return (
               <li key={href}>
@@ -83,20 +92,23 @@ export function DesktopSidebar() {
 
       <div className="my-4 border-t border-[#13294a]" />
 
-      <h2 className="px-4 pb-2 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]">Sport</h2>
+      <h2 className="px-4 pb-2 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]">{t('sport')}</h2>
       <ul className="flex flex-col gap-0.5">
-        {SPORTS.map((s) => (
-          <li key={s}>
+        {SPORTS.map(({ key: sportKey, value }) => {
+          const s = t(sportKey)
+          return (
+          <li key={sportKey}>
             <Link
-              href={`/?sport=${encodeURIComponent(s)}`}
-              aria-current={activeSport === s ? 'true' : undefined}
-              className={cn(row, activeSport === s && 'bg-[#0d1f38] text-[#65c1ff]')}
+              href={`/?sport=${encodeURIComponent(value)}`}
+              aria-current={activeSport === value ? 'true' : undefined}
+              className={cn(row, activeSport === value && 'bg-[#0d1f38] text-[#65c1ff]')}
             >
-              <SportIcon sport={s} />
+              <SportIcon sport={value} />
               {s}
             </Link>
           </li>
-        ))}
+          )
+        })}
       </ul>
 
       <div className="my-4 border-t border-[#13294a]" />
@@ -108,7 +120,7 @@ export function DesktopSidebar() {
         aria-controls="sidebar-leagues"
         className="flex min-h-9 items-center justify-between px-4 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]"
       >
-        Ligaer
+        {t('leagues')}
         <ChevronDown className={cn('size-4 text-[#d5ddef] transition-transform', !leaguesOpen && '-rotate-90')} />
       </button>
       {leaguesOpen && (
@@ -128,7 +140,7 @@ export function DesktopSidebar() {
           <li>
             <Link href="/" className={row}>
               <Ellipsis className="size-6" aria-hidden="true" />
-              Flere ligaer
+              {t('moreLeagues')}
             </Link>
           </li>
         </ul>
@@ -139,15 +151,15 @@ export function DesktopSidebar() {
           <div className="flex gap-2.5">
             <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
             <div>
-              <p className="text-[15px] font-bold leading-tight">Premium</p>
-              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">Få adgang til flere funktioner og eksklusive SikkerBets.</p>
+              <p className="text-[15px] font-bold leading-tight">{t('premium')}</p>
+              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">{t('premiumText')}</p>
             </div>
           </div>
           <Link
             href="/konto"
             className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
           >
-            Opgrader nu
+            {t('upgrade')}
           </Link>
         </div>
       )}
@@ -157,15 +169,15 @@ export function DesktopSidebar() {
           <div className="flex gap-2.5">
             <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
             <div>
-              <p className="text-[15px] font-bold leading-tight">Opret gratis konto</p>
-              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">Få fuld adgang til alle odds og funktioner.</p>
+              <p className="text-[15px] font-bold leading-tight">{t('createAccount')}</p>
+              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">{t('accountText')}</p>
             </div>
           </div>
           <Link
             href="/konto"
             className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
           >
-            Opret konto <ArrowRight className="size-4" />
+            {t('create')} <ArrowRight className="size-4" />
           </Link>
         </div>
       )}

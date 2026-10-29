@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Suspense } from 'react'
 import { BottomNav } from '@/components/bottom-nav'
+import { LocaleProvider } from '@/components/locale-provider'
 import { DesktopHeader } from '@/components/desktop/desktop-header'
 import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
 import './globals.css'
@@ -39,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="da" className={`${inter.variable} bg-background`}>
       <body className="min-h-dvh overflow-x-hidden antialiased">
+        <LocaleProvider>
         <DesktopHeader />
         <div className="lg:flex">
           <Suspense fallback={null}>
@@ -50,6 +52,7 @@ export default function RootLayout({
         </div>
         <BottomNav />
         {process.env.NODE_ENV === 'production' && <Analytics />}
+        </LocaleProvider>
       </body>
     </html>
   )

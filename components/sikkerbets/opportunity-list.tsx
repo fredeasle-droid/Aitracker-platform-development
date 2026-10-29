@@ -12,15 +12,17 @@ import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 import { authClient } from '@/lib/auth-client'
+import { useLocale } from '@/components/locale-provider'
 
 const AUTO_REFRESH_MS = 30_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
+const SPORT_KEYS: Record<string, keyof typeof import('@/lib/i18n').translations.da> = { Fodbold: 'football', Basketball: 'basketball', Tennis: 'tennis', Ishockey: 'hockey', Håndbold: 'handball', Favoritter: 'favorites' }
 const MARGINS = [0, 1, 2, 3, 4, 5]
 const SORTS = [
-  { id: 'newest', label: 'Nyeste først' },
-  { id: 'margin', label: 'Højeste margin' },
-  { id: 'kickoff', label: 'Starter snart' },
+  { id: 'newest', key: 'newest' },
+  { id: 'margin', key: 'highest' },
+  { id: 'kickoff', key: 'kickoff' },
 ] as const
 type SortId = (typeof SORTS)[number]['id']
 
@@ -72,6 +74,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   })
   const { data: session } = authClient.useSession()
   const loggedIn = Boolean(session?.user)
+  const { t } = useLocale()
 
   const [market, setMarket] = useState<string>('Alle')
   const params = useSearchParams()
@@ -143,12 +146,12 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       <DesktopHero />
       <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" role="toolbar" aria-label="Sportsgren">
         <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
-          Alle
+          {t('all')}
         </button>
         {MAIN_SPORTS.map((s) => (
           <button key={s} type="button" onClick={() => selectSport(s)} aria-pressed={sport === s} className={cn(chip, sport === s ? chipActive : chipIdle)}>
             <SportGlyph sport={s} />
-            {s}
+            {t(SPORT_KEYS[s] ?? 'more')}
           </button>
         ))}
         {[...MORE_SPORTS, 'Favoritter'].map((s) => (
@@ -159,17 +162,17 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             aria-pressed={sport === s}
             className={cn(chip, 'hidden lg:flex', sport === s ? chipActive : chipIdle)}
           >
-            {s}
+            {t(SPORT_KEYS[s] ?? 'more')}
           </button>
         ))}
         <div className="lg:hidden">
         <Popover
           align="right"
-          label="Flere sportsgrene"
+          label={t('more')}
           triggerClassName={cn(chip, 'px-4', moreActive ? chipActive : chipIdle)}
           trigger={
             <>
-              {moreActive ? sport : 'Flere'}
+              {moreActive ? t(SPORT_KEYS[sport] ?? 'more') : t('more')}
               <ChevronDown className="size-5" />
             </>
           }
@@ -192,7 +195,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           trigger={
             <>
               <ListFilter className="size-5 shrink-0" />
-              <span className="truncate">{league === 'Alle' ? 'Ligaer' : league}</span>
+              <span className="truncate">{league === 'Alle' ? t('leaguesFilter') : league}</span>
               <ChevronDown className="size-4 shrink-0" />
             </>
           }
@@ -200,7 +203,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           {(close) => (
             <div className="max-h-72 overflow-y-auto">
               <MenuOption selected={league === 'Alle'} onSelect={() => (setLeague('Alle'), close())}>
-                Alle ligaer
+                {t('allLeagues')}
               </MenuOption>
               {leagues.map((l) => (
                 <MenuOption key={l} selected={league === l} onSelect={() => (setLeague(l), close())}>
@@ -217,7 +220,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             <>
               <SmallBarsIcon className="size-5 shrink-0" />
               <span className="truncate">
-                Min. margin: <span className="text-primary">{minMargin}%</span>
+                {t('minMargin')}: <span className="text-primary">{minMargin}%</span>
               </span>
               <ChevronDown className="size-4 shrink-0" />
             </>
@@ -226,19 +229,19 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           {(close) =>
             MARGINS.map((m) => (
               <MenuOption key={m} selected={minMargin === m} onSelect={() => (setMinMargin(m), close())}>
-                {m === 0 ? 'Alle margins' : `Mindst ${m}%`}
+                {m === 0 ? t('allMargins') : `${t('atLeast')} ${m}%`}
               </MenuOption>
             ))
           }
         </Popover>
         <div className="hidden lg:block">
           <Popover
-            label="Marked"
+            label={t('market')}
             triggerClassName={filterBtn}
             trigger={
               <>
                 <ArrowDownWideNarrow className="size-5 shrink-0" />
-                <span className="truncate">{market === 'Alle' ? 'Alle markeder' : market}</span>
+                <span className="truncate">{market === 'Alle' ? t('markets') : market}</span>
                 <ChevronDown className="size-4 shrink-0" />
               </>
             }
@@ -246,7 +249,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             {(close) => (
               <div className="max-h-72 overflow-y-auto">
                 <MenuOption selected={market === 'Alle'} onSelect={() => (setMarket('Alle'), close())}>
-                  Alle markeder
+                  {t('markets')}
                 </MenuOption>
                 {markets.map((m) => (
                   <MenuOption key={m} selected={market === m} onSelect={() => (setMarket(m), close())}>
@@ -259,12 +262,12 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         </div>
         <Popover
           align="right"
-          label="Sortering"
+          label={t('sorting')}
           triggerClassName={filterBtn}
           trigger={
             <>
               <ArrowDownWideNarrow className="size-5 shrink-0" />
-              <span className="truncate">{SORTS.find((s) => s.id === sort)?.label}</span>
+              <span className="truncate">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest')}</span>
               <ChevronDown className="size-4 shrink-0" />
             </>
           }
@@ -272,7 +275,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           {(close) =>
             SORTS.map((s) => (
               <MenuOption key={s.id} selected={sort === s.id} onSelect={() => (setSort(s.id), close())}>
-                {s.label}
+                {t(s.key)}
               </MenuOption>
             ))
           }
@@ -292,8 +295,8 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       >
         {visible.length === 0 ? (
           <div className="rounded-2xl border border-dashed border-border p-8 text-center">
-            <p className="font-semibold">Ingen SikkerBets matcher</p>
-            <p className="mt-1 text-sm text-muted-foreground">Prøv en lavere minimum margin eller en anden sportsgren.</p>
+            <p className="font-semibold">{t('noMatches')}</p>
+            <p className="mt-1 text-sm text-muted-foreground">{t('tryAgain')}</p>
             <button
               type="button"
               onClick={() => {
@@ -302,7 +305,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
               }}
               className="mt-4 min-h-11 rounded-xl bg-primary px-5 text-sm font-semibold text-primary-foreground"
             >
-              Nulstil filtre
+              {t('reset')}
             </button>
           </div>
         ) : (
