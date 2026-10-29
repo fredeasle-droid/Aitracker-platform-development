@@ -5,6 +5,9 @@ import { ExternalLink } from 'lucide-react'
 import { getBookmaker } from '@/lib/bookmakers'
 import { formatInt } from '@/lib/odds'
 
+// Alle bookmakere sender til forsiden indtil direkte kamp-links er klar. Sæt til true for at aktivere opslaget igen.
+const EXACT_MATCH_LINKS_ENABLED = false
+
 type MatchLink = { url: string; exact: boolean }
 
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? (r.json() as Promise<MatchLink>) : null))
@@ -41,7 +44,7 @@ export function GoToBookmaker({
   onHandOff: () => void
 }) {
   const params = new URLSearchParams({ bookmaker, home: homeTeam, away: awayTeam, kickoff: String(kickoffTs), sport, league, country })
-  const { data } = useSWR(`/api/match-link?${params}`, fetcher, { revalidateOnFocus: false })
+  const { data } = useSWR(EXACT_MATCH_LINKS_ENABLED ? `/api/match-link?${params}` : null, fetcher, { revalidateOnFocus: false })
   const link = data ?? fallbackLink(bookmaker)
 
   return (
