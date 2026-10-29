@@ -8,6 +8,7 @@ export type BookmakerBrand = {
   inset?: boolean
   small?: boolean
   favicon?: boolean
+  affiliate?: string
 }
 
 type BrandSeed = Omit<BookmakerBrand, 'name' | 'bg' | 'fg' | 'mark' | 'favicon'> & {
@@ -113,9 +114,13 @@ function initials(name: string): string {
   return name.replace(/[^\p{L}\p{N}]/gu, '').slice(0, 2).toUpperCase()
 }
 
-export function getBookmaker(name: string): BookmakerBrand {
+export function getBookmakerKey(name: string): string | undefined {
   const key = normalize(name)
-  const matchedKey = SEEDS[key] ? key : SEED_KEYS_LONGEST_FIRST.find((k) => key.startsWith(k))
+  return SEEDS[key] ? key : SEED_KEYS_LONGEST_FIRST.find((k) => key.startsWith(k))
+}
+
+export function getBookmaker(name: string): BookmakerBrand {
+  const matchedKey = getBookmakerKey(name)
   const seed = matchedKey ? SEEDS[matchedKey] : undefined
 
   if (!seed) {
@@ -134,6 +139,7 @@ export function getBookmaker(name: string): BookmakerBrand {
   return {
     name,
     url: seed.url,
+    affiliate: seed.affiliate,
     logo: seed.logo ?? faviconLogo(hostOf(seed.url)),
     favicon: !seed.logo,
     inset: seed.inset,

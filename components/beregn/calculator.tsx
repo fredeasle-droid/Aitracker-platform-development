@@ -2,12 +2,12 @@
 
 import { Fragment, useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { ArrowLeftRight, Check, Copy, Database, ExternalLink, Info, BookmarkPlus, Wallet } from 'lucide-react'
+import { ArrowLeftRight, Check, Copy, Database, Info, BookmarkPlus, Wallet } from 'lucide-react'
 import { placeBet } from '@/app/actions'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
+import { GoToBookmaker } from '@/components/beregn/go-to-bookmaker'
 import { SmallBarsIcon } from '@/components/icons'
 import { LockedOdds, useLoggedIn } from '@/components/locked-odds'
-import { getBookmaker } from '@/lib/bookmakers'
 import type { Opportunity } from '@/lib/data'
 import { formatInt, formatOdds, formatPct, guaranteedProfit, splitStake } from '@/lib/odds'
 import { cn } from '@/lib/utils'
@@ -197,29 +197,16 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
                 </label>
                 <AmountInput id={`stake-${key}`} value={value} onChange={onChange} />
               </div>
-              <a
-                href={getBookmaker(side.bookmaker).url}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => handOff(key, value)}
-                className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-primary px-2 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff]"
-              >
-                Gå til bookmaker
-                <ExternalLink className="size-4 shrink-0" />
-                <span className="sr-only">(åbner {side.bookmaker} i ny fane og kopierer indsatsen)</span>
-              </a>
-              <p aria-live="polite" className="min-h-[2.5em] text-pretty text-center text-[12px] leading-snug text-[#a9b6d3]">
-                {handedOff === key ? (
-                  <>
-                    <span className="font-semibold text-success">{formatInt(parseAmount(value))} kr. kopieret.</span>{' '}
-                    {'Søg efter '}
-                    <span className="font-semibold text-foreground">{o.homeTeam}</span>
-                    {` og vælg ${side.label}.`}
-                  </>
-                ) : (
-                  'Indsatsen kopieres automatisk, så du kan indsætte den på kuponen.'
-                )}
-              </p>
+              <GoToBookmaker
+                bookmaker={side.bookmaker}
+                label={side.label}
+                homeTeam={o.homeTeam}
+                awayTeam={o.awayTeam}
+                kickoffTs={o.kickoffTs}
+                amount={parseAmount(value)}
+                handedOff={handedOff === key}
+                onHandOff={() => handOff(key, value)}
+              />
             </div>
             </Fragment>
           ))}
