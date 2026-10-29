@@ -41,7 +41,6 @@ export default async function AccountPage() {
 
   return (
     <MinSide
-      aside={aside}
       invoices={invoices}
       user={{ name: user.name, email: user.email, phone: user.phone ?? '', createdAt: new Date(user.createdAt).toISOString() }}
       subscription={
