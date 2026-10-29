@@ -10,11 +10,11 @@ import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { plans, type Plan } from './plans'
 
 
-export function AccountFlow({ aside }: { aside: React.ReactNode }) {
+export function AccountFlow({ aside, startInLogin = false }: { aside: React.ReactNode; startInLogin?: boolean }) {
   const [step, setStep] = useState(1)
   const [plan, setPlan] = useState<Plan>('premium')
   const [submitted, setSubmitted] = useState(false)
-  const [loginMode, setLoginMode] = useState(false)
+  const [loginMode, setLoginMode] = useState(startInLogin)
 
   return (
     <>
@@ -52,7 +52,7 @@ export function AccountFlow({ aside }: { aside: React.ReactNode }) {
           ))}
         </div>
 
-        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/konto')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
     </>

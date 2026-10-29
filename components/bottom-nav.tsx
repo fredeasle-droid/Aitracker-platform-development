@@ -2,16 +2,16 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ChartPie, Database, Gift } from 'lucide-react'
+import { ChartPie, Gift, UserRound } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
 
 const ITEMS = [
-  { href: '/', key: 'home', icon: BarsIcon },
-  { href: '/stats', key: 'stats', icon: ChartPie },
-  { href: '/bonus', key: 'bonus', icon: Gift },
-  { href: '/oddspapi', key: 'market', icon: Database },
+  { href: '/', match: '/', key: 'home', icon: BarsIcon },
+  { href: '/stats', match: '/stats', key: 'stats', icon: ChartPie },
+  { href: '/bonus', match: '/bonus', key: 'bonus', icon: Gift },
+  { href: '/konto?login=1', match: '/konto', key: 'myPage', icon: UserRound },
 ] as const
 
 export function BottomNav() {
@@ -24,9 +24,9 @@ export function BottomNav() {
       className="fixed inset-x-0 bottom-0 z-40 lg:hidden border-t border-[#193451] bg-[#050d1b]/95 px-2 pt-2 shadow-[0_-10px_30px_-20px_#159cff] backdrop-blur-xl pb-[env(safe-area-inset-bottom)]"
     >
       <ul className="mx-auto flex max-w-2xl items-stretch gap-1.5 px-1">
-        {ITEMS.map(({ href, key, icon: Icon }) => {
+        {ITEMS.map(({ href, match, key, icon: Icon }) => {
           const label = t(key)
-          const active = href === '/' ? pathname === '/' : pathname.startsWith(href)
+          const active = match === '/' ? pathname === '/' : pathname.startsWith(match)
           return (
             <li key={href} className="flex-1">
               <Link

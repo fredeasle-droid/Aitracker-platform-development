@@ -29,11 +29,11 @@ async function loadInvoices(customerId: string): Promise<AccountInvoice[]> {
   }
 }
 
-export default async function AccountPage() {
-  const [session, opportunities] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities()])
+export default async function AccountPage({ searchParams }: { searchParams: Promise<{ login?: string }> }) {
+  const [session, opportunities, { login }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
   const aside = <DesktopAside opportunities={opportunities} />
 
-  if (!session?.user) return <AccountFlow aside={aside} />
+  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} />
 
   const { user } = session
   const row = await getSubscription(user.id)
