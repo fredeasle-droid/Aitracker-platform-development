@@ -11,7 +11,7 @@ import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
 import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
-import { authClient } from '@/lib/auth-client'
+import { useHasAccess } from '@/components/locked-odds'
 import { useLocale } from '@/components/locale-provider'
 
 const AUTO_REFRESH_MS = 30_000
@@ -73,8 +73,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     revalidateOnReconnect: false,
     onSuccess: (next) => setItems(next),
   })
-  const { data: session } = authClient.useSession()
-  const loggedIn = Boolean(session?.user)
+  const loggedIn = useHasAccess()
   const { t } = useLocale()
 
   const [market, setMarket] = useState<string>('Alle')

@@ -2,13 +2,19 @@
 
 import Link from 'next/link'
 import { LockKeyhole } from 'lucide-react'
+import useSWR from 'swr'
+import { getHasOddsAccess } from '@/app/access-actions'
 import { authClient } from '@/lib/auth-client'
 import { formatOdds } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-export function useLoggedIn() {
+export function useHasAccess() {
   const { data: session } = authClient.useSession()
-  return Boolean(session?.user)
+  const userId = session?.user?.id ?? null
+  const { data } = useSWR(userId ? ['odds-access', userId] : null, () => getHasOddsAccess(), {
+    revalidateOnFocus: true,
+  })
+  return Boolean(userId && data)
 }
 
 export function LockBadge({ className }: { className?: string }) {
@@ -43,15 +49,15 @@ export function LockTile({ bookmaker, className }: { bookmaker?: string; classNa
 }
 
 export function LockedOdds({ odds, className }: { odds: number; className?: string }) {
-  const loggedIn = useLoggedIn()
+  const hasAccess = useHasAccess()
 
-  if (loggedIn) return <span className={className}>{formatOdds(odds)}</span>
+  if (hasAccess) return <span className={className}>{formatOdds(odds)}</span>
 
   return (
     <Link
       href="/konto"
       className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#55a8ff] underline underline-offset-2"
-      aria-label="Opret gratis konto for at se oddsene"
+      aria-label="Bliv kunde for at se oddsene"
     >
       <LockBadge className="size-6" />
       Lås op

@@ -7,7 +7,7 @@ import { placeBet } from '@/app/actions'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { GoToBookmaker } from '@/components/beregn/go-to-bookmaker'
 import { SmallBarsIcon } from '@/components/icons'
-import { LockedOdds, useLoggedIn } from '@/components/locked-odds'
+import { LockedOdds, useHasAccess } from '@/components/locked-odds'
 import type { Opportunity } from '@/lib/data'
 import { formatInt, formatOdds, formatPct, guaranteedProfit, splitStake } from '@/lib/odds'
 import { cn } from '@/lib/utils'
@@ -53,7 +53,7 @@ function AmountInput({
 
 export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
   const router = useRouter()
-  const loggedIn = useLoggedIn()
+  const loggedIn = useHasAccess()
   const initial = splitStake(1500, o.a.odds, o.b.odds)
   const [total, setTotal] = useState('1500')
   const [stakeA, setStakeA] = useState(String(initial.a))
