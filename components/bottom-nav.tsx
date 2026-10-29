@@ -20,24 +20,24 @@ export function BottomNav() {
   return (
     <nav
       aria-label="Hovedmenu"
-      className="fixed inset-x-0 bottom-0 z-40 lg:hidden border-t border-[#193451] bg-[#050d1b]/95 px-2 pt-2 shadow-[0_-10px_30px_-20px_#159cff] backdrop-blur-xl pb-[env(safe-area-inset-bottom)]"
+      className="fixed inset-x-0 bottom-0 z-40 lg:hidden border-t border-[#193451] bg-[#050d1b]/95 pt-2.5 backdrop-blur-xl pb-[max(env(safe-area-inset-bottom),22px)]"
     >
-      <ul className="mx-auto flex max-w-2xl items-stretch gap-1.5 px-1">
+      <ul className="relative left-1/2 flex w-[426px] -translate-x-1/2 items-stretch">
         {ITEMS.map(({ href, key, icon: Icon }) => {
           const label = t(key)
           const active = href === '/' ? pathname === '/' : pathname.startsWith(href)
           return (
-            <li key={href} className="flex-1">
+            <li key={href} className="w-[142px] shrink-0">
               <Link
                 href={href}
                 aria-current={active ? 'page' : undefined}
                 className={cn(
-                  'relative flex min-h-14 flex-col items-center justify-center gap-1 px-2 py-1.5 text-[12px] font-bold tracking-[0.01em] transition-all',
-                  active ? 'text-[#65c1ff] drop-shadow-[0_0_8px_rgba(21,156,255,0.75)]' : 'text-[#71839d] hover:text-[#d7e8fa]',
+                  'relative flex flex-col items-center justify-center gap-[3px] text-[9.5px] font-semibold transition-all',
+                  active ? 'text-[#3d9bff]' : 'text-[#71839d] hover:text-[#d7e8fa]',
                 )}
               >
                 <Icon
-                  className={cn('size-5.5 transition-transform', active ? 'scale-105 text-[#65c1ff] drop-shadow-[0_0_7px_rgba(21,156,255,0.85)]' : 'text-[#6b7894]')}
+                  className={cn('size-[17px] transition-transform', active ? 'text-[#3d9bff]' : 'text-[#6b7894]')}
                   strokeWidth={Icon === BarsIcon ? undefined : 2.25}
                   fill={Icon === ChartPie ? 'currentColor' : Icon === BarsIcon ? 'currentColor' : 'none'}
                 />

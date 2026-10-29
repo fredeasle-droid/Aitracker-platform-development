@@ -21,13 +21,13 @@ export function LiveOddsPill({ updated }: { updated: string }) {
     <button
       type="button"
       onClick={() => startTransition(() => router.refresh())}
-      className="flex min-h-11 items-center gap-1.5 rounded-full border border-border bg-[#0a1324] px-2.5 py-1 text-left"
+      className="flex h-[37px] items-center gap-[7px] rounded-full border border-[#1b3a5e] bg-[#08142a] pl-3 pr-3 text-left"
       aria-label={`Live odds, opdateret ${updated}. Tryk for at opdatere`}
     >
       <span className={cn('size-2 shrink-0 rounded-full bg-success shadow-[0_0_8px_var(--success)]', pending && 'animate-pulse')} />
-      <span className="flex flex-col whitespace-nowrap leading-tight">
-        <span className="text-[12px] font-semibold">Live odds</span>
-        <span className="text-[10px] tabular-nums text-[#a9b6d3]">{pending ? 'Opdaterer…' : `Opd. ${updated}`}</span>
+      <span className="flex flex-col gap-[3px] whitespace-nowrap">
+        <span className="text-[9.2px] font-medium leading-none">Live odds</span>
+        <span className="text-[8.3px] leading-none tabular-nums text-[#a9b6d3]">{pending ? 'Opdaterer…' : `Opdateret ${updated}`}</span>
       </span>
     </button>
   )

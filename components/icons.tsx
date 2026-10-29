@@ -2,21 +2,19 @@ import type { SVGProps } from 'react'
 
 type IconProps = SVGProps<SVGSVGElement>
 
-export function BrandMark(props: IconProps) {
+export function BrandMark({ showTrend = true, ...props }: IconProps & { showTrend?: boolean }) {
   return (
     <svg viewBox="0 0 64 48" fill="none" aria-hidden="true" {...props}>
-      <defs>
-        <linearGradient id="bt-bar" x1="0" y1="48" x2="0" y2="0" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0f5fe0" />
-          <stop offset="1" stopColor="#3b9bff" />
-        </linearGradient>
-      </defs>
-      <rect x="2" y="32" width="9" height="14" rx="2" fill="url(#bt-bar)" />
-      <rect x="15" y="25" width="9" height="21" rx="2" fill="url(#bt-bar)" />
-      <rect x="28" y="16" width="9" height="30" rx="2" fill="url(#bt-bar)" />
-      <rect x="41" y="6" width="9" height="40" rx="2" fill="url(#bt-bar)" />
-      <path d="M4 30 L18 20 L30 24 L52 4" stroke="#e8f1ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M45 4 H53 V12" stroke="#e8f1ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="2" y="32" width="9" height="14" rx="2" fill="#1f6fe8" />
+      <rect x="15" y="25" width="9" height="21" rx="2" fill="#2a80f2" />
+      <rect x="28" y="16" width="9" height="30" rx="2" fill="#3590f8" />
+      <rect x="41" y="6" width="9" height="40" rx="2" fill="#3f9fff" />
+      {showTrend && (
+        <>
+          <path d="M4 30 L18 20 L30 24 L52 4" stroke="#e8f1ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          <path d="M45 4 H53 V12" stroke="#e8f1ff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </>
+      )}
     </svg>
   )
 }

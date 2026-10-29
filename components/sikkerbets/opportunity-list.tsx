@@ -29,7 +29,7 @@ type SortId = (typeof SORTS)[number]['id']
 function SportGlyph({ sport }: { sport: string }) {
   if (sport === 'Fodbold')
     return (
-      <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true">
+      <svg viewBox="0 0 24 24" className="size-4 shrink-0 lg:size-5" aria-hidden="true">
         <circle cx="12" cy="12" r="10" fill="#fff" />
         <path d="M12 7.5l3.3 2.4-1.3 3.9h-4l-1.3-3.9z" fill="#0a1426" />
         <path d="M12 2v5.5M15.3 9.9l5.2-1.6M14 13.8l3 4.6M10 13.8l-3 4.6M8.7 9.9L3.5 8.3" stroke="#0a1426" strokeWidth="1.5" />
@@ -37,13 +37,13 @@ function SportGlyph({ sport }: { sport: string }) {
     )
   if (sport === 'Basketball')
     return (
-      <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true" fill="none">
+      <svg viewBox="0 0 24 24" className="size-4 shrink-0 lg:size-5" aria-hidden="true" fill="none">
         <circle cx="12" cy="12" r="10" fill="#fff" />
         <path d="M2 12h20M12 2v20M5 5c3 3 3 11 0 14M19 5c-3 3-3 11 0 14" stroke="#0a1426" strokeWidth="1.6" />
       </svg>
     )
   return (
-    <svg viewBox="0 0 24 24" className="size-5" aria-hidden="true" fill="none">
+    <svg viewBox="0 0 24 24" className="size-4 shrink-0 lg:size-5" aria-hidden="true" fill="none">
       <circle cx="12" cy="12" r="10" fill="#fff" />
       <path d="M4 6c5 2 5 10 0 12M20 6c-5 2-5 10 0 12" stroke="#0a1426" strokeWidth="1.6" />
     </svg>
@@ -51,11 +51,12 @@ function SportGlyph({ sport }: { sport: string }) {
 }
 
 const chip =
-  'flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-xl border px-3 text-[14px] font-medium transition-colors whitespace-nowrap lg:gap-2 lg:px-3.5 lg:text-[15px]'
-const chipIdle = 'border-border bg-[#081123] text-foreground hover:bg-accent'
-const chipActive = 'border-primary bg-primary text-primary-foreground shadow-[0_6px_18px_-8px_var(--primary)]'
+  'flex h-[30px] shrink-0 items-center rounded-[10px] border text-[9.3px] font-medium transition-colors whitespace-nowrap lg:h-auto lg:min-h-11 lg:w-auto lg:justify-center lg:gap-2 lg:rounded-xl lg:px-3.5 lg:text-[15px]'
+const chipMobile = 'gap-[7px] pl-[9px] pr-3 lg:gap-2 lg:pl-3.5 lg:pr-3.5'
+const chipIdle = 'border-[#1a2f4d] bg-[#081123] text-foreground hover:bg-accent'
+const chipActive = 'border-primary bg-primary text-primary-foreground'
 const filterBtn =
-  'flex min-h-11 w-full min-w-0 items-center justify-between gap-1.5 rounded-xl border border-border bg-[#081123] px-2.5 text-[14px] text-foreground hover:bg-accent lg:gap-2 lg:px-3'
+  'flex h-[30px] w-full min-w-0 items-center justify-between gap-2 rounded-[10px] border border-[#1a2f4d] bg-[#081123] px-2.5 text-[9.5px] text-foreground hover:bg-accent lg:h-auto lg:min-h-11 lg:rounded-xl lg:border-border lg:px-3 lg:text-[14px]'
 
 export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [items, setItems] = useState(initial)
@@ -142,14 +143,25 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const moreActive = sport === 'Favoritter' || (MORE_SPORTS as readonly string[]).includes(sport)
 
   return (
-    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-4 lg:flex-1 lg:px-0">
+    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-2.5 lg:flex-1 lg:px-0">
       <DesktopHero />
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:none] lg:mx-0 lg:px-0" role="toolbar" aria-label="Sportsgren">
-        <button type="button" onClick={() => selectSport('Alle')} aria-pressed={sport === 'Alle'} className={cn(chip, 'px-6', sport === 'Alle' ? chipActive : chipIdle)}>
+      <div className="-mx-2.5 flex gap-1.5 overflow-x-auto px-3 [scrollbar-width:none] lg:mx-0 lg:gap-2 lg:px-0 lg:pb-1" role="toolbar" aria-label="Sportsgren">
+        <button
+          type="button"
+          onClick={() => selectSport('Alle')}
+          aria-pressed={sport === 'Alle'}
+          className={cn(chip, 'w-14 justify-center px-0 lg:px-6', sport === 'Alle' ? chipActive : chipIdle)}
+        >
           {t('all')}
         </button>
         {MAIN_SPORTS.map((s) => (
-          <button key={s} type="button" onClick={() => selectSport(s)} aria-pressed={sport === s} className={cn(chip, sport === s ? chipActive : chipIdle)}>
+          <button
+            key={s}
+            type="button"
+            onClick={() => selectSport(s)}
+            aria-pressed={sport === s}
+            className={cn(chip, chipMobile, s === 'Fodbold' && 'w-[75px]', s === 'Basketball' && 'w-[86px]', s === 'Tennis' && 'w-[69px]', sport === s ? chipActive : chipIdle)}
+          >
             <SportGlyph sport={s} />
             {t(SPORT_KEYS[s] ?? 'more')}
           </button>
@@ -169,11 +181,11 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         <Popover
           align="right"
           label={t('more')}
-          triggerClassName={cn(chip, 'px-4', moreActive ? chipActive : chipIdle)}
+          triggerClassName={cn(chip, 'w-[76px] justify-between px-[17px]', moreActive ? chipActive : chipIdle)}
           trigger={
             <>
-              {moreActive ? t(SPORT_KEYS[sport] ?? 'more') : t('more')}
-              <ChevronDown className="size-5" />
+              <span className="truncate">{moreActive ? t(SPORT_KEYS[sport] ?? 'more') : t('more')}</span>
+              <ChevronDown className="size-3 shrink-0" />
             </>
           }
         >
@@ -188,16 +200,16 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         </div>
       </div>
 
-      <div className="mt-3 grid grid-cols-3 gap-2 lg:grid-cols-4 lg:gap-3">
+      <div className="mt-[13px] flex gap-[13px] lg:mt-3 lg:grid lg:grid-cols-4 lg:gap-3">
         <Popover
-          className="min-w-0"
+          className="min-w-0 flex-[97_1_0%]"
           label="Vælg liga"
           triggerClassName={filterBtn}
           trigger={
             <>
-              <ListFilter className="size-5 shrink-0" />
-              <span className="truncate">{league === 'Alle' ? t('leaguesFilter') : league}</span>
-              <ChevronDown className="size-4 shrink-0" />
+              <ListFilter className="size-3 shrink-0 lg:size-5" />
+              <span className="min-w-0 flex-1 truncate text-left">{league === 'Alle' ? t('leaguesFilter') : league}</span>
+              <ChevronDown className="size-3 shrink-0 lg:size-4" />
             </>
           }
         >
@@ -215,18 +227,16 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           )}
         </Popover>
         <Popover
-          className="min-w-0"
+          className="min-w-0 flex-[140_1_0%]"
           label="Minimum margin"
           triggerClassName={filterBtn}
           trigger={
             <>
-              <SmallBarsIcon className="hidden size-5 shrink-0 min-[440px]:block" />
-              <span className="truncate">
-                <span className="lg:hidden">Margin</span>
-                <span className="hidden lg:inline">{t('minMargin')}</span>:{' '}
-                <span className="text-primary">{minMargin}%</span>
+              <SmallBarsIcon className="size-2.5 shrink-0 lg:size-5" />
+              <span className="min-w-0 flex-1 truncate text-left">
+                {t('minMargin')}: <span className="text-primary">{minMargin}%</span>
               </span>
-              <ChevronDown className="size-4 shrink-0" />
+              <ChevronDown className="size-3 shrink-0 lg:size-4" />
             </>
           }
         >
@@ -265,18 +275,18 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           </Popover>
         </div>
         <Popover
-          className="min-w-0"
+          className="min-w-0 flex-[127_1_0%]"
           align="right"
           label={t('sorting')}
           triggerClassName={filterBtn}
           trigger={
             <>
-              <ArrowDownWideNarrow className="size-5 shrink-0" />
-              <span className="truncate">
-                <span className="lg:hidden">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest').split(' ')[0]}</span>
+              <ArrowDownWideNarrow className="size-3 shrink-0 lg:size-5" />
+              <span className="min-w-0 flex-1 truncate text-left">
+                <span className="lg:hidden">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest').replace(/\s+margin$/i, '')}</span>
                 <span className="hidden lg:inline">{t(SORTS.find((s) => s.id === sort)?.key ?? 'newest')}</span>
               </span>
-              <ChevronDown className="size-4 shrink-0" />
+              <ChevronDown className="size-3 shrink-0 lg:size-4" />
             </>
           }
         >
@@ -296,7 +306,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
 
       <div
         className={cn(
-          'mt-3 flex flex-col gap-3',
+          'mt-3 flex flex-col gap-[9px] lg:gap-3',
           visible.length > 0 &&
             'lg:gap-0 lg:divide-y lg:divide-[#13294a] lg:overflow-hidden lg:rounded-2xl lg:border lg:border-[#183252] lg:bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)]',
         )}

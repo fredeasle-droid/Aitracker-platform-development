@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Calculator, Info, LockKeyhole, Star } from 'lucide-react'
+import { ArrowRight, Calculator, Info, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { Flag } from '@/components/flag'
 import { SmallBarsIcon } from '@/components/icons'
@@ -9,27 +9,20 @@ import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-function OddsBox({ bookmaker, label, odds, loggedIn }: { bookmaker: string; label: string; odds: number; loggedIn: boolean }) {
+function OddsBox({ bookmaker, label, odds }: { bookmaker: string; label: string; odds: number }) {
   return (
-    <div className="flex min-h-16 min-w-0 flex-1 items-center gap-2 rounded-2xl border border-[#1a3557] bg-[#081123] py-1.5 pl-2 pr-2.5">
-      <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
+    <div className="relative flex h-10 min-w-0 items-center gap-[7px] rounded-[11px] border border-[#1a3557] bg-[#07101f] pl-[5px] pr-2">
+      <BookmakerLogo name={bookmaker} className="size-[26px] shrink-0 rounded-[7px]" />
       <div className="min-w-0 flex-1">
-        <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-0.5 line-clamp-2 text-[12px] leading-tight text-[#a9b6d3]" title={label}>
+        <p className="truncate text-[9.5px] font-semibold leading-3 text-[#f3f6fc]">{bookmaker}</p>
+        <p className="mt-1 truncate text-[9px] leading-3 text-[#a9b6d3]" title={label}>
           {label}
         </p>
       </div>
-      {loggedIn ? (
-        <p className="shrink-0 text-[20px] font-extrabold leading-none tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
-      ) : (
-        <Link
-          href="/konto"
-          aria-label={`Lås odds op hos ${bookmaker}`}
-          className="flex shrink-0 items-center gap-0.5 text-[#55a8ff]"
-        >
-          <LockKeyhole className="size-4" aria-hidden="true" />
-        </Link>
-      )}
+      <p className="mt-2 shrink-0 text-[14.5px] font-extrabold leading-none tracking-tight tabular-nums text-[#4aa3ff]">
+        {formatOdds(odds)}
+      </p>
+      <Megaphone className="absolute right-2 top-1 size-2.5 text-[#2b4062]" aria-hidden="true" />
     </div>
   )
 }
@@ -134,17 +127,16 @@ export function OpportunityCard(props: {
 function MobileCard({
   opportunity: o,
   onToggleFavorite,
-  loggedIn,
 }: {
   opportunity: Opportunity
   onToggleFavorite: (id: number) => void
   loggedIn: boolean
 }) {
   return (
-    <article className="w-full rounded-3xl border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:hidden">
-      <div className="flex items-center justify-between gap-2 px-0.5 text-[13px] text-[#a9b6d3]">
-        <span className="flex min-w-0 items-center gap-2">
-          <Flag code={o.countryCode} label={o.country} />
+    <article className="w-full rounded-[14px] border border-[#183252] bg-[linear-gradient(135deg,#0a1628_0%,#07111f_55%,#08182a_100%)] pb-[6.5px] pl-2.5 pr-[5.5px] pt-[7.5px] lg:hidden">
+      <div className="flex h-4 items-center justify-between gap-2 pl-px pr-[7.5px] text-[9.5px] text-[#a9b6d3]">
+        <span className="flex min-w-0 items-center gap-[5px]">
+          <Flag code={o.countryCode} label={o.country} className="size-4" />
           <span className="truncate">
             {o.country} · {o.league}
           </span>
@@ -152,66 +144,71 @@ function MobileCard({
         <span className="shrink-0 tabular-nums">{o.kickoffLabel}</span>
       </div>
 
-      <div className="mt-2 flex gap-2">
-        <div className="flex min-w-0 flex-1 flex-col gap-2">
-          <div className="flex items-center gap-1">
-            <span className="flex min-w-0 flex-1 items-center gap-1.5">
-              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-9 border-2 text-[10px]" />
-              <span className="line-clamp-2 min-w-0 text-[13.5px] font-bold leading-tight [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
+      <div className="mt-0.5 grid grid-cols-[minmax(0,1fr)_99.5px] gap-x-[5px]">
+        <div className="flex min-w-0 flex-col">
+          <div className="grid h-7 grid-cols-[minmax(0,1.12fr)_auto_minmax(0,1fr)] items-center">
+            <span className="flex min-w-0 items-center gap-2.5">
+              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-7 border-[1.5px] text-[8px]" />
+              <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
                 {o.homeTeam}
               </span>
             </span>
-            <span className="shrink-0 text-[11px] text-muted-foreground">vs</span>
-            <span className="flex min-w-0 flex-1 items-center gap-1.5">
-              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-9 border-2 text-[10px]" />
-              <span className="line-clamp-2 min-w-0 text-[13.5px] font-bold leading-tight [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
+            <span className="px-3 text-[9.5px] text-[#6b7da3]">vs</span>
+            <span className="flex min-w-0 items-center gap-2.5 pl-1">
+              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-7 border-[1.5px] text-[8px]" />
+              <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
                 {o.awayTeam}
               </span>
             </span>
           </div>
-          <p className="flex min-w-0 items-center gap-1.5 text-[14px] text-[#d5ddef]">
-            <SmallBarsIcon className="size-4 shrink-0 text-[#8fa3cc]" />
+          <p className="mt-1.5 flex h-3 min-w-0 items-center gap-[7px] pl-[3px] text-[10px] text-[#d5ddef]">
+            <SmallBarsIcon className="size-2.5 shrink-0 text-[#8fa3cc]" />
             <span className="truncate">{o.market}</span>
           </p>
+          <div className="mt-[6.5px] grid grid-cols-2 gap-1.5">
+            <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} />
+            <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} />
+          </div>
         </div>
 
-        <div className="flex w-[96px] shrink-0 flex-col justify-center gap-1 rounded-2xl border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2 py-2 shadow-[0_0_24px_-10px_var(--success)]">
-          <div className="flex items-center justify-between">
-            <span className="text-[10px] font-semibold tracking-wide text-success">MARGIN</span>
-            <SmallBarsIcon className="size-3.5 text-success/80" />
+        <div className="flex h-[85px] flex-col justify-between self-end rounded-[13px] border border-[#1b6b55] bg-[#041a1c] pb-[7.5px] pl-3 pr-2.5 pt-2.5">
+          <div>
+            <div className="flex h-[11px] items-center justify-between">
+              <span className="text-[9px] font-medium leading-none text-[#6ee7b7]">MARGIN</span>
+              <SmallBarsIcon className="size-2.5 text-[#7db4d0]" />
+            </div>
+            <p
+              className={`mt-[3px] whitespace-nowrap font-bold leading-[1.1] tabular-nums tracking-tight text-[#5fe8b0] ${formatPct(o.margin).length > 6 ? 'text-[18.5px]' : 'text-[23px]'}`}
+            >
+              {formatPct(o.margin)}
+            </p>
           </div>
-          <p className="text-[22px] font-extrabold leading-none tabular-nums tracking-tight text-success">{formatPct(o.margin)}</p>
           <span
-            className="flex items-center justify-center gap-1 rounded-full border border-border bg-[#0a1426] py-0.5 text-[11px] text-[#d5ddef]"
+            className="mx-[-5px] flex h-5 items-center justify-center gap-1.5 rounded-full border border-[#1f3a63] bg-[#0a1630] text-[9.5px] text-[#e3e9f5]"
             title="Begge mulige udfald er dækket"
           >
-            2 udfald <Info className="size-3" aria-hidden="true" />
+            2 udfald <Info className="size-2.5 text-[#8fa3cc]" aria-hidden="true" />
           </span>
         </div>
       </div>
 
-      <div className="mt-2 flex gap-2">
-        <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} />
-        <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} />
-      </div>
-
-      <div className="mt-2 flex items-center gap-2">
+      <div className="mt-2 flex items-center gap-2 pr-[4.5px]">
         <Link
           href={`/beregn?id=${o.id}`}
-          className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-3 text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          className="flex h-[34px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
         >
-          <Calculator className="size-5 shrink-0" aria-hidden="true" />
+          <Calculator className="mr-1 size-[13px] shrink-0" aria-hidden="true" />
           Beregn indsats
-          <ArrowRight className="size-5 shrink-0" aria-hidden="true" />
+          <ArrowRight className="size-3 shrink-0" aria-hidden="true" />
         </Link>
         <button
           type="button"
           onClick={() => onToggleFavorite(o.id)}
           aria-pressed={o.favorite}
           aria-label={o.favorite ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}
-          className="flex size-12 shrink-0 items-center justify-center rounded-full border border-border bg-[#081123] transition-colors hover:bg-accent"
+          className="flex size-8 shrink-0 items-center justify-center rounded-full border border-[#1b3557] bg-[#081123] transition-colors hover:bg-accent"
         >
-          <Star className={cn('size-6', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#d5ddef]')} />
+          <Star className={cn('size-4', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#d5ddef]')} />
         </button>
       </div>
     </article>
