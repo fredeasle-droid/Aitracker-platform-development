@@ -67,11 +67,6 @@ function initials(name: string): string {
   return name.replace(/[^\p{L}\p{N}]/gu, '').slice(0, 2).toUpperCase()
 }
 
-export function isKnownBookmaker(name: string): boolean {
-  const key = normalize(name)
-  return Boolean(SEEDS[key]) || SEED_KEYS_LONGEST_FIRST.some((k) => key.startsWith(k))
-}
-
 export function getBookmaker(name: string): BookmakerBrand {
   const key = normalize(name)
   const matchedKey = SEEDS[key] ? key : SEED_KEYS_LONGEST_FIRST.find((k) => key.startsWith(k))
