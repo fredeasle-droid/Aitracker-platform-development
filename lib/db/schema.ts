@@ -15,4 +15,6 @@ export const scraperSessions = pgTable('scraper_sessions', { source: text('sourc
 
 export const sourceSnapshots = pgTable('source_snapshots', { source: text('source').primaryKey(), payload: text('payload').notNull(), summary: text('summary').notNull(), rowCount: integer('row_count').notNull().default(0), updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow() })
 
-export const schema = { user, session, account, verification, opportunities, teamLogos, appUsers, favorites, bets, scraperSessions, sourceSnapshots }
+export const subscriptions = pgTable('subscriptions', { userId: text('user_id').primaryKey(), stripeCustomerId: text('stripe_customer_id').notNull().unique(), stripeSubscriptionId: text('stripe_subscription_id').unique(), plan: text('plan'), status: text('status').notNull().default('none'), trialEnd: timestamp('trial_end', { withTimezone: true }), currentPeriodEnd: timestamp('current_period_end', { withTimezone: true }), cancelAtPeriodEnd: boolean('cancel_at_period_end').notNull().default(false), createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow(), updatedAt: timestamp('updated_at', { withTimezone: true }).notNull().defaultNow() })
+
+export const schema = { user, session, account, verification, opportunities, teamLogos, appUsers, favorites, bets, scraperSessions, sourceSnapshots, subscriptions }
