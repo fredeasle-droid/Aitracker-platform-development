@@ -203,6 +203,9 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
                 homeTeam={o.homeTeam}
                 awayTeam={o.awayTeam}
                 kickoffTs={o.kickoffTs}
+                sport={o.sport}
+                league={o.league}
+                country={o.country}
                 amount={parseAmount(value)}
                 handedOff={handedOff === key}
                 onHandOff={() => handOff(key, value)}

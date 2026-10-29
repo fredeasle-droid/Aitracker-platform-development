@@ -12,6 +12,10 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Mangler parametre' }, { status: 400 })
   }
 
-  const link = await resolveMatchLink(bookmaker, home, away, kickoff)
+  const link = await resolveMatchLink(bookmaker, home, away, kickoff, {
+    sport: params.get('sport')?.slice(0, 40) || undefined,
+    league: params.get('league')?.slice(0, 80) || undefined,
+    country: params.get('country')?.slice(0, 60) || undefined,
+  })
   return NextResponse.json(link, { headers: { 'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=3600' } })
 }

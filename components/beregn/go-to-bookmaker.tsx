@@ -21,6 +21,9 @@ export function GoToBookmaker({
   homeTeam,
   awayTeam,
   kickoffTs,
+  sport,
+  league,
+  country,
   amount,
   handedOff,
   onHandOff,
@@ -30,11 +33,14 @@ export function GoToBookmaker({
   homeTeam: string
   awayTeam: string
   kickoffTs: number
+  sport: string
+  league: string
+  country: string
   amount: number
   handedOff: boolean
   onHandOff: () => void
 }) {
-  const params = new URLSearchParams({ bookmaker, home: homeTeam, away: awayTeam, kickoff: String(kickoffTs) })
+  const params = new URLSearchParams({ bookmaker, home: homeTeam, away: awayTeam, kickoff: String(kickoffTs), sport, league, country })
   const { data } = useSWR(`/api/match-link?${params}`, fetcher, { revalidateOnFocus: false })
   const link = data ?? fallbackLink(bookmaker)
 
