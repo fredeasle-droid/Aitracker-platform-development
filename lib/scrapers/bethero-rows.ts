@@ -1,5 +1,6 @@
 import 'server-only'
 import { getBetHeroMessages } from '@/lib/bethero-ingest'
+import { isKnownBookmaker } from '@/lib/bookmakers'
 import { displaySport, splitTeams, type ScrapedLeg, type ScrapedSurebet } from './types'
 
 type BetHeroBook = { name?: string }
@@ -39,8 +40,8 @@ function pickAllowedBook(books: BetHeroBook[] | undefined) {
   if (danish) return baseName(danish)
   const preferred = names.find((name) => PREFERRED_BOOKS.includes(normalizeBook(name)))
   if (preferred) return baseName(preferred)
-  const plain = names.find((name) => !/\(.*\)$/.test(name))
-  return plain ? baseName(plain) : names[0] ? baseName(names[0]) : null
+  const known = names.find((name) => !/\(.*\)$/.test(name) && isKnownBookmaker(baseName(name)))
+  return known ? baseName(known) : null
 }
 
 function collectRows(value: unknown, rows: BetHeroRow[]) {
