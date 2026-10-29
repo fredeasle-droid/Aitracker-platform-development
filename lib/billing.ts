@@ -10,6 +10,12 @@ export const TRIAL_DAYS = 7
 // Prices live on the server only, so the client can only choose a plan, never an amount.
 export const PLAN_AMOUNTS_ORE: Record<Plan, number> = { basis: 14900, premium: 24900 }
 
+// These are the active Stripe Sandbox recurring prices created for BetTracker.
+export const PLAN_PRICE_IDS: Record<Plan, string> = {
+  basis: 'price_1UVtuXEe7Wf67BEtQaL0AXx5',
+  premium: 'price_1UVtvHEe7Wf67BEtHeyNzHHR',
+}
+
 export function isPlan(value: unknown): value is Plan {
   return typeof value === 'string' && Object.hasOwn(PLAN_AMOUNTS_ORE, value)
 }

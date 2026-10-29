@@ -3,8 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { getStripe } from '@/lib/stripe'
 import { getUserId } from '@/lib/user'
-import { ACTIVE_STATUSES, PLAN_AMOUNTS_ORE, getSubscription, isPlan, saveSubscription } from '@/lib/billing'
-import { plans } from './plans'
+import { ACTIVE_STATUSES, PLAN_PRICE_IDS, getSubscription, isPlan, saveSubscription } from '@/lib/billing'
 
 async function requireActiveSubscription() {
   const userId = await getUserId()
@@ -30,9 +29,8 @@ export async function changePlan(plan: string) {
   const item = current.items.data[0]
   if (!item) throw new Error('Abonnementet kunne ikke findes hos Stripe.')
 
-  const product = await stripe.products.create({ name: `BetTracker ${plans[plan].name}` })
   const updated = await stripe.subscriptions.update(subscriptionId, {
-    items: [{ id: item.id, price_data: { currency: 'dkk', product: product.id, unit_amount: PLAN_AMOUNTS_ORE[plan], recurring: { interval: 'month' } } }],
+    items: [{ id: item.id, price: PLAN_PRICE_IDS[plan] }],
     metadata: { ...current.metadata, plan },
     proration_behavior: 'create_prorations',
     cancel_at_period_end: false,

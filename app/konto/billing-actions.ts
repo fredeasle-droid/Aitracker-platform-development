@@ -3,8 +3,7 @@
 import { headers } from 'next/headers'
 import { auth } from '@/lib/auth'
 import { getStripe } from '@/lib/stripe'
-import { PLAN_AMOUNTS_ORE, TRIAL_DAYS, getSubscription, isPlan, saveCustomer, saveSubscription } from '@/lib/billing'
-import { plans } from './plans'
+import { PLAN_PRICE_IDS, TRIAL_DAYS, getSubscription, isPlan, saveCustomer, saveSubscription } from '@/lib/billing'
 
 async function requireSessionUser() {
   const session = await auth.api.getSession({ headers: await headers() })
@@ -31,17 +30,7 @@ export async function startSubscriptionCheckout(plan: string) {
     customer: customerId,
     locale: 'da',
     redirect_on_completion: 'never',
-    line_items: [
-      {
-        quantity: 1,
-        price_data: {
-          currency: 'dkk',
-          unit_amount: PLAN_AMOUNTS_ORE[plan],
-          recurring: { interval: 'month' },
-          product_data: { name: `BetTracker ${plans[plan].name}` },
-        },
-      },
-    ],
+    line_items: [{ quantity: 1, price: PLAN_PRICE_IDS[plan] }],
     subscription_data: { trial_period_days: TRIAL_DAYS, metadata: { userId: user.id, plan } },
     metadata: { userId: user.id, plan },
   })
