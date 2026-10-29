@@ -12,6 +12,8 @@ export function FlagImage({ code, label, className }: { code: string; label: str
     'gb-sct': 'gb',
     'gb-wls': 'gb',
     'gb-nir': 'gb',
+    per: 'pe',
+    dza: 'dz',
   } as Record<string, string>)[rawCode] ?? rawCode
 
   if (!normalized || failed) return <Flag code={rawCode} label={label} className={className} />
