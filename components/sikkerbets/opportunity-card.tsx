@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Calculator, Info, Megaphone, Star } from 'lucide-react'
+import { ArrowRight, Calculator, Info, Lock, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { Flag } from '@/components/flag'
 import { SmallBarsIcon } from '@/components/icons'
@@ -28,9 +28,13 @@ function OddsBox({
       <BookmakerLogo name={bookmaker} className="size-[26px] shrink-0 rounded-[7px]" />
       <div className="min-w-0 flex-1">
         <p className="truncate text-[9.5px] font-semibold leading-3 text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-1 truncate text-[9px] leading-3 text-[#a9b6d3]" title={label}>
-          {label}
-        </p>
+        {loggedIn ? (
+          <p className="mt-1 truncate text-[9px] leading-3 text-[#a9b6d3]" title={label}>
+            {label}
+          </p>
+        ) : (
+          <p className="mt-1 truncate text-[9px] leading-3 text-[#6b7da3]">Låst</p>
+        )}
       </div>
     </>
   )
@@ -170,9 +174,7 @@ function MobileCard({
       <div className="flex h-4 items-center justify-between gap-2 pl-px pr-[7.5px] text-[9.5px] text-[#a9b6d3]">
         <span className="flex min-w-0 items-center gap-[5px]">
           <Flag code={o.countryCode} label={o.country} className="size-4" />
-          <span className="truncate">
-            {o.country} · {o.league}
-          </span>
+          <span className="truncate">{o.league}</span>
         </span>
         <span className="shrink-0 tabular-nums">{o.kickoffLabel}</span>
       </div>
@@ -181,22 +183,31 @@ function MobileCard({
         <div className="flex min-w-0 flex-col">
           <div className="grid h-7 grid-cols-[minmax(0,1.12fr)_auto_minmax(0,1fr)] items-center">
             <span className="flex min-w-0 items-center gap-2.5">
-              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-7 border-[1.5px] text-[8px]" />
+              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
               <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
                 {o.homeTeam}
               </span>
             </span>
             <span className="px-3 text-[9.5px] text-[#6b7da3]">vs</span>
             <span className="flex min-w-0 items-center gap-2.5 pl-1">
-              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-7 border-[1.5px] text-[8px]" />
+              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
               <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
                 {o.awayTeam}
               </span>
             </span>
           </div>
           <p className="mt-1.5 flex h-3 min-w-0 items-center gap-[7px] pl-[3px] text-[10px] text-[#d5ddef]">
-            <SmallBarsIcon className="size-2.5 shrink-0 text-[#8fa3cc]" />
-            <span className="truncate">{o.market}</span>
+            {loggedIn ? (
+              <>
+                <SmallBarsIcon className="size-2.5 shrink-0 text-[#8fa3cc]" />
+                <span className="truncate">{o.market}</span>
+              </>
+            ) : (
+              <>
+                <Lock className="size-2.5 shrink-0 text-[#8fa3cc]" aria-hidden="true" />
+                <span className="truncate text-[#8fa3cc]">Marked låst</span>
+              </>
+            )}
           </p>
           <div className="mt-[6.5px] grid grid-cols-2 gap-1.5">
             <OddsBox {...o.a} loggedIn={loggedIn} />

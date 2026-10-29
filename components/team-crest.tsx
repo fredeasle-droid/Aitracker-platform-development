@@ -55,7 +55,17 @@ function initials(name: string) {
     .toUpperCase()
 }
 
-export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?: string | null; className?: string }) {
+export function TeamCrest({
+  name,
+  logoUrl,
+  className,
+  fallbackClassName,
+}: {
+  name: string
+  logoUrl?: string | null
+  className?: string
+  fallbackClassName?: string
+}) {
   const [failed, setFailed] = useState(false)
   const [bg, fg] = TEAM_COLORS[name] ?? ['#1e293b', '#e2e8f0']
   const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
@@ -86,6 +96,7 @@ export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?
       className={cn(
         'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight',
         className,
+        fallbackClassName,
       )}
       style={{ background: bg, borderColor: fg, color: dark ? fg : '#ffffff' }}
     >
