@@ -43,6 +43,13 @@ const TEAM_COLORS: Record<string, [string, string]> = {
   GOG: ['#1d4ed8', '#facc15'],
 }
 
+function generatedColors(name: string): [string, string] {
+  let hash = 0
+  for (const char of name) hash = (hash * 31 + char.charCodeAt(0)) >>> 0
+  const hue = hash % 360
+  return [`hsl(${hue} 55% 32%)`, `hsl(${(hue + 40) % 360} 70% 72%)`]
+}
+
 function initials(name: string) {
   const parts = name
     .replace(/^(FC|AC|IF|LA|C\.|J\.)\s/, '')
@@ -69,8 +76,9 @@ export function TeamCrest({
   fallbackClassName?: string
 }) {
   const [failed, setFailed] = useState(false)
-  const [bg, fg] = TEAM_COLORS[name] ?? ['#1e293b', '#e2e8f0']
-  const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
+  const known = TEAM_COLORS[name]
+  const [bg, fg] = known ?? generatedColors(name)
+  const dark = known ? bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316' : false
   const logo = logoUrl ?? TEAM_LOGOS[name]
 
   if (logo && !failed) {

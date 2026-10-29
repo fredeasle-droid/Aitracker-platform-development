@@ -7,14 +7,20 @@ import { opportunities, teamLogos } from '@/lib/db/schema'
 type Source = 'espn' | 'thesportsdb' | 'wikipedia' | 'wikidata'
 
 const ESPN_LEAGUES: { sport: string; path: string; leagues: string[] }[] = [
-  { sport: 'Ishockey', path: 'hockey', leagues: ['nhl'] },
-  { sport: 'Basketball', path: 'basketball', leagues: ['nba'] },
-  { sport: 'American football', path: 'football', leagues: ['nfl'] },
-  { sport: 'Baseball', path: 'baseball', leagues: ['mlb'] },
+  { sport: 'Ishockey', path: 'hockey', leagues: ['nhl', 'mens-college-hockey'] },
+  { sport: 'Basketball', path: 'basketball', leagues: ['nba', 'wnba', 'mens-college-basketball', 'womens-college-basketball'] },
+  { sport: 'American football', path: 'football', leagues: ['nfl', 'college-football'] },
+  { sport: 'Baseball', path: 'baseball', leagues: ['mlb', 'college-baseball'] },
   {
     sport: 'Fodbold',
     path: 'soccer',
-    leagues: ['eng.1', 'eng.2', 'esp.1', 'ger.1', 'ita.1', 'fra.1', 'den.1', 'ned.1', 'por.1', 'arg.1', 'bra.1', 'sco.1', 'tur.1', 'swe.1', 'nor.1'],
+    leagues: [
+      'eng.1', 'eng.2', 'eng.3', 'eng.4', 'esp.1', 'esp.2', 'ger.1', 'ger.2', 'ita.1', 'ita.2', 'fra.1', 'fra.2',
+      'den.1', 'ned.1', 'ned.2', 'por.1', 'arg.1', 'arg.2', 'bra.1', 'bra.2', 'sco.1', 'sco.2', 'tur.1', 'swe.1', 'nor.1',
+      'aut.1', 'bel.1', 'sui.1', 'gre.1', 'rus.1', 'mex.1', 'usa.1', 'jpn.1', 'aus.1', 'chn.1', 'col.1', 'chi.1', 'uru.1',
+      'par.1', 'per.1', 'ecu.1', 'ksa.1', 'isr.1', 'rou.1', 'rsa.1', 'ind.1', 'idn.1', 'tha.1', 'mys.1', 'cyp.1',
+      'uefa.champions', 'uefa.europa', 'uefa.europa.conf', 'conmebol.libertadores', 'conmebol.sudamericana',
+    ],
   },
 ]
 
@@ -29,9 +35,9 @@ const THESPORTSDB_SPORT: Record<string, string> = {
 }
 
 const THESPORTSDB_KEY = process.env.THESPORTSDB_API_KEY || '123'
-const LOOKUPS_PER_RUN = 10
+const LOOKUPS_PER_RUN = 14
 const LOOKUP_SPACING_MS = 2_200
-const RETRY_MISSES_AFTER_MS = 24 * 60 * 60 * 1000
+const RETRY_MISSES_AFTER_MS = 6 * 60 * 60 * 1000
 const ESPN_INDEX_TTL_MS = 12 * 60 * 60 * 1000
 
 export function normalizeTeamName(name: string) {
@@ -68,6 +74,11 @@ const CITY_ABBREVIATIONS: Record<string, string> = {
   no: 'New Orleans',
   sa: 'San Antonio',
   ari: 'Arizona',
+  gb: 'Green Bay',
+  ne: 'New England',
+  sj: 'San Jose',
+  nyk: 'New York',
+  phi: 'Philadelphia',
 }
 
 const TEAM_SUFFIX_NOISE = /\s+(basketball club|basketball|hockey club|hockey|handball club|handball|football club|bc|hc)$/i
