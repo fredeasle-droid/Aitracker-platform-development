@@ -18,7 +18,7 @@ export function MinSide({ user, subscription, invoices }: Props) {
 
   return (
     <div className="min-h-dvh bg-[#050b17] text-[#f3f6fc] lg:min-h-[calc(100dvh-70px)] lg:bg-[#030914] lg:px-6 lg:pb-10 lg:pt-6">
-      <main className="mx-auto w-full max-w-[390px] px-3 pb-8 pt-2 sm:px-5 lg:max-w-4xl lg:px-0 lg:pt-0">
+      <main className="mx-auto w-full max-w-[390px] px-3 pb-8 pt-2 sm:px-5 lg:max-w-5xl lg:px-0 lg:pt-0 xl:max-w-[1240px]">
         <header className="flex h-14 items-center gap-2 lg:hidden">
           <Link href="/" aria-label="Tilbage til BetTracker" className="flex size-11 items-center justify-center rounded-full hover:bg-white/5">
             <ArrowLeft className="size-5" />
@@ -35,13 +35,13 @@ export function MinSide({ user, subscription, invoices }: Props) {
           </div>
         </div>
 
-        <div className="mt-3 space-y-4 lg:grid lg:grid-cols-2 lg:items-start lg:gap-4 lg:space-y-0">
-          <div className="space-y-4">
+        <div className="mt-3 space-y-4 lg:mt-6 lg:grid lg:grid-cols-2 lg:items-start lg:gap-5 lg:space-y-0 xl:grid-cols-3">
+          <div className="space-y-4 lg:row-span-2 xl:row-span-1">
             <SubscriptionCard subscription={subscription} />
             <InvoiceList invoices={invoices} />
           </div>
-          <div className="space-y-4">
-            <ProfileForm user={user} />
+          <ProfileForm user={user} />
+          <div className="space-y-4 lg:col-start-2 xl:col-start-auto">
             <PasswordForm />
             <Link href="/log-ud" className={secondaryButton}>
               <LogOut className="size-4" aria-hidden="true" /> Log ud
