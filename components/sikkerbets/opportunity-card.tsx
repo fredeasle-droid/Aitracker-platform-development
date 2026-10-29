@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { ArrowRight, Calculator, Info, Lock, Megaphone, Star } from 'lucide-react'
+import { ArrowRight, Calculator, Info, Lock, LockOpen, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { Flag } from '@/components/flag'
 import { SmallBarsIcon } from '@/components/icons'
@@ -237,14 +237,24 @@ function MobileCard({
       </div>
 
       <div className="mt-2 flex items-center gap-2 pr-[4.5px]">
-        <Link
-          href={`/beregn?id=${o.id}`}
-          className="flex h-[34px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
-        >
-          <Calculator className="mr-1 size-[13px] shrink-0" aria-hidden="true" />
-          Beregn indsats
-          <ArrowRight className="size-3 shrink-0" aria-hidden="true" />
-        </Link>
+        {loggedIn ? (
+          <Link
+            href={`/beregn?id=${o.id}`}
+            className="flex h-[34px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          >
+            <Calculator className="mr-1 size-[13px] shrink-0" aria-hidden="true" />
+            Beregn indsats
+            <ArrowRight className="size-3 shrink-0" aria-hidden="true" />
+          </Link>
+        ) : (
+          <Link
+            href="/konto"
+            className="flex h-[34px] min-w-0 flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          >
+            <LockOpen className="size-[13px] shrink-0" aria-hidden="true" />
+            <span className="truncate">Opret gratis konto for at se oddsene</span>
+          </Link>
+        )}
         <button
           type="button"
           onClick={() => onToggleFavorite(o.id)}
