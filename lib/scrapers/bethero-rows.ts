@@ -27,10 +27,18 @@ type BetHeroRow = {
 
 const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 
+// Bet Hero lists every bookmaker sharing the same odds feed (1xBet clones etc.) in arbitrary order,
+// so the first plain name is not necessarily the one the user bets with.
+const PREFERRED_BOOKS = ['dbbet']
+
+const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
+
 function pickAllowedBook(books: BetHeroBook[] | undefined) {
   const names = (books ?? []).map((book) => book.name).filter((name): name is string => Boolean(name))
   const danish = names.find((name) => /\(DK\)$/i.test(name))
   if (danish) return baseName(danish)
+  const preferred = names.find((name) => PREFERRED_BOOKS.includes(normalizeBook(name)))
+  if (preferred) return baseName(preferred)
   const plain = names.find((name) => !/\(.*\)$/.test(name))
   return plain ? baseName(plain) : names[0] ? baseName(names[0]) : null
 }
