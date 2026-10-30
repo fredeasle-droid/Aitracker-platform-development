@@ -33,7 +33,19 @@ export async function hasActiveSubscription(userId: string) {
 }
 
 export async function saveCustomer(userId: string, stripeCustomerId: string) {
-  await db.insert(subscriptions).values({ userId, stripeCustomerId }).onConflictDoNothing()
+  await db.insert(subscriptions).values({ userId, stripeCustomerId }).onConflictDoUpdate({
+    target: subscriptions.userId,
+    set: {
+      stripeCustomerId,
+      stripeSubscriptionId: null,
+      plan: null,
+      status: 'incomplete',
+      trialEnd: null,
+      currentPeriodEnd: null,
+      cancelAtPeriodEnd: false,
+      updatedAt: new Date(),
+    },
+  })
 }
 
 export async function saveSubscription(userId: string, subscription: Stripe.Subscription) {
