@@ -3,9 +3,10 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
-import { ArrowRight, ChartPie, ChevronDown, Crown, Ellipsis, Gamepad2, Gift, Radio, Star } from 'lucide-react'
+import { ArrowRight, ChartPie, ChevronDown, Crown, Gamepad2, Gift, Radio, Star } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
-import { Flag } from '@/components/flag'
+import { BookmakerLogo } from '@/components/bookmaker-logo'
+import { FILTER_BOOKMAKERS } from '@/lib/bookmaker-filter'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
@@ -24,15 +25,6 @@ const SPORTS = [
   { key: 'tennis', value: 'Tennis' },
   { key: 'hockey', value: 'Ishockey' },
   { key: 'esports', value: 'Esport' },
-] as const
-
-const COUNTRIES = [
-  { code: 'dk', name: 'Danmark' },
-  { code: 'gb-eng', name: 'England' },
-  { code: 'de', name: 'Tyskland' },
-  { code: 'es', name: 'Spanien' },
-  { code: 'it', name: 'Italien' },
-  { code: 'fr', name: 'Frankrig' },
 ] as const
 
 function SportIcon({ sport }: { sport: string }) {
@@ -55,7 +47,7 @@ export function DesktopSidebar() {
   const pathname = usePathname()
   const params = useSearchParams()
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
-  const activeCountry = params.get('country')
+  const activeBookmaker = params.get('bookmaker')
   const [leaguesOpen, setLeaguesOpen] = useState(true)
   const { data: session } = authClient.useSession()
   const { t } = useLocale()
@@ -69,7 +61,7 @@ export function DesktopSidebar() {
         <ul className="flex flex-col gap-1">
           {NAV.map(({ href, key, icon: Icon }) => {
             const label = t(key)
-            const active = href === '/' ? pathname === '/' && !activeSport && !activeCountry : pathname === href
+            const active = href === '/' ? pathname === '/' && !activeSport && !activeBookmaker : pathname === href
             return (
               <li key={href}>
                 <Link
@@ -120,29 +112,30 @@ export function DesktopSidebar() {
         aria-controls="sidebar-leagues"
         className="flex min-h-9 items-center justify-between px-4 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]"
       >
-        {t('leagues')}
+        {t('bookmakers')}
         <ChevronDown className={cn('size-4 text-[#d5ddef] transition-transform', !leaguesOpen && '-rotate-90')} />
       </button>
       {leaguesOpen && (
         <ul id="sidebar-leagues" className="flex flex-col gap-0.5">
-          {COUNTRIES.map((c) => (
-            <li key={c.code}>
-              <Link
-                href={`/?country=${c.code}`}
-                aria-current={activeCountry === c.code ? 'true' : undefined}
-                className={cn(row, activeCountry === c.code && 'bg-[#0d1f38] text-[#65c1ff]')}
-              >
-                <Flag code={c.code} label="" className="size-6 rounded-md" />
-                {c.name}
-              </Link>
-            </li>
-          ))}
-          <li>
-            <Link href="/" className={row}>
-              <Ellipsis className="size-6" aria-hidden="true" />
-              {t('moreLeagues')}
-            </Link>
-          </li>
+          {FILTER_BOOKMAKERS.map((b) => {
+            const selected = activeBookmaker === b.id
+            const next = new URLSearchParams()
+            if (params.get('sport')) next.set('sport', params.get('sport') as string)
+            if (!selected) next.set('bookmaker', b.id)
+            const qs = next.toString()
+            return (
+              <li key={b.id}>
+                <Link
+                  href={qs ? `/?${qs}` : '/'}
+                  aria-current={selected ? 'true' : undefined}
+                  className={cn(row, selected && 'bg-[#0d1f38] text-[#65c1ff]')}
+                >
+                  <BookmakerLogo name={b.name} className="size-6 rounded-md" />
+                  {b.name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       )}
 

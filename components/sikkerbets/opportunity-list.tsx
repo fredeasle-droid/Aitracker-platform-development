@@ -10,6 +10,7 @@ import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
 import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
+import { FILTER_BOOKMAKERS, bookmakerId, matchesBookmaker } from '@/lib/bookmaker-filter'
 import { cn } from '@/lib/utils'
 import { useHasAccess } from '@/components/locked-odds'
 import { useLocale } from '@/components/locale-provider'
@@ -23,6 +24,7 @@ const SORTS = [
   { id: 'newest', key: 'newest' },
   { id: 'margin', key: 'highest' },
   { id: 'kickoff', key: 'kickoff' },
+  { id: 'bookmaker', key: 'sortBookmaker' },
 ] as const
 type SortId = (typeof SORTS)[number]['id']
 
@@ -61,7 +63,7 @@ const filterBtn =
 export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [items, setItems] = useState(initial)
   const [sport, setSport] = useState<string>('Alle')
-  const [league, setLeague] = useState<string>('Alle')
+  const [bookmaker, setBookmaker] = useState<string>('Alle')
   const [minMargin, setMinMargin] = useState(0)
   const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
@@ -92,7 +94,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   if (urlKey !== prevUrlKey) {
     setPrevUrlKey(urlKey)
     setSport(params.get('sport') ?? 'Alle')
-    setLeague('Alle')
+    setBookmaker(params.get('bookmaker') ?? 'Alle')
   }
 
   const bySport = useMemo(
@@ -105,26 +107,37 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       ),
     [items, sport, country, query],
   )
-  const leagues = useMemo(() => Array.from(new Set(bySport.map((o) => o.league))).sort(), [bySport])
+  const bookmakerOptions = useMemo(() => {
+    const byId = new Map<string, string>()
+    for (const o of bySport) {
+      for (const name of [o.a.bookmaker, o.b.bookmaker]) {
+        const id = bookmakerId(name)
+        if (!byId.has(id)) byId.set(id, FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? name)
+      }
+    }
+    return Array.from(byId, ([id, name]) => ({ id, name })).sort((a, b) => a.name.localeCompare(b.name))
+  }, [bySport])
+  const bookmakerLabel =
+    bookmakerOptions.find((b) => b.id === bookmaker)?.name ?? FILTER_BOOKMAKERS.find((b) => b.id === bookmaker)?.name ?? bookmaker
   const markets = useMemo(() => Array.from(new Set(bySport.map((o) => o.market))).sort(), [bySport])
 
   const visible = useMemo(() => {
     const list = bySport.filter(
       (o) =>
-        (league === 'Alle' || o.league === league) &&
+        (bookmaker === 'Alle' || matchesBookmaker(o, bookmaker)) &&
         (market === 'Alle' || o.market === market) &&
         o.margin >= minMargin,
     )
     const sorted = [...list]
     if (sort === 'margin') sorted.sort((a, b) => b.margin - a.margin)
     else if (sort === 'kickoff') sorted.sort((a, b) => a.kickoffTs - b.kickoffTs)
+    else if (sort === 'bookmaker') sorted.sort((a, b) => a.a.bookmaker.localeCompare(b.a.bookmaker) || b.margin - a.margin)
     else sorted.sort((a, b) => b.createdTs - a.createdTs || b.margin - a.margin)
     return sorted
-  }, [bySport, league, market, minMargin, sort])
+  }, [bySport, bookmaker, market, minMargin, sort])
 
   function selectSport(next: string) {
     setSport(next)
-    setLeague('Alle')
     setMarket('Alle')
   }
 
@@ -202,24 +215,24 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       <div className="mt-[13px] flex gap-[13px] lg:mt-3 lg:grid lg:grid-cols-4 lg:gap-3">
         <Popover
           className="min-w-0 flex-[97_1_0%]"
-          label="Vælg liga"
+          label={t('bookmakersFilter')}
           triggerClassName={filterBtn}
           trigger={
             <>
               <ListFilter className="size-3 shrink-0 lg:size-5" />
-              <span className="min-w-0 flex-1 truncate text-left">{league === 'Alle' ? t('leaguesFilter') : league}</span>
+              <span className="min-w-0 flex-1 truncate text-left">{bookmaker === 'Alle' ? t('bookmakersFilter') : bookmakerLabel}</span>
               <ChevronDown className="size-3 shrink-0 lg:size-4" />
             </>
           }
         >
           {(close) => (
             <div className="max-h-72 overflow-y-auto">
-              <MenuOption selected={league === 'Alle'} onSelect={() => (setLeague('Alle'), close())}>
-                {t('allLeagues')}
+              <MenuOption selected={bookmaker === 'Alle'} onSelect={() => (setBookmaker('Alle'), close())}>
+                {t('allBookmakers')}
               </MenuOption>
-              {leagues.map((l) => (
-                <MenuOption key={l} selected={league === l} onSelect={() => (setLeague(l), close())}>
-                  {l}
+              {bookmakerOptions.map((b) => (
+                <MenuOption key={b.id} selected={bookmaker === b.id} onSelect={() => (setBookmaker(b.id), close())}>
+                  {b.name}
                 </MenuOption>
               ))}
             </div>
