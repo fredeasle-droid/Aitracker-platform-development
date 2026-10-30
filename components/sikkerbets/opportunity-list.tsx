@@ -10,6 +10,7 @@ import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
 import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
+import { useBookmakerList } from '@/lib/use-bookmakers'
 import { FILTER_BOOKMAKERS, bookmakerId, matchesBookmakers, parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { cn } from '@/lib/utils'
 import { useHasAccess } from '@/components/locked-odds'
@@ -107,8 +108,9 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       ),
     [items, sport, country, query],
   )
+  const allBookmakers = useBookmakerList()
   const bookmakerOptions = useMemo(() => {
-    const byId = new Map<string, string>()
+    const byId = new Map<string, string>(allBookmakers.map((b) => [b.id, b.name]))
     for (const o of bySport) {
       for (const name of [o.a.bookmaker, o.b.bookmaker]) {
         const id = bookmakerId(name)
