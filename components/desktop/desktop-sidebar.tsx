@@ -3,10 +3,10 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
-import { ArrowRight, ChartPie, ChevronDown, Crown, Gamepad2, Gift, Radio, Star } from 'lucide-react'
+import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, Radio, Star } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
-import { FILTER_BOOKMAKERS } from '@/lib/bookmaker-filter'
+import { FILTER_BOOKMAKERS, parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
@@ -48,6 +48,7 @@ export function DesktopSidebar() {
   const params = useSearchParams()
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
   const activeBookmaker = params.get('bookmaker')
+  const selectedBookmakers = parseBookmakers(activeBookmaker)
   const [leaguesOpen, setLeaguesOpen] = useState(true)
   const { data: session } = authClient.useSession()
   const { t } = useLocale()
@@ -118,24 +119,45 @@ export function DesktopSidebar() {
       {leaguesOpen && (
         <ul id="sidebar-leagues" className="flex flex-col gap-0.5">
           {FILTER_BOOKMAKERS.map((b) => {
-            const selected = activeBookmaker === b.id
+            const selected = selectedBookmakers.includes(b.id)
+            const nextSelected = toggleBookmaker(selectedBookmakers, b.id)
             const next = new URLSearchParams()
             if (params.get('sport')) next.set('sport', params.get('sport') as string)
-            if (!selected) next.set('bookmaker', b.id)
+            if (nextSelected.length > 0) next.set('bookmaker', nextSelected.join(','))
             const qs = next.toString()
             return (
               <li key={b.id}>
                 <Link
                   href={qs ? `/?${qs}` : '/'}
-                  aria-current={selected ? 'true' : undefined}
-                  className={cn(row, selected && 'bg-[#0d1f38] text-[#65c1ff]')}
+                  role="checkbox"
+                  aria-checked={selected}
+                  className={cn(row, 'gap-3', selected && 'bg-[#0d1f38] text-[#65c1ff]')}
                 >
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'flex size-5 shrink-0 items-center justify-center rounded-md border',
+                      selected ? 'border-primary bg-primary text-primary-foreground' : 'border-[#2a4468]',
+                    )}
+                  >
+                    {selected && <Check className="size-3.5" strokeWidth={3} />}
+                  </span>
                   <BookmakerLogo name={b.name} className="size-6 rounded-md" />
                   {b.name}
                 </Link>
               </li>
             )
           })}
+          {selectedBookmakers.length > 0 && (
+            <li>
+              <Link
+                href={params.get('sport') ? `/?sport=${encodeURIComponent(params.get('sport') as string)}` : '/'}
+                className="flex min-h-10 items-center px-4 text-[14px] text-[#65c1ff] underline-offset-2 hover:underline"
+              >
+                {t('clearBookmakers')}
+              </Link>
+            </li>
+          )}
         </ul>
       )}
 

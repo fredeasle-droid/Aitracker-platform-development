@@ -10,7 +10,7 @@ import { SmallBarsIcon } from '@/components/icons'
 import { OpportunityCard } from '@/components/sikkerbets/opportunity-card'
 import { DesktopHero } from '@/components/desktop/desktop-hero'
 import type { Opportunity } from '@/lib/data'
-import { FILTER_BOOKMAKERS, bookmakerId, matchesBookmaker } from '@/lib/bookmaker-filter'
+import { FILTER_BOOKMAKERS, bookmakerId, matchesBookmakers, parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { cn } from '@/lib/utils'
 import { useHasAccess } from '@/components/locked-odds'
 import { useLocale } from '@/components/locale-provider'
@@ -63,7 +63,8 @@ const filterBtn =
 export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [items, setItems] = useState(initial)
   const [sport, setSport] = useState<string>('Alle')
-  const [bookmaker, setBookmaker] = useState<string>('Alle')
+  const params = useSearchParams()
+  const [bookmakers, setBookmakers] = useState<string[]>(() => parseBookmakers(params.get('bookmaker')))
   const [minMargin, setMinMargin] = useState(0)
   const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
@@ -79,7 +80,6 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const { t } = useLocale()
 
   const [market, setMarket] = useState<string>('Alle')
-  const params = useSearchParams()
   const urlKey = params.toString()
   const country = params.get('country')?.toLowerCase() ?? null
   const query = params.get('q')?.trim().toLowerCase() ?? ''
@@ -94,7 +94,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   if (urlKey !== prevUrlKey) {
     setPrevUrlKey(urlKey)
     setSport(params.get('sport') ?? 'Alle')
-    setBookmaker(params.get('bookmaker') ?? 'Alle')
+    setBookmakers(parseBookmakers(params.get('bookmaker')))
   }
 
   const bySport = useMemo(
@@ -117,14 +117,14 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     }
     return Array.from(byId, ([id, name]) => ({ id, name })).sort((a, b) => a.name.localeCompare(b.name))
   }, [bySport])
-  const bookmakerLabel =
-    bookmakerOptions.find((b) => b.id === bookmaker)?.name ?? FILTER_BOOKMAKERS.find((b) => b.id === bookmaker)?.name ?? bookmaker
+  const nameOf = (id: string) => bookmakerOptions.find((b) => b.id === id)?.name ?? FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? id
+  const bookmakerLabel = bookmakers.length === 1 ? nameOf(bookmakers[0]) : `${bookmakers.length} ${t('bookmakers').toLowerCase()}`
   const markets = useMemo(() => Array.from(new Set(bySport.map((o) => o.market))).sort(), [bySport])
 
   const visible = useMemo(() => {
     const list = bySport.filter(
       (o) =>
-        (bookmaker === 'Alle' || matchesBookmaker(o, bookmaker)) &&
+        matchesBookmakers(o, bookmakers) &&
         (market === 'Alle' || o.market === market) &&
         o.margin >= minMargin,
     )
@@ -134,7 +134,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     else if (sort === 'bookmaker') sorted.sort((a, b) => a.a.bookmaker.localeCompare(b.a.bookmaker) || b.margin - a.margin)
     else sorted.sort((a, b) => b.createdTs - a.createdTs || b.margin - a.margin)
     return sorted
-  }, [bySport, bookmaker, market, minMargin, sort])
+  }, [bySport, bookmakers, market, minMargin, sort])
 
   function selectSport(next: string) {
     setSport(next)
@@ -220,18 +220,18 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           trigger={
             <>
               <ListFilter className="size-3 shrink-0 lg:size-5" />
-              <span className="min-w-0 flex-1 truncate text-left">{bookmaker === 'Alle' ? t('bookmakersFilter') : bookmakerLabel}</span>
+              <span className="min-w-0 flex-1 truncate text-left">{bookmakers.length === 0 ? t('bookmakersFilter') : bookmakerLabel}</span>
               <ChevronDown className="size-3 shrink-0 lg:size-4" />
             </>
           }
         >
           {(close) => (
             <div className="max-h-72 overflow-y-auto">
-              <MenuOption selected={bookmaker === 'Alle'} onSelect={() => (setBookmaker('Alle'), close())}>
+              <MenuOption selected={bookmakers.length === 0} onSelect={() => (setBookmakers([]), close())}>
                 {t('allBookmakers')}
               </MenuOption>
               {bookmakerOptions.map((b) => (
-                <MenuOption key={b.id} selected={bookmaker === b.id} onSelect={() => (setBookmaker(b.id), close())}>
+                <MenuOption key={b.id} selected={bookmakers.includes(b.id)} onSelect={() => setBookmakers((prev) => toggleBookmaker(prev, b.id))}>
                   {b.name}
                 </MenuOption>
               ))}

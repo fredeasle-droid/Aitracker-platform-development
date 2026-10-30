@@ -19,6 +19,20 @@ export function bookmakerId(name: string): string {
   return key === 'bcbet' ? 'bcgame' : key
 }
 
-export function matchesBookmaker(o: { a: { bookmaker: string }; b: { bookmaker: string } }, id: string): boolean {
-  return bookmakerId(o.a.bookmaker) === id || bookmakerId(o.b.bookmaker) === id
+export function parseBookmakers(value: string | null | undefined): string[] {
+  if (!value) return []
+  return Array.from(new Set(value.split(',').map((v) => v.trim()).filter(Boolean)))
+}
+
+export function toggleBookmaker(selected: string[], id: string): string[] {
+  return selected.includes(id) ? selected.filter((s) => s !== id) : [...selected, id]
+}
+
+// One selected: either side must be that bookmaker. Two or more: both sides must be among the selected.
+export function matchesBookmakers(o: { a: { bookmaker: string }; b: { bookmaker: string } }, selected: string[]): boolean {
+  if (selected.length === 0) return true
+  const a = bookmakerId(o.a.bookmaker)
+  const b = bookmakerId(o.b.bookmaker)
+  if (selected.length === 1) return a === selected[0] || b === selected[0]
+  return selected.includes(a) && selected.includes(b)
 }
