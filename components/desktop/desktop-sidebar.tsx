@@ -6,7 +6,8 @@ import { useState } from 'react'
 import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, Radio, Star } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
-import { FILTER_BOOKMAKERS, parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
+import useSWR from 'swr'
+import { parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
@@ -49,6 +50,13 @@ export function DesktopSidebar() {
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
   const activeBookmaker = params.get('bookmaker')
   const selectedBookmakers = parseBookmakers(activeBookmaker)
+  const { data: bookmakerList = [] } = useSWR<{ id: string; name: string }[]>('/api/bookmakers', (url: string) =>
+    fetch(url).then((r) => r.json()),
+  )
+  const bookmakerOptions = [
+    ...bookmakerList,
+    ...selectedBookmakers.filter((id) => !bookmakerList.some((b) => b.id === id)).map((id) => ({ id, name: id })),
+  ]
   const [leaguesOpen, setLeaguesOpen] = useState(true)
   const { data: session } = authClient.useSession()
   const { t } = useLocale()
@@ -118,7 +126,7 @@ export function DesktopSidebar() {
       </button>
       {leaguesOpen && (
         <ul id="sidebar-leagues" className="flex flex-col gap-0.5">
-          {FILTER_BOOKMAKERS.map((b) => {
+          {bookmakerOptions.map((b) => {
             const selected = selectedBookmakers.includes(b.id)
             const nextSelected = toggleBookmaker(selectedBookmakers, b.id)
             const next = new URLSearchParams()
