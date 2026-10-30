@@ -33,6 +33,13 @@ export function splitTeams(match: string): [string, string] | null {
   return parts.length === 2 ? [parts[0], parts[1]] : null
 }
 
+export function displayLeague(value: string, sport = '') {
+  const league = value.trim()
+  const haystack = `${league} ${sport}`.toLowerCase()
+  if (haystack.includes('oktagon') || haystack.includes('lfa')) return 'MMA'
+  return league || 'Ukendt liga'
+}
+
 export function displaySport(value: string) {
   const sport = value.toLowerCase()
   if (sport.includes('american')) return 'American football'

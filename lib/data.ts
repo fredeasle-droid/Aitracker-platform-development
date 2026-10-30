@@ -11,6 +11,7 @@ import { getDemoBets } from '@/lib/demo-bets'
 import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
 import { deriveCountry } from '@/lib/countries'
+import { displayLeague } from '@/lib/scrapers/types'
 
 export type Opportunity = {
   id: number
@@ -57,7 +58,7 @@ function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<numbe
     sport: row.sport,
     country: derived?.name ?? row.country,
     countryCode: derived?.code ?? row.countryCode,
-    league: row.league,
+    league: displayLeague(row.league, row.sport),
     homeTeam: row.homeTeam,
     awayTeam: row.awayTeam,
     homeLogo: logos.get(logoKey(row.sport, row.homeTeam)) ?? null,
