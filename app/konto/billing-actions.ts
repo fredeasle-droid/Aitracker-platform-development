@@ -21,7 +21,7 @@ export async function startSubscriptionCheckout(plan: string) {
   const stripe = getStripe()
 
   const existing = await getSubscription(user.id)
-  let customerId = existing?.stripeCustomerId
+  let customerId: string | undefined = existing?.stripeCustomerId
   if (customerId) {
     try {
       await stripe.customers.retrieve(customerId)
