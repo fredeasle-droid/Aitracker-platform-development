@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback } from 'react'
+import { useCallback, useMemo } from 'react'
 import useSWRImmutable from 'swr/immutable'
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
@@ -10,7 +10,7 @@ import type { Plan } from '@/app/konto/plans'
 export function StripeCheckout({ plan, onComplete }: { plan: Plan; onComplete: () => void }) {
   const { data: publishableKey } = useSWRImmutable('stripe-publishable-key', getStripePublishableKey)
   const { data: clientSecret, error, isLoading } = useSWRImmutable(['stripe-checkout', plan], ([, selected]) => startSubscriptionCheckout(selected))
-  const stripePromise = publishableKey ? loadStripe(publishableKey) : null
+  const stripePromise = useMemo(() => (publishableKey ? loadStripe(publishableKey) : null), [publishableKey])
 
   const handleComplete = useCallback(async () => {
     try {
@@ -19,14 +19,18 @@ export function StripeCheckout({ plan, onComplete }: { plan: Plan; onComplete: (
       onComplete()
     }
   }, [onComplete])
+  const checkoutOptions = useMemo(
+    () => (clientSecret ? { clientSecret, onComplete: handleComplete } : null),
+    [clientSecret, handleComplete],
+  )
 
   if (!stripePromise) return <Notice>Betaling er ikke sat op endnu. Stripe-nøglerne mangler.</Notice>
   if (error) return <Notice role="alert">{error instanceof Error ? error.message : 'Betalingen kunne ikke startes. Prøv igen.'}</Notice>
-  if (isLoading || !clientSecret) return <Notice>Henter sikker betaling…</Notice>
+  if (isLoading || !checkoutOptions) return <Notice>Henter sikker betaling…</Notice>
 
   return (
     <div className="overflow-hidden rounded-2xl bg-white" id="checkout">
-      <EmbeddedCheckoutProvider key={clientSecret} stripe={stripePromise} options={{ clientSecret, onComplete: handleComplete }}>
+      <EmbeddedCheckoutProvider key={clientSecret} stripe={stripePromise} options={checkoutOptions}>
         <EmbeddedCheckout />
       </EmbeddedCheckoutProvider>
     </div>
