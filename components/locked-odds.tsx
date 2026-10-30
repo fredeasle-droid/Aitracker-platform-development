@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { LockKeyhole } from 'lucide-react'
 import useSWR from 'swr'
 import { getHasOddsAccess } from '@/app/access-actions'
+import { useLocale } from '@/components/locale-provider'
 import { authClient } from '@/lib/auth-client'
 import { formatOdds } from '@/lib/odds'
 import { cn } from '@/lib/utils'
@@ -29,6 +30,7 @@ export function LockBadge({ className }: { className?: string }) {
 }
 
 export function LockTile({ bookmaker, className }: { bookmaker?: string; className?: string }) {
+  const { t } = useLocale()
   return (
     <Link
       href="/konto"
@@ -43,13 +45,14 @@ export function LockTile({ bookmaker, className }: { bookmaker?: string; classNa
         </span>
       )}
       <LockBadge className="mt-2 size-7" />
-      <span className="text-[12px] font-medium text-[#55a8ff] underline underline-offset-2">Lås op med Premium</span>
+      <span className="text-[12px] font-medium text-[#55a8ff] underline underline-offset-2">{t('unlockPremium')}</span>
     </Link>
   )
 }
 
 export function LockedOdds({ odds, className }: { odds: number; className?: string }) {
   const hasAccess = useHasAccess()
+  const { t } = useLocale()
 
   if (hasAccess) return <span className={className}>{formatOdds(odds)}</span>
 
@@ -57,10 +60,10 @@ export function LockedOdds({ odds, className }: { odds: number; className?: stri
     <Link
       href="/konto"
       className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#55a8ff] underline underline-offset-2"
-      aria-label="Bliv kunde for at se oddsene"
+      aria-label={t('becomeCustomer')}
     >
       <LockBadge className="size-6" />
-      Lås op
+      {t('unlock')}
     </Link>
   )
 }

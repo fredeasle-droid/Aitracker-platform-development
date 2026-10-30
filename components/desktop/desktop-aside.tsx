@@ -1,4 +1,7 @@
+'use client'
+
 import { CircleHelp, Layers, Target, TrendingUp, Trophy, Zap } from 'lucide-react'
+import { useLocale } from '@/components/locale-provider'
 import { BarsIcon } from '@/components/icons'
 import { ExampleOdds } from '@/components/desktop/example-odds'
 import { TeamCrest } from '@/components/team-crest'
@@ -8,14 +11,15 @@ import { formatPct } from '@/lib/odds'
 const card = 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)]'
 
 const FEATURES = [
-  { icon: Layers, value: '2.000+', label: 'Bookmakere' },
-  { icon: Zap, value: '24/7', label: 'Live scanning' },
-  { icon: Trophy, value: '30+', label: 'Sportsgrene' },
+  { icon: Layers, value: '2.000+', labelKey: 'bookmakers' },
+  { icon: Zap, value: '24/7', labelKey: 'live' },
+  { icon: Trophy, value: '30+', labelKey: 'sportBranches' },
 ] as const
 
 const timeFormat = new Intl.DateTimeFormat('da-DK', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Copenhagen' })
 
 export function DesktopAside({ opportunities }: { opportunities: Opportunity[] }) {
+  const { t } = useLocale()
   const startOfToday = new Date()
   startOfToday.setHours(0, 0, 0, 0)
   const foundToday = opportunities.filter((o) => o.createdTs >= startOfToday.getTime()).length || opportunities.length
@@ -23,29 +27,27 @@ export function DesktopAside({ opportunities }: { opportunities: Opportunity[] }
   const latest = [...opportunities].sort((a, b) => b.createdTs - a.createdTs).slice(0, 5)
 
   return (
-    <aside aria-label="Overblik" className="sticky top-[86px] hidden w-[345px] shrink-0 flex-col gap-4 xl:flex">
+    <aside aria-label={t('overview')} className="sticky top-[86px] hidden w-[345px] shrink-0 flex-col gap-4 xl:flex">
       <section id="live-scanning" className={`${card} scroll-mt-24 p-4`}>
         <div className="flex items-start justify-between gap-3">
           <div>
             <h2 className="flex items-center gap-3 text-[16px] font-semibold">
               <span className="size-2.5 animate-pulse rounded-full bg-success shadow-[0_0_10px_var(--success)]" aria-hidden="true" />
-              Live scanning
+              {t('live')}
             </h2>
-            <p className="mt-2 pl-[22px] text-[15px] leading-snug text-[#c3cde2]">
-              Vi scanner konstant efter nye muligheder hos 2.000+ bookmakere.
-            </p>
+            <p className="mt-2 pl-[22px] text-[15px] leading-snug text-[#c3cde2]">{t('scanText')}</p>
           </div>
           <BarsIcon className="mt-8 size-14 shrink-0 text-primary" />
         </div>
         <ul className="mt-4 flex flex-col gap-3 border-t border-[#13294a] pt-4">
-          {FEATURES.map(({ icon: Icon, value, label }) => (
-            <li key={label} className="flex items-center gap-4">
+          {FEATURES.map(({ icon: Icon, value, labelKey }) => (
+            <li key={labelKey} className="flex items-center gap-4">
               <span className="flex size-12 items-center justify-center rounded-xl bg-[#0b1c35] text-[#55a8ff]">
                 <Icon className="size-7" aria-hidden="true" />
               </span>
               <span>
                 <span className="block text-[17px] font-bold">{value}</span>
-                <span className="block text-[15px] text-[#c3cde2]">{label}</span>
+                <span className="block text-[15px] text-[#c3cde2]">{t(labelKey)}</span>
               </span>
             </li>
           ))}
@@ -56,7 +58,7 @@ export function DesktopAside({ opportunities }: { opportunities: Opportunity[] }
         <div>
           <h2 className="flex items-center gap-3 text-[15px] font-semibold">
             <Target className="size-7 text-[#55a8ff]" aria-hidden="true" />
-            Fundne muligheder i dag
+            {t('foundToday')}
           </h2>
           <p className="mt-1 pl-12 text-[40px] font-extrabold leading-none tabular-nums">{foundToday}</p>
         </div>
@@ -65,7 +67,7 @@ export function DesktopAside({ opportunities }: { opportunities: Opportunity[] }
 
       {example && (
         <section className={`${card} p-4`}>
-          <h2 className="text-[15px] font-semibold">Eksempel på sikkerbet</h2>
+          <h2 className="text-[15px] font-semibold">{t('exampleTitle')}</h2>
           <div className="mt-3 flex items-center justify-around">
             <span className="flex flex-col items-center gap-1.5">
               <TeamCrest name={example.homeTeam} className="size-12 text-[11px]" />
@@ -83,16 +85,16 @@ export function DesktopAside({ opportunities }: { opportunities: Opportunity[] }
           </div>
           <p className="mt-3 flex items-center gap-3 text-[17px] font-semibold text-[#55a8ff]">
             <TrendingUp className="size-6" aria-hidden="true" />
-            Potentiel profit:
+            {t('potentialProfit')}
             <span className="text-[24px] font-extrabold tabular-nums">{formatPct(example.margin)}</span>
-            <CircleHelp className="ml-auto size-5 text-[#d5ddef]" aria-label="Profit ved korrekt indsatsfordeling" />
+            <CircleHelp className="ml-auto size-5 text-[#d5ddef]" aria-label={t('profitHelp')} />
           </p>
         </section>
       )}
 
       {latest.length > 0 && (
         <section className={`${card} p-4`}>
-          <h2 className="text-[15px] font-semibold">Seneste fund</h2>
+          <h2 className="text-[15px] font-semibold">{t('latestFinds')}</h2>
           <ul className="mt-3 flex flex-col gap-2.5">
             {latest.map((o) => (
               <li key={o.id} className="flex items-center gap-3 text-[13px]">

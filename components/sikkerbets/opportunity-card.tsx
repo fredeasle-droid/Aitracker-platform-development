@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { useLocale } from '@/components/locale-provider'
 import { ArrowRight, Calculator, Info, Lock, LockOpen, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { FlagImage } from '@/components/flag-image'
@@ -21,6 +24,7 @@ function OddsBox({
   odds: number
   loggedIn: boolean
 }) {
+  const { t } = useLocale()
   const boxClass =
     'relative flex h-10 min-w-0 items-center gap-[7px] rounded-[11px] border border-[#1a3557] bg-[#07101f] pl-[5px] pr-2'
 
@@ -34,7 +38,7 @@ function OddsBox({
             {label}
           </p>
         ) : (
-          <p className="mt-1 truncate text-[9px] leading-3 text-[#6b7da3]">Låst</p>
+          <p className="mt-1 truncate text-[9px] leading-3 text-[#6b7da3]">{t('locked')}</p>
         )}
       </div>
     </>
@@ -44,7 +48,7 @@ function OddsBox({
     return (
       <Link
         href="/konto"
-        aria-label={`Opret gratis konto for at se oddsene fra ${bookmaker}`}
+        aria-label={`${t('createToSeeOddsFrom')} ${bookmaker}`}
         className={cn(boxClass, 'transition-colors hover:border-primary')}
       >
         {details}
@@ -90,6 +94,7 @@ function DesktopRow({
   onToggleFavorite: (id: number) => void
   loggedIn: boolean
 }) {
+  const { t } = useLocale()
   return (
     <article className="hidden items-center gap-3 px-4 py-3 transition-colors hover:bg-[#0a1830] lg:grid lg:grid-cols-[minmax(0,104px)_minmax(0,1.1fr)_minmax(0,1fr)_minmax(0,1fr)_108px_auto]">
       <div className="min-w-0 text-[13px]">
@@ -119,12 +124,12 @@ function DesktopRow({
 
       <div className="flex h-[72px] flex-col justify-center rounded-xl border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 shadow-[0_0_24px_-12px_var(--success)]">
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-semibold tracking-wide text-success">MARGIN</span>
+          <span className="text-[10px] font-semibold tracking-wide text-success">{t('marginLabel')}</span>
           <SmallBarsIcon className="size-3.5 text-success/80" />
         </div>
         <p className="text-[20px] font-extrabold leading-tight tabular-nums text-success">{formatPct(o.margin)}</p>
-        <span className="flex items-center justify-center gap-1 text-[10px] text-[#d5ddef]" title="Begge mulige udfald er dækket">
-          2 udfald <Info className="size-3" aria-hidden="true" />
+        <span className="flex items-center justify-center gap-1 text-[10px] text-[#d5ddef]" title={t('bothCovered')}>
+          {t('twoOutcomes')} <Info className="size-3" aria-hidden="true" />
         </span>
       </div>
 
@@ -133,14 +138,14 @@ function DesktopRow({
           href={`/beregn?id=${o.id}`}
           className="flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-xl border border-border bg-[#081123] px-3.5 text-[13px] font-semibold transition-colors hover:border-primary hover:bg-accent"
         >
-          Se detaljer
+          {t('details')}
           <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
         <button
           type="button"
           onClick={() => onToggleFavorite(o.id)}
           aria-pressed={o.favorite}
-          aria-label={o.favorite ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}
+          aria-label={o.favorite ? t('removeFav') : t('addFav')}
           className="hidden size-9 items-center justify-center rounded-full transition-colors hover:bg-accent 2xl:flex"
         >
           <Star className={cn('size-5', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#8fa3cc]')} />
@@ -172,6 +177,7 @@ function MobileCard({
   onToggleFavorite: (id: number) => void
   loggedIn: boolean
 }) {
+  const { t } = useLocale()
   return (
     <article className="w-full rounded-[14px] border border-[#183252] bg-[linear-gradient(135deg,#0a1628_0%,#07111f_55%,#08182a_100%)] pb-[6.5px] pl-2.5 pr-[5.5px] pt-[7.5px] lg:hidden">
       <div className="flex h-4 items-center justify-between gap-2 pl-px pr-[7.5px] text-[9.5px] text-[#a9b6d3]">
@@ -210,7 +216,7 @@ function MobileCard({
             ) : (
               <>
                 <Lock className="size-2.5 shrink-0 text-[#8fa3cc]" aria-hidden="true" />
-                <span className="truncate text-[#8fa3cc]">Marked låst</span>
+                <span className="truncate text-[#8fa3cc]">{t('marketLocked')}</span>
               </>
             )}
           </p>
@@ -223,7 +229,7 @@ function MobileCard({
         <div className="flex h-[85px] flex-col justify-between self-end rounded-[13px] border border-[#1b6b55] bg-[#041a1c] pb-[7.5px] pl-3 pr-2.5 pt-2.5">
           <div>
             <div className="flex h-[11px] items-center justify-between">
-              <span className="text-[9px] font-medium leading-none text-[#6ee7b7]">MARGIN</span>
+              <span className="text-[9px] font-medium leading-none text-[#6ee7b7]">{t('marginLabel')}</span>
               <SmallBarsIcon className="size-2.5 text-[#7db4d0]" />
             </div>
             <p
@@ -234,9 +240,9 @@ function MobileCard({
           </div>
           <span
             className="mx-[-5px] flex h-5 items-center justify-center gap-1.5 rounded-full border border-[#1f3a63] bg-[#0a1630] text-[9.5px] text-[#e3e9f5]"
-            title="Begge mulige udfald er dækket"
+            title={t('bothCovered')}
           >
-            2 udfald <Info className="size-2.5 text-[#8fa3cc]" aria-hidden="true" />
+            {t('twoOutcomes')} <Info className="size-2.5 text-[#8fa3cc]" aria-hidden="true" />
           </span>
         </div>
       </div>
@@ -248,7 +254,7 @@ function MobileCard({
             className="flex h-[34px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
           >
             <Calculator className="mr-1 size-[13px] shrink-0" aria-hidden="true" />
-            Beregn indsats
+            {t('calcStake')}
             <ArrowRight className="size-3 shrink-0" aria-hidden="true" />
           </Link>
         ) : (
@@ -257,14 +263,14 @@ function MobileCard({
             className="flex h-[34px] min-w-0 flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
           >
             <LockOpen className="size-[13px] shrink-0" aria-hidden="true" />
-            <span className="truncate">Opret gratis konto for at se oddsene</span>
+            <span className="truncate">{t('createToSeeOdds')}</span>
           </Link>
         )}
         <button
           type="button"
           onClick={() => onToggleFavorite(o.id)}
           aria-pressed={o.favorite}
-          aria-label={o.favorite ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}
+          aria-label={o.favorite ? t('removeFav') : t('addFav')}
           className="flex size-8 shrink-0 items-center justify-center rounded-full border border-[#1b3557] bg-[#081123] transition-colors hover:bg-accent"
         >
           <Star className={cn('size-4', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#d5ddef]')} />
