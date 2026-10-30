@@ -11,6 +11,10 @@ async function requireSessionUser() {
   return session.user
 }
 
+export async function getStripePublishableKey() {
+  return process.env.STRIPE_LIVE_PUBLISHABLE_KEY || process.env.STRIPE_PUBLISHABLE_KEY || ''
+}
+
 export async function startSubscriptionCheckout(plan: string) {
   if (!isPlan(plan)) throw new Error('Ukendt abonnement.')
   const user = await requireSessionUser()

@@ -4,14 +4,13 @@ import { useCallback } from 'react'
 import useSWRImmutable from 'swr/immutable'
 import { EmbeddedCheckout, EmbeddedCheckoutProvider } from '@stripe/react-stripe-js'
 import { loadStripe } from '@stripe/stripe-js'
-import { startSubscriptionCheckout, syncSubscription } from '@/app/konto/billing-actions'
+import { getStripePublishableKey, startSubscriptionCheckout, syncSubscription } from '@/app/konto/billing-actions'
 import type { Plan } from '@/app/konto/plans'
 
-const publishableKey = process.env.NEXT_PUBLIC_STRIPE_LIVE_PUBLISHABLE_KEY || process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-const stripePromise = publishableKey ? loadStripe(publishableKey) : null
-
 export function StripeCheckout({ plan, onComplete }: { plan: Plan; onComplete: () => void }) {
+  const { data: publishableKey } = useSWRImmutable('stripe-publishable-key', getStripePublishableKey)
   const { data: clientSecret, error, isLoading } = useSWRImmutable(['stripe-checkout', plan], ([, selected]) => startSubscriptionCheckout(selected))
+  const stripePromise = publishableKey ? loadStripe(publishableKey) : null
 
   const handleComplete = useCallback(async () => {
     try {
