@@ -12,8 +12,8 @@ export const PLAN_AMOUNTS_ORE: Record<Plan, number> = { basis: 14900, premium: 2
 
 // Live prices are set via STRIPE_PRICE_BASIS / STRIPE_PRICE_PREMIUM; the fallbacks are the Stripe Sandbox prices.
 export const PLAN_PRICE_IDS: Record<Plan, string> = {
-  basis: process.env.STRIPE_LIVE_PRICE_BASIS || process.env.STRIPE_PRICE_BASIS || 'price_1UVtuXEe7Wf67BEtQaL0AXx5',
-  premium: process.env.STRIPE_LIVE_PRICE_PREMIUM || process.env.STRIPE_PRICE_PREMIUM || 'price_1UVtvHEe7Wf67BEtHeyNzHHR',
+  basis: process.env.STRIPE_LIVE_PRICE_BASIS || process.env.STRIPE_PRICE_BASIS || 'price_1UWARgEz6ncPj5P33OSDWiup',
+  premium: process.env.STRIPE_LIVE_PRICE_PREMIUM || process.env.STRIPE_PRICE_PREMIUM || 'price_1UWARgEz6ncPj5P3TV6pdftL',
 }
 
 export function isPlan(value: unknown): value is Plan {
