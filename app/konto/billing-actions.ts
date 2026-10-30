@@ -22,6 +22,14 @@ export async function startSubscriptionCheckout(plan: string) {
 
   const existing = await getSubscription(user.id)
   let customerId = existing?.stripeCustomerId
+  if (customerId) {
+    try {
+      await stripe.customers.retrieve(customerId)
+    } catch (error) {
+      if ((error as { code?: string }).code !== 'resource_missing') throw error
+      customerId = undefined
+    }
+  }
   if (!customerId) {
     const customer = await stripe.customers.create({ email: user.email, name: user.name, metadata: { userId: user.id } })
     customerId = customer.id
@@ -48,7 +56,13 @@ export async function syncSubscription() {
   const existing = await getSubscription(user.id)
   if (!existing) return null
 
-  const list = await getStripe().subscriptions.list({ customer: existing.stripeCustomerId, status: 'all', limit: 1 })
+  let list
+  try {
+    list = await getStripe().subscriptions.list({ customer: existing.stripeCustomerId, status: 'all', limit: 1 })
+  } catch (error) {
+    if ((error as { code?: string }).code === 'resource_missing') return null
+    throw error
+  }
   const [subscription] = list.data
   if (!subscription) return null
 
