@@ -118,7 +118,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       }
     }
     return Array.from(byId, ([id, name]) => ({ id, name })).sort((a, b) => a.name.localeCompare(b.name))
-  }, [bySport])
+  }, [bySport, allBookmakers])
   const nameOf = (id: string) => bookmakerOptions.find((b) => b.id === id)?.name ?? FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? id
   const bookmakerLabel = bookmakers.length === 1 ? nameOf(bookmakers[0]) : `${bookmakers.length} ${t('bookmakers').toLowerCase()}`
   const markets = useMemo(() => Array.from(new Set(bySport.map((o) => o.market))).sort(), [bySport])
