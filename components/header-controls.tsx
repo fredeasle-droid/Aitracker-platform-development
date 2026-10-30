@@ -56,6 +56,12 @@ export function HeaderControls({ beforeAccount }: { beforeAccount?: ReactNode } 
         </div>}
       </div>
       {beforeAccount}
+      {!session?.user && (
+        <Link href="/konto" className="flex min-h-11 items-center gap-2 rounded-xl bg-[#159cff] px-3 text-[13px] font-extrabold text-[#03101e] shadow-[0_0_16px_-6px_#159cff] transition-colors hover:bg-[#42aeff] sm:px-4 sm:text-[15px]">
+          <span>Opret bruger</span>
+          <span className="hidden rounded-md bg-[#03101e]/15 px-1.5 py-0.5 text-[10px] font-black tracking-wide xl:inline">7 DAGE GRATIS</span>
+        </Link>
+      )}
       <Link href={session?.user ? "/konto" : "/login"} className={`flex min-h-11 items-center gap-1.5 rounded-xl border px-3 text-[13px] font-bold shadow-[0_0_14px_-8px_#159cff] transition-colors hover:bg-[#102e4e] sm:gap-2 sm:px-4 sm:text-[15px] ${session?.user ? 'border-[#16ee93] text-[#b8ffd9]' : 'border-[#159cff] text-[#8dd0ff]'}`}>
         <UserRound className="size-[18px]" /> <span>{session?.user ? username : t('login')}</span>{session?.user && <span className="size-1.5 rounded-full bg-[#16ee93] shadow-[0_0_8px_#16ee93]" aria-label={t('loggedIn')} />}
       </Link>
