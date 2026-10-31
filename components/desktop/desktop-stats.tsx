@@ -6,7 +6,8 @@ import { ChevronRight, Clock, Database, FileClock, History, Info, Target, Trendi
 import { BarsIcon, SoccerBallIcon } from '@/components/icons'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { BetSheet } from '@/components/stats/bet-sheet'
-import { DAY, PERIODS, StatusPill, Trend, fmt1, summarize } from '@/components/stats/stats-view'
+import { useLocale } from '@/components/locale-provider'
+import { DAY, PERIODS, StatusPill, Trend, fmt1, periodLabel, summarize } from '@/components/stats/stats-view'
 import type { BetRow } from '@/lib/data'
 import { formatInt, formatSigned } from '@/lib/odds'
 import { cn } from '@/lib/utils'
@@ -96,10 +97,19 @@ function BetTable({
   emptyText: string
   onOpen: (bet: BetRow) => void
 }) {
+  const { t } = useLocale()
   const [expanded, setExpanded] = useState(false)
   const shown = expanded ? bets : bets.slice(0, limit)
   const isOpen = variant === 'open'
-  const headings = ['Tid', 'Kamp', 'Marked', 'Bookmaker', 'Indsats', isOpen ? 'Mulig profit' : 'Profit', isOpen ? 'Status' : 'Resultat']
+  const headings = [
+    t('colTime'),
+    t('colMatch'),
+    t('market'),
+    t('colBookmaker'),
+    t('colStake'),
+    isOpen ? t('colPossibleProfit') : t('colProfit'),
+    isOpen ? t('colStatus') : t('colResult'),
+  ]
 
   return (
     <section className="overflow-hidden rounded-2xl border border-[#183252] bg-[#050f1f]">
@@ -120,7 +130,7 @@ function BetTable({
             aria-expanded={expanded}
             className="flex min-h-11 shrink-0 items-center gap-2 rounded-full border border-[#1d4a80] px-5 text-[14px] font-medium transition-colors hover:bg-[#0a2140]"
           >
-            {expanded ? 'Vis færre' : 'Se alle'}
+            {expanded ? t('showLess') : t('seeAll')}
             <ChevronRight className={cn('size-4 text-primary transition-transform', expanded && 'rotate-90')} />
           </button>
         )}
@@ -142,7 +152,7 @@ function BetTable({
                 href="/"
                 className="mt-3 flex min-h-11 items-center gap-2 rounded-xl bg-primary px-6 text-[15px] font-semibold text-primary-foreground transition-opacity hover:opacity-90"
               >
-                Find nye muligheder
+                {t('findNew')}
                 <ChevronRight className="size-4" />
               </Link>
             )}
@@ -204,6 +214,7 @@ function BetTable({
 }
 
 export function DesktopStats({ bets, now }: { bets: BetRow[]; now: number }) {
+  const { t } = useLocale()
   const [period, setPeriod] = useState<number>(30)
   const [selected, setSelected] = useState<BetRow | null>(null)
 
@@ -228,11 +239,11 @@ export function DesktopStats({ bets, now }: { bets: BetRow[]; now: number }) {
       <header className="flex items-start justify-between gap-6 px-1">
         <div className="min-w-0">
           <h1 id="stats-title" className="text-balance text-[36px] font-extrabold leading-tight tracking-tight">
-            Stats
+            {t('stats')}
           </h1>
-          <p className="text-pretty text-[15px] text-[#c3cde2]">Få overblik over dine resultater og følg din udvikling over tid.</p>
+          <p className="text-pretty text-[15px] text-[#c3cde2]">{t('statsDeskText')}</p>
         </div>
-        <div role="tablist" aria-label="Periode" className="flex shrink-0 rounded-xl border border-[#183252] bg-[#050f1f] p-1">
+        <div role="tablist" aria-label={t('period')} className="flex shrink-0 rounded-xl border border-[#183252] bg-[#050f1f] p-1">
           {PERIODS.map((p) => (
             <button
               key={p.id}
@@ -245,7 +256,7 @@ export function DesktopStats({ bets, now }: { bets: BetRow[]; now: number }) {
                 period === p.id ? 'bg-primary text-primary-foreground' : 'text-[#c7d2ea] hover:bg-[#0a1a33]',
               )}
             >
-              {p.label}
+              {periodLabel(t, p.id)}
             </button>
           ))}
         </div>
@@ -255,8 +266,8 @@ export function DesktopStats({ bets, now }: { bets: BetRow[]; now: number }) {
         <StatCard
           tone="green"
           icon={<Database className="size-6" />}
-          label="Total profit"
-          hint="Samlet profit i perioden"
+          label={t('totalProfit')}
+          hint={t('hintTotalProfit')}
           value={
             <span className={current.profit >= 0 ? 'text-[#2ee6a6]' : 'text-destructive'}>
               {formatSigned(current.profit)} <span className="text-[16px]">DKK</span>
@@ -268,8 +279,8 @@ export function DesktopStats({ bets, now }: { bets: BetRow[]; now: number }) {
         <StatCard
           tone="blue"
           icon={<BarsIcon className="size-6" />}
-          label="ROI"
-          hint="Profit i forhold til samlet indsats"
+          label={t('roi')}
+          hint={t('hintRoi')}
           value={<span className="text-[#5ea2ff]">{fmt1(current.roi)}%</span>}
         >
           <Trend value={roiTrend} />
@@ -277,45 +288,45 @@ export function DesktopStats({ bets, now }: { bets: BetRow[]; now: number }) {
         <StatCard
           tone="violet"
           icon={<Target className="size-6" />}
-          label="Win rate"
-          hint="Andel vundne væddemål"
+          label={t('winRate')}
+          hint={t('hintWinRate')}
           value={<span className="text-[#a98bff]">{Math.round(current.winRate)}%</span>}
         >
           <span className="text-[13px] text-[#c3cde2]">
-            {current.won} vundne / {current.lost} tabte
+            {t('wonLost', { won: current.won, lost: current.lost })}
           </span>
         </StatCard>
         <StatCard
           tone="magenta"
           icon={<TrendingUp className="size-6" />}
-          label="Gns. % afkast"
-          hint="Gennemsnitligt afkast pr. vundet væddemål"
+          label={t('avgReturn')}
+          hint={t('hintAvgReturn')}
           value={<span className="text-[#e879f9]">{fmt1(current.avg)}%</span>}
         >
-          <span className="text-[13px] text-[#e879f9]">Pr. væddemål</span>
+          <span className="text-[13px] text-[#e879f9]">{t('perBet')}</span>
         </StatCard>
       </div>
 
       <BetTable
-        title="Åbne væddemål"
-        description="Her ser du dine aktive væddemål, som endnu ikke er afgjort."
+        title={t('openBets')}
+        description={t('openBetsDesc')}
         icon={<Clock className="size-6" />}
         variant="open"
         bets={open}
         limit={5}
-        emptyTitle="Ingen åbne væddemål"
-        emptyText="Du har ingen åbne væddemål lige nu."
+        emptyTitle={t('emptyOpenTitle')}
+        emptyText={t('emptyOpenText')}
         onOpen={setSelected}
       />
       <BetTable
-        title="Seneste væddemål"
-        description="Her kan du se dine seneste afgjorte væddemål."
+        title={t('recentBets')}
+        description={t('recentBetsDesc')}
         icon={<History className="size-6" />}
         variant="settled"
         bets={recent}
         limit={5}
-        emptyTitle="Ingen afgjorte væddemål"
-        emptyText="Der er ingen afgjorte væddemål i den valgte periode."
+        emptyTitle={t('emptySettledTitle')}
+        emptyText={t('emptySettledText')}
         onOpen={setSelected}
       />
 

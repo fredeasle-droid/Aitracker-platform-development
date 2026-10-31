@@ -4,6 +4,7 @@ import useSWR from 'swr'
 import { ExternalLink } from 'lucide-react'
 import { getBookmaker } from '@/lib/bookmakers'
 import { formatInt } from '@/lib/odds'
+import { useLocale } from '@/components/locale-provider'
 
 // Alle bookmakere sender til forsiden indtil direkte kamp-links er klar. Sæt til true for at aktivere opslaget igen.
 const EXACT_MATCH_LINKS_ENABLED = false
@@ -43,6 +44,7 @@ export function GoToBookmaker({
   handedOff: boolean
   onHandOff: () => void
 }) {
+  const { t } = useLocale()
   const params = new URLSearchParams({ bookmaker, home: homeTeam, away: awayTeam, kickoff: String(kickoffTs), sport, league, country })
   const { data } = useSWR(EXACT_MATCH_LINKS_ENABLED ? `/api/match-link?${params}` : null, fetcher, { revalidateOnFocus: false })
   const link = data ?? fallbackLink(bookmaker)
@@ -56,26 +58,26 @@ export function GoToBookmaker({
         onClick={onHandOff}
         className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-primary px-2 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff]"
       >
-        {link.exact ? 'Gå til kampen' : 'Gå til bookmaker'}
+        {link.exact ? t('gotoMatch') : t('gotoBookmaker')}
         <ExternalLink className="size-4 shrink-0" aria-hidden="true" />
-        <span className="sr-only">(åbner {bookmaker} i ny fane og kopierer indsatsen)</span>
+        <span className="sr-only">{t('opensInNewTab', { name: bookmaker })}</span>
       </a>
       <p aria-live="polite" className="min-h-[2.5em] text-pretty text-center text-[12px] leading-snug text-[#a9b6d3]">
         {handedOff ? (
           <>
-            <span className="font-semibold text-success">{formatInt(amount)} kr. kopieret.</span>{' '}
+            <span className="font-semibold text-success">{t('copiedAmount', { amount: formatInt(amount) })}</span>{' '}
             {link.exact ? (
-              `Vælg ${label} og indsæt beløbet.`
+              t('pickAndPaste', { label })
             ) : (
               <>
-                {'Søg efter '}
+                {t('searchBefore')}
                 <span className="font-semibold text-foreground">{homeTeam}</span>
-                {` og vælg ${label}.`}
+                {t('searchAfter', { label })}
               </>
             )}
           </>
         ) : (
-          'Indsatsen kopieres automatisk, så du kan indsætte den på kuponen.'
+          t('stakeAutoCopied')
         )}
       </p>
     </>

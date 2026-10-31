@@ -4,16 +4,17 @@ import { useMemo, useState } from 'react'
 import { ArrowUpRight, ArrowDownRight, ChevronRight, Clock, Database, History, Info, Target, TrendingUp } from 'lucide-react'
 import { BarsIcon, SoccerBallIcon } from '@/components/icons'
 import { BetSheet } from '@/components/stats/bet-sheet'
+import { useLocale } from '@/components/locale-provider'
 import type { BetRow } from '@/lib/data'
+import type { Translator } from '@/lib/i18n'
 import { formatInt, formatSigned } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-export const PERIODS = [
-  { id: 7, label: '7 dage' },
-  { id: 30, label: '30 dage' },
-  { id: 90, label: '90 dage' },
-  { id: 0, label: 'Alle' },
-] as const
+export const PERIODS = [{ id: 7 }, { id: 30 }, { id: 90 }, { id: 0 }] as const
+
+export function periodLabel(t: Translator['t'], id: number) {
+  return id === 0 ? t('all') : t('daysN', { n: id })
+}
 
 export const DAY = 86_400_000
 
@@ -33,7 +34,8 @@ export function fmt1(n: number) {
 }
 
 export function Trend({ value, unit = '%' }: { value: number | null; unit?: string }) {
-  if (value === null || !Number.isFinite(value)) return <span className="text-[13px] text-muted-foreground">Ingen sammenligning</span>
+  const { t } = useLocale()
+  if (value === null || !Number.isFinite(value)) return <span className="text-[13px] text-muted-foreground">{t('noComparison')}</span>
   const up = value >= 0
   const Icon = up ? ArrowUpRight : ArrowDownRight
   return (
@@ -87,14 +89,16 @@ function StatCard({
 }
 
 export function StatusPill({ status }: { status: BetRow['status'] }) {
+  const { t } = useLocale()
   if (status === 'open')
-    return <span className="rounded-lg border border-primary px-2.5 py-1 text-[12px] font-medium text-primary">I gang</span>
+    return <span className="rounded-lg border border-primary px-2.5 py-1 text-[12px] font-medium text-primary">{t('statusOpen')}</span>
   if (status === 'won')
-    return <span className="rounded-lg bg-[#137a4a] px-2.5 py-1 text-[12px] font-semibold text-white">Vundet</span>
-  return <span className="rounded-lg bg-[#b3262d] px-2.5 py-1 text-[12px] font-semibold text-white">Tabt</span>
+    return <span className="rounded-lg bg-[#137a4a] px-2.5 py-1 text-[12px] font-semibold text-white">{t('statusWon')}</span>
+  return <span className="rounded-lg bg-[#b3262d] px-2.5 py-1 text-[12px] font-semibold text-white">{t('statusLost')}</span>
 }
 
 function BetListRow({ bet, onOpen }: { bet: BetRow; onOpen: (b: BetRow) => void }) {
+  const { t } = useLocale()
   const amount = bet.status === 'open' ? bet.expectedProfit : bet.profit ?? 0
   return (
     <li>
@@ -110,7 +114,7 @@ function BetListRow({ bet, onOpen }: { bet: BetRow; onOpen: (b: BetRow) => void 
         </span>
         <span className="w-[72px] shrink-0 border-l border-border pl-2">
           <span className="block text-[13px] font-semibold tabular-nums">{formatInt(bet.stake)} DKK</span>
-          {bet.status === 'open' && <span className="block text-[10px] text-[#a9b6d3]">Forventet</span>}
+          {bet.status === 'open' && <span className="block text-[10px] text-[#a9b6d3]">{t('expected')}</span>}
           <span className={cn('block text-[13px] font-semibold tabular-nums', amount >= 0 ? 'text-success' : 'text-destructive')}>
             {formatSigned(amount)} DKK
           </span>
@@ -142,6 +146,7 @@ function BetSection({
   empty: string
   onOpen: (b: BetRow) => void
 }) {
+  const { t } = useLocale()
   const [expanded, setExpanded] = useState(false)
   const shown = expanded ? bets : bets.slice(0, limit)
   return (
@@ -158,7 +163,7 @@ function BetSection({
             aria-expanded={expanded}
             className="flex min-h-11 items-center gap-1 px-1 text-[15px] font-medium text-primary"
           >
-            {expanded ? 'Vis færre' : 'Se alle'}
+            {expanded ? t('showLess') : t('seeAll')}
             <ChevronRight className={cn('size-5 transition-transform', expanded && 'rotate-90')} />
           </button>
         )}
@@ -177,6 +182,7 @@ function BetSection({
 }
 
 export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
+  const { t } = useLocale()
   const [period, setPeriod] = useState<number>(30)
   const [selected, setSelected] = useState<BetRow | null>(null)
 
@@ -198,13 +204,13 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
 
   return (
     <div className="flex flex-col gap-3 px-4">
-      <h1 className="sr-only">Statistik</h1>
+      <h1 className="sr-only">{t('statsHeading')}</h1>
       <div className="grid grid-cols-2 gap-2.5">
         <StatCard
           tone="green"
           icon={<Database className="size-6" />}
-          label="Total profit"
-          hint="Samlet profit i perioden"
+          label={t('totalProfit')}
+          hint={t('hintTotalProfit')}
           value={
             <span className={current.profit >= 0 ? 'text-success' : 'text-destructive'}>
               {formatSigned(current.profit)} <span className="text-[15px]">DKK</span>
@@ -216,8 +222,8 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
         <StatCard
           tone="blue"
           icon={<BarsIcon className="size-6" />}
-          label="ROI"
-          hint="Profit i forhold til samlet indsats"
+          label={t('roi')}
+          hint={t('hintRoi')}
           value={<span className="text-primary">{fmt1(current.roi)}%</span>}
         >
           <Trend value={roiTrend} />
@@ -225,26 +231,26 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
         <StatCard
           tone="blue"
           icon={<Target className="size-6" />}
-          label="Win rate"
-          hint="Andel vundne væddemål"
+          label={t('winRate')}
+          hint={t('hintWinRate')}
           value={<span className="text-primary">{Math.round(current.winRate)}%</span>}
         >
           <span className="text-[13px] text-[#9cc3ff]">
-            {current.won} vundne / {current.lost} tabte
+            {t('wonLost', { won: current.won, lost: current.lost })}
           </span>
         </StatCard>
         <StatCard
           tone="purple"
           icon={<TrendingUp className="size-6" />}
-          label="Gns. % afkast"
-          hint="Gennemsnitligt afkast pr. vundet væddemål"
+          label={t('avgReturn')}
+          hint={t('hintAvgReturn')}
           value={<span className="text-[#b57bff]">{fmt1(current.avg)}%</span>}
         >
-          <span className="text-[13px] text-[#b57bff]">Pr. væddemål</span>
+          <span className="text-[13px] text-[#b57bff]">{t('perBet')}</span>
         </StatCard>
       </div>
 
-      <div role="tablist" aria-label="Periode" className="grid grid-cols-4 rounded-xl border border-border bg-card/60 p-0.5">
+      <div role="tablist" aria-label={t('period')} className="grid grid-cols-4 rounded-xl border border-border bg-card/60 p-0.5">
         {PERIODS.map((p) => (
           <button
             key={p.id}
@@ -257,25 +263,25 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
               period === p.id ? 'bg-primary text-primary-foreground' : 'text-[#c7d2ea] hover:bg-accent',
             )}
           >
-            {p.label}
+            {periodLabel(t, p.id)}
           </button>
         ))}
       </div>
 
       <BetSection
-        title="Åbne væddemål"
+        title={t('openBets')}
         icon={<Clock className="size-6 text-primary" />}
         bets={open}
         limit={3}
-        empty="Ingen åbne væddemål. Gem et fra Beregn."
+        empty={t('emptyOpenMobile')}
         onOpen={setSelected}
       />
       <BetSection
-        title="Seneste væddemål"
+        title={t('recentBets')}
         icon={<History className="size-6 text-primary" />}
         bets={recent}
         limit={5}
-        empty="Ingen afgjorte væddemål i perioden."
+        empty={t('emptySettledMobile')}
         onOpen={setSelected}
       />
 

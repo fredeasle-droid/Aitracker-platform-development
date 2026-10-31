@@ -7,21 +7,24 @@ import { LocaleProvider } from '@/components/locale-provider'
 import { DesktopHeader } from '@/components/desktop/desktop-header'
 import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
 import { SupportChat } from '@/components/support/support-chat'
+import { getServerLocale, getServerT } from '@/lib/locale-server'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-export const metadata: Metadata = {
-  title: 'BetTracker – SikkerBets, enklere og større overblik',
-  description:
-    'Find sikre væddemål (arbitrage) på tværs af danske bookmakere, beregn dine indsatser og følg din profit.',
-  applicationName: 'BetTracker',
-  manifest: '/manifest.webmanifest',
-  appleWebApp: { capable: true, title: 'BetTracker', statusBarStyle: 'black-translucent' },
-  icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-    apple: '/apple-icon.png',
-  },
+export async function generateMetadata(): Promise<Metadata> {
+  const { t } = await getServerT()
+  return {
+    title: t('metaTitle'),
+    description: t('metaDesc'),
+    applicationName: 'BetTracker',
+    manifest: '/manifest.webmanifest',
+    appleWebApp: { capable: true, title: 'BetTracker', statusBarStyle: 'black-translucent' },
+    icons: {
+      icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+      apple: '/apple-icon.png',
+    },
+  }
 }
 
 export const viewport: Viewport = {
@@ -33,15 +36,16 @@ export const viewport: Viewport = {
   themeColor: '#050b17',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getServerLocale()
   return (
-    <html lang="da" className={`${inter.variable} bg-background`}>
+    <html lang={locale} className={`${inter.variable} bg-background`}>
       <body className="min-h-dvh overflow-x-hidden antialiased">
-        <LocaleProvider>
+        <LocaleProvider initialLocale={locale}>
         <DesktopHeader />
         <div className="lg:flex">
           <Suspense fallback={null}>

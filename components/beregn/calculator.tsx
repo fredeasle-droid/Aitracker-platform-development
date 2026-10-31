@@ -11,6 +11,7 @@ import { LockedOdds, useHasAccess } from '@/components/locked-odds'
 import type { Opportunity } from '@/lib/data'
 import { formatInt, formatOdds, formatPct, guaranteedProfit, splitStake } from '@/lib/odds'
 import { cn } from '@/lib/utils'
+import { useLocale } from '@/components/locale-provider'
 
 const PRESETS = [500, 1000, 1500, 2000]
 const MAX = 1_000_000
@@ -52,6 +53,7 @@ function AmountInput({
 }
 
 export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
+  const { t } = useLocale()
   const router = useRouter()
   const loggedIn = useHasAccess()
   const initial = splitStake(1500, o.a.odds, o.b.odds)
@@ -97,14 +99,14 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
       `${o.homeTeam} vs ${o.awayTeam} – ${o.market}`,
       `${o.a.bookmaker} (${o.a.label}${loggedIn ? ` @ ${formatOdds(o.a.odds)}` : ''}): ${formatInt(a)} DKK`,
       `${o.b.bookmaker} (${o.b.label}${loggedIn ? ` @ ${formatOdds(o.b.odds)}` : ''}): ${formatInt(b)} DKK`,
-      `Sikker gevinst: ${formatInt(profit)} DKK (${formatPct(margin)})`,
+      `${t('guaranteedProfit')}: ${formatInt(profit)} DKK (${formatPct(margin)})`,
     ].join('\n')
     try {
       await navigator.clipboard.writeText(text)
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch {
-      setMessage({ ok: false, text: 'Kunne ikke kopiere. Prøv igen.' })
+      setMessage({ ok: false, text: t('copyFailed') })
     }
   }
 
@@ -135,15 +137,15 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
 
   return (
     <div className="mt-3 flex flex-col gap-3 lg:mt-3 lg:gap-3">
-      <section aria-label="Indsatser" className="rounded-2xl border border-border bg-card/80 p-2 lg:border-[#1d4e8f] lg:bg-[linear-gradient(135deg,#071426,#06101e)] lg:p-4">
+      <section aria-label={t('stakesAria')} className="rounded-2xl border border-border bg-card/80 p-2 lg:border-[#1d4e8f] lg:bg-[linear-gradient(135deg,#071426,#06101e)] lg:p-4">
         <div className="flex flex-col gap-3 p-1.5 pb-3 min-[380px]:flex-row min-[380px]:items-end">
           <div className="min-w-0 flex-1">
             <label htmlFor="total" className="mb-2 block text-[16px] font-semibold">
-              Total indsats (DKK)
+              {t('totalStakeDkk')}
             </label>
             <AmountInput id="total" value={total} onChange={applyTotal} large />
           </div>
-          <div className="grid grid-cols-4 gap-1.5 min-[380px]:w-[52%]" role="group" aria-label="Hurtige beløb">
+          <div className="grid grid-cols-4 gap-1.5 min-[380px]:w-[52%]" role="group" aria-label={t('quickAmounts')}>
             {PRESETS.map((p) => {
               const active = parseAmount(total) === p
               return (
@@ -171,7 +173,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
               <button
                 type="button"
                 onClick={() => setSwapped((v) => !v)}
-                aria-label="Byt rækkefølge på bookmakere"
+                aria-label={t('swapAria')}
                 className="hidden size-14 items-center justify-center rounded-full border border-[#2a3a5c] bg-[#0a1426] text-foreground transition-colors hover:bg-accent lg:flex"
               >
                 <ArrowLeftRight className="size-6" aria-hidden="true" />
@@ -193,7 +195,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
                 </div>
               <div className="rounded-xl border border-border bg-[#0a1426]/60 p-2">
                 <label htmlFor={`stake-${key}`} className="mb-1.5 block text-[13px] text-[#d5ddef]">
-                  Din indsats
+                  {t('yourStake')}
                 </label>
                 <AmountInput id={`stake-${key}`} value={value} onChange={onChange} />
               </div>
@@ -217,7 +219,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
       </section>
 
       <section
-        aria-label="Resultat"
+        aria-label={t('colResult')}
         aria-live="polite"
         className={cn(
           'grid grid-cols-3 rounded-2xl border bg-[radial-gradient(100%_140%_at_50%_0%,rgba(46,230,166,0.10),rgba(5,15,22,0.9))] py-3 lg:py-5',
@@ -226,7 +228,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
       >
         <div className="flex flex-col items-center px-1.5">
           <span className="flex items-center gap-1.5 text-[12px] text-[#d5ddef]">
-            <Database className="size-4" /> Total indsats
+            <Database className="size-4" /> {t('totalStake')}
           </span>
           <span className="mt-1 text-[22px] font-extrabold tabular-nums lg:text-[30px]">
             {formatInt(sum)} <span className="text-[12px] font-bold">DKK</span>
@@ -234,7 +236,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
         </div>
         <div className="flex flex-col items-center border-x border-border px-1.5">
           <span className="flex items-center gap-1.5 text-[12px] text-[#d5ddef]">
-            <Wallet className="size-4" /> Sikker gevinst
+            <Wallet className="size-4" /> {t('guaranteedProfit')}
           </span>
           <span className={cn('mt-1 text-[22px] font-extrabold tabular-nums lg:text-[30px]', positive ? 'text-success' : 'text-destructive')}>
             {formatInt(profit)} <span className="text-[12px] font-bold text-foreground">DKK</span>
@@ -242,7 +244,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
         </div>
         <div className="flex flex-col items-center px-1.5">
           <span className="flex items-center gap-1.5 text-[12px] text-[#d5ddef]">
-            <SmallBarsIcon className="size-4" /> Margin
+            <SmallBarsIcon className="size-4" /> {t('margin')}
           </span>
           <span className={cn('mt-1 text-[22px] font-extrabold tabular-nums lg:text-[30px]', positive ? 'text-success' : 'text-destructive')}>
             {formatPct(margin)}
@@ -257,7 +259,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
         className="flex min-h-14 items-center justify-center gap-3 rounded-xl bg-primary text-[17px] font-semibold text-primary-foreground shadow-[0_8px_24px_-10px_var(--primary)] transition-colors hover:bg-[#2a85ff] disabled:opacity-50"
       >
         {copied ? <Check className="size-6" /> : <Copy className="size-6" />}
-        {copied ? 'Kopieret!' : 'Kopiér indsatser'}
+        {copied ? t('copied') : t('copyStakes')}
       </button>
 
       <button
@@ -267,7 +269,7 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
         className="flex min-h-12 items-center justify-center gap-2.5 rounded-xl border border-primary/60 bg-primary/10 text-[15px] font-semibold text-primary transition-colors hover:bg-primary/20 disabled:opacity-50"
       >
         <BookmarkPlus className="size-5" />
-        {saving ? 'Gemmer…' : 'Gem som åbent væddemål'}
+        {saving ? t('saving') : t('saveOpenBet')}
       </button>
       {message && (
         <p role="alert" className={cn('text-center text-sm', message.ok ? 'text-success' : 'text-destructive')}>
@@ -278,10 +280,9 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
       <aside className="flex gap-3 rounded-2xl border border-primary/50 bg-[#071833] p-4">
         <Info className="mt-0.5 size-6 shrink-0 fill-primary text-[#071833]" aria-hidden="true" />
         <div>
-          <h2 className="text-[16px] font-semibold text-primary">Sådan virker det?</h2>
+          <h2 className="text-[16px] font-semibold text-primary">{t('howItWorks')}</h2>
           <p className="mt-1 text-[14px] leading-relaxed text-[#d5ddef]">
-            Du placerer de viste indsatser hos de to bookmakere. Uanset hvilket resultat der sker, får du en sikker
-            gevinst på{' '}
+            {t('howText')}{' '}
             <strong className="text-foreground">{formatInt(profit)} DKK</strong> ({formatPct(margin)}).
           </p>
         </div>

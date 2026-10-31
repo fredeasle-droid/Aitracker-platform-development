@@ -1,3 +1,6 @@
+'use client'
+
+import { useLocale } from '@/components/locale-provider'
 import { FlagImage } from '@/components/flag-image'
 import { SmallBarsIcon } from '@/components/icons'
 import { TeamCrest } from '@/components/team-crest'
@@ -7,9 +10,10 @@ import type { Opportunity } from '@/lib/data'
 const crest = 'lg:size-[76px] lg:rounded-full lg:bg-[#0b1b34] lg:p-2.5 lg:ring-1 lg:ring-[#1d3a63]'
 
 export function MatchCard({ opportunity: o }: { opportunity: Opportunity }) {
+  const { t } = useLocale()
   return (
     <section
-      aria-label="Kamp"
+      aria-label={t('matchAria')}
       className="relative overflow-hidden rounded-2xl border border-border bg-card/80 p-3.5 lg:border-[#1d4e8f] lg:bg-[linear-gradient(180deg,rgba(4,29,61,.88),rgba(4,16,34,.96))] lg:p-6 lg:shadow-[0_12px_40px_-25px_#159cff]"
     >
       <img

@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Layers, Trophy, Zap } from 'lucide-react'
+import { getServerT } from '@/lib/locale-server'
 
-const FEATURES = [
-  { icon: Zap, value: 'Live scanning', label: '24/7 overvågning' },
-  { icon: Layers, value: '2.000+', label: 'Bookmakere' },
-  { icon: Trophy, value: '30+', label: 'Sportsgrene' },
-] as const
-
-export function DesktopHero() {
+export async function DesktopHero() {
+  const { t } = await getServerT()
+  const features = [
+    { icon: Zap, value: t('live'), label: t('feat247') },
+    { icon: Layers, value: '2.000+', label: t('bookmakers') },
+    { icon: Trophy, value: '30+', label: t('sportBranches') },
+  ]
   return (
     <section
       aria-labelledby="hero-title"
@@ -27,22 +28,22 @@ export function DesktopHero() {
       <div className="relative flex h-full items-center justify-between gap-6 px-8">
         <div className="max-w-[340px]">
           <h2 id="hero-title" className="text-balance text-[30px] font-extrabold leading-[1.1] tracking-tight">
-            Find sikre odds med <span className="whitespace-nowrap">Bet<span className="text-[#2f8bff]">Tracker</span></span>
+            {t('heroTitleBefore')}<span className="whitespace-nowrap">Bet<span className="text-[#2f8bff]">Tracker</span></span>
           </h2>
           <p className="mt-2 text-pretty text-[14px] leading-relaxed text-[#d5ddef]">
-            Vi scanner over <strong className="text-foreground">2.000+</strong> bookmakere 24/7 og finder forskelle, du kan udnytte.
+            {t('heroScanBefore')}<strong className="text-foreground">2.000+</strong>{t('heroScanAfter')}
           </p>
           <Link
             href="/beregn"
             className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-xl bg-primary px-5 text-[14px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-primary/90"
           >
-            Beregn indsats
+            {t('calcStake')}
             <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
 
         <ul className="hidden items-end gap-6 2xl:flex">
-          {FEATURES.map(({ icon: Icon, value, label }) => (
+          {features.map(({ icon: Icon, value, label }) => (
             <li key={label} className="flex w-[104px] flex-col items-center gap-1.5 text-center">
               <Icon className="size-9 text-[#55a8ff]" strokeWidth={1.6} aria-hidden="true" />
               <span className="text-[14px] font-semibold">{value}</span>

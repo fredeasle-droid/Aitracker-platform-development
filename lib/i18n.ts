@@ -1,13 +1,38 @@
-export type Locale = 'da' | 'sv' | 'no' | 'de'
+import { da as daMessages, type MessageKey } from './messages/da'
+import { en as enMessages } from './messages/en'
+import { sv as svMessages } from './messages/sv'
+import { no as noMessages } from './messages/no'
+import { de as deMessages } from './messages/de'
+import { dataMessages } from './data-messages'
 
-export const LOCALES: Record<Locale, { label: string; flag: string; countryCode: string }> = {
-  da: { label: 'Danmark', flag: '🇩🇰', countryCode: 'DK' },
-  sv: { label: 'Sverige', flag: '🇸🇪', countryCode: 'SE' },
-  no: { label: 'Norge', flag: '🇳🇴', countryCode: 'NO' },
-  de: { label: 'Tyskland', flag: '🇩🇪', countryCode: 'DE' },
+export type Locale = 'da' | 'en' | 'sv' | 'no' | 'de'
+
+export const DEFAULT_LOCALE: Locale = 'da'
+export const LOCALE_COOKIE = 'bettracker_locale'
+
+export const LOCALES: Record<Locale, { label: string; flag: string; countryCode: string; tag: string }> = {
+  da: { label: 'Dansk', flag: '🇩🇰', countryCode: 'DK', tag: 'da-DK' },
+  en: { label: 'English', flag: '🇬🇧', countryCode: 'GB', tag: 'en-GB' },
+  sv: { label: 'Svenska', flag: '🇸🇪', countryCode: 'SE', tag: 'sv-SE' },
+  no: { label: 'Norsk', flag: '🇳🇴', countryCode: 'NO', tag: 'nb-NO' },
+  de: { label: 'Deutsch', flag: '🇩🇪', countryCode: 'DE', tag: 'de-DE' },
 }
 
-export const translations = {
+export function isLocale(value: string | undefined | null): value is Locale {
+  return Boolean(value) && Object.prototype.hasOwnProperty.call(LOCALES, value as string)
+}
+
+const baseTranslations = {
+  en: {
+    login: 'Log in', loggedIn: 'Logged in', home: 'Sure Bets', live: 'Live scanning', stats: 'Stats', calc: 'Calculate', bonus: 'Bonus', myPage: 'My page', signup: 'Sign up', games: 'My bets',
+    all: 'All', football: 'Football', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Ice hockey', esports: 'Esports', handball: 'Handball', favorites: 'Favourites', more: 'More',
+    sport: 'Sport', leagues: 'Leagues', moreLeagues: 'More leagues', premium: 'Premium', premiumText: 'Get access to more features and exclusive sure bets.', upgrade: 'Upgrade now', createAccount: 'Create free account', accountText: 'Get full access to all odds and features.', create: 'Create account',
+    bookmakers: 'Bookmakers', bookmakersFilter: 'Bookmakers', allBookmakers: 'All bookmakers', sortBookmaker: 'Bookmaker A-Z', clearBookmakers: 'Clear selected',
+    leaguesFilter: 'Leagues', allLeagues: 'All leagues', minMargin: 'Min. margin', allMargins: 'All margins', atLeast: 'At least', markets: 'All markets', market: 'Market', sorting: 'Sort by', newest: 'Newest first', highest: 'Highest margin', kickoff: 'Starting soon', found: 'sure bets found', noMatches: 'No sure bets match', tryAgain: 'Try a lower minimum margin or another sport.', reset: 'Reset filters',
+    locked: 'Locked', marketLocked: 'Market locked', createToSeeOdds: 'Create a free account to see the odds', createToSeeOddsFrom: 'Create a free account to see the odds from', bothCovered: 'Both possible outcomes are covered', twoOutcomes: '2 outcomes', details: 'View details', removeFav: 'Remove from favourites', addFav: 'Add to favourites', calcStake: 'Calculate stake', marginLabel: 'MARGIN',
+    overview: 'Overview', scanText: 'We constantly scan for new opportunities across 2,000+ bookmakers.', sportBranches: 'Sports', foundToday: 'Opportunities found today', exampleTitle: 'Sure bet example', potentialProfit: 'Potential profit:', profitHelp: 'Profit with the correct stake split', latestFinds: 'Latest finds',
+    unlockPremium: 'Unlock with Premium', becomeCustomer: 'Become a customer to see the odds', unlock: 'Unlock', notifications: 'Notifications', newCount: 'new', highMarginNow: 'High margin right now', noAlerts: 'No sure bets above 4% right now.',
+  },
   da: {
     login: 'Log ind', loggedIn: 'Logget ind', home: 'SikkerBets', live: 'Live scanning', stats: 'Stats', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opret bruger', games: 'Mine spil',
     all: 'Alle', football: 'Fodbold', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Ishockey', esports: 'Esport', handball: 'Håndbold', favorites: 'Favoritter', more: 'Flere',
@@ -50,4 +75,35 @@ export const translations = {
   },
 } as const
 
-export type TranslationKey = keyof typeof translations.da
+type BaseKey = keyof typeof baseTranslations.da
+export type TranslationKey = BaseKey | MessageKey
+
+export const translations: Record<Locale, Record<TranslationKey, string>> = {
+  da: { ...baseTranslations.da, ...daMessages },
+  en: { ...baseTranslations.en, ...enMessages },
+  sv: { ...baseTranslations.sv, ...svMessages },
+  no: { ...baseTranslations.no, ...noMessages },
+  de: { ...baseTranslations.de, ...deMessages },
+}
+
+export type TranslateVars = Record<string, string | number>
+
+export function makeTranslator(locale: Locale) {
+  const table = translations[locale]
+  const extra = locale === 'da' ? null : dataMessages[locale]
+
+  function t(key: TranslationKey, vars?: TranslateVars) {
+    const template = table[key]
+    if (!vars) return template
+    return template.replace(/\{(\w+)\}/g, (match, name: string) => (name in vars ? String(vars[name]) : match))
+  }
+
+  // Translates Danish source strings that come from data (bonus offers, server messages, plan features).
+  function tx(source: string) {
+    return extra?.[source] ?? source
+  }
+
+  return { locale, t, tx }
+}
+
+export type Translator = ReturnType<typeof makeTranslator>
