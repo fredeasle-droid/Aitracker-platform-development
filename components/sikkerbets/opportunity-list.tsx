@@ -115,14 +115,16 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const allBookmakers = useBookmakerList(bookmakerCountry)
   const bookmakerOptions = useMemo(() => {
     const byId = new Map<string, string>(allBookmakers.map((b) => [b.id, b.name]))
-    for (const o of bySport) {
-      for (const name of [o.a.bookmaker, o.b.bookmaker]) {
-        const id = bookmakerId(name)
-        if (!byId.has(id)) byId.set(id, FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? name)
+    if (bookmakerCountry !== 'dk') {
+      for (const o of bySport) {
+        for (const name of [o.a.bookmaker, o.b.bookmaker]) {
+          const id = bookmakerId(name)
+          if (!byId.has(id)) byId.set(id, FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? name)
+        }
       }
     }
     return Array.from(byId, ([id, name]) => ({ id, name })).sort((a, b) => a.name.localeCompare(b.name))
-  }, [bySport, allBookmakers])
+  }, [bySport, allBookmakers, bookmakerCountry])
   const nameOf = (id: string) => bookmakerOptions.find((b) => b.id === id)?.name ?? FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? id
   const bookmakerLabel = bookmakers.length === 1 ? nameOf(bookmakers[0]) : `${bookmakers.length} ${t('bookmakers').toLowerCase()}`
   const filteredBookmakerOptions = bookmakerOptions.filter((bookmaker) => bookmaker.name.toLowerCase().includes(bookmakerSearch.trim().toLowerCase()))

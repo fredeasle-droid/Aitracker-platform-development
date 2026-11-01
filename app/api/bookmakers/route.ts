@@ -4,7 +4,7 @@ import { opportunities } from '@/lib/db/schema'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getBookmaker } from '@/lib/bookmakers'
 import { getBetHeroCatalog, getBetHeroMessages } from '@/lib/bethero-ingest'
-import { bookmakerId } from '@/lib/bookmaker-filter'
+import { bookmakerId, FILTER_BOOKMAKERS } from '@/lib/bookmaker-filter'
 
 export const dynamic = 'force-dynamic'
 
@@ -13,6 +13,12 @@ export async function GET(request: Request) {
   const pairs = isDemoMode()
     ? demoOpportunities.map((o) => ({ a: o.a.bookmaker, b: o.b.bookmaker }))
     : await db.selectDistinct({ a: opportunities.aBookmaker, b: opportunities.bBookmaker }).from(opportunities)
+
+  if (country === 'DK') {
+    return NextResponse.json(
+      FILTER_BOOKMAKERS.map(({ id, name }) => ({ id, name })).sort((x, y) => x.name.localeCompare(y.name)),
+    )
+  }
 
   const byId = new Map<string, string>()
   const feedMessages = await getBetHeroMessages().catch(() => [])

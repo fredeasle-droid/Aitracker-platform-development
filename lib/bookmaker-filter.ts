@@ -1,29 +1,29 @@
 import { getBookmakerKey } from '@/lib/bookmakers'
 
 export const FILTER_BOOKMAKERS = [
-  { id: '1xbet', name: '1XBET' },
-  { id: '21luckybet', name: '21LuckyBet' },
-  { id: '888sport', name: '888sport' },
+  { id: '20bet', name: '20bet' },
   { id: 'bcgame', name: 'BC.Game' },
   { id: 'bet365', name: 'Bet365' },
   { id: 'bet9ja', name: 'Bet9ja' },
   { id: 'betfair', name: 'betfair' },
   { id: 'betinia', name: 'Betinia' },
+  { id: 'betsson', name: 'betsson' },
   { id: 'bwin', name: 'bwin' },
   { id: 'campobet', name: 'Campobet' },
   { id: 'dafabet', name: 'Dafabet' },
+  { id: 'dbbet', name: 'DBbet' },
   { id: 'ggbet', name: 'GGBet' },
+  { id: 'leovegas', name: 'LeoVegas' },
   { id: 'marathonbet', name: 'Marathonbet' },
+  { id: 'mystake', name: 'MyStake' },
   { id: 'oddset', name: 'Oddset' },
   { id: 'pinnacle', name: 'Pinnacle' },
-  { id: 'skybet', name: 'Sky Bet' },
+  { id: 'rainbet', name: 'Rainbet' },
+  { id: 'sportsbetio', name: 'Sportsbet.io' },
   { id: 'unibet', name: 'Unibet' },
+  { id: 'vave', name: 'Vave' },
   { id: 'vbet', name: 'Vbet' },
-  { id: 'betsson', name: 'Betsson' },
-  { id: 'nordicbet', name: 'NordicBet' },
-  { id: 'mrgreen', name: 'Mr Green' },
-  { id: 'betway', name: 'Betway' },
-  { id: 'expekt', name: 'Expekt' },
+  { id: 'wildio', name: 'Wild.io' },
 ] as const
 
 export function bookmakerId(name: string): string {
