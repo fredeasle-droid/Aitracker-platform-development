@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Bell } from 'lucide-react'
 import { BrandMark } from '@/components/icons'
+import { LanguageSwitcher } from '@/components/header-controls'
 import { LiveOddsPill } from '@/components/live-odds-pill'
 import { LOCALES } from '@/lib/i18n'
 import { getServerT } from '@/lib/locale-server'
@@ -25,6 +26,7 @@ export async function SiteHeader() {
         </span>
       </Link>
       <div className="flex min-w-0 items-center">
+        <LanguageSwitcher />
         <LiveOddsPill updated={updatedLabel(LOCALES[locale].tag)} />
         <Link
           href="/konto"

@@ -26,6 +26,23 @@ export function AccountIconLink() {
   )
 }
 
+export function LanguageSwitcher() {
+  const { locale, setLocale } = useLocale()
+  const [open, setOpen] = useState(false)
+  const country = countries.find((item) => item.locale === locale) ?? countries[0]
+
+  return (
+    <div className="relative">
+      <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-haspopup="listbox" className="flex size-9 items-center justify-center rounded-full text-[20px] hover:bg-accent">
+        <span aria-hidden="true">{country.flag}</span><span className="sr-only">{country.name}</span>
+      </button>
+      {open && <div role="listbox" className="absolute right-0 top-10 z-50 min-w-32 rounded-xl border border-[#22517d] bg-[#071729] p-1.5 shadow-[0_16px_32px_-12px_#000]">
+        {countries.map((item) => <button key={item.code} type="button" role="option" aria-selected={country.code === item.code} onClick={() => { setLocale(item.locale); setOpen(false) }} className="flex min-h-10 w-full items-center gap-2 rounded-lg px-2 text-left text-sm hover:bg-[#123253]"><span className="text-lg">{item.flag}</span>{item.name}</button>)}
+      </div>}
+    </div>
+  )
+}
+
 export function HeaderControls({ beforeAccount }: { beforeAccount?: ReactNode } = {}) {
   const { locale, setLocale, t } = useLocale()
   const [open, setOpen] = useState(false)
