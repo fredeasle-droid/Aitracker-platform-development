@@ -68,6 +68,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [bookmakers, setBookmakers] = useState<string[]>(() => parseBookmakers(params.get('bookmaker')))
   const [bookmakerSearch, setBookmakerSearch] = useState('')
   const [bookmakerGeo, setBookmakerGeo] = useState<'Local' | 'Offshore' | 'Global' | 'Exchanges' | 'Live Betting'>('Local')
+  const [bookmakerCountry, setBookmakerCountry] = useState('DK')
   const [minMargin, setMinMargin] = useState(0)
   const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
@@ -246,6 +247,14 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
                     <p className="mt-1 text-xs text-muted-foreground">Choose bookmakers available in your country</p>
                   </div>
                   <button type="button" onClick={() => setBookmakers([])} className="rounded-lg border border-[#42516f] px-2.5 py-1.5 text-xs text-muted-foreground hover:bg-accent">Clear all</button>
+                </div>
+                <div className="flex items-center gap-2 rounded-xl border border-[#273452] bg-[#182238] px-3 py-2">
+                  <span aria-hidden="true" className="text-lg">{bookmakerCountry === 'DK' ? '🇩🇰' : bookmakerCountry === 'SE' ? '🇸🇪' : bookmakerCountry === 'NO' ? '🇳🇴' : bookmakerCountry === 'GB' ? '🇬🇧' : bookmakerCountry === 'DE' ? '🇩🇪' : '🌐'}</span>
+                  <select value={bookmakerCountry} onChange={(event) => setBookmakerCountry(event.target.value)} className="min-h-8 flex-1 bg-transparent text-sm font-medium text-foreground outline-none">
+                    <option value="DK">Denmark</option><option value="SE">Sweden</option><option value="NO">Norway</option><option value="FI">Finland</option><option value="GB">United Kingdom</option><option value="DE">Germany</option><option value="NL">Netherlands</option><option value="US">United States</option><option value="CA">Canada</option><option value="AU">Australia</option><option value="GLOBAL">Global</option>
+                  </select>
+                  <X className="size-4 text-muted-foreground" aria-hidden="true" />
+                  <ChevronDown className="size-4 text-muted-foreground" aria-hidden="true" />
                 </div>
                 <div className="mt-3 flex items-center gap-2 rounded-xl border border-[#273452] bg-[#101a31] px-3">
                   <Search className="size-4 text-muted-foreground" aria-hidden="true" />
