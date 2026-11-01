@@ -4,7 +4,7 @@ import { opportunities } from '@/lib/db/schema'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getBookmaker } from '@/lib/bookmakers'
 import { getBetHeroCatalog, getBetHeroMessages } from '@/lib/bethero-ingest'
-import { bookmakerId, FILTER_BOOKMAKERS } from '@/lib/bookmaker-filter'
+import { bookmakerId } from '@/lib/bookmaker-filter'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,7 +14,7 @@ export async function GET(request: Request) {
     ? demoOpportunities.map((o) => ({ a: o.a.bookmaker, b: o.b.bookmaker }))
     : await db.selectDistinct({ a: opportunities.aBookmaker, b: opportunities.bBookmaker }).from(opportunities)
 
-  const byId = new Map<string, string>(country === 'DK' ? FILTER_BOOKMAKERS.map((b) => [b.id, b.name]) : [])
+  const byId = new Map<string, string>()
   const feedMessages = await getBetHeroMessages().catch(() => [])
   const catalog = await getBetHeroCatalog().catch(() => [])
   const feedBooks: string[] = catalog.map((entry) => entry.name)
@@ -28,16 +28,16 @@ export async function GET(request: Request) {
     Object.values(value).forEach(collectFeedBooks)
   }
   feedMessages.forEach(collectFeedBooks)
+  for (const { a, b } of pairs) {
+    for (const bookmaker of [a, b]) {
+      const id = bookmakerId(bookmaker)
+      if (!byId.has(id)) byId.set(id, getBookmaker(bookmaker).name)
+    }
+  }
   if (country !== 'DK') {
     for (const name of feedBooks) {
       const id = bookmakerId(name)
       if (!byId.has(id)) byId.set(id, getBookmaker(name).name)
-    }
-    for (const { a, b } of pairs) {
-      for (const bookmaker of [a, b]) {
-        const id = bookmakerId(bookmaker)
-        if (!byId.has(id)) byId.set(id, getBookmaker(bookmaker).name)
-      }
     }
   }
   for (const { a, b } of pairs) {
