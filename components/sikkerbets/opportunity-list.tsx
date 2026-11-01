@@ -15,6 +15,7 @@ import { FILTER_BOOKMAKERS, bookmakerId, matchesBookmakers, parseBookmakers, tog
 import { cn } from '@/lib/utils'
 import { useHasAccess } from '@/components/locked-odds'
 import { useLocale } from '@/components/locale-provider'
+import { BOOKMAKER_COUNTRIES } from '@/lib/countries'
 
 const AUTO_REFRESH_MS = 30_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
@@ -68,7 +69,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [bookmakers, setBookmakers] = useState<string[]>(() => parseBookmakers(params.get('bookmaker')))
   const [bookmakerSearch, setBookmakerSearch] = useState('')
   const [bookmakerGeo, setBookmakerGeo] = useState<'Local' | 'Offshore' | 'Global' | 'Exchanges' | 'Live Betting'>('Local')
-  const [bookmakerCountry, setBookmakerCountry] = useState('DK')
+  const [bookmakerCountry, setBookmakerCountry] = useState('dk')
   const [minMargin, setMinMargin] = useState(0)
   const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
@@ -126,7 +127,10 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const bookmakerLabel = bookmakers.length === 1 ? nameOf(bookmakers[0]) : `${bookmakers.length} ${t('bookmakers').toLowerCase()}`
   const filteredBookmakerOptions = bookmakerOptions.filter((bookmaker) => bookmaker.name.toLowerCase().includes(bookmakerSearch.trim().toLowerCase()))
   const bookmakerGroups = filteredBookmakerOptions.reduce<Record<string, typeof filteredBookmakerOptions>>((groups, bookmaker) => {
-    const group = bookmaker.name.toLowerCase().includes('exchange') ? 'Exchanges' : bookmaker.name.toLowerCase().includes('live') ? 'Live Betting' : 'Local'
+    const normalized = bookmaker.name.toLowerCase()
+    const countrySuffix = bookmaker.name.match(/\(([a-z]{2})\)$/i)?.[1]?.toLowerCase()
+    const group = normalized.includes('exchange') || normalized.includes('betfair exchange') ? 'Exchanges' : normalized.includes('live') ? 'Live Betting' : ['stake', '1xbet', 'betonline', 'bovada', 'mybookie', 'betus', 'cloudbet', 'bc.game', 'dafabet', 'bet9ja'].some((name) => normalized.includes(name)) ? 'Offshore' : countrySuffix === bookmakerCountry ? 'Local' : 'Global'
+    if (group === 'Local' && countrySuffix !== bookmakerCountry) return groups
     ;(groups[group] ??= []).push(bookmaker)
     return groups
   }, {})
@@ -249,9 +253,9 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
                   <button type="button" onClick={() => setBookmakers([])} className="rounded-lg border border-[#42516f] px-2.5 py-1.5 text-xs text-muted-foreground hover:bg-accent">Clear all</button>
                 </div>
                 <div className="flex items-center gap-2 rounded-xl border border-[#273452] bg-[#182238] px-3 py-2">
-                  <span aria-hidden="true" className="text-lg">{bookmakerCountry === 'DK' ? '🇩🇰' : bookmakerCountry === 'SE' ? '🇸🇪' : bookmakerCountry === 'NO' ? '🇳🇴' : bookmakerCountry === 'GB' ? '🇬🇧' : bookmakerCountry === 'DE' ? '🇩🇪' : '🌐'}</span>
+                  <span aria-hidden="true" className="text-lg">{bookmakerCountry === 'dk' ? '🇩🇰' : bookmakerCountry === 'se' ? '🇸🇪' : bookmakerCountry === 'no' ? '🇳🇴' : bookmakerCountry === 'gb-eng' ? '🇬🇧' : bookmakerCountry === 'de' ? '🇩🇪' : '🌐'}</span>
                   <select value={bookmakerCountry} onChange={(event) => setBookmakerCountry(event.target.value)} className="min-h-8 flex-1 bg-transparent text-sm font-medium text-foreground outline-none">
-                    <option value="DK">Denmark</option><option value="SE">Sweden</option><option value="NO">Norway</option><option value="FI">Finland</option><option value="GB">United Kingdom</option><option value="DE">Germany</option><option value="NL">Netherlands</option><option value="US">United States</option><option value="CA">Canada</option><option value="AU">Australia</option><option value="GLOBAL">Global</option>
+                    {BOOKMAKER_COUNTRIES.map((country) => <option key={country.code} value={country.code}>{country.name}</option>)}
                   </select>
                   <X className="size-4 text-muted-foreground" aria-hidden="true" />
                   <ChevronDown className="size-4 text-muted-foreground" aria-hidden="true" />
@@ -266,7 +270,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
                 </div>
               </div>
               <div className="max-h-[360px] space-y-3 overflow-y-auto bg-[#0c1428] p-3">
-                {Object.entries(bookmakerGroups).map(([group, options]) => <div key={group} className={cn('rounded-xl border border-[#273452] bg-[#121c3a] p-3', bookmakerGeo !== group && bookmakerGeo !== 'Local' && 'hidden')}>
+                {Object.entries(bookmakerGroups).map(([group, options]) => <div key={group} className={cn('rounded-xl border border-[#273452] bg-[#121c3a] p-3', bookmakerGeo !== group && 'hidden')}>
                   <div className="mb-2 flex items-center justify-between"><span className="text-sm font-semibold text-primary">{group} <span className="text-xs text-muted-foreground">{options.length} available</span></span><button type="button" onClick={() => setBookmakers((prev) => Array.from(new Set([...prev, ...options.map((option) => option.id)])))} className="rounded-md border border-[#42516f] px-2 py-1 text-xs text-muted-foreground">Select all</button></div>
                   <div className="grid gap-2 sm:grid-cols-2">{options.map((b) => <button key={b.id} type="button" onClick={() => setBookmakers((prev) => toggleBookmaker(prev, b.id))} className={cn('flex min-h-12 items-center justify-between rounded-lg border px-3 text-left text-sm', bookmakers.includes(b.id) ? 'border-primary bg-primary/15 text-foreground' : 'border-[#354579] bg-[#1b216b]/30 text-muted-foreground hover:border-primary')}><span className="truncate">{b.name}</span><span className={cn('size-2 rounded-full', bookmakers.includes(b.id) ? 'bg-primary' : 'bg-[#e40046]')} /></button>)}</div>
                 </div>)}

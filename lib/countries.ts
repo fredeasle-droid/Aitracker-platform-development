@@ -62,6 +62,8 @@ const RULES: CountryRule[] = [
   },
 ]
 
+export const BOOKMAKER_COUNTRIES = RULES.map(({ code, name }) => ({ code, name }))
+
 // Country words win over bare league names, so "Mongolia Premier League" is not read as England.
 export function deriveCountry(league: string): { code: string; name: string } | null {
   const text = league.toLowerCase()
