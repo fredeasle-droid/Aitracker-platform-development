@@ -3,7 +3,7 @@ import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getBookmaker } from '@/lib/bookmakers'
-import { getBetHeroMessages } from '@/lib/bethero-ingest'
+import { getBetHeroCatalog, getBetHeroMessages } from '@/lib/bethero-ingest'
 import { bookmakerId, FILTER_BOOKMAKERS } from '@/lib/bookmaker-filter'
 
 export const dynamic = 'force-dynamic'
@@ -16,7 +16,8 @@ export async function GET(request: Request) {
 
   const byId = new Map<string, string>(country === 'DK' ? FILTER_BOOKMAKERS.map((b) => [b.id, b.name]) : [])
   const feedMessages = await getBetHeroMessages().catch(() => [])
-  const feedBooks: string[] = []
+  const catalog = await getBetHeroCatalog().catch(() => [])
+  const feedBooks: string[] = catalog.map((entry) => entry.name)
   const collectFeedBooks = (value: unknown) => {
     if (Array.isArray(value)) return value.forEach(collectFeedBooks)
     if (!value || typeof value !== 'object') return
