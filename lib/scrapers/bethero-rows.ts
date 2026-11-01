@@ -27,42 +27,12 @@ type BetHeroRow = {
 
 const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 
-// Bet Hero lists every bookmaker sharing the same odds feed (1xBet clones etc.) in arbitrary order.
-// Only the bookmakers the user has selected in Bet Hero may be picked, so the shared list is filtered
-// down to this whitelist (normalized names, regional suffix like "(DK)" ignored).
-const ALLOWED_BOOKS = new Set([
-  'bwin',
-  'unibet',
-  'leovegas',
-  '888sport',
-  'mrgreen',
-  'betinia',
-  'campobet',
-  'oddset',
-  'betsson',
-  'nordicbet',
-  'betfairexchange',
-  'betfair',
-  'bet365',
-  'marathonbet',
-  'dbbet',
-  'rainbet',
-  'mystake',
-  '20bet',
-  'vave',
-  'wildio',
-  'cloudbet',
-  'shuffle',
-  'sportsbetio',
-])
-
-const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
-
-function pickAllowedBook(books: BetHeroBook[] | undefined) {
+// Bet Hero can return every bookmaker available in the selected country and category.
+// Do not apply a local whitelist here: the user's Bet Hero selection is the source of truth.
+function pickBook(books: BetHeroBook[] | undefined) {
   const names = (books ?? [])
     .map((book) => book.name)
     .filter((name): name is string => Boolean(name))
-    .filter((name) => ALLOWED_BOOKS.has(normalizeBook(name)))
   const chosen = names.find((name) => /\(DK\)$/i.test(name)) ?? names[0]
   return chosen ? baseName(chosen) : null
 }
@@ -88,8 +58,8 @@ function parseRow(row: BetHeroRow, now: number): ScrapedSurebet | null {
   const oddsB = Number(row.adjusted_odds_2 ?? row.odds_2)
   if (!teams || !(profit > 0) || !(oddsA > 1) || !(oddsB > 1)) return null
 
-  const bookA = pickAllowedBook(row.books_1)
-  const bookB = pickAllowedBook(row.books_2)
+  const bookA = pickBook(row.books_1)
+  const bookB = pickBook(row.books_2)
   if (!bookA || !bookB || bookA === bookB) return null
 
   const line = row.bet_name_1?.match(/([+-]?\d+(?:\.\d+)?)\s*$/)?.[1]
