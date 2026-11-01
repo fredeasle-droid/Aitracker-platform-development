@@ -41,7 +41,8 @@ export async function POST(request: Request) {
     if (subscriptionId) subscription = await getStripe().subscriptions.retrieve(subscriptionId)
   } else if (event.type === 'invoice.payment_failed') {
     const invoice = event.data.object as Stripe.Invoice
-    const subscriptionId = typeof invoice.subscription === 'string' ? invoice.subscription : invoice.subscription?.id
+    const invoiceSubscription = (invoice as unknown as { subscription?: string | { id: string } }).subscription
+    const subscriptionId = typeof invoiceSubscription === 'string' ? invoiceSubscription : invoiceSubscription?.id
     if (subscriptionId) subscription = await getStripe().subscriptions.retrieve(subscriptionId)
   } else {
     subscription = event.data.object as Stripe.Subscription
