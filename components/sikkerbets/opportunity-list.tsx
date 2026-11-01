@@ -3,7 +3,7 @@
 import { useMemo, useState, useTransition } from 'react'
 import { useSearchParams } from 'next/navigation'
 import useSWR from 'swr'
-import { ChevronDown, ListFilter, ArrowDownWideNarrow } from 'lucide-react'
+import { ChevronDown, ListFilter, ArrowDownWideNarrow, Search, X } from 'lucide-react'
 import { refreshOpportunityList, toggleFavorite } from '@/app/actions'
 import { MenuOption, Popover } from '@/components/menu'
 import { SmallBarsIcon } from '@/components/icons'
@@ -66,6 +66,8 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [sport, setSport] = useState<string>('Alle')
   const params = useSearchParams()
   const [bookmakers, setBookmakers] = useState<string[]>(() => parseBookmakers(params.get('bookmaker')))
+  const [bookmakerSearch, setBookmakerSearch] = useState('')
+  const [bookmakerGeo, setBookmakerGeo] = useState<'Local' | 'Offshore' | 'Global' | 'Exchanges' | 'Live Betting'>('Local')
   const [minMargin, setMinMargin] = useState(0)
   const [sort, setSort] = useState<SortId>('margin')
   const [, startTransition] = useTransition()
@@ -121,6 +123,12 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   }, [bySport, allBookmakers])
   const nameOf = (id: string) => bookmakerOptions.find((b) => b.id === id)?.name ?? FILTER_BOOKMAKERS.find((b) => b.id === id)?.name ?? id
   const bookmakerLabel = bookmakers.length === 1 ? nameOf(bookmakers[0]) : `${bookmakers.length} ${t('bookmakers').toLowerCase()}`
+  const filteredBookmakerOptions = bookmakerOptions.filter((bookmaker) => bookmaker.name.toLowerCase().includes(bookmakerSearch.trim().toLowerCase()))
+  const bookmakerGroups = filteredBookmakerOptions.reduce<Record<string, typeof filteredBookmakerOptions>>((groups, bookmaker) => {
+    const group = bookmaker.name.toLowerCase().includes('exchange') ? 'Exchanges' : bookmaker.name.toLowerCase().includes('live') ? 'Live Betting' : 'Local'
+    ;(groups[group] ??= []).push(bookmaker)
+    return groups
+  }, {})
   const markets = useMemo(() => Array.from(new Set(bySport.map((o) => o.market))).sort(), [bySport])
 
   const visible = useMemo(() => {
@@ -219,6 +227,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           className="min-w-0 flex-[97_1_0%]"
           label={t('bookmakersFilter')}
           triggerClassName={filterBtn}
+          panelClassName="left-0 w-[min(720px,calc(100vw-2rem))] p-0 lg:left-0"
           trigger={
             <>
               <ListFilter className="size-3 shrink-0 lg:size-5" />
@@ -227,16 +236,34 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
             </>
           }
         >
+
           {(close) => (
-            <div className="max-h-72 overflow-y-auto">
-              <MenuOption selected={bookmakers.length === 0} onSelect={() => (setBookmakers([]), close())}>
-                {t('allBookmakers')}
-              </MenuOption>
-              {bookmakerOptions.map((b) => (
-                <MenuOption key={b.id} selected={bookmakers.includes(b.id)} onSelect={() => setBookmakers((prev) => toggleBookmaker(prev, b.id))}>
-                  {b.name}
-                </MenuOption>
-              ))}
+            <div className="overflow-hidden">
+              <div className="border-b border-[#273452] p-4">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{t('bookmakersFilter')}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">Choose bookmakers available in your country</p>
+                  </div>
+                  <button type="button" onClick={() => setBookmakers([])} className="rounded-lg border border-[#42516f] px-2.5 py-1.5 text-xs text-muted-foreground hover:bg-accent">Clear all</button>
+                </div>
+                <div className="mt-3 flex items-center gap-2 rounded-xl border border-[#273452] bg-[#101a31] px-3">
+                  <Search className="size-4 text-muted-foreground" aria-hidden="true" />
+                  <input value={bookmakerSearch} onChange={(event) => setBookmakerSearch(event.target.value)} placeholder="Search books ..." className="h-10 min-w-0 flex-1 bg-transparent text-sm text-foreground outline-none placeholder:text-muted-foreground" aria-label="Search bookmakers" />
+                  {bookmakerSearch && <button type="button" onClick={() => setBookmakerSearch('')} aria-label="Clear search"><X className="size-4 text-muted-foreground" /></button>}
+                </div>
+                <div className="mt-3 flex gap-2 overflow-x-auto [scrollbar-width:none]">
+                  {(['Local', 'Offshore', 'Global', 'Exchanges', 'Live Betting'] as const).map((geo) => <button key={geo} type="button" onClick={() => setBookmakerGeo(geo)} className={cn('rounded-lg border px-3 py-2 text-xs font-semibold whitespace-nowrap', bookmakerGeo === geo ? 'border-primary bg-primary/15 text-primary' : 'border-[#273452] text-muted-foreground hover:bg-accent')}>{geo}</button>)}
+                </div>
+              </div>
+              <div className="max-h-[360px] space-y-3 overflow-y-auto bg-[#0c1428] p-3">
+                {Object.entries(bookmakerGroups).map(([group, options]) => <div key={group} className={cn('rounded-xl border border-[#273452] bg-[#121c3a] p-3', bookmakerGeo !== group && bookmakerGeo !== 'Local' && 'hidden')}>
+                  <div className="mb-2 flex items-center justify-between"><span className="text-sm font-semibold text-primary">{group} <span className="text-xs text-muted-foreground">{options.length} available</span></span><button type="button" onClick={() => setBookmakers((prev) => Array.from(new Set([...prev, ...options.map((option) => option.id)])))} className="rounded-md border border-[#42516f] px-2 py-1 text-xs text-muted-foreground">Select all</button></div>
+                  <div className="grid gap-2 sm:grid-cols-2">{options.map((b) => <button key={b.id} type="button" onClick={() => setBookmakers((prev) => toggleBookmaker(prev, b.id))} className={cn('flex min-h-12 items-center justify-between rounded-lg border px-3 text-left text-sm', bookmakers.includes(b.id) ? 'border-primary bg-primary/15 text-foreground' : 'border-[#354579] bg-[#1b216b]/30 text-muted-foreground hover:border-primary')}><span className="truncate">{b.name}</span><span className={cn('size-2 rounded-full', bookmakers.includes(b.id) ? 'bg-primary' : 'bg-[#e40046]')} /></button>)}</div>
+                </div>)}
+                {filteredBookmakerOptions.length === 0 && <p className="py-10 text-center text-sm text-muted-foreground">No bookmakers found</p>}
+              </div>
+              <div className="flex items-center justify-end gap-2 border-t border-[#273452] bg-[#10182e] p-3"><button type="button" onClick={close} className="rounded-lg bg-[#34405a] px-4 py-2 text-sm font-semibold text-white">Cancel</button><button type="button" onClick={close} className="rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground">Apply filters</button></div>
             </div>
           )}
         </Popover>
