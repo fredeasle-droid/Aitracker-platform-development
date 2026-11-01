@@ -129,13 +129,10 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const bookmakerGroups = filteredBookmakerOptions.reduce<Record<string, typeof filteredBookmakerOptions>>((groups, bookmaker) => {
     const normalized = bookmaker.name.toLowerCase()
     const countrySuffix = bookmaker.name.match(/\(([a-z]{2})\)$/i)?.[1]?.toLowerCase()
-    const group = normalized.includes('exchange') || normalized.includes('betfair exchange') ? 'Exchanges' : normalized.includes('live') ? 'Live Betting' : ['stake', '1xbet', 'betonline', 'bovada', 'mybookie', 'betus', 'cloudbet', 'bc.game', 'dafabet', 'bet9ja'].some((name) => normalized.includes(name)) ? 'Offshore' : countrySuffix === bookmakerCountry ? 'Local' : 'Global'
-    if (group === 'Local' && countrySuffix !== bookmakerCountry) return groups
+    const selectedCountryCode = bookmakerCountry.split('-')[0].toLowerCase()
+    const group = normalized.includes('exchange') || normalized.includes('betfair exchange') ? 'Exchanges' : normalized.includes('live') ? 'Live Betting' : ['stake', '1xbet', 'betonline', 'bovada', 'mybookie', 'betus', 'cloudbet', 'bc.game', 'dafabet', 'bet9ja'].some((name) => normalized.includes(name)) ? 'Offshore' : countrySuffix === selectedCountryCode ? 'Local' : 'Global'
+    if (group === 'Local' && countrySuffix !== selectedCountryCode) return groups
     ;(groups[group] ??= []).push(bookmaker)
-    // BetHero does not always append a country suffix to local bookmakers.
-    // Keep unclassified names visible in Local as candidates for the selected country,
-    // while retaining them in Global so no bookmaker disappears from the catalog.
-    if (group === 'Global' && !countrySuffix) (groups.Local ??= []).push(bookmaker)
     return groups
   }, {})
   const markets = useMemo(() => Array.from(new Set(bySport.map((o) => o.market))).sort(), [bySport])
