@@ -308,4 +308,7 @@ export const de: Record<MessageKey, string> = {
   featUpTo5: 'SikkerBets bis zu 5 % Marge',
   featFavorites: 'Favoriten',
   featStats: 'Statistiken',
+  sureBetsAria: 'Sichere Wetten',
+  sportsAria: 'Sportarten',
+  foundCount: '{count} sichere Wetten gefunden',
 }

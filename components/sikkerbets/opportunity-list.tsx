@@ -78,7 +78,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     onSuccess: (next) => setItems(next),
   })
   const loggedIn = useHasAccess()
-  const { t } = useLocale()
+  const { t, tx } = useLocale()
 
   const [market, setMarket] = useState<string>('Alle')
   const urlKey = params.toString()
@@ -157,9 +157,9 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const moreActive = sport === 'Favoritter' || (MORE_SPORTS as readonly string[]).includes(sport)
 
   return (
-    <section aria-label="SikkerBets" className="w-full min-w-0 overflow-x-hidden px-2.5 lg:flex-1 lg:px-0">
+    <section aria-label={t('sureBetsAria')} className="w-full min-w-0 overflow-x-hidden px-2.5 lg:flex-1 lg:px-0">
       <DesktopHero />
-      <div className="-mx-2.5 flex gap-1.5 overflow-x-auto px-3 [scrollbar-width:none] lg:mx-0 lg:gap-2 lg:px-0 lg:pb-1" role="toolbar" aria-label="Sportsgren">
+      <div className="-mx-2.5 flex gap-1.5 overflow-x-auto px-3 [scrollbar-width:none] lg:mx-0 lg:gap-2 lg:px-0 lg:pb-1" role="toolbar" aria-label={t('sportsAria')}>
         <button
           type="button"
           onClick={() => selectSport('Alle')}
@@ -206,7 +206,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
           {(close) =>
             [...MORE_SPORTS, 'Favoritter'].map((s) => (
               <MenuOption key={s} selected={sport === s} onSelect={() => (selectSport(s), close())}>
-                {s}
+                {tx(s)}
               </MenuOption>
             ))
           }
@@ -242,7 +242,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
         </Popover>
         <Popover
           className="min-w-0 flex-[140_1_0%]"
-          label="Minimum margin"
+          label={t('minMargin')}
           triggerClassName={filterBtn}
           trigger={
             <>
@@ -315,7 +315,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       </div>
 
       <p className="sr-only" aria-live="polite">
-        {visible.length} SikkerBets fundet
+        {t('foundCount', { count: visible.length })}
       </p>
 
       <div

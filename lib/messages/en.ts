@@ -308,4 +308,7 @@ export const en: Record<MessageKey, string> = {
   featUpTo5: 'Sure bets up to 5% margin',
   featFavorites: 'Favorites',
   featStats: 'Statistics',
+  sureBetsAria: 'Sure bets',
+  sportsAria: 'Sports',
+  foundCount: '{count} sure bets found',
 }

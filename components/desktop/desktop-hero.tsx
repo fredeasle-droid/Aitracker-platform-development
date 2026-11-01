@@ -1,10 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, Layers, Trophy, Zap } from 'lucide-react'
-import { getServerT } from '@/lib/locale-server'
+import { useLocale } from '@/components/locale-provider'
 
-export async function DesktopHero() {
-  const { t } = await getServerT()
+export function DesktopHero() {
+  const { t } = useLocale()
   const features = [
     { icon: Zap, value: t('live'), label: t('feat247') },
     { icon: Layers, value: '2.000+', label: t('bookmakers') },

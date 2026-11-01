@@ -306,6 +306,9 @@ export const da = {
   featUpTo5: 'SikkerBets op til 5% margin',
   featFavorites: 'Favoritter',
   featStats: 'Statistik',
+  sureBetsAria: 'SikkerBets',
+  sportsAria: 'Sportsgrene',
+  foundCount: '{count} SikkerBets fundet',
 }
 
 export type MessageKey = keyof typeof da
