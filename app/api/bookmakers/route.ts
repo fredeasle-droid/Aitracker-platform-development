@@ -3,16 +3,17 @@ import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getBookmaker } from '@/lib/bookmakers'
-import { bookmakerId } from '@/lib/bookmaker-filter'
+import { bookmakerId, FILTER_BOOKMAKERS } from '@/lib/bookmaker-filter'
 
 export const dynamic = 'force-dynamic'
 
-export async function GET() {
+export async function GET(request: Request) {
+  const country = new URL(request.url).searchParams.get('country')?.toUpperCase() ?? 'DK'
   const pairs = isDemoMode()
     ? demoOpportunities.map((o) => ({ a: o.a.bookmaker, b: o.b.bookmaker }))
     : await db.selectDistinct({ a: opportunities.aBookmaker, b: opportunities.bBookmaker }).from(opportunities)
 
-  const byId = new Map<string, string>()
+  const byId = new Map<string, string>(country === 'DK' ? FILTER_BOOKMAKERS.map((b) => [b.id, b.name]) : [])
   for (const { a, b } of pairs) {
     for (const name of [a, b]) {
       const id = bookmakerId(name)

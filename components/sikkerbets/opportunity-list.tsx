@@ -111,7 +111,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
       ),
     [items, sport, country, query],
   )
-  const allBookmakers = useBookmakerList()
+  const allBookmakers = useBookmakerList(bookmakerCountry)
   const bookmakerOptions = useMemo(() => {
     const byId = new Map<string, string>(allBookmakers.map((b) => [b.id, b.name]))
     for (const o of bySport) {
