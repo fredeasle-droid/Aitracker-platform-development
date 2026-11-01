@@ -28,9 +28,17 @@ export async function GET(request: Request) {
     Object.values(value).forEach(collectFeedBooks)
   }
   feedMessages.forEach(collectFeedBooks)
-  for (const name of feedBooks) {
-    const id = bookmakerId(name)
-    if (!byId.has(id)) byId.set(id, getBookmaker(name).name)
+  if (country !== 'DK') {
+    for (const name of feedBooks) {
+      const id = bookmakerId(name)
+      if (!byId.has(id)) byId.set(id, getBookmaker(name).name)
+    }
+    for (const { a, b } of pairs) {
+      for (const bookmaker of [a, b]) {
+        const id = bookmakerId(bookmaker)
+        if (!byId.has(id)) byId.set(id, getBookmaker(bookmaker).name)
+      }
+    }
   }
   for (const { a, b } of pairs) {
     for (const name of [a, b]) {
