@@ -11,8 +11,6 @@ const SOURCES = [
   { source: 'bethero', run: scrapeBetHero },
 ]
 
-const MAX_PROFIT_PERCENT = 25
-
 export async function scrapeAll() {
   const results = await Promise.allSettled(SOURCES.map((entry) => entry.run()))
   const reports: SourceReport[] = []
@@ -31,7 +29,7 @@ export async function scrapeAll() {
   const now = Date.now()
   const best = new Map<string, ScrapedSurebet>()
   for (const item of all) {
-    if (item.legs.length !== 2 || item.profit <= 0 || item.profit > MAX_PROFIT_PERCENT || item.kickoff.getTime() < now) continue
+    if (item.legs.length !== 2 || item.profit <= 0 || item.kickoff.getTime() < now) continue
     if (item.source !== 'surebetdanmark' && item.source !== 'bethero' && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
     const key = `${item.homeTeam}|${item.awayTeam}|${item.market}`.toLowerCase()
     const current = best.get(key)
