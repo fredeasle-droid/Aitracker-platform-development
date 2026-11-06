@@ -23,7 +23,12 @@ export async function GET(request: Request) {
   const byId = new Map<string, string>()
   const feedMessages = await getBetHeroMessages().catch(() => [])
   const catalog = await getBetHeroCatalog().catch(() => [])
-  const feedBooks: string[] = catalog.map((entry) => entry.name)
+  const catalogEntries = catalog.filter((entry) => {
+    if (!entry.country) return true
+    return entry.country.toLowerCase().startsWith(country.toLowerCase())
+  })
+  const feedBooks: string[] = catalogEntries.map((entry) => entry.name)
+  const metadata = new Map(catalogEntries.map((entry) => [bookmakerId(entry.name), { country: entry.country, category: entry.category }]))
   const collectFeedBooks = (value: unknown) => {
     if (Array.isArray(value)) return value.forEach(collectFeedBooks)
     if (!value || typeof value !== 'object') return
@@ -53,6 +58,6 @@ export async function GET(request: Request) {
     }
   }
 
-  const list = Array.from(byId, ([id, name]) => ({ id, name })).sort((x, y) => x.name.localeCompare(y.name))
+  const list = Array.from(byId, ([id, name]) => ({ id, name, ...metadata.get(id) })).sort((x, y) => x.name.localeCompare(y.name))
   return NextResponse.json(list)
 }
