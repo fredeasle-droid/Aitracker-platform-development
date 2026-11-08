@@ -29,7 +29,10 @@ export function decodeHtml(value = '') {
 }
 
 export function splitTeams(match: string): [string, string] | null {
-  const parts = match.split(/\s+(?:vs\.?|—|–|-)\s+/i).map((part) => part.trim()).filter(Boolean)
+  const parts = match
+    .split(/\s*(?:@)\s*|\s+(?:vs\.?|v|at|—|–|-)\s+/i)
+    .map((part) => part.trim())
+    .filter(Boolean)
   return parts.length === 2 ? [parts[0], parts[1]] : null
 }
 
