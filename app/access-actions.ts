@@ -4,12 +4,15 @@ import { headers } from 'next/headers'
 import { auth } from '@/lib/auth'
 import { hasActiveSubscription } from '@/lib/billing'
 
+const FREE_ACCESS_EMAILS = new Set(['nebleipad@gmail.com'])
+
 function isAdminEmail(email: string) {
+  const normalizedEmail = email.trim().toLowerCase()
   const admins = (process.env.ADMIN_EMAILS ?? '')
     .split(',')
     .map((value) => value.trim().toLowerCase())
     .filter(Boolean)
-  return admins.includes(email.toLowerCase())
+  return FREE_ACCESS_EMAILS.has(normalizedEmail) || admins.includes(normalizedEmail)
 }
 
 export async function getHasOddsAccess() {
