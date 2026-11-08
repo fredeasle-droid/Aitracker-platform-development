@@ -98,13 +98,17 @@ export async function scrapeBetHero() {
   const rows: BetHeroRow[] = []
   collectRows(messages, rows)
 
-  const latest = new Map<string, BetHeroRow>()
-  for (const row of rows) {
-    const key = row.parent_id ?? `${row.event}|${row.market_1}|${row.bet_name_1}`
+  const now = Date.now()
+  const parsed = rows
+    .map((row) => parseRow(row, now))
+    .filter((item): item is ScrapedSurebet => item !== null)
+
+  const latest = new Map<string, ScrapedSurebet>()
+  for (const item of parsed) {
+    const key = `${item.homeTeam}|${item.awayTeam}|${item.market}|${item.legs.map((leg) => `${leg.bookmaker}:${leg.label}`).join('|')}`
     const current = latest.get(key)
-    if (!current || Number(row.profit ?? 0) > Number(current.profit ?? 0)) latest.set(key, row)
+    if (!current || item.profit > current.profit) latest.set(key, item)
   }
 
-  const now = Date.now()
-  return [...latest.values()].map((row) => parseRow(row, now)).filter((item): item is ScrapedSurebet => item !== null)
+  return [...latest.values()]
 }
