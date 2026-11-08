@@ -56,8 +56,9 @@ function collectRows(value: unknown, rows: BetHeroRow[]) {
 }
 
 function parseRow(row: BetHeroRow, now: number): ScrapedSurebet | null {
-  if (row.live || !row.start) return null
-  const kickoff = new Date(row.start * 1000)
+  const kickoffTimestamp = row.start ?? row.timestamp
+  if (row.live || !kickoffTimestamp) return null
+  const kickoff = new Date(kickoffTimestamp * 1000)
   if (kickoff.getTime() < now) return null
 
   const teams = splitTeams(row.event ?? '')
