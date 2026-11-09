@@ -4,6 +4,7 @@ export const FILTER_BOOKMAKERS = [
   { id: '20bet', name: '20bet' },
   { id: 'bcgame', name: 'BC.Game' },
   { id: 'bet365', name: 'Bet365' },
+  { id: 'betano', name: 'Betano' },
   { id: 'bet9ja', name: 'Bet9ja' },
   { id: 'betfair', name: 'betfair' },
   { id: 'betinia', name: 'Betinia' },

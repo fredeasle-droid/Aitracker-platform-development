@@ -31,7 +31,7 @@ const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 const ALLOWED_BOOKS = new Set([
   'bwin', 'unibet', 'leovegas', '888sport', 'mrgreen', 'betinia', 'campobet', 'oddset',
   'betsson', 'nordicbet', 'betfairexchange', 'betfair', 'bet365', 'marathonbet', 'dbbet',
-  'rainbet', 'mystake', '20', '20bet', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio',
+  'rainbet', 'mystake', '20', '20bet', 'betano', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio',
 ])
 
 const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
