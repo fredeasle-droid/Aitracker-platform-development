@@ -1,22 +1,41 @@
 import Link from 'next/link'
+import { Bell } from 'lucide-react'
 import { BrandMark } from '@/components/icons'
-import { HeaderControls } from '@/components/header-controls'
+import { LanguageSwitcher } from '@/components/header-controls'
+import { LiveOddsPill } from '@/components/live-odds-pill'
+import { LOCALES } from '@/lib/i18n'
+import { getServerT } from '@/lib/locale-server'
 
-export function SiteHeader() {
+function updatedLabel(tag: string) {
+  return new Intl.DateTimeFormat(tag, { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Copenhagen' }).format(new Date())
+}
+
+export async function SiteHeader() {
+  const { t, locale } = await getServerT()
   return (
-    <header className="flex lg:hidden items-center justify-between gap-2 border-b border-[#102b49] bg-[linear-gradient(180deg,#061a31_0%,#050f1f_100%)] px-4 pb-3 pt-[calc(1rem+env(safe-area-inset-top))]">
-      <Link href="/" className="flex min-w-0 items-center gap-2.5" aria-label="BetTracker forside">
-        <BrandMark className="h-9 w-12 shrink-0" />
-        <span className="flex min-w-0 flex-col">
-          <span className="text-[28px] font-extrabold leading-none tracking-tight">
+    <header className="flex items-center justify-between gap-1 pb-3.5 pl-3 pr-1 pt-[calc(11px+env(safe-area-inset-top))] lg:hidden">
+      <Link href="/" className="flex shrink-0 items-center gap-3" aria-label={t('homeAria')}>
+        <BrandMark showTrend={false} className="h-[25px] w-[28px] shrink-0" />
+        <span className="flex flex-col">
+          <span className="text-[25px] font-extrabold leading-none tracking-tight">
             Bet<span className="text-primary">Tracker</span>
           </span>
-          <span className="mt-1 text-[8px] font-medium leading-tight text-[#a9b6d3] min-[400px]:text-[8.5px]">
-            {'SIKKERBETS · ENKLERE · STØRRE OVERBLIK'}
+          <span className="mt-[7px] whitespace-nowrap text-[7.2px] font-semibold leading-none tracking-[0.04em] text-[#8fa3cc]">
+            {t('tagline')}
           </span>
         </span>
       </Link>
-      <HeaderControls />
+      <div className="flex min-w-0 items-center">
+        <LanguageSwitcher />
+        <LiveOddsPill updated={updatedLabel(LOCALES[locale].tag)} />
+        <Link
+          href="/konto"
+          aria-label={t('notificationsAccountAria')}
+          className="flex size-[37px] shrink-0 items-center justify-center rounded-full text-foreground transition-colors hover:bg-accent"
+        >
+          <Bell className="size-[18px]" aria-hidden="true" />
+        </Link>
+      </div>
     </header>
   )
 }

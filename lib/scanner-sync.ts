@@ -4,6 +4,7 @@ import { inArray, max } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
 import { scrapeAll } from '@/lib/scrapers'
+import { displayLeague } from '@/lib/scrapers/types'
 import { marginPercent } from '@/lib/odds'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
 
@@ -39,7 +40,7 @@ async function runRefresh() {
         sport: item.sport,
         country: 'International',
         countryCode: '',
-        league: item.league,
+        league: displayLeague(item.league, item.sport),
         homeTeam: item.homeTeam,
         awayTeam: item.awayTeam,
         market: item.market,

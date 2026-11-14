@@ -1,17 +1,17 @@
 import 'server-only'
-import { scrapeBetHero } from './bethero-rows'
-import { scrapeSureBetDanmark } from './surebetdanmark'
-import type { ScrapedSurebet } from './types'
+import { scrapeBetMonitor } from './betmonitor'
+import { scrapeOddsator } from './oddsator'
+import { scrapeSureBetsToday } from './surebets-today'
+import { isHockeySport, type ScrapedSurebet } from './types'
 import { isAllowedBookmaker } from '@/lib/allowed-bookmakers'
 
 export type SourceReport = { source: string; ok: boolean; count: number; error?: string }
 
 const SOURCES = [
-  { source: 'surebetdanmark', run: scrapeSureBetDanmark },
-  { source: 'bethero', run: scrapeBetHero },
+  { source: 'betmonitor', run: scrapeBetMonitor },
+  { source: 'surebets-today', run: scrapeSureBetsToday },
+  { source: 'oddsator', run: scrapeOddsator },
 ]
-
-const MAX_PROFIT_PERCENT = 25
 
 export async function scrapeAll() {
   const results = await Promise.allSettled(SOURCES.map((entry) => entry.run()))
@@ -31,7 +31,8 @@ export async function scrapeAll() {
   const now = Date.now()
   const best = new Map<string, ScrapedSurebet>()
   for (const item of all) {
-    if (item.legs.length !== 2 || item.profit <= 0 || item.profit > MAX_PROFIT_PERCENT || item.kickoff.getTime() < now) continue
+    if (isHockeySport(item.sport)) continue
+    if (item.legs.length !== 2 || item.profit <= 0 || item.kickoff.getTime() < now) continue
     if (item.source !== 'surebetdanmark' && item.source !== 'bethero' && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
     const key = `${item.homeTeam}|${item.awayTeam}|${item.market}`.toLowerCase()
     const current = best.get(key)

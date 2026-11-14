@@ -29,8 +29,22 @@ export function decodeHtml(value = '') {
 }
 
 export function splitTeams(match: string): [string, string] | null {
-  const parts = match.split(/\s+(?:vs\.?|—|–|-)\s+/i).map((part) => part.trim()).filter(Boolean)
+  const parts = match
+    .split(/\s*(?:@)\s*|\s+(?:vs\.?|v|at|—|–|-)\s+/i)
+    .map((part) => part.trim())
+    .filter(Boolean)
   return parts.length === 2 ? [parts[0], parts[1]] : null
+}
+
+export function displayLeague(value: string, sport = '') {
+  const league = value.trim()
+  const haystack = `${league} ${sport}`.toLowerCase()
+  if (haystack.includes('oktagon') || haystack.includes('lfa')) return 'MMA'
+  return league || 'Ukendt liga'
+}
+
+export function isHockeySport(value: string) {
+  return value.toLowerCase().includes('hockey')
 }
 
 export function displaySport(value: string) {

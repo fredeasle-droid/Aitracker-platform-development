@@ -2,16 +2,18 @@
 
 import Link from 'next/link'
 import { Bell, ChevronRight } from 'lucide-react'
+import { useLocale } from '@/components/locale-provider'
 import { Popover } from '@/components/menu'
 import { formatPct } from '@/lib/odds'
 
 type Alert = { id: number; title: string; market: string; margin: number; kickoff: string }
 
 export function NotificationsMenu({ alerts }: { alerts: Alert[] }) {
+  const { t } = useLocale()
   return (
     <Popover
       align="right"
-      label={`Notifikationer, ${alerts.length} nye`}
+      label={`${t('notifications')}, ${alerts.length} ${t('newCount')}`}
       triggerClassName="relative flex size-11 items-center justify-center rounded-full text-foreground hover:bg-accent"
       panelClassName="w-[min(20rem,calc(100vw-2rem))]"
       trigger={
@@ -25,9 +27,9 @@ export function NotificationsMenu({ alerts }: { alerts: Alert[] }) {
     >
       {(close) => (
         <div>
-          <p className="px-3 pb-2 pt-2 text-sm font-semibold">Høj margin lige nu</p>
+          <p className="px-3 pb-2 pt-2 text-sm font-semibold">{t('highMarginNow')}</p>
           {alerts.length === 0 ? (
-            <p className="px-3 pb-3 text-sm text-muted-foreground">Ingen SikkerBets over 4% lige nu.</p>
+            <p className="px-3 pb-3 text-sm text-muted-foreground">{t('noAlerts')}</p>
           ) : (
             <ul>
               {alerts.map((a) => (

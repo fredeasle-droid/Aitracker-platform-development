@@ -11,7 +11,7 @@ export default async function HomePage() {
   return (
     <main>
       <SiteHeader />
-      <h1 className="sr-only">SikkerBets</h1>
+      <h1 className="sr-only">Sure bets</h1>
       <div className="lg:flex lg:items-start lg:gap-4 lg:px-4 lg:pt-4">
         <Suspense fallback={null}>
           <OpportunityList initial={opportunities} />

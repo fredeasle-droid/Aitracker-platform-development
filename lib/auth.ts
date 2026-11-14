@@ -17,6 +17,8 @@ export const auth = betterAuth({
       process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '',
       process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : '',
       'https://aitracker-platform-development-git-v0-api-in-6722dc-bettracker1.vercel.app',
+      'https://bettrackerai.com',
+      'https://www.bettrackerai.com',
     ].filter(Boolean) : []),
   ],
   session: { expiresIn: 60 * 60 * 24 * 7, updateAge: 60 * 60 * 24 },

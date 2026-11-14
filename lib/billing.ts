@@ -10,6 +10,12 @@ export const TRIAL_DAYS = 7
 // Prices live on the server only, so the client can only choose a plan, never an amount.
 export const PLAN_AMOUNTS_ORE: Record<Plan, number> = { basis: 14900, premium: 24900 }
 
+// Live prices are set via STRIPE_PRICE_BASIS / STRIPE_PRICE_PREMIUM; the fallbacks are the Stripe Sandbox prices.
+export const PLAN_PRICE_IDS: Record<Plan, string> = {
+  basis: process.env.STRIPE_LIVE_PRICE_BASIS || process.env.STRIPE_PRICE_BASIS || 'price_1UWARgEz6ncPj5P33OSDWiup',
+  premium: process.env.STRIPE_LIVE_PRICE_PREMIUM || process.env.STRIPE_PRICE_PREMIUM || 'price_1UWARgEz6ncPj5P3TV6pdftL',
+}
+
 export function isPlan(value: unknown): value is Plan {
   return typeof value === 'string' && Object.hasOwn(PLAN_AMOUNTS_ORE, value)
 }
@@ -27,7 +33,19 @@ export async function hasActiveSubscription(userId: string) {
 }
 
 export async function saveCustomer(userId: string, stripeCustomerId: string) {
-  await db.insert(subscriptions).values({ userId, stripeCustomerId }).onConflictDoNothing()
+  await db.insert(subscriptions).values({ userId, stripeCustomerId }).onConflictDoUpdate({
+    target: subscriptions.userId,
+    set: {
+      stripeCustomerId,
+      stripeSubscriptionId: null,
+      plan: null,
+      status: 'incomplete',
+      trialEnd: null,
+      currentPeriodEnd: null,
+      cancelAtPeriodEnd: false,
+      updatedAt: new Date(),
+    },
+  })
 }
 
 export async function saveSubscription(userId: string, subscription: Stripe.Subscription) {

@@ -16,12 +16,12 @@ const formatTime = (date: Date | null) =>
 
 type SessionInfo = Awaited<ReturnType<typeof getSessionInfo>>
 
-function StatusBox({ info }: { info: SessionInfo }) {
+function StatusBox({ info, statusOverride }: { info: SessionInfo; statusOverride?: string }) {
   return (
     <section aria-label="Status" className="flex flex-col gap-2 rounded-xl border border-[#243650] bg-[#0a1725] p-4 text-sm">
       <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Gemt</span><span>{formatTime(info?.updatedAt ?? null)}</span></div>
       <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Sidst brugt</span><span>{formatTime(info?.lastCheckedAt ?? null)}</span></div>
-      <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Status</span><span className="text-right">{info?.lastStatus ?? 'Ingen session gemt'}</span></div>
+      <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Status</span><span className="text-right">{statusOverride ?? info?.lastStatus ?? 'Ingen session gemt'}</span></div>
     </section>
   )
 }
@@ -35,6 +35,7 @@ export default async function SourcesPage() {
     getSessionInfo(BETHERO_SOURCE),
     getBetHeroSnapshot(),
   ])
+  const bridgeIsFresh = Boolean(snapshot?.updatedAt && Date.now() - snapshot.updatedAt.getTime() < 60_000)
 
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 bg-[#06111d] px-5 py-10 text-white">
@@ -75,7 +76,7 @@ export default async function SourcesPage() {
             Indsæt din Bet Hero-cookie én gang, ligesom for Surebet Danmark. Serveren henter derefter data hvert minut uden at du skal have noget åbent.
           </p>
         </header>
-        <StatusBox info={betHeroInfo} />
+        <StatusBox info={betHeroInfo} statusOverride={bridgeIsFresh ? 'Aktiv via bridge' : undefined} />
         <section aria-label="Seneste data" className="flex flex-col gap-2 rounded-xl border border-[#243650] bg-[#0a1725] p-4 text-sm">
           <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Sidst modtaget</span><span>{formatTime(snapshot?.updatedAt ?? null)}</span></div>
           <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Rækker</span><span>{snapshot?.rowCount ?? 0}</span></div>

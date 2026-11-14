@@ -11,6 +11,7 @@ export function Popover({
   label,
   triggerClassName,
   panelClassName,
+  className,
 }: {
   trigger: ReactNode
   children: (close: () => void) => ReactNode
@@ -18,13 +19,14 @@ export function Popover({
   label: string
   triggerClassName?: string
   panelClassName?: string
+  className?: string
 }) {
   const [open, setOpen] = useState(false)
   const id = useId()
   const close = () => setOpen(false)
 
   return (
-    <div className="relative">
+    <div className={cn('relative', className)}>
       <button
         type="button"
         aria-haspopup="true"
