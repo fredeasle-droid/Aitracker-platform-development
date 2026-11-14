@@ -2,6 +2,7 @@ import 'server-only'
 import { scrapeBetMonitor } from './betmonitor'
 import { scrapeOddsator } from './oddsator'
 import { scrapeSureBetsToday } from './surebets-today'
+import { scrapeOddsJam } from './oddsjam'
 import { isHockeySport, type ScrapedSurebet } from './types'
 import { isAllowedBookmaker } from '@/lib/allowed-bookmakers'
 
@@ -11,6 +12,7 @@ const SOURCES = [
   { source: 'betmonitor', run: scrapeBetMonitor },
   { source: 'surebets-today', run: scrapeSureBetsToday },
   { source: 'oddsator', run: scrapeOddsator },
+  { source: 'oddsjam', run: scrapeOddsJam },
 ]
 
 export async function scrapeAll() {
@@ -31,9 +33,9 @@ export async function scrapeAll() {
   const now = Date.now()
   const best = new Map<string, ScrapedSurebet>()
   for (const item of all) {
-    if (isHockeySport(item.sport)) continue
+    if (isHockeySport(item.sport) && item.source !== 'oddsjam') continue
     if (item.legs.length !== 2 || item.profit <= 0 || item.kickoff.getTime() < now) continue
-    if (item.source !== 'surebetdanmark' && item.source !== 'bethero' && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
+    if (!['surebetdanmark', 'bethero', 'oddsjam'].includes(item.source) && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
     const key = `${item.homeTeam}|${item.awayTeam}|${item.market}`.toLowerCase()
     const current = best.get(key)
     if (!current || item.profit > current.profit) best.set(key, item)

@@ -5,7 +5,7 @@ import { getBetHeroSnapshot } from '@/lib/bethero-ingest'
 import { getSessionInfo } from '@/lib/scraper-session'
 import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
 import { SUREBETDANMARK_SOURCE } from '@/lib/scrapers/surebetdanmark'
-import { ODDSJAM_SOURCE } from '@/lib/scrapers/oddsjam'
+import { getOddsJamSnapshot, ODDSJAM_SOURCE } from '@/lib/scrapers/oddsjam'
 import { saveBetHeroCookie, saveOddsJamCookie, saveSureBetDanmarkCookie } from './actions'
 import { CookieForm } from './cookie-form'
 
@@ -31,13 +31,15 @@ export default async function SourcesPage() {
   const state = await getAdminState()
   if (state === 'signed-out') redirect('/konto')
 
-  const [surebetInfo, betHeroInfo, oddsJamInfo, snapshot] = await Promise.all([
+  const [surebetInfo, betHeroInfo, oddsJamInfo, snapshot, oddsJamSnapshot] = await Promise.all([
     getSessionInfo(SUREBETDANMARK_SOURCE),
     getSessionInfo(BETHERO_SOURCE),
     getSessionInfo(ODDSJAM_SOURCE),
     getBetHeroSnapshot(),
+    getOddsJamSnapshot(),
   ])
   const bridgeIsFresh = Boolean(snapshot?.updatedAt && Date.now() - snapshot.updatedAt.getTime() < 60_000)
+  const oddsJamBridgeIsFresh = Boolean(oddsJamSnapshot?.updatedAt && Date.now() - oddsJamSnapshot.updatedAt.getTime() < 180_000)
 
   return (
     <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 bg-[#06111d] px-5 py-10 text-white">
@@ -112,24 +114,35 @@ export default async function SourcesPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#49d6a8]">Kilde 3</p>
           <h2 id="oddsjam-heading" className="text-2xl font-extrabold">OddsJam</h2>
           <p className="leading-relaxed text-[#d6deeb]">
-            Brug din godkendte OddsJam-session, mens API-nøglen afventes. Cookien gemmes krypteret. Vi stopper, hvis OddsJam svarer med en sikkerhedskontrol; den bliver ikke forsøgt omgået.
+            OddsJam viser arbitrage-data i din indloggede browser. Browser-broen sender synlige rækker til scanneren; den læser ikke skjulte endpoints og kræver ikke, at du kopierer en cookie.
           </p>
         </header>
-        <StatusBox info={oddsJamInfo} />
-        <CookieForm
-          id="oddsjam-cookie"
-          label="Cookie-header fra OddsJam"
-          placeholder="session=…; other_cookie=…"
-          action={saveOddsJamCookie}
-          submitLabel="Test side og gem cookie"
-        />
+        <section aria-label="OddsJam browser-feed" className="flex flex-col gap-2 rounded-xl border border-[#243650] bg-[#0a1725] p-4 text-sm">
+          <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Bridge-status</span><span>{oddsJamBridgeIsFresh ? 'Aktiv' : 'Venter på browserforbindelse'}</span></div>
+          <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Sidst modtaget</span><span>{formatTime(oddsJamSnapshot?.updatedAt ?? null)}</span></div>
+          <div className="flex justify-between gap-4"><span className="text-[#9fb2cc]">Rækker</span><span>{oddsJamSnapshot?.rowCount ?? 0}</span></div>
+          <p className="text-right text-[#9fb2cc]">{oddsJamSnapshot?.summary ?? 'Ingen rækker modtaget endnu'}</p>
+        </section>
+        <a href="/api/oddsjam/userscript" download className="flex items-center justify-center rounded-xl bg-[#1769ff] px-4 py-3 text-center font-semibold text-white transition hover:bg-[#2f7bff]">
+          Hent OddsJam browser-bridge
+        </a>
         <div className="text-sm leading-relaxed text-[#9fb2cc]">
-          <h2 className="mb-1 font-semibold text-white">Sådan finder du den</h2>
-          <p>
-            Log ind i OddsJam, åbn Arbitrage-siden, og brug browserens Network-panel. Vælg dokumentkaldet til siden, kopiér værdien under Request Headers → Cookie, og indsæt den her. Del aldrig cookien i chatten.
-          </p>
-          <p className="mt-2">Forbindelsestesten bekræfter kun, at siden kan åbnes; live-datafeedet skal valideres, før OddsJam kan føjes til scanneren.</p>
+          <h2 className="mb-1 font-semibold text-white">Sådan forbindes den</h2>
+          <p>Installer scriptet i Tampermonkey eller Violentmonkey, genindlæs OddsJams Arbitrage-side, og klik på knappen “Forbind BetTracker”. Lad OddsJam-fanen og modtagervinduet stå åbne, så rækkerne kan opdateres.</p>
+          <p className="mt-2">Kun rækker, der vises i din browser, sendes. Sikkerhedskontroller bliver ikke omgået.</p>
         </div>
+        <details className="flex flex-col gap-4 text-sm text-[#9fb2cc]">
+          <summary className="cursor-pointer font-semibold text-white">Valgfri cookie-test (bruges ikke af live-scanneren)</summary>
+          <StatusBox info={oddsJamInfo} />
+          <CookieForm
+            id="oddsjam-cookie"
+            label="Cookie-header fra OddsJam"
+            placeholder="session=…; other_cookie=…"
+            action={saveOddsJamCookie}
+            submitLabel="Test side og gem cookie"
+          />
+          <p>Testen bekræfter kun, at siden kan åbnes. Del aldrig cookien i chatten.</p>
+        </details>
       </section>
     </main>
   )
