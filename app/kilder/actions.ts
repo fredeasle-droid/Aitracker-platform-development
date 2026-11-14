@@ -4,6 +4,7 @@ import { revalidatePath } from 'next/cache'
 import { getAdminState } from '@/lib/admin'
 import { cleanCookieInput, saveStoredCookie } from '@/lib/scraper-session'
 import { BETHERO_SOURCE, describeBetHeroMessages, fetchBetHeroMessages } from '@/lib/scrapers/bethero'
+import { ODDSJAM_SOURCE, inspectOddsJamPage } from '@/lib/scrapers/oddsjam'
 import { SUREBETDANMARK_SOURCE, requestFeed } from '@/lib/scrapers/surebetdanmark'
 
 export type SaveState = { ok: boolean; message: string } | null
@@ -51,5 +52,25 @@ export async function saveBetHeroCookie(_previous: SaveState, formData: FormData
     return { ok: true, message: `Sessionen virker og er gemt. Bet Hero viser ${total} surebets.` }
   } catch (error) {
     return { ok: false, message: `Sessionen blev ikke gemt: ${error instanceof Error ? error.message : 'ukendt fejl'}` }
+  }
+}
+
+export async function saveOddsJamCookie(_previous: SaveState, formData: FormData): Promise<SaveState> {
+  if ((await getAdminState()) !== 'admin') return { ok: false, message: 'Du har ikke adgang til at gemme sessioner.' }
+
+  const cookie = cleanCookieInput(String(formData.get('cookie') ?? ''))
+  if (!cookie) return { ok: false, message: 'Indsæt OddsJam-cookieværdien først.' }
+  if (cookie.length > MAX_COOKIE_LENGTH) return { ok: false, message: 'Teksten er for lang til at være en cookie.' }
+  if (/[\x00-\x1f\x7f-\uffff]/.test(cookie)) return { ok: false, message: 'Cookien er afkortet eller indeholder ugyldige tegn.' }
+  if (!cookie.includes('=')) return { ok: false, message: 'Indsæt hele Cookie-headeren fra browserens Request Headers.' }
+
+  try {
+    const page = await inspectOddsJamPage(cookie)
+    const status = `OddsJam-siden svarede ${page.status} (${page.title}); datafeed er ikke bekræftet endnu.`
+    await saveStoredCookie(ODDSJAM_SOURCE, cookie, status)
+    revalidatePath('/kilder')
+    return { ok: true, message: `Cookie gemt krypteret. ${status}` }
+  } catch (error) {
+    return { ok: false, message: `OddsJam-sessionen blev ikke gemt: ${error instanceof Error ? error.message : 'ukendt fejl'}` }
   }
 }

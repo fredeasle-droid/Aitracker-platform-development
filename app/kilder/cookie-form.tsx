@@ -8,9 +8,10 @@ type CookieFormProps = {
   label: string
   placeholder: string
   action: (previous: SaveState, formData: FormData) => Promise<SaveState>
+  submitLabel?: string
 }
 
-export function CookieForm({ id, label, placeholder, action }: CookieFormProps) {
+export function CookieForm({ id, label, placeholder, action, submitLabel = 'Test og gem session' }: CookieFormProps) {
   const [state, formAction, pending] = useActionState<SaveState, FormData>(action, null)
 
   return (
@@ -38,7 +39,7 @@ export function CookieForm({ id, label, placeholder, action }: CookieFormProps) 
         disabled={pending}
         className="flex min-h-12 items-center justify-center rounded-xl bg-[#138cff] text-base font-bold text-white disabled:cursor-not-allowed disabled:opacity-60"
       >
-        {pending ? 'Tester og gemmer…' : 'Test og gem session'}
+        {pending ? 'Tester og gemmer…' : submitLabel}
       </button>
     </form>
   )
