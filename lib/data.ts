@@ -11,7 +11,7 @@ import { getDemoBets } from '@/lib/demo-bets'
 import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
 import { deriveCountry } from '@/lib/countries'
-import { displayLeague } from '@/lib/scrapers/types'
+import { displayLeague, isHockeySport } from '@/lib/scrapers/types'
 
 export type Opportunity = {
   id: number
@@ -87,22 +87,26 @@ export const getOpportunities = cache(async () => {
   if (isDemoMode()) {
     try {
       const favIds = userId ? await getFavoriteIds(userId) : new Set<number>()
-      return demoOpportunities.map((opportunity) => ({
-        ...opportunity,
-        favorite: favIds.has(opportunity.id),
-      }))
+    return demoOpportunities.filter((opportunity) => !isHockeySport(opportunity.sport)).map((opportunity) => ({
+      ...opportunity,
+      favorite: favIds.has(opportunity.id),
+    }))
     } catch (error) {
       console.error('[data] demo favorites unavailable', error)
-      return demoOpportunities
+      return demoOpportunities.filter((opportunity) => !isHockeySport(opportunity.sport))
     }
   }
 
   try {
-    let rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+    const loadRows = async () => {
+      const rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+      return rows.filter((row) => !isHockeySport(row.sport))
+    }
+    let rows = await loadRows()
     if (rows.length === 0) {
       const { refreshOpportunities } = await import('@/lib/scanner-sync')
       const refreshed = await refreshOpportunities()
-      if (refreshed.ok) rows = await db.select().from(opportunities).orderBy(desc(opportunities.createdAt))
+      if (refreshed.ok) rows = await loadRows()
     } else {
       const { scheduleStaleRefresh } = await import('@/lib/scanner-sync')
       scheduleStaleRefresh(Math.max(...rows.map((r) => r.updatedAt.getTime())))

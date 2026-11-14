@@ -43,6 +43,10 @@ export function displayLeague(value: string, sport = '') {
   return league || 'Ukendt liga'
 }
 
+export function isHockeySport(value: string) {
+  return value.toLowerCase().includes('hockey')
+}
+
 export function displaySport(value: string) {
   const sport = value.toLowerCase()
   if (sport.includes('american')) return 'American football'
