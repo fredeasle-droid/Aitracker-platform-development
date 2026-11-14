@@ -18,6 +18,24 @@ export function GET(request: Request) {
   let lastFingerprint = '';
   let lastSentAt = 0;
   let connected = false;
+  let scannedCount = 0;
+  let statusText = 'Klar til at scanne OddsJam';
+  const panel = document.createElement('div');
+  panel.setAttribute('role', 'status');
+  panel.setAttribute('aria-live', 'polite');
+  panel.style.cssText = 'position:fixed;top:238px;right:14px;z-index:2147483647;width:230px;border:1px solid #159ed0;border-radius:10px;background:#062d40;color:#fff;padding:12px 14px;font:13px/1.45 system-ui;box-shadow:0 4px 14px #0008';
+  const panelTitle = document.createElement('strong');
+  panelTitle.textContent = 'BetTracker OddsJam';
+  panelTitle.style.cssText = 'display:block;font-size:14px;margin-bottom:4px';
+  const countLine = document.createElement('span');
+  const statusLine = document.createElement('span');
+  statusLine.style.color = '#b8d9e8';
+  panel.append(panelTitle, countLine, document.createElement('br'), statusLine);
+  const updatePanel = () => {
+    countLine.textContent = 'Synlige rækker scannet: ' + scannedCount;
+    statusLine.textContent = statusText;
+  };
+  updatePanel();
 
   const visible = (node) => node instanceof HTMLElement && node.getClientRects().length > 0 && getComputedStyle(node).visibility !== 'hidden';
   const attrs = (node) => {
@@ -97,14 +115,20 @@ export function GET(request: Request) {
     return popup && !popup.closed;
   };
   const send = () => {
-    if (!pendingRows.length || !openBridge()) return;
+    if (!pendingRows.length) return;
+    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return; }
     popup.postMessage({ type: 'oddsjam-data', rows: pendingRows }, BRIDGE_ORIGIN);
+    statusText = 'Sender rækker til BetTracker…';
+    updatePanel();
     pendingRows = [];
     lastSentAt = Date.now();
   };
   const scan = () => {
     if (!location.pathname.includes('/betting-tools/arbitrage')) return;
     const rows = collectRows();
+    scannedCount = rows.length;
+    statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';
+    updatePanel();
     if (!rows.length) return;
     const fingerprint = JSON.stringify(rows.map((row) => row.text));
     if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 60000) return;
@@ -118,11 +142,15 @@ export function GET(request: Request) {
   button.setAttribute('aria-label', 'Forbind OddsJam til BetTracker');
   button.style.cssText = 'position:fixed;top:190px;right:14px;z-index:2147483647;border:1px solid #159ed0;border-radius:8px;background:#062d40;color:#fff;padding:10px 14px;font:600 13px/1.2 system-ui;cursor:pointer;box-shadow:0 4px 14px #0008';
   button.addEventListener('click', () => { if (openBridge()) { button.textContent = 'Forbinder BetTracker…'; scan(); } else { button.textContent = 'Tillad popup og klik igen'; } });
-  document.documentElement.appendChild(button);
+  document.documentElement.append(button, panel);
   window.addEventListener('message', (event) => {
     if (event.origin !== BRIDGE_ORIGIN || !event.data) return;
-    if (event.data.type === 'oddsjam-ready') { connected = true; button.textContent = 'BetTracker forbundet'; send(); }
-    if (event.data.type === 'oddsjam-result') { button.textContent = event.data.ok ? 'BetTracker forbundet' : 'BetTracker: forbindelsesfejl'; }
+    if (event.data.type === 'oddsjam-ready') { connected = true; button.textContent = 'BetTracker forbundet'; statusText = 'Forbundet — sender synlige rækker'; updatePanel(); send(); }
+    if (event.data.type === 'oddsjam-result') {
+      button.textContent = event.data.ok ? 'BetTracker forbundet' : 'BetTracker: forbindelsesfejl';
+      statusText = String(event.data.text || (event.data.ok ? 'Rækker sendt' : 'Kunne ikke sende rækker')).slice(0, 140);
+      updatePanel();
+    }
   });
   setTimeout(scan, 3000);
   setInterval(scan, 15000);
