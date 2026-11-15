@@ -83,6 +83,9 @@ async function runRefresh() {
 let inFlight: ReturnType<typeof runRefresh> | null = null
 
 export function refreshOpportunities() {
+  if (process.env.VERCEL_ENV === 'preview') {
+    return Promise.resolve({ ok: true as const, skipped: true as const, count: 0 })
+  }
   if (!inFlight) inFlight = runRefresh().finally(() => { inFlight = null })
   return inFlight
 }

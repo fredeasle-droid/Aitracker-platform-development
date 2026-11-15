@@ -1,6 +1,11 @@
+import { isProductionOddsJamBridgeRequest } from '@/lib/oddsjam-bridge-origin'
+
 export const dynamic = 'force-dynamic'
 
 export function GET(request: Request) {
+  if (!isProductionOddsJamBridgeRequest(request)) {
+    return Response.json({ error: 'Use the production BetTracker domain for OddsJam.' }, { status: 403 })
+  }
   const bridge = `${new URL(request.url).origin}/oddsjam-bro`
   const script = `// ==UserScript==
 // @name         BetTracker OddsJam visible-row bridge

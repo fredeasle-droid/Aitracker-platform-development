@@ -1,4 +1,5 @@
 import { getAdminState } from '@/lib/admin'
+import { isProductionOddsJamBridgeRequest } from '@/lib/oddsjam-bridge-origin'
 import { saveOddsJamBrowserRows } from '@/lib/scrapers/oddsjam'
 
 export const dynamic = 'force-dynamic'
@@ -7,6 +8,10 @@ export const maxDuration = 30
 const MAX_BODY_CHARS = 1_000_000
 
 export async function POST(request: Request) {
+  if (!isProductionOddsJamBridgeRequest(request)) {
+    return Response.json({ error: 'OddsJam ingestion is only enabled on bettrackerai.com.' }, { status: 403 })
+  }
+
   const origin = request.headers.get('origin')
   if (origin !== new URL(request.url).origin) {
     return Response.json({ error: 'Origin not allowed' }, { status: 403 })
