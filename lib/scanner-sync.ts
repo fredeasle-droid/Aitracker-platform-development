@@ -4,11 +4,20 @@ import { inArray, max } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities } from '@/lib/db/schema'
 import { scrapeAll } from '@/lib/scrapers'
-import { displayLeague } from '@/lib/scrapers/types'
+import { displayLeague, surebetIdentity } from '@/lib/scrapers/types'
 import { marginPercent } from '@/lib/odds'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
 
-const rowKey = (home: string, away: string, market: string) => `${home}|${away}|${market}`.toLowerCase()
+const opportunityKey = (row: typeof opportunities.$inferSelect) => surebetIdentity({
+  homeTeam: row.homeTeam,
+  awayTeam: row.awayTeam,
+  market: row.market,
+  kickoff: row.kickoff,
+  legs: [
+    { label: row.aLabel, bookmaker: row.aBookmaker, odds: Number(row.aOdds) },
+    { label: row.bLabel, bookmaker: row.bBookmaker, odds: Number(row.bOdds) },
+  ],
+})
 
 const MIN_REFRESH_INTERVAL_MS = 20_000
 
@@ -29,7 +38,7 @@ async function runRefresh() {
 
   const stats = await db.transaction(async (tx) => {
     const existing = await tx.select().from(opportunities)
-    const byKey = new Map(existing.map((row) => [rowKey(row.homeTeam, row.awayTeam, row.market), row]))
+    const byKey = new Map(existing.map((row) => [opportunityKey(row), row]))
     const seen = new Set<number>()
     let inserted = 0
     let updated = 0
@@ -52,7 +61,7 @@ async function runRefresh() {
         bBookmaker: b.bookmaker,
         bOdds: b.odds.toFixed(2),
       }
-      const match = byKey.get(rowKey(item.homeTeam, item.awayTeam, item.market))
+      const match = byKey.get(surebetIdentity(item))
       if (match) {
         seen.add(match.id)
         await tx.update(opportunities).set({ ...values, updatedAt: new Date() }).where(inArray(opportunities.id, [match.id]))

@@ -3,7 +3,7 @@ import { scrapeBetMonitor } from './betmonitor'
 import { scrapeOddsator } from './oddsator'
 import { scrapeSureBetsToday } from './surebets-today'
 import { scrapeOddsJam } from './oddsjam'
-import { isHockeySport, type ScrapedSurebet } from './types'
+import { isHockeySport, surebetIdentity, type ScrapedSurebet } from './types'
 import { isAllowedBookmaker } from '@/lib/allowed-bookmakers'
 
 export type SourceReport = { source: string; ok: boolean; count: number; error?: string }
@@ -36,7 +36,7 @@ export async function scrapeAll() {
     if (isHockeySport(item.sport) && item.source !== 'oddsjam') continue
     if (item.legs.length !== 2 || item.profit <= 0 || item.kickoff.getTime() < now) continue
     if (!['surebetdanmark', 'bethero', 'oddsjam'].includes(item.source) && !item.legs.every((leg) => isAllowedBookmaker(leg.bookmaker))) continue
-    const key = `${item.homeTeam}|${item.awayTeam}|${item.market}`.toLowerCase()
+    const key = surebetIdentity(item)
     const current = best.get(key)
     if (!current || item.profit > current.profit) best.set(key, item)
   }

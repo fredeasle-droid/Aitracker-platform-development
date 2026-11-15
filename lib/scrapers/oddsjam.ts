@@ -65,7 +65,7 @@ function bookmakerFromLabels(labels: string[]) {
       .replace(/https?:\/\//gi, '')
       .replace(/\.com\b/gi, '')
       .trim()
-    if (!name || name.length > 40 || /^(game|bet|dual|oddsjam|arbitrage|calculator|pin|close|open|add|remove|more|favorite|favourite|details|refresh|profit|notification)$/i.test(name)) continue
+    if (!name || name.length > 40 || /^(game|bet|dual|oddsjam|arbitrage|calculator|pin|close|open|add|add to bet tracker|add to betslip|remove|more|favorite|favourite|details|refresh|profit|notification)$/i.test(name)) continue
     if (/^\$?\d/.test(name) || /\b(?:over|under|home|away|draw|yes|no)\b/i.test(name)) continue
     return displayBookmaker(name)
   }
