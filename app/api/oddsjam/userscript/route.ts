@@ -115,7 +115,7 @@ export function GET(request: Request) {
     return popup && !popup.closed;
   };
   const send = () => {
-    if (!pendingRows.length) return;
+    if (!pendingRows.length || !connected) return;
     if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return; }
     popup.postMessage({ type: 'oddsjam-data', rows: pendingRows }, BRIDGE_ORIGIN);
     statusText = 'Sender rækker til BetTracker…';
