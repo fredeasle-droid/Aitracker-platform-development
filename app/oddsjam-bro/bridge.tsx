@@ -22,9 +22,11 @@ export function Bridge() {
     } catch {}
 
     async function onMessage(event: MessageEvent) {
-      if (!openerOrigin || event.origin !== openerOrigin || event.source !== window.opener) return
+      if (!/^https:\/\/(www\.)?oddsjam\.com$/.test(event.origin) || event.source !== window.opener) return
+      openerOrigin = event.origin
       const data = event.data as { type?: string; rows?: unknown }
       if (data?.type !== 'oddsjam-data' || !Array.isArray(data.rows)) return
+      window.opener?.postMessage({ type: 'oddsjam-ready' }, openerOrigin)
       try {
         const response = await fetch('/api/ingest/oddsjam', {
           method: 'POST',
@@ -43,7 +45,6 @@ export function Bridge() {
 
     window.addEventListener('message', onMessage)
     if (openerOrigin) window.opener?.postMessage({ type: 'oddsjam-ready' }, openerOrigin)
-    else log('Åbn bridge-vinduet fra OddsJam med Tampermonkey-scriptet', false)
     return () => window.removeEventListener('message', onMessage)
   }, [])
 
