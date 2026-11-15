@@ -3,7 +3,8 @@ import { headers } from 'next/headers'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { auth } from '@/lib/auth'
 import { getOpportunities } from '@/lib/data'
-import { getSubscription } from '@/lib/billing'
+import { ACTIVE_STATUSES, getSubscription } from '@/lib/billing'
+import { OnboardingStep } from '@/components/konto/onboarding-step'
 import { getStripe } from '@/lib/stripe'
 import { AccountFlow } from './account-flow'
 import { MinSide } from './min-side'
@@ -37,6 +38,9 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
 
   const { user } = session
   const row = await getSubscription(user.id)
+  if (row && ACTIVE_STATUSES.includes(row.status) && !row.onboardingCompletedAt) {
+    return <OnboardingStep initialBookmakers={Array.isArray(row.onboardingBookmakers) ? row.onboardingBookmakers : []} />
+  }
   const invoices = row ? await loadInvoices(row.stripeCustomerId) : []
 
   return (

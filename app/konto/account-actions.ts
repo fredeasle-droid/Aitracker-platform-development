@@ -1,9 +1,31 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { eq } from 'drizzle-orm'
 import { getStripe } from '@/lib/stripe'
 import { getUserId } from '@/lib/user'
 import { ACTIVE_STATUSES, PLAN_PRICE_IDS, getSubscription, isPlan, saveSubscription } from '@/lib/billing'
+import { db } from '@/lib/db'
+import { subscriptions } from '@/lib/db/schema'
+
+const ONBOARDING_BOOKMAKERS = new Set(['bet365', 'betano', 'unibet', 'williamhill', 'nordicbet', '888sport', 'betfair', 'bwin', 'leovegas', 'danskespil', 'betsson'])
+
+export async function completeOnboarding(bookmakers: string[]) {
+  const userId = await getUserId()
+  const selected = [...new Set(bookmakers)]
+  if (selected.length === 0 || selected.some((bookmaker) => !ONBOARDING_BOOKMAKERS.has(bookmaker))) {
+    throw new Error('Vælg mindst én bookmaker fra listen.')
+  }
+
+  const row = await getSubscription(userId)
+  if (!row?.stripeSubscriptionId || !ACTIVE_STATUSES.includes(row.status)) {
+    throw new Error('Et aktivt abonnement er nødvendigt for at gennemføre onboarding.')
+  }
+
+  await db.update(subscriptions).set({ onboardingBookmakers: selected, onboardingCompletedAt: new Date(), updatedAt: new Date() }).where(eq(subscriptions.userId, userId))
+  revalidatePath('/')
+  revalidatePath('/konto')
+}
 
 async function requireActiveSubscription() {
   const userId = await getUserId()

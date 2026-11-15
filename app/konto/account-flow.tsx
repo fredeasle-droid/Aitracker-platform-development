@@ -7,6 +7,7 @@ import { LoginStep } from './login-step'
 import { authClient } from '@/lib/auth-client'
 import { DesktopFlow } from '@/components/konto/desktop-flow'
 import { StripeCheckout } from '@/components/konto/stripe-checkout'
+import { OnboardingStep } from '@/components/konto/onboarding-step'
 import { plans, type Plan } from './plans'
 import { useLocale } from '@/components/locale-provider'
 
@@ -54,7 +55,7 @@ export function AccountFlow({ aside, startInLogin = false }: { aside: React.Reac
           ))}
         </div>
 
-        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/konto')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <OnboardingStep /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/konto')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
     </>
@@ -139,4 +140,4 @@ function PaymentStep({ plan, planId, onBack, onSubmit }: { plan: typeof plans[Pl
     </section>
   )
 }
-function SuccessState({ plan }: { plan: typeof plans[Plan] }) { const { t } = useLocale(); return <section className="pt-16 text-center"><div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#159cff] text-[#04111e]"><Check className="size-8" /></div><h1 className="mt-5 text-[27px] font-extrabold">{t('youAreReady')}</h1><p className="mt-2 text-[#dce5f2]">{t('trialStarted', { plan: plan.name })}</p><Link href="/" className="mt-7 flex min-h-13 items-center justify-center rounded-xl bg-[#138cff] text-[17px] font-bold">{t('goToApp')}</Link></section> }
+

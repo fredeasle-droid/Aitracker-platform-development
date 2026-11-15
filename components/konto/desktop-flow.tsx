@@ -29,6 +29,7 @@ import { cn } from '@/lib/utils'
 import { plans, type Plan } from '@/app/konto/plans'
 import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { LoginStep } from '@/app/konto/login-step'
+import { OnboardingStep } from '@/components/konto/onboarding-step'
 
 const STEPS = ['Dine oplysninger', 'Vælg abonnement', 'Betalingsoplysninger'] as const
 
@@ -60,7 +61,7 @@ export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitt
     )
   }
 
-  if (submitted) return <Success planName={plans[plan].name} />
+  if (submitted) return <OnboardingStep />
 
   return (
     <div className="mx-auto w-full max-w-[930px]">
@@ -462,18 +463,3 @@ function PaymentStep({
   )
 }
 
-function Success({ planName }: { planName: string }) {
-  return (
-    <section className={cn(panel, 'mx-auto mt-10 max-w-[560px] p-10 text-center')}>
-      <span className="mx-auto flex size-20 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_0_36px_-6px_var(--primary)]">
-        <Check className="size-10" aria-hidden="true" />
-      </span>
-      <h1 className="mt-6 text-[36px] font-extrabold">Du er klar</h1>
-      <p className="mt-3 text-[18px] text-[#e6ecf7]">Din {planName}-prøveperiode er startet. God fornøjelse med BetTracker.</p>
-      <Link href="/" className={cn(primaryButton, 'mt-8 w-full')}>
-        Gå til BetTracker
-        <ArrowRight className="size-6" aria-hidden="true" />
-      </Link>
-    </section>
-  )
-}
