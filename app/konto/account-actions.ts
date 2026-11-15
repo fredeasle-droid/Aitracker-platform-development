@@ -1,6 +1,9 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { headers } from 'next/headers'
+import { auth } from '@/lib/auth'
+import { isPreviewTestEmail } from '@/lib/test-access'
 import { eq } from 'drizzle-orm'
 import { getStripe } from '@/lib/stripe'
 import { getUserId } from '@/lib/user'
@@ -11,7 +14,9 @@ import { subscriptions } from '@/lib/db/schema'
 const ONBOARDING_BOOKMAKERS = new Set(['bet365', 'betano', 'unibet', 'williamhill', 'nordicbet', '888sport', 'betfair', 'bwin', 'leovegas', 'danskespil', 'betsson'])
 
 export async function completeOnboarding(bookmakers: string[]) {
-  const userId = await getUserId()
+  const session = await auth.api.getSession({ headers: await headers() })
+  if (!session?.user) throw new Error('Mangler login')
+  const userId = session.user.id
   const selected = [...new Set(bookmakers)]
   if (selected.length === 0 || selected.some((bookmaker) => !ONBOARDING_BOOKMAKERS.has(bookmaker))) {
     throw new Error('Vælg mindst én bookmaker fra listen.')
@@ -19,6 +24,11 @@ export async function completeOnboarding(bookmakers: string[]) {
 
   const row = await getSubscription(userId)
   if (!row?.stripeSubscriptionId || !ACTIVE_STATUSES.includes(row.status)) {
+    if (isPreviewTestEmail(session.user.email)) {
+      revalidatePath('/')
+      revalidatePath('/konto')
+      return
+    }
     throw new Error('Et aktivt abonnement er nødvendigt for at gennemføre onboarding.')
   }
 
