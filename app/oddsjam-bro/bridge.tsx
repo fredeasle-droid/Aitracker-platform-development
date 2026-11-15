@@ -25,8 +25,11 @@ export function Bridge() {
       if (!/^https:\/\/(www\.)?oddsjam\.com$/.test(event.origin) || event.source !== window.opener) return
       openerOrigin = event.origin
       const data = event.data as { type?: string; rows?: unknown }
+      if (data?.type === 'oddsjam-hello') {
+        window.opener?.postMessage({ type: 'oddsjam-ready' }, openerOrigin)
+        return
+      }
       if (data?.type !== 'oddsjam-data' || !Array.isArray(data.rows)) return
-      window.opener?.postMessage({ type: 'oddsjam-ready' }, openerOrigin)
       try {
         const response = await fetch('/api/ingest/oddsjam', {
           method: 'POST',

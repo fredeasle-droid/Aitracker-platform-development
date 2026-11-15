@@ -18,6 +18,8 @@ export function GET(request: Request) {
   let lastFingerprint = '';
   let lastSentAt = 0;
   let connected = false;
+  let everConnected = false;
+  let lastConnectAttemptAt = 0;
   let scannedCount = 0;
   let statusText = 'Klar til at scanne OddsJam';
   const panel = document.createElement('div');
@@ -119,6 +121,12 @@ export function GET(request: Request) {
     if (!popup || popup.closed) popup = window.open(BRIDGE, 'oddsjam-bettracker-bridge', 'width=460,height=480');
     return popup && !popup.closed;
   };
+  const requestBridge = () => {
+    lastConnectAttemptAt = Date.now();
+    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return false; }
+    popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
+    return true;
+  };
   const send = () => {
     if (!pendingRows.length || !connected) return;
     if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return; }
@@ -134,6 +142,13 @@ export function GET(request: Request) {
     scannedCount = rows.length;
     statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';
     updatePanel();
+    if (!connected && popup && !popup.closed) popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
+    if (everConnected && (!popup || popup.closed) && Date.now() - lastConnectAttemptAt > 30000) {
+      statusText = 'Forbindelsen genoprettes…';
+      updatePanel();
+      if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
+      else button.textContent = 'Tillad popup og klik igen';
+    }
     if (!rows.length) return;
     const fingerprint = JSON.stringify(rows.map(rowKey));
     if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 45000) return;
@@ -146,20 +161,29 @@ export function GET(request: Request) {
   button.textContent = 'Forbind BetTracker';
   button.setAttribute('aria-label', 'Forbind OddsJam til BetTracker');
   button.style.cssText = 'position:fixed;top:190px;right:14px;z-index:2147483647;border:1px solid #159ed0;border-radius:8px;background:#062d40;color:#fff;padding:10px 14px;font:600 13px/1.2 system-ui;cursor:pointer;box-shadow:0 4px 14px #0008';
-  button.addEventListener('click', () => { if (openBridge()) { button.textContent = 'Forbinder BetTracker…'; scan(); } else { button.textContent = 'Tillad popup og klik igen'; } });
+  button.addEventListener('click', () => { if (requestBridge()) { button.textContent = 'Forbinder BetTracker…'; scan(); } else { button.textContent = 'Tillad popup og klik igen'; } });
   document.documentElement.append(button, panel);
   window.addEventListener('message', (event) => {
     if (event.origin !== BRIDGE_ORIGIN || !event.data) return;
-    if (event.data.type === 'oddsjam-ready') { connected = true; button.textContent = 'BetTracker forbundet'; statusText = 'Forbundet — sender synlige rækker'; updatePanel(); send(); }
+    if (event.data.type === 'oddsjam-ready') { connected = true; everConnected = true; button.textContent = 'BetTracker forbundet'; statusText = 'Forbundet — scanner automatisk'; updatePanel(); send(); }
     if (event.data.type === 'oddsjam-result') {
       button.textContent = event.data.ok ? 'BetTracker forbundet' : 'BetTracker: forbindelsesfejl';
       statusText = String(event.data.text || (event.data.ok ? 'Rækker sendt' : 'Kunne ikke sende rækker')).slice(0, 140);
       updatePanel();
     }
   });
+  setTimeout(() => {
+    if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
+    else button.textContent = 'Tillad popup og klik igen';
+  }, 2500);
   setTimeout(scan, 3000);
   setInterval(scan, 15000);
-  setInterval(() => { if (!connected) button.textContent = 'Forbind BetTracker'; }, 30000);
+  setInterval(() => {
+    if (!connected && button.textContent === 'Forbinder BetTracker…') button.textContent = 'Forbind BetTracker';
+  }, 30000);
+  setInterval(() => {
+    if (location.pathname.includes('/betting-tools/arbitrage')) location.reload();
+  }, 60000);
 })();
 `
   return new Response(script, {
