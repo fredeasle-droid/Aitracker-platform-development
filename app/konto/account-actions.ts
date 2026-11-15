@@ -11,15 +11,15 @@ import { ACTIVE_STATUSES, PLAN_PRICE_IDS, getSubscription, isPlan, saveSubscript
 import { db } from '@/lib/db'
 import { subscriptions } from '@/lib/db/schema'
 
-const ONBOARDING_BOOKMAKERS = new Set(['bet365', 'betano', 'unibet', 'williamhill', 'nordicbet', '888sport', 'betfair', 'bwin', 'leovegas', 'danskespil', 'betsson'])
+const ONBOARDING_BOOKMAKERS = new Set(['bet365', 'betano', 'unibet', 'williamhill', 'nordicbet', '888sport', 'betfair', 'bwin', 'paddypower', 'leovegas', 'danskespil', 'betsson'])
 
 export async function completeOnboarding(bookmakers: string[]) {
   const session = await auth.api.getSession({ headers: await headers() })
   if (!session?.user) throw new Error('Mangler login')
   const userId = session.user.id
   const selected = [...new Set(bookmakers)]
-  if (selected.length === 0 || selected.some((bookmaker) => !ONBOARDING_BOOKMAKERS.has(bookmaker))) {
-    throw new Error('Vælg mindst én bookmaker fra listen.')
+  if (selected.some((bookmaker) => !ONBOARDING_BOOKMAKERS.has(bookmaker))) {
+    throw new Error('Ukendt bookmaker i listen.')
   }
 
   const row = await getSubscription(userId)
