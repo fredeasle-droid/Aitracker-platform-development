@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { headers } from 'next/headers'
 import { auth } from '@/lib/auth'
-import { isPreviewTestEmail } from '@/lib/test-access'
+import { isPreviewTestEnvironment } from '@/lib/test-access'
 import { eq } from 'drizzle-orm'
 import { getStripe } from '@/lib/stripe'
 import { getUserId } from '@/lib/user'
@@ -24,7 +24,7 @@ export async function completeOnboarding(bookmakers: string[]) {
 
   const row = await getSubscription(userId)
   if (!row?.stripeSubscriptionId || !ACTIVE_STATUSES.includes(row.status)) {
-    if (isPreviewTestEmail(session.user.email)) {
+    if (isPreviewTestEnvironment()) {
       revalidatePath('/')
       revalidatePath('/konto')
       return

@@ -48,9 +48,10 @@ type Props = {
   onSubmitted: () => void
   loginMode: boolean
   setLoginMode: (value: boolean) => void
+  allowTestAccess: boolean
 }
 
-export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode }: Props) {
+export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode, allowTestAccess }: Props) {
   if (loginMode) {
     return (
       <div className="mx-auto w-full max-w-[520px] pt-6">
@@ -67,7 +68,7 @@ export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitt
     <div className="mx-auto w-full max-w-[930px]">
       <Stepper step={step} />
       {step === 1 && <DetailsStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />}
-      {step === 2 && <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} />}
+      {step === 2 && <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} allowTestAccess={allowTestAccess} onTestAccess={onSubmitted} />}
       {step === 3 && <PaymentStep plan={plan} onBack={() => setStep(2)} onChangePlan={() => setStep(2)} onSubmit={onSubmitted} />}
     </div>
   )
@@ -295,7 +296,7 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
   )
 }
 
-function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void }) {
+function PlanStep({ plan, setPlan, onBack, onNext, allowTestAccess, onTestAccess }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void; allowTestAccess: boolean; onTestAccess: () => void }) {
   return (
     <section>
       <Title before="Vælg dit " accent="abonnement" />
@@ -316,6 +317,7 @@ function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (pla
         Fortsæt med {plans[plan].name}
         <ArrowRight className="size-6" aria-hidden="true" />
       </button>
+      {allowTestAccess && <button type="button" onClick={onTestAccess} className="mt-3 min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] px-4 text-sm font-semibold text-[#e6ecf7] hover:bg-[#102744]">Test uden kort — kun Preview</button>}
       <BackButton onClick={onBack} className="mx-auto mt-6" />
     </section>
   )

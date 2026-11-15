@@ -9,7 +9,7 @@ import { getStripe } from '@/lib/stripe'
 import { AccountFlow } from './account-flow'
 import { MinSide } from './min-side'
 import type { AccountInvoice } from './account-types'
-import { isPreviewTestEmail } from '@/lib/test-access'
+import { isPreviewTestEnvironment } from '@/lib/test-access'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Min side – BetTracker' }
@@ -35,10 +35,10 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
   const [session, opportunities, { login, testAccess }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
   const aside = <DesktopAside opportunities={opportunities} />
 
-  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} />
+  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} allowTestAccess={isPreviewTestEnvironment()} />
 
   const { user } = session
-  if (testAccess === '1' && isPreviewTestEmail(user.email)) return <OnboardingStep />
+  if (testAccess === '1' && isPreviewTestEnvironment()) return <OnboardingStep />
 
   const row = await getSubscription(user.id)
   if (row && ACTIVE_STATUSES.includes(row.status) && !row.onboardingCompletedAt) {
@@ -50,7 +50,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
     <MinSide
       invoices={invoices}
       user={{ name: user.name, email: user.email, phone: user.phone ?? '', createdAt: new Date(user.createdAt).toISOString() }}
-      testAccess={isPreviewTestEmail(user.email)}
+      testAccess={isPreviewTestEnvironment()}
       subscription={
         row
           ? {
