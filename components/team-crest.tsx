@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 const TEAM_LOGOS: Record<string, string> = {
@@ -40,6 +43,13 @@ const TEAM_COLORS: Record<string, [string, string]> = {
   GOG: ['#1d4ed8', '#facc15'],
 }
 
+function generatedColors(name: string): [string, string] {
+  let hash = 0
+  for (const char of name) hash = (hash * 31 + char.charCodeAt(0)) >>> 0
+  const hue = hash % 360
+  return [`hsl(${hue} 55% 32%)`, `hsl(${(hue + 40) % 360} 70% 72%)`]
+}
+
 function initials(name: string) {
   const parts = name
     .replace(/^(FC|AC|IF|LA|C\.|J\.)\s/, '')
@@ -52,33 +62,55 @@ function initials(name: string) {
     .toUpperCase()
 }
 
-export function TeamCrest({ name, logoUrl, className }: { name: string; logoUrl?: string | null; className?: string }) {
-  const [bg, fg] = TEAM_COLORS[name] ?? ['#1e293b', '#e2e8f0']
-  const dark = bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316'
+export function TeamCrest({
+  name,
+  logoUrl,
+  className,
+  fallbackClassName,
+  player = false,
+}: {
+  name: string
+  player?: boolean
+  logoUrl?: string | null
+  className?: string
+  fallbackClassName?: string
+}) {
+  const [failed, setFailed] = useState(false)
+  const known = TEAM_COLORS[name]
+  const [bg, fg] = known ?? generatedColors(name)
+  const dark = known ? bg === '#ffffff' || bg === '#facc15' || bg === '#7dd3fc' || bg === '#f97316' : false
   const logo = logoUrl ?? TEAM_LOGOS[name]
 
-  const badge = (
+  if (logo && !failed) {
+    return (
+      <span className={cn('flex size-11 shrink-0 items-center justify-center', className)}>
+        <img
+          src={logo}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          onError={() => setFailed(true)}
+          ref={(el) => {
+            // The image can fail before hydration attaches onError.
+            if (el?.complete && el.naturalWidth === 0) setFailed(true)
+          }}
+          className={cn('size-full', player ? 'rounded-full bg-[#14233f] object-cover object-top' : 'object-contain')}
+        />
+      </span>
+    )
+  }
+
+  return (
     <span
       aria-hidden="true"
       className={cn(
-        'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight shadow-[0_0_0_2px_rgba(255,255,255,0.08)]',
+        'flex size-11 shrink-0 items-center justify-center rounded-full border-[3px] text-[13px] font-extrabold tracking-tight',
         className,
-        logo && 'lg:hidden',
+        fallbackClassName,
       )}
       style={{ background: bg, borderColor: fg, color: dark ? fg : '#ffffff' }}
     >
       {initials(name)}
     </span>
-  )
-
-  if (!logo) return badge
-
-  return (
-    <>
-      {badge}
-      <span className={cn('hidden size-11 shrink-0 items-center justify-center lg:flex', className)}>
-        <img src={logo} alt="" aria-hidden="true" className="size-full object-contain drop-shadow-[0_0_5px_rgba(255,255,255,0.18)]" />
-      </span>
-    </>
   )
 }

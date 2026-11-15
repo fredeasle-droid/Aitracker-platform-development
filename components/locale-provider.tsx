@@ -1,27 +1,28 @@
 'use client'
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react'
-import { LOCALES, translations, type Locale, type TranslationKey } from '@/lib/i18n'
+import { createContext, useContext, useMemo, useState, useTransition, type ReactNode } from 'react'
+import { useRouter } from 'next/navigation'
+import { LOCALE_COOKIE, LOCALES, makeTranslator, type Locale, type Translator } from '@/lib/i18n'
 
-const LocaleContext = createContext<{ locale: Locale; setLocale: (locale: Locale) => void; t: (key: TranslationKey) => string } | null>(null)
+type LocaleContextValue = Translator & { setLocale: (locale: Locale) => void; tag: string }
 
-function readLocale(): Locale {
-  if (typeof document === 'undefined') return 'da'
-  const stored = document.cookie.match(/(?:^|; )bettracker_locale=([^;]+)/)?.[1]
-  return stored && stored in LOCALES ? (stored as Locale) : 'da'
-}
+const LocaleContext = createContext<LocaleContextValue | null>(null)
 
-export function LocaleProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('da')
+export function LocaleProvider({ children, initialLocale }: { children: ReactNode; initialLocale: Locale }) {
+  const router = useRouter()
+  const [locale, setLocaleState] = useState<Locale>(initialLocale)
+  const [, startTransition] = useTransition()
 
-  useEffect(() => setLocaleState(readLocale()), [])
+  const value = useMemo<LocaleContextValue>(() => {
+    function setLocale(next: Locale) {
+      setLocaleState(next)
+      document.cookie = `${LOCALE_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`
+      document.documentElement.lang = next
+      startTransition(() => router.refresh())
+    }
+    return { ...makeTranslator(locale), setLocale, tag: LOCALES[locale].tag }
+  }, [locale, router])
 
-  function setLocale(next: Locale) {
-    setLocaleState(next)
-    document.cookie = `bettracker_locale=${next}; path=/; max-age=31536000; samesite=lax`
-  }
-
-  const value = useMemo(() => ({ locale, setLocale, t: (key: TranslationKey) => translations[locale][key] }), [locale])
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>
 }
 

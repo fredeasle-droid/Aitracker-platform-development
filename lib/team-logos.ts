@@ -4,17 +4,23 @@ import { isNotNull } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { opportunities, teamLogos } from '@/lib/db/schema'
 
-type Source = 'espn' | 'thesportsdb' | 'wikipedia'
+type Source = 'espn' | 'thesportsdb' | 'wikipedia' | 'wikidata' | 'apifootball' | 'google'
 
 const ESPN_LEAGUES: { sport: string; path: string; leagues: string[] }[] = [
-  { sport: 'Ishockey', path: 'hockey', leagues: ['nhl'] },
-  { sport: 'Basketball', path: 'basketball', leagues: ['nba'] },
-  { sport: 'American football', path: 'football', leagues: ['nfl'] },
-  { sport: 'Baseball', path: 'baseball', leagues: ['mlb'] },
+  { sport: 'Ishockey', path: 'hockey', leagues: ['nhl', 'mens-college-hockey'] },
+  { sport: 'Basketball', path: 'basketball', leagues: ['nba', 'wnba', 'mens-college-basketball', 'womens-college-basketball'] },
+  { sport: 'American football', path: 'football', leagues: ['nfl', 'college-football'] },
+  { sport: 'Baseball', path: 'baseball', leagues: ['mlb', 'college-baseball'] },
   {
     sport: 'Fodbold',
     path: 'soccer',
-    leagues: ['eng.1', 'eng.2', 'esp.1', 'ger.1', 'ita.1', 'fra.1', 'den.1', 'ned.1', 'por.1', 'arg.1', 'bra.1', 'sco.1', 'tur.1', 'swe.1', 'nor.1'],
+    leagues: [
+      'eng.1', 'eng.2', 'eng.3', 'eng.4', 'esp.1', 'esp.2', 'ger.1', 'ger.2', 'ita.1', 'ita.2', 'fra.1', 'fra.2',
+      'den.1', 'ned.1', 'ned.2', 'por.1', 'arg.1', 'arg.2', 'bra.1', 'bra.2', 'sco.1', 'sco.2', 'tur.1', 'swe.1', 'nor.1',
+      'aut.1', 'bel.1', 'sui.1', 'gre.1', 'rus.1', 'mex.1', 'usa.1', 'jpn.1', 'aus.1', 'chn.1', 'col.1', 'chi.1', 'uru.1',
+      'par.1', 'per.1', 'ecu.1', 'ksa.1', 'isr.1', 'rou.1', 'rsa.1', 'ind.1', 'idn.1', 'tha.1', 'mys.1', 'cyp.1',
+      'uefa.champions', 'uefa.europa', 'uefa.europa.conf', 'conmebol.libertadores', 'conmebol.sudamericana',
+    ],
   },
 ]
 
@@ -29,9 +35,9 @@ const THESPORTSDB_SPORT: Record<string, string> = {
 }
 
 const THESPORTSDB_KEY = process.env.THESPORTSDB_API_KEY || '123'
-const LOOKUPS_PER_RUN = 10
+const LOOKUPS_PER_RUN = 14
 const LOOKUP_SPACING_MS = 2_200
-const RETRY_MISSES_AFTER_MS = 24 * 60 * 60 * 1000
+const RETRY_MISSES_AFTER_MS = 6 * 60 * 60 * 1000
 const ESPN_INDEX_TTL_MS = 12 * 60 * 60 * 1000
 
 export function normalizeTeamName(name: string) {
@@ -68,6 +74,11 @@ const CITY_ABBREVIATIONS: Record<string, string> = {
   no: 'New Orleans',
   sa: 'San Antonio',
   ari: 'Arizona',
+  gb: 'Green Bay',
+  ne: 'New England',
+  sj: 'San Jose',
+  nyk: 'New York',
+  phi: 'Philadelphia',
 }
 
 const TEAM_SUFFIX_NOISE = /\s+(basketball club|basketball|hockey club|hockey|handball club|handball|football club|bc|hc)$/i
@@ -206,6 +217,208 @@ async function lookupWikipedia(sport: string, name: string): Promise<LookupResul
   }
 }
 
+async function lookupWikidata(name: string): Promise<LookupResult> {
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const headers = { 'User-Agent': 'BetTracker/1.0 (team logo lookup)' }
+    const search = await fetch(
+      `https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&language=en&type=item&limit=5&search=${encodeURIComponent(query)}`,
+      { headers, signal: AbortSignal.timeout(8_000) },
+    )
+    if (!search.ok) return { status: 'limited' }
+    const hits: { id: string; label?: string }[] = (await search.json()).search ?? []
+    const ids = hits.filter((hit) => hit.label && titleMatchesTeam(hit.label, query)).map((hit) => hit.id)
+    if (ids.length === 0) return { status: 'none' }
+
+    const entities = await fetch(
+      `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims&ids=${ids.join('|')}`,
+      { headers, signal: AbortSignal.timeout(8_000) },
+    )
+    if (!entities.ok) return { status: 'limited' }
+    const data = await entities.json()
+    for (const id of ids) {
+      const file = data.entities?.[id]?.claims?.P154?.[0]?.mainsnak?.datavalue?.value
+      if (typeof file === 'string') {
+        return { status: 'found', url: `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(file.replace(/ /g, '_'))}?width=200` }
+      }
+    }
+    return { status: 'none' }
+  } catch (error) {
+    console.error('[logos] wikidata lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
+const API_FOOTBALL_KEY = process.env.API_FOOTBALL_KEY
+const GOOGLE_SEARCH_KEY = process.env.GOOGLE_SEARCH_API_KEY
+const GOOGLE_SEARCH_ENGINE_ID = process.env.GOOGLE_SEARCH_ENGINE_ID
+const GOOGLE_LOOKUPS_PER_RUN = 25
+
+async function lookupApiFootball(name: string): Promise<LookupResult> {
+  if (!API_FOOTBALL_KEY) return { status: 'none' }
+  try {
+    for (const variant of nameVariants(name).slice(0, 3)) {
+      const search = variant.replace(/[^\p{L}\p{N} ]/gu, ' ').replace(/\s+/g, ' ').trim()
+      if (search.length < 3) continue
+      const res = await fetch(`https://v3.football.api-sports.io/teams?search=${encodeURIComponent(search)}`, {
+        headers: { 'x-apisports-key': API_FOOTBALL_KEY },
+        signal: AbortSignal.timeout(8_000),
+      })
+      if (res.status === 429) return { status: 'limited' }
+      if (!res.ok) return { status: 'limited' }
+      const data = await res.json()
+      const errors = data.errors
+      if (errors && !Array.isArray(errors) && Object.keys(errors).length > 0) {
+        console.error('[logos] api-football error', errors)
+        return { status: 'limited' }
+      }
+      const teams: { team?: { name?: string; logo?: string; national?: boolean } }[] = data.response ?? []
+      const wanted = normalizeTeamName(variant)
+      const match =
+        teams.find((entry) => entry.team?.logo && !entry.team.national && entry.team.name && normalizeTeamName(entry.team.name) === wanted) ??
+        teams.find((entry) => entry.team?.logo && !entry.team.national && entry.team.name && titleMatchesTeam(entry.team.name, variant))
+      if (match?.team?.logo) return { status: 'found', url: match.team.logo }
+      await new Promise((resolve) => setTimeout(resolve, 400))
+    }
+    return { status: 'none' }
+  } catch (error) {
+    console.error('[logos] api-football lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
+const GOOGLE_SPORT_WORD: Record<string, string> = {
+  Fodbold: 'football club',
+  Ishockey: 'ice hockey team',
+  Basketball: 'basketball team',
+  'Håndbold': 'handball club',
+  Baseball: 'baseball team',
+  Cricket: 'cricket team',
+  'American football': 'american football team',
+  Rugby: 'rugby team',
+  Volleyball: 'volleyball team',
+  Tennis: 'tennis player',
+  Badminton: 'badminton player',
+  Bordtennis: 'table tennis player',
+  Golf: 'golfer',
+  Snooker: 'snooker player',
+  Dart: 'darts player',
+  Darts: 'darts player',
+  MMA: 'mma fighter',
+  Boksning: 'boxer',
+}
+
+function significantTokens(name: string) {
+  return normalizeTeamName(name).split(' ').filter((token) => token.length >= 3)
+}
+
+async function lookupGoogleImage(sport: string, name: string, isPlayer: boolean): Promise<LookupResult> {
+  if (!GOOGLE_SEARCH_KEY || !GOOGLE_SEARCH_ENGINE_ID) return { status: 'none' }
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+|Res\.?)\)\s*$/i, '').trim()
+    const tokens = significantTokens(query)
+    if (tokens.length === 0) return { status: 'none' }
+    const params = new URLSearchParams({
+      key: GOOGLE_SEARCH_KEY,
+      cx: GOOGLE_SEARCH_ENGINE_ID,
+      searchType: 'image',
+      num: '6',
+      safe: 'active',
+      q: isPlayer ? `${query} ${GOOGLE_SPORT_WORD[sport] ?? sport}` : `${query} ${GOOGLE_SPORT_WORD[sport] ?? sport} logo`,
+    })
+    if (isPlayer) params.set('imgType', 'face')
+    const res = await fetch(`https://www.googleapis.com/customsearch/v1?${params}`, { signal: AbortSignal.timeout(8_000) })
+    if (res.status === 429 || res.status === 403) {
+      console.error('[logos] google search limited or rejected', res.status)
+      return { status: 'limited' }
+    }
+    if (!res.ok) return { status: 'limited' }
+    const data = await res.json()
+    const items: { title?: string; link?: string; image?: { thumbnailLink?: string; contextLink?: string } }[] = data.items ?? []
+    const longest = [...tokens].sort((a, b) => b.length - a.length)[0]
+    const match = items.find((item) => {
+      if (!item.image?.thumbnailLink) return false
+      const haystack = normalizeTeamName(`${item.title ?? ''} ${item.image.contextLink ?? ''} ${item.link ?? ''}`)
+      return tokens.length === 1 ? haystack.includes(tokens[0]) : haystack.includes(longest) && tokens.filter((token) => haystack.includes(token)).length >= Math.ceil(tokens.length / 2)
+    })
+    return match?.image?.thumbnailLink ? { status: 'found', url: match.image.thumbnailLink } : { status: 'none' }
+  } catch (error) {
+    console.error('[logos] google lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
+const PLAYER_SPORT: Record<string, { sportsDb: string; wiki: string; extract: RegExp }> = {
+  Tennis: { sportsDb: 'Tennis', wiki: 'tennis player', extract: /tennis/i },
+  Badminton: { sportsDb: 'Badminton', wiki: 'badminton player', extract: /badminton/i },
+  Bordtennis: { sportsDb: 'Table Tennis', wiki: 'table tennis player', extract: /table tennis/i },
+  Golf: { sportsDb: 'Golf', wiki: 'golfer', extract: /golf/i },
+  Snooker: { sportsDb: 'Snooker', wiki: 'snooker player', extract: /snooker/i },
+  Dart: { sportsDb: 'Darts', wiki: 'darts player', extract: /darts/i },
+  Darts: { sportsDb: 'Darts', wiki: 'darts player', extract: /darts/i },
+  MMA: { sportsDb: 'Fighting', wiki: 'mixed martial artist', extract: /martial|fighter/i },
+  Boksning: { sportsDb: 'Boxing', wiki: 'boxer', extract: /box/i },
+}
+
+const WIKI_NOT_A_PORTRAIT = /flag|logo|map|coat[_ ]of[_ ]arms|\.svg/i
+
+async function lookupPlayerSportsDb(sport: string, name: string): Promise<LookupResult> {
+  const config = PLAYER_SPORT[sport]
+  if (!config) return { status: 'none' }
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const res = await fetch(`https://www.thesportsdb.com/api/v1/json/${THESPORTSDB_KEY}/searchplayers.php?p=${encodeURIComponent(query)}`, {
+      signal: AbortSignal.timeout(8_000),
+    })
+    if (!res.ok) return { status: 'limited' }
+    const data = await res.json()
+    const players: { strPlayer?: string; strSport?: string; strCutout?: string; strThumb?: string }[] = data.player ?? []
+    const match = players.find(
+      (player) =>
+        player.strPlayer &&
+        normalizeTeamName(player.strPlayer) === normalizeTeamName(query) &&
+        player.strSport === config.sportsDb &&
+        (player.strCutout || player.strThumb),
+    )
+    const url = match?.strCutout || match?.strThumb
+    return url ? { status: 'found', url } : { status: 'none' }
+  } catch (error) {
+    console.error('[logos] thesportsdb player lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
+async function lookupPlayerWikipedia(sport: string, name: string): Promise<LookupResult> {
+  const config = PLAYER_SPORT[sport]
+  if (!config) return { status: 'none' }
+  try {
+    const query = name.replace(/\s*\((?:W|R|U\d+)\)\s*$/i, '').trim()
+    const url =
+      'https://en.wikipedia.org/w/api.php?action=query&format=json&generator=search&gsrlimit=5&prop=pageimages|extracts&piprop=thumbnail&pithumbsize=240&exintro=1&explaintext=1&exchars=400&exlimit=max' +
+      `&gsrsearch=${encodeURIComponent(`${query} ${config.wiki}`)}`
+    const res = await fetch(url, { headers: { 'User-Agent': 'BetTracker/1.0 (player photo lookup)' }, signal: AbortSignal.timeout(8_000) })
+    if (!res.ok) return { status: 'limited' }
+    const data = await res.json()
+    const pages: { index?: number; title: string; extract?: string; thumbnail?: { source?: string } }[] = Object.values(data.query?.pages ?? {})
+    pages.sort((a, b) => (a.index ?? 0) - (b.index ?? 0))
+    const match = pages.find((page) => {
+      const image = page.thumbnail?.source
+      return (
+        image &&
+        !WIKI_NOT_A_PORTRAIT.test(decodeURIComponent(image)) &&
+        titleMatchesTeam(page.title, query) &&
+        normalizeTeamName(page.title.replace(/\(.*?\)/g, ' ')) === normalizeTeamName(query) &&
+        config.extract.test(page.extract ?? '')
+      )
+    })
+    const image = match?.thumbnail?.source
+    return image ? { status: 'found', url: image } : { status: 'none' }
+  } catch (error) {
+    console.error('[logos] wikipedia player lookup failed', name, error)
+    return { status: 'limited' }
+  }
+}
+
 async function saveLogos(entries: { key: string; sport: string; name: string; url: string | null; source: Source | null }[]) {
   for (const entry of entries) {
     await db
@@ -227,7 +440,7 @@ async function run() {
   const knownByKey = new Map(known.map((row) => [row.key, row]))
   const pending = new Map<string, { key: string; sport: string; name: string }>()
   for (const row of rows) {
-    if (!THESPORTSDB_SPORT[row.sport] && !ESPN_LEAGUES.some((league) => league.sport === row.sport)) continue
+    if (!THESPORTSDB_SPORT[row.sport] && !PLAYER_SPORT[row.sport] && !ESPN_LEAGUES.some((league) => league.sport === row.sport)) continue
     for (const name of [row.home, row.away]) {
       const key = logoKey(row.sport, name)
       const previous = knownByKey.get(key)
@@ -248,6 +461,10 @@ async function run() {
   }
 
   for (const team of pending.values()) {
+    if (PLAYER_SPORT[team.sport]) {
+      remaining.push(team)
+      continue
+    }
     const variants = nameVariants(team.name)
     const url =
       espn.get(team.key) ??
@@ -264,17 +481,31 @@ async function run() {
   let misses = 0
   let sportsDbLimited = false
   let wikiLimited = false
+  let apiFootballLimited = !API_FOOTBALL_KEY
+  let googleLimited = !GOOGLE_SEARCH_KEY || !GOOGLE_SEARCH_ENGINE_ID
+  let googleLookups = 0
   for (const team of remaining.slice(0, LOOKUPS_PER_RUN)) {
     let result: LookupResult = { status: 'none' }
     let source: Source = 'thesportsdb'
 
-    if (!sportsDbLimited) {
-      result = await lookupTheSportsDb(team.sport, team.name)
+    const isPlayer = Boolean(PLAYER_SPORT[team.sport])
+
+    if (team.sport === 'Fodbold' && !apiFootballLimited) {
+      const apiFootball = await lookupApiFootball(team.name)
+      if (apiFootball.status === 'limited') apiFootballLimited = true
+      else if (apiFootball.status === 'found') {
+        result = apiFootball
+        source = 'apifootball'
+      }
+    }
+
+    if (result.status !== 'found' && !sportsDbLimited) {
+      result = isPlayer ? await lookupPlayerSportsDb(team.sport, team.name) : await lookupTheSportsDb(team.sport, team.name)
       if (result.status === 'limited') sportsDbLimited = true
       else await pause(LOOKUP_SPACING_MS)
     }
     if (result.status !== 'found' && !wikiLimited) {
-      const wiki = await lookupWikipedia(team.sport, team.name)
+      const wiki = isPlayer ? await lookupPlayerWikipedia(team.sport, team.name) : await lookupWikipedia(team.sport, team.name)
       if (wiki.status === 'limited') wikiLimited = true
       else {
         result = wiki
@@ -282,13 +513,39 @@ async function run() {
         await pause(WIKI_SPACING_MS)
       }
     }
+    if (result.status !== 'found' && !isPlayer) {
+      const wikidata = await lookupWikidata(team.name)
+      if (wikidata.status === 'found') {
+        result = wikidata
+        source = 'wikidata'
+      }
+      await pause(WIKI_SPACING_MS)
+    }
 
+    const googleConfigured = Boolean(GOOGLE_SEARCH_KEY && GOOGLE_SEARCH_ENGINE_ID)
+    let googleAnswered = !googleConfigured
+    if (result.status !== 'found' && !googleLimited && googleLookups < GOOGLE_LOOKUPS_PER_RUN) {
+      googleLookups++
+      const google = await lookupGoogleImage(team.sport, team.name, isPlayer)
+      if (google.status === 'limited') googleLimited = true
+      else {
+        googleAnswered = true
+        if (google.status === 'found') {
+          result = google
+          source = 'google'
+        }
+      }
+    }
+
+    // A miss is only final when every configured source actually answered, otherwise the team is retried next run.
+    const everySourceAnswered =
+      !sportsDbLimited && !wikiLimited && googleAnswered && !(team.sport === 'Fodbold' && API_FOOTBALL_KEY && apiFootballLimited)
     if (result.status === 'found') found.push({ ...team, url: result.url, source })
-    else if (!sportsDbLimited && !wikiLimited) {
+    else if (everySourceAnswered) {
       misses++
       found.push({ ...team, url: null, source: null })
     }
-    if (sportsDbLimited && wikiLimited) break
+    if (sportsDbLimited && wikiLimited && googleLimited) break
   }
   await saveLogos(found)
 
@@ -297,6 +554,8 @@ async function run() {
     fromEspn: fromEspn.length,
     fromSportsDb: found.filter((entry) => entry.source === 'thesportsdb').length,
     fromWikipedia: found.filter((entry) => entry.source === 'wikipedia').length,
+    fromApiFootball: found.filter((entry) => entry.source === 'apifootball').length,
+    fromGoogle: found.filter((entry) => entry.source === 'google').length,
     misses,
     limited: sportsDbLimited && wikiLimited,
   }

@@ -3,10 +3,14 @@ import { createHmac, timingSafeEqual } from 'node:crypto'
 import { zstdDecompressSync } from 'node:zlib'
 import { decode as decodeMsgpack } from '@msgpack/msgpack'
 import { eq } from 'drizzle-orm'
+import { sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { sourceSnapshots } from '@/lib/db/schema'
 
 export const BETHERO_SNAPSHOT_SOURCE = 'bethero'
+export const BETHERO_CATALOG_SOURCE = 'bethero-catalog'
+
+export type BetHeroCatalogEntry = { name: string; country?: string; category?: string }
 export const BETHERO_SOCKET_URL =
   'wss://ws-prematch.betherosports.com/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=event-asc&rows=30&touch=1'
 
@@ -66,6 +70,18 @@ export function firstRows(messages: unknown[], limit = 2) {
 
 export async function saveBetHeroSnapshot(rawMessages: BrowserMessage[]) {
   return saveBetHeroMessages(rawMessages.map(decodeBrowserMessage))
+}
+
+export async function saveBetHeroCatalog(entries: BetHeroCatalogEntry[]) {
+  const unique = Array.from(new Map(entries.filter((entry) => entry.name.trim()).map((entry) => [`${entry.country ?? ''}:${entry.category ?? ''}:${entry.name.trim()}`, { ...entry, name: entry.name.trim() }])).values())
+  await db.insert(sourceSnapshots).values({ source: BETHERO_CATALOG_SOURCE, payload: JSON.stringify(unique), summary: `${unique.length} bookmaker entries`, rowCount: unique.length }).onConflictDoUpdate({ target: sourceSnapshots.source, set: { payload: JSON.stringify(unique), summary: `${unique.length} bookmaker entries`, rowCount: unique.length, updatedAt: sql`now()` } })
+  return unique.length
+}
+
+export async function getBetHeroCatalog(): Promise<BetHeroCatalogEntry[]> {
+  const [snapshot] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_CATALOG_SOURCE)).limit(1)
+  if (!snapshot?.payload) return []
+  try { return JSON.parse(snapshot.payload) as BetHeroCatalogEntry[] } catch { return [] }
 }
 
 type StoredRow = {

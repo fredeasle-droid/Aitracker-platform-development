@@ -27,33 +27,11 @@ type BetHeroRow = {
 
 const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 
-// Bet Hero lists every bookmaker sharing the same odds feed (1xBet clones etc.) in arbitrary order.
-// Only the bookmakers the user has selected in Bet Hero may be picked, so the shared list is filtered
-// down to this whitelist (normalized names, regional suffix like "(DK)" ignored).
+// Keep the existing scanner scope stable while the separate BetHero catalog powers the UI filter.
 const ALLOWED_BOOKS = new Set([
-  'bwin',
-  'unibet',
-  'leovegas',
-  '888sport',
-  'mrgreen',
-  'betinia',
-  'campobet',
-  'oddset',
-  'betsson',
-  'nordicbet',
-  'betfairexchange',
-  'betfair',
-  'bet365',
-  'marathonbet',
-  'dbbet',
-  'rainbet',
-  'mystake',
-  '20bet',
-  'vave',
-  'wildio',
-  'cloudbet',
-  'shuffle',
-  'sportsbetio',
+  'bwin', 'unibet', 'leovegas', '888sport', 'mrgreen', 'betinia', 'campobet', 'oddset',
+  'betsson', 'nordicbet', 'betfairexchange', 'betfair', 'bet365', 'marathonbet', 'dbbet',
+  'rainbet', 'mystake', '20', '20bet', 'betano', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio',
 ])
 
 const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
@@ -78,8 +56,9 @@ function collectRows(value: unknown, rows: BetHeroRow[]) {
 }
 
 function parseRow(row: BetHeroRow, now: number): ScrapedSurebet | null {
-  if (row.live || !row.start) return null
-  const kickoff = new Date(row.start * 1000)
+  const kickoffTimestamp = row.start ?? row.timestamp
+  if (row.live || !kickoffTimestamp) return null
+  const kickoff = new Date(kickoffTimestamp * 1000)
   if (kickoff.getTime() < now) return null
 
   const teams = splitTeams(row.event ?? '')
@@ -120,13 +99,17 @@ export async function scrapeBetHero() {
   const rows: BetHeroRow[] = []
   collectRows(messages, rows)
 
-  const latest = new Map<string, BetHeroRow>()
-  for (const row of rows) {
-    const key = row.parent_id ?? `${row.event}|${row.market_1}|${row.bet_name_1}`
+  const now = Date.now()
+  const parsed = rows
+    .map((row) => parseRow(row, now))
+    .filter((item): item is ScrapedSurebet => item !== null)
+
+  const latest = new Map<string, ScrapedSurebet>()
+  for (const item of parsed) {
+    const key = `${item.homeTeam}|${item.awayTeam}|${item.market}|${item.legs.map((leg) => `${leg.bookmaker}:${leg.label}`).join('|')}`
     const current = latest.get(key)
-    if (!current || Number(row.profit ?? 0) > Number(current.profit ?? 0)) latest.set(key, row)
+    if (!current || item.profit > current.profit) latest.set(key, item)
   }
 
-  const now = Date.now()
-  return [...latest.values()].map((row) => parseRow(row, now)).filter((item): item is ScrapedSurebet => item !== null)
+  return [...latest.values()]
 }

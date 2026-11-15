@@ -14,13 +14,13 @@ export function Bridge() {
 
     async function onMessage(event: MessageEvent) {
       if (!/^https:\/\/(www\.)?betherosports\.com$/.test(event.origin)) return
-      const data = event.data as { type?: string; token?: unknown; messages?: unknown }
+      const data = event.data as { type?: string; token?: unknown; messages?: unknown; catalog?: unknown }
       if (data?.type !== 'bettracker' || !Array.isArray(data.messages)) return
       try {
         const response = await fetch('/api/ingest/bethero', {
           method: 'POST',
           headers: { 'Content-Type': 'text/plain' },
-          body: JSON.stringify({ token: data.token, messages: data.messages }),
+          body: JSON.stringify({ token: data.token, messages: data.messages, catalog: data.catalog }),
         })
         const text = await response.text()
         log(`${data.messages.length} beskeder: ${text}`, response.ok)

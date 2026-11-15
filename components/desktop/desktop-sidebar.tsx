@@ -3,9 +3,11 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
-import { ArrowRight, ChartPie, ChevronDown, Crown, Ellipsis, Gamepad2, Gift, Radio, Star } from 'lucide-react'
+import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, Radio, Star } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
-import { Flag } from '@/components/flag'
+import { BookmakerLogo } from '@/components/bookmaker-logo'
+import useSWR from 'swr'
+import { parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
@@ -24,15 +26,6 @@ const SPORTS = [
   { key: 'tennis', value: 'Tennis' },
   { key: 'hockey', value: 'Ishockey' },
   { key: 'esports', value: 'Esport' },
-] as const
-
-const COUNTRIES = [
-  { code: 'dk', name: 'Danmark' },
-  { code: 'gb-eng', name: 'England' },
-  { code: 'de', name: 'Tyskland' },
-  { code: 'es', name: 'Spanien' },
-  { code: 'it', name: 'Italien' },
-  { code: 'fr', name: 'Frankrig' },
 ] as const
 
 function SportIcon({ sport }: { sport: string }) {
@@ -55,7 +48,15 @@ export function DesktopSidebar() {
   const pathname = usePathname()
   const params = useSearchParams()
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
-  const activeCountry = params.get('country')
+  const activeBookmaker = params.get('bookmaker')
+  const selectedBookmakers = parseBookmakers(activeBookmaker)
+  const { data: bookmakerList = [] } = useSWR<{ id: string; name: string }[]>('/api/bookmakers', (url: string) =>
+    fetch(url).then((r) => r.json()),
+  )
+  const bookmakerOptions = [
+    ...bookmakerList,
+    ...selectedBookmakers.filter((id) => !bookmakerList.some((b) => b.id === id)).map((id) => ({ id, name: id })),
+  ]
   const [leaguesOpen, setLeaguesOpen] = useState(true)
   const { data: session } = authClient.useSession()
   const { t } = useLocale()
@@ -69,7 +70,7 @@ export function DesktopSidebar() {
         <ul className="flex flex-col gap-1">
           {NAV.map(({ href, key, icon: Icon }) => {
             const label = t(key)
-            const active = href === '/' ? pathname === '/' && !activeSport && !activeCountry : pathname === href
+            const active = href === '/' ? pathname === '/' && !activeSport && !activeBookmaker : pathname === href
             return (
               <li key={href}>
                 <Link
@@ -120,29 +121,51 @@ export function DesktopSidebar() {
         aria-controls="sidebar-leagues"
         className="flex min-h-9 items-center justify-between px-4 text-[13px] font-semibold uppercase tracking-wide text-[#55a8ff]"
       >
-        {t('leagues')}
+        {t('bookmakers')}
         <ChevronDown className={cn('size-4 text-[#d5ddef] transition-transform', !leaguesOpen && '-rotate-90')} />
       </button>
       {leaguesOpen && (
         <ul id="sidebar-leagues" className="flex flex-col gap-0.5">
-          {COUNTRIES.map((c) => (
-            <li key={c.code}>
+          {bookmakerOptions.map((b) => {
+            const selected = selectedBookmakers.includes(b.id)
+            const nextSelected = toggleBookmaker(selectedBookmakers, b.id)
+            const next = new URLSearchParams()
+            if (params.get('sport')) next.set('sport', params.get('sport') as string)
+            if (nextSelected.length > 0) next.set('bookmaker', nextSelected.join(','))
+            const qs = next.toString()
+            return (
+              <li key={b.id}>
+                <Link
+                  href={qs ? `/?${qs}` : '/'}
+                  role="checkbox"
+                  aria-checked={selected}
+                  className={cn(row, 'gap-3', selected && 'bg-[#0d1f38] text-[#65c1ff]')}
+                >
+                  <span
+                    aria-hidden="true"
+                    className={cn(
+                      'flex size-5 shrink-0 items-center justify-center rounded-md border',
+                      selected ? 'border-primary bg-primary text-primary-foreground' : 'border-[#2a4468]',
+                    )}
+                  >
+                    {selected && <Check className="size-3.5" strokeWidth={3} />}
+                  </span>
+                  <BookmakerLogo name={b.name} className="size-6 rounded-md" />
+                  {b.name}
+                </Link>
+              </li>
+            )
+          })}
+          {selectedBookmakers.length > 0 && (
+            <li>
               <Link
-                href={`/?country=${c.code}`}
-                aria-current={activeCountry === c.code ? 'true' : undefined}
-                className={cn(row, activeCountry === c.code && 'bg-[#0d1f38] text-[#65c1ff]')}
+                href={params.get('sport') ? `/?sport=${encodeURIComponent(params.get('sport') as string)}` : '/'}
+                className="flex min-h-10 items-center px-4 text-[14px] text-[#65c1ff] underline-offset-2 hover:underline"
               >
-                <Flag code={c.code} label="" className="size-6 rounded-md" />
-                {c.name}
+                {t('clearBookmakers')}
               </Link>
             </li>
-          ))}
-          <li>
-            <Link href="/" className={row}>
-              <Ellipsis className="size-6" aria-hidden="true" />
-              {t('moreLeagues')}
-            </Link>
-          </li>
+          )}
         </ul>
       )}
 

@@ -9,6 +9,40 @@ import { useLocale } from '@/components/locale-provider'
 
 const countries = (Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]).map(([locale, value]) => ({ locale, code: value.countryCode, name: value.label, flag: value.flag }))
 
+export function AccountIconLink() {
+  const { t } = useLocale()
+  const { data: session } = authClient.useSession()
+  const loggedIn = Boolean(session?.user)
+
+  return (
+    <Link
+      href={loggedIn ? '/konto' : '/login'}
+      aria-label={loggedIn ? 'Min side' : t('login')}
+      className={`relative flex size-11 shrink-0 items-center justify-center rounded-full border transition-colors hover:bg-[#102e4e] ${loggedIn ? 'border-[#16ee93] text-[#b8ffd9]' : 'border-[#159cff] text-[#8dd0ff]'}`}
+    >
+      <UserRound className="size-5" aria-hidden="true" />
+      {loggedIn && <span className="absolute right-1 top-1 size-2 rounded-full bg-[#16ee93] shadow-[0_0_8px_#16ee93]" />}
+    </Link>
+  )
+}
+
+export function LanguageSwitcher() {
+  const { locale, setLocale } = useLocale()
+  const [open, setOpen] = useState(false)
+  const country = countries.find((item) => item.locale === locale) ?? countries[0]
+
+  return (
+    <div className="relative">
+      <button type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-haspopup="listbox" className="flex size-9 items-center justify-center rounded-full text-[20px] hover:bg-accent">
+        <span aria-hidden="true">{country.flag}</span><span className="sr-only">{country.name}</span>
+      </button>
+      {open && <div role="listbox" className="absolute right-0 top-10 z-50 min-w-32 rounded-xl border border-[#22517d] bg-[#071729] p-1.5 shadow-[0_16px_32px_-12px_#000]">
+        {countries.map((item) => <button key={item.code} type="button" role="option" aria-selected={country.code === item.code} onClick={() => { setLocale(item.locale); setOpen(false) }} className="flex min-h-10 w-full items-center gap-2 rounded-lg px-2 text-left text-sm hover:bg-[#123253]"><span className="text-lg">{item.flag}</span>{item.name}</button>)}
+      </div>}
+    </div>
+  )
+}
+
 export function HeaderControls({ beforeAccount }: { beforeAccount?: ReactNode } = {}) {
   const { locale, setLocale, t } = useLocale()
   const [open, setOpen] = useState(false)

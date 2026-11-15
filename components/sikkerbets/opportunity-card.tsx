@@ -1,33 +1,69 @@
+'use client'
+
 import Link from 'next/link'
-import { ArrowRight, Calculator, Info, LockKeyhole, Star } from 'lucide-react'
+import { useLocale } from '@/components/locale-provider'
+import { ArrowRight, Calculator, Info, Lock, LockOpen, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
-import { Flag } from '@/components/flag'
+import { FlagImage } from '@/components/flag-image'
 import { SmallBarsIcon } from '@/components/icons'
-import { LockTile } from '@/components/locked-odds'
+import { LockBadge, LockTile } from '@/components/locked-odds'
 import { TeamCrest } from '@/components/team-crest'
+import { isIndividualSport } from '@/lib/individual-sports'
 import type { Opportunity } from '@/lib/data'
 import { formatOdds, formatPct } from '@/lib/odds'
 import { cn } from '@/lib/utils'
 
-function OddsBox({ bookmaker, label, odds, loggedIn, className }: { bookmaker: string; label: string; odds: number; loggedIn: boolean; className?: string }) {
-  return (
-    <div className={cn('flex h-[68px] min-w-0 flex-1 items-center gap-2 rounded-[16px] border border-[#1a3557] bg-[#081123] px-3', className)}>
-      <BookmakerLogo name={bookmaker} className="size-10 shrink-0 rounded-[10px]" />
+function OddsBox({
+  bookmaker,
+  label,
+  odds,
+  loggedIn,
+}: {
+  bookmaker: string
+  label: string
+  odds: number
+  loggedIn: boolean
+}) {
+  const { t } = useLocale()
+  const boxClass =
+    'relative flex h-10 min-w-0 items-center gap-[7px] rounded-[11px] border border-[#1a3557] bg-[#07101f] pl-[5px] pr-2'
+
+  const details = (
+    <>
+      <BookmakerLogo name={bookmaker} className="size-[26px] shrink-0 rounded-[7px]" />
       <div className="min-w-0 flex-1">
-        <p className="truncate text-[13px] font-semibold leading-tight text-[#f3f6fc]">{bookmaker}</p>
-        <p className="mt-1 truncate text-[12px] leading-tight text-[#a9b6d3]" title={`Udfald: ${label}`}>Udfald: {label}</p>
-      </div>
-      <div className="shrink-0 text-right">
-        <span className="block text-[10px] font-semibold uppercase tracking-wide text-[#8fa3cc]">Odds</span>
+        <p className="truncate text-[9.5px] font-semibold leading-3 text-[#f3f6fc]">{bookmaker}</p>
         {loggedIn ? (
-          <p className="text-[19px] font-extrabold tabular-nums text-[#55a8ff]">{formatOdds(odds)}</p>
+          <p className="mt-1 truncate text-[9px] leading-3 text-[#a9b6d3]" title={label}>
+            {label}
+          </p>
         ) : (
-          <Link href="/konto" className="mt-0.5 flex items-center justify-end gap-1 text-[12px] font-medium text-[#55a8ff] underline underline-offset-2">
-            <LockKeyhole className="size-4" aria-hidden="true" />
-            Lås op
-          </Link>
+          <p className="mt-1 truncate text-[9px] leading-3 text-[#6b7da3]">{t('locked')}</p>
         )}
       </div>
+    </>
+  )
+
+  if (!loggedIn) {
+    return (
+      <Link
+        href="/konto"
+        aria-label={`${t('createToSeeOddsFrom')} ${bookmaker}`}
+        className={cn(boxClass, 'transition-colors hover:border-primary')}
+      >
+        {details}
+        <LockBadge className="size-[22px] shrink-0" />
+      </Link>
+    )
+  }
+
+  return (
+    <div className={boxClass}>
+      {details}
+      <p className="mt-2 shrink-0 text-[14.5px] font-extrabold leading-none tracking-tight tabular-nums text-[#4aa3ff]">
+        {formatOdds(odds)}
+      </p>
+      <Megaphone className="absolute right-2 top-1 size-2.5 text-[#2b4062]" aria-hidden="true" />
     </div>
   )
 }
@@ -58,12 +94,15 @@ function DesktopRow({
   onToggleFavorite: (id: number) => void
   loggedIn: boolean
 }) {
+  const { t } = useLocale()
   return (
     <article className="hidden items-center gap-3 px-4 py-3 transition-colors hover:bg-[#0a1830] lg:grid lg:grid-cols-[minmax(0,104px)_minmax(0,1.1fr)_minmax(0,1fr)_minmax(0,1fr)_108px_auto]">
       <div className="min-w-0 text-[13px]">
         <p className="flex items-center gap-2 font-medium text-foreground">
-          <Flag code={o.countryCode} label={o.country} />
-          <span className="truncate">{o.league}</span>
+          <FlagImage code={o.countryCode} label={o.country} />
+          <span className="truncate" title={o.country !== 'International' ? `${o.country} · ${o.league}` : o.league}>
+            {o.league}
+          </span>
         </p>
         <p className="mt-1.5 text-[#a9b6d3]">{o.kickoffLabel}</p>
       </div>
@@ -74,7 +113,7 @@ function DesktopRow({
           { team: o.awayTeam, logo: o.awayLogo },
         ].map(({ team, logo }) => (
           <span key={team} className="flex min-w-0 items-center gap-2.5">
-            <TeamCrest name={team} logoUrl={logo} className="size-7 shrink-0 text-[9px]" />
+            <TeamCrest name={team} logoUrl={logo} player={isIndividualSport(o.sport)} className="size-7 shrink-0 text-[9px]" />
             <span className="truncate text-[14px] font-medium">{team}</span>
           </span>
         ))}
@@ -85,12 +124,12 @@ function DesktopRow({
 
       <div className="flex h-[72px] flex-col justify-center rounded-xl border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 shadow-[0_0_24px_-12px_var(--success)]">
         <div className="flex items-center justify-between">
-          <span className="text-[10px] font-semibold tracking-wide text-success">MARGIN</span>
+          <span className="text-[10px] font-semibold tracking-wide text-success">{t('marginLabel')}</span>
           <SmallBarsIcon className="size-3.5 text-success/80" />
         </div>
         <p className="text-[20px] font-extrabold leading-tight tabular-nums text-success">{formatPct(o.margin)}</p>
-        <span className="flex items-center justify-center gap-1 text-[10px] text-[#d5ddef]" title="Begge mulige udfald er dækket">
-          2 udfald <Info className="size-3" aria-hidden="true" />
+        <span className="flex items-center justify-center gap-1 text-[10px] text-[#d5ddef]" title={t('bothCovered')}>
+          {t('twoOutcomes')} <Info className="size-3" aria-hidden="true" />
         </span>
       </div>
 
@@ -99,14 +138,14 @@ function DesktopRow({
           href={`/beregn?id=${o.id}`}
           className="flex min-h-11 items-center gap-1.5 whitespace-nowrap rounded-xl border border-border bg-[#081123] px-3.5 text-[13px] font-semibold transition-colors hover:border-primary hover:bg-accent"
         >
-          Se detaljer
+          {t('details')}
           <ArrowRight className="size-4" aria-hidden="true" />
         </Link>
         <button
           type="button"
           onClick={() => onToggleFavorite(o.id)}
           aria-pressed={o.favorite}
-          aria-label={o.favorite ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}
+          aria-label={o.favorite ? t('removeFav') : t('addFav')}
           className="hidden size-9 items-center justify-center rounded-full transition-colors hover:bg-accent 2xl:flex"
         >
           <Star className={cn('size-5', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#8fa3cc]')} />
@@ -138,77 +177,103 @@ function MobileCard({
   onToggleFavorite: (id: number) => void
   loggedIn: boolean
 }) {
+  const { t } = useLocale()
   return (
-    <article className="w-full rounded-[24px] border border-[#183252] bg-[linear-gradient(135deg,#071426_0%,#06101e_55%,#071a2a_100%)] p-3.5 shadow-[0_12px_30px_-14px_rgba(0,0,0,0.85)] lg:hidden">
-      <div className="flex items-center justify-between gap-2 text-[13px] text-[#a9b6d3] lg:col-span-2">
-        <span className="flex min-w-0 items-center gap-2">
-          <Flag code={o.countryCode} label={o.country} />
+    <article className="w-full rounded-[14px] border border-[#183252] bg-[linear-gradient(135deg,#0a1628_0%,#07111f_55%,#08182a_100%)] pb-[6.5px] pl-2.5 pr-[5.5px] pt-[7.5px] lg:hidden">
+      <div className="flex h-4 items-center justify-between gap-2 pl-px pr-[7.5px] text-[9.5px] text-[#a9b6d3]">
+        <span className="flex min-w-0 items-center gap-[5px]">
+          <FlagImage code={o.countryCode} label={o.country} className="size-4" />
           <span className="truncate">
-            {o.country} · {o.league}
+            {o.country !== 'International' ? `${o.country} · ${o.league}` : o.league}
           </span>
         </span>
-        <span className="shrink-0">{o.kickoffLabel}</span>
+        <span className="shrink-0 tabular-nums">{o.kickoffLabel}</span>
       </div>
 
-      <div className="mt-1.5 flex min-h-[94px] gap-1.5 lg:contents">
-        <div className="min-w-0 flex-1 lg:col-start-1 lg:row-start-2 lg:mt-0.5">
-          <div className="flex items-start gap-1">
-            <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-              <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.homeTeam}</span>
-              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} className="size-[54px] shrink-0 text-[11px]" />
+      <div className="mt-0.5 grid grid-cols-[minmax(0,1fr)_99.5px] gap-x-[5px]">
+        <div className="flex min-w-0 flex-col">
+          <div className="grid h-7 grid-cols-[minmax(0,1.12fr)_auto_minmax(0,1fr)] items-center">
+            <span className="flex min-w-0 items-center gap-2.5">
+              <TeamCrest name={o.homeTeam} logoUrl={o.homeLogo} player={isIndividualSport(o.sport)} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
+              <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
+                {o.homeTeam}
+              </span>
             </span>
-            <span className="mt-7 shrink-0 text-xs text-muted-foreground">vs</span>
-            <span className="flex min-w-0 flex-1 flex-col items-center gap-1 text-center">
-              <span className="min-h-[18px] min-w-0 break-words text-[14px] font-bold leading-tight [hyphens:auto]">{o.awayTeam}</span>
-              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} className="size-[54px] shrink-0 text-[11px]" />
+            <span className="px-3 text-[9.5px] text-[#6b7da3]">vs</span>
+            <span className="flex min-w-0 items-center gap-2.5 pl-1">
+              <TeamCrest name={o.awayTeam} logoUrl={o.awayLogo} player={isIndividualSport(o.sport)} className="size-7 text-[8px]" fallbackClassName="border-[1.5px]" />
+              <span className="line-clamp-2 min-w-0 text-[10.5px] font-bold leading-[1.15] [hyphens:auto] [overflow-wrap:anywhere]" lang="da">
+                {o.awayTeam}
+              </span>
             </span>
           </div>
-          <p className="mt-1 flex items-center gap-1.5 text-[14px] text-[#d5ddef]">
-            <SmallBarsIcon className="size-4 text-[#8fa3cc]" />
-            {o.market}
+          <p className="mt-1.5 flex h-3 min-w-0 items-center gap-[7px] pl-[3px] text-[10px] text-[#d5ddef]">
+            {loggedIn ? (
+              <>
+                <SmallBarsIcon className="size-2.5 shrink-0 text-[#8fa3cc]" />
+                <span className="truncate">{o.market}</span>
+              </>
+            ) : (
+              <>
+                <Lock className="size-2.5 shrink-0 text-[#8fa3cc]" aria-hidden="true" />
+                <span className="truncate text-[#8fa3cc]">{t('marketLocked')}</span>
+              </>
+            )}
           </p>
-        </div>
-
-        <div className="flex w-[108px] shrink-0 flex-col items-stretch justify-center self-center lg:col-start-2 lg:row-start-2 lg:w-[142px] lg:justify-self-center lg:py-2 rounded-[18px] border border-[#23785f] bg-[radial-gradient(120%_120%_at_50%_0%,rgba(46,230,166,0.17),rgba(8,30,30,0.62))] px-2.5 py-1.5 shadow-[0_0_24px_-10px_var(--success)]">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-semibold tracking-wide text-success">MARGIN</span>
-            <SmallBarsIcon className="size-3.5 text-success/80" />
+          <div className="mt-[6.5px] grid grid-cols-2 gap-1.5">
+            <OddsBox {...o.a} loggedIn={loggedIn} />
+            <OddsBox {...o.b} loggedIn={loggedIn} />
           </div>
-          <p className="text-[26px] font-extrabold leading-tight tabular-nums text-success">{formatPct(o.margin)}</p>
+        </div>
+
+        <div className="flex h-[85px] flex-col justify-between self-end rounded-[13px] border border-[#1b6b55] bg-[#041a1c] pb-[7.5px] pl-3 pr-2.5 pt-2.5">
+          <div>
+            <div className="flex h-[11px] items-center justify-between">
+              <span className="text-[9px] font-medium leading-none text-[#6ee7b7]">{t('marginLabel')}</span>
+              <SmallBarsIcon className="size-2.5 text-[#7db4d0]" />
+            </div>
+            <p
+              className={`mt-[3px] whitespace-nowrap font-bold leading-[1.1] tabular-nums tracking-tight text-[#5fe8b0] ${formatPct(o.margin).length > 6 ? 'text-[18.5px]' : 'text-[23px]'}`}
+            >
+              {formatPct(o.margin)}
+            </p>
+          </div>
           <span
-            className="mt-1 flex items-center justify-center gap-1 rounded-full border border-border bg-[#0a1426] py-0.5 text-[11px] text-[#d5ddef]"
-            title="Begge mulige udfald er dækket"
+            className="mx-[-5px] flex h-5 items-center justify-center gap-1.5 rounded-full border border-[#1f3a63] bg-[#0a1630] text-[9.5px] text-[#e3e9f5]"
+            title={t('bothCovered')}
           >
-            2 udfald <Info className="size-3" aria-hidden="true" />
+            {t('twoOutcomes')} <Info className="size-2.5 text-[#8fa3cc]" aria-hidden="true" />
           </span>
         </div>
       </div>
 
-      <div className="mt-1.5 flex h-[68px] gap-1.5 lg:contents">
-        <OddsBox bookmaker={o.a.bookmaker} label={o.a.label} odds={o.a.odds} loggedIn={loggedIn} className="lg:col-start-1 lg:row-start-3 lg:mt-2" />
-        <OddsBox bookmaker={o.b.bookmaker} label={o.b.label} odds={o.b.odds} loggedIn={loggedIn} className="lg:col-start-2 lg:row-start-3 lg:mt-2" />
-      </div>
-
-      <div className="mt-1.5 flex items-center gap-2 lg:col-start-3 lg:row-start-3 lg:mt-2 lg:self-center">
-        <Link
-          href={`/beregn?id=${o.id}`}
-          className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-[14px] bg-[linear-gradient(100deg,#1682ff,#1372ee)] px-1.5 text-center text-[13px] font-semibold leading-tight text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)] transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
-        >
-          <span className="contents lg:hidden">
-            <Calculator className="size-4 shrink-0" />
-            Beregn indsats
-          </span>
-          <span className="hidden lg:inline">Se detaljer</span>
-          <ArrowRight className="size-4 shrink-0" />
-        </Link>
+      <div className="mt-2 flex items-center gap-2 pr-[4.5px]">
+        {loggedIn ? (
+          <Link
+            href={`/beregn?id=${o.id}`}
+            className="flex h-[34px] flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          >
+            <Calculator className="mr-1 size-[13px] shrink-0" aria-hidden="true" />
+            {t('calcStake')}
+            <ArrowRight className="size-3 shrink-0" aria-hidden="true" />
+          </Link>
+        ) : (
+          <Link
+            href="/konto"
+            className="flex h-[34px] min-w-0 flex-1 items-center justify-center gap-2 rounded-[10px] bg-[linear-gradient(100deg,#1a86ff,#1676f5)] px-3 text-[11.5px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff] active:bg-[#0f63d6]"
+          >
+            <LockOpen className="size-[13px] shrink-0" aria-hidden="true" />
+            <span className="truncate">{t('createToSeeOdds')}</span>
+          </Link>
+        )}
         <button
           type="button"
           onClick={() => onToggleFavorite(o.id)}
           aria-pressed={o.favorite}
-          aria-label={o.favorite ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}
-          className="flex size-12 shrink-0 items-center justify-center rounded-full border border-border bg-[#081123] transition-colors hover:bg-accent"
+          aria-label={o.favorite ? t('removeFav') : t('addFav')}
+          className="flex size-8 shrink-0 items-center justify-center rounded-full border border-[#1b3557] bg-[#081123] transition-colors hover:bg-accent"
         >
-          <Star className={cn('size-6', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#d5ddef]')} />
+          <Star className={cn('size-4', o.favorite ? 'fill-[#facc15] text-[#facc15]' : 'text-[#d5ddef]')} />
         </button>
       </div>
     </article>

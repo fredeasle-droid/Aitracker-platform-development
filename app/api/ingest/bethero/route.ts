@@ -1,4 +1,4 @@
-import { isValidIngestToken, saveBetHeroSnapshot, type BrowserMessage } from '@/lib/bethero-ingest'
+import { isValidIngestToken, saveBetHeroCatalog, saveBetHeroSnapshot, type BrowserMessage, type BetHeroCatalogEntry } from '@/lib/bethero-ingest'
 import { recordBetHeroStatus } from '@/lib/bethero-cookie'
 
 export const dynamic = 'force-dynamic'
@@ -22,7 +22,7 @@ export async function POST(request: Request) {
   const text = await request.text()
   if (text.length > MAX_BODY_BYTES) return reply('For stor', 413)
 
-  let body: { token?: unknown; messages?: unknown }
+  let body: { token?: unknown; messages?: unknown; catalog?: unknown }
   try {
     body = JSON.parse(text)
   } catch {
@@ -33,6 +33,8 @@ export async function POST(request: Request) {
 
   try {
     const { rowCount, summary } = await saveBetHeroSnapshot(body.messages.slice(0, 200) as BrowserMessage[])
+    const catalog = Array.isArray(body.catalog) ? body.catalog.filter((entry): entry is BetHeroCatalogEntry => Boolean(entry && typeof entry === 'object' && typeof (entry as BetHeroCatalogEntry).name === 'string')) : []
+    if (catalog.length) await saveBetHeroCatalog(catalog)
     await recordBetHeroStatus(`OK (fra browser): ${summary}`)
     return reply(`gemt, ${rowCount} rækker. ${summary}`, 200)
   } catch (error) {

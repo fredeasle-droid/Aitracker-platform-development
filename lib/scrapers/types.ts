@@ -1,7 +1,7 @@
 export type ScrapedLeg = { label: string; bookmaker: string; odds: number }
 
 export type ScrapedSurebet = {
-  source: 'betmonitor' | 'surebets-today' | 'oddsator' | 'surebetdanmark' | 'bethero'
+  source: 'betmonitor' | 'surebets-today' | 'oddsator' | 'surebetdanmark' | 'bethero' | 'oddsjam'
   homeTeam: string
   awayTeam: string
   league: string
@@ -10,6 +10,15 @@ export type ScrapedSurebet = {
   kickoff: Date
   profit: number
   legs: ScrapedLeg[]
+}
+
+export function surebetIdentity(row: Pick<ScrapedSurebet, 'homeTeam' | 'awayTeam' | 'market' | 'kickoff' | 'legs'>) {
+  const date = row.kickoff.toISOString().slice(0, 10)
+  const legs = row.legs
+    .map((leg) => `${leg.label.trim()}|${leg.bookmaker.trim()}|${Number(leg.odds).toFixed(2)}`)
+    .sort()
+    .join('~')
+  return `${row.homeTeam}|${row.awayTeam}|${row.market}|${date}|${legs}`.toLowerCase()
 }
 
 export const SCRAPER_HEADERS = { 'User-Agent': 'Mozilla/5.0 SureScan/1.0' }
@@ -29,8 +38,22 @@ export function decodeHtml(value = '') {
 }
 
 export function splitTeams(match: string): [string, string] | null {
-  const parts = match.split(/\s+(?:vs\.?|—|–|-)\s+/i).map((part) => part.trim()).filter(Boolean)
+  const parts = match
+    .split(/\s*(?:@)\s*|\s+(?:vs\.?|v|at|—|–|-)\s+/i)
+    .map((part) => part.trim())
+    .filter(Boolean)
   return parts.length === 2 ? [parts[0], parts[1]] : null
+}
+
+export function displayLeague(value: string, sport = '') {
+  const league = value.trim()
+  const haystack = `${league} ${sport}`.toLowerCase()
+  if (haystack.includes('oktagon') || haystack.includes('lfa')) return 'MMA'
+  return league || 'Ukendt liga'
+}
+
+export function isHockeySport(value: string) {
+  return value.toLowerCase().includes('hockey')
 }
 
 export function displaySport(value: string) {

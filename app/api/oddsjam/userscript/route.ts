@@ -1,0 +1,201 @@
+import { isProductionOddsJamBridgeRequest } from '@/lib/oddsjam-bridge-origin'
+
+export const dynamic = 'force-dynamic'
+
+export function GET(request: Request) {
+  if (!isProductionOddsJamBridgeRequest(request)) {
+    return Response.json({ error: 'Use the production BetTracker domain for OddsJam.' }, { status: 403 })
+  }
+  const bridge = `${new URL(request.url).origin}/oddsjam-bro`
+  const script = `// ==UserScript==
+// @name         BetTracker OddsJam visible-row bridge
+// @match        https://oddsjam.com/betting-tools/arbitrage*
+// @match        https://www.oddsjam.com/betting-tools/arbitrage*
+// @run-at       document-idle
+// @grant        none
+// ==/UserScript==
+(() => {
+  const BRIDGE = ${JSON.stringify(bridge)};
+  const BRIDGE_ORIGIN = new URL(BRIDGE).origin;
+  const MAX_ROWS = 100;
+  let popup = null;
+  let pendingRows = [];
+  let lastFingerprint = '';
+  let lastSentAt = 0;
+  let connected = false;
+  let everConnected = false;
+  let lastConnectAttemptAt = 0;
+  let scannedCount = 0;
+  let statusText = 'Klar til at scanne OddsJam';
+  const panel = document.createElement('div');
+  panel.setAttribute('role', 'status');
+  panel.setAttribute('aria-live', 'polite');
+  panel.style.cssText = 'position:fixed;top:238px;right:14px;z-index:2147483647;width:230px;border:1px solid #159ed0;border-radius:10px;background:#062d40;color:#fff;padding:12px 14px;font:13px/1.45 system-ui;box-shadow:0 4px 14px #0008';
+  const panelTitle = document.createElement('strong');
+  panelTitle.textContent = 'BetTracker OddsJam';
+  panelTitle.style.cssText = 'display:block;font-size:14px;margin-bottom:4px';
+  const countLine = document.createElement('span');
+  const statusLine = document.createElement('span');
+  statusLine.style.color = '#b8d9e8';
+  panel.append(panelTitle, countLine, document.createElement('br'), statusLine);
+  const updatePanel = () => {
+    countLine.textContent = 'Synlige rækker scannet: ' + scannedCount;
+    statusLine.textContent = statusText;
+  };
+  updatePanel();
+
+  const visible = (node) => node instanceof HTMLElement && node.getClientRects().length > 0 && getComputedStyle(node).visibility !== 'hidden';
+  const attrs = (node) => {
+    const found = [];
+    const add = (value) => { const clean = String(value || '').trim(); if (clean && clean.length < 80 && !found.includes(clean)) found.push(clean); };
+    add(node.getAttribute?.('aria-label'));
+    add(node.getAttribute?.('title'));
+    add(node.getAttribute?.('alt'));
+    if (node.querySelectorAll) node.querySelectorAll('[aria-label], [title], img[alt]').forEach((item) => {
+      add(item.getAttribute('aria-label'));
+      add(item.getAttribute('title'));
+      add(item.getAttribute('alt'));
+    });
+    return found;
+  };
+  const isRowText = (text) => text.length > 50 && text.length < 1800 && /\\d+(?:\\.\\d+)?%/.test(text) && /\\bvs\\.?\\b/i.test(text) && (text.match(/\\b\\d+\\.\\d{2}\\b/g) || []).length >= 2;
+  const nearestLegText = (node, row) => {
+    let current = node.parentElement;
+    for (let depth = 0; current && current !== row && depth < 5; depth++, current = current.parentElement) {
+      const text = (current.innerText || '').trim();
+      if (text.length > 4 && text.length < 180 && /\\b(?:over|under|yes|no|draw|home|away)\\b/i.test(text)) return text;
+    }
+    return (node.parentElement?.innerText || '').trim().slice(0, 160);
+  };
+  const serializeRow = (row) => {
+    const text = (row.innerText || '').trim();
+    const prices = Array.from(row.querySelectorAll('*')).filter((node) => {
+      if (!visible(node) || node.children.length > 0) return false;
+      const value = (node.textContent || '').trim();
+      return /^\\d+\\.\\d{2}$/.test(value) && Number(value) > 1;
+    });
+    const seenLegs = new Set();
+    const legs = prices.map((node) => {
+      const odds = Number((node.textContent || '').trim());
+      const signature = odds + '|' + nearestLegText(node, row);
+      if (seenLegs.has(signature)) return null;
+      seenLegs.add(signature);
+      let container = node.parentElement;
+      for (let depth = 0; container && container !== row && depth < 4; depth++, container = container.parentElement) {
+        if ((container.innerText || '').length > 220) break;
+        if (/\\b(?:over|under|yes|no|draw|home|away)\\b/i.test(container.innerText || '')) break;
+      }
+      return { odds, text: nearestLegText(node, row), labels: attrs(container || node.parentElement || node) };
+    }).filter(Boolean).slice(0, 2);
+    return {
+      text,
+      labels: attrs(row),
+      legs,
+      capturedAt: Date.now(),
+      timezoneOffset: new Date().getTimezoneOffset(),
+    };
+  };
+  const rowKey = (row) => [
+    row.text.replace(/\\s+/g, ' ').trim(),
+    row.labels.join('|'),
+    row.legs.map((leg) => [leg.odds, leg.text, leg.labels.join('|')].join(':')).join(';'),
+  ].join('::');
+  const collectRows = () => {
+    const candidates = new Set();
+    document.querySelectorAll('tr, [role="row"]').forEach((row) => {
+      if (visible(row) && isRowText(row.innerText || '')) candidates.add(row);
+    });
+    if (!candidates.size) {
+      document.querySelectorAll('body *').forEach((node) => {
+        if (node.children.length || !visible(node) || !/^\\d{1,3}(?:\\.\\d{1,2})?%$/.test((node.textContent || '').trim())) return;
+        let parent = node.parentElement;
+        for (let depth = 0; parent && depth < 9; depth++, parent = parent.parentElement) {
+          if (isRowText(parent.innerText || '')) { candidates.add(parent); break; }
+        }
+      });
+    }
+    const seen = new Set();
+    return Array.from(candidates).map(serializeRow).filter((row) => {
+      const key = rowKey(row);
+      if (!row.text || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    }).slice(0, MAX_ROWS);
+  };
+  const openBridge = () => {
+    if (!popup || popup.closed) popup = window.open(BRIDGE, 'oddsjam-bettracker-bridge', 'width=460,height=480');
+    return popup && !popup.closed;
+  };
+  const requestBridge = () => {
+    lastConnectAttemptAt = Date.now();
+    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return false; }
+    popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
+    return true;
+  };
+  const send = () => {
+    if (!pendingRows.length || !connected) return;
+    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return; }
+    popup.postMessage({ type: 'oddsjam-data', rows: pendingRows }, BRIDGE_ORIGIN);
+    statusText = 'Sender rækker til BetTracker…';
+    updatePanel();
+    pendingRows = [];
+    lastSentAt = Date.now();
+  };
+  const scan = () => {
+    if (!location.pathname.includes('/betting-tools/arbitrage')) return;
+    const rows = collectRows();
+    scannedCount = rows.length;
+    statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';
+    updatePanel();
+    if (!connected && popup && !popup.closed) popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
+    if (everConnected && (!popup || popup.closed) && Date.now() - lastConnectAttemptAt > 30000) {
+      statusText = 'Forbindelsen genoprettes…';
+      updatePanel();
+      if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
+      else button.textContent = 'Tillad popup og klik igen';
+    }
+    if (!rows.length) return;
+    const fingerprint = JSON.stringify(rows.map(rowKey));
+    if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 45000) return;
+    lastFingerprint = fingerprint;
+    pendingRows = rows;
+    send();
+  };
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = 'Forbind BetTracker';
+  button.setAttribute('aria-label', 'Forbind OddsJam til BetTracker');
+  button.style.cssText = 'position:fixed;top:190px;right:14px;z-index:2147483647;border:1px solid #159ed0;border-radius:8px;background:#062d40;color:#fff;padding:10px 14px;font:600 13px/1.2 system-ui;cursor:pointer;box-shadow:0 4px 14px #0008';
+  button.addEventListener('click', () => { if (requestBridge()) { button.textContent = 'Forbinder BetTracker…'; scan(); } else { button.textContent = 'Tillad popup og klik igen'; } });
+  document.documentElement.append(button, panel);
+  window.addEventListener('message', (event) => {
+    if (event.origin !== BRIDGE_ORIGIN || !event.data) return;
+    if (event.data.type === 'oddsjam-ready') { connected = true; everConnected = true; button.textContent = 'BetTracker forbundet'; statusText = 'Forbundet — scanner automatisk'; updatePanel(); send(); }
+    if (event.data.type === 'oddsjam-result') {
+      button.textContent = event.data.ok ? 'BetTracker forbundet' : 'BetTracker: forbindelsesfejl';
+      statusText = String(event.data.text || (event.data.ok ? 'Rækker sendt' : 'Kunne ikke sende rækker')).slice(0, 140);
+      updatePanel();
+    }
+  });
+  setTimeout(() => {
+    if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
+    else button.textContent = 'Tillad popup og klik igen';
+  }, 2500);
+  setTimeout(scan, 3000);
+  setInterval(scan, 15000);
+  setInterval(() => {
+    if (!connected && button.textContent === 'Forbinder BetTracker…') button.textContent = 'Forbind BetTracker';
+  }, 30000);
+  setInterval(() => {
+    if (location.pathname.includes('/betting-tools/arbitrage')) location.reload();
+  }, 60000);
+})();
+`
+  return new Response(script, {
+    headers: {
+      'Content-Type': 'application/javascript; charset=utf-8',
+      'Content-Disposition': 'attachment; filename="bettracker-oddsjam.user.js"',
+      'Cache-Control': 'no-store',
+    },
+  })
+}
