@@ -88,6 +88,11 @@ export function GET(request: Request) {
       timezoneOffset: new Date().getTimezoneOffset(),
     };
   };
+  const rowKey = (row) => [
+    row.text.replace(/\\s+/g, ' ').trim(),
+    row.labels.join('|'),
+    row.legs.map((leg) => [leg.odds, leg.text, leg.labels.join('|')].join(':')).join(';'),
+  ].join('::');
   const collectRows = () => {
     const candidates = new Set();
     document.querySelectorAll('tr, [role="row"]').forEach((row) => {
@@ -104,8 +109,8 @@ export function GET(request: Request) {
     }
     const seen = new Set();
     return Array.from(candidates).map(serializeRow).filter((row) => {
-      const key = row.text.replace(/\\s+/g, ' ').trim();
-      if (!key || seen.has(key)) return false;
+      const key = rowKey(row);
+      if (!row.text || seen.has(key)) return false;
       seen.add(key);
       return true;
     }).slice(0, MAX_ROWS);
@@ -130,8 +135,8 @@ export function GET(request: Request) {
     statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';
     updatePanel();
     if (!rows.length) return;
-    const fingerprint = JSON.stringify(rows.map((row) => row.text));
-    if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 60000) return;
+    const fingerprint = JSON.stringify(rows.map(rowKey));
+    if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 45000) return;
     lastFingerprint = fingerprint;
     pendingRows = rows;
     send();

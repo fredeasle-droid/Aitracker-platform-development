@@ -17,7 +17,7 @@ function asStrings(value: unknown) {
 
 function parseKickoff(value: string, capturedAt: number, timezoneOffset: number) {
   const direct = new Date(value)
-  if (!Number.isNaN(direct.getTime()) && !/^(?:today|tomorrow|mon|tue|wed|thu|fri|sat|sun)\b/i.test(value)) return direct
+  if (/\b\d{4}\b/.test(value) && !Number.isNaN(direct.getTime())) return direct
 
   const clock = value.match(/(\d{1,2}):(\d{2})\s*(AM|PM)/i)
   if (!clock) return null
@@ -25,13 +25,35 @@ function parseKickoff(value: string, capturedAt: number, timezoneOffset: number)
   if (clock[3].toUpperCase() === 'PM') hour += 12
   const minute = Number(clock[2])
   const localNow = new Date(capturedAt - timezoneOffset * 60_000)
+  const currentMinutes = localNow.getUTCHours() * 60 + localNow.getUTCMinutes()
   let dayOffset = 0
+
   if (/tomorrow/i.test(value)) dayOffset = 1
-  else if (/\b(mon|tue|wed|thu|fri|sat|sun)/i.test(value)) {
-    const names = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
-    const target = names.findIndex((name) => value.toLowerCase().includes(name))
-    if (target >= 0) dayOffset = (target - localNow.getUTCDay() + 7) % 7 || 7
+  else if (/\btoday\b/i.test(value)) dayOffset = 0
+  else {
+    const weekdayNames = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+    const weekdayMatch = value.match(/\b(mon|tue|wed|thu|fri|sat|sun)\b/i)
+    const monthMatch = value.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s+(\d{1,2})\b/i)
+    if (monthMatch) {
+      const month = new Date(`${monthMatch[1]} 1, 2000`).getMonth()
+      const day = Number(monthMatch[2])
+      let year = localNow.getUTCFullYear()
+      let eventDate = Date.UTC(year, month, day, hour, minute)
+      if (eventDate < localNow.getTime() - 12 * 60 * 60_000) {
+        year += 1
+        eventDate = Date.UTC(year, month, day, hour, minute)
+      }
+      return new Date(eventDate + timezoneOffset * 60_000)
+    }
+    if (weekdayMatch) {
+      const targetDay = weekdayNames.indexOf(weekdayMatch[1].toLowerCase())
+      const daysAhead = (targetDay - localNow.getUTCDay() + 7) % 7
+      dayOffset = daysAhead || (hour * 60 + minute <= currentMinutes ? 7 : 0)
+    } else if (hour * 60 + minute <= currentMinutes) {
+      dayOffset = 1
+    }
   }
+
   const localDateAsUtc = Date.UTC(localNow.getUTCFullYear(), localNow.getUTCMonth(), localNow.getUTCDate() + dayOffset, hour, minute)
   return new Date(localDateAsUtc + timezoneOffset * 60_000)
 }
@@ -69,7 +91,7 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
   const timezoneOffset = Number(raw.timezoneOffset)
   if (!Number.isFinite(capturedAt) || !Number.isFinite(timezoneOffset) || Math.abs(timezoneOffset) > 900) return null
   const eventIndex = lines.indexOf(eventLine as string)
-  const kickoffText = lines.slice(0, eventIndex).reverse().find((line) => /(?:today|tomorrow|\b(?:mon|tue|wed|thu|fri|sat|sun)\b).*\d{1,2}:\d{2}\s*(?:AM|PM)/i.test(line))
+  const kickoffText = lines.slice(0, eventIndex).reverse().find((line) => /\d{1,2}:\d{2}\s*(?:AM|PM)/i.test(line))
   const kickoff = kickoffText ? parseKickoff(kickoffText, capturedAt, timezoneOffset) : null
   if (!kickoff || Number.isNaN(kickoff.getTime())) return null
 
@@ -107,12 +129,52 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
   }
 }
 
+function getOddsJamBrowserRowIssue(raw: OddsJamBrowserRow) {
+  if (typeof raw.text !== 'string' || raw.text.length > 1800) return 'rækkeformat'
+  const lines = raw.text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
+  const eventLine = lines.find((line) => /\s+vs\.?\s+/i.test(line))
+  const teams = splitTeams(eventLine ?? '')
+  if (!teams) return 'kampnavn'
+  if (!raw.text.match(/(\d+(?:\.\d+)?)\s*%/)) return 'profit'
+
+  const capturedAt = Number(raw.capturedAt)
+  const timezoneOffset = Number(raw.timezoneOffset)
+  if (!Number.isFinite(capturedAt) || !Number.isFinite(timezoneOffset) || Math.abs(timezoneOffset) > 900) return 'capture-tid'
+  const eventIndex = lines.indexOf(eventLine as string)
+  const kickoffText = lines.slice(0, eventIndex).reverse().find((line) => /\d{1,2}:\d{2}\s*(?:AM|PM)/i.test(line))
+  if (!kickoffText || !parseKickoff(kickoffText, capturedAt, timezoneOffset)) return 'starttid'
+
+  const sportLineIndex = lines.findIndex((line, index) => index > eventIndex && /[·•]/.test(line))
+  if (sportLineIndex < 0) return 'sport/liga'
+  const market = lines.slice(sportLineIndex + 1).find((line) =>
+    line.length > 2 && line.length < 100 && !/risky bet/i.test(line) && !/\d+\.\d{2}/.test(line) && !/^\$/.test(line) && !/^(?:[12X]\s+)?(?:over|under|yes|no)\b/i.test(line),
+  )
+  if (!market) return 'marked'
+  return 'odds/bookmaker'
+}
+
 export async function saveOddsJamBrowserRows(rows: unknown[]) {
   const candidates = rows.filter((row): row is OddsJamBrowserRow => Boolean(row && typeof row === 'object'))
   const parsed = candidates.map(parseOddsJamBrowserRow).filter((row): row is ScrapedSurebet => row !== null)
-  const unique = [...new Map(parsed.map((row) => [`${row.homeTeam}|${row.awayTeam}|${row.market}|${row.kickoff.toISOString()}`.toLowerCase(), row])).values()]
+  const unique = [...new Map(parsed.map((row) => {
+    const legs = row.legs.map((leg) => `${leg.label}|${leg.bookmaker}|${leg.odds}`).sort().join('|')
+    return [`${row.homeTeam}|${row.awayTeam}|${row.market}|${row.kickoff.toISOString()}|${legs}`.toLowerCase(), row]
+  })).values()]
+  const rejected = candidates.length - parsed.length
+  const collapsedDuplicates = parsed.length - unique.length
+  const issues = new Map<string, number>()
+  if (rejected) {
+    candidates.forEach((candidate) => {
+      if (parseOddsJamBrowserRow(candidate)) return
+      const issue = getOddsJamBrowserRowIssue(candidate)
+      issues.set(issue, (issues.get(issue) ?? 0) + 1)
+    })
+  }
+  const issueSummary = [...issues.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([issue, count]) => `${issue} ${count}`).join(', ')
+  const skipped = rejected ? `; ${rejected} ikke læst${issueSummary ? `: ${issueSummary}` : ''}` : ''
+  const duplicates = collapsedDuplicates ? `; ${collapsedDuplicates} dubletter slået sammen` : ''
+  const summary = `OddsJam bridge: ${unique.length} rækker klar (${candidates.length} synlige kandidater${skipped}${duplicates})`
   const payload = JSON.stringify(unique)
-  const summary = `OddsJam bridge: ${unique.length} rækker klar (${candidates.length} synlige kandidater)`
   await db.insert(sourceSnapshots).values({ source: ODDSJAM_SOURCE, payload, summary, rowCount: unique.length, updatedAt: new Date() }).onConflictDoUpdate({ target: sourceSnapshots.source, set: { payload, summary, rowCount: unique.length, updatedAt: new Date() } })
   return { rowCount: unique.length, candidateCount: candidates.length, summary }
 }
