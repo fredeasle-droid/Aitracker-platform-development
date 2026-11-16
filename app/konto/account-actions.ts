@@ -13,15 +13,18 @@ import { subscriptions } from '@/lib/db/schema'
 
 const ONBOARDING_BOOKMAKERS = new Set(['bet365', 'betano', 'unibet', 'williamhill', 'nordicbet', '888sport', 'betfair', 'bwin', 'paddypower', 'leovegas', 'danskespil', 'betsson'])
 
-export async function completeOnboarding(bookmakers: string[]) {
+const ONBOARDING_ANSWERS = new Set(['already_registered', 'registered_after_click', 'not_yet'])
+
+export async function completeOnboarding(responses: Record<string, string>) {
   const session = await auth.api.getSession({ headers: await headers() })
   if (!session?.user) throw new Error('Mangler login')
   const userId = session.user.id
-  const selected = [...new Set(bookmakers)]
-  if (selected.some((bookmaker) => !ONBOARDING_BOOKMAKERS.has(bookmaker))) {
-    throw new Error('Ukendt bookmaker i listen.')
+  const ids = Object.keys(responses ?? {})
+  if (ids.length !== ONBOARDING_BOOKMAKERS.size || ids.some((id) => !ONBOARDING_BOOKMAKERS.has(id) || !ONBOARDING_ANSWERS.has(responses[id]))) {
+    throw new Error('Besvar alle bookmakerne, før du fortsætter.')
   }
 
+  const selected = ids.filter((id) => responses[id] !== 'not_yet')
   const row = await getSubscription(userId)
   if (!row?.stripeSubscriptionId || !ACTIVE_STATUSES.includes(row.status)) {
     if (isPreviewTestEnvironment()) {
@@ -32,7 +35,7 @@ export async function completeOnboarding(bookmakers: string[]) {
     throw new Error('Et aktivt abonnement er nødvendigt for at gennemføre onboarding.')
   }
 
-  await db.update(subscriptions).set({ onboardingBookmakers: selected, onboardingCompletedAt: new Date(), updatedAt: new Date() }).where(eq(subscriptions.userId, userId))
+  await db.update(subscriptions).set({ onboardingResponses: responses, onboardingBookmakers: selected, onboardingCompletedAt: new Date(), updatedAt: new Date() }).where(eq(subscriptions.userId, userId))
   revalidatePath('/')
   revalidatePath('/konto')
 }

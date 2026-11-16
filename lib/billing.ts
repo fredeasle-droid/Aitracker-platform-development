@@ -33,7 +33,7 @@ export async function hasActiveSubscription(userId: string) {
 }
 
 export async function saveCustomer(userId: string, stripeCustomerId: string) {
-  await db.insert(subscriptions).values({ userId, stripeCustomerId, onboardingBookmakers: [] }).onConflictDoUpdate({
+  await db.insert(subscriptions).values({ userId, stripeCustomerId, onboardingBookmakers: [], onboardingResponses: {} }).onConflictDoUpdate({
     target: subscriptions.userId,
     set: {
       stripeCustomerId,
@@ -61,5 +61,5 @@ export async function saveSubscription(userId: string, subscription: Stripe.Subs
     cancelAtPeriodEnd: subscription.cancel_at_period_end,
     updatedAt: new Date(),
   }
-  await db.insert(subscriptions).values({ userId, onboardingBookmakers: [], ...values }).onConflictDoUpdate({ target: subscriptions.userId, set: values })
+  await db.insert(subscriptions).values({ userId, onboardingBookmakers: [], onboardingResponses: {}, ...values }).onConflictDoUpdate({ target: subscriptions.userId, set: values })
 }

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { ArrowRight, Check, LayoutGrid, Star } from 'lucide-react'
+import { ArrowRight, Check, LayoutGrid, LifeBuoy, Star } from 'lucide-react'
 import { completeOnboarding } from '@/app/konto/account-actions'
 import { getBookmaker } from '@/lib/bookmakers'
 import { cn } from '@/lib/utils'
@@ -36,26 +36,32 @@ const STEPS = [
   { label: 'Få den bedste start', state: 'current' },
 ] as const
 
-export function OnboardingStep({ initialBookmakers = [] }: { initialBookmakers?: string[] }) {
+type BookmakerAnswer = 'already_registered' | 'registered_after_click' | 'not_yet'
+
+const ANSWER_OPTIONS: { value: BookmakerAnswer; label: string }[] = [
+  { value: 'already_registered', label: 'Har allerede konto' },
+  { value: 'registered_after_click', label: 'Jeg har oprettet mig' },
+  { value: 'not_yet', label: 'Ikke endnu' },
+]
+
+export function OnboardingStep({ initialResponses = {} }: { initialResponses?: Record<string, string> }) {
   const router = useRouter()
-  const [members, setMembers] = useState<string[]>(initialBookmakers)
+  const [responses, setResponses] = useState<Record<string, BookmakerAnswer>>(() =>
+    Object.fromEntries(Object.entries(initialResponses).filter(([, value]) => ANSWER_OPTIONS.some((option) => option.value === value))) as Record<string, BookmakerAnswer>,
+  )
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
+  const allAnswered = RECOMMENDED_BOOKMAKERS.every(({ id }) => Boolean(responses[id]))
 
-  function markMember(id: string, value?: boolean) {
-    setMembers((current) => {
-      const has = current.includes(id)
-      const next = value ?? !has
-      if (next === has) return current
-      return next ? [...current, id] : current.filter((item) => item !== id)
-    })
+  function setAnswer(id: string, answer: BookmakerAnswer) {
+    setResponses((current) => ({ ...current, [id]: answer }))
   }
 
   async function finish() {
     setBusy(true)
     setError('')
     try {
-      await completeOnboarding(members)
+      await completeOnboarding(responses)
       router.replace('/')
       router.refresh()
     } catch (cause) {
@@ -98,13 +104,13 @@ export function OnboardingStep({ initialBookmakers = [] }: { initialBookmakers?:
 
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {RECOMMENDED_BOOKMAKERS.map((bookmaker) => {
-          const isMember = members.includes(bookmaker.id)
+          const answer = responses[bookmaker.id]
           return (
             <li
               key={bookmaker.id}
               className={cn(
                 'overflow-hidden rounded-xl border bg-[linear-gradient(135deg,#071426_0%,#06101e_60%,#071a2a_100%)] transition-colors',
-                isMember ? 'border-primary shadow-[0_0_28px_-14px_var(--primary)]' : 'border-[#183252]',
+                answer ? 'border-primary shadow-[0_0_28px_-14px_var(--primary)]' : 'border-[#183252]',
               )}
             >
               <span className="inline-flex items-center gap-1.5 rounded-br-lg bg-[#0d2a1c] px-2.5 py-1 text-[11px] font-medium text-[#e6ecf7]">
@@ -127,31 +133,36 @@ export function OnboardingStep({ initialBookmakers = [] }: { initialBookmakers?:
                   <span className="block text-base font-bold text-white">{bookmaker.bonus}</span>i bonus
                 </span>
               </div>
-              <div className="flex gap-2 p-4 pt-3">
+              <div className="flex flex-col gap-2 p-4 pt-3">
                 <a
                   href={signupUrl(bookmaker.id)}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  onClick={() => markMember(bookmaker.id, true)}
-                  className="flex h-9 flex-1 items-center justify-center gap-1.5 rounded-lg bg-primary text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="flex h-10 items-center justify-center gap-1.5 rounded-lg bg-primary text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   Opret konto
                   <ArrowRight className="size-3.5" aria-hidden="true" />
                   <span className="sr-only"> hos {bookmaker.name} (åbner i nyt vindue)</span>
                 </a>
-                <button
-                  type="button"
-                  aria-pressed={isMember}
-                  onClick={() => markMember(bookmaker.id)}
-                  className={cn(
-                    'flex h-9 flex-1 items-center justify-center gap-1.5 rounded-lg border text-[12px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
-                    isMember ? 'border-primary bg-primary/15 text-white' : 'border-[#344861] text-[#e6ecf7] hover:bg-[#102744]',
-                  )}
-                >
-                  {isMember && <Check className="size-3.5 text-primary" aria-hidden="true" />}
-                  Jeg er allerede medlem
-                  <span className="sr-only"> hos {bookmaker.name}</span>
-                </button>
+                <p className="text-center text-xs leading-relaxed text-[#c3cde2]">Når du er færdig, fortæl os det herunder.</p>
+                <div className="grid grid-cols-1 gap-1.5" role="group" aria-label={`Svar om ${bookmaker.name}`}>
+                  {ANSWER_OPTIONS.map(({ value, label }) => (
+                    <button
+                      key={value}
+                      type="button"
+                      aria-pressed={answer === value}
+                      onClick={() => setAnswer(bookmaker.id, value)}
+                      className={cn(
+                        'flex min-h-9 items-center justify-center gap-1.5 rounded-lg border px-2 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+                        answer === value ? 'border-primary bg-primary/15 text-white' : 'border-[#344861] text-[#e6ecf7] hover:bg-[#102744]',
+                      )}
+                    >
+                      {answer === value && <Check className="size-3.5 text-primary" aria-hidden="true" />}
+                      {label}
+                      <span className="sr-only"> hos {bookmaker.name}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
             </li>
           )
@@ -167,17 +178,25 @@ export function OnboardingStep({ initialBookmakers = [] }: { initialBookmakers?:
       <button
         type="button"
         onClick={finish}
-        disabled={busy}
+        disabled={busy || !allAnswered}
         className="mx-auto mt-6 flex h-14 w-full max-w-[570px] items-center justify-center gap-4 rounded-2xl bg-[linear-gradient(100deg,#1682ff_0%,#1a63f0_55%,#5a3ff0_100%)] text-lg font-bold text-white shadow-[0_14px_34px_-14px_#1682ff] transition-[filter] hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
       >
         <LayoutGrid className="size-5" aria-hidden="true" />
         <span aria-hidden="true" className="h-6 w-px bg-white/30" />
-        {busy ? 'Gemmer…' : 'Fortsæt til dashboard'}
-        {!busy && <ArrowRight className="size-5" aria-hidden="true" />}
+        {busy ? 'Gemmer…' : allAnswered ? 'Fortsæt til dashboard' : `Besvar alle bookmakerne (${Object.keys(responses).length}/${RECOMMENDED_BOOKMAKERS.length})`}
+        {!busy && allAnswered && <ArrowRight className="size-5" aria-hidden="true" />}
       </button>
       <p className="mt-3 text-center text-xs text-[#c3cde2]" aria-live="polite">
-        Du kan altid tilføje flere bookmakere senere i dine indstillinger.
+        Du behøver ikke oprette konto hos alle. Vælg “Ikke endnu”, hvis du vil springe en bookmaker over.
       </p>
+      <button
+        type="button"
+        onClick={() => window.dispatchEvent(new Event('open-support-chat'))}
+        className="mx-auto mt-5 flex min-h-11 items-center justify-center gap-2 rounded-xl border border-[#344861] px-4 text-sm font-semibold text-[#e6ecf7] transition-colors hover:border-primary hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+      >
+        <LifeBuoy className="size-4" aria-hidden="true" />
+        Brug for hjælp? Få hjælp nu
+      </button>
     </main>
   )
 }

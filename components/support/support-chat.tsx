@@ -21,6 +21,12 @@ export function SupportChat() {
   const busy = status === 'submitted' || status === 'streaming'
 
   useEffect(() => {
+    const openSupport = () => setOpen(true)
+    window.addEventListener('open-support-chat', openSupport)
+    return () => window.removeEventListener('open-support-chat', openSupport)
+  }, [])
+
+  useEffect(() => {
     listRef.current?.scrollTo({ top: listRef.current.scrollHeight, behavior: 'smooth' })
   }, [messages, status])
 

@@ -42,7 +42,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
 
   const row = await getSubscription(user.id)
   if (row && ACTIVE_STATUSES.includes(row.status) && !row.onboardingCompletedAt) {
-    return <OnboardingStep initialBookmakers={Array.isArray(row.onboardingBookmakers) ? row.onboardingBookmakers : []} />
+    return <OnboardingStep initialResponses={row.onboardingResponses ?? {}} />
   }
   const invoices = row ? await loadInvoices(row.stripeCustomerId) : []
 
