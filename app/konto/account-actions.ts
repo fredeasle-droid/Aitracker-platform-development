@@ -13,7 +13,7 @@ import { subscriptions } from '@/lib/db/schema'
 
 const ONBOARDING_BOOKMAKERS = new Set(['bet365', 'betano', 'unibet', 'williamhill', 'nordicbet', '888sport', 'betfair', 'bwin', 'paddypower', 'leovegas', 'danskespil', 'betsson'])
 
-const ONBOARDING_ANSWERS = new Set(['already_registered', 'registered_after_click', 'not_yet'])
+const ONBOARDING_ANSWERS = new Set(['already_registered', 'registered_after_click'])
 
 export async function completeOnboarding(responses: Record<string, string>) {
   const session = await auth.api.getSession({ headers: await headers() })
@@ -24,7 +24,7 @@ export async function completeOnboarding(responses: Record<string, string>) {
     throw new Error('Besvar alle bookmakerne, før du fortsætter.')
   }
 
-  const selected = ids.filter((id) => responses[id] !== 'not_yet')
+  const selected = ids
   const row = await getSubscription(userId)
   if (!row?.stripeSubscriptionId || !ACTIVE_STATUSES.includes(row.status)) {
     if (isPreviewTestEnvironment()) {

@@ -36,12 +36,11 @@ const STEPS = [
   { label: 'Få den bedste start', state: 'current' },
 ] as const
 
-type BookmakerAnswer = 'already_registered' | 'registered_after_click' | 'not_yet'
+type BookmakerAnswer = 'already_registered' | 'registered_after_click'
 
 const ANSWER_OPTIONS: { value: BookmakerAnswer; label: string }[] = [
   { value: 'already_registered', label: 'Har allerede konto' },
   { value: 'registered_after_click', label: 'Jeg har oprettet mig' },
-  { value: 'not_yet', label: 'Ikke endnu' },
 ]
 
 export function OnboardingStep({ initialResponses = {} }: { initialResponses?: Record<string, string> }) {
@@ -187,7 +186,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
         {!busy && allAnswered && <ArrowRight className="size-5" aria-hidden="true" />}
       </button>
       <p className="mt-3 text-center text-xs text-[#c3cde2]" aria-live="polite">
-        Du behøver ikke oprette konto hos alle. Vælg “Ikke endnu”, hvis du vil springe en bookmaker over.
+        Vælg for hver bookmaker, om du allerede har en konto eller har oprettet dig via linket.
       </p>
       <button
         type="button"
