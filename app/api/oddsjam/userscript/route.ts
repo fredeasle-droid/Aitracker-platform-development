@@ -186,9 +186,6 @@ export function GET(request: Request) {
   setInterval(() => {
     if (!connected && button.textContent === 'Forbinder BetTracker…') button.textContent = 'Forbind BetTracker';
   }, 30000);
-  setInterval(() => {
-    if (location.pathname.includes('/betting-tools/arbitrage')) location.reload();
-  }, 60000);
 })();
 `
   return new Response(script, {
