@@ -105,16 +105,14 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
 
   const rawLegs = Array.isArray(raw.legs) ? raw.legs.filter((leg): leg is OddsJamBrowserLeg => Boolean(leg && typeof leg === 'object')) : []
   const fallbackSelections = lines.filter((line) => /^(?:[12X]\s+)?(?:over|under|yes|no|draw|home|away)\b/i.test(line))
-  const rowLabels = asStrings(raw.labels)
-  const rowBookmakers = rowLabels.filter((label) => bookmakerFromLabels([label]))
   const legs = rawLegs.slice(0, 2).map((leg, index) => {
     const odds = Number(leg.odds)
     const labels = asStrings(leg.labels)
-    const bookmaker = bookmakerFromLabels(labels) || rowBookmakers[index] || ''
+    const bookmaker = bookmakerFromLabels(labels)
     const selection = selectionFromText(typeof leg.text === 'string' ? leg.text : '', fallbackSelections[index] ?? '')
     return { label: normalizeLegLabel(selection, market, 2), bookmaker, odds }
   }).filter((leg) => leg.odds > 1 && Number.isFinite(leg.odds) && leg.label && leg.bookmaker)
-  if (legs.length !== 2) return null
+  if (legs.length !== 2 || legs[0].bookmaker.toLowerCase() === legs[1].bookmaker.toLowerCase()) return null
 
   return {
     source: 'oddsjam',

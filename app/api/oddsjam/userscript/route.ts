@@ -63,9 +63,24 @@ export function GET(request: Request) {
     let current = node.parentElement;
     for (let depth = 0; current && current !== row && depth < 5; depth++, current = current.parentElement) {
       const text = (current.innerText || '').trim();
-      if (text.length > 4 && text.length < 180 && /\\b(?:over|under|yes|no|draw|home|away)\\b/i.test(text)) return text;
+      const oddsCount = Array.from(current.querySelectorAll('*')).filter((item) => item.children.length === 0 && /^\\d+\\.\\d{2}$/.test((item.textContent || '').trim())).length;
+      if (oddsCount === 1 && text.length > 4 && text.length < 180 && /\\b(?:over|under|yes|no|draw|home|away)\\b/i.test(text)) return text;
     }
     return (node.parentElement?.innerText || '').trim().slice(0, 160);
+  };
+  const nearestLegLabels = (node, row, prices) => {
+    let current = node.parentElement;
+    let bestLabels = [];
+    for (let depth = 0; current && current !== row && depth < 7; depth++, current = current.parentElement) {
+      const text = (current.innerText || '').trim();
+      if (text.length > 220) break;
+      const containedPrices = prices.filter((price) => current.contains(price));
+      if (containedPrices.length !== 1) continue;
+      const labels = attrs(current);
+      if (labels.length) bestLabels = labels;
+      if (labels.length && /\\b(?:over|under|yes|no|draw|home|away)\\b/i.test(text)) return labels;
+    }
+    return bestLabels;
   };
   const serializeRow = (row) => {
     const text = (row.innerText || '').trim();
@@ -80,12 +95,7 @@ export function GET(request: Request) {
       const signature = odds + '|' + nearestLegText(node, row);
       if (seenLegs.has(signature)) return null;
       seenLegs.add(signature);
-      let container = node.parentElement;
-      for (let depth = 0; container && container !== row && depth < 4; depth++, container = container.parentElement) {
-        if ((container.innerText || '').length > 220) break;
-        if (/\\b(?:over|under|yes|no|draw|home|away)\\b/i.test(container.innerText || '')) break;
-      }
-      return { odds, text: nearestLegText(node, row), labels: attrs(container || node.parentElement || node) };
+      return { odds, text: nearestLegText(node, row), labels: nearestLegLabels(node, row, prices) };
     }).filter(Boolean).slice(0, 2);
     return {
       text,
