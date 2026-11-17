@@ -4,7 +4,7 @@ import { Logo, MobilePayIcon, TelegramIcon } from "@/components/home/icons";
 import { copyrightYear } from "@/components/home/data";
 import { MobileResponsibleNotice, ResponsibleNotice } from "@/components/home/ResponsibleNotice";
 
-const linkCls = "block py-1.5 text-sm text-foreground/80 transition-colors hover:text-primary-glow";
+const linkCls = "block py-1 text-[13px] text-foreground/80 transition-colors hover:text-primary-glow";
 
 const LINKS = [
   { href: "/", label: "Forside" },
@@ -32,11 +32,11 @@ export function GlobalFooter() {
         <div className="mx-auto grid max-w-[1200px] gap-10 px-5 py-12 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.3fr] lg:px-8">
           <div className="flex flex-col gap-3">
             <Logo big />
-            <p className="text-sm text-muted-foreground">Scan. Find. Vind.</p>
+            <p className="text-[13px] text-muted-foreground">Scan. Find. Vind.</p>
           </div>
 
           <nav aria-label="Links">
-            <p className="mb-2 text-sm font-semibold">Links</p>
+            <p className="mb-2 text-[13px] font-semibold">Links</p>
             {LINKS.map((l) => (
               <Link key={l.href} href={l.href} className={linkCls}>
                 {l.label}
@@ -45,7 +45,7 @@ export function GlobalFooter() {
           </nav>
 
           <nav aria-label="Support">
-            <p className="mb-2 text-sm font-semibold">Support</p>
+            <p className="mb-2 text-[13px] font-semibold">Support</p>
             {SUPPORT.map((l) => (
               <Link key={l.href} href={l.href} className={linkCls}>
                 {l.label}
@@ -54,9 +54,9 @@ export function GlobalFooter() {
           </nav>
 
           <div className="flex flex-col items-start gap-3">
-            <p className="text-sm font-semibold">Kom i gang i dag</p>
-            <p className="text-sm text-muted-foreground">Prøv BetTrackerAI gratis og få de nyeste surebets direkte på din konto.</p>
-            <Link href="/konto" className="btn-glow group flex h-10 items-center gap-2 rounded-full px-5 text-sm font-semibold">
+            <p className="text-[13px] font-semibold">Kom i gang i dag</p>
+            <p className="text-[13px] text-muted-foreground">Prøv BetTrackerAI gratis og få de nyeste surebets direkte på din konto.</p>
+            <Link href="/konto" className="btn-glow group flex h-10 items-center gap-2 rounded-full px-5 text-[13px] font-semibold">
               Opret konto <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
             </Link>
             <Link href="/telegram" aria-label="Telegram" className="mt-1 text-social transition-colors hover:text-primary-glow">
@@ -66,7 +66,7 @@ export function GlobalFooter() {
         </div>
 
         <div className="border-t border-border">
-          <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-4 px-5 py-6 text-[13px] text-muted-foreground sm:flex-row sm:items-center lg:px-8">
+          <div className="mx-auto flex max-w-[1200px] flex-col items-start justify-between gap-4 px-5 py-5 text-[12px] text-muted-foreground sm:flex-row sm:items-center lg:px-8">
             <span>© {copyrightYear()} BetTrackerAI. Alle rettigheder forbeholdes.</span>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-foreground/80">
               <span className="text-[15px] font-black italic tracking-[-0.5px]">VISA</span>
