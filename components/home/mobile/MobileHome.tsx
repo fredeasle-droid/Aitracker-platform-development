@@ -259,7 +259,7 @@ function Explainer() {
       </p>
       <video
         className="mt-4 aspect-video w-full rounded-[14px] bg-background-deep object-cover shadow-[var(--shadow-glow)]"
-        src={videoAsset.url}
+        src={videoAsset.url || undefined}
         poster={posterAsset.url}
         data-explainer
         preload="none"

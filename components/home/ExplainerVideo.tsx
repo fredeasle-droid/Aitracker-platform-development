@@ -29,7 +29,7 @@ export function ExplainerVideo({ videoRef, l }: { videoRef: RefObject<HTMLVideoE
         ref={videoRef}
         data-explainer
         className="h-full w-full object-cover"
-        src={videoAsset.url}
+        src={videoAsset.url || undefined}
         poster={posterAsset.url}
         preload="metadata"
         playsInline
