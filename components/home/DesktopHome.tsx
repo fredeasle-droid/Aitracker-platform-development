@@ -16,7 +16,7 @@ import { ReviewAvatar, Stars } from "./Reviews";
 import { ReviewsShowcase } from "./desktop/ReviewsShowcase";
 import { SectionHeading, Tilt, stagger, useSpotlight } from "./desktop/effects";
 import { FaqSection } from "./Faq";
-import { PRICING, REVIEWS } from "./data";
+import { REVIEWS } from "./data";
 import { LiveTicker } from "./LiveTicker";
 import { BenefitsSection } from "./Benefits";
 import { Swoosh } from "./Swoosh";
@@ -38,7 +38,6 @@ function useScanAge() {
 export function DesktopHome({ playExplainer, explainerRef }: { playExplainer: () => void; explainerRef: React.RefObject<HTMLVideoElement | null> }) {
   const spotRef = useSpotlight<HTMLDivElement>();
   const age = useScanAge();
-  const { signedIn } = useHomeData();
 
   return (
     <div className="desktop-shell">
@@ -92,8 +91,8 @@ export function DesktopHome({ playExplainer, explainerRef }: { playExplainer: ()
                 Lad vores AI finde de mest profitable muligheder på tværs af bookmakere – automatisk.
               </p>
               <div className="rise-in mt-[24px] flex items-center gap-[10px]" style={delay(560)}>
-                <Link href={signedIn ? "/surebets" : "/konto"} className="btn-glow cta-breathe group flex h-[42px] items-center justify-center gap-[8px] rounded-full px-[22px] text-[13px] font-semibold">
-                  {signedIn ? "Se dine surebets" : `Start dine ${PRICING.trialDays} gratis dage`}
+                <Link href="/konto" className="btn-glow cta-breathe group flex h-[42px] items-center justify-center gap-[8px] rounded-full px-[22px] text-[13px] font-semibold">
+                  Start dine 7 gratis dage
                   <ArrowRight className="h-[14px] w-[14px] transition-transform duration-300 group-hover:translate-x-[3px]" aria-hidden="true" />
                 </Link>
                 <button type="button" onClick={playExplainer} className="btn-ghost-glass group flex h-[42px] items-center gap-[8px] rounded-full pl-[7px] pr-[16px] text-[12px] font-medium">
