@@ -51,14 +51,7 @@ export function DesktopHome({ playExplainer, explainerRef }: { playExplainer: ()
       <div ref={spotRef} className="mock-frame">
         <div className="hero-grid pointer-events-none absolute inset-x-0 top-0 h-[640px]" aria-hidden="true" />
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/home/hero-player.jpg"
-          alt="Jublende fodboldspiller på stadion"
-          width={1920}
-          height={640}
-          className="hero-photo hero-parallax pointer-events-none absolute left-[-74px] top-[-30px] h-[calc(100vh/var(--z,var(--zf,1)))] min-h-[432px] w-[1086px] max-w-none object-cover"
-        />
-        <div className="hero-scrim pointer-events-none absolute left-[-74px] top-[-30px] h-[calc(100vh/var(--z,var(--zf,1)))] min-h-[432px] w-[1086px]" />
+        <img src="/home/hero-player.jpg" alt="Jublende fodboldspiller på stadion" width={1920} height={640} className="sr-only" />
 
         <section className="relative flex h-[calc(100vh/var(--z,var(--zf,1))-60px)] min-h-[440px] flex-col">
           <div className="relative flex flex-1 items-center justify-between pb-[10px] pl-[34px] pr-[34px]">
