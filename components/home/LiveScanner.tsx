@@ -98,7 +98,7 @@ export function LiveScanner() {
         <div className="scanner-strip absolute inset-x-0 bottom-0 flex h-[36px] items-center justify-between px-[16px] text-[9px] text-muted-foreground">
           <span className="flex items-center gap-[6px]">
             <Radar className="h-[12px] w-[12px] text-primary-glow" />
-            <span>Scanner <span className="font-semibold text-foreground">{stats.bookmakers}</span> bookmakere</span>
+            <span>Scanner <span className="font-semibold text-foreground">2000+</span> bookmakere</span>
           </span>
           <span><span className="font-semibold text-foreground">{stats.surebets}</span> aktive surebets</span>
         </div>

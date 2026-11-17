@@ -149,7 +149,7 @@ function Scanner() {
       <div className="scanner-strip -mx-4 -mb-4 mt-1 flex h-10 items-center justify-between px-4 text-[11px] text-muted-foreground">
         <span className="flex items-center gap-1.5">
           <Radar className="h-3.5 w-3.5 text-primary-glow" />
-          <span>Scanner <span className="font-semibold text-foreground">{stats.bookmakers}</span> bookmakere</span>
+          <span>Scanner <span className="font-semibold text-foreground">2000+</span> bookmakere</span>
         </span>
         <span><span className="font-semibold text-foreground">{stats.surebets}</span> aktive surebets</span>
       </div>
