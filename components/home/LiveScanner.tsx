@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock, Radar, Zap } from "lucide-react";
+import { Clock, Radar } from "lucide-react";
 import { TeamCrest, useHomeData, type HomeRow } from "./home-data";
 
 const VISIBLE_ROWS = 5;
@@ -38,25 +38,9 @@ export function ScanSweep({ className = "" }: { className?: string }) {
 export function LiveScanner() {
   const rows = useLiveRows();
   const { stats } = useHomeData();
-  const latest = rows[0];
 
   return (
     <div className="relative shrink-0">
-      {/* Newest find pops out of the scanner as a floating card */}
-      {latest && <div className="float-y absolute -left-[54px] -top-[40px] z-10">
-        <div key={latest.id} className="float-card toast-in flex h-[46px] items-center gap-[9px] rounded-[12px] pl-[8px] pr-[12px]">
-          <span className="pill-success flex h-[30px] w-[30px] items-center justify-center rounded-[9px]">
-            <Zap className="h-[15px] w-[15px] fill-current" strokeWidth={1.2} />
-          </span>
-          <span className="leading-[13px]">
-            <span className="block text-[8.5px] font-medium uppercase tracking-[0.08em] text-success">Nyt surebet fundet</span>
-            <span className="mt-[2px] block whitespace-nowrap text-[10.5px] font-semibold">
-              {latest.home.name} – {latest.away.name} <span className="text-success">+{latest.margin.toFixed(2)}%</span>
-            </span>
-          </span>
-        </div>
-      </div>}
-
       <div className="panel live-scanner relative h-[300px] w-[352px] overflow-hidden rounded-[16px]">
         <span className="absolute left-[17px] top-[16px] h-[13px] w-[13px] animate-pulse rounded-full bg-success shadow-[0_0_10px_var(--success)]" />
         <p className="absolute left-[44px] top-[12px] text-[13.5px] leading-[18px]">
