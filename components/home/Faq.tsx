@@ -9,6 +9,7 @@ import {
 import { PRICING } from "./data";
 import { FAQ_ENTRIES } from "./faq-data";
 import { SupportChat, useSupportChat } from "./SupportChat";
+import { CallButton, CallPanel, useSupportCall, type SupportCallState } from "./VoiceCall";
 
 const ICONS: LucideIcon[] = [Target, ShieldCheck, Gift, CreditCard, Building2, BellRing, UserCheck];
 
@@ -32,7 +33,7 @@ function Eyebrow({ phone = false }: { phone?: boolean }) {
   );
 }
 
-function SupportHeader({ phone = false }: { phone?: boolean }) {
+function SupportHeader({ call, phone = false }: { call: SupportCallState; phone?: boolean }) {
   return (
     <header className={`flex items-center gap-[9px] border-b border-border/70 ${phone ? "px-3.5 py-2.5" : "px-[14px] py-[8px]"}`}>
       <span className={`btn-glow relative flex shrink-0 items-center justify-center rounded-full ${phone ? "h-8 w-8" : "h-[26px] w-[26px]"}`}>
@@ -42,9 +43,10 @@ function SupportHeader({ phone = false }: { phone?: boolean }) {
       <div className="min-w-0 flex-1">
         <p className={`font-semibold ${phone ? "text-[13.5px] leading-[17px]" : "text-[11.5px] leading-[15px]"}`}>BetTrackerAI Support</p>
         <p className={`truncate text-foreground/60 ${phone ? "text-[11px]" : "text-[9.5px] leading-[13px]"}`}>
-          <span className="text-success">Online</span> · skriv dit spørgsmål
+          <span className="text-success">Online</span> · skriv eller ring op
         </p>
       </div>
+      <CallButton call={call} phone={phone} />
     </header>
   );
 }
@@ -63,6 +65,7 @@ function TrialLink({ phone = false }: { phone?: boolean }) {
 /** Desktop canvas section (inside .mock-frame): compact question list on the left, live support chat on the right. */
 export function FaqSection() {
   const chat = useSupportChat();
+  const call = useSupportCall();
   const [active, setActive] = useState<number | null>(null);
 
   return (
@@ -109,8 +112,8 @@ export function FaqSection() {
         </div>
 
         <div id="faq-chat" className="faq-chat relative flex h-[244px] flex-col overflow-hidden rounded-[14px]">
-          <SupportHeader />
-          <SupportChat chat={chat} />
+          <SupportHeader call={call} />
+          {call.open ? <CallPanel call={call} /> : <SupportChat chat={chat} />}
         </div>
       </div>
     </section>
@@ -120,6 +123,7 @@ export function FaqSection() {
 /** Phone layout section: one chat box, with the common questions as swipeable buttons above the typing box. */
 export function MobileFaq() {
   const chat = useSupportChat();
+  const call = useSupportCall();
   return (
     <section id="faq-mobile" className="panel faq-panel relative scroll-mt-6 overflow-hidden rounded-[18px] p-4">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }} />
@@ -129,8 +133,8 @@ export function MobileFaq() {
       </h2>
       <p className="mt-1.5 text-[12.5px] leading-[19px] text-foreground/75">Tryk på et spørgsmål eller skriv dit eget.</p>
       <div className="faq-chat mt-4 flex h-[440px] flex-col overflow-hidden rounded-[14px]">
-        <SupportHeader phone />
-        <SupportChat chat={chat} phone suggestions />
+        <SupportHeader call={call} phone />
+        {call.open ? <CallPanel call={call} phone /> : <SupportChat chat={chat} phone suggestions />}
       </div>
       <div className="mt-3 text-center">
         <TrialLink phone />
