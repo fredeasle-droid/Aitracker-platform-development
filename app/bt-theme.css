@@ -80,12 +80,7 @@
 }
 /* --z / --bleed are set before first paint by the inline script in __root; media steps are the no-JS fallback. */
 @media (max-width: 1023px) { :root { --zf: 0.8; } }
-@media (min-width: 1150px) { :root { --zf: 1.1; } }
-@media (min-width: 1280px) { :root { --zf: 1.22; } }
-@media (min-width: 1440px) { :root { --zf: 1.37; } }
-@media (min-width: 1600px) { :root { --zf: 1.56; } }
-@media (min-width: 1920px) { :root { --zf: 1.875; } }
-@media (min-width: 2560px) { :root { --zf: 2.5; } }
+@media (min-width: 1150px) { :root { --zf: 1; } }
 .mock-frame { zoom: var(--z, var(--zf, 1)); }
 
 .hero-photo {
