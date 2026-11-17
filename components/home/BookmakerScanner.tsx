@@ -4,7 +4,7 @@ import { useEffect, useState, type CSSProperties } from "react";
 import { useInView } from "@/lib/use-in-view";
 import { useCount } from "./use-count";
 import { Radar } from "lucide-react";
-import { BOOKMAKER_LOGOS } from "./bookmakerLogos";
+import { BOOKMAKER_LOGOS, POPULAR_BOOKMAKERS, SCANNED_BOOKMAKERS_LABEL } from "./bookmakerLogos";
 import { useHomeData } from "./home-data";
 
 const ROW_DURATIONS = [40, 46, 36];
@@ -32,7 +32,7 @@ export function bookmakerTag(name: string) {
 export function useStatTiles(): [string, string][] {
   const { stats } = useHomeData();
   return [
-    [String(stats.bookmakers), "Bookmakere"],
+    [SCANNED_BOOKMAKERS_LABEL, "Bookmakere"],
     [String(stats.leagues), "Ligaer"],
     [String(stats.surebets), "Aktive surebets"],
   ];
@@ -75,23 +75,23 @@ export function useUpdating(names: string[]) {
 }
 
 /** Desktop stat tile that counts up the first time it scrolls into view. */
-function CountStat({ to, label, format, run }: { to: number; label: string; format: (v: number) => string; run: boolean }) {
+function CountStat({ to, label, format, run, fixed }: { to: number; label: string; format: (v: number) => string; run: boolean; fixed?: string }) {
   const v = useCount(to, run, 1600);
   return (
     <div className="panel-soft lift flex h-[60px] w-[124px] flex-col justify-center pl-[14px]">
-      <span className="font-display text-[19px] font-bold leading-[23px] tracking-[-0.03em] text-primary-glow tabular-nums">{format(v)}</span>
+      <span className="font-display text-[19px] font-bold leading-[23px] tracking-[-0.03em] text-primary-glow tabular-nums">{fixed ?? format(v)}</span>
       <span className="text-[10px] leading-[14px] text-foreground/70">{label}</span>
     </div>
   );
 }
 
 export function BookmakerScanner() {
-  const { bookmakers, stats } = useHomeData();
-  const updating = useUpdating(bookmakers);
-  const rows = splitRows(bookmakers);
+  const { stats } = useHomeData();
+  const updating = useUpdating(POPULAR_BOOKMAKERS);
+  const rows = splitRows(POPULAR_BOOKMAKERS);
   const [ref, inView] = useInView<HTMLElement>(0.3);
   const countStats = [
-    { to: stats.bookmakers, label: "Bookmakere" },
+    { to: 0, label: "Bookmakere", fixed: SCANNED_BOOKMAKERS_LABEL },
     { to: stats.leagues, label: "Ligaer" },
     { to: stats.surebets, label: "Aktive surebets" },
   ];
@@ -103,7 +103,7 @@ export function BookmakerScanner() {
         Oversigt over bookmakere
       </span>
       <h2 className="absolute left-[32px] top-[70px] text-[32px] font-bold leading-[38px]">
-        Vi scanner <span className="text-gradient-brand">{stats.bookmakers}</span>
+        Vi scanner <span className="text-gradient-brand">{SCANNED_BOOKMAKERS_LABEL}</span>
         <br />
         bookmakere – hele tiden
       </h2>

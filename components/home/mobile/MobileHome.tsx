@@ -17,6 +17,7 @@ import { BENEFITS, BENEFITS_HEADING } from "../Benefits";
 import { MAX, MIN, PROFIT_RATE, calcProfit } from "../ProfitCalculator";
 import { FindCard } from "../WeeklyCarousel";
 import { Chip, splitRows, useStatTiles, useUpdating } from "../BookmakerScanner";
+import { POPULAR_BOOKMAKERS, SCANNED_BOOKMAKERS_LABEL } from "../bookmakerLogos";
 import { TeamCrest, useHomeData } from "../home-data";
 import { POINTS } from "../SmsService";
 import { CHANNELS } from "../SocialFollow";
@@ -306,16 +307,15 @@ function Benefits() {
 }
 
 function Bookmakers() {
-  const { bookmakers, stats } = useHomeData();
-  const updating = useUpdating(bookmakers);
-  const rows = splitRows(bookmakers);
+  const updating = useUpdating(POPULAR_BOOKMAKERS);
+  const rows = splitRows(POPULAR_BOOKMAKERS);
   const tiles = useStatTiles();
   return (
     <Box className="bookmaker-panel px-0">
       <div className="px-5">
         <Badge><Radar className="h-3.5 w-3.5" strokeWidth={2.2} />Oversigt over bookmakere</Badge>
         <h2 className="mt-4 text-[28px] font-bold leading-[32px] tracking-[-0.5px]">
-          Vi scanner <span className="text-gradient-brand">{stats.bookmakers}</span> bookmakere – hele tiden
+          Vi scanner <span className="text-gradient-brand">{SCANNED_BOOKMAKERS_LABEL}</span> bookmakere – hele tiden
         </h2>
         <p className="mt-3 text-[14px] leading-[21px] text-foreground/80">
           Vores AI sammenligner odds på tværs af danske og internationale bookmakere hvert sekund, så du aldrig går glip af et surebet.

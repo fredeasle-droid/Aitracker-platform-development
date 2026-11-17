@@ -16,3 +16,25 @@ export const BOOKMAKER_LOGOS: Record<string, string> = {
   "Expekt": "/bookmakers/expekt.png",
   "ComeOn": "/bookmakers/comeon.png",
 };
+
+/** Headline figure shown in the bookmaker section. */
+export const SCANNED_BOOKMAKERS_LABEL = "2.000+";
+
+/** Most popular bookmakers, shown in the sliding strip. */
+export const POPULAR_BOOKMAKERS = [
+  "bet365",
+  "Unibet",
+  "Pinnacle",
+  "Betano",
+  "Danske Spil",
+  "Bwin",
+  "LeoVegas",
+  "William Hill",
+  "NordicBet",
+  "Betsson",
+  "888sport",
+  "Betway",
+  "Mr Green",
+  "Expekt",
+  "ComeOn",
+];
