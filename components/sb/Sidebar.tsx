@@ -13,9 +13,10 @@ import {
   ArrowRight,
   Volleyball,
   Disc,
+  Trophy,
 } from "lucide-react";
 import { Logo } from "./Logo";
-import { bookmakers } from "./data";
+import { useSurebets } from "./surebets-context";
 import { useBookmakerFilter } from "./bookmaker-filter";
 import { cn } from "@/lib/utils";
 
@@ -48,20 +49,23 @@ function BasketballIcon({ className }: { className?: string }) {
   );
 }
 
-const sports = [
-  { label: "Fodbold", count: 42, icon: FootballIcon },
-  { label: "Basketball", count: 18, icon: BasketballIcon },
-  { label: "Tennis", count: 27, icon: Volleyball },
-  { label: "Ishockey", count: 12, icon: Disc },
-  { label: "Esport", count: 9, icon: Gamepad2 },
-];
+const sportIcons: Record<string, React.ComponentType<{ className?: string }>> = {
+  Fodbold: FootballIcon,
+  Basketball: BasketballIcon,
+  Tennis: Volleyball,
+  Ishockey: Disc,
+  Esport: Gamepad2,
+};
 
+const COLLAPSED_BOOKMAKERS = 8;
 
 export function SidebarContent() {
   const [activeNav, setActiveNav] = useState("Surebets");
-  const [activeSport, setActiveSport] = useState("Fodbold");
   const [open, setOpen] = useState(true);
+  const [showAll, setShowAll] = useState(false);
   const bk = useBookmakerFilter();
+  const { sports, sport: activeSport, setSport, bookmakers } = useSurebets();
+  const listed = showAll ? bookmakers : bookmakers.slice(0, COLLAPSED_BOOKMAKERS);
 
   return (
     <div className="flex min-h-full flex-col">
@@ -95,12 +99,15 @@ export function SidebarContent() {
 
       <div className="px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan">SPORT</div>
       <div className="mt-3 space-y-1 short:mt-2 short:space-y-0.5">
-        {sports.map(({ label, count, icon: Icon }) => {
+        {sports.length === 0 && <p className="px-3 text-[12.5px] text-muted-foreground">Ingen sportsgrene lige nu.</p>}
+        {sports.map(({ label, count }) => {
+          const Icon = sportIcons[label] ?? Trophy;
           const active = activeSport === label;
           return (
             <button
               key={label}
-              onClick={() => setActiveSport(label)}
+              aria-pressed={active}
+              onClick={() => setSport(active ? null : label)}
               className={cn(
                 "flex w-full items-center gap-3 rounded-xl px-3 py-2 text-[14.5px] font-medium transition-colors short:py-1.5",
                 active ? "bg-gradient-active font-bold text-foreground ring-1 ring-primary/30" : "text-sidebar-foreground hover:bg-sidebar-accent",
@@ -132,7 +139,7 @@ export function SidebarContent() {
       </button>
       {open && (
         <ul className="mt-3 space-y-2 px-2 short:mt-2 short:space-y-1.5">
-          {bookmakers.map(({ id, name }) => {
+          {listed.map(({ id, name }) => {
             const on = bk.isOn(id);
             return (
               <li key={id}>
@@ -155,10 +162,14 @@ export function SidebarContent() {
               </li>
             );
           })}
-          <li className="flex items-center gap-3 text-[13px] text-sidebar-foreground">
-            <Plus className="h-4 w-4 text-muted-foreground" />
-            Vis alle (42)
-          </li>
+          {bookmakers.length > COLLAPSED_BOOKMAKERS && (
+            <li>
+              <button onClick={() => setShowAll((v) => !v)} className="flex items-center gap-3 text-[13px] text-sidebar-foreground hover:text-foreground">
+                <Plus className="h-4 w-4 text-muted-foreground" />
+                {showAll ? "Vis færre" : `Vis alle (${bookmakers.length})`}
+              </button>
+            </li>
+          )}
         </ul>
       )}
 

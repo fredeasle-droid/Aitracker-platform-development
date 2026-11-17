@@ -6,6 +6,10 @@ import { SurebetTable } from '@/components/sb/SurebetTable'
 import { RightPanel } from '@/components/sb/RightPanel'
 import { LiveTicker } from '@/components/sb/LiveTicker'
 import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
+import { SurebetsProvider } from '@/components/sb/surebets-context'
+import { getSbData } from '@/lib/sb-data'
+
+export const dynamic = 'force-dynamic'
 
 export const metadata = {
   title: 'Surebets i realtid – BetTrackerAI',
@@ -13,8 +17,10 @@ export const metadata = {
     'Find de sikre odds med BetTrackerAI. Vi scanner markedet 24/7 og finder de bedste surebets på tværs af bookmakere.',
 }
 
-export default function SurebetsPage() {
+export default async function SurebetsPage() {
+  const data = await getSbData()
   return (
+    <SurebetsProvider data={data}>
     <BookmakerFilterProvider>
       <div className="flex min-h-screen">
         <Sidebar />
@@ -68,5 +74,6 @@ export default function SurebetsPage() {
         </main>
       </div>
     </BookmakerFilterProvider>
+    </SurebetsProvider>
   )
 }

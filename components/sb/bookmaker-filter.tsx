@@ -1,16 +1,9 @@
 "use client";
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
-import { bookmakers, type BookmakerId } from "./data";
+import type { BookmakerId } from "./data";
+import { useSurebets } from "./surebets-context";
 
-const ALL = bookmakers.map((b) => b.id);
-const STORAGE_KEY = "bt-bookmakers-v2";
-
-/** Group checkbox: turns the whole group on, or off when every bookmaker in it is already on. Keeps the canonical order. */
-export function toggleGroup(selected: readonly BookmakerId[], group: readonly BookmakerId[]): BookmakerId[] {
-  const allOn = group.every((id) => selected.includes(id));
-  const next = allOn ? selected.filter((id) => !group.includes(id)) : [...selected, ...group];
-  return ALL.filter((id) => next.includes(id));
-}
+const STORAGE_KEY = "bt-bookmakers-off-v3";
 
 type Ctx = {
   selected: BookmakerId[];
@@ -24,18 +17,20 @@ type Ctx = {
 
 const BookmakerFilterContext = createContext<Ctx | null>(null);
 
-/** Shared bookmaker selection for the filter bar, side menu and surebet list; remembered in the browser. */
+/**
+ * Shared bookmaker selection for the filter bar, side menu and surebet list; remembered in the browser.
+ * Only the bookmakers switched off are stored, so new bookmakers from the scanner start out selected.
+ */
 export function BookmakerFilterProvider({ children }: { children: ReactNode }) {
-  const [selected, setSelected] = useState<BookmakerId[]>(ALL);
+  const { bookmakers } = useSurebets();
+  const all = useMemo(() => bookmakers.map((b) => b.id), [bookmakers]);
+  const [off, setOff] = useState<BookmakerId[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      if (raw) {
-        const saved = (JSON.parse(raw) as string[]).filter((id): id is BookmakerId => ALL.includes(id as BookmakerId));
-        setSelected(ALL.filter((id) => saved.includes(id)));
-      }
+      if (raw) setOff((JSON.parse(raw) as unknown[]).filter((id): id is string => typeof id === "string"));
     } catch {
       /* ignore broken storage */
     }
@@ -43,25 +38,27 @@ export function BookmakerFilterProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (loaded) localStorage.setItem(STORAGE_KEY, JSON.stringify(selected));
-  }, [selected, loaded]);
+    if (loaded) localStorage.setItem(STORAGE_KEY, JSON.stringify(off));
+  }, [off, loaded]);
 
-  const toggle = useCallback(
-    (id: BookmakerId) => setSelected((cur) => (cur.includes(id) ? cur.filter((x) => x !== id) : ALL.filter((x) => x === id || cur.includes(x)))),
-    [],
-  );
-  const value = useMemo<Ctx>(
-    () => ({
+  const toggle = useCallback((id: BookmakerId) => setOff((cur) => (cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id])), []);
+
+  const value = useMemo<Ctx>(() => {
+    const selected = all.filter((id) => !off.includes(id));
+    return {
       selected,
-      isOn: (id) => selected.includes(id),
+      isOn: (id) => !off.includes(id),
       toggle,
-      toggleMany: (ids) => setSelected((cur) => toggleGroup(cur, ids)),
-      selectAll: () => setSelected(ALL),
-      clear: () => setSelected([]),
-      allOn: selected.length === ALL.length,
-    }),
-    [selected, toggle],
-  );
+      toggleMany: (ids) =>
+        setOff((cur) => {
+          const groupAllOn = ids.every((id) => !cur.includes(id));
+          return groupAllOn ? [...new Set([...cur, ...ids])] : cur.filter((id) => !ids.includes(id));
+        }),
+      selectAll: () => setOff([]),
+      clear: () => setOff(all),
+      allOn: selected.length === all.length,
+    };
+  }, [all, off, toggle]);
   return <BookmakerFilterContext.Provider value={value}>{children}</BookmakerFilterContext.Provider>;
 }
 

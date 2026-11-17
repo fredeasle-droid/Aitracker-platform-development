@@ -3,7 +3,7 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 /** Club logo on a soft glowing disc; falls back to initials if the image fails. */
-export function Crest({ src, name, size = "md", className }: { src: string; name: string; size?: "sm" | "md" | "lg"; className?: string }) {
+export function Crest({ src, name, size = "md", className }: { src: string | null; name: string; size?: "sm" | "md" | "lg"; className?: string }) {
   const [failed, setFailed] = useState(false);
   const initials = name
     .split(" ")
@@ -19,7 +19,7 @@ export function Crest({ src, name, size = "md", className }: { src: string; name
         size === "lg" ? "h-[64px] w-[64px] p-[7px]" : size === "md" ? "h-[38px] w-[38px] p-[4px]" : "h-7 w-7 p-[3px]",
       )}
     >
-      {failed ? (
+      {failed || !src ? (
         <span className="text-[11px] font-bold text-foreground">{initials}</span>
       ) : (
         <img

@@ -1,9 +1,11 @@
 "use client";
 import type { BookmakerId } from "./data";
 import { cn } from "@/lib/utils";
+import { useSurebets } from "./surebets-context";
 
-/** Brand wordmark, sized to sit in a ~100px slot. */
+/** Brand wordmark, sized to sit in a ~100px slot. Bookmakers without a designed mark show their name. */
 export function BookmakerMark({ id, size = "md" }: { id: BookmakerId; size?: "md" | "lg" }) {
+  const name = useSurebets().nameOf(id);
   const lg = size === "lg";
   const word = (cls: string, lgPx = "text-[22px]", mdPx = "text-[19px]") =>
     cn("inline-flex items-center whitespace-nowrap font-extrabold leading-none tracking-tight", lg ? lgPx : mdPx, cls);
@@ -101,11 +103,14 @@ export function BookmakerMark({ id, size = "md" }: { id: BookmakerId; size?: "md
           cloudbet
         </span>
       );
+    default:
+      return <span className={word("text-foreground", "text-[18px]", "text-[16px]")}>{name}</span>;
   }
 }
 
 /** Round brand monogram for compact spots (filter button, chips). */
 export function BookmakerBadge({ id, className }: { id: BookmakerId; className?: string }) {
+  const name = useSurebets().nameOf(id);
   const base = cn("bk-badge inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[10px] font-extrabold leading-none", className);
   const dark = (content: React.ReactNode, cls = "text-foreground") => <span className={cn(base, "bk-badge-dark", cls)}>{content}</span>;
   switch (id) {
@@ -175,5 +180,7 @@ export function BookmakerBadge({ id, className }: { id: BookmakerId; className?:
         </svg>,
         "bk-cloudbet",
       );
+    default:
+      return dark(name.slice(0, 2).toUpperCase());
   }
 }

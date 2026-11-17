@@ -1,32 +1,26 @@
 "use client";
 import { useEffect, useState } from "react";
 import { ArrowRight, Zap, Trophy, Layers, Play } from "lucide-react";
-import { formatPct, surebetProfitPct, surebets, teamShort } from "./data";
+import { formatAgo, formatPct, surebetProfitPct, teamShort } from "./data";
+import { useSurebets } from "./surebets-context";
 
-const ranked = surebets
-  .map((b) => ({ b, pct: surebetProfitPct(b.legs.map((l) => l.odds)) }))
-  .sort((x, y) => y.pct - x.pct);
-const top = ranked[0]!;
-const newest = surebets[0]!;
-const newestPct = surebetProfitPct(newest.legs.map((l) => l.odds));
-
-const stats = [
-  { icon: Zap, title: "24/7", sub: "Scanning" },
-  { icon: Layers, title: String(surebets.length), sub: "Surebets nu" },
-  { icon: Trophy, title: formatPct(top.pct), sub: "Top-profit" },
-];
-
-/** Seconds since the last scan; ticks up and restarts each minute. Starts from a fixed value so server and browser agree. */
-function useLastScan() {
-  const [sec, setSec] = useState(12);
+/** Age of the newest find, counting up from the server value; null when nothing has been found. */
+function useLastScan(initial: number | null) {
+  const [sec, setSec] = useState(initial);
   useEffect(() => {
-    const t = setInterval(() => setSec((s) => (s >= 59 ? 1 : s + 1)), 1000);
+    setSec(initial);
+    if (initial === null) return;
+    const t = setInterval(() => setSec((s) => (s === null ? s : s + 1)), 1000);
     return () => clearInterval(t);
-  }, []);
+  }, [initial]);
   return sec;
 }
 
 function NewFindToast() {
+  const { surebets } = useSurebets();
+  const newest = surebets[0];
+  if (!newest) return null;
+  const newestPct = surebetProfitPct(newest.legs.map((l) => l.odds));
   return (
     <div className="toast-glass sb-toast-in absolute right-6 top-4 hidden items-center gap-3 rounded-2xl py-2.5 pl-2.5 pr-4 lg:flex">
       <span className="find-icon flex h-10 w-10 items-center justify-center rounded-xl">
@@ -43,7 +37,13 @@ function NewFindToast() {
 }
 
 export function Hero() {
-  const sec = useLastScan();
+  const { surebets, top, lastScanSec } = useSurebets();
+  const sec = useLastScan(lastScanSec);
+  const stats = [
+    { icon: Zap, title: "24/7", sub: "Scanning" },
+    { icon: Layers, title: String(surebets.length), sub: "Surebets nu" },
+    { icon: Trophy, title: top ? formatPct(top.pct) : "–", sub: "Top-profit" },
+  ];
   return (
     <section className="relative">
       <NewFindToast />
@@ -52,7 +52,7 @@ export function Hero() {
           <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />
           <span className="text-success">Live surebet-scanner aktiv</span>
           <span className="hidden h-3.5 w-px bg-border sm:block" />
-          <span className="hidden tabular-nums text-muted-foreground sm:inline">Sidst scan: {sec} sek. siden</span>
+          <span className="hidden tabular-nums text-muted-foreground sm:inline">{sec === null ? "Ingen fund endnu" : `Seneste fund: ${formatAgo(sec)} siden`}</span>
         </span>
         <h1 className="hero-rise max-w-[560px] text-[36px] font-extrabold leading-[1.02] tracking-[-0.025em] drop-shadow-[0_2px_12px_var(--surface-deep)] sm:text-[52px]">
           Find de bedste surebets –{" "}

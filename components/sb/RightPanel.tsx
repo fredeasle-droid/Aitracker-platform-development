@@ -1,22 +1,18 @@
 "use client";
 import { Clock, Lightbulb, ArrowRight, Trophy, Radar } from "lucide-react";
 
-import { formatPct, surebetProfitPct, surebets, teamShort } from "./data";
+import { formatPct, surebetProfitPct, teamShort } from "./data";
 import { Crest } from "./Crest";
+import { useSurebets } from "./surebets-context";
 
-const ranked = surebets
-  .map((b) => ({ b, pct: surebetProfitPct(b.legs.map((l) => l.odds)) }))
-  .sort((x, y) => y.pct - x.pct);
-const top = ranked[0]!;
-
-/** Small rising line, like the front page's scanner card. */
-function Sparkline() {
-  const pts = [4, 9, 7, 14, 11, 18, 15, 24, 20, 30, 26, 22];
+/** Profit trend of the latest finds, oldest to newest. */
+function Sparkline({ pts }: { pts: number[] }) {
+  if (pts.length < 2) return <div className="h-[34px]" aria-hidden />;
   const w = 120;
   const h = 34;
   const step = w / (pts.length - 1);
-  const max = 32;
-  const line = pts.map((v, i) => `${(i * step).toFixed(1)},${(h - (v / max) * h).toFixed(1)}`).join(" ");
+  const max = Math.max(...pts) || 1;
+  const line = pts.map((v, i) => `${(i * step).toFixed(1)},${(h - (v / max) * (h - 2) - 1).toFixed(1)}`).join(" ");
   return (
     <svg viewBox={`0 0 ${w} ${h}`} className="h-[34px] w-full" preserveAspectRatio="none" aria-hidden>
       <defs>
@@ -32,6 +28,7 @@ function Sparkline() {
 }
 
 function LiveScanner() {
+  const { surebets, trend, bookmakers } = useSurebets();
   return (
     <div className="sb-panel panel-glow edge-light relative overflow-hidden">
       <div className="p-5 pb-3">
@@ -47,11 +44,12 @@ function LiveScanner() {
           </span>
         </div>
         <div className="mt-3">
-          <Sparkline />
+          <Sparkline pts={trend} />
         </div>
       </div>
-      <ul className="divide-y divide-border border-t border-border">
-        {surebets.map((b) => {
+      <ul className="max-h-[420px] divide-y divide-border overflow-y-auto border-t border-border">
+        {surebets.length === 0 && <li className="px-4 py-5 text-center text-[12.5px] text-muted-foreground">Ingen aktive fund lige nu.</li>}
+        {surebets.slice(0, 12).map((b) => {
           const pct = surebetProfitPct(b.legs.map((l) => l.odds));
           return (
             <li key={b.id} className="flex items-center gap-2.5 px-4 py-2.5 transition-colors hover:bg-surface-elevated/50">
@@ -74,10 +72,10 @@ function LiveScanner() {
       </ul>
       <div className="flex items-center justify-between gap-2 border-t border-border px-4 py-2.5 text-[11px] text-muted-foreground">
         <span className="flex items-center gap-1.5 whitespace-nowrap">
-          <Radar className="h-3.5 w-3.5 text-primary-glow" /> <b className="font-bold text-foreground">2000+</b> bookmakere
+          <Radar className="h-3.5 w-3.5 text-primary-glow" /> <b className="font-bold text-foreground">{bookmakers.length}</b> bookmakere
         </span>
         <span className="whitespace-nowrap">
-          <b className="font-bold text-foreground">1,2 mio</b> odds/time
+          <b className="font-bold text-foreground">{surebets.length}</b> aktive fund
         </span>
       </div>
     </div>
@@ -85,6 +83,7 @@ function LiveScanner() {
 }
 
 export function RightPanel() {
+  const { top } = useSurebets();
   return (
     <aside className="flex flex-col gap-4">
       <LiveScanner />
@@ -105,12 +104,14 @@ export function RightPanel() {
         <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/55 to-transparent" />
         <div className="relative flex h-full min-h-[245px] flex-col justify-center p-6">
           <Trophy className="h-10 w-10 fill-gold text-gold drop-shadow-[0_0_10px_var(--gold)]" />
-          <div className="text-glow-gold mt-3 text-[44px] font-extrabold leading-none text-gold">{formatPct(top.pct)}</div>
+          <div className="text-glow-gold mt-3 text-[44px] font-extrabold leading-none text-gold">{top ? formatPct(top.pct) : "–"}</div>
           <div className="mt-1 text-lg font-bold">Profit</div>
           <div className="text-shadow-hero text-[15px] text-foreground/90">på dagens bedste surebet</div>
-          <div className="glass-pill mt-3 w-fit rounded-full px-3 py-1 text-[12.5px] font-semibold">
-            {top.b.home.name} – {top.b.away.name}
-          </div>
+          {top && (
+            <div className="glass-pill mt-3 w-fit max-w-full truncate rounded-full px-3 py-1 text-[12.5px] font-semibold">
+              {top.b.home.name} – {top.b.away.name}
+            </div>
+          )}
         </div>
       </div>
     </aside>

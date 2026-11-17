@@ -1,9 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { ArrowRight, Crown, SearchX, ShieldCheck, Star, X } from "lucide-react";
-import { bookmakers, formatPct, surebetProfitPct, surebets, visibleSurebets, type Surebet } from "./data";
+import { formatPct, surebetProfitPct, visibleSurebets, type Surebet } from "./data";
 import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";
 import { useBookmakerFilter } from "./bookmaker-filter";
+import { useSurebets } from "./surebets-context";
 import { ValueGauge } from "./ValueGauge";
 import { Crest } from "./Crest";
 import { cn } from "@/lib/utils";
@@ -21,8 +22,6 @@ const cols =
 
 /** Gauge fills completely at 5 % profit. */
 const gaugeProgress = (pct: number) => pct / 5;
-
-const allRows = surebets.map((b) => ({ b, legs: b.legs, pct: surebetProfitPct(b.legs.map((l) => l.odds)) }));
 
 function AccentBar({ tone }: { tone: Surebet["accent"] }) {
   return (
@@ -115,14 +114,15 @@ function DetailsButton({ className, short }: { className?: string; short?: boole
 
 function ListHeader({ count }: { count: number }) {
   const { allOn, selected, toggle, selectAll } = useBookmakerFilter();
+  const { inSport, bookmakers, sport } = useSurebets();
   return (
     <div className="px-1 pb-3 md:px-4 md:pt-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2.5">
-          <h2 className="text-[19px] font-extrabold tracking-tight">Dagens surebets</h2>
+          <h2 className="text-[19px] font-extrabold tracking-tight">{sport ? `Surebets – ${sport}` : "Dagens surebets"}</h2>
           <span key={count} className="count-pop rounded-full bg-primary/25 px-2 py-0.5 text-xs font-bold tabular-nums text-primary-glow ring-1 ring-primary/40">
             {count}
-            {!allOn && <span className="text-muted-foreground"> / {surebets.length}</span>}
+            {!allOn && <span className="text-muted-foreground"> / {inSport.length}</span>}
           </span>
         </div>
         <div className="flex items-center gap-2 text-[12.5px] font-medium text-muted-foreground">
@@ -157,28 +157,39 @@ function ListHeader({ count }: { count: number }) {
 
 function EmptyState() {
   const { selectAll, selected } = useBookmakerFilter();
+  const { surebets } = useSurebets();
+  const none = surebets.length === 0;
   return (
     <div className="row-enter flex flex-col items-center px-6 py-14 text-center">
       <span className="find-icon mb-4 flex h-14 w-14 items-center justify-center rounded-2xl">
         <SearchX className="h-7 w-7 text-success" />
       </span>
-      <div className="text-[17px] font-bold">Ingen surebets med dit valg</div>
+      <div className="text-[17px] font-bold">{none ? "Ingen aktive surebets lige nu" : "Ingen surebets med dit valg"}</div>
       <p className="mt-1.5 max-w-[340px] text-[13.5px] leading-snug text-muted-foreground">
-        {selected.length === 0
+        {none
+          ? "Scanneren leder videre. Nye fund dukker op her, så snart de findes."
+          : selected.length === 0
           ? "Du har fravalgt alle bookmakere. Vælg mindst to for at se surebets."
           : "Et surebet kræver, at begge bookmakere er valgt. Tilføj flere bookmakere for at se flere forslag."}
       </p>
-      <button onClick={selectAll} className="btn-shine bg-gradient-primary relative mt-5 overflow-hidden rounded-lg px-5 py-2 text-sm font-bold text-primary-foreground shadow-glow transition hover:brightness-110">
-        Vis alle bookmakere
-      </button>
+      {!none && (
+        <button onClick={selectAll} className="btn-shine bg-gradient-primary relative mt-5 overflow-hidden rounded-lg px-5 py-2 text-sm font-bold text-primary-foreground shadow-glow transition hover:brightness-110">
+          Vis alle bookmakere
+        </button>
+      )}
     </div>
   );
 }
 
 export function SurebetTable() {
-  const [starred, setStarred] = useState<Record<string, boolean>>({});
-  const toggle = (id: string) => setStarred((s) => ({ ...s, [id]: !s[id] }));
+  const [starred, setStarred] = useState<Record<number, boolean>>({});
+  const toggle = (id: number) => setStarred((s) => ({ ...s, [id]: !s[id] }));
   const { selected } = useBookmakerFilter();
+  const { inSport } = useSurebets();
+  const allRows = useMemo(
+    () => inSport.map((b) => ({ b, legs: b.legs, pct: surebetProfitPct(b.legs.map((l) => l.odds)) })),
+    [inSport],
+  );
   const rows = visibleSurebets(allRows, selected);
   const bestId = rows.length ? rows.reduce((best, r) => (r.pct > best.pct ? r : best), rows[0]!).b.id : null;
   return (

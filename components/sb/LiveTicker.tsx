@@ -1,11 +1,13 @@
 "use client";
-import { formatPct, surebetProfitPct, surebets, teamShort } from "./data";
+import { formatPct, surebetProfitPct, teamShort } from "./data";
 import { Crest } from "./Crest";
-
-const items = surebets.map((b) => ({ b, pct: surebetProfitPct(b.legs.map((l) => l.odds)) }));
+import { useSurebets } from "./surebets-context";
 
 /** Endless strip of the latest finds, styled like the front page's "Live fund" bar. */
 export function LiveTicker() {
+  const { surebets } = useSurebets();
+  const items = surebets.slice(0, 20).map((b) => ({ b, pct: surebetProfitPct(b.legs.map((l) => l.odds)) }));
+  if (items.length === 0) return null;
   return (
     <div className="sb-panel edge-light relative flex items-center overflow-hidden rounded-2xl">
       <div className="sb-ticker-label relative z-10 flex shrink-0 items-center gap-2.5 self-stretch border-r border-border px-4 text-[12.5px] font-extrabold uppercase tracking-[0.16em] text-success sm:px-5">

@@ -3,14 +3,13 @@ import { useState } from "react";
 import { ArrowLeftRight, Bitcoin, Check, ChevronDown, Info, MapPin, Minus, Search, X } from "lucide-react";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { bookmakerCategories, bookmakers, surebets, visibleSurebets, type BookmakerCategory, type BookmakerId } from "./data";
+import { bookmakerCategories, visibleSurebets, type BookmakerCategory, type BookmakerId } from "./data";
 import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";
 import { useBookmakerFilter } from "./bookmaker-filter";
+import { useSurebets } from "./surebets-context";
 import { cn } from "@/lib/utils";
 
 const categoryIcon: Record<BookmakerCategory, typeof MapPin> = { local: MapPin, exchange: ArrowLeftRight, crypto: Bitcoin };
-
-const countFor = (id: BookmakerId) => surebets.filter((b) => b.legs.some((l) => l.bookmaker === id)).length;
 
 function TriggerLabel() {
   const { selected, allOn } = useBookmakerFilter();
@@ -59,8 +58,9 @@ function CheckMark({ state, small }: { state: "on" | "some" | "off"; small?: boo
 
 function Tile({ id, name }: { id: BookmakerId; name: string }) {
   const { isOn, toggle } = useBookmakerFilter();
+  const { surebets } = useSurebets();
   const on = isOn(id);
-  const n = countFor(id);
+  const n = surebets.filter((b) => b.legs.some((l) => l.bookmaker === id)).length;
   return (
     <button role="checkbox" aria-checked={on} aria-label={name} onClick={() => toggle(id)} className={cn("bk-option flex flex-col gap-2 rounded-xl p-2.5 text-left", on && "bk-option-on")}>
       <span className="flex w-full items-start justify-between gap-2">
@@ -79,6 +79,7 @@ function Tile({ id, name }: { id: BookmakerId; name: string }) {
 
 function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; hint: string; ids: BookmakerId[] }) {
   const { selected, toggleMany } = useBookmakerFilter();
+  const { bookmakers } = useSurebets();
   const Icon = categoryIcon[id];
   const all = bookmakers.filter((b) => b.category === id).map((b) => b.id);
   const allOnCount = all.filter((x) => selected.includes(x)).length;
@@ -122,6 +123,7 @@ function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; h
 
 export function BookmakerFilter() {
   const { selectAll, clear, allOn, selected } = useBookmakerFilter();
+  const { surebets, bookmakers } = useSurebets();
   const [q, setQ] = useState("");
   const shownCount = visibleSurebets(surebets, selected).length;
   const needle = q.trim().toLowerCase();
