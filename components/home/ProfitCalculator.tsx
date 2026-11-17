@@ -1,21 +1,30 @@
 "use client";
 
 import { useState, type CSSProperties } from "react";
-import { ArrowRight, Calculator, Info, TrendingUp } from "lucide-react";
+import { ArrowRight, Calculator, Info } from "lucide-react";
 import { useInView } from "@/lib/use-in-view";
 import { useTween } from "./desktop/effects";
 
-/** 30-day return used by the calculator (5.000 kr. -> +1.245 kr.). */
-export const PROFIT_RATE = 0.249;
-export const calcProfit = (capital: number) => Math.round(capital * PROFIT_RATE);
+/** Daily profit rate compounded and reinvested over 30 weekdays. */
+export const PROFIT_RATE = 0.1264;
+export const CALCULATOR_DAYS = 30;
+export const calcEndingBank = (capital: number, days = CALCULATOR_DAYS) => {
+  let bank = capital;
+  for (let day = 0; day < days; day += 1) bank += bank * PROFIT_RATE;
+  return bank;
+};
+export const calcProfit = (capital: number) => Math.round(calcEndingBank(capital) - capital);
 
 export const MIN = 1000;
 export const MAX = 7000;
 const PRESETS = [1000, 2500, 5000, 7000];
 const fmt = (n: number) => Math.round(n).toLocaleString("da-DK");
 
-/** Shape of the 30-day growth curve (0 = start, 1 = full profit), from our recent results. */
-const CURVE = [0, 0.13, 0.21, 0.31, 0.37, 0.49, 0.62, 0.79, 0.84, 1];
+/** Daily compounded bank balance sampled across the 30-weekday projection. */
+const CURVE = Array.from({ length: 10 }, (_, i) => {
+  const day = Math.round((i / 9) * CALCULATOR_DAYS);
+  return (calcEndingBank(1, day) - 1) / (calcEndingBank(1) - 1);
+});
 const CW = 440;
 const CH = 132;
 const PAD = 10;
@@ -31,7 +40,8 @@ export function ProfitCalculator() {
   const [cap, setCap] = useState(5000);
   const [ref, inView] = useInView<HTMLElement>(0.3);
   const shown = useTween(cap, 500);
-  const shownProfit = shown * PROFIT_RATE;
+  const shownProfit = calcProfit(shown);
+  const endingBank = shown + shownProfit;
   const pct = ((cap - MIN) / (MAX - MIN)) * 100;
 
   const pts = chartPoints(shown);
@@ -49,7 +59,7 @@ export function ProfitCalculator() {
         <h2 className="mt-[12px] text-[28px] font-bold leading-[33px]">
           Hvad kan din <span className="text-gradient-brand">startkapital</span> blive til?
         </h2>
-        <p className="mt-[8px] text-[11.5px] leading-[17px] text-muted-foreground">Se hvordan du kan tjene med vores seneste resultater.</p>
+        <p className="mt-[8px] text-[11.5px] leading-[17px] text-muted-foreground">Se et regneeksempel med 12,64% profit pr. hverdag, lagt til banken dagligt.</p>
 
         <div className="mt-[22px] flex items-center justify-between">
           <span className="text-[11.5px] font-medium">Startkapital</span>
@@ -86,20 +96,17 @@ export function ProfitCalculator() {
       {/* Result + chart */}
       <div className="value-pill absolute right-[30px] top-[30px] h-[258px] w-[470px] overflow-hidden rounded-[18px]">
         <div className="absolute left-[20px] top-[18px]">
-          <p className="text-[10.5px] text-foreground/70">Forventet profit (30 dage)</p>
+          <p className="text-[10.5px] text-foreground/70">Forventet profit · {CALCULATOR_DAYS} hverdage · {(PROFIT_RATE * 100).toLocaleString("da-DK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}% pr. hverdag</p>
           <p className="mt-[2px] flex items-center gap-[10px]">
             <span className="font-display text-[34px] font-bold leading-[40px] tracking-[-0.04em] text-success tabular-nums">+{fmt(shownProfit)} kr.</span>
-            <span className="pill-success flex h-[26px] items-center gap-[4px] rounded-[8px] px-[8px] text-[11.5px] font-bold">
-              <TrendingUp className="h-[12px] w-[12px]" strokeWidth={2.6} />+{(PROFIT_RATE * 100).toFixed(1)}%
-            </span>
           </p>
         </div>
         <div className="absolute right-[20px] top-[18px] text-right">
-          <p className="text-[10.5px] text-foreground/70">Efter 30 dage</p>
+          <p className="text-[10.5px] text-foreground/70">Efter 30 hverdage</p>
           <p className="mt-[6px] flex items-center justify-end gap-[6px] font-display text-[16px] font-semibold tabular-nums">
             <span className="text-foreground/60">{fmt(shown)}</span>
             <ArrowRight className="h-[13px] w-[13px] text-primary-glow" />
-            <span>{fmt(shown + shownProfit)} kr.</span>
+            <span>{fmt(endingBank)} kr.</span>
           </p>
         </div>
 
@@ -128,11 +135,11 @@ export function ProfitCalculator() {
           <circle cx={end[0]} cy={end[1]} r="4.5" fill="var(--success)" opacity={inView ? 1 : 0} style={{ filter: "drop-shadow(0 0 6px var(--success))" }} />
         </svg>
         <div className="absolute inset-x-[25px] top-[220px] flex justify-between text-[9px] text-muted-foreground">
-          {["Dag 1", "Dag 10", "Dag 20", "Dag 30"].map((d) => <span key={d}>{d}</span>)}
+          {["Hverdag 1", "Hverdag 10", "Hverdag 20", "Hverdag 30"].map((d) => <span key={d}>{d}</span>)}
         </div>
         <p className="absolute inset-x-[20px] bottom-[10px] flex items-center gap-[5px] text-[8.5px] text-foreground/50">
           <Info className="h-[10px] w-[10px] shrink-0" />
-          Bygger på vores seneste resultater – tidligere resultater er ingen garanti for fremtidig profit.
+          Illustrativ beregning med 12,64% pr. hverdag og daglig geninvestering – ikke en garanti for profit.
         </p>
       </div>
     </section>

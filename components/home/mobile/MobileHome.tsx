@@ -14,7 +14,7 @@ import { CalculatorIcon, LogoMark, TelegramIcon, TrophyIcon } from "../icons";
 import { ScanSweep, formatAge, useLiveRows } from "../LiveScanner";
 import { LiveTicker } from "../LiveTicker";
 import { BENEFITS, BENEFITS_HEADING } from "../Benefits";
-import { MAX, MIN, PROFIT_RATE, calcProfit } from "../ProfitCalculator";
+import { MAX, MIN, PROFIT_RATE, calcEndingBank, calcProfit } from "../ProfitCalculator";
 import { FindCard } from "../WeeklyCarousel";
 import { Chip, splitRows, useStatTiles, useUpdating } from "../BookmakerScanner";
 import { POPULAR_BOOKMAKERS, SCANNED_BOOKMAKERS_LABEL } from "../bookmakerLogos";
@@ -26,7 +26,7 @@ import { CHALLENGE, PRICING, RESULT_SERIES, REVIEWS } from "../data";
 import { ReviewAvatar, ReviewDots, ReviewPhoto, Stars, playExplainerVideo, useReviewRotation } from "../Reviews";
 import { MobileFaq } from "../Faq";
 
-const fmt = (n: number) => n.toLocaleString("da-DK");
+const fmt = (n: number) => Math.round(n).toLocaleString("da-DK");
 
 /** Every phone section is one full-width box, so all boxes share the same left and right edges. */
 function Box({ children, className = "", soft = false }: { children: ReactNode; className?: string; soft?: boolean }) {
@@ -198,7 +198,7 @@ function Profit() {
         <CalculatorIcon className="h-6 w-6 shrink-0" />
         <h3 className="text-[17px] font-semibold">Profitberegner</h3>
       </div>
-      <p className="mt-2 text-[13px] text-foreground/85">Se hvordan du kan tjene med vores seneste resultater</p>
+      <p className="mt-2 text-[13px] text-foreground/85">Eksempel med 12,64% profit pr. hverdag, geninvesteret dagligt.</p>
       <div className="mt-4 flex items-center justify-between">
         <span className="text-[13px]">Startkapital</span>
         <span className="value-pill flex h-7 items-center rounded-[8px] px-3 text-[13px] font-semibold">{fmt(cap)} kr.</span>
@@ -214,12 +214,12 @@ function Profit() {
         className="range-glow mt-3 w-full"
         style={{ "--pct": `${pct}%` } as CSSProperties}
       />
-      <p className="mt-4 text-[13px]">Forventet profit (30 dage)</p>
+      <p className="mt-4 text-[13px]">Forventet profit (30 hverdage)</p>
       <div className="mt-1 flex items-center gap-3">
         <span className="text-[28px] font-bold leading-9 text-success">+{fmt(profit)} kr.</span>
-        <span className="pill-success flex h-7 items-center rounded-[9px] px-2.5 text-[13px] font-bold">+{(PROFIT_RATE * 100).toFixed(1)}%</span>
+        <span className="pill-success flex h-7 items-center rounded-[9px] px-2.5 text-[13px] font-bold">+{(PROFIT_RATE * 100).toLocaleString("da-DK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}% pr. hverdag</span>
       </div>
-      <p className="mt-1 text-[12px] text-muted-foreground">{fmt(cap)} kr. → {fmt(cap + profit)} kr.</p>
+      <p className="mt-1 text-[12px] text-muted-foreground">{fmt(cap)} kr. → {fmt(calcEndingBank(cap))} kr.</p>
     </Box>
   );
 }
