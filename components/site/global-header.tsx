@@ -8,7 +8,7 @@ import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 
 const NAV: { href: string; label: string; icon: LucideIcon }[] = [
-  { href: '/', label: 'Dashboard', icon: House },
+  { href: '/', label: 'Forside', icon: House },
   { href: '/surebets', label: 'Surebets', icon: Zap },
   { href: '/stats', label: 'Analytics', icon: BarChart3 },
   { href: '/#scanner', label: 'Scanner', icon: Search },
@@ -26,7 +26,7 @@ function AuthButtons() {
   if (session?.user) {
     return (
       <Link href="/konto" className="btn-glow flex h-10 items-center gap-2 rounded-full px-5 text-[13px] font-semibold">
-        <UserRound className="size-4" aria-hidden="true" /> Min konto
+        <UserRound className="size-4 text-primary-glow" aria-hidden="true" /> Min konto
       </Link>
     )
   }
@@ -34,12 +34,12 @@ function AuthButtons() {
   return (
     <div className={cn('flex items-center gap-2 lg:gap-3', isPending && 'opacity-0')}>
       <Link href="/login" className="btn-outline-glow flex h-9 items-center gap-2 rounded-full px-3.5 text-[13px] font-semibold lg:h-10 lg:px-5">
-        <LogIn className="size-4" aria-hidden="true" /> Log ind
+        <LogIn className="size-4 text-primary-glow" aria-hidden="true" /> Log ind
       </Link>
       <Link href="/konto" className="btn-glow flex h-9 items-center gap-2 rounded-full px-3.5 text-[13px] font-semibold lg:h-10 lg:px-5">
         <span className="hidden sm:inline">Opret gratis konto</span>
         <span className="sm:hidden">Opret konto</span>
-        <ArrowRight className="size-4" aria-hidden="true" />
+        <ArrowRight className="size-4 text-primary-glow" aria-hidden="true" />
       </Link>
     </div>
   )
@@ -66,7 +66,7 @@ export function GlobalHeader() {
                 isActive(pathname, href) ? 'nav-active' : 'nav-link',
               )}
             >
-              <Icon className="size-4 transition-transform duration-300 group-hover:-translate-y-px group-hover:scale-110" strokeWidth={1.9} aria-hidden="true" />
+              <Icon className="size-4 text-primary-glow transition-transform duration-300 group-hover:-translate-y-px group-hover:scale-110" strokeWidth={1.9} aria-hidden="true" />
               {label}
             </Link>
           ))}
