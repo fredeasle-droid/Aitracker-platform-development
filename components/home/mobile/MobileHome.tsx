@@ -2,7 +2,9 @@
 
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BellRing, Check, Clock, Crown, MessageSquareText, Play, Quote, Radar, Star, Users } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BellRing, CalendarCheck, Check, Clock, Crown, MessageSquareText, Mic, Percent, Play, Quote, Radar, Star, Target, TrendingUp, Users } from "lucide-react";
+import { useInView } from "@/lib/use-in-view";
+import { useCount } from "../use-count";
 const hero = "/home/hero-player.jpg";
 const studio = { url: "/home/challenge-studio.png" };
 const host = { url: "/home/pricing-host.png" };
@@ -19,7 +21,7 @@ import { TeamCrest, useHomeData } from "../home-data";
 import { POINTS } from "../SmsService";
 import { CHANNELS } from "../SocialFollow";
 import { Swoosh } from "../Swoosh";
-import { PRICING, REVIEWS } from "../data";
+import { CHALLENGE, PRICING, RESULT_SERIES, REVIEWS } from "../data";
 import { ReviewAvatar, ReviewDots, ReviewPhoto, Stars, playExplainerVideo, useReviewRotation } from "../Reviews";
 import { MobileFaq } from "../Faq";
 
@@ -346,6 +348,125 @@ function Bookmakers() {
   );
 }
 
+const CW = 300;
+const CH = 70;
+const cmax = Math.max(...RESULT_SERIES);
+const cpts = RESULT_SERIES.map((v, i) => [(i / (RESULT_SERIES.length - 1)) * (CW - 6), CH - 4 - (v / cmax) * (CH - 10)] as const);
+const cline = cpts.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
+const carea = `${cline} L${cpts[cpts.length - 1]![0].toFixed(1)} ${CH} L0 ${CH} Z`;
+
+function Challenge() {
+  const [ref, inView] = useInView<HTMLDivElement>(0.2);
+  const pct = (CHALLENGE.day / CHALLENGE.totalDays) * 100;
+  const total = useCount(CHALLENGE.totalReturn, inView);
+  const bets = useCount(CHALLENGE.surebets, inView);
+  const margin = useCount(CHALLENGE.avgMargin, inView);
+  return (
+    <div ref={ref}>
+      <Box className="challenge-panel p-0">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={studio.url}
+          alt="Værten optager BetTrackerAI's 365 dages challenge i studiet"
+          loading="lazy"
+          width={1600}
+          height={900}
+          className="pointer-events-none aspect-[16/10] w-full object-cover object-[60%_25%] [mask-image:linear-gradient(180deg,black_65%,transparent)]"
+        />
+        <div className="relative -mt-10 px-5 pb-5">
+          <Badge>
+            <Mic className="h-3.5 w-3.5" strokeWidth={2.2} aria-hidden="true" />
+            Ny serie · Følg med hver dag
+          </Badge>
+          <h2 className="mt-3 text-[21px] font-semibold leading-[27px] tracking-[-0.2px] text-foreground/80">Vi tager jer med hele vejen.</h2>
+          <div className="mt-4 flex items-center gap-3">
+            <span className="btn-glow flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px]">
+              <CalendarCheck className="h-7 w-7" strokeWidth={2.1} aria-hidden="true" />
+            </span>
+            <p className="text-[60px] font-black leading-[60px] tracking-[-2px] text-glow">365</p>
+            <div className="relative">
+              <p className="-skew-x-6 text-[20px] font-black italic leading-[22px] tracking-[0.5px]">
+                <span className="text-primary-glow">DAGES</span>
+                <br />
+                CHALLENGE
+              </p>
+              <Swoosh className="absolute -bottom-3 left-0 h-[10px] w-[120px]" />
+            </div>
+          </div>
+          <p className="mt-5 text-[14px] leading-[21px] text-foreground/85">
+            Følg vores <span className="font-semibold text-primary-glow">365 dages</span> rejse med surebetting, resultater og ærlig feedback.
+          </p>
+          <div className="sms-card mt-4 rounded-[14px] p-3">
+            <span className="flex items-center gap-2 text-[11px] font-semibold">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-success shadow-[0_0_8px_var(--success)]" />
+              Rejsen lige nu
+            </span>
+            <p className="mt-1.5 text-[18px] font-bold">
+              Dag {CHALLENGE.day} <span className="text-[12px] font-medium text-muted-foreground">af {CHALLENGE.totalDays}</span>
+            </p>
+            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-primary to-primary-glow shadow-[0_0_8px_var(--primary-glow)] transition-[width] duration-[1600ms] ease-out"
+                style={{ width: inView ? `${pct}%` : 0 }}
+              />
+            </div>
+          </div>
+          <button type="button" className="btn-glow mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold">
+            Følg rejsen <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </button>
+        </div>
+        <div className="challenge-strip p-5">
+          <p className="text-[11px] font-semibold uppercase tracking-[2.2px] text-primary-glow">Tallene bag rejsen</p>
+          <h3 className="mt-1 text-[20px] font-bold leading-6">Se resultaterne – sort på hvidt</h3>
+          <p className="mt-1 text-[12px] text-foreground/70">Følg fremgangen i realtid, dag for dag.</p>
+          <div className="value-pill mt-4 rounded-[12px] p-3">
+            <p className="text-[11px] text-foreground/75">Samlet resultat</p>
+            <p className="flex items-center gap-1 text-[22px] font-bold tabular-nums text-success">
+              <TrendingUp className="h-4 w-4" strokeWidth={2.6} aria-hidden="true" />+{total.toFixed(2)}%
+            </p>
+            <svg className="mt-1 h-[70px] w-full" viewBox={`0 0 ${CW} ${CH}`} preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="m-strip-area" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.55" />
+                  <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
+                </linearGradient>
+              </defs>
+              <path d={carea} fill="url(#m-strip-area)" className="delay-700 transition-opacity duration-1000" style={{ opacity: inView ? 1 : 0 }} />
+              <path
+                d={cline}
+                pathLength={1}
+                fill="none"
+                stroke="var(--primary-glow)"
+                strokeWidth="2"
+                strokeLinejoin="round"
+                vectorEffect="non-scaling-stroke"
+                className="chart-draw"
+                style={{ strokeDasharray: 1, strokeDashoffset: inView ? 0 : 1 }}
+              />
+            </svg>
+          </div>
+          <div className="mt-3 grid grid-cols-2 gap-3">
+            {(
+              [
+                ["Antal surebets", Math.round(bets).toString(), Target],
+                ["Gns. margin", `${margin.toFixed(2)}%`, Percent],
+              ] as const
+            ).map(([l, v, Icon]) => (
+              <div key={l} className="value-pill rounded-[12px] p-3">
+                <p className="text-[11px] text-foreground/75">{l}</p>
+                <p className="mt-0.5 flex items-center gap-1.5 text-[20px] font-bold tabular-nums">
+                  <Icon className="h-4 w-4 text-primary-glow" strokeWidth={2.6} aria-hidden="true" />
+                  {v}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Box>
+    </div>
+  );
+}
+
 function Sms() {
   const f = useLatestFind();
   return (
@@ -514,6 +635,7 @@ export function MobileHome() {
         <Explainer />
         <Benefits />
         <Bookmakers />
+        <Challenge />
         <Sms />
         <Social />
         <Pricing />

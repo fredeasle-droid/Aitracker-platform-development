@@ -8,6 +8,7 @@ import { ProfitCalculator } from "./ProfitCalculator";
 import { ExplainerVideo } from "./ExplainerVideo";
 import { WeeklyCarousel } from "./WeeklyCarousel";
 import { BookmakerScanner } from "./BookmakerScanner";
+import { ChallengeSection } from "./ChallengeSection";
 import { SmsService } from "./SmsService";
 import { SocialFollow } from "./SocialFollow";
 import { PricingSection } from "./PricingSection";
@@ -198,6 +199,7 @@ export function DesktopHome({ playExplainer, explainerRef }: { playExplainer: ()
         <BenefitsSection />
         <BookmakerScanner />
         <ProfitCalculator />
+        <ChallengeSection />
 
         <section className="reveal relative ml-[28px] mt-[80px] w-[969px]">
           <SectionHeading eyebrow="Altid opdateret" Icon={BellRing} title="Få fundene," accent="der hvor du er." text="Vælg SMS, eller følg med på de kanaler, du allerede bruger." />
