@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { Suspense } from 'react'
 import { LocaleProvider } from '@/components/locale-provider'
 import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
+import { ChromeGate } from '@/components/site/chrome-gate'
 import { GlobalFooter } from '@/components/site/global-footer'
 import { GlobalHeader } from '@/components/site/global-header'
 import { PageShell } from '@/components/site/page-shell'
@@ -47,7 +48,9 @@ export default async function RootLayout({
     <html lang={locale} className={`${inter.variable} bg-background`}>
       <body className="min-h-dvh overflow-x-hidden antialiased">
         <LocaleProvider initialLocale={locale}>
-        <GlobalHeader />
+        <ChromeGate>
+          <GlobalHeader />
+        </ChromeGate>
         <PageShell
           sidebar={
             <Suspense fallback={null}>
@@ -57,7 +60,9 @@ export default async function RootLayout({
         >
           {children}
         </PageShell>
-        <GlobalFooter />
+        <ChromeGate>
+          <GlobalFooter />
+        </ChromeGate>
         <SupportChat />
         {process.env.NODE_ENV === 'production' && <Analytics />}
         </LocaleProvider>

@@ -2,11 +2,12 @@
 
 import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
+import { isStandalonePath } from '@/components/site/chrome-gate'
 
 export function PageShell({ sidebar, children }: { sidebar: ReactNode; children: ReactNode }) {
   const pathname = usePathname()
 
-  if (pathname === '/') return <>{children}</>
+  if (pathname === '/' || isStandalonePath(pathname)) return <>{children}</>
 
   return (
     <div className="lg:flex">

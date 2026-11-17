@@ -2,6 +2,7 @@
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
 @import './bt-theme.css';
+@import './surebets/sb-theme.css';
 
 @custom-variant dark (&:is(.dark *));
 

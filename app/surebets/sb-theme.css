@@ -1,0 +1,629 @@
+@custom-variant short (@media (max-height: 900px));
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-deep: var(--surface-deep);
+  --color-border-glow: var(--border-glow);
+  --color-success-foreground: var(--success-foreground);
+  --color-cyan: var(--cyan);
+  --color-gauge-track: var(--gauge-track);
+  --animate-sweep: sweep 3.2s linear infinite;
+  --animate-pulse-ring: pulse-ring 2.4s ease-out infinite;
+  --animate-blink: blink 1.6s ease-in-out infinite;
+}
+
+.sb-root {
+  --radius: 0.875rem;
+
+  --background: oklch(0.13 0.045 266);
+  --foreground: oklch(0.97 0.01 250);
+  --surface-deep: oklch(0.11 0.04 266);
+  --surface: oklch(0.17 0.055 265);
+  --surface-elevated: oklch(0.21 0.065 263);
+  --card: oklch(0.16 0.05 265);
+  --card-foreground: oklch(0.97 0.01 250);
+  --popover: oklch(0.17 0.055 265);
+  --popover-foreground: oklch(0.97 0.01 250);
+
+  --primary: oklch(0.58 0.23 262);
+  --primary-glow: oklch(0.68 0.19 248);
+  --primary-foreground: oklch(0.99 0 0);
+  --cyan: oklch(0.78 0.15 225);
+  --teal: oklch(0.84 0.16 168);
+
+  --secondary: oklch(0.22 0.06 264);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.2 0.05 265);
+  --muted-foreground: oklch(0.72 0.04 255);
+  --accent: oklch(0.24 0.08 262);
+  --accent-foreground: oklch(0.97 0.01 250);
+
+  --success: oklch(0.8 0.2 152);
+  --success-foreground: oklch(0.16 0.05 160);
+  --warning: oklch(0.72 0.18 50);
+  --violet: oklch(0.62 0.2 295);
+  --gold: oklch(0.86 0.17 88);
+
+  --destructive: oklch(0.64 0.23 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.32 0.08 262 / 55%);
+  --border-glow: oklch(0.6 0.2 258 / 60%);
+  --input: oklch(0.3 0.07 262 / 60%);
+  --ring: oklch(0.62 0.2 258);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.52 0.24 264), oklch(0.66 0.2 248));
+  --gradient-text: linear-gradient(90deg, oklch(0.72 0.18 240), oklch(0.82 0.14 215));
+  --gradient-panel: linear-gradient(180deg, oklch(0.18 0.06 264 / 85%), oklch(0.13 0.045 266 / 85%));
+  --gradient-active-row: linear-gradient(90deg, oklch(0.5 0.22 262 / 55%), oklch(0.5 0.22 262 / 15%));
+  --gradient-page:
+    radial-gradient(900px 500px at 55% -10%, oklch(0.35 0.16 262 / 45%), transparent 70%),
+    radial-gradient(600px 600px at 100% 30%, oklch(0.3 0.14 255 / 25%), transparent 70%),
+    radial-gradient(700px 500px at 0% 100%, oklch(0.28 0.12 262 / 25%), transparent 70%);
+  --shadow-glow: 0 0 0 1px oklch(0.6 0.2 258 / 35%), 0 8px 30px -8px oklch(0.58 0.23 262 / 65%);
+  --shadow-glow-strong: 0 0 24px oklch(0.6 0.22 258 / 70%), inset 0 0 12px oklch(0.6 0.22 258 / 35%);
+  --shadow-panel: 0 20px 50px -20px oklch(0.05 0.03 266 / 80%), inset 0 1px 0 oklch(1 0 0 / 4%);
+
+  --gauge-track: oklch(0.28 0.07 262 / 80%);
+
+  /* Bookmaker brand marks */
+  --bk-bet365-bg: oklch(0.45 0.11 160);
+  --bk-bet365-fg: oklch(0.99 0 0);
+  --bk-bet365-accent: oklch(0.92 0.18 105);
+  --bk-unibet-dot: oklch(0.72 0.2 145);
+  --bk-betfair: oklch(0.84 0.17 85);
+  --bk-1xbet: oklch(0.62 0.18 250);
+  --bk-danskespil-bg: oklch(0.48 0.13 152);
+  --bk-danskespil-dot: oklch(0.86 0.17 95);
+  --bk-nordicbet: oklch(0.74 0.17 55);
+  --bk-betsson-bg: oklch(0.68 0.2 45);
+  --bk-bet25: oklch(0.64 0.22 25);
+  --bk-leovegas: oklch(0.76 0.17 62);
+  --bk-mrgreen: oklch(0.7 0.18 148);
+  --bk-smarkets: oklch(0.8 0.15 165);
+  --bk-matchbook: oklch(0.72 0.15 230);
+  --bk-cloudbet: oklch(0.8 0.12 205);
+
+  --chart-1: var(--primary);
+  --chart-2: var(--success);
+  --chart-3: var(--cyan);
+  --chart-4: var(--warning);
+  --chart-5: var(--violet);
+  --sidebar: oklch(0.12 0.042 266);
+  --sidebar-foreground: oklch(0.88 0.02 250);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.22 0.07 263);
+  --sidebar-accent-foreground: oklch(0.97 0.01 250);
+  --sidebar-border: oklch(0.3 0.08 262 / 45%);
+  --sidebar-ring: var(--ring);
+}
+.sb-root {
+  color-scheme: dark;
+  min-height: 100dvh;
+  background-color: var(--background);
+  background-image: var(--gradient-page);
+  background-attachment: fixed;
+  color: var(--foreground);
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-roboto: var(--font-jakarta);
+  --font-sora: var(--font-jakarta);
+  -webkit-font-smoothing: antialiased;
+}
+.sb-root *, .sb-root *::before, .sb-root *::after { border-color: var(--border); }
+.sb-root .rounded-sm { border-radius: calc(var(--radius) - 4px); }
+.sb-root .rounded-md { border-radius: calc(var(--radius) - 2px); }
+.sb-root .rounded-lg { border-radius: var(--radius); }
+.sb-root .rounded-xl { border-radius: calc(var(--radius) + 4px); }
+.sb-root .rounded-2xl { border-radius: calc(var(--radius) + 8px); }
+.sb-root .rounded-3xl { border-radius: calc(var(--radius) + 12px); }
+.sb-root { scrollbar-width: none; }
+.sb-root ::-webkit-scrollbar { width: 0; height: 0; display: none; }
+@media (prefers-reduced-motion: reduce) {
+  .sb-root *, .sb-root *::before, .sb-root *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility sb-panel {
+  background: var(--gradient-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(12px);
+}
+
+@utility panel-glow {
+  border-color: var(--color-border-glow);
+  box-shadow: var(--shadow-panel), 0 0 30px -12px oklch(0.58 0.23 262 / 60%);
+}
+
+@utility text-gradient {
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+@utility bg-gradient-active {
+  background: var(--gradient-active-row);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-glow-strong {
+  box-shadow: var(--shadow-glow-strong);
+}
+
+@utility glow-dot {
+  box-shadow: 0 0 10px var(--color-success);
+}
+
+@utility text-glow-success {
+  text-shadow: 0 0 18px oklch(0.8 0.2 152 / 45%);
+}
+
+@utility text-glow-gold {
+  text-shadow: 0 0 22px oklch(0.86 0.17 88 / 45%);
+}
+
+/* Bookmaker wordmarks */
+@utility bk-bet365 {
+  background: var(--bk-bet365-bg);
+  color: var(--bk-bet365-fg);
+}
+@utility bk-bet365-accent {
+  color: var(--bk-bet365-accent);
+}
+@utility bk-unibet-dot {
+  background: var(--bk-unibet-dot);
+}
+@utility bk-betfair {
+  color: var(--bk-betfair);
+}
+@utility bk-1xbet {
+  color: var(--bk-1xbet);
+}
+@utility bk-danskespil {
+  background: var(--bk-danskespil-bg);
+  color: var(--bk-bet365-fg);
+}
+@utility bk-danskespil-dot {
+  background: var(--bk-danskespil-dot);
+}
+@utility bk-nordicbet {
+  color: var(--bk-nordicbet);
+}
+@utility bk-betsson {
+  background: var(--bk-betsson-bg);
+  color: var(--bk-bet365-fg);
+}
+@utility bk-bet25 {
+  color: var(--bk-bet25);
+}
+@utility bk-leovegas {
+  color: var(--bk-leovegas);
+}
+@utility bk-mrgreen {
+  color: var(--bk-mrgreen);
+}
+@utility bk-smarkets {
+  color: var(--bk-smarkets);
+}
+@utility bk-matchbook {
+  color: var(--bk-matchbook);
+}
+@utility bk-cloudbet {
+  color: var(--bk-cloudbet);
+}
+
+@keyframes sweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
+@keyframes row-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Surebet table polish */
+@utility crest-disc {
+  background: radial-gradient(circle at 50% 35%, oklch(0.32 0.08 262 / 70%), oklch(0.16 0.05 265 / 90%));
+  box-shadow: inset 0 0 0 1px oklch(0.55 0.14 255 / 40%), 0 0 0 2px var(--surface-deep), 0 4px 10px -2px oklch(0.05 0.03 266 / 90%);
+}
+@utility row-surface {
+  background: linear-gradient(90deg, oklch(0.2 0.065 263 / 85%), oklch(0.16 0.05 265 / 75%) 60%, oklch(0.17 0.055 265 / 80%));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 4%);
+}
+@utility table-head {
+  background: linear-gradient(180deg, oklch(0.22 0.07 263 / 70%), oklch(0.18 0.06 264 / 40%));
+}
+@utility accent-glow {
+  box-shadow: 0 0 12px 1px currentColor;
+}
+@utility odds-chip {
+  background: linear-gradient(180deg, oklch(0.24 0.075 262), oklch(0.17 0.058 264));
+  border-color: oklch(0.45 0.12 258 / 55%) !important;
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 8%), 0 2px 6px -2px oklch(0.05 0.03 266 / 80%);
+}
+@utility surebet-row {
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 6%), 0 0 0 1px oklch(0.6 0.2 258 / 18%), 0 14px 34px -20px oklch(0.58 0.23 262 / 75%);
+}
+@utility leg-row {
+  background: linear-gradient(90deg, oklch(0.24 0.075 262 / 70%), oklch(0.18 0.06 264 / 45%));
+  box-shadow: inset 0 0 0 1px oklch(0.45 0.12 258 / 35%);
+  transition: box-shadow 0.25s ease, background 0.25s ease, transform 0.25s ease;
+  &:hover {
+    background: linear-gradient(90deg, oklch(0.28 0.09 260 / 80%), oklch(0.2 0.07 262 / 55%));
+    box-shadow: inset 0 0 0 1px oklch(0.6 0.2 258 / 60%), 0 0 18px -6px oklch(0.6 0.2 258 / 70%);
+    transform: translateX(2px);
+  }
+}
+@utility best-pill {
+  background: color-mix(in oklab, var(--gold) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--gold) 45%, transparent);
+}
+@utility row-best {
+  border-color: color-mix(in oklab, var(--gold) 45%, transparent) !important;
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 6%), 0 0 0 1px color-mix(in oklab, var(--gold) 25%, transparent),
+    0 16px 40px -18px color-mix(in oklab, var(--gold) 55%, transparent);
+}
+@utility age-badge {
+  color: var(--gold);
+  box-shadow: inset 0 0 0 2px color-mix(in oklab, var(--gold) 70%, transparent);
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+}
+@utility btn-shine {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(110deg, transparent 30%, oklch(1 0 0 / 28%) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.7s ease;
+    pointer-events: none;
+  }
+  &:hover::after {
+    transform: translateX(120%);
+  }
+}
+@keyframes shimmer {
+  to {
+    background-position: 200% center;
+  }
+}
+@utility text-shimmer {
+  background: linear-gradient(90deg, var(--primary-glow), var(--cyan), oklch(0.92 0.08 210), var(--cyan), var(--primary-glow));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 6s linear infinite;
+}
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@utility hero-rise {
+  animation: hero-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+@utility hero-rise-2 {
+  animation-delay: 0.12s;
+}
+@utility hero-rise-3 {
+  animation-delay: 0.24s;
+}
+@keyframes crest-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+@utility crest-float {
+  .group:hover & {
+    animation: crest-float 1.6s ease-in-out infinite;
+  }
+}
+@utility crest-float-delay {
+  .group:hover & {
+    animation: crest-float 1.6s ease-in-out 0.4s infinite;
+  }
+}
+@utility market-pill {
+  background: color-mix(in oklab, var(--cyan) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--cyan) 40%, transparent);
+}
+@utility accent-wash {
+  background: linear-gradient(90deg, color-mix(in oklab, currentColor 16%, transparent), transparent) !important;
+}
+@utility curve-glow {
+  filter: drop-shadow(0 0 3px var(--primary-glow)) drop-shadow(0 0 9px var(--primary)) drop-shadow(0 0 18px var(--primary));
+}
+@utility hero-fade {
+  mask-image:
+    linear-gradient(90deg, transparent 0%, black 16%),
+    linear-gradient(0deg, transparent 0%, black 34%),
+    linear-gradient(180deg, transparent 0%, black 10%),
+    linear-gradient(270deg, transparent 0%, black 6%);
+  mask-composite: intersect;
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, black 16%),
+    linear-gradient(0deg, transparent 0%, black 34%),
+    linear-gradient(180deg, transparent 0%, black 10%),
+    linear-gradient(270deg, transparent 0%, black 6%);
+  -webkit-mask-composite: source-in;
+}
+@utility row-enter {
+  animation: row-enter 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) backwards;
+}
+@utility hero-ambient {
+  background:
+    radial-gradient(60% 70% at 78% 0%, oklch(0.5 0.2 258 / 22%), transparent 70%),
+    radial-gradient(40% 50% at 30% 10%, oklch(0.45 0.18 262 / 12%), transparent 70%);
+}
+@utility glass-pill {
+  background: oklch(0.14 0.05 266 / 72%);
+  box-shadow: inset 0 0 0 1px oklch(0.55 0.14 255 / 28%), 0 6px 18px -8px oklch(0.05 0.03 266 / 90%);
+  backdrop-filter: blur(10px);
+}
+@utility sb-hero-scrim {
+  background:
+    linear-gradient(90deg, oklch(0.11 0.045 266 / 92%) 0%, oklch(0.12 0.05 266 / 70%) 30%, oklch(0.13 0.05 266 / 15%) 55%, transparent 70%),
+    linear-gradient(0deg, oklch(0.11 0.045 266 / 45%), transparent 40%);
+}
+@utility hero-frame {
+  border-color: oklch(0.62 0.2 255 / 70%);
+  box-shadow: var(--shadow-panel), 0 0 34px -10px oklch(0.6 0.22 258 / 75%), inset 0 0 0 1px oklch(0.75 0.16 240 / 12%);
+}
+@utility text-shadow-hero {
+  text-shadow: 0 2px 18px oklch(0.08 0.04 266 / 85%);
+}
+@utility btn-hero {
+  background: linear-gradient(180deg, oklch(0.66 0.2 250), oklch(0.52 0.24 262));
+  box-shadow: 0 0 0 2px oklch(0.78 0.15 235 / 85%), 0 0 22px oklch(0.62 0.22 255 / 80%), inset 0 1px 0 oklch(1 0 0 / 30%);
+}
+@utility stats-glass {
+  background: linear-gradient(180deg, oklch(0.16 0.05 265 / 82%), oklch(0.11 0.04 266 / 88%));
+  border: 1px solid oklch(0.55 0.14 255 / 45%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px -10px oklch(0.05 0.03 266 / 90%);
+}
+@utility icon-glow {
+  filter: drop-shadow(0 0 6px var(--primary-glow));
+}
+@utility chip-surface {
+  background: linear-gradient(180deg, oklch(0.19 0.06 264 / 90%), oklch(0.14 0.048 265 / 90%));
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 5%);
+}
+@utility sb-nav-active {
+  background: linear-gradient(90deg, oklch(0.55 0.23 262), oklch(0.62 0.21 252));
+  box-shadow: 0 0 0 1px oklch(0.72 0.17 245 / 55%), 0 8px 24px -6px oklch(0.58 0.23 262 / 80%), inset 0 1px 0 oklch(1 0 0 / 22%);
+}
+
+/* Front-page language: live accent gradient, glass toasts, ticker, margin pills */
+@utility text-gradient-live {
+  background: linear-gradient(90deg, var(--cyan), var(--teal) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px color-mix(in oklab, var(--teal) 35%, transparent));
+}
+@keyframes swoosh-draw {
+  from {
+    stroke-dashoffset: 220;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@utility swoosh {
+  filter: drop-shadow(0 0 6px color-mix(in oklab, var(--teal) 70%, transparent));
+  & path {
+    stroke-dasharray: 220;
+    animation: swoosh-draw 1.1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.45s backwards;
+  }
+}
+@utility edge-light {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12%;
+    right: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.8 0.14 235 / 85%), transparent);
+    pointer-events: none;
+    z-index: 1;
+  }
+}
+@utility toast-glass {
+  background: linear-gradient(180deg, oklch(0.18 0.06 200 / 80%), oklch(0.12 0.045 230 / 88%));
+  border: 1px solid color-mix(in oklab, var(--success) 45%, transparent);
+  box-shadow: 0 0 28px -8px color-mix(in oklab, var(--success) 55%, transparent), 0 14px 30px -12px oklch(0.05 0.03 266 / 90%);
+  backdrop-filter: blur(12px);
+  z-index: 5;
+}
+@keyframes sb-toast-in-kf {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes toast-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+@utility sb-toast-in {
+  animation:
+    sb-toast-in-kf 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.6s backwards,
+    toast-float 5s ease-in-out 1.4s infinite;
+}
+@utility find-icon {
+  background: color-mix(in oklab, var(--success) 18%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--success) 50%, transparent), 0 0 16px -4px var(--success);
+}
+@utility sb-btn-ghost-glass {
+  background: oklch(0.14 0.05 266 / 65%);
+  box-shadow: inset 0 0 0 1px oklch(0.6 0.12 255 / 45%), 0 8px 24px -12px oklch(0.05 0.03 266 / 90%);
+  backdrop-filter: blur(10px);
+}
+@utility live-pill {
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--success) 55%, transparent);
+  background: color-mix(in oklab, var(--success) 10%, transparent);
+}
+@utility margin-pill {
+  background: linear-gradient(180deg, color-mix(in oklab, var(--success) 26%, transparent), color-mix(in oklab, var(--success) 14%, transparent));
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--success) 40%, transparent), 0 0 14px -6px var(--success);
+}
+@utility sb-ticker-label {
+  background: linear-gradient(90deg, color-mix(in oklab, var(--success) 12%, transparent), transparent);
+}
+@utility ticker-mask {
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@utility ticker-track {
+  animation: ticker 38s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+/* Bookmaker filter */
+@utility bk-badge {
+  box-shadow: inset 0 0 0 1px oklch(1 0 0 / 10%);
+}
+@utility bk-badge-dark {
+  background: radial-gradient(circle at 50% 30%, oklch(0.3 0.07 262), oklch(0.17 0.055 265));
+}
+@utility bk-popover {
+  background: linear-gradient(180deg, oklch(0.17 0.058 264 / 96%), oklch(0.12 0.045 266 / 97%));
+  backdrop-filter: blur(16px);
+  box-shadow: 0 0 0 1px oklch(0.6 0.2 258 / 25%), 0 24px 60px -16px oklch(0.04 0.03 266 / 95%), 0 0 40px -14px oklch(0.58 0.23 262 / 70%);
+}
+@utility bk-option {
+  background: oklch(0.16 0.05 265 / 60%);
+  box-shadow: inset 0 0 0 1px oklch(0.4 0.1 260 / 30%);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+  &:hover {
+    background: oklch(0.2 0.065 263 / 80%);
+    box-shadow: inset 0 0 0 1px oklch(0.6 0.2 258 / 45%);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+@utility bk-option-on {
+  background: linear-gradient(90deg, oklch(0.5 0.22 262 / 22%), oklch(0.5 0.22 262 / 6%));
+  box-shadow: inset 0 0 0 1px oklch(0.62 0.2 255 / 55%);
+  &:hover {
+    background: linear-gradient(90deg, oklch(0.5 0.22 262 / 30%), oklch(0.5 0.22 262 / 10%));
+    box-shadow: inset 0 0 0 1px oklch(0.68 0.19 248 / 75%), 0 0 18px -8px var(--primary-glow);
+  }
+}
+@utility bk-check {
+  box-shadow: inset 0 0 0 1.5px oklch(0.5 0.08 258 / 70%);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+@utility bk-check-on {
+  background: var(--gradient-primary);
+  box-shadow: 0 0 0 1px oklch(0.75 0.16 240 / 70%), 0 0 12px -2px var(--primary-glow);
+}
+@utility bk-chip {
+  background: oklch(0.2 0.065 263 / 80%);
+  box-shadow: inset 0 0 0 1px oklch(0.55 0.14 255 / 40%);
+}
+@keyframes count-pop {
+  0% {
+    transform: scale(0.7);
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@utility count-pop {
+  display: inline-block;
+  animation: count-pop 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@utility bk-group-head {
+  background: linear-gradient(180deg, oklch(0.16 0.055 265 / 98%), oklch(0.15 0.05 265 / 94%));
+  backdrop-filter: blur(8px);
+}
+@utility bk-group-icon {
+  background: color-mix(in oklab, var(--cyan) 14%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--cyan) 35%, transparent);
+}
+@utility bk-search {
+  background: oklch(0.11 0.04 266 / 80%);
+  box-shadow: inset 0 0 0 1px oklch(0.45 0.12 258 / 40%);
+  transition: box-shadow 0.2s ease;
+  &:focus-within {
+    box-shadow: inset 0 0 0 1px var(--primary-glow), 0 0 16px -6px var(--primary-glow);
+  }
+}
+@utility bk-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: oklch(0.4 0.1 260 / 60%) transparent;
+}
