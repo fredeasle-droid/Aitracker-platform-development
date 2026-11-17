@@ -40,7 +40,7 @@ export function LiveScanner() {
   const { stats } = useHomeData();
 
   return (
-    <div className="relative shrink-0">
+    <div id="scanner" className="relative shrink-0 scroll-mt-24">
       <div className="panel live-scanner relative h-[300px] w-[352px] overflow-hidden rounded-[16px]">
         <span className="absolute left-[17px] top-[16px] h-[13px] w-[13px] animate-pulse rounded-full bg-success shadow-[0_0_10px_var(--success)]" />
         <p className="absolute left-[44px] top-[12px] text-[13.5px] leading-[18px]">
