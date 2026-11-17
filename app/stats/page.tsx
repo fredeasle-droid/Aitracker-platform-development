@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { SiteHeader } from '@/components/site-header'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { DesktopStats } from '@/components/desktop/desktop-stats'
 import { StatsView } from '@/components/stats/stats-view'
@@ -18,7 +17,6 @@ export default async function StatsPage() {
         <DesktopAside opportunities={opportunities} />
       </div>
       <div className="lg:hidden">
-        <SiteHeader />
         <StatsView bets={bets} now={now} />
       </div>
     </main>

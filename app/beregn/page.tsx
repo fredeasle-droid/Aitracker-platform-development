@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { ArrowLeft, Calculator as CalculatorIcon } from 'lucide-react'
 import { Calculator } from '@/components/beregn/calculator'
 import { MatchCard } from '@/components/beregn/match-card'
-import { SiteHeader } from '@/components/site-header'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { getOpportunity, getOpportunities } from '@/lib/data'
 import { getServerT } from '@/lib/locale-server'
@@ -24,7 +23,6 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
 
   return (
     <main className="lg:min-h-dvh lg:bg-[#030914]">
-      <SiteHeader />
       <div className="flex w-full gap-4 px-4 lg:items-start lg:pb-6 lg:pt-4">
           <section className="min-w-0 flex-1">
             {opportunity ? (
