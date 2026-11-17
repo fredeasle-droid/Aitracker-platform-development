@@ -10,6 +10,48 @@ import { cn } from '@/lib/utils'
 
 const RECOMMENDED_BOOKMAKERS = ONBOARDING_BOOKMAKERS
 
+const BOOKMAKER_WORDMARKS: Record<string, string> = {
+  '888sport': '888sport',
+  bet365: 'bet365',
+  betano: 'betano',
+  betfair: 'betfair',
+  betsson: 'betsson',
+  bwin: 'bwin',
+  danskespil: 'danskespil',
+  leovegas: 'leovegas',
+  nordicbet: 'nordicbet',
+  unibet: 'unibet',
+}
+
+function BookmakerCardHeading({ id, name }: { id: string; name: string }) {
+  const [wordmarkFailed, setWordmarkFailed] = useState(false)
+  const wordmark = BOOKMAKER_WORDMARKS[id]
+
+  return (
+    <h2 className="flex h-12 w-full min-w-0 items-center gap-3">
+      {wordmark && !wordmarkFailed ? (
+        <>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={`/bookmakers/wordmarks/${wordmark}.png`}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            onError={() => setWordmarkFailed(true)}
+            className="h-full max-w-full object-contain object-left"
+          />
+          <span className="sr-only">{name}</span>
+        </>
+      ) : (
+        <>
+          <BookmakerLogo name={name} className="size-12" />
+          <span className="text-lg font-bold text-white">{name}</span>
+        </>
+      )}
+    </h2>
+  )
+}
+
 const STEPS = [
   { label: 'Opret konto', state: 'done' },
   { label: 'Vælg bookmaker', state: 'done' },
@@ -93,18 +135,18 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
                 answer ? 'border-primary shadow-[0_0_28px_-14px_var(--primary)]' : 'border-[#183252]',
               )}
             >
-              <div className="flex flex-col gap-2 p-4">
-                <div className="flex items-center gap-3">
-                  <BookmakerLogo name={bookmaker.name} className="size-12" />
-                  <h2 className="text-lg font-bold text-white">{bookmaker.name}</h2>
-                </div>
+              <div className="flex items-center px-4 pt-3">
+                <BookmakerCardHeading id={bookmaker.id} name={bookmaker.name} />
+              </div>
+              <div className="flex flex-col gap-2 p-4 pt-3">
                 <a
                   href={`https://bonustracker.dk/${bookmaker.funnelSlug}`}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="flex min-h-11 items-center justify-center gap-1.5 rounded-lg bg-primary px-3 text-center text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  Opret
+                  Opret konto
+                  <ArrowRight className="size-3.5" aria-hidden="true" />
                   <span className="sr-only"> hos {bookmaker.name} (åbner i en ny fane)</span>
                 </a>
                 <p className="text-center text-xs leading-relaxed text-[#c3cde2]">Markér dit svar, når du kommer tilbage.</p>
