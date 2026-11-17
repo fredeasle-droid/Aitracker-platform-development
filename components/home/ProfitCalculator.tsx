@@ -5,12 +5,16 @@ import { ArrowRight, Calculator, Info } from "lucide-react";
 import { useInView } from "@/lib/use-in-view";
 import { useTween } from "./desktop/effects";
 
-/** Daily profit rate compounded and reinvested over 30 weekdays. */
+/** Profit model: 12.64% of starting capital until the bank reaches 10,000 kr., then 1,000 kr. per weekday. */
 export const PROFIT_RATE = 0.1264;
+export const BANK_CAP = 10_000;
 export const CALCULATOR_DAYS = 30;
 export const calcEndingBank = (capital: number, days = CALCULATOR_DAYS) => {
   let bank = capital;
-  for (let day = 0; day < days; day += 1) bank += bank * PROFIT_RATE;
+  const dailyStartCapitalProfit = capital * PROFIT_RATE;
+  for (let day = 0; day < days; day += 1) {
+    bank += bank < BANK_CAP ? Math.min(dailyStartCapitalProfit, BANK_CAP - bank) : BANK_CAP * 0.1;
+  }
   return bank;
 };
 export const calcProfit = (capital: number) => Math.round(calcEndingBank(capital) - capital);
@@ -20,19 +24,18 @@ export const MAX = 7000;
 const PRESETS = [1000, 2500, 5000, 7000];
 const fmt = (n: number) => Math.round(n).toLocaleString("da-DK");
 
-/** Daily compounded bank balance sampled across the 30-weekday projection. */
-const CURVE = Array.from({ length: 10 }, (_, i) => {
-  const day = Math.round((i / 9) * CALCULATOR_DAYS);
-  return (calcEndingBank(1, day) - 1) / (calcEndingBank(1) - 1);
-});
 const CW = 440;
 const CH = 132;
 const PAD = 10;
 
 function chartPoints(capital: number) {
-  // Higher capital → higher end point, so the chart reacts to the slider.
-  const top = (capital / MAX) * (CH - PAD * 2);
-  return CURVE.map((f, i) => [(i / (CURVE.length - 1)) * (CW - PAD * 2) + PAD, CH - PAD - f * top] as const);
+  const finalBank = calcEndingBank(capital);
+  return Array.from({ length: 10 }, (_, i) => {
+    const day = Math.round((i / 9) * CALCULATOR_DAYS);
+    const bank = calcEndingBank(capital, day);
+    const progress = finalBank === capital ? 0 : (bank - capital) / (finalBank - capital);
+    return [(i / 9) * (CW - PAD * 2) + PAD, CH - PAD - progress * (CH - PAD * 2)] as const;
+  });
 }
 
 /** Desktop "Profitberegner": slider + presets on the left, live result and growth chart on the right. */
@@ -59,7 +62,7 @@ export function ProfitCalculator() {
         <h2 className="mt-[12px] text-[28px] font-bold leading-[33px]">
           Hvad kan din <span className="text-gradient-brand">startkapital</span> blive til?
         </h2>
-        <p className="mt-[8px] text-[11.5px] leading-[17px] text-muted-foreground">Se et regneeksempel med 12,64% profit pr. hverdag, lagt til banken dagligt.</p>
+        <p className="mt-[8px] text-[11.5px] leading-[17px] text-muted-foreground">12,64% af startkapitalen lægges til pr. hverdag, indtil banken når 10.000 kr. Derefter lægges 1.000 kr. til pr. hverdag.</p>
 
         <div className="mt-[22px] flex items-center justify-between">
           <span className="text-[11.5px] font-medium">Startkapital</span>
@@ -96,7 +99,7 @@ export function ProfitCalculator() {
       {/* Result + chart */}
       <div className="value-pill absolute right-[30px] top-[30px] h-[258px] w-[470px] overflow-hidden rounded-[18px]">
         <div className="absolute left-[20px] top-[18px]">
-          <p className="text-[10.5px] text-foreground/70">Forventet profit · {CALCULATOR_DAYS} hverdage · {(PROFIT_RATE * 100).toLocaleString("da-DK", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}% pr. hverdag</p>
+          <p className="text-[10.5px] text-foreground/70">Forventet profit · {CALCULATOR_DAYS} hverdage</p>
           <p className="mt-[2px] flex items-center gap-[10px]">
             <span className="font-display text-[34px] font-bold leading-[40px] tracking-[-0.04em] text-success tabular-nums">+{fmt(shownProfit)} kr.</span>
           </p>
@@ -139,7 +142,7 @@ export function ProfitCalculator() {
         </div>
         <p className="absolute inset-x-[20px] bottom-[10px] flex items-center gap-[5px] text-[8.5px] text-foreground/50">
           <Info className="h-[10px] w-[10px] shrink-0" />
-          Illustrativ beregning med 12,64% pr. hverdag og daglig geninvestering – ikke en garanti for profit.
+          Illustrativ beregning – faktiske resultater kan variere, og profit er ikke garanteret.
         </p>
       </div>
     </section>
