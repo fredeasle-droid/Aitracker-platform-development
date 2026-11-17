@@ -14,7 +14,7 @@ export function ChallengeSection() {
     <section ref={ref} className="reveal panel challenge-panel spotlight group/zoom relative ml-[28px] mt-[80px] h-[430px] w-[969px] overflow-hidden rounded-[22px]">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/home/challenge-studio.png"
+        src="/home/challenge-studio.webp"
         alt="Værten optager BetTrackerAI's 365 dages challenge i studiet"
         loading="lazy"
         width={1600}

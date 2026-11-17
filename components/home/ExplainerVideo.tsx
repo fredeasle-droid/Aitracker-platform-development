@@ -2,8 +2,8 @@
 
 import { useState, type RefObject } from "react";
 import { Play } from "lucide-react";
-const videoAsset = { url: "" };
-const posterAsset = { url: "/home/explainer-video.jpg" };
+const videoAsset = { url: "/home/bettrackerai-kapitel-1.mp4" };
+const posterAsset = { url: "/home/bliv-klogere-poster.jpg" };
 import { VideoControls, type Layout } from "./VideoFrame";
 
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;

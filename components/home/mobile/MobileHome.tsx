@@ -6,10 +6,10 @@ import { ArrowRight, ArrowUpRight, BellRing, CalendarCheck, Check, Clock, Crown,
 import { useInView } from "@/lib/use-in-view";
 import { useCount } from "../use-count";
 const hero = "/home/hero-player.jpg";
-const studio = { url: "/home/challenge-studio.png" };
-const host = { url: "/home/pricing-host.png" };
-const videoAsset = { url: "" };
-const posterAsset = { url: "/home/explainer-video.jpg" };
+const studio = { url: "/home/challenge-studio.webp" };
+const host = { url: "/home/pricing-host.webp" };
+const videoAsset = { url: "/home/bettrackerai-kapitel-1.mp4" };
+const posterAsset = { url: "/home/bliv-klogere-poster.jpg" };
 import { CalculatorIcon, LogoMark, TelegramIcon, TrophyIcon } from "../icons";
 import { ScanSweep, formatAge, useLiveRows } from "../LiveScanner";
 import { LiveTicker } from "../LiveTicker";

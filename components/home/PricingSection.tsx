@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useInView } from "@/lib/use-in-view";
 import Link from "next/link";
 import { ArrowRight, Check, Crown } from "lucide-react";
-const host = { url: "/home/pricing-host.png" };
+const host = { url: "/home/pricing-host.webp" };
 import { PRICING } from "./data";
 import { useHomeData } from "./home-data";
 import { Swoosh } from "./Swoosh";
