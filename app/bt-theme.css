@@ -86,7 +86,9 @@
 @media (min-width: 1600px) { :root { --zf: 1.56; } }
 @media (min-width: 1920px) { :root { --zf: 1.875; } }
 @media (min-width: 2560px) { :root { --zf: 2.5; } }
-.mock-frame { zoom: var(--z, var(--zf, 1)); }
+/* --zeff is the real element scale (10% below the screen step); the hero photo is sized from it so the background keeps reaching the screen edges. */
+:root { --zeff: calc(var(--z, var(--zf, 1)) * 0.9); }
+.mock-frame { zoom: var(--zeff); }
 
 .hero-photo {
   -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 12%, black 78%, transparent 100%),

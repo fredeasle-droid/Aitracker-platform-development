@@ -55,11 +55,11 @@ export function DesktopHome({ playExplainer, explainerRef }: { playExplainer: ()
           alt="Jublende fodboldspiller på stadion"
           width={1920}
           height={640}
-          className="hero-photo hero-parallax pointer-events-none absolute left-[-74px] top-[-30px] h-[calc(100vh/var(--z,var(--zf,1)))] min-h-[432px] w-[1086px] max-w-none object-cover"
+          className="hero-photo hero-parallax pointer-events-none absolute left-[calc((1024px-max(1086px,100vw/var(--zeff)+8px))/2)] top-[-30px] h-[calc(100vh/var(--zeff))] min-h-[432px] w-[max(1086px,calc(100vw/var(--zeff)+8px))] max-w-none object-cover"
         />
-        <div className="hero-scrim pointer-events-none absolute left-[-74px] top-[-30px] h-[calc(100vh/var(--z,var(--zf,1)))] min-h-[432px] w-[1086px]" />
+        <div className="hero-scrim pointer-events-none absolute left-[calc((1024px-max(1086px,100vw/var(--zeff)+8px))/2)] top-[-30px] h-[calc(100vh/var(--zeff))] min-h-[432px] w-[max(1086px,calc(100vw/var(--zeff)+8px))]" />
 
-        <section className="relative flex h-[calc(100vh/var(--z,var(--zf,1))-60px)] min-h-[440px] flex-col">
+        <section className="relative flex h-[calc(100vh/var(--zeff)-60px)] min-h-[440px] flex-col">
           <div className="relative flex flex-1 items-center justify-between pb-[10px] pl-[34px] pr-[34px]">
             <div className="flex w-[490px] flex-col items-start">
               <span className="glass-chip rise-in flex h-[28px] items-center gap-[8px] rounded-full pl-[10px] pr-[12px] text-[9.5px] font-semibold" style={delay(120)}>
