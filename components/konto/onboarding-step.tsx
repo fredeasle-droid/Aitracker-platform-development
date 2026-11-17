@@ -95,7 +95,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
             >
               <div className="flex flex-col gap-2 p-4">
                 <div className="flex items-center gap-3">
-                  <BookmakerLogo name={bookmaker.name} className="size-9" />
+                  <BookmakerLogo name={bookmaker.name} className="size-12" />
                   <h2 className="text-lg font-bold text-white">{bookmaker.name}</h2>
                 </div>
                 <a
