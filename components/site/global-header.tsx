@@ -25,7 +25,7 @@ function AuthButtons() {
 
   if (session?.user) {
     return (
-      <Link href="/konto" className="btn-glow flex h-9 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold">
+      <Link href="/konto" className="btn-glow flex h-10 items-center gap-2 rounded-full px-4 text-sm font-semibold">
         <UserRound className="size-4" aria-hidden="true" /> Min konto
       </Link>
     )
@@ -33,10 +33,10 @@ function AuthButtons() {
 
   return (
     <div className={cn('flex items-center gap-2', isPending && 'opacity-0')}>
-      <Link href="/login" className="btn-outline-glow flex h-9 items-center gap-1.5 rounded-full px-3 text-xs font-semibold">
+      <Link href="/login" className="btn-outline-glow flex h-10 items-center gap-2 rounded-full px-4 text-sm font-semibold">
         <LogIn className="size-4" aria-hidden="true" /> Log ind
       </Link>
-      <Link href="/konto" className="btn-glow flex h-9 items-center gap-1.5 rounded-full px-3.5 text-xs font-semibold">
+      <Link href="/konto" className="btn-glow flex h-10 items-center gap-2 rounded-full px-4 text-sm font-semibold">
         <span className="hidden sm:inline">Opret gratis konto</span>
         <span className="sm:hidden">Opret konto</span>
         <ArrowRight className="size-4" aria-hidden="true" />
@@ -50,19 +50,19 @@ export function GlobalHeader() {
 
   return (
     <header className="bt-theme sticky top-0 z-40 border-b border-border bg-background-deep/80 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
-      <div className="mx-auto flex h-[60px] max-w-[1600px] items-center justify-between gap-3 px-3 sm:px-6">
+      <div className="mx-auto flex h-[72px] max-w-[1600px] items-center justify-between gap-4 px-4 sm:h-20 sm:px-7">
         <Link href="/" aria-label="BetTrackerAI forside" className="shrink-0 text-foreground">
           <Logo />
         </Link>
 
-        <nav aria-label="Hovedmenu" className="nav-capsule hidden h-9 items-center gap-0.5 rounded-full p-1 md:flex">
+        <nav aria-label="Hovedmenu" className="nav-capsule hidden h-11 items-center gap-1 rounded-full p-1.5 md:flex">
           {NAV.map(({ href, label, icon: Icon }) => (
             <Link
               key={href}
               href={href}
               aria-current={isActive(pathname, href) ? 'page' : undefined}
               className={cn(
-                'group flex h-7 items-center gap-1.5 rounded-full px-3 text-[11px] font-medium',
+                'group flex h-8 items-center gap-2 rounded-full px-3.5 text-xs font-medium',
                 isActive(pathname, href) ? 'nav-active' : 'nav-link',
               )}
             >
