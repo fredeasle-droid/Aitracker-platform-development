@@ -214,7 +214,7 @@ function Profit() {
         className="range-glow mt-3 w-full"
         style={{ "--pct": `${pct}%` } as CSSProperties}
       />
-      <p className="mt-4 text-[13px]">Forventet profit (30 hverdage)</p>
+      <p className="mt-4 text-[13px]">Forventet profit (30 hverdage · maks. indsats 10.000 kr./dag)</p>
       <div className="mt-1">
         <span className="text-[28px] font-bold leading-9 text-success">+{fmt(profit)} kr.</span>
       </div>

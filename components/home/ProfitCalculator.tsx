@@ -99,7 +99,7 @@ export function ProfitCalculator() {
       {/* Result + chart */}
       <div className="value-pill absolute right-[30px] top-[30px] h-[258px] w-[470px] overflow-hidden rounded-[18px]">
         <div className="absolute left-[20px] top-[18px]">
-          <p className="text-[10.5px] text-foreground/70">Forventet profit · {CALCULATOR_DAYS} hverdage</p>
+          <p className="text-[10.5px] text-foreground/70">Forventet profit · {CALCULATOR_DAYS} hverdage · maks. indsats 10.000 kr./dag</p>
           <p className="mt-[2px] flex items-center gap-[10px]">
             <span className="font-display text-[34px] font-bold leading-[40px] tracking-[-0.04em] text-success tabular-nums">+{fmt(shownProfit)} kr.</span>
           </p>
