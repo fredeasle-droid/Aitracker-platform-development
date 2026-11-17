@@ -71,8 +71,8 @@ export function GlobalFooter() {
         <div className="relative mx-auto max-w-[1600px] px-5 pb-10 pt-24 lg:px-10 lg:pt-32">
           <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.65fr_0.9fr_0.75fr_1.6fr] lg:gap-0">
             <div className="flex flex-col gap-3 lg:border-r lg:border-primary/25 lg:pr-8">
-              <Logo big />
-              <p className="text-[15px] text-foreground/85 lg:pl-[39px]">Scan. Find. Vind.</p>
+              <Logo xl />
+              <p className="text-[17px] text-foreground/90 lg:pl-[65px]">Scan. Find. Vind.</p>
             </div>
 
             <nav aria-label="Links" className="lg:pl-12">

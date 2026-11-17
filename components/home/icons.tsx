@@ -20,11 +20,11 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
-export function Logo({ big }: { big?: boolean }) {
+export function Logo({ big, xl }: { big?: boolean; xl?: boolean }) {
   return (
-    <div className="flex items-center gap-[9px]">
-      <LogoMark className={big ? "h-[27px] w-[30px]" : "h-[26px] w-[29px]"} />
-      <span className={`font-bold tracking-[-0.3px] ${big ? "text-[18px]" : "text-[17px]"}`}>
+    <div className={`flex items-center ${xl ? "gap-3" : "gap-[9px]"}`}>
+      <LogoMark className={xl ? "h-[46px] w-[53px]" : big ? "h-[30px] w-[35px]" : "h-[26px] w-[29px]"} />
+      <span className={`font-bold tracking-[-0.3px] ${xl ? "text-[32px]" : big ? "text-[21px]" : "text-[17px]"}`}>
         BetTracker<span className="text-primary-glow">AI</span>
       </span>
     </div>
@@ -66,16 +66,6 @@ export function DiscordIcon({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M19.5 5.3A17 17 0 0 0 15.3 4l-.5 1a15.6 15.6 0 0 0-5.6 0l-.5-1a17 17 0 0 0-4.2 1.3C1.8 9.4 1 13.4 1.4 17.3A17 17 0 0 0 6.6 20l1.1-1.8c-.6-.2-1.2-.5-1.8-.9l.4-.3a12 12 0 0 0 11.4 0l.4.3c-.6.4-1.2.7-1.8.9l1.1 1.8a17 17 0 0 0 5.2-2.7c.5-4.5-.8-8.5-3.1-12ZM8.7 14.9c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Zm6.6 0c-1 0-1.9-1-1.9-2.2s.8-2.2 1.9-2.2 1.9 1 1.9 2.2-.8 2.2-1.9 2.2Z" />
-    </svg>
-  );
-}
-
-export function InstagramIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-      <rect x="3" y="3" width="18" height="18" rx="5" />
-      <circle cx="12" cy="12" r="4.2" />
-      <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
     </svg>
   );
 }
