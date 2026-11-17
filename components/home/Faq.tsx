@@ -66,13 +66,13 @@ export function FaqSection() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="reveal panel faq-panel relative ml-[28px] mt-[80px] w-[969px] scroll-mt-[80px] overflow-hidden rounded-[22px] px-[30px] py-[28px]">
+    <section id="faq" className="reveal panel faq-panel relative ml-[28px] mt-[80px] w-[969px] scroll-mt-[80px] overflow-hidden rounded-[22px] px-[30px] py-[22px]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }} />
 
       <div className="flex items-end justify-between gap-[24px]">
         <div>
           <Eyebrow />
-          <h2 className="mt-[12px] text-[28px] font-bold leading-[33px]">
+          <h2 className="mt-[10px] text-[25px] font-bold leading-[30px]">
             Spørg løs – <span className="text-gradient-brand">vi svarer på dansk.</span>
           </h2>
         </div>
@@ -81,9 +81,9 @@ export function FaqSection() {
         </p>
       </div>
 
-      <div className="mt-[16px] grid grid-cols-[1fr_440px] gap-[18px]">
+      <div className="mt-[14px] grid grid-cols-[1fr_440px] gap-[18px]">
         <div className="flex flex-col">
-          <ul className="grid gap-[5px]">
+          <ul className="grid gap-[4px]">
             {FAQ.map(({ q }, k) => (
               <li key={q}>
                 <button
@@ -94,7 +94,7 @@ export function FaqSection() {
                   }}
                   aria-controls="faq-chat"
                   data-active={k === active}
-                  className="faq-q group flex h-[31px] w-full items-center gap-[10px] rounded-[9px] px-[12px] text-left text-[11.5px] font-semibold leading-[15px]"
+                  className="faq-q group flex h-[28px] w-full items-center gap-[10px] rounded-[9px] px-[12px] text-left text-[11.5px] font-semibold leading-[15px]"
                 >
                   <span className="faq-num w-[18px] shrink-0 text-[10px] font-bold tabular-nums">{num(k)}</span>
                   <span className="flex-1 truncate">{q}</span>
@@ -108,7 +108,7 @@ export function FaqSection() {
           </div>
         </div>
 
-        <div id="faq-chat" className="faq-chat relative flex h-[274px] flex-col overflow-hidden rounded-[14px]">
+        <div id="faq-chat" className="faq-chat relative flex h-[244px] flex-col overflow-hidden rounded-[14px]">
           <SupportHeader />
           <SupportChat chat={chat} />
         </div>

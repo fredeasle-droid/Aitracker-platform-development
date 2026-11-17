@@ -54,9 +54,9 @@ export function ReviewsShowcase() {
         aside={<RatingSummary />}
       />
 
-      <div className="mt-[24px] grid grid-cols-[1fr_340px] gap-[18px]" {...r.hold}>
+      <div className="mt-[18px] grid grid-cols-[1fr_340px] gap-[18px]" {...r.hold}>
         {/* Featured review */}
-        <article className="review-stage spotlight group/zoom relative h-[352px] overflow-hidden rounded-[22px]">
+        <article className="review-stage spotlight group/zoom relative h-[304px] overflow-hidden rounded-[22px]">
           <div className="review-photo-fade absolute inset-y-0 right-0 w-[350px] overflow-hidden">
             <img
               key={review.name}
@@ -75,18 +75,18 @@ export function ReviewsShowcase() {
             {review.stars}/5
           </span>
 
-          <div key={index} className="absolute left-[32px] top-[26px] w-[300px]">
-            <span className="quote-mark quote-in block font-display text-[72px] font-bold leading-[52px]" aria-hidden="true">“</span>
+          <div key={index} className="absolute left-[32px] top-[16px] w-[300px]">
+            <span className="quote-mark quote-in block font-display text-[52px] font-bold leading-[36px]" aria-hidden="true">“</span>
             <PopStars n={review.stars} size="h-[15px] w-[15px]" delay={100} />
-            <h3 className="quote-in mt-[12px] font-display text-[22px] font-bold leading-[27px] tracking-[-0.03em]" style={{ "--d": "140ms" } as React.CSSProperties}>
+            <h3 className="quote-in mt-[8px] font-display text-[20px] font-bold leading-[24px] tracking-[-0.03em]" style={{ "--d": "140ms" } as React.CSSProperties}>
               {review.title}
             </h3>
-            <p className="quote-in mt-[8px] text-[12.5px] leading-[19.5px] text-foreground/85" style={{ "--d": "240ms" } as React.CSSProperties}>
+            <p className="quote-in mt-[6px] text-[12px] leading-[18px] text-foreground/85" style={{ "--d": "240ms" } as React.CSSProperties}>
               {review.text}
             </p>
           </div>
 
-          <div className="absolute bottom-[24px] left-[32px] right-[24px] flex items-center">
+          <div className="absolute bottom-[18px] left-[32px] right-[24px] flex items-center">
             <img key={review.avatar} src={review.avatar} alt="" width={192} height={192} className="quote-in h-[42px] w-[42px] rounded-full object-cover ring-2 ring-primary-glow/60 ring-offset-2 ring-offset-background-deep" />
             <span className="ml-[12px] leading-[16px]">
               <span className="block text-[14px] font-semibold">{review.name}</span>
@@ -109,7 +109,7 @@ export function ReviewsShowcase() {
         </article>
 
         {/* All reviews */}
-        <ul className="flex flex-col gap-[10px]">
+        <ul className="flex flex-col gap-[8px]">
           {REVIEWS.map((x, k) => {
             const active = k === index;
             return (
@@ -119,7 +119,7 @@ export function ReviewsShowcase() {
                   onClick={() => r.go(k)}
                   aria-current={active}
                   aria-label={`Vis anmeldelse fra ${x.name}`}
-                  className="review-tab group relative flex h-[80px] w-full items-center gap-[12px] overflow-hidden rounded-[15px] pl-[14px] pr-[16px] text-left"
+                  className="review-tab group relative flex h-[70px] w-full items-center gap-[12px] overflow-hidden rounded-[15px] pl-[14px] pr-[16px] text-left"
                 >
                   <img
                     src={x.avatar}
@@ -154,7 +154,7 @@ export function ReviewsShowcase() {
       </div>
 
       {/* Call to action under the reviews */}
-      <div className="panel-soft mt-[18px] flex h-[64px] items-center gap-[14px] rounded-[16px] pl-[18px] pr-[12px]">
+      <div className="panel-soft mt-[14px] flex h-[56px] items-center gap-[14px] rounded-[16px] pl-[18px] pr-[12px]">
         <div className="flex">
           {REVIEWS.map((x, k) => (
             <img key={x.name} src={x.avatar} alt="" loading="lazy" width={192} height={192} className={`h-[30px] w-[30px] rounded-full object-cover ring-2 ring-background-deep ${k ? "-ml-[9px]" : ""}`} />
