@@ -2,33 +2,12 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { ArrowRight, Check, LayoutGrid, LifeBuoy, Star } from 'lucide-react'
+import { ArrowRight, Check, LayoutGrid, LifeBuoy } from 'lucide-react'
 import { completeOnboarding } from '@/app/konto/account-actions'
-import { getBookmaker } from '@/lib/bookmakers'
+import { ONBOARDING_BOOKMAKERS } from '@/lib/onboarding-bookmakers'
 import { cn } from '@/lib/utils'
 
-type Recommended = { id: string; name: string; bonus: string }
-
-const RECOMMENDED_BOOKMAKERS: readonly Recommended[] = [
-  { id: 'bet365', name: 'bet365', bonus: '1.000 kr.' },
-  { id: 'betano', name: 'Betano', bonus: '1.500 kr.' },
-  { id: 'unibet', name: 'Unibet', bonus: '1.000 kr.' },
-  { id: 'williamhill', name: 'William Hill', bonus: '1.000 kr.' },
-  { id: 'nordicbet', name: 'NordicBet', bonus: '1.000 kr.' },
-  { id: '888sport', name: '888sport', bonus: '888 kr.' },
-  { id: 'betfair', name: 'betfair', bonus: '1.000 kr.' },
-  { id: 'bwin', name: 'bwin', bonus: '1.000 kr.' },
-  { id: 'paddypower', name: 'Paddy Power', bonus: '1.000 kr.' },
-  { id: 'leovegas', name: 'LeoVegas', bonus: '1.000 kr.' },
-  { id: 'danskespil', name: 'Danske Spil', bonus: '500 kr.' },
-  { id: 'betsson', name: 'betsson', bonus: '1.000 kr.' },
-]
-
-function signupUrl(id: string) {
-  const brand = getBookmaker(id)
-  if (!brand.affiliate) return brand.url
-  return brand.affiliate.includes('{url}') ? brand.affiliate.replace('{url}', encodeURIComponent(brand.url)) : brand.affiliate
-}
+const RECOMMENDED_BOOKMAKERS = ONBOARDING_BOOKMAKERS
 
 const STEPS = [
   { label: 'Opret konto', state: 'done' },
@@ -50,7 +29,8 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
   )
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
-  const allAnswered = RECOMMENDED_BOOKMAKERS.every(({ id }) => Boolean(responses[id]))
+  const answeredCount = RECOMMENDED_BOOKMAKERS.filter(({ id }) => Boolean(responses[id])).length
+  const allAnswered = answeredCount === RECOMMENDED_BOOKMAKERS.length
 
   function setAnswer(id: string, answer: BookmakerAnswer) {
     setResponses((current) => ({ ...current, [id]: answer }))
@@ -97,7 +77,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
           <span className="bg-[linear-gradient(90deg,#1593ff_0%,#4a7bff_70%,#7a45f0_100%)] bg-clip-text text-transparent">disse bookmakere</span>
         </h1>
         <p className="mx-auto mt-3 max-w-[760px] text-pretty text-[15px] leading-relaxed text-[#e6ecf7] sm:text-base">
-          For at få den bedste start anbefaler vi, at du opretter dig hos nogle af disse bookmakere. Det er her, vi får flest muligheder for at finde gode surebets til dig.
+          Åbn BonusTracker-siden for den bookmaker, du vil oprette dig hos. Når du er færdig, så kom tilbage og markér, om du allerede har en konto eller netop har oprettet dig.
         </p>
       </header>
 
@@ -112,38 +92,19 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
                 answer ? 'border-primary shadow-[0_0_28px_-14px_var(--primary)]' : 'border-[#183252]',
               )}
             >
-              <span className="inline-flex items-center gap-1.5 rounded-br-lg bg-[#0d2a1c] px-2.5 py-1 text-[11px] font-medium text-[#e6ecf7]">
-                <Star className="size-3 fill-[#ffd32a] text-[#ffd32a]" aria-hidden="true" />
-                Vores anbefaling
-              </span>
-              <div className="flex items-center gap-3 px-4 pt-2">
-                <span className="flex h-12 min-w-0 flex-1 items-center">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={`/bookmakers/wordmarks/${bookmaker.id}.png`}
-                    alt={bookmaker.name}
-                    loading="lazy"
-                    decoding="async"
-                    className="max-h-full max-w-full object-contain object-left"
-                  />
-                </span>
-                <span className="shrink-0 text-xs leading-tight text-[#c3cde2]">
-                  Op til
-                  <span className="block text-base font-bold text-white">{bookmaker.bonus}</span>i bonus
-                </span>
-              </div>
-              <div className="flex flex-col gap-2 p-4 pt-3">
+              <div className="flex flex-col gap-2 p-4">
+                <h2 className="text-lg font-bold text-white">{bookmaker.name}</h2>
                 <a
-                  href={signupUrl(bookmaker.id)}
+                  href={`https://bonustracker.dk/${bookmaker.funnelSlug}`}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="flex h-10 items-center justify-center gap-1.5 rounded-lg bg-primary text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="flex min-h-11 items-center justify-center gap-1.5 rounded-lg bg-primary px-3 text-center text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  Opret konto
+                  Åbn BonusTracker-side
                   <ArrowRight className="size-3.5" aria-hidden="true" />
-                  <span className="sr-only"> hos {bookmaker.name} (åbner i nyt vindue)</span>
+                  <span className="sr-only"> for {bookmaker.name} (åbner i en ny fane)</span>
                 </a>
-                <p className="text-center text-xs leading-relaxed text-[#c3cde2]">Når du er færdig, fortæl os det herunder.</p>
+                <p className="text-center text-xs leading-relaxed text-[#c3cde2]">Markér dit svar, når du kommer tilbage.</p>
                 <div className="grid grid-cols-1 gap-1.5" role="group" aria-label={`Svar om ${bookmaker.name}`}>
                   {ANSWER_OPTIONS.map(({ value, label }) => (
                     <button
@@ -182,7 +143,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
       >
         <LayoutGrid className="size-5" aria-hidden="true" />
         <span aria-hidden="true" className="h-6 w-px bg-white/30" />
-        {busy ? 'Gemmer…' : allAnswered ? 'Fortsæt til dashboard' : `Besvar alle bookmakerne (${Object.keys(responses).length}/${RECOMMENDED_BOOKMAKERS.length})`}
+        {busy ? 'Gemmer…' : allAnswered ? 'Fortsæt til dashboard' : `Besvar alle bookmakerne (${answeredCount}/${RECOMMENDED_BOOKMAKERS.length})`}
         {!busy && allAnswered && <ArrowRight className="size-5" aria-hidden="true" />}
       </button>
       <p className="mt-3 text-center text-xs text-[#c3cde2]" aria-live="polite">

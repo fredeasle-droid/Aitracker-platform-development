@@ -1,0 +1,28 @@
+export const ONBOARDING_BOOKMAKERS = [
+  { id: 'bet365', name: 'bet365', funnelSlug: 'bet365' },
+  { id: 'danskespil', name: 'Danske Spil', funnelSlug: 'danske-spil' },
+  { id: 'betano', name: 'Betano', funnelSlug: 'betano' },
+  { id: 'betfair', name: 'Betfair', funnelSlug: 'betfair' },
+  { id: 'betinia', name: 'Betinia', funnelSlug: 'betinia' },
+  { id: 'campobet', name: 'CampoBet', funnelSlug: 'campobet' },
+  { id: 'betsson', name: 'Betsson', funnelSlug: 'betsson' },
+  { id: 'nordicbet', name: 'NordicBet', funnelSlug: 'nordicbet' },
+  { id: 'unibet', name: 'Unibet', funnelSlug: 'unibet' },
+  { id: '888sport', name: '888sport', funnelSlug: '888sport' },
+  { id: 'bwin', name: 'bwin', funnelSlug: 'bwin' },
+  { id: 'comeon', name: 'ComeOn', funnelSlug: 'comeon' },
+  { id: 'bet25', name: 'Bet25', funnelSlug: 'bet25' },
+  { id: 'betmaster', name: 'Betmaster', funnelSlug: 'betmaster' },
+  { id: 'expekt', name: 'Expekt', funnelSlug: 'expekt' },
+  { id: 'leovegas', name: 'LeoVegas', funnelSlug: 'leovegas' },
+  { id: 'marathonbet', name: 'Marathonbet', funnelSlug: 'marathonbet' },
+  { id: 'mrgreen', name: 'Mr Green', funnelSlug: 'mr-green' },
+  { id: 'pokerstars-sports', name: 'PokerStars Sports', funnelSlug: 'pokerstars-sports' },
+  { id: 'tipwin', name: 'Tipwin', funnelSlug: 'tipwin' },
+  { id: 'stake', name: 'Stake', funnelSlug: 'stake' },
+  { id: 'getlucky', name: 'GetLucky', funnelSlug: 'getlucky' },
+  { id: 'swiper', name: 'Swiper', funnelSlug: 'swiper' },
+  { id: 'vbet', name: 'VBet', funnelSlug: 'vbet' },
+] as const
+
+export const LEGACY_ONBOARDING_BOOKMAKER_IDS = new Set(['williamhill', 'paddypower'])
