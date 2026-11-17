@@ -7,6 +7,7 @@ import { RightPanel } from '@/components/sb/RightPanel'
 import { LiveTicker } from '@/components/sb/LiveTicker'
 import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
 import { SurebetsProvider } from '@/components/sb/surebets-context'
+import { GlobalFooter } from '@/components/site/global-footer'
 import { getSbData } from '@/lib/sb-data'
 
 export const dynamic = 'force-dynamic'
@@ -64,15 +65,9 @@ export default async function SurebetsPage() {
               <RightPanel />
             </div>
           </div>
-          <footer className="relative mt-10 flex flex-col items-center justify-between gap-3 border-t border-border pt-5 text-[12.5px] text-muted-foreground sm:flex-row">
-            <div className="flex items-center gap-2.5">
-              <span className="age-badge flex h-7 w-7 items-center justify-center rounded-full text-[11px] font-extrabold">18+</span>
-              Spil ansvarligt. Har du brug for hjælp, så kontakt StopSpillet på 70 22 28 25.
-            </div>
-            <div>© {new Date().getFullYear()} BetTrackerAI</div>
-          </footer>
         </main>
       </div>
+      <GlobalFooter />
     </BookmakerFilterProvider>
     </SurebetsProvider>
   )

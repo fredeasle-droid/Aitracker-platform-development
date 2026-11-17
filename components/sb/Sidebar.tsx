@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import {
+  Home,
   BarChart3,
   Radio,
   PieChart,
@@ -74,6 +76,13 @@ export function SidebarContent() {
       </div>
 
       <nav className="mt-6 space-y-1 short:mt-4 short:space-y-0.5">
+        <Link
+          href="/"
+          className="flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5"
+        >
+          <Home className="h-5 w-5" strokeWidth={2.3} />
+          <span className="flex-1 text-left">Forside</span>
+        </Link>
         {nav.map(({ label, icon: Icon, live }) => {
           const active = activeNav === label;
           return (
