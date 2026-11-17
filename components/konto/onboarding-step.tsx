@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { ArrowRight, Check, LayoutGrid, LifeBuoy } from 'lucide-react'
 import { completeOnboarding } from '@/app/konto/account-actions'
 import { ONBOARDING_BOOKMAKERS } from '@/lib/onboarding-bookmakers'
+import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { cn } from '@/lib/utils'
 
 const RECOMMENDED_BOOKMAKERS = ONBOARDING_BOOKMAKERS
@@ -93,16 +94,18 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
               )}
             >
               <div className="flex flex-col gap-2 p-4">
-                <h2 className="text-lg font-bold text-white">{bookmaker.name}</h2>
+                <div className="flex items-center gap-3">
+                  <BookmakerLogo name={bookmaker.name} className="size-9" />
+                  <h2 className="text-lg font-bold text-white">{bookmaker.name}</h2>
+                </div>
                 <a
                   href={`https://bonustracker.dk/${bookmaker.funnelSlug}`}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
                   className="flex min-h-11 items-center justify-center gap-1.5 rounded-lg bg-primary px-3 text-center text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  Åbn BonusTracker-side
-                  <ArrowRight className="size-3.5" aria-hidden="true" />
-                  <span className="sr-only"> for {bookmaker.name} (åbner i en ny fane)</span>
+                  Opret
+                  <span className="sr-only"> hos {bookmaker.name} (åbner i en ny fane)</span>
                 </a>
                 <p className="text-center text-xs leading-relaxed text-[#c3cde2]">Markér dit svar, når du kommer tilbage.</p>
                 <div className="grid grid-cols-1 gap-1.5" role="group" aria-label={`Svar om ${bookmaker.name}`}>
