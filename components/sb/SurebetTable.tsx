@@ -86,7 +86,47 @@ function BetDetails({ b, best }: { b: Surebet; best: boolean }) {
   );
 }
 
-/** Phone card: match and profit up top, then one aligned row per bookmaker, then the action. */
+function ProfitRing({ pct }: { pct: number }) {
+  const r = 44;
+  const c = 2 * Math.PI * r;
+  const progress = Math.min(1, Math.max(0.05, gaugeProgress(pct)));
+  const label = `+${formatPct(pct)}`;
+  return (
+    <div className="relative h-[100px] w-[100px] shrink-0">
+      <svg viewBox="0 0 100 100" className="absolute inset-0 -rotate-90" aria-hidden>
+        <circle cx="50" cy="50" r={r} fill="none" strokeWidth="6" className="stroke-success/15" />
+        <circle
+          cx="50"
+          cy="50"
+          r={r}
+          fill="none"
+          strokeWidth="6"
+          strokeLinecap="round"
+          strokeDasharray={c}
+          strokeDashoffset={c * (1 - progress)}
+          className="stroke-success drop-shadow-[0_0_6px_var(--success)]"
+        />
+      </svg>
+      <div className="absolute inset-[8px] flex flex-col items-center justify-center rounded-full bg-success/10">
+        <span className={cn("font-extrabold leading-none tracking-tight text-success tabular-nums", label.length > 6 ? "text-[17px]" : "text-[21px]")}>
+          {label}
+        </span>
+        <span className="mt-1 text-[11px] font-semibold leading-none text-foreground/80 tabular-nums">+{Math.round(pct * 10)} kr</span>
+      </div>
+    </div>
+  );
+}
+
+function TeamSide({ team }: { team: Surebet["home"] }) {
+  return (
+    <div className="flex min-w-0 flex-col items-center gap-1.5 text-center">
+      <Crest src={team.crest} name={team.name} size="md" />
+      <span className="line-clamp-2 text-balance text-[13.5px] font-bold leading-tight">{team.name}</span>
+    </div>
+  );
+}
+
+/** Phone card: teams flank a profit ring, market under it, then both bookmaker legs with their stake split. */
 function MobileCard({
   b,
   pct,
@@ -104,6 +144,8 @@ function MobileCard({
 }) {
   const { bookmakers } = useSurebets();
   const names = useMemo(() => new Map(bookmakers.map((bk) => [bk.id, bk.name])), [bookmakers]);
+  const impliedTotal = b.legs.reduce((sum, leg) => sum + 1 / leg.odds, 0);
+  const stakes = b.legs.map((leg) => Math.round(1000 / leg.odds / impliedTotal));
   return (
     <article
       style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
@@ -119,56 +161,48 @@ function MobileCard({
             <span className="h-1.5 w-1.5 rounded-full bg-cyan" /> {b.time}
           </span>
         </span>
-        {best && (
-          <span className="best-pill inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-gold">
-            <Crown className="h-3 w-3" /> Bedst nu
-          </span>
-        )}
-      </div>
-
-      <div className="relative mt-3 grid grid-cols-[minmax(0,1fr)_112px] gap-3">
-        <div className="flex min-w-0 flex-col justify-center gap-2">
-          {[b.home, b.away].map((t) => (
-            <div key={t.name} className="flex min-w-0 items-center gap-2.5">
-              <Crest src={t.crest} name={t.name} size="sm" className="shrink-0" />
-              <span className="line-clamp-2 text-[15.5px] font-bold leading-tight">{t.name}</span>
-            </div>
-          ))}
-          <span className="market-pill mt-0.5 inline-flex min-w-0 max-w-full items-center gap-1.5 self-start rounded-md px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-cyan">
-            <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
-            <span className="truncate">{b.market}</span>
-          </span>
-        </div>
-
-        <div className="relative flex flex-col justify-between overflow-hidden rounded-xl bg-success/10 px-3 pb-2.5 pt-2.5 ring-1 ring-success/35 shadow-[0_0_24px_-10px_var(--success)]">
-          <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-success/85">Profit</span>
-          <span
-            className={cn(
-              "font-extrabold leading-none tracking-tight text-success tabular-nums drop-shadow-[0_0_12px_var(--success)]",
-              formatPct(pct).length > 5 ? "text-[25px]" : "text-[29px]",
-            )}
+        <span className="flex shrink-0 items-center gap-1.5">
+          {best && (
+            <span className="best-pill inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-gold">
+              <Crown className="h-3 w-3" /> Bedst nu
+            </span>
+          )}
+          <button
+            aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
+            aria-pressed={starred}
+            onClick={onStar}
+            className="-my-2 -mr-2 flex h-10 w-10 items-center justify-center rounded-lg transition active:scale-90"
           >
-            {formatPct(pct)}
-          </span>
-          <span className="mt-1.5 text-[11px] font-semibold leading-tight text-foreground/85 tabular-nums">
-            +{Math.round(pct * 10)} kr
-            <span className="block font-medium text-muted-foreground">pr. 1.000 kr</span>
-          </span>
-          <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-success/15">
-            <span className="block h-full bg-success" style={{ width: `${Math.min(100, gaugeProgress(pct) * 100)}%` }} />
-          </span>
-        </div>
+            <Star className={cn("h-5 w-5 transition-colors", starred ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground")} />
+          </button>
+        </span>
       </div>
 
-      <div className="relative mt-3 grid grid-cols-2 gap-2">
+      <div className="relative mt-3 grid grid-cols-[minmax(0,1fr)_100px_minmax(0,1fr)] items-center gap-1">
+        <TeamSide team={b.home} />
+        <ProfitRing pct={pct} />
+        <TeamSide team={b.away} />
+      </div>
+
+      <div className="relative mt-2.5 flex justify-center">
+        <span className="market-pill inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-md px-2.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-cyan">
+          <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
+          <span className="truncate">{b.market}</span>
+        </span>
+      </div>
+
+      <div className="leg-row relative mt-3 grid grid-cols-2 overflow-hidden rounded-xl">
         {b.legs.map((leg, li) => (
-          <div key={li} className="leg-row flex min-w-0 flex-col gap-1.5 rounded-xl px-2.5 py-2">
+          <div key={li} className={cn("flex min-w-0 flex-col gap-1.5 px-3 py-2.5", li === 1 && "border-l border-border")}>
             <span className="flex h-7 min-w-0 items-center overflow-hidden">
               <BookmakerMark id={leg.bookmaker} />
             </span>
             <div className="flex min-w-0 items-end justify-between gap-2">
-              <span className="truncate text-[12.5px] font-semibold text-muted-foreground">{leg.pick}</span>
-              <span className="text-[19px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
+              <div className="min-w-0 leading-tight">
+                <div className="truncate text-[12.5px] font-semibold">{leg.pick}</div>
+                <div className="mt-0.5 text-[10.5px] font-medium text-muted-foreground tabular-nums">Spil {stakes[li]} kr</div>
+              </div>
+              <span className="text-[20px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
             </div>
           </div>
         ))}
@@ -188,17 +222,6 @@ function MobileCard({
         </p>
       )}
 
-      <div className="relative mt-3 flex items-center gap-2">
-        <DetailsButton className="h-11 flex-1 text-[14.5px]" />
-        <button
-          aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
-          aria-pressed={starred}
-          onClick={onStar}
-          className="chip-surface flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border transition active:scale-95"
-        >
-          <Star className={cn("h-5 w-5 transition-colors", starred ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground")} />
-        </button>
-      </div>
     </article>
   );
 }
