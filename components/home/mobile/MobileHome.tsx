@@ -61,10 +61,10 @@ function Hero() {
         alt="Jublende fodboldspiller på stadion"
         width={1920}
         height={640}
-        className="hero-photo pointer-events-none absolute inset-x-0 -top-14 h-[440px] w-full object-cover object-[62%_center]"
+        className="hero-photo-mobile pointer-events-none absolute -left-4 -top-14 h-[440px] w-[calc(100%+2rem)] max-w-none object-cover object-[62%_center]"
       />
       {/* Darkens the lower photo so the headline stays readable */}
-      <div className="pointer-events-none absolute inset-x-[-16px] top-[120px] h-[300px] bg-background/80 [mask-image:linear-gradient(180deg,transparent,black_40%,black_65%,transparent)]" />
+      <div className="pointer-events-none absolute inset-x-[-16px] top-[120px] h-[300px] bg-background/65 [mask-image:linear-gradient(180deg,transparent,black_45%,black_65%,transparent)]" />
       <div className="relative">
         <span className="glass-chip inline-flex h-7 items-center gap-2 rounded-full px-3 text-[11px] font-semibold text-success">
           <span className="h-2 w-2 animate-pulse rounded-full bg-success shadow-[0_0_6px_var(--success)]" />
