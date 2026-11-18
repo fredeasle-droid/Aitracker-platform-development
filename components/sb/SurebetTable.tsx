@@ -119,8 +119,8 @@ function ProfitRing({ pct }: { pct: number }) {
 
 function TeamSide({ team }: { team: Surebet["home"] }) {
   return (
-    <div className="flex min-w-0 flex-col items-center gap-1.5 text-center">
-      <Crest src={team.crest} name={team.name} size="md" />
+    <div className="flex min-w-0 flex-col items-center gap-2 text-center">
+      <Crest src={team.crest} name={team.name} size="lg" />
       <span className="line-clamp-2 text-balance text-[13.5px] font-bold leading-tight">{team.name}</span>
     </div>
   );
