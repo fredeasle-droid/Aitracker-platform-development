@@ -86,6 +86,93 @@ function BetDetails({ b, best }: { b: Surebet; best: boolean }) {
   );
 }
 
+/** Phone card: match and profit up top, then one aligned row per bookmaker, then the action. */
+function MobileCard({
+  b,
+  pct,
+  best,
+  index,
+  starred,
+  onStar,
+}: {
+  b: Surebet;
+  pct: number;
+  best: boolean;
+  index: number;
+  starred: boolean;
+  onStar: () => void;
+}) {
+  return (
+    <article
+      style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
+      className={cn("sb-panel surebet-row row-enter relative overflow-hidden py-3.5 pl-5 pr-3.5", best && "row-best")}
+    >
+      <AccentBar tone={b.accent} />
+
+      <div className="relative flex items-center justify-between gap-2 text-[12px] font-medium">
+        <span className="flex min-w-0 items-center gap-1.5 text-muted-foreground">
+          <span className="truncate">{b.league}</span>
+          <span aria-hidden className="text-border-glow">•</span>
+          <span className="flex shrink-0 items-center gap-1 font-semibold text-cyan">
+            <span className="h-1.5 w-1.5 rounded-full bg-cyan" /> {b.time}
+          </span>
+        </span>
+        {best && (
+          <span className="best-pill inline-flex shrink-0 items-center gap-1 rounded-md px-1.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-gold">
+            <Crown className="h-3 w-3" /> Bedst nu
+          </span>
+        )}
+      </div>
+
+      <div className="relative mt-2.5 flex items-center gap-3">
+        <div className="relative h-[62px] w-[54px] shrink-0">
+          <Crest src={b.home.crest} name={b.home.name} size="md" className="absolute left-0 top-0 z-10 h-[40px] w-[40px]" />
+          <Crest src={b.away.crest} name={b.away.name} size="md" className="absolute bottom-0 right-0 h-[40px] w-[40px]" />
+        </div>
+        <div className="flex min-w-0 flex-1 flex-col">
+          <span className="truncate text-[16px] font-bold leading-tight">{b.home.name}</span>
+          <span className="text-[10px] font-semibold uppercase leading-4 tracking-[0.2em] text-muted-foreground">vs</span>
+          <span className="truncate text-[16px] font-bold leading-tight">{b.away.name}</span>
+        </div>
+        <ValueGauge display={formatPct(pct)} label="profit" progress={gaugeProgress(pct)} size={76} />
+      </div>
+
+      <div className="relative mt-3 flex">
+        <span className="market-pill inline-flex min-w-0 items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-cyan">
+          <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
+          <span className="truncate">{b.market}</span>
+        </span>
+      </div>
+
+      <div className="relative mt-2 flex flex-col gap-1.5">
+        {b.legs.map((leg, li) => (
+          <div key={li} className="leg-row grid min-h-12 grid-cols-[96px_minmax(0,1fr)_auto] items-center gap-2.5 rounded-lg py-1.5 pl-2.5 pr-1.5">
+            <span className="flex min-w-0 items-center overflow-hidden">
+              <BookmakerMark id={leg.bookmaker} />
+            </span>
+            <span className="min-w-0 truncate text-[14px] font-semibold">{leg.pick}</span>
+            <span className="odds-chip w-[62px] rounded-lg border border-border py-1.5 text-center text-[17px] font-extrabold leading-none tabular-nums">
+              {leg.odds.toFixed(2)}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div className="relative mt-3 flex items-center gap-2">
+        <DetailsButton className="h-11 flex-1 text-[14.5px]" />
+        <button
+          aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
+          aria-pressed={starred}
+          onClick={onStar}
+          className="chip-surface flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-border transition active:scale-95"
+        >
+          <Star className={cn("h-5 w-5 transition-colors", starred ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground")} />
+        </button>
+      </div>
+    </article>
+  );
+}
+
 function StarButton({ on, onClick }: { on: boolean; onClick: () => void }) {
   return (
     <button
@@ -202,22 +289,17 @@ export function SurebetTable() {
             <EmptyState />
           </div>
         )}
-        <div className="space-y-3">
-          {rows.map(({ b, pct }) => (
-            <div key={b.id} className={cn("sb-panel surebet-row row-enter @container relative overflow-hidden p-4", b.id === bestId && "row-best")}>
-              <AccentBar tone={b.accent} />
-              <div className="flex items-start justify-between gap-3">
-                <Match b={b} />
-                <ValueGauge display={formatPct(pct)} label="profit" progress={gaugeProgress(pct)} size={88} />
-              </div>
-              <div className="mt-4">
-                <BetDetails b={b} best={b.id === bestId} />
-              </div>
-              <div className="mt-3 flex items-center gap-2">
-                <DetailsButton className="flex-1 py-2.5 text-sm" />
-                <StarButton on={!!starred[b.id]} onClick={() => toggle(b.id)} />
-              </div>
-            </div>
+        <div className="flex flex-col gap-3">
+          {rows.map(({ b, pct }, i) => (
+            <MobileCard
+              key={b.id}
+              b={b}
+              pct={pct}
+              best={b.id === bestId}
+              index={i}
+              starred={!!starred[b.id]}
+              onStar={() => toggle(b.id)}
+            />
           ))}
         </div>
       </div>
