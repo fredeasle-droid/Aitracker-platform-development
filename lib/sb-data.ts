@@ -1,7 +1,7 @@
 import 'server-only'
 import { getOpportunities, type Opportunity } from '@/lib/data'
 import { displaySport } from '@/lib/scrapers/types'
-import type { BookmakerCategory, BookmakerInfo, Surebet } from '@/components/sb/data'
+import type { BookmakerCategory, BookmakerInfo, LegAlternative, Surebet } from '@/components/sb/data'
 
 export type SbSport = { label: string; count: number }
 
@@ -19,6 +19,52 @@ const EXCHANGES = new Set(['betfair', 'smarkets', 'matchbook', 'betdaq'])
 const CRYPTO = new Set(['1xbet', 'stake', 'cloudbet', 'bitcasino', 'sportsbet.io', 'thunderpick'])
 
 export const bookmakerKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '')
+
+/** Button text from the source site that older scans stored as a bookmaker name, e.g. "Open Calculator". */
+const NOT_A_BOOKMAKER = /calculator|betslip|bet tracker|\bopen\b|\bclick\b|\bshare\b|\bcopy\b/i
+
+const hasRealBookmakers = (o: Opportunity) =>
+  [o.a.bookmaker, o.b.bookmaker].every((name) => bookmakerKey(name).length > 1 && !NOT_A_BOOKMAKER.test(name))
+
+const MAX_ALTERNATIVES_PER_LEG = 2
+
+const marketKey = (o: Opportunity) =>
+  [o.homeTeam, o.awayTeam, o.league, o.kickoffLabel, o.market, o.player ?? '', [o.a.label, o.b.label].sort().join('/')]
+    .join('|')
+    .toLowerCase()
+
+type Group = { primary: Opportunity; alternatives: LegAlternative[] }
+
+/**
+ * Scans store the same market several times with different bookmaker pairs. Keep the pair with the best
+ * margin as the card, and list the other bookmakers offering each pick as alternatives.
+ */
+function groupOpportunities(list: Opportunity[]): Group[] {
+  const byMarket = new Map<string, Group>()
+
+  for (const o of [...list].sort((x, y) => y.margin - x.margin)) {
+    const key = marketKey(o)
+    const group = byMarket.get(key)
+    if (!group) {
+      byMarket.set(key, { primary: o, alternatives: [] })
+      continue
+    }
+
+    const primaryLegs = [group.primary.a, group.primary.b]
+    for (const leg of [o.a, o.b]) {
+      const index = primaryLegs.findIndex((p) => p.label === leg.label)
+      if (index === -1) continue
+      const bookmaker = bookmakerKey(leg.bookmaker)
+      const sameLeg = group.alternatives.filter((a) => a.leg === index)
+      const known = bookmaker === bookmakerKey(primaryLegs[index].bookmaker) || sameLeg.some((a) => a.bookmaker === bookmaker)
+      if (!known && sameLeg.length < MAX_ALTERNATIVES_PER_LEG) {
+        group.alternatives.push({ leg: index as 0 | 1, bookmaker, odds: leg.odds })
+      }
+    }
+  }
+
+  return [...byMarket.values()]
+}
 
 function categoryOf(key: string): BookmakerCategory {
   if (EXCHANGES.has(key)) return 'exchange'
@@ -47,8 +93,9 @@ function accentFor(margin: number): Surebet['accent'] {
   return 'violet'
 }
 
-function toSurebet(o: Opportunity, now: number): Surebet {
+function toSurebet({ primary: o, alternatives }: Group, now: number): Surebet {
   return {
+    alternatives,
     id: o.id,
     sport: displaySport(o.sport),
     home: { name: o.homeTeam, crest: o.homeLogo ?? null },
@@ -68,9 +115,10 @@ function toSurebet(o: Opportunity, now: number): Surebet {
 }
 
 export async function getSbData(): Promise<SbData> {
-  const all = await getOpportunities()
+  const all = (await getOpportunities()).filter(hasRealBookmakers)
   const now = Date.now()
   const fresh = [...all].sort((a, b) => b.createdTs - a.createdTs)
+  const groups = groupOpportunities(all).sort((a, b) => b.primary.createdTs - a.primary.createdTs)
 
   const names = new Map<string, string>()
   for (const o of all) {
@@ -91,7 +139,7 @@ export async function getSbData(): Promise<SbData> {
   const sports = [...sportCounts.entries()].map(([label, count]) => ({ label, count })).sort((a, b) => b.count - a.count)
 
   return {
-    surebets: fresh.map((o) => toSurebet(o, now)),
+    surebets: groups.map((g) => toSurebet(g, now)),
     bookmakers,
     sports,
     lastScanSec: fresh[0] ? Math.max(1, Math.floor((now - fresh[0].createdTs) / 1000)) : null,

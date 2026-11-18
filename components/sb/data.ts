@@ -17,6 +17,9 @@ export type Leg = { bookmaker: BookmakerId; pick: string; odds: number };
 /** `short` is used in compact lists such as the live ticker. */
 export type Team = { name: string; short?: string; crest: string | null };
 
+/** Another bookmaker that offers the same pick on one side of the surebet, at lower odds than the leg shown. */
+export type LegAlternative = { leg: 0 | 1; bookmaker: BookmakerId; odds: number };
+
 export type Surebet = {
   /** Database id of the opportunity. */
   id: number;
@@ -31,6 +34,7 @@ export type Surebet = {
   time: string;
   market: string;
   legs: [Leg, Leg];
+  alternatives: LegAlternative[];
   accent: "success" | "warning" | "primary" | "violet";
   favorite: boolean;
 };

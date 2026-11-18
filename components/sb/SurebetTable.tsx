@@ -102,6 +102,8 @@ function MobileCard({
   starred: boolean;
   onStar: () => void;
 }) {
+  const { bookmakers } = useSurebets();
+  const names = useMemo(() => new Map(bookmakers.map((bk) => [bk.id, bk.name])), [bookmakers]);
   return (
     <article
       style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
@@ -171,6 +173,20 @@ function MobileCard({
           </div>
         ))}
       </div>
+
+      {b.alternatives.length > 0 && (
+        <p className="relative mt-2 px-0.5 text-[11.5px] font-medium leading-relaxed text-muted-foreground">
+          Også:{" "}
+          {b.alternatives.map((alt, i) => (
+            <span key={`${alt.leg}-${alt.bookmaker}`} className="whitespace-nowrap">
+              {i > 0 && <span aria-hidden className="mx-1 text-border-glow">•</span>}
+              <span className="text-foreground/80">{names.get(alt.bookmaker) ?? alt.bookmaker}</span>{" "}
+              <span className="font-bold tabular-nums text-primary-glow">{alt.odds.toFixed(2)}</span>{" "}
+              <span>{b.legs[alt.leg].pick}</span>
+            </span>
+          ))}
+        </p>
+      )}
 
       <div className="relative mt-3 flex items-center gap-2">
         <DetailsButton className="h-11 flex-1 text-[14.5px]" />
