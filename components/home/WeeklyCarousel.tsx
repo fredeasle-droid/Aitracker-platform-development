@@ -38,27 +38,27 @@ export function FindCard({ f, best, width = CARD_WIDTH }: { f: HomeFind; best: b
 }
 
 /** "Ugens bedste fund" slideshow: one continuous slow glide to the left that loops without a break. */
-export function WeeklyCarousel() {
+export function WeeklyCarousel({ cardWidth = CARD_WIDTH, left = 28 }: { cardWidth?: number; left?: number }) {
   const { finds } = useHomeData();
   if (finds.length === 0) {
     return (
-      <p className="absolute left-[28px] top-[70px] text-[13px] text-muted-foreground">
+      <p className="absolute top-[70px] text-[13px] text-muted-foreground" style={{ left }}>
         Ingen surebets lige nu – scanneren leder videre.
       </p>
     );
   }
 
-  const setWidth = finds.length * (CARD_WIDTH + GAP);
+  const setWidth = finds.length * (cardWidth + GAP);
   const copies = Math.max(3, Math.ceil(2400 / setWidth) + 1);
   const cards = Array.from({ length: copies }, () => finds).flat();
 
   return (
     <div
-      className="marquee absolute left-[28px] top-[12px] flex w-max gap-[13px]"
-      style={{ "--marquee-shift": `-${setWidth}px`, "--marquee-duration": `${finds.length * SECONDS_PER_CARD}s` } as CSSProperties}
+      className="marquee absolute top-[12px] flex w-max gap-[13px]"
+      style={{ left, "--marquee-shift": `-${setWidth}px`, "--marquee-duration": `${finds.length * SECONDS_PER_CARD}s` } as CSSProperties}
     >
       {cards.map((f, k) => (
-        <FindCard key={k} f={f} best={k % finds.length === 0} />
+        <FindCard key={k} f={f} best={k % finds.length === 0} width={cardWidth} />
       ))}
     </div>
   );

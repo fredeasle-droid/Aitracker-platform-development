@@ -370,7 +370,8 @@
 @utility marquee {
   animation: marquee var(--marquee-duration, 46s) linear infinite;
   will-change: transform;
-  &:hover {
+  &:hover,
+  &:active {
     animation-play-state: paused;
   }
 }

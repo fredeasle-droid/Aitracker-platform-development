@@ -15,7 +15,7 @@ import { ScanSweep, formatAge, useLiveRows } from "../LiveScanner";
 import { LiveTicker } from "../LiveTicker";
 import { BENEFITS, BENEFITS_HEADING } from "../Benefits";
 import { MAX, MIN, calcEndingBank, calcProfit } from "../ProfitCalculator";
-import { FindCard } from "../WeeklyCarousel";
+import { WeeklyCarousel } from "../WeeklyCarousel";
 import { Chip, splitRows, useStatTiles, useUpdating } from "../BookmakerScanner";
 import { POPULAR_BOOKMAKERS, SCANNED_BOOKMAKERS_LABEL } from "../bookmakerLogos";
 import { TeamCrest, useHomeData } from "../home-data";
@@ -231,15 +231,15 @@ function Weekly() {
       <div className="flex items-center gap-3 px-5">
         <TrophyIcon className="h-7 w-7 text-gold" />
         <h3 className="text-[17px] font-semibold">Ugens bedste fund</h3>
+        <span className="ml-auto inline-flex h-6 items-center gap-1.5 rounded-full border border-success/50 bg-success/10 px-2.5 text-[10.5px] font-bold uppercase tracking-[0.12em] text-success">
+          <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-success" aria-hidden="true" />
+          Live
+        </span>
       </div>
-      <div className="mt-4 flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-px-5 px-5 pb-1 [scrollbar-width:none]">
-        {finds.map((f, k) => (
-          <div key={f.id} className="snap-start">
-            <FindCard f={f} best={k === 0} />
-          </div>
-        ))}
+      <div className="weekly-strip fade-x-soft relative mt-2 h-[190px] overflow-hidden">
+        <WeeklyCarousel cardWidth={280} left={20} />
       </div>
-      <p className="mt-3 px-5 text-[11px] text-muted-foreground">Swipe for at se flere →</p>
+      <p className="px-5 text-[11px] text-muted-foreground">Hold fingeren på et kort for at sætte farten på pause.</p>
     </Box>
   );
 }
