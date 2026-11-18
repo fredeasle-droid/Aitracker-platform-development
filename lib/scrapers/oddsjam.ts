@@ -79,6 +79,12 @@ function selectionFromText(text: string, fallback: string) {
   return value.trim().replace(/^\s*[12X]\s+/, '')
 }
 
+function playerFromLegText(text: string) {
+  const selectionIndex = text.search(/\b(?:over|under|yes|no)\b/i)
+  if (selectionIndex <= 0) return ''
+  return text.slice(0, selectionIndex).replace(/^\s*[12X]\s+/, '').trim().replace(/[·,:-]+$/, '').trim()
+}
+
 export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet | null {
   if (typeof raw.text !== 'string' || raw.text.length > 1800) return null
   const lines = raw.text.split(/\r?\n/).map((line) => line.trim()).filter(Boolean)
@@ -113,6 +119,10 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
     return { label: normalizeLegLabel(selection, market, 2), bookmaker, odds }
   }).filter((leg) => leg.odds > 1 && Number.isFinite(leg.odds) && leg.label && leg.bookmaker)
   if (legs.length !== 2 || legs[0].bookmaker.toLowerCase() === legs[1].bookmaker.toLowerCase()) return null
+  const playerCandidates = rawLegs.slice(0, 2).map((leg) => playerFromLegText(typeof leg.text === 'string' ? leg.text : ''))
+  const player = playerCandidates[0] && playerCandidates[0].toLowerCase() === playerCandidates[1]?.toLowerCase()
+    ? playerCandidates[0]
+    : undefined
 
   return {
     source: 'oddsjam',
@@ -121,6 +131,7 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
     league: rawLeague || 'Ukendt liga',
     sport: displaySport(rawSport ?? ''),
     market,
+    player,
     kickoff,
     profit: Number(percent[1]),
     legs,
@@ -156,7 +167,7 @@ export async function saveOddsJamBrowserRows(rows: unknown[]) {
   const parsed = candidates.map(parseOddsJamBrowserRow).filter((row): row is ScrapedSurebet => row !== null)
   const unique = [...new Map(parsed.map((row) => {
     const legs = row.legs.map((leg) => `${leg.label}|${leg.bookmaker}|${leg.odds}`).sort().join('|')
-    return [`${row.homeTeam}|${row.awayTeam}|${row.market}|${row.kickoff.toISOString()}|${legs}`.toLowerCase(), row]
+    return [`${row.homeTeam}|${row.awayTeam}|${row.market}|${row.player ?? ''}|${row.kickoff.toISOString()}|${legs}`.toLowerCase(), row]
   })).values()]
   const rejected = candidates.length - parsed.length
   const collapsedDuplicates = parsed.length - unique.length

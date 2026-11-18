@@ -57,7 +57,7 @@ function toSurebet(o: Opportunity, now: number): Surebet {
     leagueShort: leagueShort(o.league),
     foundAgo: foundAgo(o.createdTs, now),
     time: o.kickoffLabel,
-    market: o.market,
+    market: o.player ? `${o.player} · ${o.market}` : o.market,
     legs: [
       { bookmaker: bookmakerKey(o.a.bookmaker), pick: o.a.label, odds: o.a.odds },
       { bookmaker: bookmakerKey(o.b.bookmaker), pick: o.b.label, odds: o.b.odds },

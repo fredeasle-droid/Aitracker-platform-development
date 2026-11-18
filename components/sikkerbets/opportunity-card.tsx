@@ -211,7 +211,7 @@ function MobileCard({
             {loggedIn ? (
               <>
                 <SmallBarsIcon className="size-2.5 shrink-0 text-[#8fa3cc]" />
-                <span className="truncate">{o.market}</span>
+                <span className="truncate">{o.player ? `${o.player} · ` : ''}{o.market}</span>
               </>
             ) : (
               <>

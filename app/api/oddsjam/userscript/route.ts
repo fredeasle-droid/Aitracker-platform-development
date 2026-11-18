@@ -153,6 +153,12 @@ export function GET(request: Request) {
   };
   const scan = () => {
     if (!location.pathname.includes('/betting-tools/arbitrage')) return;
+    if (popup && popup.closed) {
+      popup = null;
+      connected = false;
+      lastConnectAttemptAt = 0;
+      button.textContent = 'Forbind BetTracker igen';
+    }
     const rows = collectRows();
     scannedCount = rows.length;
     statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';

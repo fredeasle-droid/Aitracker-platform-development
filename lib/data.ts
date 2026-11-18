@@ -24,6 +24,7 @@ export type Opportunity = {
   homeLogo?: string | null
   awayLogo?: string | null
   market: string
+  player?: string | null
   kickoffLabel: string
   kickoffTs: number
   createdTs: number
@@ -64,6 +65,7 @@ function toOpportunity(row: typeof opportunities.$inferSelect, favIds: Set<numbe
     homeLogo: logos.get(logoKey(row.sport, row.homeTeam)) ?? null,
     awayLogo: logos.get(logoKey(row.sport, row.awayTeam)) ?? null,
     market: row.market,
+    player: row.player,
     kickoffLabel: formatKickoff(row.kickoff, now),
     kickoffTs: row.kickoff.getTime(),
     createdTs: row.createdAt.getTime(),
