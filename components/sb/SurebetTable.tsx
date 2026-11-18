@@ -92,7 +92,7 @@ function ProfitRing({ pct }: { pct: number }) {
   const progress = Math.min(1, Math.max(0.05, gaugeProgress(pct)));
   const label = `+${formatPct(pct)}`;
   return (
-    <div className="relative h-[88px] w-[88px] shrink-0">
+    <div className="relative h-[78px] w-[78px] shrink-0">
       <svg viewBox="0 0 100 100" className="absolute inset-0 -rotate-90" aria-hidden>
         <circle cx="50" cy="50" r={r} fill="none" strokeWidth="6" className="stroke-success/15" />
         <circle
@@ -107,11 +107,11 @@ function ProfitRing({ pct }: { pct: number }) {
           className="stroke-success drop-shadow-[0_0_6px_var(--success)]"
         />
       </svg>
-      <div className="absolute inset-[7px] flex flex-col items-center justify-center rounded-full bg-success/10">
-        <span className={cn("font-extrabold leading-none tracking-tight text-success tabular-nums", label.length > 6 ? "text-[15px]" : "text-[19px]")}>
+      <div className="absolute inset-[6px] flex flex-col items-center justify-center rounded-full bg-success/10">
+        <span className={cn("font-extrabold leading-none tracking-tight text-success tabular-nums", label.length > 6 ? "text-[14px]" : "text-[17px]")}>
           {label}
         </span>
-        <span className="mt-0.5 text-[10.5px] font-semibold leading-none text-foreground/80 tabular-nums">+{Math.round(pct * 10)} kr</span>
+        <span className="mt-0.5 text-[10px] font-semibold leading-none text-foreground/80 tabular-nums">+{Math.round(pct * 10)} kr</span>
       </div>
     </div>
   );
@@ -119,9 +119,9 @@ function ProfitRing({ pct }: { pct: number }) {
 
 function TeamSide({ team }: { team: Surebet["home"] }) {
   return (
-    <div className="flex min-w-0 flex-col items-center gap-1 text-center">
+    <div className="flex min-w-0 flex-col items-center gap-0.5 text-center">
       <Crest src={team.crest} name={team.name} size="card" />
-      <span className="line-clamp-2 text-balance text-[13px] font-bold leading-[1.15]">{team.name}</span>
+      <span className="line-clamp-2 text-balance text-[12.5px] font-bold leading-[1.15]">{team.name}</span>
     </div>
   );
 }
@@ -149,7 +149,7 @@ function MobileCard({
   return (
     <article
       style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
-      className={cn("sb-panel surebet-row row-enter relative overflow-hidden py-2.5 pl-5 pr-3.5", best && "row-best")}
+      className={cn("sb-panel surebet-row row-enter relative overflow-hidden py-2 pl-5 pr-3.5", best && "row-best")}
     >
       <AccentBar tone={b.accent} />
 
@@ -178,31 +178,32 @@ function MobileCard({
         </span>
       </div>
 
-      <div className="relative mt-1 grid grid-cols-[minmax(0,1fr)_88px_minmax(0,1fr)] items-center gap-1">
+      <div className="relative grid grid-cols-[minmax(0,1fr)_78px_minmax(0,1fr)] items-center gap-1">
         <TeamSide team={b.home} />
         <ProfitRing pct={pct} />
         <TeamSide team={b.away} />
       </div>
 
-      <div className="relative mt-1.5 flex justify-center">
-        <span className="market-pill inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-md px-2.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-cyan">
+      <div className="relative mt-1 flex justify-center">
+        <span className="market-pill inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-md px-2.5 py-px text-[10.5px] font-bold uppercase tracking-wider text-cyan">
           <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
           <span className="truncate">{b.market}</span>
         </span>
       </div>
 
-      <div className="leg-row relative mt-2 grid grid-cols-2 overflow-hidden rounded-xl">
+      <div className="leg-row relative mt-1.5 grid grid-cols-2 overflow-hidden rounded-xl">
         {b.legs.map((leg, li) => (
-          <div key={li} className={cn("flex min-w-0 flex-col gap-1 px-3 py-2", li === 1 && "border-l border-border")}>
-            <span className="flex h-8 min-w-0 items-center overflow-hidden">
-              <BookmakerMark id={leg.bookmaker} size="lg" />
-            </span>
-            <div className="flex min-w-0 items-end justify-between gap-2">
-              <div className="min-w-0 leading-tight">
-                <div className="truncate text-[12.5px] font-semibold">{leg.pick}</div>
-                <div className="mt-0.5 text-[10.5px] font-medium text-muted-foreground tabular-nums">Spil {stakes[li]} kr</div>
-              </div>
-              <span className="text-[20px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
+          <div key={li} className={cn("flex min-w-0 flex-col gap-0.5 px-3 py-1.5", li === 1 && "border-l border-border")}>
+            <div className="flex min-w-0 items-center justify-between gap-2">
+              <span className="flex h-7 min-w-0 items-center overflow-hidden">
+                <BookmakerMark id={leg.bookmaker} size="lg" />
+              </span>
+              <span className="shrink-0 text-[19px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
+            </div>
+            <div className="flex min-w-0 items-center gap-1.5 text-[11px] font-medium leading-tight text-muted-foreground">
+              <span className="truncate font-semibold text-foreground/90">{leg.pick}</span>
+              <span aria-hidden className="text-border-glow">•</span>
+              <span className="shrink-0 tabular-nums">{stakes[li]} kr</span>
             </div>
           </div>
         ))}
