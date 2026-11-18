@@ -55,7 +55,7 @@ function useLatestFind() {
 
 function Hero() {
   return (
-    <div className="relative pt-[190px]">
+    <div className="relative pt-[176px]">
       <img
         src={hero}
         alt="Jublende fodboldspiller på stadion"

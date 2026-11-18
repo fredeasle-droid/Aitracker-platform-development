@@ -3,6 +3,7 @@
 import { useChat } from '@ai-sdk/react'
 import { DefaultChatTransport } from 'ai'
 import { ArrowUp, MessageCircle, RotateCcw, Square, X } from 'lucide-react'
+import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { useLocale } from '@/components/locale-provider'
 
@@ -12,6 +13,7 @@ const transport = new DefaultChatTransport({ api: '/api/support' })
 
 export function SupportChat() {
   const { t } = useLocale()
+  const pathname = usePathname()
   const [open, setOpen] = useState(false)
   const [input, setInput] = useState('')
   const { messages, sendMessage, status, stop, error, setMessages, clearError } = useChat({ transport })
@@ -55,7 +57,7 @@ export function SupportChat() {
         aria-expanded={open}
         aria-controls="support-chat-panel"
         aria-label={open ? t('supportClose') : t('supportOpen')}
-        className="fixed right-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-50 flex size-12 items-center justify-center gap-2 rounded-full bg-[#138cff] text-[15px] font-bold text-white shadow-[0_12px_30px_-10px_#138cff] transition-transform hover:scale-[1.03] lg:right-6 lg:bottom-6 lg:h-14 lg:w-auto lg:pr-5 lg:pl-4"
+        className={`${pathname === '/' && !open ? 'max-md:hidden ' : ''}fixed right-3 bottom-[calc(5.5rem+env(safe-area-inset-bottom))] z-50 flex size-12 items-center justify-center gap-2 rounded-full bg-[#138cff] text-[15px] font-bold text-white shadow-[0_12px_30px_-10px_#138cff] transition-transform hover:scale-[1.03] lg:right-6 lg:bottom-6 lg:h-14 lg:w-auto lg:pr-5 lg:pl-4`}
       >
         {open ? <X className="size-5" aria-hidden="true" /> : <MessageCircle className="size-5" aria-hidden="true" />}
         <span className="hidden lg:inline">{open ? t('close') : t('supportLabel')}</span>

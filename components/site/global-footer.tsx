@@ -65,7 +65,66 @@ function FooterWaves() {
 export function GlobalFooter() {
   return (
     <>
-      <footer className="bt-theme relative mt-16 overflow-hidden bg-background-deep">
+      <footer className="bt-theme mt-10 border-t border-border/50 bg-background-deep px-4 pb-8 pt-8 md:hidden">
+        <Link href="/" aria-label="BetTrackerAI forside" className="block w-fit text-foreground">
+          <Logo />
+        </Link>
+        <p className="mt-1 pl-[38px] text-[14px] text-foreground/90">Scan. Find. Vind.</p>
+
+        <div className="mt-6 grid grid-cols-2 gap-x-6">
+          <nav aria-label="Links">
+            <p className="mb-2 text-[14px] font-semibold text-foreground">Links</p>
+            {LINKS.map((l) => (
+              <Link key={l.label} href={l.href} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+          <nav aria-label="Support">
+            <p className="mb-2 text-[14px] font-semibold text-foreground">Support</p>
+            {SUPPORT.map((l) => (
+              <Link key={l.label} href={l.href} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
+                {l.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+
+        <p className="mt-7 text-[14px] font-semibold text-foreground">Følg os</p>
+        <ul className="mt-3 flex items-center gap-5 text-social">
+          {SOCIAL.map(({ href, label, Icon }) => (
+            <li key={label}>
+              <Link href={href} aria-label={label} className="block transition-colors hover:text-primary-glow">
+                <Icon className="size-[22px]" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <p className="mt-8 text-[16px] font-semibold text-foreground">Hold dig opdateret</p>
+        <p className="mb-3 mt-1 text-[13px] text-foreground/85">Få de nyeste surebets direkte i din indbakke.</p>
+        <NewsletterForm compact />
+
+        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-2 text-foreground/90">
+          <span className="text-[16px] font-black italic tracking-[-0.5px]">VISA</span>
+          <span className="flex" aria-label="Mastercard">
+            <span className="size-[18px] rounded-full bg-destructive" />
+            <span className="-ml-[6px] size-[18px] rounded-full bg-mc-orange/90" />
+          </span>
+          <span className="flex items-center gap-1.5 text-[13px]">
+            <MobilePayIcon className="size-[18px]" /> MobilePay
+          </span>
+          <span className="flex items-center gap-1.5 text-[13px] font-semibold">
+            <Landmark className="size-[16px] text-gold" aria-hidden="true" /> Bankoverførsel
+          </span>
+        </div>
+
+        <MobileResponsibleNotice />
+
+        <p className="mt-5 text-[12px] text-foreground/60">© {copyrightYear()} BetTrackerAI. Alle rettigheder forbeholdes.</p>
+      </footer>
+
+      <footer className="bt-theme relative mt-16 hidden overflow-hidden bg-background-deep md:block">
         <FooterWaves />
 
         <div className="relative mx-auto max-w-[1600px] px-5 pb-10 pt-24 lg:px-10 lg:pt-32">
@@ -131,13 +190,8 @@ export function GlobalFooter() {
           </div>
         </div>
       </footer>
-      <div className="bt-theme">
-        <div className="hidden md:block">
-          <ResponsibleNotice />
-        </div>
-        <div className="md:hidden">
-          <MobileResponsibleNotice />
-        </div>
+      <div className="bt-theme hidden md:block">
+        <ResponsibleNotice />
       </div>
     </>
   );

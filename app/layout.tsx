@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import { Suspense } from 'react'
 import { LocaleProvider } from '@/components/locale-provider'
 import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
@@ -12,7 +12,13 @@ import { SupportChat } from '@/components/support/support-chat'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '900'],
+  style: ['normal', 'italic'],
+  variable: '--font-roboto',
+  display: 'swap',
+})
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getServerT()
@@ -45,7 +51,7 @@ export default async function RootLayout({
 }>) {
   const locale = await getServerLocale()
   return (
-    <html lang={locale} className={`${inter.variable} bg-background`}>
+    <html lang={locale} className={`${roboto.variable} bg-background`}>
       <body className="min-h-dvh overflow-x-hidden antialiased">
         <LocaleProvider initialLocale={locale}>
         <ChromeGate>
