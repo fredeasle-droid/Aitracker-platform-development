@@ -124,48 +124,50 @@ function MobileCard({
         )}
       </div>
 
-      <div className="relative mt-3 flex items-center justify-between gap-3 rounded-xl bg-success/10 px-3.5 py-3 ring-1 ring-success/30">
-        <div className="flex min-w-0 flex-col">
-          <span className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-success/80">Garanteret profit</span>
-          <span className="text-[36px] font-extrabold leading-none tracking-tight text-success tabular-nums drop-shadow-[0_0_14px_var(--success)]">
-            +{formatPct(pct)}
+      <div className="relative mt-3 grid grid-cols-[minmax(0,1fr)_112px] gap-3">
+        <div className="flex min-w-0 flex-col justify-center gap-2">
+          {[b.home, b.away].map((t) => (
+            <div key={t.name} className="flex min-w-0 items-center gap-2.5">
+              <Crest src={t.crest} name={t.name} size="sm" className="shrink-0" />
+              <span className="line-clamp-2 text-[15.5px] font-bold leading-tight">{t.name}</span>
+            </div>
+          ))}
+          <span className="market-pill mt-0.5 inline-flex min-w-0 max-w-full items-center gap-1.5 self-start rounded-md px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-cyan">
+            <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
+            <span className="truncate">{b.market}</span>
           </span>
         </div>
-        <div className="flex shrink-0 flex-col items-end text-right">
-          <span className="text-[20px] font-extrabold leading-tight tabular-nums text-foreground">
+
+        <div className="relative flex flex-col justify-between overflow-hidden rounded-xl bg-success/10 px-3 pb-2.5 pt-2.5 ring-1 ring-success/35 shadow-[0_0_24px_-10px_var(--success)]">
+          <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-success/85">Profit</span>
+          <span
+            className={cn(
+              "font-extrabold leading-none tracking-tight text-success tabular-nums drop-shadow-[0_0_12px_var(--success)]",
+              formatPct(pct).length > 5 ? "text-[25px]" : "text-[29px]",
+            )}
+          >
+            {formatPct(pct)}
+          </span>
+          <span className="mt-1.5 text-[11px] font-semibold leading-tight text-foreground/85 tabular-nums">
             +{Math.round(pct * 10)} kr
+            <span className="block font-medium text-muted-foreground">pr. 1.000 kr</span>
           </span>
-          <span className="text-[11.5px] font-medium text-muted-foreground">pr. 1.000 kr indsat</span>
+          <span aria-hidden className="absolute inset-x-0 bottom-0 h-[3px] bg-success/15">
+            <span className="block h-full bg-success" style={{ width: `${Math.min(100, gaugeProgress(pct) * 100)}%` }} />
+          </span>
         </div>
-        <span aria-hidden className="absolute inset-x-3.5 bottom-0 h-[3px] overflow-hidden rounded-full bg-success/15">
-          <span className="block h-full rounded-full bg-success" style={{ width: `${Math.min(100, gaugeProgress(pct) * 100)}%` }} />
-        </span>
       </div>
 
-      <div className="relative mt-3 flex flex-col gap-1.5">
-        {[b.home, b.away].map((t) => (
-          <div key={t.name} className="flex min-w-0 items-center gap-2.5">
-            <Crest src={t.crest} name={t.name} size="sm" className="shrink-0" />
-            <span className="truncate text-[16px] font-bold leading-tight">{t.name}</span>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative mt-3 flex">
-        <span className="market-pill inline-flex min-w-0 items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-bold uppercase tracking-wider text-cyan">
-          <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
-          <span className="truncate">{b.market}</span>
-        </span>
-      </div>
-
-      <div className="relative mt-2 grid grid-cols-2 gap-2">
+      <div className="relative mt-3 grid grid-cols-2 gap-2">
         {b.legs.map((leg, li) => (
-          <div key={li} className="leg-row flex min-w-0 flex-col gap-1.5 rounded-xl p-2.5">
+          <div key={li} className="leg-row flex min-w-0 flex-col gap-1.5 rounded-xl px-2.5 py-2">
             <span className="flex h-7 min-w-0 items-center overflow-hidden">
               <BookmakerMark id={leg.bookmaker} />
             </span>
-            <span className="truncate text-[13px] font-semibold text-muted-foreground">{leg.pick}</span>
-            <span className="text-[26px] font-extrabold leading-none tabular-nums">{leg.odds.toFixed(2)}</span>
+            <div className="flex min-w-0 items-end justify-between gap-2">
+              <span className="truncate text-[12.5px] font-semibold text-muted-foreground">{leg.pick}</span>
+              <span className="text-[19px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
+            </div>
           </div>
         ))}
       </div>
