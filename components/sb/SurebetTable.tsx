@@ -124,17 +124,31 @@ function MobileCard({
         )}
       </div>
 
-      <div className="relative mt-2.5 flex items-center gap-3">
-        <div className="relative h-[62px] w-[54px] shrink-0">
-          <Crest src={b.home.crest} name={b.home.name} size="md" className="absolute left-0 top-0 z-10 h-[40px] w-[40px]" />
-          <Crest src={b.away.crest} name={b.away.name} size="md" className="absolute bottom-0 right-0 h-[40px] w-[40px]" />
+      <div className="relative mt-3 flex items-center justify-between gap-3 rounded-xl bg-success/10 px-3.5 py-3 ring-1 ring-success/30">
+        <div className="flex min-w-0 flex-col">
+          <span className="text-[10.5px] font-bold uppercase tracking-[0.16em] text-success/80">Garanteret profit</span>
+          <span className="text-[36px] font-extrabold leading-none tracking-tight text-success tabular-nums drop-shadow-[0_0_14px_var(--success)]">
+            +{formatPct(pct)}
+          </span>
         </div>
-        <div className="flex min-w-0 flex-1 flex-col">
-          <span className="truncate text-[16px] font-bold leading-tight">{b.home.name}</span>
-          <span className="text-[10px] font-semibold uppercase leading-4 tracking-[0.2em] text-muted-foreground">vs</span>
-          <span className="truncate text-[16px] font-bold leading-tight">{b.away.name}</span>
+        <div className="flex shrink-0 flex-col items-end text-right">
+          <span className="text-[20px] font-extrabold leading-tight tabular-nums text-foreground">
+            +{Math.round(pct * 10)} kr
+          </span>
+          <span className="text-[11.5px] font-medium text-muted-foreground">pr. 1.000 kr indsat</span>
         </div>
-        <ValueGauge display={formatPct(pct)} label="profit" progress={gaugeProgress(pct)} size={76} />
+        <span aria-hidden className="absolute inset-x-3.5 bottom-0 h-[3px] overflow-hidden rounded-full bg-success/15">
+          <span className="block h-full rounded-full bg-success" style={{ width: `${Math.min(100, gaugeProgress(pct) * 100)}%` }} />
+        </span>
+      </div>
+
+      <div className="relative mt-3 flex flex-col gap-1.5">
+        {[b.home, b.away].map((t) => (
+          <div key={t.name} className="flex min-w-0 items-center gap-2.5">
+            <Crest src={t.crest} name={t.name} size="sm" className="shrink-0" />
+            <span className="truncate text-[16px] font-bold leading-tight">{t.name}</span>
+          </div>
+        ))}
       </div>
 
       <div className="relative mt-3 flex">
@@ -144,16 +158,14 @@ function MobileCard({
         </span>
       </div>
 
-      <div className="relative mt-2 flex flex-col gap-1.5">
+      <div className="relative mt-2 grid grid-cols-2 gap-2">
         {b.legs.map((leg, li) => (
-          <div key={li} className="leg-row grid min-h-12 grid-cols-[96px_minmax(0,1fr)_auto] items-center gap-2.5 rounded-lg py-1.5 pl-2.5 pr-1.5">
-            <span className="flex min-w-0 items-center overflow-hidden">
+          <div key={li} className="leg-row flex min-w-0 flex-col gap-1.5 rounded-xl p-2.5">
+            <span className="flex h-7 min-w-0 items-center overflow-hidden">
               <BookmakerMark id={leg.bookmaker} />
             </span>
-            <span className="min-w-0 truncate text-[14px] font-semibold">{leg.pick}</span>
-            <span className="odds-chip w-[62px] rounded-lg border border-border py-1.5 text-center text-[17px] font-extrabold leading-none tabular-nums">
-              {leg.odds.toFixed(2)}
-            </span>
+            <span className="truncate text-[13px] font-semibold text-muted-foreground">{leg.pick}</span>
+            <span className="text-[26px] font-extrabold leading-none tabular-nums">{leg.odds.toFixed(2)}</span>
           </div>
         ))}
       </div>
