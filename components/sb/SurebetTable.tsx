@@ -193,9 +193,9 @@ function MobileCard({
 
       <div className="leg-row relative mt-3 grid grid-cols-2 overflow-hidden rounded-xl">
         {b.legs.map((leg, li) => (
-          <div key={li} className={cn("flex min-w-0 flex-col gap-1.5 px-3 py-2.5", li === 1 && "border-l border-border")}>
-            <span className="flex h-7 min-w-0 items-center overflow-hidden">
-              <BookmakerMark id={leg.bookmaker} />
+          <div key={li} className={cn("flex min-w-0 flex-col gap-2 px-3 py-3", li === 1 && "border-l border-border")}>
+            <span className="flex h-9 min-w-0 items-center overflow-hidden">
+              <BookmakerMark id={leg.bookmaker} size="lg" />
             </span>
             <div className="flex min-w-0 items-end justify-between gap-2">
               <div className="min-w-0 leading-tight">
