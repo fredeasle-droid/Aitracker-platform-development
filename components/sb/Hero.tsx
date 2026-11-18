@@ -47,14 +47,14 @@ export function Hero() {
   return (
     <section className="relative">
       <NewFindToast />
-      <div className="relative flex flex-col justify-center px-1 pb-2 pt-3 sm:min-h-[290px] sm:px-6 sm:py-6 short:lg:min-h-[262px] short:lg:py-4">
-        <span className="glass-pill hero-rise mb-3.5 inline-flex sm:mb-5 w-fit items-center gap-2.5 whitespace-nowrap rounded-full py-1.5 pl-3 pr-3.5 text-[12.5px] font-semibold">
+      <div className="relative flex min-h-[290px] flex-col justify-center px-2 py-6 sm:px-6 short:lg:min-h-[262px] short:lg:py-4">
+        <span className="glass-pill hero-rise mb-5 inline-flex w-fit items-center gap-2.5 whitespace-nowrap rounded-full py-1.5 pl-3 pr-3.5 text-[12.5px] font-semibold">
           <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />
           <span className="text-success">Live surebet-scanner aktiv</span>
           <span className="hidden h-3.5 w-px bg-border sm:block" />
           <span className="hidden tabular-nums text-muted-foreground sm:inline">{sec === null ? "Ingen fund endnu" : `Seneste fund: ${formatAgo(sec)} siden`}</span>
         </span>
-        <h1 className="hero-rise max-w-[560px] text-[32px] font-extrabold leading-[1.04] tracking-[-0.025em] text-balance drop-shadow-[0_2px_12px_var(--surface-deep)] sm:text-[52px]">
+        <h1 className="hero-rise max-w-[560px] text-[36px] font-extrabold leading-[1.02] tracking-[-0.025em] drop-shadow-[0_2px_12px_var(--surface-deep)] sm:text-[52px]">
           Find de bedste surebets –{" "}
           <span className="relative inline-block whitespace-nowrap">
             <span className="text-gradient-live">i realtid</span>
@@ -69,31 +69,19 @@ export function Hero() {
             </svg>
           </span>
         </h1>
-        <p className="hero-rise hero-rise-2 text-shadow-hero mt-4 max-w-[470px] text-[15.5px] font-medium leading-relaxed sm:mt-5 sm:leading-snug text-foreground/90 sm:text-[18px]">
+        <p className="hero-rise hero-rise-2 text-shadow-hero mt-5 max-w-[470px] text-[16.5px] font-medium leading-snug text-foreground/90 sm:text-[18px]">
           Lad vores AI finde de mest profitable muligheder på tværs af bookmakere – automatisk.
         </p>
-        <div className="hero-rise hero-rise-3 mt-5 flex items-center gap-2 sm:mt-6 sm:flex-wrap sm:gap-3 short:lg:mt-5">
-          <button className="btn-hero btn-shine group relative inline-flex h-12 flex-1 items-center justify-center gap-2 overflow-hidden whitespace-nowrap rounded-full px-5 text-[15px] font-bold text-primary-foreground transition hover:brightness-110 active:scale-[0.98] sm:h-auto sm:flex-none sm:gap-2.5 sm:px-7 sm:py-3 sm:text-[16px]">
+        <div className="hero-rise hero-rise-3 mt-6 flex flex-wrap items-center gap-3 short:lg:mt-5">
+          <button className="btn-hero btn-shine group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-7 py-3 text-[16px] font-bold text-primary-foreground transition hover:brightness-110 active:scale-[0.98]">
             Start scanning <ArrowRight className="h-[18px] w-[18px] transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
           </button>
-          <button className="sb-btn-ghost-glass group inline-flex h-12 shrink-0 items-center gap-2 whitespace-nowrap rounded-full pl-2 pr-4 text-[14.5px] font-semibold transition hover:brightness-125 active:scale-[0.98] sm:h-auto sm:gap-3 sm:py-2 sm:pr-5 sm:text-[15px]">
+          <button className="sb-btn-ghost-glass group inline-flex items-center gap-3 rounded-full py-2 pl-2 pr-5 text-[15px] font-semibold transition hover:brightness-125 active:scale-[0.98]">
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-surface-elevated ring-1 ring-border-glow/60 transition group-hover:ring-primary-glow">
               <Play className="h-3.5 w-3.5 fill-foreground text-foreground" />
             </span>
-            <span className="sm:hidden">Sådan virker det</span>
-            <span className="hidden sm:inline">Se hvordan det virker</span>
+            Se hvordan det virker
           </button>
-        </div>
-        <div className="stats-glass mt-5 grid grid-cols-3 divide-x divide-border rounded-2xl md:hidden">
-          {stats.map(({ icon: Icon, title, sub }) => (
-            <div key={sub} className="flex items-center justify-center gap-2 px-2 py-2.5">
-              <Icon className="icon-glow h-[18px] w-[18px] shrink-0 fill-primary-glow/40 text-primary-glow" strokeWidth={2} />
-              <div className="min-w-0 leading-tight">
-                <div className="text-[15px] font-extrabold tabular-nums">{title}</div>
-                <div className="truncate text-[11px] text-muted-foreground">{sub}</div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
       <div className="stats-glass absolute bottom-3.5 right-3.5 hidden grid-cols-3 divide-x divide-border rounded-2xl md:grid">
