@@ -56,13 +56,13 @@ export function GoToBookmaker({
         target="_blank"
         rel="noopener noreferrer sponsored"
         onClick={onHandOff}
-        className="flex min-h-12 items-center justify-center gap-2 rounded-xl bg-primary px-2 text-[14px] font-semibold text-primary-foreground transition-colors hover:bg-[#2a85ff]"
+        className="bg-gradient-primary btn-shine relative flex min-h-12 items-center justify-center gap-2 overflow-hidden rounded-xl px-3 text-[15px] font-bold text-primary-foreground shadow-glow transition hover:brightness-110"
       >
         {link.exact ? t('gotoMatch') : t('gotoBookmaker')}
         <ExternalLink className="size-4 shrink-0" aria-hidden="true" />
         <span className="sr-only">{t('opensInNewTab', { name: bookmaker })}</span>
       </a>
-      <p aria-live="polite" className="min-h-[2.5em] text-pretty text-center text-[12px] leading-snug text-[#a9b6d3]">
+      <p aria-live="polite" className="min-h-[2.5em] text-pretty text-center text-[12.5px] leading-snug text-muted-foreground">
         {handedOff ? (
           <>
             <span className="font-semibold text-success">{t('copiedAmount', { amount: formatInt(amount) })}</span>{' '}
