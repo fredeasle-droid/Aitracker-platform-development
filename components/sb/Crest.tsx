@@ -14,9 +14,15 @@ export function Crest({ src, name, size = "md", className }: { src: string | nul
   return (
     <span
       className={cn(
-        "crest-disc relative inline-flex shrink-0 items-center justify-center rounded-full",
+        "relative inline-flex shrink-0 items-center justify-center rounded-full",
         className,
-        size === "lg" ? "h-[64px] w-[64px] p-[7px]" : size === "card" ? "h-[44px] w-[44px] p-[5px]" : size === "md" ? "h-[38px] w-[38px] p-[4px]" : "h-7 w-7 p-[3px]",
+        size === "lg"
+          ? "crest-disc h-[64px] w-[64px] p-[7px]"
+          : size === "card"
+            ? "h-[56px] w-[56px]"
+            : size === "md"
+              ? "crest-disc h-[38px] w-[38px] p-[4px]"
+              : "h-8 w-8 sm:crest-disc sm:h-7 sm:w-7 sm:p-[3px]",
       )}
     >
       {failed || !src ? (

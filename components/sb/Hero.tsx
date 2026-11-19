@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { ArrowRight, Zap, Trophy, Layers, Play } from "lucide-react";
 import { formatAgo, formatPct, surebetProfitPct, teamShort } from "./data";
 import { useSurebets } from "./surebets-context";
@@ -73,7 +74,13 @@ export function Hero() {
           Lad vores AI finde de mest profitable muligheder på tværs af bookmakere – automatisk.
         </p>
         <div className="hero-rise hero-rise-3 mt-6 flex flex-wrap items-center gap-3 short:lg:mt-5">
-          <button className="btn-hero btn-shine group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-7 py-3 text-[16px] font-bold text-primary-foreground transition hover:brightness-110 active:scale-[0.98]">
+          <Link
+            href="/konto"
+            className="btn-hero btn-shine group relative inline-flex items-center gap-2.5 overflow-hidden rounded-full px-7 py-3 text-[16px] font-bold text-primary-foreground transition hover:brightness-110 active:scale-[0.98] sm:hidden"
+          >
+            Opret gratis konto <ArrowRight className="h-[18px] w-[18px] transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
+          </Link>
+          <button className="btn-hero btn-shine group relative hidden items-center gap-2.5 overflow-hidden rounded-full px-7 py-3 text-[16px] font-bold text-primary-foreground transition hover:brightness-110 active:scale-[0.98] sm:inline-flex">
             Start scanning <ArrowRight className="h-[18px] w-[18px] transition-transform group-hover:translate-x-1" strokeWidth={2.5} />
           </button>
           <button className="sb-btn-ghost-glass group inline-flex items-center gap-3 rounded-full py-2 pl-2 pr-5 text-[15px] font-semibold transition hover:brightness-125 active:scale-[0.98]">
