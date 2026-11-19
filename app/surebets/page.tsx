@@ -37,9 +37,10 @@ export default async function SurebetsPage() {
               width={1920}
               height={640}
               fetchPriority="high"
-              className="hero-fade h-full w-full object-cover object-[62%_18%] max-sm:brightness-125 max-sm:saturate-125 xl:object-[82%_22%]"
+              className="hero-fade h-full w-full object-cover object-[62%_18%] max-sm:object-[72%_30%] max-sm:brightness-110 max-sm:saturate-125 xl:object-[82%_22%]"
             />
-            <div className="sb-hero-scrim absolute inset-0 max-sm:opacity-60" />
+            <div className="sb-hero-scrim absolute inset-0 max-sm:opacity-85" />
+            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background sm:hidden" />
           </div>
           <div className="relative lg:pl-5">
             <TopBar />

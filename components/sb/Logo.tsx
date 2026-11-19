@@ -1,12 +1,16 @@
 "use client";
 import { useId } from "react";
 
-export function Logo({ tagline = true }: { tagline?: boolean }) {
+export function Logo({ tagline = true, compact = false }: { tagline?: boolean; compact?: boolean }) {
   const gid = `logo-g-${useId().replace(/:/g, "")}`;
   const fill = `url(#${gid})`;
   return (
-    <div className="flex items-center gap-2.5">
-      <svg viewBox="0 0 48 40" className="h-10 w-12 shrink-0 drop-shadow-[0_0_8px_var(--primary)]" aria-hidden>
+    <div className={`flex items-center ${compact ? "gap-2" : "gap-2.5"}`}>
+      <svg
+        viewBox="0 0 48 40"
+        className={`${compact ? "h-7 w-8" : "h-10 w-12"} shrink-0 drop-shadow-[0_0_8px_var(--primary)]`}
+        aria-hidden
+      >
         <defs>
           <linearGradient id={gid} x1="0" y1="1" x2="1" y2="0">
             <stop offset="0" stopColor="var(--primary)" />
@@ -21,7 +25,7 @@ export function Logo({ tagline = true }: { tagline?: boolean }) {
         <path d="M36 2 L44 2 L44 10" stroke={fill} strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <div className="leading-none">
-        <div className="text-[22px] font-extrabold tracking-tight text-foreground">
+        <div className={`${compact ? "text-lg" : "text-[22px]"} whitespace-nowrap font-extrabold tracking-tight text-foreground`}>
           BetTracker<span className="text-cyan">AI</span>
         </div>
         {tagline && (
