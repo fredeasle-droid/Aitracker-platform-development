@@ -21,7 +21,8 @@ const cols =
   "grid-cols-[minmax(200px,0.95fr)_minmax(290px,1.6fr)_128px] @min-[1000px]:grid-cols-[minmax(290px,1fr)_minmax(400px,1.7fr)_124px_176px]";
 
 /** Gauge fills completely at 5 % profit. */
-const gaugeProgress = (pct: number) => pct / 5;
+const GAUGE_MAX_PCT = 10;
+const gaugeProgress = (pct: number) => pct / GAUGE_MAX_PCT;
 
 function AccentBar({ tone }: { tone: Surebet["accent"] }) {
   return (
