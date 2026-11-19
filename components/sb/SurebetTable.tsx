@@ -20,9 +20,11 @@ const accent: Record<Surebet["accent"], string> = {
 const cols =
   "grid-cols-[minmax(200px,0.95fr)_minmax(290px,1.6fr)_128px] @min-[1000px]:grid-cols-[minmax(290px,1fr)_minmax(400px,1.7fr)_124px_176px]";
 
-/** Gauge fills completely at 5 % profit. */
-const GAUGE_MAX_PCT = 10;
-const gaugeProgress = (pct: number) => pct / GAUGE_MAX_PCT;
+/** Desktop gauge fills completely at 5 % profit. */
+const gaugeProgress = (pct: number) => pct / 5;
+
+/** Mobile profit ring fills completely at 10 % profit so typical surebets stay distinguishable. */
+const ringProgress = (pct: number) => pct / 10;
 
 function AccentBar({ tone }: { tone: Surebet["accent"] }) {
   return (
@@ -90,7 +92,7 @@ function BetDetails({ b, best }: { b: Surebet; best: boolean }) {
 function ProfitRing({ pct }: { pct: number }) {
   const r = 44;
   const c = 2 * Math.PI * r;
-  const progress = Math.min(1, Math.max(0.05, gaugeProgress(pct)));
+  const progress = Math.min(1, Math.max(0.05, ringProgress(pct)));
   const label = `+${formatPct(pct)}`;
   return (
     <div className="relative h-[78px] w-[78px] shrink-0">
