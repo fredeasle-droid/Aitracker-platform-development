@@ -138,6 +138,22 @@
     background-image: var(--gradient-page);
   }
 }
+/* The footer uses the homepage's deep tone, so its top fades out of the page glow instead of ending on a hard edge */
+@media (max-width: 767px) {
+  .sb-root footer.bt-theme {
+    margin-top: 0;
+    padding-top: 3.5rem;
+    border-top-width: 0;
+    background:
+      linear-gradient(
+        180deg,
+        oklch(0.13 0.04 260 / 0%) 0,
+        oklch(0.13 0.04 260 / 55%) 3rem,
+        oklch(0.13 0.04 260 / 92%) 6rem,
+        oklch(0.13 0.04 260) 9rem
+      );
+  }
+}
 .sb-root *, .sb-root *::before, .sb-root *::after { border-color: var(--border); }
 .sb-root .rounded-sm { border-radius: calc(var(--radius) - 4px); }
 .sb-root .rounded-md { border-radius: calc(var(--radius) - 2px); }
