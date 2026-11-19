@@ -193,31 +193,29 @@ function MobileCard({
         </span>
       </div>
 
-      <div className="relative grid grid-cols-[minmax(0,1fr)_78px_minmax(0,1fr)] items-center gap-1">
+      <div className="relative mt-2.5 grid grid-cols-[minmax(0,1fr)_78px_minmax(0,1fr)] items-center gap-1">
         <TeamSide team={b.home} />
         <ProfitRing pct={pct} />
         <TeamSide team={b.away} />
       </div>
 
-      <div className="relative mt-1 flex justify-center">
+      <div className="relative mt-1.5 flex justify-center">
         <span className="market-pill inline-flex min-w-0 max-w-full items-center gap-1.5 rounded-md px-2.5 py-px text-[10.5px] font-bold uppercase tracking-wider text-cyan">
           <ShieldCheck className="h-3.5 w-3.5 shrink-0" />
           <span className="truncate">{b.market}</span>
         </span>
       </div>
 
-      <div className="leg-row relative mt-1.5 grid grid-cols-2 overflow-hidden rounded-xl">
+      <div className="leg-row relative mt-2.5 grid grid-cols-2 overflow-hidden rounded-xl">
         {b.legs.map((leg, li) => (
-          <div key={li} className={cn("flex min-w-0 flex-col gap-0.5 px-3 py-1.5", li === 1 && "border-l border-border")}>
-            <div className="flex min-w-0 items-center justify-between gap-2">
+          <div key={li} className={cn("flex min-w-0 items-center justify-between gap-2 px-3 py-2", li === 1 && "border-l border-border")}>
+            <div className="flex min-w-0 flex-col gap-1">
               <span className="flex h-7 min-w-0 items-center overflow-hidden">
                 <BookmakerMark id={leg.bookmaker} size="lg" />
               </span>
-              <span className="shrink-0 text-[19px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
+              <span className="line-clamp-2 text-[11px] font-semibold leading-[1.15] text-foreground/90">{legLabel(b, leg.pick)}</span>
             </div>
-            <div className="flex min-w-0 items-center gap-1.5 text-[11px] font-medium leading-tight text-muted-foreground">
-              <span className="truncate font-semibold text-foreground/90">{legLabel(b, leg.pick)}</span>
-            </div>
+            <span className="shrink-0 text-[20px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
           </div>
         ))}
       </div>
