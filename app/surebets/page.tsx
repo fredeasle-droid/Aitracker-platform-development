@@ -29,7 +29,7 @@ export default async function SurebetsPage() {
           {/* Full-bleed hero backdrop: fills the whole top, fades into the page */}
           <div className="hero-ambient pointer-events-none absolute inset-x-0 top-0 h-[420px]" aria-hidden="true" />
           {/* On wide screens the picture stops under the right panel so the player stays in view */}
-          <div className="pointer-events-none absolute left-0 right-0 top-0 h-[400px] xl:right-[230px]" aria-hidden="true">
+          <div className="pointer-events-none absolute left-0 right-0 top-0 h-[400px] max-sm:h-[580px] max-sm:hero-fade-down xl:right-[230px]" aria-hidden="true">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/sb/hero-football.jpg"
@@ -40,7 +40,6 @@ export default async function SurebetsPage() {
               className="hero-fade h-full w-full object-cover object-[62%_18%] max-sm:object-[72%_30%] max-sm:brightness-110 max-sm:saturate-125 xl:object-[82%_22%]"
             />
             <div className="sb-hero-scrim absolute inset-0 max-sm:opacity-85" />
-            <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-background sm:hidden" />
           </div>
           <div className="relative lg:pl-5">
             <TopBar />
