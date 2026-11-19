@@ -43,7 +43,7 @@ export function MatchCard({ opportunity: o }: { opportunity: Opportunity }) {
           </span>
         </div>
 
-        <h2 className="mt-5 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-start gap-2 lg:mt-6 lg:items-center lg:gap-6">
+        <h2 className="mt-4 grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-start gap-2 lg:mt-6 lg:items-center lg:gap-6">
           <Team name={o.homeTeam} logo={o.homeLogo ?? null} />
           <span className="chip-surface mt-4 flex size-10 items-center justify-center rounded-full border border-border-glow/60 text-[13px] font-extrabold text-muted-foreground lg:mt-0 lg:size-12 lg:text-[15px]">
             VS
@@ -51,7 +51,7 @@ export function MatchCard({ opportunity: o }: { opportunity: Opportunity }) {
           <Team name={o.awayTeam} logo={o.awayLogo ?? null} />
         </h2>
 
-        <p className="mt-5 flex justify-center lg:mt-6">
+        <p className="mt-4 flex justify-center lg:mt-6">
           <span className="market-pill flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[14px] font-semibold text-cyan">
             <SmallBarsIcon className="size-4" />
             {o.market}

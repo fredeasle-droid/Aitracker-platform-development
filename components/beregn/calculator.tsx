@@ -2,7 +2,7 @@
 
 import { Fragment, useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
-import { ArrowLeftRight, Check, Copy, Database, Lightbulb, BookmarkPlus, Wallet } from 'lucide-react'
+import { ArrowLeftRight, Check, Copy, Lightbulb, BookmarkPlus, Wallet } from 'lucide-react'
 import { placeBet } from '@/app/actions'
 import { GoToBookmaker } from '@/components/beregn/go-to-bookmaker'
 import { markId } from '@/components/beregn/mark-id'
@@ -136,8 +136,8 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
   ] as const
   const sides = swapped ? [ordered[1], ordered[0]] : ordered
   return (
-    <div className="flex flex-col gap-3 lg:gap-4">
-      <section aria-label={t('stakesAria')} className="sb-panel panel-glow edge-light relative flex flex-col gap-3 p-3.5 lg:gap-4 lg:p-5">
+    <div className="flex flex-col gap-3 lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-4">
+      <section aria-label={t('stakesAria')} className="sb-panel panel-glow edge-light relative order-1 flex flex-col gap-3 p-3.5 lg:col-span-2 lg:p-5">
         <div className="flex flex-col gap-3 md:flex-row md:items-end md:gap-4">
           <div className="min-w-0 flex-1">
             <label htmlFor="total" className="mb-2 block text-[15px] font-bold">
@@ -167,127 +167,131 @@ export function Calculator({ opportunity: o }: { opportunity: Opportunity }) {
             })}
           </div>
         </div>
-
-        <div className="grid grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:items-center lg:gap-4">
-          {sides.map(({ key, side, value, onChange }, index) => (
-            <Fragment key={key}>
-              {index === 1 && (
-                <button
-                  type="button"
-                  onClick={() => setSwapped((v) => !v)}
-                  aria-label={t('swapAria')}
-                  className="glass-pill hidden size-12 items-center justify-center rounded-full text-primary-glow transition hover:brightness-125 lg:flex"
-                >
-                  <ArrowLeftRight className="size-5" aria-hidden="true" />
-                </button>
-              )}
-              <div className="leg-row flex min-w-0 flex-col gap-3 rounded-xl p-3 hover:translate-x-0 lg:p-4">
-                <div className="flex items-center gap-3">
-                  <span className="chip-surface flex h-12 w-[112px] shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border">
-                    <BookmakerMark id={markId(side.bookmaker)} />
-                  </span>
-                  <p className="min-w-0 flex-1 break-words text-[14px] font-semibold leading-tight text-foreground/90 lg:text-[15px]">{side.label}</p>
-                  <span className="odds-chip shrink-0 rounded-lg border px-3 py-1.5">
-                    <LockedOdds odds={side.odds} className="text-[20px] font-extrabold tabular-nums lg:text-[24px]" />
-                  </span>
-                </div>
-                <div>
-                  <label htmlFor={`stake-${key}`} className="mb-1.5 block text-[13px] font-semibold text-muted-foreground">
-                    {t('yourStake')}
-                  </label>
-                  <AmountInput id={`stake-${key}`} value={value} onChange={onChange} />
-                </div>
-                <GoToBookmaker
-                  bookmaker={side.bookmaker}
-                  label={side.label}
-                  homeTeam={o.homeTeam}
-                  awayTeam={o.awayTeam}
-                  kickoffTs={o.kickoffTs}
-                  sport={o.sport}
-                  league={o.league}
-                  country={o.country}
-                  amount={parseAmount(value)}
-                  handedOff={handedOff === key}
-                  onHandOff={() => handOff(key, value)}
-                />
-              </div>
-            </Fragment>
-          ))}
-        </div>
       </section>
 
-      <div className="grid gap-3 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-4">
-        <section
-          aria-label={t('colResult')}
-          aria-live="polite"
-          className={cn(
-            'sb-panel relative flex items-center gap-4 overflow-hidden p-4 lg:gap-6 lg:p-5',
-            positive ? 'panel-glow' : 'border-destructive/60',
-          )}
-        >
-          <ValueGauge display={formatPct(margin)} label={t('margin')} progress={positive ? margin / 5 : 0} size={116} />
-          <dl className="flex min-w-0 flex-1 flex-col gap-3">
-            <div>
-              <dt className="flex items-center gap-1.5 text-[13px] font-semibold text-muted-foreground">
-                <Wallet className="size-4 text-success" aria-hidden="true" /> {t('guaranteedProfit')}
-              </dt>
-              <dd
-                className={cn(
-                  'mt-0.5 text-[30px] font-extrabold leading-none tabular-nums lg:text-[36px]',
-                  positive ? 'text-glow-success text-success' : 'text-destructive',
-                )}
+      <section
+        aria-label={t('colResult')}
+        aria-live="polite"
+        className={cn(
+          'sb-panel relative order-2 flex items-center gap-4 overflow-hidden p-4 lg:order-3 lg:gap-6 lg:p-5',
+          positive ? 'panel-glow' : 'border-destructive/60',
+        )}
+      >
+        <ValueGauge display={formatPct(margin)} label={t('margin')} progress={positive ? margin / 5 : 0} size={104} />
+        <dl className="grid min-w-0 flex-1 gap-3">
+          <div>
+            <dt className="flex items-center gap-1.5 text-[13px] font-semibold text-muted-foreground">
+              <Wallet className="size-4 text-success" aria-hidden="true" /> {t('guaranteedProfit')}
+            </dt>
+            <dd
+              className={cn(
+                'mt-0.5 text-[34px] font-extrabold leading-none tabular-nums lg:text-[38px]',
+                positive ? 'text-glow-success text-success' : 'text-destructive',
+              )}
+            >
+              {formatInt(profit)} <span className="text-[14px] font-bold text-foreground">DKK</span>
+            </dd>
+          </div>
+          <div className="flex items-baseline justify-between gap-2 border-t border-border pt-2.5">
+            <dt className="text-[13px] font-semibold text-muted-foreground">{t('totalStake')}</dt>
+            <dd className="text-[17px] font-extrabold tabular-nums">
+              {formatInt(sum)} <span className="text-[12px] font-bold text-muted-foreground">DKK</span>
+            </dd>
+          </div>
+        </dl>
+      </section>
+
+      <div className="order-3 grid grid-cols-1 gap-3 lg:order-2 lg:col-span-2 lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] lg:items-center lg:gap-4">
+        {sides.map(({ key, side, value, onChange }, index) => (
+          <Fragment key={key}>
+            {index === 1 && (
+              <button
+                type="button"
+                onClick={() => setSwapped((v) => !v)}
+                aria-label={t('swapAria')}
+                className="glass-pill hidden size-12 items-center justify-center rounded-full text-primary-glow transition hover:brightness-125 lg:flex"
               >
-                {formatInt(profit)} <span className="text-[14px] font-bold text-foreground">DKK</span>
-              </dd>
-            </div>
-            <div className="border-t border-border pt-3">
-              <dt className="flex items-center gap-1.5 text-[13px] font-semibold text-muted-foreground">
-                <Database className="size-4 text-cyan" aria-hidden="true" /> {t('totalStake')}
-              </dt>
-              <dd className="mt-0.5 text-[20px] font-extrabold leading-none tabular-nums lg:text-[22px]">
-                {formatInt(sum)} <span className="text-[13px] font-bold text-muted-foreground">DKK</span>
-              </dd>
-            </div>
-          </dl>
-        </section>
+                <ArrowLeftRight className="size-5" aria-hidden="true" />
+              </button>
+            )}
+            <section className="sb-panel edge-light relative flex min-w-0 flex-col gap-3 p-3.5 lg:p-4">
+              <div className="flex items-center gap-3">
+                <span className="chip-surface flex h-11 w-[112px] shrink-0 items-center justify-center overflow-hidden rounded-lg border border-border lg:h-12 lg:w-[112px]">
+                  <BookmakerMark id={markId(side.bookmaker)} />
+                </span>
+                <p className="min-w-0 flex-1 break-words text-[15px] font-bold leading-tight text-foreground">{side.label}</p>
+                <span className="odds-chip shrink-0 rounded-lg border px-3 py-1.5">
+                  <LockedOdds odds={side.odds} className="text-[20px] font-extrabold tabular-nums lg:text-[24px]" />
+                </span>
+              </div>
+              <div>
+                <label htmlFor={`stake-${key}`} className="mb-1.5 block text-[13px] font-semibold text-muted-foreground">
+                  {t('yourStake')}
+                </label>
+                <AmountInput id={`stake-${key}`} value={value} onChange={onChange} />
+              </div>
+              <GoToBookmaker
+                bookmaker={side.bookmaker}
+                label={side.label}
+                homeTeam={o.homeTeam}
+                awayTeam={o.awayTeam}
+                kickoffTs={o.kickoffTs}
+                sport={o.sport}
+                league={o.league}
+                country={o.country}
+                amount={parseAmount(value)}
+                handedOff={handedOff === key}
+                onHandOff={() => handOff(key, value)}
+              />
+            </section>
+          </Fragment>
+        ))}
+        <button
+          type="button"
+          onClick={() => setSwapped((v) => !v)}
+          className="glass-pill flex min-h-11 items-center justify-center gap-2 rounded-full px-4 text-[14px] font-semibold text-primary-glow transition hover:brightness-125 lg:hidden"
+        >
+          <ArrowLeftRight className="size-4" aria-hidden="true" />
+          {t('swapAria')}
+        </button>
+      </div>
 
-        <div className="flex flex-col gap-3">
-          <button
-            type="button"
-            onClick={copyStakes}
-            disabled={sum === 0}
-            className="btn-hero btn-shine relative flex min-h-14 items-center justify-center gap-3 overflow-hidden rounded-xl text-[17px] font-bold text-primary-foreground transition hover:brightness-110 disabled:opacity-50"
-          >
-            {copied ? <Check className="size-6" aria-hidden="true" /> : <Copy className="size-6" aria-hidden="true" />}
-            {copied ? t('copied') : t('copyStakes')}
-          </button>
+      <div className="order-4 flex flex-col gap-3">
+        <button
+          type="button"
+          onClick={copyStakes}
+          disabled={sum === 0}
+          className="btn-hero btn-shine relative flex min-h-14 items-center justify-center gap-3 overflow-hidden rounded-xl text-[17px] font-bold text-primary-foreground transition hover:brightness-110 disabled:opacity-50"
+        >
+          {copied ? <Check className="size-6" aria-hidden="true" /> : <Copy className="size-6" aria-hidden="true" />}
+          {copied ? t('copied') : t('copyStakes')}
+        </button>
 
-          <button
-            type="button"
-            onClick={save}
-            disabled={sum === 0 || saving}
-            className="sb-btn-ghost-glass flex min-h-12 items-center justify-center gap-2.5 rounded-xl text-[15px] font-semibold text-primary-glow transition hover:brightness-125 disabled:opacity-50"
-          >
-            <BookmarkPlus className="size-5" aria-hidden="true" />
-            {saving ? t('saving') : t('saveOpenBet')}
-          </button>
-          {message && (
-            <p role="alert" className={cn('text-center text-sm', message.ok ? 'text-success' : 'text-destructive')}>
-              {message.text}
+        <button
+          type="button"
+          onClick={save}
+          disabled={sum === 0 || saving}
+          className="sb-btn-ghost-glass flex min-h-12 items-center justify-center gap-2.5 rounded-xl text-[15px] font-semibold text-primary-glow transition hover:brightness-125 disabled:opacity-50"
+        >
+          <BookmarkPlus className="size-5" aria-hidden="true" />
+          {saving ? t('saving') : t('saveOpenBet')}
+        </button>
+        {message && (
+          <p role="alert" className={cn('text-center text-sm', message.ok ? 'text-success' : 'text-destructive')}>
+            {message.text}
+          </p>
+        )}
+
+        <aside className="sb-panel edge-light relative flex gap-3 p-4 lg:flex-1">
+          <Lightbulb className="mt-0.5 size-6 shrink-0 fill-gold text-gold drop-shadow-[0_0_8px_var(--gold)]" aria-hidden="true" />
+          <div>
+            <h2 className="text-[15px] font-bold">{t('howItWorks')}</h2>
+            <p className="mt-1 text-pretty text-[14px] leading-relaxed text-foreground/85">
+              {t('howText')}{' '}
+              <strong className="text-success">{formatInt(profit)} DKK</strong> ({formatPct(margin)}).
             </p>
-          )}
-
-          <aside className="sb-panel edge-light relative flex flex-1 gap-3 p-4">
-            <Lightbulb className="mt-0.5 size-6 shrink-0 fill-gold text-gold drop-shadow-[0_0_8px_var(--gold)]" aria-hidden="true" />
-            <div>
-              <h2 className="text-[15px] font-bold">{t('howItWorks')}</h2>
-              <p className="mt-1 text-pretty text-[14px] leading-relaxed text-foreground/85">
-                {t('howText')}{' '}
-                <strong className="text-success">{formatInt(profit)} DKK</strong> ({formatPct(margin)}).
-              </p>
-            </div>
-          </aside>
-        </div>
+          </div>
+        </aside>
       </div>
     </div>
   )

@@ -42,12 +42,12 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
               <section className="flex min-w-0 flex-col gap-3 lg:ml-1.5 lg:gap-4">
                 <div className="flex items-center justify-between gap-3 pt-1">
                   <div className="flex min-w-0 items-center gap-3 lg:gap-4">
-                    <span className="bg-gradient-primary flex size-11 shrink-0 items-center justify-center rounded-xl text-primary-foreground shadow-glow lg:size-14">
-                      <CalculatorIcon className="size-6 lg:size-7" aria-hidden="true" />
+                    <span className="bg-gradient-primary flex size-10 shrink-0 items-center justify-center rounded-xl text-primary-foreground shadow-glow lg:size-14">
+                      <CalculatorIcon className="size-5 lg:size-7" aria-hidden="true" />
                     </span>
                     <div className="min-w-0">
-                      <h1 className="text-balance text-[24px] font-extrabold leading-tight tracking-tight lg:text-[34px]">{t('calculatorTitle')}</h1>
-                      <p className="text-pretty text-[14px] leading-snug text-muted-foreground lg:text-[16px]">{t('calcSubtitle')}</p>
+                      <h1 className="text-balance text-[22px] font-extrabold leading-tight tracking-tight lg:text-[34px]">{t('calculatorTitle')}</h1>
+                      <p className="hidden text-pretty text-[14px] leading-snug text-muted-foreground sm:block lg:text-[16px]">{t('calcSubtitle')}</p>
                     </div>
                   </div>
                   <Link
