@@ -110,6 +110,20 @@
   --font-sora: var(--font-jakarta);
   -webkit-font-smoothing: antialiased;
 }
+@media (max-width: 639px) {
+  .sb-root {
+    --background: oklch(0.16 0.06 266);
+    --surface: oklch(0.2 0.07 265);
+    --surface-elevated: oklch(0.25 0.085 263);
+    --card: oklch(0.19 0.065 265);
+    --border: oklch(0.4 0.1 262 / 55%);
+    --gradient-page:
+      radial-gradient(120% 50% at 50% 0%, oklch(0.42 0.19 262 / 60%), transparent 72%),
+      radial-gradient(90% 40% at 100% 42%, oklch(0.36 0.17 255 / 38%), transparent 70%),
+      radial-gradient(100% 45% at 0% 78%, oklch(0.34 0.15 262 / 36%), transparent 70%),
+      radial-gradient(110% 40% at 50% 100%, oklch(0.36 0.16 258 / 40%), transparent 70%);
+  }
+}
 .sb-root *, .sb-root *::before, .sb-root *::after { border-color: var(--border); }
 .sb-root .rounded-sm { border-radius: calc(var(--radius) - 4px); }
 .sb-root .rounded-md { border-radius: calc(var(--radius) - 2px); }

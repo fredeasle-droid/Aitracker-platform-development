@@ -48,7 +48,7 @@ export function Hero() {
     <section className="relative">
       <NewFindToast />
       <div className="relative flex min-h-[290px] flex-col justify-center px-2 py-6 sm:px-6 short:lg:min-h-[262px] short:lg:py-4">
-        <span className="glass-pill hero-rise mb-5 inline-flex w-fit items-center gap-2.5 whitespace-nowrap rounded-full py-1.5 pl-3 pr-3.5 text-[12.5px] font-semibold">
+        <span className="glass-pill hero-rise mb-5 hidden w-fit items-center sm:inline-flex gap-2.5 whitespace-nowrap rounded-full py-1.5 pl-3 pr-3.5 text-[12.5px] font-semibold">
           <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />
           <span className="text-success">Live surebet-scanner aktiv</span>
           <span className="hidden h-3.5 w-px bg-border sm:block" />

@@ -17,9 +17,12 @@ function DanishFlag() {
 export function TopBar() {
   return (
     <header className="flex flex-col gap-3 pb-3.5 pt-3">
-      <div className="flex items-center justify-between lg:hidden">
+      <div className="grid grid-cols-[1fr_auto_1fr] items-center lg:hidden">
         <Sheet>
-          <SheetTrigger aria-label="Åbn menu" className="rounded-xl border border-border bg-surface/70 p-2.5">
+          <SheetTrigger
+            aria-label="Åbn menu"
+            className="glass-pill flex h-10 w-10 items-center justify-center justify-self-start rounded-full transition hover:brightness-125"
+          >
             <Menu className="h-5 w-5" />
           </SheetTrigger>
           <SheetContent side="left" className="w-[270px] overflow-y-auto border-sidebar-border bg-sidebar px-4 pb-4 pt-6">
@@ -28,9 +31,19 @@ export function TopBar() {
           </SheetContent>
         </Sheet>
         <Logo tagline={false} />
-        <span className="w-11" />
+        <div className="flex items-center gap-2.5 justify-self-end">
+          <button className="glass-pill relative flex h-10 w-10 items-center justify-center rounded-full transition hover:brightness-125" aria-label="Notifikationer">
+            <Bell className="h-5 w-5 text-foreground/85" />
+            <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] font-bold text-destructive-foreground">
+              3
+            </span>
+          </button>
+          <div className="bg-gradient-primary flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-primary-foreground shadow-glow">
+            FM
+          </div>
+        </div>
       </div>
-      <div className="flex items-center gap-4">
+      <div className="hidden items-center gap-4 lg:flex">
       <div className="mx-auto flex w-full min-w-0 max-w-[570px] items-center gap-3 rounded-full border border-border-glow bg-surface-deep/70 px-5 py-3 shadow-glow">
         <Search className="h-5 w-5 text-muted-foreground" />
         <input
