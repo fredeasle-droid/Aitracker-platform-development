@@ -8,7 +8,7 @@ export function Logo({ tagline = true, compact = false }: { tagline?: boolean; c
     <div className={`flex items-center ${compact ? "gap-2" : "gap-2.5"}`}>
       <svg
         viewBox="0 0 48 40"
-        className={`${compact ? "h-7 w-8" : "h-10 w-12"} shrink-0 drop-shadow-[0_0_8px_var(--primary)]`}
+        className={`${compact ? "h-6 w-7 min-[400px]:h-7 w-8" : "h-10 w-12"} shrink-0 drop-shadow-[0_0_8px_var(--primary)]`}
         aria-hidden
       >
         <defs>
@@ -25,7 +25,7 @@ export function Logo({ tagline = true, compact = false }: { tagline?: boolean; c
         <path d="M36 2 L44 2 L44 10" stroke={fill} strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <div className="leading-none">
-        <div className={`${compact ? "text-lg" : "text-[22px]"} whitespace-nowrap font-extrabold tracking-tight text-foreground`}>
+        <div className={`${compact ? "text-base min-[400px]:text-lg" : "text-[22px]"} whitespace-nowrap font-extrabold tracking-tight text-foreground`}>
           BetTracker<span className="text-cyan">AI</span>
         </div>
         {tagline && (

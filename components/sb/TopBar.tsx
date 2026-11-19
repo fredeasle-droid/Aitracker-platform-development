@@ -38,8 +38,9 @@ function MobileAccount() {
 
   return (
     <div className={cn("flex shrink-0 items-center gap-1.5", isPending && "opacity-0")}>
-      <Link href="/login" className="btn-outline-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[12px] font-semibold">
-        <LogIn className="size-3.5 text-primary-glow max-[380px]:hidden" aria-hidden="true" /> Log ind
+      <Link href="/login" className="btn-outline-glow flex h-9 w-9 items-center justify-center whitespace-nowrap rounded-full text-[12px] font-semibold min-[400px]:w-auto min-[400px]:px-3">
+        <LogIn className="size-4 text-primary-glow min-[400px]:hidden" aria-hidden="true" />
+        <span className="sr-only min-[400px]:not-sr-only">Log ind</span>
       </Link>
       <Link href="/konto" className="btn-glow flex h-9 items-center whitespace-nowrap rounded-full px-3 text-[12px] font-semibold">
         Opret konto
@@ -51,11 +52,11 @@ function MobileAccount() {
 export function TopBar() {
   return (
     <header className="flex flex-col gap-3 pb-3.5 pt-3">
-      <div className="flex items-center gap-3 lg:hidden">
+      <div className="flex items-center gap-2 min-[400px]:gap-3 lg:hidden">
         <Sheet>
           <SheetTrigger
             aria-label="Åbn menu"
-            className="glass-pill flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition hover:brightness-125"
+            className="glass-pill flex h-10 w-10 shrink-0 min-[400px]:h-11 min-[400px]:w-11 items-center justify-center rounded-full transition hover:brightness-125"
           >
             <Menu className="h-5 w-5" />
           </SheetTrigger>

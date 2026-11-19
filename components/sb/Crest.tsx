@@ -15,6 +15,7 @@ export function Crest({ src, name, size = "md", className }: { src: string | nul
     <span
       className={cn(
         "relative inline-flex shrink-0 items-center justify-center rounded-full",
+        (failed || !src) && "crest-disc",
         className,
         size === "lg"
           ? "crest-disc h-[64px] w-[64px] p-[7px]"
