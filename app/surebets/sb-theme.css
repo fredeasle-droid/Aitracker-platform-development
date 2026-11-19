@@ -98,6 +98,9 @@
   --sidebar-border: oklch(0.3 0.08 262 / 45%);
   --sidebar-ring: var(--ring);
 }
+:root {
+  --bt-roboto: var(--font-roboto);
+}
 .sb-root {
   color-scheme: dark;
   min-height: 100dvh;

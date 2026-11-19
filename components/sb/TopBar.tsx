@@ -1,4 +1,5 @@
 "use client";
+import type { CSSProperties } from "react";
 import Link from "next/link";
 import { Search, Bell, ChevronDown, Command, Menu, LogIn } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
@@ -6,6 +7,9 @@ import { cn } from "@/lib/utils";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { SidebarContent } from "./Sidebar";
 import { Logo } from "./Logo";
+
+const HOME_PRIMARY = "oklch(0.55 0.245 262)";
+const HOME_PRIMARY_GLOW = "oklch(0.74 0.16 236)";
 
 function DanishFlag() {
   return (
@@ -38,8 +42,18 @@ function MobileAccount() {
 
   return (
     <div className={cn("flex shrink-0 items-center", isPending && "opacity-0")}>
-      <Link href="/login" className="btn-outline-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[12px] font-semibold sm:gap-2 sm:px-3.5 sm:text-[13px]">
-        <LogIn className="size-3.5 text-primary-glow sm:size-4" aria-hidden="true" /> Log ind
+      <Link
+        href="/login"
+        style={{
+          borderColor: HOME_PRIMARY,
+          color: HOME_PRIMARY_GLOW,
+          fontFamily: "var(--bt-roboto), ui-sans-serif, system-ui, sans-serif",
+          "--primary": HOME_PRIMARY,
+          "--primary-glow": HOME_PRIMARY_GLOW,
+        } as CSSProperties}
+        className="btn-outline-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full bg-[#050b17]/80 px-3 text-[12px] font-semibold backdrop-blur sm:gap-2 sm:px-3.5 sm:text-[13px]"
+      >
+        <LogIn className="size-3.5 sm:size-4" aria-hidden="true" /> Log ind
       </Link>
     </div>
   );
