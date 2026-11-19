@@ -114,7 +114,6 @@ function ProfitRing({ pct }: { pct: number }) {
         <span className={cn("font-extrabold leading-none tracking-tight text-success tabular-nums", label.length > 6 ? "text-[14px]" : "text-[17px]")}>
           {label}
         </span>
-        <span className="mt-0.5 text-[10px] font-semibold leading-none text-foreground/80 tabular-nums">+{Math.round(pct * 10)} kr</span>
       </div>
     </div>
   );
@@ -147,12 +146,10 @@ function MobileCard({
 }) {
   const { bookmakers } = useSurebets();
   const names = useMemo(() => new Map(bookmakers.map((bk) => [bk.id, bk.name])), [bookmakers]);
-  const impliedTotal = b.legs.reduce((sum, leg) => sum + 1 / leg.odds, 0);
-  const stakes = b.legs.map((leg) => Math.round(1000 / leg.odds / impliedTotal));
   return (
     <article
       style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
-      className={cn("sb-panel surebet-row row-enter relative overflow-hidden px-3.5 py-2", best && "row-best")}
+      className={cn("sb-panel surebet-row row-enter relative overflow-hidden px-3.5 pb-2 pt-1", best && "row-best")}
     >
       <div className="relative flex items-center justify-between gap-2 text-[12px] font-medium">
         <span className="flex min-w-0 items-center gap-1.5 text-muted-foreground">
@@ -172,7 +169,7 @@ function MobileCard({
             aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
             aria-pressed={starred}
             onClick={onStar}
-            className="-my-2 -mr-2 flex h-10 w-10 items-center justify-center rounded-lg transition active:scale-90"
+            className="-mb-2 -mr-2 -mt-1 flex h-10 w-10 items-center justify-center rounded-lg transition active:scale-90"
           >
             <Star className={cn("h-5 w-5 transition-colors", starred ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground")} />
           </button>
@@ -203,8 +200,6 @@ function MobileCard({
             </div>
             <div className="flex min-w-0 items-center gap-1.5 text-[11px] font-medium leading-tight text-muted-foreground">
               <span className="truncate font-semibold text-foreground/90">{leg.pick}</span>
-              <span aria-hidden className="text-border-glow">•</span>
-              <span className="shrink-0 tabular-nums">{stakes[li]} kr</span>
             </div>
           </div>
         ))}
