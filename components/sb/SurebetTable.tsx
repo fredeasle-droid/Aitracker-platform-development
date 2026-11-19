@@ -149,10 +149,8 @@ function MobileCard({
   return (
     <article
       style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
-      className={cn("sb-panel surebet-row row-enter relative overflow-hidden py-2 pl-5 pr-3.5", best && "row-best")}
+      className={cn("sb-panel surebet-row row-enter relative overflow-hidden px-3.5 py-2", best && "row-best")}
     >
-      <AccentBar tone={b.accent} />
-
       <div className="relative flex items-center justify-between gap-2 text-[12px] font-medium">
         <span className="flex min-w-0 items-center gap-1.5 text-muted-foreground">
           <span className="truncate">{b.league}</span>
