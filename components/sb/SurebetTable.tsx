@@ -128,7 +128,24 @@ function TeamSide({ team }: { team: Surebet["home"] }) {
   );
 }
 
-/** Phone card: teams flank a profit ring, market under it, then both bookmaker legs with their stake split. */
+const GOAL_TOTALS = /^(?:o\/u|over\/under|total)\s*(\(h([12])\))?\s*(\d+(?:[.,]\d+)?)\s*$/i;
+
+/** Phone wording for a leg: team names for 1/2/X, and "Over 2,5 mål" for goal totals. */
+function legLabel(b: Surebet, pick: string): string {
+  const value = pick.trim();
+  if (value === "1") return b.home.name;
+  if (value === "2") return b.away.name;
+  if (value.toLowerCase() === "x") return "Uafgjort";
+
+  const side = value.toLowerCase();
+  if (side !== "over" && side !== "under") return value;
+  const totals = GOAL_TOTALS.exec(b.market.trim());
+  if (!totals) return value;
+  const half = totals[2] ? ` (${totals[2]}. halvleg)` : "";
+  return `${side === "over" ? "Over" : "Under"} ${totals[3].replace(".", ",")} mål${half}`;
+}
+
+/** Phone card: teams flank a profit ring, market under it, then both bookmaker legs. */
 function MobileCard({
   b,
   pct,
@@ -149,9 +166,9 @@ function MobileCard({
   return (
     <article
       style={{ animationDelay: `${Math.min(index, 6) * 60}ms` }}
-      className={cn("sb-panel surebet-row row-enter relative overflow-hidden px-3.5 pb-2 pt-1", best && "row-best")}
+      className={cn("sb-panel surebet-row row-enter relative overflow-hidden px-3.5 pb-2 pt-0", best && "row-best")}
     >
-      <div className="relative flex items-center justify-between gap-2 text-[12px] font-medium">
+      <div className="relative flex h-[26px] items-center justify-between gap-2 text-[12px] font-medium">
         <span className="flex min-w-0 items-center gap-1.5 text-muted-foreground">
           <span className="truncate">{b.league}</span>
           <span aria-hidden className="text-border-glow">•</span>
@@ -159,7 +176,7 @@ function MobileCard({
             <span className="h-1.5 w-1.5 rounded-full bg-cyan" /> {b.time}
           </span>
         </span>
-        <span className="flex shrink-0 items-center gap-1.5">
+        <span className="flex shrink-0 items-center gap-1.5 pr-6">
           {best && (
             <span className="best-pill inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-gold">
               <Crown className="h-3 w-3" /> Bedst nu
@@ -169,7 +186,7 @@ function MobileCard({
             aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
             aria-pressed={starred}
             onClick={onStar}
-            className="-mb-2 -mr-2 -mt-1 flex h-10 w-10 items-center justify-center rounded-lg transition active:scale-90"
+            className="absolute -right-2.5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-lg transition active:scale-90"
           >
             <Star className={cn("h-5 w-5 transition-colors", starred ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground")} />
           </button>
@@ -199,7 +216,7 @@ function MobileCard({
               <span className="shrink-0 text-[19px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
             </div>
             <div className="flex min-w-0 items-center gap-1.5 text-[11px] font-medium leading-tight text-muted-foreground">
-              <span className="truncate font-semibold text-foreground/90">{leg.pick}</span>
+              <span className="truncate font-semibold text-foreground/90">{legLabel(b, leg.pick)}</span>
             </div>
           </div>
         ))}
