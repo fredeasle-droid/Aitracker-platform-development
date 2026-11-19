@@ -37,13 +37,9 @@ function MobileAccount() {
   }
 
   return (
-    <div className={cn("flex shrink-0 items-center gap-1.5", isPending && "opacity-0")}>
-      <Link href="/login" className="btn-outline-glow flex h-9 w-9 items-center justify-center whitespace-nowrap rounded-full text-[12px] font-semibold min-[400px]:w-auto min-[400px]:px-3">
-        <LogIn className="size-4 text-primary-glow min-[400px]:hidden" aria-hidden="true" />
-        <span className="sr-only min-[400px]:not-sr-only">Log ind</span>
-      </Link>
-      <Link href="/konto" className="btn-glow flex h-9 items-center whitespace-nowrap rounded-full px-3 text-[12px] font-semibold">
-        Opret konto
+    <div className={cn("flex shrink-0 items-center", isPending && "opacity-0")}>
+      <Link href="/login" className="btn-outline-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[12px] font-semibold sm:gap-2 sm:px-3.5 sm:text-[13px]">
+        <LogIn className="size-3.5 text-primary-glow sm:size-4" aria-hidden="true" /> Log ind
       </Link>
     </div>
   );
