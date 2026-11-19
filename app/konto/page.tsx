@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
+import { redirect } from 'next/navigation'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { auth } from '@/lib/auth'
 import { getOpportunities } from '@/lib/data'
@@ -31,11 +32,18 @@ async function loadInvoices(customerId: string): Promise<AccountInvoice[]> {
   }
 }
 
-export default async function AccountPage({ searchParams }: { searchParams: Promise<{ login?: string; testAccess?: string }> }) {
-  const [session, opportunities, { login, testAccess }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
-  const aside = <DesktopAside opportunities={opportunities} />
+/** Only same-site paths are allowed, so `next` can't be used as an open redirect. */
+function safeReturnPath(next: string | undefined) {
+  return next && next.startsWith('/') && !next.startsWith('//') && !next.startsWith('/\\') ? next : undefined
+}
 
-  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} allowTestAccess={isPreviewTestEnvironment()} />
+export default async function AccountPage({ searchParams }: { searchParams: Promise<{ login?: string; testAccess?: string; next?: string }> }) {
+  const [session, opportunities, { login, testAccess, next }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
+  const aside = <DesktopAside opportunities={opportunities} />
+  const returnTo = safeReturnPath(next)
+
+  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} allowTestAccess={isPreviewTestEnvironment()} returnTo={returnTo} />
+  if (returnTo) redirect(returnTo)
 
   const { user } = session
   if (testAccess === '1' && isPreviewTestEnvironment()) return <OnboardingStep />

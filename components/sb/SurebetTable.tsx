@@ -1,5 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { ArrowRight, Crown, SearchX, ShieldCheck, Star, X } from "lucide-react";
 import { formatPct, surebetProfitPct, visibleSurebets, type Surebet } from "./data";
 import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";
@@ -25,6 +26,19 @@ const gaugeProgress = (pct: number) => pct / 5;
 
 /** Mobile profit ring fills completely at 10 % profit so typical surebets stay distinguishable. */
 const ringProgress = (pct: number) => pct / 10;
+
+const calcHref = (b: Surebet) => `/beregn?id=${b.id}`;
+
+/** Invisible link covering the whole card/row; interactive children sit above it with z-[2]. */
+function CardLink({ b }: { b: Surebet }) {
+  return (
+    <Link
+      href={calcHref(b)}
+      aria-label={`Beregn indsats: ${b.home.name} mod ${b.away.name}`}
+      className="absolute inset-0 z-[1] rounded-[inherit] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary-glow"
+    />
+  );
+}
 
 function AccentBar({ tone }: { tone: Surebet["accent"] }) {
   return (
@@ -186,7 +200,7 @@ function MobileCard({
             aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
             aria-pressed={starred}
             onClick={onStar}
-            className="absolute -right-2.5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-lg transition active:scale-90"
+            className="absolute -right-2.5 top-1/2 z-[2] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-lg transition active:scale-90"
           >
             <Star className={cn("h-5 w-5 transition-colors", starred ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground")} />
           </button>
@@ -234,6 +248,14 @@ function MobileCard({
         </p>
       )}
 
+      <span
+        aria-hidden
+        className="btn-shine bg-gradient-primary relative mt-2.5 flex h-11 items-center justify-center gap-1.5 overflow-hidden rounded-lg text-[14.5px] font-semibold text-primary-foreground shadow-glow"
+      >
+        Beregn indsats <ArrowRight className="h-4 w-4" />
+      </span>
+
+      <CardLink b={b} />
     </article>
   );
 }
@@ -244,23 +266,25 @@ function StarButton({ on, onClick }: { on: boolean; onClick: () => void }) {
       aria-label={on ? "Fjern fra gemte" : "Gem surebet"}
       aria-pressed={on}
       onClick={onClick}
-      className="rounded-md p-1 transition-transform hover:scale-110 hover:bg-surface-elevated active:scale-95"
+      className="relative z-[2] rounded-md p-1 transition-transform hover:scale-110 hover:bg-surface-elevated active:scale-95"
     >
       <Star className={cn("h-5 w-5 transition-colors", on ? "fill-gold text-gold drop-shadow-[0_0_6px_var(--gold)]" : "text-muted-foreground hover:text-foreground")} />
     </button>
   );
 }
 
-function DetailsButton({ className, short }: { className?: string; short?: boolean }) {
+function DetailsButton({ href, className, short }: { href: string; className?: string; short?: boolean }) {
   return (
-    <button
+    <Link
+      href={href}
+      tabIndex={-1}
       className={cn(
-        "btn-shine bg-gradient-primary group/btn relative flex items-center justify-center gap-1.5 overflow-hidden whitespace-nowrap rounded-lg font-semibold text-primary-foreground shadow-glow transition hover:brightness-110 active:scale-[0.98]",
+        "btn-shine bg-gradient-primary group/btn relative z-[2] flex items-center justify-center gap-1.5 overflow-hidden whitespace-nowrap rounded-lg font-semibold text-primary-foreground shadow-glow transition hover:brightness-110 active:scale-[0.98]",
         className,
       )}
     >
-      {short ? "Detaljer" : "Se detaljer"} <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
-    </button>
+      {short ? "Beregn" : "Beregn indsats"} <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
+    </Link>
   );
 }
 
@@ -402,14 +426,15 @@ export function SurebetTable() {
                   <div className="flex flex-col items-center gap-2">
                     <ValueGauge display={formatPct(pct)} label="profit" progress={gaugeProgress(pct)} size={104} />
                     <div className="flex items-center gap-1 @min-[1000px]:hidden">
-                      <DetailsButton short className="px-2.5 py-1.5 text-[12.5px]" />
+                      <DetailsButton href={calcHref(b)} short className="px-2.5 py-1.5 text-[12.5px]" />
                       <StarButton on={!!starred[b.id]} onClick={() => toggle(b.id)} />
                     </div>
                   </div>
                   <div className="hidden items-center justify-center gap-3 @min-[1000px]:flex">
-                    <DetailsButton className="px-4 py-2.5 text-[14.5px]" />
+                    <DetailsButton href={calcHref(b)} className="px-4 py-2.5 text-[14.5px]" />
                     <StarButton on={!!starred[b.id]} onClick={() => toggle(b.id)} />
                   </div>
+                  <CardLink b={b} />
                 </div>
               ))}
             </div>

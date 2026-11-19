@@ -13,7 +13,10 @@ export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
 
   if (isMembersOnly(pathname) && !getSessionCookie(request)) {
-    return NextResponse.redirect(new URL('/konto', request.url))
+    const loginUrl = new URL('/konto', request.url)
+    loginUrl.searchParams.set('login', '1')
+    loginUrl.searchParams.set('next', pathname + request.nextUrl.search)
+    return NextResponse.redirect(loginUrl)
   }
 
   if (request.cookies.get(USER_COOKIE)?.value) return NextResponse.next()

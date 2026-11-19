@@ -49,14 +49,15 @@ type Props = {
   loginMode: boolean
   setLoginMode: (value: boolean) => void
   allowTestAccess: boolean
+  returnTo?: string
 }
 
-export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode, allowTestAccess }: Props) {
+export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode, allowTestAccess, returnTo }: Props) {
   if (loginMode) {
     return (
       <div className="mx-auto w-full max-w-[520px] pt-6">
         <div className={cn(panel, 'p-8')}>
-          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/')} />
+          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(returnTo ?? '/')} />
         </div>
       </div>
     )
