@@ -701,3 +701,8 @@
   }
   &:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
 }
+@media (min-width: 64rem) {
+  .sb-root .calc-range { height: 10px; }
+  .sb-root .calc-range::-webkit-slider-thumb { width: 32px; height: 32px; background: var(--primary); border: 4px solid var(--foreground); box-shadow: 0 0 18px var(--primary-glow); }
+  .sb-root .calc-range::-moz-range-thumb { width: 26px; height: 26px; background: var(--primary); border: 4px solid var(--foreground); box-shadow: 0 0 18px var(--primary-glow); }
+}

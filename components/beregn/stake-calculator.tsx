@@ -38,10 +38,15 @@ function LegColumn({
   const [copied, setCopied] = useState(false)
   const link = fallbackLink(side.bookmaker)
   return (
-    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center lg:gap-1.5">
-      <Crest src={crest} name={team} size="lg" className="shrink-0 sm:h-[84px] sm:w-[84px] lg:h-[100px] lg:w-[100px]" />
-      <p className="line-clamp-2 w-full text-[15px] font-bold leading-tight sm:text-[17px] lg:mt-1 lg:text-[19px]">{team}</p>
-      <div className="flex h-8 items-center lg:h-10 lg:scale-125">
+    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center lg:gap-1">
+      <Crest
+        src={crest}
+        name={team}
+        size="lg"
+        className="shrink-0 sm:h-[84px] sm:w-[84px] lg:h-[104px] lg:w-[104px] lg:bg-none! lg:p-0! lg:shadow-none! lg:drop-shadow-[0_0_14px_var(--primary)]"
+      />
+      <p className="line-clamp-2 w-full text-[15px] font-bold leading-tight sm:text-[17px] lg:mt-2 lg:text-[19px]">{team}</p>
+      <div className="flex h-8 items-center lg:my-1 lg:h-10 lg:scale-[1.45] lg:[&_.bk-bet365]:bg-transparent! lg:[&_.bk-bet365]:px-0! lg:[&_.bk-bet365]:text-foreground!">
         <BookmakerMark id={bookmakerKey(side.bookmaker)} />
       </div>
       <p className="w-full truncate text-[12.5px] text-muted-foreground lg:hidden">{side.label}</p>
@@ -61,8 +66,8 @@ function LegColumn({
         <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
         <span className="sr-only">(åbner i ny fane)</span>
       </a>
-      <span className="mt-1 text-[13px] text-muted-foreground lg:mt-3 lg:text-[17px] lg:text-foreground">Odds</span>
-      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow lg:h-[48px] lg:max-w-[200px] lg:rounded-lg lg:border-primary/70 lg:bg-primary/25">
+      <span className="mt-1 text-[13px] text-muted-foreground lg:mt-2 lg:text-[17px] lg:text-foreground">Odds</span>
+      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow lg:h-[48px] lg:max-w-[200px] lg:rounded-[10px] lg:border-2 lg:border-primary! lg:bg-surface-deep/85 lg:shadow-[inset_0_0_18px_-6px_var(--primary),0_0_18px_-6px_var(--primary)]">
         <LockedOdds odds={side.odds} className="text-[26px] font-extrabold tabular-nums sm:text-[30px] lg:text-[32px]" />
       </span>
     </div>
@@ -73,8 +78,8 @@ function StadiumBackdrop() {
   return (
     <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/sb/hero-football.jpg" alt="" className="h-full w-full object-cover object-[20%_30%] opacity-25" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80" />
+      <img src="/images/stadium-empty.png" alt="" className="h-full w-full object-cover object-center opacity-55" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/55 via-background/20 to-background/60" />
     </div>
   )
 }
@@ -105,8 +110,8 @@ function ProfitRing({ margin }: { margin: number }) {
           className="drop-shadow-[0_0_10px_var(--cyan)] transition-[stroke-dasharray] duration-500"
         />
       </svg>
-      <div className="absolute inset-[24px] flex items-center justify-center rounded-full bg-surface-deep/70 shadow-[inset_0_0_40px_-10px_var(--primary)]">
-        <span className="bg-gradient-to-r from-cyan to-success bg-clip-text text-[40px] font-extrabold tabular-nums text-transparent sm:text-[44px]">
+      <div className="absolute inset-[24px] flex items-center justify-center rounded-full bg-surface-deep/70 shadow-[inset_0_0_40px_-10px_var(--primary)] lg:bg-transparent lg:shadow-none">
+        <span className="bg-gradient-to-r from-cyan to-success bg-clip-text text-[40px] font-extrabold tabular-nums text-transparent sm:text-[44px] lg:bg-none lg:text-cyan lg:drop-shadow-[0_0_12px_var(--cyan)]">
           {margin.toLocaleString('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} %
         </span>
       </div>
@@ -141,8 +146,8 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
   return (
     <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
       <div className="flex min-w-0 flex-col gap-4">
-        <section aria-labelledby="match-title" className="sb-panel panel-glow relative overflow-hidden p-5 sm:p-6">
-          <div className="accent-wash pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
+        <section aria-labelledby="match-title" className="sb-panel panel-glow relative overflow-hidden p-5 sm:p-6 lg:rounded-[14px] lg:border-primary/70! lg:shadow-[0_0_28px_-10px_var(--primary)]">
+          <div className="accent-wash pointer-events-none absolute inset-0 opacity-60 lg:hidden" aria-hidden="true" />
           <StadiumBackdrop />
           <div className="relative flex items-center gap-4">
             <FootballIcon className="h-10 w-10 shrink-0 text-foreground" />
@@ -156,8 +161,8 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
           <div className="relative mt-6 flex items-stretch gap-3 sm:gap-6">
             <LegColumn team={o.homeTeam} crest={o.homeLogo ?? null} side={o.a} stake={stakeA} />
             <div className="relative flex w-12 shrink-0 items-center justify-center sm:w-16" aria-hidden="true">
-              <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan/70 to-transparent" />
-              <span className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan/80 bg-surface-deep text-[16px] font-extrabold shadow-[0_0_24px_-4px_var(--cyan)] sm:h-16 sm:w-16 sm:text-[22px]">
+              <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan/70 to-transparent lg:via-primary/80" />
+              <span className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan/80 bg-surface-deep text-[16px] font-extrabold shadow-[0_0_24px_-4px_var(--cyan)] sm:h-16 sm:w-16 sm:text-[22px] lg:h-[70px] lg:w-[70px] lg:border-primary! lg:bg-surface-deep/90 lg:text-[26px] lg:font-bold lg:shadow-[0_0_26px_-4px_var(--primary)]">
                 VS
               </span>
             </div>
@@ -165,7 +170,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
           </div>
         </section>
 
-        <section aria-labelledby="total-title" className="sb-panel panel-glow p-5 sm:p-6">
+        <section aria-labelledby="total-title" className="sb-panel panel-glow p-5 sm:p-6 lg:rounded-[14px] lg:border-primary/70! lg:px-8 lg:pb-8 lg:shadow-[0_0_28px_-10px_var(--primary)]">
           <div className="flex items-center gap-4">
             <Coins className="h-8 w-8 shrink-0 text-foreground" aria-hidden="true" />
             <h2 id="total-title" className="text-[20px] font-bold">
@@ -177,11 +182,11 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
               type="button"
               onClick={() => setTotal((t) => clamp(t - STEP, 0, MAX))}
               aria-label="Mindre indsats"
-              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 transition hover:brightness-125"
+              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 transition hover:brightness-125 lg:w-[60px] lg:rounded-[10px] lg:border-2 lg:border-primary! lg:bg-primary/15"
             >
               <Minus className="h-6 w-6" aria-hidden="true" />
             </button>
-            <div className="flex h-14 min-w-0 max-w-[320px] flex-1 items-center justify-center gap-2 rounded-xl border border-border-glow bg-surface-deep/80 px-3 focus-within:ring-2 focus-within:ring-ring">
+            <div className="flex h-14 min-w-0 max-w-[320px] flex-1 items-center justify-center gap-2 rounded-xl border border-border-glow bg-surface-deep/80 px-3 focus-within:ring-2 focus-within:ring-ring lg:rounded-[10px] lg:border-primary/70! lg:[&>input]:w-auto lg:[&>input]:flex-none lg:[&>input]:[field-sizing:content]">
               <input
                 id="total-stake"
                 inputMode="numeric"
@@ -196,12 +201,12 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
               type="button"
               onClick={() => setTotal((t) => clamp(t + STEP, 0, MAX))}
               aria-label="Større indsats"
-              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 transition hover:brightness-125"
+              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 transition hover:brightness-125 lg:w-[60px] lg:rounded-[10px] lg:border-2 lg:border-primary! lg:bg-primary/15"
             >
               <Plus className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
-          <div className="mt-6 flex items-center gap-3 text-[13px] text-foreground/85">
+          <div className="mt-6 flex items-center gap-3 text-[13px] text-foreground/85 lg:mt-10 lg:gap-5 lg:text-[15px] lg:text-foreground">
             <span className="shrink-0">100 DKK</span>
             <input
               type="range"
@@ -222,7 +227,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
       <section
         aria-labelledby="profit-title"
         aria-live="polite"
-        className="sb-panel panel-glow relative flex min-w-0 flex-col gap-5 overflow-hidden p-5 sm:p-6 [&>*:not(:first-child)]:relative"
+        className="sb-panel panel-glow relative flex min-w-0 flex-col gap-5 overflow-hidden p-5 sm:p-6 lg:gap-4 lg:rounded-[14px] lg:border-primary/70! lg:p-5 lg:shadow-[0_0_28px_-10px_var(--primary)] [&>*:not(:first-child)]:relative"
       >
         <StadiumBackdrop />
         <div className="flex items-center gap-4">
@@ -237,7 +242,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
 
         <ProfitRing margin={margin} />
 
-        <dl className="flex flex-col rounded-xl border border-border bg-surface-deep/60">
+        <dl className="flex flex-col rounded-xl border border-border bg-surface-deep/60 lg:rounded-[10px] lg:border-primary/50! lg:[&>div]:border-primary/30!">
           {[
             { team: o.homeTeam, crest: o.homeLogo ?? null, side: o.a, stake: stakeA },
             { team: o.awayTeam, crest: o.awayLogo ?? null, side: o.b, stake: stakeB },
@@ -260,7 +265,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
         <div
           className={cn(
             'flex items-center gap-3 rounded-xl border px-4 py-4',
-            positive ? 'border-success/60 bg-success/10 shadow-[0_0_24px_-10px_var(--success)]' : 'border-destructive/60 bg-destructive/10',
+            positive ? 'border-success/60 bg-success/10 shadow-[0_0_24px_-10px_var(--success)] lg:border-2 lg:border-success/80!' : 'border-destructive/60 bg-destructive/10',
           )}
         >
           <TrendingUp className={cn('h-7 w-7 shrink-0', positive ? 'text-success' : 'text-destructive')} aria-hidden="true" />
@@ -277,7 +282,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
           type="button"
           onClick={save}
           disabled={total <= 0 || saving}
-          className="bg-gradient-primary mt-auto flex h-14 items-center justify-center gap-3 rounded-xl text-[17px] font-bold text-primary-foreground shadow-glow transition hover:brightness-110 disabled:opacity-50 sm:text-[19px]"
+          className="bg-gradient-primary mt-auto flex h-14 items-center justify-center gap-3 rounded-xl text-[17px] font-bold text-primary-foreground shadow-glow transition hover:brightness-110 disabled:opacity-50 sm:text-[19px] lg:h-[66px] lg:rounded-[12px] lg:text-[20px]"
         >
           <Bookmark className="h-5 w-5" aria-hidden="true" />
           {saving ? 'Gemmer...' : 'Gem til mine væddemål'}
