@@ -675,3 +675,29 @@
   scrollbar-width: thin;
   scrollbar-color: oklch(0.4 0.1 260 / 60%) transparent;
 }
+
+@utility calc-range {
+  appearance: none;
+  height: 8px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--primary-glow), var(--cyan)) 0 / var(--fill, 50%) 100% no-repeat, var(--gauge-track);
+  cursor: pointer;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 9999px;
+    background: var(--surface-deep);
+    border: 3px solid var(--foreground);
+    box-shadow: 0 0 0 3px oklch(0.78 0.15 225 / 55%), 0 0 16px var(--cyan);
+  }
+  &::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 9999px;
+    background: var(--surface-deep);
+    border: 3px solid var(--foreground);
+    box-shadow: 0 0 0 3px oklch(0.78 0.15 225 / 55%), 0 0 16px var(--cyan);
+  }
+  &:focus-visible { outline: 2px solid var(--ring); outline-offset: 4px; }
+}

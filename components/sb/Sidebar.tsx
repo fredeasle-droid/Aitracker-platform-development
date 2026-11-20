@@ -16,6 +16,8 @@ import {
   Volleyball,
   Disc,
   Trophy,
+  Calculator,
+  Crown,
 } from "lucide-react";
 import { Logo } from "./Logo";
 import { useSurebets } from "./surebets-context";
@@ -30,7 +32,7 @@ const nav = [
   { label: "Mine bets", icon: Star },
 ];
 
-function FootballIcon({ className }: { className?: string }) {
+export function FootballIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} aria-hidden>
       <circle cx="12" cy="12" r="10" fill="currentColor" />
@@ -61,7 +63,91 @@ const sportIcons: Record<string, React.ComponentType<{ className?: string }>> = 
 
 const COLLAPSED_BOOKMAKERS = 8;
 
-export function SidebarContent() {
+const calculatorNav = [
+  { label: "Surebets", icon: Trophy, href: "/surebets" },
+  { label: "Beregn indsats", icon: Calculator, href: null },
+  { label: "Liveodds", icon: Radio, href: "/surebets" },
+  { label: "Statistik", icon: BarChart3, href: "/stats" },
+  { label: "Bonus", icon: Gift, href: "/bonus" },
+  { label: "Mine bets", icon: Star, href: "/stats" },
+];
+
+function CalculatorSidebarContent() {
+  const { sports } = useSurebets();
+  return (
+    <div className="flex min-h-full flex-col">
+      <div className="px-1">
+        <Logo />
+      </div>
+
+      <nav aria-label="Hovedmenu" className="mt-6 flex flex-col gap-1 short:mt-4 short:gap-0.5">
+        {calculatorNav.map(({ label, icon: Icon, href }) =>
+          href ? (
+            <Link
+              key={label}
+              href={href}
+              className="flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5"
+            >
+              <Icon className="h-5 w-5" strokeWidth={2.1} />
+              <span className="flex-1 text-left">{label}</span>
+            </Link>
+          ) : (
+            <span
+              key={label}
+              aria-current="page"
+              className="sb-nav-active flex w-full items-center gap-3.5 rounded-xl px-4 py-2.5 text-[15.5px] font-bold text-primary-foreground short:py-2"
+            >
+              <Icon className="h-5 w-5" strokeWidth={2.1} />
+              <span className="flex-1 text-left">{label}</span>
+            </span>
+          ),
+        )}
+      </nav>
+
+      <div className="my-4 h-px bg-sidebar-border short:my-3" />
+
+      <div className="px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan">SPORT</div>
+      <div className="mt-3 flex flex-col gap-1 short:mt-2 short:gap-0.5">
+        {sports.length === 0 && <p className="px-3 text-[12.5px] text-muted-foreground">Ingen sportsgrene lige nu.</p>}
+        {sports.map(({ label, count }) => {
+          const Icon = sportIcons[label] ?? Trophy;
+          return (
+            <Link
+              key={label}
+              href="/surebets"
+              className="flex w-full items-center gap-3 rounded-xl px-3 py-2 text-[14.5px] font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-accent short:py-1.5"
+            >
+              <Icon className="h-5 w-5" />
+              <span className="flex-1 text-left">{label}</span>
+              <span className="min-w-8 rounded-full bg-primary/25 px-2 py-0.5 text-center text-xs font-semibold text-foreground ring-1 ring-primary/40">
+                {count}
+              </span>
+            </Link>
+          );
+        })}
+      </div>
+
+      <div className="sb-panel panel-glow relative mt-6 shrink-0 overflow-hidden p-4 short:mt-4 short:p-3 lg:mt-auto">
+        <Crown className="h-8 w-8 fill-gold/30 text-gold" strokeWidth={1.8} aria-hidden />
+        <div className="mt-2 text-[15px] font-bold leading-tight">Opgrader til Pro</div>
+        <p className="mt-1 text-[12px] leading-snug text-muted-foreground">Få adgang til avancerede værktøjer og analyser</p>
+        <Link
+          href="/konto"
+          className="bg-gradient-primary mt-3 flex w-full items-center justify-center gap-1.5 rounded-full py-2.5 text-[13px] font-semibold text-primary-foreground shadow-glow"
+        >
+          Se fordele <ArrowRight className="h-4 w-4" aria-hidden />
+        </Link>
+      </div>
+    </div>
+  );
+}
+
+export function SidebarContent({ page = "surebets" }: { page?: "surebets" | "beregn" }) {
+  if (page === "beregn") return <CalculatorSidebarContent />;
+  return <SurebetsSidebarContent />;
+}
+
+function SurebetsSidebarContent() {
   const [activeNav, setActiveNav] = useState("Surebets");
   const [open, setOpen] = useState(true);
   const [showAll, setShowAll] = useState(false);
@@ -198,11 +284,11 @@ export function SidebarContent() {
   );
 }
 
-export function Sidebar() {
+export function Sidebar({ page = "surebets" }: { page?: "surebets" | "beregn" }) {
   return (
     <aside className="sticky top-0 z-10 hidden h-screen w-[230px] shrink-0 lg:block">
       <div className="h-full overflow-y-auto bg-sidebar/95 px-4 pb-4 pt-6 backdrop-blur-xl short:pb-3 short:pt-4">
-        <SidebarContent />
+        <SidebarContent page={page} />
       </div>
       <SidebarCurve />
     </aside>

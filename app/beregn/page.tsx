@@ -1,60 +1,55 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, Calculator as CalculatorIcon } from 'lucide-react'
-import { Calculator } from '@/components/beregn/calculator'
-import { MatchCard } from '@/components/beregn/match-card'
-import { DesktopAside } from '@/components/desktop/desktop-aside'
-import { getOpportunity, getOpportunities } from '@/lib/data'
-import { getServerT } from '@/lib/locale-server'
+import { CalcHero } from '@/components/beregn/calc-hero'
+import { StakeCalculator } from '@/components/beregn/stake-calculator'
+import { Sidebar } from '@/components/sb/Sidebar'
+import { TopBar } from '@/components/sb/TopBar'
+import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
+import { SurebetsProvider } from '@/components/sb/surebets-context'
+import { GlobalFooter } from '@/components/site/global-footer'
+import { getOpportunity } from '@/lib/data'
+import { getSbData } from '@/lib/sb-data'
 
 export const dynamic = 'force-dynamic'
-export async function generateMetadata(): Promise<Metadata> {
-  const { t } = await getServerT()
-  return { title: t('calcMetaTitle') }
+
+export const metadata: Metadata = {
+  title: 'Beregn indsats – BetTrackerAI',
+  description: 'Find den rigtige indsats og få garanteret profit på dit surebet.',
 }
 
 export default async function BeregnPage({ searchParams }: { searchParams: Promise<{ id?: string }> }) {
   const { id } = await searchParams
-  const { t } = await getServerT()
-  const [opportunity, opportunities] = await Promise.all([
-    getOpportunity(id ? Number(id) : undefined),
-    getOpportunities(),
-  ])
+  const [opportunity, data] = await Promise.all([getOpportunity(id ? Number(id) : undefined), getSbData()])
 
   return (
-    <main className="lg:min-h-dvh lg:bg-[#030914]">
-      <div className="flex w-full gap-4 px-4 lg:items-start lg:pb-6 lg:pt-4">
-          <section className="min-w-0 flex-1">
-            {opportunity ? (
-              <>
-                <h1 className="sr-only lg:hidden">{t('calculatorTitle')}</h1>
-                <div className="mb-4 hidden items-center justify-between gap-4 px-1 lg:mb-5 lg:flex">
-                  <div className="flex items-center gap-4">
-                    <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground shadow-[0_0_24px_-8px_var(--primary)] lg:size-14">
-                      <CalculatorIcon className="size-7" aria-hidden="true" />
-                    </span>
-                    <div>
-                      <h1 className="text-[28px] font-extrabold leading-tight tracking-tight lg:text-[34px]">{t('calculatorTitle')}</h1>
-                      <p className="text-[15px] text-[#bdc9e1] lg:text-[17px]">{t('calcSubtitle')}</p>
-                    </div>
-                  </div>
-                  <Link
-                    href="/"
-                    className="hidden min-h-14 items-center gap-3 rounded-xl border border-[#1d4c91] bg-[#071428] px-6 text-[16px] font-semibold text-primary transition-colors hover:bg-[#0b1d39] lg:flex"
-                  >
-                    <ArrowLeft className="size-5" aria-hidden="true" />
-                    {t('chooseOther')}
+    <SurebetsProvider data={data}>
+      <BookmakerFilterProvider>
+        <div className="flex min-h-screen">
+          <Sidebar page="beregn" />
+          <main className="relative min-w-0 flex-1 px-4 pb-8 sm:px-6">
+            <div className="hero-ambient pointer-events-none absolute inset-x-0 top-0 h-[420px]" aria-hidden="true" />
+            <div className="relative lg:pl-5">
+              <TopBar page="beregn" />
+            </div>
+            <div className="relative flex flex-col gap-4 lg:pl-5">
+              {opportunity ? (
+                <>
+                  <CalcHero league={opportunity.league} kickoff={opportunity.kickoffLabel} />
+                  <StakeCalculator key={opportunity.id} opportunity={opportunity} />
+                </>
+              ) : (
+                <div className="sb-panel p-8 text-center">
+                  <p className="text-muted-foreground">Kampen findes ikke længere.</p>
+                  <Link href="/surebets" className="mt-3 inline-block font-semibold text-cyan underline underline-offset-4">
+                    Se dagens surebets
                   </Link>
                 </div>
-                <MatchCard opportunity={opportunity} />
-                <Calculator key={opportunity.id} opportunity={opportunity} />
-              </>
-            ) : (
-              <p className="rounded-2xl border border-border p-8 text-center text-muted-foreground">{t('noSureBets')}</p>
-            )}
-          </section>
-          <DesktopAside opportunities={opportunities} />
+              )}
+            </div>
+          </main>
         </div>
-    </main>
+        <GlobalFooter />
+      </BookmakerFilterProvider>
+    </SurebetsProvider>
   )
 }

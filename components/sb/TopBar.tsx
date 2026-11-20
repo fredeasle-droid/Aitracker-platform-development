@@ -59,7 +59,7 @@ function MobileAccount() {
   );
 }
 
-export function TopBar() {
+export function TopBar({ page = "surebets" }: { page?: "surebets" | "beregn" }) {
   return (
     <header className="flex flex-col gap-3 pb-3.5 pt-3">
       <div className="flex items-center gap-2 min-[400px]:gap-3 lg:hidden">
@@ -72,7 +72,7 @@ export function TopBar() {
           </SheetTrigger>
           <SheetContent side="left" className="w-[270px] overflow-y-auto border-sidebar-border bg-sidebar px-4 pb-4 pt-6">
             <SheetTitle className="sr-only">Menu</SheetTitle>
-            <SidebarContent />
+            <SidebarContent page={page} />
           </SheetContent>
         </Sheet>
         <div className="flex min-w-0 flex-1 justify-center">
