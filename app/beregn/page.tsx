@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CalcHeroBackdrop } from '@/components/beregn/calc-hero'
 import { DesignScale } from '@/components/beregn/design-scale'
+import { BeregnMobileHeader } from '@/components/beregn/mobile-header'
 import { StakeCalculator } from '@/components/beregn/stake-calculator'
 import { Sidebar } from '@/components/sb/Sidebar'
 import { TopBar } from '@/components/sb/TopBar'
@@ -27,16 +28,17 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
       <BookmakerFilterProvider>
         <div className="bi flex min-h-screen bg-(--bi-bg)">
           <Sidebar page="beregn" />
-          <main className="relative min-w-0 flex-1 px-3 pb-8 sm:px-6 lg:px-0 lg:pb-0">
+          <main className="relative min-w-0 flex-1 lg:pb-0">
+            <BeregnMobileHeader />
             {opportunity && (
               <DesignScale className="absolute inset-x-0 top-0 hidden lg:block">
                 <CalcHeroBackdrop />
               </DesignScale>
             )}
-            <div className="relative z-10 lg:px-[30px]">
+            <div className="relative z-10 hidden lg:block lg:px-[30px]">
               <TopBar page="beregn" />
             </div>
-            <div className="relative flex flex-col gap-4">
+            <div className="relative flex flex-col gap-4 px-[12px] pt-[12px] lg:px-0 lg:pt-0">
               {opportunity ? (
                 <StakeCalculator key={opportunity.id} opportunity={opportunity} />
               ) : (
@@ -50,7 +52,9 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
             </div>
           </main>
         </div>
-        <GlobalFooter />
+        <div className="hidden lg:block">
+          <GlobalFooter />
+        </div>
       </BookmakerFilterProvider>
     </SurebetsProvider>
   )
