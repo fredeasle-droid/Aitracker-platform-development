@@ -29,31 +29,22 @@ function LegColumn({
   crest,
   side,
   stake,
-  home = false,
 }: {
   team: string
   crest: string | null
   side: Side
   stake: number
-  home?: boolean
 }) {
   const [copied, setCopied] = useState(false)
   const link = fallbackLink(side.bookmaker)
   return (
-    <div className={cn('flex min-w-0 flex-1 flex-col items-center gap-2 text-center', home && 'lg:flex-[1.3]')}>
-      <div className={cn('flex w-full min-w-0 flex-col items-center gap-2', home && 'lg:flex-row lg:items-center lg:gap-4')}>
-        <Crest
-          src={crest}
-          name={team}
-          size="lg"
-          className={cn('shrink-0 sm:h-[84px] sm:w-[84px]', home ? 'lg:h-[88px] lg:w-[88px]' : 'lg:h-[100px] lg:w-[100px]')}
-        />
-        <div className={cn('flex w-full min-w-0 flex-col items-center gap-2', home && 'lg:w-auto lg:flex-1 lg:items-start lg:text-left')}>
-      <p className="line-clamp-2 w-full text-[15px] font-bold leading-tight sm:text-[17px] lg:text-[18px]">{team}</p>
-      <div className="flex h-8 items-center lg:h-9">
+    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center lg:gap-1.5">
+      <Crest src={crest} name={team} size="lg" className="shrink-0 sm:h-[84px] sm:w-[84px] lg:h-[100px] lg:w-[100px]" />
+      <p className="line-clamp-2 w-full text-[15px] font-bold leading-tight sm:text-[17px] lg:mt-1 lg:text-[19px]">{team}</p>
+      <div className="flex h-8 items-center lg:h-10 lg:scale-125">
         <BookmakerMark id={bookmakerKey(side.bookmaker)} />
       </div>
-      <p className="w-full truncate text-[12.5px] text-muted-foreground">{side.label}</p>
+      <p className="w-full truncate text-[12.5px] text-muted-foreground lg:hidden">{side.label}</p>
       <a
         href={link.url}
         target="_blank"
@@ -70,10 +61,8 @@ function LegColumn({
         <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
         <span className="sr-only">(åbner i ny fane)</span>
       </a>
-        </div>
-      </div>
-      <span className="mt-1 text-[13px] text-muted-foreground lg:text-[16px] lg:text-foreground/85">Odds</span>
-      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow lg:h-[60px] lg:max-w-[190px] lg:bg-primary/20">
+      <span className="mt-1 text-[13px] text-muted-foreground lg:mt-3 lg:text-[17px] lg:text-foreground">Odds</span>
+      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow lg:h-[48px] lg:max-w-[200px] lg:rounded-lg lg:border-primary/70 lg:bg-primary/25">
         <LockedOdds odds={side.odds} className="text-[26px] font-extrabold tabular-nums sm:text-[30px] lg:text-[32px]" />
       </span>
     </div>
@@ -93,7 +82,7 @@ function StadiumBackdrop() {
 function ProfitRing({ margin }: { margin: number }) {
   const r = 84
   const c = 2 * Math.PI * r
-  const fraction = clamp(margin / 5, 0.04, 1)
+  const fraction = clamp(margin / 9, 0.04, 1)
   return (
     <div className="relative mx-auto h-[200px] w-[200px] sm:h-[220px] sm:w-[220px]">
       <svg viewBox="0 0 200 200" className="h-full w-full -rotate-90" aria-hidden="true">
@@ -165,7 +154,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
             </div>
           </div>
           <div className="relative mt-6 flex items-stretch gap-3 sm:gap-6">
-            <LegColumn team={o.homeTeam} crest={o.homeLogo ?? null} side={o.a} stake={stakeA} home />
+            <LegColumn team={o.homeTeam} crest={o.homeLogo ?? null} side={o.a} stake={stakeA} />
             <div className="relative flex w-12 shrink-0 items-center justify-center sm:w-16" aria-hidden="true">
               <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan/70 to-transparent" />
               <span className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan/80 bg-surface-deep text-[16px] font-extrabold shadow-[0_0_24px_-4px_var(--cyan)] sm:h-16 sm:w-16 sm:text-[22px]">

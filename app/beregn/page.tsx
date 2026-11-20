@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CalcHero } from '@/components/beregn/calc-hero'
+import { CalcHero, CalcHeroBackdrop } from '@/components/beregn/calc-hero'
 import { StakeCalculator } from '@/components/beregn/stake-calculator'
 import { Sidebar } from '@/components/sb/Sidebar'
 import { TopBar } from '@/components/sb/TopBar'
@@ -28,6 +28,7 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
           <Sidebar page="beregn" />
           <main className="relative min-w-0 flex-1 px-4 pb-8 sm:px-6">
             <div className="hero-ambient pointer-events-none absolute inset-x-0 top-0 h-[420px]" aria-hidden="true" />
+            {opportunity && <CalcHeroBackdrop />}
             <div className="relative lg:pl-5">
               <TopBar page="beregn" />
             </div>

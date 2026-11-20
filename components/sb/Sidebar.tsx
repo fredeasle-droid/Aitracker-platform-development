@@ -123,7 +123,7 @@ function CalculatorSidebarContent() {
             >
               <Icon className="h-[22px] w-[22px]" />
               <span className="flex-1 text-left">{label}</span>
-              <span className="min-w-12 rounded-full bg-primary/25 px-2.5 py-1 text-center text-[13px] font-semibold text-foreground ring-1 ring-primary/50">
+              <span className="min-w-8 text-right text-[16px] font-medium tabular-nums text-sidebar-foreground">
                 {counts.get(label) ?? 0}
               </span>
             </Link>
