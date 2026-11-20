@@ -1,0 +1,287 @@
+/* Design tokens and pieces for the "Beregn indsats" page, scoped under .bi so other pages are untouched. */
+.bi {
+  --bi-bg: oklch(0.135 0.045 266);
+  --bi-fg: oklch(0.98 0.005 250);
+  --bi-card: oklch(0.17 0.055 265);
+  --bi-field: oklch(0.2 0.075 264);
+  --bi-primary: oklch(0.6 0.225 259);
+  --bi-glow: oklch(0.7 0.17 240);
+  --bi-muted: oklch(0.84 0.025 258);
+  --bi-accent: oklch(0.24 0.08 262);
+  --bi-neon: oklch(0.86 0.15 195);
+  --bi-success: oklch(0.84 0.2 155);
+  --bi-gold: oklch(0.9 0.18 98);
+  --bi-destructive: oklch(0.63 0.23 25);
+
+  --bi-gradient-primary: linear-gradient(180deg, oklch(0.66 0.2 255) 0%, oklch(0.55 0.24 262) 100%);
+  --bi-gradient-neon: linear-gradient(90deg, oklch(0.9 0.14 190) 0%, oklch(0.8 0.15 215) 100%);
+  --bi-gradient-success: linear-gradient(90deg, oklch(0.42 0.12 165 / 0.45) 0%, oklch(0.25 0.08 175 / 0.25) 100%);
+  --bi-gradient-panel: linear-gradient(180deg, oklch(0.18 0.065 265 / 0.9) 0%, oklch(0.14 0.05 266 / 0.92) 100%);
+  --bi-shadow-glow: 0 0 22px oklch(0.6 0.225 259 / 0.6), inset 0 1px 0 oklch(1 0 0 / 0.25);
+  --bi-shadow-panel: 0 0 0 1px oklch(0.5 0.19 260 / 0.5), 0 0 24px oklch(0.6 0.225 259 / 0.12);
+  --bi-shadow-success: 0 0 0 1.5px oklch(0.84 0.2 155 / 0.85), 0 0 18px oklch(0.84 0.2 155 / 0.25);
+  --bi-shadow-float: 0 12px 34px oklch(0.06 0.03 266 / 0.75), 0 0 0 1px oklch(0.55 0.2 258 / 0.4);
+
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  color: var(--bi-fg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fixed-width desktop canvas, scaled to its container through --ds */
+.bi-canvas {
+  width: 1248px;
+  zoom: var(--ds, 1);
+}
+
+.bi-grad-primary {
+  background-image: var(--bi-gradient-primary);
+}
+.bi-grad-success {
+  background-image: var(--bi-gradient-success);
+}
+.bi-text-neon {
+  background-image: var(--bi-gradient-neon);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bi-shadow-glow {
+  box-shadow: var(--bi-shadow-glow);
+}
+.bi-shadow-success {
+  box-shadow: var(--bi-shadow-success);
+}
+.bi-glow-neon {
+  filter: drop-shadow(0 0 10px oklch(0.86 0.15 195 / 0.55));
+}
+
+.bi-panel {
+  background-image: var(--bi-gradient-panel);
+  box-shadow: var(--bi-shadow-panel);
+  border-radius: 14px;
+}
+
+.bi-field {
+  background-color: var(--bi-field);
+  border: 1px solid oklch(0.55 0.2 258 / 0.75);
+  box-shadow: inset 0 0 14px oklch(0.6 0.225 259 / 0.18);
+  border-radius: 10px;
+}
+
+.bi-range {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 8px;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    oklch(0.55 0.22 262) 0%,
+    oklch(0.84 0.15 200) var(--pct, 50%),
+    oklch(0.26 0.08 264) var(--pct, 50%),
+    oklch(0.26 0.08 264) 100%
+  );
+}
+.bi-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: oklch(0.97 0.01 240);
+  border: 3px solid oklch(0.6 0.225 259);
+  box-shadow: 0 0 14px oklch(0.7 0.17 240 / 0.9);
+}
+.bi-range::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: oklch(0.97 0.01 240);
+  border: 3px solid oklch(0.6 0.225 259);
+  box-shadow: 0 0 14px oklch(0.7 0.17 240 / 0.9);
+}
+.bi-range:focus-visible {
+  outline: 2px solid var(--bi-glow);
+  outline-offset: 6px;
+}
+
+/* ---------- Phone ---------- */
+
+.bi-combo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 26px;
+  background-image: var(--bi-gradient-panel);
+  box-shadow: var(--bi-shadow-panel), 0 0 0 1px oklch(0.55 0.2 258 / 0.35), 0 22px 48px oklch(0.06 0.03 266 / 0.7);
+}
+.bi-combo-fade {
+  background-image: linear-gradient(
+    180deg,
+    oklch(0.12 0.045 266 / 0.1) 0%,
+    oklch(0.12 0.045 266 / 0.45) 50%,
+    oklch(0.16 0.055 264 / 1) 100%
+  );
+}
+.bi-tile-in {
+  background-image: linear-gradient(165deg, oklch(0.25 0.09 260 / 0.75) 0%, oklch(0.16 0.055 266 / 0.75) 100%);
+  border-radius: 18px;
+  box-shadow: 0 0 0 1px oklch(0.55 0.2 258 / 0.4), inset 0 1px 0 oklch(0.9 0.05 240 / 0.08);
+  backdrop-filter: blur(6px);
+  transition: box-shadow 200ms;
+}
+.bi-tile-in:focus-within {
+  box-shadow: 0 0 0 1.5px var(--bi-glow), 0 0 24px oklch(0.6 0.225 259 / 0.45);
+}
+.bi-chip-glass {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background-color: oklch(0.12 0.045 266 / 0.6);
+  border: 1px solid oklch(0.7 0.17 240 / 0.35);
+  backdrop-filter: blur(8px);
+  font-size: 12px;
+  font-weight: 600;
+}
+.bi-chip-live {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid oklch(0.84 0.2 155 / 0.45);
+  background-color: oklch(0.135 0.045 266 / 0.6);
+  backdrop-filter: blur(12px);
+  color: var(--bi-success);
+  font-size: 12px;
+  font-weight: 600;
+}
+.bi-live-pulse {
+  animation: bi-live-pulse 1.8s ease-in-out infinite;
+}
+@keyframes bi-live-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.84 0.2 155 / 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 5px oklch(0.84 0.2 155 / 0);
+  }
+}
+.bi-vs-orb {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background-image: var(--bi-gradient-primary);
+  box-shadow: var(--bi-shadow-glow), 0 0 0 5px oklch(0.6 0.225 259 / 0.18);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.bi-link-line {
+  width: 2px;
+  border-radius: 999px;
+  background-image: linear-gradient(180deg, oklch(0.6 0.225 259 / 0.9) 0%, oklch(0.84 0.15 200 / 0.5) 60%, oklch(0.6 0.225 259 / 0) 100%);
+  box-shadow: 0 0 10px oklch(0.6 0.225 259 / 0.6);
+}
+.bi-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bi-divider::before,
+.bi-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-image: linear-gradient(90deg, oklch(0.55 0.2 258 / 0), oklch(0.55 0.2 258 / 0.55), oklch(0.55 0.2 258 / 0));
+}
+.bi-step {
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background-color: var(--bi-field);
+  border: 1px solid oklch(0.55 0.2 258 / 0.75);
+  box-shadow: inset 0 0 14px oklch(0.6 0.225 259 / 0.2);
+  transition: transform 120ms, border-color 150ms;
+}
+.bi-step:active {
+  transform: scale(0.92);
+  border-color: var(--bi-glow);
+}
+.bi-chip-pick {
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid oklch(0.55 0.2 258 / 0.55);
+  background-color: var(--bi-field);
+  font-size: 14px;
+  font-weight: 600;
+  color: oklch(0.98 0.005 250 / 0.85);
+  transition: background-color 150ms, box-shadow 150ms;
+}
+.bi-chip-pick[aria-pressed='true'] {
+  background-image: var(--bi-gradient-primary);
+  border-color: transparent;
+  color: var(--bi-fg);
+  box-shadow: var(--bi-shadow-glow);
+}
+.bi-split-bar {
+  height: 6px;
+  border-radius: 999px;
+  background-color: oklch(0.26 0.08 264);
+  overflow: hidden;
+}
+.bi-split-fill {
+  height: 100%;
+  border-radius: 999px;
+  background-image: var(--bi-gradient-neon);
+  box-shadow: 0 0 10px oklch(0.86 0.15 195 / 0.6);
+  transition: width 400ms ease-out;
+}
+.bi-dock {
+  background-image: linear-gradient(100deg, oklch(0.3 0.1 165 / 0.55) 0%, oklch(0.17 0.06 250 / 0.92) 60%);
+  border-radius: 20px;
+  box-shadow: var(--bi-shadow-success), var(--bi-shadow-float);
+  backdrop-filter: blur(14px);
+}
+.bi-dock-loss {
+  background-image: linear-gradient(100deg, oklch(0.32 0.12 25 / 0.5) 0%, oklch(0.17 0.06 250 / 0.92) 60%);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1.5px oklch(0.63 0.23 25 / 0.8), var(--bi-shadow-float);
+  backdrop-filter: blur(14px);
+}
+.bi-tabbar {
+  background-color: oklch(0.13 0.045 266 / 0.88);
+  border-radius: 22px;
+  box-shadow: var(--bi-shadow-float);
+  backdrop-filter: blur(14px);
+}
+.bi-tab-active {
+  background-image: var(--bi-gradient-primary);
+  box-shadow: var(--bi-shadow-glow);
+  color: var(--bi-fg);
+}
+.bi-bottom-fade {
+  background-image: linear-gradient(180deg, oklch(0.135 0.045 266 / 0) 0%, oklch(0.135 0.045 266 / 0.92) 38%);
+}
+.bi-rise {
+  animation: bi-rise 500ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes bi-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bi-rise,
+  .bi-live-pulse {
+    animation: none;
+  }
+}

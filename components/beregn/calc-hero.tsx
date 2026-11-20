@@ -1,50 +1,46 @@
 import { Trophy } from 'lucide-react'
 
+export function LeagueMark({ league, className }: { league: string; className?: string }) {
+  if (/premier league/i.test(league)) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src="/beregn/pl.png" alt="" className={className} />
+  }
+  return <Trophy className={className} strokeWidth={2} aria-hidden="true" />
+}
+
+/** Night-stadium backdrop with the striker; sits behind the top bar and hero (desktop canvas). */
 export function CalcHeroBackdrop() {
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-0 hidden h-[360px] overflow-hidden lg:block" aria-hidden="true">
+    <div className="pointer-events-none relative h-[460px] overflow-hidden" aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/sb/hero-football.jpg"
+        src="/beregn/stadium.jpg"
+        alt=""
+        className="absolute inset-0 size-full object-cover object-[50%_18%] opacity-60 [mask-image:linear-gradient(180deg,black_45%,transparent_100%)]"
+      />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/beregn/hero-player.jpg"
         alt=""
         fetchPriority="high"
-        className="absolute inset-y-0 right-0 h-full w-[75%] object-cover object-[70%_25%]"
+        className="absolute left-[250px] top-[30px] h-[380px] w-auto [mask-image:radial-gradient(ellipse_60%_62%_at_58%_50%,black_55%,transparent_100%)]"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/70 via-35% to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-(--bi-bg)/80 via-(--bi-bg)/20 to-transparent" />
     </div>
   )
 }
 
 export function CalcHero({ league, kickoff }: { league: string; kickoff: string }) {
   return (
-    <section className="relative overflow-hidden rounded-3xl lg:overflow-visible lg:rounded-none">
-      <div className="sb-panel panel-glow absolute inset-0 rounded-3xl lg:hidden" aria-hidden="true" />
-      <picture className="lg:hidden">
-        <source media="(max-width: 639px)" srcSet="/sb/hero-football-mobile.jpg" />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/sb/hero-football.jpg"
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover object-[70%_25%] max-sm:object-[60%_20%]"
-        />
-      </picture>
-      <div className="sb-hero-scrim absolute inset-0 lg:hidden" aria-hidden="true" />
-      <div className="relative flex min-h-[200px] flex-col justify-center gap-3 p-6 sm:min-h-[230px] sm:p-8 lg:min-h-[250px] lg:px-8 lg:py-6">
-        <h1 className="text-shadow-hero text-balance text-[40px] font-extrabold leading-none tracking-tight sm:text-[56px] lg:text-[66px]">
-          Beregn <span className="text-cyan">indsats</span>
-        </h1>
-        <p className="text-pretty text-[15px] leading-relaxed text-foreground/90 sm:text-[19px] lg:text-[22px] lg:text-foreground">
-          Find den rigtige indsats og få garanteret profit.
-        </p>
-        <p className="glass-pill flex w-fit max-w-full items-center gap-2.5 rounded-full px-4 py-2 text-[13px] font-medium sm:text-[15px] lg:mt-1 lg:border lg:border-primary/60 lg:px-6 lg:py-2.5 lg:text-[17px]">
-          <Trophy className="h-4 w-4 shrink-0 text-cyan lg:h-5 lg:w-5 lg:text-foreground" aria-hidden="true" />
-          <span className="truncate">
-            {league} · {kickoff}
-          </span>
-        </p>
-      </div>
+    <section className="relative z-10 h-[245px] pl-[53px] pt-[28px]">
+      <h1 className="text-[64px] font-bold leading-[1] tracking-[-0.025em]">
+        Beregn <span className="bi-text-neon">indsats</span>
+      </h1>
+      <p className="mt-[14px] text-[22px] font-medium tracking-[-0.005em]">Find den rigtige indsats og få garanteret profit.</p>
+      <p className="mt-[16px] inline-flex h-[46px] items-center gap-[12px] rounded-full border border-(--bi-primary)/70 bg-(--bi-bg)/60 pl-[16px] pr-[20px] text-[17px] font-medium backdrop-blur-sm">
+        <LeagueMark league={league} className="h-[30px] w-[26px] object-contain" />
+        {league} · {kickoff}
+      </p>
     </section>
   )
 }

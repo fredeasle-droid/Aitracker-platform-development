@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CalcHero, CalcHeroBackdrop } from '@/components/beregn/calc-hero'
+import { CalcHeroBackdrop } from '@/components/beregn/calc-hero'
+import { DesignScale } from '@/components/beregn/design-scale'
 import { StakeCalculator } from '@/components/beregn/stake-calculator'
 import { Sidebar } from '@/components/sb/Sidebar'
 import { TopBar } from '@/components/sb/TopBar'
@@ -24,20 +25,20 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
   return (
     <SurebetsProvider data={data}>
       <BookmakerFilterProvider>
-        <div className="flex min-h-screen">
+        <div className="bi flex min-h-screen bg-(--bi-bg)">
           <Sidebar page="beregn" />
-          <main className="relative min-w-0 flex-1 px-4 pb-8 sm:px-6">
-            <div className="hero-ambient pointer-events-none absolute inset-x-0 top-0 h-[420px]" aria-hidden="true" />
-            {opportunity && <CalcHeroBackdrop />}
-            <div className="relative lg:pl-5">
+          <main className="relative min-w-0 flex-1 px-3 pb-8 sm:px-6 lg:px-0 lg:pb-0">
+            {opportunity && (
+              <DesignScale className="absolute inset-x-0 top-0 hidden lg:block">
+                <CalcHeroBackdrop />
+              </DesignScale>
+            )}
+            <div className="relative z-10 lg:px-[30px]">
               <TopBar page="beregn" />
             </div>
-            <div className="relative flex flex-col gap-4 lg:pl-5">
+            <div className="relative flex flex-col gap-4">
               {opportunity ? (
-                <>
-                  <CalcHero league={opportunity.league} kickoff={opportunity.kickoffLabel} />
-                  <StakeCalculator key={opportunity.id} opportunity={opportunity} />
-                </>
+                <StakeCalculator key={opportunity.id} opportunity={opportunity} />
               ) : (
                 <div className="sb-panel p-8 text-center">
                   <p className="text-muted-foreground">Kampen findes ikke længere.</p>

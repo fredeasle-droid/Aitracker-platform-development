@@ -1,298 +1,738 @@
 'use client'
 
-import { useState, useTransition, type CSSProperties } from 'react'
+import { useState, useTransition, type CSSProperties, type ReactNode } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { ArrowUpRight, BarChart3, Bookmark, Coins, Minus, Plus, TrendingUp, Wallet } from 'lucide-react'
+import {
+  ArrowUpRight,
+  BarChart3,
+  Bookmark,
+  Calculator,
+  ChartNoAxesCombined,
+  Coins,
+  Minus,
+  Pencil,
+  Plus,
+  Radio,
+  Star,
+  Trophy,
+  Wallet,
+} from 'lucide-react'
 import { placeBet } from '@/app/actions'
 import { fallbackLink } from '@/components/beregn/go-to-bookmaker'
-import { LockedOdds } from '@/components/locked-odds'
+import { CalcHero, LeagueMark } from '@/components/beregn/calc-hero'
+import { DesignScale } from '@/components/beregn/design-scale'
+import { BetfairArrow, CoinsStackIcon, ProfitBarsIcon, SoccerBallSolid, useSvgId } from '@/components/beregn/bi-icons'
+import { LockedOdds, useHasAccess } from '@/components/locked-odds'
 import { BookmakerMark } from '@/components/sb/BookmakerMark'
 import { Crest } from '@/components/sb/Crest'
-import { FootballIcon } from '@/components/sb/Sidebar'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
-const MIN = 100
-const SLIDER_MAX = 10_000
-const MAX = 1_000_000
-const STEP = 100
+const STAKE_MIN = 100
+const STAKE_MAX = 10_000
+const INPUT_MAX = 1_000_000
+const QUICK = [500, 1000, 2500, 5000]
 
+type Result = { stakeA: number; stakeB: number; payout: number; profit: number; profitPct: number }
+
+function calcSurebet(total: number, oddsA: number, oddsB: number): Result | null {
+  if (!(total > 0) || !(oddsA > 1) || !(oddsB > 1)) return null
+  const sum = 1 / oddsA + 1 / oddsB
+  const stakeA = total / oddsA / sum
+  const payout = total / sum
+  return { stakeA, stakeB: total - stakeA, payout, profit: payout - total, profitPct: ((payout - total) / total) * 100 }
+}
+
+/** Slider position (0..1) on a log scale, as in the mock-up. */
+const stakeToPosition = (s: number) =>
+  Math.log(Math.min(STAKE_MAX, Math.max(STAKE_MIN, s)) / STAKE_MIN) / Math.log(STAKE_MAX / STAKE_MIN)
+function positionToStake(pos: number) {
+  const raw = STAKE_MIN * Math.pow(STAKE_MAX / STAKE_MIN, pos)
+  const step = raw < 1000 ? 10 : 50
+  return Math.min(STAKE_MAX, Math.max(STAKE_MIN, Math.round(raw / step) * step))
+}
+
+const krFmt = new Intl.NumberFormat('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
+const wholeFmt = new Intl.NumberFormat('da-DK', { maximumFractionDigits: 0 })
+const formatKr = (n: number) => `${krFmt.format(n)} kr.`
+const formatPct = (n: number) => `${krFmt.format(n)} %`
+const formatWhole = (n: number) => wholeFmt.format(n)
+const clampInput = (n: number) => Math.min(INPUT_MAX, Math.max(0, n))
 const bookmakerKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '')
-const kr = (n: number) => n.toLocaleString('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-const int = (n: number) => Math.round(n).toLocaleString('da-DK')
-const clamp = (n: number, lo: number, hi: number) => Math.min(Math.max(n, lo), hi)
 
-type Side = Opportunity['a']
+/** "I dag 21:00" -> { day: "I dag", time: "21:00" } */
+function splitKickoff(label: string) {
+  const m = label.match(/^(.*?)\s*(\d{1,2}[:.]\d{2})$/)
+  return m ? { day: m[1] || '', time: m[2] } : { day: '', time: label }
+}
 
-function LegColumn({
-  team,
-  crest,
-  side,
-  stake,
-}: {
+function Bet365Logo({ className }: { className?: string }) {
+  return (
+    <span className={cn('text-[31px] font-extrabold leading-none tracking-[-0.03em]', className)}>
+      bet<span className="text-(--bi-gold)">365</span>
+    </span>
+  )
+}
+
+function BetfairLogo({ className, arrowClassName }: { className?: string; arrowClassName?: string }) {
+  return (
+    <span className={cn('flex items-center gap-[4px] text-[30px] font-bold leading-none tracking-[-0.02em] text-(--bi-gold)', className)}>
+      <BetfairArrow className={cn('h-[22px] w-[26px] -rotate-12', arrowClassName)} />
+      betfair
+    </span>
+  )
+}
+
+function BookmakerLogo({ name, compact }: { name: string; compact?: boolean }) {
+  const key = bookmakerKey(name)
+  if (key === 'bet365') return <Bet365Logo className={compact ? 'text-[19px]' : undefined} />
+  if (key.startsWith('betfair'))
+    return <BetfairLogo className={compact ? 'text-[18px]' : undefined} arrowClassName={compact ? 'h-[13px] w-[15px]' : undefined} />
+  return (
+    <span className="flex items-center">
+      <BookmakerMark id={key as Parameters<typeof BookmakerMark>[0]['id']} size={compact ? 'md' : 'lg'} />
+      <span className="sr-only">{name}</span>
+    </span>
+  )
+}
+
+function TeamCrest({ src, team, className }: { src: string | null; team: string; className: string }) {
+  if (src) {
+    // eslint-disable-next-line @next/next/no-img-element
+    return <img src={src} alt={team} className={cn('object-contain', className)} />
+  }
+  return <Crest src={null} name={team} size="lg" className={className} />
+}
+
+type Leg = {
   team: string
   crest: string | null
-  side: Side
-  stake: number
-}) {
+  label: string
+  bookmaker: string
+  odds: string
+  realOdds: number
+  onOdds: (v: string) => void
+  stake: number | undefined
+}
+
+function useBookmakerLink(leg: Leg) {
   const [copied, setCopied] = useState(false)
-  const link = fallbackLink(side.bookmaker)
+  const url = fallbackLink(leg.bookmaker).url
+  const onClick = () => {
+    if (leg.stake === undefined) return
+    navigator.clipboard
+      .writeText(String(Math.round(leg.stake)))
+      .then(() => setCopied(true))
+      .catch(() => setCopied(false))
+  }
+  return { url, onClick, copied }
+}
+
+function OddsInput({ leg, hasAccess, className }: { leg: Leg; hasAccess: boolean; className: string }) {
+  if (!hasAccess) return <LockedOdds odds={leg.realOdds} className={className} />
   return (
-    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center lg:gap-1">
-      <Crest
-        src={crest}
-        name={team}
-        size="lg"
-        className="shrink-0 sm:h-[84px] sm:w-[84px] lg:h-[104px] lg:w-[104px] lg:bg-none! lg:p-0! lg:shadow-none! lg:drop-shadow-[0_0_14px_var(--primary)]"
-      />
-      <p className="line-clamp-2 w-full text-[15px] font-bold leading-tight sm:text-[17px] lg:mt-2 lg:text-[19px]">{team}</p>
-      <div className="flex h-8 items-center lg:my-1 lg:h-10 lg:scale-[1.45] lg:[&_.bk-bet365]:bg-transparent! lg:[&_.bk-bet365]:px-0! lg:[&_.bk-bet365]:text-foreground!">
-        <BookmakerMark id={bookmakerKey(side.bookmaker)} />
+    <input
+      value={leg.odds}
+      onChange={(e) => leg.onOdds(e.target.value.replace(',', '.').replace(/[^\d.]/g, ''))}
+      inputMode="decimal"
+      aria-label={`Odds for ${leg.label}`}
+      className={cn('w-full bg-transparent text-center outline-none', className)}
+    />
+  )
+}
+
+/* ---------------- Desktop ---------------- */
+
+function TeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) {
+  const link = useBookmakerLink(leg)
+  return (
+    <div className="flex w-[197px] flex-col items-center">
+      <TeamCrest src={leg.crest} team={leg.team} className="h-[104px] w-[104px]" />
+      <div className="mt-[10px] max-w-full truncate text-[18px] font-semibold leading-none">{leg.team}</div>
+      <div className="mt-[8px] flex h-[32px] items-center">
+        <BookmakerLogo name={leg.bookmaker} />
       </div>
-      <p className="w-full truncate text-[12.5px] text-muted-foreground lg:hidden">{side.label}</p>
       <a
         href={link.url}
         target="_blank"
         rel="noopener noreferrer sponsored"
-        onClick={() => {
-          navigator.clipboard
-            .writeText(String(Math.round(stake)))
-            .then(() => setCopied(true))
-            .catch(() => setCopied(false))
-        }}
-        className="flex items-center gap-1 whitespace-nowrap text-[13px] font-semibold text-cyan underline underline-offset-4 hover:text-foreground lg:text-[14px]"
+        onClick={link.onClick}
+        className="mt-[4px] flex items-center gap-[6px] whitespace-nowrap text-[16px] font-semibold text-(--bi-neon) underline underline-offset-[3px]"
       >
-        {copied ? 'Indsats kopieret' : `Gå til ${side.bookmaker}`}
-        <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+        {link.copied ? 'Indsats kopieret' : `Gå til ${leg.bookmaker}`}
+        <ArrowUpRight className="size-[18px]" strokeWidth={2.2} aria-hidden="true" />
         <span className="sr-only">(åbner i ny fane)</span>
       </a>
-      <span className="mt-1 text-[13px] text-muted-foreground lg:mt-2 lg:text-[17px] lg:text-foreground">Odds</span>
-      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow lg:h-[48px] lg:max-w-[200px] lg:rounded-[10px] lg:border-2 lg:border-primary! lg:bg-surface-deep/85 lg:shadow-[inset_0_0_18px_-6px_var(--primary),0_0_18px_-6px_var(--primary)]">
-        <LockedOdds odds={side.odds} className="text-[26px] font-extrabold tabular-nums sm:text-[30px] lg:text-[32px]" />
+      <div className="mt-[12px] text-[16px] font-medium leading-none">
+        Odds{leg.label !== leg.team ? ` · ${leg.label}` : ''}
+      </div>
+      <div className="bi-field mt-[6px] flex h-[47px] w-full items-center justify-center focus-within:border-(--bi-glow)">
+        <OddsInput leg={leg} hasAccess={hasAccess} className="text-[30px] font-bold" />
+      </div>
+    </div>
+  )
+}
+
+function MatchCard({ home, away, hasAccess }: { home: Leg; away: Leg; hasAccess: boolean }) {
+  return (
+    <section aria-labelledby="match-title" className="bi-panel relative h-[402px] overflow-hidden">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/beregn/stadium.jpg" alt="" className="pointer-events-none absolute inset-0 size-full object-cover object-top opacity-80" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-(--bi-card)/90 via-(--bi-card)/10 to-(--bi-card)/70" />
+
+      <div className="relative flex items-start gap-[20px] px-[26px] pt-[20px]">
+        <SoccerBallSolid className="mt-[2px] size-[48px]" />
+        <div>
+          <h2 id="match-title" className="text-[26px] font-semibold leading-[1.15] tracking-[-0.01em]">
+            Kamp og odds
+          </h2>
+          <p className="mt-[4px] text-[17px] text-(--bi-fg)/95">Vælg indsatser og se din garanterede profit.</p>
+        </div>
+      </div>
+
+      <div className="relative mt-[24px] flex justify-between px-[39px]">
+        <TeamColumn leg={home} hasAccess={hasAccess} />
+        <div className="relative w-0 self-stretch" aria-hidden="true">
+          <div className="absolute left-0 top-[-2px] h-[282px] w-px bg-gradient-to-b from-(--bi-primary)/10 via-(--bi-primary)/70 to-(--bi-primary)/10" />
+          <div className="bi-shadow-glow absolute left-[-34px] top-[80px] flex size-[68px] items-center justify-center rounded-full border-2 border-(--bi-primary) bg-(--bi-bg) text-[24px] font-bold">
+            VS
+          </div>
+        </div>
+        <TeamColumn leg={away} hasAccess={hasAccess} />
+      </div>
+    </section>
+  )
+}
+
+function StakeCard({ stake, onStake }: { stake: number; onStake: (n: number) => void }) {
+  const pct = stakeToPosition(stake) * 100
+  return (
+    <section aria-labelledby="total-title" className="bi-panel h-[216px] px-[30px] pt-[19px]">
+      <div className="flex items-center gap-[25px]">
+        <CoinsStackIcon className="size-[34px]" strokeWidth={1.7} />
+        <h2 id="total-title" className="text-[22px] font-semibold tracking-[-0.01em]">
+          Total indsats
+        </h2>
+      </div>
+
+      <div className="mt-[10px] flex items-center pl-[58px]">
+        <button
+          type="button"
+          aria-label="Mindre indsats"
+          onClick={() => onStake(clampInput(stake - 100))}
+          className="bi-field flex h-[53px] w-[59px] items-center justify-center transition-colors hover:border-(--bi-glow)"
+        >
+          <Minus className="size-[26px]" strokeWidth={2.4} aria-hidden="true" />
+        </button>
+        <label className="bi-field ml-[16px] flex h-[53px] w-[311px] items-center justify-center gap-[6px] focus-within:border-(--bi-glow)">
+          <input
+            value={formatWhole(stake)}
+            onChange={(e) => onStake(clampInput(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0))}
+            inputMode="numeric"
+            autoComplete="off"
+            aria-label="Total indsats"
+            className="w-[130px] bg-transparent text-right text-[29px] font-bold leading-none tabular-nums outline-none"
+          />
+          <span className="text-[22px] font-medium">DKK</span>
+        </label>
+        <button
+          type="button"
+          aria-label="Større indsats"
+          onClick={() => onStake(clampInput(stake + 100))}
+          className="bi-field ml-[17px] flex h-[53px] w-[58px] items-center justify-center transition-colors hover:border-(--bi-glow)"
+        >
+          <Plus className="size-[26px]" strokeWidth={2.4} aria-hidden="true" />
+        </button>
+      </div>
+
+      <div className="mt-[30px] flex items-center gap-[18px] pl-[1px] pr-[6px] text-[16px]">
+        <span>100 DKK</span>
+        <input
+          type="range"
+          min={0}
+          max={1000}
+          value={Math.round(pct * 10)}
+          onChange={(e) => onStake(positionToStake(Number(e.target.value) / 1000))}
+          aria-label="Indsats skyder"
+          style={{ '--pct': `${pct}%` } as CSSProperties}
+          className="bi-range flex-1"
+        />
+        <span>10.000 DKK</span>
+      </div>
+    </section>
+  )
+}
+
+function Ring({ pct }: { pct: number | null }) {
+  const R = 100
+  const C = 2 * Math.PI * R
+  const frac = pct === null ? 0 : Math.min(Math.max(pct / 10, 0), 1)
+  const gid = useSvgId('ring-g')
+  const fid = useSvgId('ring-glow')
+  return (
+    <div className="relative mx-auto size-[220px]">
+      <svg viewBox="0 0 220 220" className="size-full -rotate-90" aria-hidden="true">
+        <defs>
+          <linearGradient id={gid} x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" style={{ stopColor: 'var(--bi-neon)' }} />
+            <stop offset="1" style={{ stopColor: 'var(--bi-glow)' }} />
+          </linearGradient>
+          <filter id={fid} x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <circle cx="110" cy="110" r={R} fill="none" stroke="var(--bi-primary)" strokeOpacity="0.35" strokeWidth="6" />
+        <circle cx="110" cy="110" r={R - 12} fill="var(--bi-bg)" fillOpacity="0.55" stroke="var(--bi-primary)" strokeOpacity="0.25" strokeWidth="1.5" />
+        <circle
+          cx="110"
+          cy="110"
+          r={R}
+          fill="none"
+          stroke={`url(#${gid})`}
+          strokeWidth="9"
+          strokeLinecap="round"
+          strokeDasharray={`${C * frac} ${C}`}
+          filter={`url(#${fid})`}
+          className="transition-[stroke-dasharray] duration-500"
+        />
+      </svg>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className="bi-text-neon bi-glow-neon text-[47px] font-bold tracking-[-0.02em]">{pct === null ? '–' : formatPct(pct)}</span>
+      </div>
+    </div>
+  )
+}
+
+function ProfitCard({
+  result,
+  home,
+  away,
+  onSave,
+  saving,
+  message,
+}: {
+  result: Result | null
+  home: Leg
+  away: Leg
+  onSave: () => void
+  saving: boolean
+  message: string | null
+}) {
+  const v = (n: number | undefined) => (n === undefined ? '–' : formatKr(n))
+  const positive = (result?.profit ?? 0) >= 0
+  const tone = positive ? 'text-(--bi-success)' : 'text-(--bi-destructive)'
+  const rows: { icon: ReactNode; label: string; value: string }[] = [
+    {
+      icon: <TeamCrest src={home.crest} team="" className="size-[30px]" />,
+      label: `Indsats på ${home.label} (${home.bookmaker})`,
+      value: v(result?.stakeA),
+    },
+    {
+      icon: <TeamCrest src={away.crest} team="" className="h-[34px] w-[30px]" />,
+      label: `Indsats på ${away.label} (${away.bookmaker})`,
+      value: v(result?.stakeB),
+    },
+    { icon: <Wallet className="size-[28px]" strokeWidth={1.7} aria-hidden="true" />, label: 'Samlet udbetaling', value: v(result?.payout) },
+  ]
+
+  return (
+    <section aria-labelledby="profit-title" aria-live="polite" className="bi-panel flex h-[634px] flex-col px-[21px] pb-[20px] pt-[22px]">
+      <div className="flex items-start gap-[24px] pl-[13px]">
+        <ProfitBarsIcon className="mt-[2px] size-[44px]" />
+        <div>
+          <h2 id="profit-title" className="text-[26px] font-semibold leading-[1.15] tracking-[-0.01em]">
+            Garanteret profit
+          </h2>
+          <p className="mt-[4px] text-[17px] text-(--bi-fg)/95">Din beregning viser en garanteret profit.</p>
+        </div>
+      </div>
+
+      <div className="mt-[6px]">
+        <Ring pct={result?.profitPct ?? null} />
+      </div>
+
+      <dl className="mt-[1px] rounded-[8px] border border-(--bi-primary)/45 bg-(--bi-bg)/40">
+        {rows.map((r, i) => (
+          <div key={r.label} className={cn('flex h-[49px] items-center px-[14px]', i > 0 && 'border-t border-(--bi-primary)/35')}>
+            <span className="flex w-[30px] justify-center">{r.icon}</span>
+            <dt className="ml-[18px] min-w-0 flex-1 truncate text-[15px] text-(--bi-fg)/95">{r.label}</dt>
+            <dd className="text-[18px] font-bold tabular-nums">{r.value}</dd>
+          </div>
+        ))}
+      </dl>
+
+      <div
+        className={cn(
+          'mt-[2px] flex h-[68px] items-center rounded-[10px] px-[18px]',
+          positive ? 'bi-grad-success bi-shadow-success' : 'border-2 border-(--bi-destructive)',
+        )}
+      >
+        <ChartNoAxesCombined className={cn('size-[32px]', tone)} strokeWidth={2} aria-hidden="true" />
+        <span className={cn('ml-[20px] flex-1 text-[20px] font-semibold', tone)}>Garanteret profit</span>
+        <span className={cn('text-[30px] font-bold tabular-nums tracking-[-0.01em]', tone)}>
+          {result ? `${result.profit >= 0 ? '+' : ''}${formatKr(result.profit)}` : '–'}
+        </span>
+      </div>
+
+      <button
+        type="button"
+        onClick={onSave}
+        disabled={!result || saving}
+        className="bi-grad-primary bi-shadow-glow mt-auto flex h-[66px] items-center justify-center gap-[16px] rounded-[12px] text-[21px] font-semibold transition-transform hover:scale-[1.01] disabled:opacity-50"
+      >
+        <Bookmark className="size-[26px]" strokeWidth={2} aria-hidden="true" />
+        {saving ? 'Gemmer...' : 'Gem til mine væddemål'}
+      </button>
+      {message && (
+        <p role="alert" className="mt-[8px] text-center text-[14px] text-(--bi-destructive)">
+          {message}
+        </p>
+      )}
+    </section>
+  )
+}
+
+/* ---------------- Phone ---------------- */
+
+function MobileTeamColumn({ leg, share, hasAccess }: { leg: Leg; share: number | null; hasAccess: boolean }) {
+  const link = useBookmakerLink(leg)
+  return (
+    <div className="flex min-w-0 flex-col items-center">
+      <TeamCrest src={leg.crest} team={leg.team} className="size-[84px] drop-shadow-[0_6px_14px_oklch(0.06_0.03_266/0.8)]" />
+      <div className="mt-[8px] w-full truncate text-center text-[14px] font-bold leading-tight">{leg.team}</div>
+
+      <div className="bi-tile-in mt-[12px] flex w-full min-w-0 flex-col p-[11px]">
+        <div className="flex h-[24px] items-center justify-between gap-[6px]">
+          <span className="min-w-0 truncate">
+            <BookmakerLogo name={leg.bookmaker} compact />
+          </span>
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            onClick={link.onClick}
+            aria-label={`Gå til ${leg.bookmaker} (åbner i ny fane)`}
+            className="grid size-[26px] shrink-0 place-items-center rounded-full border border-(--bi-neon)/40 text-(--bi-neon)"
+          >
+            <ArrowUpRight className="size-[14px]" strokeWidth={2.4} aria-hidden="true" />
+          </a>
+        </div>
+
+        <label className="bi-field relative mt-[10px] flex h-[58px] items-center justify-center focus-within:border-(--bi-glow)">
+          <OddsInput leg={leg} hasAccess={hasAccess} className="text-[31px] font-extrabold leading-none tracking-[-0.02em]" />
+          {hasAccess && <Pencil className="pointer-events-none absolute right-[8px] top-[8px] size-[11px] text-(--bi-muted)" aria-hidden="true" />}
+        </label>
+
+        <div className="mt-[10px] flex items-baseline justify-between gap-[6px]">
+          <span className="truncate text-[11px] font-semibold uppercase tracking-[0.08em] text-(--bi-muted)">
+            {link.copied ? 'Kopieret' : leg.label !== leg.team ? leg.label : 'Sæt'}
+          </span>
+          <span className="text-[11px] font-semibold text-(--bi-muted)">{share === null ? '' : `${Math.round(share * 100)} %`}</span>
+        </div>
+        <div className="mt-[1px] truncate text-[19px] font-extrabold leading-tight text-(--bi-neon)">
+          {leg.stake === undefined ? '–' : formatKr(leg.stake)}
+        </div>
+        <div className="bi-split-bar mt-[7px]">
+          <div className="bi-split-fill" style={{ width: `${share === null ? 0 : share * 100}%` }} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function MobileCalculator({
+  o,
+  home,
+  away,
+  stake,
+  onStake,
+  hasAccess,
+}: {
+  o: Opportunity
+  home: Leg
+  away: Leg
+  stake: number
+  onStake: (n: number) => void
+  hasAccess: boolean
+}) {
+  const shareOf = (part: number | undefined) => (part === undefined || !(stake > 0) ? null : part / stake)
+  const pos = stakeToPosition(stake)
+  const kickoff = splitKickoff(o.kickoffLabel)
+
+  return (
+    <section className="bi-combo bi-rise" aria-label="Beregn indsats">
+      <div className="absolute inset-x-0 top-0 h-[250px]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/beregn/hero-player.jpg" alt="" className="pointer-events-none absolute inset-0 size-full object-cover object-[72%_30%]" />
+        <div className="bi-combo-fade pointer-events-none absolute inset-0" />
+      </div>
+
+      <div className="relative px-[12px] pt-[12px]">
+        <div className="flex items-center justify-between gap-[8px]">
+          <span className="bi-chip-glass min-w-0">
+            <LeagueMark league={o.league} className="h-[16px] w-[14px] shrink-0 object-contain" />
+            <span className="truncate">{o.league}</span>
+          </span>
+          <span className="bi-chip-live shrink-0">
+            <span className="bi-live-pulse size-[7px] rounded-full bg-(--bi-success)" aria-hidden="true" />
+            Live
+          </span>
+        </div>
+
+        <div className="relative mt-[44px] grid grid-cols-2 gap-[10px]">
+          <MobileTeamColumn leg={home} share={shareOf(home.stake)} hasAccess={hasAccess} />
+          <MobileTeamColumn leg={away} share={shareOf(away.stake)} hasAccess={hasAccess} />
+
+          <div className="pointer-events-none absolute left-1/2 top-0 flex h-full -translate-x-1/2 flex-col items-center" aria-hidden="true">
+            <div className="bi-vs-orb mt-[20px] size-[44px] text-[14px]">VS</div>
+            <div className="mt-[6px] rounded-full bg-(--bi-bg)/70 px-[8px] py-[3px] text-center backdrop-blur-md">
+              <div className="text-[13px] font-extrabold leading-none">{kickoff.time}</div>
+              {kickoff.day && <div className="mt-[2px] text-[9.5px] font-medium leading-none text-(--bi-muted)">{kickoff.day}</div>}
+            </div>
+            <div className="bi-link-line mt-[6px] h-[72px]" />
+          </div>
+        </div>
+      </div>
+
+      <div className="relative px-[16px] pb-[16px] pt-[18px]">
+        <div className="bi-divider text-[11px] font-bold uppercase tracking-[0.1em] text-(--bi-muted)">
+          <span className="flex items-center gap-[6px]">
+            <Coins className="size-[14px] text-(--bi-neon)" strokeWidth={2.2} aria-hidden="true" />
+            Total indsats · fordeles automatisk
+          </span>
+        </div>
+
+        <div className="mt-[14px] grid grid-cols-[52px_minmax(0,1fr)_52px] items-center gap-[10px]">
+          <button type="button" aria-label="Mindre indsats" onClick={() => onStake(clampInput(stake - 100))} className="bi-step size-[52px]">
+            <Minus className="size-[22px]" strokeWidth={2.4} aria-hidden="true" />
+          </button>
+          <label className="flex min-w-0 items-baseline justify-center gap-[6px]">
+            <input
+              value={formatWhole(stake)}
+              onChange={(e) => onStake(clampInput(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0))}
+              inputMode="numeric"
+              autoComplete="off"
+              aria-label="Total indsats"
+              className="w-full min-w-0 bg-transparent text-right text-[40px] font-extrabold leading-none tabular-nums tracking-[-0.03em] outline-none"
+            />
+            <span className="shrink-0 text-[15px] font-bold text-(--bi-muted)">DKK</span>
+          </label>
+          <button type="button" aria-label="Større indsats" onClick={() => onStake(clampInput(stake + 100))} className="bi-step size-[52px]">
+            <Plus className="size-[22px]" strokeWidth={2.4} aria-hidden="true" />
+          </button>
+        </div>
+
+        <input
+          type="range"
+          min={0}
+          max={1000}
+          value={Math.round(pos * 1000)}
+          onChange={(e) => onStake(positionToStake(Number(e.target.value) / 1000))}
+          aria-label="Vælg indsats"
+          className="bi-range mt-[18px] w-full"
+          style={{ '--pct': `${pos * 100}%` } as CSSProperties}
+        />
+        <div className="mt-[6px] flex justify-between text-[11px] font-medium text-(--bi-muted)">
+          <span>{formatWhole(STAKE_MIN)} kr.</span>
+          <span>{formatWhole(STAKE_MAX)} kr.</span>
+        </div>
+
+        <div className="mt-[12px] grid grid-cols-4 gap-[8px]">
+          {QUICK.map((q) => (
+            <button type="button" key={q} onClick={() => onStake(q)} aria-pressed={stake === q} className="bi-chip-pick">
+              {formatWhole(q)}
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+function MiniRing({ pct, tone }: { pct: number | null; tone: string }) {
+  const R = 22
+  const C = 2 * Math.PI * R
+  const frac = pct === null ? 0 : Math.min(Math.max(pct / 10, 0), 1)
+  return (
+    <div className={cn('relative size-[56px] shrink-0', tone)}>
+      <svg viewBox="0 0 56 56" className="size-full -rotate-90" aria-hidden="true">
+        <circle cx="28" cy="28" r={R} fill="none" stroke="var(--bi-primary)" strokeOpacity="0.3" strokeWidth="5" />
+        {frac > 0 && (
+          <circle
+            cx="28"
+            cy="28"
+            r={R}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="5"
+            strokeLinecap="round"
+            strokeDasharray={`${frac * C} ${C}`}
+            className="transition-[stroke-dasharray] duration-500"
+            style={{ filter: 'drop-shadow(0 0 4px currentColor)' }}
+          />
+        )}
+      </svg>
+      <span className="absolute inset-0 grid place-items-center text-[11px] font-extrabold tracking-[-0.02em]">
+        {pct === null ? '–' : formatPct(pct).replace(' ', '')}
       </span>
     </div>
   )
 }
 
-function StadiumBackdrop() {
+function MobileResultDock({ result, onSave, saving }: { result: Result | null; onSave: () => void; saving: boolean }) {
+  const positive = result !== null && result.profit >= 0
+  const tone = result === null ? 'text-(--bi-muted)' : positive ? 'text-(--bi-success)' : 'text-(--bi-destructive)'
   return (
-    <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/images/stadium-empty.png" alt="" className="h-full w-full object-cover object-center opacity-55" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/55 via-background/20 to-background/60" />
+    <div aria-live="polite" className={cn(positive || result === null ? 'bi-dock' : 'bi-dock-loss', 'flex items-center gap-[12px] p-[10px]')}>
+      <MiniRing pct={result?.profitPct ?? null} tone={tone} />
+      <div className="min-w-0 flex-1">
+        <div className="truncate text-[10px] font-bold uppercase tracking-[0.1em] text-(--bi-muted)">
+          {result === null ? 'Indtast odds' : positive ? 'Garanteret profit' : 'Ingen surebet'}
+        </div>
+        <div className={cn('truncate text-[24px] font-extrabold leading-[1.1] tabular-nums tracking-[-0.03em]', tone)}>
+          {result ? `${result.profit >= 0 ? '+' : ''}${formatKr(result.profit)}` : '–'}
+        </div>
+        <div className="truncate text-[11px] text-(--bi-muted)">
+          Udbetaling <span className="font-semibold text-(--bi-fg)">{result ? formatKr(result.payout) : '–'}</span>
+        </div>
+      </div>
+      <button
+        type="button"
+        onClick={onSave}
+        aria-label="Gem til mine væddemål"
+        disabled={!result || saving}
+        className="bi-grad-primary bi-shadow-glow flex h-[52px] shrink-0 items-center gap-[8px] rounded-[16px] px-[16px] text-[15px] font-bold transition-transform active:scale-[0.96] disabled:opacity-50"
+      >
+        <Bookmark className="size-[18px]" strokeWidth={2.2} aria-hidden="true" />
+        {saving ? 'Gemmer' : 'Gem'}
+      </button>
     </div>
   )
 }
 
-function ProfitRing({ margin }: { margin: number }) {
-  const r = 84
-  const c = 2 * Math.PI * r
-  const fraction = clamp(margin / 9, 0.04, 1)
+const TABS = [
+  { label: 'Surebets', icon: Trophy, href: '/surebets' },
+  { label: 'Beregn', icon: Calculator, href: null },
+  { label: 'Live', icon: Radio, href: '/surebets' },
+  { label: 'Statistik', icon: BarChart3, href: '/stats' },
+  { label: 'Mine bets', icon: Star, href: '/stats' },
+]
+
+function MobileTabBar() {
   return (
-    <div className="relative mx-auto h-[200px] w-[200px] sm:h-[220px] sm:w-[220px]">
-      <svg viewBox="0 0 200 200" className="h-full w-full -rotate-90" aria-hidden="true">
-        <defs>
-          <linearGradient id="profit-ring-stroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="var(--primary)" />
-            <stop offset="100%" stopColor="var(--cyan)" />
-          </linearGradient>
-        </defs>
-        <circle cx="100" cy="100" r={r} fill="none" stroke="var(--primary)" strokeOpacity="0.35" strokeWidth="6" />
-        <circle
-          cx="100"
-          cy="100"
-          r={r}
-          fill="none"
-          stroke="url(#profit-ring-stroke)"
-          strokeWidth="10"
-          strokeLinecap="round"
-          strokeDasharray={`${c * fraction} ${c}`}
-          className="drop-shadow-[0_0_10px_var(--cyan)] transition-[stroke-dasharray] duration-500"
-        />
-      </svg>
-      <div className="absolute inset-[24px] flex items-center justify-center rounded-full bg-surface-deep/70 shadow-[inset_0_0_40px_-10px_var(--primary)] lg:bg-transparent lg:shadow-none">
-        <span className="bg-gradient-to-r from-cyan to-success bg-clip-text text-[40px] font-extrabold tabular-nums text-transparent sm:text-[44px] lg:bg-none lg:text-cyan lg:drop-shadow-[0_0_12px_var(--cyan)]">
-          {margin.toLocaleString('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} %
-        </span>
-      </div>
-    </div>
+    <nav aria-label="Hovedmenu" className="bi-tabbar p-[6px]">
+      <ul className="grid h-[54px] grid-cols-5 gap-[4px]">
+        {TABS.map(({ label, icon: I, href }) => {
+          const active = href === null
+          const cls = cn(
+            'flex h-full flex-col items-center justify-center gap-[3px] rounded-[16px] text-[10.5px] font-semibold transition-colors',
+            active ? 'bi-tab-active' : 'text-(--bi-fg)/70 active:bg-(--bi-accent)',
+          )
+          const content = (
+            <>
+              <I className="size-[21px]" strokeWidth={active ? 2.2 : 1.8} aria-hidden="true" />
+              <span className="max-w-full truncate px-[2px]">{label}</span>
+            </>
+          )
+          return (
+            <li key={label} className="min-w-0">
+              {href ? (
+                <Link href={href} className={cls}>
+                  {content}
+                </Link>
+              ) : (
+                <span aria-current="page" className={cls}>
+                  {content}
+                </span>
+              )}
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
   )
 }
+
+/* ---------------- Page state ---------------- */
 
 export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }) {
   const router = useRouter()
-  const [total, setTotal] = useState(1000)
+  const hasAccess = useHasAccess()
+  const [stake, setStake] = useState(1000)
+  const [oddsA, setOddsA] = useState(String(o.a.odds))
+  const [oddsB, setOddsB] = useState(String(o.b.odds))
   const [message, setMessage] = useState<string | null>(null)
   const [saving, startSaving] = useTransition()
 
-  const inv = 1 / o.a.odds + 1 / o.b.odds
-  const stakeA = total > 0 ? total / o.a.odds / inv : 0
-  const stakeB = total - stakeA
-  const payout = stakeA * o.a.odds
-  const profit = payout - total
-  const margin = total > 0 ? (profit / total) * 100 : 0
-  const positive = profit >= 0
-  const sliderPct = ((clamp(total, MIN, SLIDER_MAX) - MIN) / (SLIDER_MAX - MIN)) * 100
+  const result = hasAccess
+    ? calcSurebet(stake, parseFloat(oddsA), parseFloat(oddsB))
+    : calcSurebet(stake, o.a.odds, o.b.odds)
+
+  const home: Leg = {
+    team: o.homeTeam,
+    crest: o.homeLogo ?? null,
+    label: o.a.label,
+    bookmaker: o.a.bookmaker,
+    odds: oddsA,
+    realOdds: o.a.odds,
+    onOdds: setOddsA,
+    stake: result?.stakeA,
+  }
+  const away: Leg = {
+    team: o.awayTeam,
+    crest: o.awayLogo ?? null,
+    label: o.b.label,
+    bookmaker: o.b.bookmaker,
+    odds: oddsB,
+    realOdds: o.b.odds,
+    onOdds: setOddsB,
+    stake: result?.stakeB,
+  }
 
   function save() {
+    if (!result) return
     setMessage(null)
     startSaving(async () => {
-      const res = await placeBet({ opportunityId: o.id, stakeA, stakeB })
+      const res = await placeBet({ opportunityId: o.id, stakeA: result.stakeA, stakeB: result.stakeB })
       if (res.ok) router.push('/stats')
       else setMessage(res.error)
     })
   }
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)]">
-      <div className="flex min-w-0 flex-col gap-4">
-        <section aria-labelledby="match-title" className="sb-panel panel-glow relative overflow-hidden p-5 sm:p-6 lg:rounded-[14px] lg:border-primary/70! lg:shadow-[0_0_28px_-10px_var(--primary)]">
-          <div className="accent-wash pointer-events-none absolute inset-0 opacity-60 lg:hidden" aria-hidden="true" />
-          <StadiumBackdrop />
-          <div className="relative flex items-center gap-4">
-            <FootballIcon className="h-10 w-10 shrink-0 text-foreground" />
-            <div>
-              <h2 id="match-title" className="text-[20px] font-bold leading-tight sm:text-[24px]">
-                Kamp og odds
-              </h2>
-              <p className="text-[13px] text-muted-foreground sm:text-[15px]">Vælg indsatser og se din garanterede profit.</p>
-            </div>
+    <>
+      <DesignScale className="hidden lg:block">
+        <CalcHero league={o.league} kickoff={o.kickoffLabel} />
+        <div className="relative z-10 grid grid-cols-[640fr_547fr] gap-x-[16px] px-[22px] pb-[52px]">
+          <div className="flex flex-col gap-[15px]">
+            <MatchCard home={home} away={away} hasAccess={hasAccess} />
+            <StakeCard stake={stake} onStake={setStake} />
           </div>
-          <div className="relative mt-6 flex items-stretch gap-3 sm:gap-6">
-            <LegColumn team={o.homeTeam} crest={o.homeLogo ?? null} side={o.a} stake={stakeA} />
-            <div className="relative flex w-12 shrink-0 items-center justify-center sm:w-16" aria-hidden="true">
-              <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan/70 to-transparent lg:via-primary/80" />
-              <span className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan/80 bg-surface-deep text-[16px] font-extrabold shadow-[0_0_24px_-4px_var(--cyan)] sm:h-16 sm:w-16 sm:text-[22px] lg:h-[70px] lg:w-[70px] lg:border-primary! lg:bg-surface-deep/90 lg:text-[26px] lg:font-bold lg:shadow-[0_0_26px_-4px_var(--primary)]">
-                VS
-              </span>
-            </div>
-            <LegColumn team={o.awayTeam} crest={o.awayLogo ?? null} side={o.b} stake={stakeB} />
-          </div>
-        </section>
-
-        <section aria-labelledby="total-title" className="sb-panel panel-glow p-5 sm:p-6 lg:rounded-[14px] lg:border-primary/70! lg:px-8 lg:pb-8 lg:shadow-[0_0_28px_-10px_var(--primary)]">
-          <div className="flex items-center gap-4">
-            <Coins className="h-8 w-8 shrink-0 text-foreground" aria-hidden="true" />
-            <h2 id="total-title" className="text-[20px] font-bold">
-              <label htmlFor="total-stake">Total indsats</label>
-            </h2>
-          </div>
-          <div className="mt-5 flex items-center justify-center gap-3">
-            <button
-              type="button"
-              onClick={() => setTotal((t) => clamp(t - STEP, 0, MAX))}
-              aria-label="Mindre indsats"
-              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 transition hover:brightness-125 lg:w-[60px] lg:rounded-[10px] lg:border-2 lg:border-primary! lg:bg-primary/15"
-            >
-              <Minus className="h-6 w-6" aria-hidden="true" />
-            </button>
-            <div className="flex h-14 min-w-0 max-w-[320px] flex-1 items-center justify-center gap-2 rounded-xl border border-border-glow bg-surface-deep/80 px-3 focus-within:ring-2 focus-within:ring-ring lg:rounded-[10px] lg:border-primary/70! lg:[&>input]:w-auto lg:[&>input]:flex-none lg:[&>input]:[field-sizing:content]">
-              <input
-                id="total-stake"
-                inputMode="numeric"
-                autoComplete="off"
-                value={int(total)}
-                onChange={(e) => setTotal(clamp(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0, 0, MAX))}
-                className="w-full min-w-0 bg-transparent text-right text-[26px] font-bold tabular-nums outline-none lg:text-[30px]"
-              />
-              <span className="shrink-0 text-[20px] font-medium text-foreground/90">DKK</span>
-            </div>
-            <button
-              type="button"
-              onClick={() => setTotal((t) => clamp(t + STEP, 0, MAX))}
-              aria-label="Større indsats"
-              className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 transition hover:brightness-125 lg:w-[60px] lg:rounded-[10px] lg:border-2 lg:border-primary! lg:bg-primary/15"
-            >
-              <Plus className="h-6 w-6" aria-hidden="true" />
-            </button>
-          </div>
-          <div className="mt-6 flex items-center gap-3 text-[13px] text-foreground/85 lg:mt-10 lg:gap-5 lg:text-[15px] lg:text-foreground">
-            <span className="shrink-0">100 DKK</span>
-            <input
-              type="range"
-              min={MIN}
-              max={SLIDER_MAX}
-              step={STEP}
-              value={clamp(total, MIN, SLIDER_MAX)}
-              onChange={(e) => setTotal(Number(e.target.value))}
-              aria-label="Total indsats"
-              style={{ '--fill': `${sliderPct}%` } as CSSProperties}
-              className="calc-range min-w-0 flex-1"
-            />
-            <span className="shrink-0">10.000 DKK</span>
-          </div>
-        </section>
-      </div>
-
-      <section
-        aria-labelledby="profit-title"
-        aria-live="polite"
-        className="sb-panel panel-glow relative flex min-w-0 flex-col gap-5 overflow-hidden p-5 sm:p-6 lg:gap-4 lg:rounded-[14px] lg:border-primary/70! lg:p-5 lg:shadow-[0_0_28px_-10px_var(--primary)] [&>*:not(:first-child)]:relative"
-      >
-        <StadiumBackdrop />
-        <div className="flex items-center gap-4">
-          <BarChart3 className="h-9 w-9 shrink-0 text-cyan" strokeWidth={2.6} aria-hidden="true" />
-          <div>
-            <h2 id="profit-title" className="text-[20px] font-bold leading-tight sm:text-[24px]">
-              Garanteret profit
-            </h2>
-            <p className="text-[13px] text-muted-foreground sm:text-[15px]">Din beregning viser en garanteret profit.</p>
-          </div>
+          <ProfitCard result={result} home={home} away={away} onSave={save} saving={saving} message={message} />
         </div>
+      </DesignScale>
 
-        <ProfitRing margin={margin} />
-
-        <dl className="flex flex-col rounded-xl border border-border bg-surface-deep/60 lg:rounded-[10px] lg:border-primary/50! lg:[&>div]:border-primary/30!">
-          {[
-            { team: o.homeTeam, crest: o.homeLogo ?? null, side: o.a, stake: stakeA },
-            { team: o.awayTeam, crest: o.awayLogo ?? null, side: o.b, stake: stakeB },
-          ].map(({ team, crest, side, stake }) => (
-            <div key={side.bookmaker + side.label} className="flex items-center gap-3 border-b border-border px-4 py-3">
-              <Crest src={crest} name={team} size="sm" />
-              <dt className="min-w-0 flex-1 truncate text-[14px] text-foreground/90">
-                Indsats på {side.label} ({side.bookmaker})
-              </dt>
-              <dd className="shrink-0 text-[16px] font-bold tabular-nums">{kr(stake)} kr.</dd>
-            </div>
-          ))}
-          <div className="flex items-center gap-3 px-4 py-3">
-            <Wallet className="h-6 w-6 shrink-0 text-foreground/85" aria-hidden="true" />
-            <dt className="min-w-0 flex-1 text-[14px] text-foreground/90">Samlet udbetaling</dt>
-            <dd className="shrink-0 text-[16px] font-bold tabular-nums">{kr(payout)} kr.</dd>
-          </div>
-        </dl>
-
-        <div
-          className={cn(
-            'flex items-center gap-3 rounded-xl border px-4 py-4',
-            positive ? 'border-success/60 bg-success/10 shadow-[0_0_24px_-10px_var(--success)] lg:border-2 lg:border-success/80!' : 'border-destructive/60 bg-destructive/10',
+      <div className="pb-[calc(176px+env(safe-area-inset-bottom))] lg:hidden">
+        <div className="mx-auto max-w-[560px]">
+          <MobileCalculator o={o} home={home} away={away} stake={stake} onStake={setStake} hasAccess={hasAccess} />
+          {message && (
+            <p role="alert" className="mt-3 text-center text-[14px] text-(--bi-destructive)">
+              {message}
+            </p>
           )}
-        >
-          <TrendingUp className={cn('h-7 w-7 shrink-0', positive ? 'text-success' : 'text-destructive')} aria-hidden="true" />
-          <span className={cn('flex-1 text-[17px] font-bold sm:text-[19px]', positive ? 'text-success' : 'text-destructive')}>
-            Garanteret profit
-          </span>
-          <span className={cn('text-[22px] font-extrabold tabular-nums sm:text-[26px]', positive ? 'text-success' : 'text-destructive')}>
-            {positive ? '+' : ''}
-            {kr(profit)} kr.
-          </span>
         </div>
-
-        <button
-          type="button"
-          onClick={save}
-          disabled={total <= 0 || saving}
-          className="bg-gradient-primary mt-auto flex h-14 items-center justify-center gap-3 rounded-xl text-[17px] font-bold text-primary-foreground shadow-glow transition hover:brightness-110 disabled:opacity-50 sm:text-[19px] lg:h-[66px] lg:rounded-[12px] lg:text-[20px]"
-        >
-          <Bookmark className="h-5 w-5" aria-hidden="true" />
-          {saving ? 'Gemmer...' : 'Gem til mine væddemål'}
-        </button>
-        {message && (
-          <p role="alert" className="text-center text-sm text-destructive">
-            {message}
-          </p>
-        )}
-      </section>
-    </div>
+        <div className="bi-bottom-fade pointer-events-none fixed inset-x-0 bottom-0 z-40 px-[10px] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[28px]">
+          <div className="pointer-events-auto mx-auto flex max-w-[560px] flex-col gap-[8px]">
+            <MobileResultDock result={result} onSave={save} saving={saving} />
+            <MobileTabBar />
+          </div>
+        </div>
+      </div>
+    </>
   )
 }
