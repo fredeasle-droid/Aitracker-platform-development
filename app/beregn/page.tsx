@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { CalcHeroBackdrop } from '@/components/beregn/calc-hero'
+import { CalcHeroBackdrop, CalcHeroStadium } from '@/components/beregn/calc-hero'
 import { DesignScale } from '@/components/beregn/design-scale'
 import { BeregnMobileHeader } from '@/components/beregn/mobile-header'
 import { StakeCalculator } from '@/components/beregn/stake-calculator'
@@ -31,7 +31,7 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
           <main className="relative min-w-0 flex-1 lg:pb-0">
             <BeregnMobileHeader />
             {opportunity && (
-              <DesignScale className="absolute inset-x-0 top-0 hidden lg:block">
+              <DesignScale className="absolute inset-x-0 top-0 hidden lg:block" backdrop={<CalcHeroStadium />}>
                 <CalcHeroBackdrop />
               </DesignScale>
             )}
