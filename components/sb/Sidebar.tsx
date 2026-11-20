@@ -72,68 +72,77 @@ const calculatorNav = [
   { label: "Mine bets", icon: Star, href: "/stats" },
 ];
 
+const CALC_SPORTS = ["Fodbold", "Basketball", "Tennis", "Ishockey", "Esport"];
+const PRO_BARS = [22, 34, 30, 48, 62];
+
 function CalculatorSidebarContent() {
   const { sports } = useSurebets();
+  const counts = new Map(sports.map((s) => [s.label, s.count]));
+  const extra = sports.filter((s) => !CALC_SPORTS.includes(s.label)).map((s) => s.label);
   return (
     <div className="flex min-h-full flex-col">
       <div className="px-1">
-        <Logo />
+        <Logo taglineText="Track · Analyse · Vind" />
       </div>
 
-      <nav aria-label="Hovedmenu" className="mt-6 flex flex-col gap-1 short:mt-4 short:gap-0.5">
+      <nav aria-label="Hovedmenu" className="mt-8 flex flex-col gap-1.5 short:mt-5 short:gap-0.5">
         {calculatorNav.map(({ label, icon: Icon, href }) =>
           href ? (
             <Link
               key={label}
               href={href}
-              className="flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5"
+              className="flex w-full items-center gap-4 rounded-xl px-4 py-2.5 text-[16.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5"
             >
-              <Icon className="h-5 w-5" strokeWidth={2.1} />
+              <Icon className="h-[22px] w-[22px]" strokeWidth={2} />
               <span className="flex-1 text-left">{label}</span>
             </Link>
           ) : (
             <span
               key={label}
               aria-current="page"
-              className="sb-nav-active flex w-full items-center gap-3.5 rounded-xl px-4 py-2.5 text-[15.5px] font-bold text-primary-foreground short:py-2"
+              className="sb-nav-active flex w-full items-center gap-4 rounded-xl px-4 py-3 text-[16.5px] font-semibold text-primary-foreground short:py-2"
             >
-              <Icon className="h-5 w-5" strokeWidth={2.1} />
+              <Icon className="h-[22px] w-[22px]" strokeWidth={2} />
               <span className="flex-1 text-left">{label}</span>
             </span>
           ),
         )}
       </nav>
 
-      <div className="my-4 h-px bg-sidebar-border short:my-3" />
+      <div className="mx-2 my-5 h-px bg-primary/40 short:my-3" />
 
-      <div className="px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan">SPORT</div>
+      <div className="px-2 text-[13px] font-semibold tracking-wide text-cyan">SPORT</div>
       <div className="mt-3 flex flex-col gap-1 short:mt-2 short:gap-0.5">
-        {sports.length === 0 && <p className="px-3 text-[12.5px] text-muted-foreground">Ingen sportsgrene lige nu.</p>}
-        {sports.map(({ label, count }) => {
+        {[...CALC_SPORTS, ...extra].map((label) => {
           const Icon = sportIcons[label] ?? Trophy;
           return (
             <Link
               key={label}
               href="/surebets"
-              className="flex w-full items-center gap-3 rounded-xl px-3 py-2 text-[14.5px] font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-accent short:py-1.5"
+              className="flex w-full items-center gap-4 rounded-xl px-3 py-2 text-[16px] font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-accent short:py-1.5"
             >
-              <Icon className="h-5 w-5" />
+              <Icon className="h-[22px] w-[22px]" />
               <span className="flex-1 text-left">{label}</span>
-              <span className="min-w-8 rounded-full bg-primary/25 px-2 py-0.5 text-center text-xs font-semibold text-foreground ring-1 ring-primary/40">
-                {count}
+              <span className="min-w-12 rounded-full bg-primary/25 px-2.5 py-1 text-center text-[13px] font-semibold text-foreground ring-1 ring-primary/50">
+                {counts.get(label) ?? 0}
               </span>
             </Link>
           );
         })}
       </div>
 
-      <div className="sb-panel panel-glow relative mt-6 shrink-0 overflow-hidden p-4 short:mt-4 short:p-3 lg:mt-auto">
-        <Crown className="h-8 w-8 fill-gold/30 text-gold" strokeWidth={1.8} aria-hidden />
-        <div className="mt-2 text-[15px] font-bold leading-tight">Opgrader til Pro</div>
-        <p className="mt-1 text-[12px] leading-snug text-muted-foreground">Få adgang til avancerede værktøjer og analyser</p>
+      <div className="sb-panel panel-glow relative mt-6 shrink-0 overflow-hidden p-5 short:mt-4 short:p-3 lg:mt-auto">
+        <div className="pointer-events-none absolute right-4 top-4 flex h-16 items-end gap-1.5" aria-hidden>
+          {PRO_BARS.map((h) => (
+            <span key={h} className="w-2.5 rounded-t-sm bg-gradient-to-t from-primary/20 to-primary" style={{ height: h }} />
+          ))}
+        </div>
+        <Crown className="relative h-9 w-9 fill-gold/30 text-gold" strokeWidth={1.8} aria-hidden />
+        <div className="relative mt-4 text-[17px] font-bold leading-tight">Opgrader til Pro</div>
+        <p className="relative mt-1.5 text-[13px] leading-snug text-foreground/85">Få adgang til avancerede værktøjer og analyser</p>
         <Link
           href="/konto"
-          className="bg-gradient-primary mt-3 flex w-full items-center justify-center gap-1.5 rounded-full py-2.5 text-[13px] font-semibold text-primary-foreground shadow-glow"
+          className="bg-gradient-primary relative mt-4 flex w-full items-center justify-center gap-1.5 rounded-full py-3 text-[15px] font-semibold text-primary-foreground shadow-glow"
         >
           Se fordele <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
@@ -286,7 +295,7 @@ function SurebetsSidebarContent() {
 
 export function Sidebar({ page = "surebets" }: { page?: "surebets" | "beregn" }) {
   return (
-    <aside className="sticky top-0 z-10 hidden h-screen w-[230px] shrink-0 lg:block">
+    <aside className={cn("sticky top-0 z-10 hidden h-screen shrink-0 lg:block", page === "beregn" ? "w-[260px]" : "w-[230px]")}>
       <div className="h-full overflow-y-auto bg-sidebar/95 px-4 pb-4 pt-6 backdrop-blur-xl short:pb-3 short:pt-4">
         <SidebarContent page={page} />
       </div>

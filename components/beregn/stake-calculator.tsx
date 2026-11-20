@@ -24,14 +24,33 @@ const clamp = (n: number, lo: number, hi: number) => Math.min(Math.max(n, lo), h
 
 type Side = Opportunity['a']
 
-function LegColumn({ team, crest, side, stake }: { team: string; crest: string | null; side: Side; stake: number }) {
+function LegColumn({
+  team,
+  crest,
+  side,
+  stake,
+  home = false,
+}: {
+  team: string
+  crest: string | null
+  side: Side
+  stake: number
+  home?: boolean
+}) {
   const [copied, setCopied] = useState(false)
   const link = fallbackLink(side.bookmaker)
   return (
-    <div className="flex min-w-0 flex-1 flex-col items-center gap-2 text-center">
-      <Crest src={crest} name={team} size="lg" className="sm:h-[84px] sm:w-[84px]" />
-      <p className="w-full truncate text-[15px] font-bold sm:text-[17px]">{team}</p>
-      <div className="flex h-8 items-center">
+    <div className={cn('flex min-w-0 flex-1 flex-col items-center gap-2 text-center', home && 'lg:flex-[1.3]')}>
+      <div className={cn('flex w-full min-w-0 flex-col items-center gap-2', home && 'lg:flex-row lg:items-center lg:gap-4')}>
+        <Crest
+          src={crest}
+          name={team}
+          size="lg"
+          className={cn('shrink-0 sm:h-[84px] sm:w-[84px]', home ? 'lg:h-[88px] lg:w-[88px]' : 'lg:h-[100px] lg:w-[100px]')}
+        />
+        <div className={cn('flex w-full min-w-0 flex-col items-center gap-2', home && 'lg:w-auto lg:flex-1 lg:items-start lg:text-left')}>
+      <p className="line-clamp-2 w-full text-[15px] font-bold leading-tight sm:text-[17px] lg:text-[18px]">{team}</p>
+      <div className="flex h-8 items-center lg:h-9">
         <BookmakerMark id={bookmakerKey(side.bookmaker)} />
       </div>
       <p className="w-full truncate text-[12.5px] text-muted-foreground">{side.label}</p>
@@ -45,16 +64,28 @@ function LegColumn({ team, crest, side, stake }: { team: string; crest: string |
             .then(() => setCopied(true))
             .catch(() => setCopied(false))
         }}
-        className="flex items-center gap-1 text-[13px] font-semibold text-cyan underline underline-offset-4 hover:text-foreground"
+        className="flex items-center gap-1 whitespace-nowrap text-[13px] font-semibold text-cyan underline underline-offset-4 hover:text-foreground lg:text-[14px]"
       >
         {copied ? 'Indsats kopieret' : `Gå til ${side.bookmaker}`}
         <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
         <span className="sr-only">(åbner i ny fane)</span>
       </a>
-      <span className="mt-1 text-[13px] text-muted-foreground">Odds</span>
-      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow">
-        <LockedOdds odds={side.odds} className="text-[26px] font-extrabold tabular-nums sm:text-[30px]" />
+        </div>
+      </div>
+      <span className="mt-1 text-[13px] text-muted-foreground lg:text-[16px] lg:text-foreground/85">Odds</span>
+      <span className="flex h-14 w-full max-w-[180px] items-center justify-center rounded-xl border border-border-glow bg-surface-elevated/80 shadow-glow lg:h-[60px] lg:max-w-[190px] lg:bg-primary/20">
+        <LockedOdds odds={side.odds} className="text-[26px] font-extrabold tabular-nums sm:text-[30px] lg:text-[32px]" />
       </span>
+    </div>
+  )
+}
+
+function StadiumBackdrop() {
+  return (
+    <div className="pointer-events-none absolute inset-0 hidden lg:block" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/sb/hero-football.jpg" alt="" className="h-full w-full object-cover object-[20%_30%] opacity-25" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/40 to-background/80" />
     </div>
   )
 }
@@ -66,21 +97,27 @@ function ProfitRing({ margin }: { margin: number }) {
   return (
     <div className="relative mx-auto h-[200px] w-[200px] sm:h-[220px] sm:w-[220px]">
       <svg viewBox="0 0 200 200" className="h-full w-full -rotate-90" aria-hidden="true">
-        <circle cx="100" cy="100" r={r} fill="none" stroke="var(--gauge-track)" strokeWidth="12" />
+        <defs>
+          <linearGradient id="profit-ring-stroke" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--cyan)" />
+          </linearGradient>
+        </defs>
+        <circle cx="100" cy="100" r={r} fill="none" stroke="var(--primary)" strokeOpacity="0.35" strokeWidth="6" />
         <circle
           cx="100"
           cy="100"
           r={r}
           fill="none"
-          stroke="var(--cyan)"
-          strokeWidth="12"
+          stroke="url(#profit-ring-stroke)"
+          strokeWidth="10"
           strokeLinecap="round"
           strokeDasharray={`${c * fraction} ${c}`}
           className="drop-shadow-[0_0_10px_var(--cyan)] transition-[stroke-dasharray] duration-500"
         />
       </svg>
-      <div className="absolute inset-[26px] flex items-center justify-center rounded-full bg-surface-deep/80 shadow-[inset_0_0_30px_-8px_var(--primary)]">
-        <span className="text-glow-success text-[40px] font-extrabold tabular-nums text-cyan sm:text-[44px]">
+      <div className="absolute inset-[24px] flex items-center justify-center rounded-full bg-surface-deep/70 shadow-[inset_0_0_40px_-10px_var(--primary)]">
+        <span className="bg-gradient-to-r from-cyan to-success bg-clip-text text-[40px] font-extrabold tabular-nums text-transparent sm:text-[44px]">
           {margin.toLocaleString('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} %
         </span>
       </div>
@@ -117,6 +154,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
       <div className="flex min-w-0 flex-col gap-4">
         <section aria-labelledby="match-title" className="sb-panel panel-glow relative overflow-hidden p-5 sm:p-6">
           <div className="accent-wash pointer-events-none absolute inset-0 opacity-60" aria-hidden="true" />
+          <StadiumBackdrop />
           <div className="relative flex items-center gap-4">
             <FootballIcon className="h-10 w-10 shrink-0 text-foreground" />
             <div>
@@ -127,7 +165,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
             </div>
           </div>
           <div className="relative mt-6 flex items-stretch gap-3 sm:gap-6">
-            <LegColumn team={o.homeTeam} crest={o.homeLogo ?? null} side={o.a} stake={stakeA} />
+            <LegColumn team={o.homeTeam} crest={o.homeLogo ?? null} side={o.a} stake={stakeA} home />
             <div className="relative flex w-12 shrink-0 items-center justify-center sm:w-16" aria-hidden="true">
               <span className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-gradient-to-b from-transparent via-cyan/70 to-transparent" />
               <span className="relative flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan/80 bg-surface-deep text-[16px] font-extrabold shadow-[0_0_24px_-4px_var(--cyan)] sm:h-16 sm:w-16 sm:text-[22px]">
@@ -161,7 +199,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
                 autoComplete="off"
                 value={int(total)}
                 onChange={(e) => setTotal(clamp(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0, 0, MAX))}
-                className="w-full min-w-0 bg-transparent text-right text-[26px] font-bold tabular-nums outline-none"
+                className="w-full min-w-0 bg-transparent text-right text-[26px] font-bold tabular-nums outline-none lg:text-[30px]"
               />
               <span className="shrink-0 text-[20px] font-medium text-foreground/90">DKK</span>
             </div>
@@ -192,7 +230,12 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
         </section>
       </div>
 
-      <section aria-labelledby="profit-title" aria-live="polite" className="sb-panel panel-glow flex min-w-0 flex-col gap-5 p-5 sm:p-6">
+      <section
+        aria-labelledby="profit-title"
+        aria-live="polite"
+        className="sb-panel panel-glow relative flex min-w-0 flex-col gap-5 overflow-hidden p-5 sm:p-6 [&>*:not(:first-child)]:relative"
+      >
+        <StadiumBackdrop />
         <div className="flex items-center gap-4">
           <BarChart3 className="h-9 w-9 shrink-0 text-cyan" strokeWidth={2.6} aria-hidden="true" />
           <div>

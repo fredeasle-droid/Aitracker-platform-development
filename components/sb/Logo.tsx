@@ -1,7 +1,15 @@
 "use client";
 import { useId } from "react";
 
-export function Logo({ tagline = true, compact = false }: { tagline?: boolean; compact?: boolean }) {
+export function Logo({
+  tagline = true,
+  compact = false,
+  taglineText,
+}: {
+  tagline?: boolean;
+  compact?: boolean;
+  taglineText?: string;
+}) {
   const gid = `logo-g-${useId().replace(/:/g, "")}`;
   const fill = `url(#${gid})`;
   return (
@@ -28,7 +36,10 @@ export function Logo({ tagline = true, compact = false }: { tagline?: boolean; c
         <div className={`${compact ? "text-base min-[400px]:text-lg" : "text-[22px]"} whitespace-nowrap font-extrabold tracking-tight text-foreground`}>
           BetTracker<span className="text-cyan">AI</span>
         </div>
-        {tagline && (
+        {tagline && taglineText && (
+          <div className="mt-1.5 whitespace-nowrap text-[12.5px] font-medium tracking-wide text-foreground/80">{taglineText}</div>
+        )}
+        {tagline && !taglineText && (
           <div className="mt-1.5 whitespace-nowrap text-[7.5px] font-semibold tracking-[0.07em] text-muted-foreground">
             SURE BETS • SMARTER • BETTER
           </div>
