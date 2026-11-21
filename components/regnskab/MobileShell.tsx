@@ -1,20 +1,15 @@
 "use client";
-import { CalendarDays, ChevronDown, LayoutDashboard, Landmark, LogOut, Plus, Settings, Trophy, User } from "lucide-react";
-import { toast } from "sonner";
+import { CalendarDays, ChevronDown, LayoutDashboard, Landmark, Plus, Trophy } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/regnskab/ui/dropdown-menu";
 import type { ChartRange } from "@/lib/regnskab/surebet";
-import { LogoMark } from "./icons";
 import { RANGE_LABELS } from "./Topbar";
 
 export type MobileTab = "overblik" | "bets" | "bankroll";
@@ -24,13 +19,7 @@ const SHORT_RANGE: Record<ChartRange, string> = { "30": "30 dage", "90": "90 dag
 export function MobileHeader({ range, onRangeChange }: { range: ChartRange; onRangeChange: (r: ChartRange) => void }) {
   return (
     <header className="sticky top-0 z-30 border-b border-border/60 bg-background/75 px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] backdrop-blur-xl">
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2.5">
-          <LogoMark width={30} height={27} className="drop-shadow-[0_0_10px_var(--primary)]" />
-          <div className="font-display text-lg font-bold tracking-tight">
-            BetTracker<span className="text-primary-glow">AI</span>
-          </div>
-        </div>
+      <div className="flex items-center justify-end gap-3">
         <div className="flex items-center gap-2">
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -52,34 +41,6 @@ export function MobileHeader({ range, onRangeChange }: { range: ChartRange; onRa
                 </DropdownMenuRadioItem>
               ))}
             </DropdownMenuRadioGroup>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <button
-              type="button"
-              aria-label="Min konto"
-              className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground ring-2 ring-primary-glow/50 glow-primary"
-            >
-              <User className="h-4 w-4" />
-            </button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="glass w-52">
-            <DropdownMenuLabel>
-              Min konto
-              <span className="block text-xs font-normal text-muted-foreground">Administrator</span>
-            </DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onSelect={() => toast("Profil åbner snart")}>
-              <User className="h-4 w-4" /> Profil
-            </DropdownMenuItem>
-            <DropdownMenuItem onSelect={() => toast("Indstillinger åbner snart")}>
-              <Settings className="h-4 w-4" /> Indstillinger
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onSelect={() => toast("Du er logget ud (demo)")} className="text-destructive focus:text-destructive">
-              <LogOut className="h-4 w-4" /> Log ud
-            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
         </div>
