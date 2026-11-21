@@ -114,3 +114,43 @@
     -webkit-tap-highlight-color: transparent;
   }
 }
+
+/* Stats dashboard: frosted panel, icon tile and neon headline accent. */
+@utility glass-panel {
+  background: linear-gradient(180deg, rgba(12, 28, 56, 0.82), rgba(6, 15, 31, 0.78));
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid rgba(46, 108, 214, 0.32);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 50px -30px rgba(2, 6, 18, 0.9);
+}
+
+@utility icon-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  background: linear-gradient(160deg, rgba(22, 119, 255, 0.28), rgba(22, 119, 255, 0.08));
+  border: 1px solid rgba(94, 162, 255, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 16px -6px rgba(94, 162, 255, 0.7);
+}
+
+@utility text-gradient-neon {
+  background-image: linear-gradient(90deg, #22d3ee, #2ee6a6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility underline-neon {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    bottom: -0.12em;
+    height: 3px;
+    border-radius: 999px;
+    background-image: linear-gradient(90deg, #22d3ee, #2ee6a6);
+    box-shadow: 0 0 18px rgba(34, 211, 238, 0.4);
+  }
+}
