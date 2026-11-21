@@ -4,8 +4,8 @@ import { useLayoutEffect, useRef, type ReactNode } from 'react'
 import { cn } from '@/lib/utils'
 
 const CANVAS_WIDTH = 1248
-// Never enlarge past the mock-up's natural size on wide screens; the canvas is centred instead.
-const MAX_SCALE = 1
+// Uncapped it grew far too large on wide screens, at 1 it looked small; 1.2 is the middle ground, canvas stays centred beyond it.
+const MAX_SCALE = 1.2
 
 // Runs during HTML parsing so the canvas is scaled before first paint, not only after hydration.
 const PRE_PAINT = `(function(s){var e=s.parentElement;if(e&&e.clientWidth)e.style.setProperty('--ds',String(Math.min(${MAX_SCALE},e.clientWidth/${CANVAS_WIDTH})))})(document.currentScript)`
