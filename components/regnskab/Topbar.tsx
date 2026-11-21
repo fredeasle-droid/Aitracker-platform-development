@@ -21,7 +21,7 @@ export function Topbar({ range, onRangeChange }: { range: ChartRange; onRangeCha
   return (
     <header className="flex flex-col gap-5 xl:flex-row xl:items-center xl:justify-between">
       <div className="flex items-center gap-4">
-        <div className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-primary-glow/40 bg-primary/15 sm:flex glow-primary">
+        <div className="hidden h-16 w-16 shrink-0 items-center justify-center rounded-2xl border border-primary-glow/40 bg-primary/15 sm:flex rg-glow-primary">
           <Handshake className="h-9 w-9 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
         </div>
         <div>
@@ -34,13 +34,13 @@ export function Topbar({ range, onRangeChange }: { range: ChartRange; onRangeCha
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="glass h-11 self-start rounded-xl px-4 hover:border-primary-glow/60 hover:bg-accent">
+          <Button variant="outline" className="rg-glass h-11 self-start rounded-xl px-4 hover:border-primary-glow/60 hover:bg-accent">
             <CalendarDays className="h-4 w-4 text-neon" />
             {RANGE_LABELS[range]}
             <ChevronDown className="h-4 w-4 text-muted-foreground" />
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="glass w-48">
+        <DropdownMenuContent align="end" className="rg-glass w-48">
           <DropdownMenuRadioGroup value={range} onValueChange={(v) => onRangeChange(v as ChartRange)}>
             {(Object.keys(RANGE_LABELS) as ChartRange[]).map((r) => (
               <DropdownMenuRadioItem key={r} value={r}>

@@ -40,7 +40,7 @@ export function AddDepositDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="glass border-primary-glow/40 sm:max-w-md sm:rounded-2xl max-md:inset-x-0 max-md:bottom-0 max-md:left-0 max-md:top-auto max-md:max-w-none max-md:translate-x-0 max-md:translate-y-0 max-md:rounded-t-3xl max-md:rounded-b-none max-md:border-x-0 max-md:border-b-0 max-md:px-5 max-md:pb-[calc(1.5rem+env(safe-area-inset-bottom))] max-md:data-[state=open]:slide-in-from-bottom max-md:data-[state=closed]:slide-out-to-bottom">
+      <DialogContent className="rg-glass border-primary-glow/40 sm:max-w-md sm:rounded-2xl max-md:inset-x-0 max-md:bottom-0 max-md:left-0 max-md:top-auto max-md:max-w-none max-md:translate-x-0 max-md:translate-y-0 max-md:rounded-t-3xl max-md:rounded-b-none max-md:border-x-0 max-md:border-b-0 max-md:px-5 max-md:pb-[calc(1.5rem+env(safe-area-inset-bottom))] max-md:data-[state=open]:slide-in-from-bottom max-md:data-[state=closed]:slide-out-to-bottom">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">Tilføj indskud</DialogTitle>
           <DialogDescription>Vælg bookmaker og skriv, hvor meget du har sat ind.</DialogDescription>
@@ -52,7 +52,7 @@ export function AddDepositDialog({
               <SelectTrigger className="bg-secondary/60" aria-label="Bookmaker">
                 <SelectValue />
               </SelectTrigger>
-              <SelectContent className="glass">
+              <SelectContent className="rg-glass">
                 {BOOKMAKERS.map((bm) => (
                   <SelectItem key={bm} value={bm}>
                     <BookmakerBadge name={bm} className="h-6" />
@@ -84,7 +84,7 @@ export function AddDepositDialog({
             <Button type="button" variant="ghost" onClick={() => onOpenChange(false)}>
               Annuller
             </Button>
-            <Button type="submit" className="rounded-xl bg-gradient-primary text-primary-foreground glow-primary hover:opacity-90">
+            <Button type="submit" className="rounded-xl rg-bg-gradient-primary text-primary-foreground rg-glow-primary hover:opacity-90">
               Gem indskud
             </Button>
           </DialogFooter>

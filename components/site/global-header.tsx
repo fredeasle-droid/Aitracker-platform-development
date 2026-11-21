@@ -2,17 +2,17 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ArrowRight, BarChart3, House, LogIn, Search, Settings, UserRound, Zap, type LucideIcon } from 'lucide-react'
+import { UserRound } from 'lucide-react'
 import { Logo } from '@/components/home/icons'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 
-const NAV: { href: string; label: string; icon: LucideIcon }[] = [
-  { href: '/', label: 'Forside', icon: House },
-  { href: '/surebets', label: 'Surebets', icon: Zap },
-  { href: '/stats', label: 'Analytics', icon: BarChart3 },
-  { href: '/#scanner', label: 'Scanner', icon: Search },
-  { href: '/konto', label: 'Indstillinger', icon: Settings },
+const NAV: { href: string; label: string }[] = [
+  { href: '/', label: 'Forside' },
+  { href: '/surebets', label: 'Surebets' },
+  { href: '/stats', label: 'Analytics' },
+  { href: '/#scanner', label: 'Scanner' },
+  { href: '/konto', label: 'Indstillinger' },
 ]
 
 function isActive(pathname: string, href: string) {
@@ -20,26 +20,36 @@ function isActive(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname.startsWith(href)
 }
 
-function AuthButtons() {
+function AuthActions() {
   const { data: session, isPending } = authClient.useSession()
 
   if (session?.user) {
     return (
-      <Link href="/konto" className="btn-glow flex h-10 items-center gap-2 rounded-full px-5 text-[13px] font-semibold">
-        <UserRound className="size-4 text-primary-glow" aria-hidden="true" /> Min konto
+      <Link
+        href="/konto"
+        aria-label="Min konto"
+        className="btn-glow flex h-9 items-center justify-center gap-2 rounded-full text-[13px] font-semibold max-sm:w-9 sm:px-4"
+      >
+        <UserRound className="size-4" aria-hidden="true" />
+        <span className="hidden sm:inline">Min konto</span>
       </Link>
     )
   }
 
   return (
-    <div className={cn('flex items-center gap-1.5 sm:gap-2 lg:gap-3', isPending && 'opacity-0')}>
-      <Link href="/login" className="btn-outline-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[12px] font-semibold sm:gap-2 sm:px-3.5 sm:text-[13px] lg:h-10 lg:px-5">
-        <LogIn className="hidden size-3.5 text-primary-glow sm:block sm:size-4" aria-hidden="true" /> Log ind
+    <div className={cn('flex items-center gap-1 sm:gap-2', isPending && 'opacity-0')}>
+      <Link
+        href="/login"
+        className="flex h-9 items-center whitespace-nowrap rounded-full px-3 text-[13px] font-semibold text-foreground/80 transition-colors hover:text-foreground sm:px-4"
+      >
+        Log ind
       </Link>
-      <Link href="/konto" className="btn-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full px-3 text-[12px] font-semibold sm:gap-2 sm:px-3.5 sm:text-[13px] lg:h-10 lg:px-5">
-        <span className="hidden sm:inline">Opret gratis konto</span>
-        <span className="sm:hidden">Opret konto</span>
-        <ArrowRight className="hidden size-3.5 text-primary-glow sm:block sm:size-4" aria-hidden="true" />
+      <Link
+        href="/konto"
+        className="btn-glow flex h-9 items-center whitespace-nowrap rounded-full px-4 text-[13px] font-semibold"
+      >
+        <span className="hidden lg:inline">Opret gratis konto</span>
+        <span className="lg:hidden">Opret konto</span>
       </Link>
     </div>
   )
@@ -54,35 +64,37 @@ export function GlobalHeader() {
       className={cn(
         'bt-theme top-0 z-40 pt-[env(safe-area-inset-top)]',
         isHome
-          ? 'relative bg-transparent md:sticky md:border-b md:border-border md:bg-background-deep/80 md:backdrop-blur-xl'
-          : 'sticky border-b border-border bg-background-deep/80 backdrop-blur-xl',
+          ? 'relative bg-transparent md:sticky md:border-b md:border-border md:bg-background-deep/85 md:backdrop-blur-xl'
+          : 'sticky border-b border-border bg-background-deep/85 backdrop-blur-xl',
       )}
     >
-      <div className={cn('mx-auto grid max-w-[1600px] grid-cols-[1fr_auto] items-center gap-2 px-3 sm:px-6 md:grid-cols-[1fr_auto_1fr] md:gap-3 lg:h-[72px] lg:px-8', isHome ? 'h-14 md:h-[60px]' : 'h-[60px]')}>
+      <div className="mx-auto flex h-14 max-w-[1600px] items-center justify-between gap-3 px-4 md:grid md:h-16 md:grid-cols-[1fr_auto_1fr] md:px-6 lg:px-8">
         <Link href="/" aria-label="BetTrackerAI forside" className="shrink-0 justify-self-start text-foreground">
-          <span className="md:hidden"><Logo /></span>
-          <span className="hidden md:block"><Logo big /></span>
+          <Logo />
         </Link>
 
-        <nav aria-label="Hovedmenu" className="nav-capsule hidden h-11 items-center gap-1 rounded-full p-1 md:flex lg:h-12">
-          {NAV.map(({ href, label, icon: Icon }) => (
-            <Link
-              key={href}
-              href={href}
-              aria-current={isActive(pathname, href) ? 'page' : undefined}
-              className={cn(
-                'group flex h-9 items-center gap-2 rounded-full px-3 text-[12px] font-medium lg:h-10 lg:px-4 lg:text-[13px]',
-                isActive(pathname, href) ? 'nav-active' : 'nav-link',
-              )}
-            >
-              <Icon className="size-4 text-primary-glow transition-transform duration-300 group-hover:-translate-y-px group-hover:scale-110" strokeWidth={1.9} aria-hidden="true" />
-              {label}
-            </Link>
-          ))}
+        <nav aria-label="Hovedmenu" className="hidden h-full items-stretch md:flex">
+          {NAV.map(({ href, label }) => {
+            const active = isActive(pathname, href)
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-current={active ? 'page' : undefined}
+                className={cn(
+                  'relative flex items-center px-3 text-[13px] font-medium transition-colors lg:px-4 lg:text-sm',
+                  active ? 'text-foreground' : 'text-muted-foreground hover:text-foreground',
+                )}
+              >
+                {label}
+                {active && <span className="absolute inset-x-3 bottom-0 h-0.5 rounded-full bg-primary-glow lg:inset-x-4" />}
+              </Link>
+            )
+          })}
         </nav>
 
         <div className="flex items-center justify-self-end">
-          <AuthButtons />
+          <AuthActions />
         </div>
       </div>
     </header>

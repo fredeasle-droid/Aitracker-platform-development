@@ -52,7 +52,7 @@ export function BottomNav({
             type="button"
             onClick={onNew}
             aria-label="Ny surebet"
-            className="-mt-7 mb-2 flex h-[58px] w-[58px] items-center justify-center rounded-full bg-gradient-primary text-primary-foreground ring-4 ring-background glow-primary transition-transform active:scale-95"
+            className="-mt-7 mb-2 flex h-[58px] w-[58px] items-center justify-center rounded-full rg-bg-gradient-primary text-primary-foreground ring-4 ring-background rg-glow-primary transition-transform active:scale-95"
           >
             <Plus className="h-7 w-7" strokeWidth={2.5} />
           </button>

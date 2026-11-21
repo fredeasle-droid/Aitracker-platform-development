@@ -29,7 +29,7 @@ export function KpiCards({ summary }: { summary: Summary }) {
       {kpis.map((k) => (
         <article
           key={k.label}
-          className="glass group relative overflow-hidden rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-primary-glow/60 hover:glow-primary"
+          className="rg-glass group relative overflow-hidden rounded-2xl p-5 transition-all hover:-translate-y-0.5 hover:border-primary-glow/60 hover:rg-glow-primary"
         >
           <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/20 blur-2xl transition-opacity group-hover:opacity-100" />
           <div className="flex items-center gap-4">

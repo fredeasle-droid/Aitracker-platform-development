@@ -89,7 +89,7 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
   const count = images.filter(Boolean).length;
 
   return (
-    <section id="mobile-import" className="glass scroll-mt-20 rounded-3xl p-4">
+    <section id="mobile-import" className="rg-glass scroll-mt-20 rounded-3xl p-4">
       <div className="flex items-center gap-2">
         <span className="icon-chip h-8 w-8">
           <Sparkles className="h-4 w-4 text-neon" />
@@ -183,7 +183,7 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
         type="button"
         disabled={!ready || busy}
         onClick={calculate}
-        className="mt-3 h-12 w-full rounded-2xl bg-gradient-primary text-base font-semibold text-primary-foreground glow-primary disabled:opacity-40 disabled:shadow-none"
+        className="mt-3 h-12 w-full rounded-2xl rg-bg-gradient-primary text-base font-semibold text-primary-foreground rg-glow-primary disabled:opacity-40 disabled:shadow-none"
       >
         {busy ? <Loader2 className="h-5 w-5 animate-spin" /> : <Calculator className="h-5 w-5" />}
         {busy ? "Læser kuponer…" : ready ? "Beregn surebet" : `Mangler ${2 - count} kupon${2 - count === 1 ? "" : "er"}`}

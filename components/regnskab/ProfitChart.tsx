@@ -27,7 +27,7 @@ const shortKr = (v: number) => `${new Intl.NumberFormat("da-DK").format(v)} kr.`
 function ChartTooltip({ active, payload, label }: TooltipContentProps) {
   if (!active || !payload?.length) return null;
   return (
-    <div className="glass rounded-xl px-4 py-3 text-sm">
+    <div className="rg-glass rounded-xl px-4 py-3 text-sm">
       <div className="mb-1.5 font-semibold">{label}</div>
       {payload.map((p) => (
         <div key={String(p.dataKey)} className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export function ProfitChart({
   const last = data[data.length - 1];
 
   return (
-    <section className="glass flex flex-col rounded-2xl p-6">
+    <section className="rg-glass flex flex-col rounded-2xl p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <BarChart3 className="h-8 w-8 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
@@ -72,7 +72,7 @@ export function ProfitChart({
               className={cn(
                 "rounded-lg px-4 py-1.5 text-sm font-medium transition-all",
                 range === t.value
-                  ? "bg-gradient-primary text-primary-foreground glow-primary"
+                  ? "rg-bg-gradient-primary text-primary-foreground rg-glow-primary"
                   : "text-muted-foreground hover:text-foreground",
               )}
             >

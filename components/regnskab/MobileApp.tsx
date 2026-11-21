@@ -130,7 +130,7 @@ export function MobileApp(props: {
       <BottomNav tab={tab} onTab={go} onNew={() => setNewOpen(true)} />
 
       <Drawer open={newOpen} onOpenChange={setNewOpen}>
-        <DrawerContent className="glass border-border">
+        <DrawerContent className="rg-glass border-border">
           <DrawerHeader className="text-left">
             <DrawerTitle className="font-display text-xl">Hvad vil du tilføje?</DrawerTitle>
             <DrawerDescription>Vælg hvordan du vil registrere.</DrawerDescription>
@@ -146,7 +146,7 @@ export function MobileApp(props: {
                 }}
                 className="flex items-center gap-4 rounded-2xl border border-border bg-secondary/50 p-4 text-left active:bg-accent"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-primary text-primary-foreground glow-primary">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl rg-bg-gradient-primary text-primary-foreground rg-glow-primary">
                   <c.icon className="h-5 w-5" />
                 </span>
                 <span>

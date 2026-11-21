@@ -31,14 +31,14 @@ export function SurebetsTable({
   onDelete: (id: string) => void;
 }) {
   return (
-    <section className="glass rounded-2xl p-6">
+    <section className="rg-glass rounded-2xl p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <CircleCheck className="h-8 w-8 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
           <h2 className="font-display text-xl font-semibold">Dine surebets</h2>
           <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs text-muted-foreground">{rows.length}</span>
         </div>
-        <Button onClick={onAdd} className="rounded-xl bg-gradient-primary font-semibold text-primary-foreground glow-primary hover:opacity-90">
+        <Button onClick={onAdd} className="rounded-xl rg-bg-gradient-primary font-semibold text-primary-foreground rg-glow-primary hover:opacity-90">
           <Plus className="h-4 w-4" /> Tilføj Surebet
         </Button>
       </div>
@@ -82,7 +82,7 @@ export function SurebetsTable({
                         <MoreHorizontal className="h-4 w-4" />
                       </Button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end" className="glass w-56">
+                    <DropdownMenuContent align="end" className="rg-glass w-56">
                       {([0, 1] as const).map((i) => (
                         <DropdownMenuItem key={i} onSelect={() => onStatus(r.id, "Vundet", i)}>
                           <CircleCheck className="h-4 w-4 text-success" /> Vundet hos {r.bookmakers[i]}

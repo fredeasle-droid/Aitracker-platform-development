@@ -41,7 +41,7 @@ function Row({ a }: { a: Activity }) {
 export function ActivityCard({ items }: { items: Activity[] }) {
   const [open, setOpen] = useState(false);
   return (
-    <section className="glass rounded-2xl p-6">
+    <section className="rg-glass rounded-2xl p-6">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <Clock className="h-8 w-8 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
@@ -62,7 +62,7 @@ export function ActivityCard({ items }: { items: Activity[] }) {
       </ul>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="glass max-h-[85vh] overflow-y-auto border-primary-glow/40 sm:max-w-xl sm:rounded-2xl">
+        <DialogContent className="rg-glass max-h-[85vh] overflow-y-auto border-primary-glow/40 sm:max-w-xl sm:rounded-2xl">
           <DialogHeader>
             <DialogTitle className="font-display text-2xl">Al aktivitet</DialogTitle>
             <DialogDescription>{items.length} hændelser i dit surebet-regnskab</DialogDescription>

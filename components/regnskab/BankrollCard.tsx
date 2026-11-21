@@ -10,13 +10,13 @@ export function BankrollCard({ rows, onAdd }: { rows: BankrollRow[]; onAdd: () =
   const sum = (f: (r: BankrollRow) => number) => rows.reduce((s, r) => s + f(r), 0);
   const totalAvailable = sum((r) => r.balance - r.active);
   return (
-    <section className="glass rounded-2xl p-6">
+    <section className="rg-glass rounded-2xl p-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <Landmark className="h-8 w-8 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
           <h2 className="font-display text-xl font-semibold">Bankroll per bookmaker</h2>
         </div>
-        <Button onClick={onAdd} className="rounded-xl bg-gradient-primary font-semibold text-primary-foreground glow-primary hover:opacity-90">
+        <Button onClick={onAdd} className="rounded-xl rg-bg-gradient-primary font-semibold text-primary-foreground rg-glow-primary hover:opacity-90">
           <Plus className="h-4 w-4" /> Tilføj
         </Button>
       </div>
@@ -48,7 +48,7 @@ export function BankrollCard({ rows, onAdd }: { rows: BankrollRow[]; onAdd: () =
                     <div className="flex flex-col items-end gap-1">
                       <span className={cn("tabular-nums font-semibold", available < 0 && "text-destructive")}>{formatKr(available)}</span>
                       <span className="h-1 w-24 overflow-hidden rounded-full bg-secondary">
-                        <span className="block h-full rounded-full bg-gradient-primary" style={{ width: `${share * 100}%` }} />
+                        <span className="block h-full rounded-full rg-bg-gradient-primary" style={{ width: `${share * 100}%` }} />
                       </span>
                     </div>
                   </td>

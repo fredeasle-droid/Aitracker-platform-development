@@ -114,7 +114,7 @@ export function MobileOverview({
         <p className="mt-1.5 text-sm text-muted-foreground">Oversigt over firmaets surebet investeringer og profit</p>
       </div>
 
-      <section className="relative overflow-hidden rounded-3xl border border-primary-glow/40 bg-gradient-pro p-5 glow-primary" aria-label="Nøgletal">
+      <section className="relative overflow-hidden rounded-3xl border border-primary-glow/40 rg-bg-gradient-pro p-5 rg-glow-primary" aria-label="Nøgletal">
         <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-primary-glow/25 blur-3xl" />
         <div className="relative flex items-start justify-between gap-3">
           <div className="min-w-0">
@@ -123,9 +123,9 @@ export function MobileOverview({
             <div
               className={cn(
                 "mt-1 font-display text-[40px] font-bold leading-none tabular-nums",
-                summary.profitToday > 0 && "text-success text-glow-success",
+                summary.profitToday > 0 && "text-success rg-text-glow-success",
                 summary.profitToday < 0 && "text-destructive",
-                summary.profitToday === 0 && "text-glow",
+                summary.profitToday === 0 && "rg-text-glow",
               )}
             >
               {signedKr(summary.profitToday)}
@@ -151,7 +151,7 @@ export function MobileOverview({
         </div>
 
         <div className="relative mt-5 grid grid-cols-2 gap-2">
-          <div className={cn("rounded-2xl border border-border bg-background/35 px-3.5 py-3", summary.profit > 0 && "panel-success")}>
+          <div className={cn("rounded-2xl border border-border bg-background/35 px-3.5 py-3", summary.profit > 0 && "rg-panel-success")}>
             <div className="text-[11px] text-muted-foreground">Profit · {RANGE_LABELS[range]}</div>
             <div className={cn("font-display text-lg font-bold tabular-nums", summary.profit > 0 && "text-success", summary.profit < 0 && "text-destructive")}>
               {signedKr(summary.profit)}
@@ -178,7 +178,7 @@ export function MobileOverview({
             onClick={() => onRangeChange(t.value)}
             className={cn(
               "rounded-xl py-2 text-sm font-semibold transition-all",
-              range === t.value ? "bg-gradient-primary text-primary-foreground glow-primary" : "text-muted-foreground",
+              range === t.value ? "rg-bg-gradient-primary text-primary-foreground rg-glow-primary" : "text-muted-foreground",
             )}
           >
             {t.label}
@@ -197,7 +197,7 @@ export function MobileOverview({
             key={t.label}
             type="button"
             onClick={t.onClick}
-            className="glass group flex flex-col items-start gap-3 rounded-2xl p-4 text-left transition-transform active:scale-[0.98]"
+            className="rg-glass group flex flex-col items-start gap-3 rounded-2xl p-4 text-left transition-transform active:scale-[0.98]"
           >
             <div className="flex w-full items-center justify-between">
               <span className="icon-chip h-10 w-10">
@@ -226,7 +226,7 @@ export function MobileOverview({
           </>
         ) : (
           <EmptyState
-            className="glass rounded-3xl"
+            className="rg-glass rounded-3xl"
             icon={Trophy}
             title="Ingen surebets endnu"
             text="Scan to kuponer eller skriv din første surebet ind."
@@ -236,7 +236,7 @@ export function MobileOverview({
         )}
       </section>
 
-      <section className="glass rounded-3xl p-4" aria-labelledby="m-bankroll">
+      <section className="rg-glass rounded-3xl p-4" aria-labelledby="m-bankroll">
         <SectionHeader id="m-bankroll" icon={Landmark} title="Bankroll per bookmaker" action={<AddButton onClick={onAddDeposit} />} />
         {bankroll.length ? (
           <>
@@ -257,7 +257,7 @@ export function MobileOverview({
                       </div>
                     </div>
                     <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-secondary">
-                      <div className="h-full rounded-full bg-gradient-primary" style={{ width: `${share * 100}%` }} />
+                      <div className="h-full rounded-full rg-bg-gradient-primary" style={{ width: `${share * 100}%` }} />
                     </div>
                     <div className="mt-1.5 flex justify-between text-xs text-muted-foreground">
                       <span>
@@ -271,7 +271,7 @@ export function MobileOverview({
                 );
               })}
             </ul>
-            <div className={cn("mt-1 flex items-center justify-between rounded-2xl border border-border px-3.5 py-3 text-sm", totalAvailable > 0 && "panel-success")}>
+            <div className={cn("mt-1 flex items-center justify-between rounded-2xl border border-border px-3.5 py-3 text-sm", totalAvailable > 0 && "rg-panel-success")}>
               <div>
                 <div className="font-semibold">I alt tilgængelig</div>
                 <div className="text-[11px] tabular-nums text-muted-foreground">
@@ -294,7 +294,7 @@ export function MobileOverview({
         )}
       </section>
 
-      <section className="glass rounded-3xl p-4">
+      <section className="rg-glass rounded-3xl p-4">
         <SectionHeader
           icon={Clock}
           title="Seneste aktivitet"
@@ -318,7 +318,7 @@ export function MobileOverview({
       </section>
 
       <Drawer open={allOpen} onOpenChange={setAllOpen}>
-        <DrawerContent className="glass max-h-[85dvh] border-border">
+        <DrawerContent className="rg-glass max-h-[85dvh] border-border">
           <DrawerHeader className="text-left">
             <DrawerTitle className="font-display text-xl">Al aktivitet</DrawerTitle>
             <DrawerDescription>{activity.length} hændelser i dit surebet-regnskab</DrawerDescription>

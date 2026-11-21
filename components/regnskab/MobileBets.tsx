@@ -46,7 +46,7 @@ export function SurebetCards({
                 type="button"
                 onClick={() => setSelectedId(r.id)}
                 aria-label={`Handlinger for ${r.event}`}
-                className="glass w-full rounded-2xl p-4 text-left transition-transform active:scale-[0.98]"
+                className="rg-glass w-full rounded-2xl p-4 text-left transition-transform active:scale-[0.98]"
               >
                 <div className="flex items-center justify-between gap-2">
                   <span className="flex items-center gap-2 text-xs tabular-nums text-muted-foreground">
@@ -84,7 +84,7 @@ export function SurebetCards({
                   <span
                     className={cn(
                       "rounded-lg border px-2.5 py-1 font-display text-sm font-bold tabular-nums",
-                      r.status === "Tabt" ? "border-destructive/40 bg-destructive/10 text-destructive" : "panel-success text-success",
+                      r.status === "Tabt" ? "border-destructive/40 bg-destructive/10 text-destructive" : "rg-panel-success text-success",
                     )}
                   >
                     {r.status === "Tabt" ? signedKr(-r.stake) : signedKr(profit)}
@@ -97,7 +97,7 @@ export function SurebetCards({
       </ul>
 
       <Drawer open={!!selected} onOpenChange={(o) => !o && setSelectedId(null)}>
-        <DrawerContent className="glass border-border">
+        <DrawerContent className="rg-glass border-border">
           {selected && (
             <>
               <DrawerHeader className="text-left">
@@ -174,7 +174,7 @@ export function MobileBets({
           </h1>
           <p className="mt-1.5 text-sm text-muted-foreground">{rows.length} registreret</p>
         </div>
-        <Button variant="outline" onClick={onAdd} className="glass h-10 rounded-xl px-3 text-sm">
+        <Button variant="outline" onClick={onAdd} className="rg-glass h-10 rounded-xl px-3 text-sm">
           <PenLine className="h-4 w-4 text-neon" /> Tilføj
         </Button>
       </div>
@@ -193,7 +193,7 @@ export function MobileBets({
               onClick={() => setFilter(f)}
               className={cn(
                 "flex shrink-0 items-center gap-1.5 rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors",
-                filter === f ? "border-primary-glow bg-gradient-primary text-primary-foreground glow-primary" : "border-border bg-secondary/50 text-muted-foreground",
+                filter === f ? "border-primary-glow rg-bg-gradient-primary text-primary-foreground rg-glow-primary" : "border-border bg-secondary/50 text-muted-foreground",
               )}
             >
               {f === "Åben" ? "Åbne" : f}
@@ -205,7 +205,7 @@ export function MobileBets({
 
       {shown.length === 0 ? (
         <EmptyState
-          className="glass rounded-3xl py-10"
+          className="rg-glass rounded-3xl py-10"
           icon={Trophy}
           title={rows.length ? "Ingen i dette filter" : "Ingen surebets endnu"}
           text="Scan to kuponer ovenfor eller skriv din første surebet ind."

@@ -43,7 +43,7 @@ export function AddButton({ onClick, label = "Tilføj" }: { onClick: () => void;
     <button
       type="button"
       onClick={onClick}
-      className="flex items-center gap-1 rounded-xl bg-gradient-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground glow-primary active:scale-95"
+      className="flex items-center gap-1 rounded-xl rg-bg-gradient-primary px-3 py-1.5 text-sm font-semibold text-primary-foreground rg-glow-primary active:scale-95"
     >
       <Plus className="h-4 w-4" /> {label}
     </button>

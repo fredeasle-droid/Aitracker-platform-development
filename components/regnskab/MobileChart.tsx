@@ -12,7 +12,7 @@ export function MobileChart({ surebets, range, today }: { surebets: Surebet[]; r
   const last = data[data.length - 1];
 
   return (
-    <section className="glass rounded-3xl p-4">
+    <section className="rg-glass rounded-3xl p-4">
       <SectionHeader icon={LineChart} title="Udvikling i profit" />
       <div className="mt-3 flex gap-2 text-xs">
         <span className="flex items-center gap-1.5 rounded-full border border-border bg-background/40 px-2.5 py-1">

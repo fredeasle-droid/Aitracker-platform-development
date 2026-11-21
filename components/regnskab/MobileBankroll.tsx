@@ -20,10 +20,10 @@ export function MobileBankroll({ rows, onAdd }: { rows: BankrollRow[]; onAdd: ()
         <p className="mt-1.5 text-sm text-muted-foreground">Din saldo hos hver bookmaker</p>
       </div>
 
-      <section className="relative overflow-hidden rounded-3xl border border-primary-glow/40 bg-gradient-pro p-5 glow-primary">
+      <section className="relative overflow-hidden rounded-3xl border border-primary-glow/40 rg-bg-gradient-pro p-5 rg-glow-primary">
         <div className="pointer-events-none absolute -left-10 -top-10 h-36 w-36 rounded-full bg-neon/15 blur-3xl" />
         <div className="relative text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">Tilgængelig at spille for</div>
-        <div className={cn("relative mt-1 font-display text-[36px] font-bold leading-none tabular-nums text-glow", available < 0 && "text-destructive")}>
+        <div className={cn("relative mt-1 font-display text-[36px] font-bold leading-none tabular-nums rg-text-glow", available < 0 && "text-destructive")}>
           {formatKr(available)}
         </div>
         <div className="relative mt-5 grid grid-cols-3 divide-x divide-border rounded-2xl border border-border bg-background/30 text-center">
@@ -40,13 +40,13 @@ export function MobileBankroll({ rows, onAdd }: { rows: BankrollRow[]; onAdd: ()
         </div>
       </section>
 
-      <Button onClick={onAdd} className="h-12 rounded-2xl bg-gradient-primary text-base font-semibold text-primary-foreground glow-primary">
+      <Button onClick={onAdd} className="h-12 rounded-2xl rg-bg-gradient-primary text-base font-semibold text-primary-foreground rg-glow-primary">
         <Plus className="h-5 w-5" /> Tilføj indskud
       </Button>
 
       {rows.length === 0 ? (
         <EmptyState
-          className="glass rounded-3xl py-10"
+          className="rg-glass rounded-3xl py-10"
           icon={Landmark}
           title="Ingen indskud endnu"
           text="Skriv din kapital ind for hver bookmaker, så holder vi styr på saldoen."
@@ -57,7 +57,7 @@ export function MobileBankroll({ rows, onAdd }: { rows: BankrollRow[]; onAdd: ()
             const free = r.balance - r.active;
             const share = r.balance > 0 ? Math.min(Math.max(free / r.balance, 0), 1) : 0;
             return (
-              <li key={r.bookmaker} className="glass rounded-2xl p-4">
+              <li key={r.bookmaker} className="rg-glass rounded-2xl p-4">
                 <div className="flex items-center justify-between gap-3">
                   <div className="flex flex-col items-start gap-1">
                     <BookmakerBadge name={r.bookmaker} className="min-w-[84px]" />
@@ -69,7 +69,7 @@ export function MobileBankroll({ rows, onAdd }: { rows: BankrollRow[]; onAdd: ()
                   </div>
                 </div>
                 <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-secondary">
-                  <div className="h-full rounded-full bg-gradient-primary" style={{ width: `${share * 100}%` }} />
+                  <div className="h-full rounded-full rg-bg-gradient-primary" style={{ width: `${share * 100}%` }} />
                 </div>
                 <div className="mt-2 flex justify-between text-xs text-muted-foreground">
                   <span>

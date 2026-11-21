@@ -179,7 +179,7 @@ export function ImportCoupon({
   };
 
   return (
-    <section className="glass flex flex-col rounded-2xl p-6">
+    <section className="rg-glass flex flex-col rounded-2xl p-6">
       <div className="flex items-start gap-4">
         <CloudUpload className="h-9 w-9 shrink-0 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
         <div>
@@ -207,7 +207,7 @@ export function ImportCoupon({
         type="button"
         disabled={!ready || busy}
         onClick={calculate}
-        className="mt-5 h-11 rounded-xl bg-gradient-primary text-primary-foreground glow-primary hover:opacity-90 disabled:opacity-40 disabled:shadow-none"
+        className="mt-5 h-11 rounded-xl rg-bg-gradient-primary text-primary-foreground rg-glow-primary hover:opacity-90 disabled:opacity-40 disabled:shadow-none"
       >
         {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Calculator className="h-4 w-4" />}
         {busy ? "Analyserer kuponer…" : ready ? "Beregn surebet" : `Upload ${2 - count} kupon${2 - count === 1 ? "" : "er"} mere`}
