@@ -1,53 +1,9 @@
 "use client";
-import { CalendarDays, ChevronDown, LayoutDashboard, Landmark, Plus, Trophy } from "lucide-react";
+import { LayoutDashboard, Landmark, Plus, Trophy } from "lucide-react";
 
 import { cn } from "@/lib/utils";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuRadioGroup,
-  DropdownMenuRadioItem,
-  DropdownMenuTrigger,
-} from "@/components/regnskab/ui/dropdown-menu";
-import type { ChartRange } from "@/lib/regnskab/surebet";
-import { RANGE_LABELS } from "./Topbar";
 
 export type MobileTab = "overblik" | "bets" | "bankroll";
-
-const SHORT_RANGE: Record<ChartRange, string> = { "30": "30 dage", "90": "90 dage", "365": "1 år" };
-
-export function MobileHeader({ range, onRangeChange }: { range: ChartRange; onRangeChange: (r: ChartRange) => void }) {
-  return (
-    <header className="sticky top-0 z-30 border-b border-border/60 bg-background/75 px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top))] backdrop-blur-xl">
-      <div className="flex items-center justify-end gap-3">
-        <div className="flex items-center gap-2">
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <button
-              type="button"
-              aria-label={`Periode: ${RANGE_LABELS[range]}`}
-              className="glass flex h-9 items-center gap-1.5 rounded-full px-3 text-xs font-semibold"
-            >
-              <CalendarDays className="h-3.5 w-3.5 text-neon" />
-              {SHORT_RANGE[range]}
-              <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
-            </button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end" className="glass w-44">
-            <DropdownMenuRadioGroup value={range} onValueChange={(v) => onRangeChange(v as ChartRange)}>
-              {(Object.keys(RANGE_LABELS) as ChartRange[]).map((r) => (
-                <DropdownMenuRadioItem key={r} value={r}>
-                  {RANGE_LABELS[r]}
-                </DropdownMenuRadioItem>
-              ))}
-            </DropdownMenuRadioGroup>
-          </DropdownMenuContent>
-        </DropdownMenu>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 const tabs: { value: MobileTab; label: string; icon: typeof Trophy }[] = [
   { value: "overblik", label: "Overblik", icon: LayoutDashboard },

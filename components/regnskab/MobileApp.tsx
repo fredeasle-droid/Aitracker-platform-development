@@ -5,7 +5,7 @@ import { Camera, ImagePlus, Landmark, PenLine } from "lucide-react";
 import { Drawer, DrawerContent, DrawerDescription, DrawerHeader, DrawerTitle } from "@/components/regnskab/ui/drawer";
 import type { CouponReading } from "@/lib/regnskab/coupon";
 import type { Activity, BankrollRow, ChartRange, Summary, Surebet, SurebetStatus } from "@/lib/regnskab/surebet";
-import { BottomNav, MobileHeader, type MobileTab } from "./MobileShell";
+import { BottomNav, type MobileTab } from "./MobileShell";
 import { MobileOverview } from "./MobileOverview";
 import { MobileBets } from "./MobileBets";
 import { MobileBankroll } from "./MobileBankroll";
@@ -70,7 +70,6 @@ export function MobileApp(props: {
 
   return (
     <div className="grid-bg min-h-dvh pb-[calc(6.5rem+env(safe-area-inset-bottom))]">
-      <MobileHeader range={props.range} onRangeChange={props.onRangeChange} />
       <main className="flex flex-col gap-4 px-4 pt-4">
         {tab === "overblik" && (
           <MobileOverview
