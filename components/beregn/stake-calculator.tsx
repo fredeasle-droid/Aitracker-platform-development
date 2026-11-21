@@ -25,7 +25,6 @@ import { DesignScale } from '@/components/beregn/design-scale'
 import { BetfairArrow, CoinsStackIcon, ProfitBarsIcon, SoccerBallSolid, useSvgId } from '@/components/beregn/bi-icons'
 import { LockedOdds, useHasAccess } from '@/components/locked-odds'
 import { BookmakerMark } from '@/components/sb/BookmakerMark'
-import { Crest } from '@/components/sb/Crest'
 import type { Opportunity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
@@ -102,7 +101,21 @@ function TeamCrest({ src, team, className }: { src: string | null; team: string;
     // eslint-disable-next-line @next/next/no-img-element
     return <img src={src} alt={team} className={cn('object-contain', className)} />
   }
-  return <Crest src={null} name={team} size="lg" className={className} />
+  const initials = team
+    .split(' ')
+    .map((w) => w[0])
+    .join('')
+    .slice(0, 3)
+    .toUpperCase()
+  return (
+    <span className={cn('crest-disc inline-flex shrink-0 items-center justify-center rounded-full', className)}>
+      {initials ? (
+        <span className="text-[22px] font-bold text-(--bi-fg)">{initials}</span>
+      ) : (
+        <SoccerBallSolid className="size-[62%] text-(--bi-primary)" aria-hidden="true" />
+      )}
+    </span>
+  )
 }
 
 type Leg = {
