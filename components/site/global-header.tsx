@@ -92,17 +92,14 @@ function MobileMenu({ pathname }: { pathname: string }) {
   )
 }
 
-export function GlobalHeader() {
+export function GlobalHeader({ className }: { className?: string }) {
   const pathname = usePathname()
-  const isHome = pathname === '/'
 
   return (
     <header
       className={cn(
-        'bt-theme top-0 z-40 pt-[env(safe-area-inset-top)]',
-        isHome
-          ? 'relative bg-transparent md:sticky md:border-b md:border-border md:bg-background-deep/85 md:backdrop-blur-xl'
-          : 'sticky border-b border-border bg-background-deep/85 backdrop-blur-xl',
+        'bt-theme sticky top-0 z-40 font-[family-name:var(--bt-roboto,var(--font-roboto))] border-b border-border bg-background-deep/85 pt-[env(safe-area-inset-top)] backdrop-blur-xl',
+        className,
       )}
     >
       <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 md:px-6 lg:px-8">

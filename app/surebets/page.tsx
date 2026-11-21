@@ -8,6 +8,7 @@ import { LiveTicker } from '@/components/sb/LiveTicker'
 import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
 import { SurebetsProvider } from '@/components/sb/surebets-context'
 import { GlobalFooter } from '@/components/site/global-footer'
+import { GlobalHeader } from '@/components/site/global-header'
 import { getSbData } from '@/lib/sb-data'
 
 export const dynamic = 'force-dynamic'
@@ -23,6 +24,7 @@ export default async function SurebetsPage() {
   return (
     <SurebetsProvider data={data}>
     <BookmakerFilterProvider>
+      <GlobalHeader className="lg:hidden" />
       <div className="flex min-h-screen">
         <Sidebar />
         <main className="relative min-w-0 flex-1 px-4 pb-8 sm:px-6">

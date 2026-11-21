@@ -2,13 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CalcHeroBackdrop, CalcHeroStadium } from '@/components/beregn/calc-hero'
 import { DesignScale } from '@/components/beregn/design-scale'
-import { BeregnMobileHeader } from '@/components/beregn/mobile-header'
 import { StakeCalculator } from '@/components/beregn/stake-calculator'
 import { Sidebar } from '@/components/sb/Sidebar'
 import { TopBar } from '@/components/sb/TopBar'
 import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
 import { SurebetsProvider } from '@/components/sb/surebets-context'
 import { GlobalFooter } from '@/components/site/global-footer'
+import { GlobalHeader } from '@/components/site/global-header'
 import { getOpportunity } from '@/lib/data'
 import { getSbData } from '@/lib/sb-data'
 
@@ -26,10 +26,10 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
   return (
     <SurebetsProvider data={data}>
       <BookmakerFilterProvider>
+        <GlobalHeader className="lg:hidden" />
         <div className="bi flex min-h-screen bg-(--bi-bg)">
           <Sidebar page="beregn" />
           <main className="relative min-w-0 flex-1 lg:pb-0">
-            <BeregnMobileHeader />
             {opportunity && (
               <DesignScale className="absolute inset-x-0 top-0 hidden lg:block" backdrop={<CalcHeroStadium />}>
                 <CalcHeroBackdrop />
