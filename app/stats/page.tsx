@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
-import { DesktopStats } from '@/components/desktop/desktop-stats'
 import { StatsView } from '@/components/stats/stats-view'
 import { getBets, getOpportunities } from '@/lib/data'
 
@@ -12,12 +11,9 @@ export default async function StatsPage() {
   const now = Date.now()
   return (
     <main className="lg:min-h-dvh lg:bg-[#030914]">
-      <div className="hidden w-full gap-4 px-4 lg:flex lg:items-start lg:pb-6 lg:pt-4">
-        <DesktopStats bets={bets} now={now} />
-        <DesktopAside opportunities={opportunities} />
-      </div>
-      <div className="lg:hidden">
+      <div className="flex w-full items-start gap-4 px-4 pt-3 lg:pt-4">
         <StatsView bets={bets} now={now} />
+        <DesktopAside opportunities={opportunities} />
       </div>
     </main>
   )
