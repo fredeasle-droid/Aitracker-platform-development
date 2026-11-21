@@ -29,6 +29,7 @@ import { cn } from '@/lib/utils'
 import { plans, type Plan } from '@/app/konto/plans'
 import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { LoginStep } from '@/app/konto/login-step'
+import { OnboardingStep } from '@/components/konto/onboarding-step'
 
 const STEPS = ['Dine oplysninger', 'Vælg abonnement', 'Betalingsoplysninger'] as const
 
@@ -47,26 +48,28 @@ type Props = {
   onSubmitted: () => void
   loginMode: boolean
   setLoginMode: (value: boolean) => void
+  allowTestAccess: boolean
+  returnTo?: string
 }
 
-export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode }: Props) {
+export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode, allowTestAccess, returnTo }: Props) {
   if (loginMode) {
     return (
       <div className="mx-auto w-full max-w-[520px] pt-6">
         <div className={cn(panel, 'p-8')}>
-          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/')} />
+          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(returnTo ?? '/')} />
         </div>
       </div>
     )
   }
 
-  if (submitted) return <Success planName={plans[plan].name} />
+  if (submitted) return <OnboardingStep />
 
   return (
     <div className="mx-auto w-full max-w-[930px]">
       <Stepper step={step} />
       {step === 1 && <DetailsStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />}
-      {step === 2 && <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} />}
+      {step === 2 && <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} allowTestAccess={allowTestAccess} onTestAccess={onSubmitted} />}
       {step === 3 && <PaymentStep plan={plan} onBack={() => setStep(2)} onChangePlan={() => setStep(2)} onSubmit={onSubmitted} />}
     </div>
   )
@@ -294,7 +297,7 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
   )
 }
 
-function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void }) {
+function PlanStep({ plan, setPlan, onBack, onNext, allowTestAccess, onTestAccess }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void; allowTestAccess: boolean; onTestAccess: () => void }) {
   return (
     <section>
       <Title before="Vælg dit " accent="abonnement" />
@@ -315,6 +318,7 @@ function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (pla
         Fortsæt med {plans[plan].name}
         <ArrowRight className="size-6" aria-hidden="true" />
       </button>
+      {allowTestAccess && <button type="button" onClick={onTestAccess} className="mt-3 min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] px-4 text-sm font-semibold text-[#e6ecf7] hover:bg-[#102744]">Test uden kort — kun Preview</button>}
       <BackButton onClick={onBack} className="mx-auto mt-6" />
     </section>
   )
@@ -462,18 +466,3 @@ function PaymentStep({
   )
 }
 
-function Success({ planName }: { planName: string }) {
-  return (
-    <section className={cn(panel, 'mx-auto mt-10 max-w-[560px] p-10 text-center')}>
-      <span className="mx-auto flex size-20 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_0_36px_-6px_var(--primary)]">
-        <Check className="size-10" aria-hidden="true" />
-      </span>
-      <h1 className="mt-6 text-[36px] font-extrabold">Du er klar</h1>
-      <p className="mt-3 text-[18px] text-[#e6ecf7]">Din {planName}-prøveperiode er startet. God fornøjelse med BetTracker.</p>
-      <Link href="/" className={cn(primaryButton, 'mt-8 w-full')}>
-        Gå til BetTracker
-        <ArrowRight className="size-6" aria-hidden="true" />
-      </Link>
-    </section>
-  )
-}

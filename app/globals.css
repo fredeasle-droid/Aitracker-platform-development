@@ -1,11 +1,28 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';
+@import './bt-theme.css';
+@import './surebets/sb-theme.css';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-sora), var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+  --color-primary-glow: var(--primary-glow);
+  --color-background-deep: var(--background-deep);
+  --color-border-strong: var(--border-strong);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success-bg: var(--success-bg);
+  --color-warning: var(--warning);
+  --color-teal: var(--teal);
+  --color-gold: var(--gold);
+  --color-mc-orange: var(--mc-orange);
+  --color-social: var(--social);
+  --color-telegram: var(--telegram);
+  --color-youtube: var(--youtube);
+  --color-discord: var(--discord);
+  --color-instagram: var(--instagram);
   --color-success: var(--success);
   --color-success-strong: var(--success-strong);
   --color-violet: var(--violet);

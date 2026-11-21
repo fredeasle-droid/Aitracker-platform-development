@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Check, Clock3, Gift, Info, ShieldCheck, Sparkles } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
-import { SiteHeader } from '@/components/site-header'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { DesktopBonus } from '@/components/desktop/desktop-bonus'
 import { getOpportunities } from '@/lib/data'
@@ -51,7 +50,6 @@ export default async function BonusPage() {
         <DesktopAside opportunities={opportunities} />
       </div>
       <div className="lg:hidden">
-      <SiteHeader />
       <section className="relative overflow-hidden px-4 pb-5 pt-3">
         <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-[#1682ff]/15 blur-3xl" />
         <div className="relative flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#54b8ff]"><Gift className="size-4" /> {t('exclusiveOffers')}</div>

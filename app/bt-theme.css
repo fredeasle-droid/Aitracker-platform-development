@@ -1,0 +1,1120 @@
+/* BetTracker global theme: tokens are scoped to .bt-theme so existing pages keep their own palette. */
+.bt-theme {
+  --radius: 0.875rem;
+  --background: oklch(0.16 0.045 258);
+  --background-deep: oklch(0.13 0.04 260);
+  --foreground: oklch(0.97 0.008 250);
+  --card: oklch(0.18 0.05 258);
+  --card-foreground: oklch(0.97 0.008 250);
+  --popover: oklch(0.18 0.05 258);
+  --popover-foreground: oklch(0.97 0.008 250);
+  --primary: oklch(0.55 0.245 262);
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-glow: oklch(0.74 0.16 236);
+  --secondary: oklch(0.24 0.07 258);
+  --secondary-foreground: oklch(0.97 0.008 250);
+  --muted: oklch(0.23 0.07 258);
+  --muted-foreground: oklch(0.72 0.03 255);
+  --accent: oklch(0.8 0.14 222);
+  --accent-foreground: oklch(0.16 0.045 258);
+  --destructive: oklch(0.6 0.24 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.8 0.19 158);
+  --success-bg: oklch(0.42 0.11 160);
+  --warning: oklch(0.84 0.15 80);
+  --teal: oklch(0.87 0.15 190);
+  --gold: oklch(0.88 0.17 92);
+  --mc-orange: oklch(0.8 0.17 70);
+  --social: oklch(0.8 0.06 275);
+  --telegram: oklch(0.66 0.14 237);
+  --youtube: oklch(0.6 0.23 27);
+  --discord: oklch(0.58 0.2 277);
+  --instagram: oklch(0.63 0.24 2);
+  --gradient-instagram: linear-gradient(45deg, oklch(0.82 0.16 80) 0%, oklch(0.63 0.24 15) 45%, oklch(0.52 0.24 320) 100%);
+  --gradient-brand-text: linear-gradient(90deg, var(--primary-glow) 0%, oklch(0.82 0.17 170) 100%);
+  --border: oklch(0.4 0.12 252 / 55%);
+  --border-strong: oklch(0.5 0.16 252);
+  --input: oklch(0.4 0.12 252 / 55%);
+  --ring: oklch(0.55 0.245 262);
+  --chart-1: oklch(0.55 0.245 262);
+  --chart-2: oklch(0.8 0.19 158);
+  --chart-3: oklch(0.74 0.16 236);
+  --chart-4: oklch(0.88 0.17 92);
+  --chart-5: oklch(0.6 0.24 27);
+  --sidebar: oklch(0.18 0.05 258);
+  --sidebar-foreground: oklch(0.97 0.008 250);
+  --sidebar-primary: oklch(0.55 0.245 262);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.24 0.07 258);
+  --sidebar-accent-foreground: oklch(0.97 0.008 250);
+  --sidebar-border: oklch(0.4 0.12 252 / 55%);
+  --sidebar-ring: oklch(0.55 0.245 262);
+
+  --gradient-panel: linear-gradient(160deg, oklch(0.22 0.07 258 / 85%) 0%, oklch(0.15 0.05 258 / 92%) 55%, oklch(0.17 0.06 258 / 90%) 100%);
+  --gradient-btn: linear-gradient(180deg, oklch(0.6 0.23 258) 0%, oklch(0.53 0.245 263) 100%);
+  --shadow-panel: 0 0 0 1px oklch(0.5 0.16 252 / 35%) inset, 0 0 24px -6px oklch(0.55 0.245 262 / 45%);
+  --shadow-glow: 0 0 28px -4px oklch(0.55 0.245 262 / 75%);
+  --shadow-btn: 0 0 18px -2px oklch(0.55 0.245 262 / 80%), 0 1px 0 0 oklch(0.8 0.12 240 / 40%) inset;
+  --shadow-btn-hover: 0 0 30px 0 oklch(0.55 0.245 262 / 90%), 0 10px 24px -10px oklch(0.55 0.245 262 / 90%), 0 1px 0 0 oklch(0.85 0.12 240 / 55%) inset;
+  --gradient-aurora-a: radial-gradient(closest-side, oklch(0.55 0.245 262 / 55%), transparent);
+  --gradient-aurora-b: radial-gradient(closest-side, oklch(0.7 0.16 200 / 35%), transparent);
+  --gradient-aurora-c: radial-gradient(closest-side, oklch(0.5 0.22 280 / 35%), transparent);
+  --shadow-success: 0 0 0 1px oklch(0.87 0.15 190) inset, 0 0 18px 0 oklch(0.87 0.15 190 / 55%), 0 0 40px -8px oklch(0.87 0.15 190 / 50%);
+}
+
+
+/* ---------- Page shell ---------- */
+
+.reference-home {
+  position: relative;
+  background:
+    radial-gradient(60% 40% at 50% 0%, oklch(0.22 0.09 260 / 60%) 0%, transparent 70%),
+    radial-gradient(40% 25% at 85% 55%, oklch(0.3 0.15 262 / 25%) 0%, transparent 70%),
+    linear-gradient(180deg, var(--background-deep) 0%, var(--background) 40%, var(--background-deep) 100%);
+}
+/* The page is authored on a fixed 1024px canvas (the mockup's grid) and scaled for desktop screens. */
+.mock-frame {
+  position: relative;
+  width: 1024px;
+  margin-inline: auto;
+}
+/* --z / --bleed are set before first paint by the inline script in __root; media steps are the no-JS fallback. */
+@media (max-width: 1023px) { :root { --zf: 0.8; } }
+@media (min-width: 1150px) { :root { --zf: 1.1; } }
+@media (min-width: 1280px) { :root { --zf: 1.22; } }
+@media (min-width: 1440px) { :root { --zf: 1.37; } }
+@media (min-width: 1600px) { :root { --zf: 1.56; } }
+@media (min-width: 1920px) { :root { --zf: 1.875; } }
+@media (min-width: 2560px) { :root { --zf: 2.5; } }
+/* --zeff is the real element scale (10% below the screen step); the hero photo is sized from it so the background keeps reaching the screen edges. */
+:root { --zeff: calc(var(--z, var(--zf, 1)) * 0.9); }
+.mock-frame { zoom: var(--zeff); }
+
+.hero-photo {
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 12%, black 78%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(180deg, transparent 0%, black 12%, black 78%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-composite: intersect;
+  opacity: 0.95;
+}
+
+/* Mobile photo spans the full screen width, so it only fades vertically. */
+.hero-photo-mobile {
+  -webkit-mask-image: linear-gradient(180deg, transparent 0%, black 10%, black 80%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0%, black 10%, black 80%, transparent 100%);
+}
+
+/* Lets the weekly carousel run to the screen edge when the canvas is narrower than the window. */
+.bleed-right { right: calc(var(--bleed, 0px) * -1); }
+
+/* Explainer video has a slanted left edge in the mockup. */
+/* video frame fills its box edge-to-edge */
+
+/* Photos inside panels melt into the panel on one side. */
+.photo-fade-left {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 38%), linear-gradient(180deg, black 80%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0%, black 38%), linear-gradient(180deg, black 80%, transparent 100%);
+  mask-composite: intersect;
+}
+.photo-fade-right {
+  -webkit-mask-image: linear-gradient(270deg, transparent 0%, black 35%), linear-gradient(180deg, black 82%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(270deg, transparent 0%, black 35%), linear-gradient(180deg, black 82%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* ---------- Surfaces ---------- */
+
+@utility panel {
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid var(--border-strong);
+  background: var(--gradient-panel);
+  box-shadow: var(--shadow-panel);
+  /* thin light catching the top edge */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 14%;
+    right: 14%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, oklch(0.85 0.1 236 / 70%), transparent);
+    pointer-events: none;
+  }
+}
+
+@utility panel-soft {
+  border-radius: 12px;
+  border: 1px solid oklch(0.45 0.14 252 / 70%);
+  background: linear-gradient(170deg, oklch(0.2 0.07 258 / 80%) 0%, oklch(0.14 0.045 258 / 90%) 100%);
+  box-shadow: 0 0 18px -8px oklch(0.55 0.245 262 / 60%);
+}
+
+@utility live-scanner {
+  border-color: oklch(0.58 0.17 245);
+  background: linear-gradient(170deg, oklch(0.24 0.07 258 / 88%) 0%, oklch(0.2 0.06 258 / 92%) 100%);
+  box-shadow: 0 0 0 1px oklch(0.6 0.16 240 / 40%) inset, 0 0 30px -4px oklch(0.55 0.2 250 / 60%);
+  backdrop-filter: blur(6px);
+}
+
+@utility glow-success {
+  border-color: var(--teal);
+  box-shadow: var(--shadow-success);
+}
+
+/* Primary button: a band of light sweeps across on hover (background layers only, so it works on any element). */
+@utility btn-glow {
+  background:
+    linear-gradient(115deg, transparent 30%, oklch(1 0 0 / 32%) 48%, transparent 66%) no-repeat,
+    var(--gradient-btn);
+  background-size: 260% 100%, 100% 100%;
+  background-position: 130% 0, 0 0;
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-btn);
+  transition: filter 0.25s ease, transform 0.25s ease, box-shadow 0.3s ease, background-position 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  &:hover {
+    filter: brightness(1.08);
+    background-position: -40% 0, 0 0;
+    box-shadow: var(--shadow-btn-hover);
+  }
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+@utility btn-outline-glow {
+  border: 1px solid var(--primary);
+  color: var(--primary-glow);
+  box-shadow: 0 0 12px -4px oklch(0.55 0.245 262 / 70%);
+  transition: background 0.2s ease;
+  &:hover {
+    background: oklch(0.55 0.245 262 / 15%);
+  }
+}
+
+@utility pill-success {
+  background: linear-gradient(180deg, oklch(0.45 0.12 160) 0%, oklch(0.38 0.1 160) 100%);
+  color: var(--success);
+  box-shadow: 0 0 10px -2px oklch(0.7 0.17 158 / 45%);
+}
+
+@utility margin-box {
+  border: 1px solid oklch(0.72 0.17 158 / 85%);
+  background: linear-gradient(180deg, oklch(0.3 0.07 175 / 70%) 0%, oklch(0.24 0.06 185 / 70%) 100%);
+  color: var(--success);
+  box-shadow: 0 0 14px -2px oklch(0.75 0.17 158 / 45%), 0 0 0 1px oklch(0.75 0.17 158 / 20%) inset;
+}
+
+@utility value-pill {
+  border: 1px solid oklch(0.4 0.12 252 / 60%);
+  background: oklch(0.21 0.07 258);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 16px oklch(0.74 0.16 236 / 55%);
+}
+
+@utility text-gradient-brand {
+  background: var(--gradient-brand-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility fade-x {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
+}
+
+@utility fade-x-soft {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, black 48px, black calc(100% - 48px), transparent 100%);
+}
+
+@utility bookmaker-panel {
+  background:
+    radial-gradient(55% 80% at 78% 45%, oklch(0.4 0.18 258 / 22%) 0%, transparent 70%),
+    var(--gradient-panel);
+}
+
+@utility challenge-panel {
+  background:
+    radial-gradient(50% 90% at 72% 40%, oklch(0.42 0.2 258 / 30%) 0%, transparent 70%),
+    var(--gradient-panel);
+}
+
+/* The results band at the bottom of the challenge panel: fades in from the panel's own
+   background so there is no hard seam, and stays navy (not near-black) at the base. */
+@utility challenge-strip {
+  background: linear-gradient(
+    180deg,
+    oklch(0.16 0.055 258 / 0%) 0%,
+    oklch(0.155 0.055 258 / 35%) 45%,
+    oklch(0.145 0.05 258 / 70%) 100%
+  );
+}
+
+/* The "scanner" band at the bottom of the live scanner panel: same soft fade, no seam. */
+@utility scanner-strip {
+  background: linear-gradient(
+    180deg,
+    oklch(0.175 0.055 258 / 0%) 0%,
+    oklch(0.17 0.055 258 / 45%) 55%,
+    oklch(0.158 0.05 258 / 80%) 100%
+  );
+}
+
+@utility pricing-panel {
+  background:
+    radial-gradient(45% 80% at 18% 50%, oklch(0.42 0.2 258 / 35%) 0%, transparent 70%),
+    radial-gradient(40% 70% at 95% 100%, oklch(0.5 0.22 258 / 30%) 0%, transparent 70%),
+    var(--gradient-panel);
+}
+
+@utility chart-draw {
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility bookmaker-chip {
+  border: 1px solid oklch(0.45 0.14 252 / 65%);
+  background: linear-gradient(170deg, oklch(0.21 0.07 258 / 90%) 0%, oklch(0.15 0.05 258 / 95%) 100%);
+  box-shadow: 0 0 16px -8px oklch(0.55 0.245 262 / 70%);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.25s ease;
+  &:hover {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 18px -4px oklch(0.55 0.245 262 / 80%);
+    transform: translateY(-2px);
+  }
+}
+
+@utility phone-frame {
+  background: linear-gradient(160deg, oklch(0.32 0.06 258) 0%, oklch(0.16 0.04 258) 60%, oklch(0.24 0.05 258) 100%);
+  box-shadow: 0 0 0 1px oklch(0.55 0.12 250 / 50%), 0 0 34px -6px oklch(0.55 0.245 262 / 70%), 0 18px 40px -10px oklch(0.08 0.03 260 / 90%);
+}
+
+@utility sms-card {
+  border: 1px solid oklch(0.6 0.14 245 / 55%);
+  background: linear-gradient(170deg, oklch(0.27 0.07 258 / 92%) 0%, oklch(0.2 0.06 258 / 95%) 100%);
+  box-shadow: 0 0 0 1px oklch(0.7 0.12 240 / 15%) inset, 0 12px 30px -8px oklch(0.08 0.03 260 / 95%), 0 0 24px -6px oklch(0.55 0.245 262 / 70%);
+  backdrop-filter: blur(8px);
+}
+
+@utility social-card {
+  border-color: oklch(0.45 0.14 252 / 65%);
+  background: linear-gradient(170deg, oklch(0.21 0.07 258 / 85%) 0%, oklch(0.15 0.05 258 / 92%) 100%);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -10px oklch(0.55 0.245 262 / 80%);
+  }
+}
+
+@utility social-tile {
+  border-color: oklch(0.45 0.14 252 / 65%);
+  background:
+    radial-gradient(70% 55% at 50% 0%, color-mix(in oklab, var(--brand) 26%, transparent) 0%, transparent 100%),
+    linear-gradient(170deg, oklch(0.21 0.07 258 / 85%) 0%, oklch(0.15 0.05 258 / 92%) 100%);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  &:hover {
+    border-color: var(--brand);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px -12px var(--brand);
+  }
+}
+
+@utility bg-instagram {
+  background: var(--gradient-instagram);
+}
+
+/* ---------- Range slider ---------- */
+
+@utility range-glow {
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-glow) var(--pct, 50%), oklch(0.26 0.06 258) var(--pct, 50%));
+  outline: none;
+  cursor: pointer;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 9999px;
+    background: var(--primary);
+    border: 2px solid oklch(0.7 0.17 245);
+    box-shadow: 0 0 14px 2px oklch(0.55 0.245 262 / 80%);
+  }
+  &::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 9999px;
+    background: var(--primary);
+    border: 2px solid oklch(0.7 0.17 245);
+    box-shadow: 0 0 14px 2px oklch(0.55 0.245 262 / 80%);
+  }
+}
+
+/* ---------- Motion ---------- */
+
+@keyframes row-in {
+  from { opacity: 0; transform: translateY(-8px); background: oklch(0.55 0.245 262 / 25%); }
+  to { opacity: 1; transform: translateY(0); background: transparent; }
+}
+@utility row-in {
+  animation: row-in 0.6s ease-out;
+}
+
+/* Weekly finds: one continuous glide to the left, looping with no step or pause between cards. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(var(--marquee-shift, -1141px)); }
+}
+@utility marquee {
+  animation: marquee var(--marquee-duration, 46s) linear infinite;
+  will-change: transform;
+  &:hover,
+  &:active {
+    animation-play-state: paused;
+  }
+}
+
+/* Bookmaker rows: two copies per row, so sliding by half the row loops seamlessly. */
+@keyframes marquee-half {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@utility marquee-half {
+  animation: marquee-half var(--marquee-duration, 40s) linear infinite;
+  will-change: transform;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes sms-in {
+  0% { opacity: 0; transform: translateY(-18px) rotate(-3deg) scale(0.94); }
+  100% { opacity: 1; transform: translateY(0) rotate(-3deg) scale(1); }
+}
+@utility sms-in {
+  animation: sms-in 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+@keyframes bell-ring {
+  0%, 70%, 100% { transform: rotate(0); }
+  74% { transform: rotate(14deg); }
+  80% { transform: rotate(-12deg); }
+  86% { transform: rotate(8deg); }
+  92% { transform: rotate(-4deg); }
+}
+@utility bell-ring {
+  animation: bell-ring 5s ease-in-out infinite;
+  transform-origin: 50% 10%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .row-in { animation: none; }
+  .marquee { animation: none; }
+  .marquee-half { animation: none; }
+  .sms-in { animation: none; }
+  .bell-ring { animation: none; }
+}
+
+/* ---------- Sign-in ---------- */
+
+/* Google's dark-theme sign-in button colours (required by Google's branding rules). */
+@utility btn-google {
+  background: #131314;
+  color: #e3e3e3;
+  border: 1px solid #8e918f;
+  &:hover {
+    background: #1f1f20;
+  }
+}
+
+/* ---------- FAQ ---------- */
+
+@utility faq-panel {
+  background:
+    radial-gradient(45% 80% at 0% 0%, oklch(0.5 0.22 258 / 30%) 0%, transparent 70%),
+    radial-gradient(40% 70% at 100% 100%, oklch(0.6 0.17 200 / 16%) 0%, transparent 70%),
+    var(--gradient-panel);
+}
+
+/* Question row: quiet until hovered, glowing when it is the one being answered. */
+@utility faq-q {
+  border: 1px solid oklch(0.45 0.14 252 / 35%);
+  background: oklch(0.17 0.05 258 / 55%);
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    border-color: oklch(0.6 0.16 245 / 70%);
+    background: oklch(0.2 0.07 258 / 75%);
+  }
+  &[data-active="true"],
+  &[data-state="open"] {
+    border-color: oklch(0.74 0.16 236 / 75%);
+    background:
+      radial-gradient(80% 160% at 0% 50%, oklch(0.55 0.245 262 / 30%) 0%, transparent 65%),
+      oklch(0.2 0.07 258 / 85%);
+    box-shadow: 0 0 22px -8px oklch(0.55 0.245 262 / 90%), 3px 0 0 0 var(--primary-glow) inset;
+  }
+}
+
+@utility faq-num {
+  color: oklch(0.74 0.16 236 / 55%);
+  [data-active="true"] &,
+  [data-state="open"] & {
+    background: var(--gradient-brand-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@utility faq-arrow {
+  color: oklch(0.74 0.16 236 / 45%);
+  transition: transform 0.2s ease, color 0.2s ease;
+  [data-active="true"] & {
+    color: var(--primary-glow);
+    transform: translateX(3px);
+  }
+}
+
+@utility faq-toggle {
+  border: 1px solid var(--border-strong);
+  color: var(--primary-glow);
+}
+
+/* Support chat window. */
+@utility faq-chat {
+  border: 1px solid oklch(0.5 0.15 250 / 45%);
+  background:
+    radial-gradient(90% 60% at 50% 0%, oklch(0.55 0.245 262 / 10%) 0%, transparent 70%),
+    linear-gradient(180deg, oklch(0.2 0.065 258 / 70%) 0%, oklch(0.17 0.055 258 / 78%) 100%);
+  box-shadow: 0 1px 0 0 oklch(0.8 0.12 240 / 14%) inset, 0 12px 30px -18px oklch(0.08 0.03 260 / 90%);
+}
+
+/* Swipeable row of common questions in the phone chat. */
+@utility faq-suggest {
+  scrollbar-width: none;
+  mask-image: linear-gradient(90deg, transparent 0, #000 10px, #000 calc(100% - 22px), transparent 100%);
+  &::-webkit-scrollbar { display: none; }
+}
+
+@utility bubble-user {
+  background: var(--gradient-btn);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-btn);
+}
+
+@utility bubble-support {
+  border: 1px solid oklch(0.45 0.14 252 / 55%);
+  background: linear-gradient(170deg, oklch(0.23 0.07 258 / 90%) 0%, oklch(0.18 0.055 258 / 95%) 100%);
+}
+
+@utility faq-chip {
+  border: 1px solid oklch(0.5 0.16 252 / 55%);
+  background: oklch(0.55 0.245 262 / 10%);
+  color: var(--primary-glow);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background: oklch(0.55 0.245 262 / 22%);
+    border-color: var(--primary-glow);
+  }
+}
+
+@utility online-dot {
+  background: var(--success);
+  box-shadow: 0 0 0 2px var(--background-deep), 0 0 6px var(--success);
+}
+
+@keyframes bubble-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@utility bubble-in {
+  animation: bubble-in 0.35s cubic-bezier(0.2, 0.9, 0.3, 1.1) both;
+}
+
+@keyframes typing {
+  0%, 60%, 100% { opacity: 0.35; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+@utility typing-dot {
+  background: var(--primary-glow);
+  animation: typing 0.9s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bubble-in { animation: none; }
+  .typing-dot { animation: none; }
+}
+
+/* Support chat typing box. */
+@utility chat-composer {
+  & [data-slot="input-group"] {
+    border-radius: 12px;
+    border-color: oklch(0.5 0.16 252 / 60%);
+    background: oklch(0.15 0.045 260 / 80%);
+  }
+  & [data-slot="input-group"]:focus-within {
+    border-color: var(--primary-glow);
+    box-shadow: 0 0 16px -6px oklch(0.55 0.245 262 / 80%);
+  }
+  & textarea::placeholder {
+    color: oklch(0.97 0.008 250 / 45%);
+  }
+}
+
+/* Answers from the support chat: tidy spacing for short markdown replies. */
+@utility chat-answer {
+  & p + p { margin-top: 0.5em; }
+  & ul, & ol { padding-left: 1.1em; margin: 0.35em 0; }
+  & li + li { margin-top: 0.2em; }
+  & a { color: var(--primary-glow); text-decoration: underline; }
+  & strong { font-weight: 600; }
+}
+
+/* ---------- Hero refresh ---------- */
+
+/* Glass capsule holding the main menu. */
+@utility nav-capsule {
+  border: 1px solid oklch(0.5 0.16 252 / 45%);
+  background: oklch(0.13 0.04 260 / 55%);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 0 oklch(0.8 0.12 240 / 14%) inset, 0 10px 26px -14px oklch(0.08 0.03 260 / 95%);
+}
+@utility nav-link {
+  color: oklch(0.97 0.008 250 / 78%);
+  transition: color 0.2s ease, background 0.2s ease;
+  &:hover {
+    color: var(--foreground);
+    background: oklch(0.55 0.245 262 / 16%);
+  }
+}
+@utility nav-active {
+  color: var(--foreground);
+  background: oklch(0.55 0.245 262 / 30%);
+  box-shadow: 0 0 0 1px oklch(0.74 0.16 236 / 45%) inset, 0 0 14px -4px oklch(0.55 0.245 262 / 90%);
+}
+
+/* Darkens the photo behind the headline so the text always reads cleanly. */
+@utility hero-scrim {
+  background:
+    linear-gradient(90deg, oklch(0.11 0.04 260 / 90%) 0%, oklch(0.11 0.04 260 / 60%) 32%, transparent 60%),
+    linear-gradient(0deg, var(--background-deep) 0%, transparent 28%);
+}
+
+@utility glass-chip {
+  border: 1px solid oklch(0.5 0.16 252 / 45%);
+  background: oklch(0.13 0.04 260 / 60%);
+  backdrop-filter: blur(10px);
+}
+
+@utility btn-ghost-glass {
+  border: 1px solid oklch(0.97 0.008 250 / 22%);
+  background: oklch(0.97 0.008 250 / 6%);
+  backdrop-filter: blur(10px);
+  color: var(--foreground);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  &:hover {
+    background: oklch(0.97 0.008 250 / 12%);
+    border-color: oklch(0.97 0.008 250 / 40%);
+  }
+}
+
+/* Live scanner: light band sweeping down the rows. */
+@keyframes scan-sweep {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(400%); }
+}
+@utility scan-sweep {
+  background: linear-gradient(180deg, transparent 0%, oklch(0.74 0.16 236 / 10%) 75%, oklch(0.74 0.16 236 / 32%) 100%);
+  border-bottom: 1px solid oklch(0.74 0.16 236 / 55%);
+  animation: scan-sweep 3.8s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* Floating "new find" card next to the scanner. */
+@utility float-card {
+  border: 1px solid oklch(0.72 0.17 158 / 55%);
+  background: linear-gradient(170deg, oklch(0.24 0.07 258 / 95%) 0%, oklch(0.18 0.055 258 / 97%) 100%);
+  box-shadow: 0 8px 18px -12px oklch(0.08 0.03 260 / 90%), 0 0 20px -8px oklch(0.75 0.17 158 / 45%);
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(8px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@utility toast-in {
+  animation: toast-in 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+@keyframes float-y {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -4px; }
+}
+@utility float-y {
+  animation: float-y 4s ease-in-out infinite;
+}
+
+/* Strip of live finds under the hero. */
+@utility ticker-bar {
+  border: 1px solid oklch(0.5 0.16 252 / 45%);
+  background: oklch(0.12 0.04 260 / 72%);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 0 oklch(0.8 0.12 240 / 12%) inset, 0 12px 30px -16px oklch(0.55 0.245 262 / 80%);
+}
+@utility ticker-label {
+  color: var(--success);
+  background: linear-gradient(90deg, oklch(0.42 0.12 160 / 55%) 0%, oklch(0.42 0.12 160 / 0%) 100%);
+  border-right: 1px solid oklch(0.5 0.16 252 / 35%);
+}
+
+/* "Hvorfor BetTrackerAI?" cards. */
+@utility benefit-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid oklch(0.45 0.14 252 / 55%);
+  background:
+    radial-gradient(90% 70% at 0% 0%, oklch(0.55 0.245 262 / 16%) 0%, transparent 70%),
+    linear-gradient(170deg, oklch(0.2 0.07 258 / 85%) 0%, oklch(0.14 0.045 258 / 92%) 100%);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gradient-brand-text);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  &:hover {
+    transform: translateY(-3px);
+    border-color: oklch(0.74 0.16 236 / 70%);
+    box-shadow: 0 14px 30px -14px oklch(0.55 0.245 262 / 90%);
+  }
+  &:hover::before {
+    opacity: 1;
+  }
+}
+@utility icon-tile {
+  background: linear-gradient(150deg, oklch(0.6 0.23 258) 0%, oklch(0.42 0.2 262) 100%);
+  color: var(--primary-foreground);
+  box-shadow: 0 0 18px -4px oklch(0.55 0.245 262 / 85%), 0 1px 0 0 oklch(0.85 0.1 240 / 45%) inset;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scan-sweep { animation: none; opacity: 0; }
+  .toast-in { animation: none; }
+  .float-y { animation: none; }
+}
+
+/* ---------- Voice call with support ---------- */
+
+@utility call-btn {
+  border: 1px solid oklch(0.8 0.19 158 / 45%);
+  background: oklch(0.8 0.19 158 / 12%);
+  color: var(--success);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  &:hover {
+    background: oklch(0.8 0.19 158 / 22%);
+    border-color: var(--success);
+  }
+}
+
+@utility call-ghost {
+  border: 1px solid oklch(0.5 0.15 250 / 55%);
+  background: oklch(0.2 0.065 258 / 70%);
+  color: var(--foreground);
+  transition: background 0.2s ease, border-color 0.2s ease;
+  &:hover:not(:disabled) {
+    background: oklch(0.25 0.08 258 / 85%);
+    border-color: var(--primary-glow);
+  }
+  &[aria-pressed="true"] {
+    background: oklch(0.97 0.008 250 / 90%);
+    color: var(--background-deep);
+  }
+}
+
+@utility call-end {
+  background: var(--destructive);
+  color: var(--destructive-foreground);
+  box-shadow: 0 6px 18px -6px oklch(0.6 0.24 27 / 70%);
+  transition: filter 0.2s ease;
+  &:hover:not(:disabled) { filter: brightness(1.1); }
+  &:disabled { opacity: 0.5; }
+}
+
+@keyframes call-ring {
+  0% { box-shadow: 0 0 0 0 oklch(0.74 0.16 236 / 55%); }
+  100% { box-shadow: 0 0 0 12px oklch(0.74 0.16 236 / 0%); }
+}
+@utility call-avatar {
+  background: var(--gradient-btn);
+  color: var(--primary-foreground);
+  &.is-live { animation: call-ring 1.6s ease-out infinite; }
+}
+
+@utility call-captions {
+  scrollbar-width: thin;
+  mask-image: linear-gradient(180deg, transparent 0, #000 12px, #000 100%);
+}
+
+@utility call-meter-bar {
+  border-radius: 9999px;
+  background: oklch(0.97 0.008 250 / 22%);
+  transition: background 0.12s ease;
+  &.is-on { background: var(--success); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .call-avatar.is-live { animation: none; }
+}
+
+/* Customer photo in "Kunde anmeldelser": bleeds to the panel's edge and melts into it on the right,
+   so it reads as part of the card instead of a framed picture inside a box. */
+.review-bleed-right {
+  -webkit-mask-image: linear-gradient(90deg, black 0%, black 56%, transparent 97%);
+  mask-image: linear-gradient(90deg, black 0%, black 56%, transparent 97%);
+}
+/* Navy scrims on the photo so the heading and the customer's name stay readable. */
+.review-scrim-top {
+  background: linear-gradient(to bottom, color-mix(in oklab, var(--background-deep) 88%, transparent) 0%, color-mix(in oklab, var(--background-deep) 48%, transparent) 42%, transparent 82%);
+}
+.review-scrim-bottom {
+  background: linear-gradient(to top, color-mix(in oklab, var(--background-deep) 94%, transparent) 0%, color-mix(in oklab, var(--background-deep) 62%, transparent) 36%, transparent 74%);
+}
+/* Restores the panel's thin edge line where a photo bleeds over it. */
+.panel-edge {
+  box-shadow: inset 0 0 0 1px var(--border-strong);
+}
+
+/* =====================================================================
+ * Desktop refresh — everything below only styles the desktop canvas
+ * (.mock-frame and the desktop-* wrappers); the phone layout is untouched.
+ * ===================================================================== */
+
+.mock-frame :is(h1, h2) {
+  font-family: var(--font-display);
+  letter-spacing: -0.022em;
+}
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+/* Slow-drifting colour fields behind the whole desktop page. */
+.desktop-shell {
+  position: relative;
+  isolation: isolate;
+}
+.desktop-aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+.desktop-aurora > span {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(40px);
+  opacity: 0.5;
+  animation: aurora-drift 26s ease-in-out infinite alternate;
+}
+.desktop-aurora > span:nth-child(1) { left: -10vw; top: 10vh; width: 55vw; height: 55vw; background: var(--gradient-aurora-a); }
+.desktop-aurora > span:nth-child(2) { right: -15vw; top: 35vh; width: 50vw; height: 50vw; background: var(--gradient-aurora-b); animation-duration: 32s; animation-delay: -8s; }
+.desktop-aurora > span:nth-child(3) { left: 30vw; bottom: -30vh; width: 45vw; height: 45vw; background: var(--gradient-aurora-c); animation-duration: 38s; animation-delay: -16s; }
+@keyframes aurora-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6vw, -4vh) scale(1.12); }
+  100% { transform: translate(-4vw, 5vh) scale(0.95); }
+}
+
+/* Faint technical grid behind the hero. */
+@utility hero-grid {
+  background-image:
+    linear-gradient(oklch(0.74 0.16 236 / 7%) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(0.74 0.16 236 / 7%) 1px, transparent 1px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(60% 70% at 70% 40%, black 0%, transparent 75%);
+  mask-image: radial-gradient(60% 70% at 70% 40%, black 0%, transparent 75%);
+}
+
+/* Thin brand-coloured reading-progress line at the very top. */
+.scroll-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 60;
+  height: 2px;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: var(--gradient-brand-text);
+  box-shadow: 0 0 10px oklch(0.74 0.16 236 / 80%);
+  pointer-events: none;
+}
+@keyframes grow-x { to { transform: scaleX(1); } }
+
+/* Menu bar: transparent over the hero, frosted glass once the page scrolls. */
+.desktop-header {
+  position: sticky;
+  top: 0;
+}
+@keyframes header-glass {
+  to {
+    background: oklch(0.12 0.04 260 / 70%);
+    backdrop-filter: blur(16px) saturate(1.4);
+    box-shadow: 0 1px 0 0 oklch(0.5 0.16 252 / 30%), 0 14px 30px -20px oklch(0.05 0.03 260 / 95%);
+  }
+}
+
+/* Hero photo drifts down and dims as you scroll away from it. */
+@keyframes hero-parallax {
+  to { transform: translateY(120px) scale(1.06); opacity: 0.45; }
+}
+
+/* Sections rise into place as they scroll into view. */
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(36px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+@supports (animation-timeline: scroll()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-progress { animation: grow-x linear both; animation-timeline: scroll(root); }
+    .desktop-header { animation: header-glass linear both; animation-timeline: scroll(root); animation-range: 0 140px; }
+    .hero-parallax { animation: hero-parallax linear both; animation-timeline: scroll(root); animation-range: 0 900px; }
+    .reveal {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 70%;
+    }
+    .reveal-stagger > * {
+      animation: reveal-up linear both;
+      animation-timeline: view();
+      animation-range: entry calc(var(--i, 0) * 8%) entry calc(60% + var(--i, 0) * 8%);
+    }
+  }
+}
+
+/* Entrance on page load (hero). */
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(20px); filter: blur(6px); }
+  to { opacity: 1; transform: none; filter: none; }
+}
+@utility rise-in {
+  animation: rise-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+/* Soft light that follows the pointer across a card. */
+@utility spotlight {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background: radial-gradient(340px circle at var(--mx, 50%) var(--my, 50%), oklch(0.74 0.16 236 / 12%), transparent 65%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+/* Lifted card on hover. */
+@utility lift {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+  &:hover {
+    transform: translateY(-4px);
+    border-color: oklch(0.74 0.16 236 / 70%);
+    box-shadow: 0 18px 40px -18px oklch(0.55 0.245 262 / 90%), 0 0 0 1px oklch(0.74 0.16 236 / 30%) inset;
+  }
+}
+
+/* Section headings */
+@utility eyebrow-chip {
+  border: 1px solid oklch(0.55 0.2 255 / 55%);
+  background: linear-gradient(90deg, oklch(0.55 0.245 262 / 22%), oklch(0.55 0.245 262 / 6%));
+  color: var(--primary-glow);
+  box-shadow: 0 0 16px -8px oklch(0.55 0.245 262 / 90%);
+}
+
+/* Weekly finds strip: cards lift and glow under the pointer. */
+.weekly-strip article {
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
+.weekly-strip article:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-glow);
+  box-shadow: 0 18px 30px -16px oklch(0.55 0.245 262 / 95%);
+}
+
+/* Benefit cards: icon tilts on hover. */
+.mock-frame .benefit-card .icon-tile {
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1.4);
+}
+.mock-frame .benefit-card:hover .icon-tile {
+  transform: rotate(-8deg) scale(1.1);
+}
+
+/* Photos zoom in slowly while the pointer rests on their panel. */
+.zoom-photo {
+  transition: scale 1.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.group\/zoom:hover .zoom-photo {
+  scale: 1.05;
+}
+
+/* Glowing ring that breathes around the main call to action. */
+@keyframes cta-breathe {
+  0%, 100% { box-shadow: var(--shadow-btn), 0 0 0 0 oklch(0.55 0.245 262 / 45%); }
+  50% { box-shadow: var(--shadow-btn), 0 0 0 10px oklch(0.55 0.245 262 / 0%); }
+}
+@utility cta-breathe {
+  animation: cta-breathe 2.8s ease-in-out infinite;
+  &:hover { animation-play-state: paused; }
+}
+
+/* Bars that grow from the base when shown. */
+@utility grow-bar {
+  transform-origin: 50% 100%;
+  transition: transform 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Chart line drawn from left to right. */
+@utility path-morph {
+  transition: d 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* ---------- Customer reviews (desktop) ---------- */
+
+@utility review-stage {
+  border: 1px solid oklch(0.55 0.17 250 / 60%);
+  background:
+    radial-gradient(70% 90% at 0% 0%, oklch(0.55 0.245 262 / 22%) 0%, transparent 60%),
+    linear-gradient(160deg, oklch(0.21 0.07 258 / 92%) 0%, oklch(0.14 0.045 258 / 96%) 100%);
+  box-shadow: 0 0 0 1px oklch(0.7 0.14 240 / 12%) inset, 0 30px 60px -30px oklch(0.05 0.03 260 / 95%), 0 0 40px -14px oklch(0.55 0.245 262 / 70%);
+}
+.review-photo-fade {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 34%);
+  mask-image: linear-gradient(90deg, transparent 0%, black 34%);
+}
+.review-photo-shade {
+  background:
+    linear-gradient(0deg, color-mix(in oklab, var(--background-deep) 80%, transparent) 0%, transparent 40%),
+    linear-gradient(90deg, color-mix(in oklab, var(--background-deep) 30%, transparent) 0%, transparent 50%);
+}
+@keyframes ken-burns {
+  from { transform: scale(1.12); }
+  to { transform: scale(1); }
+}
+.ken-burns {
+  animation: ken-burns 9s cubic-bezier(0.2, 0.6, 0.3, 1) both;
+}
+@keyframes quote-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: none; }
+}
+.quote-in {
+  animation: quote-in 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes star-pop {
+  0% { opacity: 0; transform: scale(0.2) rotate(-40deg); }
+  60% { opacity: 1; transform: scale(1.3) rotate(8deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0); }
+}
+.star-pop {
+  animation: star-pop 0.55s cubic-bezier(0.2, 0.8, 0.3, 1.3) both;
+  filter: drop-shadow(0 0 6px oklch(0.88 0.17 92 / 60%));
+}
+@utility quote-mark {
+  background: var(--gradient-brand-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility review-tab {
+  border: 1px solid oklch(0.45 0.14 252 / 45%);
+  background: linear-gradient(170deg, oklch(0.2 0.065 258 / 75%) 0%, oklch(0.15 0.045 258 / 85%) 100%);
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+  &:hover {
+    border-color: oklch(0.6 0.16 245 / 75%);
+    transform: translateX(-4px);
+  }
+  &[aria-current="true"] {
+    border-color: oklch(0.74 0.16 236 / 80%);
+    background:
+      radial-gradient(90% 140% at 0% 50%, oklch(0.55 0.245 262 / 28%) 0%, transparent 70%),
+      linear-gradient(170deg, oklch(0.23 0.075 258 / 92%) 0%, oklch(0.17 0.055 258 / 95%) 100%);
+    box-shadow: 0 0 26px -10px oklch(0.55 0.245 262 / 95%), 3px 0 0 0 var(--primary-glow) inset;
+    transform: translateX(-8px);
+  }
+}
+@keyframes review-timer {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.review-timer {
+  transform-origin: 0 50%;
+  animation: review-timer linear both;
+  background: var(--gradient-brand-text);
+  box-shadow: 0 0 8px oklch(0.74 0.16 236 / 70%);
+}
+.review-timer[data-paused="true"] {
+  animation-play-state: paused;
+}
+@utility rating-card {
+  border: 1px solid oklch(0.88 0.17 92 / 35%);
+  background:
+    radial-gradient(80% 120% at 100% 0%, oklch(0.88 0.17 92 / 14%) 0%, transparent 70%),
+    linear-gradient(170deg, oklch(0.21 0.07 258 / 88%) 0%, oklch(0.15 0.05 258 / 94%) 100%);
+  box-shadow: 0 0 30px -14px oklch(0.88 0.17 92 / 60%);
+}
+@utility nav-round {
+  border: 1px solid oklch(0.55 0.15 250 / 55%);
+  background: oklch(0.18 0.055 258 / 80%);
+  color: var(--foreground);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  &:hover {
+    background: oklch(0.55 0.245 262 / 30%);
+    border-color: var(--primary-glow);
+  }
+  &:active { transform: scale(0.92); }
+}
+
+/* ---------- Profit calculator (desktop) ---------- */
+
+@utility calc-panel {
+  background:
+    radial-gradient(45% 90% at 100% 100%, oklch(0.55 0.245 262 / 26%) 0%, transparent 70%),
+    radial-gradient(35% 60% at 0% 0%, oklch(0.8 0.19 158 / 8%) 0%, transparent 70%),
+    var(--gradient-panel);
+}
+@utility preset-chip {
+  border: 1px solid oklch(0.45 0.14 252 / 60%);
+  background: oklch(0.17 0.05 258 / 70%);
+  color: oklch(0.97 0.008 250 / 80%);
+  transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+  &:hover { border-color: var(--primary-glow); color: var(--foreground); }
+  &[aria-pressed="true"] {
+    border-color: var(--primary-glow);
+    background: oklch(0.55 0.245 262 / 25%);
+    color: var(--foreground);
+    box-shadow: 0 0 14px -6px oklch(0.55 0.245 262 / 90%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desktop-aurora > span, .ken-burns, .quote-in, .star-pop, .review-timer, .rise-in, .cta-breathe { animation: none; }
+}

@@ -12,6 +12,7 @@ const opportunityKey = (row: typeof opportunities.$inferSelect) => surebetIdenti
   homeTeam: row.homeTeam,
   awayTeam: row.awayTeam,
   market: row.market,
+  player: row.player,
   kickoff: row.kickoff,
   legs: [
     { label: row.aLabel, bookmaker: row.aBookmaker, odds: Number(row.aOdds) },
@@ -53,6 +54,7 @@ async function runRefresh() {
         homeTeam: item.homeTeam,
         awayTeam: item.awayTeam,
         market: item.market,
+        player: item.player ?? null,
         kickoff: item.kickoff,
         aLabel: a.label,
         aBookmaker: a.bookmaker,

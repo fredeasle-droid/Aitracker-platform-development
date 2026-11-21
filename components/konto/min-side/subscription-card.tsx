@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import { Check, Crown } from 'lucide-react'
@@ -11,7 +12,7 @@ import { Card, Message, dangerButton, primaryButton, secondaryButton } from './u
 
 type Feedback = { kind: 'ok' | 'error'; text: string }
 
-export function SubscriptionCard({ subscription }: { subscription: AccountSubscription | null }) {
+export function SubscriptionCard({ subscription, testAccess }: { subscription: AccountSubscription | null; testAccess: boolean }) {
   const router = useRouter()
   const [pending, startTransition] = useTransition()
   const [feedback, setFeedback] = useState<Feedback | null>(null)
@@ -68,6 +69,11 @@ export function SubscriptionCard({ subscription }: { subscription: AccountSubscr
           <div className="mt-4">
             <StripeCheckout key={choosing} plan={choosing} onComplete={() => { setChoosing(null); router.refresh() }} />
           </div>
+        )}
+        {testAccess && (
+          <Link href="/konto?testAccess=1" className={secondaryButton}>
+            Start test uden kort (kun Preview)
+          </Link>
         )}
       </Card>
     )

@@ -13,8 +13,8 @@ import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
 
 const NAV = [
-  { href: '/', key: 'home', icon: BarsIcon },
-  { href: '/#live-scanning', key: 'live', icon: Radio },
+  { href: '/surebets', key: 'home', icon: BarsIcon },
+  { href: '/surebets#live-scanning', key: 'live', icon: Radio },
   { href: '/stats', key: 'stats', icon: ChartPie },
   { href: '/bonus', key: 'bonus', icon: Gift },
   { href: '/konto', key: 'games', icon: Star },
@@ -64,13 +64,13 @@ export function DesktopSidebar() {
   return (
     <aside
       aria-label="Sidemenu"
-      className="sticky top-[70px] hidden h-[calc(100dvh-70px)] w-[255px] shrink-0 flex-col overflow-y-auto border-r border-[#102b49] bg-[#050d1b] px-3 py-4 [scrollbar-width:thin] lg:flex"
+      className="sticky top-[60px] hidden h-[calc(100dvh-60px)] w-[255px] shrink-0 flex-col overflow-y-auto border-r border-[#102b49] bg-[#050d1b] px-3 py-4 [scrollbar-width:thin] lg:flex"
     >
       <nav aria-label="Hovedmenu">
         <ul className="flex flex-col gap-1">
           {NAV.map(({ href, key, icon: Icon }) => {
             const label = t(key)
-            const active = href === '/' ? pathname === '/' && !activeSport && !activeBookmaker : pathname === href
+            const active = href === '/surebets' ? pathname === '/surebets' && !activeSport && !activeBookmaker : pathname === href
             return (
               <li key={href}>
                 <Link
@@ -100,7 +100,7 @@ export function DesktopSidebar() {
           return (
           <li key={sportKey}>
             <Link
-              href={`/?sport=${encodeURIComponent(value)}`}
+              href={`/surebets?sport=${encodeURIComponent(value)}`}
               aria-current={activeSport === value ? 'true' : undefined}
               className={cn(row, activeSport === value && 'bg-[#0d1f38] text-[#65c1ff]')}
             >
@@ -136,7 +136,7 @@ export function DesktopSidebar() {
             return (
               <li key={b.id}>
                 <Link
-                  href={qs ? `/?${qs}` : '/'}
+                  href={qs ? `/surebets?${qs}` : '/surebets'}
                   role="checkbox"
                   aria-checked={selected}
                   className={cn(row, 'gap-3', selected && 'bg-[#0d1f38] text-[#65c1ff]')}
@@ -159,7 +159,7 @@ export function DesktopSidebar() {
           {selectedBookmakers.length > 0 && (
             <li>
               <Link
-                href={params.get('sport') ? `/?sport=${encodeURIComponent(params.get('sport') as string)}` : '/'}
+                href={params.get('sport') ? `/surebets?sport=${encodeURIComponent(params.get('sport') as string)}` : '/surebets'}
                 className="flex min-h-10 items-center px-4 text-[14px] text-[#65c1ff] underline-offset-2 hover:underline"
               >
                 {t('clearBookmakers')}

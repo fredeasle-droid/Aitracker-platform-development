@@ -7,11 +7,12 @@ import { LoginStep } from './login-step'
 import { authClient } from '@/lib/auth-client'
 import { DesktopFlow } from '@/components/konto/desktop-flow'
 import { StripeCheckout } from '@/components/konto/stripe-checkout'
+import { OnboardingStep } from '@/components/konto/onboarding-step'
 import { plans, type Plan } from './plans'
 import { useLocale } from '@/components/locale-provider'
 
 
-export function AccountFlow({ aside, startInLogin = false }: { aside: React.ReactNode; startInLogin?: boolean }) {
+export function AccountFlow({ aside, startInLogin = false, allowTestAccess = false, returnTo }: { aside: React.ReactNode; startInLogin?: boolean; allowTestAccess?: boolean; returnTo?: string }) {
   const { t } = useLocale()
   const [step, setStep] = useState(1)
   const [plan, setPlan] = useState<Plan>('premium')
@@ -31,6 +32,8 @@ export function AccountFlow({ aside, startInLogin = false }: { aside: React.Reac
           onSubmitted={() => setSubmitted(true)}
           loginMode={loginMode}
           setLoginMode={setLoginMode}
+          allowTestAccess={allowTestAccess}
+          returnTo={returnTo}
         />
       </div>
       {aside}
@@ -54,7 +57,7 @@ export function AccountFlow({ aside, startInLogin = false }: { aside: React.Reac
           ))}
         </div>
 
-        {submitted ? <SuccessState plan={plans[plan]} /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign('/konto')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <OnboardingStep /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(returnTo ?? '/konto')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} allowTestAccess={allowTestAccess} onTestAccess={() => setSubmitted(true)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
     </>
@@ -99,7 +102,7 @@ function SignupStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => vo
 
 function Field({ name, icon, label, type = 'text' }: { name: string; icon: React.ReactNode; label: string; type?: string }) { return <label className="flex h-12 items-center gap-3 rounded-xl border border-[#38506b] bg-[#081725] px-3"><span className="text-[#e3ebf8]">{icon}</span><input name={name} required type={type} placeholder={label} className="min-w-0 flex-1 bg-transparent text-[16px] text-white outline-none placeholder:text-[#e1e5ee]" /></label> }
 
-function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void }) {
+function PlanStep({ plan, setPlan, onBack, onNext, allowTestAccess, onTestAccess }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void; allowTestAccess: boolean; onTestAccess: () => void }) {
   const { t } = useLocale()
   return <section className="pb-4">
     <div className="mb-5 flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.18em] text-[#4db5ff]"><Sparkles className="size-4" /> {t('membership')}</div>
@@ -111,6 +114,7 @@ function PlanStep({ plan, setPlan, onBack, onNext }: { plan: Plan; setPlan: (pla
     </div>
     <div className="mt-5 grid grid-cols-3 divide-x divide-[#233e5d] rounded-2xl border border-[#183754] bg-[#071725] py-3 text-center text-[11px] text-[#cbd9e9]"><Mini icon="⌁" label={t('noCommitment')} detail={t('cancelAnytime')} /><Mini icon="✓" label={t('sevenDays')} detail={t('freeTrial')} /><Mini icon="▣" label={t('securePayment')} detail={t('viaStripe')} /></div>
     <button type="button" onClick={onNext} className="mt-5 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-[linear-gradient(100deg,#168dff,#126be9)] text-[17px] font-bold shadow-[0_12px_28px_-12px_#159cff]">{t('continueWith', { plan: plans[plan].name })} <ArrowRight className="size-5" /></button>
+    {allowTestAccess && <button type="button" onClick={onTestAccess} className="mt-3 min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] px-4 text-sm font-semibold text-[#e6ecf7] hover:bg-[#102744]">Test uden kort — kun Preview</button>}
     <button type="button" onClick={onBack} className="mt-1 min-h-10 w-full text-sm text-[#8cb3d9]">{t('back')}</button>
   </section>
 }
@@ -139,4 +143,4 @@ function PaymentStep({ plan, planId, onBack, onSubmit }: { plan: typeof plans[Pl
     </section>
   )
 }
-function SuccessState({ plan }: { plan: typeof plans[Plan] }) { const { t } = useLocale(); return <section className="pt-16 text-center"><div className="mx-auto flex size-16 items-center justify-center rounded-full bg-[#159cff] text-[#04111e]"><Check className="size-8" /></div><h1 className="mt-5 text-[27px] font-extrabold">{t('youAreReady')}</h1><p className="mt-2 text-[#dce5f2]">{t('trialStarted', { plan: plan.name })}</p><Link href="/" className="mt-7 flex min-h-13 items-center justify-center rounded-xl bg-[#138cff] text-[17px] font-bold">{t('goToApp')}</Link></section> }
+

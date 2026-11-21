@@ -65,7 +65,7 @@ function bookmakerFromLabels(labels: string[]) {
       .replace(/https?:\/\//gi, '')
       .replace(/\.com\b/gi, '')
       .trim()
-    if (!name || name.length > 40 || /^(game|bet|dual|oddsjam|arbitrage|calculator|pin|close|open|add|add to bet tracker|add to betslip|remove|more|favorite|favourite|details|refresh|profit|notification)$/i.test(name)) continue
+    if (!name || name.length > 40 || /^(game|bet|dual|oddsjam|arbitrage|calculator|pin|close|open|add|add to bet tracker|add to betslip|remove|more|favorite|favourite|details|refresh|profit|notification)$/i.test(name) || /\b(?:calculator|betslip|bet tracker|open|click|share|copy)\b/i.test(name)) continue
     if (/^\$?\d/.test(name) || /\b(?:over|under|home|away|draw|yes|no)\b/i.test(name)) continue
     return displayBookmaker(name)
   }
@@ -77,6 +77,12 @@ function selectionFromText(text: string, fallback: string) {
     ?? text.match(/^\s*[12X]\s+(.+)$/i)?.[1]
     ?? fallback
   return value.trim().replace(/^\s*[12X]\s+/, '')
+}
+
+function playerFromLegText(text: string) {
+  const selectionIndex = text.search(/\b(?:over|under|yes|no)\b/i)
+  if (selectionIndex <= 0) return ''
+  return text.slice(0, selectionIndex).replace(/^\s*[12X]\s+/, '').trim().replace(/[·,:-]+$/, '').trim()
 }
 
 export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet | null {
@@ -105,16 +111,18 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
 
   const rawLegs = Array.isArray(raw.legs) ? raw.legs.filter((leg): leg is OddsJamBrowserLeg => Boolean(leg && typeof leg === 'object')) : []
   const fallbackSelections = lines.filter((line) => /^(?:[12X]\s+)?(?:over|under|yes|no|draw|home|away)\b/i.test(line))
-  const rowLabels = asStrings(raw.labels)
-  const rowBookmakers = rowLabels.filter((label) => bookmakerFromLabels([label]))
   const legs = rawLegs.slice(0, 2).map((leg, index) => {
     const odds = Number(leg.odds)
     const labels = asStrings(leg.labels)
-    const bookmaker = bookmakerFromLabels(labels) || rowBookmakers[index] || ''
+    const bookmaker = bookmakerFromLabels(labels)
     const selection = selectionFromText(typeof leg.text === 'string' ? leg.text : '', fallbackSelections[index] ?? '')
     return { label: normalizeLegLabel(selection, market, 2), bookmaker, odds }
   }).filter((leg) => leg.odds > 1 && Number.isFinite(leg.odds) && leg.label && leg.bookmaker)
-  if (legs.length !== 2) return null
+  if (legs.length !== 2 || legs[0].bookmaker.toLowerCase() === legs[1].bookmaker.toLowerCase()) return null
+  const playerCandidates = rawLegs.slice(0, 2).map((leg) => playerFromLegText(typeof leg.text === 'string' ? leg.text : ''))
+  const player = playerCandidates[0] && playerCandidates[0].toLowerCase() === playerCandidates[1]?.toLowerCase()
+    ? playerCandidates[0]
+    : undefined
 
   return {
     source: 'oddsjam',
@@ -123,6 +131,7 @@ export function parseOddsJamBrowserRow(raw: OddsJamBrowserRow): ScrapedSurebet |
     league: rawLeague || 'Ukendt liga',
     sport: displaySport(rawSport ?? ''),
     market,
+    player,
     kickoff,
     profit: Number(percent[1]),
     legs,
@@ -158,7 +167,7 @@ export async function saveOddsJamBrowserRows(rows: unknown[]) {
   const parsed = candidates.map(parseOddsJamBrowserRow).filter((row): row is ScrapedSurebet => row !== null)
   const unique = [...new Map(parsed.map((row) => {
     const legs = row.legs.map((leg) => `${leg.label}|${leg.bookmaker}|${leg.odds}`).sort().join('|')
-    return [`${row.homeTeam}|${row.awayTeam}|${row.market}|${row.kickoff.toISOString()}|${legs}`.toLowerCase(), row]
+    return [`${row.homeTeam}|${row.awayTeam}|${row.market}|${row.player ?? ''}|${row.kickoff.toISOString()}|${legs}`.toLowerCase(), row]
   })).values()]
   const rejected = candidates.length - parsed.length
   const collapsedDuplicates = parsed.length - unique.length

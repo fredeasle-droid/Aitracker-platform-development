@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
 import { headers } from 'next/headers'
+import { redirect } from 'next/navigation'
 import { DesktopAside } from '@/components/desktop/desktop-aside'
 import { auth } from '@/lib/auth'
 import { getOpportunities } from '@/lib/data'
-import { getSubscription } from '@/lib/billing'
+import { ACTIVE_STATUSES, getSubscription } from '@/lib/billing'
+import { OnboardingStep } from '@/components/konto/onboarding-step'
 import { getStripe } from '@/lib/stripe'
 import { AccountFlow } from './account-flow'
 import { MinSide } from './min-side'
 import type { AccountInvoice } from './account-types'
+import { isPreviewTestEnvironment } from '@/lib/test-access'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Min side – BetTracker' }
@@ -29,20 +32,33 @@ async function loadInvoices(customerId: string): Promise<AccountInvoice[]> {
   }
 }
 
-export default async function AccountPage({ searchParams }: { searchParams: Promise<{ login?: string }> }) {
-  const [session, opportunities, { login }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
-  const aside = <DesktopAside opportunities={opportunities} />
+/** Only same-site paths are allowed, so `next` can't be used as an open redirect. */
+function safeReturnPath(next: string | undefined) {
+  return next && next.startsWith('/') && !next.startsWith('//') && !next.startsWith('/\\') ? next : undefined
+}
 
-  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} />
+export default async function AccountPage({ searchParams }: { searchParams: Promise<{ login?: string; testAccess?: string; next?: string }> }) {
+  const [session, opportunities, { login, testAccess, next }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
+  const aside = <DesktopAside opportunities={opportunities} />
+  const returnTo = safeReturnPath(next)
+
+  if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} allowTestAccess={isPreviewTestEnvironment()} returnTo={returnTo} />
+  if (returnTo) redirect(returnTo)
 
   const { user } = session
+  if (testAccess === '1' && isPreviewTestEnvironment()) return <OnboardingStep />
+
   const row = await getSubscription(user.id)
+  if (row && ACTIVE_STATUSES.includes(row.status) && !row.onboardingCompletedAt) {
+    return <OnboardingStep initialResponses={row.onboardingResponses ?? {}} />
+  }
   const invoices = row ? await loadInvoices(row.stripeCustomerId) : []
 
   return (
     <MinSide
       invoices={invoices}
       user={{ name: user.name, email: user.email, phone: user.phone ?? '', createdAt: new Date(user.createdAt).toISOString() }}
+      testAccess={isPreviewTestEnvironment()}
       subscription={
         row
           ? {

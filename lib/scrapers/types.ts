@@ -7,18 +7,19 @@ export type ScrapedSurebet = {
   league: string
   sport: string
   market: string
+  player?: string | null
   kickoff: Date
   profit: number
   legs: ScrapedLeg[]
 }
 
-export function surebetIdentity(row: Pick<ScrapedSurebet, 'homeTeam' | 'awayTeam' | 'market' | 'kickoff' | 'legs'>) {
+export function surebetIdentity(row: Pick<ScrapedSurebet, 'homeTeam' | 'awayTeam' | 'market' | 'kickoff' | 'legs'> & Partial<Pick<ScrapedSurebet, 'player'>>) {
   const date = row.kickoff.toISOString().slice(0, 10)
   const legs = row.legs
     .map((leg) => `${leg.label.trim()}|${leg.bookmaker.trim()}|${Number(leg.odds).toFixed(2)}`)
     .sort()
     .join('~')
-  return `${row.homeTeam}|${row.awayTeam}|${row.market}|${date}|${legs}`.toLowerCase()
+  return `${row.homeTeam}|${row.awayTeam}|${row.market}|${row.player ?? ''}|${date}|${legs}`.toLowerCase()
 }
 
 export const SCRAPER_HEADERS = { 'User-Agent': 'Mozilla/5.0 SureScan/1.0' }

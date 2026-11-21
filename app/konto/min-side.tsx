@@ -11,9 +11,10 @@ type Props = {
   user: AccountUser
   subscription: AccountSubscription | null
   invoices: AccountInvoice[]
+  testAccess: boolean
 }
 
-export function MinSide({ user, subscription, invoices }: Props) {
+export function MinSide({ user, subscription, invoices, testAccess }: Props) {
   const initial = (user.name.trim()[0] ?? user.email[0] ?? '?').toUpperCase()
 
   return (
@@ -37,7 +38,7 @@ export function MinSide({ user, subscription, invoices }: Props) {
 
         <div className="mt-3 space-y-4 lg:mt-6 lg:grid lg:grid-cols-2 lg:items-start lg:gap-5 lg:space-y-0 xl:grid-cols-3">
           <div className="space-y-4 lg:row-span-2 xl:row-span-1">
-            <SubscriptionCard subscription={subscription} />
+            <SubscriptionCard subscription={subscription} testAccess={testAccess} />
             <InvoiceList invoices={invoices} />
           </div>
           <ProfileForm user={user} />
