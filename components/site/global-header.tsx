@@ -98,7 +98,7 @@ export function GlobalHeader({ className }: { className?: string }) {
   return (
     <header
       className={cn(
-        'bt-theme sticky top-0 z-40 font-[family-name:var(--bt-roboto,var(--font-roboto))] border-b border-border bg-background-deep/85 pt-[env(safe-area-inset-top)] backdrop-blur-xl',
+        'bt-theme relative top-0 z-40 bg-transparent font-[family-name:var(--bt-roboto,var(--font-roboto))] pt-[env(safe-area-inset-top)] md:sticky md:bg-background-deep/70 md:backdrop-blur-xl',
         className,
       )}
     >
