@@ -1,0 +1,107 @@
+@theme inline {
+  --color-neon: var(--neon);
+  --color-neon-teal: var(--neon-teal);
+  --color-bet365: var(--bet365);
+  --color-bet365-foreground: var(--bet365-foreground);
+  --color-unibet: var(--unibet);
+  --color-unibet-foreground: var(--unibet-foreground);
+  --color-betfair: var(--betfair);
+  --color-betfair-foreground: var(--betfair-foreground);
+  --color-danskespil: var(--danskespil);
+  --color-danskespil-foreground: var(--danskespil-foreground);
+  --color-success-foreground: var(--success-foreground);
+}
+
+/* Surebet-regnskab palette. Scoped so the rest of the site keeps its own theme;
+   portal content (dialogs, menus, drawers) carries the same class. */
+.regnskab {
+  --radius: 0.875rem;
+  --background: oklch(0.135 0.046 257);
+  --foreground: oklch(0.97 0.008 250);
+  --card: oklch(0.205 0.068 259);
+  --card-foreground: oklch(0.97 0.008 250);
+  --popover: oklch(0.19 0.064 259);
+  --popover-foreground: oklch(0.97 0.008 250);
+  --primary: oklch(0.58 0.233 260);
+  --primary-foreground: oklch(0.99 0 0);
+  --primary-glow: oklch(0.68 0.19 252);
+  --secondary: oklch(0.22 0.06 260);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.21 0.055 260);
+  --muted-foreground: oklch(0.76 0.022 252);
+  --accent: oklch(0.27 0.08 258);
+  --accent-foreground: oklch(0.98 0.01 250);
+  --destructive: oklch(0.63 0.23 25);
+  --destructive-foreground: oklch(0.99 0 0);
+  --success: oklch(0.8 0.188 158);
+  --success-foreground: oklch(0.17 0.05 160);
+  --neon: oklch(0.78 0.133 207);
+  --neon-teal: oklch(0.81 0.15 177);
+  --gold: oklch(0.86 0.17 92);
+  --border: oklch(0.5 0.13 254 / 0.32);
+  --input: oklch(0.5 0.13 254 / 0.42);
+  --ring: oklch(0.68 0.19 252);
+  --chart-1: oklch(0.62 0.22 258);
+  --chart-2: oklch(0.8 0.188 158);
+  --chart-3: oklch(0.78 0.133 207);
+  --chart-4: oklch(0.86 0.17 92);
+  --chart-5: oklch(0.63 0.23 25);
+  --bet365: oklch(0.47 0.12 150);
+  --bet365-foreground: oklch(0.92 0.2 105);
+  --unibet: oklch(0.16 0.01 260);
+  --unibet-foreground: oklch(0.97 0 0);
+  --betfair: oklch(0.85 0.17 85);
+  --betfair-foreground: oklch(0.18 0.01 260);
+  --danskespil: oklch(0.55 0.2 25);
+  --danskespil-foreground: oklch(0.99 0 0);
+  --sidebar: oklch(0.155 0.046 252);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.5 0.13 254 / 0.26);
+
+  --gradient-primary: linear-gradient(135deg, oklch(0.53 0.255 263), var(--primary) 55%, var(--primary-glow));
+  --gradient-neon: linear-gradient(90deg, var(--neon), var(--neon-teal));
+  --gradient-pro: linear-gradient(150deg, oklch(0.3 0.14 260), oklch(0.18 0.07 259) 55%, oklch(0.25 0.12 252));
+  --gradient-panel: linear-gradient(180deg, oklch(0.205 0.068 259 / 0.8), oklch(0.16 0.055 258 / 0.7));
+  --shadow-glow: 0 0 0 1px oklch(0.68 0.19 252 / 0.4), 0 10px 40px -12px oklch(0.58 0.233 260 / 0.75);
+  --shadow-panel: inset 0 1px 0 oklch(1 0 0 / 0.05), 0 20px 50px -30px oklch(0.05 0.03 258 / 0.9);
+  --shadow-neon: 0 0 18px oklch(0.78 0.133 207 / 0.4);
+
+  color: var(--foreground);
+}
+
+.regnskab * {
+  border-color: var(--border);
+}
+
+@utility rg-glass {
+  background: var(--gradient-panel);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-panel);
+}
+
+@utility rg-glow-primary {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility rg-text-glow {
+  text-shadow: 0 0 22px oklch(0.68 0.19 252 / 0.6);
+}
+
+@utility rg-text-glow-success {
+  text-shadow: 0 0 24px oklch(0.8 0.188 158 / 0.55);
+}
+
+@utility rg-bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
+@utility rg-bg-gradient-pro {
+  background-image: var(--gradient-pro);
+}
+
+@utility rg-panel-success {
+  background: linear-gradient(135deg, oklch(0.8 0.188 158 / 0.14), oklch(0.8 0.188 158 / 0.04));
+  border: 1px solid oklch(0.8 0.188 158 / 0.45);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.05), 0 0 24px -10px oklch(0.8 0.188 158 / 0.6);
+}

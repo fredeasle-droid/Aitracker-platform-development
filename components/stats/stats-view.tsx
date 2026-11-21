@@ -20,7 +20,7 @@ import {
 import { BarsIcon, SoccerBallIcon } from '@/components/icons'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { BetSheet } from '@/components/stats/bet-sheet'
-import { CouponUploadButton } from '@/components/stats/coupon-upload'
+import { CouponImport } from '@/components/stats/coupon-upload'
 import { StatsChart, type SeriesPoint } from '@/components/stats/stats-chart'
 import { useLocale } from '@/components/locale-provider'
 import type { BetRow } from '@/lib/data'
@@ -444,7 +444,6 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
           <p className="mt-1.5 text-pretty text-[14px] text-[#b3c0d9] lg:text-[15px]">{t('statsDeskText')}</p>
         </div>
         <div className="flex shrink-0 flex-col gap-2 lg:flex-row lg:items-center">
-          <CouponUploadButton />
           <div role="tablist" aria-label={t('period')} className="glass-panel grid shrink-0 grid-cols-4 rounded-xl p-1 lg:flex">
             {PERIODS.map((p) => (
               <button
@@ -521,7 +520,8 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
         </StatCard>
       </div>
 
-      <div className="grid gap-3 lg:gap-4 xl:grid-cols-[minmax(0,7fr)_minmax(0,4fr)]">
+      <div className="grid gap-3 lg:gap-4 xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        <CouponImport />
         <section className="glass-panel flex flex-col rounded-2xl p-4 lg:p-5">
           <div className="flex flex-wrap items-center justify-between gap-3">
             <SectionTitle icon={<BarsIcon className="size-5" />}>{t('profitDev')}</SectionTitle>
@@ -548,8 +548,9 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
             )}
           </div>
         </section>
-        <ActivityCard bets={bets} />
       </div>
+
+      <ActivityCard bets={bets} />
 
       <BetSection
         title={t('openBets')}
