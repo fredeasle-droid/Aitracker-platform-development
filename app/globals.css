@@ -3,6 +3,7 @@
 @import 'shadcn/tailwind.css';
 @import './bt-theme.css';
 @import './surebets/sb-theme.css';
+@import './regnskab.css';
 
 @custom-variant dark (&:is(.dark *));
 
