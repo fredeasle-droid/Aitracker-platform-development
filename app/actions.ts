@@ -10,6 +10,7 @@ import { refreshOpportunities } from '@/lib/scanner-sync'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
+import { MAX_COUPON_BETS, couponBetSchema, type CouponBet } from '@/lib/coupon'
 
 export async function refreshOpportunityList() {
   try {
@@ -100,6 +101,79 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
   }
   revalidatePath('/stats')
   return { ok: true as const }
+}
+
+export async function saveCouponBets(input: CouponBet[]) {
+  const userId = await getUserId()
+  if (!Array.isArray(input) || input.length === 0 || input.length > MAX_COUPON_BETS) {
+    return { ok: false as const, error: 'Ugyldig kupon' }
+  }
+
+  const now = new Date()
+  const rows = []
+  for (const raw of input) {
+    const parsed = couponBetSchema.safeParse(raw)
+    const stake = parsed.success ? Math.round(parsed.data.stake * 100) / 100 : 0
+    if (!parsed.success || !validStake(stake) || !parsed.data.match.trim()) {
+      return { ok: false as const, error: 'Hvert væddemål skal have kamp og indsats' }
+    }
+    const bet = parsed.data
+    const odds = bet.odds !== null && bet.odds > 1 && bet.odds <= 1000 ? bet.odds : null
+    const potential = odds ? stake * (odds - 1) : 0
+    const profit =
+      bet.status === 'won'
+        ? bet.payout !== null && bet.payout > 0
+          ? bet.payout - stake
+          : potential
+        : bet.status === 'lost'
+          ? -stake
+          : null
+    const date = bet.date ? new Date(bet.date) : null
+    const kickoff = date && !Number.isNaN(date.getTime()) ? date : now
+    rows.push({
+      userId,
+      opportunityId: null,
+      sport: bet.sport.trim() || 'Fodbold',
+      match: bet.match.trim().slice(0, 200),
+      market: `${bet.selection.trim()}${odds ? ` @ ${odds.toFixed(2)}` : ''}`.slice(0, 200) || 'Kupon',
+      stake: stake.toFixed(2),
+      expectedProfit: potential.toFixed(2),
+      profit: profit === null ? null : profit.toFixed(2),
+      status: bet.status,
+      bookmakers: bet.bookmaker.trim().slice(0, 60) || null,
+      kickoff,
+      settledAt: bet.status === 'open' ? null : now,
+    })
+  }
+
+  try {
+    await db.insert(bets).values(rows)
+  } catch (error) {
+    if (!process.env.ODDS_API_KEY && process.env.VERCEL_ENV !== 'production') {
+      rows.forEach((row, index) => {
+        addDemoBet(userId, {
+          id: Date.now() + index,
+          sport: row.sport,
+          match: row.match,
+          market: row.market,
+          stake: Number(row.stake),
+          expectedProfit: Number(row.expectedProfit),
+          profit: row.profit === null ? null : Number(row.profit),
+          status: row.status,
+          bookmakers: row.bookmakers,
+          kickoffLabel: row.kickoff.toLocaleDateString('da-DK'),
+          dateLabel: row.kickoff.toLocaleDateString('da-DK'),
+          placedTs: row.kickoff.getTime(),
+        })
+      })
+      revalidatePath('/stats')
+      return { ok: true as const, count: rows.length }
+    }
+    console.error('[actions] unable to save coupon bets', error)
+    return { ok: false as const, error: 'Kuponen kunne ikke gemmes lige nu' }
+  }
+  revalidatePath('/stats')
+  return { ok: true as const, count: rows.length }
 }
 
 export async function settleBet(id: number, result: 'won' | 'lost', amount?: number) {

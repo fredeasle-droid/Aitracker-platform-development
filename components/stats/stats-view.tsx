@@ -20,6 +20,7 @@ import {
 import { BarsIcon, SoccerBallIcon } from '@/components/icons'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { BetSheet } from '@/components/stats/bet-sheet'
+import { CouponUploadButton } from '@/components/stats/coupon-upload'
 import { StatsChart, type SeriesPoint } from '@/components/stats/stats-chart'
 import { useLocale } from '@/components/locale-provider'
 import type { BetRow } from '@/lib/data'
@@ -442,24 +443,27 @@ export function StatsView({ bets, now }: { bets: BetRow[]; now: number }) {
           </h1>
           <p className="mt-1.5 text-pretty text-[14px] text-[#b3c0d9] lg:text-[15px]">{t('statsDeskText')}</p>
         </div>
-        <div role="tablist" aria-label={t('period')} className="glass-panel grid shrink-0 grid-cols-4 rounded-xl p-1 lg:flex">
-          {PERIODS.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              role="tab"
-              aria-selected={period === p.id}
-              onClick={() => setPeriod(p.id)}
-              className={cn(
-                'min-h-11 rounded-lg px-4 text-[15px] font-medium transition-all lg:min-w-[88px]',
-                period === p.id
-                  ? 'bg-primary text-primary-foreground shadow-[0_0_18px_-4px_#1677ff]'
-                  : 'text-[#c7d2ea] hover:bg-[#0a1a33]',
-              )}
-            >
-              {periodLabel(t, p.id)}
-            </button>
-          ))}
+        <div className="flex shrink-0 flex-col gap-2 lg:flex-row lg:items-center">
+          <CouponUploadButton />
+          <div role="tablist" aria-label={t('period')} className="glass-panel grid shrink-0 grid-cols-4 rounded-xl p-1 lg:flex">
+            {PERIODS.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                role="tab"
+                aria-selected={period === p.id}
+                onClick={() => setPeriod(p.id)}
+                className={cn(
+                  'min-h-11 rounded-lg px-4 text-[15px] font-medium transition-all lg:min-w-[88px]',
+                  period === p.id
+                    ? 'bg-primary text-primary-foreground shadow-[0_0_18px_-4px_#1677ff]'
+                    : 'text-[#c7d2ea] hover:bg-[#0a1a33]',
+                )}
+              >
+                {periodLabel(t, p.id)}
+              </button>
+            ))}
+          </div>
         </div>
       </header>
 
