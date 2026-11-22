@@ -19,15 +19,25 @@ import {
 import { Logo } from "./Logo";
 import { useSurebets } from "./surebets-context";
 import { SidebarPromo } from "@/components/desktop/sidebar-promo";
+import { useLocale } from "@/components/locale-provider";
+import type { TranslationKey } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 
-const nav = [
-  { label: "Surebets", icon: BarChart3, href: "/surebets" },
-  { label: "Live-scanning", icon: Radio, href: "/surebets#live-scanning", live: true },
-  { label: "Statistik", icon: PieChart, href: "/stats" },
-  { label: "Bonus", icon: Gift, href: "/bonus" },
-  { label: "Min konto", icon: Star, href: "/konto" },
+const nav: { key: TranslationKey; icon: typeof Home; href: string; live?: boolean }[] = [
+  { key: "sbSurebets", icon: BarChart3, href: "/surebets" },
+  { key: "sbLiveScan", icon: Radio, href: "/surebets#live-scanning", live: true },
+  { key: "sbStats", icon: PieChart, href: "/stats" },
+  { key: "sbBonus", icon: Gift, href: "/bonus" },
+  { key: "sbAccount", icon: Star, href: "/konto" },
 ];
+
+const sportKeys: Record<string, TranslationKey> = {
+  Fodbold: "sbFootball",
+  Basketball: "sbBasketball",
+  Tennis: "sbTennis",
+  Ishockey: "sbIceHockey",
+  Esport: "sbEsport",
+};
 
 export function FootballIcon({ className }: { className?: string }) {
   return (
@@ -58,13 +68,13 @@ const sportIcons: Record<string, React.ComponentType<{ className?: string }>> = 
   Esport: Gamepad2,
 };
 
-const calculatorNav = [
-  { label: "Surebets", icon: Trophy, href: "/surebets" },
-  { label: "Beregn indsats", icon: Calculator, href: null },
-  { label: "Liveodds", icon: Radio, href: "/surebets" },
-  { label: "Statistik", icon: BarChart3, href: "/stats" },
-  { label: "Bonus", icon: Gift, href: "/bonus" },
-  { label: "Min konto", icon: Star, href: "/konto" },
+const calculatorNav: { key: TranslationKey; icon: typeof Home; href: string | null }[] = [
+  { key: "sbSurebets", icon: Trophy, href: "/surebets" },
+  { key: "sbCalcStake", icon: Calculator, href: null },
+  { key: "sbLiveOdds", icon: Radio, href: "/surebets" },
+  { key: "sbStats", icon: BarChart3, href: "/stats" },
+  { key: "sbBonus", icon: Gift, href: "/bonus" },
+  { key: "sbAccount", icon: Star, href: "/konto" },
 ];
 
 const CALC_SPORTS = ["Fodbold", "Basketball", "Tennis", "Ishockey", "Esport"];
@@ -72,6 +82,8 @@ const PRO_BARS = [22, 34, 30, 48, 62];
 
 function CalculatorSidebarContent() {
   const { sports } = useSurebets();
+  const { t } = useLocale();
+  const sportName = (label: string) => (sportKeys[label] ? t(sportKeys[label]) : label);
   const counts = new Map(sports.map((s) => [s.label, s.count]));
   const extra = sports.filter((s) => !CALC_SPORTS.includes(s.label)).map((s) => s.label);
   return (
@@ -80,25 +92,25 @@ function CalculatorSidebarContent() {
         <Logo taglineText="Track · Analyse · Vind" />
       </div>
 
-      <nav aria-label="Hovedmenu" className="mt-8 flex flex-col gap-1.5 short:mt-5 short:gap-0.5">
-        {calculatorNav.map(({ label, icon: Icon, href }) =>
+      <nav aria-label={t("sbMainMenu")} className="mt-8 flex flex-col gap-1.5 short:mt-5 short:gap-0.5">
+        {calculatorNav.map(({ key, icon: Icon, href }) =>
           href ? (
             <Link
-              key={label}
+              key={key}
               href={href}
               className="flex w-full items-center gap-4 rounded-xl px-4 py-2.5 text-[16.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5"
             >
               <Icon className="h-[22px] w-[22px]" strokeWidth={2} />
-              <span className="flex-1 text-left">{label}</span>
+              <span className="flex-1 text-left">{t(key)}</span>
             </Link>
           ) : (
             <span
-              key={label}
+              key={key}
               aria-current="page"
               className="sb-nav-active flex w-full items-center gap-4 rounded-xl px-4 py-3 text-[16.5px] font-semibold text-primary-foreground short:py-2"
             >
               <Icon className="h-[22px] w-[22px]" strokeWidth={2} />
-              <span className="flex-1 text-left">{label}</span>
+              <span className="flex-1 text-left">{t(key)}</span>
             </span>
           ),
         )}
@@ -106,7 +118,7 @@ function CalculatorSidebarContent() {
 
       <div className="mx-2 my-5 h-px bg-primary/40 short:my-3" />
 
-      <div className="px-2 text-[13px] font-semibold tracking-wide text-cyan">SPORT</div>
+      <div className="px-2 text-[13px] font-semibold tracking-wide text-cyan">{t("sport").toUpperCase()}</div>
       <div className="mt-3 flex flex-col gap-1 short:mt-2 short:gap-0.5">
         {[...CALC_SPORTS, ...extra].map((label) => {
           const Icon = sportIcons[label] ?? Trophy;
@@ -117,7 +129,7 @@ function CalculatorSidebarContent() {
               className="flex w-full items-center gap-4 rounded-xl px-3 py-2 text-[16px] font-medium text-sidebar-foreground transition-colors hover:bg-sidebar-accent short:py-1.5"
             >
               <Icon className="h-[22px] w-[22px]" />
-              <span className="flex-1 text-left">{label}</span>
+              <span className="flex-1 text-left">{sportName(label)}</span>
               <span className="min-w-8 text-right text-[16px] font-medium tabular-nums text-sidebar-foreground">
                 {counts.get(label) ?? 0}
               </span>
@@ -133,13 +145,13 @@ function CalculatorSidebarContent() {
           ))}
         </div>
         <Crown className="relative h-9 w-9 fill-gold/30 text-gold" strokeWidth={1.8} aria-hidden />
-        <div className="relative mt-4 text-[17px] font-bold leading-tight">Opgrader til Pro</div>
-        <p className="relative mt-1.5 text-[13px] leading-snug text-foreground/85">Få adgang til avancerede værktøjer og analyser</p>
+        <div className="relative mt-4 text-[17px] font-bold leading-tight">{t("sbUpgradePro")}</div>
+        <p className="relative mt-1.5 text-[13px] leading-snug text-foreground/85">{t("sbUpgradeText")}</p>
         <Link
           href="/konto"
           className="bg-gradient-primary relative mt-4 flex w-full items-center justify-center gap-1.5 rounded-full py-3 text-[15px] font-semibold text-primary-foreground shadow-glow"
         >
-          Se fordele <ArrowRight className="h-4 w-4" aria-hidden />
+          {t("sbSeeBenefits")} <ArrowRight className="h-4 w-4" aria-hidden />
         </Link>
       </div>
     </div>
@@ -152,8 +164,10 @@ export function SidebarContent({ page = "surebets" }: { page?: "surebets" | "ber
 }
 
 function SurebetsSidebarContent() {
-  const [activeNav, setActiveNav] = useState("Surebets");
+  const [activeNav, setActiveNav] = useState<TranslationKey>("sbSurebets");
   const { sport: activeSport, setSport } = useSurebets();
+  const { t } = useLocale();
+  const sportName = (label: string) => (sportKeys[label] ? t(sportKeys[label]) : label);
 
   return (
     <div className="flex min-h-full flex-col">
@@ -161,23 +175,23 @@ function SurebetsSidebarContent() {
         <Logo />
       </div>
 
-      <nav className="mt-6 space-y-1 short:mt-4 short:space-y-0.5">
+      <nav aria-label={t("sbMainMenu")} className="mt-6 space-y-1 short:mt-4 short:space-y-0.5">
         <Link
           href="/"
           className="flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5"
         >
           <Home className="h-5 w-5" strokeWidth={2.3} />
-          <span className="flex-1 text-left">Forside</span>
+          <span className="flex-1 text-left">{t("sbHome")}</span>
         </Link>
-        {nav.map(({ label, icon: Icon, href, live }) => {
-          const active = activeNav === label;
+        {nav.map(({ key, icon: Icon, href, live }) => {
+          const active = activeNav === key;
           return (
             <Link
-              key={label}
+              key={key}
               href={href}
               aria-current={active ? "page" : undefined}
               onClick={() => {
-                if (href.startsWith("/surebets")) setActiveNav(label);
+                if (href.startsWith("/surebets")) setActiveNav(key);
               }}
               className={cn(
                 "flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium transition-all short:py-1.5",
@@ -187,7 +201,7 @@ function SurebetsSidebarContent() {
               )}
             >
               <Icon className={cn("h-5 w-5", active && "fill-primary-foreground/30")} strokeWidth={2.3} />
-              <span className="flex-1 text-left">{label}</span>
+              <span className="flex-1 text-left">{t(key)}</span>
               {live && <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />}
             </Link>
           );
@@ -196,7 +210,7 @@ function SurebetsSidebarContent() {
 
       <div className="my-4 h-px bg-sidebar-border short:my-3" />
 
-      <div className="px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan">SPORT</div>
+      <div className="px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan">{t("sport").toUpperCase()}</div>
       <div className="mt-3 space-y-1 short:mt-2 short:space-y-0.5">
         {CALC_SPORTS.map((label) => {
           const Icon = sportIcons[label] ?? Trophy;
@@ -212,7 +226,7 @@ function SurebetsSidebarContent() {
               )}
             >
               <Icon className="h-5 w-5" />
-              <span className="flex-1 text-left">{label}</span>
+              <span className="flex-1 text-left">{sportName(label)}</span>
             </button>
           );
         })}

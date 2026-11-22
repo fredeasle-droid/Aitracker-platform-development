@@ -7,6 +7,7 @@ import { LogIn, Menu, UserRound } from 'lucide-react'
 import { SidebarBody } from '@/components/desktop/desktop-sidebar'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Logo } from '@/components/home/icons'
+import { useLocale } from '@/components/locale-provider'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
 
@@ -25,16 +26,17 @@ function isActive(pathname: string, href: string) {
 
 export function AuthActions() {
   const { data: session, isPending } = authClient.useSession()
-
+  const { t } = useLocale()
+  
   if (session?.user) {
-    return (
-      <Link
-        href="/konto"
-        aria-label="Min konto"
+  return (
+  <Link
+  href="/konto"
+  aria-label={t('sbAccount')}
         className="btn-glow flex h-10 items-center justify-center gap-2 rounded-full text-[13px] font-semibold max-md:w-10 md:h-9 md:px-4"
       >
         <UserRound className="size-4" aria-hidden="true" />
-        <span className="hidden md:inline">Min konto</span>
+        <span className="hidden md:inline">{t('sbAccount')}</span>
       </Link>
     )
   }
@@ -46,14 +48,14 @@ export function AuthActions() {
         className="flex h-10 items-center gap-1.5 whitespace-nowrap rounded-full border border-primary-glow/40 bg-background-deep/70 px-3.5 text-[13px] font-semibold text-primary-glow transition-colors hover:border-primary-glow hover:text-foreground md:h-9 md:px-4"
       >
         <LogIn className="size-4" aria-hidden="true" />
-        Log ind
-      </Link>
+  {t('login')}
+  </Link>
       <Link
         href="/konto"
         className="btn-glow hidden h-9 items-center whitespace-nowrap rounded-full px-4 text-[13px] font-semibold md:flex"
       >
-        <span className="hidden lg:inline">Opret gratis konto</span>
-        <span className="lg:hidden">Opret konto</span>
+  <span className="hidden lg:inline">{t('createAccount')}</span>
+  <span className="lg:hidden">{t('create')}</span>
       </Link>
     </div>
   )

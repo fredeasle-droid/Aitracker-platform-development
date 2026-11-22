@@ -7,12 +7,20 @@ import { bookmakerCategories, visibleSurebets, type BookmakerCategory, type Book
 import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";
 import { useBookmakerFilter } from "./bookmaker-filter";
 import { useSurebets } from "./surebets-context";
+import { useLocale } from "@/components/locale-provider";
 import { cn } from "@/lib/utils";
 
 const categoryIcon: Record<BookmakerCategory, typeof MapPin> = { local: MapPin, exchange: ArrowLeftRight, crypto: Bitcoin };
 
+const categoryText = {
+  local: { name: "sbCatLocal", hint: "sbCatLocalHint" },
+  exchange: { name: "sbCatExchange", hint: "sbCatExchangeHint" },
+  crypto: { name: "sbCatCrypto", hint: "sbCatCryptoHint" },
+} as const;
+
 function TriggerLabel() {
   const { selected, allOn } = useBookmakerFilter();
+  const { t } = useLocale();
   const shown = selected.slice(0, 3);
   const extra = selected.length - shown.length;
   return (
@@ -30,13 +38,13 @@ function TriggerLabel() {
       <span className="truncate">
         {allOn ? (
           <>
-            <span className="sm:hidden">Bookmakere</span>
-            <span className="hidden sm:inline">Alle bookmakere</span>
+            <span className="sm:hidden">{t("sbBookmakers")}</span>
+            <span className="hidden sm:inline">{t("sbAllBookmakers")}</span>
           </>
         ) : selected.length === 0 ? (
-          "Ingen valgt"
+          t("sbNoneSelected")
         ) : (
-          `${selected.length} bookmakere`
+          t("sbBookmakersN", { n: selected.length })
         )}
       </span>
     </span>
@@ -59,6 +67,7 @@ function CheckMark({ state, small }: { state: "on" | "some" | "off"; small?: boo
 function Tile({ id, name }: { id: BookmakerId; name: string }) {
   const { isOn, toggle } = useBookmakerFilter();
   const { surebets } = useSurebets();
+  const { t } = useLocale();
   const on = isOn(id);
   const n = surebets.filter((b) => b.legs.some((l) => l.bookmaker === id)).length;
   return (
@@ -71,7 +80,7 @@ function Tile({ id, name }: { id: BookmakerId; name: string }) {
       </span>
       <span className="flex items-center gap-1.5 text-[11px] leading-none text-muted-foreground">
         <span className={cn("h-1.5 w-1.5 rounded-full", n > 0 ? "bg-success" : "bg-muted-foreground/50")} />
-        {n === 0 ? "Ingen i dag" : `${n} ${n === 1 ? "surebet" : "surebets"} i dag`}
+        {n === 0 ? t("sbNoneToday") : t(n === 1 ? "sbOneToday" : "sbManyToday", { n })}
       </span>
     </button>
   );
@@ -80,6 +89,7 @@ function Tile({ id, name }: { id: BookmakerId; name: string }) {
 function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; hint: string; ids: BookmakerId[] }) {
   const { selected, toggleMany } = useBookmakerFilter();
   const { bookmakers } = useSurebets();
+  const { t } = useLocale();
   const Icon = categoryIcon[id];
   const all = bookmakers.filter((b) => b.category === id).map((b) => b.id);
   const allOnCount = all.filter((x) => selected.includes(x)).length;
@@ -102,11 +112,11 @@ function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; h
         <button
           role="checkbox"
           aria-checked={state === "on" ? true : state === "some" ? "mixed" : false}
-          aria-label={`Alle ${name.toLowerCase()}`}
+          aria-label={t("sbAllOf", { name: name.toLowerCase() })}
           onClick={() => toggleMany(all)}
           className="flex items-center gap-2 rounded-lg px-2 py-1 text-[11.5px] font-semibold text-muted-foreground transition hover:bg-surface-elevated hover:text-foreground"
         >
-          {state === "on" ? "Fravælg" : "Vælg alle"}
+          {state === "on" ? t("sbDeselect") : t("sbSelectAll")}
           <CheckMark state={state} small />
         </button>
       </div>
@@ -124,6 +134,7 @@ function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; h
 export function BookmakerFilter() {
   const { selectAll, clear, allOn, selected } = useBookmakerFilter();
   const { surebets, bookmakers } = useSurebets();
+  const { t } = useLocale();
   const [q, setQ] = useState("");
   const shownCount = visibleSurebets(surebets, selected).length;
   const needle = q.trim().toLowerCase();
@@ -157,12 +168,12 @@ export function BookmakerFilter() {
         <div className="edge-light shrink-0 border-b border-border px-4 pb-3 pt-4">
           <div className="flex items-start justify-between gap-3">
             <div>
-              <div className="text-[15px] font-bold">Bookmakere</div>
-              <div className="mt-0.5 text-[12px] text-muted-foreground">Vælg dem, du har konto hos</div>
+              <div className="text-[15px] font-bold">{t("sbBookmakers")}</div>
+              <div className="mt-0.5 text-[12px] text-muted-foreground">{t("sbPickBk")}</div>
             </div>
             <div className="flex items-center gap-1 text-[12px] font-semibold">
               <button onClick={selectAll} disabled={allOn} className="rounded-md px-2 py-1 text-primary-glow transition hover:bg-surface-elevated disabled:opacity-40 disabled:hover:bg-transparent">
-                Vælg alle
+                {t("sbSelectAll")}
               </button>
               <span className="h-3 w-px bg-border" />
               <button
@@ -170,7 +181,7 @@ export function BookmakerFilter() {
                 disabled={selected.length === 0}
                 className="rounded-md px-2 py-1 text-muted-foreground transition hover:bg-surface-elevated hover:text-foreground disabled:opacity-40 disabled:hover:bg-transparent"
               >
-                Ryd
+                {t("sbClear")}
               </button>
             </div>
           </div>
@@ -179,11 +190,11 @@ export function BookmakerFilter() {
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
-              placeholder={`Søg blandt ${bookmakers.length} bookmakere...`}
+              placeholder={t("sbSearchBk", { n: bookmakers.length })}
               className="min-w-0 flex-1 bg-transparent text-[13px] text-foreground placeholder:text-muted-foreground focus:outline-hidden"
             />
             {q && (
-              <button onClick={() => setQ("")} aria-label="Ryd søgning" className="rounded p-0.5 text-muted-foreground hover:text-foreground">
+              <button onClick={() => setQ("")} aria-label={t("sbClearSearch")} className="rounded p-0.5 text-muted-foreground hover:text-foreground">
                 <X className="h-3.5 w-3.5" />
               </button>
             )}
@@ -192,22 +203,22 @@ export function BookmakerFilter() {
 
         <div className="bk-scroll min-h-0 flex-1 overflow-y-auto overscroll-contain pt-1">
           {groups.map((g) => (
-            <Group key={g.id} id={g.id} name={g.name} hint={g.hint} ids={g.ids} />
+            <Group key={g.id} id={g.id} name={t(categoryText[g.id].name)} hint={t(categoryText[g.id].hint)} ids={g.ids} />
           ))}
-          {groups.length === 0 && <div className="px-4 py-10 text-center text-[13px] text-muted-foreground">Ingen bookmakere matcher “{q}”.</div>}
+          {groups.length === 0 && <div className="px-4 py-10 text-center text-[13px] text-muted-foreground">{t("sbNoBkMatch", { q })}</div>}
           <div className="mx-2.5 mb-2.5 flex items-start gap-2 rounded-lg bg-surface-elevated/60 px-3 py-2 text-[11.5px] leading-snug text-muted-foreground">
             <Info className="mt-px h-3.5 w-3.5 shrink-0 text-cyan" />
-            Et surebet vises kun, når begge dets bookmakere er valgt.
+            {t("sbBkNote")}
           </div>
         </div>
 
         <div className="flex shrink-0 items-center justify-between gap-3 border-t border-border bg-surface-deep/60 px-4 py-3">
           <span className="flex items-center gap-2 text-[12.5px] text-muted-foreground">
             <span className={cn("h-2 w-2 rounded-full", shownCount > 0 ? "glow-dot bg-success" : "bg-muted-foreground")} />
-            Viser <b className="font-bold tabular-nums text-foreground">{shownCount}</b> af {surebets.length} surebets
+            {t("sbShowingPre")} <b className="font-bold tabular-nums text-foreground">{shownCount}</b> {t("sbShowingPost", { total: surebets.length })}
           </span>
           <PopoverClose className="bg-gradient-primary btn-shine relative overflow-hidden rounded-lg px-4 py-1.5 text-[13px] font-bold text-primary-foreground shadow-glow transition hover:brightness-110 active:scale-[0.98]">
-            Færdig
+            {t("sbDone")}
           </PopoverClose>
         </div>
       </PopoverContent>

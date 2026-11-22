@@ -2,16 +2,18 @@
 import { formatPct, surebetProfitPct, teamShort } from "./data";
 import { Crest } from "./Crest";
 import { useSurebets } from "./surebets-context";
+import { useLocale } from "@/components/locale-provider";
 
 /** Endless strip of the latest finds, styled like the front page's "Live fund" bar. */
 export function LiveTicker() {
   const { surebets } = useSurebets();
+  const { t } = useLocale();
   const items = surebets.slice(0, 20).map((b) => ({ b, pct: surebetProfitPct(b.legs.map((l) => l.odds)) }));
   if (items.length === 0) return null;
   return (
     <div className="sb-panel edge-light relative flex items-center overflow-hidden rounded-2xl">
       <div className="sb-ticker-label relative z-10 flex shrink-0 items-center gap-2.5 self-stretch border-r border-border px-4 text-[12.5px] font-extrabold uppercase tracking-[0.16em] text-success sm:px-5">
-        <span className="glow-dot h-2.5 w-2.5 animate-blink rounded-full bg-success" /> Live fund
+        <span className="glow-dot h-2.5 w-2.5 animate-blink rounded-full bg-success" /> {t("sbLiveFund")}
       </div>
       <div className="ticker-mask min-w-0 flex-1 overflow-hidden">
         <div className="ticker-track flex w-max items-center">
