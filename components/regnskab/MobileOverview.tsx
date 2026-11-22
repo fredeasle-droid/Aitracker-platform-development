@@ -17,6 +17,7 @@ import {
 import { BookmakerBadge } from "./BookmakerBadge";
 import { RANGE_LABELS } from "./Topbar";
 import { MobileChart } from "./MobileChart";
+import { MobileBookmakers } from "./MobileBookmakers";
 import { SurebetCards } from "./MobileBets";
 import { AddButton, EmptyState, LivePill, SectionHeader } from "./MobileUi";
 
@@ -293,6 +294,8 @@ export function MobileOverview({
           />
         )}
       </section>
+
+      <MobileBookmakers rows={bankroll} onAdd={onAddDeposit} />
 
       <section className="rg-glass rounded-3xl p-4">
         <SectionHeader

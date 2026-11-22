@@ -6,6 +6,7 @@ import { Button } from "@/components/regnskab/ui/button";
 import { formatKr, type BankrollRow } from "@/lib/regnskab/surebet";
 import { BookmakerBadge } from "./BookmakerBadge";
 import { EmptyState } from "./MobileUi";
+import { MobileBookmakers } from "./MobileBookmakers";
 
 export function MobileBankroll({ rows, onAdd }: { rows: BankrollRow[]; onAdd: () => void }) {
   const sum = (f: (r: BankrollRow) => number) => rows.reduce((s, r) => s + f(r), 0);
@@ -84,6 +85,8 @@ export function MobileBankroll({ rows, onAdd }: { rows: BankrollRow[]; onAdd: ()
           })}
         </ul>
       )}
+
+      <MobileBookmakers rows={rows} onAdd={onAdd} />
     </>
   );
 }
