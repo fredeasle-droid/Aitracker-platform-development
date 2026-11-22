@@ -182,3 +182,9 @@
     box-shadow: 0 0 18px rgba(34, 211, 238, 0.4);
   }
 }
+
+/* Wide desktop screens: scale the content of the Statistik and Min konto pages so they match the weight of the Surebets page. */
+@media (min-width: 1440px) { .desk-zoom { zoom: 1.12; } }
+@media (min-width: 1680px) { .desk-zoom { zoom: 1.28; } }
+@media (min-width: 1920px) { .desk-zoom { zoom: 1.4; } }
+@media (min-width: 2560px) { .desk-zoom { zoom: 1.85; } }
