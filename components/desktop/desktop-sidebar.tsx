@@ -5,6 +5,8 @@ import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, House, Radio, Star } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
+import { Logo as SbLogo } from '@/components/sb/Logo'
+import { SidebarCurve } from '@/components/sb/Sidebar'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import useSWR from 'swr'
 import { parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
@@ -42,6 +44,13 @@ function SportIcon({ sport, className = 'size-6' }: { sport: string; className?:
   )
 }
 
+const DESK_LABELS: Record<string, string> = {
+  home: 'Surebets',
+  live: 'Live-scanning',
+  stats: 'Statistik',
+  games: 'Mine bets',
+}
+
 const row =
   'flex min-h-10 items-center gap-4 rounded-xl px-4 text-[15px] text-[#e6ecf7] transition-colors hover:bg-[#0d1f38]'
 const deskRow =
@@ -73,11 +82,11 @@ export function SidebarBody({
   ]
   const [leaguesOpen, setLeaguesOpen] = useState(bookmakersDefaultOpen)
   const { data: session } = authClient.useSession()
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
 
   return (
     <div
-      className="flex min-h-full flex-1 flex-col"
+      className="flex min-h-0 flex-1 flex-col"
       onClick={(e) => {
         if (onNavigate && (e.target as HTMLElement).closest('a')) onNavigate()
       }}
@@ -85,7 +94,7 @@ export function SidebarBody({
       <nav aria-label="Hovedmenu">
         <ul className="flex flex-col gap-1">
           {NAV.map(({ href, key, icon: Icon }) => {
-            const label = t(key)
+            const label = desk && locale === 'da' && DESK_LABELS[key] ? DESK_LABELS[key] : t(key)
             const active = href === '/surebets' ? pathname === '/surebets' && !activeSport && !activeBookmaker : pathname === href
             return (
               <li key={href}>
@@ -275,9 +284,17 @@ export function DesktopSidebar() {
   return (
     <aside
       aria-label="Sidemenu"
-      className="sticky top-16 hidden h-[calc(100dvh-4rem)] w-[255px] shrink-0 flex-col overflow-y-auto border-r border-sidebar-border bg-sidebar px-4 py-5 [scrollbar-width:thin] lg:flex"
+      className="sb-root sticky top-0 z-10 hidden h-dvh w-[230px] shrink-0 !min-h-0 !bg-transparent lg:block"
     >
-      <SidebarBody variant="desktop" />
+      <div className="flex h-full flex-col overflow-y-auto bg-sidebar/95 px-4 pb-4 pt-6 backdrop-blur-xl [scrollbar-width:thin]">
+        <div className="mb-6 px-1">
+          <Link href="/" aria-label="BetTrackerAI forside">
+            <SbLogo />
+          </Link>
+        </div>
+        <SidebarBody variant="desktop" />
+      </div>
+      <SidebarCurve />
     </aside>
   )
 }

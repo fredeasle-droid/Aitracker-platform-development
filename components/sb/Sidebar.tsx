@@ -309,7 +309,7 @@ export function Sidebar({ page = "surebets" }: { page?: "surebets" | "beregn" })
 }
 
 /** Curved, glowing right edge of the sidebar (sweeps in from top-right to bottom-left). */
-function SidebarCurve() {
+export function SidebarCurve() {
   const path = "M40 0 Q 16 380 0 1000";
   return (
     <svg

@@ -23,7 +23,7 @@ function isActive(pathname: string, href: string) {
   return href === '/' ? pathname === '/' : pathname.startsWith(href)
 }
 
-function AuthActions() {
+export function AuthActions() {
   const { data: session, isPending } = authClient.useSession()
 
   if (session?.user) {
@@ -102,6 +102,12 @@ function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?:
       </SheetContent>
     </Sheet>
   )
+}
+
+/** Desktop pages with the sidebar carry the logo there, so the top bar only shows on the homepage. */
+export function RootHeader() {
+  const pathname = usePathname()
+  return <GlobalHeader className={pathname === '/' ? undefined : 'lg:hidden'} />
 }
 
 export function GlobalHeader({
