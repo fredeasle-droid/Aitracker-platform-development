@@ -34,7 +34,7 @@ const baseTranslations = {
     unlockPremium: 'Unlock with Premium', becomeCustomer: 'Become a customer to see the odds', unlock: 'Unlock', notifications: 'Notifications', newCount: 'new', highMarginNow: 'High margin right now', noAlerts: 'No sure bets above 4% right now.',
   },
   da: {
-    login: 'Log ind', loggedIn: 'Logget ind', frontPage: 'Forside', home: 'SikkerBets', live: 'Live scanning', stats: 'Stats', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opret bruger', games: 'Mine spil',
+    login: 'Log ind', loggedIn: 'Logget ind', frontPage: 'Forside', home: 'Surebets', live: 'Live scanning', stats: 'Stats', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opret bruger', games: 'Min konto',
     all: 'Alle', football: 'Fodbold', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Ishockey', esports: 'Esport', handball: 'Håndbold', favorites: 'Favoritter', more: 'Flere',
     sport: 'Sport', leagues: 'Ligaer', moreLeagues: 'Flere ligaer', premium: 'Premium', premiumText: 'Få adgang til flere funktioner og eksklusive SikkerBets.', upgrade: 'Opgrader nu', createAccount: 'Opret gratis konto', accountText: 'Få fuld adgang til alle odds og funktioner.', create: 'Opret konto',
     bookmakers: 'Bookmakere', bookmakersFilter: 'Bookmakere', allBookmakers: 'Alle bookmakere', sortBookmaker: 'Bookmaker A-Å', clearBookmakers: 'Ryd valgte',
