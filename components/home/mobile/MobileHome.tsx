@@ -566,9 +566,9 @@ function Pricing() {
         loading="lazy"
         width={1600}
         height={893}
-        className="pointer-events-none aspect-[16/9] w-full object-cover object-[50%_20%] [mask-image:linear-gradient(180deg,black_70%,transparent)]"
+        className="pointer-events-none aspect-[4/3] w-full object-cover object-[50%_15%] [mask-image:linear-gradient(180deg,black_80%,transparent)]"
       />
-      <div className="relative -mt-8 px-4 pb-4 text-center">
+      <div className="relative -mt-24 px-4 pb-5 text-center">
         <h2 className="text-[19px] font-bold leading-[24px] tracking-[-0.3px]">Vi stoler så meget på vores system, at vi lader dig prøve det –</h2>
         <p className="relative mt-0.5 inline-block -skew-x-6 text-[30px] font-black italic leading-[38px] text-primary-glow text-glow">
           helt gratis.
@@ -617,7 +617,6 @@ function Pricing() {
           </div>
         </div>
       </div>
-      <LiveTicker phone className="relative mt-5" />
     </Box>
   );
 }
