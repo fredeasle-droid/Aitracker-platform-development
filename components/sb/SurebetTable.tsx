@@ -373,8 +373,11 @@ export function SurebetTable() {
     () => inSport.map((b) => ({ b, legs: b.legs, pct: surebetProfitPct(b.legs.map((l) => l.odds)) })),
     [inSport],
   );
-  const rows = visibleSurebets(allRows, selected);
-  const bestId = rows.length ? rows.reduce((best, r) => (r.pct > best.pct ? r : best), rows[0]!).b.id : null;
+  const rows = useMemo(
+    () => [...visibleSurebets(allRows, selected)].sort((x, y) => y.pct - x.pct),
+    [allRows, selected],
+  );
+  const bestId = rows[0]?.b.id ?? null;
   return (
     <>
       {/* Phone: one card per match */}
