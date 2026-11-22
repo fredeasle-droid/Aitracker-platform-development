@@ -292,7 +292,7 @@ export function DesktopSidebar() {
             <SbLogo />
           </Link>
         </div>
-        <SidebarBody variant="desktop" />
+        <SidebarBody variant="desktop" showBookmakers={false} />
       </div>
       <SidebarCurve />
     </aside>
