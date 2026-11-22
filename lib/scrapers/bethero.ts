@@ -5,7 +5,7 @@ import { decode as decodeMsgpack, encode as encodeMsgpack } from '@msgpack/msgpa
 export const BETHERO_SOURCE = 'bethero'
 
 const SOCKET_URL =
-  'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=30&touch=1'
+  'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=100&touch=1'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
 const SETTLE_AFTER_ROWS_MS = 800
 const DEFAULT_FILTER_ID = 'zOUILG38'
@@ -17,7 +17,7 @@ function subscribeMessage() {
     ping: Date.now(),
     view: {
       sort: 'profit-desc',
-      rows: 30,
+      rows: 100,
       search: null,
       exhaustive: false,
       group: null,
