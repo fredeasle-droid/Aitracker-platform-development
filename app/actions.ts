@@ -11,6 +11,7 @@ import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { guaranteedProfit } from '@/lib/odds'
 import { addDemoBet, getDemoBets, isDemoOpportunityId, updateDemoBet } from '@/lib/demo-bets'
 import { MAX_COUPON_BETS, couponBetSchema, type CouponBet } from '@/lib/coupon'
+import { BOOKMAKERS } from '@/lib/regnskab/surebet'
 
 export async function refreshOpportunityList() {
   try {
@@ -41,10 +42,9 @@ function validStake(n: number) {
   return Number.isFinite(n) && n > 0 && n <= MAX_STAKE
 }
 
-const REGNSKAB_NAMES = ['bet365', 'Unibet', 'betfair', 'Danske Spil']
-
 function regnskabBookmaker(name: string) {
-  return REGNSKAB_NAMES.find((known) => known.toLowerCase() === name.trim().toLowerCase()) ?? name.trim()
+  const wanted = name.trim().toLowerCase()
+  return BOOKMAKERS.find((known) => known.toLowerCase() === wanted) ?? name.trim()
 }
 
 // The stats page (surebet-regnskab) reads regnskab_surebets, so every saved bet is mirrored there.
