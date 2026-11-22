@@ -10,7 +10,7 @@ export function PageShell({ sidebar, children }: { sidebar: ReactNode; children:
 
   if (pathname === '/' || isStandalonePath(pathname)) return <>{children}</>
 
-  const scaled = pathname === '/stats' || pathname === '/konto'
+  const scaled = pathname === '/konto'
 
   return (
     <div className="lg:flex">
