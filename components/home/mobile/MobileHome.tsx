@@ -55,13 +55,13 @@ function useLatestFind() {
 
 function Hero() {
   return (
-    <div className="relative pt-[176px]">
+    <div className="relative pt-[240px]">
       <img
         src={hero}
         alt="Jublende fodboldspiller på stadion"
         width={1920}
         height={640}
-        className="hero-photo-mobile pointer-events-none absolute -left-4 -top-14 h-[440px] w-[calc(100%+2rem)] max-w-none object-cover object-[62%_center]"
+        className="hero-photo-mobile pointer-events-none absolute -left-4 top-0 h-[504px] w-[calc(100%+2rem)] max-w-none object-cover object-[62%_center]"
       />
       {/* Darkens the lower photo so the headline stays readable */}
       <div className="pointer-events-none absolute inset-x-[-16px] top-[120px] h-[300px] bg-background/65 [mask-image:linear-gradient(180deg,transparent,black_45%,black_65%,transparent)]" />

@@ -99,6 +99,7 @@ export function GlobalHeader({ className }: { className?: string }) {
     <header
       className={cn(
         'bt-theme relative top-0 z-40 bg-transparent font-[family-name:var(--bt-roboto,var(--font-roboto))] pt-[env(safe-area-inset-top)] md:sticky md:bg-background-deep/70 md:backdrop-blur-xl',
+        pathname === '/' && 'max-md:absolute max-md:inset-x-0',
         className,
       )}
     >
