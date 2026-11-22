@@ -4,7 +4,8 @@ import { ArrowLeftRight, Bitcoin, Check, ChevronDown, Info, MapPin, Minus, Searc
 import { PopoverClose } from "@radix-ui/react-popover";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { bookmakerCategories, visibleSurebets, type BookmakerCategory, type BookmakerId } from "./data";
-import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";
+import { BookmakerLogo } from "@/components/bookmaker-logo";
+import { getBookmaker } from "@/lib/bookmakers";
 import { useBookmakerFilter } from "./bookmaker-filter";
 import { useSurebets } from "./surebets-context";
 import { useLocale } from "@/components/locale-provider";
@@ -28,7 +29,7 @@ function TriggerLabel() {
       {selected.length > 0 && (
         <span className="hidden -space-x-2 sm:flex">
           {shown.map((id) => (
-            <BookmakerBadge key={id} id={id} className="h-6 w-6 text-[8px] ring-2 ring-surface-deep" />
+            <LogoBox key={id} id={id} className="h-6 w-6 rounded-full ring-2 ring-surface-deep" />
           ))}
           {extra > 0 && (
             <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-surface-elevated px-1 text-[10px] font-bold text-foreground ring-2 ring-surface-deep">+{extra}</span>
@@ -64,36 +65,49 @@ function CheckMark({ state, small }: { state: "on" | "some" | "off"; small?: boo
   );
 }
 
-function Tile({ id, name }: { id: BookmakerId; name: string }) {
+/** Real brand logo on its own brand-coloured square, used in the filter tiles and the trigger button. */
+function LogoBox({ id, className }: { id: BookmakerId; className?: string }) {
+  const name = useSurebets().nameOf(id);
+  const { bg } = getBookmaker(name);
+  return (
+    <span className={cn("flex shrink-0 items-center justify-center overflow-hidden", className)} style={{ backgroundColor: bg }}>
+      <BookmakerLogo name={name} className="size-full" />
+    </span>
+  );
+}
+
+function Tile({ id, name, count }: { id: BookmakerId; name: string; count: number }) {
   const { isOn, toggle } = useBookmakerFilter();
-  const { surebets } = useSurebets();
   const { t } = useLocale();
   const on = isOn(id);
-  const n = surebets.filter((b) => b.legs.some((l) => l.bookmaker === id)).length;
   return (
-    <button role="checkbox" aria-checked={on} aria-label={name} onClick={() => toggle(id)} className={cn("bk-option flex flex-col gap-2 rounded-xl p-2.5 text-left", on && "bk-option-on")}>
-      <span className="flex w-full items-start justify-between gap-2">
-        <span className={cn("flex h-8 min-w-0 items-center transition duration-300", !on && "opacity-40 grayscale")}>
-          <BookmakerMark id={id} />
+    <button role="checkbox" aria-checked={on} aria-label={name} onClick={() => toggle(id)} className={cn("bk-option flex min-w-0 items-center gap-2 rounded-xl p-2 text-left", on && "bk-option-on")}>
+      <LogoBox id={id} className={cn("h-9 w-9 rounded-lg ring-1 ring-white/10 transition duration-300", !on && "opacity-40 grayscale")} />
+      <span className="flex min-w-0 flex-1 flex-col gap-1.5">
+        <span className={cn("truncate text-[13px] font-bold leading-none transition-colors", on ? "text-foreground" : "text-muted-foreground")}>{name}</span>
+        <span className="flex items-center gap-1.5 truncate text-[11px] leading-none text-muted-foreground">
+          <span className={cn("h-1.5 w-1.5 shrink-0 rounded-full", count > 0 ? "bg-success" : "bg-muted-foreground/50")} />
+          <span className="truncate">{count === 0 ? t("sbNoneToday") : t(count === 1 ? "sbOneToday" : "sbManyToday", { n: count })}</span>
         </span>
-        <CheckMark state={on ? "on" : "off"} small />
       </span>
-      <span className="flex items-center gap-1.5 text-[11px] leading-none text-muted-foreground">
-        <span className={cn("h-1.5 w-1.5 rounded-full", n > 0 ? "bg-success" : "bg-muted-foreground/50")} />
-        {n === 0 ? t("sbNoneToday") : t(n === 1 ? "sbOneToday" : "sbManyToday", { n })}
-      </span>
+      <CheckMark state={on ? "on" : "off"} small />
     </button>
   );
 }
 
 function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; hint: string; ids: BookmakerId[] }) {
   const { selected, toggleMany } = useBookmakerFilter();
-  const { bookmakers } = useSurebets();
+  const { bookmakers, surebets } = useSurebets();
   const { t } = useLocale();
   const Icon = categoryIcon[id];
   const all = bookmakers.filter((b) => b.category === id).map((b) => b.id);
   const allOnCount = all.filter((x) => selected.includes(x)).length;
   const state = allOnCount === all.length ? "on" : allOnCount === 0 ? "off" : "some";
+  const countOf = (bk: BookmakerId) => surebets.filter((s) => s.legs.some((l) => l.bookmaker === bk)).length;
+  const tiles = bookmakers
+    .filter((b) => ids.includes(b.id))
+    .map((b) => ({ ...b, count: countOf(b.id) }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "da"));
   return (
     <section>
       <div className="bk-group-head sticky top-0 z-10 flex items-center gap-2.5 px-3 py-2">
@@ -121,11 +135,9 @@ function Group({ id, name, hint, ids }: { id: BookmakerCategory; name: string; h
         </button>
       </div>
       <div className="grid grid-cols-2 gap-1.5 px-2.5 pb-3 pt-1">
-        {bookmakers
-          .filter((b) => ids.includes(b.id))
-          .map((b) => (
-            <Tile key={b.id} id={b.id} name={b.name} />
-          ))}
+        {tiles.map((b) => (
+          <Tile key={b.id} id={b.id} name={b.name} count={b.count} />
+        ))}
       </div>
     </section>
   );
@@ -163,7 +175,7 @@ export function BookmakerFilter() {
         align="end"
         sideOffset={8}
         collisionPadding={16}
-        className="bk-popover flex max-h-[min(640px,var(--radix-popover-content-available-height))] w-[min(420px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border-border-glow p-0"
+        className="bk-popover flex max-h-[min(640px,var(--radix-popover-content-available-height))] w-[min(480px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border-border-glow p-0"
       >
         <div className="edge-light shrink-0 border-b border-border px-4 pb-3 pt-4">
           <div className="flex items-start justify-between gap-3">
