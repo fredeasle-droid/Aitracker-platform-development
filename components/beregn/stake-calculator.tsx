@@ -633,7 +633,7 @@ const TABS = [
   { label: 'Beregn', icon: Calculator, href: null },
   { label: 'Live', icon: Radio, href: '/surebets' },
   { label: 'Statistik', icon: BarChart3, href: '/stats' },
-  { label: 'Mine bets', icon: Star, href: '/stats' },
+  { label: 'Min konto', icon: Star, href: '/konto' },
 ]
 
 function MobileTabBar() {

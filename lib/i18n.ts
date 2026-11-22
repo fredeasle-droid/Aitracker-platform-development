@@ -24,7 +24,7 @@ export function isLocale(value: string | undefined | null): value is Locale {
 
 const baseTranslations = {
   en: {
-    login: 'Log in', loggedIn: 'Logged in', home: 'Sure Bets', live: 'Live scanning', stats: 'Stats', calc: 'Calculate', bonus: 'Bonus', myPage: 'My page', signup: 'Sign up', games: 'My bets',
+    login: 'Log in', loggedIn: 'Logged in', frontPage: 'Home', home: 'Sure Bets', live: 'Live scanning', stats: 'Stats', calc: 'Calculate', bonus: 'Bonus', myPage: 'My page', signup: 'Sign up', games: 'My bets',
     all: 'All', football: 'Football', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Ice hockey', esports: 'Esports', handball: 'Handball', favorites: 'Favourites', more: 'More',
     sport: 'Sport', leagues: 'Leagues', moreLeagues: 'More leagues', premium: 'Premium', premiumText: 'Get access to more features and exclusive sure bets.', upgrade: 'Upgrade now', createAccount: 'Create free account', accountText: 'Get full access to all odds and features.', create: 'Create account',
     bookmakers: 'Bookmakers', bookmakersFilter: 'Bookmakers', allBookmakers: 'All bookmakers', sortBookmaker: 'Bookmaker A-Z', clearBookmakers: 'Clear selected',
@@ -34,7 +34,7 @@ const baseTranslations = {
     unlockPremium: 'Unlock with Premium', becomeCustomer: 'Become a customer to see the odds', unlock: 'Unlock', notifications: 'Notifications', newCount: 'new', highMarginNow: 'High margin right now', noAlerts: 'No sure bets above 4% right now.',
   },
   da: {
-    login: 'Log ind', loggedIn: 'Logget ind', home: 'SikkerBets', live: 'Live scanning', stats: 'Stats', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opret bruger', games: 'Mine spil',
+    login: 'Log ind', loggedIn: 'Logget ind', frontPage: 'Forside', home: 'Surebets', live: 'Live scanning', stats: 'Stats', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opret bruger', games: 'Min konto',
     all: 'Alle', football: 'Fodbold', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Ishockey', esports: 'Esport', handball: 'Håndbold', favorites: 'Favoritter', more: 'Flere',
     sport: 'Sport', leagues: 'Ligaer', moreLeagues: 'Flere ligaer', premium: 'Premium', premiumText: 'Få adgang til flere funktioner og eksklusive SikkerBets.', upgrade: 'Opgrader nu', createAccount: 'Opret gratis konto', accountText: 'Få fuld adgang til alle odds og funktioner.', create: 'Opret konto',
     bookmakers: 'Bookmakere', bookmakersFilter: 'Bookmakere', allBookmakers: 'Alle bookmakere', sortBookmaker: 'Bookmaker A-Å', clearBookmakers: 'Ryd valgte',
@@ -44,7 +44,7 @@ const baseTranslations = {
     unlockPremium: 'Lås op med Premium', becomeCustomer: 'Bliv kunde for at se oddsene', unlock: 'Lås op', notifications: 'Notifikationer', newCount: 'nye', highMarginNow: 'Høj margin lige nu', noAlerts: 'Ingen SikkerBets over 4% lige nu.',
   },
   sv: {
-    login: 'Logga in', loggedIn: 'Inloggad', home: 'Säkra spel', live: 'Liveskanning', stats: 'Statistik', calc: 'Beräkna', bonus: 'Bonus', myPage: 'Min sida', signup: 'Skapa konto', games: 'Mina spel',
+    login: 'Logga in', loggedIn: 'Inloggad', frontPage: 'Startsida', home: 'Säkra spel', live: 'Liveskanning', stats: 'Statistik', calc: 'Beräkna', bonus: 'Bonus', myPage: 'Min sida', signup: 'Skapa konto', games: 'Mina spel',
     all: 'Alla', football: 'Fotboll', basketball: 'Basket', tennis: 'Tennis', hockey: 'Ishockey', esports: 'E-sport', handball: 'Handboll', favorites: 'Favoriter', more: 'Fler',
     sport: 'Sport', leagues: 'Ligorna', moreLeagues: 'Fler ligor', premium: 'Premium', premiumText: 'Få tillgång till fler funktioner och exklusiva säkra spel.', upgrade: 'Uppgradera nu', createAccount: 'Skapa gratis konto', accountText: 'Få full tillgång till alla odds och funktioner.', create: 'Skapa konto',
     bookmakers: 'Spelbolag', bookmakersFilter: 'Spelbolag', allBookmakers: 'Alla spelbolag', sortBookmaker: 'Spelbolag A-Ö', clearBookmakers: 'Rensa valda',
@@ -54,7 +54,7 @@ const baseTranslations = {
     unlockPremium: 'Lås upp med Premium', becomeCustomer: 'Bli kund för att se oddsen', unlock: 'Lås upp', notifications: 'Notiser', newCount: 'nya', highMarginNow: 'Hög marginal just nu', noAlerts: 'Inga säkra spel över 4 % just nu.',
   },
   no: {
-    login: 'Logg inn', loggedIn: 'Innlogget', home: 'Sikre spill', live: 'Live-skanning', stats: 'Statistikk', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opprett bruker', games: 'Mine spill',
+    login: 'Logg inn', loggedIn: 'Innlogget', frontPage: 'Forside', home: 'Sikre spill', live: 'Live-skanning', stats: 'Statistikk', calc: 'Beregn', bonus: 'Bonus', myPage: 'Min side', signup: 'Opprett bruker', games: 'Mine spill',
     all: 'Alle', football: 'Fotball', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Ishockey', esports: 'E-sport', handball: 'Håndball', favorites: 'Favoritter', more: 'Flere',
     sport: 'Sport', leagues: 'Ligaer', moreLeagues: 'Flere ligaer', premium: 'Premium', premiumText: 'Få tilgang til flere funksjoner og eksklusive sikre spill.', upgrade: 'Oppgrader nå', createAccount: 'Opprett gratis konto', accountText: 'Få full tilgang til alle odds og funksjoner.', create: 'Opprett konto',
     bookmakers: 'Bookmakere', bookmakersFilter: 'Bookmakere', allBookmakers: 'Alle bookmakere', sortBookmaker: 'Bookmaker A-Å', clearBookmakers: 'Fjern valgte',
@@ -64,7 +64,7 @@ const baseTranslations = {
     unlockPremium: 'Lås opp med Premium', becomeCustomer: 'Bli kunde for å se oddsen', unlock: 'Lås opp', notifications: 'Varsler', newCount: 'nye', highMarginNow: 'Høy margin akkurat nå', noAlerts: 'Ingen sikre spill over 4 % akkurat nå.',
   },
   de: {
-    login: 'Anmelden', loggedIn: 'Angemeldet', home: 'Sichere Wetten', live: 'Live-Scan', stats: 'Statistiken', calc: 'Rechner', bonus: 'Bonus', myPage: 'Mein Konto', signup: 'Registrieren', games: 'Meine Spiele',
+    login: 'Anmelden', loggedIn: 'Angemeldet', frontPage: 'Startseite', home: 'Sichere Wetten', live: 'Live-Scan', stats: 'Statistiken', calc: 'Rechner', bonus: 'Bonus', myPage: 'Mein Konto', signup: 'Registrieren', games: 'Meine Spiele',
     all: 'Alle', football: 'Fußball', basketball: 'Basketball', tennis: 'Tennis', hockey: 'Eishockey', esports: 'E-Sport', handball: 'Handball', favorites: 'Favoriten', more: 'Mehr',
     sport: 'Sport', leagues: 'Ligen', moreLeagues: 'Weitere Ligen', premium: 'Premium', premiumText: 'Erhalte Zugang zu weiteren Funktionen und exklusiven sicheren Wetten.', upgrade: 'Jetzt upgraden', createAccount: 'Kostenloses Konto erstellen', accountText: 'Erhalte vollen Zugriff auf alle Quoten und Funktionen.', create: 'Konto erstellen',
     bookmakers: 'Buchmacher', bookmakersFilter: 'Buchmacher', allBookmakers: 'Alle Buchmacher', sortBookmaker: 'Buchmacher A-Z', clearBookmakers: 'Auswahl löschen',

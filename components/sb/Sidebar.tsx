@@ -25,11 +25,11 @@ import { useBookmakerFilter } from "./bookmaker-filter";
 import { cn } from "@/lib/utils";
 
 const nav = [
-  { label: "Surebets", icon: BarChart3 },
-  { label: "Live-scanning", icon: Radio, live: true },
-  { label: "Statistik", icon: PieChart },
-  { label: "Bonus", icon: Gift },
-  { label: "Mine bets", icon: Star },
+  { label: "Surebets", icon: BarChart3, href: "/surebets" },
+  { label: "Live-scanning", icon: Radio, href: "/surebets#live-scanning", live: true },
+  { label: "Statistik", icon: PieChart, href: "/stats" },
+  { label: "Bonus", icon: Gift, href: "/bonus" },
+  { label: "Min konto", icon: Star, href: "/konto" },
 ];
 
 export function FootballIcon({ className }: { className?: string }) {
@@ -69,7 +69,7 @@ const calculatorNav = [
   { label: "Liveodds", icon: Radio, href: "/surebets" },
   { label: "Statistik", icon: BarChart3, href: "/stats" },
   { label: "Bonus", icon: Gift, href: "/bonus" },
-  { label: "Mine bets", icon: Star, href: "/stats" },
+  { label: "Min konto", icon: Star, href: "/konto" },
 ];
 
 const CALC_SPORTS = ["Fodbold", "Basketball", "Tennis", "Ishockey", "Esport"];
@@ -178,12 +178,16 @@ function SurebetsSidebarContent() {
           <Home className="h-5 w-5" strokeWidth={2.3} />
           <span className="flex-1 text-left">Forside</span>
         </Link>
-        {nav.map(({ label, icon: Icon, live }) => {
+        {nav.map(({ label, icon: Icon, href, live }) => {
           const active = activeNav === label;
           return (
-            <button
+            <Link
               key={label}
-              onClick={() => setActiveNav(label)}
+              href={href}
+              aria-current={active ? "page" : undefined}
+              onClick={() => {
+                if (href.startsWith("/surebets")) setActiveNav(label);
+              }}
               className={cn(
                 "flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium transition-all short:py-1.5",
                 active
@@ -194,7 +198,7 @@ function SurebetsSidebarContent() {
               <Icon className={cn("h-5 w-5", active && "fill-primary-foreground/30")} strokeWidth={2.3} />
               <span className="flex-1 text-left">{label}</span>
               {live && <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />}
-            </button>
+            </Link>
           );
         })}
       </nav>
@@ -305,7 +309,7 @@ export function Sidebar({ page = "surebets" }: { page?: "surebets" | "beregn" })
 }
 
 /** Curved, glowing right edge of the sidebar (sweeps in from top-right to bottom-left). */
-function SidebarCurve() {
+export function SidebarCurve() {
   const path = "M40 0 Q 16 380 0 1000";
   return (
     <svg

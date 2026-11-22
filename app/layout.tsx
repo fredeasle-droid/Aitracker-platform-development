@@ -6,7 +6,7 @@ import { LocaleProvider } from '@/components/locale-provider'
 import { DesktopSidebar } from '@/components/desktop/desktop-sidebar'
 import { ChromeGate } from '@/components/site/chrome-gate'
 import { GlobalFooter } from '@/components/site/global-footer'
-import { GlobalHeader } from '@/components/site/global-header'
+import { RootHeader } from '@/components/site/global-header'
 import { PageShell } from '@/components/site/page-shell'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
 import './globals.css'
@@ -54,7 +54,7 @@ export default async function RootLayout({
       <body className="min-h-dvh overflow-x-hidden antialiased">
         <LocaleProvider initialLocale={locale}>
         <ChromeGate>
-          <GlobalHeader />
+          <RootHeader />
         </ChromeGate>
         <PageShell
           sidebar={
