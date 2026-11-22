@@ -1,5 +1,31 @@
-export type Bookmaker = "bet365" | "Unibet" | "betfair" | "Danske Spil";
-export const BOOKMAKERS: Bookmaker[] = ["bet365", "Unibet", "betfair", "Danske Spil"];
+/** Names are stored in the database; the first four keep their original spelling so existing rows still match. */
+export const BOOKMAKERS = [
+  "bet365",
+  "Danske Spil",
+  "Betano",
+  "betfair",
+  "Betinia",
+  "Campobet",
+  "Betsson",
+  "NordicBet",
+  "Unibet",
+  "888sport",
+  "Bwin",
+  "ComeOn",
+  "Bet25",
+  "Betmaster",
+  "Expekt",
+  "LeoVegas",
+  "Marathonbet",
+  "Mr Green",
+  "PokerStars Sports",
+  "Tipwin",
+  "Stake",
+  "GetLucky",
+  "Swiper",
+  "Vbet",
+] as const;
+export type Bookmaker = (typeof BOOKMAKERS)[number];
 
 export type SurebetStatus = "Vundet" | "Åben" | "Tabt";
 
