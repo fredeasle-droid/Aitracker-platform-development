@@ -1,1 +1,1 @@
-export const MAX_OPPORTUNITIES = 30
+export const MAX_OPPORTUNITIES = 50

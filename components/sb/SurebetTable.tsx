@@ -92,7 +92,7 @@ function BetDetails({ b, best }: { b: Surebet; best: boolean }) {
         {b.legs.map((leg, i) => (
           <div
             key={i}
-            className="leg-row grid grid-cols-[112px_minmax(0,1fr)_auto] items-center gap-3 rounded-lg px-3 py-2 @max-[999px]:grid-cols-[96px_minmax(0,1fr)_auto] @max-[999px]:gap-2 @max-[999px]:px-2"
+            className="leg-row grid grid-cols-[132px_minmax(0,1fr)_auto] items-center gap-3 rounded-lg px-3 py-2 @max-[999px]:grid-cols-[96px_minmax(0,1fr)_auto] @max-[999px]:gap-2 @max-[999px]:px-2"
           >
             <span className="flex items-center">
               <BookmakerMark id={leg.bookmaker} size="lg" />
