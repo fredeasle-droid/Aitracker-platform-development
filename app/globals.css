@@ -4,6 +4,7 @@
 @import './bt-theme.css';
 @import './surebets/sb-theme.css';
 @import './regnskab.css';
+@import './mobile-theme.css';
 
 @custom-variant dark (&:is(.dark *));
 

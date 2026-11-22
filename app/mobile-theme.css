@@ -1,0 +1,91 @@
+/* Mobile only: pages built with hardcoded teal-black hex colours are remapped onto the navy tokens the homepage and Surebets use, so every page shares one palette. */
+@media (max-width: 639px) {
+  [class~="bg-[#030914]/85"] { background-color: oklch(0.15 0.055 266 / 85%); }
+  [class~="bg-[#041a1c]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#050d1b]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#050f1f]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#06101e]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#06111d]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#07101f]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#071321]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#071428]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#071522]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#071725]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#071729]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#071a2b]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#071a33]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#081123]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#081322]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#08142a]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#081725]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#081c38]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#091b2d]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0a1426]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#0a1630]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0a1725]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0a1726]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0a1d30]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0a2547]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0b1c35]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0b1d39]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0b2342]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0b243d]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0b2945]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="bg-[#0c1428]"] { background-color: oklch(0.15 0.055 266); }
+  [class~="bg-[#0d1f38]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0d2238]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#0f2a4f]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="bg-[#0f2f52]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="bg-[#10182e]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#101a31]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#10263a]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#121c3a]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#123b61]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="bg-[#123d62]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="bg-[#14233f]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#182238]"] { background-color: oklch(0.19 0.065 265); }
+  [class~="bg-[#1b216b]/30"] { background-color: oklch(0.25 0.085 263 / 30%); }
+  [class~="bg-[#1d3a5f]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="bg-[#2a3447]"] { background-color: oklch(0.25 0.085 263); }
+  [class~="border-[#102b49]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#123b61]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#13294a]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#143456]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#145e91]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#183252]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#183754]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1a2846]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1a2f4d]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1a3557]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1a3653]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1b3557]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1b3a5e]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1b4164]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1b4a86]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1d3a5f]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1d4a80]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1d4c91]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#1f3a63]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#214b70]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#22517d]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#243650]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#244563]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#263f5a]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#273452]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#2a4468]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#2a4a76]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#344861]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#354579]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#38506b]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#42516f]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="border-[#52617a]"] { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="divide-[#183252]"] > :not(:last-child) { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="divide-[#183754]"] > :not(:last-child) { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="divide-[#1d4a80]"] > :not(:last-child) { border-color: oklch(0.4 0.1 262 / 55%); }
+  [class~="divide-[#233e5d]"] > :not(:last-child) { border-color: oklch(0.4 0.1 262 / 55%); }
+
+  .glass-panel {
+    background: linear-gradient(180deg, oklch(0.21 0.07 264 / 88%), oklch(0.16 0.055 265 / 86%));
+    border-color: oklch(0.4 0.1 262 / 55%);
+  }
+}

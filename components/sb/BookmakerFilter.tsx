@@ -183,7 +183,7 @@ export function BookmakerFilter() {
               <div className="text-[15px] font-bold">{t("sbBookmakers")}</div>
               <div className="mt-0.5 text-[12px] text-muted-foreground">{t("sbPickBk")}</div>
             </div>
-            <div className="flex items-center gap-1 text-[12px] font-semibold">
+            <div className="flex shrink-0 items-center gap-1 whitespace-nowrap text-[12px] font-semibold">
               <button onClick={selectAll} disabled={allOn} className="rounded-md px-2 py-1 text-primary-glow transition hover:bg-surface-elevated disabled:opacity-40 disabled:hover:bg-transparent">
                 {t("sbSelectAll")}
               </button>
