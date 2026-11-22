@@ -39,7 +39,7 @@ export default async function TelegramPage() {
   if (state === 'signed-out') redirect('/konto')
   if (state === 'forbidden') {
     return (
-      <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-2 bg-[#06111d] px-5 py-10 text-white">
+      <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-2 px-5 py-10 text-white">
         <h1 className="text-2xl font-extrabold">Ingen adgang</h1>
         <p className="text-[#d6deeb]">Kun ejeren af BetTracker kan styre Telegram-opslag.</p>
       </main>
@@ -54,7 +54,7 @@ export default async function TelegramPage() {
   ])
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 bg-[#06111d] px-5 py-10 text-white">
+    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 px-5 py-10 text-white">
       <header className="flex flex-col gap-2">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6f86a3]">Markedsføring</p>
         <h1 className="text-3xl font-extrabold tracking-tight text-balance">Telegram-opslag</h1>

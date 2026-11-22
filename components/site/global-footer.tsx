@@ -65,7 +65,7 @@ function FooterWaves() {
 export function GlobalFooter() {
   return (
     <>
-      <footer className="bt-theme mt-10 border-t border-border/50 bg-background-deep px-4 pb-8 pt-8 md:hidden">
+      <footer className="bt-theme mt-6 bg-linear-to-b from-transparent via-background-deep/80 to-background-deep px-4 pb-8 pt-20 md:hidden">
         <Link href="/" aria-label="BetTrackerAI forside" className="block w-fit text-foreground">
           <Logo />
         </Link>

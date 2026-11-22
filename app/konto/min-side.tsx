@@ -18,7 +18,7 @@ export function MinSide({ user, subscription, invoices, testAccess }: Props) {
   const initial = (user.name.trim()[0] ?? user.email[0] ?? '?').toUpperCase()
 
   return (
-    <div className="min-h-dvh bg-[#050b17] text-[#f3f6fc] lg:min-h-[calc(100dvh-70px)] lg:bg-[#030914] lg:px-6 lg:pb-10 lg:pt-6">
+    <div className="min-h-dvh text-[#f3f6fc] lg:min-h-[calc(100dvh-70px)] lg:px-6 lg:pb-10 lg:pt-6">
       <main className="mx-auto w-full max-w-[390px] px-3 pb-8 pt-2 sm:px-5 lg:max-w-5xl lg:px-0 lg:pt-0 xl:max-w-[1240px]">
         <header className="flex h-14 items-center gap-2 lg:hidden">
           <Link href="/" aria-label="Tilbage til BetTracker" className="flex size-11 items-center justify-center rounded-full hover:bg-white/5">

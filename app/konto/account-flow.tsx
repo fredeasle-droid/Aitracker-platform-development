@@ -21,7 +21,7 @@ export function AccountFlow({ aside, startInLogin = false, allowTestAccess = fal
 
   return (
     <>
-    <div className="hidden min-h-[calc(100dvh-70px)] w-full gap-4 bg-[#030914] px-4 text-[#f3f6fc] lg:flex lg:items-start lg:pb-6 lg:pt-4">
+    <div className="hidden min-h-[calc(100dvh-70px)] w-full gap-4 px-4 text-[#f3f6fc] lg:flex lg:items-start lg:pb-6 lg:pt-4">
       <div className="min-w-0 flex-1 pt-4">
         <DesktopFlow
           step={step}
@@ -38,7 +38,7 @@ export function AccountFlow({ aside, startInLogin = false, allowTestAccess = fal
       </div>
       {aside}
     </div>
-    <main className="min-h-dvh bg-[#050b17] px-3 pb-8 pt-2 text-[#f3f6fc] sm:px-5 lg:hidden">
+    <main className="min-h-dvh px-3 pb-8 pt-2 text-[#f3f6fc] sm:px-5 lg:hidden">
       <div className="mx-auto w-full max-w-[390px]">
         <header className="flex h-14 items-center justify-between">
           <Link href="/" aria-label={t('backToApp')} className="flex size-11 items-center justify-center rounded-full hover:bg-white/5">

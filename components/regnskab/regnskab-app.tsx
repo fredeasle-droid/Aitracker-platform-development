@@ -122,7 +122,7 @@ export function RegnskabApp({ initial }: { initial: RegnskabData }) {
   };
 
   return (
-    <div className="regnskab grid-bg min-h-dvh min-w-0 flex-1 bg-background text-foreground">
+    <div className="regnskab grid-bg min-h-dvh min-w-0 flex-1 text-foreground">
       <div className="md:hidden">
         <MobileApp
           summary={summary}

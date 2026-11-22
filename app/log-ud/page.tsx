@@ -9,7 +9,7 @@ export default function LogoutPage() {
   }, [])
 
   return (
-    <main className="flex min-h-dvh items-center justify-center bg-[#050b17] text-[#f3f6fc]">
+    <main className="flex min-h-dvh items-center justify-center text-[#f3f6fc]">
       <p role="status">Logger ud...</p>
     </main>
   )

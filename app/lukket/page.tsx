@@ -20,7 +20,7 @@ export default function ClosedPage() {
 
   return (
     <main
-      className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-background px-5 py-12 text-center"
+      className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden px-5 py-12 text-center"
       style={{
         backgroundImage:
           'linear-gradient(to bottom, var(--background) 0%, color-mix(in oklab, var(--background) 82%, transparent) 50%, var(--background) 100%), url(/beregn/stadium.jpg)',
