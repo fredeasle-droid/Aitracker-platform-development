@@ -1,4 +1,5 @@
-import { Sidebar } from '@/components/sb/Sidebar'
+import { Sidebar, SidebarContent } from '@/components/sb/Sidebar'
+import { jakarta } from './font'
 import { TopBar } from '@/components/sb/TopBar'
 import { Hero } from '@/components/sb/Hero'
 import { FilterBar } from '@/components/sb/FilterBar'
@@ -24,7 +25,11 @@ export default async function SurebetsPage() {
   return (
     <SurebetsProvider data={data}>
     <BookmakerFilterProvider>
-      <GlobalHeader className="max-lg:absolute max-lg:inset-x-0 lg:hidden" />
+      <GlobalHeader
+        className="max-lg:absolute max-lg:inset-x-0 lg:hidden"
+        menu={<SidebarContent />}
+        menuClassName={jakarta.variable}
+      />
       <div className="flex min-h-screen">
         <Sidebar />
         <main className="relative min-w-0 flex-1 px-4 pb-8 max-lg:pt-16 sm:px-6">

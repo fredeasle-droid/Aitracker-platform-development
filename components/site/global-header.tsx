@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Suspense, useState } from 'react'
+import { Suspense, useState, type ReactNode } from 'react'
 import { LogIn, Menu, UserRound } from 'lucide-react'
 import { SidebarBody } from '@/components/desktop/desktop-sidebar'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
@@ -53,7 +53,7 @@ function AuthActions() {
   )
 }
 
-function MobileMenu({ pathname }: { pathname: string }) {
+function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?: string }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -66,23 +66,47 @@ function MobileMenu({ pathname }: { pathname: string }) {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="bt-theme w-[300px] max-w-[85vw] gap-0 border-r border-[#102b49] bg-[#050d1b] p-0 sm:max-w-[300px]"
+        className={cn(
+          'flex h-dvh w-[300px] max-w-[85vw] flex-col gap-0 border-r p-0 sm:max-w-[300px]',
+          menu ? `sb-root !min-h-0 border-sidebar-border bg-sidebar ${menuClassName ?? ''}` : 'bt-theme border-[#102b49] bg-[#050d1b]',
+        )}
       >
         <SheetTitle className="sr-only">Menu</SheetTitle>
-        <div className="shrink-0 px-5 pb-3 pt-6">
-          <Logo />
-        </div>
-        <div className="min-h-0 flex-1 overflow-y-auto px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:thin]">
-          <Suspense fallback={null}>
-            <SidebarBody onNavigate={() => setOpen(false)} />
-          </Suspense>
-        </div>
+        {menu ? (
+          <div
+            className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 [-webkit-overflow-scrolling:touch]"
+            onClick={(e) => {
+              if ((e.target as HTMLElement).closest('a')) setOpen(false)
+            }}
+          >
+            {menu}
+          </div>
+        ) : (
+          <>
+            <div className="shrink-0 px-5 pb-3 pt-6">
+              <Logo />
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:thin]">
+              <Suspense fallback={null}>
+                <SidebarBody onNavigate={() => setOpen(false)} />
+              </Suspense>
+            </div>
+          </>
+        )}
       </SheetContent>
     </Sheet>
   )
 }
 
-export function GlobalHeader({ className }: { className?: string }) {
+export function GlobalHeader({
+  className,
+  menu,
+  menuClassName,
+}: {
+  className?: string
+  menu?: ReactNode
+  menuClassName?: string
+}) {
   const pathname = usePathname()
 
   return (
@@ -95,7 +119,7 @@ export function GlobalHeader({ className }: { className?: string }) {
     >
       <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-self-start">
-          <MobileMenu pathname={pathname} />
+          <MobileMenu menu={menu} menuClassName={menuClassName} />
           <Link href="/" aria-label="BetTrackerAI forside" className="hidden text-foreground md:block">
             <Logo />
           </Link>
