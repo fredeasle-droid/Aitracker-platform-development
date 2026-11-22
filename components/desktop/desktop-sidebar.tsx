@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
-import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, Radio, Star } from 'lucide-react'
+import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, House, Radio, Star } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import useSWR from 'swr'
@@ -13,6 +13,7 @@ import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
 
 const NAV = [
+  { href: '/', key: 'frontPage', icon: House },
   { href: '/surebets', key: 'home', icon: BarsIcon },
   { href: '/surebets#live-scanning', key: 'live', icon: Radio },
   { href: '/stats', key: 'stats', icon: ChartPie },
