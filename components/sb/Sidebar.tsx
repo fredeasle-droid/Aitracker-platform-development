@@ -42,7 +42,7 @@ export function FootballIcon({ className }: { className?: string }) {
   );
 }
 
-function BasketballIcon({ className }: { className?: string }) {
+export function BasketballIcon({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <circle cx="12" cy="12" r="10" />

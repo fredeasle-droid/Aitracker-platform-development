@@ -3,10 +3,11 @@
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
-import { ArrowRight, Check, ChartPie, ChevronDown, Crown, Gamepad2, Gift, House, Radio, Star } from 'lucide-react'
+import { ArrowRight, BarChart3, Check, ChartPie, ChevronDown, Crown, Disc, Gamepad2, Gift, House, PieChart, Radio, Star, Volleyball } from 'lucide-react'
 import { BarsIcon } from '@/components/icons'
+import { jakarta } from '@/app/surebets/font'
 import { Logo as SbLogo } from '@/components/sb/Logo'
-import { SidebarCurve } from '@/components/sb/Sidebar'
+import { BasketballIcon, FootballIcon, SidebarCurve } from '@/components/sb/Sidebar'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import useSWR from 'swr'
 import { parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
@@ -31,6 +32,29 @@ const SPORTS = [
   { key: 'esports', value: 'Esport' },
 ] as const
 
+const DESK_NAV_ICONS = {
+  frontPage: House,
+  home: BarChart3,
+  live: Radio,
+  stats: PieChart,
+  bonus: Gift,
+  games: Star,
+} as const
+
+function DeskNavIcon({ name, active }: { name: keyof typeof DESK_NAV_ICONS; active: boolean }) {
+  const Icon = DESK_NAV_ICONS[name]
+  return <Icon className={cn('h-5 w-5', active && 'fill-primary-foreground/30')} strokeWidth={2.3} aria-hidden="true" />
+}
+
+function DeskSportIcon({ sport }: { sport: string }) {
+  const className = 'h-5 w-5'
+  if (sport === 'Fodbold') return <FootballIcon className={className} />
+  if (sport === 'Basketball') return <BasketballIcon className={className} />
+  if (sport === 'Tennis') return <Volleyball className={className} aria-hidden="true" />
+  if (sport === 'Ishockey') return <Disc className={className} aria-hidden="true" />
+  return <Gamepad2 className={className} aria-hidden="true" />
+}
+
 function SportIcon({ sport, className = 'size-6' }: { sport: string; className?: string }) {
   if (sport === 'Esport') return <Gamepad2 className={className} aria-hidden="true" />
   return (
@@ -54,7 +78,7 @@ const DESK_LABELS: Record<string, string> = {
 const row =
   'flex min-h-10 items-center gap-4 rounded-xl px-4 text-[15px] text-[#e6ecf7] transition-colors hover:bg-[#0d1f38]'
 const deskRow =
-  'flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent'
+  'flex w-full items-center gap-3.5 rounded-xl px-4 py-2 text-[15.5px] font-medium text-sidebar-foreground transition-all hover:bg-sidebar-accent short:py-1.5'
 
 export function SidebarBody({
   onNavigate,
@@ -92,7 +116,7 @@ export function SidebarBody({
       }}
     >
       <nav aria-label="Hovedmenu">
-        <ul className="flex flex-col gap-1">
+        <ul className={cn('flex flex-col gap-1', desk && 'short:gap-0.5')}>
           {NAV.map(({ href, key, icon: Icon }) => {
             const label = desk && locale === 'da' && DESK_LABELS[key] ? DESK_LABELS[key] : t(key)
             const active = href === '/surebets' ? pathname === '/surebets' && !activeSport && !activeBookmaker : pathname === href
@@ -105,12 +129,17 @@ export function SidebarBody({
                     desk ? deskRow : cn(row, 'min-h-12'),
                     active &&
                       (desk
-                        ? 'sb-nav-active py-2.5 font-bold text-primary-foreground hover:bg-transparent'
+                        ? 'sb-nav-active py-2.5 font-bold text-primary-foreground hover:bg-transparent short:py-2'
                         : 'sb-nav-active font-bold text-primary-foreground hover:bg-transparent'),
                   )}
                 >
-                  <Icon className={desk ? 'size-5' : 'size-6'} fill={Icon === BarsIcon || Icon === ChartPie ? 'currentColor' : 'none'} />
-                  {label}
+                  {desk ? (
+                    <DeskNavIcon name={key} active={active} />
+                  ) : (
+                    <Icon className="size-6" fill={Icon === BarsIcon || Icon === ChartPie ? 'currentColor' : 'none'} />
+                  )}
+                  <span className={desk ? 'flex-1 text-left' : undefined}>{label}</span>
+                  {desk && key === 'live' && <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />}
                 </Link>
               </li>
             )
@@ -118,17 +147,17 @@ export function SidebarBody({
         </ul>
       </nav>
 
-      <div className={desk ? 'my-4 h-px bg-sidebar-border' : 'my-4 border-t border-[#13294a]'} />
+      <div className={desk ? 'my-4 h-px bg-sidebar-border short:my-3' : 'my-4 border-t border-[#13294a]'} />
 
       <h2
         className={cn(
           'font-semibold uppercase',
-          desk ? 'px-2 pb-3 text-[11px] tracking-[0.12em] text-cyan' : 'px-4 pb-2 text-[13px] tracking-wide text-[#55a8ff]',
+          desk ? 'px-2 pb-3 text-[11px] short:pb-2 tracking-[0.12em] text-cyan' : 'px-4 pb-2 text-[13px] tracking-wide text-[#55a8ff]',
         )}
       >
         {t('sport')}
       </h2>
-      <ul className="flex flex-col gap-0.5">
+      <ul className={cn('flex flex-col', desk ? 'gap-1 short:gap-0.5' : 'gap-0.5')}>
         {SPORTS.map(({ key: sportKey, value }) => {
           const s = t(sportKey)
           return (
@@ -139,11 +168,11 @@ export function SidebarBody({
               className={cn(
                 desk ? cn(deskRow, 'gap-3 px-3 text-[14.5px]') : row,
                 activeSport === value &&
-                  (desk ? 'bg-sidebar-accent font-bold ring-1 ring-primary/30' : 'bg-[#0d1f38] text-[#65c1ff]'),
+                  (desk ? 'bg-gradient-active font-bold text-foreground ring-1 ring-primary/30' : 'bg-[#0d1f38] text-[#65c1ff]'),
               )}
             >
-              <SportIcon sport={value} className={desk ? 'size-5' : undefined} />
-              {s}
+              {desk ? <DeskSportIcon sport={value} /> : <SportIcon sport={value} />}
+              {desk ? <span className="flex-1 text-left">{s}</span> : s}
             </Link>
           </li>
           )
@@ -235,19 +264,30 @@ export function SidebarBody({
         <div
           className={cn(
             'mt-auto',
-            desk ? 'sb-panel panel-glow p-4' : 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3',
+            desk ? 'sb-panel panel-glow mt-6 shrink-0 p-4 short:mt-4 short:p-3' : 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3',
           )}
         >
-          <div className="flex gap-2.5">
-            <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
+          <div className={cn('flex', desk ? 'items-start gap-3' : 'gap-2.5')}>
+            <Crown
+              className={cn('shrink-0 fill-[#f5c84b] text-[#f5c84b]', desk ? 'h-9 w-9' : 'mt-0.5 size-7')}
+              strokeWidth={desk ? 1.8 : undefined}
+              aria-hidden="true"
+            />
             <div>
-              <p className="text-[15px] font-bold leading-tight">{t('premium')}</p>
-              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">{t('premiumText')}</p>
+              <p className={cn('font-bold leading-tight', desk ? 'text-sm' : 'text-[15px]')}>{t('premium')}</p>
+              <p className={cn('mt-1 leading-snug', desk ? 'text-[11px] text-muted-foreground' : 'text-[12px] text-[#a9b6d3]')}>
+                {t('premiumText')}
+              </p>
             </div>
           </div>
           <Link
             href="/konto"
-            className="mt-3 flex min-h-12 items-center justify-center rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
+            className={cn(
+              'mt-3 flex items-center justify-center font-semibold text-primary-foreground',
+              desk
+                ? 'bg-gradient-primary gap-1.5 rounded-lg py-2 text-xs shadow-glow'
+                : 'min-h-12 rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] shadow-[0_8px_24px_-8px_var(--primary)]',
+            )}
           >
             {t('upgrade')}
           </Link>
@@ -258,21 +298,32 @@ export function SidebarBody({
         <div
           className={cn(
             'mt-auto',
-            desk ? 'sb-panel panel-glow p-4' : 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3',
+            desk ? 'sb-panel panel-glow mt-6 shrink-0 p-4 short:mt-4 short:p-3' : 'rounded-2xl border border-[#183252] bg-[linear-gradient(135deg,#0a1a33,#071226)] p-3',
           )}
         >
-          <div className="flex gap-2.5">
-            <Crown className="mt-0.5 size-7 shrink-0 fill-[#f5c84b] text-[#f5c84b]" aria-hidden="true" />
+          <div className={cn('flex', desk ? 'items-start gap-3' : 'gap-2.5')}>
+            <Crown
+              className={cn('shrink-0 fill-[#f5c84b] text-[#f5c84b]', desk ? 'h-9 w-9' : 'mt-0.5 size-7')}
+              strokeWidth={desk ? 1.8 : undefined}
+              aria-hidden="true"
+            />
             <div>
-              <p className="text-[15px] font-bold leading-tight">{t('createAccount')}</p>
-              <p className="mt-1 text-[12px] leading-snug text-[#a9b6d3]">{t('accountText')}</p>
+              <p className={cn('font-bold leading-tight', desk ? 'text-sm' : 'text-[15px]')}>{t('createAccount')}</p>
+              <p className={cn('mt-1 leading-snug', desk ? 'text-[11px] text-muted-foreground' : 'text-[12px] text-[#a9b6d3]')}>
+                {t('accountText')}
+              </p>
             </div>
           </div>
           <Link
             href="/konto"
-            className="mt-3 flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] font-semibold text-primary-foreground shadow-[0_8px_24px_-8px_var(--primary)]"
+            className={cn(
+              'mt-3 flex items-center justify-center font-semibold text-primary-foreground',
+              desk
+                ? 'bg-gradient-primary gap-1.5 rounded-lg py-2 text-xs shadow-glow'
+                : 'min-h-12 gap-2 rounded-xl bg-[linear-gradient(100deg,#1682ff,#1372ee)] text-[15px] shadow-[0_8px_24px_-8px_var(--primary)]',
+            )}
           >
-            {t('create')} <ArrowRight className="size-4" />
+            {t('create')} <ArrowRight className={desk ? 'h-3.5 w-3.5' : 'size-4'} />
           </Link>
         </div>
       )}
@@ -284,11 +335,11 @@ export function DesktopSidebar() {
   return (
     <aside
       aria-label="Sidemenu"
-      className="sb-root sticky top-0 z-10 hidden h-dvh w-[230px] shrink-0 !min-h-0 !bg-transparent lg:block"
+      className={`sb-root ${jakarta.variable} sticky top-0 z-10 hidden h-dvh w-[230px] shrink-0 !min-h-0 !bg-transparent lg:block`}
     >
-      <div className="flex h-full flex-col overflow-y-auto bg-sidebar/95 px-4 pb-4 pt-6 backdrop-blur-xl [scrollbar-width:thin]">
-        <div className="mb-6 px-1">
-          <Link href="/" aria-label="BetTrackerAI forside">
+      <div className="flex h-full flex-col overflow-y-auto bg-sidebar/95 px-4 pb-4 pt-6 backdrop-blur-xl short:pb-3 short:pt-4 [scrollbar-width:thin]">
+        <div className="mb-6 px-1 short:mb-4">
+          <Link href="/" aria-label="BetTrackerAI forside" className="block">
             <SbLogo />
           </Link>
         </div>
