@@ -22,16 +22,16 @@ export function LegalPage({
 }) {
   if (plain) {
     return (
-      <main id="top" className="mx-auto w-full max-w-3xl px-4 pb-20 pt-5 lg:max-w-6xl lg:px-10 lg:pb-28 lg:pt-10">
-        <LegalTabs />
-        <header className="mt-8 max-w-[68ch] lg:mt-12">
+      <main id="top" className="mx-auto w-full max-w-3xl px-4 pb-20 pt-5 lg:px-10 lg:pb-28 lg:pt-10">
+        <LegalTabs centered />
+        <header className="mt-8 max-w-[68ch] lg:mx-auto lg:mt-12">
           <h1 className="text-balance text-[34px] font-extrabold leading-[1.1] tracking-tight text-foreground lg:text-[44px]">
             {title}
           </h1>
           {updated && <p className="mt-3 text-[14px] text-muted-foreground">Senest opdateret {updated}</p>}
           <p className="mt-5 text-pretty text-[17px] leading-relaxed text-foreground/85">{intro}</p>
         </header>
-        <div className="mt-10">{children}</div>
+        <div className="mt-10 lg:mx-auto lg:max-w-[68ch]">{children}</div>
       </main>
     )
   }

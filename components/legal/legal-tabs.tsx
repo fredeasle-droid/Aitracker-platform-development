@@ -11,12 +11,12 @@ const PAGES = [
   { href: '/privatlivspolitik', label: 'Privatlivspolitik', icon: ShieldCheck },
 ]
 
-export function LegalTabs() {
+export function LegalTabs({ centered = false }: { centered?: boolean }) {
   const pathname = usePathname()
 
   return (
     <nav aria-label="Support" className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden">
-      <ul className="flex w-max gap-2 lg:w-auto lg:flex-wrap">
+      <ul className={`flex w-max gap-2 lg:w-auto lg:flex-wrap ${centered ? 'lg:justify-center' : ''}`}>
         {PAGES.map(({ href, label, icon: Icon }) => {
           const active = pathname === href
           return (

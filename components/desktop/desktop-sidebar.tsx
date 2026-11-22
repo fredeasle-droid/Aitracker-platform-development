@@ -90,7 +90,7 @@ export function SidebarBody({
                   className={cn(
                     row,
                     'min-h-12',
-                    active && 'bg-[linear-gradient(100deg,#1682ff,#1372ee)] font-semibold text-primary-foreground shadow-[0_8px_24px_-10px_var(--primary)] hover:bg-primary',
+                    active && 'sb-nav-active font-bold text-primary-foreground hover:bg-transparent',
                   )}
                 >
                   <Icon className="size-6" fill={Icon === BarsIcon || Icon === ChartPie ? 'currentColor' : 'none'} />
