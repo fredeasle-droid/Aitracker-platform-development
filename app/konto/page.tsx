@@ -11,6 +11,9 @@ import { AccountFlow } from './account-flow'
 import { MinSide } from './min-side'
 import type { AccountInvoice } from './account-types'
 import { isPreviewTestEnvironment } from '@/lib/test-access'
+import { eq } from 'drizzle-orm'
+import { db } from '@/lib/db'
+import { smsAlertSettings } from '@/lib/db/schema'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Min side – BetTracker' }
@@ -52,11 +55,21 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
   if (row && ACTIVE_STATUSES.includes(row.status) && !row.onboardingCompletedAt) {
     return <OnboardingStep initialResponses={row.onboardingResponses ?? {}} />
   }
-  const invoices = row ? await loadInvoices(row.stripeCustomerId) : []
+  const [invoices, smsRow] = await Promise.all([
+    row ? loadInvoices(row.stripeCustomerId) : Promise.resolve([]),
+    db.select().from(smsAlertSettings).where(eq(smsAlertSettings.userId, user.id)).then((r) => r[0]).catch(() => undefined),
+  ])
 
   return (
     <MinSide
       invoices={invoices}
+      smsSettings={{
+        enabled: smsRow?.enabled ?? false,
+        minProfit: smsRow ? Number(smsRow.minProfit) : 5,
+        dailyLimit: smsRow?.dailyLimit ?? 10,
+        quietStart: smsRow?.quietStart ?? 23,
+        quietEnd: smsRow?.quietEnd ?? 7,
+      }}
       user={{ name: user.name, email: user.email, phone: user.phone ?? '', createdAt: new Date(user.createdAt).toISOString() }}
       testAccess={isPreviewTestEnvironment()}
       subscription={

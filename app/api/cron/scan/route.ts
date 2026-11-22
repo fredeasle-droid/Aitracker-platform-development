@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { isAuthorizedScan } from '@/lib/cron-auth'
 import { refreshOpportunities } from '@/lib/scanner-sync'
 import { refreshTeamLogos } from '@/lib/team-logos'
+import { dispatchSmsAlerts } from '@/lib/sms-alerts'
 
 export const dynamic = 'force-dynamic'
 export const maxDuration = 60
@@ -14,7 +15,11 @@ export async function GET(request: Request) {
       console.error('[logos] cron logo refresh failed', error)
       return null
     })
-    return NextResponse.json({ ...result, logos }, { status: result.ok ? 200 : 502 })
+    const sms = await dispatchSmsAlerts().catch((error) => {
+      console.error('[sms] alert dispatch failed', error)
+      return null
+    })
+    return NextResponse.json({ ...result, logos, sms }, { status: result.ok ? 200 : 502 })
   } catch (error) {
     console.error('[scanner] cron refresh failed', error)
     return NextResponse.json({ ok: false, error: 'Could not refresh odds' }, { status: 502 })
