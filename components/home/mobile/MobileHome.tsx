@@ -356,10 +356,12 @@ const carea = `${cline} L${cpts[cpts.length - 1]![0].toFixed(1)} ${CH} L0 ${CH} 
 
 function Challenge() {
   const [ref, inView] = useInView<HTMLDivElement>(0.2);
+  const [open, setOpen] = useState(false);
+  const shown = inView && open;
   const pct = (CHALLENGE.day / CHALLENGE.totalDays) * 100;
-  const total = useCount(CHALLENGE.totalReturn, inView);
-  const bets = useCount(CHALLENGE.surebets, inView);
-  const margin = useCount(CHALLENGE.avgMargin, inView);
+  const total = useCount(CHALLENGE.totalReturn, shown);
+  const bets = useCount(CHALLENGE.surebets, shown);
+  const margin = useCount(CHALLENGE.avgMargin, shown);
   return (
     <div ref={ref}>
       <Box className="challenge-panel p-0!">
@@ -410,10 +412,22 @@ function Challenge() {
               />
             </div>
           </div>
-          <button type="button" className="btn-glow mt-3 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold">
-            Følg rejsen <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          <button
+            type="button"
+            aria-expanded={open}
+            aria-controls="challenge-results"
+            onClick={() => setOpen((v) => !v)}
+            className="btn-glow mt-3 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold"
+          >
+            Følg rejsen{" "}
+            <ArrowRight className={`h-4 w-4 transition-transform duration-500 motion-reduce:transition-none ${open ? "rotate-90" : ""}`} aria-hidden="true" />
           </button>
         </div>
+        <div
+          id="challenge-results"
+          className={`grid transition-[grid-template-rows] duration-500 ease-out motion-reduce:transition-none ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
+        >
+          <div className="overflow-hidden" inert={!open}>
         <div className="challenge-strip p-4">
           <p className="text-[11px] font-semibold uppercase tracking-[2.2px] text-primary-glow">Tallene bag rejsen</p>
           <h3 className="mt-1 text-[20px] font-bold leading-6">Se resultaterne – sort på hvidt</h3>
@@ -430,7 +444,7 @@ function Challenge() {
                   <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
                 </linearGradient>
               </defs>
-              <path d={carea} fill="url(#m-strip-area)" className="delay-700 transition-opacity duration-1000" style={{ opacity: inView ? 1 : 0 }} />
+              <path d={carea} fill="url(#m-strip-area)" className="delay-700 transition-opacity duration-1000" style={{ opacity: shown ? 1 : 0 }} />
               <path
                 d={cline}
                 pathLength={1}
@@ -440,7 +454,7 @@ function Challenge() {
                 strokeLinejoin="round"
                 vectorEffect="non-scaling-stroke"
                 className="chart-draw"
-                style={{ strokeDasharray: 1, strokeDashoffset: inView ? 0 : 1 }}
+                style={{ strokeDasharray: 1, strokeDashoffset: shown ? 0 : 1 }}
               />
             </svg>
           </div>
@@ -459,6 +473,8 @@ function Challenge() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
           </div>
         </div>
       </Box>
