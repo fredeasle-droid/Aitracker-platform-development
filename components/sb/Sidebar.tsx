@@ -29,7 +29,7 @@ const nav = [
   { label: "Live-scanning", icon: Radio, href: "/surebets#live-scanning", live: true },
   { label: "Statistik", icon: PieChart, href: "/stats" },
   { label: "Bonus", icon: Gift, href: "/bonus" },
-  { label: "Mine bets", icon: Star, href: "/konto" },
+  { label: "Min konto", icon: Star, href: "/konto" },
 ];
 
 export function FootballIcon({ className }: { className?: string }) {
@@ -69,7 +69,7 @@ const calculatorNav = [
   { label: "Liveodds", icon: Radio, href: "/surebets" },
   { label: "Statistik", icon: BarChart3, href: "/stats" },
   { label: "Bonus", icon: Gift, href: "/bonus" },
-  { label: "Mine bets", icon: Star, href: "/konto" },
+  { label: "Min konto", icon: Star, href: "/konto" },
 ];
 
 const CALC_SPORTS = ["Fodbold", "Basketball", "Tennis", "Ishockey", "Esport"];

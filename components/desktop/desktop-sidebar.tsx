@@ -48,7 +48,7 @@ const DESK_LABELS: Record<string, string> = {
   home: 'Surebets',
   live: 'Live-scanning',
   stats: 'Statistik',
-  games: 'Mine bets',
+  games: 'Min konto',
 }
 
 const row =
