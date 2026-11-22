@@ -47,9 +47,11 @@ const row =
 export function SidebarBody({
   onNavigate,
   showBookmakers = true,
+  bookmakersDefaultOpen = true,
 }: {
   onNavigate?: () => void
   showBookmakers?: boolean
+  bookmakersDefaultOpen?: boolean
 }) {
   const pathname = usePathname()
   const params = useSearchParams()
@@ -63,7 +65,7 @@ export function SidebarBody({
     ...bookmakerList,
     ...selectedBookmakers.filter((id) => !bookmakerList.some((b) => b.id === id)).map((id) => ({ id, name: id })),
   ]
-  const [leaguesOpen, setLeaguesOpen] = useState(true)
+  const [leaguesOpen, setLeaguesOpen] = useState(bookmakersDefaultOpen)
   const { data: session } = authClient.useSession()
   const { t } = useLocale()
 

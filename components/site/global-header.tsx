@@ -88,7 +88,7 @@ function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?:
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:thin]">
               <Suspense fallback={null}>
-                <SidebarBody showBookmakers={false} onNavigate={() => setOpen(false)} />
+                <SidebarBody bookmakersDefaultOpen={false} onNavigate={() => setOpen(false)} />
               </Suspense>
             </div>
           </>
