@@ -1,4 +1,5 @@
 import 'server-only'
+import { scrapeBetHero } from './bethero-rows'
 import { scrapeBetMonitor } from './betmonitor'
 import { scrapeOddsator } from './oddsator'
 import { scrapeSureBetsToday } from './surebets-today'
@@ -13,6 +14,7 @@ const SOURCES = [
   { source: 'surebets-today', run: scrapeSureBetsToday },
   { source: 'oddsator', run: scrapeOddsator },
   { source: 'oddsjam', run: scrapeOddsJam },
+  { source: 'bethero', run: scrapeBetHero },
 ]
 
 export async function scrapeAll() {
