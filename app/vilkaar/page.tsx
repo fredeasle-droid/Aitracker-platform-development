@@ -13,6 +13,7 @@ export default function TermsPage() {
   return (
     <LegalPage
       icon={FileText}
+      plain
       eyebrow="Juridisk"
       title="Vilkår & Betingelser"
       intro="Her står det, hvad du kan forvente af os, og hvad vi forventer af dig, når du bruger BetTrackerAI."

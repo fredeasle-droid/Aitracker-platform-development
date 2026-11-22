@@ -13,6 +13,7 @@ export default function PrivacyPage() {
   return (
     <LegalPage
       icon={ShieldCheck}
+      plain
       eyebrow="Juridisk"
       title="Privatlivspolitik"
       intro="Vi behandler kun de oplysninger, vi har brug for. Her kan du læse hvilke, hvorfor og hvilke rettigheder du har."
