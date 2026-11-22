@@ -105,10 +105,10 @@ export type Review = { name: string; title: string; stars: number; text: string;
  *  `focus` is the crop point (object-position) that keeps that customer's face in frame when the
  *  wide photo is shown as a tall column on the computer or a full-width band on the phone. */
 export const REVIEWS: Review[] = [
-  { name: "Martin", title: "Gode resultater", stars: 5, photo: martinPhoto, avatar: martinAvatar, focus: "34% 26%", text: "Jeg er virkelig positivt overrasket over resultaterne med BetTracker AI. Det er fedt at se, hvordan scanneren finder muligheder, og hvordan det hele kan omsættes til konkrete resultater. Et virkelig spændende system!" },
-  { name: "Mads", title: "Spændende koncept", stars: 5, photo: madsPhoto, avatar: madsAvatar, focus: "22% 28%", text: "Virkelig spændende system. Det er fedt at se, hvilke muligheder scanneren finder. Nem at komme i gang med!" },
-  { name: "Frederik", title: "Positiv overraskelse", stars: 5, photo: frederikPhoto, avatar: frederikAvatar, focus: "40% 26%", text: "Jeg var lidt skeptisk i starten, men systemet er virkelig interessant. Godt overblik og en spændende måde at arbejde med surebets på." },
-  { name: "Jonas", title: "Nem at bruge", stars: 5, photo: jonasPhoto, avatar: jonasAvatar, focus: "50% 26%", text: "Jeg blev positivt overrasket over, hvor overskueligt systemet er. Det er spændende at følge med i." },
+  { name: "Martin", title: "Gode resultater", stars: 5, photo: martinPhoto, avatar: martinAvatar, focus: "47% 30%", text: "Jeg er virkelig positivt overrasket over resultaterne med BetTracker AI. Det er fedt at se, hvordan scanneren finder muligheder, og hvordan det hele kan omsættes til konkrete resultater. Et virkelig spændende system!" },
+  { name: "Mads", title: "Spændende koncept", stars: 5, photo: madsPhoto, avatar: madsAvatar, focus: "33% 30%", text: "Virkelig spændende system. Det er fedt at se, hvilke muligheder scanneren finder. Nem at komme i gang med!" },
+  { name: "Frederik", title: "Positiv overraskelse", stars: 5, photo: frederikPhoto, avatar: frederikAvatar, focus: "53% 28%", text: "Jeg var lidt skeptisk i starten, men systemet er virkelig interessant. Godt overblik og en spændende måde at arbejde med surebets på." },
+  { name: "Jonas", title: "Nem at bruge", stars: 5, photo: jonasPhoto, avatar: jonasAvatar, focus: "50% 36%", text: "Jeg blev positivt overrasket over, hvor overskueligt systemet er. Det er spændende at følge med i." },
 ];
 
 /** Seconds each review stays on screen before the next one fades in. */
