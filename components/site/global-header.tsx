@@ -2,8 +2,9 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { Suspense, useState } from 'react'
 import { LogIn, Menu, UserRound } from 'lucide-react'
+import { SidebarBody } from '@/components/desktop/desktop-sidebar'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Logo } from '@/components/home/icons'
 import { authClient } from '@/lib/auth-client'
@@ -63,30 +64,19 @@ function MobileMenu({ pathname }: { pathname: string }) {
       >
         <Menu className="size-5" aria-hidden="true" />
       </SheetTrigger>
-      <SheetContent side="left" className="bt-theme w-[270px] border-border bg-background-deep px-4 pb-6 pt-6">
+      <SheetContent
+        side="left"
+        className="bt-theme w-[300px] max-w-[85vw] gap-0 border-r border-[#102b49] bg-[#050d1b] p-0 sm:max-w-[300px]"
+      >
         <SheetTitle className="sr-only">Menu</SheetTitle>
-        <div className="px-1">
+        <div className="shrink-0 px-5 pb-3 pt-6">
           <Logo />
         </div>
-        <nav aria-label="Hovedmenu" className="mt-6 flex flex-col gap-1">
-          {NAV.map(({ href, label }) => {
-            const active = isActive(pathname, href)
-            return (
-              <Link
-                key={href}
-                href={href}
-                onClick={() => setOpen(false)}
-                aria-current={active ? 'page' : undefined}
-                className={cn(
-                  'rounded-xl px-4 py-3 text-[15px] font-medium transition-colors',
-                  active ? 'bg-primary text-primary-foreground' : 'text-muted-foreground hover:bg-card hover:text-foreground',
-                )}
-              >
-                {label}
-              </Link>
-            )
-          })}
-        </nav>
+        <div className="min-h-0 flex-1 overflow-y-auto px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:thin]">
+          <Suspense fallback={null}>
+            <SidebarBody onNavigate={() => setOpen(false)} />
+          </Suspense>
+        </div>
       </SheetContent>
     </Sheet>
   )
@@ -98,7 +88,7 @@ export function GlobalHeader({ className }: { className?: string }) {
   return (
     <header
       className={cn(
-        'bt-theme relative top-0 z-40 bg-transparent font-[family-name:var(--bt-roboto,var(--font-roboto))] pt-[env(safe-area-inset-top)] md:sticky md:bg-background-deep/70 md:backdrop-blur-xl',
+        'bt-theme relative top-0 z-40 bg-transparent font-[family-name:var(--bt-roboto,var(--font-roboto))] [@media(display-mode:standalone)]:pt-[env(safe-area-inset-top)] md:sticky md:bg-background-deep/70 md:backdrop-blur-xl',
         pathname === '/' && 'max-md:absolute max-md:inset-x-0',
         className,
       )}

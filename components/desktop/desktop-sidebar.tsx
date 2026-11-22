@@ -44,7 +44,7 @@ function SportIcon({ sport }: { sport: string }) {
 const row =
   'flex min-h-10 items-center gap-4 rounded-xl px-4 text-[15px] text-[#e6ecf7] transition-colors hover:bg-[#0d1f38]'
 
-export function DesktopSidebar() {
+export function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname()
   const params = useSearchParams()
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
@@ -62,9 +62,11 @@ export function DesktopSidebar() {
   const { t } = useLocale()
 
   return (
-    <aside
-      aria-label="Sidemenu"
-      className="sticky top-[60px] hidden h-[calc(100dvh-60px)] w-[255px] shrink-0 flex-col overflow-y-auto border-r border-[#102b49] bg-[#050d1b] px-3 py-4 [scrollbar-width:thin] lg:flex"
+    <div
+      className="flex min-h-full flex-1 flex-col"
+      onClick={(e) => {
+        if (onNavigate && (e.target as HTMLElement).closest('a')) onNavigate()
+      }}
     >
       <nav aria-label="Hovedmenu">
         <ul className="flex flex-col gap-1">
@@ -204,6 +206,17 @@ export function DesktopSidebar() {
           </Link>
         </div>
       )}
+    </div>
+  )
+}
+
+export function DesktopSidebar() {
+  return (
+    <aside
+      aria-label="Sidemenu"
+      className="sticky top-[60px] hidden h-[calc(100dvh-60px)] w-[255px] shrink-0 flex-col overflow-y-auto border-r border-[#102b49] bg-[#050d1b] px-3 py-4 [scrollbar-width:thin] lg:flex"
+    >
+      <SidebarBody />
     </aside>
   )
 }
