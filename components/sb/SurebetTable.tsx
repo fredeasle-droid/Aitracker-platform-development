@@ -8,7 +8,10 @@ import { useBookmakerFilter } from "./bookmaker-filter";
 import { useSurebets } from "./surebets-context";
 import { ValueGauge } from "./ValueGauge";
 import { Crest } from "./Crest";
+import { useLocale } from "@/components/locale-provider";
 import { cn } from "@/lib/utils";
+
+type Translate = ReturnType<typeof useLocale>["t"];
 
 const accent: Record<Surebet["accent"], string> = {
   success: "bg-success text-success",
@@ -31,10 +34,11 @@ const calcHref = (b: Surebet) => `/beregn?id=${b.id}`;
 
 /** Invisible link covering the whole card/row; interactive children sit above it with z-[2]. */
 function CardLink({ b }: { b: Surebet }) {
+  const { t } = useLocale();
   return (
     <Link
       href={calcHref(b)}
-      aria-label={`Beregn indsats: ${b.home.name} mod ${b.away.name}`}
+      aria-label={t("sbCalcAria", { home: b.home.name, away: b.away.name })}
       className="absolute inset-0 z-[1] rounded-[inherit] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary-glow"
     />
   );
@@ -71,6 +75,7 @@ function Match({ b }: { b: Surebet }) {
 
 /** The bet itself: market, then one line per bookmaker with pick and odds. */
 function BetDetails({ b, best }: { b: Surebet; best: boolean }) {
+  const { t } = useLocale();
   return (
     <div className="min-w-0">
       <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -79,7 +84,7 @@ function BetDetails({ b, best }: { b: Surebet; best: boolean }) {
         </span>
         {best && (
           <span className="best-pill inline-flex items-center gap-1 whitespace-nowrap rounded-md px-2 py-0.5 text-[11.5px] font-bold uppercase tracking-wider text-gold">
-            <Crown className="h-3.5 w-3.5" /> Bedst lige nu
+            <Crown className="h-3.5 w-3.5" /> {t("sbBestNow")}
           </span>
         )}
       </div>
@@ -145,18 +150,18 @@ function TeamSide({ team }: { team: Surebet["home"] }) {
 const GOAL_TOTALS = /^(?:o\/u|over\/under|total)\s*(\(h([12])\))?\s*(\d+(?:[.,]\d+)?)\s*$/i;
 
 /** Phone wording for a leg: team names for 1/2/X, and "Over 2,5 mål" for goal totals. */
-function legLabel(b: Surebet, pick: string): string {
+function legLabel(b: Surebet, pick: string, t: Translate): string {
   const value = pick.trim();
   if (value === "1") return b.home.name;
   if (value === "2") return b.away.name;
-  if (value.toLowerCase() === "x") return "Uafgjort";
+  if (value.toLowerCase() === "x") return t("sbDraw");
 
   const side = value.toLowerCase();
   if (side !== "over" && side !== "under") return value;
   const totals = GOAL_TOTALS.exec(b.market.trim());
   if (!totals) return value;
-  const half = totals[2] ? ` (${totals[2]}. halvleg)` : "";
-  return `${side === "over" ? "Over" : "Under"} ${totals[3].replace(".", ",")} mål${half}`;
+  const half = totals[2] ? ` (${t("sbHalf", { n: totals[2] })})` : "";
+  return `${side === "over" ? t("sbOver") : t("sbUnder")} ${totals[3].replace(".", ",")} ${t("sbGoals")}${half}`;
 }
 
 /** Phone card: teams flank a profit ring, market under it, then both bookmaker legs. */
@@ -176,6 +181,7 @@ function MobileCard({
   onStar: () => void;
 }) {
   const { bookmakers } = useSurebets();
+  const { t } = useLocale();
   const names = useMemo(() => new Map(bookmakers.map((bk) => [bk.id, bk.name])), [bookmakers]);
   return (
     <article
@@ -193,11 +199,11 @@ function MobileCard({
         <span className="flex shrink-0 items-center gap-1.5 pr-6">
           {best && (
             <span className="best-pill inline-flex items-center gap-1 rounded-md px-1.5 py-0.5 text-[10.5px] font-bold uppercase tracking-wider text-gold">
-              <Crown className="h-3 w-3" /> Bedst nu
+              <Crown className="h-3 w-3" /> {t("sbBestShort")}
             </span>
           )}
           <button
-            aria-label={starred ? "Fjern fra gemte" : "Gem surebet"}
+            aria-label={starred ? t("sbRemoveSaved") : t("sbSave")}
             aria-pressed={starred}
             onClick={onStar}
             className="absolute -right-2.5 top-1/2 z-[2] flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-lg transition active:scale-90"
@@ -227,7 +233,7 @@ function MobileCard({
               <span className="flex h-7 min-w-0 items-center overflow-hidden">
                 <BookmakerMark id={leg.bookmaker} size="lg" />
               </span>
-              <span className="line-clamp-2 text-[11px] font-semibold leading-[1.15] text-foreground/90">{legLabel(b, leg.pick)}</span>
+              <span className="line-clamp-2 text-[11px] font-semibold leading-[1.15] text-foreground/90">{legLabel(b, leg.pick, t)}</span>
             </div>
             <span className="shrink-0 text-[20px] font-extrabold leading-none tabular-nums text-primary-glow">{leg.odds.toFixed(2)}</span>
           </div>
@@ -236,7 +242,7 @@ function MobileCard({
 
       {b.alternatives.length > 0 && (
         <p className="relative mt-2 px-0.5 text-[11.5px] font-medium leading-relaxed text-muted-foreground">
-          Også:{" "}
+          {t("sbAlso")}{" "}
           {b.alternatives.map((alt, i) => (
             <span key={`${alt.leg}-${alt.bookmaker}`} className="whitespace-nowrap">
               {i > 0 && <span aria-hidden className="mx-1 text-border-glow">•</span>}
@@ -252,7 +258,7 @@ function MobileCard({
         aria-hidden
         className="btn-shine bg-gradient-primary relative mt-2.5 flex h-11 items-center justify-center gap-1.5 overflow-hidden rounded-lg text-[14.5px] font-semibold text-primary-foreground shadow-glow"
       >
-        Beregn indsats <ArrowRight className="h-4 w-4" />
+        {t("sbCalcStake")} <ArrowRight className="h-4 w-4" />
       </span>
 
       <CardLink b={b} />
@@ -261,9 +267,10 @@ function MobileCard({
 }
 
 function StarButton({ on, onClick }: { on: boolean; onClick: () => void }) {
+  const { t } = useLocale();
   return (
     <button
-      aria-label={on ? "Fjern fra gemte" : "Gem surebet"}
+      aria-label={on ? t("sbRemoveSaved") : t("sbSave")}
       aria-pressed={on}
       onClick={onClick}
       className="relative z-[2] rounded-md p-1 transition-transform hover:scale-110 hover:bg-surface-elevated active:scale-95"
@@ -274,6 +281,7 @@ function StarButton({ on, onClick }: { on: boolean; onClick: () => void }) {
 }
 
 function DetailsButton({ href, className, short }: { href: string; className?: string; short?: boolean }) {
+  const { t } = useLocale();
   return (
     <Link
       href={href}
@@ -283,7 +291,7 @@ function DetailsButton({ href, className, short }: { href: string; className?: s
         className,
       )}
     >
-      {short ? "Beregn" : "Beregn indsats"} <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
+      {short ? t("sbCalcShort") : t("sbCalcStake")} <ArrowRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5" />
     </Link>
   );
 }
@@ -291,30 +299,31 @@ function DetailsButton({ href, className, short }: { href: string; className?: s
 function ListHeader({ count }: { count: number }) {
   const { allOn, selected, toggle, selectAll } = useBookmakerFilter();
   const { inSport, bookmakers, sport } = useSurebets();
+  const { t } = useLocale();
   return (
     <div className="px-1 pb-3 md:px-4 md:pt-4">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2.5">
-          <h2 className="text-[19px] font-extrabold tracking-tight">{sport ? `Surebets – ${sport}` : "Dagens surebets"}</h2>
+          <h2 className="text-[19px] font-extrabold tracking-tight">{sport ? t("sbSureSport", { sport }) : t("sbTodaySure")}</h2>
           <span key={count} className="count-pop rounded-full bg-primary/25 px-2 py-0.5 text-xs font-bold tabular-nums text-primary-glow ring-1 ring-primary/40">
             {count}
             {!allOn && <span className="text-muted-foreground"> / {inSport.length}</span>}
           </span>
         </div>
         <div className="flex items-center gap-2 text-[12.5px] font-medium text-muted-foreground">
-          <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" /> Opdateret lige nu
+          <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" /> {t("sbUpdatedNow")}
         </div>
       </div>
       {!allOn && selected.length > 0 && (
         <div className="row-enter mt-3 flex flex-wrap items-center gap-1.5">
-          <span className="mr-1 text-[12px] font-semibold text-muted-foreground">Bookmakere:</span>
+          <span className="mr-1 text-[12px] font-semibold text-muted-foreground">{t("sbBookmakersColon")}</span>
           {bookmakers
             .filter((bk) => selected.includes(bk.id))
             .map((bk) => (
               <button
                 key={bk.id}
                 onClick={() => toggle(bk.id)}
-                aria-label={`Fjern ${bk.name}`}
+                aria-label={t("sbRemoveBk", { name: bk.name })}
                 className="bk-chip group/chip flex items-center gap-1.5 rounded-full py-0.5 pl-0.5 pr-2 text-[12px] font-semibold transition hover:brightness-125"
               >
                 <BookmakerBadge id={bk.id} className="h-5 w-5 text-[8px]" />
@@ -323,7 +332,7 @@ function ListHeader({ count }: { count: number }) {
               </button>
             ))}
           <button onClick={selectAll} className="ml-1 rounded-md px-1.5 py-0.5 text-[12px] font-semibold text-primary-glow hover:underline">
-            Nulstil
+            {t("sbReset")}
           </button>
         </div>
       )}
@@ -334,23 +343,20 @@ function ListHeader({ count }: { count: number }) {
 function EmptyState() {
   const { selectAll, selected } = useBookmakerFilter();
   const { surebets } = useSurebets();
+  const { t } = useLocale();
   const none = surebets.length === 0;
   return (
     <div className="row-enter flex flex-col items-center px-6 py-14 text-center">
       <span className="find-icon mb-4 flex h-14 w-14 items-center justify-center rounded-2xl">
         <SearchX className="h-7 w-7 text-success" />
       </span>
-      <div className="text-[17px] font-bold">{none ? "Ingen aktive surebets lige nu" : "Ingen surebets med dit valg"}</div>
+      <div className="text-[17px] font-bold">{none ? t("sbEmptyNone") : t("sbEmptyFiltered")}</div>
       <p className="mt-1.5 max-w-[340px] text-[13.5px] leading-snug text-muted-foreground">
-        {none
-          ? "Scanneren leder videre. Nye fund dukker op her, så snart de findes."
-          : selected.length === 0
-          ? "Du har fravalgt alle bookmakere. Vælg mindst to for at se surebets."
-          : "Et surebet kræver, at begge bookmakere er valgt. Tilføj flere bookmakere for at se flere forslag."}
+        {none ? t("sbEmptyNoneText") : selected.length === 0 ? t("sbEmptyNoBk") : t("sbEmptyFewBk")}
       </p>
       {!none && (
         <button onClick={selectAll} className="btn-shine bg-gradient-primary relative mt-5 overflow-hidden rounded-lg px-5 py-2 text-sm font-bold text-primary-foreground shadow-glow transition hover:brightness-110">
-          Vis alle bookmakere
+          {t("sbShowAllBk")}
         </button>
       )}
     </div>
@@ -362,6 +368,7 @@ export function SurebetTable() {
   const toggle = (id: number) => setStarred((s) => ({ ...s, [id]: !s[id] }));
   const { selected } = useBookmakerFilter();
   const { inSport } = useSurebets();
+  const { t } = useLocale();
   const allRows = useMemo(
     () => inSport.map((b) => ({ b, legs: b.legs, pct: surebetProfitPct(b.legs.map((l) => l.odds)) })),
     [inSport],
@@ -404,10 +411,10 @@ export function SurebetTable() {
         <div className="overflow-x-auto">
           <div className="min-w-[660px]">
             <div className={cn("table-head grid items-center gap-4 border-y border-border px-4 py-2.5 text-[12px] font-semibold uppercase tracking-wider text-muted-foreground @min-[1000px]:px-6", cols)}>
-              <div>Kamp</div>
-              <div>Væddemål &amp; bookmakere</div>
-              <div className="text-center">Profit</div>
-              <div className="hidden text-center @min-[1000px]:block">Handling</div>
+              <div>{t("sbColMatch")}</div>
+              <div>{t("sbColBets")}</div>
+              <div className="text-center">{t("sbColProfit")}</div>
+              <div className="hidden text-center @min-[1000px]:block">{t("sbColAction")}</div>
             </div>
             <div className="space-y-2 p-2">
               {rows.map(({ b, pct }, i) => (
@@ -424,7 +431,7 @@ export function SurebetTable() {
                   <Match b={b} />
                   <BetDetails b={b} best={b.id === bestId} />
                   <div className="flex flex-col items-center gap-2">
-                    <ValueGauge display={formatPct(pct)} label="profit" progress={gaugeProgress(pct)} size={104} />
+                    <ValueGauge display={formatPct(pct)} label={t("sbProfitLower")} progress={gaugeProgress(pct)} size={104} />
                     <div className="flex items-center gap-1 @min-[1000px]:hidden">
                       <DetailsButton href={calcHref(b)} short className="px-2.5 py-1.5 text-[12.5px]" />
                       <StarButton on={!!starred[b.id]} onClick={() => toggle(b.id)} />
