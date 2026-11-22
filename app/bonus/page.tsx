@@ -44,7 +44,7 @@ export default async function BonusPage() {
   const opportunities = await getOpportunities()
   const { t, tx } = await getServerT()
   return (
-    <main className="lg:min-h-dvh lg:bg-[#030914]">
+    <main className="lg:min-h-dvh">
       <div className="hidden w-full gap-4 px-4 lg:flex lg:items-start lg:pb-6 lg:pt-4">
         <DesktopBonus />
         <DesktopAside opportunities={opportunities} />

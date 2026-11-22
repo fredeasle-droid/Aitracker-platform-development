@@ -42,7 +42,7 @@ export default async function SourcesPage() {
   const oddsJamBridgeIsFresh = Boolean(oddsJamSnapshot?.updatedAt && Date.now() - oddsJamSnapshot.updatedAt.getTime() < 180_000)
 
   return (
-    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 bg-[#06111d] px-5 py-10 text-white">
+    <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-8 px-5 py-10 text-white">
       <header className="flex flex-col gap-2">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6f86a3]">Datakilder</p>
         <h1 className="text-3xl font-extrabold tracking-tight">Forbindelser</h1>

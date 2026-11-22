@@ -1,6 +1,6 @@
 export default function OddsApiTestPage() {
   return (
-    <main className="min-h-screen bg-slate-950 px-4 py-8 text-slate-100">
+    <main className="min-h-screen px-4 py-8 text-slate-100">
       <div className="mx-auto max-w-5xl">
         <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">Test feed</p>
         <h1 className="mt-2 text-3xl font-bold">Tom test-feed</h1>
