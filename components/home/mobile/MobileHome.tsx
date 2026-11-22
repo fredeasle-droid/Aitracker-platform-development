@@ -362,7 +362,7 @@ function Challenge() {
   const margin = useCount(CHALLENGE.avgMargin, inView);
   return (
     <div ref={ref}>
-      <Box className="challenge-panel p-0">
+      <Box className="challenge-panel p-0!">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={studio.url}
@@ -370,51 +370,51 @@ function Challenge() {
           loading="lazy"
           width={1600}
           height={900}
-          className="pointer-events-none aspect-[16/10] w-full object-cover object-[60%_25%] [mask-image:linear-gradient(180deg,black_65%,transparent)]"
+          className="pointer-events-none aspect-[16/9] w-full object-cover object-[60%_25%] [mask-image:linear-gradient(180deg,black_70%,transparent)]"
         />
-        <div className="relative -mt-10 px-5 pb-5">
+        <div className="relative -mt-8 px-4 pb-4">
           <Badge>
             <Mic className="h-3.5 w-3.5" strokeWidth={2.2} aria-hidden="true" />
             Ny serie · Følg med hver dag
           </Badge>
-          <h2 className="mt-3 text-[21px] font-semibold leading-[27px] tracking-[-0.2px] text-foreground/80">Vi tager jer med hele vejen.</h2>
-          <div className="mt-4 flex items-center gap-3">
-            <span className="btn-glow flex h-14 w-14 shrink-0 items-center justify-center rounded-[16px]">
-              <CalendarCheck className="h-7 w-7" strokeWidth={2.1} aria-hidden="true" />
+          <h2 className="mt-2.5 text-[18px] font-semibold leading-[24px] tracking-[-0.2px] text-foreground/80">Vi tager jer med hele vejen.</h2>
+          <div className="mt-3 flex items-center gap-2.5">
+            <span className="btn-glow flex h-11 w-11 shrink-0 items-center justify-center rounded-[13px]">
+              <CalendarCheck className="h-5 w-5" strokeWidth={2.1} aria-hidden="true" />
             </span>
-            <p className="text-[60px] font-black leading-[60px] tracking-[-2px] text-glow">365</p>
+            <p className="text-[46px] font-black leading-[46px] tracking-[-1.5px] text-glow">365</p>
             <div className="relative">
-              <p className="-skew-x-6 text-[20px] font-black italic leading-[22px] tracking-[0.5px]">
+              <p className="-skew-x-6 text-[16px] font-black italic leading-[18px] tracking-[0.5px]">
                 <span className="text-primary-glow">DAGES</span>
                 <br />
                 CHALLENGE
               </p>
-              <Swoosh className="absolute -bottom-3 left-0 h-[10px] w-[120px]" />
+              <Swoosh className="absolute -bottom-2.5 left-0 h-[8px] w-[100px]" />
             </div>
           </div>
-          <p className="mt-5 text-[14px] leading-[21px] text-foreground/85">
+          <p className="mt-4 text-[13px] leading-[19px] text-foreground/85">
             Følg vores <span className="font-semibold text-primary-glow">365 dages</span> rejse med surebetting, resultater og ærlig feedback.
           </p>
-          <div className="sms-card mt-4 rounded-[14px] p-3">
+          <div className="sms-card mt-3 rounded-[12px] p-2.5">
             <span className="flex items-center gap-2 text-[11px] font-semibold">
               <span className="h-2 w-2 animate-pulse rounded-full bg-success shadow-[0_0_8px_var(--success)]" />
               Rejsen lige nu
             </span>
-            <p className="mt-1.5 text-[18px] font-bold">
+            <p className="mt-1 text-[16px] font-bold">
               Dag {CHALLENGE.day} <span className="text-[12px] font-medium text-muted-foreground">af {CHALLENGE.totalDays}</span>
             </p>
-            <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-foreground/10">
+            <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-foreground/10">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-primary to-primary-glow shadow-[0_0_8px_var(--primary-glow)] transition-[width] duration-[1600ms] ease-out"
                 style={{ width: inView ? `${pct}%` : 0 }}
               />
             </div>
           </div>
-          <button type="button" className="btn-glow mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold">
+          <button type="button" className="btn-glow mt-3 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold">
             Følg rejsen <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
-        <div className="challenge-strip p-5">
+        <div className="challenge-strip p-4">
           <p className="text-[11px] font-semibold uppercase tracking-[2.2px] text-primary-glow">Tallene bag rejsen</p>
           <h3 className="mt-1 text-[20px] font-bold leading-6">Se resultaterne – sort på hvidt</h3>
           <p className="mt-1 text-[12px] text-foreground/70">Følg fremgangen i realtid, dag for dag.</p>
@@ -558,23 +558,24 @@ function Pricing() {
   const plan = plans.find((p) => p.key === selected) ?? plans[0];
   if (!plan) return null;
   return (
-    <Box className="pricing-panel p-0">
+    <Box className="pricing-panel p-0!">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={host.url}
         alt="BetTrackerAI-værten foran platformen"
         loading="lazy"
         width={1600}
         height={893}
-        className="pointer-events-none aspect-[16/10] w-full object-cover object-[50%_20%] [mask-image:linear-gradient(180deg,black_60%,transparent)]"
+        className="pointer-events-none aspect-[16/9] w-full object-cover object-[50%_20%] [mask-image:linear-gradient(180deg,black_70%,transparent)]"
       />
-      <div className="relative -mt-12 px-5 pb-5 text-center">
-        <h2 className="text-[24px] font-bold leading-[29px] tracking-[-0.3px]">Vi stoler så meget på vores system, at vi lader dig prøve det –</h2>
-        <p className="relative mt-1 inline-block -skew-x-6 text-[36px] font-black italic leading-[44px] text-primary-glow text-glow">
+      <div className="relative -mt-8 px-4 pb-4 text-center">
+        <h2 className="text-[19px] font-bold leading-[24px] tracking-[-0.3px]">Vi stoler så meget på vores system, at vi lader dig prøve det –</h2>
+        <p className="relative mt-0.5 inline-block -skew-x-6 text-[30px] font-black italic leading-[38px] text-primary-glow text-glow">
           helt gratis.
-          <Swoosh className="absolute -bottom-2 -left-2 h-[10px] w-[calc(100%+16px)]" />
+          <Swoosh className="absolute -bottom-1.5 -left-2 h-[8px] w-[calc(100%+16px)]" />
         </p>
-        <div className="mt-6 h-px bg-gradient-to-r from-transparent via-primary-glow/70 to-transparent" />
-        <div className="mt-5 flex items-center justify-between">
+        <div className="mt-4 h-px bg-gradient-to-r from-transparent via-primary-glow/70 to-transparent" />
+        <div className="mt-4 flex items-center justify-between">
           <span className="flex items-center gap-2">
             <Crown className="h-6 w-6 fill-gold text-gold" strokeWidth={1.6} />
             <h3 className="text-[18px] font-bold">Priser</h3>
@@ -585,23 +586,23 @@ function Pricing() {
             ))}
           </div>
         </div>
-        <p className="mt-5 text-left text-[12px] font-medium uppercase tracking-[1.6px] text-foreground/80">BetTrackerAI {plan.name}</p>
+        <p className="mt-4 text-left text-[11px] font-medium uppercase tracking-[1.6px] text-foreground/80">BetTrackerAI {plan.name}</p>
         <p className="flex items-end gap-2">
-          <span key={plan.price} className="row-in text-[76px] font-black leading-[76px] tracking-[-3px]">{plan.price}</span>
-          <span className="mb-2 text-[20px] font-bold">kr./md</span>
+          <span key={plan.price} className="row-in text-[56px] font-black leading-[58px] tracking-[-2px]">{plan.price}</span>
+          <span className="mb-1.5 text-[17px] font-bold">kr./md</span>
         </p>
-        <p className="mt-1 text-left text-[14px] text-muted-foreground">{plan.detail}</p>
-        <Link href="/konto" className="btn-glow mt-5 flex h-12 w-full items-center justify-center gap-2 rounded-full text-[15px] font-semibold">
+        <p className="text-left text-[13px] text-muted-foreground">{plan.detail}</p>
+        <Link href="/konto" className="btn-glow mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold">
           Start dine {PRICING.trialDays} gratis dage <ArrowRight className="h-4 w-4" />
         </Link>
         <button
           type="button"
           onClick={playExplainerVideo}
-          className="btn-ghost-glass mt-2.5 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-medium"
+          className="btn-ghost-glass mt-2 flex h-10 w-full items-center justify-center gap-2 rounded-full text-[13px] font-medium"
         >
           <Play className="h-3.5 w-3.5 fill-current" /> Se hvordan det virker
         </button>
-        <div className="mt-4 flex items-center justify-center gap-3">
+        <div className="mt-3 flex items-center justify-center gap-3">
           <div className="flex">
             {REVIEWS.slice(0, 4).map((r, k) => (
               <ReviewAvatar key={r.name} review={r} className={`h-7 w-7 text-[10px] ring-2 ring-background-deep ${k > 0 ? "-ml-2" : ""}`} />
