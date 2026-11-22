@@ -9,9 +9,6 @@ import {
   Gift,
   Star,
   Gamepad2,
-  Check,
-  Plus,
-  ChevronDown,
   ArrowRight,
   Volleyball,
   Disc,
@@ -21,7 +18,7 @@ import {
 } from "lucide-react";
 import { Logo } from "./Logo";
 import { useSurebets } from "./surebets-context";
-import { useBookmakerFilter } from "./bookmaker-filter";
+import { SidebarPromo } from "@/components/desktop/sidebar-promo";
 import { cn } from "@/lib/utils";
 
 const nav = [
@@ -60,8 +57,6 @@ const sportIcons: Record<string, React.ComponentType<{ className?: string }>> = 
   Ishockey: Disc,
   Esport: Gamepad2,
 };
-
-const COLLAPSED_BOOKMAKERS = 8;
 
 const calculatorNav = [
   { label: "Surebets", icon: Trophy, href: "/surebets" },
@@ -158,11 +153,7 @@ export function SidebarContent({ page = "surebets" }: { page?: "surebets" | "ber
 
 function SurebetsSidebarContent() {
   const [activeNav, setActiveNav] = useState("Surebets");
-  const [open, setOpen] = useState(true);
-  const [showAll, setShowAll] = useState(false);
-  const bk = useBookmakerFilter();
-  const { sports, sport: activeSport, setSport, bookmakers } = useSurebets();
-  const listed = showAll ? bookmakers : bookmakers.slice(0, COLLAPSED_BOOKMAKERS);
+  const { sport: activeSport, setSport } = useSurebets();
 
   return (
     <div className="flex min-h-full flex-col">
@@ -207,8 +198,7 @@ function SurebetsSidebarContent() {
 
       <div className="px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan">SPORT</div>
       <div className="mt-3 space-y-1 short:mt-2 short:space-y-0.5">
-        {sports.length === 0 && <p className="px-3 text-[12.5px] text-muted-foreground">Ingen sportsgrene lige nu.</p>}
-        {sports.map(({ label, count }) => {
+        {CALC_SPORTS.map((label) => {
           const Icon = sportIcons[label] ?? Trophy;
           const active = activeSport === label;
           return (
@@ -223,76 +213,12 @@ function SurebetsSidebarContent() {
             >
               <Icon className="h-5 w-5" />
               <span className="flex-1 text-left">{label}</span>
-              <span
-                className={cn(
-                  "min-w-7 rounded-md px-1.5 py-0.5 text-xs",
-                  active ? "bg-primary/50 font-semibold text-foreground" : "font-medium text-sidebar-foreground",
-                )}
-              >
-                {count}
-              </span>
             </button>
           );
         })}
       </div>
 
-      <div className="my-4 h-px bg-sidebar-border short:my-3" />
-
-      <button
-        onClick={() => setOpen((o) => !o)}
-        className="flex items-center justify-between px-2 text-[11px] font-semibold tracking-[0.12em] text-cyan"
-      >
-        BOOKMAKERE
-        <ChevronDown className={cn("h-4 w-4 text-muted-foreground transition-transform", !open && "-rotate-90")} />
-      </button>
-      {open && (
-        <ul className="mt-3 space-y-2 px-2 short:mt-2 short:space-y-1.5">
-          {listed.map(({ id, name }) => {
-            const on = bk.isOn(id);
-            return (
-              <li key={id}>
-                <button
-                  role="checkbox"
-                  aria-checked={on}
-                  onClick={() => bk.toggle(id)}
-                  className={cn("flex w-full items-center gap-3 text-[13px] transition-colors hover:text-foreground", on ? "text-sidebar-foreground" : "text-muted-foreground/70")}
-                >
-                  <span
-                    className={cn(
-                      "flex h-4 w-4 items-center justify-center rounded-full transition-all",
-                      on ? "bg-success shadow-[0_0_8px_var(--success)]" : "border border-muted-foreground/50",
-                    )}
-                  >
-                    <Check className={cn("h-3 w-3 text-success-foreground transition-transform", on ? "scale-100" : "scale-0")} strokeWidth={3} />
-                  </span>
-                  <span className={cn(!on && "line-through decoration-muted-foreground/50")}>{name}</span>
-                </button>
-              </li>
-            );
-          })}
-          {bookmakers.length > COLLAPSED_BOOKMAKERS && (
-            <li>
-              <button onClick={() => setShowAll((v) => !v)} className="flex items-center gap-3 text-[13px] text-sidebar-foreground hover:text-foreground">
-                <Plus className="h-4 w-4 text-muted-foreground" />
-                {showAll ? "Vis færre" : `Vis alle (${bookmakers.length})`}
-              </button>
-            </li>
-          )}
-        </ul>
-      )}
-
-      <div className="sb-panel panel-glow mt-6 shrink-0 p-4 short:mt-4 short:p-3 lg:mt-auto">
-        <div className="flex items-start gap-3">
-          <Gift className="icon-glow h-9 w-9 shrink-0 fill-primary/40 text-cyan" strokeWidth={1.8} />
-          <div>
-            <div className="text-sm font-bold leading-tight">Få endnu bedre odds!</div>
-            <p className="mt-1 text-[11px] leading-snug text-muted-foreground">Opret gratis konto og få flere muligheder.</p>
-          </div>
-        </div>
-        <button className="bg-gradient-primary mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg py-2 text-xs font-semibold text-primary-foreground shadow-glow">
-          Kom i gang <ArrowRight className="h-3.5 w-3.5" />
-        </button>
-      </div>
+      <SidebarPromo />
     </div>
   );
 }
