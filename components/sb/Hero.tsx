@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Zap, Trophy, Layers, Play } from "lucide-react";
-import { formatAgo, formatPct, surebetProfitPct, teamShort } from "./data";
+import { formatAgo, formatPct } from "./data";
 import { useSurebets } from "./surebets-context";
 
 /** Age of the newest find, counting up from the server value; null when nothing has been found. */
@@ -17,26 +17,6 @@ function useLastScan(initial: number | null) {
   return sec;
 }
 
-function NewFindToast() {
-  const { surebets } = useSurebets();
-  const newest = surebets[0];
-  if (!newest) return null;
-  const newestPct = surebetProfitPct(newest.legs.map((l) => l.odds));
-  return (
-    <div className="toast-glass sb-toast-in absolute right-6 top-4 hidden items-center gap-3 rounded-2xl py-2.5 pl-2.5 pr-4 lg:flex">
-      <span className="find-icon flex h-10 w-10 items-center justify-center rounded-xl">
-        <Zap className="h-5 w-5 fill-success text-success" />
-      </span>
-      <div className="leading-tight">
-        <div className="text-[11px] font-bold uppercase tracking-[0.16em] text-success">Nyt surebet fundet</div>
-        <div className="mt-0.5 text-[14px] font-bold">
-          {teamShort(newest.home)} – {teamShort(newest.away)} <span className="text-success">+{formatPct(newestPct)}</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function Hero() {
   const { surebets, top, lastScanSec } = useSurebets();
   const sec = useLastScan(lastScanSec);
@@ -47,7 +27,6 @@ export function Hero() {
   ];
   return (
     <section className="relative">
-      <NewFindToast />
       <div className="relative flex min-h-[290px] flex-col justify-center px-2 py-6 sm:px-6 short:lg:min-h-[262px] short:lg:py-4">
         <span className="glass-pill hero-rise mb-5 hidden w-fit items-center sm:inline-flex gap-2.5 whitespace-nowrap rounded-full py-1.5 pl-3 pr-3.5 text-[12.5px] font-semibold">
           <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" />
