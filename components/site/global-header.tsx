@@ -40,16 +40,22 @@ function AuthActions() {
   }
 
   return (
-    <Link
-      href="/login"
-      className={cn(
-        'flex h-10 items-center gap-1.5 whitespace-nowrap rounded-full border border-primary-glow/40 bg-background-deep/70 px-3.5 text-[13px] font-semibold text-primary-glow transition-colors hover:border-primary-glow hover:text-foreground md:h-9 md:px-4',
-        isPending && 'opacity-0',
-      )}
-    >
-      <LogIn className="size-4" aria-hidden="true" />
-      Log ind
-    </Link>
+    <div className={cn('flex items-center gap-2', isPending && 'opacity-0')}>
+      <Link
+        href="/login"
+        className="flex h-10 items-center gap-1.5 whitespace-nowrap rounded-full border border-primary-glow/40 bg-background-deep/70 px-3.5 text-[13px] font-semibold text-primary-glow transition-colors hover:border-primary-glow hover:text-foreground md:h-9 md:px-4"
+      >
+        <LogIn className="size-4" aria-hidden="true" />
+        Log ind
+      </Link>
+      <Link
+        href="/konto"
+        className="btn-glow hidden h-9 items-center whitespace-nowrap rounded-full px-4 text-[13px] font-semibold md:flex"
+      >
+        <span className="hidden lg:inline">Opret gratis konto</span>
+        <span className="lg:hidden">Opret konto</span>
+      </Link>
+    </div>
   )
 }
 
