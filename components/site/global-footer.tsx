@@ -16,8 +16,8 @@ const LINKS = [
 ];
 
 const SUPPORT = [
-  { href: "/#faq", label: "FAQ" },
-  { href: "/#faq", label: "Kontakt os" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/kontakt", label: "Kontakt os" },
   { href: "/vilkaar", label: "Vilkår & Betingelser" },
   { href: "/privatlivspolitik", label: "Privatlivspolitik" },
 ];
