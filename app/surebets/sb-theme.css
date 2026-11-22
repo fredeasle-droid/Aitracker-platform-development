@@ -135,7 +135,9 @@
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background-image: var(--gradient-page);
+    background-image:
+      linear-gradient(180deg, oklch(0.13 0.04 260) 0, oklch(0.13 0.04 260 / 0%) 96px),
+      var(--gradient-page);
   }
 }
 /* The footer uses the homepage's deep tone, so its top fades out of the page glow instead of ending on a hard edge */

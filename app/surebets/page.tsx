@@ -8,6 +8,7 @@ import { LiveTicker } from '@/components/sb/LiveTicker'
 import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
 import { SurebetsProvider } from '@/components/sb/surebets-context'
 import { GlobalFooter } from '@/components/site/global-footer'
+import { GlobalHeader } from '@/components/site/global-header'
 import { getSbData } from '@/lib/sb-data'
 
 export const dynamic = 'force-dynamic'
@@ -23,9 +24,10 @@ export default async function SurebetsPage() {
   return (
     <SurebetsProvider data={data}>
     <BookmakerFilterProvider>
+      <GlobalHeader className="max-lg:absolute max-lg:inset-x-0 lg:hidden" />
       <div className="flex min-h-screen">
         <Sidebar />
-        <main className="relative min-w-0 flex-1 px-4 pb-8 sm:px-6">
+        <main className="relative min-w-0 flex-1 px-4 pb-8 max-lg:pt-16 sm:px-6">
           {/* Full-bleed hero backdrop: fills the whole top, fades into the page */}
           <div className="hero-ambient pointer-events-none absolute inset-x-0 top-0 h-[420px]" aria-hidden="true" />
           {/* On wide screens the picture stops under the right panel so the player stays in view */}

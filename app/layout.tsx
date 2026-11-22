@@ -8,7 +8,6 @@ import { ChromeGate } from '@/components/site/chrome-gate'
 import { GlobalFooter } from '@/components/site/global-footer'
 import { GlobalHeader } from '@/components/site/global-header'
 import { PageShell } from '@/components/site/page-shell'
-import { SupportChat } from '@/components/support/support-chat'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
 import './globals.css'
 
@@ -69,7 +68,6 @@ export default async function RootLayout({
         <ChromeGate>
           <GlobalFooter />
         </ChromeGate>
-        <SupportChat />
         {process.env.NODE_ENV === 'production' && <Analytics />}
         </LocaleProvider>
       </body>

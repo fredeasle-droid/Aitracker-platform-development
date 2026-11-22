@@ -1,15 +1,5 @@
 "use client";
-import type { CSSProperties } from "react";
-import Link from "next/link";
-import { Search, Bell, ChevronDown, Command, Menu, LogIn } from "lucide-react";
-import { authClient } from "@/lib/auth-client";
-import { cn } from "@/lib/utils";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { SidebarContent } from "./Sidebar";
-import { Logo } from "./Logo";
-
-const HOME_PRIMARY = "oklch(0.55 0.245 262)";
-const HOME_PRIMARY_GLOW = "oklch(0.74 0.16 236)";
+import { Search, Bell, ChevronDown, Command } from "lucide-react";
 
 function DanishFlag() {
   return (
@@ -21,66 +11,10 @@ function DanishFlag() {
   );
 }
 
-function MobileAccount() {
-  const { data: session, isPending } = authClient.useSession();
-
-  if (session?.user) {
-    return (
-      <div className="flex shrink-0 items-center gap-2">
-        <button className="glass-pill relative flex h-11 w-11 items-center justify-center rounded-full transition hover:brightness-125" aria-label="Notifikationer">
-          <Bell className="h-5 w-5 text-foreground/85" />
-          <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] font-bold text-destructive-foreground">
-            3
-          </span>
-        </button>
-        <Link href="/konto" aria-label="Min konto" className="bg-gradient-primary flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold text-primary-foreground shadow-glow">
-          FM
-        </Link>
-      </div>
-    );
-  }
-
+export function TopBar(_props: { page?: "surebets" | "beregn" }) {
   return (
-    <div className={cn("flex shrink-0 items-center", isPending && "opacity-0")}>
-      <Link
-        href="/login"
-        style={{
-          borderColor: HOME_PRIMARY,
-          color: HOME_PRIMARY_GLOW,
-          fontFamily: "var(--bt-roboto), ui-sans-serif, system-ui, sans-serif",
-          "--primary": HOME_PRIMARY,
-          "--primary-glow": HOME_PRIMARY_GLOW,
-        } as CSSProperties}
-        className="btn-outline-glow flex h-9 items-center gap-1.5 whitespace-nowrap rounded-full bg-[#050b17]/80 px-3 text-[12px] font-semibold backdrop-blur sm:gap-2 sm:px-3.5 sm:text-[13px]"
-      >
-        <LogIn className="size-3.5 sm:size-4" aria-hidden="true" /> Log ind
-      </Link>
-    </div>
-  );
-}
-
-export function TopBar({ page = "surebets" }: { page?: "surebets" | "beregn" }) {
-  return (
-    <header className="flex flex-col gap-3 pb-3.5 pt-3">
-      <div className="flex items-center gap-2 min-[400px]:gap-3 lg:hidden">
-        <Sheet>
-          <SheetTrigger
-            aria-label="Åbn menu"
-            className="glass-pill flex h-10 w-10 shrink-0 min-[400px]:h-11 min-[400px]:w-11 items-center justify-center rounded-full transition hover:brightness-125"
-          >
-            <Menu className="h-5 w-5" />
-          </SheetTrigger>
-          <SheetContent side="left" className="w-[270px] overflow-y-auto border-sidebar-border bg-sidebar px-4 pb-4 pt-6">
-            <SheetTitle className="sr-only">Menu</SheetTitle>
-            <SidebarContent page={page} />
-          </SheetContent>
-        </Sheet>
-        <div className="flex min-w-0 flex-1 justify-center">
-          <Logo tagline={false} compact />
-        </div>
-        <MobileAccount />
-      </div>
-      <div className="hidden items-center gap-4 lg:flex">
+    <header className="hidden flex-col gap-3 pb-3.5 pt-3 lg:flex">
+      <div className="flex items-center gap-4">
       <div className="mx-auto flex w-full min-w-0 max-w-[570px] items-center gap-3 rounded-full border border-border-glow bg-surface-deep/70 px-5 py-3 shadow-glow">
         <Search className="h-5 w-5 text-muted-foreground" />
         <input

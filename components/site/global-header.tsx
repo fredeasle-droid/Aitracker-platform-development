@@ -2,7 +2,10 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { UserRound } from 'lucide-react'
+import { Suspense, useState, type ReactNode } from 'react'
+import { LogIn, Menu, UserRound } from 'lucide-react'
+import { SidebarBody } from '@/components/desktop/desktop-sidebar'
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Logo } from '@/components/home/icons'
 import { authClient } from '@/lib/auth-client'
 import { cn } from '@/lib/utils'
@@ -28,25 +31,26 @@ function AuthActions() {
       <Link
         href="/konto"
         aria-label="Min konto"
-        className="btn-glow flex h-9 items-center justify-center gap-2 rounded-full text-[13px] font-semibold max-sm:w-9 sm:px-4"
+        className="btn-glow flex h-10 items-center justify-center gap-2 rounded-full text-[13px] font-semibold max-md:w-10 md:h-9 md:px-4"
       >
         <UserRound className="size-4" aria-hidden="true" />
-        <span className="hidden sm:inline">Min konto</span>
+        <span className="hidden md:inline">Min konto</span>
       </Link>
     )
   }
 
   return (
-    <div className={cn('flex items-center gap-1 sm:gap-2', isPending && 'opacity-0')}>
+    <div className={cn('flex items-center gap-2', isPending && 'opacity-0')}>
       <Link
         href="/login"
-        className="flex h-9 items-center whitespace-nowrap rounded-full px-3 text-[13px] font-semibold text-foreground/80 transition-colors hover:text-foreground sm:px-4"
+        className="flex h-10 items-center gap-1.5 whitespace-nowrap rounded-full border border-primary-glow/40 bg-background-deep/70 px-3.5 text-[13px] font-semibold text-primary-glow transition-colors hover:border-primary-glow hover:text-foreground md:h-9 md:px-4"
       >
+        <LogIn className="size-4" aria-hidden="true" />
         Log ind
       </Link>
       <Link
         href="/konto"
-        className="btn-glow flex h-9 items-center whitespace-nowrap rounded-full px-4 text-[13px] font-semibold"
+        className="btn-glow hidden h-9 items-center whitespace-nowrap rounded-full px-4 text-[13px] font-semibold md:flex"
       >
         <span className="hidden lg:inline">Opret gratis konto</span>
         <span className="lg:hidden">Opret konto</span>
@@ -55,21 +59,79 @@ function AuthActions() {
   )
 }
 
-export function GlobalHeader() {
+function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?: string }) {
+  const [open, setOpen] = useState(false)
+
+  return (
+    <Sheet open={open} onOpenChange={setOpen}>
+      <SheetTrigger
+        aria-label="Åbn menu"
+        className="flex size-10 items-center justify-center rounded-full border border-border bg-background-deep/70 text-foreground transition-colors hover:bg-card md:hidden"
+      >
+        <Menu className="size-5" aria-hidden="true" />
+      </SheetTrigger>
+      <SheetContent
+        side="left"
+        className={cn(
+          'flex h-dvh w-[300px] max-w-[85vw] flex-col gap-0 border-r p-0 sm:max-w-[300px]',
+          menu ? `sb-root !min-h-0 border-sidebar-border bg-sidebar ${menuClassName ?? ''}` : 'bt-theme border-[#102b49] bg-[#050d1b]',
+        )}
+      >
+        <SheetTitle className="sr-only">Menu</SheetTitle>
+        {menu ? (
+          <div
+            className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 [-webkit-overflow-scrolling:touch]"
+            onClick={(e) => {
+              if ((e.target as HTMLElement).closest('a')) setOpen(false)
+            }}
+          >
+            {menu}
+          </div>
+        ) : (
+          <>
+            <div className="shrink-0 px-5 pb-3 pt-6">
+              <Logo />
+            </div>
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 pb-[calc(1rem+env(safe-area-inset-bottom))] [scrollbar-width:thin]">
+              <Suspense fallback={null}>
+                <SidebarBody bookmakersDefaultOpen={false} onNavigate={() => setOpen(false)} />
+              </Suspense>
+            </div>
+          </>
+        )}
+      </SheetContent>
+    </Sheet>
+  )
+}
+
+export function GlobalHeader({
+  className,
+  menu,
+  menuClassName,
+}: {
+  className?: string
+  menu?: ReactNode
+  menuClassName?: string
+}) {
   const pathname = usePathname()
-  const isHome = pathname === '/'
 
   return (
     <header
       className={cn(
-        'bt-theme top-0 z-40 pt-[env(safe-area-inset-top)]',
-        isHome
-          ? 'relative bg-transparent md:sticky md:border-b md:border-border md:bg-background-deep/85 md:backdrop-blur-xl'
-          : 'sticky border-b border-border bg-background-deep/85 backdrop-blur-xl',
+        'bt-theme relative top-0 z-40 bg-transparent font-[family-name:var(--bt-roboto,var(--font-roboto))] [@media(display-mode:standalone)]:pt-[env(safe-area-inset-top)] md:sticky md:bg-background-deep/70 md:backdrop-blur-xl',
+        pathname === '/' && 'max-md:absolute max-md:inset-x-0',
+        className,
       )}
     >
-      <div className="mx-auto flex h-14 max-w-[1600px] items-center justify-between gap-3 px-4 md:grid md:h-16 md:grid-cols-[1fr_auto_1fr] md:px-6 lg:px-8">
-        <Link href="/" aria-label="BetTrackerAI forside" className="shrink-0 justify-self-start text-foreground">
+      <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 md:px-6 lg:px-8">
+        <div className="flex items-center justify-self-start">
+          <MobileMenu menu={menu} menuClassName={menuClassName} />
+          <Link href="/" aria-label="BetTrackerAI forside" className="hidden text-foreground md:block">
+            <Logo />
+          </Link>
+        </div>
+
+        <Link href="/" aria-label="BetTrackerAI forside" className="text-foreground md:hidden">
           <Logo />
         </Link>
 

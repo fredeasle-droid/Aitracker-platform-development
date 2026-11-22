@@ -2,7 +2,7 @@
 
 import { and, eq } from 'drizzle-orm'
 import { revalidatePath } from 'next/cache'
-import { db } from '@/lib/db'
+import { db, pool } from '@/lib/db'
 import { bets, favorites, opportunities } from '@/lib/db/schema'
 import { getUserId } from '@/lib/user'
 import { getBetForUser, getTopOpportunities } from '@/lib/data'
@@ -39,6 +39,39 @@ const MAX_STAKE = 1_000_000
 
 function validStake(n: number) {
   return Number.isFinite(n) && n > 0 && n <= MAX_STAKE
+}
+
+const REGNSKAB_NAMES = ['bet365', 'Unibet', 'betfair', 'Danske Spil']
+
+function regnskabBookmaker(name: string) {
+  return REGNSKAB_NAMES.find((known) => known.toLowerCase() === name.trim().toLowerCase()) ?? name.trim()
+}
+
+// The stats page (surebet-regnskab) reads regnskab_surebets, so every saved bet is mirrored there.
+async function mirrorToRegnskab(
+  userId: string,
+  bet: { event: string; bookmakers: [string, string]; odds: [number, number]; stake: number; profit: number },
+) {
+  try {
+    await pool.query(
+      `INSERT INTO regnskab_surebets (id, user_id, date, event, bookmaker_a, bookmaker_b, odds_a, odds_b, stake, expected, status)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,'Åben') ON CONFLICT (id) DO NOTHING`,
+      [
+        `bet-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+        userId,
+        new Date().toISOString().slice(0, 10),
+        bet.event.slice(0, 200),
+        regnskabBookmaker(bet.bookmakers[0]),
+        regnskabBookmaker(bet.bookmakers[1]),
+        bet.odds[0],
+        bet.odds[1],
+        bet.stake,
+        bet.stake + bet.profit,
+      ],
+    )
+  } catch (error) {
+    console.error('[actions] unable to mirror bet to regnskab', error)
+  }
 }
 
 export async function placeBet(input: { opportunityId: number; stakeA: number; stakeB: number }) {
@@ -93,12 +126,26 @@ export async function placeBet(input: { opportunityId: number; stakeA: number; s
         dateLabel: new Date(demo.kickoffTs).toLocaleDateString('da-DK'),
         placedTs: Date.now(),
       })
+      await mirrorToRegnskab(userId, {
+        event: `${demo.homeTeam} vs ${demo.awayTeam}`,
+        bookmakers: [demo.a.bookmaker, demo.b.bookmaker],
+        odds: [aOdds, bOdds],
+        stake: stakeA + stakeB,
+        profit,
+      })
       revalidatePath('/stats')
       return { ok: true as const }
     }
     console.error('[actions] unable to save open bet', error)
     return { ok: false as const, error: 'Væddemålet kunne ikke gemmes lige nu' }
   }
+  await mirrorToRegnskab(userId, {
+    event: `${opp?.homeTeam ?? demo!.homeTeam} vs ${opp?.awayTeam ?? demo!.awayTeam}`,
+    bookmakers: opp ? [opp.aBookmaker, opp.bBookmaker] : [demo!.a.bookmaker, demo!.b.bookmaker],
+    odds: [aOdds, bOdds],
+    stake: stakeA + stakeB,
+    profit,
+  })
   revalidatePath('/stats')
   return { ok: true as const }
 }
