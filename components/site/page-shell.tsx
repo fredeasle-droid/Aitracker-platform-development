@@ -10,6 +10,8 @@ export function PageShell({ sidebar, children }: { sidebar: ReactNode; children:
 
   if (pathname === '/' || isStandalonePath(pathname)) return <>{children}</>
 
+  const scaled = pathname === '/konto'
+
   return (
     <div className="lg:flex">
       {sidebar}
@@ -17,7 +19,7 @@ export function PageShell({ sidebar, children }: { sidebar: ReactNode; children:
         <div className="bt-theme hidden justify-end px-8 pt-4 lg:flex">
           <AuthActions />
         </div>
-        {children}
+        {scaled ? <div className="desk-zoom">{children}</div> : children}
       </div>
     </div>
   )

@@ -1,5 +1,6 @@
 "use client";
 import { Search, Bell, ChevronDown, Command } from "lucide-react";
+import { AuthActions } from "@/components/site/global-header";
 
 function DanishFlag() {
   return (
@@ -38,8 +39,8 @@ export function TopBar(_props: { page?: "surebets" | "beregn" }) {
             3
           </span>
         </button>
-        <div className="bg-gradient-primary flex h-11 w-11 items-center justify-center rounded-full text-sm font-bold text-primary-foreground shadow-glow">
-          FM
+        <div className="bt-theme">
+          <AuthActions />
         </div>
       </div>
       </div>
