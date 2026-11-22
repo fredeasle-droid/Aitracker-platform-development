@@ -44,7 +44,13 @@ function SportIcon({ sport }: { sport: string }) {
 const row =
   'flex min-h-10 items-center gap-4 rounded-xl px-4 text-[15px] text-[#e6ecf7] transition-colors hover:bg-[#0d1f38]'
 
-export function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
+export function SidebarBody({
+  onNavigate,
+  showBookmakers = true,
+}: {
+  onNavigate?: () => void
+  showBookmakers?: boolean
+}) {
   const pathname = usePathname()
   const params = useSearchParams()
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
@@ -114,6 +120,8 @@ export function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
         })}
       </ul>
 
+      {showBookmakers && (
+      <>
       <div className="my-4 border-t border-[#13294a]" />
 
       <button
@@ -169,6 +177,8 @@ export function SidebarBody({ onNavigate }: { onNavigate?: () => void }) {
             </li>
           )}
         </ul>
+      )}
+      </>
       )}
 
       {session?.user && (
