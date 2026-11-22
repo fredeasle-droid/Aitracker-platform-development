@@ -1,5 +1,6 @@
 import 'server-only'
-import { getOpportunities, type Opportunity } from '@/lib/data'
+import { getAllOpportunities, type Opportunity } from '@/lib/data'
+import { MAX_OPPORTUNITIES } from '@/lib/limits'
 import { displaySport } from '@/lib/scrapers/types'
 import type { BookmakerCategory, BookmakerInfo, LegAlternative, Surebet } from '@/components/sb/data'
 
@@ -154,10 +155,12 @@ function toSurebet({ primary: o, alternatives }: Group, now: number): Surebet {
 }
 
 export async function getSbData(): Promise<SbData> {
-  const all = (await getOpportunities()).filter(hasRealBookmakers)
+  const all = (await getAllOpportunities()).filter(hasRealBookmakers)
   const now = Date.now()
   const fresh = [...all].sort((a, b) => b.createdTs - a.createdTs)
-  const groups = groupOpportunities(all).sort((a, b) => b.primary.createdTs - a.primary.createdTs)
+  const groups = groupOpportunities(all)
+    .sort((a, b) => b.primary.margin - a.primary.margin)
+    .slice(0, MAX_OPPORTUNITIES)
 
   const names = new Map<string, string>(LOCAL_BOOKMAKERS.map((b) => [b.id, b.name]))
   for (const o of all) {

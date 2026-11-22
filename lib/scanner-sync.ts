@@ -6,7 +6,7 @@ import { opportunities } from '@/lib/db/schema'
 import { scrapeAll } from '@/lib/scrapers'
 import { displayLeague, surebetIdentity } from '@/lib/scrapers/types'
 import { marginPercent } from '@/lib/odds'
-import { MAX_OPPORTUNITIES } from '@/lib/limits'
+import { MAX_STORED_OPPORTUNITIES } from '@/lib/limits'
 
 const opportunityKey = (row: typeof opportunities.$inferSelect) => surebetIdentity({
   homeTeam: row.homeTeam,
@@ -35,7 +35,7 @@ async function runRefresh() {
 
   const items = [...scraped]
     .sort((x, y) => marginPercent(y.legs[0].odds, y.legs[1].odds) - marginPercent(x.legs[0].odds, x.legs[1].odds))
-    .slice(0, MAX_OPPORTUNITIES)
+    .slice(0, MAX_STORED_OPPORTUNITIES)
 
   const stats = await db.transaction(async (tx) => {
     const existing = await tx.select().from(opportunities)

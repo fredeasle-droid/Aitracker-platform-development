@@ -9,7 +9,7 @@ import { formatKickoff, formatShortDate } from '@/lib/dates'
 import { demoOpportunities, isDemoMode } from '@/lib/demo-opportunities'
 import { getDemoBets } from '@/lib/demo-bets'
 import { getLogoMap, logoKey, scheduleLogoRefresh } from '@/lib/team-logos'
-import { MAX_OPPORTUNITIES } from '@/lib/limits'
+import { MAX_OPPORTUNITIES, MAX_STORED_OPPORTUNITIES } from '@/lib/limits'
 import { deriveCountry } from '@/lib/countries'
 import { displayLeague, isHockeySport } from '@/lib/scrapers/types'
 
@@ -84,7 +84,8 @@ async function getFavoriteIds(userId: string) {
   return new Set(favs.map((f) => f.id))
 }
 
-export const getOpportunities = cache(async () => {
+/** Every stored scanner row (one per bookmaker pair), best margin first. */
+export const getAllOpportunities = cache(async () => {
   const userId = await getOptionalUserId()
   if (isDemoMode()) {
     try {
@@ -132,12 +133,16 @@ export const getOpportunities = cache(async () => {
     return rows
       .map((r) => toOpportunity(r, favIds, now, logos))
       .sort((a, b) => b.margin - a.margin || a.id - b.id)
-      .slice(0, MAX_OPPORTUNITIES)
+      .slice(0, MAX_STORED_OPPORTUNITIES)
   } catch (error) {
     console.error('[data] opportunities unavailable', error)
     return []
   }
 })
+
+export async function getOpportunities() {
+  return (await getAllOpportunities()).slice(0, MAX_OPPORTUNITIES)
+}
 
 export async function getTopOpportunities() {
   const all = await getOpportunities()
