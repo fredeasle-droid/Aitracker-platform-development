@@ -8,14 +8,20 @@ export const maxDuration = 30
 
 const MAX_BODY_BYTES = 8_000_000
 
+// Paused: the VPS worker holds the Bet Hero session and blocks the cron scraper.
+// Flip to false once the worker mirrors the cron behaviour.
+const WORKER_DISABLED = true
+
 export async function GET(request: Request) {
   if (!isValidWorkerToken(request)) return new Response('Forkert nøgle', { status: 401 })
+  if (WORKER_DISABLED) return new Response('Worker er slukket', { status: 503 })
   const cookie = await resolveBetHeroCookie()
   return NextResponse.json({ cookie }, { headers: { 'Cache-Control': 'no-store' } })
 }
 
 export async function POST(request: Request) {
   if (!isValidWorkerToken(request)) return new Response('Forkert nøgle', { status: 401 })
+  if (WORKER_DISABLED) return new Response('Worker er slukket', { status: 503 })
   const text = await request.text()
   if (text.length > MAX_BODY_BYTES) return new Response('For stor', { status: 413 })
 
