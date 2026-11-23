@@ -42,11 +42,12 @@ function buildPayload(row: typeof opportunities.$inferSelect, profit: number): P
     bo: String(Number(row.bOdds)),
   })
   return {
-    title: `Ny surebet: ${pct}% profit`,
+    title: `Ny surebet: +${pct}% profit`,
     body: `${row.homeTeam} - ${row.awayTeam}\n${when}\n${row.aBookmaker} @${Number(row.aOdds).toFixed(2)} og ${row.bBookmaker} @${Number(row.bOdds).toFixed(2)}`,
     url: '/surebets',
     tag: alertKey(row).slice(0, 120),
     image: `/api/push/card?${card.toString()}`,
+    sticky: true,
   }
 }
 
