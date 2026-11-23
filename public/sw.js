@@ -10,8 +10,8 @@ self.addEventListener('push', (event) => {
   }
   const options = {
     body: data.body || '',
-    icon: '/apple-icon.png',
-    badge: '/icon-light-32x32.png',
+    icon: '/icons/bettracker-192.png',
+    badge: '/icons/notification-badge.png',
     tag: data.tag || undefined,
     renotify: Boolean(data.tag),
     timestamp: Date.now(),

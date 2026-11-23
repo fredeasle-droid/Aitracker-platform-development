@@ -28,7 +28,10 @@ export async function generateMetadata(): Promise<Metadata> {
     manifest: '/manifest.webmanifest',
     appleWebApp: { capable: true, title: 'BetTracker', statusBarStyle: 'black-translucent' },
     icons: {
-      icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+      icon: [
+        { url: '/icon.svg', type: 'image/svg+xml' },
+        { url: '/icons/favicon-64.png', sizes: '64x64', type: 'image/png' },
+      ],
       apple: '/apple-icon.png',
     },
   }
