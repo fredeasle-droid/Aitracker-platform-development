@@ -9,7 +9,8 @@ export const bookmakerCategories: { id: BookmakerCategory; name: string; hint: s
   { id: "crypto", name: "Crypto bookmakere", hint: "Ind- og udbetaling i krypto" },
 ];
 
-export type BookmakerInfo = { id: BookmakerId; name: string; category: BookmakerCategory };
+/** `defaultOn`: selected until the user changes it. Bookmakers outside our approved list start switched off. */
+export type BookmakerInfo = { id: BookmakerId; name: string; category: BookmakerCategory; defaultOn: boolean };
 
 /** One side of a surebet: what to bet, where, and at which odds. */
 export type Leg = { bookmaker: BookmakerId; pick: string; odds: number };

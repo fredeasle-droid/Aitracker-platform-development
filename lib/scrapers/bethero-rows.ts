@@ -36,12 +36,12 @@ const ALLOWED_BOOKS = new Set([
 
 const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
 
-function pickAllowedBook(books: BetHeroBook[] | undefined) {
-  const names = (books ?? [])
-    .map((book) => book.name)
-    .filter((name): name is string => Boolean(name))
-    .filter((name) => ALLOWED_BOOKS.has(normalizeBook(name)))
-  const chosen = names.find((name) => /\(DK\)$/i.test(name)) ?? names[0]
+// Prefer a local bookmaker for each side; otherwise keep any bookmaker so the user can opt in via the filter.
+function pickBook(books: BetHeroBook[] | undefined) {
+  const names = (books ?? []).map((book) => book.name).filter((name): name is string => Boolean(name))
+  const allowed = names.filter((name) => ALLOWED_BOOKS.has(normalizeBook(name)))
+  const pool = allowed.length > 0 ? allowed : names
+  const chosen = pool.find((name) => /\(DK\)$/i.test(name)) ?? pool[0]
   return chosen ? baseName(chosen) : null
 }
 
@@ -67,8 +67,8 @@ function parseRow(row: BetHeroRow, now: number): ScrapedSurebet | null {
   const oddsB = Number(row.adjusted_odds_2 ?? row.odds_2)
   if (!teams || !(profit > 0) || !(oddsA > 1) || !(oddsB > 1)) return null
 
-  const bookA = pickAllowedBook(row.books_1)
-  const bookB = pickAllowedBook(row.books_2)
+  const bookA = pickBook(row.books_1)
+  const bookB = pickBook(row.books_2)
   if (!bookA || !bookB || bookA === bookB) return null
 
   const line = row.bet_name_1?.match(/([+-]?\d+(?:\.\d+)?)\s*$/)?.[1]

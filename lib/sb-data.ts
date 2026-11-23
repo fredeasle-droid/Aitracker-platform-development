@@ -16,7 +16,7 @@ export type SbData = {
   trend: number[]
 }
 
-const EXCHANGES = new Set(['smarkets', 'matchbook', 'betdaq'])
+const EXCHANGES = new Set(['smarkets', 'matchbook', 'betdaq', 'betfairexchange', 'polymarket', 'kalshi', 'novig', 'prophetx', 'sporttrade'])
 const CRYPTO = new Set(['1xbet', 'cloudbet', 'bitcasino', 'sportsbet.io', 'thunderpick'])
 
 /** Bookmakers always offered in the filter and shown as local, whether or not the scanner has found a surebet at them. */
@@ -48,6 +48,13 @@ const LOCAL_BOOKMAKERS: { id: string; name: string }[] = [
 ]
 
 const LOCAL_IDS = new Set(LOCAL_BOOKMAKERS.map((b) => b.id))
+
+/** Bookmakers the scanners already accepted before every Bet Hero bookmaker was let in; these start selected. */
+const APPROVED_IDS = new Set([
+  ...LOCAL_IDS,
+  'danskespil', 'dbbet', 'rainbet', 'mystake', '20', '20bet', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio',
+  'bcgame', 'bcbet', 'ggbet', 'pinnacle', 'bet9ja', 'dafabet', 'betfairexchange',
+])
 
 /** The same bookmaker under another name in the scans. */
 const ALIASES: Record<string, string> = { oddset: 'danskespil', pokerstarssports: 'pokerstars' }
@@ -109,7 +116,7 @@ function categoryOf(key: string): BookmakerCategory {
   if (LOCAL_IDS.has(key)) return 'local'
   if (EXCHANGES.has(key)) return 'exchange'
   if (CRYPTO.has(key)) return 'crypto'
-  return 'local'
+  return 'crypto'
 }
 
 function leagueShort(league: string) {
@@ -158,9 +165,13 @@ export async function getSbData(): Promise<SbData> {
   const all = (await getAllOpportunities()).filter(hasRealBookmakers)
   const now = Date.now()
   const fresh = [...all].sort((a, b) => b.createdTs - a.createdTs)
-  const groups = groupOpportunities(all)
-    .sort((a, b) => b.primary.margin - a.primary.margin)
-    .slice(0, MAX_OPPORTUNITIES)
+  const sorted = groupOpportunities(all).sort((a, b) => b.primary.margin - a.primary.margin)
+  const isApproved = (g: Group) => [g.primary.a, g.primary.b].every((leg) => APPROVED_IDS.has(bookmakerKey(leg.bookmaker)))
+  // Cap approved and other bookmakers separately so opt-in bookmakers never push the default list below 50.
+  const groups = [
+    ...sorted.filter(isApproved).slice(0, MAX_OPPORTUNITIES),
+    ...sorted.filter((g) => !isApproved(g)).slice(0, MAX_OPPORTUNITIES),
+  ].sort((a, b) => b.primary.margin - a.primary.margin)
 
   const names = new Map<string, string>(LOCAL_BOOKMAKERS.map((b) => [b.id, b.name]))
   for (const o of all) {
@@ -170,7 +181,7 @@ export async function getSbData(): Promise<SbData> {
     }
   }
   const bookmakers = [...names.entries()]
-    .map(([id, name]) => ({ id, name, category: categoryOf(id) }))
+    .map(([id, name]) => ({ id, name, category: categoryOf(id), defaultOn: APPROVED_IDS.has(id) }))
     .sort((a, b) => a.name.localeCompare(b.name, 'da'))
 
   const sportCounts = new Map<string, number>()
