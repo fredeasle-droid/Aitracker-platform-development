@@ -17,6 +17,7 @@ type FeedRow = {
 }
 
 const ACCEPTED_VALIDATION = new Set(['validated', 'observed'])
+const MIN_PROFIT_PCT = 5
 type FeedResponse = { state?: string; feed?: { rows?: FeedRow[] } }
 
 function parseRow(row: FeedRow): ScrapedSurebet | null {
@@ -28,7 +29,7 @@ function parseRow(row: FeedRow): ScrapedSurebet | null {
   const teams = splitTeams(row.event?.name ?? '')
   const kickoff = row.event?.start_time ? new Date(row.event.start_time) : null
   const profit = Number(row.edge?.pct)
-  if (!teams || !kickoff || Number.isNaN(kickoff.getTime()) || !(profit > 0)) return null
+  if (!teams || !kickoff || Number.isNaN(kickoff.getTime()) || !(profit >= MIN_PROFIT_PCT)) return null
 
   const legs = (row.legs ?? [])
     .filter((leg) => leg.bookmaker && leg.selection && leg.source_current !== false)
