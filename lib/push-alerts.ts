@@ -82,13 +82,13 @@ export async function dispatchPushAlerts() {
   return { ok: true, sent }
 }
 
-/** Offers and news go to every device whose owner left "Tilbud og nyheder" on. */
-export async function broadcastPush(payload: PushPayload) {
+/** Offers and news go to every device whose owner left the matching switch on. */
+export async function broadcastPush(payload: PushPayload, category: 'offers' | 'news') {
   const subs = await db
     .select({ endpoint: pushSubscriptions.endpoint, p256dh: pushSubscriptions.p256dh, auth: pushSubscriptions.auth })
     .from(pushSubscriptions)
     .innerJoin(pushSettings, eq(pushSettings.userId, pushSubscriptions.userId))
-    .where(eq(pushSettings.offersEnabled, true))
+    .where(eq(category === 'offers' ? pushSettings.offersEnabled : pushSettings.newsEnabled, true))
   const delivered = await sendPushToSubscriptions(subs, payload)
   return { devices: subs.length, delivered }
 }

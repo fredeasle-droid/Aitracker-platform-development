@@ -13,6 +13,7 @@ import { sendPushToUser } from '@/lib/push'
 export type PushSettingsInput = {
   alertsEnabled: boolean
   offersEnabled: boolean
+  newsEnabled: boolean
   minProfit: number
   dailyLimit: number
   quietStart: number
@@ -75,6 +76,7 @@ export async function savePushSettings(input: PushSettingsInput): Promise<Result
   const values = {
     alertsEnabled: input.alertsEnabled === true,
     offersEnabled: input.offersEnabled === true,
+    newsEnabled: input.newsEnabled === true,
     minProfit: minProfit.toFixed(2),
     dailyLimit,
     quietStart,
@@ -101,8 +103,9 @@ export async function sendTestPush(): Promise<Result> {
   return delivered > 0 ? { ok: true, message: 'Testnotifikation sendt.' } : { ok: false, error: 'Kunne ikke sende. Slå notifikationer til på denne enhed igen.' }
 }
 
-export async function sendBroadcastPush(input: { title: string; body: string; url: string }): Promise<Result> {
+export async function sendBroadcastPush(input: { title: string; body: string; url: string; category: 'offers' | 'news' }): Promise<Result> {
   if ((await getOwnerState()) !== 'owner') return { ok: false, error: 'Kun ejeren kan sende til alle.' }
+  if (input.category !== 'offers' && input.category !== 'news') return { ok: false, error: 'Vælg om det er et tilbud eller en nyhed.' }
 
   const title = String(input.title ?? '').trim().slice(0, 80)
   const body = String(input.body ?? '').trim().slice(0, 240)
@@ -110,6 +113,6 @@ export async function sendBroadcastPush(input: { title: string; body: string; ur
   if (!title || !body) return { ok: false, error: 'Skriv både titel og tekst.' }
   const url = rawUrl.startsWith('/') && !rawUrl.startsWith('//') ? rawUrl : '/'
 
-  const { devices, delivered } = await broadcastPush({ title, body, url, tag: `broadcast-${Date.now()}` })
+  const { devices, delivered } = await broadcastPush({ title, body, url, tag: `broadcast-${Date.now()}` }, input.category)
   return { ok: true, message: `Sendt til ${delivered} af ${devices} enheder.` }
 }

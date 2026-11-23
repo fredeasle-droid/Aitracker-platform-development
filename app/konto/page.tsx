@@ -70,6 +70,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
       pushSettings={{
         alertsEnabled: pushRow?.alertsEnabled ?? true,
         offersEnabled: pushRow?.offersEnabled ?? true,
+        newsEnabled: pushRow?.newsEnabled ?? true,
         minProfit: pushRow ? Number(pushRow.minProfit) : 5,
         dailyLimit: pushRow?.dailyLimit ?? 20,
         quietStart: pushRow?.quietStart ?? 23,

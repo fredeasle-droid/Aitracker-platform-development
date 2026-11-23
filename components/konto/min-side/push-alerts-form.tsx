@@ -152,7 +152,7 @@ export function PushAlertsForm({ initial, isSubscriber }: { initial: PushSetting
 
       {status === 'off' && (
         <div className="flex flex-col gap-3">
-          <p className="text-[13px] leading-5 text-[#9fb3cc]">Få besked med det samme i din browser, når der er et surebet over din grænse, samt tilbud og nyheder. Gratis.</p>
+          <p className="text-[13px] leading-5 text-[#9fb3cc]">Få besked med det samme i din browser, når der er et surebet over din grænse, samt tilbud og nyheder, hvis du vælger det. Gratis.</p>
           <button type="button" onClick={enable} disabled={pending} className={primaryButton}>
             {pending ? 'Slår til…' : 'Slå notifikationer til'}
           </button>
@@ -162,7 +162,8 @@ export function PushAlertsForm({ initial, isSubscriber }: { initial: PushSetting
       {status === 'on' && (
         <form onSubmit={save} className="flex flex-col gap-4">
           <Switch checked={settings.alertsEnabled} onChange={(v) => update('alertsEnabled', v)} title="Surebet-alarm" hint="Når vi finder et surebet over din grænse" />
-          <Switch checked={settings.offersEnabled} onChange={(v) => update('offersEnabled', v)} title="Tilbud og nyheder" hint="Bonusser, nye funktioner og vigtige beskeder" />
+          <Switch checked={settings.offersEnabled} onChange={(v) => update('offersEnabled', v)} title="Tilbud" hint="Bonusser og kampagner fra bookmakerne" />
+          <Switch checked={settings.newsEnabled} onChange={(v) => update('newsEnabled', v)} title="Nyheder" hint="Nye funktioner og vigtige beskeder fra os" />
 
           <fieldset className="flex flex-col gap-2">
             <legend className="mb-1.5 text-[13px] font-medium text-[#b5c6d9]">Minimum profit</legend>
