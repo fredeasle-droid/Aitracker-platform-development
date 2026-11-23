@@ -18,7 +18,7 @@ const SOURCES = [
   { source: 'oddsator', run: scrapeOddsator, enabled: true },
   { source: 'oddsjam', run: scrapeOddsJam, enabled: true },
   { source: 'bethero', run: scrapeBetHero, enabled: true },
-  { source: 'surebetdanmark', run: scrapeSureBetDanmark, enabled: false },
+  { source: 'surebetdanmark', run: scrapeSureBetDanmark, enabled: true },
 ]
 
 function activeSources() {
