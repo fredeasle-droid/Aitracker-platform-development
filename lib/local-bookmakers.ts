@@ -46,7 +46,7 @@ export const bookmakerKey = (name: string) => {
 export const isLocalBookmaker = (name: string) => LOCAL_IDS.has(bookmakerKey(name))
 
 /**
- * The scanner's bookmaker list from before the VPS worker: the local bookmakers plus the international
+ * The scanner's bookmaker list from the original setup: the local bookmakers plus the international
  * ones the old ALLOWED_BOOKS list had (20Bet and Rainbet left out on request). Nothing outside it is stored or shown.
  */
 export const APPROVED_IDS = new Set([
