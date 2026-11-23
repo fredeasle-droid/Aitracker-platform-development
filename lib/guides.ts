@@ -936,6 +936,275 @@ export const GUIDES: Guide[] = [
     ],
     cta: { href: '/surebets', label: 'Se aktuelle surebets' },
   },
+  {
+    slug: 'surebet-danmark-alternativ',
+    title: 'BetTrackerAI vs. Surebet Danmark: det billigere alternativ',
+    metaTitle: 'Surebet Danmark alternativ – BetTrackerAI sammenlignet (2026)',
+    description:
+      'Sammenligning af BetTrackerAI og Surebet Danmark: pris, funktioner, bookmakere og regnskab. Se hvilket surebet-værktøj der passer til dig.',
+    keyword: 'surebet danmark alternativ',
+    category: 'Grundlæggende',
+    readMinutes: 5,
+    updated: '2026-11-23',
+    intro:
+      'Surebet Danmark og BetTrackerAI er de to danske værktøjer, der finder surebets hos bookmakere med dansk licens. Begge giver dig 7 dages gratis prøve. Forskellen ligger i prisen, og i hvad du får ud over selve surebet-listen.',
+    blocks: [
+      { type: 'h2', text: 'Kort fortalt' },
+      {
+        type: 'example',
+        title: 'BetTrackerAI og Surebet Danmark side om side',
+        rows: [
+          ['Pris pr. måned', 'BetTrackerAI fra 149 kr. · Surebet Danmark 999 kr.'],
+          ['Gratis prøve', 'Begge: 7 dage'],
+          ['Bookmakere', 'Begge: kun bookmakere med dansk licens'],
+          ['Notifikationer', 'BetTrackerAI: push og SMS (Premium) · Surebet Danmark: live notifikationer'],
+          ['Regnskab over dine spil', 'BetTrackerAI: fuldt regnskab med ROI og bankroll pr. bookmaker · Surebet Danmark: bet tracker'],
+          ['Gratis beregner og guides', 'BetTrackerAI: surebet beregner og guides på dansk'],
+        ],
+        note: 'Priserne er tjekket på begge sider den 23. november 2026 og kan ændre sig.',
+      },
+      { type: 'h2', text: 'Pris: forskellen er stor' },
+      {
+        type: 'p',
+        text: 'Surebet Danmark koster 999 kr. om måneden. BetTrackerAI koster 149 kr. om måneden for Basis med surebets op til 5 % profit, og 249 kr. for Premium med alle surebets og SMS-alerts. Med Premium sparer du 750 kr. om måneden, altså 9.000 kr. om året.',
+      },
+      {
+        type: 'p',
+        text: 'Det betyder noget, fordi surebets typisk giver 1–5 % pr. spil. Med en lav månedspris skal du omsætte langt mindre, før abonnementet har tjent sig hjem.',
+      },
+      { type: 'h2', text: 'Regnskab: her adskiller BetTrackerAI sig' },
+      {
+        type: 'p',
+        text: 'Surebets er kun lønsomme, hvis du ved præcis, hvor meget du har tjent. I BetTrackerAI registrerer du dine surebets og indskud, og du ser din profit, din ROI og din saldo hos hver bookmaker samlet ét sted. Du kan også importere en kupon i stedet for at taste den ind.',
+      },
+      { type: 'h2', text: 'Hvem passer hvad til?' },
+      {
+        type: 'ul',
+        items: [
+          'Vælg BetTrackerAI, hvis du vil have danske surebets til en lav pris og samtidig holde styr på dit regnskab.',
+          'Vælg Surebet Danmark, hvis du allerede bruger deres system og er tilfreds med prisen.',
+          'Er du i tvivl, så prøv begge. De har begge 7 dages gratis prøve, så du kan sammenligne surebets på de samme kampe.',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Uanset hvilket værktøj du vælger: placér altid det spil med den mest ustabile odds først, og tjek at markedet er det samme hos begge bookmakere.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Er BetTrackerAI billigere end Surebet Danmark?',
+        a: 'Ja. BetTrackerAI koster 149 eller 249 kr. om måneden, mens Surebet Danmark koster 999 kr. om måneden (pr. 23. november 2026).',
+      },
+      {
+        q: 'Bruger begge kun danske bookmakere?',
+        a: 'Ja. Begge værktøjer fokuserer på bookmakere med dansk licens, så du spiller lovligt og med dansk spillerbeskyttelse.',
+      },
+      {
+        q: 'Kan jeg prøve BetTrackerAI gratis?',
+        a: 'Ja. Du får 7 dages gratis prøve med fuld adgang, og du kan opsige når som helst i prøveperioden.',
+      },
+    ],
+    cta: { href: '/konto', label: 'Prøv BetTrackerAI gratis i 7 dage' },
+  },
+  {
+    slug: 'bet-tracker',
+    title: 'Bet tracker: sådan holder du styr på dine spil',
+    metaTitle: 'Bet tracker – hold styr på dine spil, profit og ROI (2026)',
+    description:
+      'Hvad er en bet tracker, og hvorfor skal du bruge en? Lær hvad du skal registrere, og hvordan du ser din rigtige profit på betting.',
+    keyword: 'bet tracker',
+    category: 'Strategi',
+    readMinutes: 5,
+    updated: '2026-11-23',
+    intro:
+      'En bet tracker er et regnskab over dine spil. Den viser, hvor meget du har satset, hvor meget du har vundet, og hvilke bookmakere dine penge står hos. Uden et regnskab ved du ikke, om du faktisk tjener penge.',
+    blocks: [
+      { type: 'h2', text: 'Hvorfor du skal tracke dine spil' },
+      {
+        type: 'p',
+        text: 'De fleste spillere husker deres store gevinster og glemmer de mange små tab. En bet tracker fjerner gætteriet. Du ser dit resultat, som det er, og du kan se, hvilke sportsgrene, markeder og bookmakere der giver overskud.',
+      },
+      {
+        type: 'p',
+        text: 'For surebets er det endnu vigtigere. Hver surebet består af to eller tre spil hos forskellige bookmakere, og profitten er ofte kun få procent. Ét fejlplaceret spil kan æde gevinsten fra flere surebets, og det opdager du kun, hvis du registrerer alt.',
+      },
+      { type: 'h2', text: 'Det skal du registrere for hvert spil' },
+      {
+        type: 'ul',
+        items: [
+          'Dato og kamp',
+          'Bookmaker',
+          'Marked og udfald, fx over 2,5 mål',
+          'Odds og indsats',
+          'Resultat: vundet, tabt eller annulleret',
+          'Ved surebets: hvilke spil der hører sammen, så du ser profitten for hele kombinationen',
+        ],
+      },
+      { type: 'h2', text: 'Regneark eller bet tracker?' },
+      {
+        type: 'p',
+        text: 'Et regneark virker, men det kræver disciplin, og det giver dig ikke automatisk et overblik over saldoen hos hver bookmaker. En dedikeret bet tracker regner profit, ROI og bankroll ud for dig, og den viser udviklingen over tid i en graf.',
+      },
+      {
+        type: 'tip',
+        text: 'BetTrackerAI har et indbygget regnskab, hvor du registrerer surebets og indskud og ser profit, ROI og saldo pr. bookmaker. Du kan også importere en kupon i stedet for at taste den ind.',
+      },
+      { type: 'h2', text: 'Sådan kommer du i gang' },
+      {
+        type: 'ul',
+        items: [
+          'Registrér dine nuværende saldoer hos hver bookmaker som startpunkt.',
+          'Registrér hvert spil, lige når du har placeret det, ikke bagefter.',
+          'Opdatér resultatet, når kampen er slut.',
+          'Kig på dit regnskab hver uge, og læg mærke til, hvad der virker.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvad er en bet tracker?',
+        a: 'En bet tracker er et værktøj, der registrerer dine spil og regner din profit, ROI og saldo ud, så du ved præcis, hvordan det går.',
+      },
+      {
+        q: 'Er en bet tracker gratis?',
+        a: 'Et regneark er gratis. Regnskabet i BetTrackerAI er en del af abonnementet, som du kan prøve gratis i 7 dage.',
+      },
+      {
+        q: 'Skal jeg tracke surebets anderledes end almindelige spil?',
+        a: 'Ja. Et surebet består af flere spil, der hører sammen. Registrér dem som én kombination, så du ser den samlede profit og ikke et tab på det spil, der ikke gik ind.',
+      },
+    ],
+    cta: { href: '/stats', label: 'Åbn dit regnskab' },
+  },
+  {
+    slug: 'roi-betting',
+    title: 'ROI på betting: sådan beregner du dit afkast',
+    metaTitle: 'ROI betting – sådan beregner du afkast på dine spil',
+    description:
+      'Lær at beregne ROI og yield på betting med eksempler. Se hvad et godt afkast er, og hvorfor ROI siger mere end din samlede gevinst.',
+    keyword: 'roi betting',
+    category: 'Strategi',
+    readMinutes: 4,
+    updated: '2026-11-23',
+    intro:
+      'ROI står for return on investment og viser, hvor mange procent du tjener i forhold til det, du har sat på spil. Det er det tal, der fortæller, om din strategi virker, uanset hvor store indsatser du bruger.',
+    blocks: [
+      { type: 'h2', text: 'Formlen' },
+      {
+        type: 'p',
+        text: 'ROI = profit divideret med samlet indsats, ganget med 100. Profitten er det, du har fået udbetalt, minus det, du har sat på spil.',
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: en måned med surebets',
+        rows: [
+          ['Samlet indsats', '40.000 kr.'],
+          ['Samlet udbetaling', '41.000 kr.'],
+          ['Profit', '1.000 kr.'],
+          ['ROI', '1.000 / 40.000 × 100 = 2,5 %'],
+        ],
+        note: 'Du har tjent 2,5 øre for hver krone, du har sat på spil.',
+      },
+      { type: 'h2', text: 'ROI og yield er det samme' },
+      {
+        type: 'p',
+        text: 'I betting bruges ordene ROI og yield ofte om det samme tal: profit i forhold til samlet indsats. Nogle regner i stedet ROI ud i forhold til din bankroll. Det giver et højere tal, fordi den samme bankroll bliver brugt mange gange. Tjek altid, hvilken metode et tal er regnet med, før du sammenligner.',
+      },
+      { type: 'h2', text: 'Hvad er en god ROI?' },
+      {
+        type: 'ul',
+        items: [
+          'Almindelige spil på lang sigt: de fleste spillere ligger under 0 %, fordi bookmakeren tager en margin.',
+          'Value betting: 2–5 % over mange spil er et godt resultat.',
+          'Surebets: typisk 1–5 % pr. surebet, men næsten uden risiko, fordi alle udfald er dækket.',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'ROI siger mest over mange spil. Efter 20 spil kan tallet svinge meget. Efter flere hundrede spil viser det, om din strategi holder.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvordan beregner jeg ROI på betting?',
+        a: 'Tag din profit, divider med din samlede indsats og gang med 100. Har du sat 10.000 kr. på spil og tjent 300 kr., er din ROI 3 %.',
+      },
+      {
+        q: 'Hvad er forskellen på ROI og profit?',
+        a: 'Profit er det beløb, du har tjent. ROI er profitten i procent af din indsats. Den gør det muligt at sammenligne resultater med forskellige indsatser.',
+      },
+      {
+        q: 'Kan jeg se min ROI automatisk?',
+        a: 'Ja. Regnskabet i BetTrackerAI regner din ROI ud ud fra de spil, du registrerer.',
+      },
+    ],
+    cta: { href: '/stats', label: 'Se din ROI i regnskabet' },
+  },
+  {
+    slug: 'betting-regnskab',
+    title: 'Betting-regnskab: sådan holder du styr på din bankroll',
+    metaTitle: 'Betting regnskab – styr på saldo hos alle bookmakere',
+    description:
+      'Sådan fører du regnskab over din betting: indskud, udbetalinger og saldo hos hver bookmaker. Undgå at miste overblikket, når du spiller hos flere bookmakere.',
+    keyword: 'betting regnskab',
+    category: 'Strategi',
+    readMinutes: 4,
+    updated: '2026-11-23',
+    intro:
+      'Når du spiller surebets, har du penge stående hos mange bookmakere på én gang. Et betting-regnskab viser dig, hvor pengene er, og hvor meget du har tjent, når du lægger det hele sammen.',
+    blocks: [
+      { type: 'h2', text: 'Hvorfor overblikket forsvinder' },
+      {
+        type: 'p',
+        text: 'Ved surebets vinder du hos én bookmaker og taber hos en anden. Saldoen flytter sig hele tiden, og du skal løbende indbetale og hæve for at have penge de rigtige steder. Uden et regnskab er det svært at se, om du samlet set er i plus.',
+      },
+      { type: 'h2', text: 'Det skal dit regnskab indeholde' },
+      {
+        type: 'ul',
+        items: [
+          'Alle indskud og udbetalinger hos hver bookmaker',
+          'Den aktuelle saldo hos hver bookmaker',
+          'Alle spil med indsats, odds og resultat',
+          'Din samlede profit: nuværende saldoer plus udbetalinger minus indskud',
+        ],
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: samlet profit på tværs af bookmakere',
+        rows: [
+          ['Indskud i alt', '10.000 kr.'],
+          ['Udbetalt i alt', '3.000 kr.'],
+          ['Saldo hos bookmakerne nu', '7.800 kr.'],
+          ['Profit', '3.000 + 7.800 − 10.000 = 800 kr.'],
+        ],
+      },
+      { type: 'h2', text: 'Gode vaner' },
+      {
+        type: 'ul',
+        items: [
+          'Registrér indskud og udbetalinger samme dag.',
+          'Afstem saldoen med bookmakerens egen saldo en gang om ugen.',
+          'Hold dine bettingpenge adskilt fra dine almindelige penge, så du ikke kommer til at spille for penge, du skal bruge.',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Regnskabet i BetTrackerAI viser saldo, indskud og profit pr. bookmaker, så du altid ved, hvor dine penge står.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Skal jeg betale skat af mine gevinster?',
+        a: 'Gevinster hos bookmakere med dansk licens er skattefri. Læs vores guide om skat på spillegevinster for detaljerne.',
+      },
+      {
+        q: 'Hvor ofte skal jeg opdatere mit regnskab?',
+        a: 'Registrér spil og indskud med det samme, og afstem saldoerne en gang om ugen.',
+      },
+    ],
+    cta: { href: '/stats', label: 'Åbn dit regnskab' },
+  },
 ]
 
 export function getGuide(slug: string) {
