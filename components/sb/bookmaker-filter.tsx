@@ -3,7 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import type { BookmakerId } from "./data";
 import { useSurebets } from "./surebets-context";
 
-const STORAGE_KEY = "bt-bookmakers-v5";
+const STORAGE_KEY = "bt-bookmakers-v6";
 
 type Ctx = {
   selected: BookmakerId[];

@@ -84,7 +84,12 @@ const APPROVED_IDS = new Set([
 /** The same bookmaker under another name in the scans. */
 const ALIASES: Record<string, string> = { oddset: 'danskespil', pokerstarssports: 'pokerstars' }
 
-const rawKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '')
+/** Bet Hero suffixes the licence country, e.g. "bwin (DK)"; it is the same bookmaker as "bwin". */
+const rawKey = (name: string) =>
+  name
+    .replace(/\s*\([^)]*\)\s*$/, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, '')
 
 export const bookmakerKey = (name: string) => {
   const key = rawKey(name)
