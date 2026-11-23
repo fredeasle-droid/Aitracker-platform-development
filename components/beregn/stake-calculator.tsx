@@ -397,7 +397,7 @@ function ProfitCard({
 
 /* ---------------- Phone ---------------- */
 
-function MobileTeamColumn({ leg, share, hasAccess }: { leg: Leg; share: number | null; hasAccess: boolean }) {
+function MobileTeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) {
   const link = useBookmakerLink(leg)
   return (
     <div className="flex min-w-0 flex-col items-center">
@@ -426,17 +426,11 @@ function MobileTeamColumn({ leg, share, hasAccess }: { leg: Leg; share: number |
           {hasAccess && <Pencil className="pointer-events-none absolute right-[8px] top-[8px] size-[11px] text-(--bi-muted)" aria-hidden="true" />}
         </label>
 
-        <div className="mt-[10px] flex items-baseline justify-between gap-[6px]">
-          <span className="truncate text-[11px] font-semibold uppercase tracking-[0.08em] text-(--bi-muted)">
-            {link.copied ? 'Kopieret' : leg.label !== leg.team ? leg.label : 'Sæt'}
-          </span>
-          <span className="text-[11px] font-semibold text-(--bi-muted)">{share === null ? '' : `${Math.round(share * 100)} %`}</span>
+        <div className="mt-[10px] truncate text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-(--bi-muted)">
+          {link.copied ? 'Kopieret' : leg.label !== leg.team ? leg.label : 'Sæt'}
         </div>
-        <div className="mt-[1px] truncate text-[19px] font-extrabold leading-tight text-(--bi-neon)">
+        <div className="mt-[2px] truncate text-center text-[19px] font-extrabold leading-tight text-(--bi-neon)">
           {leg.stake === undefined ? '–' : formatKr(leg.stake)}
-        </div>
-        <div className="bi-split-bar mt-[7px]">
-          <div className="bi-split-fill" style={{ width: `${share === null ? 0 : share * 100}%` }} />
         </div>
       </div>
     </div>
@@ -458,7 +452,6 @@ function MobileCalculator({
   onStake: (n: number) => void
   hasAccess: boolean
 }) {
-  const shareOf = (part: number | undefined) => (part === undefined || !(stake > 0) ? null : part / stake)
   const pos = stakeToPosition(stake)
   const kickoff = splitKickoff(o.kickoffLabel)
 
@@ -483,8 +476,8 @@ function MobileCalculator({
         </div>
 
         <div className="relative mt-[44px] grid grid-cols-2 gap-[10px]">
-          <MobileTeamColumn leg={home} share={shareOf(home.stake)} hasAccess={hasAccess} />
-          <MobileTeamColumn leg={away} share={shareOf(away.stake)} hasAccess={hasAccess} />
+          <MobileTeamColumn leg={home} hasAccess={hasAccess} />
+          <MobileTeamColumn leg={away} hasAccess={hasAccess} />
 
           <div className="pointer-events-none absolute left-1/2 top-0 flex h-full -translate-x-1/2 flex-col items-center" aria-hidden="true">
             <div className="bi-vs-orb mt-[20px] size-[44px] text-[14px]">VS</div>
@@ -509,16 +502,19 @@ function MobileCalculator({
           <button type="button" aria-label="Mindre indsats" onClick={() => onStake(clampInput(stake - 100))} className="bi-step size-[52px]">
             <Minus className="size-[22px]" strokeWidth={2.4} aria-hidden="true" />
           </button>
-          <label className="flex min-w-0 items-baseline justify-center gap-[6px]">
-            <input
-              value={formatWhole(stake)}
-              onChange={(e) => onStake(clampInput(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0))}
-              inputMode="numeric"
-              autoComplete="off"
-              aria-label="Total indsats"
-              className="w-full min-w-0 bg-transparent text-right text-[40px] font-extrabold leading-none tabular-nums tracking-[-0.03em] outline-none"
-            />
-            <span className="shrink-0 text-[15px] font-bold text-(--bi-muted)">DKK</span>
+          <label className="flex min-w-0 items-center justify-center">
+            <span className="relative inline-block">
+              <input
+                value={formatWhole(stake)}
+                onChange={(e) => onStake(clampInput(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0))}
+                inputMode="numeric"
+                autoComplete="off"
+                aria-label="Total indsats"
+                style={{ width: `${Math.max(formatWhole(stake).length, 1) + 0.5}ch` }}
+                className="bg-transparent text-center text-[40px] font-extrabold leading-none tabular-nums tracking-[-0.03em] outline-none"
+              />
+              <span className="pointer-events-none absolute bottom-[4px] left-full ml-[4px] text-[15px] font-bold text-(--bi-muted)">DKK</span>
+            </span>
           </label>
           <button type="button" aria-label="Større indsats" onClick={() => onStake(clampInput(stake + 100))} className="bi-step size-[52px]">
             <Plus className="size-[22px]" strokeWidth={2.4} aria-hidden="true" />
