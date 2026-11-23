@@ -50,7 +50,7 @@ export default async function SurebetsPage() {
           <div className="relative lg:pl-5">
             <TopBar />
           </div>
-          <div className="relative grid gap-4 xl:grid-cols-[minmax(0,1fr)_260px]">
+          <div className="relative grid grid-cols-[minmax(0,1fr)] gap-4 xl:grid-cols-[minmax(0,1fr)_260px]">
             <div className="min-w-0 space-y-4">
               {/* Left edges step in to follow the sidebar's curved edge */}
               <div className="lg:ml-1.5">
