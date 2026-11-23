@@ -6,7 +6,7 @@ import { removePushSubscription, savePushSettings, savePushSubscription, sendTes
 import { IosInstallGuide, isIos } from '@/components/push/ios-install-guide'
 import { Card, FieldLabel, Message, inputClass, primaryButton, secondaryButton } from './ui'
 
-const PRESETS = [10, 15, 20, 25, 30]
+const PRESETS = [15, 20, 25, 30]
 const HOURS = Array.from({ length: 24 }, (_, h) => h)
 const hourLabel = (h: number) => `${String(h).padStart(2, '0')}:00`
 

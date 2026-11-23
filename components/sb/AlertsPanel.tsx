@@ -8,7 +8,7 @@ import { saveSmsSettings, type SmsSettingsInput } from "@/app/konto/sms-actions"
 import { IosInstallGuide, isIos } from "@/components/push/ios-install-guide";
 import type { AlertPanelData } from "@/lib/alert-panel-data";
 
-const PRESETS = [10, 15, 20, 25, 30];
+const PRESETS = [15, 20, 25, 30];
 
 type Tab = "push" | "sms";
 type PushStatus = "checking" | "unsupported" | "blocked" | "off" | "on";
