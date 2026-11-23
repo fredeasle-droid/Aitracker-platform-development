@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Block, FaqList, faqJsonLd } from '@/components/seo/guide-blocks'
 import { GUIDES } from '@/lib/guides'
-import { UPDATED, type LandingPage } from '@/lib/landing-pages'
+import { BOOKMAKER_PAGES, SPORT_PAGES, UPDATED, type LandingPage } from '@/lib/landing-pages'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 
 type Props = {
@@ -15,6 +15,10 @@ export function LandingArticle({ page, section, siblings }: Props) {
   const url = `${SITE_URL}${section.path}/${page.slug}`
   const guides = page.guides.map((slug) => GUIDES.find((guide) => guide.slug === slug)).filter((guide) => guide !== undefined)
   const others = siblings.filter((item) => item.slug !== page.slug)
+  const cross =
+    section.path === '/bookmaker'
+      ? { label: 'Surebets pr. sportsgren', path: '/sport', pages: SPORT_PAGES }
+      : { label: 'Surebets pr. bookmaker', path: '/bookmaker', pages: BOOKMAKER_PAGES }
 
   const jsonLd = JSON.stringify([
     {
@@ -108,6 +112,30 @@ export function LandingArticle({ page, section, siblings }: Props) {
                 className="inline-flex min-h-11 items-center rounded-full border border-border bg-card/60 px-4 text-[14px] font-semibold text-foreground/85 transition-colors hover:border-primary/60 hover:text-foreground"
               >
                 {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section aria-labelledby="cross-heading" className="mt-10">
+        <h2 id="cross-heading" className="text-[18px] font-bold text-foreground">{cross.label}</h2>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          <li>
+            <Link
+              href="/dagens-surebets"
+              className="inline-flex min-h-11 items-center rounded-full border border-primary/50 bg-primary/10 px-4 text-[14px] font-semibold text-foreground transition-colors hover:border-primary"
+            >
+              Dagens surebets
+            </Link>
+          </li>
+          {cross.pages.map((item) => (
+            <li key={item.slug}>
+              <Link
+                href={`${cross.path}/${item.slug}`}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-card/60 px-4 text-[14px] font-semibold text-foreground/85 transition-colors hover:border-primary/60 hover:text-foreground"
+              >
+                {item.name}
               </Link>
             </li>
           ))}

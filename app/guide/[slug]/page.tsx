@@ -4,7 +4,13 @@ import { notFound } from 'next/navigation'
 import { ArrowRight, ChevronRight, Clock } from 'lucide-react'
 import { Block, FaqList } from '@/components/seo/guide-blocks'
 import { GUIDES, getGuide } from '@/lib/guides'
+import { BOOKMAKER_PAGES, SPORT_PAGES } from '@/lib/landing-pages'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
+
+const AUTHOR = 'BetTrackerAI-redaktionen'
+const BOOKMAKER_GUIDES = new Set(['bedste-bookmakere-til-surebets', 'undgaa-begraensning', 'matched-betting'])
+const chipCls =
+  'inline-flex min-h-11 items-center rounded-full border border-border bg-card/60 px-4 text-[14px] font-semibold text-foreground/85 transition-colors hover:border-primary/60 hover:text-foreground'
 
 export function generateStaticParams() {
   return GUIDES.map((guide) => ({ slug: guide.slug }))
@@ -30,7 +36,12 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   if (!guide) notFound()
 
   const url = `${SITE_URL}/guide/${guide.slug}`
-  const related = GUIDES.filter((item) => item.slug !== guide.slug).slice(0, 3)
+  const others = GUIDES.filter((item) => item.slug !== guide.slug)
+  const related = [
+    ...others.filter((item) => item.category === guide.category),
+    ...others.filter((item) => item.category !== guide.category),
+  ].slice(0, 3)
+  const showBookmakers = BOOKMAKER_GUIDES.has(guide.slug)
   const jsonLd = JSON.stringify([
     {
       '@context': 'https://schema.org',
@@ -41,8 +52,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       dateModified: guide.updated,
       datePublished: guide.updated,
       mainEntityOfPage: url,
-      image: `${SITE_URL}/opengraph-image`,
-      author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+      image: `${url}/opengraph-image`,
+      author: { '@type': 'Organization', name: AUTHOR, url: `${SITE_URL}/om-os` },
       publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     },
     {
@@ -90,6 +101,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
             </span>
             <span aria-hidden="true">·</span>
             <time dateTime={guide.updated}>Opdateret {dateFormat.format(new Date(guide.updated))}</time>
+            <span aria-hidden="true">·</span>
+            <span>
+              Af{' '}
+              <Link href="/om-os" rel="author" className="font-semibold text-foreground/90 underline-offset-4 hover:underline">
+                {AUTHOR}
+              </Link>
+            </span>
           </p>
           <p className="mt-5 text-pretty text-[18px] leading-relaxed text-foreground">{guide.intro}</p>
         </header>
@@ -125,6 +143,33 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           ))}
         </ul>
       </section>
+
+      <section aria-labelledby="sports-heading" className="mt-10">
+        <h2 id="sports-heading" className="text-[18px] font-bold text-foreground">Find surebets på din sport</h2>
+        <ul className="mt-3 flex flex-wrap gap-2">
+          <li>
+            <Link href="/dagens-surebets" className={chipCls}>Dagens surebets</Link>
+          </li>
+          {SPORT_PAGES.map((page) => (
+            <li key={page.slug}>
+              <Link href={`/sport/${page.slug}`} className={chipCls}>{page.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      {showBookmakers && (
+        <section aria-labelledby="bookmakers-heading" className="mt-10">
+          <h2 id="bookmakers-heading" className="text-[18px] font-bold text-foreground">Surebets hos bookmakerne</h2>
+          <ul className="mt-3 flex flex-wrap gap-2">
+            {BOOKMAKER_PAGES.map((page) => (
+              <li key={page.slug}>
+                <Link href={`/bookmaker/${page.slug}`} className={chipCls}>{page.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
     </main>
   )
 }
