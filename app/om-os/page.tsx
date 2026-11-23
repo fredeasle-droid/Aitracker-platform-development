@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 
@@ -27,7 +28,13 @@ const JSON_LD = JSON.stringify([
     logo: `${SITE_URL}/icon.svg`,
     description: 'Dansk surebet-scanner, der finder odds hos bookmakere, hvor du vinder uanset udfaldet.',
     areaServed: 'DK',
-    founder: { '@type': 'Person', name: 'Frederik Myllerup Asler', url: `${SITE_URL}/om-os` },
+    founder: {
+      '@type': 'Person',
+      name: 'Frederik Myllerup Asler',
+      url: `${SITE_URL}/om-os`,
+      image: `${SITE_URL}/home/pricing-host.webp`,
+      jobTitle: 'Stifter og ejer',
+    },
     contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', url: `${SITE_URL}/kontakt`, availableLanguage: ['da'] },
   },
 ])
@@ -44,6 +51,7 @@ const SECTIONS = [
     title: 'Hvem står bag',
     body: [
       'BetTrackerAI er grundlagt og ejet af Frederik Myllerup Asler, som står bag udviklingen af scanneren og har det redaktionelle ansvar for sidens guides.',
+      'Det er også Frederik, du møder i videoen på forsiden og på billederne rundt omkring på siden.',
     ],
   },
   {
@@ -82,6 +90,20 @@ export default function AboutPage() {
           BetTrackerAI scanner bookmakerne for dig og finder odds, hvor du vinder uanset udfaldet. Her kan du læse, hvem vi er, og hvordan vi arbejder.
         </p>
       </header>
+
+      <figure className="mt-8 overflow-hidden rounded-2xl border border-border">
+        <Image
+          src="/home/pricing-host.webp"
+          alt="Frederik Myllerup Asler, stifter af BetTrackerAI, foran BetTrackerAI-scanneren"
+          width={1600}
+          height={893}
+          priority
+          className="h-auto w-full"
+        />
+        <figcaption className="px-4 py-3 text-[14px] text-muted-foreground">
+          Frederik Myllerup Asler, stifter og ejer af BetTrackerAI
+        </figcaption>
+      </figure>
 
       {SECTIONS.map((section) => (
         <section key={section.title} className="mt-10">
