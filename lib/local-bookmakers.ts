@@ -48,7 +48,7 @@ export const isLocalBookmaker = (name: string) => LOCAL_IDS.has(bookmakerKey(nam
 /** The limited list: the local bookmakers plus the other books from the original whitelist. Nothing outside it is stored or shown. */
 export const APPROVED_IDS = new Set([
   ...LOCAL_IDS,
-  'dbbet', 'rainbet', 'mystake', '20', '20bet', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio', 'betfairexchange',
+  'dbbet', 'mystake', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio', 'betfairexchange',
 ])
 
 export const isApprovedBookmaker = (name: string) => APPROVED_IDS.has(bookmakerKey(name))
