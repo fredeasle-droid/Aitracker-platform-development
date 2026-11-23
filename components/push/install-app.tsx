@@ -10,7 +10,7 @@ type InstallPromptEvent = Event & {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>
 }
 
-type InstallState = { mode: 'hidden' | 'prompt' | 'ios' | 'installed' }
+type InstallState = { mode: 'hidden' | 'prompt' | 'ios' | 'android' | 'installed' }
 
 const SERVER_STATE: InstallState = { mode: 'hidden' }
 let deferredPrompt: InstallPromptEvent | null = null
@@ -28,6 +28,7 @@ function computeState(): InstallState {
   if (isStandalone()) return { mode: 'installed' }
   if (deferredPrompt) return { mode: 'prompt' }
   if (isIos()) return { mode: 'ios' }
+  if (/android/i.test(navigator.userAgent)) return { mode: 'android' }
   return SERVER_STATE
 }
 
@@ -74,6 +75,30 @@ function useInstallApp() {
 
 const GUIDE_TITLE = 'Sådan installerer du på iPhone'
 
+function AndroidInstallGuide({ className, titleClassName }: { className?: string; titleClassName?: string }) {
+  return (
+    <div className={className}>
+      <h4 className={cn('text-sm font-bold', titleClassName)}>Sådan installerer du på Android</h4>
+      <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-[13px] leading-5 marker:font-semibold">
+        <li>Åbn BetTracker i Chrome.</li>
+        <li>Tryk på de tre prikker øverst til højre.</li>
+        <li>
+          Vælg &quot;Installer app&quot; eller &quot;Føj til startskærm&quot;, og bekræft.
+        </li>
+        <li>Åbn BetTracker fra startskærmen.</li>
+      </ol>
+    </div>
+  )
+}
+
+function ManualGuide({ mode, className, titleClassName }: { mode: 'ios' | 'android'; className?: string; titleClassName?: string }) {
+  return mode === 'ios' ? (
+    <IosInstallGuide title={GUIDE_TITLE} className={className} titleClassName={titleClassName} />
+  ) : (
+    <AndroidInstallGuide className={className} titleClassName={titleClassName} />
+  )
+}
+
 /** Row for the side menus. Hidden when the app can't be installed or already is. */
 export function InstallAppMenuItem({ className }: { className?: string }) {
   const { mode, install } = useInstallApp()
@@ -85,16 +110,16 @@ export function InstallAppMenuItem({ className }: { className?: string }) {
       <button
         type="button"
         onClick={mode === 'prompt' ? install : () => setOpen((v) => !v)}
-        aria-expanded={mode === 'ios' ? open : undefined}
+        aria-expanded={mode === 'prompt' ? undefined : open}
         className="flex min-h-11 w-full items-center gap-3.5 rounded-xl border border-primary/40 bg-primary/10 px-4 text-left text-[15px] font-semibold text-primary-glow transition-colors hover:bg-primary/20"
       >
         <Download className="size-5 shrink-0" aria-hidden="true" />
         <span className="flex-1">Installer app</span>
-        {mode === 'ios' && <ChevronDown className={cn('size-4 transition-transform', open && 'rotate-180')} aria-hidden="true" />}
+        {mode !== 'prompt' && <ChevronDown className={cn('size-4 transition-transform', open && 'rotate-180')} aria-hidden="true" />}
       </button>
-      {mode === 'ios' && open && (
-        <IosInstallGuide
-          title={GUIDE_TITLE}
+      {(mode === 'ios' || mode === 'android') && open && (
+        <ManualGuide
+          mode={mode}
           className="mt-2 rounded-xl border border-border bg-card/60 p-3 text-foreground/90"
           titleClassName="text-primary-glow"
         />
@@ -147,7 +172,7 @@ export function InstallAppCard() {
         </button>
       )}
 
-      {mode === 'ios' && (
+      {(mode === 'ios' || mode === 'android') && (
         <>
           <button
             type="button"
@@ -159,8 +184,8 @@ export function InstallAppCard() {
             <ChevronDown className={cn('size-4 transition-transform', open && 'rotate-180')} aria-hidden="true" />
           </button>
           {open && (
-            <IosInstallGuide
-              title={GUIDE_TITLE}
+            <ManualGuide
+              mode={mode}
               className="mt-3 rounded-lg border border-border bg-surface-elevated/40 p-3 text-foreground/90"
               titleClassName="text-primary-glow"
             />
