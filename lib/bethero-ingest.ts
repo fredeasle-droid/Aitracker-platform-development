@@ -98,23 +98,7 @@ type StoredRow = {
   fresh_until?: number
 }
 
-const ROW_TTL_MS = 3 * 60 * 60_000
-// Bet Hero keeps re-sending rows that still exist (each one is fresh for about a minute),
-// so a row that has not been refreshed for this long has vanished from Bet Hero.
-const STALE_AFTER_FRESH_MS = 10 * 60_000
-
-function freshUntilMs(row: StoredRow) {
-  const value = Number(row.fresh_until)
-  if (!Number.isFinite(value) || value <= 0) return null
-  return value > 1e12 ? value : value * 1000
-}
-
-function isStaleRow(row: StoredRow, now: number) {
-  const freshUntil = freshUntilMs(row)
-  return freshUntil !== null && now - freshUntil > STALE_AFTER_FRESH_MS
-}
 const MAX_STORED_ROWS = 8000
-const MAX_DANISH_EXTRA_ROWS = 2000
 
 const hasDanishBook = (row: StoredRow) =>
   [...((row as { books_1?: { name?: string }[] }).books_1 ?? []), ...((row as { books_2?: { name?: string }[] }).books_2 ?? [])].some((book) =>
@@ -160,14 +144,14 @@ export async function saveBetHeroMessages(messages: unknown[]) {
 
   // Bet Hero streams changes in small batches rather than full lists, so rows are only removed
   // through `gone`, kick-off, or going stale — never because a batch happened to skip them.
+  // Danish-only for now. Bet Hero does not re-send unchanged low-profit rows, so these are kept
+  // until kick-off or until Bet Hero announces them in `gone` — never pruned for going quiet.
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
-    if (row.live || kickedOff || isStaleRow(row, now) || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
+    if (row.live || kickedOff || !hasDanishBook(row)) state.delete(key)
   }
 
-  // Keep every row Bet Hero has, like Bet Hero itself does. The cap is only a safety net against runaway payloads.
-  const sorted = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0))
-  const rows = [...sorted.slice(0, MAX_STORED_ROWS), ...sorted.slice(MAX_STORED_ROWS).filter(hasDanishBook).slice(0, MAX_DANISH_EXTRA_ROWS)]
+  const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)
   const lastTotal = [...messages].reverse().find((message) => message && typeof message === 'object' && !Array.isArray(message) && 'total' in message)
   const stored: unknown[] = lastTotal ? [rows, lastTotal] : [rows]
   const top = rows[0] ? `, højeste ${Number(rows[0].profit).toFixed(1)}%` : ''
@@ -190,9 +174,7 @@ export async function getBetHeroMessages() {
   const [row] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
   if (!row) return []
   try {
-    const messages = JSON.parse(row.payload) as unknown[]
-    const now = Date.now()
-    return messages.map((message, index) => (index === 0 && Array.isArray(message) ? (message as StoredRow[]).filter((item) => !isStaleRow(item, now)) : message))
+    return JSON.parse(row.payload) as unknown[]
   } catch {
     return []
   }
