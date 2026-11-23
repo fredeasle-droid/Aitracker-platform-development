@@ -9,6 +9,7 @@ import { jakarta } from '@/app/surebets/font'
 import { Logo as SbLogo } from '@/components/sb/Logo'
 import { BasketballIcon, FootballIcon, SidebarCurve } from '@/components/sb/Sidebar'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
+import { InstallAppMenuItem } from '@/components/push/install-app'
 import useSWR from 'swr'
 import { parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { authClient } from '@/lib/auth-client'
@@ -146,6 +147,8 @@ export function SidebarBody({
           })}
         </ul>
       </nav>
+
+      <InstallAppMenuItem className="mt-3" />
 
       <div className={desk ? 'my-4 h-px bg-sidebar-border short:my-3' : 'my-4 border-t border-[#13294a]'} />
 
