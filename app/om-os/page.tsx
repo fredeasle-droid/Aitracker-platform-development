@@ -2,7 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { YoutubeFacade } from '@/components/seo/youtube-facade'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
+import { videoObjectJsonLd } from '@/lib/video'
 
 export const metadata: Metadata = {
   title: 'Om BetTrackerAI – hvem står bag surebet-scanneren',
@@ -13,6 +15,7 @@ export const metadata: Metadata = {
 }
 
 const JSON_LD = JSON.stringify([
+  videoObjectJsonLd(),
   {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
@@ -105,6 +108,14 @@ export default function AboutPage() {
           Frederik Myllerup Asler, stifter og ejer af BetTrackerAI
         </figcaption>
       </figure>
+
+      <section className="mt-10">
+        <h2 className="text-[22px] font-bold text-foreground">Se hvad BetTrackerAI gør</h2>
+        <p className="mt-3 text-pretty text-[16px] leading-relaxed text-foreground/85">
+          I videoen forklarer Frederik, hvad surebets er, og hvordan du bruger scanneren.
+        </p>
+        <YoutubeFacade className="mt-4" />
+      </section>
 
       {SECTIONS.map((section) => (
         <section key={section.title} className="mt-10">

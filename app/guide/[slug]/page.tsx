@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowRight, ChevronRight, Clock } from 'lucide-react'
 import { Block, FaqList } from '@/components/seo/guide-blocks'
+import { YoutubeFacade } from '@/components/seo/youtube-facade'
+import { videoObjectJsonLd } from '@/lib/video'
 import { GUIDES, getGuide } from '@/lib/guides'
 import { BOOKMAKER_PAGES, SPORT_PAGES } from '@/lib/landing-pages'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
@@ -42,7 +44,9 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
     ...others.filter((item) => item.category !== guide.category),
   ].slice(0, 3)
   const showBookmakers = BOOKMAKER_GUIDES.has(guide.slug)
+  const showVideo = guide.slug === 'hvad-er-surebets'
   const jsonLd = JSON.stringify([
+    ...(showVideo ? [videoObjectJsonLd()] : []),
     {
       '@context': 'https://schema.org',
       '@type': 'Article',
@@ -111,6 +115,13 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           </p>
           <p className="mt-5 text-pretty text-[18px] leading-relaxed text-foreground">{guide.intro}</p>
         </header>
+
+        {showVideo && (
+          <figure className="mt-8">
+            <YoutubeFacade />
+            <figcaption className="mt-2 text-[14px] text-muted-foreground">Se videoen: surebets forklaret på under 3 minutter</figcaption>
+          </figure>
+        )}
 
         {guide.blocks.map((block, index) => (
           <Block key={index} block={block} />

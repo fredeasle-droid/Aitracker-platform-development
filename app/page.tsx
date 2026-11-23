@@ -6,12 +6,14 @@ import { HomeView } from '@/components/home/HomeView'
 import { auth } from '@/lib/auth'
 import { getSubscription, ACTIVE_STATUSES } from '@/lib/billing'
 import { getHomeData } from '@/lib/home-data'
+import { videoObjectJsonLd } from '@/lib/video'
 
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = { alternates: { canonical: '/' } }
 
 const JSON_LD = JSON.stringify([
+  videoObjectJsonLd(),
   {
     '@context': 'https://schema.org',
     '@type': 'Organization',
