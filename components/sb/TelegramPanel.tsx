@@ -7,7 +7,7 @@ const PERKS = [
 ];
 
 export function TelegramPanel() {
-  const url = process.env.NEXT_PUBLIC_TELEGRAM_URL?.trim();
+  const url = process.env.NEXT_PUBLIC_TELEGRAM_URL?.trim() || "https://t.me/bettrackerai";
 
   return (
     <div className="sb-panel edge-light relative p-5">

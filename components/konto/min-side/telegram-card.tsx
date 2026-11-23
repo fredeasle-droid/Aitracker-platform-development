@@ -8,7 +8,7 @@ const perks = [
 ]
 
 export function TelegramCard() {
-  const url = process.env.NEXT_PUBLIC_TELEGRAM_URL?.trim()
+  const url = process.env.NEXT_PUBLIC_TELEGRAM_URL?.trim() || 'https://t.me/bettrackerai'
 
   return (
     <Card title="Følg os på Telegram" icon={<Send />}>
