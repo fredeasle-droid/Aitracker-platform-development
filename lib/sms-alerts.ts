@@ -24,7 +24,7 @@ export const alertKey = (row: typeof opportunities.$inferSelect) =>
 
 function calculatorUrl(id: number) {
   const host = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  return host ? `https://${host}/beregn?id=${id}` : ''
+  return host ? `https://${host}/s/${id}` : ''
 }
 
 function formatMessage(row: typeof opportunities.$inferSelect, profit: number) {
