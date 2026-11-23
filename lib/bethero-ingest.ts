@@ -113,8 +113,13 @@ function isStaleRow(row: StoredRow, now: number) {
   const freshUntil = freshUntilMs(row)
   return freshUntil !== null && now - freshUntil > STALE_AFTER_FRESH_MS
 }
-const MAX_STORED_ROWS = 1500
-const FULL_LIST_MIN_ROWS = 25
+const MAX_STORED_ROWS = 1000
+const MAX_DANISH_EXTRA_ROWS = 500
+
+const hasDanishBook = (row: StoredRow) =>
+  [...((row as { books_1?: { name?: string }[] }).books_1 ?? []), ...((row as { books_2?: { name?: string }[] }).books_2 ?? [])].some((book) =>
+    /\(DK\)\s*$/i.test(book.name ?? ''),
+  )
 
 const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
 
@@ -153,20 +158,16 @@ export async function saveBetHeroMessages(messages: unknown[]) {
   const touched = new Set<string>()
   for (const message of messages) applyMessage(state, message, now, touched)
 
-  // The feed is sorted by profit, so a full list (many rows in one batch) must contain every
-  // stored row at or above its lowest profit. Anything missing from it is gone from Bet Hero,
-  // even when no `gone` message arrived.
-  if (touched.size >= FULL_LIST_MIN_ROWS) {
-    const lowest = Math.min(...[...touched].map((key) => Number(state.get(key)?.profit ?? Infinity)))
-    for (const [key, row] of state) if (!touched.has(key) && Number(row.profit ?? 0) >= lowest) state.delete(key)
-  }
-
+  // Bet Hero streams changes in small batches rather than full lists, so rows are only removed
+  // through `gone`, kick-off, or going stale — never because a batch happened to skip them.
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
     if (row.live || kickedOff || isStaleRow(row, now) || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
   }
 
-  const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)
+  // Danish rows usually have lower profit than the international top list, so they are kept outside the cap.
+  const sorted = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0))
+  const rows = [...sorted.slice(0, MAX_STORED_ROWS), ...sorted.slice(MAX_STORED_ROWS).filter(hasDanishBook).slice(0, MAX_DANISH_EXTRA_ROWS)]
   const lastTotal = [...messages].reverse().find((message) => message && typeof message === 'object' && !Array.isArray(message) && 'total' in message)
   const stored: unknown[] = lastTotal ? [rows, lastTotal] : [rows]
   const top = rows[0] ? `, højeste ${Number(rows[0].profit).toFixed(1)}%` : ''
