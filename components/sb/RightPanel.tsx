@@ -4,6 +4,7 @@ import { Clock, Trophy, Radar } from "lucide-react";
 import { formatPct, surebetProfitPct, teamShort } from "./data";
 import { Crest } from "./Crest";
 import { AlertsPanel } from "./AlertsPanel";
+import { TelegramPanel } from "./TelegramPanel";
 import type { AlertPanelData } from "@/lib/alert-panel-data";
 import { useSurebets } from "./surebets-context";
 import { useLocale } from "@/components/locale-provider";
@@ -93,6 +94,8 @@ export function RightPanel({ alerts }: { alerts: AlertPanelData }) {
       <LiveScanner />
 
       <AlertsPanel data={alerts} />
+
+      <TelegramPanel />
 
       <div className="sb-panel panel-glow relative min-h-[245px] overflow-hidden">
         <img src="/sb/promo-ball.jpg" alt="" loading="lazy" width={816} height={816} className="absolute inset-0 h-full w-full object-cover object-[75%_60%]" />
