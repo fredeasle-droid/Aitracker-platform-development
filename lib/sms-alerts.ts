@@ -22,6 +22,12 @@ export function isQuietHour(hour: number, start: number, end: number) {
 export const alertKey = (row: typeof opportunities.$inferSelect) =>
   [row.homeTeam, row.awayTeam, row.market, row.player ?? '', row.kickoff.toISOString()].join('|').toLowerCase()
 
+/** Reduces an alert key to its match (teams + kickoff) so one match only triggers one alert. */
+export const matchKeyOf = (key: string) => {
+  const parts = key.split('|')
+  return [parts[0], parts[1], parts[parts.length - 1]].join('|')
+}
+
 function calculatorUrl(id: number) {
   const host = process.env.VERCEL_PROJECT_PRODUCTION_URL
   return host ? `https://${host}/s/${id}` : ''
@@ -78,14 +84,14 @@ export async function dispatchSmsAlerts() {
     const eligible = candidates.filter((c) => c.profit >= minProfit)
     if (eligible.length === 0) continue
 
-    const already = new Set(
+    const alreadyMatches = new Set(
       (await db
         .select({ key: smsAlertLog.alertKey })
         .from(smsAlertLog)
-        .where(and(eq(smsAlertLog.userId, settings.userId), inArray(smsAlertLog.alertKey, eligible.map((c) => c.key)))))
-        .map((r) => r.key),
+        .where(and(eq(smsAlertLog.userId, settings.userId), gt(smsAlertLog.sentAt, new Date(now.getTime() - 7 * DAY_MS)))))
+        .map((r) => matchKeyOf(r.key)),
     )
-    const pick = eligible.find((c) => !already.has(c.key))
+    const pick = eligible.find((c) => !alreadyMatches.has(matchKeyOf(c.key)))
     if (!pick) continue
 
     const claimed = await db
