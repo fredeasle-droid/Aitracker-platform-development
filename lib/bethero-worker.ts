@@ -50,7 +50,7 @@ import { fileURLToPath } from 'node:url'
 const BASE = process.env.BETTRACKER_URL
 const TOKEN = process.env.BETTRACKER_TOKEN
 const FILTER_ID = process.env.BETHERO_FILTER_ID || 'zOUILG38'
-const SOCKET_URL = 'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=1000&touch=1'
+const SOCKET_URL = 'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=100&touch=1'
 const FLUSH_MS = 20_000
 const RESUBSCRIBE_MS = 5 * 60_000
 const RECONNECT_MS = 4 * 60_000
@@ -88,9 +88,7 @@ function subscribeMessage() {
   return encode({
     filters: [FILTER_ID],
     ping: Date.now(),
-    // exhaustive: true walks Bet Hero's whole list; otherwise only the overall top 100 by profit
-    // arrive and almost none of them are on our bookmaker list.
-    view: { sort: 'profit-desc', rows: 1000, search: null, exhaustive: true, group: null, pin_leagues: null, pin_events: null, hide: [], id: 1 },
+    view: { sort: 'profit-desc', rows: 100, search: null, exhaustive: false, group: null, pin_leagues: null, pin_events: null, hide: [], id: 1 },
   })
 }
 

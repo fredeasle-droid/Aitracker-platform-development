@@ -5,13 +5,9 @@ import { decode as decodeMsgpack, encode as encodeMsgpack } from '@msgpack/msgpa
 export const BETHERO_SOURCE = 'bethero'
 
 const SOCKET_URL =
-  'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=1000&touch=1'
+  'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=100&touch=1'
 const SOCKET_HEADERS = { Origin: 'https://betherosports.com', 'User-Agent': 'Mozilla/5.0' }
-// The exhaustive list streams in hundreds of messages, so wait for a real pause before closing.
-const SETTLE_AFTER_ROWS_MS = 3000
-// Bet Hero has hundreds of thousands of surebets; only the exhaustive list reaches the ones on our
-// bookmaker list instead of just the overall top 100 by profit.
-const ROWS = 1000
+const SETTLE_AFTER_ROWS_MS = 800
 const DEFAULT_FILTER_ID = 'zOUILG38'
 
 function subscribeMessage() {
@@ -21,9 +17,9 @@ function subscribeMessage() {
     ping: Date.now(),
     view: {
       sort: 'profit-desc',
-      rows: ROWS,
+      rows: 100,
       search: null,
-      exhaustive: true,
+      exhaustive: false,
       group: null,
       pin_leagues: null,
       pin_events: null,
@@ -72,7 +68,7 @@ export function describeBetHeroMessages(messages: unknown[]) {
   return `Bet Hero sendte ${messages.length} beskeder: ${shapes.join(' | ')}`.slice(0, 400)
 }
 
-export function fetchBetHeroMessages(cookie: string, waitMs = 20000) {
+export function fetchBetHeroMessages(cookie: string, waitMs = 8000) {
   return new Promise<unknown[]>((resolve, reject) => {
     const messages: unknown[] = []
     const socket = new WebSocket(SOCKET_URL, { headers: { ...SOCKET_HEADERS, Cookie: cookie }, handshakeTimeout: 10_000 })
