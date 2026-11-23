@@ -113,8 +113,8 @@ function isStaleRow(row: StoredRow, now: number) {
   const freshUntil = freshUntilMs(row)
   return freshUntil !== null && now - freshUntil > STALE_AFTER_FRESH_MS
 }
-const MAX_STORED_ROWS = 1000
-const MAX_DANISH_EXTRA_ROWS = 500
+const MAX_STORED_ROWS = 8000
+const MAX_DANISH_EXTRA_ROWS = 2000
 
 const hasDanishBook = (row: StoredRow) =>
   [...((row as { books_1?: { name?: string }[] }).books_1 ?? []), ...((row as { books_2?: { name?: string }[] }).books_2 ?? [])].some((book) =>
@@ -165,7 +165,7 @@ export async function saveBetHeroMessages(messages: unknown[]) {
     if (row.live || kickedOff || isStaleRow(row, now) || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
   }
 
-  // Danish rows usually have lower profit than the international top list, so they are kept outside the cap.
+  // Keep every row Bet Hero has, like Bet Hero itself does. The cap is only a safety net against runaway payloads.
   const sorted = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0))
   const rows = [...sorted.slice(0, MAX_STORED_ROWS), ...sorted.slice(MAX_STORED_ROWS).filter(hasDanishBook).slice(0, MAX_DANISH_EXTRA_ROWS)]
   const lastTotal = [...messages].reverse().find((message) => message && typeof message === 'object' && !Array.isArray(message) && 'total' in message)
