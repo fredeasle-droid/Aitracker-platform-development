@@ -5,7 +5,7 @@ import { ArrowRight, Bell, MessageSquareText, Smartphone } from "lucide-react";
 
 import { removePushSubscription, savePushSettings, savePushSubscription, sendTestPush, type PushSettingsInput } from "@/app/konto/push-actions";
 import { saveSmsSettings, type SmsSettingsInput } from "@/app/konto/sms-actions";
-import { IosInstallGuide, isIos } from "@/components/push/ios-install-guide";
+import { isIos } from "@/components/push/ios-install-guide";
 import type { AlertPanelData } from "@/lib/alert-panel-data";
 
 const PRESETS = [15, 20, 25, 30];
@@ -180,12 +180,13 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
     <div className="flex flex-col gap-3">
       {status === "checking" && <p className="text-[13px] text-muted-foreground">Tjekker din enhed…</p>}
 
-      {status === "unsupported" &&
-        (ios ? (
-          <IosInstallGuide className="rounded-lg border border-gold/40 bg-gold/10 p-3 text-foreground/90" titleClassName="text-gold" />
-        ) : (
-          <p className="text-[13px] leading-5 text-gold">Din browser understøtter ikke push. Prøv Chrome, Edge, Firefox eller Safari.</p>
-        ))}
+      {status === "unsupported" && (
+        <p className="text-[13px] leading-5 text-gold">
+          {ios
+            ? "Push er ikke tilgængelig i Safari på iPhone. Brug SMS-fanen, eller hent appen nedenfor."
+            : "Din browser understøtter ikke push. Prøv Chrome, Edge, Firefox eller Safari."}
+        </p>
+      )}
 
       {status === "blocked" && (
         <p className="text-[13px] leading-5 text-gold">Notifikationer er blokeret i din browser. Tillad dem for siden i browserens indstillinger, og genindlæs.</p>

@@ -19,6 +19,7 @@ import {
 import { Logo } from "./Logo";
 import { useSurebets } from "./surebets-context";
 import { SidebarPromo } from "@/components/desktop/sidebar-promo";
+import { InstallAppMenuItem } from "@/components/push/install-app";
 import { useLocale } from "@/components/locale-provider";
 import type { TranslationKey } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
@@ -207,6 +208,8 @@ function SurebetsSidebarContent() {
           );
         })}
       </nav>
+
+      <InstallAppMenuItem className="mt-3" />
 
       <div className="my-4 h-px bg-sidebar-border short:my-3" />
 

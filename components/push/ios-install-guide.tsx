@@ -10,10 +10,18 @@ export function isIos() {
   return /iphone|ipad|ipod/i.test(navigator.userAgent) || (/macintosh/i.test(navigator.userAgent) && navigator.maxTouchPoints > 1)
 }
 
-export function IosInstallGuide({ className = '', titleClassName = '' }: { className?: string; titleClassName?: string }) {
+export function IosInstallGuide({
+  className = '',
+  titleClassName = '',
+  title = 'Sådan får du notifikationer på iPhone',
+}: {
+  className?: string
+  titleClassName?: string
+  title?: string
+}) {
   return (
     <div className={className}>
-      <p className={`text-[13px] font-semibold ${titleClassName}`}>Sådan får du notifikationer på iPhone</p>
+      <p className={`text-[13px] font-semibold ${titleClassName}`}>{title}</p>
       <ol className="mt-2 flex list-decimal flex-col gap-1 pl-5 text-[13px] leading-5 marker:font-bold">
         {STEPS.map((step) => (
           <li key={step}>{step}</li>
