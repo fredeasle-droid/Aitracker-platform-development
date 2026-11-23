@@ -27,6 +27,7 @@ const JSON_LD = JSON.stringify([
     logo: `${SITE_URL}/icon.svg`,
     description: 'Dansk surebet-scanner, der finder odds hos bookmakere, hvor du vinder uanset udfaldet.',
     areaServed: 'DK',
+    founder: { '@type': 'Person', name: 'Frederik Myllerup Asler', url: `${SITE_URL}/om-os` },
     contactPoint: { '@type': 'ContactPoint', contactType: 'customer support', url: `${SITE_URL}/kontakt`, availableLanguage: ['da'] },
   },
 ])
@@ -40,6 +41,12 @@ const SECTIONS = [
     ],
   },
   {
+    title: 'Hvem står bag',
+    body: [
+      'BetTrackerAI er grundlagt og ejet af Frederik Myllerup Asler, som står bag udviklingen af scanneren og har det redaktionelle ansvar for sidens guides.',
+    ],
+  },
+  {
     title: 'Sådan finder vi surebets',
     body: [
       'Vores scanner henter odds fra danske og internationale bookmakere døgnet rundt. Hver gang en odds ændrer sig, beregner vi, om det giver et surebet, og viser det med det samme sammen med den korrekte indsatsfordeling.',
@@ -49,7 +56,7 @@ const SECTIONS = [
   {
     title: 'Sådan skriver vi vores guides',
     body: [
-      'Guides skrives af BetTrackerAI-redaktionen og bygger på vores egne erfaringer, bookmakernes regler og gældende dansk lovgivning. Hver guide har en dato for seneste opdatering, og vi gennemgår dem, når reglerne eller markedet ændrer sig.',
+      'Guides skrives af Frederik Myllerup Asler og bygger på vores egne erfaringer, bookmakernes regler og gældende dansk lovgivning. Hver guide har en dato for seneste opdatering, og vi gennemgår dem, når reglerne eller markedet ændrer sig.',
       'Finder du en fejl, så skriv til os, så retter vi den.',
     ],
   },

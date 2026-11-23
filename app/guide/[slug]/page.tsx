@@ -7,7 +7,7 @@ import { GUIDES, getGuide } from '@/lib/guides'
 import { BOOKMAKER_PAGES, SPORT_PAGES } from '@/lib/landing-pages'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 
-const AUTHOR = 'BetTrackerAI-redaktionen'
+const AUTHOR = 'Frederik Myllerup Asler'
 const BOOKMAKER_GUIDES = new Set(['bedste-bookmakere-til-surebets', 'undgaa-begraensning', 'matched-betting'])
 const chipCls =
   'inline-flex min-h-11 items-center rounded-full border border-border bg-card/60 px-4 text-[14px] font-semibold text-foreground/85 transition-colors hover:border-primary/60 hover:text-foreground'
@@ -53,7 +53,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       datePublished: guide.updated,
       mainEntityOfPage: url,
       image: `${url}/opengraph-image`,
-      author: { '@type': 'Organization', name: AUTHOR, url: `${SITE_URL}/om-os` },
+      author: { '@type': 'Person', name: 'Frederik Myllerup Asler', url: `${SITE_URL}/om-os` },
       publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     },
     {
