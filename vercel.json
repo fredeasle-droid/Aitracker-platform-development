@@ -11,6 +11,10 @@
     {
       "path": "/api/cron/telegram",
       "schedule": "0 18 * * *"
+    },
+    {
+      "path": "/api/cron/seo",
+      "schedule": "0 5 * * *"
     }
   ]
 }

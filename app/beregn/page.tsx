@@ -16,7 +16,8 @@ export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Beregn indsats – BetTrackerAI',
-  description: 'Find den rigtige indsats og få garanteret profit på dit surebet.',
+  description: 'Gratis surebet beregner: find den rigtige indsats på hvert udfald og se din garanterede profit med det samme.',
+  alternates: { canonical: '/beregn' },
 }
 
 export default async function BeregnPage({ searchParams }: { searchParams: Promise<{ id?: string }> }) {

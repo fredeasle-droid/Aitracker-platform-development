@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getServerT()
-  return { title: t('bonusMetaTitle'), description: t('bonusMetaDesc') }
+  return { title: t('bonusMetaTitle'), description: t('bonusMetaDesc'), alternates: { canonical: '/bonus' } }
 }
 
 const offers = [

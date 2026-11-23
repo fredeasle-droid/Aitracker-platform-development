@@ -1,4 +1,4 @@
-import { boolean, integer, jsonb, numeric, pgTable, primaryKey, serial, text, timestamp } from 'drizzle-orm/pg-core'
+import { boolean, date, integer, jsonb, numeric, pgTable, primaryKey, real, serial, text, timestamp } from 'drizzle-orm/pg-core'
 
 export const user = pgTable('user', { id: text('id').primaryKey(), name: text('name').notNull(), email: text('email').notNull().unique(), emailVerified: boolean('emailVerified').notNull().default(false), image: text('image'), username: text('username'), phone: text('phone'), createdAt: timestamp('createdAt').notNull().defaultNow(), updatedAt: timestamp('updatedAt').notNull().defaultNow() })
 export const session = pgTable('session', { id: text('id').primaryKey(), expiresAt: timestamp('expiresAt').notNull(), token: text('token').notNull().unique(), createdAt: timestamp('createdAt').notNull().defaultNow(), updatedAt: timestamp('updatedAt').notNull().defaultNow(), ipAddress: text('ipAddress'), userAgent: text('userAgent'), userId: text('userId').notNull() })
@@ -29,4 +29,9 @@ export const pushSettings = pgTable('push_settings', { userId: text('user_id').p
 export const pushAlertLog = pgTable('push_alert_log', { userId: text('user_id').notNull(), alertKey: text('alert_key').notNull(), profit: numeric('profit', { precision: 6, scale: 2 }).notNull(), sentAt: timestamp('sent_at', { withTimezone: true }).notNull().defaultNow() }, (t) => [primaryKey({ columns: [t.userId, t.alertKey] })])
 export const pushConfig = pgTable('push_config', { key: text('key').primaryKey(), value: text('value').notNull() })
 
-export const schema = { pushSubscriptions, pushSettings, pushAlertLog, pushConfig, user, session, account, verification, opportunities, teamLogos, appUsers, favorites, bets, scraperSessions, sourceSnapshots, subscriptions, telegramGroups, telegramPosts, telegramSettings, smsAlertSettings, smsAlertLog }
+export const seoKeywords = pgTable('seo_keywords', { id: serial('id').primaryKey(), keyword: text('keyword').notNull().unique(), targetPath: text('target_path').notNull().default('/'), createdAt: timestamp('created_at', { withTimezone: true }).notNull().defaultNow() })
+export const seoQueryDaily = pgTable('seo_query_daily', { date: date('date').notNull(), query: text('query').notNull(), clicks: integer('clicks').notNull().default(0), impressions: integer('impressions').notNull().default(0), ctr: real('ctr').notNull().default(0), position: real('position').notNull().default(0) }, (t) => [primaryKey({ columns: [t.date, t.query] })])
+export const seoSiteDaily = pgTable('seo_site_daily', { date: date('date').primaryKey(), clicks: integer('clicks').notNull().default(0), impressions: integer('impressions').notNull().default(0), ctr: real('ctr').notNull().default(0), position: real('position').notNull().default(0) })
+export const seoMeta = pgTable('seo_meta', { key: text('key').primaryKey(), value: text('value').notNull() })
+
+export const schema = { seoKeywords, seoQueryDaily, seoSiteDaily, seoMeta, pushSubscriptions, pushSettings, pushAlertLog, pushConfig, user, session, account, verification, opportunities, teamLogos, appUsers, favorites, bets, scraperSessions, sourceSnapshots, subscriptions, telegramGroups, telegramPosts, telegramSettings, smsAlertSettings, smsAlertLog }
