@@ -53,6 +53,7 @@ const FILTER_ID = process.env.BETHERO_FILTER_ID || 'zOUILG38'
 const SOCKET_URL = 'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=100&touch=1'
 const FLUSH_MS = 20_000
 const RESUBSCRIBE_MS = 5 * 60_000
+const RECONNECT_MS = 4 * 60_000
 // Bet Hero sends its full list (~2000 rows in ~100 messages) right after subscribing and only
 // changes afterwards, so the buffer must be large enough to never drop that first burst.
 const MAX_BUFFER = 3000
@@ -158,6 +159,9 @@ function runSocket(cookie) {
       reportStatus('Forbundet til Bet Hero')
       socket.send(subscribeMessage())
       timers.push(setInterval(() => socket.send(subscribeMessage()), RESUBSCRIBE_MS))
+      // Only a fresh connection makes Bet Hero resend the whole list; afterwards it keeps
+      // refreshing just the top rows by profit, so lower-profit (often Danish) rows would go stale.
+      timers.push(setTimeout(() => stop(), RECONNECT_MS))
       timers.push(setInterval(() => {
         if (!alive) return stop(new Error('Bet Hero svarer ikke'))
         alive = false
