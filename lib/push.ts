@@ -4,7 +4,7 @@ import { eq, inArray } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { pushConfig, pushSubscriptions } from '@/lib/db/schema'
 
-export type PushPayload = { title: string; body: string; url?: string; tag?: string }
+export type PushPayload = { title: string; body: string; url?: string; tag?: string; image?: string }
 
 type VapidKeys = { publicKey: string; privateKey: string }
 let cachedKeys: VapidKeys | null = null

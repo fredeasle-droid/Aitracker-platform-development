@@ -11,13 +11,42 @@ export const PUSH_LIMITS = { minProfit: 1, maxProfit: 50, minDaily: 1, maxDaily:
 
 const DAY_MS = 24 * 60 * 60 * 1000
 
+const TIME_ZONE = 'Europe/Copenhagen'
+
+function kickoffLabel(kickoff: Date, now: Date) {
+  const dayKey = (date: Date) => new Intl.DateTimeFormat('en-CA', { timeZone: TIME_ZONE }).format(date)
+  const time = new Intl.DateTimeFormat('da-DK', { timeZone: TIME_ZONE, hour: '2-digit', minute: '2-digit' })
+    .format(kickoff)
+    .replace('.', ':')
+  const diffDays = Math.round((Date.parse(dayKey(kickoff)) - Date.parse(dayKey(now))) / DAY_MS)
+  if (diffDays === 0) return `I dag kl. ${time}`
+  if (diffDays === 1) return `I morgen kl. ${time}`
+  const day = new Intl.DateTimeFormat('da-DK', { timeZone: TIME_ZONE, weekday: 'long', day: 'numeric', month: 'short' }).format(kickoff)
+  return `${day.charAt(0).toUpperCase()}${day.slice(1)} kl. ${time}`
+}
+
 function buildPayload(row: typeof opportunities.$inferSelect, profit: number): PushPayload {
   const pct = profit.toFixed(1).replace('.', ',')
+  const when = kickoffLabel(row.kickoff, new Date())
+  const card = new URLSearchParams({
+    p: pct,
+    h: row.homeTeam,
+    a: row.awayTeam,
+    l: row.league,
+    k: when,
+    al: row.aLabel,
+    ab: row.aBookmaker,
+    ao: String(Number(row.aOdds)),
+    bl: row.bLabel,
+    bb: row.bBookmaker,
+    bo: String(Number(row.bOdds)),
+  })
   return {
-    title: `${pct}% surebet: ${row.homeTeam} - ${row.awayTeam}`,
-    body: `${row.aLabel} @${Number(row.aOdds).toFixed(2)} (${row.aBookmaker})\n${row.bLabel} @${Number(row.bOdds).toFixed(2)} (${row.bBookmaker})`,
+    title: `Ny surebet: ${pct}% profit`,
+    body: `${row.homeTeam} - ${row.awayTeam}\n${when}\n${row.aBookmaker} @${Number(row.aOdds).toFixed(2)} og ${row.bBookmaker} @${Number(row.bOdds).toFixed(2)}`,
     url: '/surebets',
     tag: alertKey(row).slice(0, 120),
+    image: `/api/push/card?${card.toString()}`,
   }
 }
 

@@ -8,15 +8,19 @@ self.addEventListener('push', (event) => {
   } catch {
     data = { body: event.data ? event.data.text() : '' }
   }
-  event.waitUntil(
-    self.registration.showNotification(data.title || 'BetTracker', {
-      body: data.body || '',
-      icon: '/apple-icon.png',
-      badge: '/icon-light-32x32.png',
-      tag: data.tag || undefined,
-      data: { url: data.url || '/surebets' },
-    }),
-  )
+  const options = {
+    body: data.body || '',
+    icon: '/apple-icon.png',
+    badge: '/icon-light-32x32.png',
+    tag: data.tag || undefined,
+    renotify: Boolean(data.tag),
+    timestamp: Date.now(),
+    vibrate: [120, 60, 120],
+    actions: [{ action: 'open', title: 'Se surebet' }],
+    data: { url: data.url || '/surebets' },
+  }
+  if (data.image) options.image = data.image
+  event.waitUntil(self.registration.showNotification(data.title || 'BetTracker', options))
 })
 
 self.addEventListener('notificationclick', (event) => {
