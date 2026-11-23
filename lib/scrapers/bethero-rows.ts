@@ -1,6 +1,6 @@
 import 'server-only'
 import { getBetHeroMessages } from '@/lib/bethero-ingest'
-import { isLocalBookmaker } from '@/lib/local-bookmakers'
+import { isApprovedBookmaker, isLocalBookmaker } from '@/lib/local-bookmakers'
 import { displaySport, splitTeams, type ScrapedLeg, type ScrapedSurebet } from './types'
 
 type BetHeroBook = { name?: string }
@@ -28,21 +28,12 @@ type BetHeroRow = {
 
 const baseName = (name: string) => name.replace(/\s*\(.*?\)\s*$/, '').trim()
 
-// Keep the existing scanner scope stable while the separate BetHero catalog powers the UI filter.
-const ALLOWED_BOOKS = new Set([
-  'bwin', 'unibet', 'leovegas', '888sport', 'mrgreen', 'betinia', 'campobet', 'oddset',
-  'betsson', 'nordicbet', 'betfairexchange', 'betfair', 'bet365', 'marathonbet', 'dbbet',
-  'rainbet', 'mystake', '20', '20bet', 'betano', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio',
-])
-
-const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^a-z0-9]/g, '')
-
-// Prefer a local bookmaker for each side; otherwise keep any bookmaker so the user can opt in via the filter.
+// Only bookmakers on the limited list may be picked; a side with none of them drops the whole surebet.
 function pickBook(books: BetHeroBook[] | undefined) {
   const names = (books ?? []).map((book) => book.name).filter((name): name is string => Boolean(name))
-  const local = names.filter(isLocalBookmaker)
-  const allowed = names.filter((name) => ALLOWED_BOOKS.has(normalizeBook(name)))
-  const pool = local.length > 0 ? local : allowed.length > 0 ? allowed : names
+  const allowed = names.filter(isApprovedBookmaker)
+  const local = allowed.filter(isLocalBookmaker)
+  const pool = local.length > 0 ? local : allowed
   const chosen = pool.find((name) => /\(DK\)$/i.test(name)) ?? pool[0]
   return chosen ? baseName(chosen) : null
 }

@@ -6,7 +6,7 @@ import { eq } from 'drizzle-orm'
 import { sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { sourceSnapshots } from '@/lib/db/schema'
-import { isLocalBookmaker } from '@/lib/local-bookmakers'
+import { isApprovedBookmaker } from '@/lib/local-bookmakers'
 
 export const BETHERO_SNAPSHOT_SOURCE = 'bethero'
 export const BETHERO_CATALOG_SOURCE = 'bethero-catalog'
@@ -101,10 +101,13 @@ type StoredRow = {
 
 const MAX_STORED_ROWS = 8000
 
-const hasDanishBook = (row: StoredRow) =>
-  [...((row as { books_1?: { name?: string }[] }).books_1 ?? []), ...((row as { books_2?: { name?: string }[] }).books_2 ?? [])].some((book) =>
-    isLocalBookmaker(book.name ?? ''),
-  )
+const sideIsApproved = (books: { name?: string }[] | undefined) => (books ?? []).some((book) => isApprovedBookmaker(book.name ?? ''))
+
+// Both sides of a surebet must have a bookmaker from the limited list.
+const bothSidesApproved = (row: StoredRow) => {
+  const sides = row as { books_1?: { name?: string }[]; books_2?: { name?: string }[] }
+  return sideIsApproved(sides.books_1) && sideIsApproved(sides.books_2)
+}
 
 const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
 
@@ -151,7 +154,7 @@ export async function saveBetHeroMessages(messages: unknown[]) {
   // sorted into exchange, crypto or other by the bookmaker filter on the page.
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
-    if (row.live || kickedOff || !hasDanishBook(row)) state.delete(key)
+    if (row.live || kickedOff || !bothSidesApproved(row)) state.delete(key)
   }
 
   const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)

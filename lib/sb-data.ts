@@ -2,7 +2,7 @@ import 'server-only'
 import { getAllOpportunities, type Opportunity } from '@/lib/data'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
 import { displaySport } from '@/lib/scrapers/types'
-import { LOCAL_BOOKMAKERS, LOCAL_IDS, bookmakerKey } from '@/lib/local-bookmakers'
+import { APPROVED_IDS, LOCAL_BOOKMAKERS, LOCAL_IDS, bookmakerKey, isApprovedBookmaker } from '@/lib/local-bookmakers'
 import type { BookmakerCategory, BookmakerInfo, LegAlternative, Surebet } from '@/components/sb/data'
 
 export type SbSport = { label: string; count: number }
@@ -45,18 +45,11 @@ const KNOWN_NAMES: Record<string, string> = {
   superbet: 'Superbet', coolbet: 'Coolbet', '10bet': '10bet', betmgm: 'BetMGM', caesars: 'Caesars', bovada: 'Bovada', betonline: 'BetOnline',
 }
 
-/** Bookmakers the scanners already accepted before every Bet Hero bookmaker was let in; these start selected. */
-const APPROVED_IDS = new Set([
-  ...LOCAL_IDS,
-  'danskespil', 'dbbet', 'rainbet', 'mystake', '20', '20bet', 'vave', 'wildio', 'cloudbet', 'shuffle', 'sportsbetio',
-  'bcgame', 'bcbet', 'ggbet', 'pinnacle', 'bet9ja', 'dafabet', 'betfairexchange',
-])
-
 /** Button text from the source site that older scans stored as a bookmaker name, e.g. "Open Calculator". */
 const NOT_A_BOOKMAKER = /calculator|betslip|bet tracker|\bopen\b|\bclick\b|\bshare\b|\bcopy\b/i
 
 const hasRealBookmakers = (o: Opportunity) =>
-  [o.a.bookmaker, o.b.bookmaker].every((name) => bookmakerKey(name).length > 1 && !NOT_A_BOOKMAKER.test(name))
+  [o.a.bookmaker, o.b.bookmaker].every((name) => bookmakerKey(name).length > 1 && !NOT_A_BOOKMAKER.test(name) && isApprovedBookmaker(name))
 
 const MAX_ALTERNATIVES_PER_LEG = 2
 
@@ -152,12 +145,7 @@ export async function getSbData(): Promise<SbData> {
   const now = Date.now()
   const fresh = [...all].sort((a, b) => b.createdTs - a.createdTs)
   const sorted = groupOpportunities(all).sort((a, b) => b.primary.margin - a.primary.margin)
-  const isApproved = (g: Group) => [g.primary.a, g.primary.b].every((leg) => APPROVED_IDS.has(bookmakerKey(leg.bookmaker)))
-  // Cap approved and other bookmakers separately so opt-in bookmakers never push the default list below 50.
-  const groups = [
-    ...sorted.filter(isApproved).slice(0, MAX_OPPORTUNITIES),
-    ...sorted.filter((g) => !isApproved(g)).slice(0, MAX_OPPORTUNITIES),
-  ].sort((a, b) => b.primary.margin - a.primary.margin)
+  const groups = sorted.slice(0, MAX_OPPORTUNITIES)
 
   const names = new Map<string, string>([...LOCAL_BOOKMAKERS.map((b) => [b.id, b.name] as const), ...Object.entries(KNOWN_NAMES)])
   for (const o of all) {
@@ -167,8 +155,7 @@ export async function getSbData(): Promise<SbData> {
     }
   }
   const bookmakers = [...names.entries()]
-    // Every stored surebet already has a Danish bookmaker, so start with all bookmakers on; otherwise the
-    // international leg of most pairs would hide the surebet.
+    .filter(([id]) => APPROVED_IDS.has(id))
     .map(([id, name]) => ({ id, name, category: categoryOf(id), defaultOn: true }))
     .sort((a, b) => a.name.localeCompare(b.name, 'da'))
 
