@@ -390,6 +390,8 @@ export const en: Record<MessageKey, string> = {
   sbCatExchangeHint: 'Bet against other players',
   sbCatCrypto: 'Crypto bookmakers',
   sbCatCryptoHint: 'Deposits and withdrawals in crypto',
+  sbCatOther: 'Other bookmakers',
+  sbCatOtherHint: 'Foreign bookmakers',
   sbCalcAria: 'Calculate stake: {home} vs {away}',
   sbBestNow: 'Best right now',
   sbBestShort: 'Best now',

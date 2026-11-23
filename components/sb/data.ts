@@ -1,12 +1,13 @@
 /** Normalised bookmaker key, e.g. "Danske Spil" -> "danskespil". */
 export type BookmakerId = string;
 
-export type BookmakerCategory = "local" | "exchange" | "crypto";
+export type BookmakerCategory = "local" | "crypto" | "exchange" | "other";
 
 export const bookmakerCategories: { id: BookmakerCategory; name: string; hint: string }[] = [
   { id: "local", name: "Lokale bookmakere", hint: "Dansk licens" },
-  { id: "exchange", name: "Spillebørs", hint: "Spil mod andre spillere" },
   { id: "crypto", name: "Crypto bookmakere", hint: "Ind- og udbetaling i krypto" },
+  { id: "exchange", name: "Spillebørs", hint: "Spil mod andre spillere" },
+  { id: "other", name: "Andre bookmakere", hint: "Udenlandske bookmakere" },
 ];
 
 /** `defaultOn`: selected until the user changes it. Bookmakers outside our approved list start switched off. */

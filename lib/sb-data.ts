@@ -16,8 +16,16 @@ export type SbData = {
   trend: number[]
 }
 
-const EXCHANGES = new Set(['smarkets', 'matchbook', 'betdaq', 'betfairexchange', 'polymarket', 'kalshi', 'novig', 'prophetx', 'sporttrade'])
-const CRYPTO = new Set(['1xbet', 'cloudbet', 'bitcasino', 'sportsbet.io', 'thunderpick'])
+const EXCHANGES = new Set([
+  'smarkets', 'matchbook', 'betdaq', 'betfairexchange', 'betfairex', 'polymarket', 'kalshi', 'novig', 'prophetx',
+  'sporttrade', 'orbitexchange', 'sxbet', 'betconnect', 'predictit', 'manifold', 'limitless',
+])
+const CRYPTO = new Set([
+  'cloudbet', 'bitcasino', 'sportsbetio', 'thunderpick', 'rainbet', 'mystake', 'shuffle', 'bcgame', 'bcbet', 'roobet',
+  'rollbit', 'betfury', 'bitsler', 'fairspin', 'jackbit', 'coinpoker', 'metaspins', 'wildio', 'vave', 'duelbits',
+  'gamdom', 'betplay', 'winz', 'luckyblock', 'megadice', 'bitstarz', 'betpanda', 'coinplay',
+  'stakecom', 'trustdice', 'betsio', 'cryptobetsports', 'sportbet', 'nitrobetting', 'lilibet', '1xbit',
+])
 
 /** Bookmakers always offered in the filter and shown as local, whether or not the scanner has found a surebet at them. */
 const LOCAL_BOOKMAKERS: { id: string; name: string }[] = [
@@ -116,7 +124,7 @@ function categoryOf(key: string): BookmakerCategory {
   if (LOCAL_IDS.has(key)) return 'local'
   if (EXCHANGES.has(key)) return 'exchange'
   if (CRYPTO.has(key)) return 'crypto'
-  return 'crypto'
+  return 'other'
 }
 
 function leagueShort(league: string) {
