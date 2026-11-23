@@ -6,6 +6,16 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'www.bettrackerai.com' }],
+        destination: 'https://bettrackerai.com/:path*',
+        permanent: true,
+      },
+    ]
+  },
   async headers() {
     return [
       {

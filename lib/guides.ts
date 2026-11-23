@@ -352,6 +352,293 @@ export const GUIDES: Guide[] = [
     ],
     cta: { href: '/stats', label: 'Følg dine spil i regnskabet' },
   },
+  {
+    slug: 'bedste-bookmakere-til-surebets',
+    title: 'Bedste bookmakere til surebets i Danmark',
+    metaTitle: 'Bedste bookmakere til surebets i Danmark (2026)',
+    description:
+      'Hvilke bookmakere skal du bruge til surebets? Se hvad der kendetegner en god surebet-bookmaker, og hvordan du sammensætter dine konti.',
+    keyword: 'bedste bookmakere surebets',
+    category: 'Strategi',
+    readMinutes: 6,
+    updated: '2026-11-23',
+    intro:
+      'Der findes ikke én bookmaker, der er bedst til surebets. Surebets opstår mellem bookmakere, så det vigtigste er at have konti hos flere af dem med forskellige odds-leverandører og forskellig tilgang til markedet.',
+    blocks: [
+      { type: 'h2', text: 'Hvorfor flere bookmakere giver flere surebets' },
+      {
+        type: 'p',
+        text: 'Mange bookmakere bruger den samme odds-platform og har derfor næsten ens odds. Surebets opstår oftest mellem bookmakere, der sætter odds på hver sin måde. Har du kun konti hos bookmakere på samme platform, vil du se langt færre muligheder.',
+      },
+      { type: 'h2', text: 'Det skal du kigge efter' },
+      {
+        type: 'ul',
+        items: [
+          'Dansk licens fra Spillemyndigheden, så gevinster er skattefrie og du er beskyttet.',
+          'Hurtige ind- og udbetalinger, så du kan flytte penge, hvor de skal bruges.',
+          'Bredt udvalg af sportsgrene og markeder, især tennis, fodbold og basketball.',
+          'Konkurrencedygtige odds og lav margin på de populære markeder.',
+          'En velkomstbonus med rimelige vilkår, som du kan omsætte med surebets.',
+        ],
+      },
+      { type: 'h2', text: 'Sådan sammensætter du dine konti' },
+      {
+        type: 'p',
+        text: 'Start med 5-8 danske bookmakere fordelt på forskellige platforme. Det giver et godt udvalg af muligheder uden at du skal holde styr på for mange saldi. Når du har styr på rutinen, kan du udvide med flere.',
+      },
+      {
+        type: 'tip',
+        text: 'I BetTrackerAI kan du vælge præcis de bookmakere, du har konto hos, så du kun ser surebets, du faktisk kan spille.',
+      },
+      { type: 'h2', text: 'Bookmakere med egne odds er guld værd' },
+      {
+        type: 'p',
+        text: 'Bookmakere, der sætter deres egne odds i stedet for at købe dem, reagerer ofte langsommere eller anderledes på nyheder. Det er netop her, prisforskellene opstår. Til gengæld er det også ofte dem, der er hurtigst til at begrænse vindende konti.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvor mange bookmakere skal jeg have til surebets?',
+        a: 'Et godt udgangspunkt er 5-8 bookmakere med dansk licens. Jo flere forskellige odds-platforme du dækker, jo flere surebets får du adgang til.',
+      },
+      {
+        q: 'Må jeg bruge udenlandske bookmakere?',
+        a: 'Det anbefales ikke. Bookmakere uden dansk licens kan være blokeret, og gevinster derfra kan være skattepligtige.',
+      },
+    ],
+    cta: { href: '/surebets', label: 'Se surebets hos dine bookmakere' },
+  },
+  {
+    slug: 'bankroll-management',
+    title: 'Bankroll management til surebets og betting',
+    metaTitle: 'Bankroll management – styr dine penge som surebetter',
+    description:
+      'Sådan fordeler du din bankroll mellem bookmakere, hvor meget du skal sætte pr. surebet, og hvordan du undgår at mangle penge, når muligheden kommer.',
+    keyword: 'bankroll management',
+    category: 'Strategi',
+    readMinutes: 5,
+    updated: '2026-11-23',
+    intro:
+      'Din bankroll er de penge, du har sat af til betting. Ved surebets handler bankroll management mindre om at undgå tab og mere om at have pengene det rigtige sted, når et surebet dukker op.',
+    blocks: [
+      { type: 'h2', text: 'Sæt en fast bankroll' },
+      {
+        type: 'p',
+        text: 'Bestem et beløb, du kan undvære, og hold det adskilt fra dine øvrige penge. Brug kun det beløb til betting, og læg ikke flere penge ind, fordi et enkelt spil gik galt.',
+      },
+      { type: 'h2', text: 'Fordel pengene mellem bookmakere' },
+      {
+        type: 'p',
+        text: 'Et surebet kræver indsats hos to eller tre bookmakere samtidig. Fordel derfor din bankroll, så hver bookmaker har nok til mindst et par spil. Bookmakere, der ofte indgår i surebets, skal have lidt mere.',
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: bankroll på 10.000 kr. fordelt på 6 bookmakere',
+        rows: [
+          ['To mest brugte bookmakere', '2.500 kr. hver'],
+          ['Fire øvrige bookmakere', '1.250 kr. hver'],
+          ['Typisk indsats pr. surebet', '500-1.000 kr. i alt'],
+        ],
+        note: 'Med denne fordeling kan du dække flere surebets i træk, før du skal flytte penge.',
+      },
+      { type: 'h2', text: 'Hvor meget skal man sætte pr. surebet?' },
+      {
+        type: 'p',
+        text: 'En god tommelfingerregel er 5-10 % af din samlede bankroll pr. surebet. Det er højt sammenlignet med almindelig betting, men risikoen er også langt lavere. Gå ned i indsats, hvis oddsene er ustabile, eller hvis du er ny.',
+      },
+      {
+        type: 'tip',
+        text: 'Før regnskab over alle spil. Så kan du se, hvilke bookmakere der binder flest penge, og fordele bankrollen bedre.',
+      },
+      { type: 'h2', text: 'Flyt gevinster regelmæssigt' },
+      {
+        type: 'p',
+        text: 'Efter en periode samler pengene sig hos nogle bookmakere og mangler hos andre. Hæv fra dem med for meget og indsæt hos dem med for lidt, fx en gang om ugen.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvor stor en bankroll skal man starte med?',
+        a: 'Du kan starte med et par tusinde kroner, men 5.000-10.000 kr. gør det lettere at have penge nok hos flere bookmakere samtidig.',
+      },
+      {
+        q: 'Kan man tabe penge på surebets?',
+        a: 'Det kan ske, hvis en odds ændrer sig, før du når at placere det andet spil, eller hvis et spil bliver annulleret. God bankroll management begrænser skaden.',
+      },
+    ],
+    cta: { href: '/stats', label: 'Hold styr på din bankroll' },
+  },
+  {
+    slug: 'value-betting-vs-surebets',
+    title: 'Value betting vs. surebets: hvad er forskellen?',
+    metaTitle: 'Value betting vs. surebets – forskelle, fordele og risiko',
+    description:
+      'Value betting og surebets bruger begge forkerte odds, men på hver sin måde. Se forskellen, risikoen, og hvilken strategi der passer til dig.',
+    keyword: 'value betting',
+    category: 'Strategi',
+    readMinutes: 5,
+    updated: '2026-11-23',
+    intro:
+      'Både value betting og surebets udnytter, at bookmakerne nogle gange sætter odds forkert. Forskellen er, at et surebet låser gevinsten fast med det samme, mens value betting giver profit over mange spil.',
+    blocks: [
+      { type: 'h2', text: 'Hvad er value betting?' },
+      {
+        type: 'p',
+        text: 'Et value bet er en odds, der er højere end den reelle sandsynlighed tilsiger. Hvis en kamp reelt er 50/50, og en bookmaker giver odds 2,20, er det et value bet. Du spiller kun på ét udfald og kan tabe det enkelte spil, men over tid vinder du.',
+      },
+      { type: 'h2', text: 'Hvad er et surebet?' },
+      {
+        type: 'p',
+        text: 'Ved et surebet spiller du på alle udfald hos forskellige bookmakere, så du vinder uanset resultatet. Gevinsten er mindre pr. spil, men den er sikret med det samme.',
+      },
+      {
+        type: 'example',
+        title: 'Sammenligning',
+        rows: [
+          ['Risiko pr. spil', 'Surebets: lav · Value: høj'],
+          ['Profit pr. spil', 'Surebets: 1-5 % · Value: varierer'],
+          ['Antal spil før profit', 'Surebets: 1 · Value: hundredvis'],
+          ['Kræver konti hos', 'Surebets: flere · Value: én'],
+        ],
+      },
+      { type: 'h2', text: 'Hvilken strategi passer til dig?' },
+      {
+        type: 'ul',
+        items: [
+          'Vælg surebets, hvis du vil have stabil profit uden store udsving.',
+          'Vælg value betting, hvis du kan tåle perioder med tab og har en stor bankroll.',
+          'Mange kombinerer begge: surebets som fast indtægt og value bets som supplement.',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Begynder du, så start med surebets. Du lærer markedet at kende uden at risikere store tab.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Er value betting mere profitabelt end surebets?',
+        a: 'Value betting kan give højere profit på lang sigt, men med langt større udsving. Surebets giver mindre, men mere stabil profit.',
+      },
+      {
+        q: 'Bliver man også begrænset af value betting?',
+        a: 'Ja. Bookmakere begrænser vindende kunder uanset strategi, men value betting kan være lidt sværere at opdage, fordi du også taber spil.',
+      },
+    ],
+    cta: { href: '/surebets', label: 'Prøv surebets i realtid' },
+  },
+  {
+    slug: 'skat-paa-spillegevinster',
+    title: 'Skat på spillegevinster i Danmark',
+    metaTitle: 'Skat på spillegevinster i Danmark – hvad gælder for betting?',
+    description:
+      'Skal du betale skat af gevinster fra betting og surebets? Her er reglerne for danske og udenlandske bookmakere, og hvad du skal være opmærksom på.',
+    keyword: 'skat på spillegevinster',
+    category: 'Regler',
+    readMinutes: 4,
+    updated: '2026-11-23',
+    intro:
+      'For de fleste danske spillere er svaret enkelt: Gevinster fra bookmakere med dansk licens er skattefrie. Det er bookmakeren, der betaler afgift til staten, ikke dig.',
+    blocks: [
+      { type: 'h2', text: 'Danske bookmakere: skattefrit' },
+      {
+        type: 'p',
+        text: 'Når du spiller hos en udbyder med licens fra Spillemyndigheden, betaler udbyderen spilleafgift af sin indtjening. Dine gevinster er derfor som udgangspunkt skattefrie, og du skal ikke oplyse dem til Skattestyrelsen.',
+      },
+      { type: 'h2', text: 'Udenlandske bookmakere uden dansk licens' },
+      {
+        type: 'p',
+        text: 'Spiller du hos udbydere uden dansk licens, kan gevinsterne være skattepligtige. Reglerne afhænger blandt andet af, om udbyderen har licens i et andet EU/EØS-land. Det er en af grundene til, at det er mest enkelt at holde sig til danske bookmakere.',
+      },
+      { type: 'h2', text: 'Gælder det også for surebets?' },
+      {
+        type: 'p',
+        text: 'Ja. Skattemæssigt er et surebet bare to eller tre almindelige spil. Gevinster fra danske bookmakere er skattefrie, uanset om du spiller surebets, value bets eller almindelige spil.',
+      },
+      {
+        type: 'tip',
+        text: 'Gem en oversigt over dine spil. Det gør det let at dokumentere, hvor pengene kommer fra, hvis din bank spørger.',
+      },
+      { type: 'h2', text: 'Professionelt spil' },
+      {
+        type: 'p',
+        text: 'Er betting din hovedbeskæftigelse i stort omfang, kan der i særlige tilfælde gælde andre regler. Er du i tvivl om din egen situation, så kontakt Skattestyrelsen eller en revisor.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Skal jeg betale skat af gevinster fra danske bookmakere?',
+        a: 'Nej, som udgangspunkt ikke. Gevinster fra udbydere med dansk licens er skattefrie for spilleren.',
+      },
+      {
+        q: 'Hvordan ser jeg, om en bookmaker har dansk licens?',
+        a: 'Spillemyndigheden har en liste over godkendte udbydere på sin hjemmeside, og bookmakere med licens viser Spillemyndighedens logo på deres side.',
+      },
+    ],
+    cta: { href: '/guide/er-surebets-lovligt', label: 'Læs om reglerne for surebets' },
+  },
+  {
+    slug: 'odds-beregner',
+    title: 'Sådan bruger du en odds-beregner',
+    metaTitle: 'Odds-beregner – omregn odds til sandsynlighed og gevinst',
+    description:
+      'Lær at omregne decimalodds til sandsynlighed, beregne din mulige gevinst, og finde bookmakerens margin med en odds-beregner.',
+    keyword: 'odds beregner',
+    category: 'Grundlæggende',
+    readMinutes: 4,
+    updated: '2026-11-23',
+    intro:
+      'En odds-beregner gør odds til noget, du kan bruge: hvor meget du vinder, hvor sandsynligt bookmakeren mener udfaldet er, og hvor meget bookmakeren tjener. Her er de tre beregninger, du skal kende.',
+    blocks: [
+      { type: 'h2', text: '1. Mulig gevinst' },
+      {
+        type: 'p',
+        text: 'Med decimalodds, som danske bookmakere bruger, er udbetalingen indsats gange odds. Profitten er udbetalingen minus indsatsen.',
+      },
+      {
+        type: 'example',
+        title: 'Indsats 200 kr. til odds 2,50',
+        rows: [
+          ['Udbetaling', '200 × 2,50 = 500 kr.'],
+          ['Profit', '500 − 200 = 300 kr.'],
+        ],
+      },
+      { type: 'h2', text: '2. Implicit sandsynlighed' },
+      {
+        type: 'p',
+        text: 'Den sandsynlighed, bookmakeren regner med, er 1 divideret med odds. Odds 2,50 svarer til 40 %. Mener du selv, chancen er højere, er det et value bet.',
+      },
+      { type: 'h2', text: '3. Bookmakerens margin' },
+      {
+        type: 'p',
+        text: 'Læg de implicitte sandsynligheder for alle udfald sammen. Summen er over 100 %, og det overskydende er bookmakerens margin. Er summen under 100 % på tværs af bookmakere, har du et surebet.',
+      },
+      {
+        type: 'example',
+        title: 'Tennis: odds 1,85 og 1,95 hos samme bookmaker',
+        rows: [
+          ['1/1,85 + 1/1,95', '54,1 % + 51,3 % = 105,4 %'],
+          ['Bookmakerens margin', 'ca. 5,4 %'],
+        ],
+        note: 'Jo lavere margin, jo bedre odds får du som spiller.',
+      },
+      {
+        type: 'tip',
+        text: 'Vores gratis surebet beregner laver alle tre beregninger for dig og fordeler indsatsen på flere udfald.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvordan omregner man odds til procent?',
+        a: 'Divider 1 med odds og gang med 100. Odds 2,00 svarer til 50 %, og odds 4,00 svarer til 25 %.',
+      },
+      {
+        q: 'Hvad er forskellen på decimalodds og brøkodds?',
+        a: 'Decimalodds viser den samlede udbetaling pr. krone, fx 2,50. Brøkodds, som 3/2, viser kun profitten. Danske bookmakere bruger decimalodds.',
+      },
+    ],
+    cta: { href: '/beregn', label: 'Åbn beregneren' },
+  },
 ]
 
 export function getGuide(slug: string) {

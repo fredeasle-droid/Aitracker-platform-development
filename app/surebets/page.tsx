@@ -5,6 +5,7 @@ import { FilterBar } from '@/components/sb/FilterBar'
 import { SurebetTable } from '@/components/sb/SurebetTable'
 import { RightPanel } from '@/components/sb/RightPanel'
 import { LiveTicker } from '@/components/sb/LiveTicker'
+import { SeoIntro } from '@/components/sb/SeoIntro'
 import { BookmakerFilterProvider } from '@/components/sb/bookmaker-filter'
 import { SurebetsProvider } from '@/components/sb/surebets-context'
 import { GlobalFooter } from '@/components/site/global-footer'
@@ -71,6 +72,7 @@ export default async function SurebetsPage() {
               <RightPanel alerts={alerts} />
             </div>
           </div>
+          <SeoIntro />
         </main>
       </div>
       <GlobalFooter />

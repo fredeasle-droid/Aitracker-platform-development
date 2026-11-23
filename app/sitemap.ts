@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { GUIDES } from '@/lib/guides'
+import { BOOKMAKER_PAGES, SPORT_PAGES, UPDATED } from '@/lib/landing-pages'
 import { PUBLIC_PAGES, SITE_URL } from '@/lib/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -15,5 +16,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
-  return [...pages, ...guides]
+  const landing = [
+    ...SPORT_PAGES.map((page) => ({ path: `/sport/${page.slug}`, priority: 0.7 })),
+    ...BOOKMAKER_PAGES.map((page) => ({ path: `/bookmaker/${page.slug}`, priority: 0.6 })),
+  ].map(({ path, priority }) => ({
+    url: `${SITE_URL}${path}`,
+    lastModified: new Date(UPDATED),
+    changeFrequency: 'monthly' as const,
+    priority,
+  }))
+  return [...pages, ...guides, ...landing]
 }
