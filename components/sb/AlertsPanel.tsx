@@ -6,7 +6,6 @@ import { ArrowRight, Bell, MessageSquareText, Smartphone } from "lucide-react";
 import { removePushSubscription, savePushSettings, savePushSubscription, sendTestPush, type PushSettingsInput } from "@/app/konto/push-actions";
 import { saveSmsSettings, type SmsSettingsInput } from "@/app/konto/sms-actions";
 import { IosInstallGuide, isIos } from "@/components/push/ios-install-guide";
-import { InstallAppSection } from "@/components/push/install-app";
 import type { AlertPanelData } from "@/lib/alert-panel-data";
 
 const PRESETS = [15, 20, 25, 30];
@@ -321,7 +320,6 @@ export function AlertsPanel({ data }: { data: AlertPanelData }) {
           </Link>
         </>
       )}
-      <InstallAppSection />
     </div>
   );
 }

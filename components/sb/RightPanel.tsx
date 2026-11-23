@@ -5,6 +5,7 @@ import { formatPct, surebetProfitPct, teamShort } from "./data";
 import { Crest } from "./Crest";
 import { AlertsPanel } from "./AlertsPanel";
 import { TelegramPanel } from "./TelegramPanel";
+import { InstallAppCard } from "@/components/push/install-app";
 import type { AlertPanelData } from "@/lib/alert-panel-data";
 import { useSurebets } from "./surebets-context";
 import { useLocale } from "@/components/locale-provider";
@@ -94,6 +95,8 @@ export function RightPanel({ alerts }: { alerts: AlertPanelData }) {
       <LiveScanner />
 
       <AlertsPanel data={alerts} />
+
+      <InstallAppCard />
 
       <TelegramPanel />
 
