@@ -6,6 +6,7 @@ import { eq } from 'drizzle-orm'
 import { sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { sourceSnapshots } from '@/lib/db/schema'
+import { isLocalBookmaker } from '@/lib/local-bookmakers'
 
 export const BETHERO_SNAPSHOT_SOURCE = 'bethero'
 export const BETHERO_CATALOG_SOURCE = 'bethero-catalog'
@@ -100,6 +101,11 @@ type StoredRow = {
 
 const MAX_STORED_ROWS = 8000
 
+const hasDanishBook = (row: StoredRow) =>
+  [...((row as { books_1?: { name?: string }[] }).books_1 ?? []), ...((row as { books_2?: { name?: string }[] }).books_2 ?? [])].some((book) =>
+    isLocalBookmaker(book.name ?? ''),
+  )
+
 const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
 
 // Bet Hero only sends a row when it changes and announces removals in `gone`,
@@ -139,12 +145,13 @@ export async function saveBetHeroMessages(messages: unknown[]) {
 
   // Bet Hero streams changes in small batches rather than full lists, so rows are only removed
   // through `gone`, kick-off, or going stale — never because a batch happened to skip them.
-  // Bet Hero does not re-send unchanged low-profit rows, so rows are kept until kick-off or until
-  // Bet Hero announces them in `gone` — never pruned for going quiet. The bookmaker filter on the
-  // page decides which category (local, exchange, crypto, other) each side lands in.
+  // Only surebets where at least one side is on the Lokale bookmaker list are stored. Bet Hero does
+  // not re-send unchanged low-profit rows, so they are kept until kick-off or until Bet Hero
+  // announces them in `gone` — never pruned for going quiet. The other side of each surebet is
+  // sorted into exchange, crypto or other by the bookmaker filter on the page.
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
-    if (row.live || kickedOff) state.delete(key)
+    if (row.live || kickedOff || !hasDanishBook(row)) state.delete(key)
   }
 
   const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)
