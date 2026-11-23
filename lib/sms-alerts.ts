@@ -22,10 +22,24 @@ export function isQuietHour(hour: number, start: number, end: number) {
 export const alertKey = (row: typeof opportunities.$inferSelect) =>
   [row.homeTeam, row.awayTeam, row.market, row.player ?? '', row.kickoff.toISOString()].join('|').toLowerCase()
 
-/** Reduces an alert key to its match (teams + kickoff) so one match only triggers one alert. */
+/** Word order is sorted because sources disagree on "Berta Bonardi" vs "Bonardi, Berta". */
+const normalizeTeam = (name: string) =>
+  name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .split(/[^a-z0-9æøå]+/)
+    .filter(Boolean)
+    .sort()
+    .join(' ')
+
+/**
+ * Reduces an alert key to its match (teams only) so one match only triggers one alert.
+ * Kickoff is left out on purpose: some feeds derive it from "starts in X min" and it drifts every scan.
+ */
 export const matchKeyOf = (key: string) => {
-  const parts = key.split('|')
-  return [parts[0], parts[1], parts[parts.length - 1]].join('|')
+  const [home = '', away = ''] = key.split('|')
+  return `${normalizeTeam(home)}|${normalizeTeam(away)}`
 }
 
 function calculatorUrl(id: number) {

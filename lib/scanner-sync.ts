@@ -22,7 +22,15 @@ const opportunityKey = (row: typeof opportunities.$inferSelect) => surebetIdenti
 
 const MAX_PER_MATCH = 3
 
-const normalizeTeam = (name: string) => name.toLowerCase().replace(/[^a-z0-9æøå]+/g, ' ').trim()
+const normalizeTeam = (name: string) =>
+  name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .split(/[^a-z0-9æøå]+/)
+    .filter(Boolean)
+    .sort()
+    .join(' ')
 
 const matchKey = (item: { homeTeam: string; awayTeam: string; kickoff: Date | string | null }) => {
   const day = item.kickoff ? new Date(item.kickoff).toISOString().slice(0, 10) : ''
