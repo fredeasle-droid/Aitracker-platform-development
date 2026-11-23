@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Bell } from 'lucide-react'
 import { removePushSubscription, savePushSettings, savePushSubscription, sendTestPush, type PushSettingsInput } from '@/app/konto/push-actions'
+import { IosInstallGuide, isIos } from '@/components/push/ios-install-guide'
 import { Card, FieldLabel, Message, inputClass, primaryButton, secondaryButton } from './ui'
 
 const PRESETS = [3, 5, 10, 15]
@@ -16,8 +17,6 @@ function urlBase64ToBytes(value: string) {
   const raw = atob(padded.replace(/-/g, '+').replace(/_/g, '/'))
   return Uint8Array.from(raw, (c) => c.charCodeAt(0))
 }
-
-const isIos = () => typeof navigator !== 'undefined' && /iphone|ipad|ipod/i.test(navigator.userAgent)
 
 function Switch({ checked, onChange, title, hint }: { checked: boolean; onChange: (value: boolean) => void; title: string; hint: string }) {
   return (
@@ -138,13 +137,12 @@ export function PushAlertsForm({ initial, isSubscriber }: { initial: PushSetting
     <Card title="Push-notifikationer" icon={<Bell />}>
       {status === 'checking' && <p className="text-[13px] text-[#9fb3cc]">Tjekker din enhed…</p>}
 
-      {status === 'unsupported' && (
-        <p className="text-[13px] leading-5 text-[#ffcf6b]">
-          {isIos()
-            ? 'På iPhone skal siden først tilføjes til hjemmeskærmen: tryk Del, derefter "Føj til hjemmeskærm", og åbn BetTracker derfra.'
-            : 'Din browser understøtter ikke push-notifikationer. Prøv Chrome, Edge, Firefox eller Safari.'}
-        </p>
-      )}
+      {status === 'unsupported' &&
+        (isIos() ? (
+          <IosInstallGuide className="rounded-xl border border-[#ffcf6b]/40 bg-[#ffcf6b]/10 p-3 text-[#dbe6f3]" titleClassName="text-[#ffcf6b]" />
+        ) : (
+          <p className="text-[13px] leading-5 text-[#ffcf6b]">Din browser understøtter ikke push-notifikationer. Prøv Chrome, Edge, Firefox eller Safari.</p>
+        ))}
 
       {status === 'blocked' && (
         <p className="text-[13px] leading-5 text-[#ffcf6b]">Notifikationer er blokeret i din browser. Tillad dem i browserens indstillinger for siden, og genindlæs.</p>

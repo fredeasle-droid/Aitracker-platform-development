@@ -10,6 +10,7 @@ import { SurebetsProvider } from '@/components/sb/surebets-context'
 import { GlobalFooter } from '@/components/site/global-footer'
 import { GlobalHeader } from '@/components/site/global-header'
 import { getSbData } from '@/lib/sb-data'
+import { getAlertPanelData } from '@/lib/alert-panel-data'
 
 export const dynamic = 'force-dynamic'
 
@@ -20,7 +21,7 @@ export const metadata = {
 }
 
 export default async function SurebetsPage() {
-  const data = await getSbData()
+  const [data, alerts] = await Promise.all([getSbData(), getAlertPanelData()])
   return (
     <SurebetsProvider data={data}>
     <BookmakerFilterProvider>
@@ -66,7 +67,7 @@ export default async function SurebetsPage() {
               </div>
             </div>
             <div className="lg:ml-5 xl:ml-0">
-              <RightPanel />
+              <RightPanel alerts={alerts} />
             </div>
           </div>
         </main>
