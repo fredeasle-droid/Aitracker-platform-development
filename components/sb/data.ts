@@ -1,17 +1,15 @@
 /** Normalised bookmaker key, e.g. "Danske Spil" -> "danskespil". */
 export type BookmakerId = string;
 
-export type BookmakerCategory = "local" | "crypto" | "exchange" | "other";
+export type BookmakerCategory = "local" | "exchange" | "crypto";
 
 export const bookmakerCategories: { id: BookmakerCategory; name: string; hint: string }[] = [
   { id: "local", name: "Lokale bookmakere", hint: "Dansk licens" },
-  { id: "crypto", name: "Crypto bookmakere", hint: "Ind- og udbetaling i krypto" },
   { id: "exchange", name: "Spillebørs", hint: "Spil mod andre spillere" },
-  { id: "other", name: "Andre bookmakere", hint: "Udenlandske bookmakere" },
+  { id: "crypto", name: "Crypto bookmakere", hint: "Ind- og udbetaling i krypto" },
 ];
 
-/** `defaultOn`: selected until the user changes it. Bookmakers outside our approved list start switched off. */
-export type BookmakerInfo = { id: BookmakerId; name: string; category: BookmakerCategory; defaultOn: boolean };
+export type BookmakerInfo = { id: BookmakerId; name: string; category: BookmakerCategory };
 
 /** One side of a surebet: what to bet, where, and at which odds. */
 export type Leg = { bookmaker: BookmakerId; pick: string; odds: number };

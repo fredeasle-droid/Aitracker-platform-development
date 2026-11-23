@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowLeftRight, Bitcoin, Check, ChevronDown, Globe, Info, MapPin, Minus, Search, X } from "lucide-react";
+import { ArrowLeftRight, Bitcoin, Check, ChevronDown, Info, MapPin, Minus, Search, X } from "lucide-react";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { bookmakerCategories, visibleSurebets, type BookmakerCategory, type BookmakerId } from "./data";
@@ -11,13 +11,12 @@ import { useSurebets } from "./surebets-context";
 import { useLocale } from "@/components/locale-provider";
 import { cn } from "@/lib/utils";
 
-const categoryIcon: Record<BookmakerCategory, typeof MapPin> = { local: MapPin, exchange: ArrowLeftRight, crypto: Bitcoin, other: Globe };
+const categoryIcon: Record<BookmakerCategory, typeof MapPin> = { local: MapPin, exchange: ArrowLeftRight, crypto: Bitcoin };
 
 const categoryText = {
   local: { name: "sbCatLocal", hint: "sbCatLocalHint" },
   exchange: { name: "sbCatExchange", hint: "sbCatExchangeHint" },
   crypto: { name: "sbCatCrypto", hint: "sbCatCryptoHint" },
-  other: { name: "sbCatOther", hint: "sbCatOtherHint" },
 } as const;
 
 function TriggerLabel() {
@@ -185,12 +184,7 @@ export function BookmakerFilter() {
               <div className="mt-0.5 text-[12px] text-muted-foreground">{t("sbPickBk")}</div>
             </div>
             <div className="flex shrink-0 items-center gap-1 whitespace-nowrap text-[12px] font-semibold">
-              <button
-                onClick={selectAll}
-                disabled={allOn}
-                className="bg-gradient-primary flex items-center gap-1.5 rounded-lg px-3 py-1.5 font-bold text-primary-foreground shadow-glow transition hover:brightness-110 active:scale-[0.98] disabled:opacity-40 disabled:shadow-none disabled:hover:brightness-100"
-              >
-                <Check className="h-3.5 w-3.5" strokeWidth={3} />
+              <button onClick={selectAll} disabled={allOn} className="rounded-md px-2 py-1 text-primary-glow transition hover:bg-surface-elevated disabled:opacity-40 disabled:hover:bg-transparent">
                 {t("sbSelectAll")}
               </button>
               <span className="h-3 w-px bg-border" />

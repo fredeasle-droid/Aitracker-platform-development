@@ -3,7 +3,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState, t
 import type { BookmakerId } from "./data";
 import { useSurebets } from "./surebets-context";
 
-const STORAGE_KEY = "bt-bookmakers-v6";
+const STORAGE_KEY = "bt-bookmakers-off-v3";
 
 type Ctx = {
   selected: BookmakerId[];
@@ -15,28 +15,22 @@ type Ctx = {
   allOn: boolean;
 };
 
-type Overrides = Record<BookmakerId, boolean>;
-
 const BookmakerFilterContext = createContext<Ctx | null>(null);
 
 /**
  * Shared bookmaker selection for the filter bar, side menu and surebet list; remembered in the browser.
- * Only the user's changes are stored, so approved bookmakers start on and every other bookmaker starts off.
+ * Only the bookmakers switched off are stored, so new bookmakers from the scanner start out selected.
  */
 export function BookmakerFilterProvider({ children }: { children: ReactNode }) {
   const { bookmakers } = useSurebets();
   const all = useMemo(() => bookmakers.map((b) => b.id), [bookmakers]);
-  const defaults = useMemo(() => new Map(bookmakers.map((b) => [b.id, b.defaultOn])), [bookmakers]);
-  const [overrides, setOverrides] = useState<Overrides>({});
+  const [off, setOff] = useState<BookmakerId[]>([]);
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
-      const parsed = raw ? (JSON.parse(raw) as unknown) : null;
-      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
-        setOverrides(Object.fromEntries(Object.entries(parsed).filter(([, v]) => typeof v === "boolean")) as Overrides);
-      }
+      if (raw) setOff((JSON.parse(raw) as unknown[]).filter((id): id is string => typeof id === "string"));
     } catch {
       /* ignore broken storage */
     }
@@ -44,27 +38,27 @@ export function BookmakerFilterProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (loaded) localStorage.setItem(STORAGE_KEY, JSON.stringify(overrides));
-  }, [overrides, loaded]);
+    if (loaded) localStorage.setItem(STORAGE_KEY, JSON.stringify(off));
+  }, [off, loaded]);
 
-  const isOn = useCallback((id: BookmakerId) => overrides[id] ?? defaults.get(id) ?? false, [overrides, defaults]);
-
-  const toggle = useCallback((id: BookmakerId) => setOverrides((cur) => ({ ...cur, [id]: !isOn(id) })), [isOn]);
+  const toggle = useCallback((id: BookmakerId) => setOff((cur) => (cur.includes(id) ? cur.filter((x) => x !== id) : [...cur, id])), []);
 
   const value = useMemo<Ctx>(() => {
-    const selected = all.filter(isOn);
-    const setAll = (ids: readonly BookmakerId[], on: boolean) =>
-      setOverrides((cur) => ({ ...cur, ...Object.fromEntries(ids.map((id) => [id, on])) }));
+    const selected = all.filter((id) => !off.includes(id));
     return {
       selected,
-      isOn,
+      isOn: (id) => !off.includes(id),
       toggle,
-      toggleMany: (ids) => setAll(ids, !ids.every(isOn)),
-      selectAll: () => setAll(all, true),
-      clear: () => setAll(all, false),
+      toggleMany: (ids) =>
+        setOff((cur) => {
+          const groupAllOn = ids.every((id) => !cur.includes(id));
+          return groupAllOn ? [...new Set([...cur, ...ids])] : cur.filter((id) => !ids.includes(id));
+        }),
+      selectAll: () => setOff([]),
+      clear: () => setOff(all),
       allOn: selected.length === all.length,
     };
-  }, [all, isOn, toggle]);
+  }, [all, off, toggle]);
   return <BookmakerFilterContext.Provider value={value}>{children}</BookmakerFilterContext.Provider>;
 }
 

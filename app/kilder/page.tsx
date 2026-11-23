@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
-import { getAdminState, getOwnerState } from '@/lib/admin'
-import { currentPairCode, workerToken } from '@/lib/bethero-worker'
-import { SITE_URL } from '@/lib/site'
+import { getAdminState } from '@/lib/admin'
 import { getBetHeroSnapshot } from '@/lib/bethero-ingest'
 import { getSessionInfo } from '@/lib/scraper-session'
 import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
@@ -40,9 +38,6 @@ export default async function SourcesPage() {
     getBetHeroSnapshot(),
     getOddsJamSnapshot(),
   ])
-  const isOwner = (await getOwnerState()) === 'owner'
-  const vpsCommand = isOwner ? `curl -fsSL ${SITE_URL}/api/worker/bethero/install | sudo bash -s -- ${workerToken()}` : null
-  const shortVpsCommand = isOwner ? `curl -fsSL ${SITE_URL.replace(/^https?:\/\//, '')}/api/w/${currentPairCode()} | bash` : null
   const bridgeIsFresh = Boolean(snapshot?.updatedAt && Date.now() - snapshot.updatedAt.getTime() < 60_000)
   const oddsJamBridgeIsFresh = Boolean(oddsJamSnapshot?.updatedAt && Date.now() - oddsJamSnapshot.updatedAt.getTime() < 180_000)
 
@@ -97,30 +92,6 @@ export default async function SourcesPage() {
           placeholder="auth_session=…; bh_auth=1"
           action={saveBetHeroCookie}
         />
-        {vpsCommand && (
-          <section aria-labelledby="bethero-vps-heading" className="flex flex-col gap-3 rounded-xl border border-[#1769ff]/50 bg-[#0a1725] p-4 text-sm leading-relaxed">
-            <h3 id="bethero-vps-heading" className="text-base font-bold text-white">Kør døgnet rundt på en VPS</h3>
-            <p className="text-[#9fb2cc]">
-              Log ind på din Ubuntu-server og kør kommandoen herunder. Den installerer alt og starter en worker, der holder forbindelsen til Bet Hero åben og sender data hvert 20. sekund. Den henter selv cookien herfra, så når du gemmer en ny cookie ovenfor, bruger VPS&apos;en den automatisk.
-            </p>
-            {shortVpsCommand && (
-              <div className="flex flex-col gap-2">
-                <p className="font-semibold text-white">Kort kommando til at skrive i hånden</p>
-                <code className="block break-all rounded-lg border border-[#1769ff]/60 bg-[#081725] p-3 font-mono text-base text-white">{shortVpsCommand}</code>
-                <p className="text-xs text-[#9fb2cc]">Virker i ca. 30-60 minutter og kører som root. Genindlæs siden for en ny kode, hvis den er udløbet.</p>
-              </div>
-            )}
-            <label htmlFor="bethero-vps-command" className="font-semibold text-white">Installationskommando</label>
-            <textarea
-              id="bethero-vps-command"
-              readOnly
-              rows={4}
-              value={vpsCommand}
-              className="w-full resize-none rounded-lg border border-[#243650] bg-[#081725] p-3 font-mono text-xs text-[#d6deeb]"
-            />
-            <p className="text-xs text-[#9fb2cc]">Kommandoen indeholder en hemmelig nøgle. Del den ikke med andre.</p>
-          </section>
-        )}
         <a href="/api/bethero/userscript" download className="flex items-center justify-center rounded-xl bg-[#1769ff] px-4 py-3 text-center font-semibold text-white transition hover:bg-[#2f7bff]">
           Hent automatisk Bet Hero-bridge
         </a>

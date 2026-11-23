@@ -6,7 +6,6 @@ import { eq } from 'drizzle-orm'
 import { sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { sourceSnapshots } from '@/lib/db/schema'
-import { isApprovedBookmaker } from '@/lib/local-bookmakers'
 
 export const BETHERO_SNAPSHOT_SOURCE = 'bethero'
 export const BETHERO_CATALOG_SOURCE = 'bethero-catalog'
@@ -99,15 +98,23 @@ type StoredRow = {
   fresh_until?: number
 }
 
-const MAX_STORED_ROWS = 8000
+const ROW_TTL_MS = 3 * 60 * 60_000
+// Bet Hero keeps re-sending rows that still exist (each one is fresh for about a minute),
+// so a row that has not been refreshed for this long has vanished from Bet Hero.
+const STALE_AFTER_FRESH_MS = 10 * 60_000
 
-const sideIsApproved = (books: { name?: string }[] | undefined) => (books ?? []).some((book) => isApprovedBookmaker(book.name ?? ''))
-
-// Both sides of a surebet must have a bookmaker from the limited list.
-const bothSidesApproved = (row: StoredRow) => {
-  const sides = row as { books_1?: { name?: string }[]; books_2?: { name?: string }[] }
-  return sideIsApproved(sides.books_1) && sideIsApproved(sides.books_2)
+function freshUntilMs(row: StoredRow) {
+  const value = Number(row.fresh_until)
+  if (!Number.isFinite(value) || value <= 0) return null
+  return value > 1e12 ? value : value * 1000
 }
+
+function isStaleRow(row: StoredRow, now: number) {
+  const freshUntil = freshUntilMs(row)
+  return freshUntil !== null && now - freshUntil > STALE_AFTER_FRESH_MS
+}
+const MAX_STORED_ROWS = 1500
+const FULL_LIST_MIN_ROWS = 25
 
 const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
 
@@ -146,15 +153,17 @@ export async function saveBetHeroMessages(messages: unknown[]) {
   const touched = new Set<string>()
   for (const message of messages) applyMessage(state, message, now, touched)
 
-  // Bet Hero streams changes in small batches rather than full lists, so rows are only removed
-  // through `gone`, kick-off, or going stale — never because a batch happened to skip them.
-  // Only surebets where at least one side is on the Lokale bookmaker list are stored. Bet Hero does
-  // not re-send unchanged low-profit rows, so they are kept until kick-off or until Bet Hero
-  // announces them in `gone` — never pruned for going quiet. The other side of each surebet is
-  // sorted into exchange, crypto or other by the bookmaker filter on the page.
+  // The feed is sorted by profit, so a full list (many rows in one batch) must contain every
+  // stored row at or above its lowest profit. Anything missing from it is gone from Bet Hero,
+  // even when no `gone` message arrived.
+  if (touched.size >= FULL_LIST_MIN_ROWS) {
+    const lowest = Math.min(...[...touched].map((key) => Number(state.get(key)?.profit ?? Infinity)))
+    for (const [key, row] of state) if (!touched.has(key) && Number(row.profit ?? 0) >= lowest) state.delete(key)
+  }
+
   for (const [key, row] of state) {
     const kickedOff = !row.start || row.start * 1000 < now
-    if (row.live || kickedOff || !bothSidesApproved(row)) state.delete(key)
+    if (row.live || kickedOff || isStaleRow(row, now) || now - (row.seenAt ?? now) > ROW_TTL_MS) state.delete(key)
   }
 
   const rows = [...state.values()].sort((a, b) => Number(b.profit ?? 0) - Number(a.profit ?? 0)).slice(0, MAX_STORED_ROWS)
@@ -180,7 +189,9 @@ export async function getBetHeroMessages() {
   const [row] = await db.select({ payload: sourceSnapshots.payload }).from(sourceSnapshots).where(eq(sourceSnapshots.source, BETHERO_SNAPSHOT_SOURCE)).limit(1)
   if (!row) return []
   try {
-    return JSON.parse(row.payload) as unknown[]
+    const messages = JSON.parse(row.payload) as unknown[]
+    const now = Date.now()
+    return messages.map((message, index) => (index === 0 && Array.isArray(message) ? (message as StoredRow[]).filter((item) => !isStaleRow(item, now)) : message))
   } catch {
     return []
   }

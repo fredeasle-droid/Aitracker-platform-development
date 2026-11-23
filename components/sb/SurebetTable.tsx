@@ -1,9 +1,9 @@
 "use client";
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Crown, SearchX, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, Crown, SearchX, ShieldCheck, Star, X } from "lucide-react";
 import { formatPct, surebetProfitPct, visibleSurebets, type Surebet } from "./data";
-import { BookmakerMark } from "./BookmakerMark";
+import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";
 import { useBookmakerFilter } from "./bookmaker-filter";
 import { useSurebets } from "./surebets-context";
 import { ValueGauge } from "./ValueGauge";
@@ -297,8 +297,8 @@ function DetailsButton({ href, className, short }: { href: string; className?: s
 }
 
 function ListHeader({ count }: { count: number }) {
-  const { allOn } = useBookmakerFilter();
-  const { inSport, sport } = useSurebets();
+  const { allOn, selected, toggle, selectAll } = useBookmakerFilter();
+  const { inSport, bookmakers, sport } = useSurebets();
   const { t } = useLocale();
   return (
     <div className="px-1 pb-3 md:px-4 md:pt-4">
@@ -314,6 +314,28 @@ function ListHeader({ count }: { count: number }) {
           <span className="glow-dot h-2 w-2 animate-blink rounded-full bg-success" /> {t("sbUpdatedNow")}
         </div>
       </div>
+      {!allOn && selected.length > 0 && (
+        <div className="row-enter mt-3 flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 text-[12px] font-semibold text-muted-foreground">{t("sbBookmakersColon")}</span>
+          {bookmakers
+            .filter((bk) => selected.includes(bk.id))
+            .map((bk) => (
+              <button
+                key={bk.id}
+                onClick={() => toggle(bk.id)}
+                aria-label={t("sbRemoveBk", { name: bk.name })}
+                className="bk-chip group/chip flex items-center gap-1.5 rounded-full py-0.5 pl-0.5 pr-2 text-[12px] font-semibold transition hover:brightness-125"
+              >
+                <BookmakerBadge id={bk.id} className="h-5 w-5 text-[8px]" />
+                {bk.name}
+                <X className="h-3 w-3 text-muted-foreground transition group-hover/chip:text-foreground" />
+              </button>
+            ))}
+          <button onClick={selectAll} className="ml-1 rounded-md px-1.5 py-0.5 text-[12px] font-semibold text-primary-glow hover:underline">
+            {t("sbReset")}
+          </button>
+        </div>
+      )}
     </div>
   );
 }
