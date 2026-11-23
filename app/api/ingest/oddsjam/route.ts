@@ -1,5 +1,6 @@
 import { getAdminState } from '@/lib/admin'
 import { isProductionOddsJamBridgeRequest } from '@/lib/oddsjam-bridge-origin'
+import { verifyOddsJamIngestToken } from '@/lib/oddsjam-token'
 import { saveOddsJamBrowserRows } from '@/lib/scrapers/oddsjam'
 
 export const dynamic = 'force-dynamic'
@@ -12,12 +13,19 @@ export async function POST(request: Request) {
     return Response.json({ error: 'OddsJam ingestion is only enabled on bettrackerai.com.' }, { status: 403 })
   }
 
-  const origin = request.headers.get('origin')
-  if (origin !== new URL(request.url).origin) {
-    return Response.json({ error: 'Origin not allowed' }, { status: 403 })
-  }
-  if ((await getAdminState()) !== 'admin') {
-    return Response.json({ error: 'Sign in to BetTracker before connecting OddsJam' }, { status: 401 })
+  const authorization = request.headers.get('authorization')
+  if (authorization?.startsWith('Bearer ')) {
+    if (!(await verifyOddsJamIngestToken(authorization.slice(7).trim()))) {
+      return Response.json({ error: 'Invalid OddsJam token — download the script again from /kilder' }, { status: 401 })
+    }
+  } else {
+    const origin = request.headers.get('origin')
+    if (origin !== new URL(request.url).origin) {
+      return Response.json({ error: 'Origin not allowed' }, { status: 403 })
+    }
+    if ((await getAdminState()) !== 'admin') {
+      return Response.json({ error: 'Sign in to BetTracker before connecting OddsJam' }, { status: 401 })
+    }
   }
 
   const bodyText = await request.text()
