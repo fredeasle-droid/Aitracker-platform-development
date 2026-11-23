@@ -5,6 +5,12 @@ import { PasswordForm } from '@/components/konto/min-side/password-form'
 import { SubscriptionCard } from '@/components/konto/min-side/subscription-card'
 import { InvoiceList } from '@/components/konto/min-side/invoice-list'
 import { secondaryButton } from '@/components/konto/min-side/ui'
+import { SmsAlertsForm } from '@/components/konto/min-side/sms-alerts-form'
+import { PushAlertsForm } from '@/components/konto/min-side/push-alerts-form'
+import { PushBroadcastForm } from '@/components/konto/min-side/push-broadcast-form'
+import { TelegramCard } from '@/components/konto/min-side/telegram-card'
+import type { SmsSettingsInput } from './sms-actions'
+import type { PushSettingsInput } from './push-actions'
 import { formatDate, type AccountInvoice, type AccountSubscription, type AccountUser } from './account-types'
 
 type Props = {
@@ -12,9 +18,13 @@ type Props = {
   subscription: AccountSubscription | null
   invoices: AccountInvoice[]
   testAccess: boolean
+  smsSettings: SmsSettingsInput
+  pushSettings: PushSettingsInput
+  isOwner: boolean
 }
 
-export function MinSide({ user, subscription, invoices, testAccess }: Props) {
+export function MinSide({ user, subscription, invoices, testAccess, smsSettings, pushSettings, isOwner }: Props) {
+  const isSubscriber = subscription?.status === 'active' || subscription?.status === 'trialing'
   const initial = (user.name.trim()[0] ?? user.email[0] ?? '?').toUpperCase()
 
   return (
@@ -41,8 +51,14 @@ export function MinSide({ user, subscription, invoices, testAccess }: Props) {
             <SubscriptionCard subscription={subscription} testAccess={testAccess} />
             <InvoiceList invoices={invoices} />
           </div>
-          <ProfileForm user={user} />
+          <div className="space-y-4">
+            <ProfileForm user={user} />
+            <SmsAlertsForm initial={smsSettings} hasPhone={Boolean(user.phone.trim())} isSubscriber={isSubscriber} />
+          </div>
           <div className="space-y-4 lg:col-start-2 xl:col-start-auto">
+            <PushAlertsForm initial={pushSettings} isSubscriber={isSubscriber} />
+            <TelegramCard />
+            {isOwner && <PushBroadcastForm />}
             <PasswordForm />
             <Link href="/log-ud" className={secondaryButton}>
               <LogOut className="size-4" aria-hidden="true" /> Log ud

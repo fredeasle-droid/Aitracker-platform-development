@@ -72,6 +72,12 @@
     radial-gradient(40% 25% at 85% 55%, oklch(0.3 0.15 262 / 25%) 0%, transparent 70%),
     linear-gradient(180deg, var(--background-deep) 0%, var(--background) 40%, var(--background-deep) 100%);
 }
+/* On mobile the shared page backdrop from globals.css shows through, so the homepage matches every other page. */
+@media (max-width: 639px) {
+  .reference-home {
+    background: none;
+  }
+}
 /* The page is authored on a fixed 1024px canvas (the mockup's grid) and scaled for desktop screens. */
 .mock-frame {
   position: relative;

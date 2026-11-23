@@ -12,7 +12,7 @@ export const BETHERO_CATALOG_SOURCE = 'bethero-catalog'
 
 export type BetHeroCatalogEntry = { name: string; country?: string; category?: string }
 export const BETHERO_SOCKET_URL =
-  'wss://ws-prematch.betherosports.com/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=event-asc&rows=30&touch=1'
+  'wss://ws-prematch.betherosports.com/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=event-asc&rows=100&touch=1'
 
 export type BrowserMessage = { b64?: string; text?: string }
 

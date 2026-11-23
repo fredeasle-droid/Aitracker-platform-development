@@ -70,6 +70,11 @@
 
 :root {
   color-scheme: dark;
+  --mobile-page-bg: oklch(0.13 0.04 262);
+  --mobile-page-glow:
+    radial-gradient(120% 38% at 50% 0%, oklch(0.3 0.13 262 / 55%), transparent 72%),
+    radial-gradient(90% 28% at 100% 55%, oklch(0.25 0.1 262 / 30%), transparent 70%),
+    radial-gradient(110% 32% at 50% 100%, oklch(0.27 0.11 262 / 40%), transparent 70%);
   --background: #050b17;
   --foreground: #f3f6fc;
   --card: #0a1426;
@@ -111,24 +116,27 @@
   * {
     @apply border-border outline-ring/50;
   }
+  /* iOS Safari shrinks the page to fit when anything is wider than the screen, which leaves an empty strip on the right. Clip at the root so it can't. */
+  html {
+    overflow-x: clip;
+    max-width: 100%;
+  }
   body {
     @apply text-foreground font-sans;
-    background-color: oklch(0.16 0.06 266);
+    max-width: 100%;
+    overflow-x: clip;
+    background-color: var(--mobile-page-bg);
     isolation: isolate;
     -webkit-tap-highlight-color: transparent;
   }
-  /* Same navy and glow as the homepage and Surebets, pinned to the viewport (iOS ignores background-attachment: fixed) so every page matches. */
+  /* One mobile backdrop for every page: the deep navy of the homepage, pinned to the viewport (iOS ignores background-attachment: fixed). */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
     z-index: -1;
     pointer-events: none;
-    background-image:
-      radial-gradient(120% 50% at 50% 0%, oklch(0.42 0.19 262 / 60%), transparent 72%),
-      radial-gradient(90% 40% at 100% 42%, oklch(0.36 0.17 255 / 38%), transparent 70%),
-      radial-gradient(100% 45% at 0% 78%, oklch(0.34 0.15 262 / 36%), transparent 70%),
-      radial-gradient(110% 40% at 50% 100%, oklch(0.36 0.16 258 / 40%), transparent 70%);
+    background-image: var(--mobile-page-glow);
   }
   /* Desktop uses the exact page backdrop of the Surebets page */
   @media (min-width: 640px) {

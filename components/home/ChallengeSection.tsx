@@ -1,13 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import { ArrowRight, CalendarCheck, Mic } from "lucide-react";
 import { useInView } from "@/lib/use-in-view";
 import { CHALLENGE } from "./data";
 import { Swoosh } from "./Swoosh";
 import { ResultsStrip } from "./ResultsStrip";
+import { ChallengeCalendarDialog } from "./ChallengeCalendarDialog";
 
 export function ChallengeSection() {
   const [ref, inView] = useInView<HTMLElement>(0.25);
+  const [calendarOpen, setCalendarOpen] = useState(false);
   const pct = (CHALLENGE.day / CHALLENGE.totalDays) * 100;
 
   return (
@@ -46,7 +49,7 @@ export function ChallengeSection() {
       <p className="absolute left-[32px] top-[186px] w-[340px] text-[12.5px] leading-[18px] text-foreground/85">
         Følg vores <span className="font-semibold text-primary-glow">365 dages</span> rejse med surebetting, resultater og ærlig feedback.
       </p>
-      <button type="button" className="btn-glow group absolute left-[32px] top-[228px] flex h-[36px] items-center gap-[8px] rounded-full px-[20px] text-[12.5px] font-semibold">
+      <button type="button" onClick={() => setCalendarOpen(true)} aria-haspopup="dialog" className="btn-glow group absolute left-[32px] top-[228px] flex h-[36px] items-center gap-[8px] rounded-full px-[20px] text-[12.5px] font-semibold">
         Følg rejsen <ArrowRight className="h-[13px] w-[13px] transition-transform duration-300 group-hover:translate-x-[3px]" aria-hidden="true" />
       </button>
 
@@ -68,6 +71,7 @@ export function ChallengeSection() {
         </div>
       </div>
       <ResultsStrip inView={inView} />
+      <ChallengeCalendarDialog open={calendarOpen} onClose={() => setCalendarOpen(false)} />
     </section>
   );
 }

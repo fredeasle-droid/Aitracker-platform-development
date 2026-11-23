@@ -9,7 +9,7 @@ export const COMPANY: { brand: string; email: string; legalName?: string; cvr?: 
   email: "support@bettrackerai.com",
 };
 
-export const LEGAL_UPDATED = "22. november 2026";
+export const LEGAL_UPDATED = "23. november 2026";
 
 export type LegalBlock = { p: string } | { ul: string[] };
 export type LegalSection = { id: string; title: string; blocks: LegalBlock[] };
@@ -200,6 +200,8 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
       {
         ul: [
           "kontooplysninger: e-mail, brugernavn, mobilnummer (hvis du bruger SMS-service) og din adgangskode i krypteret form",
+          "alarmindstillinger: dine grænser for SMS og push (fx minimum og maksimum profit), stilletider og en log over, hvilke alarmer vi har sendt til dig",
+          "push-abonnement: en teknisk adresse (endpoint og nøgler), som din browser eller enhed giver os, når du tillader push-notifikationer. Den bruges kun til at sende dig beskeder",
           "abonnements- og betalingsoplysninger: hvilken plan du har, fakturaer og betalingsstatus. Selve kortoplysningerne håndteres af Stripe, og vi ser dem ikke",
           "dine data i tjenesten: registrerede spil og bankroll, indstillinger, valgte sportsgrene og alerts, samt billeder af kuponer, hvis du bruger scanningen",
           "henvendelser: dine beskeder til support og til vores AI-baserede supportchat",
@@ -216,7 +218,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
       {
         ul: [
           "At levere tjenesten, oprette din konto og håndtere dit abonnement: GDPR art. 6, stk. 1, litra b (opfyldelse af aftale)",
-          "At sende SMS-alerts, nyhedsbrev og markedsføring: GDPR art. 6, stk. 1, litra a (samtykke), som du kan trække tilbage når som helst",
+          "At sende SMS-alerts, push-notifikationer, nyhedsbrev og markedsføring (nyheder og tilbud): GDPR art. 6, stk. 1, litra a (samtykke). Du slår SMS og push til af dig selv, og du kan trække samtykket tilbage når som helst ved at slå dem fra under Min side eller i din browser",
           "At sikre og forbedre tjenesten, forebygge misbrug og besvare henvendelser: GDPR art. 6, stk. 1, litra f (legitim interesse)",
           "At opfylde bogføringsloven og andre retlige krav: GDPR art. 6, stk. 1, litra c (retlig forpligtelse)",
         ],
@@ -239,7 +241,9 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
           "Vercel til hosting og målinger af besøg",
           "Neon til drift af vores database",
           "udbydere af AI-modeller til at aflæse kuponer og besvare spørgsmål i supportchatten",
-          "udbydere af SMS og e-mail til at sende dine alerts og beskeder",
+          "GatewayAPI (dansk udbyder med servere i EU) til at sende SMS-alarmer til det mobilnummer, du selv har oplyst. De modtager kun nummeret og beskedteksten, når en SMS sendes, og bruger det ikke til egen markedsføring",
+          "din browsers push-tjeneste (fx Google, Apple eller Mozilla) til at levere push-notifikationer. De modtager kun den krypterede besked og det tekniske push-abonnement",
+          "udbydere af e-mail til at sende dine beskeder",
         ],
       },
       {
@@ -266,6 +270,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
           "Bogføringsmateriale, fx fakturaer, gemmes i 5 år efter regnskabsårets udløb, jf. bogføringsloven",
           "Billeder af kuponer gemmer vi kun, så længe det er nødvendigt for at aflæse dem",
           "Nyhedsbrevsoplysninger gemmes, til du afmelder dig",
+          "Mobilnummer og push-abonnement gemmes, til du slår SMS eller push fra, fjerner nummeret eller sletter din konto. Loggen over sendte alarme bruges til at undgå dubletter og gemmes kun kortvarigt",
           "Supporthenvendelser gemmer vi, så længe det er nødvendigt for at løse sagen og dokumentere vores svar",
         ],
       },

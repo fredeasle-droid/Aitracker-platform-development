@@ -2,9 +2,8 @@
 
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, BellRing, CalendarCheck, Check, Clock, Crown, MessageSquareText, Mic, Percent, Play, Quote, Radar, Star, Target, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BellRing, CalendarCheck, Check, Clock, Crown, MessageSquareText, Mic, Play, Quote, Radar, Star, Users } from "lucide-react";
 import { useInView } from "@/lib/use-in-view";
-import { useCount } from "../use-count";
 const hero = "/home/hero-player.jpg";
 const studio = { url: "/home/challenge-studio.webp" };
 const host = { url: "/home/pricing-host.webp" };
@@ -22,9 +21,10 @@ import { TeamCrest, useHomeData } from "../home-data";
 import { POINTS } from "../SmsService";
 import { CHANNELS } from "../SocialFollow";
 import { Swoosh } from "../Swoosh";
-import { CHALLENGE, PRICING, RESULT_SERIES, REVIEWS } from "../data";
+import { CHALLENGE, PRICING, REVIEWS } from "../data";
 import { ReviewAvatar, ReviewDots, ReviewPhoto, Stars, playExplainerVideo, useReviewRotation } from "../Reviews";
 import { MobileFaq } from "../Faq";
+import { ChallengeCalendarDialog } from "../ChallengeCalendarDialog";
 
 const fmt = (n: number) => Math.round(n).toLocaleString("da-DK");
 
@@ -347,21 +347,10 @@ function Bookmakers() {
   );
 }
 
-const CW = 300;
-const CH = 70;
-const cmax = Math.max(...RESULT_SERIES);
-const cpts = RESULT_SERIES.map((v, i) => [(i / (RESULT_SERIES.length - 1)) * (CW - 6), CH - 4 - (v / cmax) * (CH - 10)] as const);
-const cline = cpts.map(([x, y], i) => `${i ? "L" : "M"}${x.toFixed(1)} ${y.toFixed(1)}`).join(" ");
-const carea = `${cline} L${cpts[cpts.length - 1]![0].toFixed(1)} ${CH} L0 ${CH} Z`;
-
 function Challenge() {
   const [ref, inView] = useInView<HTMLDivElement>(0.2);
   const [open, setOpen] = useState(false);
-  const shown = inView && open;
   const pct = (CHALLENGE.day / CHALLENGE.totalDays) * 100;
-  const total = useCount(CHALLENGE.totalReturn, shown);
-  const bets = useCount(CHALLENGE.surebets, shown);
-  const margin = useCount(CHALLENGE.avgMargin, shown);
   return (
     <div ref={ref}>
       <Box className="challenge-panel p-0!">
@@ -414,70 +403,15 @@ function Challenge() {
           </div>
           <button
             type="button"
-            aria-expanded={open}
-            aria-controls="challenge-results"
-            onClick={() => setOpen((v) => !v)}
+            aria-haspopup="dialog"
+            onClick={() => setOpen(true)}
             className="btn-glow mt-3 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold"
           >
-            Følg rejsen{" "}
-            <ArrowRight className={`h-4 w-4 transition-transform duration-500 motion-reduce:transition-none ${open ? "rotate-90" : ""}`} aria-hidden="true" />
+            Følg rejsen <ArrowRight className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>
-        <div
-          id="challenge-results"
-          className={`grid transition-[grid-template-rows] duration-500 ease-out motion-reduce:transition-none ${open ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
-        >
-          <div className="overflow-hidden" inert={!open}>
-        <div className="challenge-strip p-4">
-          <p className="text-[11px] font-semibold uppercase tracking-[2.2px] text-primary-glow">Tallene bag rejsen</p>
-          <h3 className="mt-1 text-[20px] font-bold leading-6">Se resultaterne – sort på hvidt</h3>
-          <p className="mt-1 text-[12px] text-foreground/70">Følg fremgangen i realtid, dag for dag.</p>
-          <div className="value-pill mt-4 rounded-[12px] p-3">
-            <p className="text-[11px] text-foreground/75">Samlet resultat</p>
-            <p className="flex items-center gap-1 text-[22px] font-bold tabular-nums text-success">
-              <TrendingUp className="h-4 w-4" strokeWidth={2.6} aria-hidden="true" />+{total.toFixed(2)}%
-            </p>
-            <svg className="mt-1 h-[70px] w-full" viewBox={`0 0 ${CW} ${CH}`} preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <linearGradient id="m-strip-area" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.55" />
-                  <stop offset="100%" stopColor="var(--primary)" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-              <path d={carea} fill="url(#m-strip-area)" className="delay-700 transition-opacity duration-1000" style={{ opacity: shown ? 1 : 0 }} />
-              <path
-                d={cline}
-                pathLength={1}
-                fill="none"
-                stroke="var(--primary-glow)"
-                strokeWidth="2"
-                strokeLinejoin="round"
-                vectorEffect="non-scaling-stroke"
-                className="chart-draw"
-                style={{ strokeDasharray: 1, strokeDashoffset: shown ? 0 : 1 }}
-              />
-            </svg>
-          </div>
-          <div className="mt-3 grid grid-cols-2 gap-3">
-            {(
-              [
-                ["Antal surebets", Math.round(bets).toString(), Target],
-                ["Gns. margin", `${margin.toFixed(2)}%`, Percent],
-              ] as const
-            ).map(([l, v, Icon]) => (
-              <div key={l} className="value-pill rounded-[12px] p-3">
-                <p className="text-[11px] text-foreground/75">{l}</p>
-                <p className="mt-0.5 flex items-center gap-1.5 text-[20px] font-bold tabular-nums">
-                  <Icon className="h-4 w-4 text-primary-glow" strokeWidth={2.6} aria-hidden="true" />
-                  {v}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-          </div>
-        </div>
       </Box>
+      <ChallengeCalendarDialog open={open} onClose={() => setOpen(false)} />
     </div>
   );
 }

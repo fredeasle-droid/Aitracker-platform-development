@@ -1,8 +1,11 @@
 "use client";
-import { Clock, Lightbulb, ArrowRight, Trophy, Radar } from "lucide-react";
+import { Clock, Trophy, Radar } from "lucide-react";
 
 import { formatPct, surebetProfitPct, teamShort } from "./data";
 import { Crest } from "./Crest";
+import { AlertsPanel } from "./AlertsPanel";
+import { TelegramPanel } from "./TelegramPanel";
+import type { AlertPanelData } from "@/lib/alert-panel-data";
 import { useSurebets } from "./surebets-context";
 import { useLocale } from "@/components/locale-provider";
 
@@ -83,23 +86,16 @@ function LiveScanner() {
   );
 }
 
-export function RightPanel() {
+export function RightPanel({ alerts }: { alerts: AlertPanelData }) {
   const { top } = useSurebets();
   const { t } = useLocale();
   return (
     <aside className="flex flex-col gap-4">
       <LiveScanner />
 
-      <div className="sb-panel edge-light relative p-5">
-        <div className="flex items-center gap-2.5 text-[17px] font-bold">
-          <Lightbulb className="h-6 w-6 fill-gold text-gold drop-shadow-[0_0_8px_var(--gold)]" /> {t("sbQuickInfo")}
-        </div>
-        <p className="mt-3 text-[15px] font-semibold leading-snug">{t("sbQuick1")}</p>
-        <p className="mt-3 text-[15px] font-medium leading-snug text-foreground/85">{t("sbQuick2")}</p>
-        <button className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-lg chip-surface border border-border-glow/60 py-2 text-sm font-bold text-primary-glow hover:brightness-125">
-          {t("sbReadMore")} <ArrowRight className="h-4 w-4" />
-        </button>
-      </div>
+      <AlertsPanel data={alerts} />
+
+      <TelegramPanel />
 
       <div className="sb-panel panel-glow relative min-h-[245px] overflow-hidden">
         <img src="/sb/promo-ball.jpg" alt="" loading="lazy" width={816} height={816} className="absolute inset-0 h-full w-full object-cover object-[75%_60%]" />
