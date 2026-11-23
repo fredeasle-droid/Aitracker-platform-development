@@ -44,6 +44,8 @@ export const WORKER_PACKAGE_JSON = JSON.stringify(
 
 export const WORKER_SCRIPT = String.raw`import WebSocket from 'ws'
 import { encode } from '@msgpack/msgpack'
+import { readFileSync, writeFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 
 const BASE = process.env.BETTRACKER_URL
 const TOKEN = process.env.BETTRACKER_TOKEN
@@ -51,7 +53,12 @@ const FILTER_ID = process.env.BETHERO_FILTER_ID || 'zOUILG38'
 const SOCKET_URL = 'wss://ws-prematch.betherosports.com/ws/surebets?format=msgpack&compress=zstd&pin=1&formulas=2&view=1&sort=profit-desc&rows=100&touch=1'
 const FLUSH_MS = 20_000
 const RESUBSCRIBE_MS = 5 * 60_000
-const MAX_BUFFER = 200
+// Bet Hero sends its full list (~2000 rows in ~100 messages) right after subscribing and only
+// changes afterwards, so the buffer must be large enough to never drop that first burst.
+const MAX_BUFFER = 3000
+const CHUNK_SIZE = 100
+const UPDATE_CHECK_MS = 10 * 60_000
+const SELF_PATH = fileURLToPath(import.meta.url)
 
 if (!BASE || !TOKEN) {
   console.error('BETTRACKER_URL og BETTRACKER_TOKEN mangler i /etc/bettracker-worker.env')
@@ -85,20 +92,45 @@ function subscribeMessage() {
 }
 
 let buffer = []
+let flushing = false
 
 async function flush() {
-  if (!buffer.length) return
-  const messages = buffer
-  buffer = []
+  if (flushing || !buffer.length) return
+  flushing = true
   try {
-    log('Sendt:', await api('POST', { messages }))
-  } catch (error) {
-    log('Kunne ikke sende data:', error.message)
-    buffer = messages.concat(buffer).slice(-MAX_BUFFER)
+    while (buffer.length) {
+      const messages = buffer.slice(0, CHUNK_SIZE)
+      try {
+        log('Sendt:', await api('POST', { messages }))
+        buffer = buffer.slice(messages.length)
+      } catch (error) {
+        log('Kunne ikke sende data:', error.message)
+        break
+      }
+    }
+  } finally {
+    flushing = false
   }
 }
 
 setInterval(flush, FLUSH_MS)
+
+async function checkForUpdate() {
+  try {
+    const response = await fetch(BASE + '/api/worker/bethero/script', { signal: AbortSignal.timeout(30_000) })
+    if (!response.ok) return
+    const latest = await response.text()
+    if (!latest.includes('WebSocket') || latest === readFileSync(SELF_PATH, 'utf8')) return
+    writeFileSync(SELF_PATH, latest)
+    log('Ny version hentet, genstarter')
+    await flush()
+    process.exit(0)
+  } catch (error) {
+    log('Kunne ikke tjekke for opdatering:', error.message)
+  }
+}
+
+setInterval(checkForUpdate, UPDATE_CHECK_MS)
 
 class SessionExpired extends Error {}
 
@@ -223,6 +255,7 @@ Restart=always
 RestartSec=10
 NoNewPrivileges=true
 ProtectSystem=strict
+ReadWritePaths=/opt/bettracker-worker
 ProtectHome=true
 PrivateTmp=true
 
