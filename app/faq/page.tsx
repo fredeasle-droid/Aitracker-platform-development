@@ -8,6 +8,7 @@ import { ACCOUNT_FAQ } from '@/lib/legal'
 export const metadata: Metadata = {
   title: 'FAQ – BetTrackerAI',
   description: 'Svar på de mest stillede spørgsmål om surebets, prøveperiode, abonnement, opsigelse og fortrydelsesret.',
+  alternates: { canonical: '/faq' },
 }
 
 const GROUPS = [

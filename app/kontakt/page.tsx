@@ -8,6 +8,7 @@ import { COMPANY } from '@/lib/legal'
 export const metadata: Metadata = {
   title: 'Kontakt os – BetTrackerAI',
   description: 'Kontakt BetTrackerAI support på e-mail, via Telegram eller i supportchatten på forsiden.',
+  alternates: { canonical: '/kontakt' },
 }
 
 const cardCls = 'flex flex-col gap-3 rounded-2xl border border-border bg-card/70 p-5 transition-colors hover:border-primary/50 lg:p-6'

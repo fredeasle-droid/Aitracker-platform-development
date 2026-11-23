@@ -7,6 +7,7 @@ import { LEGAL_UPDATED, PRIVACY_SECTIONS } from '@/lib/legal'
 export const metadata: Metadata = {
   title: 'Privatlivspolitik – BetTrackerAI',
   description: 'Se hvilke personoplysninger BetTrackerAI behandler, hvorfor, hvor længe, og hvilke rettigheder du har efter GDPR.',
+  alternates: { canonical: '/privatlivspolitik' },
 }
 
 export default function PrivacyPage() {

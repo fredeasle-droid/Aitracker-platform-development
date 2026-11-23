@@ -11,6 +11,7 @@ const headingCls = "mb-2 text-[16px] font-semibold text-foreground";
 const LINKS = [
   { href: "/", label: "Forside" },
   { href: "/surebets", label: "Surebets" },
+  { href: "/guide", label: "Guides" },
   { href: "/stats", label: "Analytics" },
   { href: "/konto", label: "Indstillinger" },
 ];

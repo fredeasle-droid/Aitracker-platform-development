@@ -9,6 +9,7 @@ import { GlobalFooter } from '@/components/site/global-footer'
 import { RootHeader } from '@/components/site/global-header'
 import { PageShell } from '@/components/site/page-shell'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
+import { SITE_NAME, SITE_URL } from '@/lib/site'
 import './globals.css'
 
 const roboto = Roboto({
@@ -22,9 +23,13 @@ const roboto = Roboto({
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getServerT()
   return {
+    metadataBase: new URL(SITE_URL),
     title: t('metaTitle'),
     description: t('metaDesc'),
     applicationName: 'BetTracker',
+    openGraph: { type: 'website', siteName: SITE_NAME, locale: 'da_DK', title: t('metaTitle'), description: t('metaDesc') },
+    twitter: { card: 'summary_large_image', title: t('metaTitle'), description: t('metaDesc') },
+    ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
     manifest: '/manifest.webmanifest',
     appleWebApp: { capable: true, title: 'BetTracker', statusBarStyle: 'black-translucent' },
     icons: {

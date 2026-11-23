@@ -18,6 +18,7 @@ export const metadata = {
   title: 'Surebets i realtid – BetTrackerAI',
   description:
     'Find de sikre odds med BetTrackerAI. Vi scanner markedet 24/7 og finder de bedste surebets på tværs af bookmakere.',
+  alternates: { canonical: '/surebets' },
 }
 
 export default async function SurebetsPage() {

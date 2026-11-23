@@ -7,6 +7,7 @@ import { LEGAL_UPDATED, TERMS_SECTIONS } from '@/lib/legal'
 export const metadata: Metadata = {
   title: 'Vilkår & Betingelser – BetTrackerAI',
   description: 'Læs vilkårene for BetTrackerAI: abonnement, prøveperiode, fortrydelsesret, opsigelse og ansvarligt spil.',
+  alternates: { canonical: '/vilkaar' },
 }
 
 export default function TermsPage() {
