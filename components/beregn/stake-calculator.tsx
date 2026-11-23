@@ -1,23 +1,8 @@
 'use client'
 
 import { useState, useTransition, type CSSProperties, type ReactNode } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import {
-  ArrowUpRight,
-  BarChart3,
-  Bookmark,
-  Calculator,
-  ChartNoAxesCombined,
-  Coins,
-  Minus,
-  Pencil,
-  Plus,
-  Radio,
-  Star,
-  Trophy,
-  Wallet,
-} from 'lucide-react'
+import { ArrowUpRight, Bookmark, ChartNoAxesCombined, Coins, Minus, Pencil, Plus, Wallet } from 'lucide-react'
 import { placeBet } from '@/app/actions'
 import { fallbackLink } from '@/components/beregn/go-to-bookmaker'
 import { CalcHero, LeagueMark } from '@/components/beregn/calc-hero'
@@ -628,49 +613,6 @@ function MobileResultDock({ result, onSave, saving }: { result: Result | null; o
   )
 }
 
-const TABS = [
-  { label: 'Surebets', icon: Trophy, href: '/surebets' },
-  { label: 'Beregn', icon: Calculator, href: null },
-  { label: 'Live', icon: Radio, href: '/surebets' },
-  { label: 'Statistik', icon: BarChart3, href: '/stats' },
-  { label: 'Min konto', icon: Star, href: '/konto' },
-]
-
-function MobileTabBar() {
-  return (
-    <nav aria-label="Hovedmenu" className="bi-tabbar p-[6px]">
-      <ul className="grid h-[54px] grid-cols-5 gap-[4px]">
-        {TABS.map(({ label, icon: I, href }) => {
-          const active = href === null
-          const cls = cn(
-            'flex h-full flex-col items-center justify-center gap-[3px] rounded-[16px] text-[10.5px] font-semibold transition-colors',
-            active ? 'bi-tab-active' : 'text-(--bi-fg)/70 active:bg-(--bi-accent)',
-          )
-          const content = (
-            <>
-              <I className="size-[21px]" strokeWidth={active ? 2.2 : 1.8} aria-hidden="true" />
-              <span className="max-w-full truncate px-[2px]">{label}</span>
-            </>
-          )
-          return (
-            <li key={label} className="min-w-0">
-              {href ? (
-                <Link href={href} className={cls}>
-                  {content}
-                </Link>
-              ) : (
-                <span aria-current="page" className={cls}>
-                  {content}
-                </span>
-              )}
-            </li>
-          )
-        })}
-      </ul>
-    </nav>
-  )
-}
-
 /* ---------------- Page state ---------------- */
 
 export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }) {
@@ -730,7 +672,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
         </div>
       </DesignScale>
 
-      <div className="pb-[calc(176px+env(safe-area-inset-bottom))] lg:hidden">
+      <div className="pb-[calc(112px+env(safe-area-inset-bottom))] lg:hidden">
         <div className="mx-auto max-w-[560px]">
           <MobileCalculator o={o} home={home} away={away} stake={stake} onStake={setStake} hasAccess={hasAccess} />
           {message && (
@@ -740,9 +682,8 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
           )}
         </div>
         <div className="bi-bottom-fade pointer-events-none fixed inset-x-0 bottom-0 z-40 px-[10px] pb-[calc(10px+env(safe-area-inset-bottom))] pt-[28px]">
-          <div className="pointer-events-auto mx-auto flex max-w-[560px] flex-col gap-[8px]">
+          <div className="pointer-events-auto mx-auto max-w-[560px]">
             <MobileResultDock result={result} onSave={save} saving={saving} />
-            <MobileTabBar />
           </div>
         </div>
       </div>

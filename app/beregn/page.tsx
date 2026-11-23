@@ -26,31 +26,33 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
   return (
     <SurebetsProvider data={data}>
       <BookmakerFilterProvider>
-        <GlobalHeader className="lg:hidden" />
-        <div className="bi flex min-h-screen bg-(--bi-bg)">
-          <Sidebar page="beregn" />
-          <main className="relative min-w-0 flex-1 lg:pb-0">
-            {opportunity && (
-              <DesignScale className="absolute inset-x-0 top-0 hidden lg:block" backdrop={<CalcHeroStadium />}>
-                <CalcHeroBackdrop />
-              </DesignScale>
-            )}
-            <div className="relative z-10 hidden lg:block lg:px-[30px]">
-              <TopBar page="beregn" />
-            </div>
-            <div className="relative flex flex-col gap-4 px-[12px] pt-[12px] lg:px-0 lg:pt-0">
-              {opportunity ? (
-                <StakeCalculator key={opportunity.id} opportunity={opportunity} />
-              ) : (
-                <div className="sb-panel p-8 text-center">
-                  <p className="text-muted-foreground">Kampen findes ikke længere.</p>
-                  <Link href="/surebets" className="mt-3 inline-block font-semibold text-cyan underline underline-offset-4">
-                    Se dagens surebets
-                  </Link>
-                </div>
+        <div className="bi flex min-h-screen flex-col bg-(--bi-bg)">
+          <GlobalHeader className="lg:hidden" />
+          <div className="flex flex-1">
+            <Sidebar page="beregn" />
+            <main className="relative min-w-0 flex-1 lg:pb-0">
+              {opportunity && (
+                <DesignScale className="absolute inset-x-0 top-0 hidden lg:block" backdrop={<CalcHeroStadium />}>
+                  <CalcHeroBackdrop />
+                </DesignScale>
               )}
-            </div>
-          </main>
+              <div className="relative z-10 hidden lg:block lg:px-[30px]">
+                <TopBar page="beregn" />
+              </div>
+              <div className="relative flex flex-col gap-4 px-[12px] pt-[12px] lg:px-0 lg:pt-0">
+                {opportunity ? (
+                  <StakeCalculator key={opportunity.id} opportunity={opportunity} />
+                ) : (
+                  <div className="sb-panel p-8 text-center">
+                    <p className="text-muted-foreground">Kampen findes ikke længere.</p>
+                    <Link href="/surebets" className="mt-3 inline-block font-semibold text-cyan underline underline-offset-4">
+                      Se dagens surebets
+                    </Link>
+                  </div>
+                )}
+              </div>
+            </main>
+          </div>
         </div>
         <div className="hidden lg:block">
           <GlobalFooter />
