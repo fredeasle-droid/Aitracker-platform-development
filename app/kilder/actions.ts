@@ -39,19 +39,25 @@ export async function saveBetHeroCookie(_previous: SaveState, formData: FormData
   if (!cookie.includes('=')) cookie = `auth_session=${cookie}`
   if (!cookie.includes('auth_session=')) return { ok: false, message: 'Teksten indeholder ingen auth_session. Kopiér cookien auth_session fra Bet Hero.' }
 
+  // Bet Hero often blocks Vercel's servers, so a failed test here doesn't mean the cookie is bad.
+  // Save it regardless; the VPS worker picks it up and reports the real status.
+  let testNote: string
   try {
     const messages = await fetchBetHeroMessages(cookie)
     const total = messages
       .map((message) => (message && typeof message === 'object' ? (message as { total?: unknown }).total : undefined))
       .find((value): value is number => typeof value === 'number')
-    if (!total) {
-      return { ok: false, message: `Cookien blev ikke gemt, fordi Bet Hero ikke gav et antal surebets. ${describeBetHeroMessages(messages)}` }
-    }
-    await saveStoredCookie(BETHERO_SOURCE, cookie, `Forbundet, ${total} surebets hos Bet Hero (lige gemt)`)
-    revalidatePath('/kilder')
-    return { ok: true, message: `Sessionen virker og er gemt. Bet Hero viser ${total} surebets.` }
+    testNote = total ? `Bet Hero viser ${total} surebets.` : `Testen herfra gav intet antal (${describeBetHeroMessages(messages)}).`
   } catch (error) {
-    return { ok: false, message: `Sessionen blev ikke gemt: ${error instanceof Error ? error.message : 'ukendt fejl'}` }
+    testNote = `Testen herfra fejlede (${error instanceof Error ? error.message : 'ukendt fejl'}), det er normalt.`
+  }
+
+  try {
+    await saveStoredCookie(BETHERO_SOURCE, cookie, 'Gemt, venter på serveren')
+    revalidatePath('/kilder')
+    return { ok: true, message: `Cookien er gemt. Serveren bruger den inden for 2 minutter. ${testNote}` }
+  } catch (error) {
+    return { ok: false, message: `Cookien blev ikke gemt: ${error instanceof Error ? error.message : 'ukendt fejl'}` }
   }
 }
 
