@@ -132,13 +132,19 @@ export function GET(request: Request) {
       return true;
     }).slice(0, MAX_ROWS);
   };
+  let blocked = false;
   const openBridge = () => {
-    if (!popup || popup.closed) popup = window.open(BRIDGE, 'oddsjam-bettracker-bridge', 'width=460,height=480');
+    if (blocked) return false;
+    if (!popup || popup.closed) {
+      popup = window.open(BRIDGE, 'oddsjam-bettracker-bridge', 'width=460,height=480');
+      // OddsJam's Cross-Origin-Opener-Policy severs the handle, so a fresh window reports closed immediately; retrying would spawn endless windows.
+      if (popup && popup.closed) { blocked = true; popup = null; statusText = 'OddsJam blokerer forbindelsen (COOP) — luk BetTracker-vinduet'; updatePanel(); return false; }
+    }
     return popup && !popup.closed;
   };
   const requestBridge = () => {
     lastConnectAttemptAt = Date.now();
-    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return false; }
+    if (!openBridge()) { if (!blocked) { statusText = 'Tillad pop-ups for at forbinde'; } updatePanel(); return false; }
     popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
     return true;
   };
@@ -164,12 +170,7 @@ export function GET(request: Request) {
     statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';
     updatePanel();
     if (!connected && popup && !popup.closed) popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
-    if (everConnected && (!popup || popup.closed) && Date.now() - lastConnectAttemptAt > 30000) {
-      statusText = 'Forbindelsen genoprettes…';
-      updatePanel();
-      if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
-      else button.textContent = 'Tillad popup og klik igen';
-    }
+    if (blocked) { statusText = 'OddsJam blokerer forbindelsen (COOP)'; updatePanel(); }
     if (!rows.length) return;
     const fingerprint = JSON.stringify(rows.map(rowKey));
     if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 45000) return;
@@ -193,10 +194,6 @@ export function GET(request: Request) {
       updatePanel();
     }
   });
-  setTimeout(() => {
-    if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
-    else button.textContent = 'Tillad popup og klik igen';
-  }, 2500);
   setTimeout(scan, 3000);
   setInterval(scan, 15000);
   setInterval(() => {
