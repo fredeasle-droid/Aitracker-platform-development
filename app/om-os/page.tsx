@@ -24,6 +24,7 @@ const JSON_LD = JSON.stringify([
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_NAME,
+    legalName: 'ODDSLOGIC LTD',
     url: SITE_URL,
     logo: `${SITE_URL}/icon.svg`,
     description: 'Dansk surebet-scanner, der finder odds hos bookmakere, hvor du vinder uanset udfaldet.',
@@ -50,7 +51,7 @@ const SECTIONS = [
   {
     title: 'Hvem står bag',
     body: [
-      'BetTrackerAI er grundlagt og ejet af Frederik Myllerup Asler, som står bag udviklingen af scanneren og har det redaktionelle ansvar for sidens guides.',
+      'BetTrackerAI er grundlagt og ejet af Frederik Myllerup Asler, som står bag udviklingen af scanneren og har det redaktionelle ansvar for sidens guides. Tjenesten drives af selskabet ODDSLOGIC LTD.',
       'Det er også Frederik, du møder i videoen på forsiden og på billederne rundt omkring på siden.',
     ],
   },

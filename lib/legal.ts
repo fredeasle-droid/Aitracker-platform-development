@@ -7,6 +7,7 @@ import { PRICING, RESPONSIBLE } from "@/components/home/data";
 export const COMPANY: { brand: string; email: string; legalName?: string; cvr?: string; address?: string } = {
   brand: "BetTrackerAI",
   email: "support@bettrackerai.com",
+  legalName: "ODDSLOGIC LTD",
 };
 
 export const LEGAL_UPDATED = "23. november 2026";
@@ -188,7 +189,7 @@ export const PRIVACY_SECTIONS: LegalSection[] = [
     title: "Hvem er dataansvarlig",
     blocks: [
       {
-        p: `${COMPANY.brand} er dataansvarlig for de personoplysninger, vi behandler om dig. Du kan altid kontakte os på ${COMPANY.email}, hvis du har spørgsmål om, hvordan vi bruger dine oplysninger.`,
+        p: `${COMPANY.legalName}, som driver ${COMPANY.brand}, er dataansvarlig for de personoplysninger, vi behandler om dig. Du kan altid kontakte os på ${COMPANY.email}, hvis du har spørgsmål om, hvordan vi bruger dine oplysninger.`,
       },
     ],
   },

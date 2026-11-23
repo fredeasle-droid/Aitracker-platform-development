@@ -16,6 +16,7 @@ const JSON_LD = JSON.stringify([
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE_NAME,
+    legalName: 'ODDSLOGIC LTD',
     url: SITE_URL,
     logo: `${SITE_URL}/apple-icon.png`,
   },
