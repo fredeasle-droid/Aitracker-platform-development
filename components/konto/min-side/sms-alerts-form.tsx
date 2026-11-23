@@ -5,7 +5,7 @@ import { MessageSquareText } from 'lucide-react'
 import { saveSmsSettings, type SmsSettingsInput } from '@/app/konto/sms-actions'
 import { Card, FieldLabel, Message, inputClass, primaryButton } from './ui'
 
-const PRESETS = [3, 5, 10, 15]
+const PRESETS = [10, 15, 20, 25, 30]
 const HOURS = Array.from({ length: 24 }, (_, h) => h)
 const hourLabel = (h: number) => `${String(h).padStart(2, '0')}:00`
 
