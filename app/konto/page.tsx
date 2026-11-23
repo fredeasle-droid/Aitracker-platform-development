@@ -13,7 +13,8 @@ import type { AccountInvoice } from './account-types'
 import { isPreviewTestEnvironment } from '@/lib/test-access'
 import { eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
-import { smsAlertSettings } from '@/lib/db/schema'
+import { pushSettings, smsAlertSettings } from '@/lib/db/schema'
+import { getOwnerState } from '@/lib/admin'
 
 export const dynamic = 'force-dynamic'
 export const metadata: Metadata = { title: 'Min side – BetTracker' }
@@ -55,14 +56,25 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
   if (row && ACTIVE_STATUSES.includes(row.status) && !row.onboardingCompletedAt) {
     return <OnboardingStep initialResponses={row.onboardingResponses ?? {}} />
   }
-  const [invoices, smsRow] = await Promise.all([
+  const [invoices, smsRow, pushRow, ownerState] = await Promise.all([
     row ? loadInvoices(row.stripeCustomerId) : Promise.resolve([]),
     db.select().from(smsAlertSettings).where(eq(smsAlertSettings.userId, user.id)).then((r) => r[0]).catch(() => undefined),
+    db.select().from(pushSettings).where(eq(pushSettings.userId, user.id)).then((r) => r[0]).catch(() => undefined),
+    getOwnerState(),
   ])
 
   return (
     <MinSide
       invoices={invoices}
+      isOwner={ownerState === 'owner'}
+      pushSettings={{
+        alertsEnabled: pushRow?.alertsEnabled ?? true,
+        offersEnabled: pushRow?.offersEnabled ?? true,
+        minProfit: pushRow ? Number(pushRow.minProfit) : 5,
+        dailyLimit: pushRow?.dailyLimit ?? 20,
+        quietStart: pushRow?.quietStart ?? 23,
+        quietEnd: pushRow?.quietEnd ?? 7,
+      }}
       smsSettings={{
         enabled: smsRow?.enabled ?? false,
         minProfit: smsRow ? Number(smsRow.minProfit) : 5,

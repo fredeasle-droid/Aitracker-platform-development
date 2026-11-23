@@ -10,7 +10,7 @@ export const SMS_LIMITS = { minProfit: 1, maxProfit: 50, minDaily: 1, maxDaily: 
 
 const DAY_MS = 24 * 60 * 60 * 1000
 
-function copenhagenHour(date = new Date()) {
+export function copenhagenHour(date = new Date()) {
   return Number(new Intl.DateTimeFormat('da-DK', { timeZone: 'Europe/Copenhagen', hour: '2-digit', hour12: false }).format(date)) % 24
 }
 
@@ -19,7 +19,7 @@ export function isQuietHour(hour: number, start: number, end: number) {
   return start < end ? hour >= start && hour < end : hour >= start || hour < end
 }
 
-const alertKey = (row: typeof opportunities.$inferSelect) =>
+export const alertKey = (row: typeof opportunities.$inferSelect) =>
   [row.homeTeam, row.awayTeam, row.market, row.player ?? '', row.kickoff.toISOString()].join('|').toLowerCase()
 
 function siteUrl() {
