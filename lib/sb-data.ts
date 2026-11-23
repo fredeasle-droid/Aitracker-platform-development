@@ -206,7 +206,9 @@ export async function getSbData(): Promise<SbData> {
     }
   }
   const bookmakers = [...names.entries()]
-    .map(([id, name]) => ({ id, name, category: categoryOf(id), defaultOn: APPROVED_IDS.has(id) }))
+    // Every stored surebet already has a Danish bookmaker, so start with all bookmakers on; otherwise the
+    // international leg of most pairs would hide the surebet.
+    .map(([id, name]) => ({ id, name, category: categoryOf(id), defaultOn: true }))
     .sort((a, b) => a.name.localeCompare(b.name, 'da'))
 
   const sportCounts = new Map<string, number>()
