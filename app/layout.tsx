@@ -54,6 +54,15 @@ export default async function RootLayout({
   const locale = await getServerLocale()
   return (
     <html lang={locale} className={`${roboto.variable} bg-background`}>
+      <head>
+        <script
+          {...({ nowprocket: '', 'nitro-exclude': '' } as Record<string, string>)}
+          type="text/javascript"
+          id="sa-dynamic-optimization"
+          data-uuid="68cbf5cd-4087-462b-a364-dc243d4078bb"
+          src="https://dashboard.searchatlas.com/scripts/dynamic_optimization.js"
+        />
+      </head>
       <body className="min-h-dvh overflow-x-hidden antialiased">
         <LocaleProvider initialLocale={locale}>
         <ChromeGate>
