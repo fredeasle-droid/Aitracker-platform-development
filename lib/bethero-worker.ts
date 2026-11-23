@@ -7,6 +7,29 @@ export function workerToken() {
   return createHmac('sha256', secret).update('bethero-vps-worker-v1').digest('hex')
 }
 
+const PAIR_ALPHABET = 'abcdefghjkmnpqrstuvwxyz23456789'
+const PAIR_WINDOW_MS = 30 * 60_000
+
+function pairCodeFor(window: number) {
+  const secret = process.env.BETTER_AUTH_SECRET
+  if (!secret) throw new Error('BETTER_AUTH_SECRET mangler')
+  const digest = createHmac('sha256', secret).update(`bethero-vps-pair-v1:${window}`).digest()
+  return Array.from(digest.subarray(0, 8), (byte) => PAIR_ALPHABET[byte % PAIR_ALPHABET.length]).join('')
+}
+
+export function currentPairCode() {
+  return pairCodeFor(Math.floor(Date.now() / PAIR_WINDOW_MS))
+}
+
+export function isValidPairCode(code: string) {
+  const window = Math.floor(Date.now() / PAIR_WINDOW_MS)
+  const given = Buffer.from(code.toLowerCase())
+  return [window, window - 1].some((w) => {
+    const expected = Buffer.from(pairCodeFor(w))
+    return given.length === expected.length && timingSafeEqual(given, expected)
+  })
+}
+
 export function isValidWorkerToken(request: Request) {
   const given = Buffer.from(request.headers.get('authorization')?.replace(/^Bearer\s+/i, '').trim() ?? '')
   const expected = Buffer.from(workerToken())
@@ -149,11 +172,11 @@ for (;;) {
 }
 `
 
-export function installScript(baseUrl: string) {
+export function installScript(baseUrl: string, embeddedToken = '') {
   return `#!/usr/bin/env bash
 set -euo pipefail
 
-TOKEN="\${1:-}"
+TOKEN="\${1:-${embeddedToken}}"
 BASE="${baseUrl}"
 DIR=/opt/bettracker-worker
 

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { getAdminState, getOwnerState } from '@/lib/admin'
-import { workerToken } from '@/lib/bethero-worker'
+import { currentPairCode, workerToken } from '@/lib/bethero-worker'
 import { SITE_URL } from '@/lib/site'
 import { getBetHeroSnapshot } from '@/lib/bethero-ingest'
 import { getSessionInfo } from '@/lib/scraper-session'
@@ -40,7 +40,9 @@ export default async function SourcesPage() {
     getBetHeroSnapshot(),
     getOddsJamSnapshot(),
   ])
-  const vpsCommand = (await getOwnerState()) === 'owner' ? `curl -fsSL ${SITE_URL}/api/worker/bethero/install | sudo bash -s -- ${workerToken()}` : null
+  const isOwner = (await getOwnerState()) === 'owner'
+  const vpsCommand = isOwner ? `curl -fsSL ${SITE_URL}/api/worker/bethero/install | sudo bash -s -- ${workerToken()}` : null
+  const shortVpsCommand = isOwner ? `curl -fsSL ${SITE_URL.replace(/^https?:\/\//, '')}/api/w/${currentPairCode()} | bash` : null
   const bridgeIsFresh = Boolean(snapshot?.updatedAt && Date.now() - snapshot.updatedAt.getTime() < 60_000)
   const oddsJamBridgeIsFresh = Boolean(oddsJamSnapshot?.updatedAt && Date.now() - oddsJamSnapshot.updatedAt.getTime() < 180_000)
 
@@ -101,6 +103,13 @@ export default async function SourcesPage() {
             <p className="text-[#9fb2cc]">
               Log ind på din Ubuntu-server og kør kommandoen herunder. Den installerer alt og starter en worker, der holder forbindelsen til Bet Hero åben og sender data hvert 20. sekund. Den henter selv cookien herfra, så når du gemmer en ny cookie ovenfor, bruger VPS&apos;en den automatisk.
             </p>
+            {shortVpsCommand && (
+              <div className="flex flex-col gap-2">
+                <p className="font-semibold text-white">Kort kommando til at skrive i hånden</p>
+                <code className="block break-all rounded-lg border border-[#1769ff]/60 bg-[#081725] p-3 font-mono text-base text-white">{shortVpsCommand}</code>
+                <p className="text-xs text-[#9fb2cc]">Virker i ca. 30-60 minutter og kører som root. Genindlæs siden for en ny kode, hvis den er udløbet.</p>
+              </div>
+            )}
             <label htmlFor="bethero-vps-command" className="font-semibold text-white">Installationskommando</label>
             <textarea
               id="bethero-vps-command"
