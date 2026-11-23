@@ -1,5 +1,5 @@
 import 'server-only'
-import webpush from 'web-push'
+import * as webpush from 'web-push'
 import { eq, inArray } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { pushConfig, pushSubscriptions } from '@/lib/db/schema'
