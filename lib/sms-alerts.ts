@@ -22,19 +22,20 @@ export function isQuietHour(hour: number, start: number, end: number) {
 export const alertKey = (row: typeof opportunities.$inferSelect) =>
   [row.homeTeam, row.awayTeam, row.market, row.player ?? '', row.kickoff.toISOString()].join('|').toLowerCase()
 
-function siteUrl() {
+function calculatorUrl(id: number) {
   const host = process.env.VERCEL_PROJECT_PRODUCTION_URL
-  return host ? `https://${host}/surebets` : ''
+  return host ? `https://${host}/beregn?id=${id}` : ''
 }
 
 function formatMessage(row: typeof opportunities.$inferSelect, profit: number) {
   const pct = profit.toFixed(1).replace('.', ',')
+  const link = calculatorUrl(row.id)
   return [
     `BetTracker: ${pct}% surebet`,
     `${row.homeTeam} - ${row.awayTeam}`,
     `${row.aLabel} @${Number(row.aOdds).toFixed(2)} (${row.aBookmaker})`,
     `${row.bLabel} @${Number(row.bOdds).toFixed(2)} (${row.bBookmaker})`,
-    siteUrl(),
+    link && `Lav surebet her: ${link}`,
     'Slå fra under Min side.',
   ].filter(Boolean).join('\n')
 }
