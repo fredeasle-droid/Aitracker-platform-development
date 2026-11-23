@@ -16,7 +16,7 @@ export function LiveTicker() {
         <span className="glow-dot h-2.5 w-2.5 animate-blink rounded-full bg-success" /> {t("sbLiveFund")}
       </div>
       <div className="ticker-mask min-w-0 flex-1 overflow-hidden">
-        <div className="ticker-track flex w-max items-center">
+        <div className="ticker-track flex w-max items-center" style={{ animationDuration: `${Math.max(items.length, 6) * 9}s` }}>
           {[0, 1].map((copy) => (
             <div key={copy} className="flex items-center" aria-hidden={copy === 1}>
               {items.map(({ b, pct }) => (

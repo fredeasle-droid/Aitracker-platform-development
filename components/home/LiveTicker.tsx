@@ -14,7 +14,7 @@ export function LiveTicker({ phone = false, className = "" }: { phone?: boolean;
         LIVE FUND
       </span>
       <div className="fade-x relative h-full min-w-0 flex-1 overflow-hidden">
-        <div className="marquee-half flex h-full w-max items-center" style={{ ["--marquee-duration" as string]: phone ? "38s" : "52s" }}>
+        <div className="marquee-half flex h-full w-max items-center" style={{ ["--marquee-duration" as string]: `${Math.max(rows.length, 6) * (phone ? 9 : 10)}s` }}>
           {rows.length === 0 && (
             <span className={`px-4 text-muted-foreground ${text}`}>Scanneren leder efter nye surebets...</span>
           )}
