@@ -8,6 +8,7 @@ import { secondaryButton } from '@/components/konto/min-side/ui'
 import { SmsAlertsForm } from '@/components/konto/min-side/sms-alerts-form'
 import { PushAlertsForm } from '@/components/konto/min-side/push-alerts-form'
 import { PushBroadcastForm } from '@/components/konto/min-side/push-broadcast-form'
+import { TelegramCard } from '@/components/konto/min-side/telegram-card'
 import type { SmsSettingsInput } from './sms-actions'
 import type { PushSettingsInput } from './push-actions'
 import { formatDate, type AccountInvoice, type AccountSubscription, type AccountUser } from './account-types'
@@ -56,6 +57,7 @@ export function MinSide({ user, subscription, invoices, testAccess, smsSettings,
           </div>
           <div className="space-y-4 lg:col-start-2 xl:col-start-auto">
             <PushAlertsForm initial={pushSettings} isSubscriber={isSubscriber} />
+            <TelegramCard />
             {isOwner && <PushBroadcastForm />}
             <PasswordForm />
             <Link href="/log-ud" className={secondaryButton}>
