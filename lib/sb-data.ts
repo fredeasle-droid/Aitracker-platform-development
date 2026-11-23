@@ -55,6 +55,23 @@ const LOCAL_BOOKMAKERS: { id: string; name: string }[] = [
   { id: 'vbet', name: 'Vbet' },
 ]
 
+/** Display names for crypto, exchange and other bookmakers we know, so they can be switched on before the scanner finds odds at them. */
+const KNOWN_NAMES: Record<string, string> = {
+  smarkets: 'Smarkets', matchbook: 'Matchbook', betdaq: 'Betdaq', betfairexchange: 'Betfair Exchange', polymarket: 'Polymarket',
+  kalshi: 'Kalshi', novig: 'Novig', prophetx: 'ProphetX', sporttrade: 'Sporttrade', orbitexchange: 'Orbit Exchange', sxbet: 'SX Bet',
+  betconnect: 'BetConnect', predictit: 'PredictIt', manifold: 'Manifold', limitless: 'Limitless',
+  cloudbet: 'Cloudbet', bitcasino: 'Bitcasino', sportsbetio: 'Sportsbet.io', thunderpick: 'Thunderpick', rainbet: 'Rainbet',
+  mystake: 'MyStake', shuffle: 'Shuffle', bcgame: 'BC.Game', bcbet: 'BC.Bet', roobet: 'Roobet', rollbit: 'Rollbit', betfury: 'BetFury',
+  bitsler: 'Bitsler', fairspin: 'Fairspin', jackbit: 'Jackbit', coinpoker: 'CoinPoker', metaspins: 'Metaspins', wildio: 'Wild.io',
+  vave: 'Vave', duelbits: 'Duelbits', gamdom: 'Gamdom', betplay: 'Betplay', winz: 'Winz', luckyblock: 'Lucky Block', megadice: 'Mega Dice',
+  bitstarz: 'BitStarz', betpanda: 'Betpanda', coinplay: 'Coinplay', stakecom: 'Stake.com', trustdice: 'TrustDice', betsio: 'Bets.io',
+  cryptobetsports: 'CryptoBetSports', sportbet: 'Sportbet', nitrobetting: 'Nitrobetting', lilibet: 'Lilibet', '1xbit': '1xBit',
+  dbbet: 'DBbet', '20bet': '20Bet', ggbet: 'GGBet', pinnacle: 'Pinnacle', bet9ja: 'Bet9ja', dafabet: 'Dafabet',
+  '1xbet': '1xBet', betway: 'Betway', williamhill: 'William Hill', paddypower: 'Paddy Power', ladbrokes: 'Ladbrokes', betvictor: 'BetVictor',
+  betclic: 'Betclic', casumo: 'Casumo', spilnu: 'Spilnu', sportybet: 'Sportybet', draftkings: 'DraftKings', fanduel: 'FanDuel',
+  superbet: 'Superbet', coolbet: 'Coolbet', '10bet': '10bet', betmgm: 'BetMGM', caesars: 'Caesars', bovada: 'Bovada', betonline: 'BetOnline',
+}
+
 const LOCAL_IDS = new Set(LOCAL_BOOKMAKERS.map((b) => b.id))
 
 /** Bookmakers the scanners already accepted before every Bet Hero bookmaker was let in; these start selected. */
@@ -181,7 +198,7 @@ export async function getSbData(): Promise<SbData> {
     ...sorted.filter((g) => !isApproved(g)).slice(0, MAX_OPPORTUNITIES),
   ].sort((a, b) => b.primary.margin - a.primary.margin)
 
-  const names = new Map<string, string>(LOCAL_BOOKMAKERS.map((b) => [b.id, b.name]))
+  const names = new Map<string, string>([...LOCAL_BOOKMAKERS.map((b) => [b.id, b.name] as const), ...Object.entries(KNOWN_NAMES)])
   for (const o of all) {
     for (const raw of [o.a.bookmaker, o.b.bookmaker]) {
       const key = bookmakerKey(raw)
