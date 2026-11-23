@@ -138,7 +138,15 @@ export default async function SeoDashboardPage() {
           </p>
           {data.lastStatus?.startsWith('Fejl') && <p className="text-sm text-destructive">{data.lastStatus}</p>}
         </div>
-        <SyncButton disabled={!connected} />
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-start">
+          <Link
+            href="/admin/seo/forum"
+            className="inline-flex min-h-11 items-center justify-center rounded-xl border border-primary px-4 text-sm font-semibold text-primary-glow"
+          >
+            Forum-radar
+          </Link>
+          <SyncButton disabled={!connected} />
+        </div>
       </header>
 
       {!connected && <SetupGuide />}
