@@ -15,7 +15,9 @@ self.addEventListener('push', (event) => {
     tag: data.tag || undefined,
     renotify: Boolean(data.tag),
     timestamp: Date.now(),
-    vibrate: [120, 60, 120],
+    vibrate: [250, 120, 250, 120, 400],
+    silent: false,
+    requireInteraction: Boolean(data.sticky),
     actions: [{ action: 'open', title: 'Se surebet' }],
     data: { url: data.url || '/surebets' },
   }

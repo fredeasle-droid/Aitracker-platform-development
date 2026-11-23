@@ -62,27 +62,35 @@ export function GET(request: NextRequest) {
         }}
       >
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <div style={{ display: 'flex', fontSize: 30, fontWeight: 800, letterSpacing: 1 }}>BetTracker</div>
-          <div style={{ display: 'flex', fontSize: 24, color: COLORS.muted }}>{kickoff}</div>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'flex-end', gap: 5, height: 36 }}>
+              <div style={{ display: 'flex', width: 10, height: 16, borderRadius: 3, backgroundColor: COLORS.primary }} />
+              <div style={{ display: 'flex', width: 10, height: 26, borderRadius: 3, backgroundColor: COLORS.primary }} />
+              <div style={{ display: 'flex', width: 10, height: 36, borderRadius: 3, backgroundColor: COLORS.primary }} />
+            </div>
+            <div style={{ display: 'flex', marginLeft: 14, fontSize: 32, fontWeight: 800, letterSpacing: 1 }}>BetTracker</div>
+          </div>
+          <div style={{ display: 'flex', fontSize: 26, fontWeight: 700, color: COLORS.muted }}>{kickoff}</div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', marginTop: 34 }}>
+        <div style={{ display: 'flex', alignItems: 'center', marginTop: 30 }}>
           <div
             style={{
               display: 'flex',
-              padding: '10px 30px',
-              borderRadius: 18,
+              padding: '8px 34px',
+              borderRadius: 24,
               backgroundColor: COLORS.primary,
-              fontSize: 76,
+              fontSize: 110,
               fontWeight: 800,
+              lineHeight: 1.1,
               color: COLORS.foreground,
             }}
           >
-            {`${profit}%`}
+            {`+${profit}%`}
           </div>
-          <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 30, flex: 1 }}>
-            <div style={{ display: 'flex', fontSize: 40, fontWeight: 800 }}>{match}</div>
-            <div style={{ display: 'flex', fontSize: 24, color: COLORS.muted, marginTop: 6 }}>{league}</div>
+          <div style={{ display: 'flex', flexDirection: 'column', marginLeft: 32, flex: 1 }}>
+            <div style={{ display: 'flex', fontSize: match.length > 34 ? 32 : 40, fontWeight: 800, lineHeight: 1.15 }}>{match}</div>
+            <div style={{ display: 'flex', fontSize: 24, color: COLORS.muted, marginTop: 8 }}>{league}</div>
           </div>
         </div>
 
