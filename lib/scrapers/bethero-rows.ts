@@ -1,5 +1,6 @@
 import 'server-only'
 import { getBetHeroMessages } from '@/lib/bethero-ingest'
+import { isLocalBookmaker } from '@/lib/local-bookmakers'
 import { displaySport, splitTeams, type ScrapedLeg, type ScrapedSurebet } from './types'
 
 type BetHeroBook = { name?: string }
@@ -39,8 +40,9 @@ const normalizeBook = (name: string) => baseName(name).toLowerCase().replace(/[^
 // Prefer a local bookmaker for each side; otherwise keep any bookmaker so the user can opt in via the filter.
 function pickBook(books: BetHeroBook[] | undefined) {
   const names = (books ?? []).map((book) => book.name).filter((name): name is string => Boolean(name))
+  const local = names.filter(isLocalBookmaker)
   const allowed = names.filter((name) => ALLOWED_BOOKS.has(normalizeBook(name)))
-  const pool = allowed.length > 0 ? allowed : names
+  const pool = local.length > 0 ? local : allowed.length > 0 ? allowed : names
   const chosen = pool.find((name) => /\(DK\)$/i.test(name)) ?? pool[0]
   return chosen ? baseName(chosen) : null
 }

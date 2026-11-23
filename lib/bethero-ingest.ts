@@ -6,6 +6,7 @@ import { eq } from 'drizzle-orm'
 import { sql } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { sourceSnapshots } from '@/lib/db/schema'
+import { isLocalBookmaker } from '@/lib/local-bookmakers'
 
 export const BETHERO_SNAPSHOT_SOURCE = 'bethero'
 export const BETHERO_CATALOG_SOURCE = 'bethero-catalog'
@@ -102,7 +103,7 @@ const MAX_STORED_ROWS = 8000
 
 const hasDanishBook = (row: StoredRow) =>
   [...((row as { books_1?: { name?: string }[] }).books_1 ?? []), ...((row as { books_2?: { name?: string }[] }).books_2 ?? [])].some((book) =>
-    /\(DK\)\s*$/i.test(book.name ?? ''),
+    isLocalBookmaker(book.name ?? ''),
   )
 
 const rowKey = (row: StoredRow) => row._id ?? `${row.parent_id ?? row.event}|${row.market_1}|${row.bet_name_1}`
