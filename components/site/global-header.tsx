@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/s
 import { Logo } from '@/components/home/icons'
 import { useLocale } from '@/components/locale-provider'
 import { authClient } from '@/lib/auth-client'
+import { canonicalPathname } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
 const NAV: { href: string; label: string }[] = [
@@ -108,7 +109,7 @@ function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?:
 
 /** Desktop pages with the sidebar carry the logo there, so the top bar only shows on the homepage. */
 export function RootHeader() {
-  const pathname = usePathname()
+  const pathname = canonicalPathname(usePathname())
   return <GlobalHeader className={pathname === '/' ? undefined : 'lg:hidden'} />
 }
 

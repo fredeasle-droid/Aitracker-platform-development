@@ -13,6 +13,7 @@ import { InstallAppMenuItem } from '@/components/push/install-app'
 import useSWR from 'swr'
 import { parseBookmakers, toggleBookmaker } from '@/lib/bookmaker-filter'
 import { authClient } from '@/lib/auth-client'
+import { canonicalPathname } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 import { useLocale } from '@/components/locale-provider'
 
@@ -93,7 +94,7 @@ export function SidebarBody({
   variant?: 'default' | 'desktop'
 }) {
   const desk = variant === 'desktop'
-  const pathname = usePathname()
+  const pathname = canonicalPathname(usePathname())
   const params = useSearchParams()
   const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
   const activeBookmaker = params.get('bookmaker')

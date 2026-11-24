@@ -4,9 +4,10 @@ import { usePathname } from 'next/navigation'
 import type { ReactNode } from 'react'
 import { isStandalonePath } from '@/components/site/chrome-gate'
 import { AuthActions } from '@/components/site/global-header'
+import { canonicalPathname } from '@/lib/i18n'
 
 export function PageShell({ sidebar, children }: { sidebar: ReactNode; children: ReactNode }) {
-  const pathname = usePathname()
+  const pathname = canonicalPathname(usePathname())
 
   if (pathname === '/' || isStandalonePath(pathname)) return <>{children}</>
 

@@ -12,7 +12,7 @@ import { pl as plMessages } from './messages/pl'
 import { fi as fiMessages } from './messages/fi'
 import { nl as nlMessages } from './messages/nl'
 import { dataMessages } from './data-messages'
-import { localizeRoute } from './route-slugs'
+import { canonicalRoute, localizeRoute } from './route-slugs'
 
 export type Locale = 'da' | 'en' | 'sv' | 'no' | 'de' | 'es' | 'br' | 'pt' | 'fr' | 'it' | 'pl' | 'fi' | 'nl'
 
@@ -59,6 +59,12 @@ export function stripLocalePrefix(pathname: string): { locale: Locale | null; pa
   const locale = localeFromPrefix(first)
   if (!locale) return { locale: null, path: pathname }
   return { locale, path: `/${rest.join('/')}` }
+}
+
+// Browser pathname (e.g. /se/mitt-konto) -> canonical Danish path (/konto), so route checks work in every language.
+export function canonicalPathname(pathname: string): string {
+  const { locale, path } = stripLocalePrefix(pathname)
+  return locale ? canonicalRoute(locale, path) : pathname
 }
 
 // Takes a canonical (Danish) path and returns the public URL path for the language.
