@@ -65,6 +65,8 @@ const SLUGS: Record<Translated, Record<string, string>> = {
     'fodbold-surebets': 'surebets-fotball',
     'surebet-danmark-alternativ': 'surebet-verktoy-sammenligning',
     'betting-regnskab': 'spillregnskap',
+    'tjen-penge-paa-odds-uden-risiko': 'tjen-penger-pa-odds-uten-risiko',
+    'find-surebets-automatisk': 'finn-surebets-automatisk',
     fodbold: 'fotball',
     esport: 'e-sport',
   },
