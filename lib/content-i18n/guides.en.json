@@ -46,7 +46,7 @@
       },
       {
         "q": "How much are typical welcome bonuses worth?",
-        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at £1,000 or €1,000 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose and confirm that it holds a valid licence in your country."
+        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at €1,000 or €1,000 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose and confirm that it holds a valid licence in your country."
       }
     ],
     "category": "Strategy",
@@ -372,15 +372,15 @@
       },
       {
         "type": "example",
-        "title": "£200 stake at odds of 2.50",
+        "title": "€200 stake at odds of 2.50",
         "rows": [
           [
             "Payout",
-            "£200 × 2.50 = £500"
+            "€200 × 2.50 = €500"
           ],
           [
             "Profit",
-            "£500 − £200 = £300"
+            "€500 − €200 = €300"
           ]
         ]
       },
@@ -629,80 +629,150 @@
     "ctaLabel": "Read about the rules for surebets"
   },
   "bankroll-management": {
-    "title": "Bankroll management for arbitrage betting and sports betting",
-    "metaTitle": "Bankroll management for arbitrage betting – fund control",
-    "description": "How to split your bankroll across bookmakers, stake the right amount per arb, and ensure capital is available when opportunities appear.",
-    "keyword": "bankroll management",
-    "intro": "Your bankroll is the capital you've set aside for betting. With arbitrage betting, bankroll management is less about avoiding losses and more about having funds in the right place when an arb appears.",
+    "title": "Bankroll management guide for sports betting and arbitrage",
+    "metaTitle": "Bankroll Management Guide for Sports Betting 2026",
+    "description": "Bankroll management for sports betting: how to size stakes, split money across bookmakers and calculate ROI, with worked examples in €.",
+    "keyword": "bankroll management guide for sports betting",
+    "intro": "Good bankroll management means deciding in advance how much money is dedicated to betting, how much you stake per bet and how the money is split across bookmakers. For value betting, stake 1–2% of your bankroll per bet. For surebets, the limit is liquidity: your money must sit at the right bookmakers when a surebet appears. Track everything to measure ROI.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Set a fixed bankroll"
+        "text": "Bankroll management: the basic rules"
       },
       {
-        "type": "p",
-        "text": "Decide on an amount you can afford to lose and keep it separate from your other money. Only use that amount for betting, and don't add more funds just because a single bet went wrong."
+        "type": "ul",
+        "items": [
+          "**Separate money:** your bankroll is money you can afford to lose and is kept apart from everyday finances.",
+          "**Fixed stake rules:** decide the stake size before you bet, not on gut feeling.",
+          "**No chasing losses:** raising stakes after a loss is the fastest way to empty a bankroll.",
+          "**Review monthly:** adjust stakes up or down based on your bankroll, not on one good week."
+        ]
       },
       {
         "type": "h2",
-        "text": "Distribute funds between bookmakers"
+        "text": "Stake sizing for value bets and surebets"
       },
       {
         "type": "p",
-        "text": "An arb requires stakes at two or three bookmakers simultaneously. Therefore, distribute your bankroll so each bookmaker has enough for at least a couple of bets. Bookmakers that frequently feature in arbs should receive slightly more."
+        "text": "Value bets can lose, so the stake must be small enough to survive losing streaks. Surebets do not lose when executed correctly, so the risk is execution: odds changes, voids and missing legs."
       },
       {
         "type": "example",
-        "title": "Example: £10,000 bankroll distributed across 6 bookmakers",
+        "title": "Example: flat staking for value bets, bankroll €2,000",
         "rows": [
           [
-            "Two most-used bookmakers",
-            "£2,500 each"
+            "Stake per bet (1.5%)",
+            "€30"
           ],
           [
-            "Four other bookmakers",
-            "£1,250 each"
+            "10 losing bets in a row",
+            "−€300 (15% of bankroll)"
           ],
           [
-            "Typical stake per arb",
-            "£500–1,000 in total"
+            "Bankroll left",
+            "€1,700"
+          ],
+          [
+            "New stake after review (1.5%)",
+            "€25.50"
           ]
         ],
-        "note": "With this distribution, you can cover several arbs in a row before needing to move money around."
+        "note": "A 1–2% stake keeps you in the game through the losing streaks that every value bettor experiences."
+      },
+      {
+        "type": "example",
+        "title": "Example: surebet bankroll split across bookmakers, €3,000",
+        "rows": [
+          [
+            "6 bookmakers × €500",
+            "€3,000"
+          ],
+          [
+            "Typical surebet total stake",
+            "€400"
+          ],
+          [
+            "60 surebets per month at 2% average",
+            "€400 × 60 × 2% = €480"
+          ],
+          [
+            "Monthly return on bankroll",
+            "€480 / €3,000 = 16%"
+          ]
+        ],
+        "note": "The profit per surebet is small, but the bankroll is turned over many times a month. Results vary with limits and available surebets."
       },
       {
         "type": "h2",
-        "text": "How much should you stake per arb?"
+        "text": "Sports betting ROI calculator: measure what you earn"
       },
       {
         "type": "p",
-        "text": "A good rule of thumb is 5–10% of your total bankroll per arb. That's high compared to regular betting, but the risk is also far lower. Reduce your stakes if the odds are unstable or if you're new to arbing."
+        "text": "ROI is net profit divided by total turnover. It tells you how much you earn per € staked and is the best way to compare strategies, sports and bookmakers."
+      },
+      {
+        "type": "example",
+        "title": "Example: ROI calculation",
+        "rows": [
+          [
+            "Total staked",
+            "€18,500"
+          ],
+          [
+            "Total returned",
+            "€18,870"
+          ],
+          [
+            "Net profit",
+            "€370"
+          ],
+          [
+            "ROI",
+            "€370 / €18,500 = 2.0%"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read more about [ROI on betting](/en/guides/roi-betting), or check single surebets in the [surebet calculator](/en/calculator)."
+      },
+      {
+        "type": "h2",
+        "text": "Track your bets for free and protect your bankroll"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Balance per bookmaker:** move money before a bookmaker runs dry.",
+          "**Profit per strategy:** see whether surebets or value bets are paying off.",
+          "**Drawdown:** spot losing periods early and lower stakes in time."
+        ]
       },
       {
         "type": "tip",
-        "text": "Keep records of all bets. This lets you see which bookmakers are tying up the most funds, so you can distribute your bankroll better."
-      },
-      {
-        "type": "h2",
-        "text": "Move winnings regularly"
+        "text": "Keep around 20% of your bankroll in reserve outside the bookmakers. It lets you top up the accounts where most surebets appear."
       },
       {
         "type": "p",
-        "text": "After a period, funds accumulate with some bookmakers and run short with others. Withdraw from those with too much and deposit with those with too little, for example once a week."
+        "text": "A [bet tracker](/en/guides/bet-tracker) makes bankroll management automatic. [BetTracker AI](/en) logs your surebets, shows your balance per bookmaker and calculates ROI for you."
       }
     ],
     "faq": [
       {
-        "q": "How large a bankroll do I need to start arbitrage betting?",
-        "a": "You can start with a couple of thousand in your currency, but £5,000–10,000 (or equivalent) makes it easier to have sufficient funds with multiple bookmakers at once."
+        "q": "How big should my bankroll be for surebets?",
+        "a": "Many start with €1,000–€3,000 spread across 4–6 bookmakers. Less works, but the profit per surebet becomes very small."
       },
       {
-        "q": "Can you lose money on arbitrage bets?",
-        "a": "It can happen if odds change before you place the second bet, or if a bet is voided. Good bankroll management limits the damage."
+        "q": "What percentage should I stake on value bets?",
+        "a": "1–2% of your bankroll per bet is a common, conservative rule. Larger stakes increase the risk of ruin during losing streaks."
+      },
+      {
+        "q": "How do I calculate ROI on my bets?",
+        "a": "Divide net profit by total stakes. €370 profit on €18,500 staked gives an ROI of 2.0%."
       }
     ],
     "category": "Strategy",
-    "ctaLabel": "Keep track of your bankroll"
+    "ctaLabel": "Track your bankroll for free"
   },
   "arbitrage-betting": {
     "title": "How does arbitrage betting work? Lock in profit on every result",
@@ -966,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Example: three players in a tournament, total stake £1,000",
+        "title": "Example: three players in a tournament, total stake €1,000",
         "rows": [
           [
             "Player A, odds 3.00",
-            "stake approx. £444"
+            "stake approx. €444"
           ],
           [
             "Player B, odds 4.00",
-            "stake approx. £333"
+            "stake approx. €333"
           ],
           [
             "Player C, odds 6.00",
-            "stake approx. £222"
+            "stake approx. €222"
           ],
           [
             "S = 0.333 + 0.250 + 0.167",
@@ -986,11 +1056,11 @@
           ],
           [
             "If one of the three wins",
-            "payout approx. £1,333, profit approx. £333"
+            "payout approx. €1,333, profit approx. €333"
           ],
           [
             "If none of the three win",
-            "loss of £1,000"
+            "loss of €1,000"
           ]
         ],
         "note": "The profit is only realised if one of your three players wins. You must judge for yourself how likely that is."
@@ -1046,15 +1116,15 @@
       },
       {
         "type": "example",
-        "title": "Example: odds 1.95 and 2.20, total stake £1,000",
+        "title": "Example: odds 1.95 and 2.20, total stake €1,000",
         "rows": [
           [
             "Player A at bookmaker 1, odds 1.95",
-            "stake approx. £530"
+            "stake approx. €530"
           ],
           [
             "Player B at bookmaker 2, odds 2.20",
-            "stake approx. £470"
+            "stake approx. €470"
           ],
           [
             "1/1.95 + 1/2.20",
@@ -1062,11 +1132,11 @@
           ],
           [
             "Payout regardless of winner",
-            "approx. £1,034"
+            "approx. €1,034"
           ],
           [
             "Profit",
-            "approx. £34 (3.4%)"
+            "approx. €34 (3.4%)"
           ]
         ],
         "note": "The sum is below 1, so the combination is a surebet."
@@ -1119,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Example: three bookmakers, total stake £1,000",
+        "title": "Example: three bookmakers, total stake €1,000",
         "rows": [
           [
             "Home win at bookmaker 1, odds 2.40",
-            "stake approx. £424"
+            "stake approx. €424"
           ],
           [
             "Draw at bookmaker 2, odds 3.80",
-            "stake approx. £268"
+            "stake approx. €268"
           ],
           [
             "Away win at bookmaker 3, odds 3.30",
-            "stake approx. £308"
+            "stake approx. €308"
           ],
           [
             "1/2.40 + 1/3.80 + 1/3.30",
@@ -1139,11 +1209,11 @@
           ],
           [
             "Return regardless of outcome",
-            "approx. £1,017"
+            "approx. €1,017"
           ],
           [
             "Profit",
-            "approx. £17 (1.7%)"
+            "approx. €17 (1.7%)"
           ]
         ],
         "note": "The profit is smaller than in tennis, and three bets mean a greater risk that odds will change whilst you're placing them."
@@ -1284,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Home team -0.25 with £100 stake",
+        "title": "Home team -0.25 with €100 stake",
         "rows": [
           [
             "Home team wins",
@@ -1292,7 +1362,7 @@
           ],
           [
             "Draw",
-            "£50 returned, £50 lost"
+            "€50 returned, €50 lost"
           ],
           [
             "Home team loses",
@@ -1328,81 +1398,117 @@
     "ctaLabel": "View current surebets"
   },
   "bet-tracker": {
-    "title": "Bet tracker: how to keep track of your bets",
-    "metaTitle": "Bet tracker – track your bets, profit and ROI (2025)",
-    "description": "What is a bet tracker, and why do you need one? Learn what to record and how to see your true betting profit.",
-    "keyword": "bet tracker",
-    "intro": "A bet tracker is a record of your bets. It shows how much you've staked, how much you've won, and which bookmakers are holding your money. Without a record, you don't know whether you're actually making money.",
+    "title": "Betting spreadsheet alternative: track every bet automatically",
+    "metaTitle": "Betting Spreadsheet Alternative – Bet Tracker 2026",
+    "description": "Swap your betting spreadsheet for a bet tracker: what to log, how to calculate ROI, examples in € and what the best bet tracker app should do.",
+    "keyword": "betting spreadsheet alternative",
+    "intro": "The best betting spreadsheet alternative is a bet tracker that logs every bet, stake and result for you and calculates ROI, profit per bookmaker and balance automatically. Spreadsheets break as soon as you place dozens of surebets a week: formulas get overwritten, legs go missing and voided bets distort the numbers. A tracker gives you the real picture in seconds.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why you need to track your bets"
+        "text": "Why the betting spreadsheet stops working"
       },
       {
         "type": "p",
-        "text": "Most punters remember their big wins and forget the many small losses. A bet tracker removes the guesswork. You see your results as they really are, and you can see which sports, markets and bookmakers are delivering a profit."
-      },
-      {
-        "type": "p",
-        "text": "For sure bets, it's even more important. Each sure bet consists of two or three bets placed with different bookmakers, and the profit is often only a few per cent. One misplaced bet can wipe out the profit from several sure bets, and you'll only spot that if you record everything."
-      },
-      {
-        "type": "h2",
-        "text": "What you need to record for each bet"
+        "text": "A spreadsheet is fine for ten bets a month. For arbitrage betting, every surebet has two or three legs at different bookmakers, so 50 surebets means 100–150 rows to type, settle and reconcile by hand."
       },
       {
         "type": "ul",
         "items": [
-          "Date and match",
-          "Bookmaker",
-          "Market and outcome, e.g. over 2.5 goals",
-          "Odds and stake",
-          "Result: won, lost or void",
-          "For sure bets: which bets belong together, so you can see the profit for the entire combination"
+          "**Manual errors:** one wrong odds value or stake ruins your ROI figure.",
+          "**Missing legs:** if one leg is not logged, a winning surebet looks like a loss.",
+          "**Voids and partial acceptance:** hard to handle correctly with simple formulas.",
+          "**No overview per bookmaker:** you cannot easily see where your money actually sits."
         ]
       },
       {
         "type": "h2",
-        "text": "Spreadsheet or bet tracker?"
+        "text": "Bet tracking: what to log on every bet"
       },
       {
-        "type": "p",
-        "text": "A spreadsheet works, but it requires discipline, and it won't automatically give you an overview of your balance with each bookmaker. A dedicated bet tracker calculates profit, ROI and bankroll for you, and it shows your progress over time in a graph."
+        "type": "ul",
+        "items": [
+          "**Date and event**, so you can find the bet later.",
+          "**Bookmaker, market and odds**, exactly as accepted on the bet slip.",
+          "**Stake and result**: won, lost, void or half-won on Asian lines.",
+          "**Type of bet**: surebet, value bet or normal bet, so you can compare strategies.",
+          "**Closing odds** if you value bet, to see whether you beat the market."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Example: one month of tracked surebets",
+        "rows": [
+          [
+            "Number of surebets",
+            "60"
+          ],
+          [
+            "Total turnover (all legs)",
+            "€24,000"
+          ],
+          [
+            "Total returned",
+            "€24,720"
+          ],
+          [
+            "Net profit",
+            "€720"
+          ],
+          [
+            "ROI",
+            "€720 / €24,000 = 3.0%"
+          ]
+        ],
+        "note": "Without tracking you only see your balance moving. With tracking you see that every €100 you turn over earns €3."
+      },
+      {
+        "type": "h2",
+        "text": "Best bet tracker app: what it should do"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Group surebet legs**, so the whole arb is shown as one position with one profit.",
+          "**Calculate ROI automatically** per month, sport, market and bookmaker.",
+          "**Show balance per bookmaker**, so you know where to deposit or withdraw.",
+          "**Handle voids and odds changes** without breaking the totals.",
+          "**Work on mobile**, because you place bets on the go."
+        ]
       },
       {
         "type": "tip",
-        "text": "BetTrackerAI has a built-in tracker where you record sure bets and deposits, and see profit, ROI and balance per bookmaker. You can also import a bet slip instead of typing it in."
+        "text": "Log the bet the moment it is accepted, not at the end of the day. Most tracking mistakes come from logging from memory."
       },
       {
         "type": "h2",
-        "text": "How to get started"
+        "text": "Automated bet tracking app: track your bets for free"
       },
       {
-        "type": "ul",
-        "items": [
-          "Record your current balances with each bookmaker as a starting point.",
-          "Record each bet as soon as you've placed it, not afterwards.",
-          "Update the result when the match finishes.",
-          "Review your tracker each week and notice what's working."
-        ]
+        "type": "p",
+        "text": "An automated bet tracking app saves you the typing: when you place a surebet from the scanner, the legs, odds and stakes are logged for you. You only confirm the result. Read how to [calculate ROI on betting](/en/guides/roi-betting) and set up [bankroll management](/en/guides/bankroll-management) based on your real numbers."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) combines the surebet scanner and the bet tracker in one place, so every surebet you place is tracked automatically and your ROI is always up to date."
       }
     ],
     "faq": [
       {
-        "q": "What is a bet tracker?",
-        "a": "A bet tracker is a tool that records your bets and calculates your profit, ROI and balance, so you know exactly how you're doing."
+        "q": "Can I still use a spreadsheet?",
+        "a": "Yes, for a small number of bets. Once you place more than a few surebets a week, a bet tracker is faster and far less error-prone."
       },
       {
-        "q": "Is a bet tracker free?",
-        "a": "A spreadsheet is free. The tracker in BetTrackerAI is part of the subscription, which you can try free for seven days."
+        "q": "What is a good ROI for surebets?",
+        "a": "Typically 1–4% of turnover. Higher figures are possible but often come with more limits and voided bets."
       },
       {
-        "q": "Do I need to track sure bets differently from ordinary bets?",
-        "a": "Yes. A sure bet consists of several bets that belong together. Record them as one combination so you see the overall profit and not a loss on the leg that didn't come in."
+        "q": "Should I track normal bets too?",
+        "a": "Yes. Tracking everything shows your real result and reveals whether your normal bets are eating into your surebet profit."
       }
     ],
     "category": "Strategy",
-    "ctaLabel": "Open your tracker"
+    "ctaLabel": "Track your bets for free"
   },
   "roi-betting": {
     "title": "ROI on betting: how to calculate your return",
@@ -1425,15 +1531,15 @@
         "rows": [
           [
             "Total stake",
-            "£40,000"
+            "€40,000"
           ],
           [
             "Total payout",
-            "£41,000"
+            "€41,000"
           ],
           [
             "Profit",
-            "£1,000"
+            "€1,000"
           ],
           [
             "ROI",
@@ -1470,7 +1576,7 @@
     "faq": [
       {
         "q": "How do I calculate ROI on betting?",
-        "a": "Take your profit, divide by your total stake and multiply by 100. If you've staked £10,000 and earned £300, your ROI is 3%."
+        "a": "Take your profit, divide by your total stake and multiply by 100. If you've staked €10,000 and earned €300, your ROI is 3%."
       },
       {
         "q": "What's the difference between ROI and profit?",
@@ -1501,7 +1607,7 @@
         "rows": [
           [
             "Price per month",
-            "BetTrackerAI from £13 · Surebet Danmark £87"
+            "BetTrackerAI from approx. €20 · Surebet Danmark approx. €134"
           ],
           [
             "Free trial",
@@ -1532,7 +1638,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet Danmark costs £87 per month. BetTrackerAI costs £13 per month for Basic (surebets up to 5% profit) and £22 for Premium (all surebets plus SMS alerts). With Premium you save £65 per month – that's £780 a year."
+        "text": "Surebet Danmark costs approx. €134 per month. BetTrackerAI costs approx. €20 per month for Basic (surebets up to 5% profit) and approx. €33 for Premium (all surebets plus SMS alerts). With Premium you save approx. €100 per month – that's approx. €1,200 a year."
       },
       {
         "type": "p",
@@ -1566,7 +1672,7 @@
     "faq": [
       {
         "q": "Is BetTrackerAI cheaper than Surebet Danmark?",
-        "a": "Yes. BetTrackerAI costs £13 or £22 per month, while Surebet Danmark costs £87 per month (as of 23 November 2025)."
+        "a": "Yes. BetTrackerAI costs approx. €20 or approx. €33 per month, while Surebet Danmark costs approx. €134 per month (as of 23 November 2025)."
       },
       {
         "q": "Do both tools only use licensed bookmakers?",
@@ -1614,19 +1720,19 @@
         "rows": [
           [
             "Total deposits",
-            "£10,000"
+            "€10,000"
           ],
           [
             "Total withdrawn",
-            "£3,000"
+            "€3,000"
           ],
           [
             "Balance with bookmakers now",
-            "£7,800"
+            "€7,800"
           ],
           [
             "Profit",
-            "£3,000 + £7,800 − £10,000 = £800"
+            "€3,000 + €7,800 − €10,000 = €800"
           ]
         ]
       },
@@ -2061,6 +2167,252 @@
       {
         "q": "Do bookmakers limit live arbers faster?",
         "a": "Often yes, because live arbing on slow prices is easy to spot. Mix in normal bets and read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "find-value-bets-med-ai": {
+    "title": "Find value bets with AI: how an AI odds scanner spots +EV bets",
+    "metaTitle": "Find Value Bets with AI – AI Odds Scanner 2026",
+    "description": "How to find value bets with AI: how an AI odds scanner calculates fair odds, spots +EV bets and what you can expect, with examples in €.",
+    "keyword": "find value bets with ai",
+    "category": "Strategy",
+    "ctaLabel": "Find value bets with AI",
+    "intro": "To find value bets with AI, you use an AI odds scanner that estimates the fair probability of each outcome, typically from sharp bookmaker prices with the margin removed, and compares it with the odds at soft bookmakers. When the offered odds are higher than the fair odds, the bet has positive expected value (+EV). The AI does the comparison across thousands of markets in seconds.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Value betting: what +EV actually means"
+      },
+      {
+        "type": "p",
+        "text": "A value bet is a bet where the odds are higher than the true probability justifies. You can lose any single value bet, but over hundreds of bets the positive expected value turns into profit."
+      },
+      {
+        "type": "example",
+        "title": "Example: expected value on a single bet",
+        "rows": [
+          [
+            "Fair probability",
+            "50% (fair odds 2.00)"
+          ],
+          [
+            "Offered odds at soft bookmaker",
+            "2.10"
+          ],
+          [
+            "Expected value",
+            "0.50 × 2.10 − 1 = +5%"
+          ],
+          [
+            "Stake €50",
+            "Expected profit €2.50 per bet"
+          ],
+          [
+            "300 bets of €50 (€15,000 turnover)",
+            "Expected profit approx. €750"
+          ]
+        ],
+        "note": "Expected profit is an average. Actual results swing above and below it, especially over a small number of bets."
+      },
+      {
+        "type": "h2",
+        "text": "AI odds scanner: how fair odds are calculated"
+      },
+      {
+        "type": "p",
+        "text": "Sharp bookmakers have low margins and adjust quickly to professional money, so their prices are the best estimate of the true probability. The AI removes the margin from the sharp price and calculates fair odds."
+      },
+      {
+        "type": "example",
+        "title": "Example: removing the margin from sharp odds",
+        "rows": [
+          [
+            "Sharp odds",
+            "1.95 / 1.95"
+          ],
+          [
+            "Implied probabilities",
+            "51.28% + 51.28% = 102.56%"
+          ],
+          [
+            "Fair probability after margin removal",
+            "50% / 50%"
+          ],
+          [
+            "Fair odds",
+            "2.00 / 2.00"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Market matching:** AI recognises identical events and lines across bookmakers.",
+          "**Speed:** prices are recalculated every few seconds as markets move.",
+          "**Filtering:** the scanner ignores tiny edges and suspicious outliers that are likely to be voided."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI sports betting: value bets vs surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Surebets:** guaranteed profit on every result, but small margins and fast limits.",
+          "**Value bets:** single bets with higher expected profit, but with variance and losing streaks.",
+          "**Combine them:** many bettors use surebets for steady profit and value bets to increase ROI."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read the full comparison of [value betting vs surebets](/en/guides/value-bets-vs-surebets)."
+      },
+      {
+        "type": "h2",
+        "text": "AI betting in practice: rules that protect you"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Stake 1–2% of your bankroll** per value bet. See [bankroll management](/en/guides/bankroll-management).",
+          "**Minimum edge of 2–3%** to leave room for errors in the fair odds estimate.",
+          "**Track closing odds:** beating the closing line consistently is the best sign that your bets have value.",
+          "**Judge after hundreds of bets**, never after one week."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Log every value bet in a [bet tracker](/en/guides/bet-tracker). After 300–500 bets, your ROI shows whether the edge is real."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) uses AI to scan the bookmakers, calculate fair odds and show value bets and surebets in real time."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Does AI guarantee profit on value bets?",
+        "a": "No. AI finds bets with positive expected value, but individual bets can lose. Profit comes over a large number of bets."
+      },
+      {
+        "q": "How much can I make with value betting?",
+        "a": "A realistic long-term ROI is often 2–5% of turnover, depending on edge, bookmakers and how long your accounts stay open."
+      },
+      {
+        "q": "Do bookmakers limit value bettors?",
+        "a": "Yes, soft bookmakers often limit customers who beat the closing line. Read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "bedste-odds-vaerktoej-danmark": {
+    "title": "Best sports betting tools in 2026: AI odds scanners and trackers",
+    "metaTitle": "Best Sports Betting Tools 2026 – AI & Odds Scanners",
+    "description": "The best sports betting tools in 2026: AI odds scanners, odds comparison, surebet calculators and bet trackers, what they cost in € and what to choose.",
+    "keyword": "best sports betting tools",
+    "category": "Strategy",
+    "ctaLabel": "Try BetTracker AI",
+    "intro": "The best sports betting tools are an AI odds scanner that finds surebets and value bets, odds comparison across many bookmakers, a surebet calculator for exact stakes and a bet tracker that measures your ROI. Choose betting software that covers the bookmakers you use, updates prices every few seconds and pays for itself with a realistic turnover.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "The betting tools every serious bettor needs"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**AI odds scanner:** finds surebets and value bets automatically across bookmakers.",
+          "**Odds comparison:** shows the best available price for every outcome.",
+          "**Surebet calculator:** splits the stake so the profit is the same on every result. Try the [surebet calculator](/en/calculator).",
+          "**Bet tracker:** logs every bet and calculates ROI. See [bet tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI odds scanner vs manual odds comparison"
+      },
+      {
+        "type": "p",
+        "text": "Manual odds comparison finds the best price for one match. An AI odds scanner compares every market at every bookmaker continuously and only shows the combinations where you have an edge."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Coverage:** thousands of markets instead of a handful.",
+          "**Speed:** surebets are flagged within seconds, before prices are corrected.",
+          "**Accuracy:** matching and stake calculations are done for you."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Betting software: what it costs and when it pays off"
+      },
+      {
+        "type": "p",
+        "text": "A tool only makes sense if the profit it finds is larger than its price. Calculate the turnover you need to break even."
+      },
+      {
+        "type": "example",
+        "title": "Example: break-even for a €33 per month tool",
+        "rows": [
+          [
+            "Subscription",
+            "approx. €33 per month"
+          ],
+          [
+            "Average ROI on surebets",
+            "2%"
+          ],
+          [
+            "Turnover needed to break even",
+            "€33 / 2% = €1,650"
+          ],
+          [
+            "Typical turnover (60 surebets × €400)",
+            "€24,000"
+          ],
+          [
+            "Profit after subscription",
+            "€480 − €33 = €447"
+          ]
+        ],
+        "note": "Prices are approximate euro amounts. BetTracker AI costs from approx. €20 per month for Basic and approx. €33 for Premium."
+      },
+      {
+        "type": "h2",
+        "text": "How to choose the best sports betting tools"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Bookmaker coverage:** the tool must include the bookmakers you can actually use.",
+          "**Update frequency:** a few seconds for pre-match, faster for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filters:** sport, market, bookmaker and minimum profit.",
+          "**Built-in tracking:** surebets placed from the scanner should be tracked automatically.",
+          "**Fair price:** compare monthly cost with your expected turnover. See the [surebet tool comparison](/en/guides/surebet-tool-comparison)."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Start with one tool that combines scanner, calculator and tracker. Juggling separate tools costs time, and time is what surebets do not give you."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) combines an AI odds scanner, odds comparison, a surebet calculator and a bet tracker in one platform. Read how to [find value bets with AI](/en/guides/find-value-bets-with-ai) and [find surebets automatically](/en/guides/find-surebets-automatically)."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Which betting tool should I start with?",
+        "a": "A surebet scanner with a built-in calculator and tracker. It covers finding, placing and measuring in one place."
+      },
+      {
+        "q": "Are free betting tools good enough?",
+        "a": "Free calculators and trackers are fine. Free odds scanners usually show delayed or limited surebets, which are often gone by the time you act."
+      },
+      {
+        "q": "Is betting software legal?",
+        "a": "Using tools to compare odds and track bets is legal. Automated bet placing usually breaks bookmaker terms. See [are surebets legal?](/en/guides/are-surebets-legal)"
       }
     ]
   }

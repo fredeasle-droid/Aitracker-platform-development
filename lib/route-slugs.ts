@@ -28,6 +28,8 @@ const SLUGS: Record<Translated, Record<string, string>> = {
     'betting-regnskab': 'betting-accounts',
     'tjen-penge-paa-odds-uden-risiko': 'make-money-betting-without-risk',
     'find-surebets-automatisk': 'find-surebets-automatically',
+    'find-value-bets-med-ai': 'find-value-bets-with-ai',
+    'bedste-odds-vaerktoej-danmark': 'best-sports-betting-tools',
     fodbold: 'football',
     ishockey: 'ice-hockey',
     esport: 'esports',
