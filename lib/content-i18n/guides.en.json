@@ -102,59 +102,125 @@
     "ctaLabel": "See surebets at licensed bookmakers"
   },
   "undgaa-begraensning": {
-    "title": "How to avoid bookmaker account limits and gubbing",
-    "metaTitle": "Avoid bookmaker limits – tips for arbers & value bettors",
-    "description": "Bookmakers limit accounts that win consistently. Learn the key tactics to keep your accounts active longer when placing arbitrage bets and value bets.",
-    "keyword": "how to avoid gubbing",
-    "intro": "The biggest challenge with arbitrage betting and value betting isn't finding the opportunities – it's keeping your accounts open. Bookmakers monitor betting patterns closely, and accounts that consistently win are often restricted or 'gubbed'. With a few smart habits, you can extend the lifespan of your accounts significantly.",
+    "title": "How to avoid bookmaker limits and keep your accounts open longer",
+    "metaTitle": "How to Avoid Bookmaker Limits – Arbing Guide 2026",
+    "description": "How to avoid bookmaker limits as an arber: a betting strategy that looks natural, the best bookmakers for arbitrage betting and examples in €.",
+    "keyword": "how to avoid bookmaker limits",
+    "intro": "To avoid bookmaker limits, you need to bet like a normal customer: round stakes, popular markets, a mix of regular bets and no instant reaction to every price drop. Soft bookmakers limit accounts that consistently beat the closing line. You cannot avoid it forever, but a smart betting strategy can keep your accounts open for months instead of weeks.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why do bookmakers limit accounts?"
+        "text": "Why bookmakers limit accounts"
       },
       {
         "type": "p",
-        "text": "Bookmakers profit from their margin. A customer who consistently beats the market by exploiting arbs or finding value bets costs them money. Their risk-management systems flag patterns such as unusual stake amounts, bets on obscure markets, wagers placed immediately after odds shifts, and accounts that rarely bet on recreational markets."
-      },
-      {
-        "type": "h2",
-        "text": "Best practices to avoid account limits"
+        "text": "Soft bookmakers make money from recreational bettors, not from customers who only take mispriced odds. Their risk systems look at patterns: do you bet on prices that drop shortly afterwards? Do you only bet obscure markets? Are your stakes calculated to the cent? Each of these signals raises your risk score."
       },
       {
         "type": "ul",
         "items": [
-          "Round your stakes – for example, £50 or €100 instead of £47.83 or €93.42.",
-          "Avoid the highest-profit sure bets and arbs. These often result from pricing errors and draw immediate attention.",
-          "Place occasional bets on mainstream events and popular markets (football accumulators, horse racing, in-play tennis).",
-          "Don't withdraw winnings immediately after each winning bet. Leave funds in your account and withdraw less frequently.",
-          "Rotate your activity across multiple bookmakers rather than hammering the same few repeatedly."
+          "**Beating the closing line:** the strongest signal. If your odds are consistently better than the final price, you get flagged.",
+          "**Uneven stakes:** €463.27 looks like a calculator. €460 looks like a person.",
+          "**Niche markets:** corners in the second division of a small league attract attention.",
+          "**Only withdrawing:** frequent withdrawals without bonuses or regular bets look professional."
         ]
       },
       {
-        "type": "tip",
-        "text": "Track your bets in the accounts section so you can see which bookmakers you're using most heavily and spread your activity more evenly across your portfolio."
+        "type": "h2",
+        "text": "Betting strategy that keeps your accounts open"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Round your stakes** to whole tens. The profit barely changes.",
+          "**Stick to mainstream markets:** major leagues, 1X2, over/under and match winner in tennis.",
+          "**Mix in normal bets:** a few small regular bets per week, ideally on big matches.",
+          "**Avoid extreme pricing errors:** surebets above 8–10% attract attention and are often voided anyway.",
+          "**Do not react instantly:** betting the second a price moves is a classic arber pattern.",
+          "**Spread your volume** across many bookmakers instead of hammering one."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Example: rounded stakes, total stake €1,000",
+        "rows": [
+          [
+            "Exact split at odds 2.10 / 2.00",
+            "€487.80 / €512.20"
+          ],
+          [
+            "Rounded split",
+            "€490 / €510"
+          ],
+          [
+            "Profit if A wins (2.10)",
+            "€1,029 − €1,000 = €29.00"
+          ],
+          [
+            "Profit if B wins (2.00)",
+            "€1,020 − €1,000 = €20.00"
+          ],
+          [
+            "Exact split for comparison",
+            "approx. €24.39 either way"
+          ]
+        ],
+        "note": "The rounded stakes still lock in a profit on both results, and they look far more natural to the bookmaker."
       },
       {
         "type": "h2",
-        "text": "What to do if you get limited"
+        "text": "Best bookmakers for arbitrage betting"
       },
       {
         "type": "p",
-        "text": "A limited account isn't useless. You can often still use it for promotional offers, matched betting or smaller stakes. Always maintain more accounts than you strictly need, so you can continue operating smoothly even if one bookmaker reduces your limits or closes your account."
+        "text": "A good arbitrage setup combines two types of bookmaker. Soft bookmakers offer the mispriced odds, and sharp bookmakers or exchanges accept large stakes without limiting winners."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Soft bookmakers:** the source of most surebets, but they limit quickly. Use them carefully.",
+          "**Sharp bookmakers:** lower margins and high limits. Ideal for the second leg.",
+          "**Betting exchanges:** you bet against other users, so you are not limited for winning. Commission reduces the profit slightly."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read the full overview of the [best bookmakers for surebets](/en/guides/best-bookmakers-for-surebets). Always use licensed bookmakers in your country."
+      },
+      {
+        "type": "h2",
+        "text": "What to do when an account is limited"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Withdraw your balance** if the account can no longer be used for surebets.",
+          "**Do not open a new account** under someone else's name. It breaks the terms and can lead to confiscated winnings.",
+          "**Move volume** to your other accounts and to sharp bookmakers or exchanges.",
+          "**Track per bookmaker:** a [bet tracker](/en/guides/bet-tracker) shows which accounts are worth protecting."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The more bookmakers you can use, the less volume each account needs. [BetTracker AI](/en) finds surebets across many bookmakers, so you can spread your bets and keep your accounts open longer."
       }
     ],
     "faq": [
       {
-        "q": "Can a bookmaker close your account completely?",
-        "a": "Licensed bookmakers can close accounts according to their terms and conditions, but they are legally required to pay out any remaining balance and outstanding winnings."
+        "q": "Can I avoid bookmaker limits completely?",
+        "a": "Not at soft bookmakers in the long run. But a natural betting pattern can delay limits by months, and sharp bookmakers and exchanges rarely limit at all."
       },
       {
-        "q": "How long before you typically get gubbed or limited?",
-        "a": "It varies considerably between bookmakers and depends on your betting behaviour. Some restrict accounts after a few weeks of consistent winning, others after several months of activity. Sharper bookmakers tend to act more quickly."
+        "q": "Is it legal for bookmakers to limit me?",
+        "a": "Yes, bookmakers can usually decide who they accept bets from. See [are surebets legal?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "How many bookmakers should I use?",
+        "a": "Five to ten is a good start. It spreads your volume and gives you more surebets to choose from."
       }
     ],
     "category": "Strategy",
-    "ctaLabel": "Track your bets in the accounts"
+    "ctaLabel": "Find surebets at more bookmakers"
   },
   "surebet-beregner": {
     "title": "Free surebet calculator: work out your stakes in seconds",
@@ -1744,6 +1810,257 @@
       {
         "q": "How much money do I need to start?",
         "a": "You can start with €200–500 spread across a few bookmakers. With smaller stakes, though, a surebet only returns a few euros."
+      }
+    ]
+  },
+  "find-surebets-automatisk": {
+    "title": "Find surebets automatically: how an odds scanner spots pricing errors",
+    "metaTitle": "Find Surebets Automatically – Odds Scanner 2026",
+    "description": "How to find surebets automatically with an odds scanner: how betting software spots pricing errors, worked examples in € and what to look for.",
+    "keyword": "find surebets automatically",
+    "category": "Strategy",
+    "ctaLabel": "Start the surebet scanner",
+    "intro": "To find surebets automatically, you use an odds scanner that compares prices across dozens of bookmakers every few seconds. When the sum of the inverse odds drops below 1, the software flags the surebet with stakes already calculated. It catches pricing errors in seconds that would take you hours to find by hand, and before the bookmaker corrects them.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why finding surebets by hand rarely works"
+      },
+      {
+        "type": "p",
+        "text": "A single football match can have 100+ markets. Multiply that by 15 bookmakers and several hundred matches a day, and you have millions of price combinations. Most surebets last 2–10 minutes. By the time you have compared tabs and done the maths, the price has usually moved."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Volume:** a scanner checks every market at once, you check a handful.",
+          "**Speed:** the software reacts within seconds of a price change.",
+          "**Accuracy:** the stake split is calculated for you, so there are no typing errors."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Software to find odds errors: how the scanner works"
+      },
+      {
+        "type": "p",
+        "text": "Betting software collects prices from bookmakers continuously, matches identical events and markets, and calculates the sum of inverse odds for every combination. The core of the job is matching: \"Man Utd\" and \"Manchester United\" must be recognised as the same team, and \"over 2.5\" must be the same line at both bookmakers."
+      },
+      {
+        "type": "example",
+        "title": "Example: pricing error spotted by the scanner, total stake €1,000",
+        "rows": [
+          [
+            "Over 2.5 goals at bookmaker 1, odds 2.25",
+            "Stake €461.72"
+          ],
+          [
+            "Under 2.5 goals at bookmaker 2, odds 1.93",
+            "Stake €538.28"
+          ],
+          [
+            "1/2.25 + 1/1.93",
+            "0.444 + 0.518 = 0.963"
+          ],
+          [
+            "Payout on every result",
+            "approx. €1,038.88"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €38.88 (3.9%)"
+          ]
+        ],
+        "note": "Bookmaker 1 had not reacted to a team news update. The scanner flagged the gap within seconds."
+      },
+      {
+        "type": "h2",
+        "text": "Pricing errors: the real ones and the traps"
+      },
+      {
+        "type": "p",
+        "text": "Not every high-profit surebet is a gift. Profits above 8–10% are often a sign that something is wrong rather than a genuine opportunity."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Obvious errors:** odds of 15.0 where everyone else offers 1.50 are often voided by the bookmaker. Avoid them.",
+          "**Different rules:** a tennis market settled on retirement at one bookmaker and voided at the other is not a real surebet.",
+          "**Different lines:** Asian handicap −0.5 and −0.25 look alike but behave differently. Read about [Asian handicap](/en/guides/asian-handicap).",
+          "**Healthy surebets:** 1–4% profit on mainstream markets is the sweet spot. That is where most of your profit will come from."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Set a minimum profit of 1% and a maximum of around 8% in the scanner. That filters out noise and most of the errors that get voided."
+      },
+      {
+        "type": "h2",
+        "text": "What to look for in an odds scanner"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Bookmaker coverage:** the more bookmakers, the more surebets. Make sure the ones you have accounts with are included.",
+          "**Update frequency:** prices must be refreshed every few seconds, especially for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filters:** sport, market, minimum profit and bookmakers, so you only see what you can actually play.",
+          "**Stake calculator:** built in, so you can place the bets immediately. You can also check the numbers in the [surebet calculator](/en/calculator).",
+          "**Bet tracking:** logging your bets afterwards shows your real ROI. See [bet tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Pick your bookmakers, set a minimum profit of 1% and place the bets quickly, one after the other. [BetTracker AI](/en) scans the bookmakers for you and shows surebets in real time with the stake split already calculated."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many surebets does a scanner find per day?",
+        "a": "Typically anywhere from dozens to several hundred, depending on how many bookmakers and sports you include and your minimum profit setting."
+      },
+      {
+        "q": "Can I place bets automatically?",
+        "a": "Automated bet placing breaks the terms of most bookmakers and gets accounts closed quickly. Let the scanner find the surebets and place the bets yourself."
+      },
+      {
+        "q": "Why has the surebet disappeared when I open the bookmaker?",
+        "a": "The price has moved since the scan. Always check the odds on your bet slip and recalculate before placing."
+      }
+    ]
+  },
+  "live-arbitrage-betting-scanner": {
+    "title": "Live arbitrage betting scanner: how to catch live surebets in play",
+    "metaTitle": "Live Arbitrage Betting Scanner – Live Surebets 2026",
+    "description": "How a live arbitrage betting scanner finds surebets during matches: speed, bet delays, worked examples in € and how to avoid the classic mistakes.",
+    "keyword": "live arbitrage betting scanner",
+    "category": "Strategy",
+    "ctaLabel": "See live surebets",
+    "intro": "A live arbitrage betting scanner compares in-play odds across bookmakers while matches are running and flags surebets the moment prices diverge. Live surebets appear more often than pre-match because bookmakers react at different speeds to goals, breaks and red cards. They also disappear faster, often within 10–60 seconds, so speed and discipline matter more than ever.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Live surebets: why in-play creates more opportunities"
+      },
+      {
+        "type": "p",
+        "text": "Before kick-off, prices move slowly. In play, every event shifts the probabilities instantly. A bookmaker that uses a slower data feed, or suspends markets for a few seconds longer, ends up with a price that no longer matches the rest of the market. That gap is a live surebet."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Tennis:** a break of serve changes the odds dramatically, and bookmakers update at different speeds.",
+          "**Football:** goals, red cards and penalties create brief price gaps in 1X2 and over/under markets.",
+          "**Basketball:** fast scoring runs cause frequent swings in two-way markets."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sports arbitrage in play: a worked example"
+      },
+      {
+        "type": "example",
+        "title": "Example: live tennis after a break, total stake €800",
+        "rows": [
+          [
+            "Player A at bookmaker 1, odds 1.72",
+            "Stake €467.63"
+          ],
+          [
+            "Player B at bookmaker 2, odds 2.42",
+            "Stake €332.37"
+          ],
+          [
+            "1/1.72 + 1/2.42",
+            "0.581 + 0.413 = 0.995"
+          ],
+          [
+            "Payout whoever wins",
+            "approx. €804.33"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €4.33 (0.5%)"
+          ]
+        ],
+        "note": "Live margins are often smaller than pre-match. A higher bet count compensates, but only if your execution is fast and accurate."
+      },
+      {
+        "type": "example",
+        "title": "Example: over/under after an early goal, total stake €1,000",
+        "rows": [
+          [
+            "Over 3.5 goals at bookmaker 1, odds 2.30",
+            "Stake €451.07"
+          ],
+          [
+            "Under 3.5 goals at bookmaker 2, odds 1.89",
+            "Stake €548.93"
+          ],
+          [
+            "Sum of inverse odds",
+            "0.435 + 0.529 = 0.964"
+          ],
+          [
+            "Payout on every result",
+            "approx. €1,037.47"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €37.47 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Bet delays and suspended markets: the live risks"
+      },
+      {
+        "type": "p",
+        "text": "Live betting adds risks that do not exist pre-match. Bookmakers use a bet delay of 3–10 seconds, during which the price can change or the bet can be rejected."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Bet delay:** your bet is only accepted after a few seconds. If the price moves, it may be rejected.",
+          "**Suspended markets:** after a goal or a break, markets close briefly. Never place the first leg while the second market is suspended.",
+          "**Partial acceptance:** some bookmakers accept only part of your stake live. Check the confirmation before placing the second leg.",
+          "**Recalculate quickly:** if the second leg moves, recalculate in the [surebet calculator](/en/calculator) and cover at the best price available."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Place the leg at the bookmaker with the longest bet delay first. Once it is accepted, place the second leg at the faster bookmaker."
+      },
+      {
+        "type": "h2",
+        "text": "Odds comparison live: what your scanner must do"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Update every few seconds:** live prices older than 10 seconds are useless.",
+          "**Show the price age:** so you can see how fresh the surebet is.",
+          "**Filter live and pre-match separately:** live surebets need a different approach and lower stakes at first.",
+          "**Log every bet:** live results vary more, so a [bet tracker](/en/guides/bet-tracker) is essential to see if you are actually profitable."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Start pre-match if you are new, and move to live once your routine is solid. Read how to [find surebets automatically](/en/guides/find-surebets-automatically) first. When you are ready, [BetTracker AI](/en) shows live surebets with the stake split calculated in real time."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Are live surebets more profitable than pre-match?",
+        "a": "There are more of them, but margins are often smaller and the execution risk is higher. The net result depends on how fast and accurate you are."
+      },
+      {
+        "q": "How fast do I need to be?",
+        "a": "Live surebets often last 10–60 seconds. You should be able to place both legs within that window, so have accounts funded and logged in beforehand."
+      },
+      {
+        "q": "Do bookmakers limit live arbers faster?",
+        "a": "Often yes, because live arbing on slow prices is easy to spot. Mix in normal bets and read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
       }
     ]
   }
