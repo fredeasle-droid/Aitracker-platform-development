@@ -1664,7 +1664,7 @@
         "rows": [
           [
             "Preis pro Monat",
-            "BetTrackerAI ab 149 kr. · Surebet Danmark 999 kr."
+            "BetTrackerAI ab ca. 20 € · Surebet Danmark ca. 134 €"
           ],
           [
             "Kostenlose Testphase",
@@ -1695,7 +1695,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet Danmark kostet 999 kr. pro Monat. BetTrackerAI kostet 149 kr. pro Monat für Basis mit Surebets bis zu 5 % Gewinn und 249 kr. für Premium mit allen Surebets und SMS-Benachrichtigungen. Mit Premium sparen Sie 750 kr. pro Monat, also 9.000 kr. pro Jahr."
+        "text": "Surebet Danmark kostet ca. 134 € pro Monat. BetTrackerAI kostet ca. 20 € pro Monat für Basis mit Surebets bis zu 5 % Gewinn und ca. 33 € für Premium mit allen Surebets und SMS-Benachrichtigungen. Mit Premium sparen Sie ca. 100 € pro Monat, also rund 1.200 € pro Jahr. Abgerechnet wird in dänischen Kronen, daher sind die Euro-Beträge gerundet."
       },
       {
         "type": "p",
@@ -1729,7 +1729,7 @@
     "faq": [
       {
         "q": "Ist BetTrackerAI günstiger als Surebet Danmark?",
-        "a": "Ja. BetTrackerAI kostet 149 oder 249 kr. pro Monat, während Surebet Danmark 999 kr. pro Monat kostet (Stand: 23. November 2026)."
+        "a": "Ja. BetTrackerAI kostet ca. 20 oder 33 € pro Monat, während Surebet Danmark ca. 134 € pro Monat kostet (Stand: 23. November 2026)."
       },
       {
         "q": "Welche Wettanbieter vergleichen beide Tools?",
