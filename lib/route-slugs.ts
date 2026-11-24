@@ -95,10 +95,10 @@ const SLUGS: Record<Translated, Record<string, string>> = {
 
 // Stand-alone pages that exist in every language. Keys are the canonical (Danish) paths.
 const PAGE_NAMES: Record<Translated, Record<string, string>> = {
-  en: { '/dagens-surebets': '/todays-surebets' },
-  sv: { '/faq': '/vanliga-fragor' },
-  no: { '/faq': '/vanlige-sporsmal' },
-  de: { '/dagens-surebets': '/surebets-heute' },
+  en: { '/dagens-surebets': '/todays-surebets', '/beregn': '/calculator', '/konto': '/account' },
+  sv: { '/faq': '/vanliga-fragor', '/beregn': '/kalkylator', '/konto': '/mitt-konto' },
+  no: { '/faq': '/vanlige-sporsmal', '/beregn': '/kalkulator' },
+  de: { '/dagens-surebets': '/surebets-heute', '/beregn': '/rechner', '/konto': '/mein-konto' },
 }
 
 const REVERSE_PAGE_NAMES = Object.fromEntries(

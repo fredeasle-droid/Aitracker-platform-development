@@ -42,13 +42,25 @@ export function CalcHeroBackdrop() {
   )
 }
 
-export function CalcHero({ league, kickoff }: { league: string; kickoff: string }) {
+export function CalcHero({
+  league,
+  kickoff,
+  title,
+  accent,
+  text,
+}: {
+  league: string
+  kickoff: string
+  title: string
+  accent: string
+  text: string
+}) {
   return (
     <section className="relative z-10 h-[245px] pl-[53px] pt-[28px]">
       <h1 className="text-[64px] font-bold leading-[1] tracking-[-0.025em]">
-        Beregn <span className="bi-text-neon">indsats</span>
+        {title} <span className="bi-text-neon">{accent}</span>
       </h1>
-      <p className="mt-[14px] text-[22px] font-medium tracking-[-0.005em]">Find den rigtige indsats og få garanteret profit.</p>
+      <p className="mt-[14px] text-[22px] font-medium tracking-[-0.005em]">{text}</p>
       <p className="mt-[16px] inline-flex h-[46px] items-center gap-[12px] rounded-full border border-(--bi-primary)/70 bg-(--bi-bg)/60 pl-[16px] pr-[20px] text-[17px] font-medium backdrop-blur-sm">
         <LeagueMark league={league} className="h-[30px] w-[26px] object-contain" />
         {league} · {kickoff}

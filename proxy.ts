@@ -68,9 +68,9 @@ export function proxy(request: NextRequest) {
   }
 
   if (isMembersOnly(path) && !getSessionCookie(request)) {
-    const loginUrl = new URL('/konto', request.url)
+    const loginUrl = new URL(locale ? localePath(locale, '/konto') : '/konto', request.url)
     loginUrl.searchParams.set('login', '1')
-    loginUrl.searchParams.set('next', path + request.nextUrl.search)
+    loginUrl.searchParams.set('next', (locale ? localePath(locale, path) : path) + request.nextUrl.search)
     return NextResponse.redirect(loginUrl)
   }
 

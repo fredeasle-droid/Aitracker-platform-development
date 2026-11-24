@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useTransition, type CSSProperties, type ReactNode } from 'react'
+import { useMemo, useState, useTransition, type CSSProperties, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowUpRight, Bookmark, ChartNoAxesCombined, Coins, Minus, Pencil, Plus, Wallet } from 'lucide-react'
 import { placeBet } from '@/app/actions'
@@ -10,7 +10,10 @@ import { DesignScale } from '@/components/beregn/design-scale'
 import { BetfairArrow, CoinsStackIcon, ProfitBarsIcon, SoccerBallSolid, useSvgId } from '@/components/beregn/bi-icons'
 import { LockedOdds, useHasAccess } from '@/components/locked-odds'
 import { BookmakerMark } from '@/components/sb/BookmakerMark'
+import { useLocale } from '@/components/locale-provider'
 import type { Opportunity } from '@/lib/data'
+import { localePath } from '@/lib/i18n'
+import { calculatorFormat, calculatorText, fill } from '@/lib/messages/calculator'
 import { cn } from '@/lib/utils'
 
 const STAKE_MIN = 100
@@ -37,11 +40,14 @@ function positionToStake(pos: number) {
   return Math.min(STAKE_MAX, Math.max(STAKE_MIN, Math.round(raw / step) * step))
 }
 
-const krFmt = new Intl.NumberFormat('da-DK', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-const wholeFmt = new Intl.NumberFormat('da-DK', { maximumFractionDigits: 0 })
-const formatKr = (n: number) => `${krFmt.format(n)} kr.`
-const formatPct = (n: number) => `${krFmt.format(n)} %`
-const formatWhole = (n: number) => wholeFmt.format(n)
+function useCalc() {
+  const { locale } = useLocale()
+  return useMemo(() => {
+    const text = calculatorText(locale)
+    return { text, fmt: calculatorFormat(text) }
+  }, [locale])
+}
+
 const clampInput = (n: number) => Math.min(INPUT_MAX, Math.max(0, n))
 const bookmakerKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '')
 
@@ -128,13 +134,14 @@ function useBookmakerLink(leg: Leg) {
 }
 
 function OddsInput({ leg, hasAccess, className }: { leg: Leg; hasAccess: boolean; className: string }) {
+  const { text } = useCalc()
   if (!hasAccess) return <LockedOdds odds={leg.realOdds} className={className} />
   return (
     <input
       value={leg.odds}
       onChange={(e) => leg.onOdds(e.target.value.replace(',', '.').replace(/[^\d.]/g, ''))}
       inputMode="decimal"
-      aria-label={`Odds for ${leg.label}`}
+      aria-label={fill(text.oddsFor, { label: leg.label })}
       className={cn('w-full bg-transparent text-center outline-none', className)}
     />
   )
@@ -144,6 +151,7 @@ function OddsInput({ leg, hasAccess, className }: { leg: Leg; hasAccess: boolean
 
 function TeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) {
   const link = useBookmakerLink(leg)
+  const { text } = useCalc()
   return (
     <div className="flex w-[197px] flex-col items-center">
       <TeamCrest src={leg.crest} team={leg.team} className="h-[104px] w-[104px]" />
@@ -158,9 +166,9 @@ function TeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) {
         onClick={link.onClick}
         className="mt-[4px] flex items-center gap-[6px] whitespace-nowrap text-[16px] font-semibold text-(--bi-neon) underline underline-offset-[3px]"
       >
-        {link.copied ? 'Indsats kopieret' : `Gå til ${leg.bookmaker}`}
+        {link.copied ? text.stakeCopied : fill(text.goTo, { bookmaker: leg.bookmaker })}
         <ArrowUpRight className="size-[18px]" strokeWidth={2.2} aria-hidden="true" />
-        <span className="sr-only">(åbner i ny fane)</span>
+        <span className="sr-only">{text.newTab}</span>
       </a>
       <div className="mt-[12px] text-[16px] font-medium leading-none">
         Odds{leg.label !== leg.team ? ` · ${leg.label}` : ''}
@@ -173,6 +181,7 @@ function TeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) {
 }
 
 function MatchCard({ home, away, hasAccess }: { home: Leg; away: Leg; hasAccess: boolean }) {
+  const { text } = useCalc()
   return (
     <section aria-labelledby="match-title" className="bi-panel relative h-[402px] overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -183,9 +192,9 @@ function MatchCard({ home, away, hasAccess }: { home: Leg; away: Leg; hasAccess:
         <SoccerBallSolid className="mt-[2px] size-[48px]" />
         <div>
           <h2 id="match-title" className="text-[26px] font-semibold leading-[1.15] tracking-[-0.01em]">
-            Kamp og odds
+            {text.matchTitle}
           </h2>
-          <p className="mt-[4px] text-[17px] text-(--bi-fg)/95">Vælg indsatser og se din garanterede profit.</p>
+          <p className="mt-[4px] text-[17px] text-(--bi-fg)/95">{text.matchText}</p>
         </div>
       </div>
 
@@ -205,19 +214,20 @@ function MatchCard({ home, away, hasAccess }: { home: Leg; away: Leg; hasAccess:
 
 function StakeCard({ stake, onStake }: { stake: number; onStake: (n: number) => void }) {
   const pct = stakeToPosition(stake) * 100
+  const { text, fmt } = useCalc()
   return (
     <section aria-labelledby="total-title" className="bi-panel h-[216px] px-[30px] pt-[19px]">
       <div className="flex items-center gap-[25px]">
         <CoinsStackIcon className="size-[34px]" strokeWidth={1.7} />
         <h2 id="total-title" className="text-[22px] font-semibold tracking-[-0.01em]">
-          Total indsats
+          {text.totalStake}
         </h2>
       </div>
 
       <div className="mt-[10px] flex items-center pl-[58px]">
         <button
           type="button"
-          aria-label="Mindre indsats"
+          aria-label={text.lessStake}
           onClick={() => onStake(clampInput(stake - 100))}
           className="bi-field flex h-[53px] w-[59px] items-center justify-center transition-colors hover:border-(--bi-glow)"
         >
@@ -225,18 +235,18 @@ function StakeCard({ stake, onStake }: { stake: number; onStake: (n: number) => 
         </button>
         <label className="bi-field ml-[16px] flex h-[53px] w-[311px] items-center justify-center gap-[6px] focus-within:border-(--bi-glow)">
           <input
-            value={formatWhole(stake)}
+            value={fmt.whole(stake)}
             onChange={(e) => onStake(clampInput(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0))}
             inputMode="numeric"
             autoComplete="off"
-            aria-label="Total indsats"
+            aria-label={text.totalStake}
             className="w-[130px] bg-transparent text-right text-[29px] font-bold leading-none tabular-nums outline-none"
           />
-          <span className="text-[22px] font-medium">DKK</span>
+          <span className="text-[22px] font-medium">{text.currency}</span>
         </label>
         <button
           type="button"
-          aria-label="Større indsats"
+          aria-label={text.moreStake}
           onClick={() => onStake(clampInput(stake + 100))}
           className="bi-field ml-[17px] flex h-[53px] w-[58px] items-center justify-center transition-colors hover:border-(--bi-glow)"
         >
@@ -245,18 +255,18 @@ function StakeCard({ stake, onStake }: { stake: number; onStake: (n: number) => 
       </div>
 
       <div className="mt-[30px] flex items-center gap-[18px] pl-[1px] pr-[6px] text-[16px]">
-        <span>100 DKK</span>
+        <span>{`${fmt.whole(STAKE_MIN)} ${text.currency}`}</span>
         <input
           type="range"
           min={0}
           max={1000}
           value={Math.round(pct * 10)}
           onChange={(e) => onStake(positionToStake(Number(e.target.value) / 1000))}
-          aria-label="Indsats skyder"
+          aria-label={text.stakeSlider}
           style={{ '--pct': `${pct}%` } as CSSProperties}
           className="bi-range flex-1"
         />
-        <span>10.000 DKK</span>
+        <span>{`${fmt.whole(STAKE_MAX)} ${text.currency}`}</span>
       </div>
     </section>
   )
@@ -268,6 +278,7 @@ function Ring({ pct }: { pct: number | null }) {
   const frac = pct === null ? 0 : Math.min(Math.max(pct / 10, 0), 1)
   const gid = useSvgId('ring-g')
   const fid = useSvgId('ring-glow')
+  const { fmt } = useCalc()
   return (
     <div className="relative mx-auto size-[220px]">
       <svg viewBox="0 0 220 220" className="size-full -rotate-90" aria-hidden="true">
@@ -300,7 +311,7 @@ function Ring({ pct }: { pct: number | null }) {
         />
       </svg>
       <div className="absolute inset-0 flex items-center justify-center">
-        <span className="bi-text-neon bi-glow-neon text-[47px] font-bold tracking-[-0.02em]">{pct === null ? '–' : formatPct(pct)}</span>
+        <span className="bi-text-neon bi-glow-neon text-[47px] font-bold tracking-[-0.02em]">{pct === null ? '–' : fmt.pct(pct)}</span>
       </div>
     </div>
   )
@@ -321,21 +332,22 @@ function ProfitCard({
   saving: boolean
   message: string | null
 }) {
-  const v = (n: number | undefined) => (n === undefined ? '–' : formatKr(n))
+  const { text, fmt } = useCalc()
+  const v = (n: number | undefined) => (n === undefined ? '–' : fmt.money(n))
   const positive = (result?.profit ?? 0) >= 0
   const tone = positive ? 'text-(--bi-success)' : 'text-(--bi-destructive)'
   const rows: { icon: ReactNode; label: string; value: string }[] = [
     {
       icon: <TeamCrest src={home.crest} team="" className="size-[30px]" />,
-      label: `Indsats på ${home.label} (${home.bookmaker})`,
+      label: fill(text.stakeOn, { label: home.label, bookmaker: home.bookmaker }),
       value: v(result?.stakeA),
     },
     {
       icon: <TeamCrest src={away.crest} team="" className="h-[34px] w-[30px]" />,
-      label: `Indsats på ${away.label} (${away.bookmaker})`,
+      label: fill(text.stakeOn, { label: away.label, bookmaker: away.bookmaker }),
       value: v(result?.stakeB),
     },
-    { icon: <Wallet className="size-[28px]" strokeWidth={1.7} aria-hidden="true" />, label: 'Samlet udbetaling', value: v(result?.payout) },
+    { icon: <Wallet className="size-[28px]" strokeWidth={1.7} aria-hidden="true" />, label: text.totalPayout, value: v(result?.payout) },
   ]
 
   return (
@@ -344,9 +356,9 @@ function ProfitCard({
         <ProfitBarsIcon className="mt-[2px] size-[44px]" />
         <div>
           <h2 id="profit-title" className="text-[26px] font-semibold leading-[1.15] tracking-[-0.01em]">
-            Garanteret profit
+            {text.guaranteedProfit}
           </h2>
-          <p className="mt-[4px] text-[17px] text-(--bi-fg)/95">Din beregning viser en garanteret profit.</p>
+          <p className="mt-[4px] text-[17px] text-(--bi-fg)/95">{text.profitText}</p>
         </div>
       </div>
 
@@ -371,9 +383,9 @@ function ProfitCard({
         )}
       >
         <ChartNoAxesCombined className={cn('size-[32px]', tone)} strokeWidth={2} aria-hidden="true" />
-        <span className={cn('ml-[20px] flex-1 text-[20px] font-semibold', tone)}>Garanteret profit</span>
+        <span className={cn('ml-[20px] flex-1 text-[20px] font-semibold', tone)}>{text.guaranteedProfit}</span>
         <span className={cn('text-[30px] font-bold tabular-nums tracking-[-0.01em]', tone)}>
-          {result ? `${result.profit >= 0 ? '+' : ''}${formatKr(result.profit)}` : '–'}
+          {result ? `${result.profit >= 0 ? '+' : ''}${fmt.money(result.profit)}` : '–'}
         </span>
       </div>
 
@@ -384,7 +396,7 @@ function ProfitCard({
         className="bi-grad-primary bi-shadow-glow mt-auto flex h-[66px] items-center justify-center gap-[16px] rounded-[12px] text-[21px] font-semibold transition-transform hover:scale-[1.01] disabled:opacity-50"
       >
         <Bookmark className="size-[26px]" strokeWidth={2} aria-hidden="true" />
-        {saving ? 'Gemmer...' : 'Gem til mine væddemål'}
+        {saving ? text.saving : text.saveLong}
       </button>
       {message && (
         <p role="alert" className="mt-[8px] text-center text-[14px] text-(--bi-destructive)">
@@ -399,6 +411,7 @@ function ProfitCard({
 
 function MobileTeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) {
   const link = useBookmakerLink(leg)
+  const { text, fmt } = useCalc()
   return (
     <div className="flex min-w-0 flex-col items-center">
       <TeamCrest src={leg.crest} team={leg.team} className="size-[84px] drop-shadow-[0_6px_14px_oklch(0.06_0.03_266/0.8)]" />
@@ -414,7 +427,7 @@ function MobileTeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) 
             target="_blank"
             rel="noopener noreferrer sponsored"
             onClick={link.onClick}
-            aria-label={`Gå til ${leg.bookmaker} (åbner i ny fane)`}
+            aria-label={`${fill(text.goTo, { bookmaker: leg.bookmaker })} ${text.newTab}`}
             className="grid size-[26px] shrink-0 place-items-center rounded-full border border-(--bi-neon)/40 text-(--bi-neon)"
           >
             <ArrowUpRight className="size-[14px]" strokeWidth={2.4} aria-hidden="true" />
@@ -427,10 +440,10 @@ function MobileTeamColumn({ leg, hasAccess }: { leg: Leg; hasAccess: boolean }) 
         </label>
 
         <div className="mt-[10px] truncate text-center text-[11px] font-semibold uppercase tracking-[0.08em] text-(--bi-muted)">
-          {link.copied ? 'Kopieret' : leg.label !== leg.team ? leg.label : 'Sæt'}
+          {link.copied ? text.copied : leg.label !== leg.team ? leg.label : text.place}
         </div>
         <div className="mt-[2px] truncate text-center text-[19px] font-extrabold leading-tight text-(--bi-neon)">
-          {leg.stake === undefined ? '–' : formatKr(leg.stake)}
+          {leg.stake === undefined ? '–' : fmt.money(leg.stake)}
         </div>
       </div>
     </div>
@@ -454,9 +467,10 @@ function MobileCalculator({
 }) {
   const pos = stakeToPosition(stake)
   const kickoff = splitKickoff(o.kickoffLabel)
+  const { text, fmt } = useCalc()
 
   return (
-    <section className="bi-combo bi-rise" aria-label="Beregn indsats">
+    <section className="bi-combo bi-rise" aria-label={text.calcAria}>
       <div className="absolute inset-x-0 top-0 h-[250px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/beregn/hero-player.jpg" alt="" className="pointer-events-none absolute inset-0 size-full object-cover object-[72%_30%]" />
@@ -494,29 +508,29 @@ function MobileCalculator({
         <div className="bi-divider text-[11px] font-bold uppercase tracking-[0.1em] text-(--bi-muted)">
           <span className="flex items-center gap-[6px]">
             <Coins className="size-[14px] text-(--bi-neon)" strokeWidth={2.2} aria-hidden="true" />
-            Total indsats · fordeles automatisk
+            {text.totalStakeAuto}
           </span>
         </div>
 
         <div className="mt-[14px] grid grid-cols-[52px_minmax(0,1fr)_52px] items-center gap-[10px]">
-          <button type="button" aria-label="Mindre indsats" onClick={() => onStake(clampInput(stake - 100))} className="bi-step size-[52px]">
+          <button type="button" aria-label={text.lessStake} onClick={() => onStake(clampInput(stake - 100))} className="bi-step size-[52px]">
             <Minus className="size-[22px]" strokeWidth={2.4} aria-hidden="true" />
           </button>
           <label className="flex min-w-0 items-center justify-center">
             <span className="relative inline-block">
               <input
-                value={formatWhole(stake)}
+                value={fmt.whole(stake)}
                 onChange={(e) => onStake(clampInput(Number(e.target.value.replace(/\D/g, '').slice(0, 7)) || 0))}
                 inputMode="numeric"
                 autoComplete="off"
-                aria-label="Total indsats"
-                style={{ width: `${Math.max(formatWhole(stake).length, 1) + 0.5}ch` }}
+                aria-label={text.totalStake}
+                style={{ width: `${Math.max(fmt.whole(stake).length, 1) + 0.5}ch` }}
                 className="bg-transparent text-center text-[40px] font-extrabold leading-none tabular-nums tracking-[-0.03em] outline-none"
               />
-              <span className="pointer-events-none absolute bottom-[4px] left-full ml-[4px] text-[15px] font-bold text-(--bi-muted)">DKK</span>
+              <span className="pointer-events-none absolute bottom-[4px] left-full ml-[4px] text-[15px] font-bold text-(--bi-muted)">{text.currency}</span>
             </span>
           </label>
-          <button type="button" aria-label="Større indsats" onClick={() => onStake(clampInput(stake + 100))} className="bi-step size-[52px]">
+          <button type="button" aria-label={text.moreStake} onClick={() => onStake(clampInput(stake + 100))} className="bi-step size-[52px]">
             <Plus className="size-[22px]" strokeWidth={2.4} aria-hidden="true" />
           </button>
         </div>
@@ -527,19 +541,19 @@ function MobileCalculator({
           max={1000}
           value={Math.round(pos * 1000)}
           onChange={(e) => onStake(positionToStake(Number(e.target.value) / 1000))}
-          aria-label="Vælg indsats"
+          aria-label={text.stakeSlider}
           className="bi-range mt-[18px] w-full"
           style={{ '--pct': `${pos * 100}%` } as CSSProperties}
         />
         <div className="mt-[6px] flex justify-between text-[11px] font-medium text-(--bi-muted)">
-          <span>{formatWhole(STAKE_MIN)} kr.</span>
-          <span>{formatWhole(STAKE_MAX)} kr.</span>
+          <span>{`${fmt.whole(STAKE_MIN)} ${text.currency}`}</span>
+          <span>{`${fmt.whole(STAKE_MAX)} ${text.currency}`}</span>
         </div>
 
         <div className="mt-[12px] grid grid-cols-4 gap-[8px]">
           {QUICK.map((q) => (
             <button type="button" key={q} onClick={() => onStake(q)} aria-pressed={stake === q} className="bi-chip-pick">
-              {formatWhole(q)}
+              {fmt.whole(q)}
             </button>
           ))}
         </div>
@@ -552,6 +566,7 @@ function MiniRing({ pct, tone }: { pct: number | null; tone: string }) {
   const R = 22
   const C = 2 * Math.PI * R
   const frac = pct === null ? 0 : Math.min(Math.max(pct / 10, 0), 1)
+  const { fmt } = useCalc()
   return (
     <div className={cn('relative size-[56px] shrink-0', tone)}>
       <svg viewBox="0 0 56 56" className="size-full -rotate-90" aria-hidden="true">
@@ -572,13 +587,14 @@ function MiniRing({ pct, tone }: { pct: number | null; tone: string }) {
         )}
       </svg>
       <span className="absolute inset-0 grid place-items-center text-[11px] font-extrabold tracking-[-0.02em]">
-        {pct === null ? '–' : formatPct(pct).replace(' ', '')}
+        {pct === null ? '–' : fmt.pct(pct).replace(' ', '')}
       </span>
     </div>
   )
 }
 
 function MobileResultDock({ result, onSave, saving }: { result: Result | null; onSave: () => void; saving: boolean }) {
+  const { text, fmt } = useCalc()
   const positive = result !== null && result.profit >= 0
   const tone = result === null ? 'text-(--bi-muted)' : positive ? 'text-(--bi-success)' : 'text-(--bi-destructive)'
   return (
@@ -586,24 +602,24 @@ function MobileResultDock({ result, onSave, saving }: { result: Result | null; o
       <MiniRing pct={result?.profitPct ?? null} tone={tone} />
       <div className="min-w-0 flex-1">
         <div className="truncate text-[10px] font-bold uppercase tracking-[0.1em] text-(--bi-muted)">
-          {result === null ? 'Indtast odds' : positive ? 'Garanteret profit' : 'Ingen surebet'}
+          {result === null ? text.enterOdds : positive ? text.guaranteedProfit : text.noSurebet}
         </div>
         <div className={cn('truncate text-[24px] font-extrabold leading-[1.1] tabular-nums tracking-[-0.03em]', tone)}>
-          {result ? `${result.profit >= 0 ? '+' : ''}${formatKr(result.profit)}` : '–'}
+          {result ? `${result.profit >= 0 ? '+' : ''}${fmt.money(result.profit)}` : '–'}
         </div>
         <div className="truncate text-[11px] text-(--bi-muted)">
-          Udbetaling <span className="font-semibold text-(--bi-fg)">{result ? formatKr(result.payout) : '–'}</span>
+          {text.payout} <span className="font-semibold text-(--bi-fg)">{result ? fmt.money(result.payout) : '–'}</span>
         </div>
       </div>
       <button
         type="button"
         onClick={onSave}
-        aria-label="Gem til mine væddemål"
+        aria-label={text.saveLong}
         disabled={!result || saving}
         className="bi-grad-primary bi-shadow-glow flex h-[52px] shrink-0 items-center gap-[8px] rounded-[16px] px-[16px] text-[15px] font-bold transition-transform active:scale-[0.96] disabled:opacity-50"
       >
         <Bookmark className="size-[18px]" strokeWidth={2.2} aria-hidden="true" />
-        {saving ? 'Gemmer' : 'Gem'}
+        {saving ? text.saving : text.save}
       </button>
     </div>
   )
@@ -613,6 +629,8 @@ function MobileResultDock({ result, onSave, saving }: { result: Result | null; o
 
 export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }) {
   const router = useRouter()
+  const { locale } = useLocale()
+  const { text: heroText } = useCalc()
   const hasAccess = useHasAccess()
   const [stake, setStake] = useState(1000)
   const [oddsA, setOddsA] = useState(String(o.a.odds))
@@ -650,7 +668,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
     setMessage(null)
     startSaving(async () => {
       const res = await placeBet({ opportunityId: o.id, stakeA: result.stakeA, stakeB: result.stakeB })
-      if (res.ok) router.push('/stats')
+      if (res.ok) router.push(localePath(locale, '/stats'))
       else setMessage(res.error)
     })
   }
@@ -658,7 +676,7 @@ export function StakeCalculator({ opportunity: o }: { opportunity: Opportunity }
   return (
     <>
       <DesignScale className="hidden lg:block">
-        <CalcHero league={o.league} kickoff={o.kickoffLabel} />
+        <CalcHero league={o.league} kickoff={o.kickoffLabel} title={heroText.heroTitle} accent={heroText.heroAccent} text={heroText.heroText} />
         <div className="relative z-10 grid grid-cols-[640fr_547fr] gap-x-[16px] px-[22px] pb-[52px]">
           <div className="flex flex-col gap-[15px]">
             <MatchCard home={home} away={away} hasAccess={hasAccess} />
