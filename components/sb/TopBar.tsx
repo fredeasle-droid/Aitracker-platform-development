@@ -4,6 +4,7 @@ import { Search, Bell, ChevronDown, Command } from "lucide-react";
 import { AuthActions } from "@/components/site/global-header";
 import { useLocale } from "@/components/locale-provider";
 import { LOCALES, type Locale } from "@/lib/i18n";
+import { FlagImage } from "@/components/flag-image";
 
 const LOCALE_OPTIONS = Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][];
 
@@ -39,7 +40,7 @@ function LanguageMenu() {
         aria-label={current.label}
         className="glass-pill flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold transition hover:brightness-125"
       >
-        <span className="text-lg leading-none" aria-hidden="true">{current.flag}</span>
+        <FlagImage code={current.countryCode.toLowerCase()} label="" className="size-5" />
         {current.countryCode}
         <ChevronDown className={`h-4 w-4 text-muted-foreground transition-transform ${open ? "rotate-180" : ""}`} />
       </button>
@@ -57,7 +58,7 @@ function LanguageMenu() {
               }}
               className={`flex min-h-10 w-full items-center gap-2.5 rounded-lg px-2.5 text-left text-sm transition hover:bg-surface ${code === locale ? "bg-surface font-bold text-foreground" : "text-foreground/85"}`}
             >
-              <span className="text-lg leading-none" aria-hidden="true">{option.flag}</span>
+              <FlagImage code={option.countryCode.toLowerCase()} label="" className="size-5" />
               {option.label}
             </button>
           ))}

@@ -7,6 +7,7 @@ import { LogIn, Menu, UserRound } from 'lucide-react'
 import { SidebarBody } from '@/components/desktop/desktop-sidebar'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Logo } from '@/components/home/icons'
+import { LanguageMenu } from '@/components/site/language-menu'
 import { useLocale } from '@/components/locale-provider'
 import { authClient } from '@/lib/auth-client'
 import { canonicalPathname } from '@/lib/i18n'
@@ -164,7 +165,8 @@ export function GlobalHeader({
           })}
         </nav>
 
-        <div className="flex items-center justify-self-end">
+        <div className="flex items-center gap-2 justify-self-end">
+          <LanguageMenu />
           <AuthActions />
         </div>
       </div>
