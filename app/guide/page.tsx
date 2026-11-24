@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, Clock } from 'lucide-react'
 import { getLocalizedGuides } from '@/lib/content-i18n'
 import { LOCALES, OG_LOCALE, localePath } from '@/lib/i18n'
 import { getServerLocale } from '@/lib/locale-server'
-import { absoluteUrl, buildAlternates } from '@/lib/seo/alternates'
+import { absoluteUrl, buildAlternates, localeRobots } from '@/lib/seo/alternates'
 import { SEO_STRINGS } from '@/lib/seo/ui-strings'
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -15,6 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
     title: text.guideIndexTitle,
     description: text.guideIndexDescription,
     alternates: buildAlternates('/guide', locale),
+    robots: localeRobots(locale),
     openGraph: { url, type: 'website', locale: OG_LOCALE[locale], title: text.guideIndexTitle, description: text.guideIndexDescription },
   }
 }

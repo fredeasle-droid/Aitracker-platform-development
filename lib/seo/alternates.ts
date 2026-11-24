@@ -8,9 +8,21 @@ export const ALL_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
 // so its translated URLs point back to the Danish page instead of competing with it.
 export const TRANSLATED_SECTIONS = ['/guide', '/sport', '/bookmaker'] as const
 
+// Languages Google may index. Swedish, Norwegian and German still carry Danish-market copy,
+// so they stay reachable for visitors but are kept out of search until they are localised.
+export const INDEXABLE_LOCALES: Locale[] = ['da', 'en']
+
+export function isIndexable(locale: Locale) {
+  return INDEXABLE_LOCALES.includes(locale)
+}
+
+export function localeRobots(locale: Locale): Metadata['robots'] | undefined {
+  return isIndexable(locale) ? undefined : { index: false, follow: true }
+}
+
 export function translatedLocalesFor(path: string): Locale[] {
   const translated = TRANSLATED_SECTIONS.some((section) => path === section || path.startsWith(`${section}/`))
-  return translated ? ALL_LOCALES : ['da']
+  return translated ? INDEXABLE_LOCALES : ['da']
 }
 
 export function absoluteUrl(locale: Locale, path: string) {
@@ -19,6 +31,7 @@ export function absoluteUrl(locale: Locale, path: string) {
 }
 
 export function buildAlternates(path: string, locale: Locale): NonNullable<Metadata['alternates']> {
+  if (!isIndexable(locale)) return { canonical: absoluteUrl(locale, path) }
   const available = translatedLocalesFor(path)
   const canonicalLocale = available.includes(locale) ? locale : 'da'
   const canonical = absoluteUrl(canonicalLocale, path)

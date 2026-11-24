@@ -5,7 +5,7 @@ import { getLocalizedLanding } from '@/lib/content-i18n'
 import { OG_LOCALE } from '@/lib/i18n'
 import { SPORT_PAGES } from '@/lib/landing-pages'
 import { getServerLocale } from '@/lib/locale-server'
-import { absoluteUrl, buildAlternates } from '@/lib/seo/alternates'
+import { absoluteUrl, buildAlternates, localeRobots } from '@/lib/seo/alternates'
 
 export const dynamicParams = false
 
@@ -23,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: page.description,
     keywords: [page.keyword],
     alternates: buildAlternates(path, locale),
+    robots: localeRobots(locale),
     openGraph: { type: 'website', url: absoluteUrl(locale, path), locale: OG_LOCALE[locale], title: page.metaTitle, description: page.description },
   }
 }

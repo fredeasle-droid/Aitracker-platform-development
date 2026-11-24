@@ -9,7 +9,7 @@ import { getLocalizedGuide, getLocalizedGuides, getLocalizedLandingList } from '
 import { GUIDES } from '@/lib/guides'
 import { LOCALES, OG_LOCALE, localePath, type Locale } from '@/lib/i18n'
 import { getServerLocale } from '@/lib/locale-server'
-import { absoluteUrl, buildAlternates } from '@/lib/seo/alternates'
+import { absoluteUrl, buildAlternates, localeRobots } from '@/lib/seo/alternates'
 import { SEO_STRINGS } from '@/lib/seo/ui-strings'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 
@@ -36,6 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: guide.description,
     keywords: [guide.keyword],
     alternates: buildAlternates(path, locale),
+    robots: localeRobots(locale),
     openGraph: {
       type: 'article',
       url: absoluteUrl(locale, path),

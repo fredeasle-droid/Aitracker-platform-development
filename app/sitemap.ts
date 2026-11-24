@@ -2,15 +2,15 @@ import type { MetadataRoute } from 'next'
 import { GUIDES } from '@/lib/guides'
 import { HREFLANG } from '@/lib/i18n'
 import { BOOKMAKER_PAGES, SPORT_PAGES, UPDATED } from '@/lib/landing-pages'
-import { ALL_LOCALES, absoluteUrl } from '@/lib/seo/alternates'
+import { INDEXABLE_LOCALES, absoluteUrl } from '@/lib/seo/alternates'
 import { PUBLIC_PAGES, SITE_URL } from '@/lib/site'
 
 type Entry = MetadataRoute.Sitemap[number]
 
 function translatedEntries(path: string, lastModified: Date, priority: number): Entry[] {
-  const languages: Record<string, string> = Object.fromEntries(ALL_LOCALES.map((locale) => [HREFLANG[locale], absoluteUrl(locale, path)]))
+  const languages: Record<string, string> = Object.fromEntries(INDEXABLE_LOCALES.map((locale) => [HREFLANG[locale], absoluteUrl(locale, path)]))
   languages['x-default'] = absoluteUrl('da', path)
-  return ALL_LOCALES.map((locale) => ({
+  return INDEXABLE_LOCALES.map((locale) => ({
     url: absoluteUrl(locale, path),
     lastModified,
     changeFrequency: 'monthly' as const,
