@@ -12,7 +12,7 @@ export const TRANSLATED_SECTIONS = ['/guide', '/sport', '/bookmaker'] as const
 export const TRANSLATED_PAGES = ['/dagens-surebets', '/faq'] as const
 
 // Languages Google may index. Every language now has its own localised copy and keywords.
-export const INDEXABLE_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
+export const INDEXABLE_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de', 'es', 'br', 'pt', 'fr', 'it', 'pl', 'fi', 'nl']
 
 export function isIndexable(locale: Locale) {
   return INDEXABLE_LOCALES.includes(locale)

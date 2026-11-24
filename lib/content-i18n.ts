@@ -6,6 +6,22 @@ import landingEn from './content-i18n/landing.en.json'
 import landingSv from './content-i18n/landing.sv.json'
 import landingNo from './content-i18n/landing.no.json'
 import landingDe from './content-i18n/landing.de.json'
+import guidesEs from './content-i18n/guides.es.json'
+import landingEs from './content-i18n/landing.es.json'
+import guidesBr from './content-i18n/guides.br.json'
+import landingBr from './content-i18n/landing.br.json'
+import guidesPt from './content-i18n/guides.pt.json'
+import landingPt from './content-i18n/landing.pt.json'
+import guidesFr from './content-i18n/guides.fr.json'
+import landingFr from './content-i18n/landing.fr.json'
+import guidesIt from './content-i18n/guides.it.json'
+import landingIt from './content-i18n/landing.it.json'
+import guidesPl from './content-i18n/guides.pl.json'
+import landingPl from './content-i18n/landing.pl.json'
+import guidesFi from './content-i18n/guides.fi.json'
+import landingFi from './content-i18n/landing.fi.json'
+import guidesNl from './content-i18n/guides.nl.json'
+import landingNl from './content-i18n/landing.nl.json'
 import { GUIDES, type Guide, type GuideBlock } from '@/lib/guides'
 import { BOOKMAKER_PAGES, SPORT_PAGES, type LandingPage } from '@/lib/landing-pages'
 import type { Locale } from '@/lib/i18n'
@@ -29,6 +45,14 @@ const GUIDE_TRANSLATIONS = {
   sv: guidesSv,
   no: guidesNo,
   de: guidesDe,
+  es: guidesEs,
+  br: guidesBr,
+  pt: guidesPt,
+  fr: guidesFr,
+  it: guidesIt,
+  pl: guidesPl,
+  fi: guidesFi,
+  nl: guidesNl,
 } as unknown as Record<Exclude<Locale, 'da'>, Record<string, GuideTranslation>>
 
 const LANDING_TRANSLATIONS = {
@@ -36,6 +60,14 @@ const LANDING_TRANSLATIONS = {
   sv: landingSv,
   no: landingNo,
   de: landingDe,
+  es: landingEs,
+  br: landingBr,
+  pt: landingPt,
+  fr: landingFr,
+  it: landingIt,
+  pl: landingPl,
+  fi: landingFi,
+  nl: landingNl,
 } as unknown as Record<Exclude<Locale, 'da'>, Record<string, LandingTranslation>>
 
 export type LocalizedGuide = Omit<Guide, 'category'> & { category: string }
