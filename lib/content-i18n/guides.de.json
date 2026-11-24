@@ -384,80 +384,145 @@
     "ctaLabel": "Surebets bei mehreren Anbietern finden"
   },
   "bankroll-management": {
-    "title": "Bankroll-Management für Surebets und Sportwetten",
-    "metaTitle": "Bankroll-Management – Kapital für Surebets richtig verwalten",
-    "description": "So verteilen Sie Ihre Bankroll auf Wettanbieter, wie viel Sie pro Surebet setzen sollten und wie Sie sicherstellen, dass Ihr Kapital verfügbar ist, wenn sich eine Gelegenheit bietet.",
-    "keyword": "Bankroll-Management Wetten",
-    "intro": "Ihre Bankroll ist das Kapital, das Sie für Sportwetten reserviert haben. Bei Surebets geht es beim Bankroll-Management weniger darum, Verluste zu vermeiden, sondern vielmehr darum, das Geld zur richtigen Zeit bei den richtigen Wettanbietern verfügbar zu haben, wenn sich ein Surebet ergibt.",
+    "title": "Bankroll Management bei Sportwetten: der komplette Leitfaden",
+    "metaTitle": "Bankroll Management bei Sportwetten: Leitfaden 2026",
+    "description": "Leitfaden für Bankroll Management bei Sportwetten: wie viel du pro Wette setzt, wie du Kapital auf Anbieter verteilst und deinen ROI berechnest.",
+    "keyword": "leitfaden für bankroll management bei sportwetten",
+    "intro": "Bankroll Management bei Sportwetten bedeutet, ein festes Wettkapital zu definieren und pro Wette nur einen kleinen, festen Anteil davon zu setzen: bei Value Bets meist 1–2 %, bei Surebets 10–20 % pro Position, verteilt auf mehrere Anbieter. So überstehst du Pechsträhnen, hast immer Guthaben dort, wo sich eine Chance bietet, und siehst über deinen ROI, ob deine Strategie funktioniert.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Legen Sie eine feste Bankroll fest"
+        "text": "Bankroll Management: die Grundregeln"
       },
       {
-        "type": "p",
-        "text": "Bestimmen Sie einen Betrag, auf den Sie im Notfall verzichten könnten, und halten Sie ihn getrennt von Ihrem übrigen Geld. Verwenden Sie ausschließlich diesen Betrag zum Wetten und zahlen Sie nicht impulsiv nach, nur weil eine einzelne Wette nicht aufgegangen ist."
+        "type": "ul",
+        "items": [
+          "**Feste Bankroll:** Nur Geld, das du nicht für Miete, Rechnungen oder Rücklagen brauchst.",
+          "**Fester Anteil pro Wette:** Der Einsatz richtet sich nach der Bankroll, nicht nach dem Bauchgefühl.",
+          "**Keine Verluste jagen:** Nach einem schlechten Tag wird der Einsatz nicht erhöht.",
+          "**Regelmäßig neu berechnen:** Einmal im Monat passt du den Einsatz an die neue Bankroll an.",
+          "**Alles erfassen:** Ohne lückenlose Daten weißt du nicht, ob du wirklich im Plus bist."
+        ]
       },
       {
         "type": "h2",
-        "text": "Verteilen Sie das Kapital auf mehrere Wettanbieter"
+        "text": "Wie viel pro Wette? Surebets und Value Bets im Vergleich"
       },
       {
         "type": "p",
-        "text": "Ein Surebet erfordert gleichzeitige Einsätze bei zwei oder drei Wettanbietern. Verteilen Sie daher Ihre Bankroll so, dass jeder Anbieter genug Guthaben für mindestens einige Wetten hat. Wettanbieter, die häufig in Surebets vorkommen, sollten etwas mehr Kapital erhalten."
+        "text": "Surebets sind mathematisch abgesichert, deshalb kannst du pro Position deutlich mehr setzen als bei Value Bets, die kurzfristig stark schwanken. **Bei Surebets begrenzt eher das Guthaben bei den einzelnen Anbietern deinen Einsatz als das Risiko.**"
       },
       {
         "type": "example",
-        "title": "Beispiel: Bankroll von 10.000 € verteilt auf 6 Wettanbieter",
+        "title": "Beispiel: Bankroll von 3.000 €",
         "rows": [
           [
-            "Zwei meistgenutzte Wettanbieter",
-            "je 2.500 €"
+            "Surebet, 15 % pro Position",
+            "450 € Gesamteinsatz"
           ],
           [
-            "Vier weitere Wettanbieter",
-            "je 1.250 €"
+            "Gewinn bei 2 % Marge",
+            "9 € pro Surebet"
           ],
           [
-            "Typischer Einsatz pro Surebet",
-            "500–1.000 € insgesamt"
+            "Value Bet, 1,5 % pro Wette",
+            "45 € Einsatz"
+          ],
+          [
+            "Erwarteter Gewinn bei 5 % Edge",
+            "2,25 € pro Wette"
+          ],
+          [
+            "Verteilung auf 6 Anbieter",
+            "ca. 500 € pro Konto"
           ]
         ],
-        "note": "Mit dieser Verteilung können Sie mehrere Surebets hintereinander abdecken, bevor Sie Geld zwischen den Anbietern umschichten müssen."
+        "note": "Bei Value Bets sind zehn Verluste in Folge völlig normal. Mit 1,5 % Einsatz verlierst du dabei rund 14 % der Bankroll, nicht die Hälfte."
       },
       {
         "type": "h2",
-        "text": "Wie viel sollte man pro Surebet setzen?"
+        "text": "Kapital auf Wettanbieter verteilen"
       },
       {
         "type": "p",
-        "text": "Eine gute Faustregel sind 5–10 % Ihrer gesamten Bankroll pro Surebet. Das ist im Vergleich zu normalen Sportwetten relativ hoch, aber das Risiko ist auch deutlich geringer. Reduzieren Sie den Einsatz, wenn die Quoten instabil sind oder wenn Sie noch am Anfang stehen. Bedenken Sie außerdem: In Deutschland fällt auf den Wetteinsatz eine Wettsteuer von 5,3 % an, die viele Anbieter an die Kunden weitergeben. Diese Steuer reduziert die effektive Marge eines Surebets, sodass sich nur Arbitragen mit deutlich mehr als 5,3 % Gewinn wirklich lohnen."
+        "text": "Ein Surebet nützt dir nichts, wenn bei einem der beiden Anbieter kein Guthaben liegt. Halte deshalb bei jedem aktiven Konto mindestens so viel Guthaben, wie ein typischer Einsatz auf einer Seite erfordert, und behalte rund 20 % der Bankroll als Reserve auf dem Bankkonto, um schnell nachzuladen."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Mehr Guthaben bei weichen Anbietern,** wo die meisten Surebets entstehen.",
+          "**Gewinne regelmäßig umverteilen,** weil sich das Geld bei den Anbietern sammelt, die verlieren.",
+          "**Auszahlungszeiten beachten:** Anbieter mit langsamen Auszahlungen binden Kapital."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Welche Anbieter sich lohnen, liest du im Ratgeber [Limitierungen bei Wettanbietern vermeiden](/de/ratgeber/undgaa-begraensning). [BetTracker AI](/de) zeigt dir den Saldo pro Anbieter automatisch."
+      },
+      {
+        "type": "h2",
+        "text": "Sportwetten ROI Rechner: so misst du deinen Erfolg"
+      },
+      {
+        "type": "p",
+        "text": "Der ROI (Return on Investment) ist die wichtigste Kennzahl: **ROI = Nettogewinn ÷ Gesamtumsatz × 100.** Bei Surebets sind 1–3 % realistisch, bei Value Bets 3–8 % über viele hundert Wetten."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: ROI nach einem Monat",
+        "rows": [
+          [
+            "Gesamtumsatz",
+            "18.500 €"
+          ],
+          [
+            "Nettogewinn",
+            "314,50 €"
+          ],
+          [
+            "ROI",
+            "314,50 ÷ 18.500 × 100 = 1,7 %"
+          ],
+          [
+            "Rendite auf Bankroll (3.000 €)",
+            "10,5 %"
+          ]
+        ],
+        "note": "Der ROI auf den Umsatz wirkt klein, aber weil du die Bankroll viele Male pro Monat umschlägst, wächst das Kapital deutlich schneller."
       },
       {
         "type": "tip",
-        "text": "Führen Sie Buch über alle Wetten. So sehen Sie, bei welchen Wettanbietern das meiste Kapital gebunden ist, und können Ihre Bankroll gezielter verteilen."
+        "text": "In Deutschland fallen auf Sportwetten 5,3 % Wettsteuer an. Zieht ein Anbieter sie vom Einsatz oder Gewinn ab, sinkt deine effektive Quote um rund 5 %. Rechne Value Bets und Surebets deshalb immer mit Nettoquoten oder nutze Anbieter, die die Steuer selbst tragen."
       },
       {
         "type": "h2",
-        "text": "Verschieben Sie Gewinne regelmäßig"
+        "text": "Sportwetten-Übersicht behalten"
       },
       {
         "type": "p",
-        "text": "Nach einer gewissen Zeit sammelt sich das Geld bei einigen Wettanbietern an und fehlt bei anderen. Heben Sie bei denen mit zu viel Guthaben ab und zahlen Sie bei denen mit zu wenig ein – zum Beispiel einmal pro Woche. Beachten Sie dabei auch das monatliche Einzahlungslimit von 1.000 € bei allen in Deutschland lizenzierten Anbietern zusammen (LUGAS-System)."
+        "text": "Bankroll Management funktioniert nur mit sauberen Zahlen. Statt einer Excel-Tabelle nutzt du am besten einen [Bet Tracker](/de/ratgeber/bet-tracker), der Gewinn, ROI und Saldo pro Anbieter selbst berechnet. Mehr zur Kennzahl findest du im Ratgeber [ROI beim Wetten](/de/ratgeber/roi-betting)."
+      },
+      {
+        "type": "p",
+        "text": "Bereit, deine Bankroll systematisch wachsen zu lassen? [Starte mit BetTracker AI](/de): Surebets finden, Einsätze berechnen und jede Wette automatisch verfolgen."
       }
     ],
     "faq": [
       {
-        "q": "Wie groß sollte die Bankroll für Surebets am Anfang sein?",
-        "a": "Sie können mit wenigen tausend Euro beginnen, aber 5.000–10.000 € erleichtern es, bei mehreren Wettanbietern gleichzeitig genug Guthaben verfügbar zu haben und von mehr Arbitrage-Gelegenheiten zu profitieren."
+        "q": "Wie groß sollte meine Bankroll für Surebets sein?",
+        "a": "Mit 1.000–2.000 € kannst du sinnvoll starten. Darunter sind die Gewinne pro Surebet sehr klein, und du kannst nur wenige Anbieter gleichzeitig nutzen."
       },
       {
-        "q": "Kann man bei Surebets trotzdem Geld verlieren?",
-        "a": "Das kann passieren, wenn sich eine Quote ändert, bevor Sie die zweite Wette platzieren können, oder wenn eine Wette storniert wird. Gutes Bankroll-Management begrenzt den möglichen Schaden und stellt sicher, dass Sie auch nach einzelnen Fehlschlägen handlungsfähig bleiben."
+        "q": "Soll ich den Einsatz nach Gewinnen sofort erhöhen?",
+        "a": "Nein. Passe den Einsatz einmal im Monat an die aktuelle Bankroll an. So vermeidest du emotionale Entscheidungen."
+      },
+      {
+        "q": "Was ist ein guter ROI bei Sportwetten?",
+        "a": "Bei Surebets 1–3 % auf den Umsatz, bei Value Bets 3–8 % über mindestens 500 Wetten. Alles darüber ist auf Dauer selten."
       }
     ],
-    "category": "Strategi",
-    "ctaLabel": "Behalten Sie Ihre Bankroll im Griff"
+    "category": "Strategie",
+    "ctaLabel": "Bankroll im Bet Tracker verfolgen"
   },
   "bedste-bookmakere-til-surebets": {
     "title": "Beste Wettanbieter für Surebets in Deutschland",
@@ -2129,6 +2194,236 @@
       {
         "q": "Welche Sportarten eignen sich am besten für Live-Arbitrage?",
         "a": "Tennis und Basketball, weil es viele Punkte und schnelle Quotenwechsel gibt. Im Fußball sind Über/Unter-Märkte nach Toren am ergiebigsten."
+      }
+    ]
+  },
+  "find-value-bets-med-ai": {
+    "title": "Value Bets mit KI finden: so arbeitet ein KI-Quotenscanner",
+    "metaTitle": "Value Bets mit KI finden: Leitfaden 2026",
+    "description": "So findest du Value Bets mit KI: wie ein KI-Quotenscanner faire Quoten berechnet, Rechenbeispiel in € und worauf du bei KI-Sportwetten achten musst.",
+    "keyword": "value bets mit ki finden",
+    "category": "Strategie",
+    "ctaLabel": "Value Bets mit KI finden",
+    "intro": "Value Bets mit KI findest du, indem ein KI-Quotenscanner die Quoten scharfer Anbieter und Börsen nutzt, um die faire Wahrscheinlichkeit eines Ausgangs zu schätzen, und dann Anbieter meldet, deren Quote darüber liegt. Liegt die faire Quote bei 2,00 und ein Anbieter bietet 2,20, hast du 10 % Value. Über viele Wetten wird daraus ein erwarteter Gewinn, auch wenn einzelne Wetten verlieren.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Value Betting: was eine Value Bet ist"
+      },
+      {
+        "type": "p",
+        "text": "Eine Value Bet ist eine Wette, deren Quote höher ist, als die tatsächliche Wahrscheinlichkeit rechtfertigt. **Der Wert berechnet sich so: Value = Quote × Wahrscheinlichkeit − 1.** Ist das Ergebnis positiv, hast du langfristig einen Vorteil (+EV)."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Bundesliga, Sieg Heimteam",
+        "rows": [
+          [
+            "Faire Quote laut scharfem Markt",
+            "2,00 (50 %)"
+          ],
+          [
+            "Angebotene Quote beim Anbieter",
+            "2,20"
+          ],
+          [
+            "Value",
+            "2,20 × 0,50 − 1 = 10 %"
+          ],
+          [
+            "Einsatz",
+            "50 €"
+          ],
+          [
+            "Erwarteter Gewinn pro Wette",
+            "5 €"
+          ]
+        ],
+        "note": "Diese eine Wette verliert in jedem zweiten Fall. Erst über hunderte solcher Wetten nähert sich dein Ergebnis dem erwarteten Gewinn an."
+      },
+      {
+        "type": "tip",
+        "text": "In Deutschland fallen auf Sportwetten 5,3 % Wettsteuer an. Zieht ein Anbieter sie vom Einsatz oder Gewinn ab, sinkt deine effektive Quote um rund 5 %. Rechne Value Bets und Surebets deshalb immer mit Nettoquoten oder nutze Anbieter, die die Steuer selbst tragen."
+      },
+      {
+        "type": "h2",
+        "text": "KI-Sportwetten: wie ein KI-Quotenscanner arbeitet"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Quoten sammeln:** Der Scanner liest laufend die Quoten vieler Anbieter in Deutschland und international.",
+          "**Marge entfernen:** Aus den Quoten scharfer Anbieter rechnet er die Buchmacher-Marge heraus, um faire Quoten zu erhalten.",
+          "**Abweichungen finden:** Er vergleicht jede angebotene Quote mit der fairen Quote und berechnet den Value.",
+          "**Filtern:** Nur Wetten über deinem Mindest-Value, in Märkten mit genug Liquidität und mit frischen Quoten."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ein Mensch schafft das für ein paar Spiele am Tag. Ein KI-Quotenscanner prüft tausende Märkte pro Minute. Wie die Marge berechnet wird, erklärt der Ratgeber [Buchmacher-Marge](/de/ratgeber/bookmakerens-margin). [BetTracker AI](/de) übernimmt Scan und Berechnung für dich."
+      },
+      {
+        "type": "h2",
+        "text": "Value Betting vs. Surebets"
+      },
+      {
+        "type": "example",
+        "title": "Die beiden Strategien im Vergleich",
+        "rows": [
+          [
+            "Risiko pro Wette",
+            "Value: ja · Surebet: nein"
+          ],
+          [
+            "Typischer ROI",
+            "Value: 3–8 % · Surebet: 1–3 %"
+          ],
+          [
+            "Wetten pro Ereignis",
+            "Value: 1 · Surebet: 2–3"
+          ],
+          [
+            "Benötigte Geduld",
+            "Value: hoch · Surebet: gering"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Viele kombinieren beides: Surebets für stabile Gewinne, Value Bets für höhere Rendite. Mehr dazu im Ratgeber [Value Bets vs. Surebets](/de/ratgeber/value-betting-vs-surebets)."
+      },
+      {
+        "type": "h2",
+        "text": "Worauf du beim AI Betting achten musst"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Kleine Einsätze:** 1–2 % der Bankroll pro Value Bet, siehe [Bankroll Management](/de/ratgeber/bankroll-management).",
+          "**Große Stichprobe:** Bewerte die Strategie erst nach mehreren hundert Wetten.",
+          "**Schlussquote prüfen:** Schlägst du regelmäßig die Schlussquote, findest du echten Value.",
+          "**Alles erfassen:** Ohne Bet Tracker kannst du Glück und Können nicht unterscheiden."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Willst du sehen, wo der Markt gerade falsch liegt? [Teste BetTracker AI](/de) und lass dir Surebets und Chancen in Echtzeit anzeigen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann KI Sportwetten zuverlässig vorhersagen?",
+        "a": "Nein. Eine KI sagt keine Ergebnisse voraus, sie findet Quoten, die zu hoch sind. Der Vorteil entsteht erst über viele Wetten."
+      },
+      {
+        "q": "Wie viel Value sollte eine Wette mindestens haben?",
+        "a": "Nach Abzug der Wettsteuer mindestens 2–3 %. Darunter fressen Steuer und Schwankungen den Vorteil schnell auf."
+      },
+      {
+        "q": "Gibt es einen KI-Quotenscanner für Deutschland?",
+        "a": "Ja. BetTracker AI vergleicht Quoten von Anbietern, die in Deutschland verfügbar sind, und zeigt dir Chancen mit fertiger Berechnung."
+      }
+    ]
+  },
+  "bedste-odds-vaerktoej-danmark": {
+    "title": "Die besten Sportwetten-Tools in Deutschland: was du wirklich brauchst",
+    "metaTitle": "Beste Sportwetten Tools Deutschland 2026",
+    "description": "Die besten Sportwetten-Tools in Deutschland im Überblick: KI-Quotenscanner, Quotenvergleich, Surebet-Rechner und Bet Tracker, mit Preisen in €.",
+    "keyword": "beste sportwetten tools deutschland",
+    "category": "Tools",
+    "ctaLabel": "BetTracker AI testen",
+    "intro": "Die besten Sportwetten-Tools in Deutschland decken vier Aufgaben ab: ein KI-Quotenscanner, der Surebets und Value Bets automatisch findet, ein Quotenvergleich in Echtzeit, ein Surebet-Rechner für die Einsatzverteilung und ein Bet Tracker für Gewinn und ROI. Am meisten Zeit sparst du, wenn alle vier in einer Wetten-Software verbunden sind, statt Daten zwischen mehreren Tools zu kopieren.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Die vier Sportwetten-Tools, die du brauchst"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**KI-Quotenscanner:** findet Surebets und Quotenfehler bei vielen Anbietern gleichzeitig.",
+          "**Quotenvergleich:** zeigt dir für jedes Spiel die beste verfügbare Quote.",
+          "**Surebet-Rechner:** verteilt deinen Einsatz so, dass jeder Ausgang denselben Gewinn bringt.",
+          "**Bet Tracker:** erfasst jede Wette und berechnet Gewinn, ROI und Saldo pro Anbieter."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "KI-Quotenscanner Deutschland: worauf es ankommt"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Abdeckung:** Er muss die Anbieter kennen, bei denen du in Deutschland ein Konto hast.",
+          "**Geschwindigkeit:** Surebets verschwinden oft in Minuten, live in Sekunden.",
+          "**Fertige Einsätze:** Der Scanner sollte die Verteilung direkt berechnen.",
+          "**Filter:** nach Sport, Markt, Mindestgewinn und Anbieter."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Was ein Tool dir in der Praxis spart"
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: 20 Surebets pro Woche",
+        "rows": [
+          [
+            "Von Hand, 6 Anbieter",
+            "ca. 8–10 Stunden pro Woche"
+          ],
+          [
+            "Mit KI-Quotenscanner",
+            "ca. 1 Stunde pro Woche"
+          ],
+          [
+            "Gewinn pro Surebet, 500 € Einsatz, 2 %",
+            "10 €"
+          ],
+          [
+            "Gewinn pro Woche",
+            "20 × 10 € = 200 €"
+          ]
+        ],
+        "note": "Von Hand findest du selten 20 Surebets pro Woche, weil die meisten verschwinden, bevor du fertig gerechnet hast. Der Scanner findet sie in der Sekunde, in der sie entstehen."
+      },
+      {
+        "type": "h2",
+        "text": "Quotenvergleich und Wetten-Software: die Preise"
+      },
+      {
+        "type": "p",
+        "text": "Ein reiner Quotenvergleich ist oft kostenlos, findet aber keine Surebets für dich. Spezialisierte Surebet-Dienste kosten häufig über 100 € pro Monat. **BetTracker AI kostet ab ca. 20 € pro Monat für Basis und ca. 33 € für Premium**, mit Scanner, Rechner und Bet Tracker in einem. Einen ausführlichen Vergleich findest du im Ratgeber [Arbitrage-Wetten-Tools im Vergleich](/de/ratgeber/surebet-danmark-alternativ)."
+      },
+      {
+        "type": "tip",
+        "text": "In Deutschland fallen auf Sportwetten 5,3 % Wettsteuer an. Zieht ein Anbieter sie vom Einsatz oder Gewinn ab, sinkt deine effektive Quote um rund 5 %. Rechne Value Bets und Surebets deshalb immer mit Nettoquoten oder nutze Anbieter, die die Steuer selbst tragen."
+      },
+      {
+        "type": "h2",
+        "text": "So wählst du das richtige Tool"
+      },
+      {
+        "type": "p",
+        "text": "Teste zuerst, ob das Tool deine Anbieter abdeckt und wie viele Surebets es pro Tag findet. Prüfe dann, ob Rechner und Tracker eingebaut sind, damit du nicht drei Abos bezahlst. Wie der Scanner im Alltag arbeitet, liest du im Ratgeber [Surebets automatisch finden](/de/ratgeber/find-surebets-automatisk), und die Einsatzverteilung kannst du im [Surebet-Rechner](/de/rechner) ausprobieren."
+      },
+      {
+        "type": "p",
+        "text": "Alle vier Tools in einer Software? [Starte mit BetTracker AI](/de) und finde noch heute dein erstes Surebet."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Gibt es kostenlose Sportwetten-Tools?",
+        "a": "Ja, Quotenvergleiche und einfache Rechner sind oft gratis. Ein Scanner, der Surebets automatisch findet, kostet in der Regel ein monatliches Abo."
+      },
+      {
+        "q": "Lohnt sich ein bezahltes Tool?",
+        "a": "Bei 500 € Einsatz und 2 % Marge bringt ein Surebet rund 10 €. Schon zwei bis vier Surebets im Monat decken ein Abo für ca. 20–33 €."
+      },
+      {
+        "q": "Funktionieren die Tools mit deutschen Wettanbietern?",
+        "a": "BetTracker AI vergleicht Quoten von Anbietern, die in Deutschland verfügbar sind. Achte bei jedem Anbieter auf eine gültige GGL-Lizenz."
       }
     ]
   }

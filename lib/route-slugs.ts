@@ -98,6 +98,8 @@ const SLUGS: Record<Translated, Record<string, string>> = {
     'betting-regnskab': 'wettbuchhaltung',
     'tjen-penge-paa-odds-uden-risiko': 'sportwetten-ohne-risiko',
     'find-surebets-automatisk': 'surebets-automatisch-finden',
+    'find-value-bets-med-ai': 'value-bets-mit-ki-finden',
+    'bedste-odds-vaerktoej-danmark': 'beste-sportwetten-tools',
     fodbold: 'fussball',
     ishockey: 'eishockey',
   },
