@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { localePath } from "@/lib/i18n";
+import { getServerLocale } from "@/lib/locale-server";
 import { Landmark } from "lucide-react";
 import { DiscordIcon, InstagramIcon, Logo, MobilePayIcon, TelegramIcon, YoutubeIcon } from "@/components/home/icons";
 import { copyrightYear } from "@/components/home/data";
@@ -65,7 +67,11 @@ function FooterWaves() {
   );
 }
 
-export function GlobalFooter() {
+const TRANSLATED_HREFS = new Set(["/", "/surebets", "/dagens-surebets", "/guide", "/faq"]);
+
+export async function GlobalFooter() {
+  const locale = await getServerLocale();
+  const hrefFor = (href: string) => (TRANSLATED_HREFS.has(href) ? localePath(locale, href) : href);
   return (
     <>
       <footer className="bt-theme mt-6 bg-linear-to-b from-transparent via-background-deep/80 to-background-deep px-4 pb-8 pt-20 md:hidden">
@@ -78,7 +84,7 @@ export function GlobalFooter() {
           <nav aria-label="Links">
             <p className="mb-2 text-[14px] font-semibold text-foreground">Links</p>
             {LINKS.map((l) => (
-              <Link key={l.label} href={l.href} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
+              <Link key={l.label} href={hrefFor(l.href)} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
                 {l.label}
               </Link>
             ))}
@@ -86,7 +92,7 @@ export function GlobalFooter() {
           <nav aria-label="Support">
             <p className="mb-2 text-[14px] font-semibold text-foreground">Support</p>
             {SUPPORT.map((l) => (
-              <Link key={l.label} href={l.href} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
+              <Link key={l.label} href={hrefFor(l.href)} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
                 {l.label}
               </Link>
             ))}
@@ -140,7 +146,7 @@ export function GlobalFooter() {
             <nav aria-label="Links" className="lg:pl-12">
               <p className={headingCls}>Links</p>
               {LINKS.map((l) => (
-                <Link key={l.label} href={l.href} className={linkCls}>
+                <Link key={l.label} href={hrefFor(l.href)} className={linkCls}>
                   {l.label}
                 </Link>
               ))}
@@ -149,7 +155,7 @@ export function GlobalFooter() {
             <nav aria-label="Support" className="lg:pl-6">
               <p className={headingCls}>Support</p>
               {SUPPORT.map((l) => (
-                <Link key={l.label} href={l.href} className={linkCls}>
+                <Link key={l.label} href={hrefFor(l.href)} className={linkCls}>
                   {l.label}
                 </Link>
               ))}

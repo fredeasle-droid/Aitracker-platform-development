@@ -93,6 +93,21 @@ const SLUGS: Record<Translated, Record<string, string>> = {
   },
 }
 
+// Stand-alone pages that exist in every language. Keys are the canonical (Danish) paths.
+const PAGE_NAMES: Record<Translated, Record<string, string>> = {
+  en: { '/dagens-surebets': '/todays-surebets' },
+  sv: { '/faq': '/vanliga-fragor' },
+  no: { '/faq': '/vanlige-sporsmal' },
+  de: { '/dagens-surebets': '/surebets-heute' },
+}
+
+const REVERSE_PAGE_NAMES = Object.fromEntries(
+  (Object.keys(PAGE_NAMES) as Translated[]).map((locale) => [
+    locale,
+    Object.fromEntries(Object.entries(PAGE_NAMES[locale]).map(([canonical, localized]) => [localized, canonical])),
+  ]),
+) as Record<Translated, Record<string, string>>
+
 const SECTIONS: Section[] = ['guide', 'sport', 'bookmaker']
 
 function isSection(value: string): value is Section {
@@ -128,7 +143,10 @@ export function localizeRoute(locale: Locale, path: string) {
   if (locale === 'da') return path
   const { pathname, suffix } = splitSuffix(path)
   const [, section, slug, ...rest] = pathname.split('/')
-  if (!section || !isSection(section)) return path
+  if (!section || !isSection(section)) {
+    const page = PAGE_NAMES[locale][pathname]
+    return page ? `${page}${suffix}` : path
+  }
   const segments = [SECTION_NAMES[locale][section]]
   if (slug) segments.push(localizeSlug(locale, slug))
   return `/${[...segments, ...rest].join('/')}${suffix}`
@@ -142,7 +160,10 @@ export function canonicalRoute(locale: Locale, path: string) {
   const [, first, slug, ...rest] = pathname.split('/')
   if (!first) return path
   const section = REVERSE_SECTION[locale][first] ?? (isSection(first) ? first : undefined)
-  if (!section) return path
+  if (!section) {
+    const page = REVERSE_PAGE_NAMES[locale][pathname]
+    return page ? `${page}${suffix}` : path
+  }
   const segments: string[] = [section]
   if (slug) segments.push(REVERSE_SLUGS[locale][slug] ?? slug)
   return `/${[...segments, ...rest].join('/')}${suffix}`

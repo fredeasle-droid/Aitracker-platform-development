@@ -21,7 +21,7 @@ function translatedEntries(path: string, lastModified: Date, priority: number): 
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages: Entry[] = PUBLIC_PAGES.flatMap(({ path, priority, changeFrequency }) => {
-    if (path === '/guide' || path === '/') return translatedEntries(path, new Date(), priority)
+    if (path === '/guide' || path === '/' || path === '/dagens-surebets' || path === '/faq') return translatedEntries(path, new Date(), priority)
     return [{ url: `${SITE_URL}${path === '/' ? '' : path}`, lastModified: new Date(), changeFrequency, priority }]
   })
   const guides = GUIDES.flatMap((guide) => translatedEntries(`/guide/${guide.slug}`, new Date(guide.updated), 0.7))

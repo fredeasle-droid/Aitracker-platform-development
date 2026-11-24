@@ -8,6 +8,9 @@ export const ALL_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
 // so its translated URLs point back to the Danish page instead of competing with it.
 export const TRANSLATED_SECTIONS = ['/guide', '/sport', '/bookmaker'] as const
 
+// Stand-alone pages with full copy in every language.
+export const TRANSLATED_PAGES = ['/dagens-surebets', '/faq'] as const
+
 // Languages Google may index. Every language now has its own localised copy and keywords.
 export const INDEXABLE_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
 
@@ -20,7 +23,10 @@ export function localeRobots(locale: Locale): Metadata['robots'] | undefined {
 }
 
 export function translatedLocalesFor(path: string): Locale[] {
-  const translated = path === '/' || TRANSLATED_SECTIONS.some((section) => path === section || path.startsWith(`${section}/`))
+  const translated =
+    path === '/' ||
+    (TRANSLATED_PAGES as readonly string[]).includes(path) ||
+    TRANSLATED_SECTIONS.some((section) => path === section || path.startsWith(`${section}/`))
   return translated ? INDEXABLE_LOCALES : ['da']
 }
 

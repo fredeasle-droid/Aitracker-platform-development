@@ -3,42 +3,61 @@ import Link from 'next/link'
 import { ArrowRight, ChevronDown, CircleHelp, Mail, UserRound, Zap } from 'lucide-react'
 import { FAQ_ENTRIES } from '@/components/home/faq-data'
 import { LegalPage } from '@/components/legal/legal-page'
+import { FAQ_PAGE, type FaqContent } from '@/lib/content-i18n/pages'
+import { LOCALES, OG_LOCALE, localePath, type Locale } from '@/lib/i18n'
 import { ACCOUNT_FAQ } from '@/lib/legal'
+import { getServerLocale } from '@/lib/locale-server'
+import { absoluteUrl, buildAlternates, localeRobots } from '@/lib/seo/alternates'
 
-export const metadata: Metadata = {
-  title: 'FAQ – BetTrackerAI',
-  description: 'Svar på de mest stillede spørgsmål om surebets, prøveperiode, abonnement, opsigelse og fortrydelsesret.',
-  alternates: { canonical: '/faq' },
+const DA: FaqContent = {
+  metaTitle: 'FAQ – BetTrackerAI',
+  metaDescription: 'Svar på de mest stillede spørgsmål om surebets, prøveperiode, abonnement, opsigelse og fortrydelsesret.',
+  eyebrow: 'Support',
+  h1: 'Ofte stillede spørgsmål',
+  intro: 'Find svar på det, vi oftest bliver spurgt om. Finder du ikke dit spørgsmål, så skriv til os.',
+  topicsLabel: 'Emner',
+  groupService: 'Om surebets og tjenesten',
+  groupAccount: 'Konto, betaling og data',
+  notFound: 'Fandt du ikke svar?',
+  notFoundText: 'Vi hjælper dig gerne personligt.',
+  contact: 'Kontakt os',
+  service: FAQ_ENTRIES,
+  account: ACCOUNT_FAQ,
 }
 
-const GROUPS = [
-  { id: 'surebets', title: 'Om surebets og tjenesten', icon: Zap, entries: FAQ_ENTRIES },
-  { id: 'konto', title: 'Konto, betaling og data', icon: UserRound, entries: ACCOUNT_FAQ },
-]
+function contentFor(locale: Locale): FaqContent {
+  return locale === 'da' ? DA : FAQ_PAGE[locale]
+}
 
-const JSON_LD = JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: GROUPS.flatMap((g) => g.entries).map(({ q, a }) => ({
-    '@type': 'Question',
-    name: q,
-    acceptedAnswer: { '@type': 'Answer', text: a },
-  })),
-})
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale()
+  const text = contentFor(locale)
+  return {
+    title: text.metaTitle,
+    description: text.metaDescription,
+    alternates: buildAlternates('/faq', locale),
+    robots: localeRobots(locale),
+    openGraph: {
+      url: absoluteUrl(locale, '/faq'),
+      type: 'website',
+      locale: OG_LOCALE[locale],
+      title: text.metaTitle,
+      description: text.metaDescription,
+    },
+  }
+}
 
-export default function FaqPage() {
+function FaqBody({ text, locale }: { text: FaqContent; locale: Locale }) {
+  const groups = [
+    { id: 'surebets', title: text.groupService, icon: Zap, entries: text.service },
+    { id: 'konto', title: text.groupAccount, icon: UserRound, entries: text.account },
+  ]
+
   return (
-    <LegalPage
-      icon={CircleHelp}
-      eyebrow="Support"
-      title="Ofte stillede spørgsmål"
-      intro="Find svar på det, vi oftest bliver spurgt om. Finder du ikke dit spørgsmål, så skriv til os."
-    >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
-
-      <nav aria-label="Emner" className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden">
+    <>
+      <nav aria-label={text.topicsLabel} className="-mx-4 overflow-x-auto px-4 [scrollbar-width:none] lg:mx-0 lg:px-0 [&::-webkit-scrollbar]:hidden">
         <ul className="flex w-max gap-2 lg:w-auto">
-          {GROUPS.map(({ id, title, icon: Icon, entries }) => (
+          {groups.map(({ id, title, icon: Icon, entries }) => (
             <li key={id}>
               <a
                 href={`#${id}`}
@@ -54,7 +73,7 @@ export default function FaqPage() {
       </nav>
 
       <div className="mt-8 flex flex-col gap-10 lg:max-w-3xl">
-        {GROUPS.map(({ id, title, icon: Icon, entries }) => (
+        {groups.map(({ id, title, icon: Icon, entries }) => (
           <section key={id} id={id} aria-labelledby={`${id}-heading`} className="scroll-mt-20">
             <h2 id={`${id}-heading`} className="mb-4 flex items-center gap-3 text-[20px] font-bold text-foreground">
               <span className="flex size-10 items-center justify-center rounded-xl border border-primary/40 bg-primary/15 text-primary-glow">
@@ -87,18 +106,60 @@ export default function FaqPage() {
               <Mail className="size-6" aria-hidden="true" />
             </span>
             <div>
-              <p className="text-[18px] font-bold text-foreground">Fandt du ikke svar?</p>
-              <p className="mt-0.5 text-[15px] text-foreground/80">Vi hjælper dig gerne personligt.</p>
+              <p className="text-[18px] font-bold text-foreground">{text.notFound}</p>
+              <p className="mt-0.5 text-[15px] text-foreground/80">{text.notFoundText}</p>
             </div>
           </div>
           <Link
-            href="/kontakt"
+            href={localePath(locale, '/kontakt')}
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-primary px-6 text-[15px] font-semibold text-primary-foreground shadow-[0_0_28px_-8px] shadow-primary transition-opacity hover:opacity-90"
           >
-            Kontakt os <ArrowRight className="size-4" aria-hidden="true" />
+            {text.contact} <ArrowRight className="size-4" aria-hidden="true" />
           </Link>
         </div>
       </div>
-    </LegalPage>
+    </>
+  )
+}
+
+export default async function FaqPage() {
+  const locale = await getServerLocale()
+  const text = contentFor(locale)
+
+  const jsonLd = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    inLanguage: LOCALES[locale].tag,
+    mainEntity: [...text.service, ...text.account].map(({ q, a }) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  })
+
+  if (locale === 'da') {
+    return (
+      <LegalPage icon={CircleHelp} eyebrow={text.eyebrow} title={text.h1} intro={text.intro}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+        <FaqBody text={text} locale={locale} />
+      </LegalPage>
+    )
+  }
+
+  return (
+    <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 lg:max-w-6xl lg:px-10 lg:pb-24 lg:pt-10">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd }} />
+      <header className="mb-8 max-w-2xl">
+        <p className="flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.2em] text-primary-glow">
+          <CircleHelp className="size-4" aria-hidden="true" />
+          {text.eyebrow}
+        </p>
+        <h1 className="mt-2 text-balance text-[32px] font-extrabold leading-[1.08] tracking-tight text-foreground lg:text-[48px]">
+          {text.h1}
+        </h1>
+        <p className="mt-3 text-pretty text-[16px] leading-relaxed text-foreground/80 lg:text-[17px]">{text.intro}</p>
+      </header>
+      <FaqBody text={text} locale={locale} />
+    </main>
   )
 }
