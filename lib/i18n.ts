@@ -4,6 +4,7 @@ import { sv as svMessages } from './messages/sv'
 import { no as noMessages } from './messages/no'
 import { de as deMessages } from './messages/de'
 import { dataMessages } from './data-messages'
+import { localizeRoute } from './route-slugs'
 
 export type Locale = 'da' | 'en' | 'sv' | 'no' | 'de'
 
@@ -44,10 +45,12 @@ export function stripLocalePrefix(pathname: string): { locale: Locale | null; pa
   return { locale, path: `/${rest.join('/')}` }
 }
 
+// Takes a canonical (Danish) path and returns the public URL path for the language.
 export function localePath(locale: Locale, path: string): string {
   const prefix = LOCALE_PREFIX[locale]
   if (!prefix) return path
-  return path === '/' ? `/${prefix}` : `/${prefix}${path}`
+  const localized = localizeRoute(locale, path)
+  return localized === '/' ? `/${prefix}` : `/${prefix}${localized}`
 }
 
 const baseTranslations = {

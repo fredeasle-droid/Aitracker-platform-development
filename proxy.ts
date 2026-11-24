@@ -1,6 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { getSessionCookie } from 'better-auth/cookies'
-import { LOCALE_HEADER, stripLocalePrefix } from '@/lib/i18n'
+import { LOCALE_HEADER, localePath, stripLocalePrefix } from '@/lib/i18n'
+import { canonicalRoute } from '@/lib/route-slugs'
 import { MAINTENANCE_BYPASS_COOKIE, getOpensAt, isMaintenanceActive } from '@/lib/maintenance'
 
 export const USER_COOKIE = 'bt_uid'
@@ -49,10 +50,22 @@ function maintenanceResponse(request: NextRequest): NextResponse | null {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
-  const { locale, path } = stripLocalePrefix(pathname)
+  const { locale, path: publicPath } = stripLocalePrefix(pathname)
+  const path = locale ? canonicalRoute(locale, publicPath) : publicPath
 
   const closed = maintenanceResponse(request)
   if (closed) return closed
+
+  // Old or untranslated addresses (e.g. /en/guide/hvad-er-surebets) move permanently to the localized one.
+  if (locale && (request.method === 'GET' || request.method === 'HEAD')) {
+    const wanted = localePath(locale, path)
+    const current = pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
+    if (wanted !== current) {
+      const target = request.nextUrl.clone()
+      target.pathname = wanted
+      return NextResponse.redirect(target, 308)
+    }
+  }
 
   if (isMembersOnly(path) && !getSessionCookie(request)) {
     const loginUrl = new URL('/konto', request.url)

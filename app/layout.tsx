@@ -8,6 +8,7 @@ import { ChromeGate } from '@/components/site/chrome-gate'
 import { GlobalFooter } from '@/components/site/global-footer'
 import { RootHeader } from '@/components/site/global-header'
 import { PageShell } from '@/components/site/page-shell'
+import { OG_LOCALE } from '@/lib/i18n'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 import './globals.css'
@@ -22,12 +23,13 @@ const roboto = Roboto({
 
 export async function generateMetadata(): Promise<Metadata> {
   const { t } = await getServerT()
+  const locale = await getServerLocale()
   return {
     metadataBase: new URL(SITE_URL),
     title: t('metaTitle'),
     description: t('metaDesc'),
     applicationName: 'BetTracker',
-    openGraph: { type: 'website', siteName: SITE_NAME, locale: 'da_DK', title: t('metaTitle'), description: t('metaDesc') },
+    openGraph: { type: 'website', siteName: SITE_NAME, locale: OG_LOCALE[locale], title: t('metaTitle'), description: t('metaDesc') },
     twitter: { card: 'summary_large_image', title: t('metaTitle'), description: t('metaDesc') },
     ...(process.env.GOOGLE_SITE_VERIFICATION ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } } : {}),
     manifest: '/manifest.webmanifest',

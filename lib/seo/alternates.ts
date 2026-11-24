@@ -20,7 +20,7 @@ export function localeRobots(locale: Locale): Metadata['robots'] | undefined {
 }
 
 export function translatedLocalesFor(path: string): Locale[] {
-  const translated = TRANSLATED_SECTIONS.some((section) => path === section || path.startsWith(`${section}/`))
+  const translated = path === '/' || TRANSLATED_SECTIONS.some((section) => path === section || path.startsWith(`${section}/`))
   return translated ? INDEXABLE_LOCALES : ['da']
 }
 
