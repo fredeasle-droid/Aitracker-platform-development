@@ -8,9 +8,8 @@ export const ALL_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
 // so its translated URLs point back to the Danish page instead of competing with it.
 export const TRANSLATED_SECTIONS = ['/guide', '/sport', '/bookmaker'] as const
 
-// Languages Google may index. Swedish, Norwegian and German still carry Danish-market copy,
-// so they stay reachable for visitors but are kept out of search until they are localised.
-export const INDEXABLE_LOCALES: Locale[] = ['da', 'en']
+// Languages Google may index. Every language now has its own localised copy and keywords.
+export const INDEXABLE_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
 
 export function isIndexable(locale: Locale) {
   return INDEXABLE_LOCALES.includes(locale)
