@@ -49,6 +49,11 @@ export function getLocalizedGuide(slug: string, locale: Locale): LocalizedGuide 
   return { ...base, ...fields, cta: { href: base.cta.href, label: ctaLabel } }
 }
 
+export function guideLocales(slug: string): Locale[] {
+  const translated = (Object.keys(GUIDE_TRANSLATIONS) as Exclude<Locale, 'da'>[]).filter((locale) => GUIDE_TRANSLATIONS[locale]?.[slug])
+  return ['da', ...translated]
+}
+
 export function getLocalizedGuides(locale: Locale): LocalizedGuide[] {
   return GUIDES.map((guide) => getLocalizedGuide(guide.slug, locale)).filter((guide) => guide !== undefined)
 }

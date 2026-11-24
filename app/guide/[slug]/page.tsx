@@ -5,7 +5,7 @@ import { ArrowRight, ChevronRight, Clock } from 'lucide-react'
 import { Block, FaqList } from '@/components/seo/guide-blocks'
 import { YoutubeFacade } from '@/components/seo/youtube-facade'
 import { videoObjectJsonLd } from '@/lib/video'
-import { getLocalizedGuide, getLocalizedGuides, getLocalizedLandingList } from '@/lib/content-i18n'
+import { getLocalizedGuide, getLocalizedGuides, getLocalizedLandingList, guideLocales } from '@/lib/content-i18n'
 import { GUIDES } from '@/lib/guides'
 import { LOCALES, OG_LOCALE, localePath, type Locale } from '@/lib/i18n'
 import { getServerLocale } from '@/lib/locale-server'
@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: guide.metaTitle,
     description: guide.description,
     keywords: [guide.keyword],
-    alternates: buildAlternates(path, locale),
+    alternates: buildAlternates(path, locale, guideLocales(guide.slug)),
     robots: localeRobots(locale),
     openGraph: {
       type: 'article',

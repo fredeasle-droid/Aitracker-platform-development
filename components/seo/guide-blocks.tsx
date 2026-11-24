@@ -1,19 +1,44 @@
+import Link from 'next/link'
 import { ChevronDown, Lightbulb } from 'lucide-react'
 import type { GuideBlock } from '@/lib/guides'
+
+// Guide copy supports two inline marks: [label](/internal-path) and **bold**.
+const INLINE_PATTERN = /\[([^\]]+)\]\((\/[^)\s]*)\)|\*\*([^*]+)\*\*/g
+
+function Inline({ text }: { text: string }) {
+  const parts: React.ReactNode[] = []
+  let last = 0
+  for (const match of text.matchAll(INLINE_PATTERN)) {
+    const index = match.index ?? 0
+    if (index > last) parts.push(text.slice(last, index))
+    if (match[1] && match[2]) {
+      parts.push(
+        <Link key={index} href={match[2]} className="font-semibold text-primary-glow underline underline-offset-4 hover:text-foreground">
+          {match[1]}
+        </Link>,
+      )
+    } else {
+      parts.push(<strong key={index} className="font-semibold text-foreground">{match[3]}</strong>)
+    }
+    last = index + match[0].length
+  }
+  if (last < text.length) parts.push(text.slice(last))
+  return <>{parts}</>
+}
 
 export function Block({ block }: { block: GuideBlock }) {
   switch (block.type) {
     case 'h2':
       return <h2 className="mt-10 text-balance text-[22px] font-bold leading-tight text-foreground lg:text-[26px]">{block.text}</h2>
     case 'p':
-      return <p className="mt-4 text-pretty text-[16px] leading-relaxed text-foreground/85 lg:text-[17px]">{block.text}</p>
+      return <p className="mt-4 text-pretty text-[16px] leading-relaxed text-foreground/85 lg:text-[17px]"><Inline text={block.text} /></p>
     case 'ul':
       return (
         <ul className="mt-4 flex flex-col gap-2.5">
           {block.items.map((item) => (
             <li key={item} className="flex gap-3 text-pretty text-[16px] leading-relaxed text-foreground/85">
               <span className="mt-2.5 size-1.5 shrink-0 rounded-full bg-primary-glow" aria-hidden="true" />
-              {item}
+              <span><Inline text={item} /></span>
             </li>
           ))}
         </ul>
@@ -37,7 +62,7 @@ export function Block({ block }: { block: GuideBlock }) {
       return (
         <aside className="mt-6 flex gap-3 rounded-2xl border border-primary/40 bg-primary/10 p-4">
           <Lightbulb className="mt-0.5 size-5 shrink-0 text-primary-glow" aria-hidden="true" />
-          <p className="text-pretty text-[15px] leading-relaxed text-foreground/90">{block.text}</p>
+          <p className="text-pretty text-[15px] leading-relaxed text-foreground/90"><Inline text={block.text} /></p>
         </aside>
       )
   }

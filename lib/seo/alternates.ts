@@ -35,9 +35,12 @@ export function absoluteUrl(locale: Locale, path: string) {
   return localized === '/' ? SITE_URL : `${SITE_URL}${localized}`
 }
 
-export function buildAlternates(path: string, locale: Locale): NonNullable<Metadata['alternates']> {
+export function buildAlternates(
+  path: string,
+  locale: Locale,
+  available: Locale[] = translatedLocalesFor(path),
+): NonNullable<Metadata['alternates']> {
   if (!isIndexable(locale)) return { canonical: absoluteUrl(locale, path) }
-  const available = translatedLocalesFor(path)
   const canonicalLocale = available.includes(locale) ? locale : 'da'
   const canonical = absoluteUrl(canonicalLocale, path)
   if (available.length < 2) return { canonical }
