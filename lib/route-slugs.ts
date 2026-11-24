@@ -67,6 +67,8 @@ const SLUGS: Record<Translated, Record<string, string>> = {
     'betting-regnskab': 'spillregnskap',
     'tjen-penge-paa-odds-uden-risiko': 'tjen-penger-pa-odds-uten-risiko',
     'find-surebets-automatisk': 'finn-surebets-automatisk',
+    'find-value-bets-med-ai': 'finn-value-bets-med-ai',
+    'bedste-odds-vaerktoej-danmark': 'beste-odds-verktoy-norge',
     fodbold: 'fotball',
     esport: 'e-sport',
   },
