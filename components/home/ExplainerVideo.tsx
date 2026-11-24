@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useState, type RefObject } from "react";
 import { Play } from "lucide-react";
 const videoAsset = { url: "/home/bettrackerai-kapitel-1.mp4" };
@@ -9,6 +10,7 @@ import { VideoControls, type Layout } from "./VideoFrame";
 const fmt = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
 
 export function ExplainerVideo({ videoRef, l }: { videoRef: RefObject<HTMLVideoElement | null>; l: Layout }) {
+  const { tx } = useLocale();
   const [playing, setPlaying] = useState(false);
   const [t, setT] = useState(0);
   const [dur, setDur] = useState(0);
@@ -42,7 +44,7 @@ export function ExplainerVideo({ videoRef, l }: { videoRef: RefObject<HTMLVideoE
       <button
         type="button"
         onClick={toggle}
-        aria-label={playing ? "Sæt videoen på pause" : "Afspil videoen"}
+        aria-label={playing ? tx("Sæt videoen på pause") : tx("Afspil videoen")}
         className="absolute inset-0 cursor-pointer"
       >
         {!playing && (

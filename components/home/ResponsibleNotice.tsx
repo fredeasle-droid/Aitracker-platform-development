@@ -1,24 +1,27 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { RESPONSIBLE } from "./data";
 
 const linkCls = "font-semibold text-primary-glow underline-offset-2 hover:underline";
 
 function Links() {
+  const { tx } = useLocale();
   return (
     <>
-      Spil ansvarligt – du skal være fyldt {RESPONSIBLE.minAge} år. Brug for hjælp? Ring til StopSpillet på{" "}
-      <a href={`tel:${RESPONSIBLE.stopSpilletPhone.replace(/\s/g, "")}`} className={linkCls}>{RESPONSIBLE.stopSpilletPhone}</a> eller besøg{" "}
-      <a href={RESPONSIBLE.stopSpilletUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>StopSpillet.dk</a>. Udeluk dig selv fra spil på{" "}
-      <a href={RESPONSIBLE.rofusUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>ROFUS.nu</a>.
+      {tx("Spil ansvarligt – du skal være fyldt")}{" "}{tx(RESPONSIBLE.minAge)} {" "}{tx("år. Brug for hjælp? Ring til StopSpillet på")}{" "}
+      <a href={`tel:${RESPONSIBLE.stopSpilletPhone.replace(/\s/g, "")}`} className={linkCls}>{tx(RESPONSIBLE.stopSpilletPhone)}</a> {" "}{tx("eller besøg")}{" "}
+      <a href={RESPONSIBLE.stopSpilletUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>{tx("StopSpillet.dk")}</a>{tx(". Udeluk dig selv fra spil på")}{" "}
+      <a href={RESPONSIBLE.rofusUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>{tx("ROFUS.nu")}</a>.
     </>
   );
 }
 
 function AgeBadge({ className }: { className: string }) {
+  const { tx } = useLocale();
   return (
     <span aria-label={`Kun for personer over ${RESPONSIBLE.minAge} år`} className={`flex shrink-0 items-center justify-center rounded-full border-2 border-destructive font-black ${className}`}>
-      {RESPONSIBLE.minAge}+
+      {tx(RESPONSIBLE.minAge)}+
     </span>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import type { LucideIcon } from "lucide-react";
 
@@ -24,6 +25,7 @@ export function useSpotlight<T extends HTMLElement>() {
 
 /** Tilts its content a few degrees towards the pointer. */
 export function Tilt({ children, max = 6, className = "" }: { children: ReactNode; max?: number; className?: string }) {
+  const { tx } = useLocale();
   const [t, setT] = useState({ x: 0, y: 0 });
   return (
     <div
@@ -39,7 +41,7 @@ export function Tilt({ children, max = 6, className = "" }: { children: ReactNod
         className="relative transition-transform duration-500 ease-out"
         style={{ transform: `rotateY(${t.x * max}deg) rotateX(${-t.y * max}deg)`, transformStyle: "preserve-3d" }}
       >
-        {children}
+        {tx(children)}
       </div>
     </div>
   );
@@ -71,18 +73,19 @@ export function useTween(value: number, ms = 600) {
 export function SectionHeading({
   eyebrow, Icon, title, accent, text, aside, stack = false, className = "",
 }: { eyebrow: string; Icon?: LucideIcon; title: ReactNode; accent?: ReactNode; text?: ReactNode; aside?: ReactNode; stack?: boolean; className?: string }) {
+  const { tx } = useLocale();
   return (
     <div className={`flex items-end justify-between gap-[24px] ${className}`}>
       <div>
         <span className="eyebrow-chip inline-flex h-[24px] items-center gap-[6px] rounded-full px-[11px] text-[9.5px] font-semibold uppercase tracking-[0.16em]">
           {Icon && <Icon className="h-[12px] w-[12px]" strokeWidth={2.3} />}
-          {eyebrow}
+          {tx(eyebrow)}
         </span>
         <h2 className="mt-[12px] text-[30px] font-bold leading-[35px]">
-          {title} {stack && <br />}{accent && <span className="text-gradient-brand">{accent}</span>}
+          {tx(title)} {stack && <br />}{accent && <span className="text-gradient-brand">{tx(accent)}</span>}
         </h2>
       </div>
-      {aside ?? (text && <p className="w-[330px] pb-[4px] text-right text-[11.5px] leading-[17px] text-muted-foreground">{text}</p>)}
+      {aside ?? (text && <p className="w-[330px] pb-[4px] text-right text-[11.5px] leading-[17px] text-muted-foreground">{tx(text)}</p>)}
     </div>
   );
 }

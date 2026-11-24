@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { type CSSProperties } from "react";
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
@@ -12,11 +13,12 @@ export const CARD_WIDTH = 290;
 const SECONDS_PER_CARD = 11;
 
 export function FindCard({ f, best, width = CARD_WIDTH }: { f: HomeFind; best: boolean; width?: number }) {
+  const { tx } = useLocale();
   return (
     <article className={`panel-soft relative h-[165px] shrink-0 ${best ? "glow-success" : ""}`} style={{ width }}>
-      <p className="absolute left-[16px] right-[16px] top-[12px] truncate text-[11px] font-medium leading-[15px] text-accent">{f.league}</p>
+      <p className="absolute left-[16px] right-[16px] top-[12px] truncate text-[11px] font-medium leading-[15px] text-accent">{tx(f.league)}</p>
       <p className="absolute left-[16px] right-[16px] top-[35px] truncate text-[17px] font-bold leading-[22px]">
-        {f.home.name} – {f.away.name}
+        {tx(f.home.name)} – {tx(f.away.name)}
       </p>
       <div className="absolute left-0 top-[66px] flex h-[54px] items-center justify-center gap-[12px]" style={{ width: width - 108 }}>
         <TeamCrest team={f.home} className="h-[52px] w-[52px]" />
@@ -24,14 +26,14 @@ export function FindCard({ f, best, width = CARD_WIDTH }: { f: HomeFind; best: b
       </div>
       <div className="margin-box absolute right-[21px] top-[68px] flex h-[51px] w-[88px] flex-col items-center justify-center rounded-[10px]">
         <span className="text-[21px] font-bold leading-[24px]">{f.margin.toFixed(2)}%</span>
-        <span className="text-[10.5px] leading-[13px]">Margin</span>
+        <span className="text-[10.5px] leading-[13px]">{tx("Margin")}</span>
       </div>
       <p className="absolute left-[17px] top-[134px] flex items-center gap-[6px] text-[11px]">
         <Clock className="h-[15px] w-[15px]" />
-        {f.time}
+        {tx(f.time)}
       </p>
       <Link href="/surebets" className="btn-glow absolute right-[12px] top-[129px] flex h-[26px] items-center gap-[4px] rounded-full px-[13px] text-[10.5px] font-bold">
-        Se detaljerne <ArrowRight className="h-[11px] w-[11px]" />
+        {tx("Se detaljerne")}{" "}<ArrowRight className="h-[11px] w-[11px]" />
       </Link>
     </article>
   );
@@ -39,12 +41,12 @@ export function FindCard({ f, best, width = CARD_WIDTH }: { f: HomeFind; best: b
 
 /** "Ugens bedste fund" slideshow: one continuous slow glide to the left that loops without a break. */
 export function WeeklyCarousel({ cardWidth = CARD_WIDTH, left = 28 }: { cardWidth?: number; left?: number }) {
+  const { tx } = useLocale();
   const { finds } = useHomeData();
   if (finds.length === 0) {
     return (
       <p className="absolute top-[70px] text-[13px] text-muted-foreground" style={{ left }}>
-        Ingen surebets lige nu – scanneren leder videre.
-      </p>
+        {tx("Ingen surebets lige nu – scanneren leder videre.")}</p>
     );
   }
 

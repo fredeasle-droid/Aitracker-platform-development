@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Headphones, MessageSquareText, Mic, MicOff, Phone, PhoneOff } from "lucide-react";
 import { VoiceConversation } from "@elevenlabs/client";
@@ -169,6 +170,7 @@ function MicMeter({ level, phone }: { level: number; phone: boolean }) {
 
 /** Call button for the chat header. */
 export function CallButton({ call, phone = false }: { call: SupportCallState; phone?: boolean }) {
+  const { tx } = useLocale();
   const busy = call.status === "connecting" || call.status === "connected" || call.status === "stopping";
   if (call.open) return null;
   return (
@@ -179,13 +181,13 @@ export function CallButton({ call, phone = false }: { call: SupportCallState; ph
       className={`call-btn flex shrink-0 items-center gap-[6px] rounded-full font-semibold ${phone ? "h-8 px-3 text-[12px]" : "h-[26px] px-[10px] text-[10.5px]"}`}
     >
       <Phone className={phone ? "h-3.5 w-3.5" : "h-[11px] w-[11px]"} />
-      Ring op
-    </button>
+      {tx("Ring op")}</button>
   );
 }
 
 /** The call screen shown inside the chat box while talking with support. */
 export function CallPanel({ call, phone = false }: { call: SupportCallState; phone?: boolean }) {
+  const { tx } = useLocale();
   const live = call.status === "connected";
   const ended = call.status === "closed" || call.status === "idle";
   const seconds = useElapsedSeconds(live);
@@ -209,17 +211,17 @@ export function CallPanel({ call, phone = false }: { call: SupportCallState; pho
   const round = phone ? "h-12 w-12" : "h-[36px] w-[36px]";
 
   return (
-    <div className="flex min-h-0 flex-1 flex-col" role="region" aria-label="Opkald med support">
+    <div className="flex min-h-0 flex-1 flex-col" role="region" aria-label={tx("Opkald med support")}>
       <div className={`flex items-center gap-[12px] ${phone ? "px-4 pt-4" : "px-[16px] pt-[12px]"}`}>
         <span className={`call-avatar relative flex shrink-0 items-center justify-center rounded-full ${live ? "is-live" : ""} ${phone ? "h-12 w-12" : "h-[38px] w-[38px]"}`}>
           <Headphones className={phone ? "h-5 w-5" : "h-[16px] w-[16px]"} />
         </span>
         <div className="min-w-0">
-          <p className={`font-semibold ${phone ? "text-[15px]" : "text-[12.5px] leading-[16px]"}`}>Taler med support</p>
+          <p className={`font-semibold ${phone ? "text-[15px]" : "text-[12.5px] leading-[16px]"}`}>{tx("Taler med support")}</p>
           <p role="status" className={`flex items-center gap-[6px] tabular-nums ${live ? "text-success" : "text-foreground/65"} ${phone ? "text-[12px]" : "text-[10px] leading-[14px]"}`}>
-            {status}
+            {tx(status)}
             {live && !call.muted && <MicMeter level={call.micLevel} phone={phone} />}
-            {live && call.muted && <span className="text-foreground/55">· mikrofon slået fra</span>}
+            {live && call.muted && <span className="text-foreground/55">{tx("· mikrofon slået fra")}</span>}
           </p>
         </div>
       </div>
@@ -227,32 +229,29 @@ export function CallPanel({ call, phone = false }: { call: SupportCallState; pho
       <div ref={scroller} className={`call-captions min-h-0 flex-1 overflow-y-auto ${phone ? "mx-4 mt-3 space-y-2 text-[13px] leading-[19px]" : "mx-[16px] mt-[10px] space-y-[6px] text-[11px] leading-[16px]"}`}>
         {call.captions.length === 0 && !err && (
           <p className="text-foreground/55">
-            {call.status === "connecting" ? "Tillad mikrofonen, hvis browseren spørger. Support siger hej om et øjeblik." : "Sig hvad du har på hjertet – support lytter."}
+            {call.status === "connecting" ? tx("Tillad mikrofonen, hvis browseren spørger. Support siger hej om et øjeblik.") : tx("Sig hvad du har på hjertet – support lytter.")}
           </p>
         )}
         {call.captions.map((c, k) => (
           <p key={k} className={c.role === "user" ? "text-foreground/60" : "text-foreground"}>
-            <span className={`mr-[6px] font-semibold ${c.role === "user" ? "text-foreground/45" : "text-primary-glow"}`}>{c.role === "user" ? "Dig" : "Support"}</span>
-            {c.text}
+            <span className={`mr-[6px] font-semibold ${c.role === "user" ? "text-foreground/45" : "text-primary-glow"}`}>{c.role === "user" ? tx("Dig") : tx("Support")}</span>
+            {tx(c.text)}
           </p>
         ))}
         {cannotHear && (
           <p role="status" className="text-warning">
-            Vi kan ikke høre dig endnu. Tjek at den rigtige mikrofon er valgt i browseren og ikke er slået fra – og tal så igen.
-          </p>
+            {tx("Vi kan ikke høre dig endnu. Tjek at den rigtige mikrofon er valgt i browseren og ikke er slået fra – og tal så igen.")}</p>
         )}
-        {err && <p role="alert" className="text-destructive">{err}</p>}
+        {err && <p role="alert" className="text-destructive">{tx(err)}</p>}
       </div>
 
       <div className={`flex items-center justify-center ${phone ? "gap-4 p-4" : "gap-[12px] px-[16px] py-[10px]"}`}>
         {ended ? (
           <>
             <button type="button" onClick={call.call} className={`btn-glow flex items-center gap-[6px] rounded-full font-semibold ${phone ? "h-11 px-5 text-[14px]" : "h-[32px] px-[14px] text-[11px]"}`}>
-              <Phone className={icon} /> Ring igen
-            </button>
+              <Phone className={icon} /> {" "}{tx("Ring igen")}</button>
             <button type="button" onClick={call.close} className={`call-ghost flex items-center gap-[6px] rounded-full font-semibold ${phone ? "h-11 px-5 text-[14px]" : "h-[32px] px-[14px] text-[11px]"}`}>
-              <MessageSquareText className={icon} /> Tilbage til chat
-            </button>
+              <MessageSquareText className={icon} /> {" "}{tx("Tilbage til chat")}</button>
           </>
         ) : (
           <>
@@ -261,7 +260,7 @@ export function CallPanel({ call, phone = false }: { call: SupportCallState; pho
               onClick={() => call.setMuted(!call.muted)}
               disabled={!live}
               aria-pressed={call.muted}
-              aria-label={call.muted ? "Slå mikrofonen til" : "Slå mikrofonen fra"}
+              aria-label={call.muted ? tx("Slå mikrofonen til") : tx("Slå mikrofonen fra")}
               className={`call-ghost flex items-center justify-center rounded-full disabled:opacity-40 ${round}`}
             >
               {call.muted ? <MicOff className={icon} /> : <Mic className={icon} />}
@@ -270,7 +269,7 @@ export function CallPanel({ call, phone = false }: { call: SupportCallState; pho
               type="button"
               onClick={call.close}
               disabled={call.status === "stopping"}
-              aria-label="Læg på"
+              aria-label={tx("Læg på")}
               className={`call-end flex items-center justify-center rounded-full ${phone ? "h-12 w-16" : "h-[36px] w-[52px]"}`}
             >
               <PhoneOff className={icon} />
@@ -278,7 +277,7 @@ export function CallPanel({ call, phone = false }: { call: SupportCallState; pho
           </>
         )}
       </div>
-      <p className={`text-center text-foreground/45 ${phone ? "pb-3 text-[11px]" : "pb-[8px] text-[9px]"}`}>AI-stemme · kan tage fejl · intet bliver gemt</p>
+      <p className={`text-center text-foreground/45 ${phone ? "pb-3 text-[11px]" : "pb-[8px] text-[9px]"}`}>{tx("AI-stemme · kan tage fejl · intet bliver gemt")}</p>
     </div>
   );
 }

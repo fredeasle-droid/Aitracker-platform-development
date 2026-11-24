@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useState, type CSSProperties } from "react";
 import { useInView } from "@/lib/use-in-view";
 import { useCount } from "./use-count";
@@ -39,6 +40,7 @@ export function useStatTiles(): [string, string][] {
 }
 
 export function Chip({ name, updating }: { name: string; updating: boolean }) {
+  const { tx } = useLocale();
   return (
     <div className="bookmaker-chip mr-[14px] flex h-[46px] shrink-0 items-center gap-[11px] rounded-[12px] pl-[9px] pr-[14px]">
       {BOOKMAKER_LOGOS[name] ? (
@@ -48,7 +50,7 @@ export function Chip({ name, updating }: { name: string; updating: boolean }) {
           {bookmakerTag(name)}
         </span>
       )}
-      <span className="whitespace-nowrap text-[13px] font-semibold">{name}</span>
+      <span className="whitespace-nowrap text-[13px] font-semibold">{tx(name)}</span>
       <span
         className={`ml-[6px] h-[7px] w-[7px] rounded-full transition-colors duration-500 ${updating ? "animate-pulse bg-gold shadow-[0_0_8px_var(--gold)]" : "bg-success shadow-[0_0_8px_var(--success)]"}`}
       />
@@ -76,16 +78,18 @@ export function useUpdating(names: string[]) {
 
 /** Desktop stat tile that counts up the first time it scrolls into view. */
 function CountStat({ to, label, format, run, fixed }: { to: number; label: string; format: (v: number) => string; run: boolean; fixed?: string }) {
+  const { tx } = useLocale();
   const v = useCount(to, run, 1600);
   return (
     <div className="panel-soft lift flex h-[60px] w-[124px] flex-col justify-center pl-[14px]">
       <span className="font-display text-[19px] font-bold leading-[23px] tracking-[-0.03em] text-primary-glow tabular-nums">{fixed ?? format(v)}</span>
-      <span className="text-[10px] leading-[14px] text-foreground/70">{label}</span>
+      <span className="text-[10px] leading-[14px] text-foreground/70">{tx(label)}</span>
     </div>
   );
 }
 
 export function BookmakerScanner() {
+  const { tx } = useLocale();
   const { stats } = useHomeData();
   const updating = useUpdating(POPULAR_BOOKMAKERS);
   const rows = splitRows(POPULAR_BOOKMAKERS);
@@ -100,16 +104,13 @@ export function BookmakerScanner() {
     <section ref={ref} className="reveal panel bookmaker-panel spotlight relative ml-[28px] mt-[80px] h-[310px] w-[969px] overflow-hidden rounded-[22px]">
       <span className="eyebrow-chip absolute left-[32px] top-[32px] flex h-[24px] items-center gap-[6px] rounded-full px-[11px] text-[9.5px] font-semibold uppercase tracking-[0.16em]">
         <Radar className="h-[12px] w-[12px] animate-[spin_6s_linear_infinite]" strokeWidth={2.3} />
-        Oversigt over bookmakere
-      </span>
+        {tx("Oversigt over bookmakere")}</span>
       <h2 className="absolute left-[32px] top-[70px] text-[32px] font-bold leading-[38px]">
-        Vi scanner <span className="text-gradient-brand">{SCANNED_BOOKMAKERS_LABEL}</span>
+        {tx("Vi scanner")}{" "}<span className="text-gradient-brand">{tx(SCANNED_BOOKMAKERS_LABEL)}</span>
         <br />
-        bookmakere – hele tiden
-      </h2>
+        {tx("bookmakere – hele tiden")}</h2>
       <p className="absolute left-[32px] top-[156px] w-[390px] text-[12px] leading-[18px] text-foreground/75">
-        Vores AI sammenligner odds på tværs af danske og internationale bookmakere hvert sekund, så du aldrig går glip af et surebet.
-      </p>
+        {tx("Vores AI sammenligner odds på tværs af danske og internationale bookmakere hvert sekund, så du aldrig går glip af et surebet.")}</p>
       <div className="absolute left-[32px] top-[214px] flex gap-[12px]">
         {countStats.map((s) => (
           <CountStat key={s.label} {...s} format={(v) => String(Math.round(v))} run={inView} />
@@ -131,8 +132,8 @@ export function BookmakerScanner() {
       </div>
 
       <p className="absolute right-[34px] top-[248px] flex items-center gap-[18px] text-[10px] text-foreground/75">
-        <span className="flex items-center gap-[6px]"><span className="h-[7px] w-[7px] rounded-full bg-success" />Live odds</span>
-        <span className="flex items-center gap-[6px]"><span className="h-[7px] w-[7px] rounded-full bg-gold" />Opdaterer</span>
+        <span className="flex items-center gap-[6px]"><span className="h-[7px] w-[7px] rounded-full bg-success" />{tx("Live odds")}</span>
+        <span className="flex items-center gap-[6px]"><span className="h-[7px] w-[7px] rounded-full bg-gold" />{tx("Opdaterer")}</span>
       </p>
     </section>
   );

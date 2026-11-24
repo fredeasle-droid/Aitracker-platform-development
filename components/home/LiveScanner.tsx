@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useState } from "react";
 import { Clock, Radar } from "lucide-react";
 import { TeamCrest, useHomeData, type HomeRow } from "./home-data";
@@ -36,6 +37,7 @@ export function ScanSweep({ className = "" }: { className?: string }) {
 }
 
 export function LiveScanner() {
+  const { tx } = useLocale();
   const rows = useLiveRows();
   const { stats } = useHomeData();
 
@@ -44,9 +46,8 @@ export function LiveScanner() {
       <div className="panel live-scanner relative h-[300px] w-[352px] overflow-hidden rounded-[16px]">
         <span className="absolute left-[17px] top-[16px] h-[13px] w-[13px] animate-pulse rounded-full bg-success shadow-[0_0_10px_var(--success)]" />
         <p className="absolute left-[44px] top-[12px] text-[13.5px] leading-[18px]">
-          <span className="font-semibold">Live scanner</span> – Nye fund
-        </p>
-        <p className="absolute left-[44px] top-[34px] text-[9.5px] text-foreground/75">Opdateres automatisk</p>
+          <span className="font-semibold">{tx("Live scanner")}</span> {" "}{tx("– Nye fund")}</p>
+        <p className="absolute left-[44px] top-[34px] text-[9.5px] text-foreground/75">{tx("Opdateres automatisk")}</p>
         <svg className="absolute left-[200px] top-[10px] h-[34px] w-[76px] text-primary-glow" viewBox="0 0 76 34" aria-hidden="true">
           <defs>
             <linearGradient id="spark" x1="0" x2="0" y1="0" y2="1">
@@ -59,14 +60,13 @@ export function LiveScanner() {
         </svg>
         <span className="absolute right-[14px] top-[16px] flex h-[20px] items-center gap-[5px] rounded-full border border-success/50 bg-success-bg/40 px-[8px] text-[8.5px] font-bold tracking-[0.12em] text-success">
           <span className="h-[5px] w-[5px] animate-pulse rounded-full bg-success" />
-          LIVE
-        </span>
+          {tx("LIVE")}</span>
         <div className="absolute inset-x-0 top-[61px] h-px bg-border" />
 
         <div className="absolute left-[17px] right-[12px] top-[69px] grid h-[18px] grid-cols-[190px_33px_1fr] items-center text-[9px] uppercase tracking-[0.08em] text-muted-foreground">
-          <span>Kamp</span>
-          <span>Liga</span>
-          <span className="pl-[28px]">Margin</span>
+          <span>{tx("Kamp")}</span>
+          <span>{tx("Liga")}</span>
+          <span className="pl-[28px]">{tx("Margin")}</span>
         </div>
         <div className="absolute left-[15px] right-[12px] top-[89px] h-px bg-border/70" />
 
@@ -78,10 +78,10 @@ export function LiveScanner() {
                 <TeamCrest team={r.home} className="size-[21px]" />
                 <TeamCrest team={r.away} className="ml-[7px] size-[21px]" />
                 <span className="ml-[8px] truncate">
-                  {r.home.name} – {r.away.name}
+                  {tx(r.home.name)} – {tx(r.away.name)}
                 </span>
               </div>
-              <span className="truncate text-muted-foreground" title={r.league}>{r.league}</span>
+              <span className="truncate text-muted-foreground" title={tx(r.league)}>{tx(r.league)}</span>
               <div className="flex items-center">
                 <span className="pill-success flex h-[22px] w-[56px] items-center justify-center rounded-[6px] text-[10.5px] font-bold">
                   +{r.margin.toFixed(2)}%
@@ -98,9 +98,9 @@ export function LiveScanner() {
         <div className="scanner-strip absolute inset-x-0 bottom-0 flex h-[36px] items-center justify-between px-[16px] text-[9px] text-muted-foreground">
           <span className="flex items-center gap-[6px]">
             <Radar className="h-[12px] w-[12px] text-primary-glow" />
-            <span>Scanner <span className="font-semibold text-foreground">2000+</span> bookmakere</span>
+            <span>{tx("Scanner")}{" "}<span className="font-semibold text-foreground">2000+</span> {" "}{tx("bookmakere")}</span>
           </span>
-          <span><span className="font-semibold text-foreground">{stats.surebets}</span> aktive surebets</span>
+          <span><span className="font-semibold text-foreground">{tx(stats.surebets)}</span> {" "}{tx("aktive surebets")}</span>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ import { pl as plMessages } from './messages/pl'
 import { fi as fiMessages } from './messages/fi'
 import { nl as nlMessages } from './messages/nl'
 import { dataMessages } from './data-messages'
+import { homePageMessages } from './home-messages'
 import { canonicalRoute, localizeRoute } from './route-slugs'
 
 export type Locale = 'da' | 'en' | 'sv' | 'no' | 'de' | 'es' | 'br' | 'pt' | 'fr' | 'it' | 'pl' | 'fi' | 'nl'
@@ -232,6 +233,7 @@ export type TranslateVars = Record<string, string | number>
 export function makeTranslator(locale: Locale) {
   const table = translations[locale]
   const extra = locale === 'da' ? null : dataMessages[locale]
+  const homeMessages = locale === 'da' ? null : homePageMessages[locale]
 
   function t(key: TranslationKey, vars?: TranslateVars) {
     const template = table[key]
@@ -240,8 +242,12 @@ export function makeTranslator(locale: Locale) {
   }
 
   // Translates Danish source strings that come from data (bonus offers, server messages, plan features).
-  function tx(source: string) {
-    return extra?.[source] ?? source
+  // Non-string values (numbers, React nodes) pass through unchanged so UI code can wrap any rendered value.
+  function tx(source: string): string
+  function tx<T>(source: T): T
+  function tx(source: unknown) {
+    if (typeof source !== 'string' || !extra) return source
+    return extra[source] ?? homeMessages?.[source] ?? extra[source.trim()] ?? source
   }
 
   return { locale, t, tx }

@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { Maximize, Pause, Play, Volume2 } from "lucide-react";
 
 export type Layout = {
@@ -7,6 +8,7 @@ export type Layout = {
 };
 
 export function VideoControls({ time, l, playing = false }: { time: string; l: Layout; playing?: boolean }) {
+  const { tx } = useLocale();
   return (
     <div className="pointer-events-none absolute inset-0">
       <div className="absolute inset-x-0 bottom-0 h-[44px] bg-gradient-to-t from-background-deep/95 via-background-deep/50 to-transparent" />
@@ -21,7 +23,7 @@ export function VideoControls({ time, l, playing = false }: { time: string; l: L
         <span className="absolute left-0 top-1/2 h-[6px] w-[6px] -translate-y-1/2 rounded-full bg-primary-glow" />
       </div>
       <Volume2 className="absolute h-[12px] w-[12px] -translate-y-1/2 fill-current" style={{ left: l.volumeX, top: l.barY }} />
-      <span className="absolute -translate-y-1/2 text-[7.5px]" style={{ left: l.timeX, top: l.barY }}>{time}</span>
+      <span className="absolute -translate-y-1/2 text-[7.5px]" style={{ left: l.timeX, top: l.barY }}>{tx(time)}</span>
       <Maximize className="absolute h-[11px] w-[11px] -translate-y-1/2" style={{ left: l.fullX, top: l.barY }} />
     </div>
   );
