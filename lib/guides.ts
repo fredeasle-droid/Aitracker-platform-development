@@ -434,6 +434,208 @@ export const GUIDES: Guide[] = [
     cta: { href: '/beregn', label: 'Åbn surebet beregneren' },
   },
   {
+    slug: 'find-surebets-automatisk',
+    title: 'Find surebets automatisk: sådan finder en odds scanner sikre gevinster og oddsfejl',
+    metaTitle: 'Find surebets automatisk med scanner og oddsfejl 2026',
+    description:
+      'Find surebets automatisk med en odds scanner. Se hvordan betting software finder odds fejl, hvad det giver i kr., og hvad du tjekker, før du spiller.',
+    keyword: 'find surebets automatisk',
+    category: 'Strategi',
+    readMinutes: 7,
+    updated: '2026-11-24',
+    intro:
+      'Du finder surebets automatisk ved at lade en odds scanner hente oddsene fra flere bookmakere, matche samme kamp og samme marked, og regne ud, om de omvendte odds tilsammen giver under 1,00. Scanneren gør det på sekunder og gentager det hele døgnet. Du får en liste med færdige indsatser i kr., så du kan bruge din tid på at placere spillene i stedet for at lede.',
+    blocks: [
+      { type: 'h2', text: 'Hvorfor du ikke kan finde surebets i hånden' },
+      {
+        type: 'p',
+        text: 'Regn på det: 8 bookmakere, 30 kampe og 3 udfald pr. kamp giver 720 odds, du skal holde op mod hinanden. Oddsene ændrer sig løbende, og en typisk surebet på 1–3 % holder kun i minutter. Når du har sammenlignet de sidste odds, er de første allerede ændret. Selve metoden er forklaret i guiden [hvordan fungerer arbitrage betting](/guide/arbitrage-betting).',
+      },
+      { type: 'h2', text: 'Sådan finder en odds scanner surebets for dig' },
+      {
+        type: 'ul',
+        items: [
+          '**Henter odds** fra alle de bookmakere, du har valgt, med faste mellemrum.',
+          '**Matcher kampene.** Samme hold, samme dato og samme marked, fx kampresultat inkl. overtid.',
+          '**Beregner summen af omvendte odds** for hver kombination. Er den under 1,00, er det et surebet.',
+          '**Filtrerer** efter din minimumsprofit og kun de bookmakere, du har konto hos.',
+          '**Udregner indsatserne,** så udbetalingen er ens uanset resultat.',
+        ],
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: surebet fundet af scanneren, samlet indsats 1.000 kr.',
+        rows: [
+          ['Hjemmehold hos bookmaker 1, odds 2,08', 'indsats 490,20 kr.'],
+          ['Udehold hos bookmaker 2, odds 2,00', 'indsats 509,80 kr.'],
+          ['Udbetaling uanset vinder', 'ca. 1.019,60 kr.'],
+          ['Sikker gevinst', 'ca. 19,60 kr. (2,0 %)'],
+        ],
+        note: 'Vil du regne selv med, kan du bruge [surebet beregneren](/beregn).',
+      },
+      { type: 'h2', text: 'Software til at finde odds fejl: den store gevinst og den store risiko' },
+      {
+        type: 'p',
+        text: 'En odds fejl er en odds, som en bookmaker har sat forkert, fx fordi to hold er byttet om, eller fordi en trader har tastet forkert. En scanner opdager den, fordi oddsen afviger markant fra de andre bookmakere, og fordi den pludselig skaber et surebet med en usædvanlig høj profit.',
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: odds fejl, samlet indsats 1.000 kr.',
+        rows: [
+          ['Hjemmehold hos bookmaker 1, fejlagtig odds 2,60', 'indsats 409,10 kr.'],
+          ['Udehold hos bookmaker 2, odds 1,80', 'indsats 590,90 kr.'],
+          ['Udbetaling uanset vinder', 'ca. 1.063,60 kr.'],
+          ['Sikker gevinst', 'ca. 63,60 kr. (6,4 %)'],
+        ],
+        note: 'Over tre gange så stor gevinst som et almindeligt surebet. Men bookmakeren kan annullere spillet med den fejlagtige odds, og så står du med et enkelt åbent spil.',
+      },
+      {
+        type: 'ul',
+        items: [
+          '**Tjek, at oddsene er friske.** Se, hvornår scanneren sidst har hentet dem.',
+          '**Tjek, at markederne er ens.** Inkl. eller ekskl. overtid og fuld tid eller første halvleg giver helt forskellige spil.',
+          '**Placér det mest usikre spil først,** altså dét hos bookmakeren med den fejlagtige odds.',
+          '**Brug beløb, du kan tåle at have stående,** hvis spillet bliver annulleret.',
+        ],
+      },
+      { type: 'h2', text: 'Det skal en god betting software kunne' },
+      {
+        type: 'ul',
+        items: [
+          'Vise kun surebets hos de bookmakere, du selv har valgt.',
+          'Regne indsatserne ud i kr. og vise gevinsten i procent.',
+          'Opdatere ofte og vise, hvor gamle oddsene er.',
+          'Sende besked, når en ny surebet over din grænse dukker op.',
+          'Gemme dine spil, så du kan følge din reelle gevinst i en [bet tracker](/guide/bet-tracker).',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Se et udvalg af dagens fund på siden [dagens surebets](/dagens-surebets), og lær, hvordan du [holder dine konti åbne](/guide/undgaa-begraensning) på sigt.',
+      },
+      { type: 'h2', text: 'Fra scanner til gevinst: din rutine' },
+      {
+        type: 'p',
+        text: 'Vælg dine bookmakere, sæt en minimumsprofit på 1 %, og placer spillene hurtigt og efter hinanden. Registrér dem bagefter, så du kan se, hvad scanneren faktisk har givet dig. Kampene kører også live: læs om [live arbitrage betting scanner](/guide/live-arbitrage-betting-scanner). [Prøv BetTracker AI](/) og lad scanneren gøre det tunge arbejde.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvordan finder man surebets automatisk?',
+        a: 'Med en odds scanner, der sammenligner oddsene fra flere bookmakere og regner summen af omvendte odds ud. Er summen under 1,00, viser scanneren surebetten med de færdige indsatser.',
+      },
+      {
+        q: 'Er det lovligt at bruge software til at finde odds fejl?',
+        a: 'Ja, det er lovligt at sammenligne odds og spille på dem. Bookmakere må dog selv bestemme, hvem de vil have som kunder, og kan sætte dine maksimale indsatser ned. Læs mere i guiden om [er surebets lovligt](/guide/er-surebets-lovligt).',
+      },
+      {
+        q: 'Hvor ofte opstår der odds fejl?',
+        a: 'Sjældent, og de bliver typisk rettet inden for få minutter. Derfor er det vigtigt, at scanneren opdaterer ofte, og at du kan reagere hurtigt.',
+      },
+      {
+        q: 'Kan en odds scanner give garanti for gevinst?',
+        a: 'Nej. Scanneren finder muligheder, men du skal selv placere spillene, før oddsene ændrer sig. Annullerede spil og odds, der flytter sig, er de to største risici.',
+      },
+    ],
+    cta: { href: '/surebets', label: 'Se surebets fundet af scanneren' },
+  },
+  {
+    slug: 'live-arbitrage-betting-scanner',
+    title: 'Live arbitrage betting scanner: sådan finder du live surebets, mens kampen kører',
+    metaTitle: 'Live arbitrage betting scanner – live surebets 2026',
+    description:
+      'Sådan fungerer en live arbitrage betting scanner. Regneeksempler i kr., risikoen ved odds, der flytter sig, og tips til sports arbitrage under kampen.',
+    keyword: 'live arbitrage betting scanner',
+    category: 'Strategi',
+    readMinutes: 7,
+    updated: '2026-11-24',
+    intro:
+      'En live arbitrage betting scanner sammenligner bookmakernes odds, mens kampen er i gang, og viser dig surebets, der kun eksisterer i få sekunder eller minutter. Under kampen flytter oddsene sig hurtigt og ikke lige hurtigt hos alle bookmakere, og det skaber de prisforskelle, du kan tjene på. Til gengæld er risikoen større end før kampen, fordi oddsene kan ændre sig, mens dit spil bliver godkendt.',
+    blocks: [
+      { type: 'h2', text: 'Live surebets: hvorfor oddsene pludselig er uens' },
+      {
+        type: 'p',
+        text: 'Et mål, et rødt kort eller et vundet tennissæt får bookmakerne til at opdatere oddsene. Nogle gør det på sekunder, andre bruger længere tid. I mellemtiden kan to bookmakeres odds tilsammen give en sum af omvendte odds under 1,00, og så er der en live surebet. Grundprincippet er det samme som i [arbitrage betting](/guide/arbitrage-betting), men tiden er knap.',
+      },
+      { type: 'h2', text: 'Sådan fungerer en live surebets scanner' },
+      {
+        type: 'ul',
+        items: [
+          '**Opdaterer oddsene hyppigt** for kampe, der er i gang.',
+          '**Sammenligner odds** på tværs af dine bookmakere i realtid.',
+          '**Viser kun friske muligheder,** så du ikke bruger tid på udløbne odds.',
+          '**Regner indsatserne ud** i kr., så du kan placere spillene med det samme.',
+        ],
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: tennis under kampen, samlet indsats 1.000 kr.',
+        rows: [
+          ['Spiller A hos bookmaker 1, odds 2,20', 'indsats 469,90 kr.'],
+          ['Spiller B hos bookmaker 2, odds 1,95', 'indsats 530,10 kr.'],
+          ['Udbetaling uanset vinder', 'ca. 1.033,80 kr.'],
+          ['Sikker gevinst', 'ca. 33,80 kr. (3,4 %)'],
+        ],
+        note: 'Live giver ofte højere procenter end før kampen, men det er netop fordi risikoen for, at oddsene flytter sig, er større.',
+      },
+      { type: 'h2', text: 'Risikoen: oddsen ændrer sig, før dit spil er godkendt' },
+      {
+        type: 'p',
+        text: 'Mange bookmakere bruger nogle sekunder på at godkende live-spil. Når du har placeret det første spil, kan oddsen på det andet være faldet. Så sidder du med et åbent spil og skal vælge mellem at dække det til en dårligere pris eller tage chancen.',
+      },
+      {
+        type: 'example',
+        title: 'Eksempel: odds på spiller A falder fra 2,20 til 2,00, efter du har spillet på B',
+        rows: [
+          ['Spil på B placeret', '530,10 kr. à 1,95 = 1.033,70 kr.'],
+          ['Dæk A ved odds 2,00', '1.033,70 ÷ 2,00 = 516,85 kr.'],
+          ['Samlet indsats', '1.046,95 kr.'],
+          ['Resultat', 'tab ca. 13,25 kr. (1,3 %)'],
+        ],
+        note: 'Oddsen på A kan faktisk falde til 2,06, før surebetten forsvinder. Falder den længere, bliver det et tab.',
+      },
+      { type: 'h2', text: 'Sports arbitrage live: sådan sammenligner du odds uden at miste overblikket' },
+      {
+        type: 'ul',
+        items: [
+          '**Start med et højere krav til profit,** fx mindst 2 %, så du har luft, hvis oddsen flytter sig.',
+          '**Placér det spil først, der er sværest at få godkendt,** typisk hos bookmakeren med den højeste odds.',
+          '**Vælg sportsgrene, hvor oddsene flytter sig i små skridt,** fx tennis, hvor hvert point ændrer lidt.',
+          '**Hav saldo klar hos alle bookmakere,** så du ikke skal indbetale midt i spillet.',
+          '**Brug [beregneren](/beregn),** hvis du skal tjekke et tal hurtigt.',
+        ],
+      },
+      {
+        type: 'tip',
+        text: 'Er du ny, så start med surebets før kampen. Der har du tid til at tjekke oddsene to gange. Live passer bedst, når du kender rutinen. Sådan finder du dem [automatisk](/guide/find-surebets-automatisk).',
+      },
+      { type: 'h2', text: 'Kom i gang med live surebets' },
+      {
+        type: 'p',
+        text: 'Sæt et fast maksimalt beløb pr. live-spil, og registrér hvert spil i din [bet tracker](/guide/bet-tracker), så du kan se, om live faktisk giver dig mere end før kampen. [Se de aktuelle muligheder i BetTracker AI](/).',
+      },
+    ],
+    faq: [
+      {
+        q: 'Hvad er en live arbitrage betting scanner?',
+        a: 'Et værktøj, der sammenligner odds hos flere bookmakere under kampen og viser, når oddsene tilsammen giver en sikker gevinst. Scanneren regner også indsatserne ud.',
+      },
+      {
+        q: 'Er live surebets mere risikable end almindelige surebets?',
+        a: 'Ja. Oddsene flytter sig hurtigere, og bookmakere godkender live-spil med få sekunders forsinkelse. Risikoen for et åbent spil er derfor større.',
+      },
+      {
+        q: 'Hvor hurtig skal jeg være?',
+        a: 'Du skal kunne placere begge spil inden for få sekunder. Har du ikke din saldo og dine konti klar, så hold dig til surebets før kampen.',
+      },
+      {
+        q: 'Hvad er forskellen på live surebets og almindelige surebets?',
+        a: 'Almindelige surebets varer ofte i minutter, mens live surebets ofte kun varer sekunder. Til gengæld kan live give højere gevinstprocenter.',
+      },
+    ],
+    cta: { href: '/surebets', label: 'Find surebets nu' },
+  },
+  {
     slug: 'matched-betting',
     title: 'Matched betting i Danmark: få mest ud af velkomstbonusser',
     metaTitle: 'Matched betting Danmark – sådan udnytter du bonusser',
@@ -529,54 +731,102 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: 'undgaa-begraensning',
-    title: 'Sådan undgår du at blive begrænset hos bookmakere',
-    metaTitle: 'Undgå begrænsning hos bookmakere – tips til surebettere',
+    title: 'Sådan undgår du limits hos bookmakere som surebetter',
+    metaTitle: 'Sådan undgår du limits hos bookmakere (guide 2026)',
     description:
-      'Bookmakere begrænser konti, der vinder for stabilt. Her er de vigtigste tips til at holde dine konti åbne længere, når du spiller surebets.',
-    keyword: 'bookmaker begrænsning',
+      'Hvordan undgår man limits hos bookmakere? Syv vaner, et regneeksempel i kr. og tips til at fordele dine konti og holde dem åbne længere.',
+    keyword: 'hvordan undgår man limits hos bookmakere',
     category: 'Strategi',
-    readMinutes: 5,
-    updated: '2026-11-23',
+    readMinutes: 7,
+    updated: '2026-11-24',
     intro:
-      'Den største udfordring ved surebets er ikke at finde dem, men at beholde sine konti. Bookmakere holder øje med spillemønstre, og konti der kun vinder, bliver ofte begrænset. Med lidt omtanke kan du forlænge levetiden betydeligt.',
+      'Du kan ikke undgå limits helt, men du kan udskyde dem betydeligt. Bookmakere sætter dine maksimale indsatser ned, når din konto vinder for stabilt eller spiller anderledes end almindelige kunder. Du holder dine konti åbne længere ved at runde indsatser af, sprede dine spil over mange bookmakere, ikke jagte de højeste profitter og lade din betting strategi omfatte mere end surebets alene.',
     blocks: [
-      { type: 'h2', text: 'Hvorfor bliver man begrænset?' },
+      { type: 'h2', text: 'Hvorfor sætter bookmakere limits på surebettere?' },
       {
         type: 'p',
-        text: 'Bookmakerne tjener penge på deres margin. En kunde, der altid spiller på de odds, som er for høje, koster dem penge. Systemerne ser efter mønstre som skæve beløb, spil på små ligaer og spil kort efter, at en odds har bevæget sig.',
+        text: 'Bookmakerne tjener på deres margin, som typisk er 4–7 %. En kunde, der altid spiller på de odds, som er højere end markedet, koster dem penge. Deres systemer leder efter mønstre som skæve indsatser, spil på små ligaer, spil kort efter en oddsændring og kunder, der aldrig spiller kombinationsspil. Bookmakere må selv vælge, hvem de vil have som kunder. Grundreglerne for surebets kan du læse i guiden [hvordan fungerer arbitrage betting](/guide/arbitrage-betting).',
       },
-      { type: 'h2', text: 'Gode vaner' },
+      { type: 'h2', text: 'Syv vaner, der holder dine konti åbne længere' },
       {
         type: 'ul',
         items: [
-          'Rund indsatserne af, fx 500 kr. i stedet for 493,98 kr.',
-          'Undgå de højeste profitprocenter. De skyldes ofte fejl og tiltrækker opmærksomhed.',
-          'Spil også på store kampe og populære markeder.',
-          'Lad være med at hæve gevinsten med det samme efter hvert spil.',
-          'Fordel spil over mange bookmakere i stedet for at bruge de samme hver gang.',
+          '**Rund indsatserne af** til hele tiere eller halve hundreder i stedet for 493,98 kr.',
+          '**Undgå de højeste profitprocenter.** De skyldes ofte odds fejl og tiltrækker opmærksomhed.',
+          '**Spil også på store kampe og populære markeder,** ikke kun på små ligaer.',
+          '**Spred dine spil.** Brug ikke de samme to bookmakere hver gang.',
+          '**Vent med at hæve gevinsten** til du har en samlet sum, i stedet for efter hvert spil.',
+          '**Spil engang imellem på kampe, du selv har en holdning til,** uden at det er et surebet.',
+          '**Hold styr på, hvor meget du spiller hos hver bookmaker,** i en [bet tracker](/guide/bet-tracker).',
+        ],
+      },
+      { type: 'h2', text: 'Regneeksempel: hvad koster det at blive limited?' },
+      {
+        type: 'p',
+        text: 'Afrunding koster næsten ingenting, mens en limit koster meget. Her er begge dele i tal.',
+      },
+      {
+        type: 'example',
+        title: 'Afrunding: surebet med odds 2,08 og 2,00, samlet indsats 1.000 kr.',
+        rows: [
+          ['Præcise indsatser 490,20 kr. og 509,80 kr.', 'gevinst ca. 19,60 kr.'],
+          ['Afrundede indsatser 490 kr. og 510 kr.', 'gevinst ca. 19,20 kr.'],
+          ['Pris for at ligne en almindelig kunde', 'ca. 0,40 kr.'],
         ],
       },
       {
-        type: 'tip',
-        text: 'Følg dine spil i regnskabet, så du kan se, hvilke bookmakere du bruger mest, og sprede dit spil mere jævnt.',
+        type: 'example',
+        title: 'Limit: surebet med 2 % gevinst, før og efter',
+        rows: [
+          ['Maksimal indsats 2.000 kr.', 'gevinst ca. 40 kr. pr. spil'],
+          ['Maksimal indsats sat ned til 150 kr.', 'gevinst ca. 3 kr. pr. spil'],
+          ['Tabt indtjening pr. spil', 'ca. 37 kr. (92 %)'],
+        ],
+        note: 'Det er derfor, det betaler sig at tænke langsigtet. En enkelt ekstra procent er ikke værd at risikere en konto for.',
       },
-      { type: 'h2', text: 'Hvis du bliver begrænset' },
+      { type: 'h2', text: 'Bedste bookmakere til surebets i Danmark: spred dine konti' },
       {
         type: 'p',
-        text: 'En begrænset konto er ikke spildt. Du kan ofte stadig bruge den til bonusser eller mindre indsatser. Hav altid flere konti end du har brug for, så du kan fortsætte, selvom en enkelt bookmaker sætter dine grænser ned.',
+        text: 'Jo flere bookmakere med dansk licens du bruger, jo færre spil får hver af dem. Spiller du 24 surebets på en måned fordelt på 6 bookmakere, er det kun 4 spil pr. bookmaker. Spiller du dem på to bookmakere, er det 12 hos hver, og de lægger mærke til det hurtigere. Du kan læse mere om, hvilke bookmakere der passer bedst, i guiden [bedste bookmakere til surebets](/guide/bedste-bookmakere-til-surebets). Husk, at du kun må have én konto pr. person hos hver bookmaker.',
+      },
+      {
+        type: 'tip',
+        text: 'I [BetTracker AI](/) vælger du selv de bookmakere, du har konto hos, så du kun ser surebets, du kan spille, og lettere kan fordele dine spil.',
+      },
+      { type: 'h2', text: 'Betting strategi, hvis du alligevel bliver limited' },
+      {
+        type: 'ul',
+        items: [
+          '**Brug kontoen alligevel.** En limited konto kan stadig bruges til mindre indsatser og velkomstbonusser, se guiden om [matched betting](/guide/matched-betting).',
+          '**Flyt fokus til andre bookmakere,** og lad den limited konto hvile.',
+          '**Spil mindre, men oftere,** så din samlede gevinst holder.',
+          '**Planlæg din bankroll efter det,** se [bankroll management](/guide/bankroll-management).',
+        ],
+      },
+      {
+        type: 'p',
+        text: 'Se de aktuelle muligheder og vælg dine bookmakere i [BetTracker AI](/).',
       },
     ],
     faq: [
       {
-        q: 'Kan man blive lukket helt ude af en bookmaker?',
-        a: 'Bookmakere kan lukke en konto efter deres vilkår, men de skal udbetale dine indestående penge.',
+        q: 'Kan man helt undgå limits hos bookmakere?',
+        a: 'Nej. Bookmakere kan altid sætte dine maksimale indsatser ned. Men du kan udskyde det med afrundede indsatser, spredte spil og færre jagter på de højeste profitter.',
       },
       {
-        q: 'Hvor lang tid går der, før man bliver begrænset?',
-        a: 'Det varierer meget mellem bookmakere og afhænger af, hvordan du spiller. Nogle begrænser efter få uger, andre efter flere måneder.',
+        q: 'Hvor lang tid går der, før man bliver limited?',
+        a: 'Det varierer meget og afhænger af bookmakeren og af, hvordan du spiller. Nogle begrænser efter få uger, andre først efter flere måneder.',
+      },
+      {
+        q: 'Hvad gør jeg, hvis jeg bliver limited?',
+        a: 'Brug kontoen til bonusser og mindre indsatser, og flyt dine surebets til de andre bookmakere. Husk, at bookmakeren skal udbetale det, du har stående på kontoen.',
+      },
+      {
+        q: 'Må jeg have flere konti hos samme bookmaker?',
+        a: 'Nej. Du må kun have én konto pr. person hos hver bookmaker. Det er de mange forskellige bookmakere, der giver dig flere muligheder, ikke flere konti hos samme.',
       },
     ],
-    cta: { href: '/stats', label: 'Følg dine spil i regnskabet' },
+    cta: { href: '/surebets', label: 'Se surebets hos dine bookmakere' },
   },
   {
     slug: 'bedste-bookmakere-til-surebets',
