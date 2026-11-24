@@ -96,6 +96,8 @@ const SLUGS: Record<Translated, Record<string, string>> = {
     'roi-betting': 'roi-wetten',
     'surebet-danmark-alternativ': 'arbitrage-wetten-tool-vergleich',
     'betting-regnskab': 'wettbuchhaltung',
+    'tjen-penge-paa-odds-uden-risiko': 'sportwetten-ohne-risiko',
+    'find-surebets-automatisk': 'surebets-automatisch-finden',
     fodbold: 'fussball',
     ishockey: 'eishockey',
   },
