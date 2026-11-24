@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { HREFLANG, LOCALE_PREFIX, localePath, type Locale } from '@/lib/i18n'
 import { SITE_URL } from '@/lib/site'
 
-export const ALL_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
+export const ALL_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de', 'es', 'br', 'pt', 'fr', 'it', 'pl', 'fi', 'nl']
 
 // Sections whose body copy exists in every language. Everything else is still Danish-only,
 // so its translated URLs point back to the Danish page instead of competing with it.

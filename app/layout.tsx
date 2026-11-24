@@ -8,7 +8,7 @@ import { ChromeGate } from '@/components/site/chrome-gate'
 import { GlobalFooter } from '@/components/site/global-footer'
 import { RootHeader } from '@/components/site/global-header'
 import { PageShell } from '@/components/site/page-shell'
-import { OG_LOCALE } from '@/lib/i18n'
+import { LOCALES, OG_LOCALE } from '@/lib/i18n'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
 import './globals.css'
@@ -60,7 +60,7 @@ export default async function RootLayout({
 }>) {
   const locale = await getServerLocale()
   return (
-    <html lang={locale} className={`${roboto.variable} bg-background`}>
+    <html lang={LOCALES[locale].tag} className={`${roboto.variable} bg-background`}>
       <head>
         <script
           {...({ nowprocket: '', 'nitro-exclude': '' } as Record<string, string>)}

@@ -25,6 +25,14 @@ const ACCOUNT_TITLE: Record<Locale, string> = {
   sv: 'Mitt konto – BetTracker',
   no: 'Min side – BetTracker',
   de: 'Mein Konto – BetTracker',
+  es: 'Mi cuenta – BetTracker',
+  br: 'Minha conta – BetTracker',
+  pt: 'A minha conta – BetTracker',
+  fr: 'Mon compte – BetTracker',
+  it: 'Il mio account – BetTracker',
+  pl: 'Moje konto – BetTracker',
+  fi: 'Oma tili – BetTracker',
+  nl: 'Mijn account – BetTracker',
 }
 
 export async function generateMetadata(): Promise<Metadata> {

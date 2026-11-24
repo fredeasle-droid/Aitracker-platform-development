@@ -9,7 +9,7 @@ const PAGE_SIZE = 25000
 const MAX_PAGES = 4
 const CHUNK = 500
 
-export const SEO_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de']
+export const SEO_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de', 'es', 'br', 'pt', 'fr', 'it', 'pl', 'fi', 'nl']
 
 const isoDate = (date: Date) => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Copenhagen' }).format(date)
 const daysAgo = (days: number) => isoDate(new Date(Date.now() - days * 86_400_000))

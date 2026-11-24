@@ -10,6 +10,14 @@ const SECTION_NAMES: Record<Translated, Record<Section, string>> = {
   sv: { guide: 'guider', sport: 'sport', bookmaker: 'spelbolag' },
   no: { guide: 'guider', sport: 'sport', bookmaker: 'bookmakere' },
   de: { guide: 'ratgeber', sport: 'sportarten', bookmaker: 'buchmacher' },
+  es: { guide: 'guias', sport: 'deportes', bookmaker: 'casas-de-apuestas' },
+  br: { guide: 'guias', sport: 'esportes', bookmaker: 'casas-de-apostas' },
+  pt: { guide: 'guias', sport: 'desportos', bookmaker: 'casas-de-apostas' },
+  fr: { guide: 'guides', sport: 'sports', bookmaker: 'bookmakers' },
+  it: { guide: 'guide', sport: 'sport', bookmaker: 'bookmaker' },
+  pl: { guide: 'poradniki', sport: 'sporty', bookmaker: 'bukmacherzy' },
+  fi: { guide: 'oppaat', sport: 'urheilu', bookmaker: 'vedonlyontiyhtiot' },
+  nl: { guide: 'gidsen', sport: 'sporten', bookmaker: 'bookmakers' },
 }
 
 const SLUGS: Record<Translated, Record<string, string>> = {
@@ -107,6 +115,14 @@ const SLUGS: Record<Translated, Record<string, string>> = {
     fodbold: 'fussball',
     ishockey: 'eishockey',
   },
+  es: { fodbold: 'futbol', ishockey: 'hockey-hielo', esport: 'esports' },
+  br: { fodbold: 'futebol', ishockey: 'hoquei-no-gelo', esport: 'esports' },
+  pt: { fodbold: 'futebol', ishockey: 'hoquei-no-gelo', esport: 'esports' },
+  fr: { fodbold: 'football', ishockey: 'hockey-sur-glace', esport: 'esports' },
+  it: { fodbold: 'calcio', ishockey: 'hockey-ghiaccio', esport: 'esports' },
+  pl: { fodbold: 'pilka-nozna', ishockey: 'hokej', basketball: 'koszykowka', esport: 'esport' },
+  fi: { fodbold: 'jalkapallo', ishockey: 'jaakiekko', basketball: 'koripallo', tennis: 'tennis', esport: 'e-urheilu' },
+  nl: { fodbold: 'voetbal', ishockey: 'ijshockey', esport: 'esports' },
 }
 
 // Stand-alone pages that exist in every language. Keys are the canonical (Danish) paths.
@@ -115,6 +131,14 @@ const PAGE_NAMES: Record<Translated, Record<string, string>> = {
   sv: { '/faq': '/vanliga-fragor', '/beregn': '/kalkylator', '/konto': '/mitt-konto' },
   no: { '/faq': '/vanlige-sporsmal', '/beregn': '/kalkulator' },
   de: { '/dagens-surebets': '/surebets-heute', '/beregn': '/rechner', '/konto': '/mein-konto' },
+  es: { '/dagens-surebets': '/surebets-hoy', '/beregn': '/calculadora', '/konto': '/mi-cuenta', '/faq': '/preguntas-frecuentes' },
+  br: { '/dagens-surebets': '/surebets-hoje', '/beregn': '/calculadora', '/konto': '/minha-conta', '/faq': '/perguntas-frequentes' },
+  pt: { '/dagens-surebets': '/surebets-hoje', '/beregn': '/calculadora', '/konto': '/a-minha-conta', '/faq': '/perguntas-frequentes' },
+  fr: { '/dagens-surebets': '/surebets-du-jour', '/beregn': '/calculateur', '/konto': '/mon-compte' },
+  it: { '/dagens-surebets': '/surebet-oggi', '/beregn': '/calcolatore', '/konto': '/il-mio-account', '/faq': '/domande-frequenti' },
+  pl: { '/dagens-surebets': '/surebety-dzis', '/beregn': '/kalkulator', '/konto': '/moje-konto', '/faq': '/czeste-pytania' },
+  fi: { '/dagens-surebets': '/paivan-surebetit', '/beregn': '/laskuri', '/konto': '/oma-tili', '/faq': '/usein-kysytyt' },
+  nl: { '/dagens-surebets': '/surebets-vandaag', '/beregn': '/calculator', '/konto': '/mijn-account', '/faq': '/veelgestelde-vragen' },
 }
 
 const REVERSE_PAGE_NAMES = Object.fromEntries(
