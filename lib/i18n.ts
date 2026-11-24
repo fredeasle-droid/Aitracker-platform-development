@@ -22,6 +22,34 @@ export function isLocale(value: string | undefined | null): value is Locale {
   return Boolean(value) && Object.prototype.hasOwnProperty.call(LOCALES, value as string)
 }
 
+export const LOCALE_HEADER = 'x-bt-locale'
+
+// Danish is served from the root; the other languages live under a URL prefix on the same domain.
+export const LOCALE_PREFIX: Record<Locale, string> = { da: '', en: 'en', sv: 'se', no: 'no', de: 'de' }
+
+export const HREFLANG: Record<Locale, string> = { da: 'da-DK', en: 'en', sv: 'sv-SE', no: 'nb-NO', de: 'de-DE' }
+
+export const OG_LOCALE: Record<Locale, string> = { da: 'da_DK', en: 'en_GB', sv: 'sv_SE', no: 'nb_NO', de: 'de_DE' }
+
+export function localeFromPrefix(segment: string | undefined): Locale | null {
+  if (!segment) return null
+  const match = (Object.keys(LOCALE_PREFIX) as Locale[]).find((key) => LOCALE_PREFIX[key] && LOCALE_PREFIX[key] === segment)
+  return match ?? null
+}
+
+export function stripLocalePrefix(pathname: string): { locale: Locale | null; path: string } {
+  const [, first, ...rest] = pathname.split('/')
+  const locale = localeFromPrefix(first)
+  if (!locale) return { locale: null, path: pathname }
+  return { locale, path: `/${rest.join('/')}` }
+}
+
+export function localePath(locale: Locale, path: string): string {
+  const prefix = LOCALE_PREFIX[locale]
+  if (!prefix) return path
+  return path === '/' ? `/${prefix}` : `/${prefix}${path}`
+}
+
 const baseTranslations = {
   en: {
     login: 'Log in', loggedIn: 'Logged in', frontPage: 'Home', home: 'Sure Bets', live: 'Live scanning', stats: 'Stats', calc: 'Calculate', bonus: 'Bonus', myPage: 'My page', signup: 'Sign up', games: 'My bets',

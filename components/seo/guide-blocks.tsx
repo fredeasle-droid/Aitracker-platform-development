@@ -43,10 +43,10 @@ export function Block({ block }: { block: GuideBlock }) {
   }
 }
 
-export function FaqList({ items }: { items: { q: string; a: string }[] }) {
+export function FaqList({ items, heading = 'Ofte stillede spørgsmål' }: { items: { q: string; a: string }[]; heading?: string }) {
   return (
     <section aria-labelledby="faq-heading" className="mt-12">
-      <h2 id="faq-heading" className="text-[22px] font-bold text-foreground">Ofte stillede spørgsmål</h2>
+      <h2 id="faq-heading" className="text-[22px] font-bold text-foreground">{heading}</h2>
       <div className="mt-4 flex flex-col gap-3">
         {items.map(({ q, a }) => (
           <details key={q} className="group rounded-2xl border border-border bg-card/70 open:border-primary/50">

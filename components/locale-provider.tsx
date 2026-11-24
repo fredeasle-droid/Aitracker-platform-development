@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useMemo, useState, useTransition, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
-import { LOCALE_COOKIE, LOCALES, makeTranslator, type Locale, type Translator } from '@/lib/i18n'
+import { LOCALE_COOKIE, LOCALES, localePath, makeTranslator, stripLocalePrefix, type Locale, type Translator } from '@/lib/i18n'
 
 type LocaleContextValue = Translator & { setLocale: (locale: Locale) => void; tag: string }
 
@@ -18,7 +18,9 @@ export function LocaleProvider({ children, initialLocale }: { children: ReactNod
       setLocaleState(next)
       document.cookie = `${LOCALE_COOKIE}=${next}; path=/; max-age=31536000; samesite=lax`
       document.documentElement.lang = next
-      startTransition(() => router.refresh())
+      const { path } = stripLocalePrefix(window.location.pathname)
+      const target = `${localePath(next, path)}${window.location.search}${window.location.hash}`
+      startTransition(() => router.push(target))
     }
     return { ...makeTranslator(locale), setLocale, tag: LOCALES[locale].tag }
   }, [locale, router])

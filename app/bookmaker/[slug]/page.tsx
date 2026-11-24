@@ -1,7 +1,11 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { LandingArticle } from '@/components/seo/landing-article'
-import { BOOKMAKER_PAGES, getBookmakerPage } from '@/lib/landing-pages'
+import { getLocalizedLanding } from '@/lib/content-i18n'
+import { OG_LOCALE } from '@/lib/i18n'
+import { BOOKMAKER_PAGES } from '@/lib/landing-pages'
+import { getServerLocale } from '@/lib/locale-server'
+import { absoluteUrl, buildAlternates } from '@/lib/seo/alternates'
 
 export const dynamicParams = false
 
@@ -10,20 +14,22 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const page = getBookmakerPage((await params).slug)
+  const locale = await getServerLocale()
+  const page = getLocalizedLanding('bookmaker', (await params).slug, locale)
   if (!page) return {}
   const path = `/bookmaker/${page.slug}`
   return {
     title: page.metaTitle,
     description: page.description,
     keywords: [page.keyword],
-    alternates: { canonical: path },
-    openGraph: { type: 'website', url: path, title: page.metaTitle, description: page.description },
+    alternates: buildAlternates(path, locale),
+    openGraph: { type: 'website', url: absoluteUrl(locale, path), locale: OG_LOCALE[locale], title: page.metaTitle, description: page.description },
   }
 }
 
 export default async function BookmakerPage({ params }: { params: Promise<{ slug: string }> }) {
-  const page = getBookmakerPage((await params).slug)
+  const locale = await getServerLocale()
+  const page = getLocalizedLanding('bookmaker', (await params).slug, locale)
   if (!page) notFound()
-  return <LandingArticle page={page} section={{ label: 'Bookmakere', path: '/bookmaker' }} siblings={BOOKMAKER_PAGES} />
+  return <LandingArticle page={page} kind="bookmaker" locale={locale} />
 }

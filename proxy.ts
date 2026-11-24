@@ -1,5 +1,6 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { getSessionCookie } from 'better-auth/cookies'
+import { LOCALE_HEADER, stripLocalePrefix } from '@/lib/i18n'
 import { MAINTENANCE_BYPASS_COOKIE, getOpensAt, isMaintenanceActive } from '@/lib/maintenance'
 
 export const USER_COOKIE = 'bt_uid'
@@ -48,29 +49,45 @@ function maintenanceResponse(request: NextRequest): NextResponse | null {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const { locale, path } = stripLocalePrefix(pathname)
 
   const closed = maintenanceResponse(request)
   if (closed) return closed
 
-  if (isMembersOnly(pathname) && !getSessionCookie(request)) {
+  if (isMembersOnly(path) && !getSessionCookie(request)) {
     const loginUrl = new URL('/konto', request.url)
     loginUrl.searchParams.set('login', '1')
-    loginUrl.searchParams.set('next', pathname + request.nextUrl.search)
+    loginUrl.searchParams.set('next', path + request.nextUrl.search)
     return NextResponse.redirect(loginUrl)
   }
 
-  if (request.cookies.get(USER_COOKIE)?.value) return NextResponse.next()
+  const hasUid = Boolean(request.cookies.get(USER_COOKIE)?.value)
+  const uid = hasUid ? null : crypto.randomUUID()
+  if (uid) request.cookies.set(USER_COOKIE, uid)
 
-  const uid = crypto.randomUUID()
-  request.cookies.set(USER_COOKIE, uid)
-  const response = NextResponse.next({ request: { headers: request.headers } })
-  response.cookies.set(USER_COOKIE, uid, {
-    httpOnly: true,
-    secure: true,
-    sameSite: 'none',
-    path: '/',
-    maxAge: 60 * 60 * 24 * 365 * 2,
-  })
+  // Never trust a client-supplied locale header; only the URL prefix decides it.
+  const forwarded = new Headers(request.headers)
+  forwarded.delete(LOCALE_HEADER)
+  if (locale) forwarded.set(LOCALE_HEADER, locale)
+
+  let response: NextResponse
+  if (locale) {
+    const target = request.nextUrl.clone()
+    target.pathname = path
+    response = NextResponse.rewrite(target, { request: { headers: forwarded } })
+  } else {
+    response = NextResponse.next({ request: { headers: forwarded } })
+  }
+
+  if (uid) {
+    response.cookies.set(USER_COOKIE, uid, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365 * 2,
+    })
+  }
   return response
 }
 
