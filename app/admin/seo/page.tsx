@@ -4,6 +4,7 @@ import { redirect } from 'next/navigation'
 import { ArrowDown, ArrowUp, ExternalLink, Minus, Trash2 } from 'lucide-react'
 import { getOwnerState } from '@/lib/admin'
 import { GUIDES } from '@/lib/guides'
+import { isLocale, LOCALES, type Locale } from '@/lib/i18n'
 import { getSeoDashboard, type SeoKeywordRow, type SeoTotals } from '@/lib/seo/dashboard'
 import { getSearchConsoleConfig } from '@/lib/seo/search-console'
 import { PUBLIC_PAGES, SITE_URL } from '@/lib/site'
@@ -111,7 +112,35 @@ function SetupGuide() {
   )
 }
 
-export default async function SeoDashboardPage() {
+function CountrySwitcher({ active }: { active: Locale }) {
+  return (
+    <nav aria-label="Vælg land" className="-mx-4 overflow-x-auto px-4 lg:mx-0 lg:px-0">
+      <ul className="flex w-max gap-2">
+        {(Object.keys(LOCALES) as Locale[]).map((code) => {
+          const selected = code === active
+          return (
+            <li key={code}>
+              <Link
+                href={`/admin/seo?land=${code}`}
+                aria-current={selected ? 'page' : undefined}
+                className={`inline-flex min-h-11 items-center gap-2 rounded-xl border px-4 text-sm font-semibold ${
+                  selected ? 'border-primary bg-primary text-primary-foreground' : 'border-border bg-card text-foreground hover:border-primary'
+                }`}
+              >
+                <span className="text-xs tabular-nums opacity-80">{LOCALES[code].countryCode}</span>
+                {LOCALES[code].label}
+              </Link>
+            </li>
+          )
+        })}
+      </ul>
+    </nav>
+  )
+}
+
+export default async function SeoDashboardPage({ searchParams }: { searchParams: Promise<{ land?: string }> }) {
+  const { land } = await searchParams
+  const locale: Locale = isLocale(land) ? land : 'da'
   const state = await getOwnerState()
   if (state === 'signed-out') redirect('/konto')
   if (state === 'forbidden') {
@@ -124,7 +153,7 @@ export default async function SeoDashboardPage() {
   }
 
   const connected = getSearchConsoleConfig() !== null
-  const data = await getSeoDashboard()
+  const data = await getSeoDashboard(locale)
   const hasData = data.series.length > 0
 
   return (
@@ -149,11 +178,13 @@ export default async function SeoDashboardPage() {
         </div>
       </header>
 
+      <CountrySwitcher active={locale} />
+
       {!connected && <SetupGuide />}
 
       <section aria-labelledby="kpi-title" className="flex flex-col gap-3">
         <h2 id="kpi-title" className="text-lg font-bold text-foreground">
-          Seneste 28 dage
+          {LOCALES[locale].label} · seneste 28 dage
         </h2>
         <KpiGrid current={data.current} previous={data.previous} />
       </section>
@@ -178,6 +209,7 @@ export default async function SeoDashboardPage() {
         </div>
 
         <form action={addKeyword} className="flex flex-col gap-2 sm:flex-row">
+          <input type="hidden" name="locale" value={locale} />
           <label className="sr-only" htmlFor="keyword">
             Søgeord
           </label>
@@ -237,6 +269,7 @@ export default async function SeoDashboardPage() {
                   </span>
                 </div>
                 <form action={addKeyword}>
+                  <input type="hidden" name="locale" value={locale} />
                   <input type="hidden" name="keyword" value={row.query} />
                   <button type="submit" className="min-h-11 rounded-xl border border-border px-3 text-sm font-semibold text-foreground hover:border-primary">
                     Følg

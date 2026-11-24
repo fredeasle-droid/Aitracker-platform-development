@@ -34,7 +34,14 @@ async function getAccessToken({ email, privateKey }: SearchConsoleConfig) {
 
 export async function querySearchAnalytics(
   config: SearchConsoleConfig,
-  request: { startDate: string; endDate: string; dimensions: ('date' | 'query' | 'page')[]; rowLimit?: number; startRow?: number },
+  request: {
+    startDate: string
+    endDate: string
+    dimensions: ('date' | 'query' | 'page')[]
+    rowLimit?: number
+    startRow?: number
+    dimensionFilterGroups?: { groupType: 'and'; filters: { dimension: 'page'; operator: 'includingRegex' | 'excludingRegex'; expression: string }[] }[]
+  },
   token?: string,
 ) {
   const accessToken = token ?? (await getAccessToken(config))

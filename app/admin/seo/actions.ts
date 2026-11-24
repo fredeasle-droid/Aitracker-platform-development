@@ -5,6 +5,7 @@ import { revalidatePath } from 'next/cache'
 import { getOwnerState } from '@/lib/admin'
 import { db } from '@/lib/db'
 import { seoKeywords } from '@/lib/db/schema'
+import { isLocale } from '@/lib/i18n'
 import { syncSearchConsole } from '@/lib/seo/sync'
 
 async function requireOwner() {
@@ -26,7 +27,9 @@ export async function addKeyword(formData: FormData) {
   await requireOwner()
   const keyword = readKeyword(formData)
   if (!keyword) return
-  await db.insert(seoKeywords).values({ keyword, targetPath: readPath(formData) }).onConflictDoNothing()
+  const locale = String(formData.get('locale') ?? 'da')
+  if (!isLocale(locale)) return
+  await db.insert(seoKeywords).values({ locale, keyword, targetPath: readPath(formData) }).onConflictDoNothing()
   revalidatePath('/admin/seo')
 }
 
