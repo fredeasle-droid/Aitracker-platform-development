@@ -1,1 +1,2419 @@
-{}
+{
+  "matched-betting": {
+    "title": "Matched Betting: So holst du Gewinn aus Willkommensboni",
+    "metaTitle": "Matched Betting – so nutzt du Wettanbieter-Boni aus",
+    "description": "Matched Betting erklärt: Wie du Willkommensboni und Gratiswetten bei lizenzierten Wettanbietern nutzt, um dir einen Gewinn zu sichern, und wo der Unterschied zu Sure Bets liegt.",
+    "keyword": "Matched Betting",
+    "intro": "Matched Betting ist eine Technik, mit der du Boni und Gratiswetten von Wettanbietern in echtes Geld verwandelst. Indem du dasselbe Ereignis sowohl mit einer Normalwette als auch mit einer Gegenwette abdeckst, sind alle Ausgänge abgesichert und das Ergebnis spielt keine Rolle. Übrig bleibt ein garantierter Gewinn aus dem Bonus.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "So funktioniert Matched Betting"
+      },
+      {
+        "type": "p",
+        "text": "Wenn du eine Gratiswette oder einen Bonus einlöst, setzt du sie bei einem Wettanbieter auf einen Ausgang und wettest bei einer Wettbörse dagegen (Lay-Wette) oder setzt bei einem anderen Wettanbieter auf das gegenteilige Ergebnis. Da du bei der Gratiswette kein eigenes Geld einsetzt, sicherst du dir unabhängig vom Ausgang den Großteil ihres Nennwerts als Gewinn."
+      },
+      {
+        "type": "h2",
+        "text": "Bonusbedingungen und Einschränkungen"
+      },
+      {
+        "type": "p",
+        "text": "Willkommensboni sind je nach Wettanbieter und Land, in dem du wettest, an unterschiedliche Bedingungen geknüpft. In manchen regulierten Märkten werden Bonusbeträge gedeckelt und Umsatzbedingungen begrenzt, um Konsumentinnen und Konsumenten zu schützen. Lies daher immer die genauen Geschäftsbedingungen, bevor du ein Angebot annimmst."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Achte auf die Mindestquote, die zum Freischalten des Bonus nötig ist – viele Wettanbieter verlangen mindestens 1.80.",
+          "Merke dir die Gültigkeitsdauer, damit dein Bonus oder deine Gratiswette nicht ungenutzt verfällt.",
+          "Überlege, Sure Bets (Arbitrage-Wetten) einzusetzen, um Umsatzbedingungen mit minimalem Risiko zu erfüllen."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Matched Betting mit Sure Bets kombinieren"
+      },
+      {
+        "type": "p",
+        "text": "Sure Bets eignen sich ideal, um Umsatzbedingungen von Boni zu erfüllen, weil du nicht echtes Geld auf einen einzelnen Ausgang riskierst. Sobald du den Rollover geschafft hast, kannst du weiter Arbitrage-Chancen nutzen, ohne auf Aktionen angewiesen zu sein."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist Matched Betting legal?",
+        "a": "Ja. Boni im Rahmen der veröffentlichten Bedingungen des Wettanbieters zu nutzen, ist völlig legal. Allerdings behalten sich Wettanbieter das Recht vor, Angebote zurückzuziehen oder Konten zu beschränken, wenn sie der Meinung sind, dass du nicht im Sinne ihrer Aktionen wettest oder gegen die Bedingungen verstößt."
+      },
+      {
+        "q": "Wie viel sind typische Willkommensboni wert?",
+        "a": "Bonushöhe und Umsatzbedingungen unterscheiden sich je nach Wettanbieter und Rechtsraum. In manchen regulierten Märkten können Willkommensangebote gedeckelt sein – zum Beispiel bei €1,000 oder €1,000 mit einem maximalen Rollover vom Zehnfachen des Bonus. Prüfe immer die aktuellen Bedingungen beim gewählten Wettanbieter und vergewissere dich, dass er in deinem Land über eine gültige Lizenz verfügt."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Aktuelle Boni ansehen"
+  },
+  "er-surebets-lovligt": {
+    "title": "Sind Surebets legal? Regeln und steuerliche Aspekte",
+    "metaTitle": "Sind Surebets legal? Regeln, Steuern und Wettanbieter-Bedingungen",
+    "description": "Ist es legal, Surebets zu platzieren, und muss man Gewinne versteuern? Hier erfährst du die Regeln und was Wettanbieter gegen Arbitrage-Wetten unternehmen können.",
+    "keyword": "sind Surebets legal",
+    "intro": "Die kurze Antwort lautet: Ja. Surebets zu platzieren ist in den meisten Rechtsräumen legal. Du gibst ganz normale Wetten bei lizenzierten Wettanbietern ab und vergleichst Quoten, um den besten Wert zu finden – an diesem Vorgehen ist nichts illegal.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Was können Wettanbieter tun?"
+      },
+      {
+        "type": "p",
+        "text": "Auch wenn Surebets legal sind, sind Kundinnen und Kunden, die laufend Wetten mit garantiertem Gewinn platzieren, bei Wettanbietern nicht gern gesehen. In ihren Geschäftsbedingungen behalten sie sich das Recht vor, Maximaleinsätze zu senken, Märkte einzuschränken oder Konten zu beschränken. Dein eingezahltes Guthaben müssen sie jedoch immer zurückzahlen und gültige Gewinne auszahlen."
+      },
+      {
+        "type": "h2",
+        "text": "Muss man Gewinne versteuern?"
+      },
+      {
+        "type": "p",
+        "text": "Die steuerliche Behandlung von Wettgewinnen ist von Land zu Land unterschiedlich. In vielen regulierten Märkten sind Gewinne von Anbietern, die von der nationalen Glücksspielbehörde lizenziert sind, für die Spielerin bzw. den Spieler steuerfrei. Bei Offshore-Anbietern oder Anbietern ohne Lizenz können Gewinne steuerpflichtig sein. Informiere dich über die steuerlichen Regeln an deinem Wohnort oder wende dich an die zuständige Steuerbehörde, wenn du dir bei deiner Situation nicht sicher bist."
+      },
+      {
+        "type": "tip",
+        "text": "Bleib bei Wettanbietern, die von der Aufsichtsbehörde deines Landes lizenziert sind. Das bringt in der Regel steuerliche Vorteile und den Verbraucherschutz durch deine Glücksspielbehörde."
+      },
+      {
+        "type": "h2",
+        "text": "Verantwortungsvoll spielen"
+      },
+      {
+        "type": "p",
+        "text": "Auch bei Surebets ist es wichtig, die Kontrolle über dein Spielverhalten zu behalten. Setze dir Einzahlungslimits und nutze das Selbstsperrsystem deines Landes, wenn du eine Pause brauchst. Wenn du Unterstützung benötigst, wende dich an eine anerkannte Hilfsstelle für Glücksspielprobleme in deiner Region."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann ein Wettanbieter die Auszahlung von Gewinnen aus einer Surebet verweigern?",
+        "a": "Ein Wettanbieter muss gültige Gewinne auszahlen. Er kann eine Wette stornieren, wenn bei den Quoten ein offensichtlicher Fehler vorlag, und das Konto für die Zukunft beschränken."
+      },
+      {
+        "q": "Muss ich Gewinne aus Surebets versteuern?",
+        "a": "Das hängt von deinem Land ab. In vielen regulierten Märkten sind Gewinne von lizenzierten Anbietern für die Spielerin bzw. den Spieler steuerfrei. Informiere dich über die steuerlichen Regeln an deinem Wohnort."
+      }
+    ],
+    "category": "Regeln",
+    "ctaLabel": "Surebets bei lizenzierten Wettanbietern ansehen"
+  },
+  "undgaa-begraensning": {
+    "title": "So vermeidest du Limits bei Wettanbietern und hältst deine Konten länger offen",
+    "metaTitle": "Wettanbieter-Limits vermeiden – Arbing-Ratgeber 2026",
+    "description": "So vermeidest du als Arber Limits bei Wettanbietern: eine Wettstrategie, die natürlich wirkt, die besten Wettanbieter für Arbitrage-Wetten und Beispiele in €.",
+    "keyword": "Wettanbieter-Limits vermeiden",
+    "intro": "Um Limits bei Wettanbietern zu vermeiden, musst du wie ein ganz normaler Kunde wetten: runde Einsätze, beliebte Märkte, dazwischen ganz gewöhnliche Wetten und keine sofortige Reaktion auf jeden Quotenrutsch. Soft-Wettanbieter beschränken Konten, die dauerhaft die Schlussquote schlagen. Für immer lässt sich das nicht verhindern, aber mit einer klugen Wettstrategie bleiben deine Konten statt weniger Wochen mehrere Monate offen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum Wettanbieter Konten limitieren"
+      },
+      {
+        "type": "p",
+        "text": "Soft-Wettanbieter verdienen ihr Geld mit Freizeitspielern, nicht mit Kunden, die nur falsch bepreiste Quoten nutzen. Ihre Risikosysteme achten auf Muster: Wettest du auf Quoten, die kurz darauf fallen? Wettest du nur auf exotische Märkte? Sind deine Einsätze auf den Cent genau berechnet? Jedes dieser Signale erhöht deinen Risikowert."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Die Closing Line schlagen:** das stärkste Signal. Wenn deine Quoten regelmäßig besser sind als der Schlusskurs, wirst du markiert.",
+          "**Krumme Einsätze:** €463.27 wirkt wie ein Taschenrechner. €460 wirkt wie ein Mensch.",
+          "**Nischenmärkte:** Eckbälle in der zweiten Liga eines kleinen Landes ziehen Aufmerksamkeit auf sich.",
+          "**Nur auszahlen:** häufige Auszahlungen ohne Bonusse oder reguläre Wetten wirken professionell."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Die Wettstrategie, mit der deine Konten offen bleiben"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Runde deine Einsätze** auf volle Zehner. Der Gewinn ändert sich kaum.",
+          "**Bleib bei gängigen Märkten:** große Ligen, 1X2, Über/Unter und Spielsieger im Tennis.",
+          "**Streu normale Wetten ein:** ein paar kleine reguläre Wetten pro Woche, am besten auf große Spiele.",
+          "**Meide extreme Fehlquoten:** Surebets über 8–10 % fallen auf und werden ohnehin oft annulliert.",
+          "**Reagiere nicht sofort:** wer in der Sekunde setzt, in der sich eine Quote bewegt, zeigt ein klassisches Arber-Muster.",
+          "**Verteile dein Volumen** auf viele Wettanbieter, statt einen einzigen auszureizen."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: gerundete Einsätze, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Exakte Aufteilung bei den Quoten 2.10 / 2.00",
+            "€487.80 / €512.20"
+          ],
+          [
+            "Gerundete Aufteilung",
+            "€490 / €510"
+          ],
+          [
+            "Gewinn, wenn A gewinnt (2.10)",
+            "€1,029 − €1,000 = €29.00"
+          ],
+          [
+            "Gewinn, wenn B gewinnt (2.00)",
+            "€1,020 − €1,000 = €20.00"
+          ],
+          [
+            "Exakte Aufteilung zum Vergleich",
+            "ca. €24.39 in beiden Fällen"
+          ]
+        ],
+        "note": "Auch mit den gerundeten Einsätzen sicherst du dir bei beiden Ergebnissen einen Gewinn, und sie wirken für den Wettanbieter viel natürlicher."
+      },
+      {
+        "type": "h2",
+        "text": "Die besten Wettanbieter für Arbitrage-Wetten"
+      },
+      {
+        "type": "p",
+        "text": "Ein gutes Arbitrage-Setup kombiniert zwei Arten von Wettanbietern. Soft-Wettanbieter liefern die falsch bepreisten Quoten, Sharp-Wettanbieter und Wettbörsen nehmen hohe Einsätze an, ohne Gewinner zu limitieren."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Soft-Wettanbieter:** die Quelle der meisten Surebets, limitieren aber schnell. Setz sie mit Bedacht ein.",
+          "**Sharp-Wettanbieter:** niedrigere Margen und hohe Limits. Ideal für den zweiten Teil der Wette.",
+          "**Wettbörsen:** du wettest gegen andere Nutzer und wirst daher nicht fürs Gewinnen limitiert. Die Provision schmälert den Gewinn leicht."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Lies dir den vollständigen Überblick über die [besten Wettanbieter für Surebets](/en/guides/best-bookmakers-for-surebets) durch. Nutze immer Wettanbieter, die in Österreich zugelassen sind."
+      },
+      {
+        "type": "h2",
+        "text": "Was tun, wenn ein Konto limitiert wird"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Heb dein Guthaben ab,** wenn sich das Konto nicht mehr für Surebets nutzen lässt.",
+          "**Eröffne kein neues Konto** unter fremdem Namen. Das verstößt gegen die AGB und kann dazu führen, dass Gewinne einbehalten werden.",
+          "**Verlagere das Volumen** auf deine anderen Konten sowie auf Sharp-Wettanbieter oder Wettbörsen.",
+          "**Auswertung pro Wettanbieter:** ein [Bet-Tracker](/en/guides/bet-tracker) zeigt dir, welche Konten sich zu schützen lohnen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Je mehr Wettanbieter du nutzen kannst, desto weniger Volumen braucht jedes einzelne Konto. [BetTracker AI](/en) findet Surebets bei vielen Wettanbietern, sodass du deine Wetten verteilen und deine Konten länger offen halten kannst."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann ich Limits bei Wettanbietern komplett vermeiden?",
+        "a": "Bei Soft-Wettanbietern auf lange Sicht nicht. Ein natürliches Wettverhalten kann Limits aber um Monate hinauszögern, und Sharp-Wettanbieter und Wettbörsen limitieren so gut wie nie."
+      },
+      {
+        "q": "Dürfen Wettanbieter mich überhaupt limitieren?",
+        "a": "Ja, Wettanbieter können in der Regel selbst entscheiden, von wem sie Wetten annehmen. Siehe [Sind Surebets legal?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "Wie viele Wettanbieter sollte ich nutzen?",
+        "a": "Fünf bis zehn sind ein guter Anfang. So verteilt sich dein Volumen, und du hast mehr Surebets zur Auswahl."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Surebets bei mehr Wettanbietern finden"
+  },
+  "surebet-beregner": {
+    "title": "Kostenloser Surebet-Rechner: Einsätze in Sekunden berechnen",
+    "metaTitle": "Kostenloser Surebet-Rechner – Einsätze berechnen 2026",
+    "description": "Mit dem kostenlosen Surebet-Rechner teilst du deinen Einsatz auf zwei oder drei Ausgänge auf. Die Formel, Beispiele in € und wie du Einsätze sicher rundest.",
+    "keyword": "kostenloser Surebet-Rechner",
+    "intro": "Ein Surebet-Rechner teilt deinen Gesamteinsatz so auf alle Ausgänge auf, dass die Auszahlung immer gleich hoch ist, egal was passiert. Gib die Quoten und deinen Betrag ein, und der Rechner zeigt dir den Einsatz pro Ausgang, die Auszahlung und deinen Gewinn in € und %. Die Formel ist einfach, aber ein Rechner verhindert Fehler, wenn dir nur wenige Minuten zum Setzen bleiben.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "So berechnest du Surebet-Einsätze: die Formel"
+      },
+      {
+        "type": "p",
+        "text": "Addiere zuerst die Kehrwerte der Quoten: 1/Quote A + 1/Quote B (+ 1/Quote C bei drei Ausgängen). Nenne diese Summe S. Der Einsatz auf einen Ausgang ist Gesamteinsatz × 1/Quote, geteilt durch S. Die Auszahlung ist der Gesamteinsatz geteilt durch S."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Einsatz pro Ausgang:** Gesamteinsatz × (1/Quote) ÷ S",
+          "**Auszahlung:** Gesamteinsatz ÷ S",
+          "**Gewinn in %:** (1 ÷ S − 1) × 100"
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: zwei Ausgänge, Gesamteinsatz €1,500",
+        "rows": [
+          [
+            "Quote A 2.10 und Quote B 2.05",
+            "S = 0.476 + 0.488 = 0.964"
+          ],
+          [
+            "Einsatz auf A",
+            "€740.97"
+          ],
+          [
+            "Einsatz auf B",
+            "€759.03"
+          ],
+          [
+            "Auszahlung in jedem Fall",
+            "ca. €1,556.03"
+          ],
+          [
+            "Gewinn",
+            "ca. €56.03 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sportwetten-Arbitrage mit drei Ausgängen"
+      },
+      {
+        "type": "p",
+        "text": "Bei 1X2-Märkten im Fußball und Eishockey kommt ein dritter Ausgang in dieselbe Formel. Von Hand wird das mühsam, und genau hier spart dir ein Rechner am meisten Zeit."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: 1X2, Gesamteinsatz € 1.000",
+        "rows": [
+          [
+            "Heimsieg, Quote 2,50",
+            "Einsatz € 408,23"
+          ],
+          [
+            "Unentschieden, Quote 3,50",
+            "Einsatz € 291,59"
+          ],
+          [
+            "Auswärtssieg, Quote 3,40",
+            "Einsatz € 300,17"
+          ],
+          [
+            "Summe der Kehrwerte der Quoten",
+            "0.980"
+          ],
+          [
+            "Gewinn",
+            "ca. € 20,58 (2,1 %)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Runden und ungleichmäßige Einsätze"
+      },
+      {
+        "type": "p",
+        "text": "Einsätze wie € 740,97 wirken auf einen Wettanbieter auffällig. Runde auf ganze Euro oder auf Zehner. Wenn du auf € 741 und € 759 rundest, bleibt der Gewinn bei rund € 56, und zwischen den Ausgängen liegen nur ein paar Cent Unterschied."
+      },
+      {
+        "type": "p",
+        "text": "Du kannst die Einsätze auch bewusst verschieben. Wenn du nur deinen Einsatz auf einem Ausgang abdeckst, gewinnst du dort € 0 und auf dem anderen Ausgang mehr. Im obigen Beispiel ergeben € 768,29 auf A und € 731,71 auf B einen Gewinn von € 113,41, wenn A gewinnt, und € 0, wenn B gewinnt."
+      },
+      {
+        "type": "tip",
+        "text": "Rechne immer mit den Quoten, die auf deinem Wettschein tatsächlich angezeigt werden, und nicht mit jenen aus dem Scanner. Zwischen dem Scan und dem Klick können sich die Quoten ein kleines Stück verändern."
+      },
+      {
+        "type": "h2",
+        "text": "Der Surebet-Rechner als Werkzeug für den Wettalltag"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Vor der Wette:** Prüfe, ob die Summe der Kehrwerte der Quoten noch unter 1 liegt.",
+          "**Während der Wette:** Rechne neu, wenn sich eine Quote ändert.",
+          "**Nach der Wette:** Trage das Ergebnis ein, damit du deinen ROI in einem [Wett-Tracker](/en/guides/bet-tracker) verfolgen kannst."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Probiere den kostenlosen [Surebet-Rechner](/en/calculator) mit zwei oder drei Ausgängen aus. Wenn du Quoten nicht selbst eintippen möchtest, findet [BetTracker AI](/en) Surebets für dich und berechnet die Einsätze automatisch."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist der Surebet-Rechner kostenlos?",
+        "a": "Ja, der Rechner von BetTracker AI ist kostenlos und funktioniert mit zwei und drei Ausgängen."
+      },
+      {
+        "q": "Kann ich den Rechner zum Hedgen verwenden?",
+        "a": "Ja. Gib deine ursprüngliche Quote und die neue Quote auf den Gegenausgang ein, dann siehst du, wie viel du setzen musst, um dir einen Gewinn zu sichern. Mehr dazu unter [Mit Sportwetten ohne Risiko Geld verdienen](/en/guides/make-money-betting-without-risk)."
+      },
+      {
+        "q": "Warum zeigt der Rechner einen negativen Gewinn an?",
+        "a": "Die Summe der Kehrwerte der Quoten liegt über 1, also gibt es keine Surebet. Höchstwahrscheinlich hat sich eine der Quoten verändert."
+      }
+    ],
+    "category": "Grundlagen",
+    "ctaLabel": "Surebet-Rechner öffnen"
+  },
+  "odds-beregner": {
+    "title": "So verwendest du einen Quotenrechner",
+    "metaTitle": "Quotenrechner – Quoten in Wahrscheinlichkeit und Gewinn umrechnen",
+    "description": "Lerne mit einem Quotenrechner, Dezimalquoten in Wahrscheinlichkeiten umzurechnen, deinen möglichen Gewinn zu berechnen und die Marge des Wettanbieters zu ermitteln.",
+    "keyword": "Quotenrechner",
+    "intro": "Ein Quotenrechner macht aus Quoten brauchbare Zahlen: wie viel du gewinnst, für wie wahrscheinlich der Wettanbieter ein Ergebnis hält und wie viel der Wettanbieter für sich einbehält. Das sind die drei Berechnungen, die du kennen solltest.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "1. Möglicher Gewinn"
+      },
+      {
+        "type": "p",
+        "text": "Bei Dezimalquoten, wie sie die meisten Online-Wettanbieter verwenden, ergibt sich die Auszahlung aus Einsatz mal Quote. Der Gewinn ist die Auszahlung minus Einsatz."
+      },
+      {
+        "type": "example",
+        "title": "€ 200 Einsatz bei einer Quote von 2,50",
+        "rows": [
+          [
+            "Auszahlung",
+            "€200 × 2.50 = €500"
+          ],
+          [
+            "Gewinn",
+            "€500 − €200 = €300"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "2. Implizierte Wahrscheinlichkeit"
+      },
+      {
+        "type": "p",
+        "text": "Die Wahrscheinlichkeit, mit der der Wettanbieter rechnet, ist 1 geteilt durch die Quote. Eine Quote von 2,50 entspricht 40 %. Wenn du die Chance höher einschätzt, ist es eine Value Bet."
+      },
+      {
+        "type": "h2",
+        "text": "3. Marge des Wettanbieters"
+      },
+      {
+        "type": "p",
+        "text": "Zähle die impliziten Wahrscheinlichkeiten aller Ausgänge zusammen. Die Summe liegt über 100 %, und der Überschuss ist die Marge des Wettanbieters. Liegt die Summe über mehrere Wettanbieter hinweg unter 100 %, hast du eine Surebet (auch Arbitrage-Wette genannt)."
+      },
+      {
+        "type": "example",
+        "title": "Tennis: Quoten von 1,85 und 1,95 beim selben Wettanbieter",
+        "rows": [
+          [
+            "1/1.85 + 1/1.95",
+            "54.1% + 51.3% = 105.4%"
+          ],
+          [
+            "Marge des Wettanbieters",
+            "ca. 5,4 %"
+          ]
+        ],
+        "note": "Je niedriger die Marge, desto bessere Quoten bekommst du als Wettender."
+      },
+      {
+        "type": "tip",
+        "text": "Unser kostenloser Surebet-Rechner übernimmt alle drei Berechnungen für dich und verteilt den Einsatz auf mehrere Ausgänge."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie rechnet man Quoten in Prozent um?",
+        "a": "Teile 1 durch die Quote und multipliziere mit 100. Eine Quote von 2,00 entspricht 50 %, eine Quote von 4,00 entspricht 25 %."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen Dezimalquoten und Bruchquoten?",
+        "a": "Dezimalquoten zeigen die gesamte Auszahlung pro eingesetzter Einheit, z. B. 2,50. Bruchquoten wie 3/2 zeigen nur den Gewinn. Die meisten Online-Wettanbieter verwenden Dezimalquoten, Bruchquoten sind aber im Vereinigten Königreich und in Irland weiterhin üblich."
+      }
+    ],
+    "category": "Grundlagen",
+    "ctaLabel": "Rechner öffnen"
+  },
+  "value-betting-vs-surebets": {
+    "title": "Value Betting vs. Surebets: Was ist der Unterschied?",
+    "metaTitle": "Value Betting vs. Surebets – Unterschiede, Risiko & Gewinn",
+    "description": "Value Betting und Surebets nutzen beide falsch bewertete Quoten, funktionieren aber unterschiedlich. Vergleiche Risiko, Gewinnpotenzial und finde heraus, welche Strategie zu deinem Wettstil passt.",
+    "keyword": "Value Betting vs. Surebets",
+    "intro": "Sowohl Value Betting als auch Surebets nutzen Preisfehler der Wettanbieter aus. Der entscheidende Unterschied: Surebets sichern dir sofort einen garantierten Gewinn, während Value Betting erst über eine große Anzahl an Wetten Gewinn bringt.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Was ist Value Betting?"
+      },
+      {
+        "type": "p",
+        "text": "Eine Value Bet ist eine Wette, bei der die Quote höher ist, als es die tatsächliche Wahrscheinlichkeit nahelegt. Wenn ein Spiel wirklich 50:50 steht und ein Wettanbieter eine Quote von 2,20 bietet, ist das eine Value Bet. Du setzt nur auf einen Ausgang und kannst einzelne Wetten verlieren, aber auf lange Sicht bringt dir dieser Vorteil Gewinn."
+      },
+      {
+        "type": "h2",
+        "text": "Was ist eine Surebet?"
+      },
+      {
+        "type": "p",
+        "text": "Bei einer Surebet (Arbitrage-Wette) setzt du bei verschiedenen Wettanbietern auf alle Ausgänge und gewinnst unabhängig vom Ergebnis. Der Gewinn pro Wette ist kleiner, dafür bei jeder einzelnen garantiert."
+      },
+      {
+        "type": "example",
+        "title": "Vergleich",
+        "rows": [
+          [
+            "Risiko pro Wette",
+            "Surebets: niedrig · Value Bets: hoch"
+          ],
+          [
+            "Gewinn pro Wette",
+            "Surebets: 1–5% · Value Bets: schwankend"
+          ],
+          [
+            "Wetten, bis sich der Gewinn zeigt",
+            "Surebets: 1 · Value Bets: Hunderte"
+          ],
+          [
+            "Benötigte Wettkonten",
+            "Surebets: mehrere · Value Bets: eines oder mehrere"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Welche Strategie passt zu dir?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Setz auf Surebets, wenn du stabile Gewinne ohne große Schwankungen oder Durststrecken willst.",
+          "Setz auf Value Betting, wenn du Verlustserien aushältst und eine ausreichend große Bankroll hast, um die Varianz durchzustehen.",
+          "Viele kombinieren beides: Surebets für ein stetiges Einkommen und Value Bets, um den langfristigen Vorteil zu maximieren."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Wenn du gerade erst anfängst, beginn mit Surebets. So lernst du, wie Wettanbieter arbeiten, ohne hohe Verluste zu riskieren."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist Value Betting profitabler als Surebets?",
+        "a": "Value Betting kann langfristig höhere Gewinne bringen, hat aber eine deutlich größere Varianz. Surebets liefern bei jeder Wette einen kleineren, dafür stabileren Gewinn."
+      },
+      {
+        "q": "Limitieren Wettanbieter dein Konto auch beim Value Betting?",
+        "a": "Ja. Wettanbieter schränken erfolgreiche Kunden unabhängig von der Strategie ein. Value Betting lässt sich allerdings etwas schwerer erkennen, weil du auch verlierende Wetten platzierst."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Surebets in Echtzeit testen"
+  },
+  "bedste-bookmakere-til-surebets": {
+    "title": "Die besten Wettanbieter für Surebets",
+    "metaTitle": "Die besten Wettanbieter für Surebets (2026)",
+    "description": "Welche Wettanbieter eignen sich für Surebets? Erfahre, was einen guten Wettanbieter für Arbitrage-Wetten ausmacht und wie du dein Portfolio an Wettkonten aufbaust.",
+    "keyword": "beste Wettanbieter Surebets",
+    "intro": "Den einen besten Wettanbieter für Surebets gibt es nicht. Arbitrage-Wetten entstehen zwischen Wettanbietern. Entscheidend ist daher, Konten bei mehreren Anbietern zu haben, die unterschiedliche Quotenlieferanten nutzen und den Markt unterschiedlich angehen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum mehrere Wettanbieter dir mehr Surebets bringen"
+      },
+      {
+        "type": "p",
+        "text": "Viele Wettanbieter nutzen dieselbe Quotenplattform und haben deshalb nahezu identische Preise. Surebets entstehen meist zwischen Anbietern, die ihre Quoten auf eigene, unterschiedliche Weise festlegen. Wenn du nur Konten bei Anbietern mit derselben Plattform hast, siehst du deutlich weniger Arbitrage-Chancen."
+      },
+      {
+        "type": "h2",
+        "text": "Worauf du achten solltest"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Lizenz der für dich zuständigen Glücksspielbehörde, damit du geschützt bist und die steuerliche Behandlung deiner Gewinne prüfen kannst.",
+          "Schnelle Ein- und Auszahlungen, damit du dein Geld dorthin bringst, wo du es brauchst.",
+          "Breites Angebot an Sportarten und Wettmärkten, besonders bei Tennis, Fußball und Basketball.",
+          "Konkurrenzfähige Quoten und niedrige Wettanbieter-Marge bei beliebten Märkten.",
+          "Ein Willkommensbonus mit fairen Bedingungen, den du mit Surebets umsetzen kannst."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "So baust du dein Portfolio an Wettanbietern auf"
+      },
+      {
+        "type": "p",
+        "text": "Starte mit fünf bis acht lizenzierten Wettanbietern, die auf verschiedene Plattformen verteilt sind. So hast du eine gute Auswahl an Chancen, ohne zu viele Kontostände im Blick behalten zu müssen. Sobald du Routine hast, kannst du weitere dazunehmen."
+      },
+      {
+        "type": "tip",
+        "text": "In BetTrackerAI wählst du genau aus, bei welchen Wettanbietern du ein Konto hast. So siehst du nur Surebets, die du auch tatsächlich platzieren kannst."
+      },
+      {
+        "type": "h2",
+        "text": "Wettanbieter mit eigenen Quoten sind Gold wert"
+      },
+      {
+        "type": "p",
+        "text": "Wettanbieter, die ihre Quoten selbst festlegen, statt sie zuzukaufen, reagieren oft langsamer oder anders auf Neuigkeiten. Genau dort entstehen die Preisunterschiede. Auf der anderen Seite sind sie oft auch die Ersten, die erfolgreiche Konten per Gubbing einschränken."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie viele Wettanbieter brauche ich für Surebets?",
+        "a": "Ein guter Startpunkt sind fünf bis acht regulierte Wettanbieter. Je mehr verschiedene Quotenplattformen du abdeckst, desto mehr Surebets stehen dir zur Verfügung."
+      },
+      {
+        "q": "Kann ich für Arbitrage-Wetten auch Wettanbieter ohne Lizenz nutzen?",
+        "a": "Das ist nicht empfehlenswert. Wettanbieter ohne Lizenz in deinem Rechtsraum können gesperrt werden, und Gewinne von dort können steuerlich anders behandelt werden oder ohne behördlichen Schutz bleiben. Informiere dich immer über die Regeln an deinem Wohnort."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Surebets bei deinen Wettanbietern ansehen"
+  },
+  "skat-paa-spillegevinster": {
+    "title": "Steuer auf Wettgewinne – internationaler Wettratgeber",
+    "metaTitle": "Steuer auf Wettgewinne – was du wissen musst",
+    "description": "Musst du auf Wettgewinne und Surebets Steuern zahlen? Erfahre, wie die Steuerregeln bei lizenzierten und Offshore-Wettanbietern funktionieren und was du dokumentieren solltest.",
+    "keyword": "Steuer auf Wettgewinne",
+    "intro": "In vielen regulierten Märkten ist die Antwort einfach: Gewinne bei lizenzierten Wettanbietern sind für die Spieler steuerfrei. Die Abgaben führt der Wettanbieter an den Staat ab, nicht du. Die Regeln hängen aber davon ab, wo du lebst und wo du wettest.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Lizenzierte Wettanbieter: in der Regel steuerfrei"
+      },
+      {
+        "type": "p",
+        "text": "Wenn du bei einem Anbieter wettest, der von der für dich zuständigen Glücksspielbehörde lizenziert ist, zahlt der Anbieter in der Regel die Glücksspielabgabe auf seine Einnahmen. Deine Gewinne sind daher im Allgemeinen steuerfrei, und meistens musst du sie nicht bei deiner Steuerbehörde melden. Informiere dich immer über die Regeln an deinem Wohnort."
+      },
+      {
+        "type": "h2",
+        "text": "Offshore-Wettanbieter ohne lokale Lizenz"
+      },
+      {
+        "type": "p",
+        "text": "Wenn du bei Anbietern wettest, die in deinem Land keine Lizenz haben, können die Gewinne steuerpflichtig sein. Die Regeln hängen von mehreren Faktoren ab, etwa davon, ob der Anbieter in einem anderen Land lizenziert ist, und von deinem eigenen steuerlichen Wohnsitz. Das ist ein Grund, warum es oft einfacher ist, bei regulierten Wettanbietern zu bleiben."
+      },
+      {
+        "type": "h2",
+        "text": "Gilt das auch für Surebets?"
+      },
+      {
+        "type": "p",
+        "text": "Ja. Steuerlich ist eine Surebet einfach nur zwei oder drei ganz normale Wetten. Gewinne bei lizenzierten Wettanbietern sind in der Regel steuerfrei, egal ob du Surebets, Value Bets oder gewöhnliche Wetten platzierst. Es gelten dieselben Grundsätze."
+      },
+      {
+        "type": "tip",
+        "text": "Führe Buch über deine Wetten. So kannst du leicht belegen, woher das Geld stammt, falls deine Bank nachfragt."
+      },
+      {
+        "type": "h2",
+        "text": "Wetten als Beruf"
+      },
+      {
+        "type": "p",
+        "text": "Wenn Wetten deine Haupttätigkeit in großem Umfang ist, können in manchen Ländern andere Regeln gelten. Wenn du dir bei deiner eigenen Situation unsicher bist, wende dich an das zuständige Finanzamt oder an einen Steuerberater bzw. eine Steuerberaterin."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Muss ich Gewinne von lizenzierten Wettanbietern versteuern?",
+        "a": "In den meisten regulierten Märkten nicht. Gewinne bei lokal lizenzierten Anbietern sind für Spielerinnen und Spieler üblicherweise steuerfrei. Informiere dich über die steuerlichen Regeln an deinem Wohnort."
+      },
+      {
+        "q": "Woran erkenne ich, ob ein Wettanbieter in meinem Land lizenziert ist?",
+        "a": "Die Glücksspielaufsicht deines Landes veröffentlicht auf ihrer Website in der Regel eine Liste der zugelassenen Anbieter, und lizenzierte Wettanbieter zeigen meist das Logo der Behörde auf ihrer Seite an."
+      }
+    ],
+    "category": "Regeln",
+    "ctaLabel": "Mehr zu den Regeln für Surebets lesen"
+  },
+  "bankroll-management": {
+    "title": "Bankroll-Management: Ratgeber für Sportwetten und Arbitrage",
+    "metaTitle": "Bankroll-Management für Sportwetten: Ratgeber 2026",
+    "description": "Bankroll-Management bei Sportwetten: So bestimmst du deine Einsätze, verteilst dein Geld auf Buchmacher und berechnest den ROI – mit Rechenbeispielen in €.",
+    "keyword": "bankroll management ratgeber sportwetten",
+    "intro": "Gutes Bankroll-Management bedeutet, im Voraus festzulegen, wie viel Geld du für Wetten einplanst, wie hoch dein Einsatz pro Wette ist und wie du das Geld auf die Buchmacher aufteilst. Bei Value Bets setzt du 1–2 % deiner Bankroll pro Wette. Bei Surebets ist die Liquidität die Grenze: Dein Geld muss bei den richtigen Buchmachern liegen, wenn eine Surebet auftaucht. Dokumentiere alles, um deinen ROI zu messen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Bankroll-Management: die wichtigsten Grundregeln"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Geld trennen:** Deine Bankroll ist Geld, dessen Verlust du verkraften kannst, und bleibt getrennt von deinen alltäglichen Finanzen.",
+          "**Feste Einsatzregeln:** Lege die Einsatzhöhe fest, bevor du wettest – nicht nach Bauchgefühl.",
+          "**Verluste nicht jagen:** Nach einem Verlust die Einsätze zu erhöhen, leert eine Bankroll am schnellsten.",
+          "**Monatlich überprüfen:** Passe die Einsätze nach oben oder unten an deine Bankroll an, nicht an eine einzelne gute Woche."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Einsatzhöhe bei Value Bets und Surebets"
+      },
+      {
+        "type": "p",
+        "text": "Value Bets können verlieren, deshalb muss der Einsatz klein genug sein, um Verlustserien zu überstehen. Surebets verlieren nicht, wenn sie korrekt platziert werden – das Risiko liegt also in der Ausführung: Quotenänderungen, annullierte Wetten und nicht platzierte Teilwetten."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Flat Staking bei Value Bets, Bankroll € 2.000",
+        "rows": [
+          [
+            "Einsatz pro Wette (1,5 %)",
+            "€30"
+          ],
+          [
+            "10 verlorene Wetten in Folge",
+            "−€ 300 (15 % der Bankroll)"
+          ],
+          [
+            "Verbleibende Bankroll",
+            "€1,700"
+          ],
+          [
+            "Neuer Einsatz nach der Überprüfung (1,5 %)",
+            "€25.50"
+          ]
+        ],
+        "note": "Mit einem Einsatz von 1–2 % bleibst du auch bei den Verlustserien im Spiel, die jeder Value-Bettor erlebt."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Surebet-Bankroll auf Buchmacher verteilt, € 3.000",
+        "rows": [
+          [
+            "6 Buchmacher × € 500",
+            "€3,000"
+          ],
+          [
+            "Typischer Gesamteinsatz pro Surebet",
+            "€400"
+          ],
+          [
+            "60 Surebets pro Monat bei durchschnittlich 2 %",
+            "€400 × 60 × 2% = €480"
+          ],
+          [
+            "Monatliche Rendite auf die Bankroll",
+            "€480 / €3,000 = 16%"
+          ]
+        ],
+        "note": "Der Gewinn pro Surebet ist klein, aber die Bankroll wird mehrmals im Monat umgeschlagen. Die Ergebnisse hängen von Limits und verfügbaren Surebets ab."
+      },
+      {
+        "type": "h2",
+        "text": "ROI-Rechner für Sportwetten: So misst du, was du verdienst"
+      },
+      {
+        "type": "p",
+        "text": "Der ROI ist der Nettogewinn geteilt durch den gesamten Umsatz. Er zeigt dir, wie viel du pro eingesetztem € verdienst, und eignet sich am besten, um Strategien, Sportarten und Buchmacher zu vergleichen."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: ROI-Berechnung",
+        "rows": [
+          [
+            "Gesamteinsatz",
+            "€18,500"
+          ],
+          [
+            "Gesamtauszahlung",
+            "€18,870"
+          ],
+          [
+            "Nettogewinn",
+            "€370"
+          ],
+          [
+            "ROI",
+            "€370 / €18,500 = 2.0%"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Mehr dazu im Beitrag über den [ROI bei Sportwetten](/en/guides/roi-betting) – oder prüfe einzelne Surebets im [Surebet-Rechner](/en/calculator)."
+      },
+      {
+        "type": "h2",
+        "text": "Verfolge deine Wetten kostenlos und schütze deine Bankroll"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Guthaben pro Buchmacher:** Verschiebe Geld, bevor ein Konto leer ist.",
+          "**Gewinn pro Strategie:** Sieh, ob sich Surebets oder Value Bets mehr auszahlen.",
+          "**Drawdown:** Erkenne Verlustphasen früh und senke rechtzeitig deine Einsätze."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Halte rund 20 % deiner Bankroll als Reserve außerhalb der Buchmacher. So kannst du die Konten aufladen, bei denen die meisten Surebets auftauchen."
+      },
+      {
+        "type": "p",
+        "text": "Ein [Wett-Tracker](/en/guides/bet-tracker) macht das Bankroll-Management automatisch. [BetTracker AI](/en) erfasst deine Surebets, zeigt dein Guthaben pro Buchmacher und berechnet den ROI für dich."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie groß sollte meine Bankroll für Surebets sein?",
+        "a": "Viele starten mit € 1.000–€ 3.000, verteilt auf 4–6 Buchmacher. Mit weniger geht es auch, aber der Gewinn pro Surebet wird dann sehr klein."
+      },
+      {
+        "q": "Wie viel Prozent sollte ich bei Value Bets einsetzen?",
+        "a": "1–2% deiner Bankroll pro Wette gelten als gängige, konservative Faustregel. Höhere Einsätze erhöhen bei Verlustserien das Risiko, die gesamte Bankroll zu verlieren."
+      },
+      {
+        "q": "Wie berechne ich den ROI meiner Wetten?",
+        "a": "Teile den Nettogewinn durch die gesamten Einsätze. €370 Gewinn bei €18,500 Einsatz ergeben einen ROI von 2.0%."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Bankroll kostenlos tracken"
+  },
+  "arbitrage-betting": {
+    "title": "Wie funktioniert Arbitrage-Betting? So sicherst du dir bei jedem Ergebnis Gewinn",
+    "metaTitle": "Wie funktioniert Arbitrage-Betting? Ratgeber 2026",
+    "description": "So funktioniert Arbitrage-Betting: die Formel, Rechenbeispiele in € und eine Schritt-für-Schritt-Anleitung für deine erste Surebet mit gesichertem Gewinn.",
+    "keyword": "wie funktioniert arbitrage betting",
+    "intro": "Beim Arbitrage-Betting setzt du bei verschiedenen Wettanbietern auf jeden möglichen Ausgang desselben Ereignisses, wenn die Summe der Kehrwerte der Quoten unter 1 liegt. Du teilst deinen Einsatz so auf, dass die Auszahlung bei jedem Ergebnis gleich hoch ist. Die Differenz zwischen Gesamteinsatz und Auszahlung ist dein Gewinn, meist 1–3% pro Surebet, abgesichert durch Mathematik statt durch Glück.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Surebets einfach erklärt: wenn zwei Wettanbieter beim Preis auseinanderliegen"
+      },
+      {
+        "type": "p",
+        "text": "Jeder Wettanbieter legt seine Quoten selbst fest und rechnet eine Marge von 4–7% ein. Auf Verletzungen, Aufstellungen und große Wetteinsätze reagieren die Anbieter aber unterschiedlich schnell. Senkt ein Anbieter eine Quote zu langsam, während ein anderer das Gegenergebnis schon angehoben hat, bleibt bei beiden Quoten zusammen ein Überschuss übrig. Das ist eine Surebet. Neu im Thema? Starte mit [Was sind Surebets?](/en/guides/what-are-surebets)."
+      },
+      {
+        "type": "p",
+        "text": "Der Test ist einfach: Berechne für jedes Ergebnis 1 ÷ Quote und addiere die Werte. Liegt die Summe unter 1.00, hast du eine Arbitrage-Chance. Je niedriger die Summe, desto höher der Gewinn."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Tennismatch mit zwei Ausgängen, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Spieler A bei Wettanbieter 1, Quote 2.08",
+            "Einsatz €492.68"
+          ],
+          [
+            "Spieler B bei Wettanbieter 2, Quote 2.02",
+            "Einsatz €507.32"
+          ],
+          [
+            "1/2.08 + 1/2.02",
+            "0.481 + 0.495 = 0.976"
+          ],
+          [
+            "Auszahlung, egal wer gewinnt",
+            "ca. €1,024.78"
+          ],
+          [
+            "Gesicherter Gewinn",
+            "ca. €24.78 (2.5%)"
+          ]
+        ],
+        "note": "Die Summe liegt unter 1, also verdienst du rund €24.78, unabhängig davon, wer das Match gewinnt."
+      },
+      {
+        "type": "h2",
+        "text": "Arbitrage-Betting-Ratgeber: drei Ausgänge im Fußball"
+      },
+      {
+        "type": "p",
+        "text": "Im Fußball gibt es Heimsieg, Unentschieden und Auswärtssieg. Das Prinzip bleibt gleich, du brauchst nur drei Quoten und oft drei Wettanbieter. Weil sich die Marge auf drei Ausgänge verteilt, sind 1X2-Surebets seltener und der Gewinn fällt tendenziell etwas niedriger aus als im Tennis."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Premier-League-Spiel, Gesamteinsatz €2,000",
+        "rows": [
+          [
+            "Heimsieg, Quote 2.15",
+            "Einsatz €942.69"
+          ],
+          [
+            "Unentschieden, Quote 3.60",
+            "Einsatz €562.99"
+          ],
+          [
+            "Auswärtssieg, Quote 4.10",
+            "Einsatz €494.33"
+          ],
+          [
+            "Summe der Kehrwerte der Quoten",
+            "0.987"
+          ],
+          [
+            "Auszahlung bei jedem Ergebnis",
+            "ca. €2,026.75"
+          ],
+          [
+            "Gesicherter Gewinn",
+            "ca. €26.75 (1.3%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Surebets platzieren: von Hand oder mit Scanner"
+      },
+      {
+        "type": "p",
+        "text": "Theoretisch kannst du die Quoten in einem Dutzend Browser-Tabs vergleichen, aber Surebets halten oft nur wenige Minuten. Bis du fertig gerechnet hast, hat sich die Quote meist schon verändert. Deshalb nutzen die meisten Wettende einen Quotenscanner, der die Wettanbieter laufend vergleicht. Mehr dazu, wie du [Surebets automatisch findest](/en/guides/find-surebets-automatically)."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Von Hand:** kostenlos, aber langsam – und meist bist du zu spät dran, bevor sich die Quote ändert.",
+          "**Mit Scanner:** Surebets erscheinen mit bereits berechneter Einsatzaufteilung, du kannst also sofort handeln.",
+          "**Rechner:** Egal, welche Methode du nutzt, prüfe die Einsätze vor dem Platzieren im [Surebet-Rechner](/en/calculator)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Risikolos wetten in der Praxis: fünf Schritte zu deiner ersten Surebet"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**1. Konten eröffnen** bei mindestens zwei lizenzierten Wettanbietern, am besten bei mehr, und vorab einzahlen.",
+          "**2. Surebet finden,** bei der die Summe der Kehrwerte der Quoten unter 1.00 liegt.",
+          "**3. Einsätze berechnen,** sodass die Auszahlung bei jedem Ausgang gleich hoch ist.",
+          "**4. Beide Wetten rasch platzieren,** und zwar zuerst jene mit der Quote, die sich am ehesten ändert.",
+          "**5. Wettscheine kontrollieren:** Markt, Linie und Quote müssen exakt mit deiner Berechnung übereinstimmen."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Die Mathematik ist risikolos, die Umsetzung nicht immer. **Quotenänderungen** während du die zweite Wette platzierst, **stornierte Wetten** bei offensichtlichen Quotenfehlern und **limitierte Konten** sind die echten Risiken. Halte die Einsätze anfangs moderat und lies, wie du [Limits bei Wettanbietern vermeidest](/en/guides/avoid-bookmaker-limits)."
+      },
+      {
+        "type": "p",
+        "text": "Du willst Live-Surebets samt fertig berechneten Einsätzen sehen? [BetTracker AI](/en) durchsucht die Wettanbieter für dich und zeigt dir Surebets in Echtzeit."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist Arbitrage-Betting legal?",
+        "a": "Ja, in den meisten Ländern ist es nicht verboten, auf alle Ausgänge eines Ereignisses zu wetten. Wettanbieter können dein Konto trotzdem limitieren. Siehe [Sind Surebets legal?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "Wie viel kann man mit Surebets verdienen?",
+        "a": "Eine typische Surebet bringt 1–3% des Gesamteinsatzes. Bei €1,000 pro Surebet, 40 Surebets im Monat und durchschnittlich 1.5% sind das rund €600 im Monat."
+      },
+      {
+        "q": "Wie viele Wettanbieter brauche ich?",
+        "a": "Mindestens zwei, aber je mehr Konten du hast, desto mehr Surebets kannst du nutzen. Viele Arber arbeiten mit fünf bis zehn Wettanbietern."
+      },
+      {
+        "q": "Was tun, wenn sich die Quoten vor meiner zweiten Wette ändern?",
+        "a": "Berechne die zweite Wette mit der neuen Quote neu. Liegt die Summe weiterhin unter 1, hast du eine kleinere Surebet. Liegt sie darüber, begrenzt du den Verlust, indem du dich zur besten verfügbaren Quote absicherst."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Jetzt Surebets finden"
+  },
+  "hvad-er-surebets": {
+    "title": "Was sind Surebets? So funktionieren garantierte Quoten",
+    "metaTitle": "Was sind Surebets? Der komplette Ratgeber zu Arbitrage-Wetten",
+    "description": "Erfahre, was Surebets sind, wie sie entstehen und wie du bei verschiedenen Wettanbietern auf alle Ausgänge setzt, um dir einen garantierten Gewinn zu sichern.",
+    "keyword": "Surebets",
+    "intro": "Eine Surebet – auch Arbitrage-Wette oder Arbing genannt – ist eine Kombination von Quoten verschiedener Wettanbieter, bei der du auf alle möglichen Ausgänge eines Spiels setzen kannst und trotzdem Gewinn machst, egal wie es ausgeht. Das klingt zu gut, um wahr zu sein, ist aber reine Mathematik.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum gibt es Surebets?"
+      },
+      {
+        "type": "p",
+        "text": "Wettanbieter legen ihre Quoten unabhängig voneinander fest. Sie arbeiten mit unterschiedlichen Modellen, reagieren unterschiedlich auf Neuigkeiten und wollen Wetten auf bestimmte Ausgänge anziehen. Dadurch kann ein Anbieter hohe Quoten auf das Heimteam bieten, während ein anderer hohe Quoten auf das Auswärtsteam anbietet. Wird der Unterschied groß genug, entsteht eine Surebet."
+      },
+      {
+        "type": "p",
+        "text": "Surebets halten meist nur wenige Minuten. Sobald die Wettanbieter ihre Quoten anpassen, ist die Chance weg. Deshalb braucht es entweder viele Stunden manueller Suche oder einen Scanner, der den Markt laufend überwacht."
+      },
+      {
+        "type": "h2",
+        "text": "Woran du erkennst, ob es eine Surebet ist"
+      },
+      {
+        "type": "p",
+        "text": "Du berechnest den Kehrwert jeder Quote (1 geteilt durch die Quote) und addierst alle Werte. Liegt die Summe unter 1, hast du eine Surebet. Je niedriger die Summe, desto höher dein Gewinn."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Tennis mit zwei Ausgängen",
+        "rows": [
+          [
+            "Spieler A bei Wettanbieter 1",
+            "Quote 2.10"
+          ],
+          [
+            "Spieler B bei Wettanbieter 2",
+            "Quote 2.05"
+          ],
+          [
+            "1/2.10 + 1/2.05",
+            "0.476 + 0.488 = 0.964"
+          ],
+          [
+            "Garantierter Gewinn",
+            "ca. 3.7%"
+          ]
+        ],
+        "note": "Die Summe liegt unter 1, also ist diese Kombination eine Surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Wie teilst du deinen Einsatz auf?"
+      },
+      {
+        "type": "p",
+        "text": "Dein Einsatz muss so aufgeteilt werden, dass die Auszahlung gleich hoch ist, egal wer gewinnt. Bei einem Gesamteinsatz von 1,000 Einheiten setzt du im obigen Beispiel ungefähr 494 Einheiten auf Spieler A und ungefähr 506 Einheiten auf Spieler B. Beide Ausgänge bringen rund 1,037 Einheiten zurück, also einen Gewinn von etwa 37 Einheiten."
+      },
+      {
+        "type": "tip",
+        "text": "Das musst du nicht selbst ausrechnen. Unser kostenloser Surebet-Rechner teilt den Einsatz automatisch auf und zeigt dir deinen garantierten Gewinn."
+      },
+      {
+        "type": "h2",
+        "text": "Worauf solltest du achten?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Quoten können sich ändern, während du deine Wetten platzierst. Setze zuerst die Wette mit der unbeständigsten Quote.",
+          "Prüfe, ob der Markt bei beiden Wettanbietern exakt derselbe ist, zum Beispiel ob die Verlängerung zählt.",
+          "Halte bei mehreren Wettanbietern Guthaben bereit, damit du schnell reagieren kannst.",
+          "Wettanbieter können Konten beschränken, die nur auf Surebets setzen. Lies unseren Ratgeber dazu, wie du Gubbing und Kontolimits vermeidest."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "Sind Surebets risikofrei?",
+        "a": "Mathematisch ist der Gewinn garantiert, sobald beide Wetten zu den richtigen Quoten platziert sind. In der Praxis liegt das Risiko in Quotenänderungen, stornierten Wetten oder Fehlern im Markt."
+      },
+      {
+        "q": "Wie viel kann man mit Surebets verdienen?",
+        "a": "Die meisten Surebets bringen zwischen 1 und 5% deines Einsatzes. Der Gewinn entsteht durch die Wiederholung, nicht durch einzelne große Treffer."
+      },
+      {
+        "q": "Wie findest du Surebets?",
+        "a": "Du kannst Quoten von Hand vergleichen, das ist aber mühsam und langsam. Ein Surebet-Scanner wie BetTrackerAI überwacht die für dich verfügbaren Wettanbieter und zeigt dir Chancen, sobald sie entstehen."
+      }
+    ],
+    "category": "Grundlagen",
+    "ctaLabel": "Aktuelle Surebets ansehen"
+  },
+  "dutching-betting": {
+    "title": "Dutching: So verteilst du deinen Einsatz auf mehrere Ausgänge",
+    "metaTitle": "Dutching bei Sportwetten – Erklärung, Formel und Beispiel",
+    "description": "Beim Dutching verteilst du deinen Einsatz auf mehrere Ausgänge, sodass du unabhängig vom Gewinner denselben Ertrag erhältst. Hier findest du die Formel und ein Beispiel.",
+    "keyword": "Dutching Wetten",
+    "intro": "Dutching ist eine Wettmethode, bei der du auf mehrere Ausgänge desselben Ereignisses setzt und deinen Einsatz so verteilst, dass du die gleiche Auszahlung erhältst, egal welche deiner Auswahlen gewinnt. Die Methode ist besonders bei Turnieren und Märkten mit vielen möglichen Ausgängen nützlich.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Der Unterschied zwischen Dutching und Surebets"
+      },
+      {
+        "type": "p",
+        "text": "Bei einer Surebet deckst du alle Ausgänge ab und gewinnst unabhängig vom Ergebnis. Beim Dutching deckst du nur einen Teil der Ausgänge ab. Gewinnt einer davon, erhältst du immer denselben Ertrag, gewinnt aber keiner, verlierst du deinen gesamten Einsatz. Dutching ist daher nicht risikofrei."
+      },
+      {
+        "type": "h2",
+        "text": "Die Formel"
+      },
+      {
+        "type": "p",
+        "text": "Berechne für jeden Ausgang 1/Quote und addiere die Werte. Nenne die Summe S. Der Einsatz auf einen Ausgang ist der Gesamteinsatz mal (1/Quote) geteilt durch S. Die Auszahlung entspricht dem Gesamteinsatz geteilt durch S."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: drei Spieler in einem Turnier, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Spieler A, Quote 3.00",
+            "Einsatz ca. €444"
+          ],
+          [
+            "Spieler B, Quote 4.00",
+            "Einsatz ca. €333"
+          ],
+          [
+            "Spieler C, Quote 6.00",
+            "Einsatz ca. €222"
+          ],
+          [
+            "S = 0.333 + 0.250 + 0.167",
+            "0.750"
+          ],
+          [
+            "Wenn einer der drei gewinnt",
+            "Auszahlung ca. €1,333, Gewinn ca. €333"
+          ],
+          [
+            "Wenn keiner der drei gewinnt",
+            "Verlust von €1,000"
+          ]
+        ],
+        "note": "Der Gewinn tritt nur ein, wenn einer deiner drei Spieler gewinnt. Wie wahrscheinlich das ist, musst du selbst einschätzen."
+      },
+      {
+        "type": "h2",
+        "text": "Wann ist Dutching sinnvoll?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wenn du glaubst, dass sich der Großteil der Wahrscheinlichkeit auf wenige Ergebnisse verteilt, z. B. auf die drei Favoriten eines Turniers.",
+          "Wenn du das Risiko streuen willst, statt auf ein einzelnes Ergebnis zu setzen.",
+          "Wenn du bei mehreren Wettanbietern bessere Quoten bekommst und deinen Einsatz darauf aufteilen möchtest."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Dutching ist kein Ersatz für Surebets. Wer einen garantierten Gewinn will, muss alle Ausgänge bei verschiedenen Wettanbietern abdecken. Der Rechner zeigt dir den Unterschied sofort."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist Dutching dasselbe wie Arbitrage-Wetten?",
+        "a": "Nein. Bei Arbitrage-Wetten (Surebets) deckst du alle Ausgänge ab und gewinnst unabhängig vom Ergebnis. Beim Dutching deckst du nur einen Teil der Ausgänge ab und kannst deinen gesamten Einsatz verlieren."
+      },
+      {
+        "q": "Kann man beim Dutching Geld verlieren?",
+        "a": "Ja. Gewinnt keines der Ergebnisse, auf die du gesetzt hast, verlierst du deinen gesamten Gesamteinsatz."
+      },
+      {
+        "q": "Wie berechnet man die Einsätze beim Dutching?",
+        "a": "Addiere 1/Quote für deine Ergebnisse (S). Der Einsatz auf jedes Ergebnis ist der Gesamteinsatz mal 1/Quote, geteilt durch S."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Einsatz mit dem Rechner aufteilen"
+  },
+  "tennis-surebets": {
+    "title": "Surebets im Tennis: so findest und spielst du sie",
+    "metaTitle": "Tennis-Surebets – garantierter Gewinn mit Tennis-Quoten",
+    "description": "Tennis eignet sich ideal für Surebets, da es nur zwei Ausgänge gibt. Hier findest du ein Rechenbeispiel und die Stolperfallen, die du bei Arbitrage-Wetten auf Tennis vermeiden musst.",
+    "keyword": "Tennis-Surebets",
+    "intro": "Tennis zählt zu den einfachsten Sportarten für Surebets. Ein Match hat nur zwei Ausgänge und kein Unentschieden, du brauchst also nur zwei Wettanbieter und zwei Wetten.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum sich Tennis für Surebets eignet"
+      },
+      {
+        "type": "p",
+        "text": "Bei zwei Ausgängen ist die Berechnung einfach, und du musst nur zwei Wetten platzieren. Jeden Tag werden über alle Zeitzonen hinweg viele Matches gespielt, die Wettanbieter setzen daher laufend neue Quoten – und das nicht einheitlich."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Quoten 1.95 und 2.20, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Spieler A bei Wettanbieter 1, Quote 1.95",
+            "Einsatz ca. €530"
+          ],
+          [
+            "Spieler B bei Wettanbieter 2, Quote 2.20",
+            "Einsatz ca. €470"
+          ],
+          [
+            "1/1.95 + 1/2.20",
+            "0.513 + 0.455 = 0.967"
+          ],
+          [
+            "Auszahlung unabhängig vom Sieger",
+            "ca. €1,034"
+          ],
+          [
+            "Gewinn",
+            "ca. €34 (3.4%)"
+          ]
+        ],
+        "note": "Die Summe liegt unter 1, daher ist die Kombination eine Surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Stolperfallen bei Tennis-Surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Aufgabe eines Spielers: Gibt ein Spieler mitten im Match auf, können die Regeln der Wettanbieter unterschiedlich sein. Manche erklären die Wette für ungültig, andere werten sie. Lies die Bedingungen bei beiden.",
+          "Walkovers und Matches, die gar nicht stattfinden, können zu stornierten Wetten und einer offenen Position führen.",
+          "Falsches Match: Kontrolliere Spielernamen und Turnier, besonders bei kleineren Turnieren, wo Namen ähnlich sein können.",
+          "Live-Quoten ändern sich schnell. Pre-Match-Surebets lassen sich leichter rechtzeitig platzieren."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Platziere zuerst dort die Wette, wo die Quoten am stärksten schwanken, und danach die andere. So minimierst du das Risiko, auf einer halben Surebet sitzen zu bleiben."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Warum eignet sich Tennis gut für Surebets?",
+        "a": "Weil es nur zwei Ausgänge und kein Unentschieden gibt. Du brauchst nur zwei Wettanbieter und platzierst zwei Wetten."
+      },
+      {
+        "q": "Was passiert, wenn ein Spieler bei einer Surebet mitten im Match aufgibt?",
+        "a": "Das hängt von den Regeln der Wettanbieter ab. Manche erklären die Wette für ungültig, wenn das Match nicht zu Ende gespielt wird, andere werten sie. Das ist eines der größten Risiken bei Arbitrage-Wetten auf Tennis, lies daher vorher die Bedingungen."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Aktuelle Surebets ansehen"
+  },
+  "fodbold-surebets": {
+    "title": "Surebets im Fußball: so deckst du drei Ausgänge ab",
+    "metaTitle": "Fußball-Surebets – so teilst du 1X2-Quoten auf",
+    "description": "Im Fußball gibt es drei Ausgänge, für eine Surebet braucht es daher drei Wetten. So verteilst du deinen Einsatz auf Heimsieg, Unentschieden und Auswärtssieg und umgehst die typischen Stolperfallen.",
+    "keyword": "Fußball-Surebets",
+    "intro": "Im Fußball gibt es drei mögliche Ausgänge: Heimsieg, Unentschieden und Auswärtssieg. Eine Surebet auf dem 1X2-Markt erfordert deshalb drei Wetten, und die besten Quoten findest du oft bei drei verschiedenen Wettanbietern.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "So berechnest du drei Ausgänge"
+      },
+      {
+        "type": "p",
+        "text": "Die Formel ist dieselbe wie bei zwei Ausgängen. Addiere 1/Quote für alle drei Ausgänge. Liegt die Summe unter 1, hast du eine Surebet. Der Einsatz für jeden Ausgang ist der Gesamteinsatz mal 1/Quote, geteilt durch die Summe."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: drei Wettanbieter, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Heimsieg bei Wettanbieter 1, Quote 2.40",
+            "Einsatz ca. €424"
+          ],
+          [
+            "Unentschieden bei Wettanbieter 2, Quote 3.80",
+            "Einsatz ca. €268"
+          ],
+          [
+            "Auswärtssieg bei Wettanbieter 3, Quote 3.30",
+            "Einsatz ca. €308"
+          ],
+          [
+            "1/2.40 + 1/3.80 + 1/3.30",
+            "0.417 + 0.263 + 0.303 = 0.983"
+          ],
+          [
+            "Auszahlung unabhängig vom Ausgang",
+            "ca. €1,017"
+          ],
+          [
+            "Gewinn",
+            "ca. €17 (1.7%)"
+          ]
+        ],
+        "note": "Der Gewinn fällt kleiner aus als beim Tennis, und bei drei Wetten ist das Risiko höher, dass sich die Quoten ändern, während du sie platzierst."
+      },
+      {
+        "type": "h2",
+        "text": "Stolperfallen bei Fußball-Surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Prüfe, ob der Markt bei allen Wettanbietern für dieselbe Spielzeit gilt. 1X2 umfasst normalerweise nur die reguläre Spielzeit, kontrolliere aber bei Cupspielen und Play-off-Partien die Regeln.",
+          "Verschobene und abgebrochene Spiele werden unterschiedlich abgerechnet. Lies daher die Regeln bei jedem Wettanbieter nach.",
+          "Bei drei Wetten steigt das Risiko, dass sich die Quoten ändern. Platziere die volatilste Wette zuerst – meist ist das die Wette mit der höchsten Quote oder auf dem am wenigsten liquiden Markt.",
+          "Greife am besten zu Zwei-Weg-Märkten wie dem Asiatischen Handicap oder Über/Unter 2.5 Tore, wenn du bei zwei Wettanbietern bleiben und das Risiko von Quotenänderungen verringern möchtest."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Wähle in BetTrackerAI die Wettanbieter aus, bei denen du bereits Guthaben hast. So siehst du nur Surebets, die du auch wirklich platzieren kannst."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Warum sind Fußball-Surebets schwieriger als Tennis-Surebets?",
+        "a": "Weil es drei statt zwei mögliche Ausgänge gibt. Du musst drei Wetten platzieren, oft bei drei verschiedenen Wettanbietern, und das Risiko, dass sich die Quoten währenddessen ändern, ist größer."
+      },
+      {
+        "q": "Gilt der 1X2-Markt inklusive Verlängerung?",
+        "a": "Normalerweise nicht. 1X2 umfasst in der Regel nur die 90 Minuten plus Nachspielzeit, die Regeln können aber abweichen. Prüfe vor dem Platzieren deiner Wetten immer die Geschäftsbedingungen des jeweiligen Wettanbieters."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Aktuelle Surebets ansehen"
+  },
+  "bookmakerens-margin": {
+    "title": "Wettanbieter-Marge: So erkennst du, was Quoten wirklich kosten",
+    "metaTitle": "Wettanbieter-Marge – Overround berechnen und bessere Quoten finden",
+    "description": "Wettanbieter verdienen über eine eingebaute Marge in ihren Quoten. Lerne, sie zu berechnen und die Wettanbieter mit den besten Quoten zu finden.",
+    "keyword": "wettanbieter marge",
+    "intro": "Wenn du die impliziten Wahrscheinlichkeiten eines Marktes zusammenzählst, ergibt die Summe mehr als 100%. Der Überschuss ist die Marge des Wettanbieters, auch Overround genannt. Sie ist der Preis, den du fürs Wetten bezahlst.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "So berechnest du die Marge"
+      },
+      {
+        "type": "p",
+        "text": "Berechne 1/Quote für alle Ausgänge des Marktes und addiere die Ergebnisse. Ziehst du von der Summe 1 ab, erhältst du die Marge."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Fußballspiel mit den Quoten 2.10, 3.40 und 3.60",
+        "rows": [
+          [
+            "1/2.10 + 1/3.40 + 1/3.60",
+            "0.476 + 0.294 + 0.278 = 1.048"
+          ],
+          [
+            "Marge des Wettanbieters",
+            "ca. 4.8%"
+          ],
+          [
+            "Auszahlungsquote",
+            "ca. 95.4%"
+          ],
+          [
+            "Heimsieg ohne Marge",
+            "ca. 45.4%"
+          ]
+        ],
+        "note": "Die Quote 2.10 entspricht 47.6%, ohne Marge liegt die tatsächliche Wahrscheinlichkeit aber bei rund 45.4%."
+      },
+      {
+        "type": "h2",
+        "text": "Warum ist die Marge wichtig?"
+      },
+      {
+        "type": "p",
+        "text": "Je niedriger die Marge, desto bessere Quoten bekommst du für dieselbe Wahrscheinlichkeit. Über viele Wetten hinweg macht der Unterschied zwischen 3% und 7% einen deutlichen Unterschied für deine Bankroll. Vergleiche daher die Margen der Wettanbieter, die du nutzt, auf den Märkten, auf die du am häufigsten wettest."
+      },
+      {
+        "type": "h2",
+        "text": "Marge und Surebets"
+      },
+      {
+        "type": "p",
+        "text": "Eine Surebet entsteht, wenn die besten Quoten mehrerer Wettanbieter zusammen eine Summe unter 1 ergeben. Die Marge der Wettanbieter wird dann durch ihre unterschiedliche Preiseinschätzung mehr als ausgeglichen. Genau danach sucht ein Scanner."
+      },
+      {
+        "type": "tip",
+        "text": "Gib in unserem Rechner die Quoten ein und sieh sofort die Summe. Liegt sie unter 1, hast du eine Surebet."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Was ist eine gute Marge beim Wettanbieter?",
+        "a": "Je niedriger, desto besser. Bei beliebten Fußballmärkten sind 3–6% Marge üblich, bei kleineren Ligen und Spezialmärkten ist die Marge oft höher."
+      },
+      {
+        "q": "Was ist der Overround?",
+        "a": "Overround ist der englische Begriff für die Marge des Wettanbieters, also dafür, wie weit die impliziten Wahrscheinlichkeiten in Summe über 100% liegen."
+      }
+    ],
+    "category": "Grundlagen",
+    "ctaLabel": "Quotensumme berechnen"
+  },
+  "asiatisk-handicap": {
+    "title": "Asiatisches Handicap erklärt: Ganze, halbe und Viertel-Linien",
+    "metaTitle": "Asiatisches Handicap erklärt – einfacher Leitfaden mit Beispielen",
+    "description": "So funktioniert das Asiatische Handicap: Was -0.5, -1 und -0.25 bedeuten, wann du deinen Einsatz zurückbekommst und warum die Linie bei Surebets wichtig ist.",
+    "keyword": "asiatisches handicap",
+    "intro": "Das Asiatische Handicap ist ein Fußball-Wettmarkt, bei dem das Unentschieden ausgeschlossen oder aufgeteilt wird. So bleiben nur zwei Ausgänge übrig, weshalb der Markt gerne von Spielern genutzt wird, die Surebets und Arbitrage-Wetten suchen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Ganze Linien: Einsatz zurück bei Unentschieden"
+      },
+      {
+        "type": "p",
+        "text": "Bei einem Handicap von 0 oder einer ganzen Zahl kann dein Einsatz zurückerstattet werden. Heimteam 0 bedeutet: Endet das Spiel unentschieden, bekommst du dein Geld zurück. Heimteam -1 bedeutet, dass die Mannschaft mit mindestens zwei Toren Unterschied gewinnen muss, damit die Wette Gewinn bringt. Gewinnt sie mit genau einem Tor, erhältst du deinen Einsatz zurück."
+      },
+      {
+        "type": "h2",
+        "text": "Halbe Linien: keine Rückerstattung des Einsatzes"
+      },
+      {
+        "type": "p",
+        "text": "Bei -0.5 muss das Team gewinnen. Bei einem Unentschieden oder einer Niederlage ist die Wette verloren. Bei +0.5 gewinnst du, wenn das Team gewinnt oder unentschieden spielt. Es gibt immer nur Gewinn oder Verlust, der Einsatz wird nie zurückerstattet."
+      },
+      {
+        "type": "h2",
+        "text": "Viertel-Linien: Einsatz wird halbiert und aufgeteilt"
+      },
+      {
+        "type": "p",
+        "text": "Bei -0.25 wird der Einsatz in zwei Hälften geteilt: eine Hälfte auf 0, die andere auf -0.5. Bei +0.25 liegt eine Hälfte auf 0 und die andere auf +0.5. Das Ergebnis kann daher ein halber Gewinn oder ein halber Verlust sein."
+      },
+      {
+        "type": "example",
+        "title": "Heimteam -0.25 mit €100 Einsatz",
+        "rows": [
+          [
+            "Heimteam gewinnt",
+            "beide Hälften gewinnen"
+          ],
+          [
+            "Unentschieden",
+            "€50 zurück, €50 verloren"
+          ],
+          [
+            "Heimteam verliert",
+            "beide Hälften verloren"
+          ]
+        ],
+        "note": "Bei +0.25 auf das Auswärtsteam ist es umgekehrt: Bei einem Unentschieden gewinnt eine Hälfte, und bei der anderen bekommst du den Einsatz zurück."
+      },
+      {
+        "type": "h2",
+        "text": "Asiatisches Handicap und Surebets"
+      },
+      {
+        "type": "p",
+        "text": "Da der Markt nur zwei Ausgänge hat, kannst du Heimteam -0.5 bei einem Wettanbieter mit Auswärtsteam +0.5 bei einem anderen kombinieren und brauchst für eine Surebet nur zwei Wettanbieter. Achte darauf, dass beide Seiten die passende Linie haben: -0.5 passt zu +0.5 und -0.25 passt zu +0.25."
+      },
+      {
+        "type": "tip",
+        "text": "Prüfe vor jeder Surebet immer die Linie. Schon ein Viertel-Linien-Unterschied kann aus einem garantierten Gewinn eine riskante Wette machen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Was bedeutet Asiatisches Handicap -0,5?",
+        "a": "Das Team muss das Spiel gewinnen, damit du Gewinn machst. Bei einem Unentschieden oder einer Niederlage ist die Wette verloren."
+      },
+      {
+        "q": "Bekomme ich beim Asiatischen Handicap meinen Einsatz zurück?",
+        "a": "Bei ganzen Linien wie 0 oder -1 bekommst du deinen Einsatz zurück, wenn das Spielergebnis genau dem Handicap entspricht. Bei halben Linien kommt das nie vor, und bei Viertellinien kann es einen halben Gewinn oder einen halben Verlust geben."
+      }
+    ],
+    "category": "Grundlagen",
+    "ctaLabel": "Aktuelle Surebets ansehen"
+  },
+  "bet-tracker": {
+    "title": "Alternative zur Wett-Tabelle: Jede Wette automatisch erfassen",
+    "metaTitle": "Alternative zur Wett-Tabelle – Bet Tracker 2026",
+    "description": "Ersetze deine Wett-Tabelle durch einen Bet Tracker: Was du erfassen solltest, wie du den ROI berechnest, Beispiele in € und was die beste Bet-Tracker-App können muss.",
+    "keyword": "alternative zur wett-tabelle",
+    "intro": "Die beste Alternative zur Wett-Tabelle ist ein Bet Tracker, der jede Wette, jeden Einsatz und jedes Ergebnis für dich erfasst und ROI, Gewinn pro Wettanbieter und Kontostand automatisch berechnet. Tabellen stoßen an ihre Grenzen, sobald du pro Woche Dutzende Surebets platzierst: Formeln werden überschrieben, Wetten fehlen und stornierte Wetten verfälschen die Zahlen. Ein Tracker zeigt dir in Sekunden das echte Bild.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum die Wett-Tabelle irgendwann nicht mehr funktioniert"
+      },
+      {
+        "type": "p",
+        "text": "Für zehn Wetten im Monat reicht eine Tabelle völlig aus. Beim Arbitrage-Wetten hat jede Surebet aber zwei oder drei Wetten bei verschiedenen Wettanbietern. Bei 50 Surebets sind das 100 bis 150 Zeilen, die du von Hand eintippen, abrechnen und abgleichen musst."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Tippfehler:** Eine falsche Quote oder ein falscher Einsatz ruiniert deinen ROI.",
+          "**Fehlende Wetten:** Fehlt eine Wette, sieht eine gewonnene Surebet wie ein Verlust aus.",
+          "**Stornierungen und Teilannahmen:** Mit einfachen Formeln kaum korrekt abzubilden.",
+          "**Kein Überblick pro Wettanbieter:** Du siehst nicht auf einen Blick, wo dein Geld tatsächlich liegt."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Wetten tracken: Was du bei jeder Wette erfassen solltest"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Datum und Ereignis**, damit du die Wette später wiederfindest.",
+          "**Wettanbieter, Markt und Quote**, genau so, wie sie auf dem Wettschein angenommen wurden.",
+          "**Einsatz und Ergebnis**: gewonnen, verloren, storniert oder bei Asiatischen Linien halb gewonnen.",
+          "**Wettart**: Surebet, Value Bet oder normale Wette, damit du Strategien vergleichen kannst.",
+          "**Schlussquote**, wenn du Value Bets spielst, um zu sehen, ob du den Markt geschlagen hast."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: ein Monat mit erfassten Surebets",
+        "rows": [
+          [
+            "Anzahl der Surebets",
+            "60"
+          ],
+          [
+            "Gesamtumsatz (alle Wetten)",
+            "€24,000"
+          ],
+          [
+            "Gesamtauszahlung",
+            "€24,720"
+          ],
+          [
+            "Nettogewinn",
+            "€720"
+          ],
+          [
+            "ROI",
+            "€720 / €24,000 = 3.0%"
+          ]
+        ],
+        "note": "Ohne Tracking siehst du nur, wie sich dein Kontostand bewegt. Mit Tracking siehst du, dass du mit jedem umgesetzten €100 einen Gewinn von €3 machst."
+      },
+      {
+        "type": "h2",
+        "text": "Die beste Bet-Tracker-App: Das muss sie können"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Surebet-Wetten zusammenfassen**, damit die ganze Arbitrage als eine Position mit einem Gewinn angezeigt wird.",
+          "**ROI automatisch berechnen**, pro Monat, Sportart, Markt und Wettanbieter.",
+          "**Kontostand pro Wettanbieter anzeigen**, damit du weißt, wo du einzahlen oder auszahlen solltest.",
+          "**Stornierungen und Quotenänderungen verarbeiten**, ohne dass die Summen durcheinandergeraten.",
+          "**Am Handy funktionieren**, denn du setzt deine Wetten auch unterwegs."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Erfasse die Wette in dem Moment, in dem sie angenommen wird, und nicht erst am Abend. Die meisten Fehler beim Tracking entstehen, weil aus dem Gedächtnis eingetragen wird."
+      },
+      {
+        "type": "h2",
+        "text": "Bet-Tracking-App mit Automatik: Wetten kostenlos tracken"
+      },
+      {
+        "type": "p",
+        "text": "Eine automatische Bet-Tracking-App erspart dir das Tippen: Wenn du eine Surebet über den Scanner platzierst, werden Wetten, Quoten und Einsätze für dich erfasst. Du bestätigst nur noch das Ergebnis. Lies, wie du den [ROI beim Wetten berechnest](/en/guides/roi-betting) und dein [Bankroll-Management](/en/guides/bankroll-management) auf Basis deiner echten Zahlen aufsetzt."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) vereint Surebet-Scanner und Bet Tracker an einem Ort. So wird jede Surebet, die du platzierst, automatisch erfasst und dein ROI ist immer auf dem neuesten Stand."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann ich weiterhin eine Tabelle verwenden?",
+        "a": "Ja, bei wenigen Wetten schon. Sobald du mehr als ein paar Surebets pro Woche platzierst, ist ein Bet Tracker schneller und deutlich weniger fehleranfällig."
+      },
+      {
+        "q": "Was ist ein guter ROI bei Surebets?",
+        "a": "Üblich sind 1–4 % des Umsatzes. Höhere Werte sind möglich, gehen aber oft mit mehr Limits und stornierten Wetten einher."
+      },
+      {
+        "q": "Sollte ich auch normale Wetten tracken?",
+        "a": "Ja. Wenn du alles erfasst, siehst du dein tatsächliches Ergebnis und erkennst, ob deine normalen Wetten deinen Surebet-Gewinn auffressen."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Wetten kostenlos tracken"
+  },
+  "roi-betting": {
+    "title": "ROI beim Wetten: So berechnest du deine Rendite",
+    "metaTitle": "ROI beim Wetten – So berechnest du die Rendite deiner Wetten",
+    "description": "Lerne mit Beispielen, wie du ROI und Yield beim Wetten berechnest. Erfahre, was eine gute Rendite ist und warum der ROI mehr aussagt als dein Gesamtgewinn.",
+    "keyword": "roi wetten",
+    "intro": "ROI steht für Return on Investment und zeigt, wie viel Prozent du im Verhältnis zu deinem Einsatz verdienst. Diese Kennzahl verrät dir, ob deine Strategie funktioniert, ganz unabhängig davon, wie hoch deine Einsätze sind.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Die Formel"
+      },
+      {
+        "type": "p",
+        "text": "ROI = Gewinn geteilt durch Gesamteinsatz, mal 100. Der Gewinn ist das, was dir ausbezahlt wurde, abzüglich deines Einsatzes."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: ein Monat mit Surebets",
+        "rows": [
+          [
+            "Gesamteinsatz",
+            "€40,000"
+          ],
+          [
+            "Gesamtauszahlung",
+            "€41,000"
+          ],
+          [
+            "Gewinn",
+            "€1,000"
+          ],
+          [
+            "ROI",
+            "1,000 / 40,000 × 100 = 2.5%"
+          ]
+        ],
+        "note": "Du hast pro eingesetztem Pfund 2,5 Pence verdient."
+      },
+      {
+        "type": "h2",
+        "text": "ROI und Yield sind dasselbe"
+      },
+      {
+        "type": "p",
+        "text": "Beim Wetten werden die Begriffe ROI und Yield oft für dieselbe Kennzahl verwendet: den Gewinn im Verhältnis zum Gesamteinsatz. Manche berechnen den ROI stattdessen im Verhältnis zu deiner Bankroll. Das ergibt einen höheren Wert, weil dieselbe Bankroll viele Male umgesetzt wird. Prüfe daher immer, nach welcher Methode eine Zahl berechnet wurde, bevor du vergleichst."
+      },
+      {
+        "type": "h2",
+        "text": "Was ist ein guter ROI?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Normale Wetten auf lange Sicht: Die meisten Wettenden liegen unter 0%, weil der Wettanbieter eine Marge einbehält.",
+          "Valuebetting: 2–5% über viele Wetten sind ein gutes Ergebnis.",
+          "Surebets: üblicherweise 1–5% pro Surebet, dafür aber nahezu risikofrei, weil alle Ausgänge abgedeckt sind."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Der ROI sagt vor allem über viele Wetten hinweg etwas aus. Nach 20 Wetten kann der Wert stark schwanken. Nach mehreren hundert Wetten zeigt er, ob deine Strategie funktioniert."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie berechne ich den ROI beim Wetten?",
+        "a": "Nimm deinen Gewinn, teile ihn durch deinen Gesamteinsatz und multipliziere mit 100. Hast du €10.000 eingesetzt und €300 verdient, liegt dein ROI bei 3%."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen ROI und Gewinn?",
+        "a": "Der Gewinn ist der Betrag, den du verdient hast. Der ROI ist dieser Gewinn in Prozent deines Einsatzes. So lassen sich Ergebnisse mit unterschiedlich hohen Einsätzen vergleichen."
+      },
+      {
+        "q": "Kann ich meinen ROI automatisch sehen?",
+        "a": "Ja. Die Wettbuchhaltung in BetTrackerAI berechnet deinen ROI auf Basis der Wetten, die du erfasst."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Deinen ROI in der Wettbuchhaltung ansehen"
+  },
+  "surebet-danmark-alternativ": {
+    "title": "BetTrackerAI vs. Surebet Danmark: die günstigere Alternative",
+    "metaTitle": "Surebet Danmark Alternative – BetTrackerAI im Vergleich (2025)",
+    "description": "BetTrackerAI und Surebet Danmark im Vergleich: Preise, Funktionen, Wettanbieter-Abdeckung und Wett-Tracking. Finde das Surebet-Tool, das zu dir passt.",
+    "keyword": "Surebet-Tool Vergleich",
+    "intro": "Surebet Danmark und BetTrackerAI suchen beide nach Surebets (auch Arbitrage-Wetten genannt) bei lizenzierten Wettanbietern. Beide bieten eine 7-tägige kostenlose Testphase. Die wichtigsten Unterschiede liegen im Preis und in den Tools, die du zusätzlich zum Surebet-Scanner bekommst.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Auf einen Blick"
+      },
+      {
+        "type": "example",
+        "title": "BetTrackerAI und Surebet Danmark im direkten Vergleich",
+        "rows": [
+          [
+            "Preis pro Monat",
+            "BetTrackerAI ab ca. €20 · Surebet Danmark ca. €134"
+          ],
+          [
+            "Kostenlose Testphase",
+            "Beide: 7 Tage"
+          ],
+          [
+            "Wettanbieter",
+            "Beide: ausschließlich lizenzierte Wettanbieter"
+          ],
+          [
+            "Benachrichtigungen",
+            "BetTrackerAI: Push und SMS (Premium) · Surebet Danmark: Live-Benachrichtigungen"
+          ],
+          [
+            "Wettbuchhaltung",
+            "BetTrackerAI: vollständiges Tracking mit ROI und Kontostand pro Wettanbieter · Surebet Danmark: Wett-Tracker"
+          ],
+          [
+            "Kostenlose Tools und Ratgeber",
+            "BetTrackerAI: Surebet-Rechner und Ratgeber zum Lernen"
+          ]
+        ],
+        "note": "Preise am 23. November 2025 auf beiden Websites geprüft, Änderungen vorbehalten."
+      },
+      {
+        "type": "h2",
+        "text": "Preis: ein deutlicher Unterschied"
+      },
+      {
+        "type": "p",
+        "text": "Surebet Danmark kostet ca. €134 pro Monat. BetTrackerAI kostet ca. €20 pro Monat für Basic (Surebets bis 5% Gewinn) und ca. €33 für Premium (alle Surebets plus SMS-Benachrichtigungen). Mit Premium sparst du ca. €100 pro Monat – das sind ca. €1.200 im Jahr."
+      },
+      {
+        "type": "p",
+        "text": "Das ist wichtig, weil Surebets üblicherweise 1–5% pro Wette abwerfen. Je niedriger die monatliche Gebühr, desto weniger Umsatz brauchst du, bis sich das Abo rechnet."
+      },
+      {
+        "type": "h2",
+        "text": "Wett-Tracking: Hier punktet BetTrackerAI"
+      },
+      {
+        "type": "p",
+        "text": "Surebets lohnen sich nur, wenn du genau weißt, was du verdient hast. In BetTrackerAI erfasst du deine Surebets und Einzahlungen und siehst Gewinn, ROI und Kontostand bei jedem Wettanbieter an einem Ort. Außerdem kannst du einen Wettschein importieren, statt ihn von Hand einzugeben."
+      },
+      {
+        "type": "h2",
+        "text": "Welches Tool passt zu dir?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Entscheide dich für BetTrackerAI, wenn du Surebets zu einem günstigeren Preis willst und deine Konten gleichzeitig detailliert verfolgen möchtest.",
+          "Entscheide dich für Surebet Danmark, wenn du deren Plattform bereits nutzt und mit den Kosten zufrieden bist.",
+          "Wenn du dir unsicher bist, probier beide aus. Beide bieten eine 7-tägige kostenlose Testphase, du kannst also Surebets bei denselben Events vergleichen."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Egal, für welches Tool du dich entscheidest: Platziere immer zuerst die Wette mit den schwankungsanfälligeren Quoten und prüfe, ob der Markt bei beiden Wettanbietern identisch ist."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist BetTrackerAI günstiger als Surebet Danmark?",
+        "a": "Ja. BetTrackerAI kostet ca. €20 bzw. ca. €33 pro Monat, Surebet Danmark dagegen ca. €134 pro Monat (Stand 23. November 2025)."
+      },
+      {
+        "q": "Nutzen beide Tools nur lizenzierte Wettanbieter?",
+        "a": "Ja. Beide Plattformen setzen auf regulierte, lizenzierte Wettanbieter – für legales Wetten mit Spielerschutz."
+      },
+      {
+        "q": "Kann ich BetTrackerAI kostenlos testen?",
+        "a": "Ja. Du bekommst eine 7-tägige kostenlose Testphase mit vollem Zugriff und kannst jederzeit während der Testphase kündigen."
+      }
+    ],
+    "category": "Grundlagen",
+    "ctaLabel": "BetTrackerAI 7 Tage kostenlos testen"
+  },
+  "betting-regnskab": {
+    "title": "Wettbuchhaltung: So behältst du den Überblick über deine Bankroll",
+    "metaTitle": "Wettbuchhaltung – Kontostand bei allen Wettanbietern im Blick",
+    "description": "So führst du Buch über deine Wetten: Einzahlungen, Auszahlungen und Kontostand bei jedem Wettanbieter. Behalte den Überblick, auch wenn du bei mehreren Anbietern wettest.",
+    "keyword": "Wett-Tracker",
+    "intro": "Wenn du Surebets platzierst, liegt gleichzeitig bei vielen Wettanbietern Geld von dir. Eine Wettbuchhaltung zeigt dir, wo dein Geld steckt und wie viel du insgesamt verdient hast.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum man den Überblick verliert"
+      },
+      {
+        "type": "p",
+        "text": "Beim Arbitrage-Wetten gewinnst du bei einem Wettanbieter und verlierst bei einem anderen. Dein Kontostand ändert sich ständig, und du musst regelmäßig ein- und auszahlen, damit das Geld an den richtigen Stellen liegt. Ohne saubere Buchhaltung ist kaum erkennbar, ob du unterm Strich im Plus bist."
+      },
+      {
+        "type": "h2",
+        "text": "Was deine Aufzeichnungen enthalten sollten"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Alle Ein- und Auszahlungen bei jedem Wettanbieter",
+          "Dein aktueller Kontostand bei jedem Wettanbieter",
+          "Alle Wetten mit Einsatz, Quote und Ergebnis",
+          "Dein Gesamtgewinn: aktuelle Kontostände plus Auszahlungen minus Einzahlungen"
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Gesamtgewinn über mehrere Wettanbieter",
+        "rows": [
+          [
+            "Einzahlungen gesamt",
+            "€10,000"
+          ],
+          [
+            "Auszahlungen gesamt",
+            "€3,000"
+          ],
+          [
+            "Aktuelles Guthaben bei den Wettanbietern",
+            "€7,800"
+          ],
+          [
+            "Gewinn",
+            "€3,000 + €7,800 − €10,000 = €800"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Gute Gewohnheiten beim Bankroll-Management"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Trag Ein- und Auszahlungen noch am selben Tag ein.",
+          "Gleiche deinen Kontostand einmal pro Woche mit dem Kontostand beim Wettanbieter ab.",
+          "Halte dein Wettgeld getrennt von deinem Alltagsgeld, damit du nicht versehentlich Geld einsetzt, das du für anderes brauchst."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Die Buchführung in BetTrackerAI zeigt dir Kontostand, Einzahlungen und Gewinn pro Wettanbieter, damit du immer weißt, wo dein Geld steht."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Muss ich auf Wettgewinne Steuern zahlen?",
+        "a": "Wie Glücksspielgewinne besteuert werden, ist von Land zu Land unterschiedlich. In manchen regulierten Märkten sind Gewinne bei lizenzierten Wettanbietern steuerfrei, in anderen musst du sie unter Umständen angeben. Informiere dich über die Steuerregeln an deinem Wohnort oder frag eine Steuerberaterin bzw. einen Steuerberater."
+      },
+      {
+        "q": "Wie oft sollte ich mein Wett-Tracking aktualisieren?",
+        "a": "Trag Wetten und Einzahlungen sofort ein und gleiche die Kontostände einmal pro Woche ab."
+      }
+    ],
+    "category": "Strategie",
+    "ctaLabel": "Buchführung öffnen"
+  },
+  "tjen-penge-paa-odds-uden-risiko": {
+    "title": "Mit Sportwetten risikofrei Geld verdienen: So funktionieren Hedging und Arbitrage",
+    "metaTitle": "Mit Sportwetten risikofrei Geld verdienen 2026",
+    "description": "So verdienst du mit Sportwetten risikofrei Geld: Surebets und Hedging mit Rechenbeispielen in €, eine realistische Wettstrategie und die tatsächlichen Stolpersteine.",
+    "keyword": "mit Sportwetten risikofrei Geld verdienen",
+    "category": "Strategie",
+    "ctaLabel": "Surebets mit garantiertem Gewinn ansehen",
+    "intro": "Mit Sportwetten kannst du risikofrei Geld verdienen, indem du bei verschiedenen Wettanbietern auf alle Ausgänge desselben Ereignisses setzt, wenn die kombinierten Quoten mehr auszahlen, als du einsetzt. Das nennt sich Sportwetten-Arbitrage oder Surebet. Der Gewinn steht schon vor dem Anpfiff fest und liegt meist bei 1–3%. Das Risiko liegt nicht im Ergebnis, sondern in Quotenänderungen, Fehlern und Kontolimits.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sportwetten-Arbitrage: Warum der Gewinn garantiert ist"
+      },
+      {
+        "type": "p",
+        "text": "Ein Wettanbieter verdient, weil seine Quoten in Summe mehr als 100% Wahrscheinlichkeit ergeben. Bewerten zwei Wettanbieter dasselbe Ereignis unterschiedlich, nimmst du bei jedem die beste Quote auf einen anderen Ausgang. Liegt die kombinierte Wahrscheinlichkeit unter 100%, hast du einen garantierten Gewinn. Das ist mathematisches Wetten, kein Raten. Den genauen Mechanismus erklärt [Wie funktionieren Arbitrage-Wetten?](/en/guides/arbitrage-betting)"
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Basketballspiel mit zwei Ausgängen (inkl. Verlängerung), €1,000",
+        "rows": [
+          [
+            "Team A bei Wettanbieter 1, Quote 1.95",
+            "Einsatz €520.88"
+          ],
+          [
+            "Team B bei Wettanbieter 2, Quote 2.12",
+            "Einsatz €479.12"
+          ],
+          [
+            "Summe der Kehrwerte der Quoten",
+            "0.513 + 0.472 = 0.985"
+          ],
+          [
+            "Auszahlung, egal wer gewinnt",
+            "ca. €1,015.72"
+          ],
+          [
+            "Garantierter Gewinn",
+            "ca. €15.72 (1.6%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Garantierter Wettgewinn mit Hedging: Sichere dir eine laufende Wette ab"
+      },
+      {
+        "type": "p",
+        "text": "Hedging beruht auf derselben Rechnung, geht aber von einer Wette aus, die du bereits platziert hast. Verschiebt sich die Quote zu deinen Gunsten, setzt du bei einem anderen Wettanbieter auf den Gegenausgang und sicherst dir so unabhängig vom Ergebnis einen Gewinn."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Über 2.5 Tore, vor Spielbeginn mit €500 gesetzt",
+        "rows": [
+          [
+            "Ursprüngliche Wette: Über 2.5 Tore, Quote 2.40",
+            "Einsatz €500, möglicher Gewinnbetrag €1,200"
+          ],
+          [
+            "Nach einem frühen Tor: Unter 2.5 Tore, Quote 2.60",
+            "Einsatz €461.54"
+          ],
+          [
+            "Gesamteinsatz",
+            "€961.54"
+          ],
+          [
+            "Auszahlung bei jedem Ergebnis",
+            "€1,200"
+          ],
+          [
+            "Gesicherter Gewinn",
+            "ca. €238.46 (24.8%)"
+          ]
+        ],
+        "note": "Die Formel: Hedge-Einsatz = möglicher Gewinnbetrag ÷ neue Quote. Hier: 1,200 ÷ 2.60 = €461.54."
+      },
+      {
+        "type": "h2",
+        "text": "Wettstrategie: kleine Margen, viele Wetten"
+      },
+      {
+        "type": "p",
+        "text": "Der garantierte Gewinn pro Surebet ist klein, deshalb entstehen Ergebnisse durch Menge und Disziplin. Eine realistische Arbitrage-Strategie sieht so aus:"
+      },
+      {
+        "type": "example",
+        "title": "Realistische Monatszahlen",
+        "rows": [
+          [
+            "Einsatz pro Surebet",
+            "€1,000"
+          ],
+          [
+            "Durchschnittlicher Gewinn",
+            "1.5%"
+          ],
+          [
+            "Surebets pro Monat",
+            "40"
+          ],
+          [
+            "Erwartetes Monatsergebnis",
+            "ca. €600"
+          ],
+          [
+            "Gleiches Setup mit €2,500 pro Surebet",
+            "ca. €1,500"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Verteile deine Wetten** auf mehrere Wettanbieter, damit kein einzelnes Konto auffällt.",
+          "**Halte bei jedem Wettanbieter Guthaben bereit**, damit du innerhalb weniger Minuten handeln kannst.",
+          "**Dokumentiere jede Wette**, damit du deinen echten ROI siehst und nicht nur ein Bauchgefühl hast. Ein [Wett-Tracker](/en/guides/bet-tracker) erledigt das automatisch."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mathematisches Wetten: vier Risiken, die nichts mit Mathematik zu tun haben"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Quotenbewegung:** Die Quote kann zwischen deiner ersten und zweiten Wette sinken. Setze immer zuerst auf die Quote, die am wenigsten stabil ist.",
+          "**Stornierte Wetten:** Bei offensichtlichen Quotenfehlern kann der Wettanbieter die Wette stornieren, und du bleibst mit einer ungesicherten Seite zurück.",
+          "**Unterschiedliche Regeln:** Aufgaben, Walkovers und Verlängerungen werden unterschiedlich abgerechnet. Prüfe, ob beide Wettanbieter den Markt gleich abrechnen.",
+          "**Kontolimits:** Wettanbieter können deinen Maximaleinsatz kürzen. Lies, wie du [Limits bei Wettanbietern vermeidest](/en/guides/avoid-bookmaker-limits)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Clever zu wetten heißt, die praktischen Risiken auszuschalten, nicht nur die mathematischen. [BetTracker AI](/en) zeigt dir Surebets mit berechneter Einsatzaufteilung, damit du die Wetten platzieren kannst, bevor sich die Quote ändert."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann man mit Sportwetten wirklich völlig risikolos Geld verdienen?",
+        "a": "Bei einer korrekt platzierten Surebet spielt das Ergebnis keine Rolle. Das verbleibende Risiko ist praktischer Natur: Quotenänderungen, stornierte Wetten und die Wahl des falschen Markts."
+      },
+      {
+        "q": "Was ist der Unterschied zwischen Surebets und Hedging?",
+        "a": "Eine Surebet wird auf alle Ausgänge gleichzeitig gesetzt. Beim Hedging beginnst du mit einer Wette und deckst den Gegenausgang erst später ab, wenn sich die Quote zu deinen Gunsten bewegt hat."
+      },
+      {
+        "q": "Wie viel Geld brauche ich zum Start?",
+        "a": "Du kannst mit €200–500 starten, verteilt auf einige Wettanbieter. Bei kleineren Einsätzen bringt eine Surebet allerdings nur wenige Euro."
+      }
+    ]
+  },
+  "find-surebets-automatisk": {
+    "title": "Surebets automatisch finden: So erkennt ein Quotenscanner Quotenfehler",
+    "metaTitle": "Surebets automatisch finden – Quotenscanner 2026",
+    "description": "So findest du Surebets automatisch mit einem Quotenscanner: Wie Wettsoftware Quotenfehler erkennt, Rechenbeispiele in € und worauf du achten solltest.",
+    "keyword": "Surebets automatisch finden",
+    "category": "Strategie",
+    "ctaLabel": "Surebet-Scanner starten",
+    "intro": "Um Surebets automatisch zu finden, nutzt du einen Quotenscanner, der die Quoten Dutzender Wettanbieter alle paar Sekunden vergleicht. Sinkt die Summe der Kehrwerte der Quoten unter 1, markiert die Software die Surebet mit bereits berechneten Einsätzen. Quotenfehler, für die du von Hand Stunden bräuchtest, erkennt sie in Sekunden – noch bevor der Wettanbieter sie korrigiert.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum das Finden von Surebets von Hand selten funktioniert"
+      },
+      {
+        "type": "p",
+        "text": "Ein einzelnes Fußballspiel kann 100+ Märkte haben. Multipliziere das mit 15 Wettanbietern und mehreren hundert Spielen pro Tag, und du hast Millionen an Quotenkombinationen. Die meisten Surebets bestehen nur 2–10 Minuten. Bis du die Tabs verglichen und gerechnet hast, hat sich die Quote meist schon bewegt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Menge:** Ein Scanner prüft alle Märkte gleichzeitig, du nur eine Handvoll.",
+          "**Tempo:** Die Software reagiert binnen Sekunden auf eine Quotenänderung.",
+          "**Genauigkeit:** Die Einsatzaufteilung wird für dich berechnet, damit gibt es keine Tippfehler."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Software zum Aufspüren von Quotenfehlern: So funktioniert der Scanner"
+      },
+      {
+        "type": "p",
+        "text": "Wettsoftware sammelt laufend die Quoten der Wettanbieter, gleicht identische Ereignisse und Märkte ab und berechnet für jede Kombination die Summe der Kehrwerte. Der Kern der Arbeit ist das Matching: „Man Utd“ und „Manchester United“ müssen als dasselbe Team erkannt werden, und „Über 2.5“ muss bei beiden Wettanbietern dieselbe Linie sein."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Vom Scanner erkannter Quotenfehler, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Über 2.5 Tore bei Wettanbieter 1, Quote 2.25",
+            "Einsatz €461.72"
+          ],
+          [
+            "Unter 2.5 Tore bei Wettanbieter 2, Quote 1.93",
+            "Einsatz €538.28"
+          ],
+          [
+            "1/2.25 + 1/1.93",
+            "0.444 + 0.518 = 0.963"
+          ],
+          [
+            "Auszahlung bei jedem Ergebnis",
+            "ca. €1,038.88"
+          ],
+          [
+            "Fixer Gewinn",
+            "ca. €38.88 (3.9%)"
+          ]
+        ],
+        "note": "Wettanbieter 1 hatte noch nicht auf ein Update zu den Teamnews reagiert. Der Scanner meldete die Lücke binnen Sekunden."
+      },
+      {
+        "type": "h2",
+        "text": "Quotenfehler: die echten und die Fallen"
+      },
+      {
+        "type": "p",
+        "text": "Nicht jede Surebet mit hohem Gewinn ist ein Geschenk. Gewinne über 8–10% sind oft ein Zeichen dafür, dass etwas nicht stimmt, und keine echte Chance."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Offensichtliche Fehler:** Quoten von 15.0, wo alle anderen 1.50 anbieten, werden vom Wettanbieter oft storniert. Lass die Finger davon.",
+          "**Unterschiedliche Regeln:** Ein Tennis-Markt, der bei einem Wettanbieter bei Aufgabe gewertet und beim anderen storniert wird, ist keine echte Surebet.",
+          "**Unterschiedliche Linien:** Asiatisches Handicap −0.5 und −0.25 sehen ähnlich aus, verhalten sich aber verschieden. Mehr dazu im Ratgeber zum [Asiatischen Handicap](/en/guides/asian-handicap).",
+          "**Gesunde Surebets:** 1–4% Gewinn auf gängigen Märkten sind der Sweet Spot. Daher kommt der Großteil deines Gewinns."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Stelle im Scanner einen Mindestgewinn von 1% und ein Maximum von rund 8% ein. So filterst du Rauschen und die meisten Fehler heraus, die später storniert werden."
+      },
+      {
+        "type": "h2",
+        "text": "Worauf du bei einem Quotenscanner achten solltest"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Abdeckung der Wettanbieter:** Je mehr Wettanbieter, desto mehr Surebets. Achte darauf, dass jene dabei sind, bei denen du ein Konto hast.",
+          "**Aktualisierungsfrequenz:** Die Quoten müssen alle paar Sekunden aktualisiert werden, besonders für [Live-Surebets](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filter:** Sportart, Markt, Mindestgewinn und Wettanbieter – so siehst du nur, was du auch wirklich spielen kannst.",
+          "**Einsatzrechner:** ist integriert, damit du die Wetten sofort platzieren kannst. Die Zahlen kannst du zusätzlich im [Surebet-Rechner](/en/calculator) nachprüfen.",
+          "**Wett-Tracking:** Wenn du deine Wetten im Nachhinein erfasst, siehst du deinen tatsächlichen ROI. Mehr dazu im [Wett-Tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Such dir deine Wettanbieter aus, lege einen Mindestgewinn von 1% fest und platziere die Wetten zügig nacheinander. [BetTracker AI](/en) durchsucht die Wettanbieter für dich und zeigt dir Surebets in Echtzeit an – die Einsatzaufteilung ist bereits berechnet."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Wie viele Surebets findet ein Scanner pro Tag?",
+        "a": "Üblicherweise sind es zwischen einigen Dutzend und mehreren Hundert – je nachdem, wie viele Wettanbieter und Sportarten du einbeziehst und welchen Mindestgewinn du einstellst."
+      },
+      {
+        "q": "Kann ich Wetten automatisch platzieren lassen?",
+        "a": "Automatisches Platzieren von Wetten verstößt gegen die Bedingungen der meisten Wettanbieter und führt schnell zur Kontosperre. Lass den Scanner die Surebets finden und platziere die Wetten selbst."
+      },
+      {
+        "q": "Warum ist die Surebet weg, wenn ich den Wettanbieter öffne?",
+        "a": "Die Quote hat sich seit dem Scan verändert. Prüfe daher immer die Quoten auf deinem Wettschein und rechne vor dem Platzieren noch einmal nach."
+      }
+    ]
+  },
+  "live-arbitrage-betting-scanner": {
+    "title": "Live-Arbitrage-Scanner: So erwischst du Live-Surebets während des Spiels",
+    "metaTitle": "Live-Arbitrage-Scanner – Live-Surebets 2026",
+    "description": "Wie ein Live-Arbitrage-Scanner Surebets während laufender Spiele findet: Geschwindigkeit, Wettverzögerung, Rechenbeispiele in € und wie du die typischen Fehler vermeidest.",
+    "keyword": "Live-Arbitrage-Scanner",
+    "category": "Strategie",
+    "ctaLabel": "Live-Surebets ansehen",
+    "intro": "Ein Live-Arbitrage-Scanner vergleicht die Live-Quoten verschiedener Wettanbieter, während die Spiele laufen, und meldet Surebets, sobald die Quoten auseinanderlaufen. Live-Surebets treten häufiger auf als vor dem Spiel, weil die Wettanbieter unterschiedlich schnell auf Tore, Pausen und Rote Karten reagieren. Sie verschwinden allerdings auch schneller, oft innerhalb von 10–60 Sekunden – Tempo und Disziplin sind daher wichtiger denn je.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Live-Surebets: Warum Live-Wetten mehr Chancen bieten"
+      },
+      {
+        "type": "p",
+        "text": "Vor dem Anpfiff bewegen sich die Quoten nur langsam. Live verschiebt dagegen jedes Ereignis die Wahrscheinlichkeiten schlagartig. Ein Wettanbieter mit langsamerem Datenfeed oder mit ein paar Sekunden längerer Marktsperre hat dann eine Quote, die nicht mehr zum restlichen Markt passt. Genau diese Lücke ist eine Live-Surebet."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Tennis:** Ein Break verändert die Quoten drastisch, und die Wettanbieter ziehen unterschiedlich schnell nach.",
+          "**Fußball:** Tore, Rote Karten und Elfmeter erzeugen kurze Quotenlücken bei 1X2- und Über/Unter-Märkten.",
+          "**Basketball:** Schnelle Punkteserien führen in Zwei-Weg-Märkten zu häufigen Ausschlägen."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sportwetten-Arbitrage live: ein Rechenbeispiel"
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Live-Tennis nach einem Break, Gesamteinsatz €800",
+        "rows": [
+          [
+            "Spieler A bei Wettanbieter 1, Quote 1.72",
+            "Einsatz €467.63"
+          ],
+          [
+            "Spieler B bei Wettanbieter 2, Quote 2.42",
+            "Einsatz €332.37"
+          ],
+          [
+            "1/1.72 + 1/2.42",
+            "0.581 + 0.413 = 0.995"
+          ],
+          [
+            "Auszahlung, egal wer gewinnt",
+            "ca. €804.33"
+          ],
+          [
+            "Gesicherter Gewinn",
+            "ca. €4.33 (0.5%)"
+          ]
+        ],
+        "note": "Live-Margen sind oft kleiner als vor dem Spiel. Eine höhere Anzahl an Wetten gleicht das aus – aber nur, wenn du schnell und sauber arbeitest."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Über/Unter nach einem frühen Tor, Gesamteinsatz €1,000",
+        "rows": [
+          [
+            "Über 3.5 Tore bei Wettanbieter 1, Quote 2.30",
+            "Einsatz €451.07"
+          ],
+          [
+            "Unter 3.5 Tore bei Wettanbieter 2, Quote 1.89",
+            "Einsatz €548.93"
+          ],
+          [
+            "Summe der Kehrwerte der Quoten",
+            "0.435 + 0.529 = 0.964"
+          ],
+          [
+            "Auszahlung bei jedem Ausgang",
+            "ca. €1,037.47"
+          ],
+          [
+            "Gesicherter Gewinn",
+            "ca. €37.47 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Wettverzögerung und gesperrte Märkte: die Risiken bei Live-Wetten"
+      },
+      {
+        "type": "p",
+        "text": "Live-Wetten bringen Risiken mit sich, die es vor dem Spiel nicht gibt. Wettanbieter arbeiten mit einer Wettverzögerung von 3–10 Sekunden, in der sich die Quote ändern oder die Wette abgelehnt werden kann."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Wettverzögerung:** Deine Wette wird erst nach ein paar Sekunden angenommen. Ändert sich die Quote in der Zwischenzeit, kann sie abgelehnt werden.",
+          "**Gesperrte Märkte:** Nach einem Tor oder einem Break werden Märkte kurz geschlossen. Platziere die erste Wette niemals, solange der zweite Markt gesperrt ist.",
+          "**Teilweise Annahme:** Manche Wettanbieter nehmen live nur einen Teil deines Einsatzes an. Prüfe die Bestätigung, bevor du die zweite Wette platzierst.",
+          "**Schnell neu rechnen:** Ändert sich die Quote der zweiten Wette, rechne im [Surebet-Rechner](/en/calculator) neu und decke dich zur besten verfügbaren Quote ab."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Platziere zuerst die Wette beim Wettanbieter mit der längsten Wettverzögerung. Sobald sie angenommen ist, setzt du die zweite Wette beim schnelleren Wettanbieter."
+      },
+      {
+        "type": "h2",
+        "text": "Live-Quotenvergleich: Das muss dein Scanner können"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Aktualisierung alle paar Sekunden:** Live-Quoten, die älter als 10 Sekunden sind, sind wertlos.",
+          "**Alter der Quote anzeigen:** So siehst du, wie aktuell die Surebet noch ist.",
+          "**Live und Pre-Match getrennt filtern:** Live-Surebets erfordern eine andere Herangehensweise und anfangs niedrigere Einsätze.",
+          "**Jede Wette protokollieren:** Live-Ergebnisse schwanken stärker, daher ist ein [Wett-Tracker](/en/guides/bet-tracker) unverzichtbar, um zu sehen, ob du tatsächlich im Plus bist."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Starte als Einsteiger mit Pre-Match und wechsle erst zu Live, wenn deine Routine sitzt. Lies zuerst, wie du [Surebets automatisch findest](/en/guides/find-surebets-automatically). Wenn du bereit bist, zeigt dir [BetTracker AI](/en) Live-Surebets mit der Einsatzaufteilung in Echtzeit berechnet."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Sind Live-Surebets profitabler als Pre-Match?",
+        "a": "Es gibt mehr davon, aber die Margen sind oft kleiner und das Ausführungsrisiko ist höher. Das Nettoergebnis hängt davon ab, wie schnell und genau du arbeitest."
+      },
+      {
+        "q": "Wie schnell muss ich sein?",
+        "a": "Live-Surebets bleiben oft nur 10–60 Sekunden bestehen. Du solltest beide Wetten innerhalb dieser Zeit platzieren können. Sorge also vorab dafür, dass deine Konten aufgeladen und eingeloggt sind."
+      },
+      {
+        "q": "Limitieren Wettanbieter Live-Arber schneller?",
+        "a": "Oft ja, denn Live-Arbing auf trägen Quoten fällt leicht auf. Streue normale Wetten ein und lies, wie du [Limits bei Wettanbietern vermeidest](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "find-value-bets-med-ai": {
+    "title": "Value Bets mit KI finden: Wie ein KI-Quotenscanner +EV-Wetten aufspürt",
+    "metaTitle": "Value Bets mit KI finden – KI-Quotenscanner 2026",
+    "description": "So findest du Value Bets mit KI: Wie ein KI-Quotenscanner faire Quoten berechnet, +EV-Wetten erkennt und was du erwarten kannst – mit Beispielen in €.",
+    "keyword": "value bets mit ki finden",
+    "category": "Strategie",
+    "ctaLabel": "Value Bets mit KI finden",
+    "intro": "Um Value Bets mit KI zu finden, nutzt du einen KI-Quotenscanner, der die faire Wahrscheinlichkeit jedes Ergebnisses schätzt, meist anhand von Quoten sharper Wettanbieter ohne Marge, und sie mit den Quoten bei Soft-Wettanbietern vergleicht. Liegt die angebotene Quote über der fairen Quote, hat die Wette einen positiven Erwartungswert (+EV). Die KI erledigt diesen Vergleich über tausende Märkte hinweg in Sekunden.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Value Betting: Was +EV wirklich bedeutet"
+      },
+      {
+        "type": "p",
+        "text": "Eine Value Bet ist eine Wette, bei der die Quote höher ist, als es die tatsächliche Wahrscheinlichkeit rechtfertigt. Jede einzelne Value Bet kann verloren gehen, aber über hunderte Wetten wird aus dem positiven Erwartungswert Gewinn."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Erwartungswert einer einzelnen Wette",
+        "rows": [
+          [
+            "Faire Wahrscheinlichkeit",
+            "50% (faire Quote 2.00)"
+          ],
+          [
+            "Angebotene Quote beim Soft-Wettanbieter",
+            "2.10"
+          ],
+          [
+            "Erwartungswert",
+            "0.50 × 2.10 − 1 = +5%"
+          ],
+          [
+            "Einsatz €50",
+            "Erwarteter Gewinn €2.50 pro Wette"
+          ],
+          [
+            "300 Wetten à €50 (€15,000 Umsatz)",
+            "Erwarteter Gewinn ca. €750"
+          ]
+        ],
+        "note": "Der erwartete Gewinn ist ein Durchschnittswert. Die tatsächlichen Ergebnisse schwanken darüber und darunter, besonders bei wenigen Wetten."
+      },
+      {
+        "type": "h2",
+        "text": "KI-Quotenscanner: So werden faire Quoten berechnet"
+      },
+      {
+        "type": "p",
+        "text": "Sharpe Wettanbieter arbeiten mit niedrigen Margen und passen ihre Quoten schnell an professionelles Geld an. Ihre Preise sind daher die beste Schätzung der tatsächlichen Wahrscheinlichkeit. Die KI rechnet die Marge aus der sharpen Quote heraus und berechnet daraus die fairen Quoten."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Marge aus sharpen Quoten herausrechnen",
+        "rows": [
+          [
+            "Sharpe Quoten",
+            "1.95 / 1.95"
+          ],
+          [
+            "Implizierte Wahrscheinlichkeiten",
+            "51.28% + 51.28% = 102.56%"
+          ],
+          [
+            "Faire Wahrscheinlichkeit nach Margenbereinigung",
+            "50% / 50%"
+          ],
+          [
+            "Faire Quoten",
+            "2.00 / 2.00"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Markt-Matching:** Die KI erkennt identische Ereignisse und Linien bei verschiedenen Wettanbietern.",
+          "**Tempo:** Die Quoten werden alle paar Sekunden neu berechnet, sobald sich die Märkte bewegen.",
+          "**Filterung:** Der Scanner ignoriert winzige Vorteile und verdächtige Ausreißer, die wahrscheinlich storniert werden."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "KI-Sportwetten: Value Bets vs. Surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Surebets:** Garantierter Gewinn bei jedem Ergebnis, aber kleine Margen und rasche Limits.",
+          "**Value Bets:** Einzelwetten mit höherem erwartetem Gewinn, aber mit Varianz und Verlustserien.",
+          "**Kombinieren:** Viele Wettende setzen Surebets für stetigen Gewinn ein und Value Bets, um den ROI zu steigern."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Lies den ausführlichen Vergleich [Value Betting vs. Surebets](/en/guides/value-bets-vs-surebets)."
+      },
+      {
+        "type": "h2",
+        "text": "KI-Wetten in der Praxis: Regeln, die dich schützen"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Setze 1–2% deiner Bankroll** pro Value Bet. Mehr dazu im [Bankroll-Management](/en/guides/bankroll-management).",
+          "**Mindestvorteil von 2–3%**, um Spielraum für Ungenauigkeiten bei der Schätzung der fairen Quote zu lassen.",
+          "**Schlussquoten verfolgen:** Wer die Schlussquote regelmäßig schlägt, hat das beste Indiz dafür, dass seine Wetten Value haben.",
+          "**Beurteile erst nach hunderten Wetten**, nie nach einer Woche."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Protokolliere jede Value Bet in einem [Wett-Tracker](/en/guides/bet-tracker). Nach 300–500 Wetten zeigt dein ROI, ob der Vorteil echt ist."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) nutzt KI, um die Wettanbieter zu scannen, faire Quoten zu berechnen und Value Bets sowie Surebets in Echtzeit anzuzeigen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Garantiert KI Gewinn bei Value Bets?",
+        "a": "Nein. Die KI findet Wetten mit positivem Erwartungswert, aber einzelne Wetten können verloren gehen. Der Gewinn stellt sich erst über eine große Zahl an Wetten ein."
+      },
+      {
+        "q": "Wie viel kann ich mit Value Betting verdienen?",
+        "a": "Ein realistischer langfristiger ROI liegt oft bei 2–5% des Umsatzes – je nach Vorteil, Wettanbietern und danach, wie lange deine Konten offen bleiben."
+      },
+      {
+        "q": "Limitieren Wettanbieter Value-Wetter?",
+        "a": "Ja, Soft-Wettanbieter limitieren häufig Kunden, die die Closing Line schlagen. Lies, wie du [Limitierungen bei Wettanbietern vermeidest](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "bedste-odds-vaerktoej-danmark": {
+    "title": "Die besten Sportwetten-Tools 2026: KI-Quotenscanner und Tracker",
+    "metaTitle": "Beste Sportwetten-Tools 2026 – KI & Quotenscanner",
+    "description": "Die besten Sportwetten-Tools 2026: KI-Quotenscanner, Quotenvergleich, Surebet-Rechner und Wett-Tracker – was sie in € kosten und welches Tool zu dir passt.",
+    "keyword": "beste Sportwetten-Tools",
+    "category": "Strategie",
+    "ctaLabel": "BetTracker AI testen",
+    "intro": "Zu den besten Sportwetten-Tools zählen ein KI-Quotenscanner, der Surebets und Value Bets findet, ein Quotenvergleich über viele Wettanbieter, ein Surebet-Rechner für exakte Einsätze und ein Wett-Tracker, der deinen ROI misst. Wähle eine Wettsoftware, die die Wettanbieter abdeckt, die du nutzt, die Quoten alle paar Sekunden aktualisiert und sich bei realistischem Umsatz selbst bezahlt macht.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Die Wett-Tools, die jeder ernsthafte Wetter braucht"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**KI-Quotenscanner:** findet Surebets und Value Bets automatisch bei verschiedenen Wettanbietern.",
+          "**Quotenvergleich:** zeigt für jeden Ausgang die beste verfügbare Quote.",
+          "**Surebet-Rechner:** teilt den Einsatz so auf, dass der Gewinn bei jedem Ergebnis gleich hoch ist. Probiere den [Surebet-Rechner](/en/calculator) aus.",
+          "**Wett-Tracker:** erfasst jede Wette und berechnet den ROI. Mehr dazu im [Wett-Tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "KI-Quotenscanner vs. manueller Quotenvergleich"
+      },
+      {
+        "type": "p",
+        "text": "Beim manuellen Quotenvergleich findest du die beste Quote für ein einzelnes Spiel. Ein KI-Quotenscanner vergleicht dagegen laufend jeden Markt bei jedem Wettanbieter und zeigt dir nur die Kombinationen, bei denen du einen Vorteil hast."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Abdeckung:** tausende Märkte statt nur einer Handvoll.",
+          "**Tempo:** Surebets werden innerhalb von Sekunden markiert, bevor die Quoten angepasst werden.",
+          "**Genauigkeit:** Zuordnung und Einsatzberechnung übernimmt das Tool für dich."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Wettsoftware: Was sie kostet und wann sie sich rentiert"
+      },
+      {
+        "type": "p",
+        "text": "Ein Tool lohnt sich nur, wenn der Gewinn, den es findet, höher ist als sein Preis. Berechne, welchen Umsatz du brauchst, um die Gewinnschwelle zu erreichen."
+      },
+      {
+        "type": "example",
+        "title": "Beispiel: Break-even bei einem Tool um €33 pro Monat",
+        "rows": [
+          [
+            "Abo",
+            "ca. €33 pro Monat"
+          ],
+          [
+            "Durchschnittlicher ROI bei Surebets",
+            "2%"
+          ],
+          [
+            "Nötiger Umsatz bis zum Break-even",
+            "€33 / 2% = €1,650"
+          ],
+          [
+            "Typischer Umsatz (60 Surebets × €400)",
+            "€24,000"
+          ],
+          [
+            "Gewinn nach Abzug des Abos",
+            "€480 − €33 = €447"
+          ]
+        ],
+        "note": "Die Preise sind ungefähre Euro-Beträge. BetTracker AI kostet ab ca. €20 pro Monat für Basic und ca. €33 für Premium."
+      },
+      {
+        "type": "h2",
+        "text": "So wählst du die besten Sportwetten-Tools aus"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Abdeckung der Wettanbieter:** Das Tool muss die Wettanbieter enthalten, die du tatsächlich nutzen kannst.",
+          "**Aktualisierungsfrequenz:** wenige Sekunden bei Pre-Match, schneller bei [Live-Surebets](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filter:** Sportart, Markt, Wettanbieter und Mindestgewinn.",
+          "**Integriertes Tracking:** Surebets, die du über den Scanner platzierst, sollten automatisch erfasst werden.",
+          "**Fairer Preis:** Vergleiche die monatlichen Kosten mit deinem erwarteten Umsatz. Siehe den [Vergleich von Surebet-Tools](/en/guides/surebet-tool-comparison)."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Starte mit einem Tool, das Scanner, Rechner und Tracker vereint. Mehrere getrennte Tools kosten Zeit – und Zeit ist genau das, was dir Surebets nicht schenken."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) vereint einen KI-Quotenscanner, Quotenvergleich, einen Surebet-Rechner und einen Wett-Tracker auf einer Plattform. Lies, wie du [Value Bets mit KI findest](/en/guides/find-value-bets-with-ai) und [Surebets automatisch findest](/en/guides/find-surebets-automatically)."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Mit welchem Wett-Tool sollte ich anfangen?",
+        "a": "Mit einem Surebet-Scanner samt integriertem Rechner und Tracker. So hast du Finden, Platzieren und Auswerten an einem Ort."
+      },
+      {
+        "q": "Sind kostenlose Wett-Tools gut genug?",
+        "a": "Kostenlose Rechner und Tracker sind völlig in Ordnung. Kostenlose Quotenscanner zeigen meist verzögerte oder eingeschränkte Surebets an, die oft schon weg sind, bis du reagierst."
+      },
+      {
+        "q": "Ist Wettsoftware legal?",
+        "a": "Tools zum Vergleichen von Quoten und zum Erfassen von Wetten zu nutzen, ist legal. Automatisches Platzieren von Wetten verstößt meist gegen die Bedingungen der Wettanbieter. Siehe [Sind Surebets legal?](/en/guides/are-surebets-legal)"
+      }
+    ]
+  }
+}

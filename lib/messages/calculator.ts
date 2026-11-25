@@ -4,7 +4,7 @@ import { newLocales } from '@/lib/locale-packs'
 
 // Calculator copy per language. Currency and number format follow the visitor's country,
 // so a German visitor calculates in euro and a Swede in kronor.
-const calculatorBase = {
+export const calculatorBase = {
   da: {
     numberTag: 'da-DK',
     currency: 'DKK',

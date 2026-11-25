@@ -7,7 +7,7 @@ import { newLocales } from '@/lib/locale-packs'
 type Section = 'guide' | 'sport' | 'bookmaker'
 type Translated = Exclude<Locale, 'da'>
 
-const SECTION_NAMES_BASE: Record<BaseTranslated, Record<Section, string>> = {
+export const SECTION_NAMES_BASE: Record<BaseTranslated, Record<Section, string>> = {
   en: { guide: 'guides', sport: 'sports', bookmaker: 'bookmakers' },
   sv: { guide: 'guider', sport: 'sport', bookmaker: 'spelbolag' },
   no: { guide: 'guider', sport: 'sport', bookmaker: 'bookmakere' },
@@ -22,7 +22,7 @@ const SECTION_NAMES_BASE: Record<BaseTranslated, Record<Section, string>> = {
   nl: { guide: 'gidsen', sport: 'sporten', bookmaker: 'bookmakers' },
 }
 
-const SLUGS_BASE: Record<BaseTranslated, Record<string, string>> = {
+export const SLUGS_BASE: Record<BaseTranslated, Record<string, string>> = {
   en: {
     'er-surebets-lovligt': 'are-surebets-legal',
     'undgaa-begraensning': 'avoid-bookmaker-limits',
@@ -128,7 +128,7 @@ const SLUGS_BASE: Record<BaseTranslated, Record<string, string>> = {
 }
 
 // Stand-alone pages that exist in every language. Keys are the canonical (Danish) paths.
-const PAGE_NAMES_BASE: Record<BaseTranslated, Record<string, string>> = {
+export const PAGE_NAMES_BASE: Record<BaseTranslated, Record<string, string>> = {
   en: { '/dagens-surebets': '/todays-surebets', '/beregn': '/calculator', '/konto': '/account' },
   sv: { '/faq': '/vanliga-fragor', '/beregn': '/kalkylator', '/konto': '/mitt-konto' },
   no: { '/faq': '/vanlige-sporsmal', '/beregn': '/kalkulator' },
