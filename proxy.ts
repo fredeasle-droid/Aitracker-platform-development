@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server'
 import { getSessionCookie } from 'better-auth/cookies'
 import { LOCALE_HEADER, localePath, stripLocalePrefix } from '@/lib/i18n'
 import { canonicalRoute } from '@/lib/route-slugs'
+import { isIndexed } from '@/lib/locale-packs'
 import { MAINTENANCE_BYPASS_COOKIE, getOpensAt, isMaintenanceActive } from '@/lib/maintenance'
 
 export const USER_COOKIE = 'bt_uid'
@@ -91,6 +92,8 @@ export function proxy(request: NextRequest) {
   } else {
     response = NextResponse.next({ request: { headers: forwarded } })
   }
+
+  if (locale && !isIndexed(locale)) response.headers.set('X-Robots-Tag', 'noindex, follow')
 
   if (uid) {
     response.cookies.set(USER_COOKIE, uid, {
