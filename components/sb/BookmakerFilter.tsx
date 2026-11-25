@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowLeftRight, Bitcoin, Check, ChevronDown, Info, MapPin, Minus, Search, X } from "lucide-react";
+import { ArrowLeftRight, Bitcoin, Check, ChevronDown, Globe, Info, MapPin, Minus, Search, X } from "lucide-react";
 import { PopoverClose } from "@radix-ui/react-popover";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { bookmakerCategories, visibleSurebets, type BookmakerCategory, type BookmakerId } from "./data";
@@ -11,12 +11,13 @@ import { useSurebets } from "./surebets-context";
 import { useLocale } from "@/components/locale-provider";
 import { cn } from "@/lib/utils";
 
-const categoryIcon: Record<BookmakerCategory, typeof MapPin> = { local: MapPin, exchange: ArrowLeftRight, crypto: Bitcoin };
+const categoryIcon: Record<BookmakerCategory, typeof MapPin> = { local: MapPin, exchange: ArrowLeftRight, crypto: Bitcoin, other: Globe };
 
 const categoryText = {
   local: { name: "sbCatLocal", hint: "sbCatLocalHint" },
   exchange: { name: "sbCatExchange", hint: "sbCatExchangeHint" },
   crypto: { name: "sbCatCrypto", hint: "sbCatCryptoHint" },
+  other: { name: "sbCatOther", hint: "sbCatOtherHint" },
 } as const;
 
 function TriggerLabel() {

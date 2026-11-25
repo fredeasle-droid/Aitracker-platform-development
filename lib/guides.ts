@@ -155,7 +155,7 @@ export const GUIDES: Guide[] = [
       { type: 'h2', text: 'Arbitrage betting i Danmark: det skal du vide' },
       {
         type: 'p',
-        text: 'Det er lovligt at spille surebets i Danmark, og gevinster fra bookmakere med licens fra Spillemyndigheden eller fra et andet EU/EØS-land er skattefrie for dig som spiller. Du kan læse mere i guiden [er surebets lovligt](/guide/er-surebets-lovligt).',
+        text: 'Det er lovligt at spille surebets i Danmark. Gevinster fra udbydere med dansk licens er som udgangspunkt skattefrie. Gevinster fra udenlandske udbydere kan også være skattefrie, men kun hvis særlige krav til udbyderens hjemsted, offentlige kontrol og spillets lovlighed i Danmark er opfyldt. Du kan læse mere i guiden [er surebets lovligt](/guide/er-surebets-lovligt).',
       },
       {
         type: 'p',
@@ -321,7 +321,7 @@ export const GUIDES: Guide[] = [
       },
       {
         q: 'Skal man betale skat af gevinsten?',
-        a: 'Nej, ikke hvis du spiller hos bookmakere med licens i Danmark eller et andet EU/EØS-land. Så er gevinsterne skattefrie for dig som spiller.',
+        a: 'Gevinster fra udbydere med dansk licens er som udgangspunkt skattefrie. Gevinster fra en udenlandsk udbyder er kun skattefrie, hvis betingelserne om EU/EØS-hjemsted, offentlig godkendelse og kontrol samt et tilsvarende lovligt spil i Danmark er opfyldt. Du har selv ansvaret for at kunne dokumentere det; spørg Skattestyrelsen, hvis du er i tvivl.',
       },
     ],
     cta: { href: '/surebets', label: 'Se aktuelle surebets' },
@@ -832,7 +832,7 @@ export const GUIDES: Guide[] = [
       { type: 'h2', text: 'Danske bonusregler' },
       {
         type: 'p',
-        text: 'I Danmark må en velkomstbonus højst være på 1.000 kr., og omsætningskravet må højst være 10 gange bonusbeløbet. Det gør danske bonusser mere gennemsigtige end mange udenlandske, men også mindre. Læs altid de konkrete vilkår, før du tager imod en bonus.',
+        text: 'I Danmark må en salgsfremmende foranstaltning til væddemål og onlinekasino højst have en værdi på 1.000 kr. Et eventuelt gennemspilskrav må højst være 10 gange indskuddet og bonusbeløbet tilsammen. Læs altid de konkrete vilkår, før du tager imod et tilbud.',
       },
       {
         type: 'ul',
@@ -855,7 +855,7 @@ export const GUIDES: Guide[] = [
       },
       {
         q: 'Hvor stor er en velkomstbonus i Danmark?',
-        a: 'Højst 1.000 kr. med et omsætningskrav på højst 10 gange bonusbeløbet, efter de danske regler for bonusser.',
+        a: 'Til væddemål og onlinekasino må tilbuddet højst have en værdi på 1.000 kr. Et eventuelt gennemspilskrav må højst være 10 gange indskuddet og bonusbeløbet tilsammen.',
       },
     ],
     cta: { href: '/bonus', label: 'Se aktuelle bonusser' },
@@ -881,7 +881,7 @@ export const GUIDES: Guide[] = [
       { type: 'h2', text: 'Skal man betale skat af gevinster?' },
       {
         type: 'p',
-        text: 'Gevinster fra spil hos udbydere med dansk licens fra Spillemyndigheden er som udgangspunkt skattefrie for dig som spiller. Spiller du hos udbydere uden dansk licens, kan gevinsten være skattepligtig. Er du i tvivl om din egen situation, så kontakt Skattestyrelsen.',
+        text: 'Gevinster fra spil hos udbydere med dansk licens fra Spillemyndigheden er som udgangspunkt skattefrie for dig som spiller. Gevinster fra udenlandske udbydere kan også være skattefrie, men kun hvis udbyderen er hjemmehørende i et EU/EØS-land, spillet er godkendt og kontrolleret af en offentlig myndighed dér, og tilsvarende spil lovligt kan udbydes i Danmark. Du skal selv kunne dokumentere betingelserne. Spørg Skattestyrelsen, hvis du er i tvivl.',
       },
       {
         type: 'tip',
@@ -900,7 +900,7 @@ export const GUIDES: Guide[] = [
       },
       {
         q: 'Skal jeg betale skat af surebet-gevinster?',
-        a: 'Ikke hvis du spiller hos udbydere med dansk licens. Gevinster derfra er som udgangspunkt skattefrie for spilleren.',
+        a: 'Gevinster fra udbydere med dansk licens er som udgangspunkt skattefrie. Gevinster fra en udenlandsk udbyder er kun skattefrie, hvis betingelserne om EU/EØS-hjemsted, offentlig godkendelse og kontrol samt et tilsvarende lovligt spil i Danmark er opfyldt. Du skal kunne dokumentere det.'
       },
     ],
     cta: { href: '/surebets', label: 'Se surebets hos danske bookmakere' },
@@ -1026,7 +1026,7 @@ export const GUIDES: Guide[] = [
       {
         type: 'ul',
         items: [
-          'Dansk licens fra Spillemyndigheden, så gevinster er skattefrie og du er beskyttet.',
+          'Kontrollér, at udbyderen har dansk licens fra Spillemyndigheden, og at licensen gælder det præcise domæne.',
           'Hurtige ind- og udbetalinger, så du kan flytte penge, hvor de skal bruges.',
           'Bredt udvalg af sportsgrene og markeder, især tennis, fodbold og basketball.',
           'Konkurrencedygtige odds og lav margin på de populære markeder.',
@@ -1218,17 +1218,17 @@ export const GUIDES: Guide[] = [
     readMinutes: 4,
     updated: '2026-11-23',
     intro:
-      'For de fleste danske spillere er svaret enkelt: Gevinster fra bookmakere med dansk licens er skattefrie. Det er bookmakeren, der betaler afgift til staten, ikke dig.',
+      'Gevinster fra spil hos udbydere med dansk licens er som udgangspunkt skattefrie for dig som spiller. Gevinster fra udenlandske udbydere kræver en særskilt vurdering efter Skattestyrelsens betingelser; en EU/EØS-licens er ikke i sig selv nok.',
     blocks: [
       { type: 'h2', text: 'Danske bookmakere: skattefrit' },
       {
         type: 'p',
         text: 'Når du spiller hos en udbyder med licens fra Spillemyndigheden, betaler udbyderen spilleafgift af sin indtjening. Dine gevinster er derfor som udgangspunkt skattefrie, og du skal ikke oplyse dem til Skattestyrelsen.',
       },
-      { type: 'h2', text: 'Udenlandske bookmakere uden dansk licens' },
+      { type: 'h2', text: 'Gevinster hos udbydere uden dansk licens' },
       {
         type: 'p',
-        text: 'Spiller du hos udbydere uden dansk licens, kan gevinsterne være skattepligtige. Reglerne afhænger blandt andet af, om udbyderen har licens i et andet EU/EØS-land. Det er en af grundene til, at det er mest enkelt at holde sig til danske bookmakere.',
+        text: 'Gevinster fra en udenlandsk udbyder er kun skattefrie, hvis udbyderen er hjemmehørende i et EU/EØS-land, spillet er godkendt og kontrolleret af en offentlig myndighed dér, og tilsvarende spil lovligt kan udbydes i Danmark. Du skal selv kunne dokumentere, at betingelserne er opfyldt. Hvis de ikke er det, kan gevinsten være skattepligtig. Kontrollér altid reglerne hos Skattestyrelsen.',
       },
       { type: 'h2', text: 'Gælder det også for surebets?' },
       {
@@ -1248,7 +1248,7 @@ export const GUIDES: Guide[] = [
     faq: [
       {
         q: 'Skal jeg betale skat af gevinster fra danske bookmakere?',
-        a: 'Nej, som udgangspunkt ikke. Gevinster fra udbydere med dansk licens er skattefrie for spilleren.',
+        a: 'Som udgangspunkt er gevinster fra udbydere med dansk licens skattefrie. Gevinster fra udenlandske udbydere afhænger af, om Skattestyrelsens betingelser er opfyldt.'
       },
       {
         q: 'Hvordan ser jeg, om en bookmaker har dansk licens?',
@@ -1898,7 +1898,7 @@ export const GUIDES: Guide[] = [
     faq: [
       {
         q: 'Skal jeg betale skat af mine gevinster?',
-        a: 'Gevinster hos bookmakere med dansk licens er skattefri. Læs vores guide om skat på spillegevinster for detaljerne.',
+        a: 'Gevinster hos udbydere med dansk licens er som udgangspunkt skattefrie. For udenlandske udbydere afhænger skatten af, om Skattestyrelsens betingelser er opfyldt. Læs vores guide om skat på spillegevinster for detaljerne.'
       },
       {
         q: 'Hvor ofte skal jeg opdatere mit regnskab?',
