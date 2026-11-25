@@ -3,6 +3,7 @@ import { GUIDES } from '@/lib/guides'
 import { guideLocales } from '@/lib/content-i18n'
 import { HREFLANG, type Locale } from '@/lib/i18n'
 import { BOOKMAKER_PAGES, SPORT_PAGES, UPDATED } from '@/lib/landing-pages'
+import { getLocalizedLanding } from '@/lib/content-i18n'
 import { INDEXABLE_LOCALES, absoluteUrl } from '@/lib/seo/alternates'
 import { PUBLIC_PAGES, SITE_URL } from '@/lib/site'
 
@@ -28,8 +29,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   })
   const guides = GUIDES.flatMap((guide) => translatedEntries(`/guide/${guide.slug}`, new Date(guide.updated), 0.7, guideLocales(guide.slug)))
   const landing = [
-    ...SPORT_PAGES.map((page) => ({ path: `/sport/${page.slug}`, priority: 0.7 })),
-    ...BOOKMAKER_PAGES.map((page) => ({ path: `/bookmaker/${page.slug}`, priority: 0.6 })),
-  ].flatMap(({ path, priority }) => translatedEntries(path, new Date(UPDATED), priority))
+    ...SPORT_PAGES.map((page) => ({ kind: 'sport' as const, path: `/sport/${page.slug}`, slug: page.slug, priority: 0.7 })),
+    ...BOOKMAKER_PAGES.map((page) => ({ kind: 'bookmaker' as const, path: `/bookmaker/${page.slug}`, slug: page.slug, priority: 0.6 })),
+  ].flatMap(({ kind, path, slug, priority }) => {
+    const locales = INDEXABLE_LOCALES.filter((locale) => locale === 'da' || Boolean(getLocalizedLanding(kind, slug, locale)))
+    return translatedEntries(path, new Date(UPDATED), priority, locales)
+  })
   return [...pages, ...guides, ...landing]
 }
