@@ -1,427 +1,427 @@
 {
   "sport/basketball": {
-    "title": "Surebets on basketball",
-    "metaTitle": "Basketball surebets – guaranteed profit on NBA and Euroleague",
-    "description": "Find basketball surebets on NBA, Euroleague and European leagues. Points markets and handicaps create numerous arbitrage opportunities with licensed bookmakers.",
-    "keyword": "basketball surebets",
-    "intro": "Basketball offers numerous surebets on points totals and handicaps. The NBA features extensive betting markets, and bookmakers adjust their lines at different speeds, creating arbitrage opportunities.",
+    "title": "Surebets στο μπάσκετ",
+    "metaTitle": "Surebets μπάσκετ – εγγυημένο κέρδος σε NBA και Euroleague",
+    "description": "Βρες surebets μπάσκετ σε NBA, Euroleague και ευρωπαϊκά πρωταθλήματα. Οι αγορές πόντων και τα χάντικαπ δημιουργούν πολλές ευκαιρίες arbitrage σε εταιρείες στοιχημάτων με άδεια.",
+    "keyword": "surebets μπάσκετ",
+    "intro": "Το μπάσκετ προσφέρει πολλά surebets στα σύνολα πόντων και στα χάντικαπ. Το NBA έχει εκτενείς αγορές στοιχημάτων, και οι εταιρείες προσαρμόζουν τις γραμμές τους με διαφορετική ταχύτητα, δημιουργώντας ευκαιρίες arbitrage.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Popular markets for basketball arbing"
+        "text": "Δημοφιλείς αγορές για arbitrage στο μπάσκετ"
       },
       {
         "type": "ul",
         "items": [
-          "Match winner including overtime: two outcomes and straightforward calculation.",
-          "Over/under total points, for example over or under 215.5 points.",
-          "Points handicap, where the favourite must win by a specified margin.",
-          "Player-specific markets such as points scored, rebounds and assists."
+          "Νικητής αγώνα με παράταση: δύο αποτελέσματα και απλός υπολογισμός.",
+          "Over/under συνολικών πόντων, για παράδειγμα over ή under 215.5 πόντους.",
+          "Χάντικαπ πόντων, όπου το φαβορί πρέπει να κερδίσει με συγκεκριμένη διαφορά.",
+          "Αγορές ανά παίκτη, όπως πόντοι, ριμπάουντ και ασίστ."
         ]
       },
       {
         "type": "h2",
-        "text": "Middling on points totals"
+        "text": "Middling στα σύνολα πόντων"
       },
       {
         "type": "p",
-        "text": "With points markets, two bookmakers may offer different lines, for example over 214.5 at one and under 216.5 at another. If the match finishes on exactly 215 or 216 points, you win both bets. This is called a 'middle' and represents an additional profit opportunity in basketball."
+        "text": "Στις αγορές πόντων, δύο εταιρείες στοιχημάτων μπορεί να προσφέρουν διαφορετικές γραμμές, για παράδειγμα over 214.5 στη μία και under 216.5 στην άλλη. Αν ο αγώνας τελειώσει με ακριβώς 215 ή 216 πόντους, κερδίζεις και τα δύο στοιχήματα. Αυτό λέγεται «middle» και αποτελεί επιπλέον ευκαιρία κέρδους στο μπάσκετ."
       },
       {
         "type": "tip",
-        "text": "Check whether overtime counts. In basketball it almost always does, but not at all bookmakers on every market."
+        "text": "Έλεγξε αν μετράει η παράταση. Στο μπάσκετ σχεδόν πάντα μετράει, αλλά όχι σε όλες τις εταιρείες και όχι σε κάθε αγορά."
       }
     ],
     "faq": [
       {
-        "q": "Does overtime count in basketball surebets?",
-        "a": "For most markets yes, but always check the specific market rules at each bookmaker. A market excluding overtime cannot be combined with one that includes overtime for arbitrage purposes."
+        "q": "Μετράει η παράταση στα surebets μπάσκετ;",
+        "a": "Στις περισσότερες αγορές ναι, αλλά έλεγχε πάντα τους κανόνες της συγκεκριμένης αγοράς σε κάθε εταιρεία στοιχημάτων. Μια αγορά που δεν περιλαμβάνει παράταση δεν μπορεί να συνδυαστεί με μια που περιλαμβάνει παράταση για arbitrage."
       },
       {
-        "q": "What time are NBA games usually played?",
-        "a": "NBA games are typically played during the evening in North America. Depending on your time zone, many surebets may appear several hours before tip-off, giving you time to place both sides of the arbitrage bet."
+        "q": "Τι ώρα παίζονται συνήθως οι αγώνες του NBA;",
+        "a": "Οι αγώνες του NBA παίζονται συνήθως το βράδυ στη Βόρεια Αμερική. Ανάλογα με τη ζώνη ώρας σου, πολλά surebets μπορεί να εμφανιστούν αρκετές ώρες πριν από το τζάμπολ, δίνοντάς σου χρόνο να τοποθετήσεις και τις δύο πλευρές του arbitrage."
       }
     ]
   },
   "sport/ishockey": {
-    "title": "Ice hockey surebets",
-    "metaTitle": "Ice hockey surebets – guaranteed profit on NHL & leagues",
-    "description": "Ice hockey surebets from NHL, SHL and other leagues. Learn the difference between regulation-time and winner markets, and find guaranteed profit opportunities.",
-    "keyword": "ice hockey surebets",
-    "intro": "Ice hockey is an underrated sport for surebets. Many bookmakers price the Nordic leagues differently, and the distinction between regulation-time and winner markets creates additional opportunities for arbitrage betting.",
+    "title": "Surebets στο χόκεϊ επί πάγου",
+    "metaTitle": "Surebets στο χόκεϊ επί πάγου – εγγυημένο κέρδος σε NHL και άλλα πρωταθλήματα",
+    "description": "Surebets στο χόκεϊ επί πάγου από NHL, SHL και άλλα πρωταθλήματα. Μάθε τη διαφορά ανάμεσα στις αγορές κανονικής διάρκειας και τις αγορές νικητή και βρες ευκαιρίες εγγυημένου κέρδους.",
+    "keyword": "surebets στο χόκεϊ επί πάγου",
+    "intro": "Το χόκεϊ επί πάγου είναι ένα υποτιμημένο άθλημα για surebets. Πολλές εταιρείες στοιχημάτων τιμολογούν διαφορετικά τα σκανδιναβικά πρωταθλήματα, ενώ η διαφορά ανάμεσα στις αγορές κανονικής διάρκειας και νικητή δημιουργεί επιπλέον ευκαιρίες για arbitrage betting.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Regulation time or including overtime?"
+        "text": "Κανονική διάρκεια ή με παράταση;"
       },
       {
         "type": "p",
-        "text": "In ice hockey, there is both a 1X2 market for regulation time only and a winner market including overtime and shootouts. These two must never be mixed in the same surebet. Always check which market you are betting on with each bookmaker before placing your bets."
+        "text": "Στο χόκεϊ επί πάγου υπάρχει τόσο η αγορά 1X2 μόνο για την κανονική διάρκεια όσο και η αγορά νικητή που περιλαμβάνει παράταση και διαδοχικά πέναλτι. Οι δύο αυτές αγορές δεν πρέπει ποτέ να αναμιγνύονται στο ίδιο surebet. Έλεγξε πάντα σε ποια αγορά στοιχηματίζεις σε κάθε εταιρεία στοιχημάτων πριν καταχωρίσεις τα στοιχήματά σου."
       },
       {
         "type": "h2",
-        "text": "Good leagues for ice hockey surebets"
+        "text": "Πρωταθλήματα κατάλληλα για surebets στο χόκεϊ επί πάγου"
       },
       {
         "type": "ul",
         "items": [
-          "NHL: many matches and high maximum stakes.",
-          "SHL and Liiga: popular in the Nordic region and priced differently by bookmakers.",
-          "Domestic leagues: smaller leagues where bookmakers often disagree on pricing."
+          "NHL: πολλοί αγώνες και υψηλά μέγιστα όρια στοιχήματος.",
+          "SHL και Liiga: δημοφιλή στις σκανδιναβικές χώρες και με διαφορετική τιμολόγηση από τις εταιρείες στοιχημάτων.",
+          "Εγχώρια πρωταθλήματα: μικρότερες διοργανώσεις όπου οι εταιρείες στοιχημάτων συχνά διαφωνούν στην τιμολόγηση."
         ]
       },
       {
         "type": "tip",
-        "text": "Ice hockey often offers high profit per surebet, but lower maximum stakes than football."
+        "text": "Το χόκεϊ επί πάγου προσφέρει συχνά υψηλό κέρδος ανά surebet, αλλά χαμηλότερα μέγιστα όρια στοιχήματος από το ποδόσφαιρο."
       }
     ],
     "faq": [
       {
-        "q": "Can you combine 1X2 and winner including overtime in an ice hockey surebet?",
-        "a": "No. These are two different markets. If you combine them, you can lose both bets if the match goes to overtime. Always ensure all legs of your arbitrage bet are on the same market type."
+        "q": "Μπορώ να συνδυάσω το 1X2 με τον νικητή με παράταση σε ένα surebet χόκεϊ επί πάγου;",
+        "a": "Όχι. Πρόκειται για δύο διαφορετικές αγορές. Αν τις συνδυάσεις, μπορεί να χάσεις και τα δύο στοιχήματα σε περίπτωση που ο αγώνας φτάσει στην παράταση. Φρόντισε πάντα όλα τα σκέλη του arbitrage στοιχήματός σου να βρίσκονται στον ίδιο τύπο αγοράς."
       },
       {
-        "q": "Are there surebets on smaller ice hockey leagues?",
-        "a": "Yes. Bookmakers often price smaller domestic leagues differently, so arbitrage opportunities arise regularly. Check that bookmakers are licensed to operate in your country before betting."
+        "q": "Υπάρχουν surebets και στα μικρότερα πρωταθλήματα χόκεϊ επί πάγου;",
+        "a": "Ναι. Οι εταιρείες στοιχημάτων τιμολογούν συχνά διαφορετικά τα μικρότερα εγχώρια πρωταθλήματα, γι' αυτό οι ευκαιρίες arbitrage εμφανίζονται τακτικά. Πριν στοιχηματίσεις, βεβαιώσου ότι οι εταιρείες έχουν άδεια να δραστηριοποιούνται στη χώρα σου."
       }
     ]
   },
   "sport/fodbold": {
-    "title": "Surebets on football",
-    "metaTitle": "Football surebets – find guaranteed profit on matches",
-    "description": "Find surebets on football in real time. BetTrackerAI scans odds across the Premier League, Champions League and hundreds of other leagues at licensed bookmakers.",
-    "keyword": "football surebets",
-    "intro": "Football produces more surebets than any other sport. Matches are played around the clock, and each fixture offers hundreds of markets that bookmakers price differently.",
+    "title": "Surebets στο ποδόσφαιρο",
+    "metaTitle": "Surebets στο ποδόσφαιρο – βρες εγγυημένο κέρδος στους αγώνες",
+    "description": "Βρες surebets στο ποδόσφαιρο σε πραγματικό χρόνο. Το BetTrackerAI σαρώνει αποδόσεις σε Premier League, Champions League και εκατοντάδες άλλα πρωταθλήματα σε εταιρείες στοιχημάτων με άδεια.",
+    "keyword": "surebets στο ποδόσφαιρο",
+    "intro": "Το ποδόσφαιρο παράγει περισσότερα surebets από οποιοδήποτε άλλο άθλημα. Αγώνες διεξάγονται όλο το 24ωρο και κάθε αναμέτρηση προσφέρει εκατοντάδες αγορές που οι εταιρείες στοιχημάτων τιμολογούν διαφορετικά.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why football produces so many surebets"
+        "text": "Γιατί το ποδόσφαιρο παράγει τόσα πολλά surebets"
       },
       {
         "type": "p",
-        "text": "Bookmakers must price thousands of football matches every week, from the Champions League down to lower divisions. The smaller the league, the less time bookmakers devote to it, and the greater the likelihood of pricing discrepancies that create arbitrage opportunities."
+        "text": "Οι εταιρείες στοιχημάτων πρέπει να τιμολογήσουν χιλιάδες ποδοσφαιρικούς αγώνες κάθε εβδομάδα, από το Champions League μέχρι τις χαμηλότερες κατηγορίες. Όσο μικρότερο είναι το πρωτάθλημα, τόσο λιγότερο χρόνο του αφιερώνουν και τόσο μεγαλύτερη είναι η πιθανότητα να προκύψουν αποκλίσεις στην τιμολόγηση που δημιουργούν ευκαιρίες arbitrage."
       },
       {
         "type": "h2",
-        "text": "The most commonly used markets"
+        "text": "Οι πιο συχνά χρησιμοποιούμενες αγορές"
       },
       {
         "type": "ul",
         "items": [
-          "1X2: home win, draw and away win. Three outcomes, so you need three bets.",
-          "Over/under goals, for example over or under 2.5 goals. Only two outcomes and often high liquidity.",
-          "Asian handicap: two outcomes and low margin, but read the settlement rules for half and whole goals carefully.",
-          "Both teams to score: yes or no. A straightforward market with two outcomes."
+          "1X2: νίκη γηπεδούχου, ισοπαλία και νίκη φιλοξενούμενου. Τρία αποτελέσματα, άρα χρειάζεσαι τρία στοιχήματα.",
+          "Over/under γκολ, για παράδειγμα over ή under 2.5 γκολ. Μόνο δύο αποτελέσματα και συχνά υψηλή ρευστότητα.",
+          "Ασιατικό χάντικαπ: δύο αποτελέσματα και χαμηλό περιθώριο κέρδους για την εταιρεία, αλλά διάβασε προσεκτικά τους κανόνες διακανονισμού για τα μισά και τα ακέραια γκολ.",
+          "Γκολ/Γκολ (GG/NG): ναι ή όχι. Μια απλή αγορά με δύο αποτελέσματα."
         ]
       },
       {
         "type": "tip",
-        "text": "Always check whether the market applies to normal time only. Extra time and penalties rarely count in football surebets."
+        "text": "Έλεγχε πάντα αν η αγορά ισχύει μόνο για την κανονική διάρκεια του αγώνα. Η παράταση και τα πέναλτι σπάνια υπολογίζονται στα surebets ποδοσφαίρου."
       },
       {
         "type": "h2",
-        "text": "When do surebets arise?"
+        "text": "Πότε εμφανίζονται τα surebets;"
       },
       {
         "type": "p",
-        "text": "Many football surebets emerge when team line-ups are announced roughly an hour before kick-off. Some bookmakers adjust quickly, others react more slowly, and pricing differences appear in that window."
+        "text": "Πολλά surebets στο ποδόσφαιρο εμφανίζονται όταν ανακοινώνονται οι ενδεκάδες περίπου μία ώρα πριν από την výροχή. Μερικές εταιρείες στοιχημάτων προσαρμόζονται γρήγορα, άλλες αντιδρούν πιο αργά και σε αυτό το διάστημα προκύπτουν διαφορές στην τιμολόγηση."
       }
     ],
     "faq": [
       {
-        "q": "Which football leagues have the most surebets?",
-        "a": "Smaller leagues often offer higher profit percentages, but major leagues like the Premier League and Champions League have more markets and higher maximum stakes."
+        "q": "Ποια ποδοσφαιρικά πρωταθλήματα έχουν τα περισσότερα surebets;",
+        "a": "Τα μικρότερα πρωταθλήματα προσφέρουν συχνά υψηλότερα ποσοστά κέρδους, ενώ τα μεγάλα πρωταθλήματα, όπως η Premier League και το Champions League, έχουν περισσότερες αγορές και υψηλότερα μέγιστα όρια στοιχήματος."
       },
       {
-        "q": "Can you place surebets on live football matches?",
-        "a": "Yes, but live odds change very quickly. It requires you to place both bets within a few seconds."
+        "q": "Μπορώ να παίξω surebets σε ζωντανούς ποδοσφαιρικούς αγώνες;",
+        "a": "Ναι, αλλά οι αποδόσεις στο live αλλάζουν πολύ γρήγορα. Θα πρέπει να καταχωρίσεις και τα δύο στοιχήματα μέσα σε λίγα δευτερόλεπτα."
       }
     ]
   },
   "sport/esport": {
-    "title": "Surebets on esports",
-    "metaTitle": "Esports surebets – arbitrage betting on CS2, LoL & Dota 2",
-    "description": "Esports is one of the fastest-growing markets for surebets. Find arbitrage betting opportunities on CS2, League of Legends and Dota 2 at licensed bookmakers.",
-    "keyword": "esports surebets",
-    "intro": "Esports features large price differences between bookmakers. The market is relatively new, many bookmakers have fewer specialists in the field, and odds often move significantly before match start.",
+    "title": "Surebets στα esports",
+    "metaTitle": "Surebets στα esports – arbitrage betting σε CS2, LoL και Dota 2",
+    "description": "Τα esports είναι μία από τις ταχύτερα αναπτυσσόμενες αγορές για surebets. Βρες ευκαιρίες arbitrage betting σε CS2, League of Legends και Dota 2 σε εταιρείες στοιχημάτων με άδεια.",
+    "keyword": "surebets στα esports",
+    "intro": "Στα esports παρατηρούνται μεγάλες διαφορές τιμών ανάμεσα στις εταιρείες στοιχημάτων. Η αγορά είναι σχετικά νέα, πολλές εταιρείες διαθέτουν λιγότερους ειδικούς στον χώρο και οι αποδόσεις συχνά κινούνται σημαντικά πριν από την έναρξη του αγώνα.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why esports yields high profit"
+        "text": "Γιατί τα esports αποφέρουν υψηλό κέρδος"
       },
       {
         "type": "p",
-        "text": "Bookmakers dedicate fewer resources to esports than to football, and news about team line-ups spreads quickly within the community. This creates larger odds differences and often higher profit per surebet."
+        "text": "Οι εταιρείες στοιχημάτων αφιερώνουν λιγότερους πόρους στα esports απ' ό,τι στο ποδόσφαιρο και οι ειδήσεις για τις συνθέσεις των ομάδων κυκλοφορούν γρήγορα μέσα στην κοινότητα. Έτσι δημιουργούνται μεγαλύτερες διαφορές στις αποδόσεις και συχνά υψηλότερο κέρδος ανά surebet."
       },
       {
         "type": "h2",
-        "text": "Popular games for arbitrage betting"
+        "text": "Δημοφιλή παιχνίδια για arbitrage betting"
       },
       {
         "type": "ul",
         "items": [
-          "Counter-Strike 2: the most matches and markets for map and round handicaps.",
-          "League of Legends: major tournaments with stable markets.",
-          "Dota 2: high odds differences, but lower maximum stakes."
+          "Counter-Strike 2: οι περισσότεροι αγώνες και αγορές για χάντικαπ χαρτών και γύρων.",
+          "League of Legends: μεγάλα τουρνουά με σταθερές αγορές.",
+          "Dota 2: μεγάλες διαφορές στις αποδόσεις, αλλά χαμηλότερα μέγιστα όρια στοιχήματος."
         ]
       },
       {
         "type": "tip",
-        "text": "Watch out for postponed matches. Bookmakers have different rules for how long a bet remains valid."
+        "text": "Πρόσεξε τους αγώνες που αναβάλλονται. Οι εταιρείες στοιχημάτων έχουν διαφορετικούς κανόνες για το πόσο διάστημα παραμένει έγκυρο ένα στοίχημα."
       }
     ],
     "faq": [
       {
-        "q": "Are esports good for surebets?",
-        "a": "Yes, the profit is often higher than in traditional sports. However, the maximum stakes are typically lower."
+        "q": "Είναι τα esports καλά για surebets;",
+        "a": "Ναι, το κέρδος είναι συχνά υψηλότερο από ό,τι στα παραδοσιακά αθλήματα. Ωστόσο, τα μέγιστα όρια στοιχήματος είναι συνήθως χαμηλότερα."
       },
       {
-        "q": "Which bookmakers offer esports?",
-        "a": "Most major licensed bookmakers offer esports, especially CS2 and League of Legends. Check availability and licence in your country."
+        "q": "Ποιες εταιρείες στοιχημάτων προσφέρουν esports;",
+        "a": "Οι περισσότερες μεγάλες εταιρείες στοιχημάτων με άδεια προσφέρουν esports, ιδίως CS2 και League of Legends. Έλεγξε τη διαθεσιμότητα και την άδεια λειτουργίας στη χώρα σου."
       }
     ]
   },
   "sport/tennis": {
-    "title": "Surebets on Tennis",
-    "metaTitle": "Tennis Surebets – Guaranteed Profit on ATP, WTA & Challenger",
-    "description": "Tennis is ideal for surebets: only two outcomes and year-round matches. Find tennis arbitrage opportunities on ATP, WTA and Challenger tournaments worldwide.",
-    "keyword": "tennis surebets",
-    "intro": "Tennis is the preferred sport for many sure bettors. There are only two outcomes, no draw, and tournaments take place almost every single day of the year.",
+    "title": "Surebets στο τένις",
+    "metaTitle": "Surebets στο τένις – εγγυημένο κέρδος σε ATP, WTA και Challenger",
+    "description": "Το τένις είναι ιδανικό για surebets: μόνο δύο αποτελέσματα και αγώνες όλο τον χρόνο. Βρες ευκαιρίες arbitrage στο τένις σε τουρνουά ATP, WTA και Challenger σε όλο τον κόσμο.",
+    "keyword": "surebets τένις",
+    "intro": "Το τένις είναι το αγαπημένο άθλημα πολλών παικτών που κυνηγούν surebets. Υπάρχουν μόνο δύο πιθανά αποτελέσματα, δεν υπάρχει ισοπαλία και τουρνουά διεξάγονται σχεδόν κάθε μέρα του χρόνου.",
     "blocks": [
       {
         "type": "h2",
-        "text": "The Advantages of Tennis"
+        "text": "Τα πλεονεκτήματα του τένις"
       },
       {
         "type": "ul",
         "items": [
-          "Only two outcomes, so you only need to place two bets.",
-          "No draw, which makes the calculation simple.",
-          "Plenty of matches at Challenger and ITF level, where bookmakers often disagree.",
-          "Matches around the clock due to tournaments in different time zones."
+          "Μόνο δύο πιθανά αποτελέσματα, άρα χρειάζεται να παίξετε μόνο δύο στοιχήματα.",
+          "Καμία ισοπαλία, που κάνει τον υπολογισμό απλό.",
+          "Άφθονοι αγώνες σε επίπεδο Challenger και ITF, όπου οι στοιχηματικές εταιρείες συχνά διαφωνούν στις αποδόσεις.",
+          "Αγώνες όλο το εικοσιτετράωρο χάρη στα τουρνουά που διεξάγονται σε διαφορετικές ζώνες ώρας."
         ]
       },
       {
         "type": "h2",
-        "text": "Beware of Retired Matches"
+        "text": "Προσοχή στις εγκαταλείψεις αγώνων"
       },
       {
         "type": "p",
-        "text": "The biggest risk in tennis is when a player retires from a match. Bookmakers have different rules: some void the bet, others settle it if the first set has been completed. If your two bookmakers use different rules, you could lose both bets."
+        "text": "Ο μεγαλύτερος κίνδυνος στο τένις είναι η εγκατάλειψη του αγώνα από έναν παίκτη. Οι στοιχηματικές εταιρείες έχουν διαφορετικούς κανόνες: ορισμένες ακυρώνουν το στοίχημα, ενώ άλλες το διακανονίζουν αν έχει ολοκληρωθεί το πρώτο σετ. Αν οι δύο εταιρείες που έχετε επιλέξει εφαρμόζουν διαφορετικούς κανόνες, μπορεί να χάσετε και τα δύο στοιχήματα."
       },
       {
         "type": "tip",
-        "text": "Read the bookmakers' rules for retired tennis matches before placing your first tennis surebet."
+        "text": "Διαβάστε τους κανόνες των στοιχηματικών εταιρειών για τους αγώνες τένις με εγκατάλειψη πριν παίξετε το πρώτο σας surebet στο τένις."
       },
       {
         "type": "h2",
-        "text": "Other Markets"
+        "text": "Άλλες αγορές"
       },
       {
         "type": "p",
-        "text": "Besides the match winner, there are surebets on total games, set handicaps and individual set winners. These markets often have lower maximum stakes."
+        "text": "Εκτός από τον νικητή του αγώνα, υπάρχουν surebets στο σύνολο games, στο handicap σετ και στον νικητή κάθε σετ. Σε αυτές τις αγορές τα μέγιστα όρια στοιχήματος είναι συχνά χαμηλότερα."
       }
     ],
     "faq": [
       {
-        "q": "Is tennis good for surebets?",
-        "a": "Yes. Only two outcomes and plenty of matches make tennis one of the best sports for surebets, especially for beginners."
+        "q": "Ενδείκνυται το τένις για surebets;",
+        "a": "Ναι. Τα δύο μόνο πιθανά αποτελέσματα και ο μεγάλος αριθμός αγώνων κάνουν το τένις ένα από τα καλύτερα αθλήματα για surebets, ειδικά για αρχάριους."
       },
       {
-        "q": "What happens if a player retires?",
-        "a": "It depends on the bookmaker. Some void all bets, others settle them if a certain number of sets have been played. Check the rules at both bookmakers."
+        "q": "Τι συμβαίνει αν ένας παίκτης εγκαταλείψει;",
+        "a": "Εξαρτάται από τη στοιχηματική εταιρεία. Κάποιες ακυρώνουν όλα τα στοιχήματα, άλλες τα διακανονίζουν αν έχει διεξαχθεί συγκεκριμένος αριθμός σετ. Ελέγξτε τους κανόνες και των δύο εταιρειών."
       }
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebets at Bet365",
-    "metaTitle": "Bet365 Surebets – Find Guaranteed Profit Opportunities",
-    "description": "Find surebets at Bet365 in real time. BetTrackerAI compares Bet365 odds with other bookmakers and shows you where to lock in a guaranteed profit.",
-    "keyword": "bet365 surebets",
-    "intro": "Bet365 is one of the world's largest bookmakers and offers one of the widest selections of sports and markets. This makes Bet365 one of the bookmakers most frequently involved in surebets.",
+    "title": "Surebets στην Bet365",
+    "metaTitle": "Surebets Bet365 – Βρείτε ευκαιρίες εγγυημένου κέρδους",
+    "description": "Βρείτε surebets στην Bet365 σε πραγματικό χρόνο. Το BetTrackerAI συγκρίνει τις αποδόσεις της Bet365 με άλλες στοιχηματικές εταιρείες και σας δείχνει πού μπορείτε να κλειδώσετε εγγυημένο κέρδος.",
+    "keyword": "surebets bet365",
+    "intro": "Η Bet365 είναι μία από τις μεγαλύτερες στοιχηματικές εταιρείες στον κόσμο και προσφέρει μία από τις πιο ευρείες γκάμες αθλημάτων και αγορών. Γι' αυτό η Bet365 συγκαταλέγεται στις εταιρείες που εμφανίζονται συχνότερα σε surebets.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Bet365"
+        "text": "Σχετικά με την Bet365"
       },
       {
         "type": "p",
-        "text": "Bet365 is a licensed bookmaker in multiple jurisdictions and offers odds on a very large number of matches, including minor leagues and live markets. This breadth means that Bet365 often has odds that differ from the rest of the market."
+        "text": "Η Bet365 είναι αδειοδοτημένη στοιχηματική εταιρεία σε πολλές δικαιοδοσίες και προσφέρει αποδόσεις σε πάρα πολλούς αγώνες, συμπεριλαμβανομένων μικρότερων πρωταθλημάτων και live αγορών. Αυτή η ευρύτητα σημαίνει ότι η Bet365 έχει συχνά αποδόσεις που διαφέρουν από την υπόλοιπη αγορά."
       },
       {
         "type": "h2",
-        "text": "How to find surebets with Bet365"
+        "text": "Πώς να βρείτε surebets με την Bet365"
       },
       {
         "type": "p",
-        "text": "A surebet with Bet365 arises when Bet365 has higher odds on one outcome than other bookmakers have on the opposite outcomes. BetTrackerAI monitors Bet365 odds constantly and compares them with the rest of the market."
+        "text": "Ένα surebet με την Bet365 προκύπτει όταν η Bet365 έχει υψηλότερη απόδοση σε ένα αποτέλεσμα από αυτές που προσφέρουν άλλες στοιχηματικές εταιρείες στα αντίθετα αποτελέσματα. Το BetTrackerAI παρακολουθεί συνεχώς τις αποδόσεις της Bet365 και τις συγκρίνει με την υπόλοιπη αγορά."
       },
       {
         "type": "ul",
         "items": [
-          "Select Bet365 and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a surebet with stable odds.",
-          "Use the calculator to distribute your stake and round the amount.",
-          "Place the bet with the bookmaker offering the most volatile odds first."
+          "Επιλέξτε την Bet365 και τις υπόλοιπες στοιχηματικές εταιρείες σας με το φίλτρο στη σελίδα των surebets.",
+          "Ταξινομήστε ανά κέρδος και διαλέξτε ένα surebet με σταθερές αποδόσεις.",
+          "Χρησιμοποιήστε τον υπολογιστή για να μοιράσετε το ποσό του στοιχήματος και να στρογγυλοποιήσετε τα ποσά.",
+          "Παίξτε πρώτα το στοίχημα στην εταιρεία με τις πιο ασταθείς αποδόσεις."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers so you don't only use Bet365. This extends the lifespan of your account."
+        "text": "Μοιράστε τα στοιχήματά σας σε περισσότερες στοιχηματικές εταιρείες, ώστε να μην παίζετε μόνο στην Bet365. Έτσι ο λογαριασμός σας θα έχει μεγαλύτερη διάρκεια ζωής."
       }
     ],
     "faq": [
       {
-        "q": "Is arbitrage betting allowed at Bet365?",
-        "a": "Arbitrage betting is legal. However, like all bookmakers, Bet365 may restrict accounts under its terms and conditions if they detect betting patterns that consistently secure guaranteed profit."
+        "q": "Επιτρέπεται το arbitrage betting στην Bet365;",
+        "a": "Το arbitrage betting είναι νόμιμο. Ωστόσο, όπως όλες οι στοιχηματικές εταιρείες, η Bet365 μπορεί να περιορίσει λογαριασμούς βάσει των όρων και προϋποθέσεών της, αν εντοπίσει μοτίβα στοιχηματισμού που εξασφαλίζουν σταθερά εγγυημένο κέρδος."
       },
       {
-        "q": "Does Bet365 operate under a gambling licence?",
-        "a": "Yes. Bet365 holds licences in multiple regulated markets worldwide. Check your local tax rules, as the treatment of winnings varies by jurisdiction."
+        "q": "Λειτουργεί η Bet365 με άδεια τυχερών παιχνιδιών;",
+        "a": "Ναι. Η Bet365 διαθέτει άδειες σε πολλές ρυθμιζόμενες αγορές ανά τον κόσμο. Ελέγξτε τους τοπικούς φορολογικούς κανόνες, καθώς η μεταχείριση των κερδών διαφέρει ανά δικαιοδοσία."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebets at Unibet",
-    "metaTitle": "Unibet Sure Bets – Find Arbitrage Betting Opportunities",
-    "description": "Find sure bets at Unibet in real time. BetTrackerAI compares Unibet's odds with other bookmakers so you can lock in guaranteed profit through arbitrage betting.",
-    "keyword": "unibet sure bets",
-    "intro": "Unibet is one of the most popular bookmakers worldwide. Unibet uses the Kambi odds platform, so odds at Unibet often resemble those at other Kambi-powered bookmakers.",
+    "title": "Surebets στη Unibet",
+    "metaTitle": "Surebets Unibet – Βρείτε ευκαιρίες arbitrage betting",
+    "description": "Βρείτε surebets στη Unibet σε πραγματικό χρόνο. Το BetTrackerAI συγκρίνει τις αποδόσεις της Unibet με άλλες στοιχηματικές εταιρείες, ώστε να κλειδώσετε εγγυημένο κέρδος μέσω arbitrage betting.",
+    "keyword": "surebets unibet",
+    "intro": "Η Unibet είναι μία από τις πιο δημοφιλείς στοιχηματικές εταιρείες παγκοσμίως. Η Unibet χρησιμοποιεί την πλατφόρμα αποδόσεων Kambi, γι' αυτό οι αποδόσεις της μοιάζουν συχνά με εκείνες άλλων εταιρειών που βασίζονται στην Kambi.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Unibet"
+        "text": "Σχετικά με τη Unibet"
       },
       {
         "type": "p",
-        "text": "Unibet holds licences in multiple regulated markets and offers a wide range of sports. Because Unibet shares its odds platform with several other bookmakers, sure bets most often arise between Unibet and bookmakers on different platforms."
+        "text": "Η Unibet διαθέτει άδειες σε πολλές ρυθμιζόμενες αγορές και προσφέρει μεγάλη γκάμα αθλημάτων. Επειδή η Unibet μοιράζεται την πλατφόρμα αποδόσεων με αρκετές άλλες στοιχηματικές εταιρείες, τα surebets προκύπτουν συχνότερα ανάμεσα στη Unibet και εταιρείες που χρησιμοποιούν διαφορετικές πλατφόρμες."
       },
       {
         "type": "h2",
-        "text": "How to find sure bets with Unibet"
+        "text": "Πώς να βρείτε surebets με τη Unibet"
       },
       {
         "type": "p",
-        "text": "A sure bet with Unibet occurs when Unibet has higher odds on one outcome than other bookmakers have on the opposing outcomes. BetTrackerAI monitors Unibet's odds continuously and compares them with the rest of the market."
+        "text": "Ένα surebet με τη Unibet προκύπτει όταν η Unibet έχει υψηλότερη απόδοση σε ένα αποτέλεσμα από αυτές που προσφέρουν άλλες στοιχηματικές εταιρείες στα αντίθετα αποτελέσματα. Το BetTrackerAI παρακολουθεί συνεχώς τις αποδόσεις της Unibet και τις συγκρίνει με την υπόλοιπη αγορά."
       },
       {
         "type": "ul",
         "items": [
-          "Select Unibet and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a sure bet with stable odds.",
-          "Use the calculator to split your stake and round the amounts.",
-          "Place your bet with the bookmaker offering the most volatile odds first."
+          "Επιλέξτε τη Unibet και τις υπόλοιπες στοιχηματικές εταιρείες σας με το φίλτρο στη σελίδα των surebets.",
+          "Ταξινομήστε ανά κέρδος και διαλέξτε ένα surebet με σταθερές αποδόσεις.",
+          "Χρησιμοποιήστε τον υπολογιστή για να μοιράσετε το ποσό του στοιχήματος και να στρογγυλοποιήσετε τα ποσά.",
+          "Παίξτε πρώτα το στοίχημα στην εταιρεία με τις πιο ασταθείς αποδόσεις."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers, so you don't only use Unibet. This will extend the lifespan of your account and help you avoid limits."
+        "text": "Μοιράστε τα στοιχήματά σας σε περισσότερες στοιχηματικές εταιρείες, ώστε να μην παίζετε μόνο στη Unibet. Έτσι ο λογαριασμός σας θα έχει μεγαλύτερη διάρκεια ζωής και θα αποφύγετε τους περιορισμούς."
       }
     ],
     "faq": [
       {
-        "q": "Is it legal to place sure bets at Unibet?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, Unibet may limit or restrict accounts under its terms and conditions if they only place bets with guaranteed profit."
+        "q": "Είναι νόμιμο να παίζω surebets στη Unibet;",
+        "a": "Ναι, το arbitrage betting είναι νόμιμο. Ωστόσο, όπως όλες οι στοιχηματικές εταιρείες, η Unibet μπορεί να περιορίσει λογαριασμούς βάσει των όρων και προϋποθέσεών της, αν παίζουν αποκλειστικά στοιχήματα με εγγυημένο κέρδος."
       },
       {
-        "q": "Which bookmakers are similar to Unibet?",
-        "a": "Unibet uses Kambi, which also supplies odds to several other bookmakers. Therefore, combine Unibet with bookmakers on different platforms to find more sure bets."
+        "q": "Ποιες στοιχηματικές εταιρείες μοιάζουν με τη Unibet;",
+        "a": "Η Unibet χρησιμοποιεί την Kambi, η οποία προμηθεύει με αποδόσεις και αρκετές άλλες στοιχηματικές εταιρείες. Γι' αυτό, συνδυάστε τη Unibet με εταιρείες που βασίζονται σε διαφορετικές πλατφόρμες, για να βρείτε περισσότερα surebets."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebets at Betano",
-    "metaTitle": "Betano surebets – find arbitrage bets at Betano",
-    "description": "Find surebets at Betano in real time. BetTrackerAI compares Betano's odds with other licensed bookmakers and shows where you can lock in a guaranteed profit.",
+    "title": "Surebets στη Betano",
+    "metaTitle": "Surebets Betano – βρείτε στοιχήματα arbitrage στη Betano",
+    "description": "Βρείτε surebets στη Betano σε πραγματικό χρόνο. Το BetTrackerAI συγκρίνει τις αποδόσεις της Betano με άλλες αδειοδοτημένες στοιχηματικές εταιρείες και σας δείχνει πού μπορείτε να κλειδώσετε εγγυημένο κέρδος.",
     "keyword": "betano surebets",
-    "intro": "Betano is one of the newer bookmakers in the regulated market and uses its own odds-setting platform. This means that Betano's odds often differ from the rest of the market, creating arbitrage betting opportunities.",
+    "intro": "Η Betano είναι μία από τις νεότερες στοιχηματικές εταιρείες της ρυθμιζόμενης αγοράς και χρησιμοποιεί τη δική της πλατφόρμα διαμόρφωσης αποδόσεων. Έτσι, οι αποδόσεις της Betano συχνά διαφέρουν από τις υπόλοιπες της αγοράς, δημιουργώντας ευκαιρίες για arbitrage betting.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Betano"
+        "text": "Σχετικά με τη Betano"
       },
       {
         "type": "p",
-        "text": "Betano holds a licence in multiple jurisdictions and offers a wide range of sports. Because Betano sets odds independently, it is often involved in surebets when compared with established bookmakers."
+        "text": "Η Betano διαθέτει άδεια λειτουργίας σε περισσότερες από μία δικαιοδοσίες και προσφέρει μεγάλη γκάμα αθλημάτων. Επειδή διαμορφώνει τις αποδόσεις της ανεξάρτητα, εμφανίζεται συχνά σε surebets όταν συγκρίνεται με τις παλαιότερες στοιχηματικές εταιρείες."
       },
       {
         "type": "h2",
-        "text": "How to find surebets with Betano"
+        "text": "Πώς να βρείτε surebets με τη Betano"
       },
       {
         "type": "p",
-        "text": "A surebet with Betano arises when Betano offers higher odds on one outcome than other bookmakers offer on the opposite outcomes. BetTrackerAI monitors Betano's odds continuously and compares them with the rest of the market."
+        "text": "Ένα surebet με τη Betano προκύπτει όταν η Betano δίνει υψηλότερη απόδοση σε ένα αποτέλεσμα από ό,τι δίνουν άλλες στοιχηματικές εταιρείες στα αντίθετα αποτελέσματα. Το BetTrackerAI παρακολουθεί συνεχώς τις αποδόσεις της Betano και τις συγκρίνει με την υπόλοιπη αγορά."
       },
       {
         "type": "ul",
         "items": [
-          "Select Betano and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a surebet with stable odds.",
-          "Use the calculator to split your stake and round the amounts.",
-          "Place the bet with the bookmaker that has the most volatile odds first."
+          "Επιλέξτε τη Betano και τις υπόλοιπες στοιχηματικές σας εταιρείες από το φίλτρο στη σελίδα των surebets.",
+          "Ταξινομήστε ανά κέρδος και διαλέξτε ένα surebet με σταθερές αποδόσεις.",
+          "Χρησιμοποιήστε τον υπολογιστή για να μοιράσετε το ποσό της συμμετοχής σας και να στρογγυλοποιήσετε τα ποσά.",
+          "Παίξτε πρώτα το στοίχημα στη στοιχηματική εταιρεία με τις πιο ασταθείς αποδόσεις."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers so you don't only use Betano. This extends the lifespan of your account and helps you avoid restrictions."
+        "text": "Μοιράστε τα στοιχήματά σας σε περισσότερες στοιχηματικές εταιρείες, ώστε να μην παίζετε μόνο στη Betano. Έτσι ο λογαριασμός σας διατηρείται περισσότερο και αποφεύγετε τους περιορισμούς."
       }
     ],
     "faq": [
       {
-        "q": "Are you allowed to place surebets at Betano?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, Betano may limit accounts under its terms and conditions if they detect betting patterns that consistently lock in guaranteed profit."
+        "q": "Επιτρέπεται να παίζω surebets στη Betano;",
+        "a": "Ναι, το arbitrage betting είναι νόμιμο. Ωστόσο, όπως όλες οι στοιχηματικές εταιρείες, η Betano μπορεί να περιορίσει λογαριασμούς σύμφωνα με τους όρους και τις προϋποθέσεις της, αν εντοπίσει μοτίβα στοιχηματισμού που εξασφαλίζουν σταθερά εγγυημένο κέρδος."
       },
       {
-        "q": "Is Betano licensed?",
-        "a": "Yes. Betano is licensed in multiple regulated markets. Check your national gambling regulator to confirm whether Betano holds a licence where you live."
+        "q": "Διαθέτει άδεια η Betano;",
+        "a": "Ναι. Η Betano διαθέτει άδεια σε περισσότερες από μία ρυθμιζόμενες αγορές. Ελέγξτε στην αρμόδια εθνική ρυθμιστική αρχή τυχερών παιχνιδιών αν η Betano έχει άδεια στη χώρα όπου ζείτε."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets at LeoVegas",
-    "metaTitle": "LeoVegas Sure Bets – Find Arbitrage Betting Opportunities",
-    "description": "Find sure bets at LeoVegas in real time. BetTrackerAI compares LeoVegas odds with other bookmakers and shows you where you can lock in a guaranteed profit.",
-    "keyword": "leovegas sure bets",
-    "intro": "LeoVegas is known for its casino offering but also provides a wide sports betting selection. The bookmaker uses the Kambi platform and regularly features in arbitrage betting opportunities.",
+    "title": "Surebets στη LeoVegas",
+    "metaTitle": "LeoVegas Surebets – Βρείτε ευκαιρίες arbitrage betting",
+    "description": "Βρείτε surebets στη LeoVegas σε πραγματικό χρόνο. Το BetTrackerAI συγκρίνει τις αποδόσεις της LeoVegas με άλλες στοιχηματικές εταιρείες και σας δείχνει πού μπορείτε να κλειδώσετε εγγυημένο κέρδος.",
+    "keyword": "leovegas surebets",
+    "intro": "Η LeoVegas φημίζεται για την προσφορά της στο καζίνο, αλλά διαθέτει και μεγάλη γκάμα στοιχηματικών επιλογών. Η εταιρεία χρησιμοποιεί την πλατφόρμα Kambi και εμφανίζεται τακτικά σε ευκαιρίες arbitrage betting.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About LeoVegas"
+        "text": "Σχετικά με τη LeoVegas"
       },
       {
         "type": "p",
-        "text": "LeoVegas is a licensed bookmaker with a user-friendly app that makes it quick to place bets. This is important with sure bets, where odds can change in seconds. Check that LeoVegas is licensed and available in your country before opening an account."
+        "text": "Η LeoVegas είναι αδειοδοτημένη στοιχηματική εταιρεία με φιλική προς τον χρήστη εφαρμογή, που κάνει την τοποθέτηση στοιχημάτων γρήγορη. Αυτό είναι σημαντικό στα surebets, όπου οι αποδόσεις μπορούν να αλλάξουν μέσα σε δευτερόλεπτα. Πριν ανοίξετε λογαριασμό, ελέγξτε ότι η LeoVegas έχει άδεια και είναι διαθέσιμη στη χώρα σας."
       },
       {
         "type": "h2",
-        "text": "How to find sure bets with LeoVegas"
+        "text": "Πώς να βρείτε surebets με τη LeoVegas"
       },
       {
         "type": "p",
-        "text": "A sure bet with LeoVegas occurs when LeoVegas has higher odds on one outcome than other bookmakers have on the opposite outcomes. BetTrackerAI monitors LeoVegas odds continuously and compares them with bookmakers operating in your market."
+        "text": "Ένα surebet με τη LeoVegas προκύπτει όταν η LeoVegas δίνει υψηλότερη απόδοση σε ένα αποτέλεσμα από ό,τι δίνουν άλλες στοιχηματικές εταιρείες στα αντίθετα αποτελέσματα. Το BetTrackerAI παρακολουθεί συνεχώς τις αποδόσεις της LeoVegas και τις συγκρίνει με τις εταιρείες που δραστηριοποιούνται στην αγορά σας."
       },
       {
         "type": "ul",
         "items": [
-          "Select LeoVegas and your other bookmakers using the filter on the sure bets page.",
-          "Sort by profit and choose a sure bet with stable odds.",
-          "Use the calculator to divide your stake, and round the amounts.",
-          "Place your bet with the bookmaker offering the most volatile odds first."
+          "Επιλέξτε τη LeoVegas και τις υπόλοιπες στοιχηματικές σας εταιρείες από το φίλτρο στη σελίδα των surebets.",
+          "Ταξινομήστε ανά κέρδος και διαλέξτε ένα surebet με σταθερές αποδόσεις.",
+          "Χρησιμοποιήστε τον υπολογιστή για να μοιράσετε το ποσό της συμμετοχής σας και να στρογγυλοποιήσετε τα ποσά.",
+          "Παίξτε πρώτα το στοίχημα στη στοιχηματική εταιρεία με τις πιο ασταθείς αποδόσεις."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across several bookmakers, so you don't only use LeoVegas. This extends the lifespan of your account and reduces the risk of account limits."
+        "text": "Μοιράστε τα στοιχήματά σας σε περισσότερες στοιχηματικές εταιρείες, ώστε να μην παίζετε μόνο στη LeoVegas. Έτσι ο λογαριασμός σας διατηρείται περισσότερο και μειώνεται ο κίνδυνος περιορισμών."
       }
     ],
     "faq": [
       {
-        "q": "Can you place sure bets at LeoVegas?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, LeoVegas may restrict accounts under its terms and conditions if they detect betting patterns that consistently guarantee profit."
+        "q": "Μπορώ να παίξω surebets στη LeoVegas;",
+        "a": "Ναι, το arbitrage betting είναι νόμιμο. Ωστόσο, όπως όλες οι στοιχηματικές εταιρείες, η LeoVegas μπορεί να περιορίσει λογαριασμούς σύμφωνα με τους όρους και τις προϋποθέσεις της, αν εντοπίσει μοτίβα στοιχηματισμού που εξασφαλίζουν σταθερά κέρδος."
       },
       {
-        "q": "Is LeoVegas good for sure bets?",
-        "a": "LeoVegas is a good supplementary bookmaker, especially when combined with bookmakers outside the Kambi platform, as this increases the number of arbitrage opportunities available."
+        "q": "Είναι καλή η LeoVegas για surebets;",
+        "a": "Η LeoVegas είναι μια καλή συμπληρωματική στοιχηματική εταιρεία, ιδίως όταν συνδυάζεται με εταιρείες εκτός της πλατφόρμας Kambi, καθώς έτσι αυξάνονται οι διαθέσιμες ευκαιρίες arbitrage."
       }
     ]
   }

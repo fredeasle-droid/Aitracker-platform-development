@@ -1,427 +1,427 @@
 {
   "sport/basketball": {
-    "title": "Surebets on basketball",
-    "metaTitle": "Basketball surebets – guaranteed profit on NBA and Euroleague",
-    "description": "Find basketball surebets on NBA, Euroleague and European leagues. Points markets and handicaps create numerous arbitrage opportunities with licensed bookmakers.",
-    "keyword": "basketball surebets",
-    "intro": "Basketball offers numerous surebets on points totals and handicaps. The NBA features extensive betting markets, and bookmakers adjust their lines at different speeds, creating arbitrage opportunities.",
+    "title": "Basketbolda surebet",
+    "metaTitle": "Basketbol surebet'leri – NBA ve Euroleague'de garantili kâr",
+    "description": "NBA, Euroleague ve Avrupa liglerinde basketbol surebet'lerini bulun. Sayı pazarları ve handikaplar, lisanslı bahis sitelerinde çok sayıda arbitraj fırsatı yaratır.",
+    "keyword": "basketbol surebet",
+    "intro": "Basketbol, toplam sayı ve handikap pazarlarında çok sayıda surebet sunar. NBA'de geniş bir bahis pazarı bulunur ve bahis siteleri oranlarını farklı hızlarda güncelleyerek arbitraj fırsatları doğurur.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Popular markets for basketball arbing"
+        "text": "Basketbol arbitrajında popüler pazarlar"
       },
       {
         "type": "ul",
         "items": [
-          "Match winner including overtime: two outcomes and straightforward calculation.",
-          "Over/under total points, for example over or under 215.5 points.",
-          "Points handicap, where the favourite must win by a specified margin.",
-          "Player-specific markets such as points scored, rebounds and assists."
+          "Uzatmalar dahil maç sonucu: iki sonuç ve kolay hesaplama.",
+          "Toplam sayı alt/üst, örneğin 215.5 sayı alt veya üst.",
+          "Sayı handikapı: favorinin belirli bir farkla kazanması gerekir.",
+          "Oyuncuya özel pazarlar: atılan sayı, ribaund ve asist gibi."
         ]
       },
       {
         "type": "h2",
-        "text": "Middling on points totals"
+        "text": "Toplam sayılarda middle"
       },
       {
         "type": "p",
-        "text": "With points markets, two bookmakers may offer different lines, for example over 214.5 at one and under 216.5 at another. If the match finishes on exactly 215 or 216 points, you win both bets. This is called a 'middle' and represents an additional profit opportunity in basketball."
+        "text": "Sayı pazarlarında iki bahis sitesi farklı barajlar sunabilir; örneğin biri 214.5 üst, diğeri 216.5 alt teklif eder. Maç tam 215 ya da 216 sayıyla biterse iki bahsi de kazanırsınız. Buna 'middle' denir ve basketbolda ek bir kâr fırsatı oluşturur."
       },
       {
         "type": "tip",
-        "text": "Check whether overtime counts. In basketball it almost always does, but not at all bookmakers on every market."
+        "text": "Uzatmaların sayılıp sayılmadığını kontrol edin. Basketbolda neredeyse her zaman sayılır, ancak her bahis sitesinde her pazar için geçerli değildir."
       }
     ],
     "faq": [
       {
-        "q": "Does overtime count in basketball surebets?",
-        "a": "For most markets yes, but always check the specific market rules at each bookmaker. A market excluding overtime cannot be combined with one that includes overtime for arbitrage purposes."
+        "q": "Basketbol surebet'lerinde uzatmalar sayılır mı?",
+        "a": "Çoğu pazarda evet, ancak her bahis sitesinde ilgili pazarın kurallarını mutlaka kontrol edin. Uzatmaları hariç tutan bir pazar, arbitraj amacıyla uzatmaları dahil eden bir pazarla birleştirilemez."
       },
       {
-        "q": "What time are NBA games usually played?",
-        "a": "NBA games are typically played during the evening in North America. Depending on your time zone, many surebets may appear several hours before tip-off, giving you time to place both sides of the arbitrage bet."
+        "q": "NBA maçları genellikle saat kaçta oynanır?",
+        "a": "NBA maçları genellikle Kuzey Amerika'da akşam saatlerinde oynanır. Türkiye saatine göre pek çok surebet, maç başlamadan saatler önce ortaya çıkabilir; bu da arbitraj bahsinin iki tarafını da oynamanız için size zaman tanır."
       }
     ]
   },
   "sport/ishockey": {
-    "title": "Ice hockey surebets",
-    "metaTitle": "Ice hockey surebets – guaranteed profit on NHL & leagues",
-    "description": "Ice hockey surebets from NHL, SHL and other leagues. Learn the difference between regulation-time and winner markets, and find guaranteed profit opportunities.",
-    "keyword": "ice hockey surebets",
-    "intro": "Ice hockey is an underrated sport for surebets. Many bookmakers price the Nordic leagues differently, and the distinction between regulation-time and winner markets creates additional opportunities for arbitrage betting.",
+    "title": "Buz hokeyi surebet'leri",
+    "metaTitle": "Buz hokeyi surebet'leri – NHL ve diğer liglerde garanti kâr",
+    "description": "NHL, SHL ve diğer liglerden buz hokeyi surebet'leri. Normal süre ile kazanan marketleri arasındaki farkı öğrenin, garanti kâr fırsatlarını yakalayın.",
+    "keyword": "buz hokeyi surebet",
+    "intro": "Buz hokeyi, surebet için hhak ettiği değeri görmeyen bir spor. Birçok bahis sitesi İskandinav liglerini farklı oranlarla fiyatlıyor; normal süre ve kazanan marketleri arasındaki ayrım da arbitraj bahisleri için ek fırsatlar yaratıyor.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Regulation time or including overtime?"
+        "text": "Normal süre mi, uzatmalar dahil mi?"
       },
       {
         "type": "p",
-        "text": "In ice hockey, there is both a 1X2 market for regulation time only and a winner market including overtime and shootouts. These two must never be mixed in the same surebet. Always check which market you are betting on with each bookmaker before placing your bets."
+        "text": "Buz hokeyinde yalnızca normal süreyi kapsayan bir 1X2 marketi ile uzatmalar ve penaltı atışları dahil bir kazanan marketi bulunur. Bu ikisi aynı surebet içinde asla karıştırılmamalıdır. Bahislerinizi yapmadan önce her bahis sitesinde hangi markete oynadığınızı mutlaka kontrol edin."
       },
       {
         "type": "h2",
-        "text": "Good leagues for ice hockey surebets"
+        "text": "Buz hokeyi surebet'leri için iyi ligler"
       },
       {
         "type": "ul",
         "items": [
-          "NHL: many matches and high maximum stakes.",
-          "SHL and Liiga: popular in the Nordic region and priced differently by bookmakers.",
-          "Domestic leagues: smaller leagues where bookmakers often disagree on pricing."
+          "NHL: çok sayıda maç ve yüksek maksimum bahis limitleri.",
+          "SHL ve Liiga: İskandinav bölgesinde popüler ve bahis siteleri tarafından farklı fiyatlanıyor.",
+          "Yerel ligler: bahis sitelerinin oranlar konusunda sıklıkla ayrıştığı küçük ligler."
         ]
       },
       {
         "type": "tip",
-        "text": "Ice hockey often offers high profit per surebet, but lower maximum stakes than football."
+        "text": "Buz hokeyi, surebet başına çoğunlukla yüksek kâr sunar; ancak maksimum bahis limitleri futbola göre daha düşüktür."
       }
     ],
     "faq": [
       {
-        "q": "Can you combine 1X2 and winner including overtime in an ice hockey surebet?",
-        "a": "No. These are two different markets. If you combine them, you can lose both bets if the match goes to overtime. Always ensure all legs of your arbitrage bet are on the same market type."
+        "q": "Buz hokeyi surebet'inde 1X2 ile uzatmalar dahil kazanan marketi birleştirilebilir mi?",
+        "a": "Hayır. Bunlar iki farklı markettir. Birleştirirseniz maç uzatmaya giderse iki bahsi de kaybedebilirsiniz. Arbitraj bahsinizin tüm ayaklarının aynı market türünde olduğundan her zaman emin olun."
       },
       {
-        "q": "Are there surebets on smaller ice hockey leagues?",
-        "a": "Yes. Bookmakers often price smaller domestic leagues differently, so arbitrage opportunities arise regularly. Check that bookmakers are licensed to operate in your country before betting."
+        "q": "Daha küçük buz hokeyi liglerinde surebet var mı?",
+        "a": "Evet. Bahis siteleri küçük yerel ligleri çoğu zaman farklı fiyatlar, bu yüzden arbitraj fırsatları düzenli olarak ortaya çıkar. Bahis yapmadan önce bahis sitelerinin ülkenizde faaliyet göstermeye yetkili olup olmadığını kontrol edin."
       }
     ]
   },
   "sport/fodbold": {
-    "title": "Surebets on football",
-    "metaTitle": "Football surebets – find guaranteed profit on matches",
-    "description": "Find surebets on football in real time. BetTrackerAI scans odds across the Premier League, Champions League and hundreds of other leagues at licensed bookmakers.",
-    "keyword": "football surebets",
-    "intro": "Football produces more surebets than any other sport. Matches are played around the clock, and each fixture offers hundreds of markets that bookmakers price differently.",
+    "title": "Futbolda surebet'ler",
+    "metaTitle": "Futbol surebet'leri – maçlarda garanti kâr bulun",
+    "description": "Futbolda surebet'leri gerçek zamanlı bulun. BetTrackerAI, lisanslı bahis sitelerinde Premier League, Şampiyonlar Ligi ve yüzlerce diğer ligdeki oranları tarar.",
+    "keyword": "futbol surebet",
+    "intro": "Futbol, diğer tüm sporlardan daha fazla surebet üretir. Maçlar günün her saatinde oynanır ve her karşılaşma, bahis sitelerinin farklı fiyatladığı yüzlerce market sunar.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why football produces so many surebets"
+        "text": "Futbol neden bu kadar çok surebet üretir?"
       },
       {
         "type": "p",
-        "text": "Bookmakers must price thousands of football matches every week, from the Champions League down to lower divisions. The smaller the league, the less time bookmakers devote to it, and the greater the likelihood of pricing discrepancies that create arbitrage opportunities."
+        "text": "Bahis siteleri her hafta Şampiyonlar Ligi'nden alt liglere kadar binlerce futbol maçına oran vermek zorundadır. Lig ne kadar küçükse bahis sitelerinin ona ayırdığı zaman o kadar azdır; bu da arbitraj fırsatları yaratan fiyat farklarının ortaya çıkma olasılığını artırır."
       },
       {
         "type": "h2",
-        "text": "The most commonly used markets"
+        "text": "En sık kullanılan marketler"
       },
       {
         "type": "ul",
         "items": [
-          "1X2: home win, draw and away win. Three outcomes, so you need three bets.",
-          "Over/under goals, for example over or under 2.5 goals. Only two outcomes and often high liquidity.",
-          "Asian handicap: two outcomes and low margin, but read the settlement rules for half and whole goals carefully.",
-          "Both teams to score: yes or no. A straightforward market with two outcomes."
+          "1X2: ev sahibi galibiyeti, beraberlik ve deplasman galibiyeti. Üç sonuç olduğu için üç bahis yapmanız gerekir.",
+          "Alt/üst gol, örneğin 2.5 gol alt veya üst. Yalnızca iki sonuç var ve likidite çoğunlukla yüksek.",
+          "Asya handikapı: iki sonuç ve düşük marj; ancak yarım ve tam gol için geçerli bahis sonuçlandırma kurallarını dikkatle okuyun.",
+          "Karşılıklı gol: var veya yok. İki sonuçlu, anlaşılması kolay bir market."
         ]
       },
       {
         "type": "tip",
-        "text": "Always check whether the market applies to normal time only. Extra time and penalties rarely count in football surebets."
+        "text": "Marketin yalnızca normal süre için geçerli olup olmadığını her zaman kontrol edin. Futbol surebet'lerinde uzatmalar ve penaltılar nadiren sayılır."
       },
       {
         "type": "h2",
-        "text": "When do surebets arise?"
+        "text": "Surebet'ler ne zaman ortaya çıkar?"
       },
       {
         "type": "p",
-        "text": "Many football surebets emerge when team line-ups are announced roughly an hour before kick-off. Some bookmakers adjust quickly, others react more slowly, and pricing differences appear in that window."
+        "text": "Birçok futbol surebet'i, takımların ilk 11'leri maçtan yaklaşık bir saat önce açıklandığında ortaya çıkar. Bazı bahis siteleri oranları hızla günceller, bazıları ise daha geç tepki verir; fiyat farkları da bu aralıkta oluşur."
       }
     ],
     "faq": [
       {
-        "q": "Which football leagues have the most surebets?",
-        "a": "Smaller leagues often offer higher profit percentages, but major leagues like the Premier League and Champions League have more markets and higher maximum stakes."
+        "q": "Hangi futbol liglerinde en çok surebet bulunur?",
+        "a": "Küçük ligler çoğunlukla daha yüksek kâr yüzdeleri sunar; ancak Premier League ve Şampiyonlar Ligi gibi büyük liglerde daha fazla market ve daha yüksek maksimum bahis limitleri vardır."
       },
       {
-        "q": "Can you place surebets on live football matches?",
-        "a": "Yes, but live odds change very quickly. It requires you to place both bets within a few seconds."
+        "q": "Canlı futbol maçlarında surebet oynanabilir mi?",
+        "a": "Evet, ancak canlı oranlar çok hızlı değişir. Bu yüzden iki bahsi de birkaç saniye içinde yapmanız gerekir."
       }
     ]
   },
   "sport/esport": {
-    "title": "Surebets on esports",
-    "metaTitle": "Esports surebets – arbitrage betting on CS2, LoL & Dota 2",
-    "description": "Esports is one of the fastest-growing markets for surebets. Find arbitrage betting opportunities on CS2, League of Legends and Dota 2 at licensed bookmakers.",
-    "keyword": "esports surebets",
-    "intro": "Esports features large price differences between bookmakers. The market is relatively new, many bookmakers have fewer specialists in the field, and odds often move significantly before match start.",
+    "title": "E-sporda surebet'ler",
+    "metaTitle": "E-spor surebet'leri – CS2, LoL ve Dota 2'de arbitraj bahisleri",
+    "description": "E-spor, surebet için en hızlı büyüyen pazarlardan biri. Lisanslı bahis sitelerinde CS2, League of Legends ve Dota 2 için arbitraj bahsi fırsatlarını bulun.",
+    "keyword": "e-spor surebet",
+    "intro": "E-sporda bahis siteleri arasında büyük oran farkları görülür. Pazar nispeten yeni, birçok bahis sitesinin bu alanda uzman sayısı az ve oranlar maç başlamadan önce çoğu zaman belirgin şekilde değişiyor.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why esports yields high profit"
+        "text": "E-spor neden yüksek kâr sağlar?"
       },
       {
         "type": "p",
-        "text": "Bookmakers dedicate fewer resources to esports than to football, and news about team line-ups spreads quickly within the community. This creates larger odds differences and often higher profit per surebet."
+        "text": "Bahis siteleri e-spora futbola göre daha az kaynak ayırır ve takım kadrolarıyla ilgili haberler topluluk içinde hızla yayılır. Bu durum daha büyük oran farkları ve çoğunlukla surebet başına daha yüksek kâr yaratır."
       },
       {
         "type": "h2",
-        "text": "Popular games for arbitrage betting"
+        "text": "Arbitraj bahisleri için popüler oyunlar"
       },
       {
         "type": "ul",
         "items": [
-          "Counter-Strike 2: the most matches and markets for map and round handicaps.",
-          "League of Legends: major tournaments with stable markets.",
-          "Dota 2: high odds differences, but lower maximum stakes."
+          "Counter-Strike 2: harita ve raunt handikapları için en fazla maç ve market.",
+          "League of Legends: istikrarlı marketler sunan büyük turnuvalar.",
+          "Dota 2: yüksek oran farkları, ancak daha düşük maksimum bahis limitleri."
         ]
       },
       {
         "type": "tip",
-        "text": "Watch out for postponed matches. Bookmakers have different rules for how long a bet remains valid."
+        "text": "Ertelenen maçlara dikkat edin. Bahis sitelerinin bir bahsin ne kadar süre geçerli kalacağına dair kuralları farklıdır."
       }
     ],
     "faq": [
       {
-        "q": "Are esports good for surebets?",
-        "a": "Yes, the profit is often higher than in traditional sports. However, the maximum stakes are typically lower."
+        "q": "E-spor surebet için uygun mu?",
+        "a": "Evet, kâr çoğunlukla geleneksel sporlara göre daha yüksektir. Ancak maksimum bahis limitleri genellikle daha düşüktür."
       },
       {
-        "q": "Which bookmakers offer esports?",
-        "a": "Most major licensed bookmakers offer esports, especially CS2 and League of Legends. Check availability and licence in your country."
+        "q": "Hangi bahis siteleri e-spor sunuyor?",
+        "a": "Büyük lisanslı bahis sitelerinin çoğu, özellikle CS2 ve League of Legends olmak üzere e-spor sunar. Ülkenizdeki erişilebilirliği ve lisans durumunu kontrol edin."
       }
     ]
   },
   "sport/tennis": {
-    "title": "Surebets on Tennis",
-    "metaTitle": "Tennis Surebets – Guaranteed Profit on ATP, WTA & Challenger",
-    "description": "Tennis is ideal for surebets: only two outcomes and year-round matches. Find tennis arbitrage opportunities on ATP, WTA and Challenger tournaments worldwide.",
-    "keyword": "tennis surebets",
-    "intro": "Tennis is the preferred sport for many sure bettors. There are only two outcomes, no draw, and tournaments take place almost every single day of the year.",
+    "title": "Tenis'te Surebet'ler",
+    "metaTitle": "Tenis Surebet'leri – ATP, WTA ve Challenger'da Garanti Kâr",
+    "description": "Tenis surebet için ideal: yalnızca iki sonuç ve yıl boyunca süren maçlar. Dünya genelindeki ATP, WTA ve Challenger turnuvalarında tenis arbitraj fırsatlarını bulun.",
+    "keyword": "tenis surebet",
+    "intro": "Tenis, birçok surebet yapan bahisçinin tercih ettiği spordur. Yalnızca iki sonuç vardır, beraberlik yoktur ve turnuvalar yılın neredeyse her günü oynanır.",
     "blocks": [
       {
         "type": "h2",
-        "text": "The Advantages of Tennis"
+        "text": "Tenisin Avantajları"
       },
       {
         "type": "ul",
         "items": [
-          "Only two outcomes, so you only need to place two bets.",
-          "No draw, which makes the calculation simple.",
-          "Plenty of matches at Challenger and ITF level, where bookmakers often disagree.",
-          "Matches around the clock due to tournaments in different time zones."
+          "Yalnızca iki sonuç olduğu için sadece iki bahis oynamanız yeterli.",
+          "Beraberlik olmadığı için hesaplama çok basit.",
+          "Bahis sitelerinin sık sık farklı oran verdiği Challenger ve ITF seviyesinde çok sayıda maç.",
+          "Farklı saat dilimlerindeki turnuvalar sayesinde günün her saati maç var."
         ]
       },
       {
         "type": "h2",
-        "text": "Beware of Retired Matches"
+        "text": "Yarıda Kalan Maçlara Dikkat"
       },
       {
         "type": "p",
-        "text": "The biggest risk in tennis is when a player retires from a match. Bookmakers have different rules: some void the bet, others settle it if the first set has been completed. If your two bookmakers use different rules, you could lose both bets."
+        "text": "Tenisteki en büyük risk, bir oyuncunun maçtan çekilmesidir. Bahis sitelerinin kuralları farklıdır: bazıları bahsi iptal eder, bazıları ise ilk set tamamlanmışsa bahsi sonuçlandırır. İki bahis siteniz farklı kurallar uyguluyorsa, her iki bahsi de kaybedebilirsiniz."
       },
       {
         "type": "tip",
-        "text": "Read the bookmakers' rules for retired tennis matches before placing your first tennis surebet."
+        "text": "İlk tenis surebet bahsinizi oynamadan önce, bahis sitelerinin yarıda kalan tenis maçlarına ilişkin kurallarını okuyun."
       },
       {
         "type": "h2",
-        "text": "Other Markets"
+        "text": "Diğer Bahis Pazarları"
       },
       {
         "type": "p",
-        "text": "Besides the match winner, there are surebets on total games, set handicaps and individual set winners. These markets often have lower maximum stakes."
+        "text": "Maç kazananının yanı sıra toplam oyun sayısı, set handikapı ve tek tek set kazananları için de surebet fırsatları bulunur. Bu pazarlarda maksimum bahis limitleri genellikle daha düşüktür."
       }
     ],
     "faq": [
       {
-        "q": "Is tennis good for surebets?",
-        "a": "Yes. Only two outcomes and plenty of matches make tennis one of the best sports for surebets, especially for beginners."
+        "q": "Tenis surebet için uygun mu?",
+        "a": "Evet. Yalnızca iki sonucun olması ve çok sayıda maç bulunması, tenisi özellikle yeni başlayanlar için surebet açısından en iyi sporlardan biri yapıyor."
       },
       {
-        "q": "What happens if a player retires?",
-        "a": "It depends on the bookmaker. Some void all bets, others settle them if a certain number of sets have been played. Check the rules at both bookmakers."
+        "q": "Bir oyuncu maçtan çekilirse ne olur?",
+        "a": "Bahis sitesine göre değişir. Bazıları tüm bahisleri iptal eder, bazıları ise belirli sayıda set oynanmışsa bahisleri sonuçlandırır. Her iki bahis sitesinin kurallarını da kontrol edin."
       }
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebets at Bet365",
-    "metaTitle": "Bet365 Surebets – Find Guaranteed Profit Opportunities",
-    "description": "Find surebets at Bet365 in real time. BetTrackerAI compares Bet365 odds with other bookmakers and shows you where to lock in a guaranteed profit.",
-    "keyword": "bet365 surebets",
-    "intro": "Bet365 is one of the world's largest bookmakers and offers one of the widest selections of sports and markets. This makes Bet365 one of the bookmakers most frequently involved in surebets.",
+    "title": "Bet365'te Surebet",
+    "metaTitle": "Bet365 Surebet – Garanti Kâr Fırsatlarını Keşfedin",
+    "description": "Bet365'teki surebet fırsatlarını gerçek zamanlı bulun. BetTrackerAI, Bet365 oranlarını diğer bahis siteleriyle karşılaştırır ve garanti kârı nerede kilitleyebileceğinizi gösterir.",
+    "keyword": "bet365 surebet",
+    "intro": "Bet365, dünyanın en büyük bahis sitelerinden biridir ve en geniş spor ve bahis pazarı seçeneklerinden birini sunar. Bu nedenle Bet365, surebet fırsatlarında en sık yer alan bahis sitelerinden biridir.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Bet365"
+        "text": "Bet365 Hakkında"
       },
       {
         "type": "p",
-        "text": "Bet365 is a licensed bookmaker in multiple jurisdictions and offers odds on a very large number of matches, including minor leagues and live markets. This breadth means that Bet365 often has odds that differ from the rest of the market."
+        "text": "Bet365, birçok yetki alanında lisanslı bir bahis sitesidir ve alt ligler ile canlı bahis pazarları dahil çok sayıda maça oran sunar. Bu genişlik sayesinde Bet365'in oranları çoğu zaman piyasanın geri kalanından farklılık gösterir."
       },
       {
         "type": "h2",
-        "text": "How to find surebets with Bet365"
+        "text": "Bet365 ile surebet nasıl bulunur?"
       },
       {
         "type": "p",
-        "text": "A surebet with Bet365 arises when Bet365 has higher odds on one outcome than other bookmakers have on the opposite outcomes. BetTrackerAI monitors Bet365 odds constantly and compares them with the rest of the market."
+        "text": "Bet365'te surebet, Bet365'in bir sonuca diğer bahis sitelerinin karşıt sonuçlara verdiğinden daha yüksek oran vermesiyle ortaya çıkar. BetTrackerAI, Bet365 oranlarını sürekli izler ve piyasanın geri kalanıyla karşılaştırır."
       },
       {
         "type": "ul",
         "items": [
-          "Select Bet365 and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a surebet with stable odds.",
-          "Use the calculator to distribute your stake and round the amount.",
-          "Place the bet with the bookmaker offering the most volatile odds first."
+          "Surebet sayfasındaki filtreyi kullanarak Bet365'i ve diğer bahis sitelerinizi seçin.",
+          "Kâra göre sıralayın ve oranları istikrarlı olan bir surebet seçin.",
+          "Hesaplayıcıyı kullanarak bahis tutarınızı dağıtın ve miktarı yuvarlayın.",
+          "Önce oranları en çok değişen bahis sitesinde bahsinizi oynayın."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers so you don't only use Bet365. This extends the lifespan of your account."
+        "text": "Bahislerinizi birden fazla bahis sitesine yayın, böylece yalnızca Bet365'i kullanmamış olursunuz. Bu, hesabınızın ömrünü uzatır."
       }
     ],
     "faq": [
       {
-        "q": "Is arbitrage betting allowed at Bet365?",
-        "a": "Arbitrage betting is legal. However, like all bookmakers, Bet365 may restrict accounts under its terms and conditions if they detect betting patterns that consistently secure guaranteed profit."
+        "q": "Bet365'te arbitraj bahsine izin veriliyor mu?",
+        "a": "Arbitraj bahsi yasaldır. Ancak tüm bahis siteleri gibi Bet365 de sürekli garanti kâr sağlayan bahis düzenlerini tespit ederse, kullanım koşulları uyarınca hesapları kısıtlayabilir."
       },
       {
-        "q": "Does Bet365 operate under a gambling licence?",
-        "a": "Yes. Bet365 holds licences in multiple regulated markets worldwide. Check your local tax rules, as the treatment of winnings varies by jurisdiction."
+        "q": "Bet365 bir bahis lisansıyla mı faaliyet gösteriyor?",
+        "a": "Evet. Bet365, dünya genelinde düzenlemeye tabi birçok pazarda lisansa sahiptir. Kazançların vergilendirilmesi yetki alanına göre değiştiği için bulunduğunuz yerdeki vergi kurallarını kontrol edin."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebets at Unibet",
-    "metaTitle": "Unibet Sure Bets – Find Arbitrage Betting Opportunities",
-    "description": "Find sure bets at Unibet in real time. BetTrackerAI compares Unibet's odds with other bookmakers so you can lock in guaranteed profit through arbitrage betting.",
-    "keyword": "unibet sure bets",
-    "intro": "Unibet is one of the most popular bookmakers worldwide. Unibet uses the Kambi odds platform, so odds at Unibet often resemble those at other Kambi-powered bookmakers.",
+    "title": "Unibet'te Surebet",
+    "metaTitle": "Unibet Surebet – Arbitraj Bahis Fırsatlarını Keşfedin",
+    "description": "Unibet'teki surebet fırsatlarını gerçek zamanlı bulun. BetTrackerAI, Unibet oranlarını diğer bahis siteleriyle karşılaştırır; böylece arbitraj bahsiyle garanti kârı kilitleyebilirsiniz.",
+    "keyword": "unibet surebet",
+    "intro": "Unibet, dünyanın en popüler bahis sitelerinden biridir. Unibet, Kambi oran platformunu kullanır; bu yüzden Unibet'in oranları çoğu zaman Kambi altyapılı diğer bahis sitelerinin oranlarına benzer.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Unibet"
+        "text": "Unibet Hakkında"
       },
       {
         "type": "p",
-        "text": "Unibet holds licences in multiple regulated markets and offers a wide range of sports. Because Unibet shares its odds platform with several other bookmakers, sure bets most often arise between Unibet and bookmakers on different platforms."
+        "text": "Unibet, düzenlemeye tabi birçok pazarda lisansa sahiptir ve geniş bir spor yelpazesi sunar. Unibet oran platformunu başka birçok bahis sitesiyle paylaştığı için surebet fırsatları çoğunlukla Unibet ile farklı platformlardaki bahis siteleri arasında ortaya çıkar."
       },
       {
         "type": "h2",
-        "text": "How to find sure bets with Unibet"
+        "text": "Unibet ile surebet nasıl bulunur?"
       },
       {
         "type": "p",
-        "text": "A sure bet with Unibet occurs when Unibet has higher odds on one outcome than other bookmakers have on the opposing outcomes. BetTrackerAI monitors Unibet's odds continuously and compares them with the rest of the market."
+        "text": "Unibet'te surebet, Unibet'in bir sonuca diğer bahis sitelerinin karşıt sonuçlara verdiğinden daha yüksek oran vermesiyle oluşur. BetTrackerAI, Unibet oranlarını kesintisiz izler ve piyasanın geri kalanıyla karşılaştırır."
       },
       {
         "type": "ul",
         "items": [
-          "Select Unibet and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a sure bet with stable odds.",
-          "Use the calculator to split your stake and round the amounts.",
-          "Place your bet with the bookmaker offering the most volatile odds first."
+          "Surebet sayfasındaki filtreyi kullanarak Unibet'i ve diğer bahis sitelerinizi seçin.",
+          "Kâra göre sıralayın ve oranları istikrarlı olan bir surebet seçin.",
+          "Hesaplayıcıyı kullanarak bahis tutarınızı bölün ve miktarları yuvarlayın.",
+          "Önce oranları en çok değişen bahis sitesinde bahsinizi oynayın."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers, so you don't only use Unibet. This will extend the lifespan of your account and help you avoid limits."
+        "text": "Bahislerinizi birden fazla bahis sitesine yayın, böylece yalnızca Unibet'i kullanmamış olursunuz. Bu, hesabınızın ömrünü uzatır ve limitlerden kaçınmanıza yardımcı olur."
       }
     ],
     "faq": [
       {
-        "q": "Is it legal to place sure bets at Unibet?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, Unibet may limit or restrict accounts under its terms and conditions if they only place bets with guaranteed profit."
+        "q": "Unibet'te surebet oynamak yasal mı?",
+        "a": "Evet, arbitraj bahsi yasaldır. Ancak tüm bahis siteleri gibi Unibet de yalnızca garanti kârlı bahis oynayan hesapları kullanım koşulları uyarınca sınırlayabilir veya kısıtlayabilir."
       },
       {
-        "q": "Which bookmakers are similar to Unibet?",
-        "a": "Unibet uses Kambi, which also supplies odds to several other bookmakers. Therefore, combine Unibet with bookmakers on different platforms to find more sure bets."
+        "q": "Unibet'e benzeyen bahis siteleri hangileri?",
+        "a": "Unibet, başka birçok bahis sitesine de oran sağlayan Kambi'yi kullanır. Bu nedenle daha fazla surebet bulmak için Unibet'i farklı platformlardaki bahis siteleriyle birlikte kullanın."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebets at Betano",
-    "metaTitle": "Betano surebets – find arbitrage bets at Betano",
-    "description": "Find surebets at Betano in real time. BetTrackerAI compares Betano's odds with other licensed bookmakers and shows where you can lock in a guaranteed profit.",
-    "keyword": "betano surebets",
-    "intro": "Betano is one of the newer bookmakers in the regulated market and uses its own odds-setting platform. This means that Betano's odds often differ from the rest of the market, creating arbitrage betting opportunities.",
+    "title": "Betano'da Surebet",
+    "metaTitle": "Betano surebet – Betano'da arbitraj bahislerini bulun",
+    "description": "Betano'daki surebet fırsatlarını anlık olarak bulun. BetTrackerAI, Betano oranlarını diğer lisanslı bahis şirketlerinin oranlarıyla karşılaştırır ve garanti kâr elde edebileceğiniz yerleri gösterir.",
+    "keyword": "betano surebet",
+    "intro": "Betano, düzenlenmiş pazarın görece yeni bahis şirketlerinden biridir ve kendi oran belirleme platformunu kullanır. Bu nedenle Betano'nun oranları çoğu zaman piyasanın geri kalanından farklılaşır ve arbitraj bahis fırsatları ortaya çıkar.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Betano"
+        "text": "Betano hakkında"
       },
       {
         "type": "p",
-        "text": "Betano holds a licence in multiple jurisdictions and offers a wide range of sports. Because Betano sets odds independently, it is often involved in surebets when compared with established bookmakers."
+        "text": "Betano birden fazla ülkede lisansa sahiptir ve geniş bir spor yelpazesi sunar. Oranları bağımsız belirlediği için köklü bahis şirketleriyle karşılaştırıldığında sıklıkla surebet fırsatlarında yer alır."
       },
       {
         "type": "h2",
-        "text": "How to find surebets with Betano"
+        "text": "Betano ile surebet nasıl bulunur?"
       },
       {
         "type": "p",
-        "text": "A surebet with Betano arises when Betano offers higher odds on one outcome than other bookmakers offer on the opposite outcomes. BetTrackerAI monitors Betano's odds continuously and compares them with the rest of the market."
+        "text": "Betano ile surebet, Betano'nun bir sonuca diğer bahis şirketlerinin karşıt sonuçlara verdiğinden daha yüksek oran sunması durumunda ortaya çıkar. BetTrackerAI, Betano oranlarını sürekli izler ve piyasanın geri kalanıyla karşılaştırır."
       },
       {
         "type": "ul",
         "items": [
-          "Select Betano and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a surebet with stable odds.",
-          "Use the calculator to split your stake and round the amounts.",
-          "Place the bet with the bookmaker that has the most volatile odds first."
+          "Surebet sayfasındaki filtreyi kullanarak Betano'yu ve diğer bahis şirketlerinizi seçin.",
+          "Kâra göre sıralayın ve oranları istikrarlı bir surebet seçin.",
+          "Hesaplayıcıyı kullanarak bahis tutarınızı bölün ve miktarları yuvarlayın.",
+          "Önce oranları en değişken olan bahis şirketinde bahsinizi yapın."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers so you don't only use Betano. This extends the lifespan of your account and helps you avoid restrictions."
+        "text": "Bahislerinizi birden fazla bahis şirketine yayın, yalnızca Betano'yu kullanmayın. Bu, hesabınızın ömrünü uzatır ve kısıtlamalarla karşılaşmanıza engel olur."
       }
     ],
     "faq": [
       {
-        "q": "Are you allowed to place surebets at Betano?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, Betano may limit accounts under its terms and conditions if they detect betting patterns that consistently lock in guaranteed profit."
+        "q": "Betano'da surebet oynamak serbest mi?",
+        "a": "Evet, arbitraj bahis yasaldır. Ancak tüm bahis şirketlerinde olduğu gibi Betano da sürekli olarak garanti kâr sağlayan bahis davranışları tespit ederse, kullanım şartları uyarınca hesapları kısıtlayabilir."
       },
       {
-        "q": "Is Betano licensed?",
-        "a": "Yes. Betano is licensed in multiple regulated markets. Check your national gambling regulator to confirm whether Betano holds a licence where you live."
+        "q": "Betano lisanslı mı?",
+        "a": "Evet. Betano, düzenlenmiş birden fazla pazarda lisanslıdır. Betano'nun bulunduğunuz yerde lisansa sahip olup olmadığını öğrenmek için ülkenizdeki kumar düzenleyici kurumu kontrol edin."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets at LeoVegas",
-    "metaTitle": "LeoVegas Sure Bets – Find Arbitrage Betting Opportunities",
-    "description": "Find sure bets at LeoVegas in real time. BetTrackerAI compares LeoVegas odds with other bookmakers and shows you where you can lock in a guaranteed profit.",
-    "keyword": "leovegas sure bets",
-    "intro": "LeoVegas is known for its casino offering but also provides a wide sports betting selection. The bookmaker uses the Kambi platform and regularly features in arbitrage betting opportunities.",
+    "title": "LeoVegas'ta Surebet",
+    "metaTitle": "LeoVegas Surebet – Arbitraj Bahis Fırsatlarını Bulun",
+    "description": "LeoVegas'taki surebet fırsatlarını anlık olarak bulun. BetTrackerAI, LeoVegas oranlarını diğer bahis şirketleriyle karşılaştırır ve garanti kâr elde edebileceğiniz yerleri gösterir.",
+    "keyword": "leovegas surebet",
+    "intro": "LeoVegas daha çok casino teklifiyle tanınır, ancak geniş bir spor bahisleri seçkisi de sunar. Bahis şirketi Kambi platformunu kullanır ve arbitraj bahis fırsatlarında düzenli olarak yer alır.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About LeoVegas"
+        "text": "LeoVegas hakkında"
       },
       {
         "type": "p",
-        "text": "LeoVegas is a licensed bookmaker with a user-friendly app that makes it quick to place bets. This is important with sure bets, where odds can change in seconds. Check that LeoVegas is licensed and available in your country before opening an account."
+        "text": "LeoVegas, hızlı bahis yapmayı sağlayan kullanıcı dostu bir uygulamaya sahip lisanslı bir bahis şirketidir. Oranların saniyeler içinde değişebildiği surebet'lerde bu büyük önem taşır. Hesap açmadan önce LeoVegas'ın lisanslı olduğunu ve ülkenizde hizmet verdiğini kontrol edin."
       },
       {
         "type": "h2",
-        "text": "How to find sure bets with LeoVegas"
+        "text": "LeoVegas ile surebet nasıl bulunur?"
       },
       {
         "type": "p",
-        "text": "A sure bet with LeoVegas occurs when LeoVegas has higher odds on one outcome than other bookmakers have on the opposite outcomes. BetTrackerAI monitors LeoVegas odds continuously and compares them with bookmakers operating in your market."
+        "text": "LeoVegas ile surebet, LeoVegas'ın bir sonuca diğer bahis şirketlerinin karşıt sonuçlara verdiğinden daha yüksek oran sunması durumunda ortaya çıkar. BetTrackerAI, LeoVegas oranlarını sürekli izler ve bulunduğunuz pazarda faaliyet gösteren bahis şirketleriyle karşılaştırır."
       },
       {
         "type": "ul",
         "items": [
-          "Select LeoVegas and your other bookmakers using the filter on the sure bets page.",
-          "Sort by profit and choose a sure bet with stable odds.",
-          "Use the calculator to divide your stake, and round the amounts.",
-          "Place your bet with the bookmaker offering the most volatile odds first."
+          "Surebet sayfasındaki filtreyi kullanarak LeoVegas'ı ve diğer bahis şirketlerinizi seçin.",
+          "Kâra göre sıralayın ve oranları istikrarlı bir surebet seçin.",
+          "Hesaplayıcıyı kullanarak bahis tutarınızı bölün ve miktarları yuvarlayın.",
+          "Önce oranları en değişken olan bahis şirketinde bahsinizi yapın."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across several bookmakers, so you don't only use LeoVegas. This extends the lifespan of your account and reduces the risk of account limits."
+        "text": "Bahislerinizi birkaç bahis şirketine yayın, yalnızca LeoVegas'ı kullanmayın. Bu, hesabınızın ömrünü uzatır ve hesap kısıtlaması riskini azaltır."
       }
     ],
     "faq": [
       {
-        "q": "Can you place sure bets at LeoVegas?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, LeoVegas may restrict accounts under its terms and conditions if they detect betting patterns that consistently guarantee profit."
+        "q": "LeoVegas'ta surebet oynanabilir mi?",
+        "a": "Evet, arbitraj bahis yasaldır. Ancak tüm bahis şirketlerinde olduğu gibi LeoVegas da sürekli olarak kâr garantisi sağlayan bahis davranışları tespit ederse, kullanım şartları uyarınca hesapları kısıtlayabilir."
       },
       {
-        "q": "Is LeoVegas good for sure bets?",
-        "a": "LeoVegas is a good supplementary bookmaker, especially when combined with bookmakers outside the Kambi platform, as this increases the number of arbitrage opportunities available."
+        "q": "LeoVegas surebet için iyi bir seçenek mi?",
+        "a": "LeoVegas, özellikle Kambi platformu dışındaki bahis şirketleriyle birlikte kullanıldığında iyi bir tamamlayıcı seçenektir; çünkü bu, erişebileceğiniz arbitraj fırsatlarının sayısını artırır."
       }
     ]
   }
