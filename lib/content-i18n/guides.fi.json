@@ -42,11 +42,11 @@
     "faq": [
       {
         "q": "Onko matched betting laillista?",
-        "a": "Kyllä. Bonusten hyödyntäminen vedonlyöntitoimiston julkaisemien ehtojen puitteissa on täysin laillista. Vedonlyöntitoimistot pidättävät kuitenkin oikeuden peruuttaa tarjouksia tai rajoittaa tilejä, jos ne katsovat sinun pelaavan kampanjoiden hengen vastaisesti tai rikkoneen ehtoja."
+        "a": "Kyllä. Bonusten hyödyntäminen Suomessa toimiluvalla toimivan vedonlyöntitoimiston julkaisemien ehtojen puitteissa on laillista. Vedonlyöntitoimistot pidättävät kuitenkin oikeuden peruuttaa tarjouksia tai rajoittaa tilejä, jos ne katsovat sinun pelaavan kampanjoiden hengen vastaisesti tai rikkoneen ehtoja. Älä käytä toimijoita, joilla ei ole lisenssiä."
       },
       {
         "q": "Kuinka paljon tyypilliset tervetuliaisbonus­tarjoukset ovat arvoltaan?",
-        "a": "Bonusten arvot ja kierrätysvaatimukset vaihtelevat vedonlyöntitoimiston ja markkinan mukaan. Joillakin säännellyillä markkinoilla tervetuliaistarjoukset saattavat olla rajattuja – esimerkiksi enintään €1 000 ja enintään kymmenkertainen kierrätysvaatimus bonukseen nähden. Tarkista aina voimassa olevat ehdot valitsemaltasi vedonlyöntitoimistolta ja varmista, että sillä on voimassa oleva lisenssi maassasi."
+        "a": "Bonusten arvot ja kierrätysvaatimukset vaihtelevat vedonlyöntitoimiston ja markkinan mukaan. Joillakin säännellyillä markkinoilla tervetuliaistarjoukset saattavat olla rajattuja – esimerkiksi enintään 150 € ja enintään kymmenkertainen kierrätysvaatimus bonukseen nähden. Suomessa Veikkaus on toistaiseksi monopoliasemassa, joten matched betting lisensoitujen toimijoiden välillä ei ole mahdollista ennen kuin markkina avautuu (lisenssijärjestelmän on määrä alkaa 2026–2027). Tarkista aina voimassa olevat ehdot ja säännöt valitsemaltasi vedonlyöntitoimistolta ja varmista, että sillä on voimassa oleva lisenssi Suomessa."
       }
     ],
     "category": "Strategia",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Vedonlyöntivoittojen verotus vaihtelee maittain. Monilla säännellyillä markkinoilla kansallisen rahapeliviranomaisen lisensoimien toimijoiden maksamat voitot ovat pelaajalle verovapaita. Jos käytät ulkomaisia tai lisensoimattomia toimijoita, voitot saattavat olla veronalaisia. Tarkista asuinmaasi verosäännöt tai käänny tarvittaessa paikallisen veroviranomaisen puoleen."
+        "text": "Suomessa Veikkaukselta saadut voitot ovat pääsääntöisesti verovapaita pelaajalle, ja sama koskee yleensä myös EU- ja ETA-alueella lisensoitujen toimijoiden maksamia voittoja. Jos käytät lisensoimattomia toimijoita, voitot saattavat olla veronalaisia, eikä sinulla ole samaa suojaa. Tarkista ajantasaiset verosäännöt Verohallinnolta tai käänny tarvittaessa veroviranomaisen puoleen."
       },
       {
         "type": "tip",
-        "text": "Käytä vain kansallisen rahapeliviranomaisen lisensoimia vedonlyöntitoimistoja. Tämä tarjoaa tyypillisesti veroetuja sekä kuluttajansuojaa rahapeliviranomaisen taholta."
+        "text": "Käytä vain Suomessa lisensoituja vedonlyöntitoimistoja. Tällä hetkellä Veikkauksella on yksinoikeus, mutta markkinat avataan lisensoiduille toimijoille lisenssijärjestelmällä vuosina 2026–2027, jolloin valvonta siirtyy uudelle lupaviranomaiselle. Varmojen vetojen tekeminen lisensoitujen suomalaisten vedonlyöntitoimistojen välillä ei ole mahdollista ennen markkinoiden avautumista. Älä käytä lisensoimattomia sivustoja – ne eivät tarjoa kuluttajansuojaa."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Myös varmoja vetoja tehdessä on tärkeää pitää rahapelaaminen hallinnassa. Aseta talletusrajat ja hyödynnä tarvittaessa kansallista itsepoissulkemisrekisteriä tauon pitämiseksi. Jos tarvitset tukea, ota yhteyttä alueesi tunnustettuun rahapeliauttajaan."
+        "text": "Myös varmoja vetoja tehdessä on tärkeää pitää rahapelaaminen hallinnassa. Aseta talletusrajat ja hyödynnä tarvittaessa Veikkauksen itsensä poissulkemista tauon pitämiseksi. Jos tarvitset tukea, ota yhteyttä Peluuri-palveluun."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Pitääkö varmojen vetojen voitoista maksaa veroa?",
-        "a": "Se riippuu maastasi. Monilla säännellyillä markkinoilla lisensoiduiden toimijoiden maksamat voitot ovat pelaajalle verovapaita. Tarkista asuinmaasi verosäännöt."
+        "a": "Veikkaukselta saadut voitot ja yleensä myös EU- ja ETA-alueella lisensoitujen toimijoiden maksamat voitot ovat pääsääntöisesti verovapaita. Tarkista kuitenkin aina ajantasaiset säännöt Verohallinnolta."
       }
     ],
     "category": "Säännöt",
@@ -104,7 +104,7 @@
   "undgaa-begraensning": {
     "title": "Kuinka välttää vedonlyöntitoimistojen rajoitukset ja pitää tilisi auki pidempään",
     "metaTitle": "Vältä Vedonlyöntirajoitukset – Arbitraasiopas 2026",
-    "description": "Näin vältät vedonlyöntitoimistojen rajoitukset arbitraasipelaajana: luonnollinen vedonlyöntistrategia, parhaat toimistot varmoihin vetoihin ja esimerkkejä euroissa.",
+    "description": "Näin vältät vedonlyöntitoimistojen rajoitukset arbitraasipelaajana: luonnollinen vedonlyöntistrategia, toimistotyypit varmoihin vetoihin ja esimerkkejä euroissa.",
     "keyword": "kuinka välttää vedonlyöntitoimistojen rajoitukset",
     "intro": "Välttääksesi vedonlyöntitoimistojen rajoitukset sinun täytyy pelata kuin tavallinen asiakas: pyöreät panokset, suositut markkinat, sekoitus tavallisia vetoja eikä välitöntä reagointia jokaiseen hinnanmuutokseen. Pehmeät toimistot rajoittavat tilejä, jotka lyövät johdonmukaisesti sulkevaa linjaa. Rajoituksia ei voi välttää ikuisesti, mutta älykäs vedonlyöntistrategia voi pitää tilisi auki kuukausia viikkojen sijaan.",
     "blocks": [
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**Sulkevan linjan lyöminen:** vahvin signaali. Jos kertoimesi ovat johdonmukaisesti paremmat kuin lopullinen hinta, sinut merkitään.",
-          "**Epätasaiset panokset:** €463,27 näyttää laskimelta. €460 näyttää ihmiseltä.",
+          "**Epätasaiset panokset:** 463,27 € näyttää laskimelta. 460 € näyttää ihmiseltä.",
           "**Kapeat markkinat:** pienen sarjan toisen divisioonan kulmapotkut herättävät huomiota.",
           "**Pelkkä nostaminen:** toistuvat nostot ilman bonuksia tai tavallisia vetoja näyttävät ammattimaiselta."
         ]
@@ -142,38 +142,38 @@
       },
       {
         "type": "example",
-        "title": "Esimerkki: pyöristetyt panokset, kokonaispanos €1 000",
+        "title": "Esimerkki: pyöristetyt panokset, kokonaispanos 1 000 €",
         "rows": [
           [
             "Tarkka jako kertoimilla 2,10 / 2,00",
-            "€487,80 / €512,20"
+            "487,80 € / 512,20 €"
           ],
           [
             "Pyöristetty jako",
-            "€490 / €510"
+            "490 € / 510 €"
           ],
           [
             "Voitto jos A voittaa (2,10)",
-            "€1 029 − €1 000 = €29,00"
+            "1 029 € − 1 000 € = 29,00 €"
           ],
           [
             "Voitto jos B voittaa (2,00)",
-            "€1 020 − €1 000 = €20,00"
+            "1 020 € − 1 000 € = 20,00 €"
           ],
           [
             "Tarkka jako vertailun vuoksi",
-            "noin €24,39 kummallakin tuloksella"
+            "noin 24,39 € kummallakin tuloksella"
           ]
         ],
         "note": "Pyöristetyillä panoksilla lukitaan silti voitto molemmilla tuloksilla, ja ne näyttävät toimistolle huomattavasti luonnollisemmilta."
       },
       {
         "type": "h2",
-        "text": "Parhaat vedonlyöntitoimistot arbitraasivedonlyöntiin"
+        "text": "Toimistotyypit arbitraasivedonlyöntiin"
       },
       {
         "type": "p",
-        "text": "Hyvä arbitraasijärjestely yhdistää kaksi toimistotyyppiä. Pehmeät toimistot tarjoavat väärin hinnoitellut kertoimet, ja terävät toimistot tai pörssit hyväksyvät suuret panokset rajoittamatta voittajia."
+        "text": "Hyvä arbitraasijärjestely yhdistää kaksi toimistotyyppiä. Pehmeät toimistot tarjoavat väärin hinnoitellut kertoimet, ja terävät toimistot tai pörssit hyväksyvät suuret panokset rajoittamatta voittajia. Suomessa Veikkauksella on toistaiseksi monopoli, joten lisensoitujen toimistojen välinen arbitraasi ei ole vielä mahdollista. Tämä kuvaus koskee markkinoita, jotka avautuvat lisenssijärjestelmän myötä."
       },
       {
         "type": "ul",
@@ -185,7 +185,7 @@
       },
       {
         "type": "p",
-        "text": "Lue kattava katsaus [parhaista toimistoista varmoihin vetoihin](/fi/oppaat/parhaat-bookmakerit-surebets). Käytä aina maassasi lisensöityjä toimistoja."
+        "text": "Lue kattava katsaus [parhaista toimistoista varmoihin vetoihin](/fi/oppaat/parhaat-bookmakerit-surebets). Käytä aina vain Suomessa toimiluvan saaneita toimijoita: toistaiseksi Veikkaus on ainoa, ja uusia lisensoituja toimijoita tulee markkinoiden avautuessa. Älä käytä luvattomia sivustoja."
       },
       {
         "type": "h2",
@@ -196,13 +196,13 @@
         "items": [
           "**Nosta saldosi** jos tiliä ei enää voi käyttää varmoihin vetoihin.",
           "**Älä avaa uutta tiliä** toisen henkilön nimissä. Se rikkoo käyttöehtoja ja voi johtaa voittojen takavarikointiin.",
-          "**Siirrä volyymi** muille tileillesi sekä teräviin toimistoihin tai pörsseihin.",
+          "**Siirrä volyymi** muille tileillesi sekä teräviin toimistoihin tai pörsseihin, kunhan ne ovat Suomessa sallittuja.",
           "**Seuraa toimistokohtaisesti:** [vedonlyöntiseuranta](/fi/oppaat/vedonlyonti-seuranta-tyokalu) näyttää, mitkä tilit kannattaa suojella."
         ]
       },
       {
         "type": "p",
-        "text": "Mitä useampaa toimistoa voit käyttää, sitä vähemmän volyymia kukin tili tarvitsee. [BetTracker AI](/fi) löytää varmoja vetoja monelta toimistolta, joten voit hajauttaa vetosi ja pitää tilisi auki pidempään."
+        "text": "Mitä useampaa toimistoa voit käyttää, sitä vähemmän volyymia kukin tili tarvitsee. Kun Suomen markkinat avautuvat, [BetTracker AI](/fi) löytää varmoja vetoja monelta lisensoidulta toimistolta, joten voit hajauttaa vetosi ja pitää tilisi auki pidempään."
       }
     ],
     "faq": [
@@ -216,7 +216,7 @@
       },
       {
         "q": "Kuinka monta toimistoa minun pitäisi käyttää?",
-        "a": "Viidestä kymmeneen on hyvä lähtökohta. Se hajauttaa volyymisi ja antaa enemmän varmoja vetoja valittavaksi."
+        "a": "Viidestä kymmeneen on hyvä lähtökohta, kun Suomessa on useita lisensoituja toimijoita. Se hajauttaa volyymisi ja antaa enemmän varmoja vetoja valittavaksi. Tällä hetkellä Veikkaus on ainoa lisensoitu toimija."
       }
     ],
     "category": "Strategia",
@@ -255,19 +255,19 @@
           ],
           [
             "Panos A:lle",
-            "€740,97"
+            "€740,96"
           ],
           [
             "Panos B:lle",
-            "€759,03"
+            "€759,04"
           ],
           [
             "Voittosumma kummallakin",
-            "noin €1 556,03"
+            "noin €1 556,02"
           ],
           [
             "Tuotto",
-            "noin €56,03 (3,7%)"
+            "noin €56,02 (3,7%)"
           ]
         ]
       },
@@ -311,7 +311,7 @@
       },
       {
         "type": "p",
-        "text": "Panokset kuten €740,97 voivat herättää huomiota vedonlyöntiyhtiöissä. Pyöristä lähimpään euroon tai kymmeneen. Jos pyöristät panokset €741 ja €759, tuotto pysyy noin €56:ssa ja ero lopputulosten välillä on vain muutama sentti."
+        "text": "Panokset kuten €740,96 voivat herättää huomiota vedonlyöntiyhtiöissä. Pyöristä lähimpään euroon tai kymmeneen. Jos pyöristät panokset €741 ja €759, tuotto pysyy noin €56:ssa ja ero lopputulosten välillä on alle 20 senttiä."
       },
       {
         "type": "p",
@@ -372,15 +372,15 @@
       },
       {
         "type": "example",
-        "title": "€200 panos kertoimella 2.50",
+        "title": "200 € panos kertoimella 2.50",
         "rows": [
           [
             "Kokonaismaksu",
-            "€200 × 2.50 = €500"
+            "200 € × 2.50 = 500 €"
           ],
           [
             "Voitto",
-            "€500 − €200 = €300"
+            "500 € − 200 € = 300 €"
           ]
         ]
       },
@@ -492,7 +492,7 @@
       },
       {
         "type": "tip",
-        "text": "Jos olet vasta aloittamassa, aloita varmoilla vedoilla. Opit, miten vedonlyöntitoimistot toimivat ilman suuria tappioriskejä."
+        "text": "Jos olet vasta aloittamassa, aloita varmoilla vedoilla. Opit, miten vedonlyöntitoimistot toimivat ilman suuria tappioriskejä. Huomaa kuitenkin, että Suomessa Veikkauksella on toistaiseksi monopoli, joten varmoja vetoja useiden lisensoitujen suomalaisten vedonlyöntitoimistojen välillä ei voi vielä tehdä. Se tulee mahdolliseksi vasta, kun markkina avautuu lisensoiduille toimijoille. Käytä aina vain lisensoituja palveluita ja tarkista ajankohtaiset säännöt viranomaisilta."
       }
     ],
     "faq": [
@@ -511,9 +511,9 @@
   "bedste-bookmakere-til-surebets": {
     "title": "Parhaat vedonlyöntisivustot varmoihin vetoihin",
     "metaTitle": "Parhaat vedonlyöntisivustot varmoihin vetoihin (2026)",
-    "description": "Mitkä vedonlyöntisivustot sopivat parhaiten varmoihin vetoihin? Katso, mitä hyvältä arbitraasivedonsivustolta vaaditaan ja miten rakennat tilitilisi.",
+    "description": "Mitkä vedonlyöntisivustot sopivat parhaiten varmoihin vetoihin? Katso, mitä hyvältä arbitraasivedonsivustolta vaaditaan ja miten rakennat tilisalkkusi Suomen markkinan avautuessa.",
     "keyword": "parhaat vedonlyöntisivustot varmaat vedot",
-    "intro": "Yhtä ainoaa parasta vedonlyöntisivustoa varmoihin vetoihin ei ole olemassa. Arbitraasivetomahdollisuudet syntyvät vedonlyöntisivustojen välille, joten tärkeintä on omistaa tilit useilla eri operaattoreilla, jotka käyttävät erilaisia kertoimentarjoajia ja erilaisia lähestymistapoja markkinoihin.",
+    "intro": "Yhtä ainoaa parasta vedonlyöntisivustoa varmoihin vetoihin ei ole olemassa. Arbitraasivetomahdollisuudet syntyvät vedonlyöntisivustojen välille, joten tärkeintä on omistaa tilit useilla eri operaattoreilla, jotka käyttävät erilaisia kertoimentarjoajia ja erilaisia lähestymistapoja markkinoihin. Suomessa Veikkauksella on toistaiseksi monopoli, joten varmoja vetoja lisensoitujen suomalaisten vedonlyöntisivustojen välillä ei vielä voi tehdä. Se tulee mahdolliseksi vasta, kun markkina avautuu lisensoiduille operaattoreille.",
     "blocks": [
       {
         "type": "h2",
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Kansallisen rahapeliviranomaisen myöntämä lisenssi, joka suojaa sinua ja mahdollistaa voittojen verokohtelun tarkistamisen.",
+          "Voimassa oleva lisenssi Suomen viranomaisilta (toistaiseksi Poliisihallitus, markkinan avautuessa valvonta siirtyy uudelle lupaviranomaiselle), joka suojaa sinua. Veikkauksen ja EU/ETA-alueella lisensoitujen operaattorien voitot ovat yleensä verovapaita, mutta tarkista aina ajantasaiset säännöt.",
           "Nopeat talletukset ja nostot, jotta voit siirtää rahaa sinne, missä sitä tarvitaan.",
           "Laaja urheilutarjonta ja markkinat, erityisesti tennis, jalkapallo ja koripallo.",
           "Kilpailukykyiset kertoimet ja matala vedonlyöntisivuston marginaali suosituilla markkinoilla.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Aloita viidestä kahdeksaan lisensoituun vedonlyöntisivustoon, jotka on hajautettu eri alustoille. Tämä antaa sinulle hyvän valikoiman mahdollisuuksia ilman, että sinun täytyy hallita liian monta saldoa. Kun rutiini on hallussa, voit laajentaa lisäämällä uusia sivustoja."
+        "text": "Kun markkina on avautunut, aloita viidestä kahdeksaan lisensoituun vedonlyöntisivustoon, jotka on hajautettu eri alustoille. Tämä antaa sinulle hyvän valikoiman mahdollisuuksia ilman, että sinun täytyy hallita liian monta saldoa. Kun rutiini on hallussa, voit laajentaa lisäämällä uusia sivustoja. Toistaiseksi Veikkaus on ainoa lisensoitu vaihtoehto Suomessa, joten yksin sen kanssa varmoja vetoja ei voi toteuttaa."
       },
       {
         "type": "tip",
@@ -561,38 +561,38 @@
     "faq": [
       {
         "q": "Kuinka monta vedonlyöntisivustoa tarvitsen varmoja vetoja varten?",
-        "a": "Hyvä lähtökohta on viidestä kahdeksaan säänneltyä vedonlyöntisivustoa. Mitä useampia eri kertoimenalustoja kattaat, sitä enemmän varmoja vetoja sinulla on saatavillasi."
+        "a": "Kun Suomen markkina on avautunut, hyvä lähtökohta on viidestä kahdeksaan lisensoitua ja säänneltyä vedonlyöntisivustoa. Mitä useampia eri kertoimenalustoja kattaat, sitä enemmän varmoja vetoja sinulla on saatavillasi. Veikkauksen monopolin aikana yksi operaattori ei riitä varmoihin vetoihin."
       },
       {
         "q": "Voinko käyttää lisensoimattomia vedonlyöntisivustoja arbitraasivetoihin?",
-        "a": "Sitä ei suositella. Ilman asianmukaista lisenssiä toimivat sivustot saattavat olla estettyjä, ja niiltä saatujen voittojen verokohtelu tai sääntelysuoja voi poiketa normaalista. Tarkista aina voimassa olevat säännöt asuinmaassasi."
+        "a": "Sitä ei suositella. Ilman asianmukaista lisenssiä toimivat sivustot saattavat olla estettyjä, ja niiltä saatujen voittojen verokohtelu tai sääntelysuoja voi poiketa normaalista. Käytä vain Veikkausta tai markkinan avauduttua Suomessa lisensoituja operaattoreita ja tarkista aina voimassa olevat säännöt. Jos pelaaminen alkaa tuntua hallitsemattomalta, apua saat Peluurin auttavasta puhelimesta ja Veikkauksen pelirajoituksista."
       }
     ],
     "category": "Strategia",
     "ctaLabel": "Katso varmoja vetoja vedonlyöntisivustoillasi"
   },
   "skat-paa-spillegevinster": {
-    "title": "Verotus rahapelien voitoista – kansainvälinen vedonlyöntiohje",
-    "metaTitle": "Verotus rahapelien voitoista – mitä sinun tulee tietää",
-    "description": "Pitääkö vedonlyöntivoitoista tai varmoista vedoista maksaa veroa? Lue, miten verosäännöt toimivat lisensoiduilla ja ulkomaisilla vedonlyöntisivustoilla.",
+    "title": "Verotus rahapelien voitoista Suomessa – vedonlyöntiohje",
+    "metaTitle": "Verotus rahapelien voitoista Suomessa – mitä sinun tulee tietää",
+    "description": "Pitääkö vedonlyöntivoitoista tai varmoista vedoista maksaa veroa? Lue, miten verosäännöt toimivat Veikkauksella ja EU/ETA-alueella lisensoiduilla toimijoilla.",
     "keyword": "verotus rahapelien voitoista",
-    "intro": "Monilla säännellyillä markkinoilla vastaus on selkeä: lisensoitujen vedonlyöntitoimistojen voitot ovat pelaajalle verovapaita. Vedonlyöntitoimisto maksaa veron valtiolle, ei sinä. Säännöt riippuvat kuitenkin siitä, missä asut ja missä vedät.",
+    "intro": "Suomessa vastaus on selkeä: Veikkauksen voitot ovat pelaajalle yleensä verovapaita, samoin EU/ETA-alueella lisensoitujen toimijoiden voitot. Rahapeliyhtiö maksaa veron valtiolle, ei sinä. Markkina on kuitenkin avautumassa lisensoiduille toimijoille, joten tarkista aina ajantasaiset säännöt.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Lisensoidut vedonlyöntitoimistot: yleensä verovapaat"
+        "text": "Veikkaus ja lisensoidut toimijat: yleensä verovapaat"
       },
       {
         "type": "p",
-        "text": "Kun vedät kansallisen rahapeliviranomaisen lisensoimalla palveluntarjoajalla, palveluntarjoaja maksaa yleensä rahapeliveron tuloistaan. Voittosi ovat siksi pääsääntöisesti verovapaita, eikä sinun useimmissa tapauksissa tarvitse ilmoittaa niitä veroviranomaiselle. Tarkista aina asuinmaasi säännöt."
+        "text": "Kun pelaat Veikkauksella tai EU/ETA-alueella lisensoidulla toimijalla, voittosi ovat pääsääntöisesti verovapaita, eikä niitä useimmissa tapauksissa tarvitse ilmoittaa veroviranomaiselle. Suomessa Veikkauksella on tällä hetkellä yksinoikeus, ja markkina avautuu lisensoiduille toimijoille lisenssijärjestelmän myötä (2026–2027). Tarkista aina ajantasaiset säännöt."
       },
       {
         "type": "h2",
-        "text": "Ulkomaiset vedonlyöntitoimistot ilman paikallista lisenssiä"
+        "text": "Ulkomaiset toimijat ilman Suomen lisenssiä"
       },
       {
         "type": "p",
-        "text": "Jos vedät palveluntarjoajilla, joilla ei ole lisenssiä asuinmaassasi, voitot saattavat olla veronalaisia. Säännöt riippuvat muun muassa siitä, onko palveluntarjoajalla lisenssi jossakin muussa maassa, sekä omasta verotusoikeudestasi. Tämä on yksi syy, miksi on usein yksinkertaisempaa pysyä säänneltyjen vedonlyöntitoimistojen asiakkaana."
+        "text": "Jos pelaat toimijalla, jolla ei ole lisenssiä Suomessa eikä muualla EU/ETA-alueella, voitot saattavat olla veronalaisia. Säännöt riippuvat muun muassa siitä, missä toimijalla on lisenssi, sekä omasta verotilanteestasi. Emme kannusta pelaamaan luvattomilla sivustoilla, ja yksinkertaisinta on pysyä Veikkauksen ja markkinan avauduttua lisensoitujen toimijoiden asiakkaana. Tarkista voimassa olevat säännöt Verohallinnolta."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Kyllä. Verotuksen näkökulmasta varma veto on yksinkertaisesti kaksi tai kolme tavallista vetoa. Lisensoitujen vedonlyöntitoimistojen voitot ovat yleensä verovapaita riippumatta siitä, teetkö varmoja vetoja, arvovetoja vai tavallisia vetoja. Samat periaatteet pätevät kaikkiin."
+        "text": "Kyllä. Verotuksen näkökulmasta varma veto on yksinkertaisesti kaksi tai kolme tavallista vetoa. Lisensoitujen toimijoiden voitot ovat yleensä verovapaita riippumatta siitä, teetkö varmoja vetoja, arvovetoja vai tavallisia vetoja. Huomaa kuitenkin, että varmojen vetojen tekeminen lisensoitujen suomalaisten vedonlyöntitoimistojen välillä ei ole mahdollista ennen kuin markkina avautuu."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Jos vedonlyönti on pääasiallinen toimeentulosi merkittävässä mittakaavassa, tietyissä tilanteissa saattavat päteä eri säännöt. Jos olet epävarma omasta tilanteestasi, ota yhteyttä paikalliseen veroviranomaiseen tai pätevään kirjanpitäjään."
+        "text": "Jos vedonlyönti on pääasiallinen toimeentulosi merkittävässä mittakaavassa, tietyissä tilanteissa saattavat päteä eri säännöt. Jos olet epävarma omasta tilanteestasi, ota yhteyttä Verohallintoon tai pätevään kirjanpitäjään."
       }
     ],
     "faq": [
       {
-        "q": "Pitääkö lisensoitujen vedonlyöntitoimistojen voitoista maksaa veroa?",
-        "a": "Useimmilla säännellyillä markkinoilla ei. Paikallisesti lisensoitujen palveluntarjoajien voitot ovat tyypillisesti pelaajalle verovapaita. Tarkista asuinmaasi verosäännöt."
+        "q": "Pitääkö Veikkauksen ja muiden lisensoitujen toimijoiden voitoista maksaa veroa?",
+        "a": "Yleensä ei. Veikkauksen ja EU/ETA-alueella lisensoitujen toimijoiden voitot ovat tyypillisesti pelaajalle verovapaita. Tarkista kuitenkin ajantasaiset verosäännöt Verohallinnolta."
       },
       {
-        "q": "Mistä näen, onko vedonlyöntitoimistolla lisenssi maassani?",
-        "a": "Kansallisella rahapeliviranomaisella on verkkosivuillaan lista hyväksytyistä palveluntarjoajista, ja lisensoidut vedonlyöntitoimistot näyttävät yleensä viranomaisen logon sivustollaan."
+        "q": "Mistä näen, onko vedonlyöntitoimistolla lisenssi Suomessa?",
+        "a": "Suomessa rahapelitoimintaa valvoo tällä hetkellä Poliisihallitus, ja valvonta siirtyy uudelle lisenssiviranomaiselle markkinan avautuessa. Tarkista viranomaisen verkkosivuilta, onko toimijalla voimassa oleva lisenssi. Jos et löydä sitä sieltä, älä pelaa kyseisellä sivustolla."
       }
     ],
     "category": "Säännöt",
@@ -631,9 +631,9 @@
   "bankroll-management": {
     "title": "Pankkihallinnan opas urheiluvedonlyöntiin ja arbitraasiin",
     "metaTitle": "Pankkihallinta urheiluvedonlyönnissä 2026",
-    "description": "Pankkihallinta urheiluvedonlyönnissä: kuinka mitoittaa panokset, jakaa rahat kirjanpitäjien kesken ja laskea ROI – käytännön esimerkkejä euroissa.",
+    "description": "Pankkihallinta urheiluvedonlyönnissä: kuinka mitoittaa panokset, jakaa rahat vedonvälittäjien kesken ja laskea ROI – käytännön esimerkkejä euroissa.",
     "keyword": "pankkihallinta urheiluvedonlyönti opas",
-    "intro": "Hyvä pankkihallinta tarkoittaa, että päätät etukäteen kuinka paljon rahaa on varattu vedonlyöntiin, kuinka paljon panostat per veto ja miten rahat jakautuvat eri vedonvälittäjille. Arvovedoissa panosta 1–2 % pankkivarastostasi per veto. Varmoissa vedoissa rajoittava tekijä on likviditeetti: rahasi täytyy olla oikeilla vedonvälittäjillä silloin, kun varma veto ilmestyy. Seuraa kaikkea ROI:n mittaamiseksi.",
+    "intro": "Hyvä pankkihallinta tarkoittaa, että päätät etukäteen kuinka paljon rahaa on varattu vedonlyöntiin, kuinka paljon panostat per veto ja miten rahat jakautuvat eri vedonvälittäjille. Arvovedoissa panosta 1–2 % pankkivarastostasi per veto. Varmoissa vedoissa rajoittava tekijä on likviditeetti: rahasi täytyy olla oikeilla vedonvälittäjillä silloin, kun varma veto ilmestyy. Suomessa Veikkaus on toistaiseksi ainoa lisensoitu operaattori, joten varmat vedot lisensoitujen suomalaisten vedonvälittäjien välillä ovat mahdollisia vasta markkinan avauduttua. Seuraa kaikkea ROI:n mittaamiseksi.",
     "blocks": [
       {
         "type": "h2",
@@ -700,7 +700,7 @@
             "480 € / 3 000 € = 16 %"
           ]
         ],
-        "note": "Tuotto per varma veto on pieni, mutta pankkivarasto kierrätetään useita kertoja kuukaudessa. Tulokset vaihtelevat rajoitusten ja saatavilla olevien varmojen vetojen mukaan."
+        "note": "Tuotto per varma veto on pieni, mutta pankkivarasto kierrätetään useita kertoja kuukaudessa. Tulokset vaihtelevat rajoitusten ja saatavilla olevien varmojen vetojen mukaan. Esimerkki on laskennallinen: Suomessa useamman lisensoidun vedonvälittäjän välinen toteutus on mahdollista vasta markkinan avauduttua."
       },
       {
         "type": "h2",
@@ -760,7 +760,7 @@
     "faq": [
       {
         "q": "Kuinka suuri pankkivaraston pitäisi olla varmoissa vedoissa?",
-        "a": "Monet aloittavat 1 000–3 000 eurolla jaettuna 4–6 vedonvälittäjälle. Pienemmälläkin pärjää, mutta tuotto per varma veto jää hyvin pieneksi."
+        "a": "Monet aloittavat 1 000–3 000 eurolla jaettuna 4–6 vedonvälittäjälle. Pienemmälläkin pärjää, mutta tuotto per varma veto jää hyvin pieneksi. Suomessa varmojen vetojen tekeminen lisensoitujen vedonvälittäjien välillä on mahdollista vasta, kun markkina avautuu (lisenssijärjestelmä on tulossa 2026–2027). Älä käytä lisenssittömiä sivustoja."
       },
       {
         "q": "Kuinka suuren prosenttiosuuden pitäisi panostaa arvovedoissa?",
@@ -775,11 +775,11 @@
     "ctaLabel": "Seuraa pankkivarastoasi ilmaiseksi"
   },
   "arbitrage-betting": {
-    "title": "Miten arbitraaživedot toimivat? Lukitse voitto jokaisella tuloksella",
-    "metaTitle": "Miten Arbitraaživedot Toimivat? Opas 2026",
-    "description": "Miten arbitraaživedot toimivat: kaava, käytännön esimerkit euroissa ja ohjeet ensimmäisen varman vedon tekemiseen askel askeleelta.",
-    "keyword": "miten arbitraaživedot toimivat",
-    "intro": "Arbitraaživedot toimivat siten, että pelataan jokainen saman tapahtuman lopputulos eri vedonlyöntiyhtiöissä, kun kertoimien käänteislukujen summa on alle 1. Jaat panoksen niin, että voitto on sama riippumatta tuloksesta. Kokonaispanoksen ja voiton välinen ero on sinun voittosi – yleensä 1–3 % per varma veto – ja se perustuu matematiikkaan eikä tuuriin.",
+    "title": "Miten arbitraasivedot toimivat? Lukitse voitto jokaisella tuloksella",
+    "metaTitle": "Miten Arbitraasivedot Toimivat? Opas 2026",
+    "description": "Miten arbitraasivedot toimivat: kaava, käytännön esimerkit euroissa ja ohjeet ensimmäisen varman vedon tekemiseen askel askeleelta.",
+    "keyword": "miten arbitraasivedot toimivat",
+    "intro": "Arbitraasivedot toimivat siten, että pelataan jokainen saman tapahtuman lopputulos eri vedonlyöntiyhtiöissä, kun kertoimien käänteislukujen summa on alle 1. Jaat panoksen niin, että voitto on sama riippumatta tuloksesta. Kokonaispanoksen ja voiton välinen ero on sinun voittosi – yleensä 1–3 % per varma veto – ja se perustuu matematiikkaan eikä tuuriin. Suomessa Veikkaus on toistaiseksi ainoa lisensoitu toimija, joten varmoja vetoja lisensoitujen yhtiöiden välillä voi tehdä vasta markkinan avauduttua.",
     "blocks": [
       {
         "type": "h2",
@@ -822,7 +822,7 @@
       },
       {
         "type": "h2",
-        "text": "Arbitraaživedot-opas: kolme lopputulosta jalkapallossa"
+        "text": "Arbitraasivedot-opas: kolme lopputulosta jalkapallossa"
       },
       {
         "type": "p",
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Avaa tilit** vähintään kahdelle lisensoidulle vedonlyöntiyhtiölle, mieluiten useammalle, ja tee talletus etukäteen.",
+          "**1. Avaa tilit** vähintään kahdelle lisensoidulle vedonlyöntiyhtiölle, mieluiten useammalle, ja tee talletus etukäteen. Suomessa Veikkaus on toistaiseksi ainoa lisensoitu toimija, joten tämä onnistuu vasta markkinan avauduttua. Älä käytä lisenssittömiä sivustoja.",
           "**2. Löydä varma veto,** jossa kertoimien käänteislukujen summa on alle 1,00.",
           "**3. Laske panokset** niin, että voitto on sama jokaisella lopputuloksella.",
           "**4. Pelaa molemmat vedot nopeasti,** aloittaen kertoimesta, joka todennäköisimmin muuttuu.",
@@ -890,7 +890,7 @@
       },
       {
         "type": "p",
-        "text": "Matematiikka on riskitöntä, mutta toteutus ei aina ole. **Kertoimien muuttuminen** toisen vedon pelaamisen aikana, **mitätöidyt vedot** ilmeisten hinnoitteluvirheiden vuoksi ja **rajoitetut tilit** ovat todelliset riskit. Pidä panokset maltillisina aluksi ja lue, miten [välttää vedonlyöntiyhtiöiden rajoitukset](/fi/oppaat/kuinka-valttaa-bookmaker-rajoitukset)."
+        "text": "Matematiikka on riskitöntä, mutta toteutus ei aina ole. **Kertoimien muuttuminen** toisen vedon pelaamisen aikana, **mitätöidyt vedot** ilmeisten hinnoitteluvirheiden vuoksi ja **rajoitetut tilit** ovat todelliset riskit. Pidä panokset maltillisina aluksi ja lue, miten [välttää vedonlyöntiyhtiöiden rajoitukset](/fi/oppaat/kuinka-valttaa-bookmaker-rajoitukset). Jos pelaaminen alkaa tuntua hallitsemattomalta, apua saa Peluurin auttavasta puhelimesta ja Veikkauksen pelirajoituksista."
       },
       {
         "type": "p",
@@ -899,16 +899,16 @@
     ],
     "faq": [
       {
-        "q": "Ovatko arbitraaživedot laillisia?",
-        "a": "Kyllä, jokaisen lopputuloksen pelaaminen samassa tapahtumassa ei ole laitonta useimmissa maissa. Vedonlyöntiyhtiöt voivat silti rajoittaa tiliäsi. Katso [ovatko varmat vedot laillisia?](/fi/oppaat/ovatko-surebetit-laillisia)"
+        "q": "Ovatko arbitraasivedot laillisia?",
+        "a": "Kyllä, jokaisen lopputuloksen pelaaminen samassa tapahtumassa ei ole laitonta useimmissa maissa. Vedonlyöntiyhtiöt voivat silti rajoittaa tiliäsi. Suomessa Veikkaus on toistaiseksi ainoa lisensoitu toimija, eikä lisenssittömien sivustojen käyttöä suositella. Voitot Veikkaukselta ja EU/ETA-alueella lisensoiduilta toimijoilta ovat yleensä verovapaita, mutta tarkista voimassa olevat säännöt. Katso [ovatko varmat vedot laillisia?](/fi/oppaat/ovatko-surebetit-laillisia)"
       },
       {
         "q": "Kuinka paljon voi ansaita varmoilla vedoilla?",
-        "a": "Tyypillinen varma veto tuottaa 1–3 % kokonaispanoksesta. Kun panostat 1 000 € per varma veto, teet 40 varmaa vetoa kuukaudessa ja keskiarvo on 1,5 %, se on noin 600 € kuukaudessa."
+        "a": "Tyypillinen varma veto tuottaa 1–3 % kokonaispanoksesta. Kun panostat 1 000 € per varma veto, teet 40 varmaa vetoa kuukaudessa ja keskiarvo on 1,5 %, se on noin 600 € kuukaudessa. Suomessa tämä on mahdollista vasta, kun lisensoitujen yhtiöiden markkina avautuu."
       },
       {
         "q": "Kuinka monta vedonlyöntiyhtiötä tarvitsen?",
-        "a": "Vähintään kaksi, mutta mitä enemmän tilejä sinulla on, sitä enemmän varma vetoja voit hyödyntää. Monet arbitraažipelaajat käyttävät viittä kymmeneen vedonlyöntiyhtiötä."
+        "a": "Vähintään kaksi, mutta mitä enemmän tilejä sinulla on, sitä enemmän varmoja vetoja voit hyödyntää. Monet arbitraasipelaajat käyttävät viittä kymmeneen vedonlyöntiyhtiötä. Suomessa Veikkaus on toistaiseksi ainoa lisensoitu yhtiö, joten useamman yhtiön vertailu tulee mahdolliseksi vasta lisenssijärjestelmän käynnistyttyä (2026–2027)."
       },
       {
         "q": "Mitä jos kertoimet muuttuvat ennen toista vetoani?",
@@ -920,10 +920,10 @@
   },
   "hvad-er-surebets": {
     "title": "Mitä ovat varmat vedot? Näin taatut kertoimet toimivat",
-    "metaTitle": "Varmat vedot – täydellinen opas arbitraaživedontlyöntiin",
+    "metaTitle": "Varmat vedot – täydellinen opas arbitraasivedonlyöntiin",
     "description": "Opi mitä varmat vedot ovat, miten ne syntyvät ja miten voit lyödä vetoa kaikista lopputuloksista eri vedonlyöntitoimistoilla varmistaaksesi taatun voiton.",
     "keyword": "varmat vedot",
-    "intro": "Varma veto – tunnetaan myös nimillä arbitraaživedontlyönti tai arbing – on kertoimien yhdistelmä eri vedonlyöntitoimistoilta, jossa voit lyödä vetoa kaikista ottelun mahdollisista lopputuloksista ja silti tehdä voittoa riippumatta siitä, miten ottelu päättyy. Se kuulostaa liian hyvältä ollakseen totta, mutta kyse on puhtaasta matematiikasta.",
+    "intro": "Varma veto – tunnetaan myös nimillä arbitraasivedonlyönti tai arbing – on kertoimien yhdistelmä eri vedonlyöntitoimistoilta, jossa voit lyödä vetoa kaikista ottelun mahdollisista lopputuloksista ja silti tehdä voittoa riippumatta siitä, miten ottelu päättyy. Se kuulostaa liian hyvältä ollakseen totta, mutta kyse on puhtaasta matematiikasta.",
     "blocks": [
       {
         "type": "h2",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Panoksesi on jaettava niin, että voitto on sama riippumatta siitä, kumpi voittaa. Yllä olevan esimerkin 1 000 yksikön kokonaispanoksella sijoitat noin 494 yksikköä pelaajalle A ja noin 506 yksikköä pelaajalle B. Kumpikin lopputulos tuottaa noin 1 037 yksikköä, eli voittoa kertyy noin 37 yksikköä."
+        "text": "Panoksesi on jaettava niin, että voitto on sama riippumatta siitä, kumpi voittaa. Yllä olevan esimerkin 1 000 euron kokonaispanoksella sijoitat noin 494 euroa pelaajalle A ja noin 506 euroa pelaajalle B. Kumpikin lopputulos tuottaa noin 1 037 euroa, eli voittoa kertyy noin 37 euroa."
       },
       {
         "type": "tip",
@@ -989,7 +989,7 @@
         "items": [
           "Kertoimet voivat muuttua vetojen asettamisen aikana. Aseta ensin veto epävakaimmilla kertoimilla.",
           "Tarkista, että markkina on täsmälleen sama molemmilla toimistoilla – esimerkiksi lasketaanko jatkoaika mukaan.",
-          "Pidä varoja useilla vedonlyöntitoimistoilla, jotta voit toimia nopeasti.",
+          "Pidä varoja useilla lisensoiduilla vedonlyöntitoimistoilla, jotta voit toimia nopeasti. Suomessa tämä on mahdollista vasta, kun markkina avautuu lisensoiduille toimijoille Veikkauksen rinnalle.",
           "Vedonlyöntitoimistot saattavat rajoittaa tilejä, jotka lyövät vetoa ainoastaan varmoilla vedoilla. Lue oppaamme tilien rajoitusten välttämisestä."
         ]
       }
@@ -1005,7 +1005,7 @@
       },
       {
         "q": "Kuinka löydät varmat vedot?",
-        "a": "Voit vertailla kertoimia manuaalisesti, mutta se on hidasta. Varman vedon skanneri kuten BetTrackerAI seuraa markkinoillasi toimivia vedonlyöntitoimistoja ja näyttää tilaisuudet heti niiden ilmaantuessa."
+        "a": "Voit vertailla kertoimia manuaalisesti, mutta se on hidasta. Varman vedon skanneri kuten BetTrackerAI seuraa markkinoillasi toimivia lisensoituja vedonlyöntitoimistoja ja näyttää tilaisuudet heti niiden ilmaantuessa. Suomessa Veikkauksella on toistaiseksi yksinoikeus, joten varmat vedot kotimaisten toimistojen välillä ovat mahdollisia vasta, kun markkina avautuu lisensoiduille toimijoille. Pelaa vain lisensoiduilla sivustoilla ja tarkista voimassa olevat säännöt viranomaisilta. Jos pelaaminen alkaa huolestuttaa, apua saat Peluurista."
       }
     ],
     "category": "Perusteet",
@@ -1036,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Esimerkki: kolme pelaajaa turnauksessa, kokonaispanos €1 000",
+        "title": "Esimerkki: kolme pelaajaa turnauksessa, kokonaispanos 1 000 €",
         "rows": [
           [
             "Pelaaja A, kerroin 3,00",
-            "panos noin €444"
+            "panos noin 444 €"
           ],
           [
             "Pelaaja B, kerroin 4,00",
-            "panos noin €333"
+            "panos noin 333 €"
           ],
           [
             "Pelaaja C, kerroin 6,00",
-            "panos noin €222"
+            "panos noin 222 €"
           ],
           [
             "S = 0,333 + 0,250 + 0,167",
@@ -1056,11 +1056,11 @@
           ],
           [
             "Jos jokin kolmesta voittaa",
-            "tuotto noin €1 333, voitto noin €333"
+            "tuotto noin 1 333 €, voitto noin 333 €"
           ],
           [
             "Jos mikään kolmesta ei voita",
-            "tappio €1 000"
+            "tappio 1 000 €"
           ]
         ],
         "note": "Voitto realisoituu vain, jos jokin kolmesta pelaajastasi voittaa. Sinun on itse arvioitava, kuinka todennäköistä se on."
@@ -1074,12 +1074,12 @@
         "items": [
           "Kun uskot muutaman lopputuloksen sisältävän suurimman osan todennäköisyydestä, esimerkiksi turnauksen kolme suosikkia.",
           "Kun haluat hajauttaa riskiä sen sijaan, että pelaisit yhdelle lopputulokselle.",
-          "Kun saat paremmat kertoimet usealta vedonvälittäjältä ja haluat jakaa panoksesi niiden kesken."
+          "Kun markkina on avautunut ja saat paremmat kertoimet usealta lisensoidulta vedonvälittäjältä ja haluat jakaa panoksesi niiden kesken. Toistaiseksi Suomessa on vain Veikkaus."
         ]
       },
       {
         "type": "tip",
-        "text": "Dutching ei korvaa surebet-vedonlyöntiä. Jos haluat taatun voiton, sinun on katettava kaikki lopputulokset eri vedonvälittäjillä. Laskuri näyttää eron välittömästi."
+        "text": "Dutching ei korvaa surebet-vedonlyöntiä. Jos haluat taatun voiton, sinun on katettava kaikki lopputulokset eri vedonvälittäjillä. Suomessa se on mahdollista vasta, kun markkina avautuu lisensoiduille operaattoreille. Laskuri näyttää eron välittömästi."
       }
     ],
     "faq": [
@@ -1104,7 +1104,7 @@
     "metaTitle": "Tennisvarmat vedot – löydä taattu voitto tenniskertoimista",
     "description": "Tennis sopii erinomaisesti varmoihin vetoihin, sillä tuloksia on vain kaksi. Katso käytännön esimerkki ja sudenkuopat, jotka on syytä välttää tennisarbitraasissa.",
     "keyword": "tennisvarmat vedot",
-    "intro": "Tennis on yksi helpoimmista lajeista varmojen vetojen pelaamiseen. Ottelussa on vain kaksi mahdollista tulosta eikä tasapeliä, joten tarvitset vain kaksi vedonlyöntitoimistoa ja kaksi vetoa.",
+    "intro": "Tennis on yksi helpoimmista lajeista varmojen vetojen pelaamiseen. Ottelussa on vain kaksi mahdollista tulosta eikä tasapeliä, joten tarvitset vain kaksi vedonlyöntitoimistoa ja kaksi vetoa. Suomessa Veikkaus on toistaiseksi ainoa toimija, joten varmoja vetoja lisensoitujen toimistojen välillä voi tehdä vasta, kun markkina avautuu lisensoiduille operaattoreille.",
     "blocks": [
       {
         "type": "h2",
@@ -1162,7 +1162,7 @@
     "faq": [
       {
         "q": "Miksi tennis sopii hyvin varmoihin vetoihin?",
-        "a": "Koska tuloksia on vain kaksi eikä tasapeliä ole. Tarvitset vain kaksi vedonlyöntitoimistoa ja asetat kaksi vetoa."
+        "a": "Koska tuloksia on vain kaksi eikä tasapeliä ole. Tarvitset vain kaksi vedonlyöntitoimistoa ja asetat kaksi vetoa. Suomessa tämä on käytännössä mahdollista lisensoitujen toimistojen välillä vasta markkinan avauduttua, sillä Veikkaus on toistaiseksi ainoa toimija."
       },
       {
         "q": "Mitä tapahtuu, jos pelaaja keskeyttää ottelun kesken varman vedon aikana?",
@@ -1189,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Esimerkki: kolme vedonlyöntiyhtiötä, kokonaispanos €1 000",
+        "title": "Esimerkki: kolme vedonlyöntiyhtiötä, kokonaispanos 1 000 €",
         "rows": [
           [
             "Kotivoitto vedonlyöntiyhtiöllä 1, kerroin 2,40",
-            "panos noin €424"
+            "panos noin 424 €"
           ],
           [
             "Tasapeli vedonlyöntiyhtiöllä 2, kerroin 3,80",
-            "panos noin €268"
+            "panos noin 268 €"
           ],
           [
             "Vierasvoitto vedonlyöntiyhtiöllä 3, kerroin 3,30",
-            "panos noin €308"
+            "panos noin 308 €"
           ],
           [
             "1/2,40 + 1/3,80 + 1/3,30",
@@ -1209,11 +1209,11 @@
           ],
           [
             "Tuotto lopputuloksesta riippumatta",
-            "noin €1 017"
+            "noin 1 017 €"
           ],
           [
             "Voitto",
-            "noin €17 (1,7%)"
+            "noin 17 € (1,7 %)"
           ]
         ],
         "note": "Voitto on pienempi kuin tennisessä, ja kolme panosta tarkoittaa suurempaa riskiä siitä, että kertoimet muuttuvat panoksia asettaessa."
@@ -1233,7 +1233,7 @@
       },
       {
         "type": "tip",
-        "text": "Valitse BetTrackerAI:ssa ne vedonlyöntiyhtiöt, joilla sinulla on jo varoja, jotta näet vain varmat vedot, jotka voit oikeasti asettaa."
+        "text": "Valitse BetTrackerAI:ssa ne vedonlyöntiyhtiöt, joilla sinulla on jo varoja, jotta näet vain varmat vedot, jotka voit oikeasti asettaa. Huomaa, että Suomessa Veikkaus on toistaiseksi ainoa lisensoitu toimija, joten varmoja vetoja lisensoitujen suomalaisten vedonlyöntiyhtiöiden välillä ei voi tehdä ennen kuin markkina avautuu (lisenssijärjestelmän on määrä alkaa 2026–2027). Älä käytä luvattomia sivustoja, ja tarkista ajantasaiset säännöt viranomaisilta."
       }
     ],
     "faq": [
@@ -1377,7 +1377,7 @@
       },
       {
         "type": "p",
-        "text": "Koska markkinalla on vain kaksi lopputulosta, voit yhdistää kotijoukkueen -0,5 yhdeltä vedonvälittäjältä ja vierasjoukkueen +0,5 toiselta – varmaan vetoon tarvitaan siis vain kaksi vedonvälittäjää. Varmista, että molemmat puolet vastaavat toisiaan: -0,5 paritetaan +0,5:n kanssa ja -0,25 paritetaan +0,25:n kanssa."
+        "text": "Koska markkinalla on vain kaksi lopputulosta, voit yhdistää kotijoukkueen -0,5 yhdeltä vedonvälittäjältä ja vierasjoukkueen +0,5 toiselta – varmaan vetoon tarvitaan siis vain kaksi vedonvälittäjää. Varmista, että molemmat puolet vastaavat toisiaan: -0,5 paritetaan +0,5:n kanssa ja -0,25 paritetaan +0,25:n kanssa. Huomaa, että Suomessa Veikkaus on toistaiseksi ainoa lisensoitu toimija, joten varmoja vetoja suomalaisten lisensoitujen vedonvälittäjien välillä ei voi tehdä ennen kuin markkina avautuu. Älä käytä ilman lupaa toimivia sivustoja."
       },
       {
         "type": "tip",
@@ -1402,7 +1402,7 @@
     "metaTitle": "Parempi kuin Excel – Vedonlyönnin seuranta 2026",
     "description": "Vaihda Excel-taulukko vedonlyönnin seurantasovellukseen: mitä kirjata, miten laskea ROI, esimerkkejä euroissa ja mitä hyvän bet tracker -sovelluksen tulee tehdä.",
     "keyword": "vedonlyönnin seuranta sovellus",
-    "intro": "Paras vaihtoehto Excel-taulukolle on bet tracker, joka kirjaa jokaisen vedon, panoksen ja tuloksen puolestasi sekä laskee automaattisesti ROI:n, voiton kirjanmerkkikohtaisesti ja saldon. Taulukot hajoavat heti, kun teet kymmeniä varmat vedot -vetoja viikossa: kaavat ylikirjoittuvat, haarat katoavat ja mitätöidyt vedot vääristävät luvut. Seurantasovellus näyttää todellisen tilanteen sekunneissa.",
+    "intro": "Paras vaihtoehto Excel-taulukolle on bet tracker, joka kirjaa jokaisen vedon, panoksen ja tuloksen puolestasi sekä laskee automaattisesti ROI:n, voiton vedonvälittäjäkohtaisesti ja saldon. Taulukot hajoavat heti, kun teet kymmeniä varmat vedot -vetoja viikossa: kaavat ylikirjoittuvat, haarat katoavat ja mitätöidyt vedot vääristävät luvut. Seurantasovellus näyttää todellisen tilanteen sekunneissa. Huomaa, että Suomessa Veikkauksella on toistaiseksi monopoli, joten varmat vedot lisensoitujen suomalaisten operaattoreiden välillä ovat mahdollisia vasta, kun markkina avautuu. Seuranta toimii silti kaikille vedoillesi.",
     "blocks": [
       {
         "type": "h2",
@@ -1410,7 +1410,7 @@
       },
       {
         "type": "p",
-        "text": "Taulukko riittää kymmenelle vedolle kuukaudessa. Arbitraasivedonlyönnissä jokaisessa varmat vedot -vedossa on kaksi tai kolme haaraa eri kirjanmerkeillä, joten 50 varmat vedot -vetoa tarkoittaa 100–150 riviä, jotka pitää kirjoittaa, selvittää ja täsmäyttää käsin."
+        "text": "Taulukko riittää kymmenelle vedolle kuukaudessa. Arbitraasivedonlyönnissä jokaisessa varmat vedot -vedossa on kaksi tai kolme haaraa eri vedonvälittäjillä, joten 50 varmat vedot -vetoa tarkoittaa 100–150 riviä, jotka pitää kirjoittaa, selvittää ja täsmäyttää käsin."
       },
       {
         "type": "ul",
@@ -1418,7 +1418,7 @@
           "**Manuaaliset virheet:** yksi väärä kerroin tai panos pilaa koko ROI-luvun.",
           "**Puuttuvat haarat:** jos yksi haara jää kirjaamatta, voitollinen veto näyttää tappiolta.",
           "**Mitätöinnit ja osittainen hyväksyntä:** vaikea käsitellä oikein yksinkertaisilla kaavoilla.",
-          "**Ei kirjanmerkki­kohtaista yhteenvetoa:** et näe helposti, missä rahasi todella ovat."
+          "**Ei vedonvälittäjäkohtaista yhteenvetoa:** et näe helposti, missä rahasi todella ovat."
         ]
       },
       {
@@ -1429,7 +1429,7 @@
         "type": "ul",
         "items": [
           "**Päivämäärä ja tapahtuma**, jotta löydät vedon myöhemmin.",
-          "**Kirjanmerkki, markkina ja kerroin**, täsmälleen sellaisena kuin vetokuponki hyväksyi.",
+          "**Vedonvälittäjä, markkina ja kerroin**, täsmälleen sellaisena kuin vetokuponki hyväksyi.",
           "**Panos ja tulos**: voitto, tappio, mitätöinti tai puolivoitto aasialaisilla linjoilla.",
           "**Vedon tyyppi**: varmat vedot, arvovedot tai tavallinen veto, jotta voit vertailla strategioita.",
           "**Sulkemiskertoimet** arvovetoja tehdessä, jotta näet, voititko markkinan."
@@ -1445,22 +1445,22 @@
           ],
           [
             "Kokonaisliikevaihto (kaikki haarat)",
-            "€24 000"
+            "24 000 €"
           ],
           [
             "Palautettu yhteensä",
-            "€24 720"
+            "24 720 €"
           ],
           [
             "Nettovoitto",
-            "€720"
+            "720 €"
           ],
           [
             "ROI",
-            "€720 / €24 000 = 3,0 %"
+            "720 € / 24 000 € = 3,0 %"
           ]
         ],
-        "note": "Ilman seurantaa näet vain saldon liikkuvan. Seurannan avulla näet, että jokainen kierrättämäsi €100 tuo €3 voittoa."
+        "note": "Ilman seurantaa näet vain saldon liikkuvan. Seurannan avulla näet, että jokainen kierrättämäsi 100 € tuo 3 € voittoa."
       },
       {
         "type": "h2",
@@ -1470,8 +1470,8 @@
         "type": "ul",
         "items": [
           "**Ryhmitellä varmat vedot -haarat**, jolloin koko arbitraasi näkyy yhtenä positiona ja yhtenä voittona.",
-          "**Laskea ROI automaattisesti** kuukauden, lajin, markkinan ja kirjanmerkin mukaan.",
-          "**Näyttää saldo kirjanmerkki­kohtaisesti**, jotta tiedät, minne tallettaa tai mistä nostaa.",
+          "**Laskea ROI automaattisesti** kuukauden, lajin, markkinan ja vedonvälittäjän mukaan.",
+          "**Näyttää saldo vedonvälittäjäkohtaisesti**, jotta tiedät, minne tallettaa tai mistä nostaa.",
           "**Käsitellä mitätöinnit ja kertoimen muutokset** rikkomatta kokonaissummia.",
           "**Toimia mobiilissa**, koska teet vedot liikkeellä ollessasi."
         ]
@@ -1531,19 +1531,19 @@
         "rows": [
           [
             "Kokonaispanos",
-            "€40,000"
+            "40 000 €"
           ],
           [
             "Kokonaisvoitto",
-            "€41,000"
+            "41 000 €"
           ],
           [
             "Voitto",
-            "€1,000"
+            "1 000 €"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "1 000 / 40 000 × 100 = 2,5 %"
           ]
         ],
         "note": "Olet ansainnut 2,5 senttiä jokaista panostettua euroasi kohden."
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Miten lasken ROI:n vedonlyönnissä?",
-        "a": "Ota voittosi, jaa kokonaispanoksellasi ja kerro 100:lla. Jos olet pannut €10,000 ja ansainnut €300, ROI:si on 3 %."
+        "a": "Ota voittosi, jaa kokonaispanoksellasi ja kerro 100:lla. Jos olet pannut 10 000 € ja ansainnut 300 €, ROI:si on 3 %."
       },
       {
         "q": "Mitä eroa on ROI:lla ja voitolla?",
@@ -1595,7 +1595,7 @@
     "metaTitle": "Surebet Danmark -vaihtoehto – BetTrackerAI vertailu (2025)",
     "description": "Vertaa BetTrackerAI:ta ja Surebet Danmarkia: hinnoittelu, ominaisuudet, vedonlyöntitoimistot ja vedonjäljitys. Löydä varmat vedot -työkalu, joka sopii sinulle.",
     "keyword": "varmat vedot -työkalu vertailu",
-    "intro": "Surebet Danmark ja BetTrackerAI skannaavat molemmat varmoja vetoja (tunnetaan myös nimellä arbitraasivedonlyönti) lisensoiduilta vedonlyöntitoimistoilta. Molemmilla on 7 päivän ilmainen kokeilujakso. Tärkeimmät erot löytyvät hinnoittelusta sekä työkaluista, joita saat varmat vedot -skannerin lisäksi.",
+    "intro": "Surebet Danmark ja BetTrackerAI skannaavat molemmat varmoja vetoja (tunnetaan myös nimellä arbitraasivedonlyönti) lisensoiduilta vedonlyöntitoimistoilta. Suomessa Veikkaus on toistaiseksi ainoa toimija, joten varmat vedot suomalaisten lisensoitujen toimistojen välillä ovat mahdollisia vasta, kun markkina avautuu. Molemmilla työkaluilla on 7 päivän ilmainen kokeilujakso. Tärkeimmät erot löytyvät hinnoittelusta sekä työkaluista, joita saat varmat vedot -skannerin lisäksi.",
     "blocks": [
       {
         "type": "h2",
@@ -1615,7 +1615,7 @@
           ],
           [
             "Vedonlyöntitoimistot",
-            "Molemmat: vain lisensoidut vedonlyöntitoimistot"
+            "Molemmat: vain lisensoidut vedonlyöntitoimistot (Suomessa toistaiseksi Veikkaus)"
           ],
           [
             "Ilmoitukset",
@@ -1676,7 +1676,7 @@
       },
       {
         "q": "Käyttävätkö molemmat työkalut vain lisensoituja vedonlyöntitoimistoja?",
-        "a": "Kyllä. Molemmat alustat keskittyvät säänneltyihin ja lisensoituihin vedonlyöntitoimistoihin, joten voit lyödä vetoa laillisesti ja pelaajan suojien turvin."
+        "a": "Kyllä. Molemmat alustat keskittyvät säänneltyihin ja lisensoituihin vedonlyöntitoimistoihin. Suomessa Veikkaus on toistaiseksi ainoa toimija, joten varmat vedot suomalaisten lisensoitujen toimistojen välillä eivät ole vielä mahdollisia – markkinan on tarkoitus avautua lisenssijärjestelmän myötä 2026–2027. Älä käytä lisensoimattomia sivustoja, ja tarkista ajantasaiset säännöt viranomaisilta."
       },
       {
         "q": "Voinko kokeilla BetTrackerAI:ta ilmaiseksi?",
@@ -1699,7 +1699,7 @@
       },
       {
         "type": "p",
-        "text": "Arbitragevedonlyönnissä voitat yhdellä vedonlyöjällä ja häviät toisella. Saldosi muuttuu jatkuvasti, ja sinun täytyy tallettaa ja nostaa säännöllisesti, jotta rahaa on oikeissa paikoissa. Ilman kunnollista kirjanpitoa on vaikea nähdä, oletko kokonaisuudessa voitolla."
+        "text": "Arbitragevedonlyönnissä voitat yhdellä vedonlyöjällä ja häviät toisella. Saldosi muuttuu jatkuvasti, ja sinun täytyy tallettaa ja nostaa säännöllisesti, jotta rahaa on oikeissa paikoissa. Ilman kunnollista kirjanpitoa on vaikea nähdä, oletko kokonaisuudessa voitolla. Suomessa Veikkaus on toistaiseksi ainoa lisensoitu toimija, joten varmojen vetojen tekeminen lisensoitujen suomalaisten vedonlyöjien välillä ei ole vielä mahdollista. Markkina avautuu lisenssijärjestelmän myötä 2026–2027, ja käytä vain lisensoituja toimijoita."
       },
       {
         "type": "h2",
@@ -1720,19 +1720,19 @@
         "rows": [
           [
             "Talletukset yhteensä",
-            "€10,000"
+            "10 000 €"
           ],
           [
             "Nostettu yhteensä",
-            "€3,000"
+            "3 000 €"
           ],
           [
             "Saldo vedonlyöjillä nyt",
-            "€7,800"
+            "7 800 €"
           ],
           [
             "Voitto",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3 000 € + 7 800 € − 10 000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1756,7 @@
     "faq": [
       {
         "q": "Maksetaanko vedonlyöntivoitoista veroa?",
-        "a": "Vedonlyöntivoittojen verokohtelu vaihtelee maittain. Suomessa kannattaa tarkistaa voimassa olevat verosäännöt tai kysyä neuvoa paikalliselta asiantuntijalta, sillä tilanne voi muuttua."
+        "a": "Veikkauksen ja EU/ETA-alueella lisensoitujen toimijoiden vedonlyöntivoitot ovat yleensä verovapaita Suomessa. Säännöt voivat kuitenkin muuttua markkinan avautuessa, joten tarkista aina voimassa olevat verosäännöt viranomaisilta tai kysy neuvoa asiantuntijalta."
       },
       {
         "q": "Kuinka usein minun pitäisi päivittää vedonlyönnin seurantani?",
@@ -1773,7 +1773,7 @@
     "keyword": "ansaitse rahaa urheiluvedonlyönnissä ilman riskiä",
     "category": "Strategia",
     "ctaLabel": "Katso taatun voiton varmat vedot",
-    "intro": "Voit ansaita rahaa urheiluvedonlyönnissä ilman riskiä kattamalla saman tapahtuman jokaisen lopputuloksen eri vedonvälittäjillä, kun yhdistetyt kertoimet maksavat enemmän kuin panostat. Tätä kutsutaan urheiluarbitraasiksi eli varmaksi vedoksi. Voitto on lukittu ennen ottelun alkua, yleensä 1–3 %. Riski ei piile lopputuloksessa vaan kertoimien muutoksissa, virheissä ja tilikohtaisissa rajoituksissa.",
+    "intro": "Voit ansaita rahaa urheiluvedonlyönnissä ilman riskiä kattamalla saman tapahtuman jokaisen lopputuloksen eri vedonvälittäjillä, kun yhdistetyt kertoimet maksavat enemmän kuin panostat. Tätä kutsutaan urheiluarbitraasiksi eli varmaksi vedoksi. Voitto on lukittu ennen ottelun alkua, yleensä 1–3 %. Riski ei piile lopputuloksessa vaan kertoimien muutoksissa, virheissä ja tilikohtaisissa rajoituksissa. Suomessa Veikkauksella on toistaiseksi yksinoikeus, joten varma veto lisensoitujen suomalaisten vedonvälittäjien välillä ei ole vielä mahdollista. Se tulee mahdolliseksi vasta, kun markkina avautuu lisenssijärjestelmän myötä (suunnitelmien mukaan 2026–2027).",
     "blocks": [
       {
         "type": "h2",
@@ -1901,7 +1901,7 @@
       },
       {
         "type": "p",
-        "text": "Älykäs vedonlyönti tarkoittaa käytännön riskien poistamista matemaattisten riskien lisäksi. [BetTracker AI](/fi) näyttää sinulle varmat vedot valmiiksi lasketulla panosjaolla, jotta ehdit asettaa vedot ennen kuin kerroin muuttuu."
+        "text": "Älykäs vedonlyönti tarkoittaa käytännön riskien poistamista matemaattisten riskien lisäksi. [BetTracker AI](/fi) näyttää sinulle varmat vedot valmiiksi lasketulla panosjaolla, jotta ehdit asettaa vedot ennen kuin kerroin muuttuu. Suomessa käytä vain luvallisia palveluntarjoajia, kuten Veikkausta, äläkä koskaan lisensoimattomia sivustoja. Tarkista voimassa olevat säännöt ja verotus ajantasaisista lähteistä. Jos pelaaminen alkaa mietityttää, apua saat Peluurin auttavasta puhelimesta ja Veikkauksen pelirajoituksista."
       }
     ],
     "faq": [
@@ -1915,7 +1915,7 @@
       },
       {
         "q": "Kuinka paljon rahaa tarvitsen aloittamiseen?",
-        "a": "Voit aloittaa €200–500:lla jaettuna muutamalle vedonvälittäjälle. Pienemmillä panoksilla varma veto tuottaa kuitenkin vain muutaman euron."
+        "a": "Kun Suomen markkina on avautunut ja useampi lisensoitu vedonvälittäjä on käytettävissä, voit aloittaa €200–500:lla jaettuna muutamalle vedonvälittäjälle. Pienemmillä panoksilla varma veto tuottaa kuitenkin vain muutaman euron."
       }
     ]
   },
@@ -1954,15 +1954,15 @@
       },
       {
         "type": "example",
-        "title": "Esimerkki: skannerin havaitsema hinnoitteluvirhe, kokonaispanos €1 000",
+        "title": "Esimerkki: skannerin havaitsema hinnoitteluvirhe, kokonaispanos 1 000 €",
         "rows": [
           [
             "Yli 2,5 maalia vedonlyöntisivusto 1:llä, kerroin 2,25",
-            "Panos €461,72"
+            "Panos 461,72 €"
           ],
           [
             "Alle 2,5 maalia vedonlyöntisivusto 2:lla, kerroin 1,93",
-            "Panos €538,28"
+            "Panos 538,28 €"
           ],
           [
             "1/2,25 + 1/1,93",
@@ -1970,11 +1970,11 @@
           ],
           [
             "Voitto jokaisella lopputuloksella",
-            "noin €1 038,88"
+            "noin 1 038,88 €"
           ],
           [
             "Lukittu voitto",
-            "noin €38,88 (3,9%)"
+            "noin 38,88 € (3,9 %)"
           ]
         ],
         "note": "Vedonlyöntisivusto 1 ei ollut reagoinut joukkueuutisiin. Skanneri havaitsi eron sekunneissa."
@@ -2007,7 +2007,7 @@
       {
         "type": "ul",
         "items": [
-          "**Sivustokattavuus:** mitä enemmän vedonlyöntisivustoja, sitä enemmän varmoja vetoja. Varmista, että sivustot joilla sinulla on tili, ovat mukana.",
+          "**Sivustokattavuus:** mitä enemmän vedonlyöntisivustoja, sitä enemmän varmoja vetoja. Varmista, että sivustot joilla sinulla on tili, ovat mukana. Suomessa Veikkaus on toistaiseksi ainoa lupansa saanut operaattori, joten varmojen vetojen löytäminen lisensoitujen suomalaisten sivustojen välillä on mahdollista vasta, kun markkina avautuu lisensoiduille operaattoreille. Älä käytä lisensoimattomia sivustoja.",
           "**Päivitystaajuus:** hinnat on päivitettävä muutaman sekunnin välein, erityisesti [live-varmojen vetojen](/fi/oppaat/live-arbitrage-betting-skanneri) osalta.",
           "**Suodattimet:** laji, markkina, minimituotto ja vedonlyöntisivustot, jotta näet vain sen, mitä voit oikeasti pelata.",
           "**Panoslasku:** sisäänrakennettu, jotta voit asettaa vedot välittömästi. Voit myös tarkistaa luvut [varmojen vetojen laskurilla](/fi/laskuri).",
@@ -2016,13 +2016,13 @@
       },
       {
         "type": "p",
-        "text": "Valitse vedonlyöntisivustosi, aseta minimituotoksi 1 % ja aseta vedot nopeasti yksi toisensa jälkeen. [BetTracker AI](/fi) skannaa vedonlyöntisivustot puolestasi ja näyttää varmat vedot reaaliajassa valmiiksi laskettuine panosjakautumine."
+        "text": "Valitse vedonlyöntisivustosi, aseta minimituotoksi 1 % ja aseta vedot nopeasti yksi toisensa jälkeen. [BetTracker AI](/fi) skannaa vedonlyöntisivustot puolestasi ja näyttää varmat vedot reaaliajassa valmiiksi laskettuine panosjakaumineen."
       }
     ],
     "faq": [
       {
         "q": "Kuinka monta varmaa vetoa skanneri löytää päivässä?",
-        "a": "Tyypillisesti kymmeniä tai jopa satoja, riippuen mukana olevien vedonlyöntisivustojen ja lajien määrästä sekä asettamastasi minimituotosta."
+        "a": "Tyypillisesti kymmeniä tai jopa satoja, riippuen mukana olevien vedonlyöntisivustojen ja lajien määrästä sekä asettamastasi minimituotosta. Suomessa lisensoituja vaihtoehtoja on toistaiseksi vain Veikkaus, joten varmoja vetoja lisensoitujen suomalaisten sivustojen välillä alkaa syntyä vasta markkinan avauduttua. Tarkista voimassa olevat säännöt viranomaisilta."
       },
       {
         "q": "Voinko asettaa vedot automaattisesti?",
@@ -2041,7 +2041,7 @@
     "keyword": "live-arbitraasiskanneri",
     "category": "Strategia",
     "ctaLabel": "Katso live varmat vedot",
-    "intro": "Live-arbitraasiskanneri vertaa reaaliaikaisia kertoimia eri vedonlyöntiyhtiöiden välillä otteluiden aikana ja ilmoittaa varmoista vedoista heti, kun hinnat eroavat toisistaan. Live-varmat vedot esiintyvät useammin kuin ennen ottelua, koska vedonlyöntiyhtiöt reagoivat maaleihin, syöttöpelien menetyksiin ja punaisiin kortteihin eri nopeuksilla. Ne myös katoavat nopeammin, usein 10–60 sekunnin sisällä, joten nopeus ja kurinalaisuus ovat tärkeämpiä kuin koskaan.",
+    "intro": "Live-arbitraasiskanneri vertaa reaaliaikaisia kertoimia eri vedonlyöntiyhtiöiden välillä otteluiden aikana ja ilmoittaa varmoista vedoista heti, kun hinnat eroavat toisistaan. Live-varmat vedot esiintyvät useammin kuin ennen ottelua, koska vedonlyöntiyhtiöt reagoivat maaleihin, syöttöpelien menetyksiin ja punaisiin kortteihin eri nopeuksilla. Ne myös katoavat nopeammin, usein 10–60 sekunnin sisällä, joten nopeus ja kurinalaisuus ovat tärkeämpiä kuin koskaan. Suomessa Veikkauksella on toistaiseksi yksinoikeus, joten varmoja vetoja useiden lisensoitujen suomalaisten vedonlyöntiyhtiöiden välillä ei voi vielä tehdä ennen kuin markkina avautuu lisenssijärjestelmän myötä (alkaa 2026–2027). Älä käytä luvattomia sivustoja.",
     "blocks": [
       {
         "type": "h2",
@@ -2152,7 +2152,7 @@
       },
       {
         "type": "p",
-        "text": "Aloita ennen ottelua, jos olet uusi, ja siirry liveen vasta kun rutiinisi on vakiintunut. Lue ensin, kuinka [löytää varmat vedot automaattisesti](/fi/oppaat/loyda-surebetit-automaattisesti). Kun olet valmis, [BetTracker AI](/fi) näyttää live-varmat vedot reaaliajassa lasketulla panosjaolla."
+        "text": "Aloita ennen ottelua, jos olet uusi, ja siirry liveen vasta kun rutiinisi on vakiintunut. Lue ensin, kuinka [löytää varmat vedot automaattisesti](/fi/oppaat/loyda-surebetit-automaattisesti). Kun olet valmis, [BetTracker AI](/fi) näyttää live-varmat vedot reaaliajassa lasketulla panosjaolla. Käytä vain Veikkauksen ja jatkossa lisensoitujen operaattoreiden palveluja, ja tarkista voimassa olevat säännöt. Jos pelaaminen alkaa huolestuttaa, apua saat Peluurin auttavasta puhelimesta ja Veikkauksen pelirajoituksista tai pelikiellosta."
       }
     ],
     "faq": [
@@ -2185,7 +2185,7 @@
       },
       {
         "type": "p",
-        "text": "Arvovedolla tarkoitetaan vetoa, jossa kertoimet ovat korkeammat kuin todellinen todennäköisyys edellyttäisi. Yksittäinen arvovedot voi hävitä, mutta satojen vetojen jälkeen positiivinen odotusarvo muuttuu voitoksi."
+        "text": "Arvovedolla tarkoitetaan vetoa, jossa kertoimet ovat korkeammat kuin todellinen todennäköisyys edellyttäisi. Yksittäinen arvoveto voi hävitä, mutta satojen vetojen jälkeen positiivinen odotusarvo muuttuu voitoksi."
       },
       {
         "type": "example",
@@ -2275,7 +2275,7 @@
       {
         "type": "ul",
         "items": [
-          "**Panosta 1–2% pankkivarastostasi** per arvovedot. Katso [pankkivaraston hallinta](/fi/oppaat/bankroll-management-urheiluvedot).",
+          "**Panosta 1–2% pankkivarastostasi** yhtä arvovetoa kohden. Katso [pankkivaraston hallinta](/fi/oppaat/bankroll-management-urheiluvedot).",
           "**Vähimmäisetu 2–3%** jättää liikkumavaraa reilujen kertoimien arviointivirheille.",
           "**Seuraa sulkemiskertoimia:** sulkemislinjan jatkuva voittaminen on paras merkki siitä, että vedoillasi on arvoa.",
           "**Arvioi satojen vetojen jälkeen**, älä koskaan yhden viikon perusteella."
@@ -2283,7 +2283,7 @@
       },
       {
         "type": "tip",
-        "text": "Kirjaa jokainen arvovedot [vetojen seurantatyökaluun](/fi/oppaat/vedonlyonti-seuranta-tyokalu). 300–500 vedon jälkeen ROI kertoo, onko etu todellinen."
+        "text": "Kirjaa jokainen arvoveto [vetojen seurantatyökaluun](/fi/oppaat/vedonlyonti-seuranta-tyokalu). 300–500 vedon jälkeen ROI kertoo, onko etu todellinen."
       },
       {
         "type": "p",
@@ -2297,11 +2297,11 @@
       },
       {
         "q": "Kuinka paljon voin ansaita arvovedoilla?",
-        "a": "Realistinen pitkän aikavälin ROI on usein 2–5% kierroksesta, riippuen edusta, toimistoista ja siitä kuinka kauan tilisi pysyvät auki."
+        "a": "Realistinen pitkän aikavälin ROI on usein 2–5% kierroksesta, riippuen edusta, toimistoista ja siitä kuinka kauan tilisi pysyvät auki. Suomessa Veikkaus on toistaiseksi monopoliasemassa, joten arvovetojen vertailu lisensoitujen toimistojen välillä on mahdollista vasta, kun markkina avautuu (lisenssijärjestelmä alkaa 2026–2027). Älä käytä lisensoimattomia sivustoja. Tarkista voimassa olevat säännöt viranomaisilta."
       },
       {
         "q": "Rajoittavatko vedonlyöntitoimistot arvovetoja pelaavia?",
-        "a": "Kyllä, pehmeät toimistot rajoittavat usein asiakkaita, jotka voittavat sulkemislinjan. Lue kuinka [välttää vedonlyöntitoimistojen rajoitukset](/fi/oppaat/kuinka-valttaa-bookmaker-rajoitukset)."
+        "a": "Kyllä, pehmeät toimistot rajoittavat usein asiakkaita, jotka voittavat sulkemislinjan. Lue kuinka [välttää vedonlyöntitoimistojen rajoitukset](/fi/oppaat/kuinka-valttaa-bookmaker-rajoitukset). Pelaa aina harkiten: apua tarjoaa Peluuri-neuvontapuhelin, ja Veikkauksella on oma pelirajoitus- ja pelikieltomahdollisuus."
       }
     ]
   },
@@ -2385,7 +2385,7 @@
       {
         "type": "ul",
         "items": [
-          "**Vedonlyöntitoimistojen kattavuus:** työkalun on sisällettävä vedonlyöntitoimistot, joita voit oikeasti käyttää.",
+          "**Vedonlyöntitoimistojen kattavuus:** työkalun on sisällettävä vedonlyöntitoimistot, joita voit oikeasti ja laillisesti käyttää. Suomessa toimii toistaiseksi vain Veikkaus, joten varmat vedot lisensoitujen toimijoiden välillä ovat mahdollisia vasta, kun markkina avautuu. Älä käytä luvattomia sivustoja.",
           "**Päivitystiheys:** muutama sekunti ennen ottelua, nopeammin [live-varmoja vetoja](/fi/oppaat/live-arbitrage-betting-skanneri) varten.",
           "**Suodattimet:** laji, markkina, vedonlyöntitoimisto ja vähimmäisvoitto.",
           "**Sisäänrakennettu seuranta:** skannerista tehdyt varmat vedot tulisi seurata automaattisesti.",

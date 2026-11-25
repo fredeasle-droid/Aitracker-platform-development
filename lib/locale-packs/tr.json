@@ -625,7 +625,7 @@
     "findOnSport": "Takip ettiğiniz spor dalındaki surebet'leri bulun",
     "surebetsAtBookmakers": "Bahis sitelerindeki surebet'ler",
     "guideIndexTitle": "Surebet ve arbitraj bahis rehberleri – BetTrackerAI",
-    "guideIndexDescription": "Surebet'i sıfırdan öğrenin: nedir, bahis tutarları nasıl hesaplanır, Danimarka'daki kurallar ve vergi nasıl işler ve hesabınızın kısıtlanmasından nasıl kaçınırsınız.",
+    "guideIndexDescription": "Surebet'i sıfırdan öğrenin: nedir, bahis tutarları nasıl hesaplanır, Türkiye'de iddaa sisteminde surebet neden sınırlıdır, kazanç kuralları nasıl işler (güncel kuralları mutlaka kontrol edin) ve hesabınızın kısıtlanmasından nasıl kaçınırsınız.",
     "guideIndexH1": "Surebet hakkında bilmeniz gereken her şey",
     "guideIndexLead": "Türkiye'deki bahisçiler için hazırlanmış kısa ve pratik rehberler. İlk hesaplamanızdan hesaplarınızı açık tutmaya kadar.",
     "guideIndexName": "Surebet rehberleri",
@@ -638,7 +638,7 @@
   },
   "daily": {
     "metaTitle": "Bugünün Surebet'leri – Şu Anki En İyi Surebet Fırsatları",
-    "metaDescription": "Danimarka'daki ve uluslararası bahis sitelerindeki bugünün en iyi surebet'lerini görün, sürekli güncellenir. Şu an en güçlü fırsatlar için spor dalı, maç, pazar ve garantili kâr bilgisi.",
+    "metaDescription": "Bugünün surebet ve oran karşılaştırma fırsatlarını görün, sürekli güncellenir. Spor dalı, maç, pazar ve garantili kâr bilgisi. Not: Nesine, Bilyoner, Misli gibi lisanslı iddaa bayileri aynı oranları sunduğu için aralarında surebet çıkmaz.",
     "name": "Bugünün surebet'leri",
     "h1": "Bugünün surebet'leri",
     "empty": "Şu anda aktif surebet yok. Tarayıcı günün her saati çalışıyor, birazdan tekrar göz atın.",
@@ -700,7 +700,7 @@
       },
       {
         "q": "Hangi bahis sitelerini karşılaştırıyorsunuz?",
-        "a": "Danimarka'daki ve uluslararası bahis sitelerinin oranlarını karşılaştırıyoruz; aralarında Danske Spil, bet365, Unibet, LeoVegas, Betano ve Pinnacle de var."
+        "a": "Spor Toto Teşkilatı (iddaa) lisanslı bayilerin (Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur) oranlarını takip ediyoruz. Bu bayiler aynı iddaa oranlarını sunduğu için aralarında surebet oluşmaz. Yurt dışı bahis siteleri Türkiye'de yasa dışıdır ve engellenmiştir; bu siteleri önermiyoruz."
       },
       {
         "q": "Yeni surebet'lerden nasıl haberdar olurum?",

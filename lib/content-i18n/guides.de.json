@@ -1752,7 +1752,7 @@
             "BetTrackerAI: Surebet-Rechner und deutschsprachige Anleitungen"
           ]
         ],
-        "note": "Die Preise wurden am 23. November 2026 auf beiden Seiten überprüft und können sich ändern. Prüfen Sie die Verfügbarkeit und Lizenz der Wettanbieter in Ihrem Land."
+        "note": "Die Preise wurden am 23. November 2026 auf beiden Seiten überprüft und können sich ändern. In Deutschland dürfen nur Wettanbieter mit GGL-Lizenz Sportwetten anbieten – prüfen Sie daher immer die Lizenz des Anbieters."
       },
       {
         "type": "h2",
@@ -1760,11 +1760,11 @@
       },
       {
         "type": "p",
-        "text": "Surebet Danmark kostet ca. 134 € pro Monat. BetTrackerAI kostet ca. 20 € pro Monat für Basis mit Surebets bis zu 5 % Gewinn und ca. 33 € für Premium mit allen Surebets und SMS-Benachrichtigungen. Mit Premium sparen Sie ca. 100 € pro Monat, also rund 1.200 € pro Jahr. Abgerechnet wird in dänischen Kronen, daher sind die Euro-Beträge gerundet."
+        "text": "Surebet Danmark kostet ca. 134 € pro Monat. BetTrackerAI kostet ca. 20 € pro Monat für Basis mit Surebets bis zu 5 % Gewinn und ca. 33 € für Premium mit allen Surebets und SMS-Benachrichtigungen. Mit Premium sparen Sie ca. 100 € pro Monat, also rund 1.200 € pro Jahr. Die Euro-Beträge sind gerundet und können je nach Wechselkurs leicht abweichen."
       },
       {
         "type": "p",
-        "text": "Das ist wichtig, weil Arbitrage-Wetten typischerweise 1–5 % pro Wette bringen – in Deutschland jedoch nach Abzug der 5,3 % Wettsteuer oft deutlich weniger. Mit einem niedrigen Monatspreis müssen Sie deutlich weniger umsetzen, bevor sich das Abonnement amortisiert hat."
+        "text": "Das ist wichtig, weil Arbitrage-Wetten typischerweise 1–5 % pro Wette bringen – bei Wettanbietern, die die 5,3 % Wettsteuer an die Spieler weitergeben, jedoch oft deutlich weniger. Mit einem niedrigen Monatspreis müssen Sie deutlich weniger umsetzen, bevor sich das Abonnement amortisiert hat."
       },
       {
         "type": "h2",
@@ -1781,14 +1781,14 @@
       {
         "type": "ul",
         "items": [
-          "Wählen Sie BetTrackerAI, wenn Sie Surebets zu einem günstigen Preis suchen und gleichzeitig Ihre Buchhaltung und Ihr Bankroll-Management professionell führen möchten. Prüfen Sie, welche Wettanbieter in Ihrem Markt verfügbar sind.",
+          "Wählen Sie BetTrackerAI, wenn Sie Surebets zu einem günstigen Preis suchen und gleichzeitig Ihre Buchhaltung und Ihr Bankroll-Management professionell führen möchten. Nutzen Sie dabei nur Wettanbieter mit GGL-Lizenz, zum Beispiel Tipico, bwin, bet365 oder ODDSET.",
           "Wählen Sie Surebet Danmark, wenn Sie deren System bereits nutzen, Zugang zu den dort gelisteten Wettanbietern haben und mit dem Preis zufrieden sind.",
           "Wenn Sie unsicher sind, probieren Sie beide aus. Beide bieten 7 Tage kostenlose Testphase, sodass Sie Surebets bei denselben Spielen vergleichen können."
         ]
       },
       {
         "type": "tip",
-        "text": "Unabhängig davon, welches Tool Sie wählen: Platzieren Sie immer zuerst die Wette mit der instabilsten Quote und prüfen Sie, dass der Markt bei beiden Wettanbietern derselbe ist. Beachten Sie in Deutschland die 5,3 % Wettsteuer – nur Surebets mit Margen deutlich über diesem Wert bleiben nach Steuer profitabel."
+        "text": "Unabhängig davon, welches Tool Sie wählen: Platzieren Sie immer zuerst die Wette mit der instabilsten Quote und prüfen Sie, dass der Markt bei beiden Wettanbietern derselbe ist. Achten Sie in Deutschland darauf, ob Ihr Wettanbieter die 5,3 % Wettsteuer an Sie weitergibt – dann bleiben nur Surebets mit Margen deutlich über diesem Wert profitabel."
       }
     ],
     "faq": [
@@ -1798,7 +1798,7 @@
       },
       {
         "q": "Welche Wettanbieter vergleichen beide Tools?",
-        "a": "Surebet Danmark konzentriert sich auf Wettanbieter mit dänischer Lizenz. BetTrackerAI vergleicht Quoten über internationale Wettanbieter – prüfen Sie die Verfügbarkeit und Lizenz (GGL) der Anbieter in Ihrem Land."
+        "a": "Surebet Danmark konzentriert sich auf Wettanbieter mit dänischer Lizenz, die für den deutschen Markt meist nicht relevant sind. BetTrackerAI vergleicht Quoten über internationale Wettanbieter – in Deutschland dürfen Sie jedoch nur bei Anbietern mit GGL-Lizenz wetten, etwa Tipico, bwin, Interwetten oder bet365. Prüfen Sie die Lizenz immer vorab."
       },
       {
         "q": "Kann ich BetTrackerAI kostenlos testen?",

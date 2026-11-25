@@ -1465,7 +1465,7 @@
     "metaTitle": "Alternativ til Surebet Danmark – BetTrackerAI sammenlignet",
     "description": "Sammenligning av BetTrackerAI og Surebet Danmark: pris, funksjoner, bookmakere og bet tracking. Se hvilket surebet-verktøy som passer for deg.",
     "keyword": "surebet verktøy sammenligning",
-    "intro": "Surebet Danmark og BetTrackerAI er to verktøy som finner surebets (arbitrasjemuligheter) hos spillselskaper. Begge tilbyr 7 dagers gratis prøve. Forskjellen ligger i prisen, og i hva du får utover selve surebet-listen. Merk at Surebet Danmark er rettet mot det danske markedet. Sjekk alltid hvilke spillselskaper som er tilgjengelige og lovlige i Norge – i Norge har Norsk Tipping og Rikstoto konsesjon, mens bruk av utenlandske bookmakers er i en gråsone. Spill ansvarlig og kontakt Hjelpelinjen ved behov.",
+    "intro": "Surebet Danmark og BetTrackerAI er to verktøy som finner surebets (arbitrasjemuligheter) hos spillselskaper. Begge tilbyr 7 dagers gratis prøve. Forskjellen ligger i prisen, og i hva du får utover selve surebet-listen. Merk at Surebet Danmark er rettet mot det danske markedet. I Norge er Norsk Tipping eneste lisensierte aktør for sportsspill, under tilsyn av Lotteritilsynet. Det betyr at surebetting mellom lisensierte norske spillselskaper ikke er mulig. Utenlandske sider har ikke norsk lisens og er blokkert, og vi oppfordrer ikke til å bruke dem. Spill ansvarlig og kontakt Hjelpelinjen for spilleavhengige ved behov.",
     "blocks": [
       {
         "type": "h2",
@@ -1485,7 +1485,7 @@
           ],
           [
             "Spillselskaper",
-            "Surebet Danmark: dansk lisens · BetTrackerAI: sammenligner odds fra tilgjengelige spillselskaper"
+            "Surebet Danmark: dansk lisens · BetTrackerAI: sammenligner odds fra lisensierte spillselskaper (i Norge kun Norsk Tipping)"
           ],
           [
             "Varsler",
@@ -1508,7 +1508,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet Danmark koster ca. 1 600 kr per måned. BetTrackerAI koster ca. 240 kr per måned for Basis med surebets opp til 5 % profitt, og ca. 400 kr for Premium med alle surebets og SMS-varsler. Med Premium sparer du ca. 1 200 kr per måned, altså ca. 14 400 kr per år. Betalingen skjer i danske kroner, så beløpene i norske kroner er avrundet."
+        "text": "Surebet Danmark koster ca. 1 600 kr per måned. BetTrackerAI koster ca. 240 kr per måned for Basis med surebets opp til 5 % profitt, og ca. 400 kr for Premium med alle surebets og SMS-varsler. Med Premium sparer du ca. 1 200 kr per måned, altså ca. 14 400 kr per år. Beløpene er avrundet, så sjekk gjeldende pris på de respektive nettsidene."
       },
       {
         "type": "p",
@@ -1530,13 +1530,13 @@
         "type": "ul",
         "items": [
           "Velg BetTrackerAI hvis du vil ha surebet-søk til en rimelig pris og samtidig holde full oversikt over regnskapet ditt.",
-          "Velg Surebet Danmark hvis du allerede bruker deres system, har tilgang til danske spillselskaper og er fornøyd med prisen.",
+          "Velg Surebet Danmark hvis du allerede bruker deres system, bor i Danmark med tilgang til danske lisensierte spillselskaper og er fornøyd med prisen.",
           "Er du i tvil, prøv begge. De har begge 7 dagers gratis prøve, så du kan sammenligne surebets på de samme kampene."
         ]
       },
       {
         "type": "tip",
-        "text": "Uansett hvilket verktøy du velger: Plasser alltid det spillet med den mest ustabile oddsen først, og sjekk at markedet er det samme hos begge spillselskapene. Husk at spillgevinster normalt ikke skattlegges i Norge for privatpersoner, men sjekk gjeldende regler. Aldersgrense 18 år. Spill ansvarlig."
+        "text": "Uansett hvilket verktøy du velger: Plasser alltid det spillet med den mest ustabile oddsen først, og sjekk at markedet er det samme hos begge spillselskapene. Husk at gevinster fra Norsk Tipping er skattefrie. Aldersgrense 18 år. Spill ansvarlig, og kontakt Hjelpelinjen for spilleavhengige hvis spillingen blir et problem."
       }
     ],
     "faq": [
@@ -1546,7 +1546,7 @@
       },
       {
         "q": "Hvilke spillselskaper dekker verktøyene?",
-        "a": "Surebet Danmark fokuserer på spillselskaper med dansk lisens. BetTrackerAI sammenligner odds fra de spillselskapene som er tilgjengelige i ditt marked. I Norge har Norsk Tipping og Rikstoto konsesjon; mange nordmenn bruker også utenlandske bookmakers, men sjekk alltid gjeldende regler."
+        "a": "Surebet Danmark fokuserer på spillselskaper med dansk lisens. BetTrackerAI sammenligner odds fra lisensierte spillselskaper i ditt marked. I Norge er Norsk Tipping eneste lisensierte aktør for sportsspill, så surebetting mellom lisensierte norske spillselskaper er ikke mulig. Utenlandske sider har ikke norsk lisens og er blokkert, og vi oppfordrer ikke til å bruke dem. Sjekk alltid gjeldende regler hos Lotteritilsynet."
       },
       {
         "q": "Kan jeg prøve BetTrackerAI gratis?",

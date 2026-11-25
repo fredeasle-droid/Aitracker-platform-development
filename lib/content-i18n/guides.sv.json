@@ -1429,7 +1429,7 @@
           ],
           [
             "Spelbolag",
-            "BetTrackerAI: spelbolag på din marknad · Surebet Danmark: dansk licens"
+            "BetTrackerAI: spelbolag med svensk licens på din marknad · Surebet Danmark: dansk licens"
           ],
           [
             "Notifikationer",
@@ -1452,7 +1452,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet Danmark kostar ca 1 500 kr per månad. BetTrackerAI kostar ca 220 kr per månad för Basis med surebets upp till 5 % vinst, och ca 370 kr för Premium med alla surebets och SMS-varningar. Med Premium sparar du ca 1 100 kr per månad, alltså ca 13 500 kr per år. Betalningen sker i danska kronor, så beloppen i svenska kronor är avrundade."
+        "text": "Surebet Danmark kostar ca 1 500 kr per månad. BetTrackerAI kostar ca 220 kr per månad för Basis med surebets upp till 5 % vinst, och ca 370 kr för Premium med alla surebets och SMS-varningar. Med Premium sparar du ca 1 100 kr per månad, alltså ca 13 500 kr per år. Beloppen är avrundade."
       },
       {
         "type": "p",
@@ -1490,7 +1490,7 @@
       },
       {
         "q": "Vilka spelbolag täcker verktygen?",
-        "a": "Surebet Danmark fokuserar på spelbolag med dansk licens. BetTrackerAI jämför odds från spelbolag som är tillgängliga på din marknad. Kontrollera alltid att spelbolaget har svensk licens från Spelinspektionen om du spelar i Sverige."
+        "a": "Surebet Danmark fokuserar på spelbolag med dansk licens. BetTrackerAI jämför odds från spelbolag som är tillgängliga på din marknad, till exempel Svenska Spel Sport & Casino, Unibet, Betsson och bet365. Kontrollera alltid att spelbolaget har svensk licens från Spelinspektionen om du spelar i Sverige."
       },
       {
         "q": "Kan jag prova BetTrackerAI gratis?",

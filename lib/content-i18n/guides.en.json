@@ -20,7 +20,7 @@
       },
       {
         "type": "p",
-        "text": "Welcome bonuses carry different terms depending on the bookmaker and the country in which you're betting. Some regulated markets cap bonus amounts and limit wagering requirements to protect consumers. Always read the specific terms and conditions before you accept any offer."
+        "text": "Welcome bonuses carry different terms depending on the bookmaker and the country in which you're betting. Some regulated markets cap bonus amounts and limit wagering requirements to protect consumers. Always read the specific terms and conditions before you accept any offer, and only use bookmakers that are licensed in the country where you live."
       },
       {
         "type": "ul",
@@ -42,11 +42,11 @@
     "faq": [
       {
         "q": "Is matched betting legal?",
-        "a": "Yes. Exploiting bonuses within the bookmaker's published terms is perfectly legal. However, bookmakers reserve the right to withdraw offers or limit accounts if they believe you are not betting in the spirit of their promotions or if you breach the terms."
+        "a": "Yes. Exploiting bonuses within the bookmaker's published terms is perfectly legal. However, bookmakers reserve the right to withdraw offers or limit accounts if they believe you are not betting in the spirit of their promotions or if you breach the terms. Tax on betting winnings depends on your country, so check your local rules."
       },
       {
         "q": "How much are typical welcome bonuses worth?",
-        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at €1,000 or €1,000 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose and confirm that it holds a valid licence in your country."
+        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at €130 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose, such as bet365, Unibet, William Hill or Betway, and confirm that it holds a valid licence in your country."
       }
     ],
     "category": "Strategy",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Tax treatment of betting winnings varies by country. In many regulated markets, winnings from operators licensed by your national gambling regulator are tax-free for the player. If you use offshore or unlicensed operators, your winnings may be taxable. Check the tax rules where you live, or consult your local tax authority if you are unsure about your situation."
+        "text": "Tax treatment of betting winnings varies by country. In many regulated markets, winnings from operators licensed by your national gambling regulator are tax-free for the player. If you use offshore or unlicensed operators, your winnings may be taxable. Check the current tax rules where you live, or consult your local tax authority if you are unsure about your situation."
       },
       {
         "type": "tip",
-        "text": "Stick to bookmakers licensed by your national regulator. This typically offers tax advantages and consumer protection from your gambling authority."
+        "text": "Only use bookmakers that are licensed where you live, by your national gambling regulator. This typically offers consumer protection from your gambling authority and can affect how your winnings are taxed, so check your local rules."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Even with surebets, it is important to maintain control over your gambling. Set deposit limits, and use your country's self-exclusion register if you need a break. If you need support, contact a recognised gambling helpline in your region."
+        "text": "Even with surebets, it is important to maintain control over your gambling. Set deposit limits, and use your country's self-exclusion register if you need a break. If you need support, contact a recognised gambling helpline in your country."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Do I have to pay tax on surebet winnings?",
-        "a": "It depends on your country. In many regulated markets, winnings from licensed operators are tax-free for the player. Check the tax rules where you live."
+        "a": "It depends on your country. In many regulated markets, winnings from licensed operators are tax-free for the player. Check the current tax rules where you live."
       }
     ],
     "category": "Rules",
@@ -185,7 +185,7 @@
       },
       {
         "type": "p",
-        "text": "Read the full overview of the [best bookmakers for surebets](/en/guides/best-bookmakers-for-surebets). Always use licensed bookmakers in your country."
+        "text": "Read the full overview of the [best bookmakers for surebets](/en/guides/best-bookmakers-for-surebets). Only use bookmakers that are licensed where you live."
       },
       {
         "type": "h2",
@@ -406,11 +406,11 @@
         "rows": [
           [
             "1/1.85 + 1/1.95",
-            "54.1% + 51.3% = 105.4%"
+            "54.05% + 51.28% = 105.33%"
           ],
           [
             "Bookmaker margin",
-            "approx. 5.4%"
+            "approx. 5.3%"
           ]
         ],
         "note": "The lower the margin, the better odds you get as a punter."
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Licensed by your national gambling regulator, so you're protected and can verify the tax treatment of your winnings.",
+          "Licensed by the gambling regulator in your own country, so you're protected and can check the tax treatment of your winnings under your local rules.",
           "Fast deposits and withdrawals, so you can move money where it's needed.",
           "Wide range of sports and markets, especially tennis, football and basketball.",
           "Competitive odds and low bookmaker margin on popular markets.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Start with five to eight licensed bookmakers spread across different platforms. This gives you a good range of opportunities without having to manage too many balances. Once you've got the routine down, you can expand with more."
+        "text": "Start with five to eight bookmakers that are licensed where you live, spread across different platforms. Well-known operators such as bet365, Pinnacle, Unibet, Betfair, William Hill, Betway and bwin are examples, but only use those that hold a licence in your country. This gives you a good range of opportunities without having to manage too many balances. Once you've got the routine down, you can expand with more."
       },
       {
         "type": "tip",
@@ -561,11 +561,11 @@
     "faq": [
       {
         "q": "How many bookmakers do I need for surebets?",
-        "a": "A good starting point is five to eight regulated bookmakers. The more different odds platforms you cover, the more surebets you'll have access to."
+        "a": "A good starting point is five to eight regulated bookmakers that are licensed where you live. The more different odds platforms you cover, the more surebets you'll have access to."
       },
       {
         "q": "Can I use unlicensed bookmakers for arbitrage betting?",
-        "a": "It's not recommended. Bookmakers without a licence in your jurisdiction may be blocked, and winnings from them may be subject to different tax treatment or lack regulatory protection. Always check the rules where you live."
+        "a": "It's not recommended. Bookmakers without a licence in your jurisdiction may be blocked, and winnings from them may be subject to different tax treatment or lack regulatory protection. Always check the rules where you live, including local tax rules on betting winnings."
       }
     ],
     "category": "Strategy",
@@ -576,15 +576,15 @@
     "metaTitle": "Tax on Gambling Winnings – What You Need to Know",
     "description": "Do you need to pay tax on betting winnings and surebets? Learn how tax rules work for licensed and offshore bookmakers, and what to document.",
     "keyword": "tax on gambling winnings",
-    "intro": "In many regulated markets, the answer is straightforward: winnings from licensed bookmakers are tax-free for the player. The bookmaker pays duty to the state, not you. But the rules depend on where you live and where you bet.",
+    "intro": "In some regulated markets, the answer is straightforward: winnings from licensed bookmakers are tax-free for the player, because the bookmaker pays duty to the state, not you. But tax on betting winnings differs from country to country, so the rules depend on where you live and where you bet. Always check your local rules.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Licensed bookmakers: typically tax-free"
+        "text": "Licensed bookmakers: check your local rules"
       },
       {
         "type": "p",
-        "text": "When you bet with a provider licensed by your national gambling regulator, the provider usually pays gambling duty on their revenue. Your winnings are therefore generally tax-free, and in most cases you don't need to report them to your tax authority. Always check the rules where you live."
+        "text": "When you bet with a provider licensed by the gambling regulator in your own country, the provider usually pays gambling duty on their revenue. In some countries this means your winnings are tax-free and don't need to be reported to your tax authority, but this is not the case everywhere. Only use bookmakers, such as bet365, Pinnacle, Unibet, Betfair, William Hill, Betway or bwin, where they are licensed in the country where you live, and always check the current tax rules there."
       },
       {
         "type": "h2",
@@ -592,7 +592,7 @@
       },
       {
         "type": "p",
-        "text": "If you bet with providers that do not hold a licence in your jurisdiction, the winnings may be taxable. The rules depend on factors such as whether the provider holds a licence in another country and your own tax residence. This is one reason why it's often simpler to stick with regulated bookmakers."
+        "text": "If you bet with providers that do not hold a licence in your jurisdiction, the winnings may be taxable, and using them may not be legal at all. The rules depend on factors such as whether the provider holds a licence in another country and your own tax residence. This is one reason why it's often simpler to stick with bookmakers licensed where you live."
       },
       {
         "type": "h2",
@@ -600,11 +600,11 @@
       },
       {
         "type": "p",
-        "text": "Yes. For tax purposes, a surebet is simply two or three ordinary bets. Winnings from licensed bookmakers are generally tax-free, whether you're placing sure bets, value bets or standard bets. The same principles apply."
+        "text": "Yes. For tax purposes, a surebet is generally treated as two or three ordinary bets. Whether you're placing sure bets, value bets or standard bets, the same tax rules in your country normally apply. Check your local rules to see how winnings from licensed bookmakers are treated."
       },
       {
         "type": "tip",
-        "text": "Keep a record of your bets. It makes it easy to document where the money comes from if your bank asks."
+        "text": "Keep a record of your bets. It makes it easy to document where the money comes from if your bank or tax authority asks."
       },
       {
         "type": "h2",
@@ -618,11 +618,11 @@
     "faq": [
       {
         "q": "Do I need to pay tax on winnings from licensed bookmakers?",
-        "a": "In most regulated markets, no. Winnings from locally licensed providers are typically tax-free for the player. Check the tax rules where you live."
+        "a": "It depends on your country. In some regulated markets, winnings from locally licensed providers are tax-free for the player, while in others they may be taxable. Check the current tax rules where you live."
       },
       {
         "q": "How can I see if a bookmaker is licensed in my country?",
-        "a": "Your national gambling regulator will have a list of approved providers on its website, and licensed bookmakers usually display the regulator's logo on their site."
+        "a": "The gambling regulator in your own country will have a list of approved providers on its website, and licensed bookmakers usually display the regulator's logo on their site."
       }
     ],
     "category": "Rules",
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Open accounts** with at least two licensed bookmakers, ideally more, and deposit in advance.",
+          "**1. Open accounts** with at least two bookmakers licensed in the country where you live, ideally more, and deposit in advance.",
           "**2. Find a surebet** where the sum of inverse odds is below 1.00.",
           "**3. Calculate the stakes** so the payout is equal on every outcome.",
           "**4. Place both bets quickly,** starting with the price most likely to move.",
@@ -900,7 +900,7 @@
     "faq": [
       {
         "q": "Is arbitrage betting legal?",
-        "a": "Yes, betting on every outcome of an event is not illegal in most countries. Bookmakers can still limit your account. See [are surebets legal?](/en/guides/are-surebets-legal)"
+        "a": "Yes, betting on every outcome of an event is not illegal in most countries. Bookmakers can still limit your account. Only use bookmakers licensed where you live, and check your local rules, including any tax on winnings. See [are surebets legal?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "How much can you make with surebets?",
@@ -1005,7 +1005,7 @@
       },
       {
         "q": "How do you find surebets?",
-        "a": "You can compare odds manually, but it's slow. A surebet scanner like BetTrackerAI monitors bookmakers that operate in your market and shows opportunities as soon as they arise."
+        "a": "You can compare odds manually, but it's slow. A surebet scanner like BetTrackerAI monitors bookmakers and shows opportunities as soon as they arise. Only use bookmakers that are licensed where you live."
       }
     ],
     "category": "Fundamentals",
@@ -1293,7 +1293,7 @@
       },
       {
         "type": "p",
-        "text": "The lower the margin, the better odds you get for the same probability. Over many bets, the difference between 3% and 7% makes a significant difference to your bankroll. So compare margins at the bookmakers you use on the markets you bet most."
+        "text": "The lower the margin, the better odds you get for the same probability. Over many bets, the difference between 3% and 7% makes a significant difference to your bankroll. So compare margins at the bookmakers you use on the markets you bet most. Only use bookmakers that are licensed in the country where you live, such as bet365, Pinnacle, Unibet, Betfair, William Hill, Betway or bwin where they are available to you."
       },
       {
         "type": "h2",
@@ -1546,7 +1546,7 @@
             "1,000 / 40,000 × 100 = 2.5%"
           ]
         ],
-        "note": "You've earned 2.5p for every pound you've staked."
+        "note": "You've earned 2.5 cents for every euro you've staked."
       },
       {
         "type": "h2",
@@ -1595,7 +1595,7 @@
     "metaTitle": "Surebet Danmark Alternative – BetTrackerAI Compared (2025)",
     "description": "Compare BetTrackerAI and Surebet Danmark: pricing, features, bookmaker coverage and bet tracking. Find the surebet tool that fits your needs.",
     "keyword": "surebet tool comparison",
-    "intro": "Surebet Danmark and BetTrackerAI both scan for surebets (also called arbitrage bets) at licensed bookmakers. Both offer a 7-day free trial. The key differences lie in pricing and in the tools you get beyond the surebet scanner itself.",
+    "intro": "Surebet Danmark and BetTrackerAI both scan for surebets (also called arbitrage bets) at licensed bookmakers such as bet365, Pinnacle, Unibet, Betfair, William Hill, Betway and bwin. Both offer a 7-day free trial. The key differences lie in pricing and in the tools you get beyond the surebet scanner itself.",
     "blocks": [
       {
         "type": "h2",
@@ -1650,7 +1650,7 @@
       },
       {
         "type": "p",
-        "text": "Surebets are only profitable if you know exactly what you've earned. In BetTrackerAI you log your surebets and deposits, and you see your profit, ROI and balance at each bookmaker in one place. You can also import a bet slip instead of entering it manually."
+        "text": "Surebets are only profitable if you know exactly what you've earned. In BetTrackerAI you log your surebets and deposits, and you see your profit, ROI and balance at each bookmaker in one place. You can also import a bet slip instead of entering it manually. Tax on betting winnings depends on your country, so check your local rules and keep good records."
       },
       {
         "type": "h2",
@@ -1666,7 +1666,7 @@
       },
       {
         "type": "tip",
-        "text": "Whichever tool you choose: always place the bet with the most volatile odds first, and confirm that the market is identical at both bookmakers."
+        "text": "Whichever tool you choose: always place the bet with the most volatile odds first, and confirm that the market is identical at both bookmakers. Only use bookmakers that are licensed where you live."
       }
     ],
     "faq": [
@@ -1676,7 +1676,7 @@
       },
       {
         "q": "Do both tools only use licensed bookmakers?",
-        "a": "Yes. Both platforms focus on regulated, licensed bookmakers, ensuring you bet legally and with player protections in place."
+        "a": "Yes. Both platforms focus on regulated, licensed bookmakers, which come with player protections. Licensing differs from country to country, so only use bookmakers that are licensed where you live. If gambling stops being fun, use the responsible-gambling and self-exclusion services in your country."
       },
       {
         "q": "Can I try BetTrackerAI for free?",
@@ -1881,7 +1881,7 @@
       {
         "type": "ul",
         "items": [
-          "**Spread your bets** across several bookmakers so no single account stands out.",
+          "**Spread your bets** across several bookmakers licensed where you live, so no single account stands out.",
           "**Keep balances ready** at every bookmaker so you can act within minutes.",
           "**Log every bet** so you see your real ROI, not just a feeling. A [bet tracker](/en/guides/bet-tracker) does it automatically."
         ]
@@ -2385,7 +2385,7 @@
       {
         "type": "ul",
         "items": [
-          "**Bookmaker coverage:** the tool must include the bookmakers you can actually use.",
+          "**Bookmaker coverage:** the tool must include the bookmakers you can actually use, meaning those licensed where you live.",
           "**Update frequency:** a few seconds for pre-match, faster for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
           "**Filters:** sport, market, bookmaker and minimum profit.",
           "**Built-in tracking:** surebets placed from the scanner should be tracked automatically.",
@@ -2412,7 +2412,7 @@
       },
       {
         "q": "Is betting software legal?",
-        "a": "Using tools to compare odds and track bets is legal. Automated bet placing usually breaks bookmaker terms. See [are surebets legal?](/en/guides/are-surebets-legal)"
+        "a": "Using tools to compare odds and track bets is legal. Automated bet placing usually breaks bookmaker terms. Only use bookmakers licensed where you live, and check your local rules on tax on winnings. See [are surebets legal?](/en/guides/are-surebets-legal)"
       }
     ]
   }

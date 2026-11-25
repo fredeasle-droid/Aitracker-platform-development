@@ -82,7 +82,7 @@
       },
       {
         "q": "Zijn er surebets op kleinere ijshockeycompetities?",
-        "a": "Ja. Bookmakers prijzen kleinere nationale competities vaak verschillend in, waardoor er regelmatig arbitragemogelijkheden ontstaan. Controleer of bookmakers een vergunning hebben om in Nederland actief te zijn voordat je inzet."
+        "a": "Ja. Bookmakers prijzen kleinere nationale competities vaak verschillend in, waardoor er regelmatig arbitragemogelijkheden ontstaan. Controleer of bookmakers een KSA-vergunning hebben om in Nederland actief te zijn voordat je inzet."
       }
     ]
   },
@@ -109,7 +109,7 @@
         "type": "ul",
         "items": [
           "1X2: thuiswinst, gelijkspel en uitwinst. Drie uitkomsten, dus je hebt drie weddenschappen nodig.",
-          "Over/under doelpunten, bijvoorbeeld over of under 2,5 doelpunten. Slechts twee uitkomsten en vaak een hoge liquiditeit.",
+          "Over/under doelpunten, bijvoorbeeld over of onder 2,5 doelpunten. Slechts twee uitkomsten en vaak een hoge liquiditeit.",
           "Aziatische handicap: twee uitkomsten en een lage marge, maar lees de afwikkelingsregels voor halve en hele doelpunten goed door.",
           "Beide teams scoren: ja of nee. Een overzichtelijke markt met twee uitkomsten."
         ]
@@ -177,7 +177,7 @@
       },
       {
         "q": "Welke bookmakers bieden esports aan?",
-        "a": "De meeste grote vergunde bookmakers bieden esports aan, met name CS2 en League of Legends. Controleer het aanbod en de vergunning in jouw land."
+        "a": "De meeste grote vergunde bookmakers bieden esports aan, met name CS2 en League of Legends. Controleer het actuele aanbod en of de bookmaker een KSA-vergunning heeft."
       }
     ]
   },
@@ -246,7 +246,7 @@
       },
       {
         "type": "p",
-        "text": "Bet365 is een vergunde bookmaker in meerdere jurisdicties en biedt odds op een zeer groot aantal wedstrijden, waaronder lagere competities en livemarkets. Door dit brede aanbod heeft Bet365 vaak odds die afwijken van de rest van de markt."
+        "text": "Bet365 is een vergunde bookmaker in meerdere jurisdicties, waaronder Nederland, en biedt odds op een zeer groot aantal wedstrijden, waaronder lagere competities en livemarkets. Door dit brede aanbod heeft Bet365 vaak odds die afwijken van de rest van de markt."
       },
       {
         "type": "h2",
@@ -277,7 +277,7 @@
       },
       {
         "q": "Heeft Bet365 een vergunning voor kansspelen?",
-        "a": "Ja. Bet365 beschikt over vergunningen in meerdere gereguleerde markten wereldwijd. Raadpleeg de lokale regelgeving in jouw regio, aangezien de fiscale behandeling van winsten per jurisdictie verschilt."
+        "a": "Ja. Bet365 beschikt over een vergunning van de Kansspelautoriteit (KSA) voor de Nederlandse markt en over vergunningen in meerdere andere gereguleerde markten. De kansspelbelasting wordt door de aanbieder betaald, niet door jou als speler. Controleer wel altijd de actuele regels."
       }
     ]
   },
@@ -294,7 +294,7 @@
       },
       {
         "type": "p",
-        "text": "Unibet beschikt over vergunningen in meerdere gereguleerde markten en biedt een breed scala aan sporten aan. Omdat Unibet zijn oddsplatform deelt met verschillende andere bookmakers, ontstaan surebets het vaakst tussen Unibet en bookmakers op andere platforms."
+        "text": "Unibet beschikt over vergunningen in meerdere gereguleerde markten, waaronder Nederland (vergunning van de Kansspelautoriteit), en biedt een breed scala aan sporten aan. Omdat Unibet zijn oddsplatform deelt met verschillende andere bookmakers, ontstaan surebets het vaakst tussen Unibet en bookmakers op andere platforms."
       },
       {
         "type": "h2",
@@ -321,7 +321,7 @@
     "faq": [
       {
         "q": "Is het legaal om surebets te plaatsen bij Unibet?",
-        "a": "Ja, arbitrage wedden is legaal. Zoals alle bookmakers kan Unibet echter op grond van zijn algemene voorwaarden accounts beperken of limiteren als deze uitsluitend inzetten plaatsen met gegarandeerde winst."
+        "a": "Ja, arbitrage wedden is op zich niet verboden, en Unibet is een bookmaker met een KSA-vergunning. Zoals alle bookmakers kan Unibet echter op grond van zijn algemene voorwaarden accounts beperken of limiteren als deze uitsluitend inzetten plaatsen met gegarandeerde winst."
       },
       {
         "q": "Welke bookmakers lijken op Unibet?",
@@ -330,11 +330,11 @@
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebets bij Betano",
-    "metaTitle": "Betano surebets – vind arbitrage weddenschappen bij Betano",
-    "description": "Vind surebets bij Betano in realtime. BetTrackerAI vergelijkt de odds van Betano met andere vergunde bookmakers en toont waar je gegarandeerde winst kunt vastleggen.",
+    "title": "Surebets en Betano in Nederland",
+    "metaTitle": "Betano surebets – status in Nederland en alternatieven met KSA-vergunning",
+    "description": "Zoek je betano surebets? Betano staat niet in onze lijst van bookmakers met een KSA-vergunning. BetTrackerAI vergelijkt in realtime de odds van vergunde bookmakers zoals TOTO, Unibet en BetCity.",
     "keyword": "betano surebets",
-    "intro": "Betano is een van de nieuwere bookmakers op de gereguleerde markt en gebruikt een eigen platform voor het bepalen van odds. Dit betekent dat de odds van Betano vaak afwijken van de rest van de markt, wat arbitrage weddenschappen oplevert.",
+    "intro": "Betano is een bookmaker die een eigen platform gebruikt voor het bepalen van odds. In Nederland mogen alleen aanbieders met een vergunning van de Kansspelautoriteit (KSA) online weddenschappen aanbieden, en Betano staat niet in onze lijst van vergunde bookmakers. Daarom richt BetTrackerAI zich voor Nederland op surebets tussen vergunde bookmakers.",
     "blocks": [
       {
         "type": "h2",
@@ -342,20 +342,20 @@
       },
       {
         "type": "p",
-        "text": "Betano beschikt over een vergunning in meerdere jurisdicties en biedt een breed aanbod aan sporten. Omdat Betano zijn odds zelfstandig bepaalt, is het vaak betrokken bij surebets wanneer het wordt vergeleken met gevestigde bookmakers."
+        "text": "Betano beschikt over een vergunning in meerdere landen en biedt een breed aanbod aan sporten. In Nederland geldt sinds 2021 een vergunningstelsel: alleen operators met een KSA-vergunning mogen hier online wedden aanbieden. Controleer altijd het actuele register van de KSA voordat je bij een bookmaker speelt."
       },
       {
         "type": "h2",
-        "text": "Hoe vind je surebets met Betano"
+        "text": "Hoe vind je surebets bij vergunde bookmakers"
       },
       {
         "type": "p",
-        "text": "Een surebet met Betano ontstaat wanneer Betano hogere odds biedt op één uitkomst dan andere bookmakers bieden op de tegengestelde uitkomsten. BetTrackerAI monitort de odds van Betano continu en vergelijkt ze met de rest van de markt."
+        "text": "Een surebet ontstaat wanneer een bookmaker hogere odds biedt op één uitkomst dan andere bookmakers bieden op de tegengestelde uitkomsten. BetTrackerAI monitort de odds van vergunde bookmakers zoals TOTO, Unibet, BetCity, Jack’s.nl, bet365, Holland Casino Online, Circus.nl en Vbet continu en vergelijkt ze met elkaar."
       },
       {
         "type": "ul",
         "items": [
-          "Selecteer Betano en je andere bookmakers via het filter op de surebets-pagina.",
+          "Selecteer je vergunde bookmakers, zoals TOTO, Unibet en BetCity, via het filter op de surebets-pagina.",
           "Sorteer op winst en kies een surebet met stabiele odds.",
           "Gebruik de calculator om je inzet te verdelen en de bedragen af te ronden.",
           "Plaats de weddenschap eerst bij de bookmaker met de meest volatiele odds."
@@ -363,47 +363,47 @@
       },
       {
         "type": "tip",
-        "text": "Spreid je weddenschappen over meerdere bookmakers zodat je niet uitsluitend bij Betano wedt. Dit verlengt de levensduur van je account en helpt je beperkingen te voorkomen."
+        "text": "Spreid je weddenschappen over meerdere vergunde bookmakers zodat je niet uitsluitend bij één bookmaker wedt. Dit verlengt de levensduur van je accounts en helpt je beperkingen te voorkomen."
       }
     ],
     "faq": [
       {
         "q": "Mag je surebets plaatsen bij Betano?",
-        "a": "Ja, arbitrage weddenschappen zijn legaal. Maar net als alle bookmakers kan Betano accounts beperken op grond van zijn algemene voorwaarden als er weddenschappatronen worden gedetecteerd die consequent gegarandeerde winst opleveren."
+        "a": "Arbitrage weddenschappen zijn op zich niet verboden, maar je mag alleen wedden bij aanbieders met een KSA-vergunning. Betano staat niet in onze lijst van vergunde bookmakers, dus wij raden het af en tonen er geen surebets voor. Vergunde bookmakers kunnen bovendien accounts beperken op grond van hun algemene voorwaarden als er patronen worden gedetecteerd die consequent gegarandeerde winst opleveren."
       },
       {
-        "q": "Heeft Betano een vergunning?",
-        "a": "Ja. Betano heeft een vergunning in meerdere gereguleerde markten. Raadpleeg de kansspelautoriteit in jouw land om te bevestigen of Betano een vergunning heeft voor de markt waar jij woont."
+        "q": "Heeft Betano een vergunning in Nederland?",
+        "a": "Betano heeft een vergunning in andere markten, maar staat niet in onze lijst van bookmakers met een KSA-vergunning voor Nederland. Raadpleeg het actuele register van de Kansspelautoriteit (KSA) om de status te bevestigen en wed alleen bij vergunde aanbieders."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets bij LeoVegas",
-    "metaTitle": "LeoVegas Surebets – Vind Arbitrage Kansen",
-    "description": "Vind surebets bij LeoVegas in realtime. BetTrackerAI vergelijkt LeoVegas-odds met andere bookmakers en laat zien waar je gegarandeerde winst kunt behalen.",
-    "keyword": "leovegas surebets",
-    "intro": "LeoVegas staat bekend om zijn casinoaanbod, maar biedt ook een uitgebreide selectie sportsweddenschappen. De bookmaker maakt gebruik van het Kambi-platform en duikt regelmatig op in arbitragemogelijkheden.",
+    "title": "Surebets bij Unibet",
+    "metaTitle": "Unibet Surebets – Vind Arbitrage Kansen",
+    "description": "Vind surebets bij Unibet in realtime. BetTrackerAI vergelijkt Unibet-odds met andere bookmakers en laat zien waar je gegarandeerde winst kunt behalen.",
+    "keyword": "unibet surebets",
+    "intro": "Unibet staat bekend om zijn brede aanbod aan sportsweddenschappen en casinospellen. De bookmaker maakt gebruik van het Kambi-platform en duikt regelmatig op in arbitragemogelijkheden.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Over LeoVegas"
+        "text": "Over Unibet"
       },
       {
         "type": "p",
-        "text": "LeoVegas is een vergunde bookmaker met een gebruiksvriendelijke app waarmee je snel weddenschappen kunt plaatsen. Dit is belangrijk bij surebets, waarbij odds in seconden kunnen veranderen. Controleer of LeoVegas vergund en beschikbaar is in jouw land voordat je een account opent."
+        "text": "Unibet is een bookmaker met een Nederlandse KSA-vergunning en een gebruiksvriendelijke app waarmee je snel weddenschappen kunt plaatsen. Dit is belangrijk bij surebets, waarbij odds in seconden kunnen veranderen. Controleer of Unibet een geldige vergunning van de Kansspelautoriteit (KSA) heeft voordat je een account opent."
       },
       {
         "type": "h2",
-        "text": "Hoe vind je surebets met LeoVegas"
+        "text": "Hoe vind je surebets met Unibet"
       },
       {
         "type": "p",
-        "text": "Een surebet met LeoVegas ontstaat wanneer LeoVegas hogere odds biedt op één uitkomst dan andere bookmakers bieden op de tegengestelde uitkomsten. BetTrackerAI monitort de LeoVegas-odds continu en vergelijkt deze met bookmakers die actief zijn in jouw markt."
+        "text": "Een surebet met Unibet ontstaat wanneer Unibet hogere odds biedt op één uitkomst dan andere bookmakers bieden op de tegengestelde uitkomsten. BetTrackerAI monitort de Unibet-odds continu en vergelijkt deze met bookmakers met een KSA-vergunning, zoals TOTO, BetCity, Jack's.nl en bet365."
       },
       {
         "type": "ul",
         "items": [
-          "Selecteer LeoVegas en je andere bookmakers via het filter op de surebets-pagina.",
+          "Selecteer Unibet en je andere bookmakers via het filter op de surebets-pagina.",
           "Sorteer op winst en kies een surebet met stabiele odds.",
           "Gebruik de calculator om je inzet te verdelen en rond de bedragen af.",
           "Plaats je weddenschap eerst bij de bookmaker met de meest volatiele odds."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Spreid je weddenschappen over meerdere bookmakers, zodat je niet uitsluitend LeoVegas gebruikt. Dit verlengt de levensduur van je account en verkleint het risico op accountlimieten."
+        "text": "Spreid je weddenschappen over meerdere bookmakers, zodat je niet uitsluitend Unibet gebruikt. Dit verlengt de levensduur van je account en verkleint het risico op accountlimieten."
       }
     ],
     "faq": [
       {
-        "q": "Kun je surebets plaatsen bij LeoVegas?",
-        "a": "Ja, arbitrageweddenschappen zijn legaal. Maar net als alle bookmakers kan LeoVegas accounts beperken op basis van zijn algemene voorwaarden, als er weddenschapspatronen worden gedetecteerd die consequent gegarandeerde winst opleveren."
+        "q": "Kun je surebets plaatsen bij Unibet?",
+        "a": "Ja, arbitrageweddenschappen zijn legaal. Maar net als alle bookmakers kan Unibet accounts beperken op basis van zijn algemene voorwaarden, als er weddenschapspatronen worden gedetecteerd die consequent gegarandeerde winst opleveren."
       },
       {
-        "q": "Is LeoVegas geschikt voor surebets?",
-        "a": "LeoVegas is een goede aanvullende bookmaker, vooral in combinatie met bookmakers buiten het Kambi-platform, omdat dit het aantal beschikbare arbitragemogelijkheden vergroot."
+        "q": "Is Unibet geschikt voor surebets?",
+        "a": "Unibet is een goede aanvullende bookmaker, vooral in combinatie met bookmakers buiten het Kambi-platform, omdat dit het aantal beschikbare arbitragemogelijkheden vergroot."
       }
     ]
   }
