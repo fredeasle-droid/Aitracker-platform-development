@@ -1,5 +1,5 @@
 import type { Locale } from '@/lib/i18n'
-import type { BaseTranslated } from '@/lib/locale-list'
+import type { BaseTranslated, NewLocale } from '@/lib/locale-list'
 import { newLocales } from '@/lib/locale-packs'
 
 // Public URLs for the translated sections use words people actually search for in each country.
@@ -129,18 +129,32 @@ export const SLUGS_BASE: Record<BaseTranslated, Record<string, string>> = {
 
 // Stand-alone pages that exist in every language. Keys are the canonical (Danish) paths.
 export const PAGE_NAMES_BASE: Record<BaseTranslated, Record<string, string>> = {
-  en: { '/dagens-surebets': '/todays-surebets', '/beregn': '/calculator', '/konto': '/account' },
-  sv: { '/faq': '/vanliga-fragor', '/beregn': '/kalkylator', '/konto': '/mitt-konto' },
-  no: { '/faq': '/vanlige-sporsmal', '/beregn': '/kalkulator' },
-  de: { '/dagens-surebets': '/surebets-heute', '/beregn': '/rechner', '/konto': '/mein-konto' },
-  es: { '/dagens-surebets': '/surebets-hoy', '/beregn': '/calculadora', '/konto': '/mi-cuenta', '/faq': '/preguntas-frecuentes' },
-  br: { '/dagens-surebets': '/surebets-hoje', '/beregn': '/calculadora', '/konto': '/minha-conta', '/faq': '/perguntas-frequentes' },
-  pt: { '/dagens-surebets': '/surebets-hoje', '/beregn': '/calculadora', '/konto': '/a-minha-conta', '/faq': '/perguntas-frequentes' },
-  fr: { '/dagens-surebets': '/surebets-du-jour', '/beregn': '/calculateur', '/konto': '/mon-compte' },
-  it: { '/dagens-surebets': '/surebet-oggi', '/beregn': '/calcolatore', '/konto': '/il-mio-account', '/faq': '/domande-frequenti' },
-  pl: { '/dagens-surebets': '/surebety-dzis', '/beregn': '/kalkulator', '/konto': '/moje-konto', '/faq': '/czeste-pytania' },
-  fi: { '/dagens-surebets': '/paivan-surebetit', '/beregn': '/laskuri', '/konto': '/oma-tili', '/faq': '/usein-kysytyt' },
-  nl: { '/dagens-surebets': '/surebets-vandaag', '/beregn': '/calculator', '/konto': '/mijn-account', '/faq': '/veelgestelde-vragen' },
+  en: { '/om-os': '/about-us', '/kontakt': '/contact', '/dagens-surebets': '/todays-surebets', '/beregn': '/calculator', '/konto': '/account' },
+  sv: { '/om-os': '/om-oss', '/kontakt': '/kontakt', '/dagens-surebets': '/dagens-surebets', '/faq': '/vanliga-fragor', '/beregn': '/kalkylator', '/konto': '/mitt-konto' },
+  no: { '/om-os': '/om-oss', '/kontakt': '/kontakt-oss', '/dagens-surebets': '/dagens-surebets', '/faq': '/vanlige-sporsmal', '/beregn': '/kalkulator' },
+  de: { '/om-os': '/uber-uns', '/kontakt': '/kontakt', '/dagens-surebets': '/surebets-heute', '/beregn': '/rechner', '/konto': '/mein-konto' },
+  es: { '/om-os': '/sobre-nosotros', '/kontakt': '/contacto', '/dagens-surebets': '/surebets-hoy', '/beregn': '/calculadora', '/konto': '/mi-cuenta', '/faq': '/preguntas-frecuentes' },
+  br: { '/om-os': '/sobre-nos', '/kontakt': '/contato', '/dagens-surebets': '/surebets-hoje', '/beregn': '/calculadora', '/konto': '/minha-conta', '/faq': '/perguntas-frequentes' },
+  pt: { '/om-os': '/sobre-nos', '/kontakt': '/contactos', '/dagens-surebets': '/surebets-hoje', '/beregn': '/calculadora', '/konto': '/a-minha-conta', '/faq': '/perguntas-frequentes' },
+  fr: { '/om-os': '/a-propos', '/kontakt': '/contact', '/dagens-surebets': '/surebets-du-jour', '/beregn': '/calculateur', '/konto': '/mon-compte' },
+  it: { '/om-os': '/chi-siamo', '/kontakt': '/contatti', '/dagens-surebets': '/surebet-oggi', '/beregn': '/calcolatore', '/konto': '/il-mio-account', '/faq': '/domande-frequenti' },
+  pl: { '/om-os': '/o-nas', '/kontakt': '/kontakt', '/dagens-surebets': '/surebety-dzis', '/beregn': '/kalkulator', '/konto': '/moje-konto', '/faq': '/czeste-pytania' },
+  fi: { '/om-os': '/tietoa-meista', '/kontakt': '/yhteystiedot', '/dagens-surebets': '/paivan-surebetit', '/beregn': '/laskuri', '/konto': '/oma-tili', '/faq': '/usein-kysytyt' },
+  nl: { '/om-os': '/over-ons', '/kontakt': '/contact', '/dagens-surebets': '/surebets-vandaag', '/beregn': '/calculator', '/konto': '/mijn-account', '/faq': '/veelgestelde-vragen' },
+}
+
+const PAGE_NAMES_NEW: Record<NewLocale, Record<string, string>> = {
+  tr: { '/om-os': '/hakkimizda', '/kontakt': '/iletisim' },
+  cs: { '/om-os': '/o-nas', '/kontakt': '/kontakt' },
+  el: { '/om-os': '/sxetika-me-emas', '/kontakt': '/epikoinonia' },
+  hu: { '/om-os': '/rolunk', '/kontakt': '/kapcsolat' },
+  hr: { '/om-os': '/o-nama', '/kontakt': '/kontakt' },
+  sk: { '/om-os': '/o-nas', '/kontakt': '/kontakt' },
+  mx: { '/om-os': '/sobre-nosotros', '/kontakt': '/contacto' },
+  ar: { '/om-os': '/sobre-nosotros', '/kontakt': '/contacto' },
+  ch: { '/om-os': '/uber-uns', '/kontakt': '/kontakt' },
+  at: { '/om-os': '/uber-uns', '/kontakt': '/kontakt' },
+  be: { '/om-os': '/over-ons', '/kontakt': '/contact' },
 }
 
 const SECTION_NAMES: Record<Translated, Record<Section, string>> = {
@@ -155,7 +169,12 @@ const SLUGS: Record<Translated, Record<string, string>> = {
 
 const PAGE_NAMES: Record<Translated, Record<string, string>> = {
   ...PAGE_NAMES_BASE,
-  ...newLocales(PAGE_NAMES_BASE, (pack, fallback) => ({ ...fallback, ...pack.pages })),
+  ...newLocales(PAGE_NAMES_BASE, (pack, fallback, locale) => {
+    const pages = { ...fallback, ...PAGE_NAMES_NEW[locale], ...pack.pages }
+    return Object.fromEntries(
+      Object.entries(pages).map(([canonical, localized]) => [canonical, localized.startsWith('/') ? localized : `/${localized}`]),
+    )
+  }),
 }
 
 const REVERSE_PAGE_NAMES = Object.fromEntries(

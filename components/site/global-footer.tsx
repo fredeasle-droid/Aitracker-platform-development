@@ -67,7 +67,7 @@ function FooterWaves() {
   );
 }
 
-const TRANSLATED_HREFS = new Set(["/", "/surebets", "/dagens-surebets", "/guide", "/faq"]);
+const TRANSLATED_HREFS = new Set(["/", "/surebets", "/dagens-surebets", "/guide", "/faq", "/om-os", "/kontakt"]);
 
 export async function GlobalFooter() {
   const locale = await getServerLocale();

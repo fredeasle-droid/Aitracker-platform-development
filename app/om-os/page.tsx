@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { YoutubeFacade } from '@/components/seo/youtube-facade'
 import { SITE_NAME, SITE_URL } from '@/lib/site'
+import { getServerT, getServerLocale } from '@/lib/locale-server'
+import { localePath } from '@/lib/i18n'
 import { videoObjectJsonLd } from '@/lib/video'
 
 export const metadata: Metadata = {
@@ -80,7 +82,10 @@ const SECTIONS = [
   },
 ]
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const locale = await getServerLocale()
+  const { tx } = await getServerT()
+
   return (
     <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 lg:px-10 lg:pb-24 lg:pt-10">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON_LD }} />
@@ -130,17 +135,17 @@ export default function AboutPage() {
 
       <div className="mt-12 flex flex-col gap-3 sm:flex-row">
         <Link
-          href="/dagens-surebets"
+          href={localePath(locale, '/dagens-surebets')}
           className="flex min-h-14 flex-1 items-center justify-center gap-2 rounded-2xl bg-primary px-5 text-[16px] font-bold text-primary-foreground transition-opacity hover:opacity-90"
         >
-          Se dagens surebets
+          {tx('Dagens surebets')}
           <ArrowRight className="size-5" aria-hidden="true" />
         </Link>
         <Link
-          href="/kontakt"
+          href={localePath(locale, '/kontakt')}
           className="flex min-h-14 flex-1 items-center justify-center rounded-2xl border border-border bg-card/60 px-5 text-[16px] font-bold text-foreground transition-colors hover:border-primary/60"
         >
-          Kontakt os
+          {tx('Kontakt os')}
         </Link>
       </div>
     </main>
