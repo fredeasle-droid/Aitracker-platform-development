@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import {
   ArrowLeft,
   ArrowRight,
@@ -30,6 +30,8 @@ import { plans, type Plan } from '@/app/konto/plans'
 import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { LoginStep } from '@/app/konto/login-step'
 import { OnboardingStep } from '@/components/konto/onboarding-step'
+import { useLocale } from '@/components/locale-provider'
+import { localizedInternalHref } from '@/lib/localized-href'
 
 const STEPS = ['Dine oplysninger', 'Vælg abonnement', 'Betalingsoplysninger'] as const
 
@@ -53,11 +55,12 @@ type Props = {
 }
 
 export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode, allowTestAccess, returnTo }: Props) {
+  const { locale } = useLocale()
   if (loginMode) {
     return (
       <div className="mx-auto w-full max-w-[520px] pt-6">
         <div className={cn(panel, 'p-8')}>
-          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(returnTo ?? '/')} />
+          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(localizedInternalHref(locale, returnTo ?? '/'))} />
         </div>
       </div>
     )

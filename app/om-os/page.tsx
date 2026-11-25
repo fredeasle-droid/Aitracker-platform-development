@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { YoutubeFacade } from '@/components/seo/youtube-facade'

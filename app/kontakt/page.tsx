@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowRight, ArrowUpRight, HeartHandshake, Mail, MessageCircleQuestion, Phone, Send } from 'lucide-react'
 import { RESPONSIBLE } from '@/components/home/data'
 import { LegalPage } from '@/components/legal/legal-page'

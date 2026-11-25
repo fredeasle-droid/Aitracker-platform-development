@@ -2,7 +2,7 @@
 
 import { useLocale } from "@/components/locale-provider";
 import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, ArrowUpRight, BellRing, CalendarCheck, Check, Clock, Crown, MessageSquareText, Mic, Play, Quote, Radar, Star, Users } from "lucide-react";
 import { useInView } from "@/lib/use-in-view";
 const hero = "/home/hero-player.jpg";

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowRight, Crown } from 'lucide-react'
 import { authClient } from '@/lib/auth-client'
 import { useLocale } from '@/components/locale-provider'

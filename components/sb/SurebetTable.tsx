@@ -1,6 +1,6 @@
 "use client";
 import { useMemo, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, Crown, SearchX, ShieldCheck, Star, X } from "lucide-react";
 import { formatPct, surebetProfitPct, visibleSurebets, type Surebet } from "./data";
 import { BookmakerBadge, BookmakerMark } from "./BookmakerMark";

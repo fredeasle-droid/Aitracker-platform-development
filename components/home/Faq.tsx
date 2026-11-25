@@ -2,7 +2,7 @@
 
 import { useLocale } from "@/components/locale-provider";
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import {
   ArrowRight, BellRing, Building2, ChevronRight, CreditCard, Gift, Headphones, MessageCircleQuestion, ShieldCheck, Target, UserCheck,
   type LucideIcon,

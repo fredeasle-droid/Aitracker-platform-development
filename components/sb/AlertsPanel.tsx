@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useId, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, Bell, MessageSquareText, Smartphone } from "lucide-react";
 
 import { removePushSubscription, savePushSettings, savePushSubscription, sendTestPush, type PushSettingsInput } from "@/app/konto/push-actions";

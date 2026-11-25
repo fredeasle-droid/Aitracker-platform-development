@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowRight, ChevronDown, CircleHelp, Mail, UserRound, Zap } from 'lucide-react'
 import { FAQ_ENTRIES } from '@/components/home/faq-data'
 import { LegalPage } from '@/components/legal/legal-page'

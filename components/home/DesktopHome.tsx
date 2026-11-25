@@ -2,7 +2,7 @@
 
 import { useLocale } from "@/components/locale-provider";
 import { useEffect, useRef, useState, type CSSProperties } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, BellRing, Check, Play, Trophy } from "lucide-react";
 import { LiveScanner, formatAge } from "./LiveScanner";
 import { ProfitCalculator } from "./ProfitCalculator";

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { asc, desc } from 'drizzle-orm'
 import { getOwnerState } from '@/lib/admin'
+import { getServerLocale } from '@/lib/locale-server'
+import { localePath } from '@/lib/i18n'
 import { db } from '@/lib/db'
 import { telegramGroups, telegramPosts } from '@/lib/db/schema'
 import { getBotName, getSettings, hasBotToken } from '@/lib/telegram'
@@ -36,7 +38,7 @@ function RowActions({ id, active, onToggle, onDelete }: { id: number; active: bo
 
 export default async function TelegramPage() {
   const state = await getOwnerState()
-  if (state === 'signed-out') redirect('/konto')
+  if (state === 'signed-out') redirect(localePath(await getServerLocale(), '/konto'))
   if (state === 'forbidden') {
     return (
       <main className="mx-auto flex min-h-screen max-w-xl flex-col gap-2 px-5 py-10 text-white">

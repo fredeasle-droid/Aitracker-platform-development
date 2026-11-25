@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { getAdminState } from '@/lib/admin'
+import { getServerLocale } from '@/lib/locale-server'
+import { localePath } from '@/lib/i18n'
 import { getBetHeroSnapshot } from '@/lib/bethero-ingest'
 import { getSessionInfo } from '@/lib/scraper-session'
 import { BETHERO_SOURCE } from '@/lib/scrapers/bethero'
@@ -29,7 +31,7 @@ function StatusBox({ info, statusOverride }: { info: SessionInfo; statusOverride
 
 export default async function SourcesPage() {
   const state = await getAdminState()
-  if (state === 'signed-out') redirect('/konto')
+  if (state === 'signed-out') redirect(localePath(await getServerLocale(), '/konto'))
 
   const [surebetInfo, betHeroInfo, oddsJamInfo, snapshot, oddsJamSnapshot] = await Promise.all([
     getSessionInfo(SUREBETDANMARK_SOURCE),

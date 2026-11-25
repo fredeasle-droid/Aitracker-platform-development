@@ -1,6 +1,7 @@
 import type { Locale } from '@/lib/i18n'
 import type { BaseTranslated, NewLocale } from '@/lib/locale-list'
 import { newLocales } from '@/lib/locale-packs'
+import { TRANSLATED_SLUG_FALLBACKS } from './translated-slug-fallbacks'
 
 // Public URLs for the translated sections use words people actually search for in each country.
 // Internally every page still lives at its Danish path; the proxy rewrites localized URLs to it.
@@ -162,15 +163,59 @@ const SECTION_NAMES: Record<Translated, Record<Section, string>> = {
   ...newLocales(SECTION_NAMES_BASE, (pack, fallback) => ({ ...fallback, ...(pack.sections as Partial<Record<Section, string>>) })),
 }
 
+const SLUGS_BASE_WITH_FALLBACKS = Object.fromEntries(
+  (Object.keys(SLUGS_BASE) as BaseTranslated[]).map((locale) => [
+    locale,
+    { ...TRANSLATED_SLUG_FALLBACKS[locale], ...SLUGS_BASE[locale] },
+  ]),
+) as Record<BaseTranslated, Record<string, string>>
+
 const SLUGS: Record<Translated, Record<string, string>> = {
-  ...SLUGS_BASE,
-  ...newLocales(SLUGS_BASE, (pack, fallback) => ({ ...fallback, ...pack.slugs })),
+  ...SLUGS_BASE_WITH_FALLBACKS,
+  ...newLocales(SLUGS_BASE, (pack, fallback, locale) => ({
+    ...fallback,
+    ...TRANSLATED_SLUG_FALLBACKS[locale],
+    ...pack.slugs,
+  })),
 }
 
+const CORE_PAGE_NAMES: Partial<Record<Translated, Record<string, string>>> = {
+  en: { '/stats': '/statistics', '/bonus': '/bonuses', '/surebets': '/surebets', '/faq': '/faq', '/login': '/login', '/vilkaar': '/terms', '/privatlivspolitik': '/privacy-policy', '/telegram': '/telegram' },
+  sv: { '/stats': '/statistik', '/bonus': '/bonus', '/surebets': '/surebets', '/faq': '/vanliga-fragor', '/login': '/logga-in', '/konto': '/mitt-konto', '/vilkaar': '/villkor', '/privatlivspolitik': '/integritetspolicy', '/telegram': '/telegram' },
+  no: { '/stats': '/statistikk', '/bonus': '/bonuser', '/surebets': '/surebets', '/faq': '/vanlige-sporsmal', '/login': '/logg-inn', '/konto': '/min-konto', '/vilkaar': '/vilkar', '/privatlivspolitik': '/personvern', '/telegram': '/telegram' },
+  de: { '/stats': '/statistiken', '/bonus': '/bonusangebote', '/surebets': '/surebets', '/faq': '/haeufige-fragen', '/login': '/anmelden', '/vilkaar': '/bedingungen', '/privatlivspolitik': '/datenschutz', '/telegram': '/telegram' },
+  es: { '/stats': '/estadisticas', '/bonus': '/bonos', '/surebets': '/surebets', '/faq': '/preguntas-frecuentes', '/login': '/iniciar-sesion', '/vilkaar': '/terminos', '/privatlivspolitik': '/politica-de-privacidad', '/telegram': '/telegram' },
+  br: { '/stats': '/estatisticas', '/bonus': '/bonus', '/surebets': '/surebets', '/faq': '/perguntas-frequentes', '/login': '/entrar', '/vilkaar': '/termos', '/privatlivspolitik': '/politica-de-privacidade', '/telegram': '/telegram' },
+  pt: { '/stats': '/estatisticas', '/bonus': '/bonus', '/surebets': '/surebets', '/faq': '/perguntas-frequentes', '/login': '/entrar', '/vilkaar': '/termos-e-condicoes', '/privatlivspolitik': '/politica-de-privacidade', '/telegram': '/telegram' },
+  fr: { '/stats': '/statistiques', '/bonus': '/bonus', '/surebets': '/surebets', '/faq': '/questions-frequentes', '/login': '/connexion', '/vilkaar': '/conditions', '/privatlivspolitik': '/politique-de-confidentialite', '/telegram': '/telegram' },
+  it: { '/stats': '/statistiche', '/bonus': '/bonus', '/surebets': '/surebets', '/faq': '/domande-frequenti', '/login': '/accedi', '/vilkaar': '/condizioni', '/privatlivspolitik': '/privacy', '/telegram': '/telegram' },
+  pl: { '/stats': '/statystyki', '/bonus': '/bonusy', '/surebets': '/surebets', '/faq': '/czeste-pytania', '/login': '/logowanie', '/vilkaar': '/regulamin', '/privatlivspolitik': '/polityka-prywatnosci', '/telegram': '/telegram' },
+  fi: { '/stats': '/tilastot', '/bonus': '/bonukset', '/surebets': '/surebetit', '/faq': '/usein-kysytyt', '/login': '/kirjaudu', '/vilkaar': '/kayttoehdot', '/privatlivspolitik': '/tietosuojakaytanto', '/telegram': '/telegram' },
+  nl: { '/stats': '/statistieken', '/bonus': '/bonussen', '/surebets': '/surebets', '/faq': '/veelgestelde-vragen', '/login': '/inloggen', '/vilkaar': '/voorwaarden', '/privatlivspolitik': '/privacybeleid', '/telegram': '/telegram' },
+  tr: { '/stats': '/istatistikler', '/bonus': '/bonuslar', '/surebets': '/surebetler', '/faq': '/sikca-sorulan-sorular', '/login': '/giris-yap', '/konto': '/hesabim', '/vilkaar': '/kullanim-kosullari', '/privatlivspolitik': '/gizlilik-politikasi', '/telegram': '/telegram' },
+  cs: { '/stats': '/statistiky', '/bonus': '/bonusy', '/surebets': '/surebety', '/faq': '/casto-kladene-otazky', '/login': '/prihlaseni', '/konto': '/ucet', '/vilkaar': '/podminky-pouziti', '/privatlivspolitik': '/ochrana-osobnich-udaju', '/telegram': '/telegram' },
+  el: { '/stats': '/statistika', '/bonus': '/bonus', '/surebets': '/surebets', '/faq': '/sychnes-erotiseis', '/login': '/syndesi', '/konto': '/logariasmos', '/vilkaar': '/oroi-chrisis', '/privatlivspolitik': '/politiki-aporritou', '/telegram': '/telegram' },
+  hu: { '/stats': '/statisztikak', '/bonus': '/bonuszok', '/surebets': '/surebetek', '/faq': '/gyakori-kerdesek', '/login': '/belepes', '/konto': '/fiokom', '/vilkaar': '/felhasznalasi-feltetelek', '/privatlivspolitik': '/adatvedelmi-tajekoztato', '/telegram': '/telegram' },
+  hr: { '/stats': '/statistika', '/bonus': '/bonusi', '/surebets': '/surebeti', '/faq': '/cesta-pitanja', '/login': '/prijava', '/konto': '/moj-racun', '/vilkaar': '/uvjeti-koristenja', '/privatlivspolitik': '/politika-privatnosti', '/telegram': '/telegram' },
+  sk: { '/stats': '/statistiky', '/bonus': '/bonusy', '/surebets': '/surebety', '/faq': '/casto-kladene-otazky', '/login': '/prihlasenie', '/konto': '/ucet', '/vilkaar': '/podmienky-pouzivania', '/privatlivspolitik': '/ochrana-osobnych-udajov', '/telegram': '/telegram' },
+  mx: { '/stats': '/estadisticas', '/bonus': '/bonos', '/surebets': '/surebets', '/faq': '/preguntas-frecuentes', '/login': '/iniciar-sesion', '/vilkaar': '/terminos', '/privatlivspolitik': '/politica-de-privacidad', '/telegram': '/telegram' },
+  ar: { '/stats': '/estadisticas', '/bonus': '/bonos', '/surebets': '/surebets', '/faq': '/preguntas-frecuentes', '/login': '/iniciar-sesion', '/vilkaar': '/terminos', '/privatlivspolitik': '/politica-de-privacidad', '/telegram': '/telegram' },
+  ch: { '/stats': '/statistiken', '/bonus': '/bonusangebote', '/surebets': '/surebets', '/faq': '/haeufige-fragen', '/login': '/anmelden', '/vilkaar': '/bedingungen', '/privatlivspolitik': '/datenschutz', '/telegram': '/telegram' },
+  at: { '/stats': '/statistiken', '/bonus': '/bonusangebote', '/surebets': '/surebets', '/faq': '/haeufige-fragen', '/login': '/anmelden', '/vilkaar': '/bedingungen', '/privatlivspolitik': '/datenschutz', '/telegram': '/telegram' },
+  be: { '/stats': '/statistieken', '/bonus': '/bonussen', '/surebets': '/surebets', '/faq': '/veelgestelde-vragen', '/login': '/inloggen', '/vilkaar': '/voorwaarden', '/privatlivspolitik': '/privacybeleid', '/telegram': '/telegram' },
+}
+
+const PAGE_NAMES_BASE_WITH_CORE = Object.fromEntries(
+  (Object.keys(PAGE_NAMES_BASE) as BaseTranslated[]).map((locale) => [
+    locale,
+    { ...CORE_PAGE_NAMES[locale], ...PAGE_NAMES_BASE[locale] },
+  ]),
+) as Record<BaseTranslated, Record<string, string>>
+
 const PAGE_NAMES: Record<Translated, Record<string, string>> = {
-  ...PAGE_NAMES_BASE,
+  ...PAGE_NAMES_BASE_WITH_CORE,
   ...newLocales(PAGE_NAMES_BASE, (pack, fallback, locale) => {
-    const pages = { ...fallback, ...PAGE_NAMES_NEW[locale], ...pack.pages }
+    const pages = { ...fallback, ...CORE_PAGE_NAMES[locale], ...PAGE_NAMES_NEW[locale], ...pack.pages }
     return Object.fromEntries(
       Object.entries(pages).map(([canonical, localized]) => [canonical, localized.startsWith('/') ? localized : `/${localized}`]),
     )
@@ -183,6 +228,24 @@ const REVERSE_PAGE_NAMES = Object.fromEntries(
     Object.fromEntries(Object.entries(PAGE_NAMES[locale]).map(([canonical, localized]) => [localized, canonical])),
   ]),
 ) as Record<Translated, Record<string, string>>
+
+export function isLocalizedRoute(locale: Locale, path: string) {
+  if (locale === 'da') {
+    const pathname = splitSuffix(path).pathname
+    const [, first] = pathname.split('/')
+    return pathname === '/' || isSection(first)
+  }
+
+  const pathname = splitSuffix(path).pathname
+  if (pathname === '/') return true
+  const [, first] = pathname.split('/')
+  return (
+    isSection(first) ||
+    Boolean(REVERSE_SECTION[locale][first]) ||
+    Boolean(PAGE_NAMES[locale][pathname]) ||
+    Boolean(REVERSE_PAGE_NAMES[locale][pathname])
+  )
+}
 
 const SECTIONS: Section[] = ['guide', 'sport', 'bookmaker']
 

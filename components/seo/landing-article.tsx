@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 import { Block, FaqList, faqJsonLd } from '@/components/seo/guide-blocks'
 import { getLocalizedGuide, getLocalizedLandingList } from '@/lib/content-i18n'

@@ -6,7 +6,7 @@ import { HomeView } from '@/components/home/HomeView'
 import { auth } from '@/lib/auth'
 import { getSubscription, ACTIVE_STATUSES } from '@/lib/billing'
 import { getHomeData } from '@/lib/home-data'
-import { LOCALES, OG_LOCALE, type Locale } from '@/lib/i18n'
+import { localePath, LOCALES, OG_LOCALE, type Locale } from '@/lib/i18n'
 import { getServerLocale, getServerT } from '@/lib/locale-server'
 import { absoluteUrl, buildAlternates, localeRobots } from '@/lib/seo/alternates'
 import { videoObjectJsonLd } from '@/lib/video'
@@ -68,7 +68,7 @@ export default async function HomePage() {
   const session = await auth.api.getSession({ headers: await headers() })
   if (session?.user) {
     const subscription = await getSubscription(session.user.id)
-    if (subscription && ACTIVE_STATUSES.includes(subscription.status) && !subscription.onboardingCompletedAt) redirect('/konto')
+    if (subscription && ACTIVE_STATUSES.includes(subscription.status) && !subscription.onboardingCompletedAt) redirect(localePath(locale, '/konto'))
   }
 
   const data = await getHomeData()

@@ -3,7 +3,7 @@
 import { useLocale } from "@/components/locale-provider";
 import { useState } from "react";
 import { useInView } from "@/lib/use-in-view";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, Check, Crown } from "lucide-react";
 const host = { url: "/home/pricing-host.webp" };
 import { PRICING } from "./data";

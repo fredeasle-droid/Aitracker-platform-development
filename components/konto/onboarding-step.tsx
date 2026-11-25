@@ -7,6 +7,8 @@ import { completeOnboarding } from '@/app/konto/account-actions'
 import { ONBOARDING_BOOKMAKERS } from '@/lib/onboarding-bookmakers'
 import { BookmakerLogo } from '@/components/bookmaker-logo'
 import { cn } from '@/lib/utils'
+import { localePath } from '@/lib/i18n'
+import { useLocale } from '@/components/locale-provider'
 
 const RECOMMENDED_BOOKMAKERS = ONBOARDING_BOOKMAKERS
 
@@ -67,6 +69,7 @@ const ANSWER_OPTIONS: { value: BookmakerAnswer; label: string }[] = [
 
 export function OnboardingStep({ initialResponses = {} }: { initialResponses?: Record<string, string> }) {
   const router = useRouter()
+  const { locale } = useLocale()
   const [responses, setResponses] = useState<Record<string, BookmakerAnswer>>(() =>
     Object.fromEntries(Object.entries(initialResponses).filter(([, value]) => ANSWER_OPTIONS.some((option) => option.value === value))) as Record<string, BookmakerAnswer>,
   )
@@ -84,7 +87,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
     setError('')
     try {
       await completeOnboarding(responses)
-      router.replace('/')
+      router.replace(localePath(locale, '/'))
       router.refresh()
     } catch (cause) {
       setError(cause instanceof Error ? cause.message : 'Dine valg kunne ikke gemmes. Prøv igen.')

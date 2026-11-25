@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { notFound } from 'next/navigation'
 import { ArrowRight, ChevronRight, Clock } from 'lucide-react'
 import { Block, FaqList } from '@/components/seo/guide-blocks'

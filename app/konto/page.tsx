@@ -19,6 +19,7 @@ import type { Locale } from '@/lib/i18n'
 import type { BaseLocale } from '@/lib/locale-list'
 import { newLocales } from '@/lib/locale-packs'
 import { getServerLocale } from '@/lib/locale-server'
+import { localizedInternalHref } from '@/lib/localized-href'
 
 export const dynamic = 'force-dynamic'
 const ACCOUNT_TITLE_BASE: Record<BaseLocale, string> = {
@@ -70,12 +71,12 @@ function safeReturnPath(next: string | undefined) {
 }
 
 export default async function AccountPage({ searchParams }: { searchParams: Promise<{ login?: string; testAccess?: string; next?: string }> }) {
-  const [session, opportunities, { login, testAccess, next }] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams])
+  const [session, opportunities, { login, testAccess, next }, locale] = await Promise.all([auth.api.getSession({ headers: await headers() }), getOpportunities(), searchParams, getServerLocale()])
   const aside = <DesktopAside opportunities={opportunities} />
   const returnTo = safeReturnPath(next)
 
   if (!session?.user) return <AccountFlow aside={aside} startInLogin={login === '1'} allowTestAccess={isPreviewTestEnvironment()} returnTo={returnTo} />
-  if (returnTo) redirect(returnTo)
+  if (returnTo) redirect(localizedInternalHref(locale, returnTo))
 
   const { user } = session
   if (testAccess === '1' && isPreviewTestEnvironment()) return <OnboardingStep />

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { useState, useTransition } from 'react'
 import { useRouter } from 'next/navigation'
 import { Check, Crown } from 'lucide-react'

@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { usePathname } from 'next/navigation'
 import { FileText, HelpCircle, Mail, ShieldCheck } from 'lucide-react'
 

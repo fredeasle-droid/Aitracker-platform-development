@@ -1,12 +1,15 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowLeft, X } from 'lucide-react'
 import { LoginStep } from '@/app/konto/login-step'
+import { useLocale } from '@/components/locale-provider'
+import { localizedInternalHref } from '@/lib/localized-href'
 
 export default function LoginPage() {
+  const { locale } = useLocale()
   function completeLogin() {
-    window.location.assign('/')
+    window.location.assign(localizedInternalHref(locale, '/'))
   }
 
   return (
@@ -25,7 +28,7 @@ export default function LoginPage() {
             </div>
           ))}
         </div>
-        <LoginStep onBack={() => window.location.assign('/konto')} onNext={completeLogin} />
+        <LoginStep onBack={() => window.location.assign(localizedInternalHref(locale, '/konto'))} onNext={completeLogin} />
       </div>
     </main>
   )

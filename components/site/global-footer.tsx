@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { localePath } from "@/lib/i18n";
 import { getServerLocale, getServerT } from "@/lib/locale-server";
 import { Landmark } from "lucide-react";

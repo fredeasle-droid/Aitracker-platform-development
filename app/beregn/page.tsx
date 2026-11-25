@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { CalcHeroBackdrop, CalcHeroStadium } from '@/components/beregn/calc-hero'
 import { DesignScale } from '@/components/beregn/design-scale'
 import { StakeCalculator } from '@/components/beregn/stake-calculator'

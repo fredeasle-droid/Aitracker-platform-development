@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 import { ArrowRight, BarChart3, Check, ChartPie, ChevronDown, Crown, Disc, Gamepad2, Gift, House, PieChart, Radio, Star, Volleyball } from 'lucide-react'
@@ -96,7 +96,13 @@ export function SidebarBody({
   const desk = variant === 'desktop'
   const pathname = canonicalPathname(usePathname())
   const params = useSearchParams()
-  const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
+  const { t, locale } = useLocale()
+  const requestedSport = params.get('sport')
+  const activeSport = requestedSport
+    ? SPORTS.find(({ key, value }) => requestedSport === t(key) || requestedSport === value)?.key ?? requestedSport
+    : pathname === '/beregn'
+      ? 'football'
+      : null
   const activeBookmaker = params.get('bookmaker')
   const selectedBookmakers = parseBookmakers(activeBookmaker)
   const { data: bookmakerList = [] } = useSWR<{ id: string; name: string }[]>('/api/bookmakers', (url: string) =>
@@ -108,7 +114,6 @@ export function SidebarBody({
   ]
   const [leaguesOpen, setLeaguesOpen] = useState(bookmakersDefaultOpen)
   const { data: session } = authClient.useSession()
-  const { t, locale } = useLocale()
 
   return (
     <div
@@ -167,11 +172,11 @@ export function SidebarBody({
           return (
           <li key={sportKey}>
             <Link
-              href={`/surebets?sport=${encodeURIComponent(value)}`}
-              aria-current={activeSport === value ? 'true' : undefined}
+              href={`/surebets?sport=${encodeURIComponent(t(sportKey))}`}
+              aria-current={activeSport === sportKey ? 'true' : undefined}
               className={cn(
                 desk ? cn(deskRow, 'gap-3 px-3 text-[14.5px]') : row,
-                activeSport === value &&
+                activeSport === sportKey &&
                   (desk ? 'bg-gradient-active font-bold text-foreground ring-1 ring-primary/30' : 'bg-[#0d1f38] text-[#65c1ff]'),
               )}
             >
