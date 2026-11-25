@@ -14,6 +14,7 @@ import { nl as nlMessages } from './messages/nl'
 import { dataMessages } from './data-messages'
 import { homePageMessages } from './home-messages'
 import { canonicalRoute, localizeRoute } from './route-slugs'
+import { formatMoney, localizeMoneyText } from './currency'
 
 import type { BaseLocale, Locale } from './locale-list'
 import { isLaunched, newLocales } from './locale-packs'
@@ -266,22 +267,29 @@ export function makeTranslator(locale: Locale) {
   const extra = locale === 'da' ? null : dataMessages[locale]
   const homeMessages = locale === 'da' ? null : homePageMessages[locale]
 
+  // `copiedAmount` carries the user's own tracked amount, which is not a Danish price to convert.
   function t(key: TranslationKey, vars?: TranslateVars) {
     const template = table[key]
     if (!vars) return template
-    return template.replace(/\{(\w+)\}/g, (match, name: string) => (name in vars ? String(vars[name]) : match))
+    const text = template.replace(/\{(\w+)\}/g, (match, name: string) => (name in vars ? String(vars[name]) : match))
+    return key === 'copiedAmount' ? text : localizeMoneyText(text, locale)
   }
 
   // Translates Danish source strings that come from data (bonus offers, server messages, plan features).
   // Non-string values (numbers, React nodes) pass through unchanged so UI code can wrap any rendered value.
+  // Danish kroner inside the translated copy are shown in the market's own currency.
   function tx(source: string): string
   function tx<T>(source: T): T
   function tx(source: unknown) {
     if (typeof source !== 'string' || !extra) return source
-    return extra[source] ?? homeMessages?.[source] ?? extra[source.trim()] ?? source
+    const translated = extra[source] ?? homeMessages?.[source] ?? extra[source.trim()]
+    return translated === undefined ? source : localizeMoneyText(translated, locale)
   }
 
-  return { locale, t, tx }
+  // Formats an amount written in DKK in the market's own currency.
+  const money = (amountDkk: number) => formatMoney(amountDkk, locale)
+
+  return { locale, t, tx, money }
 }
 
 export type Translator = ReturnType<typeof makeTranslator>

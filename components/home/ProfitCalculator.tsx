@@ -23,7 +23,6 @@ export const calcProfit = (capital: number) => Math.round(calcEndingBank(capital
 export const MIN = 1000;
 export const MAX = 7000;
 const PRESETS = [1000, 2500, 5000, 7000];
-const fmt = (n: number) => Math.round(n).toLocaleString("da-DK");
 
 const CW = 440;
 const CH = 132;
@@ -41,7 +40,7 @@ function chartPoints(capital: number) {
 
 /** Desktop "Profitberegner": slider + presets on the left, live result and growth chart on the right. */
 export function ProfitCalculator() {
-  const { tx } = useLocale();
+  const { tx, money } = useLocale();
   const [cap, setCap] = useState(5000);
   const [ref, inView] = useInView<HTMLElement>(0.3);
   const shown = useTween(cap, 500);
@@ -67,7 +66,7 @@ export function ProfitCalculator() {
         <div className="mt-[22px] flex items-center justify-between">
           <span className="text-[11.5px] font-medium">{tx("Startkapital")}</span>
           <span className="value-pill flex h-[28px] min-w-[90px] items-center justify-center rounded-[9px] px-[10px] font-display text-[13px] font-semibold tabular-nums">
-            {fmt(shown)} {" "}{tx("kr.")}</span>
+            {money(shown)}</span>
         </div>
         <input
           type="range"
@@ -89,7 +88,7 @@ export function ProfitCalculator() {
               onClick={() => setCap(p)}
               className="preset-chip h-[26px] flex-1 rounded-full text-[10.5px] font-semibold tabular-nums"
             >
-              {fmt(p)} {" "}{tx("kr.")}</button>
+              {money(p)}</button>
           ))}
         </div>
       </div>
@@ -99,15 +98,15 @@ export function ProfitCalculator() {
         <div className="absolute left-[20px] top-[18px]">
           <p className="text-[10.5px] text-foreground/70">{tx("Forventet profit ·")}{" "}{tx(CALCULATOR_DAYS)} {" "}{tx("hverdage · maks. indsats 10.000 kr./dag")}</p>
           <p className="mt-[2px] flex items-center gap-[10px]">
-            <span className="font-display text-[34px] font-bold leading-[40px] tracking-[-0.04em] text-success tabular-nums">+{fmt(shownProfit)} {" "}{tx("kr.")}</span>
+            <span className="font-display text-[34px] font-bold leading-[40px] tracking-[-0.04em] text-success tabular-nums">+{money(shownProfit)}</span>
           </p>
         </div>
         <div className="absolute right-[20px] top-[18px] text-right">
           <p className="text-[10.5px] text-foreground/70">{tx("Efter 30 hverdage")}</p>
           <p className="mt-[6px] flex items-center justify-end gap-[6px] font-display text-[16px] font-semibold tabular-nums">
-            <span className="text-foreground/60">{fmt(shown)}</span>
+            <span className="text-foreground/60">{money(shown)}</span>
             <ArrowRight className="h-[13px] w-[13px] text-primary-glow" />
-            <span>{fmt(endingBank)} {" "}{tx("kr.")}</span>
+            <span>{money(endingBank)}</span>
           </p>
         </div>
 

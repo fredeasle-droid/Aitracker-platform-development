@@ -27,7 +27,6 @@ import { ReviewAvatar, ReviewDots, ReviewPhoto, Stars, playExplainerVideo, useRe
 import { MobileFaq } from "../Faq";
 import { ChallengeCalendarDialog } from "../ChallengeCalendarDialog";
 
-const fmt = (n: number) => Math.round(n).toLocaleString("da-DK");
 
 /** Every phone section is one full-width box, so all boxes share the same left and right edges. */
 function Box({ children, className = "", soft = false }: { children: ReactNode; className?: string; soft?: boolean }) {
@@ -191,7 +190,7 @@ function Reviews() {
 }
 
 function Profit() {
-  const { tx } = useLocale();
+  const { tx, money } = useLocale();
   const [cap, setCap] = useState(5000);
   const profit = calcProfit(cap);
   const pct = ((cap - MIN) / (MAX - MIN)) * 100;
@@ -204,7 +203,7 @@ function Profit() {
       <p className="mt-2 text-[13px] leading-5 text-foreground/85">{tx("12,64% af startkapitalen pr. hverdag indtil banken når 10.000 kr.; derefter 1.000 kr. pr. hverdag.")}</p>
       <div className="mt-4 flex items-center justify-between">
         <span className="text-[13px]">{tx("Startkapital")}</span>
-        <span className="value-pill flex h-7 items-center rounded-[8px] px-3 text-[13px] font-semibold">{fmt(cap)} {" "}{tx("kr.")}</span>
+        <span className="value-pill flex h-7 items-center rounded-[8px] px-3 text-[13px] font-semibold">{money(cap)}</span>
       </div>
       <input
         type="range"
@@ -219,9 +218,9 @@ function Profit() {
       />
       <p className="mt-4 text-[13px]">{tx("Forventet profit (30 hverdage · maks. indsats 10.000 kr./dag)")}</p>
       <div className="mt-1">
-        <span className="text-[28px] font-bold leading-9 text-success">+{fmt(profit)} {" "}{tx("kr.")}</span>
+        <span className="text-[28px] font-bold leading-9 text-success">+{money(profit)}</span>
       </div>
-      <p className="mt-1 text-[12px] text-muted-foreground">{fmt(cap)} {" "}{tx("kr. →")}{" "}{fmt(calcEndingBank(cap))} {" "}{tx("kr.")}</p>
+      <p className="mt-1 text-[12px] text-muted-foreground">{money(cap)} → {money(calcEndingBank(cap))}</p>
     </Box>
   );
 }
@@ -502,7 +501,7 @@ function Social() {
 }
 
 function Pricing() {
-  const { tx } = useLocale();
+  const { tx, money } = useLocale();
   const { plans } = useHomeData();
   const [selected, setSelected] = useState(plans[plans.length - 1]?.key ?? "");
   const plan = plans.find((p) => p.key === selected) ?? plans[0];
@@ -537,8 +536,8 @@ function Pricing() {
         </div>
         <p className="mt-4 text-left text-[11px] font-medium uppercase tracking-[1.6px] text-foreground/80">{tx("BetTrackerAI")}{" "}{tx(plan.name)}</p>
         <p className="flex items-end gap-2">
-          <span key={plan.price} className="row-in text-[56px] font-black leading-[58px] tracking-[-2px]">{tx(plan.price)}</span>
-          <span className="mb-1.5 text-[17px] font-bold">{tx("kr./md")}</span>
+          <span key={plan.price} className="row-in text-[56px] font-black leading-[58px] tracking-[-2px]">{money(plan.price)}</span>
+          <span className="mb-1.5 text-[17px] font-bold">{tx("kr./md").replace(/^[^/]*/, "")}</span>
         </p>
         <p className="text-left text-[13px] text-muted-foreground">{tx(plan.detail)}</p>
         <Link href="/konto" className="btn-glow mt-4 flex h-11 w-full items-center justify-center gap-2 rounded-full text-[14px] font-semibold">

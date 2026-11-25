@@ -13,7 +13,7 @@ import { Swoosh } from "./Swoosh";
 const BARS = [18, 30, 26, 44, 52, 66, 84];
 
 export function PricingSection() {
-  const { tx } = useLocale();
+  const { tx, money } = useLocale();
   const { plans } = useHomeData();
   const [selected, setSelected] = useState(plans[plans.length - 1]?.key ?? "");
   const plan = plans.find((p) => p.key === selected) ?? plans[0];
@@ -56,8 +56,8 @@ export function PricingSection() {
 
       <p className="absolute left-[662px] top-[76px] text-[12px] font-medium uppercase tracking-[1.6px] text-foreground/80">{tx("BetTrackerAI")}{" "}{tx(plan.name)}</p>
       <p className="absolute left-[658px] top-[92px] flex items-end gap-[8px]">
-        <span key={plan.price} className="row-in font-display text-[84px] font-extrabold leading-[84px] tracking-[-0.06em]">{tx(plan.price)}</span>
-        <span className="mb-[10px] text-[20px] font-bold">{tx("kr./md")}</span>
+        <span key={plan.price} className="row-in font-display text-[84px] font-extrabold leading-[84px] tracking-[-0.06em]">{money(plan.price)}</span>
+        <span className="mb-[10px] text-[20px] font-bold">{tx("kr./md").replace(/^[^/]*/, "")}</span>
       </p>
       <p className="absolute left-[662px] top-[184px] w-[300px] text-[13px] text-muted-foreground">{tx(plan.detail)}</p>
 
