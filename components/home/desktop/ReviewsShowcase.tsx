@@ -64,7 +64,7 @@ export function ReviewsShowcase() {
             <img
               key={review.name}
               src={review.photo}
-              alt={`${review.name}, BetTrackerAI-kunde`}
+              alt={`${review.name}, ${tx("BetTrackerAI-kunde")}`}
               loading="lazy"
               width={1280}
               height={800}
