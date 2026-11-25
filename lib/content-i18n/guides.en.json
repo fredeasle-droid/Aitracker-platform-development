@@ -1590,102 +1590,6 @@
     "category": "Strategy",
     "ctaLabel": "See your ROI in the accounts"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: the more affordable alternative",
-    "metaTitle": "Surebet Danmark Alternative – BetTrackerAI Compared (2025)",
-    "description": "Compare BetTrackerAI and Surebet Danmark: pricing, features, bookmaker coverage and bet tracking. Find the surebet tool that fits your needs.",
-    "keyword": "surebet tool comparison",
-    "intro": "Surebet Danmark and BetTrackerAI both scan for surebets (also called arbitrage bets) at licensed bookmakers such as bet365, Pinnacle, Unibet, Betfair, William Hill, Betway and bwin. Both offer a 7-day free trial. The key differences lie in pricing and in the tools you get beyond the surebet scanner itself.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "At a glance"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI and Surebet Danmark side by side",
-        "rows": [
-          [
-            "Price per month",
-            "BetTrackerAI from approx. €20 · Surebet Danmark approx. €134"
-          ],
-          [
-            "Free trial",
-            "Both: 7 days"
-          ],
-          [
-            "Bookmakers",
-            "Both: licensed bookmakers only"
-          ],
-          [
-            "Notifications",
-            "BetTrackerAI: push and SMS (Premium) · Surebet Danmark: live notifications"
-          ],
-          [
-            "Bet accounting",
-            "BetTrackerAI: full tracking with ROI and balance per bookmaker · Surebet Danmark: bet tracker"
-          ],
-          [
-            "Free tools and guides",
-            "BetTrackerAI: sure bet calculator and educational guides"
-          ]
-        ],
-        "note": "Prices checked on both sites on 23 November 2025 and may change."
-      },
-      {
-        "type": "h2",
-        "text": "Price: a significant difference"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark costs approx. €134 per month. BetTrackerAI costs approx. €20 per month for Basic (surebets up to 5% profit) and approx. €33 for Premium (all surebets plus SMS alerts). With Premium you save approx. €100 per month – that's approx. €1,200 a year."
-      },
-      {
-        "type": "p",
-        "text": "This matters because surebets typically yield 1–5% per bet. A lower monthly fee means you need far less turnover before the subscription pays for itself."
-      },
-      {
-        "type": "h2",
-        "text": "Bet tracking: where BetTrackerAI stands out"
-      },
-      {
-        "type": "p",
-        "text": "Surebets are only profitable if you know exactly what you've earned. In BetTrackerAI you log your surebets and deposits, and you see your profit, ROI and balance at each bookmaker in one place. You can also import a bet slip instead of entering it manually. Tax on betting winnings depends on your country, so check your local rules and keep good records."
-      },
-      {
-        "type": "h2",
-        "text": "Which tool suits you?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Choose BetTrackerAI if you want surebets at a lower price whilst tracking your accounts in detail.",
-          "Choose Surebet Danmark if you already use their platform and are satisfied with the cost.",
-          "If you're unsure, try both. Both offer 7-day free trials, so you can compare surebets on the same events."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Whichever tool you choose: always place the bet with the most volatile odds first, and confirm that the market is identical at both bookmakers. Only use bookmakers that are licensed where you live."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Is BetTrackerAI cheaper than Surebet Danmark?",
-        "a": "Yes. BetTrackerAI costs approx. €20 or approx. €33 per month, while Surebet Danmark costs approx. €134 per month (as of 23 November 2025)."
-      },
-      {
-        "q": "Do both tools only use licensed bookmakers?",
-        "a": "Yes. Both platforms focus on regulated, licensed bookmakers, which come with player protections. Licensing differs from country to country, so only use bookmakers that are licensed where you live. If gambling stops being fun, use the responsible-gambling and self-exclusion services in your country."
-      },
-      {
-        "q": "Can I try BetTrackerAI for free?",
-        "a": "Yes. You get a 7-day free trial with full access, and you can cancel at any time during the trial period."
-      }
-    ],
-    "category": "Fundamentals",
-    "ctaLabel": "Try BetTrackerAI free for 7 days"
-  },
   "betting-regnskab": {
     "title": "Betting accounts: how to keep track of your bankroll",
     "metaTitle": "Betting Accounts – Track Your Balance Across Bookmakers",
@@ -2389,7 +2293,7 @@
           "**Update frequency:** a few seconds for pre-match, faster for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
           "**Filters:** sport, market, bookmaker and minimum profit.",
           "**Built-in tracking:** surebets placed from the scanner should be tracked automatically.",
-          "**Fair price:** compare monthly cost with your expected turnover. See the [surebet tool comparison](/en/guides/surebet-tool-comparison)."
+          "**Fair price:** compare monthly cost with your expected turnover."
         ]
       },
       {

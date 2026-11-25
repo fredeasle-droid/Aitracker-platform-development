@@ -1590,102 +1590,6 @@
     "category": "Strateji",
     "ctaLabel": "Hesaplarınızda ROI'nizi görün"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: daha uygun fiyatlı alternatif",
-    "metaTitle": "Surebet Danmark Alternatifi – BetTrackerAI Karşılaştırması (2025)",
-    "description": "BetTrackerAI ile Surebet Danmark'ı karşılaştırın: fiyatlandırma, özellikler, bahis şirketi kapsamı ve bahis takibi. İhtiyacınıza uygun aracı bulun.",
-    "keyword": "surebet aracı karşılaştırması",
-    "intro": "Surebet Danmark ve BetTrackerAI, lisanslı bahis şirketlerindeki surebet'leri (arbitraj bahisleri) tarar. İkisi de 7 günlük ücretsiz deneme sunar. Asıl farklar fiyatlandırmada ve surebet tarayıcısının ötesinde sunulan araçlardadır. Türkiye'de iddaa sistemi devlet kontrolündedir ve lisanslı bayiler aynı oranları sunduğu için bu bayiler arasında surebet mümkün değildir; bu yüzden bahis takibi Türkiye'deki okuyucular için özellikle önemlidir.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Bir bakışta"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI ve Surebet Danmark yan yana",
-        "rows": [
-          [
-            "Aylık fiyat",
-            "BetTrackerAI yaklaşık €20'den başlıyor · Surebet Danmark yaklaşık €134"
-          ],
-          [
-            "Ücretsiz deneme",
-            "İkisinde de: 7 gün"
-          ],
-          [
-            "Bahis şirketleri",
-            "İkisinde de: yalnızca lisanslı bahis şirketleri · Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunar"
-          ],
-          [
-            "Bildirimler",
-            "BetTrackerAI: push ve SMS (Premium) · Surebet Danmark: canlı bildirimler"
-          ],
-          [
-            "Bahis muhasebesi",
-            "BetTrackerAI: bahis şirketi başına ROI ve bakiye ile tam takip · Surebet Danmark: bahis takipçisi"
-          ],
-          [
-            "Ücretsiz araçlar ve rehberler",
-            "BetTrackerAI: sure bet hesaplayıcı ve eğitici rehberler"
-          ]
-        ],
-        "note": "Fiyatlar 23 Kasım 2025 tarihinde her iki sitede kontrol edilmiştir ve değişebilir."
-      },
-      {
-        "type": "h2",
-        "text": "Fiyat: önemli bir fark"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark aylık yaklaşık €134'tür. BetTrackerAI ise Basic için (kâr oranı %5'e kadar olan surebet'ler) aylık yaklaşık €20, Premium için (tüm surebet'ler ve SMS uyarıları) yaklaşık €33'tür. Premium ile ayda yaklaşık €100 tasarruf edersiniz – bu da yılda yaklaşık €1.200 eder."
-      },
-      {
-        "type": "p",
-        "text": "Bu önemli, çünkü surebet'ler bahis başına genellikle %1–5 kazandırır. Aylık ücret ne kadar düşükse, abonelik kendini amorti edene kadar o kadar az ciroya ihtiyaç duyarsınız. Türkiye'de ise lisanslı iddaa bayileri aynı oranları sunduğundan bu bayiler arasında surebet fırsatı oluşmaz."
-      },
-      {
-        "type": "h2",
-        "text": "Bahis takibi: BetTrackerAI'ın öne çıktığı alan"
-      },
-      {
-        "type": "p",
-        "text": "Bahislerden ancak tam olarak ne kazandığınızı veya kaybettiğinizi biliyorsanız doğru sonuç çıkarabilirsiniz. BetTrackerAI'da bahislerinizi ve para yatırma işlemlerinizi kaydeder, Nesine, Bilyoner, Misli gibi her bayideki kâr/zararınızı, ROI'nizi ve bakiyenizi tek yerde görürsünüz. Ayrıca bahis kuponunu elle girmek yerine içe aktarabilirsiniz."
-      },
-      {
-        "type": "h2",
-        "text": "Hangi araç size uygun?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Araçlara daha düşük fiyata ulaşmak ve iddaa bahislerinizi ile bayi hesaplarınızı ayrıntılı takip etmek istiyorsanız BetTrackerAI'ı seçin.",
-          "Zaten Surebet Danmark platformunu kullanıyor ve maliyetten memnunsanız Surebet Danmark'ı seçin.",
-          "Emin değilseniz ikisini de deneyin. İkisi de 7 günlük ücretsiz deneme sunduğu için araçları kendi ihtiyacınıza göre karşılaştırabilirsiniz."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Hangi aracı seçerseniz seçin: bahis yapmadan önce oranları ve marketin birebir aynı olduğunu kontrol edin. Türkiye'de yalnızca Spor Toto Teşkilatı (iddaa) lisanslı bayilerini kullanın; yurt dışı siteler yasa dışıdır ve engellenmiştir, bu sitelere yönlendirmiyoruz. Bahis bir bağımlılık haline geliyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
-      }
-    ],
-    "faq": [
-      {
-        "q": "BetTrackerAI, Surebet Danmark'tan daha ucuz mu?",
-        "a": "Evet. BetTrackerAI aylık yaklaşık €20 veya yaklaşık €33'tür; Surebet Danmark ise aylık yaklaşık €134'tür (23 Kasım 2025 itibarıyla)."
-      },
-      {
-        "q": "İki araç da yalnızca lisanslı bahis şirketlerini mi kullanıyor?",
-        "a": "Evet. Her iki platform da düzenlemeye tabi, lisanslı bahis şirketlerine odaklanır. Türkiye'de yasal seçenek, Spor Toto Teşkilatı (iddaa) lisanslı bayileridir (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur). Bu bayiler aynı iddaa oranlarını sunduğundan aralarında surebet oluşmaz. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bunları önermiyoruz."
-      },
-      {
-        "q": "BetTrackerAI'ı ücretsiz deneyebilir miyim?",
-        "a": "Evet. Tam erişimli 7 günlük ücretsiz deneme alırsınız ve deneme süresi boyunca istediğiniz zaman iptal edebilirsiniz."
-      }
-    ],
-    "category": "Temel Bilgiler",
-    "ctaLabel": "BetTrackerAI'ı 7 gün ücretsiz deneyin"
-  },
   "betting-regnskab": {
     "title": "Bahis muhasebesi: bankroll'ünüzü nasıl takip edersiniz",
     "metaTitle": "Bahis Muhasebesi – iddaa Platformları Genelinde Bakiyenizi Takip Edin",
@@ -2389,7 +2293,7 @@
           "**Güncelleme sıklığı:** maç öncesi için birkaç saniye, [canlı surebet'ler](/en/guides/live-arbitrage-betting-scanner) için daha da hızlı.",
           "**Filtreler:** spor, pazar, bahis sitesi ve minimum kâr.",
           "**Dahili takip:** oynadığınız bahisler otomatik olarak takip edilmelidir.",
-          "**Adil fiyat:** aylık maliyeti beklediğiniz bahis hacmiyle karşılaştırın. [Surebet aracı karşılaştırmasına](/en/guides/surebet-tool-comparison) göz atın."
+          ""
         ]
       },
       {

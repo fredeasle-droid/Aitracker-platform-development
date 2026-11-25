@@ -1590,102 +1590,6 @@
     "category": "Strategie",
     "ctaLabel": "Bekijk je ROI in de boekhouding"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: het voordeligere alternatief",
-    "metaTitle": "Alternatief voor Surebet Danmark – BetTrackerAI vergeleken (2025)",
-    "description": "Vergelijk BetTrackerAI en Surebet Danmark: prijs, functies, aanbod aan bookmakers en bet tracking. Ontdek welke surebettool bij jou past.",
-    "keyword": "surebettools vergelijken",
-    "intro": "Surebet Danmark en BetTrackerAI scannen allebei op surebets (ook arbitragebets genoemd) bij bookmakers met een vergunning. Beide bieden een gratis proefperiode van 7 dagen. De belangrijkste verschillen zitten in de prijs en in de tools die je naast de surebetscanner zelf krijgt.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "In een oogopslag"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI en Surebet Danmark naast elkaar",
-        "rows": [
-          [
-            "Prijs per maand",
-            "BetTrackerAI vanaf ca. €20 · Surebet Danmark ca. €134"
-          ],
-          [
-            "Gratis proefperiode",
-            "Beide: 7 dagen"
-          ],
-          [
-            "Bookmakers",
-            "Beide: enkel bookmakers met een vergunning"
-          ],
-          [
-            "Meldingen",
-            "BetTrackerAI: push en sms (Premium) · Surebet Danmark: live meldingen"
-          ],
-          [
-            "Gokboekhouding",
-            "BetTrackerAI: volledige tracking met ROI en saldo per bookmaker · Surebet Danmark: bet tracker"
-          ],
-          [
-            "Gratis tools en gidsen",
-            "BetTrackerAI: surebetcalculator en educatieve gidsen"
-          ]
-        ],
-        "note": "Prijzen gecontroleerd op beide websites op 23 november 2025 en kunnen wijzigen."
-      },
-      {
-        "type": "h2",
-        "text": "Prijs: een aanzienlijk verschil"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark kost ca. €134 per maand. BetTrackerAI kost ca. €20 per maand voor Basic (surebets tot 5% winst) en ca. €33 voor Premium (alle surebets plus sms-meldingen). Met Premium bespaar je ca. €100 per maand, of ca. €1.200 per jaar."
-      },
-      {
-        "type": "p",
-        "text": "Dat is belangrijk, want surebets leveren doorgaans 1–5% per weddenschap op. Met een lagere maandprijs heb je veel minder omzet nodig voordat je abonnement zichzelf terugbetaalt."
-      },
-      {
-        "type": "h2",
-        "text": "Bet tracking: waar BetTrackerAI uitblinkt"
-      },
-      {
-        "type": "p",
-        "text": "Surebets zijn enkel winstgevend als je precies weet wat je verdiend hebt. In BetTrackerAI registreer je je surebets en stortingen, en zie je je winst, ROI en saldo bij elke bookmaker op één plaats. Je kunt ook een wedslip importeren in plaats van alles manueel in te voeren."
-      },
-      {
-        "type": "h2",
-        "text": "Welke tool past bij jou?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Kies BetTrackerAI als je surebets tegen een lagere prijs wilt en tegelijk je rekeningen in detail wilt opvolgen.",
-          "Kies Surebet Danmark als je hun platform al gebruikt en tevreden bent over de kostprijs.",
-          "Twijfel je? Probeer ze allebei. Beide bieden een gratis proefperiode van 7 dagen, zodat je surebets voor dezelfde wedstrijden kunt vergelijken."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Welke tool je ook kiest: plaats altijd eerst de weddenschap met de odds die het meest schommelen, en controleer dat de markt bij beide bookmakers identiek is."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Is BetTrackerAI goedkoper dan Surebet Danmark?",
-        "a": "Ja. BetTrackerAI kost ca. €20 of ca. €33 per maand, terwijl Surebet Danmark ca. €134 per maand kost (op 23 november 2025)."
-      },
-      {
-        "q": "Gebruiken beide tools enkel bookmakers met een vergunning?",
-        "a": "Ja. Beide platformen richten zich op gereguleerde bookmakers met een vergunning, zodat je binnen een wettelijk kader en met spelersbescherming gokt."
-      },
-      {
-        "q": "Kan ik BetTrackerAI gratis uitproberen?",
-        "a": "Ja. Je krijgt een gratis proefperiode van 7 dagen met volledige toegang, en je kunt op elk moment tijdens die periode opzeggen."
-      }
-    ],
-    "category": "Basis",
-    "ctaLabel": "Probeer BetTrackerAI 7 dagen gratis"
-  },
   "betting-regnskab": {
     "title": "Gokboekhouding: zo hou je overzicht over je bankroll",
     "metaTitle": "Gokboekhouding – volg je saldo bij alle bookmakers",
@@ -2389,7 +2293,7 @@
           "**Ververssnelheid:** enkele seconden voor prematch, sneller voor [live surebets](/en/guides/live-arbitrage-betting-scanner).",
           "**Filters:** sport, markt, bookmaker en minimale winst.",
           "**Ingebouwde tracking:** surebets die je vanuit de scanner plaatst, moeten automatisch worden bijgehouden.",
-          "**Faire prijs:** vergelijk de maandelijkse kost met de omzet die je verwacht. Bekijk de [vergelijking van surebettools](/en/guides/surebet-tool-comparison)."
+          "**Faire prijs:** vergelijk de maandelijkse kost met de omzet die je verwacht."
         ]
       },
       {

@@ -22,12 +22,10 @@ const DANISH = /Danmark|Dänemark|Denmark|Dinamarca|Danemark|Danimarca|\bDania\b
 const KR = /\d\s?kr\.?(?!\w)|\bkr\.(?!\w)/i
 
 // The competitor guide compares against a Denmark-only service, so naming its Danish coverage is factual there.
-const COMPETITOR_DANISH = /Danmark|Dänemark|Denmark|Dinamarca|Danemark|Danimarca|\bDania\b|Danii|Tanska|Denemarken|Danimarka|Dánia|Dánsko|Δανία|\bdansk\w*|\bdanska\w*|dänisch\w*|danish|danois\w*|danes[ie]\w*|duńsk\w*|tanskal\w*|deens\w*|dinamarqu\w*|dánsk\w*|δανέζ\w*/gi
 
 function marker(locale, text, id = '') {
   let t = text
   for (const re of KEEP_PHRASES) t = t.replace(re, '')
-  if (id.startsWith('surebet-danmark-alternativ')) t = t.replace(COMPETITOR_DANISH, '')
   if (DANISH.test(t)) return t.match(DANISH)[0]
   if (!['sv', 'no'].includes(locale) && KR.test(t)) return t.match(KR)[0]
   return null

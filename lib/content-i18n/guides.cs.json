@@ -1590,102 +1590,6 @@
     "category": "Strategie",
     "ctaLabel": "Zobrazte si své ROI na účtech"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: výhodnější alternativa",
-    "metaTitle": "Alternativa k Surebet Danmark – srovnání s BetTrackerAI (2025)",
-    "description": "Porovnejte BetTrackerAI a Surebet Danmark: ceny, funkce, nabídku sázkových kanceláří i evidenci sázek. Vyberte si surebet nástroj, který vám sedí.",
-    "keyword": "srovnání surebet nástrojů",
-    "intro": "Surebet Danmark i BetTrackerAI vyhledávají surebety (též arbitrážní sázky) u licencovaných sázkových kanceláří, v Česku například u Tipsportu, Fortuny nebo Chance. Oba nabízejí 7denní zkušební verzi zdarma. Hlavní rozdíly jsou v ceně a v nástrojích, které dostanete navíc k samotnému surebet scanneru.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Stručný přehled"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI a Surebet Danmark vedle sebe",
-        "rows": [
-          [
-            "Cena za měsíc",
-            "BetTrackerAI od cca €20 · Surebet Danmark cca €134"
-          ],
-          [
-            "Zkušební verze zdarma",
-            "Obě: 7 dní"
-          ],
-          [
-            "Sázkové kanceláře",
-            "Obě: pouze licencované sázkové kanceláře (v ČR s licencí Ministerstva financí)"
-          ],
-          [
-            "Upozornění",
-            "BetTrackerAI: push notifikace a SMS (Premium) · Surebet Danmark: živá upozornění"
-          ],
-          [
-            "Evidence sázek",
-            "BetTrackerAI: kompletní evidence s ROI a zůstatkem u každé sázkové kanceláře · Surebet Danmark: tracker sázek"
-          ],
-          [
-            "Bezplatné nástroje a návody",
-            "BetTrackerAI: kalkulačka surebetů a vzdělávací návody"
-          ]
-        ],
-        "note": "Ceny byly ověřeny na obou webech dne 23. listopadu 2025 a mohou se změnit."
-      },
-      {
-        "type": "h2",
-        "text": "Cena: výrazný rozdíl"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark stojí cca €134 měsíčně. BetTrackerAI stojí cca €20 měsíčně za tarif Basic (surebety s profitem do 5 %) a cca €33 za tarif Premium (všechny surebety plus SMS upozornění). S tarifem Premium ušetříte cca €100 měsíčně – to je zhruba €1,200 ročně."
-      },
-      {
-        "type": "p",
-        "text": "Na tom záleží, protože surebety obvykle vynášejí 1–5 % na jednu sázku. Nižší měsíční poplatek znamená, že potřebujete mnohem menší obrat, aby se vám předplatné vrátilo."
-      },
-      {
-        "type": "h2",
-        "text": "Evidence sázek: v čem BetTrackerAI vyniká"
-      },
-      {
-        "type": "p",
-        "text": "Surebety se vyplatí, jen když přesně víte, kolik jste vydělali. V BetTrackerAI zaznamenáváte své surebety i vklady a na jednom místě vidíte zisk, ROI i zůstatek u každé sázkové kanceláře. Sázenku můžete také naimportovat, místo abyste ji zadávali ručně."
-      },
-      {
-        "type": "h2",
-        "text": "Který nástroj se hodí pro vás?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Vyberte si BetTrackerAI, pokud chcete surebety za nižší cenu a zároveň podrobný přehled o svých účtech.",
-          "Vyberte si Surebet Danmark, pokud už jejich platformu používáte a cena vám vyhovuje.",
-          "Pokud si nejste jistí, vyzkoušejte oba. Oba nabízejí 7denní zkušební verzi zdarma, takže můžete porovnat surebety u stejných zápasů."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Ať už zvolíte jakýkoli nástroj: vždy nejdřív vsaďte sázku s nejnestabilnějšími kurzy a ověřte, že je trh u obou sázkových kanceláří totožný."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Je BetTrackerAI levnější než Surebet Danmark?",
-        "a": "Ano. BetTrackerAI stojí cca €20 nebo cca €33 měsíčně, zatímco Surebet Danmark stojí cca €134 měsíčně (stav k 23. listopadu 2025)."
-      },
-      {
-        "q": "Používají oba nástroje jen licencované sázkové kanceláře?",
-        "a": "Ano. Obě platformy se zaměřují na regulované, licencované sázkové kanceláře, takže sázíte legálně a s ochranou hráčů. V Česku jde o provozovatele s licencí Ministerstva financí ČR, například Tipsport, Fortuna, Chance, Betano nebo Sazka bet."
-      },
-      {
-        "q": "Mohu si BetTrackerAI vyzkoušet zdarma?",
-        "a": "Ano. Získáte 7denní zkušební verzi s plným přístupem a během zkušebního období můžete kdykoli zrušit."
-      }
-    ],
-    "category": "Základy",
-    "ctaLabel": "Vyzkoušejte BetTrackerAI na 7 dní zdarma"
-  },
   "betting-regnskab": {
     "title": "Účetnictví sázek: jak mít přehled o svém bankrollu",
     "metaTitle": "Účetnictví sázek – sledujte zůstatek napříč sázkovými kancelářemi",
@@ -2389,7 +2293,7 @@
           "**Frekvence aktualizace:** několik sekund u prematch sázek, u [live surebetů](/en/guides/live-arbitrage-betting-scanner) ještě rychleji.",
           "**Filtry:** sport, trh, sázková kancelář a minimální zisk.",
           "**Vestavěné sledování:** surebety vsazené ze skeneru by se měly evidovat automaticky.",
-          "**Férová cena:** porovnejte měsíční náklady s předpokládaným obratem. Viz [srovnání nástrojů na surebety](/en/guides/surebet-tool-comparison)."
+          "**Férová cena:** porovnejte měsíční náklady s předpokládaným obratem."
         ]
       },
       {

@@ -1590,102 +1590,6 @@
     "category": "Stratégia",
     "ctaLabel": "Nézd meg a ROI-dat a fogadási könyvelésben"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: a kedvezőbb árú alternatíva",
-    "metaTitle": "Surebet Danmark alternatíva – BetTrackerAI összehasonlítás (2025)",
-    "description": "Hasonlítsd össze a BetTrackerAI-t és a Surebet Danmarkot: árak, funkciók, fogadóirodai lefedettség és fogadáskövetés. Találd meg a számodra megfelelő surebet-eszközt.",
-    "keyword": "surebet eszközök összehasonlítása",
-    "intro": "A Surebet Danmark és a BetTrackerAI egyaránt surebeteket (más néven arbitrázsfogadásokat) keres a licenccel rendelkező fogadóirodáknál. Mindkettő 7 napos ingyenes próbaidőszakot kínál. A fő különbség az árban, valamint a surebet-szkenneren túli eszközökben rejlik. Magyarországon fontos tudni: az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt., Tippmix), ezért licenccel rendelkező hazai fogadóirodák között surebetelni nem lehet.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Dióhéjban"
-      },
-      {
-        "type": "example",
-        "title": "A BetTrackerAI és a Surebet Danmark egymás mellett",
-        "rows": [
-          [
-            "Havi ár",
-            "BetTrackerAI: kb. €20-tól · Surebet Danmark: kb. €134"
-          ],
-          [
-            "Ingyenes próbaidőszak",
-            "Mindkettő: 7 nap"
-          ],
-          [
-            "Fogadóirodák",
-            "Mindkettő: kizárólag licenccel rendelkező fogadóirodák · Magyarországon csak a Tippmix (Szerencsejáték Zrt.) engedélyezett, így hazai surebet nem lehetséges"
-          ],
-          [
-            "Értesítések",
-            "BetTrackerAI: push- és SMS-értesítések (Premium) · Surebet Danmark: élő értesítések"
-          ],
-          [
-            "Fogadási könyvelés",
-            "BetTrackerAI: teljes körű követés ROI-val és fogadóirodánkénti egyenleggel · Surebet Danmark: fogadáskövető"
-          ],
-          [
-            "Ingyenes eszközök és útmutatók",
-            "BetTrackerAI: surebet-kalkulátor és oktató jellegű útmutatók"
-          ]
-        ],
-        "note": "Az árakat mindkét oldalon 2025. november 23-án ellenőriztük, és változhatnak."
-      },
-      {
-        "type": "h2",
-        "text": "Ár: jelentős a különbség"
-      },
-      {
-        "type": "p",
-        "text": "A Surebet Danmark havonta kb. €134-ba kerül. A BetTrackerAI Basic csomagja (legfeljebb 5% profitú surebetek) kb. €20 havonta, a Premium (az összes surebet plusz SMS-értesítések) pedig kb. €33. A Premiummal havonta kb. €100-t spórolsz – ez évi kb. €1,200."
-      },
-      {
-        "type": "p",
-        "text": "Ez azért számít, mert a surebetek fogadásonként jellemzően 1–5% hozamot hoznak. Minél alacsonyabb a havi díj, annál kisebb forgalom kell ahhoz, hogy az előfizetés megtérüljön."
-      },
-      {
-        "type": "h2",
-        "text": "Fogadáskövetés: itt tűnik ki a BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "A surebet csak akkor kifizetődő, ha pontosan tudod, mennyit kerestél. A BetTrackerAI-ban rögzítheted a surebeteket és a befizetéseket, a profitodat, a ROI-dat és az egyenleged pedig fogadóirodánként egy helyen látod. A fogadási szelvényt be is importálhatod, így nem kell kézzel felvinned. Magyarországon a követés a Tippmix-fogadásaidnál is hasznos: a Szerencsejáték Zrt.-nél szerzett nyeremények a játékosok számára adómentesek, de a saját eredményedet így is érdemes tudni."
-      },
-      {
-        "type": "h2",
-        "text": "Melyik eszköz illik hozzád?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Válaszd a BetTrackerAI-t, ha alacsonyabb áron szeretnél surebeteket, és közben részletesen követnéd a számláidat.",
-          "Válaszd a Surebet Danmarkot, ha már használod a platformjukat, és elégedett vagy a költségekkel.",
-          "Ha bizonytalan vagy, próbáld ki mindkettőt. Mindkettő 7 napos ingyenes próbaidőszakot kínál, így ugyanazokon az eseményeken összehasonlíthatod a surebeteket."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Bármelyik eszközt választod: mindig azt a fogadást told meg először, amelyiknél a szorzók a leginkább ingadoznak, és ellenőrizd, hogy a piac mindkét fogadóirodánál teljesen azonos. Ne használj engedély nélküli vagy blokkolt oldalakat, és ha a fogadás már nem szórakozás, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a országos addiktológiai segélyvonaltól."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Olcsóbb a BetTrackerAI, mint a Surebet Danmark?",
-        "a": "Igen. A BetTrackerAI havonta kb. €20-ba vagy kb. €33-ba kerül, a Surebet Danmark viszont kb. €134-ba (2025. november 23-i állapot szerint)."
-      },
-      {
-        "q": "Mindkét eszköz kizárólag licenccel rendelkező fogadóirodákat használ?",
-        "a": "Igen, mindkét platform a szabályozott, licenccel rendelkező fogadóirodákra összpontosít. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt., Tippmix), a külföldi oldalak blokkoltak, így licenccel rendelkező hazai fogadóirodák között surebetelni nem lehet. Nem ajánljuk engedély nélküli oldalak használatát. A hatályos szabályokat az SZTFH oldalán ellenőrizd."
-      },
-      {
-        "q": "Kipróbálhatom ingyen a BetTrackerAI-t?",
-        "a": "Igen. 7 napos ingyenes próbaidőszakot kapsz teljes hozzáféréssel, és a próbaidőszak alatt bármikor lemondhatod."
-      }
-    ],
-    "category": "Alapok",
-    "ctaLabel": "Próbáld ki a BetTrackerAI-t 7 napig ingyen"
-  },
   "betting-regnskab": {
     "title": "Fogadási könyvelés: így tartsd szemmel a bankrollodat",
     "metaTitle": "Fogadási könyvelés – kövesd az egyenleged és a profitod",
@@ -2389,7 +2293,7 @@
           "**Frissítési gyakoriság:** mérkőzés előtt néhány másodperc, a [live surebeteknél](/en/guides/live-arbitrage-betting-scanner) ennél is gyorsabb.",
           "**Szűrők:** sportág, piac, fogadóiroda és minimális profit.",
           "**Beépített követés:** a szkennerből megkötött surebeteket automatikusan követni kell.",
-          "**Korrekt ár:** vesd össze a havi költséget a várható forgalmaddal. Lásd a [surebet eszközök összehasonlítását](/en/guides/surebet-tool-comparison)."
+          "**Korrekt ár:** vesd össze a havi költséget a várható forgalmaddal."
         ]
       },
       {

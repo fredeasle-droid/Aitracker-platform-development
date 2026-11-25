@@ -1590,102 +1590,6 @@
     "category": "Strategija",
     "ctaLabel": "Pogledajte svoj ROI na računima"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: povoljnija alternativa",
-    "metaTitle": "Alternativa za Surebet Danmark – usporedba s BetTrackerAI (2025.)",
-    "description": "Usporedite BetTrackerAI i Surebet Danmark: cijene, funkcije, pokrivenost kladionica i praćenje oklada. Pronađite surebet alat koji vam odgovara.",
-    "keyword": "usporedba surebet alata",
-    "intro": "Surebet Danmark i BetTrackerAI skeniraju surebetove (poznate i kao arbitražne oklade) kod licenciranih kladionica. Oba nude besplatno probno razdoblje od 7 dana. Ključne razlike su u cijeni i u alatima koje dobivate uz sam surebet skener.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Ukratko"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI i Surebet Danmark jedan pored drugog",
-        "rows": [
-          [
-            "Cijena po mjesecu",
-            "BetTrackerAI od oko €20 · Surebet Danmark oko €134"
-          ],
-          [
-            "Besplatno probno razdoblje",
-            "Oba: 7 dana"
-          ],
-          [
-            "Kladionice",
-            "Oba: samo licencirane kladionice"
-          ],
-          [
-            "Obavijesti",
-            "BetTrackerAI: push obavijesti i SMS (Premium) · Surebet Danmark: obavijesti uživo"
-          ],
-          [
-            "Evidencija oklada",
-            "BetTrackerAI: potpuno praćenje s ROI-jem i stanjem po kladionici · Surebet Danmark: praćenje oklada"
-          ],
-          [
-            "Besplatni alati i vodiči",
-            "BetTrackerAI: kalkulator sigurnih oklada i edukativni vodiči"
-          ]
-        ],
-        "note": "Cijene su provjerene na obje stranice 23. studenoga 2025. i mogu se promijeniti."
-      },
-      {
-        "type": "h2",
-        "text": "Cijena: značajna razlika"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark košta oko €134 mjesečno. BetTrackerAI košta oko €20 mjesečno za Basic (surebetovi do 5 % profita) i oko €33 za Premium (svi surebetovi plus SMS upozorenja). S Premiumom štedite oko €100 mjesečno – to je oko €1.200 godišnje."
-      },
-      {
-        "type": "p",
-        "text": "To je važno jer surebetovi obično donose 1–5 % po okladi. Niža mjesečna pretplata znači da vam treba znatno manji promet da se pretplata isplati."
-      },
-      {
-        "type": "h2",
-        "text": "Praćenje oklada: po čemu se BetTrackerAI ističe"
-      },
-      {
-        "type": "p",
-        "text": "Surebetovi se isplate samo ako točno znate koliko ste zaradili. U BetTrackerAI bilježite svoje surebetove i uplate, a profit, ROI i stanje kod svake kladionice vidite na jednom mjestu. Listić možete i uvesti umjesto da ga ručno unosite."
-      },
-      {
-        "type": "h2",
-        "text": "Koji alat vam odgovara?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Odaberite BetTrackerAI ako želite surebetove po nižoj cijeni i detaljno praćenje svojih računa.",
-          "Odaberite Surebet Danmark ako već koristite njihovu platformu i zadovoljni ste cijenom.",
-          "Ako niste sigurni, isprobajte oba. Oba nude besplatno probno razdoblje od 7 dana, pa možete usporediti surebetove na istim događajima."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Koji god alat odabrali: uvijek prvo uplatite okladu s najnestabilnijim koeficijentima i provjerite je li tržište kod obje kladionice identično."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Je li BetTrackerAI jeftiniji od Surebet Danmark?",
-        "a": "Da. BetTrackerAI košta oko €20 ili oko €33 mjesečno, dok Surebet Danmark košta oko €134 mjesečno (stanje na dan 23. studenoga 2025.)."
-      },
-      {
-        "q": "Koriste li oba alata samo licencirane kladionice?",
-        "a": "Da. Obje platforme usmjerene su na regulirane, licencirane kladionice, pa se klađenje odvija legalno i uz zaštitu igrača."
-      },
-      {
-        "q": "Mogu li BetTrackerAI isprobati besplatno?",
-        "a": "Da. Dobivate besplatno probno razdoblje od 7 dana s punim pristupom i možete otkazati u bilo kojem trenutku tijekom probnog razdoblja."
-      }
-    ],
-    "category": "Osnove",
-    "ctaLabel": "Isprobajte BetTrackerAI besplatno 7 dana"
-  },
   "betting-regnskab": {
     "title": "Evidencija klađenja: kako pratiti svoj bankroll",
     "metaTitle": "Evidencija klađenja – pratite stanje kod svih kladionica",
@@ -2389,7 +2293,7 @@
           "**Učestalost osvježavanja:** nekoliko sekundi za prematch, a brže za [live surebetove](/en/guides/live-arbitrage-betting-scanner).",
           "**Filtri:** sport, tržište, kladionica i minimalna dobit.",
           "**Ugrađeno praćenje:** surebetovi uplaćeni putem skenera trebali bi se pratiti automatski.",
-          "**Poštena cijena:** usporedite mjesečni trošak s očekivanim prometom. Pogledajte [usporedbu surebet alata](/en/guides/surebet-tool-comparison)."
+          "**Poštena cijena:** usporedite mjesečni trošak s očekivanim prometom."
         ]
       },
       {

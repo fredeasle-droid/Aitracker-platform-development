@@ -1590,102 +1590,6 @@
     "category": "Stratégia",
     "ctaLabel": "Pozrite si svoje ROI v účtoch"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: cenovo výhodnejšia alternatíva",
-    "metaTitle": "Alternatíva k Surebet Danmark – porovnanie s BetTrackerAI (2025)",
-    "description": "Porovnajte BetTrackerAI a Surebet Danmark: ceny, funkcie, pokrytie bookmakerov a evidenciu stávok. Nájdite surebet nástroj, ktorý vám vyhovuje.",
-    "keyword": "porovnanie surebet nástrojov",
-    "intro": "Surebet Danmark aj BetTrackerAI vyhľadávajú surebety (nazývané aj arbitrážne stávky) u licencovaných bookmakerov. Oba nástroje ponúkajú 7-dňovú bezplatnú skúšobnú verziu. Hlavné rozdiely sú v cene a v nástrojoch, ktoré získate popri samotnom surebet skeneri.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Stručný prehľad"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI a Surebet Danmark vedľa seba",
-        "rows": [
-          [
-            "Cena za mesiac",
-            "BetTrackerAI od cca €20 · Surebet Danmark cca €134"
-          ],
-          [
-            "Bezplatná skúšobná verzia",
-            "Oba: 7 dní"
-          ],
-          [
-            "Bookmakeri",
-            "Oba: iba licencovaní bookmakeri"
-          ],
-          [
-            "Upozornenia",
-            "BetTrackerAI: push a SMS (Premium) · Surebet Danmark: živé upozornenia"
-          ],
-          [
-            "Evidencia stávok",
-            "BetTrackerAI: kompletná evidencia s ROI a zostatkom u každého bookmakera · Surebet Danmark: tracker stávok"
-          ],
-          [
-            "Bezplatné nástroje a návody",
-            "BetTrackerAI: kalkulačka surebetov a vzdelávacie návody"
-          ]
-        ],
-        "note": "Ceny boli skontrolované na oboch weboch 23. novembra 2025 a môžu sa zmeniť."
-      },
-      {
-        "type": "h2",
-        "text": "Cena: výrazný rozdiel"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark stojí cca €134 mesačne. BetTrackerAI stojí cca €20 mesačne za balík Basic (surebety so ziskom do 5 %) a cca €33 za balík Premium (všetky surebety plus SMS upozornenia). S balíkom Premium ušetríte cca €100 mesačne – to je cca €1,200 ročne."
-      },
-      {
-        "type": "p",
-        "text": "Na tom záleží, pretože surebety zvyčajne prinášajú 1–5 % na jednu stávku. Nižší mesačný poplatok znamená, že na splatenie predplatného potrebujete výrazne nižší obrat."
-      },
-      {
-        "type": "h2",
-        "text": "Evidencia stávok: v čom vyniká BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "Surebety sa oplatia len vtedy, ak presne viete, koľko ste zarobili. V BetTrackerAI zaznamenávate svoje surebety a vklady a zisk, ROI aj zostatok u každého bookmakera vidíte na jednom mieste. Stávkový tiket môžete aj naimportovať, takže ho nemusíte zadávať ručne."
-      },
-      {
-        "type": "h2",
-        "text": "Ktorý nástroj vám vyhovuje?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Vyberte si BetTrackerAI, ak chcete surebety za nižšiu cenu a zároveň podrobnú evidenciu svojich účtov.",
-          "Vyberte si Surebet Danmark, ak už ich platformu používate a cena vám vyhovuje.",
-          "Ak si nie ste istí, vyskúšajte oba. Oba ponúkajú 7-dňovú bezplatnú skúšobnú verziu, takže si môžete porovnať surebety na rovnakých podujatiach."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Nech si vyberiete ktorýkoľvek nástroj: stávku s najvolatilnejšími kurzami vždy vsaďte ako prvú a skontrolujte, či je trh u oboch bookmakerov rovnaký."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Je BetTrackerAI lacnejší ako Surebet Danmark?",
-        "a": "Áno. BetTrackerAI stojí cca €20 alebo cca €33 mesačne, zatiaľ čo Surebet Danmark stojí cca €134 mesačne (k 23. novembru 2025)."
-      },
-      {
-        "q": "Používajú oba nástroje iba licencovaných bookmakerov?",
-        "a": "Áno. Obe platformy sa zameriavajú na regulovaných, licencovaných bookmakerov, takže stávkujete legálne a s ochranou hráčov."
-      },
-      {
-        "q": "Môžem BetTrackerAI vyskúšať zadarmo?",
-        "a": "Áno. Dostanete 7-dňovú bezplatnú skúšobnú verziu s plným prístupom a počas nej môžete kedykoľvek zrušiť predplatné."
-      }
-    ],
-    "category": "Základy",
-    "ctaLabel": "Vyskúšajte BetTrackerAI zadarmo na 7 dní"
-  },
   "betting-regnskab": {
     "title": "Stávkové účtovníctvo: ako si udržať prehľad o bankrolli",
     "metaTitle": "Stávkové účtovníctvo – sledujte svoj zostatok u všetkých bookmakerov",
@@ -2389,7 +2293,7 @@
           "**Frekvencia aktualizácie:** pri prematch stávkach stačí pár sekúnd, pri [live surebetoch](/en/guides/live-arbitrage-betting-scanner) ešte rýchlejšie.",
           "**Filtre:** šport, trh, stávková kancelária a minimálny zisk.",
           "**Vstavané sledovanie:** surebety uzavreté zo skenera by sa mali evidovať automaticky.",
-          "**Férová cena:** porovnajte mesačné náklady s očakávaným obratom. Pozrite si [porovnanie nástrojov na surebety](/en/guides/surebet-tool-comparison)."
+          "**Férová cena:** porovnajte mesačné náklady s očakávaným obratom."
         ]
       },
       {
