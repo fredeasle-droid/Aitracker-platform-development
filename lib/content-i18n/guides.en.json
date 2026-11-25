@@ -46,7 +46,7 @@
       },
       {
         "q": "How much are typical welcome bonuses worth?",
-        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at €130 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose, such as bet365, Unibet, William Hill or Betway, and confirm that it holds a valid licence in your country."
+        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance with a maximum bonus amount in euros and a limit on the rollover, expressed as a multiple of the bonus. Always check the current terms at the bookmaker you choose, such as bet365, Unibet, William Hill or Betway, and confirm that it holds a valid licence in your country."
       }
     ],
     "category": "Strategy",
@@ -73,7 +73,7 @@
       },
       {
         "type": "p",
-        "text": "Tax treatment of betting winnings varies by country. In many regulated markets, winnings from operators licensed by your national gambling regulator are tax-free for the player. If you use offshore or unlicensed operators, your winnings may be taxable. Check the current tax rules where you live, or consult your local tax authority if you are unsure about your situation."
+        "text": "Tax treatment of betting winnings varies by country. In some countries, winnings from operators licensed by your national gambling regulator are tax-free for the player, while in others they may be taxable. If you use offshore or unlicensed operators, the tax position may be different. Check the current tax rules where you live, or consult your local tax authority if you are unsure about your situation."
       },
       {
         "type": "tip",
@@ -95,7 +95,7 @@
       },
       {
         "q": "Do I have to pay tax on surebet winnings?",
-        "a": "It depends on your country. In many regulated markets, winnings from licensed operators are tax-free for the player. Check the current tax rules where you live."
+        "a": "It depends on your country. Some countries treat winnings from licensed operators as tax-free for the player, while others may tax them. Check the current tax rules where you live."
       }
     ],
     "category": "Rules",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Your stake must be divided so that the payout is the same regardless of who wins. With a total stake of 1,000 units in the example above, you place approximately 494 units on player A and approximately 506 units on player B. Both outcomes return approximately 1,037 units, meaning a profit of roughly 37 units."
+        "text": "Your stake must be divided so that the payout is the same regardless of who wins. With a total stake of €1,000 in the example above, you place approximately €494 on player A and approximately €506 on player B. Both outcomes return approximately €1,037, meaning a profit of roughly €37."
       },
       {
         "type": "tip",
