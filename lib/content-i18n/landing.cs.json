@@ -1,1 +1,428 @@
-{}
+{
+  "sport/basketball": {
+    "title": "Surebety na basketbal",
+    "metaTitle": "Basketbalové surebety – garantovaný zisk na NBA a Euroligu",
+    "description": "Najděte basketbalové surebety na NBA, Euroligu a evropské ligy. Trhy na body a handicapy vytvářejí řadu arbitrážních příležitostí u licencovaných sázkových kanceláří.",
+    "keyword": "basketbalové surebety",
+    "intro": "Basketbal nabízí řadu surebetů na celkový počet bodů a handicapy. NBA má velmi široké sázkové nabídky a sázkové kanceláře upravují své kurzy různě rychle, což vytváří arbitrážní příležitosti.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Oblíbené trhy pro basketbalový arbing"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Vítěz zápasu včetně prodloužení: dva možné výsledky a jednoduchý výpočet.",
+          "Over/under celkový počet bodů, například více nebo méně než 215,5 bodu.",
+          "Bodový handicap, kdy musí favorit vyhrát o stanovený rozdíl.",
+          "Trhy na jednotlivé hráče, například na body, doskoky a asistence."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Middling na celkovém počtu bodů"
+      },
+      {
+        "type": "p",
+        "text": "U trhů na body mohou dvě sázkové kanceláře nabízet různé hranice, například over 214,5 u jedné a under 216,5 u druhé. Pokud zápas skončí přesně na 215 nebo 216 bodech, vyhrajete obě sázky. Tomu se říká ‚middle‘ a v basketbalu jde o další možnost, jak získat zisk."
+      },
+      {
+        "type": "tip",
+        "text": "Ověřte si, zda se počítá prodloužení. V basketbalu to platí téměř vždy, ale ne u všech sázkových kanceláří na každém trhu."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Počítá se u basketbalových surebetů prodloužení?",
+        "a": "U většiny trhů ano, ale vždy si ověřte pravidla konkrétního trhu u každé sázkové kanceláře. Trh bez prodloužení nelze pro účely arbitráže kombinovat s trhem, který prodloužení zahrnuje."
+      },
+      {
+        "q": "V kolik hodin se obvykle hrají zápasy NBA?",
+        "a": "Zápasy NBA se obvykle hrají večer podle severoamerického času. Podle vašeho časového pásma se mnoho surebetů může objevit několik hodin před úvodním výskokem, takže máte čas vsadit obě strany arbitrážní sázky."
+      }
+    ]
+  },
+  "sport/ishockey": {
+    "title": "Surebety na lední hokej",
+    "metaTitle": "Surebety na lední hokej – jistý zisk na NHL i další ligy",
+    "description": "Surebety na lední hokej z NHL, SHL a dalších lig. Zjistěte rozdíl mezi sázkami na základní hrací dobu a na celkového vítěze a objevte příležitosti k jistému zisku.",
+    "keyword": "surebety na lední hokej",
+    "intro": "Lední hokej je pro surebety podceňovaný sport. Mnoho sázkových kanceláří oceňuje severské ligy odlišně a rozdíl mezi sázkami na základní hrací dobu a na vítěze zápasu vytváří další příležitosti pro arbitrážní sázení.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Základní hrací doba, nebo včetně prodloužení?"
+      },
+      {
+        "type": "p",
+        "text": "V ledním hokeji existuje jak trh 1X2 pouze na základní hrací dobu, tak trh na vítěze včetně prodloužení a samostatných nájezdů. Tyto dva trhy se v jedné surebetě nikdy nesmí kombinovat. Než vsadíte, vždy si u každé sázkové kanceláře ověřte, na jaký trh sázíte."
+      },
+      {
+        "type": "h2",
+        "text": "Vhodné ligy pro surebety na lední hokej"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "NHL: mnoho zápasů a vysoké maximální sázky.",
+          "SHL a Liiga: oblíbené v severní Evropě a sázkové kanceláře je oceňují odlišně.",
+          "Domácí ligy: menší soutěže, ve kterých se sázkové kanceláře v kurzech často rozcházejí."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Lední hokej často nabízí vysoký zisk na jednu surebetu, ale nižší maximální sázky než fotbal."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Lze v surebetě na lední hokej kombinovat 1X2 a vítěze včetně prodloužení?",
+        "a": "Ne. Jde o dva různé trhy. Pokud je zkombinujete, můžete při prodloužení prohrát obě sázky. Vždy dbejte na to, aby všechny části vaší arbitrážní sázky byly na stejném typu trhu."
+      },
+      {
+        "q": "Existují surebety i na menší hokejové ligy?",
+        "a": "Ano. Sázkové kanceláře menší domácí ligy často oceňují odlišně, a arbitrážní příležitosti se proto objevují pravidelně. Před sázením si ověřte, že mají sázkové kanceláře povolení působit v České republice."
+      }
+    ]
+  },
+  "sport/fodbold": {
+    "title": "Surebety na fotbal",
+    "metaTitle": "Fotbalové surebety – najděte jistý zisk na zápasech",
+    "description": "Najděte surebety na fotbal v reálném čase. BetTrackerAI prochází kurzy v Premier League, Lize mistrů a stovkách dalších soutěží u licencovaných sázkových kanceláří.",
+    "keyword": "fotbalové surebety",
+    "intro": "Fotbal produkuje více surebet než jakýkoli jiný sport. Zápasy se hrají prakticky nonstop a každé utkání nabízí stovky trhů, které sázkové kanceláře oceňují odlišně.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Proč fotbal přináší tolik surebet"
+      },
+      {
+        "type": "p",
+        "text": "Sázkové kanceláře musí každý týden nacenit tisíce fotbalových zápasů, od Ligy mistrů až po nižší soutěže. Čím menší liga, tím méně času jí kanceláře věnují a tím větší je pravděpodobnost nesrovnalostí v kurzech, ze kterých vznikají arbitrážní příležitosti."
+      },
+      {
+        "type": "h2",
+        "text": "Nejčastěji používané trhy"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1X2: výhra domácích, remíza a výhra hostů. Tři možné výsledky, takže potřebujete tři sázky.",
+          "Počet gólů méně/více, například méně nebo více než 2,5 gólu. Jen dva výsledky a často vysoká likvidita.",
+          "Asijský handicap: dva výsledky a nízká marže, ale pozorně si přečtěte pravidla vyhodnocení pro půlgóly a celé góly.",
+          "Oba týmy skórují: ano, nebo ne. Přímočarý trh se dvěma výsledky."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Vždy zkontrolujte, zda se trh vztahuje pouze na základní hrací dobu. Prodloužení a penalty se u fotbalových surebet započítávají jen výjimečně."
+      },
+      {
+        "type": "h2",
+        "text": "Kdy surebety vznikají?"
+      },
+      {
+        "type": "p",
+        "text": "Mnoho fotbalových surebet vzniká ve chvíli, kdy se zhruba hodinu před výkopem oznámí sestavy. Některé sázkové kanceláře upraví kurzy rychle, jiné reagují pomaleji a v tomto okně se objeví rozdíly v kurzech."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Které fotbalové ligy mají nejvíce surebet?",
+        "a": "Menší ligy často nabízejí vyšší procentuální zisk, ale velké soutěže jako Premier League a Liga mistrů mají více trhů a vyšší maximální sázky."
+      },
+      {
+        "q": "Dají se surebety sázet i na živé fotbalové zápasy?",
+        "a": "Ano, ale live kurzy se mění velmi rychle. Obě sázky je třeba umístit během několika sekund."
+      }
+    ]
+  },
+  "sport/esport": {
+    "title": "Surebety na esport",
+    "metaTitle": "Esportové surebety – arbitrážní sázení na CS2, LoL a Dota 2",
+    "description": "Esport je jedním z nejrychleji rostoucích trhů pro surebety. Najděte příležitosti pro arbitrážní sázení na CS2, League of Legends a Dota 2 u licencovaných sázkových kanceláří.",
+    "keyword": "esportové surebety",
+    "intro": "V esportu se mezi sázkovými kancelářemi objevují velké cenové rozdíly. Trh je poměrně nový, mnoho kanceláří má v oboru méně specialistů a kurzy se před začátkem zápasu často výrazně pohybují.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Proč esport přináší vysoký zisk"
+      },
+      {
+        "type": "p",
+        "text": "Sázkové kanceláře věnují esportu méně zdrojů než fotbalu a zprávy o sestavách týmů se komunitou šíří rychle. Vznikají tak větší rozdíly v kurzech a často i vyšší zisk na jednu surebetu."
+      },
+      {
+        "type": "h2",
+        "text": "Oblíbené hry pro arbitrážní sázení"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Counter-Strike 2: nejvíce zápasů a trhů na handicapy na mapy a kola.",
+          "League of Legends: velké turnaje se stabilními trhy.",
+          "Dota 2: vysoké rozdíly v kurzech, ale nižší maximální sázky."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Dejte si pozor na odložené zápasy. Sázkové kanceláře mají odlišná pravidla, jak dlouho sázka zůstává v platnosti."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Je esport vhodný na surebety?",
+        "a": "Ano, zisk bývá často vyšší než u tradičních sportů. Maximální sázky jsou však obvykle nižší."
+      },
+      {
+        "q": "Které sázkové kanceláře nabízejí esport?",
+        "a": "Většina velkých licencovaných sázkových kanceláří nabízí esport, zejména CS2 a League of Legends. Ověřte si dostupnost a licenci v České republice."
+      }
+    ]
+  },
+  "sport/tennis": {
+    "title": "Surebety na tenis",
+    "metaTitle": "Tenisové surebety – jistý zisk na ATP, WTA a Challengeru",
+    "description": "Tenis je pro surebety ideální: jen dva možné výsledky a zápasy po celý rok. Najděte tenisové arbitrážní příležitosti na turnajích ATP, WTA a Challenger po celém světě.",
+    "keyword": "tenis surebety",
+    "intro": "Tenis je pro mnoho sázkařů, kteří hledají surebety, nejoblíbenějším sportem. Existují jen dva možné výsledky, žádná remíza a turnaje se hrají téměř každý den v roce.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Výhody tenisu"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Jen dva možné výsledky, takže stačí vsadit na dvě sázky.",
+          "Žádná remíza, díky čemuž je výpočet jednoduchý.",
+          "Spousta zápasů na úrovni Challenger a ITF, kde se sázkové kanceláře často rozcházejí v kurzech.",
+          "Zápasy po celých 24 hodin díky turnajům v různých časových pásmech."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Pozor na skrečované zápasy"
+      },
+      {
+        "type": "p",
+        "text": "Největším rizikem v tenise je situace, kdy hráč zápas vzdá. Sázkové kanceláře mají různá pravidla: některé sázku vrátí, jiné ji vypořádají, pokud byl dohrán první set. Pokud se pravidla obou vašich sázkových kanceláří liší, můžete prohrát obě sázky."
+      },
+      {
+        "type": "tip",
+        "text": "Než vsadíte svou první tenisovou surebet, přečtěte si pravidla sázkových kanceláří pro skrečované tenisové zápasy."
+      },
+      {
+        "type": "h2",
+        "text": "Další trhy"
+      },
+      {
+        "type": "p",
+        "text": "Kromě vítěze zápasu existují surebety i na celkový počet gamů, handicapy v setech a vítěze jednotlivých setů. Tyto trhy mají často nižší maximální vsazené částky."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hodí se tenis na surebety?",
+        "a": "Ano. Jen dva možné výsledky a velké množství zápasů dělají z tenisu jeden z nejlepších sportů pro surebety, zejména pro začátečníky."
+      },
+      {
+        "q": "Co se stane, když hráč zápas vzdá?",
+        "a": "Záleží na sázkové kanceláři. Některé vrátí všechny sázky, jiné je vypořádají, pokud se odehrál určitý počet setů. Zkontrolujte si pravidla u obou sázkových kanceláří."
+      }
+    ]
+  },
+  "bookmaker/bet365": {
+    "title": "Surebety u Bet365",
+    "metaTitle": "Bet365 surebety – najděte příležitosti k jistému zisku",
+    "description": "Najděte surebety u Bet365 v reálném čase. BetTrackerAI porovnává kurzy Bet365 s ostatními sázkovými kancelářemi a ukáže vám, kde si zajistit jistý zisk.",
+    "keyword": "bet365 surebety",
+    "intro": "Bet365 je jednou z největších sázkových kanceláří na světě a nabízí jednu z nejširších nabídek sportů a trhů. Díky tomu patří Bet365 mezi sázkové kanceláře, které se v surebetech objevují nejčastěji.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Bet365 je licencovaná sázková kancelář v několika jurisdikcích a nabízí kurzy na obrovské množství zápasů, včetně nižších soutěží a živých trhů. Díky této šíři má Bet365 často kurzy, které se liší od zbytku trhu."
+      },
+      {
+        "type": "h2",
+        "text": "Jak najít surebety s Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Surebet s Bet365 vzniká tehdy, když má Bet365 vyšší kurz na jeden výsledek, než nabízejí ostatní sázkové kanceláře na opačné výsledky. BetTrackerAI kurzy Bet365 neustále sleduje a porovnává je se zbytkem trhu."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Pomocí filtru na stránce se surebety vyberte Bet365 a své další sázkové kanceláře.",
+          "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
+          "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete ji.",
+          "Sázku nejdříve vsaďte u sázkové kanceláře s nejvolatilnějšími kurzy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozdělte své sázky mezi více sázkových kanceláří, abyste nesázeli jen u Bet365. Prodloužíte tak životnost svého účtu."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Je arbitrážní sázení u Bet365 povolené?",
+        "a": "Arbitrážní sázení je legální. Stejně jako každá sázková kancelář však může Bet365 podle svých obchodních podmínek omezit účty, u nichž zjistí sázkové vzorce, které soustavně zajišťují jistý zisk."
+      },
+      {
+        "q": "Provozuje Bet365 svou činnost na základě licence na hazardní hry?",
+        "a": "Ano. Bet365 má licence na několika regulovaných trzích po celém světě. Zjistěte si platná daňová pravidla ve své zemi, protože zdanění výher se v jednotlivých jurisdikcích liší."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Surebety u Unibet",
+    "metaTitle": "Unibet surebety – najděte příležitosti pro arbitrážní sázení",
+    "description": "Najděte surebety u Unibet v reálném čase. BetTrackerAI porovnává kurzy Unibet s ostatními sázkovými kancelářemi, abyste si mohli arbitrážním sázením zajistit jistý zisk.",
+    "keyword": "unibet surebety",
+    "intro": "Unibet patří k nejoblíbenějším sázkovým kancelářím na světě. Unibet využívá platformu kurzů Kambi, takže kurzy u Unibet se často podobají kurzům u dalších sázkových kanceláří provozovaných na Kambi.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Unibet má licence na několika regulovaných trzích a nabízí širokou škálu sportů. Protože Unibet sdílí platformu kurzů s několika dalšími sázkovými kancelářemi, vznikají surebety nejčastěji mezi Unibet a kancelářemi na jiných platformách."
+      },
+      {
+        "type": "h2",
+        "text": "Jak najít surebety s Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Surebet s Unibet vzniká tehdy, když má Unibet vyšší kurz na jeden výsledek, než nabízejí ostatní sázkové kanceláře na opačné výsledky. BetTrackerAI kurzy Unibet nepřetržitě sleduje a porovnává je se zbytkem trhu."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Pomocí filtru na stránce se surebety vyberte Unibet a své další sázkové kanceláře.",
+          "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
+          "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete jednotlivé sázky.",
+          "Sázku nejdříve vsaďte u sázkové kanceláře s nejvolatilnějšími kurzy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozdělte své sázky mezi více sázkových kanceláří, abyste nesázeli jen u Unibet. Prodloužíte tak životnost svého účtu a pomůžete si vyhnout se limitům."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Je legální vsázet surebety u Unibet?",
+        "a": "Ano, arbitrážní sázení je legální. Stejně jako každá sázková kancelář však může Unibet podle svých obchodních podmínek omezit účty, na nichž se sází pouze s jistým ziskem."
+      },
+      {
+        "q": "Které sázkové kanceláře jsou podobné Unibet?",
+        "a": "Unibet používá Kambi, které dodává kurzy i několika dalším sázkovým kancelářím. Kombinujte proto Unibet se sázkovými kancelářemi na jiných platformách, abyste našli více surebetů."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebety u Betano",
+    "metaTitle": "Betano surebety – najděte arbitrážní sázky u Betano",
+    "description": "Najděte surebety u Betana v reálném čase. BetTrackerAI porovnává kurzy Betana s dalšími licencovanými sázkovými kancelářemi a ukáže vám, kde si můžete zajistit garantovaný zisk.",
+    "keyword": "betano surebety",
+    "intro": "Betano patří mezi novější sázkové kanceláře na regulovaném trhu a používá vlastní platformu pro tvorbu kurzů. Kurzy Betana se proto často liší od zbytku trhu, a vznikají tak příležitosti pro arbitrážní sázení.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O Betanu"
+      },
+      {
+        "type": "p",
+        "text": "Betano má licenci v několika jurisdikcích a nabízí širokou škálu sportů. Protože Betano nastavuje kurzy samostatně, často se objevuje v surebetech ve srovnání se zavedenými sázkovými kancelářemi."
+      },
+      {
+        "type": "h2",
+        "text": "Jak najít surebety s Betanem"
+      },
+      {
+        "type": "p",
+        "text": "Surebet s Betanem vzniká tehdy, když Betano nabízí vyšší kurz na jeden výsledek, než jaký nabízejí jiné sázkové kanceláře na protichůdné výsledky. BetTrackerAI kurzy Betana nepřetržitě sleduje a porovnává je se zbytkem trhu."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Pomocí filtru na stránce surebetů vyberte Betano a své další sázkové kanceláře.",
+          "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
+          "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete výsledné sumy.",
+          "Nejprve vsaďte u sázkové kanceláře s nejvíce kolísavými kurzy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozdělte své sázky mezi více sázkových kanceláří, ať nesázíte jen u Betana. Prodloužíte tím životnost svého účtu a snáze se vyhnete omezením."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Smí se u Betana sázet na surebety?",
+        "a": "Ano, arbitrážní sázení je legální. Betano však stejně jako všechny sázkové kanceláře může podle svých obchodních podmínek omezit účty, u kterých zjistí sázkové vzorce, jež soustavně zajišťují garantovaný zisk."
+      },
+      {
+        "q": "Má Betano licenci?",
+        "a": "Ano. Betano má licenci na několika regulovaných trzích. U svého národního regulátora hazardních her si ověřte, zda má Betano licenci i tam, kde žijete."
+      }
+    ]
+  },
+  "bookmaker/leovegas": {
+    "title": "Surebety u LeoVegas",
+    "metaTitle": "Surebety LeoVegas – najděte příležitosti pro arbitrážní sázení",
+    "description": "Najděte surebety u LeoVegas v reálném čase. BetTrackerAI porovnává kurzy LeoVegas s dalšími sázkovými kancelářemi a ukáže vám, kde si můžete zajistit garantovaný zisk.",
+    "keyword": "leovegas surebety",
+    "intro": "LeoVegas je známé hlavně nabídkou kasina, ale nabízí i širokou paletu sportovních sázek. Sázková kancelář využívá platformu Kambi a pravidelně se objevuje v příležitostech pro arbitrážní sázení.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "LeoVegas je licencovaná sázková kancelář s přehlednou aplikací, ve které vsadíte rychle. U surebetů, kde se kurzy mohou změnit během několika sekund, je to důležité. Před založením účtu si ověřte, že LeoVegas má licenci a je dostupné ve vaší zemi."
+      },
+      {
+        "type": "h2",
+        "text": "Jak najít surebety s LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "Surebet s LeoVegas nastává tehdy, když LeoVegas nabízí vyšší kurz na jeden výsledek, než jaký nabízejí jiné sázkové kanceláře na protichůdné výsledky. BetTrackerAI kurzy LeoVegas nepřetržitě sleduje a porovnává je se sázkovými kancelářemi působícími na vašem trhu."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Pomocí filtru na stránce surebetů vyberte LeoVegas a své další sázkové kanceláře.",
+          "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
+          "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete výsledné sumy.",
+          "Nejprve vsaďte u sázkové kanceláře s nejvíce kolísavými kurzy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozdělte své sázky mezi více sázkových kanceláří, ať nesázíte jen u LeoVegas. Prodloužíte tím životnost svého účtu a snížíte riziko jeho omezení."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Dá se u LeoVegas sázet na surebety?",
+        "a": "Ano, arbitrážní sázení je legální. LeoVegas však stejně jako všechny sázkové kanceláře může podle svých obchodních podmínek omezit účty, u kterých zjistí sázkové vzorce, jež soustavně zaručují zisk."
+      },
+      {
+        "q": "Hodí se LeoVegas na surebety?",
+        "a": "LeoVegas je dobrá doplňková sázková kancelář, zejména v kombinaci se sázkovými kancelářemi mimo platformu Kambi, protože tak získáte více příležitostí pro arbitráž."
+      }
+    ]
+  }
+}
