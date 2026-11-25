@@ -46,7 +46,7 @@
       },
       {
         "q": "Akú hodnotu majú typické uvítacie bonusy?",
-        "a": "Výška bonusov a podmienky obratu sa líšia podľa stávkovej kancelárie a jurisdikcie. Na niektorých regulovaných trhoch môžu byť uvítacie ponuky limitované – napríklad na €1,000 alebo €1,000 s maximálnym obratom desaťnásobku bonusu. Vždy si skontrolujte aktuálne podmienky vo vami zvolenej stávkovej kancelárii a overte, či má platnú licenciu na Slovensku."
+        "a": "Výška bonusov a podmienky obratu sa líšia podľa stávkovej kancelárie a jurisdikcie. Na niektorých regulovaných trhoch môžu byť uvítacie ponuky limitované – napríklad na 100 € s maximálnym obratom desaťnásobku bonusu. Vždy si skontrolujte aktuálne podmienky vo vami zvolenej stávkovej kancelárii a overte, či má platnú licenciu ÚRHH na Slovensku."
       }
     ],
     "category": "Stratégia",
@@ -55,9 +55,9 @@
   "er-surebets-lovligt": {
     "title": "Sú surebety legálne? Pravidlá a daňové aspekty",
     "metaTitle": "Sú surebety legálne? Pravidlá, dane a podmienky stávkoviek",
-    "description": "Je legálne uzatvárať surebety a platí sa z výhier daň? Prečítajte si pravidlá a zistite, čo môžu stávkové kancelárie voči arbitrážnemu stávkovaniu podniknúť.",
+    "description": "Je na Slovensku legálne uzatvárať surebety a platí sa z výhier daň? Prečítajte si pravidlá a zistite, čo môžu stávkové kancelárie voči arbitrážnemu stávkovaniu podniknúť.",
     "keyword": "sú surebety legálne",
-    "intro": "Stručná odpoveď je áno. Uzatváranie surebetov je legálne vo väčšine jurisdikcií. Jednoducho robíte bežné stávky u licencovaných stávkových kancelárií a porovnávate kurzy, aby ste našli tú najlepšiu hodnotu – na tomto postupe nie je nič nezákonné.",
+    "intro": "Stručná odpoveď je áno. Uzatváranie surebetov je na Slovensku legálne, ak stávkujete u prevádzkovateľov s licenciou Úradu pre reguláciu hazardných hier (ÚRHH). Jednoducho robíte bežné stávky u licencovaných stávkových kancelárií a porovnávate kurzy, aby ste našli tú najlepšiu hodnotu – na tomto postupe nie je nič nezákonné.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Zdanenie stávkových výhier sa líši podľa krajiny. V mnohých regulovaných trhoch sú výhry od prevádzkovateľov licencovaných národným regulátorom hazardných hier pre hráča oslobodené od dane. Ak využívate offshore alebo nelicencovaných prevádzkovateľov, vaše výhry môžu podliehať zdaneniu. Informujte sa o daňových pravidlách vo svojej krajine, alebo sa v prípade pochybností obráťte na miestny daňový úrad."
+        "text": "Na Slovensku sú výhry od prevádzkovateľov s licenciou ÚRHH pre hráča vo všeobecnosti oslobodené od dane. Stávkovať by ste mali výlučne u licencovaných prevádzkovateľov, keďže nelicencované stránky sú na Slovensku blokované. Pravidlá sa však môžu meniť, preto si aktuálne daňové pravidlá overte na daňovom úrade alebo u daňového poradcu."
       },
       {
         "type": "tip",
-        "text": "Držte sa stávkových kancelárií licencovaných vaším národným regulátorom. Zvyčajne to prináša daňové výhody a ochranu spotrebiteľa zo strany úradu pre hazardné hry."
+        "text": "Držte sa stávkových kancelárií s licenciou ÚRHH, napríklad Niké, Tipsport, Fortuna, Doxxbet, Synot Tip, Tipos alebo Monaco. Zvyčajne to prináša daňové výhody a ochranu spotrebiteľa zo strany regulátora."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Aj pri surebetoch je dôležité mať svoje hranie pod kontrolou. Nastavte si limity vkladov a ak si potrebujete oddýchnuť, využite register samovylúčenia vo svojej krajine. Ak potrebujete podporu, obráťte sa na uznávanú linku pomoci pre hráčov vo vašom regióne."
+        "text": "Aj pri surebetoch je dôležité mať svoje hranie pod kontrolou. Nastavte si limity vkladov a ak si potrebujete oddýchnuť, využite Register vylúčených osôb vedený ÚRHH. Ak potrebujete podporu, obráťte sa na miestnu poradňu alebo linku pomoci pre ľudí so závislosťou od hazardu."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Musím platiť daň z výhier zo surebetov?",
-        "a": "Záleží na vašej krajine. V mnohých regulovaných trhoch sú výhry od licencovaných prevádzkovateľov pre hráča oslobodené od dane. Informujte sa o daňových pravidlách vo svojej krajine."
+        "a": "Na Slovensku sú výhry od prevádzkovateľov s licenciou ÚRHH pre hráča vo všeobecnosti oslobodené od dane. Aktuálne pravidlá si však vždy overte na daňovom úrade alebo u daňového poradcu."
       }
     ],
     "category": "Pravidlá",
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**Porazenie uzatváracieho kurzu:** najsilnejší signál. Ak sú vaše kurzy pravidelne lepšie než konečná cena, dostanete označenie.",
-          "**Nerovné vklady:** €463.27 vyzerá ako z kalkulačky. €460 vyzerá ako od človeka.",
+          "**Nerovné vklady:** 463,27 € vyzerá ako z kalkulačky. 460 € vyzerá ako od človeka.",
           "**Nišové trhy:** rohové kopy v druhej lige malej súťaže púšťajú do očí.",
           "**Iba výbery:** časté výbery bez bonusov či bežných stávok pôsobia profesionálne."
         ]
@@ -142,27 +142,27 @@
       },
       {
         "type": "example",
-        "title": "Príklad: zaokrúhlené vklady, celkový vklad €1,000",
+        "title": "Príklad: zaokrúhlené vklady, celkový vklad 1 000 €",
         "rows": [
           [
-            "Presné rozdelenie pri kurzoch 2.10 / 2.00",
-            "€487.80 / €512.20"
+            "Presné rozdelenie pri kurzoch 2,10 / 2,00",
+            "487,80 € / 512,20 €"
           ],
           [
             "Zaokrúhlené rozdelenie",
-            "€490 / €510"
+            "490 € / 510 €"
           ],
           [
-            "Zisk, ak vyhrá A (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "Zisk, ak vyhrá A (2,10)",
+            "1 029 € − 1 000 € = 29,00 €"
           ],
           [
-            "Zisk, ak vyhrá B (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "Zisk, ak vyhrá B (2,00)",
+            "1 020 € − 1 000 € = 20,00 €"
           ],
           [
             "Presné rozdelenie na porovnanie",
-            "cca €24.39 v oboch prípadoch"
+            "cca 24,39 € v oboch prípadoch"
           ]
         ],
         "note": "Zaokrúhlené vklady vám stále zaistia zisk pri oboch výsledkoch a pre stávkovú kanceláriu pôsobia oveľa prirodzenejšie."
@@ -185,7 +185,7 @@
       },
       {
         "type": "p",
-        "text": "Prečítajte si úplný prehľad [najlepších stávkových kancelárií pre surebety](/en/guides/best-bookmakers-for-surebets). Vždy využívajte stávkové kancelárie s licenciou vo vašej krajine."
+        "text": "Prečítajte si úplný prehľad [najlepších stávkových kancelárií pre surebety](/en/guides/best-bookmakers-for-surebets). Na Slovensku využívajte výlučne stávkové kancelárie s licenciou Úradu pre reguláciu hazardných hier (ÚRHH), napríklad Niké, Tipsport, Fortuna, Doxxbet, Synot Tip, Tipos alebo Monaco."
       },
       {
         "type": "h2",
@@ -247,27 +247,27 @@
       },
       {
         "type": "example",
-        "title": "Príklad: dva výsledky, celkový vklad €1,500",
+        "title": "Príklad: dva výsledky, celkový vklad 1 500 €",
         "rows": [
           [
-            "Kurz A 2.10 a kurz B 2.05",
-            "S = 0.476 + 0.488 = 0.964"
+            "Kurz A 2,10 a kurz B 2,05",
+            "S = 0,476 + 0,488 = 0,964"
           ],
           [
             "Vklad na A",
-            "€740.97"
+            "740,97 €"
           ],
           [
             "Vklad na B",
-            "€759.03"
+            "759,03 €"
           ],
           [
             "Výplata v oboch prípadoch",
-            "cca €1,556.03"
+            "cca 1 556,03 €"
           ],
           [
             "Zisk",
-            "cca €56.03 (3.7%)"
+            "cca 56,03 € (3,7 %)"
           ]
         ]
       },
@@ -281,27 +281,27 @@
       },
       {
         "type": "example",
-        "title": "Príklad: 1X2, celkový vklad €1,000",
+        "title": "Príklad: 1X2, celkový vklad 1 000 €",
         "rows": [
           [
-            "Výhra domácich, kurz 2.50",
-            "Vklad €408.23"
+            "Výhra domácich, kurz 2,50",
+            "Vklad 408,23 €"
           ],
           [
-            "Remíza, kurz 3.50",
-            "Vklad €291.59"
+            "Remíza, kurz 3,50",
+            "Vklad 291,59 €"
           ],
           [
-            "Výhra hostí, kurz 3.40",
-            "Vklad €300.17"
+            "Výhra hostí, kurz 3,40",
+            "Vklad 300,17 €"
           ],
           [
             "Súčet prevrátených hodnôt kurzov",
-            "0.980"
+            "0,980"
           ],
           [
             "Zisk",
-            "cca €20.58 (2.1%)"
+            "cca 20,58 € (2,1 %)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "Vklady ako €740.97 pôsobia na stávkovú kanceláriu podozrivo. Zaokrúhľujte na celé eurá alebo desiatky. Ak zaokrúhlite na €741 a €759, zisk zostane okolo €56 a rozdiel medzi výsledkami bude len pár centov."
+        "text": "Vklady ako 740,97 € pôsobia na stávkovú kanceláriu podozrivo. Zaokrúhľujte na celé eurá alebo desiatky. Ak zaokrúhlite na 741 € a 759 €, zisk zostane okolo 56 € a rozdiel medzi výsledkami bude len pár centov."
       },
       {
         "type": "p",
-        "text": "Vklady môžete zámerne aj vychýliť. Ak na jednom výsledku iba pokryjete vklad, zisk tam bude €0 a na druhom výsledku vyšší. V uvedenom príklade vklad €768.29 na A a €731.71 na B prinesie zisk €113.41, ak vyhrá A, a €0, ak vyhrá B."
+        "text": "Vklady môžete zámerne aj vychýliť. Ak na jednom výsledku iba pokryjete vklad, zisk tam bude 0 € a na druhom výsledku vyšší. V uvedenom príklade vklad 768,29 € na A a 731,71 € na B prinesie zisk 113,41 €, ak vyhrá A, a 0 €, ak vyhrá B."
       },
       {
         "type": "tip",
@@ -446,7 +446,7 @@
       },
       {
         "type": "p",
-        "text": "Value bet je stávka, pri ktorej je kurz vyšší, než by zodpovedalo skutočnej pravdepodobnosti. Ak je zápas naozaj vyrovnaný 50 : 50 a kancelária ponúka kurz 2.20, ide o value bet. Staviate len na jeden výsledok a jednotlivé stávky môžete prehrať, ale z dlhodobého hľadiska vám výhoda prináša zisk."
+        "text": "Value bet je stávka, pri ktorej je kurz vyšší, než by zodpovedalo skutočnej pravdepodobnosti. Ak je zápas naozaj vyrovnaný 50 : 50 a kancelária ponúka kurz 2,20, ide o value bet. Staviate len na jeden výsledok a jednotlivé stávky môžete prehrať, ale z dlhodobého hľadiska vám výhoda prináša zisk."
       },
       {
         "type": "h2",
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Licencia od národného regulátora hazardných hier vo vašej krajine, vďaka ktorej ste chránení a môžete si overiť daňové zaobchádzanie s výhrami.",
+          "Licencia od Úradu pre reguláciu hazardných hier (ÚRHH), vďaka ktorej ste chránení. Aktuálne daňové zaobchádzanie s výhrami si vždy overte.",
           "Rýchle vklady a výbery, aby ste mohli presúvať peniaze tam, kde ich práve treba.",
           "Široká ponuka športov a trhov, najmä tenisu, futbalu a basketbalu.",
           "Konkurencieschopné kurzy a nízka marža stávkovej kancelárie na populárnych trhoch.",
@@ -565,18 +565,18 @@
       },
       {
         "q": "Môžem na arbitrážne stávkovanie používať aj kancelárie bez licencie?",
-        "a": "Neodporúča sa to. Stávkové kancelárie bez licencie vo vašej jurisdikcii môžu byť blokované a výhry od nich môžu podliehať inému daňovému zaobchádzaniu alebo nemusia mať regulačnú ochranu. Vždy si overte pravidlá platné tam, kde žijete."
+        "a": "Neodporúča sa to. Na Slovensku môžu stávky ponúkať len prevádzkovatelia s licenciou ÚRHH, stránky bez licencie sú blokované a nemáte na nich regulačnú ochranu. Výhry od licencovaných prevádzkovateľov sú pre hráčov vo všeobecnosti oslobodené od dane, aktuálne pravidlá si však vždy overte."
       }
     ],
     "category": "Stratégia",
     "ctaLabel": "Pozrite si surebety vo svojich stávkových kanceláriách"
   },
   "skat-paa-spillegevinster": {
-    "title": "Daň z výhier z hazardných hier – medzinárodný sprievodca stávkovaním",
-    "metaTitle": "Daň z výhier z hazardných hier – čo potrebujete vedieť",
-    "description": "Musíte platiť daň z výhier zo stávok a surebetov? Zistite, ako fungujú daňové pravidlá pri licencovaných a offshore stávkových kanceláriách a čo si dokumentovať.",
+    "title": "Daň z výhier z hazardných hier na Slovensku – sprievodca stávkovaním",
+    "metaTitle": "Daň z výhier z hazardných hier na Slovensku – čo potrebujete vedieť",
+    "description": "Musíte na Slovensku platiť daň z výhier zo stávok a surebetov? Zistite, ako fungujú pravidlá pri stávkových kanceláriách s licenciou ÚRHH a čo si dokumentovať.",
     "keyword": "daň z výhier z hazardných hier",
-    "intro": "Na mnohých regulovaných trhoch je odpoveď jednoznačná: výhry od licencovaných stávkových kancelárií sú pre hráča oslobodené od dane. Odvody štátu platí stávková kancelária, nie vy. Pravidlá však závisia od toho, kde žijete a kde stávkujete.",
+    "intro": "Na Slovensku sú výhry od stávkových kancelárií s licenciou Úradu pre reguláciu hazardných hier (ÚRHH) pre hráča vo všeobecnosti oslobodené od dane. Odvody štátu platí stávková kancelária, nie vy. Aktuálne pravidlá si však vždy overte.",
     "blocks": [
       {
         "type": "h2",
@@ -584,15 +584,15 @@
       },
       {
         "type": "p",
-        "text": "Keď stávkujete u prevádzkovateľa s licenciou od národného regulátora hazardných hier, daň z hazardných hier z vlastných príjmov zvyčajne odvádza prevádzkovateľ. Vaše výhry preto bývajú spravidla oslobodené od dane a vo väčšine prípadov ich nemusíte hlásiť daňovému úradu. Vždy si overte pravidlá platné tam, kde žijete."
+        "text": "Keď stávkujete u prevádzkovateľa s licenciou ÚRHH, napríklad Niké, Tipsport, Fortuna, Doxxbet, Synot Tip, Tipos alebo Monaco, daň z hazardných hier z vlastných príjmov zvyčajne odvádza prevádzkovateľ. Vaše výhry preto bývajú spravidla oslobodené od dane a vo väčšine prípadov ich nemusíte hlásiť daňovému úradu. Vždy si overte aktuálne platné pravidlá."
       },
       {
         "type": "h2",
-        "text": "Offshore stávkové kancelárie bez miestnej licencie"
+        "text": "Stávkové kancelárie bez licencie ÚRHH"
       },
       {
         "type": "p",
-        "text": "Ak stávkujete u prevádzkovateľov, ktorí nemajú licenciu vo vašej jurisdikcii, výhry môžu podliehať dani. Pravidlá závisia od faktorov, ako je to, či prevádzkovateľ drží licenciu v inej krajine, a od vášho daňového domicilu. Aj preto je často jednoduchšie držať sa regulovaných stávkových kancelárií."
+        "text": "Na Slovensku môžu stávky ponúkať iba prevádzkovatelia s licenciou ÚRHH a weby bez licencie sú blokované. Na takých stránkach preto stávkovať neodporúčame: nemáte tam ochranu hráča a daňové zaobchádzanie s výhrami môže byť nejasné. Najjednoduchšie a najbezpečnejšie je držať sa licencovaných stávkových kancelárií."
       },
       {
         "type": "h2",
@@ -604,7 +604,7 @@
       },
       {
         "type": "tip",
-        "text": "Vedzte si záznam o svojich stávkach. Ak sa vás banka bude pýtať na pôvod peňazí, jednoducho ho preukážete."
+        "text": "Veďte si záznam o svojich stávkach. Ak sa vás banka spýta na pôvod peňazí, jednoducho ho preukážete."
       },
       {
         "type": "h2",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Ak je stávkovanie vaším hlavným zamestnaním vo významnom rozsahu, v niektorých jurisdikciách sa môžu uplatňovať iné pravidlá. Ak si nie ste istý svojou situáciou, obráťte sa na miestny daňový úrad alebo kvalifikovaného účtovníka."
+        "text": "Ak je stávkovanie vaším hlavným zamestnaním vo významnom rozsahu, môžu sa uplatňovať iné pravidlá. Ak si nie ste istý svojou situáciou, obráťte sa na daňový úrad alebo kvalifikovaného účtovníka a overte si aktuálne platné pravidlá."
       }
     ],
     "faq": [
       {
         "q": "Musím platiť daň z výhier u licencovaných stávkových kancelárií?",
-        "a": "Na väčšine regulovaných trhov nie. Výhry od miestne licencovaných prevádzkovateľov sú pre hráča zvyčajne oslobodené od dane. Pozrite sa na daňové pravidlá v krajine, kde žijete."
+        "a": "Vo všeobecnosti nie. Výhry od prevádzkovateľov s licenciou ÚRHH sú pre hráča zvyčajne oslobodené od dane. Aktuálne daňové pravidlá si však overte."
       },
       {
-        "q": "Ako zistím, či má stávková kancelária licenciu v mojej krajine?",
-        "a": "Národný regulátor hazardných hier má na svojom webe zoznam schválených prevádzkovateľov a licencované stávkové kancelárie zvyčajne zobrazujú logo regulátora priamo na svojej stránke."
+        "q": "Ako zistím, či má stávková kancelária licenciu ÚRHH?",
+        "a": "ÚRHH zverejňuje na svojom webe zoznam držiteľov licencie a licencované stávkové kancelárie zvyčajne uvádzajú údaje o licencii priamo na svojej stránke."
       }
     ],
     "category": "Pravidlá",
@@ -631,7 +631,7 @@
   "bankroll-management": {
     "title": "Bankroll management: príručka pre športové stávkovanie a arbitráž",
     "metaTitle": "Bankroll management v stávkovaní: príručka 2026",
-    "description": "Bankroll management pri športovom stávkovaní: ako určiť výšku stávok, rozdeliť peniaze medzi stávkové kancelárie a vypočítať ROI, s praktickými príkladmi v €.",
+    "description": "Bankroll management pri športovom stávkovaní: ako určiť výšku stávok, rozdeliť peniaze medzi stávkové kancelárie a vypočítať ROI, s praktickými príkladmi v eurách.",
     "keyword": "bankroll management príručka pre športové stávkovanie",
     "intro": "Dobrý bankroll management znamená vopred sa rozhodnúť, koľko peňazí vyčleníte na stávkovanie, koľko vsadíte na jednu stávku a ako peniaze rozdelíte medzi stávkové kancelárie. Pri value betoch vsádzajte 1–2 % bankrollu na stávku. Pri surebetoch je limitom likvidita: vaše peniaze musia byť u správnych stávkových kancelárií v okamihu, keď sa surebet objaví. Všetko si evidujte, aby ste mohli merať ROI.",
     "blocks": [
@@ -658,46 +658,46 @@
       },
       {
         "type": "example",
-        "title": "Príklad: fixná stávka pri value betoch, bankroll €2,000",
+        "title": "Príklad: fixná stávka pri value betoch, bankroll 2 000 €",
         "rows": [
           [
-            "Stávka na jednu sázku (1.5%)",
-            "€30"
+            "Stávka na jednu stávku (1,5 %)",
+            "30 €"
           ],
           [
             "10 prehratých stávok v rade",
-            "−€300 (15 % bankrollu)"
+            "−300 € (15 % bankrollu)"
           ],
           [
             "Zostávajúci bankroll",
-            "€1,700"
+            "1 700 €"
           ],
           [
-            "Nová stávka po kontrole (1.5%)",
-            "€25.50"
+            "Nová stávka po kontrole (1,5 %)",
+            "25,50 €"
           ]
         ],
         "note": "Stávka vo výške 1–2 % vás udrží v hre aj cez série prehier, ktorými si prejde každý value bettor."
       },
       {
         "type": "example",
-        "title": "Príklad: rozdelenie bankrollu na surebety medzi stávkové kancelárie, €3,000",
+        "title": "Príklad: rozdelenie bankrollu na surebety medzi stávkové kancelárie, 3 000 €",
         "rows": [
           [
-            "6 stávkových kancelárií × €500",
-            "€3,000"
+            "6 stávkových kancelárií × 500 €",
+            "3 000 €"
           ],
           [
             "Typický celkový vklad na surebet",
-            "€400"
+            "400 €"
           ],
           [
-            "60 surebetov mesačne s priemerom 2%",
-            "€400 × 60 × 2% = €480"
+            "60 surebetov mesačne s priemerom 2 %",
+            "400 € × 60 × 2 % = 480 €"
           ],
           [
             "Mesačný výnos z bankrollu",
-            "€480 / €3,000 = 16%"
+            "480 € / 3 000 € = 16 %"
           ]
         ],
         "note": "Zisk z jedného surebetu je malý, ale bankroll sa za mesiac obráti mnohokrát. Výsledky závisia od limitov a dostupných surebetov."
@@ -708,7 +708,7 @@
       },
       {
         "type": "p",
-        "text": "ROI je čistý zisk vydelený celkovým obratom. Ukazuje, koľko zarobíte na každom vsadenom €, a je najlepším spôsobom, ako porovnať stratégie, športy aj stávkové kancelárie."
+        "text": "ROI je čistý zisk vydelený celkovým obratom. Ukazuje, koľko zarobíte na každom vsadenom eure, a je najlepším spôsobom, ako porovnať stratégie, športy aj stávkové kancelárie."
       },
       {
         "type": "example",
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Celkovo vsadené",
-            "€18,500"
+            "18 500 €"
           ],
           [
             "Celkovo vyplatené",
-            "€18,870"
+            "18 870 €"
           ],
           [
             "Čistý zisk",
-            "€370"
+            "370 €"
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "370 € / 18 500 € = 2,0 %"
           ]
         ]
       },
@@ -760,7 +760,7 @@
     "faq": [
       {
         "q": "Aký veľký by mal byť môj bankroll na surebety?",
-        "a": "Mnohí začínajú s €1,000–€3,000 rozloženými medzi 4–6 stávkových kancelárií. Dá sa aj s menšou sumou, ale zisk z jedného surebetu je potom veľmi malý."
+        "a": "Mnohí začínajú s 1 000 – 3 000 € rozloženými medzi 4–6 stávkových kancelárií. Dá sa aj s menšou sumou, ale zisk z jedného surebetu je potom veľmi malý."
       },
       {
         "q": "Koľko percent bankrollu mám vsádzať pri value betoch?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Ako vypočítam ROI svojich stávok?",
-        "a": "Vydeľte čistý zisk celkovou sumou vsadených stávok. Zisk €370 pri vsadených €18,500 dáva ROI 2.0%."
+        "a": "Vydeľte čistý zisk celkovou sumou vsadených stávok. Zisk 370 € pri vsadených 18 500 € dáva ROI 2,0 %."
       }
     ],
     "category": "Stratégia",
@@ -787,38 +787,38 @@
       },
       {
         "type": "p",
-        "text": "Každá stávková kancelária si nastavuje vlastné kurzy a zabudováva do nich maržu 4–7%. Na zranenia, zostavy či veľké stávky však reaguje rôzne rýchlo. Ak jedna kancelária pomaly znižuje kurz, zatiaľ čo iná už zvýšila kurz na opačný výsledok, spolu tieto dva kurzy zanechajú prebytok. To je surebet. Ste v tejto téme noví? Začnite článkom [čo sú surebety](/en/guides/what-are-surebets)."
+        "text": "Každá stávková kancelária si nastavuje vlastné kurzy a zabudováva do nich maržu 4–7 %. Na zranenia, zostavy či veľké stávky však reaguje rôzne rýchlo. Ak jedna kancelária pomaly znižuje kurz, zatiaľ čo iná už zvýšila kurz na opačný výsledok, spolu tieto dva kurzy zanechajú prebytok. To je surebet. Ste v tejto téme noví? Začnite článkom [čo sú surebety](/en/guides/what-are-surebets)."
       },
       {
         "type": "p",
-        "text": "Test je jednoduchý: pre každý výsledok vypočítajte 1 ÷ kurz a hodnoty sčítajte. Ak je súčet menší ako 1.00, máte arbitráž. Čím nižší súčet, tým vyšší zisk."
+        "text": "Test je jednoduchý: pre každý výsledok vypočítajte 1 ÷ kurz a hodnoty sčítajte. Ak je súčet menší ako 1,00, máte arbitráž. Čím nižší súčet, tým vyšší zisk."
       },
       {
         "type": "example",
-        "title": "Príklad: tenisový zápas s dvoma výsledkami, celkový vklad €1,000",
+        "title": "Príklad: tenisový zápas s dvoma výsledkami, celkový vklad 1 000 €",
         "rows": [
           [
-            "Hráč A v stávkovej kancelárii 1, kurz 2.08",
-            "Vklad €492.68"
+            "Hráč A v stávkovej kancelárii 1, kurz 2,08",
+            "Vklad 492,68 €"
           ],
           [
-            "Hráč B v stávkovej kancelárii 2, kurz 2.02",
-            "Vklad €507.32"
+            "Hráč B v stávkovej kancelárii 2, kurz 2,02",
+            "Vklad 507,32 €"
           ],
           [
-            "1/2.08 + 1/2.02",
-            "0.481 + 0.495 = 0.976"
+            "1/2,08 + 1/2,02",
+            "0,481 + 0,495 = 0,976"
           ],
           [
             "Výplata bez ohľadu na víťaza",
-            "približne €1,024.78"
+            "približne 1 024,78 €"
           ],
           [
             "Zaručený zisk",
-            "približne €24.78 (2.5%)"
+            "približne 24,78 € (2,5 %)"
           ]
         ],
-        "note": "Súčet je menší ako 1, takže zarobíte približne €24.78 bez ohľadu na to, kto zápas vyhrá."
+        "note": "Súčet je menší ako 1, takže zarobíte približne 24,78 € bez ohľadu na to, kto zápas vyhrá."
       },
       {
         "type": "h2",
@@ -830,31 +830,31 @@
       },
       {
         "type": "example",
-        "title": "Príklad: zápas Premier League, celkový vklad €2,000",
+        "title": "Príklad: zápas Premier League, celkový vklad 2 000 €",
         "rows": [
           [
-            "Výhra domácich, kurz 2.15",
-            "Vklad €942.69"
+            "Výhra domácich, kurz 2,15",
+            "Vklad 942,69 €"
           ],
           [
-            "Remíza, kurz 3.60",
-            "Vklad €562.99"
+            "Remíza, kurz 3,60",
+            "Vklad 562,99 €"
           ],
           [
-            "Výhra hostí, kurz 4.10",
-            "Vklad €494.33"
+            "Výhra hostí, kurz 4,10",
+            "Vklad 494,33 €"
           ],
           [
             "Súčet prevrátených hodnôt kurzov",
-            "0.987"
+            "0,987"
           ],
           [
             "Výplata pri každom výsledku",
-            "približne €2,026.75"
+            "približne 2 026,75 €"
           ],
           [
             "Zaručený zisk",
-            "približne €26.75 (1.3%)"
+            "približne 26,75 € (1,3 %)"
           ]
         ]
       },
@@ -864,7 +864,7 @@
       },
       {
         "type": "p",
-        "text": "Teoreticky môžete porovnávať kurzy v desiatkach kariet prehliadača, ale surebety často trvajú len pár minút. Kým dopočítate, kurz sa už väčšinou pohne. Pretoväčšina stávkarov používa skener kurzov, ktorý stávkové kancelárie porovnáva nepretržite. Prečítajte si viac o tom, ako [nájsť surebety automaticky](/en/guides/find-surebets-automatically)."
+        "text": "Teoreticky môžete porovnávať kurzy v desiatkach kariet prehliadača, ale surebety často trvajú len pár minút. Kým dopočítate, kurz sa už väčšinou pohne. Preto väčšina stávkarov používa skener kurzov, ktorý stávkové kancelárie porovnáva nepretržite. Prečítajte si viac o tom, ako [nájsť surebety automaticky](/en/guides/find-surebets-automatically)."
       },
       {
         "type": "ul",
@@ -881,8 +881,8 @@
       {
         "type": "ul",
         "items": [
-          "**1. Založte si účty** aspoň v dvoch licencovaných stávkových kanceláriách, ideálne vo viacerých, a vopred si na ne vložte peniaze.",
-          "**2. Nájdite surebet,** pri ktorom je súčet prevrátených hodnôt kurzov menší ako 1.00.",
+          "**1. Založte si účty** aspoň v dvoch stávkových kanceláriách s licenciou ÚRHH (napr. Niké, Tipsport alebo Fortuna), ideálne vo viacerých, a vopred si na ne vložte peniaze.",
+          "**2. Nájdite surebet,** pri ktorom je súčet prevrátených hodnôt kurzov menší ako 1,00.",
           "**3. Vypočítajte vklady** tak, aby bola výplata pri každom výsledku rovnaká.",
           "**4. Uzavrite obe stávky rýchlo** a začnite kurzom, ktorý sa najpravdepodobnejšie pohne.",
           "**5. Skontrolujte stávkové lístky:** trh, hranica aj kurz sa musia presne zhodovať s vaším výpočtom."
@@ -900,11 +900,11 @@
     "faq": [
       {
         "q": "Je arbitrážne stávkovanie legálne?",
-        "a": "Áno, stávkovanie na všetky výsledky udalosti nie je vo väčšine krajín nezákonné. Stávkové kancelárie však môžu váš účet obmedziť. Pozrite si [sú surebety legálne?](/en/guides/are-surebets-legal)"
+        "a": "Stávkovanie na všetky výsledky udalosti nie je samo osebe zakázané, na Slovensku však môžete stávkovať len u prevádzkovateľov s licenciou ÚRHH, pretože nelicencované stránky sú blokované. Stávkové kancelárie môžu váš účet obmedziť. Aktuálne pravidlá si vždy overte. Pozrite si [sú surebety legálne?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Koľko sa dá na surebetoch zarobiť?",
-        "a": "Typický surebet prinesie 1–3% z celkového vkladu. Pri vklade €1,000 na jeden surebet, 40 surebetoch mesačne a priemere 1.5% je to zhruba €600 mesačne."
+        "a": "Typický surebet prinesie 1–3 % z celkového vkladu. Pri vklade 1 000 € na jeden surebet, 40 surebetoch mesačne a priemere 1,5 % je to zhruba 600 € mesačne. Výhry od licencovaných prevádzkovateľov sú pre hráčov vo všeobecnosti nezdanené, aktuálne pravidlá si však skontrolujte."
       },
       {
         "q": "Koľko stávkových kancelárií potrebujem?",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Vklad treba rozdeliť tak, aby bola výplata rovnaká bez ohľadu na to, kto vyhrá. Pri celkovom vklade 1,000 jednotiek v uvedenom príklade vsadíte približne 494 jednotiek na hráča A a približne 506 jednotiek na hráča B. Oba výsledky vrátia približne 1,037 jednotiek, čo znamená zisk zhruba 37 jednotiek."
+        "text": "Vklad treba rozdeliť tak, aby bola výplata rovnaká bez ohľadu na to, kto vyhrá. Pri celkovom vklade 1 000 € v uvedenom príklade vsadíte približne 494 € na hráča A a približne 506 € na hráča B. Oba výsledky vrátia približne 1 037 €, čo znamená zisk zhruba 37 €."
       },
       {
         "type": "tip",
@@ -1036,31 +1036,31 @@
       },
       {
         "type": "example",
-        "title": "Príklad: traja hráči v turnaji, celkový vklad €1,000",
+        "title": "Príklad: traja hráči v turnaji, celkový vklad 1 000 €",
         "rows": [
           [
-            "Hráč A, kurz 3.00",
-            "vklad približne €444"
+            "Hráč A, kurz 3,00",
+            "vklad približne 444 €"
           ],
           [
-            "Hráč B, kurz 4.00",
-            "vklad približne €333"
+            "Hráč B, kurz 4,00",
+            "vklad približne 333 €"
           ],
           [
-            "Hráč C, kurz 6.00",
-            "vklad približne €222"
+            "Hráč C, kurz 6,00",
+            "vklad približne 222 €"
           ],
           [
-            "S = 0.333 + 0.250 + 0.167",
-            "0.750"
+            "S = 0,333 + 0,250 + 0,167",
+            "0,750"
           ],
           [
             "Ak vyhrá jeden z troch",
-            "výplata približne €1,333, zisk približne €333"
+            "výplata približne 1 333 €, zisk približne 333 €"
           ],
           [
             "Ak nevyhrá ani jeden z troch",
-            "strata €1,000"
+            "strata 1 000 €"
           ]
         ],
         "note": "Zisk získate, len ak vyhrá jeden z vašich troch hráčov. Aká je to pravdepodobnosť, musíte posúdiť sami."
@@ -1116,27 +1116,27 @@
       },
       {
         "type": "example",
-        "title": "Príklad: kurzy 1.95 a 2.20, celkový vklad €1,000",
+        "title": "Príklad: kurzy 1,95 a 2,20, celkový vklad 1 000 €",
         "rows": [
           [
-            "Hráč A v stávkovej kancelárii 1, kurz 1.95",
-            "vklad cca €530"
+            "Hráč A v stávkovej kancelárii 1, kurz 1,95",
+            "vklad cca 530 €"
           ],
           [
-            "Hráč B v stávkovej kancelárii 2, kurz 2.20",
-            "vklad cca €470"
+            "Hráč B v stávkovej kancelárii 2, kurz 2,20",
+            "vklad cca 470 €"
           ],
           [
-            "1/1.95 + 1/2.20",
-            "0.513 + 0.455 = 0.967"
+            "1/1,95 + 1/2,20",
+            "0,513 + 0,455 = 0,967"
           ],
           [
             "Výplata bez ohľadu na víťaza",
-            "cca €1,034"
+            "cca 1 034 €"
           ],
           [
             "Zisk",
-            "cca €34 (3.4%)"
+            "cca 34 € (3,4 %)"
           ]
         ],
         "note": "Súčet je menší ako 1, takže kombinácia je surebet."
@@ -1189,31 +1189,31 @@
       },
       {
         "type": "example",
-        "title": "Príklad: tri stávkové kancelárie, celkový vklad €1,000",
+        "title": "Príklad: tri stávkové kancelárie, celkový vklad 1 000 €",
         "rows": [
           [
-            "Výhra domácich v stávkovej kancelárii 1, kurz 2.40",
-            "vklad cca €424"
+            "Výhra domácich v stávkovej kancelárii 1, kurz 2,40",
+            "vklad cca 424 €"
           ],
           [
-            "Remíza v stávkovej kancelárii 2, kurz 3.80",
-            "vklad cca €268"
+            "Remíza v stávkovej kancelárii 2, kurz 3,80",
+            "vklad cca 268 €"
           ],
           [
-            "Výhra hostí v stávkovej kancelárii 3, kurz 3.30",
-            "vklad cca €308"
+            "Výhra hostí v stávkovej kancelárii 3, kurz 3,30",
+            "vklad cca 308 €"
           ],
           [
-            "1/2.40 + 1/3.80 + 1/3.30",
-            "0.417 + 0.263 + 0.303 = 0.983"
+            "1/2,40 + 1/3,80 + 1/3,30",
+            "0,417 + 0,263 + 0,303 = 0,983"
           ],
           [
             "Výplata bez ohľadu na výsledok",
-            "cca €1,017"
+            "cca 1 017 €"
           ],
           [
             "Zisk",
-            "cca €17 (1.7%)"
+            "cca 17 € (1,7 %)"
           ]
         ],
         "note": "Zisk je menší ako pri tenise a tri stávky znamenajú vyššie riziko, že sa kurzy zmenia, kým ich uzatvárate."
@@ -1228,7 +1228,7 @@
           "Overte, že trh platí pre rovnaký úsek zápasu vo všetkých stávkových kanceláriách. Trh 1X2 zvyčajne zahŕňa len základný hrací čas, no pri pohárových zápasoch a zápasoch play-off si skontrolujte pravidlá.",
           "Odložené a predčasne ukončené zápasy sa vyhodnocujú rôzne, preto si prečítajte pravidlá v každej stávkovej kancelárii.",
           "Tri stávky zvyšujú riziko zmeny kurzov. Najvolatilnejšiu stávku uzavrite ako prvú – zvyčajne tú s najvyšším kurzom alebo na najmenej likvidnom trhu.",
-          "Zvážte trhy s dvoma výsledkami, napríklad ázijský hendikep alebo počet gólov pod/nad 2.5, ak chcete zostať pri dvoch stávkových kanceláriách a znížiť vplyv zmien kurzov."
+          "Zvážte trhy s dvoma výsledkami, napríklad ázijský hendikep alebo počet gólov pod/nad 2,5, ak chcete zostať pri dvoch stávkových kanceláriách a znížiť vplyv zmien kurzov."
         ]
       },
       {
@@ -1354,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Domáci -0.25 so vkladom €100",
+        "title": "Domáci -0.25 so vkladom 100 €",
         "rows": [
           [
             "Domáci vyhrajú",
@@ -1362,7 +1362,7 @@
           ],
           [
             "Remíza",
-            "€50 sa vráti, €50 prehráte"
+            "50 € sa vráti, 50 € prehráte"
           ],
           [
             "Domáci prehrajú",
@@ -1445,22 +1445,22 @@
           ],
           [
             "Celkový obrat (všetky stávky)",
-            "€24,000"
+            "24 000 €"
           ],
           [
             "Celkovo vrátené",
-            "€24,720"
+            "24 720 €"
           ],
           [
             "Čistý zisk",
-            "€720"
+            "720 €"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "720 € / 24 000 € = 3,0 %"
           ]
         ],
-        "note": "Bez sledovania vidíte len to, ako sa hýbe váš zostatok. So sledovaním zistíte, že z každých €100 obratu zarobíte €3."
+        "note": "Bez sledovania vidíte len to, ako sa hýbe váš zostatok. So sledovaním zistíte, že z každých 100 € obratu zarobíte 3 €."
       },
       {
         "type": "h2",
@@ -1531,19 +1531,19 @@
         "rows": [
           [
             "Celkový vklad",
-            "€40,000"
+            "40 000 €"
           ],
           [
             "Celková výplata",
-            "€41,000"
+            "41 000 €"
           ],
           [
             "Zisk",
-            "€1,000"
+            "1 000 €"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "1 000 / 40 000 × 100 = 2,5 %"
           ]
         ],
         "note": "Z každého vsadeného eura ste zarobili 2,5 centa."
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Ako vypočítam ROI pri stávkovaní?",
-        "a": "Vezmite svoj zisk, vydeľte ho celkovým vkladom a vynásobte 100. Ak ste vsadili €10,000 a zarobili €300, vaše ROI je 3 %."
+        "a": "Vezmite svoj zisk, vydeľte ho celkovým vkladom a vynásobte 100. Ak ste vsadili 10 000 € a zarobili 300 €, vaše ROI je 3 %."
       },
       {
         "q": "Aký je rozdiel medzi ROI a ziskom?",
@@ -1720,19 +1720,19 @@
         "rows": [
           [
             "Vklady celkom",
-            "€10,000"
+            "10 000 €"
           ],
           [
             "Výbery celkom",
-            "€3,000"
+            "3 000 €"
           ],
           [
             "Aktuálny zostatok u bookmakerov",
-            "€7,800"
+            "7 800 €"
           ],
           [
             "Zisk",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3 000 € + 7 800 € − 10 000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1756,7 @@
     "faq": [
       {
         "q": "Platí sa daň z výhier zo stávok?",
-        "a": "Zdanenie výhier z hazardných hier sa líši podľa jurisdikcie. Na niektorých regulovaných trhoch sú výhry od licencovaných stávkových kancelárií oslobodené od dane, inde ich možno budete musieť priznať. Overte si daňové pravidlá vo svojej krajine alebo sa poraďte s miestnym poradcom."
+        "a": "Na Slovensku sú výhry od stávkových kancelárií s licenciou ÚRHH pre hráčov spravidla oslobodené od dane. Pravidlá sa však môžu meniť, preto si vždy overte aktuálne znenie predpisov alebo sa poraďte s daňovým poradcom."
       },
       {
         "q": "Ako často mám aktualizovať svoj denník stávok?",
@@ -1773,7 +1773,7 @@
     "keyword": "zarábanie na športových stávkach bez rizika",
     "category": "Stratégia",
     "ctaLabel": "Zobraziť surebety so zaručeným ziskom",
-    "intro": "Na športových stávkach sa dá zarábať bez rizika, ak vsadíte na všetky výsledky tej istej udalosti v rôznych stávkových kanceláriách a spoločné kurzy vyplatia viac, než koľko vsadíte. Ide o športovú arbitráž, teda surebet. Zisk je daný ešte pred výkopom, zvyčajne 1–3%. Riziko nie je vo výsledku, ale v pohybe kurzov, chybách a obmedzeniach účtu.",
+    "intro": "Na športových stávkach sa dá zarábať bez rizika, ak vsadíte na všetky výsledky tej istej udalosti v rôznych stávkových kanceláriách a spoločné kurzy vyplatia viac, než koľko vsadíte. Ide o športovú arbitráž, teda surebet. Zisk je daný ešte pred výkopom, zvyčajne 1–3 %. Riziko nie je vo výsledku, ale v pohybe kurzov, chybách a obmedzeniach účtu.",
     "blocks": [
       {
         "type": "h2",
@@ -1781,31 +1781,31 @@
       },
       {
         "type": "p",
-        "text": "Stávková kancelária zarába na tom, že súčet pravdepodobností v jej kurzoch presahuje 100%. Keď dve kancelárie ohodnotia tú istú udalosť odlišne, vezmete si u každej z nich najlepší kurz na iný výsledok. Ak súhrnná pravdepodobnosť klesne pod 100%, máte zaručený zisk. Je to matematické stávkovanie, nie hádanie. Celý mechanizmus vysvetľuje článok [ako funguje arbitrážne stávkovanie?](/en/guides/arbitrage-betting)"
+        "text": "Stávková kancelária zarába na tom, že súčet pravdepodobností v jej kurzoch presahuje 100 %. Keď dve kancelárie ohodnotia tú istú udalosť odlišne, vezmete si u každej z nich najlepší kurz na iný výsledok. Ak súhrnná pravdepodobnosť klesne pod 100 %, máte zaručený zisk. Je to matematické stávkovanie, nie hádanie. Celý mechanizmus vysvetľuje článok [ako funguje arbitrážne stávkovanie?](/en/guides/arbitrage-betting)"
       },
       {
         "type": "example",
-        "title": "Príklad: basketbalový zápas s dvomi výsledkami (vrátane predĺženia), €1,000",
+        "title": "Príklad: basketbalový zápas s dvomi výsledkami (vrátane predĺženia), 1 000 €",
         "rows": [
           [
-            "Tím A v stávkovej kancelárii 1, kurz 1.95",
-            "Vklad €520.88"
+            "Tím A v stávkovej kancelárii 1, kurz 1,95",
+            "Vklad 520,88 €"
           ],
           [
-            "Tím B v stávkovej kancelárii 2, kurz 2.12",
-            "Vklad €479.12"
+            "Tím B v stávkovej kancelárii 2, kurz 2,12",
+            "Vklad 479,12 €"
           ],
           [
             "Súčet prevrátených hodnôt kurzov",
-            "0.513 + 0.472 = 0.985"
+            "0,513 + 0,472 = 0,985"
           ],
           [
             "Výplata bez ohľadu na víťaza",
-            "cca €1,015.72"
+            "cca 1 015,72 €"
           ],
           [
             "Zaručený zisk",
-            "cca €15.72 (1.6%)"
+            "cca 15,72 € (1,6 %)"
           ]
         ]
       },
@@ -1819,30 +1819,30 @@
       },
       {
         "type": "example",
-        "title": "Príklad: stávka na viac ako 2.5 gólu pred zápasom za €500",
+        "title": "Príklad: stávka na viac ako 2,5 gólu pred zápasom za 500 €",
         "rows": [
           [
-            "Pôvodná stávka: viac ako 2.5 gólu, kurz 2.40",
-            "Vklad €500, možná výplata €1,200"
+            "Pôvodná stávka: viac ako 2,5 gólu, kurz 2,40",
+            "Vklad 500 €, možná výplata 1 200 €"
           ],
           [
-            "Po skorom góle: menej ako 2.5 gólu, kurz 2.60",
-            "Vklad €461.54"
+            "Po skorom góle: menej ako 2,5 gólu, kurz 2,60",
+            "Vklad 461,54 €"
           ],
           [
             "Celkový vklad",
-            "€961.54"
+            "961,54 €"
           ],
           [
             "Výplata pri každom výsledku",
-            "€1,200"
+            "1 200 €"
           ],
           [
             "Zaistený zisk",
-            "cca €238.46 (24.8%)"
+            "cca 238,46 € (24,8 %)"
           ]
         ],
-        "note": "Vzorec: vklad na zaistenie = možná výplata ÷ nový kurz. Tu 1,200 ÷ 2.60 = €461.54."
+        "note": "Vzorec: vklad na zaistenie = možná výplata ÷ nový kurz. Tu 1 200 ÷ 2,60 = 461,54 €."
       },
       {
         "type": "h2",
@@ -1858,11 +1858,11 @@
         "rows": [
           [
             "Vklad na jeden surebet",
-            "€1,000"
+            "1 000 €"
           ],
           [
             "Priemerný zisk",
-            "1.5%"
+            "1,5 %"
           ],
           [
             "Surebety za mesiac",
@@ -1870,11 +1870,11 @@
           ],
           [
             "Očakávaný mesačný výsledok",
-            "cca €600"
+            "cca 600 €"
           ],
           [
-            "Rovnaké nastavenie s vkladom €2,500 na surebet",
-            "cca €1,500"
+            "Rovnaké nastavenie s vkladom 2 500 € na surebet",
+            "cca 1 500 €"
           ]
         ]
       },
@@ -1911,11 +1911,11 @@
       },
       {
         "q": "Aký je rozdiel medzi surebetmi a hedgingom?",
-        "a": "Surebet sa vsádza na všetky výsledky naraz. Hedging začína jednou stávkou a opačný výsledok sa kryje až neskôr, keď sa kurz pohne v tvoj prospech."
+        "a": "Surebet sa vsádza na všetky výsledky naraz. Hedging začína jednou stávkou a opačný výsledok sa kryje až neskôr, keď sa kurz pohne vo váš prospech."
       },
       {
         "q": "Koľko peňazí potrebujem na začiatok?",
-        "a": "Začať môžeš s €200–500 rozdelenými medzi niekoľko stávkových kancelárií. Pri nižších vkladoch však surebet vynesie len pár eur."
+        "a": "Začať môžete s 200–500 € rozdelenými medzi niekoľko stávkových kancelárií. Pri nižších vkladoch však surebet vynesie len pár eur."
       }
     ]
   },
@@ -2030,7 +2030,7 @@
       },
       {
         "q": "Prečo surebet zmizol, keď otvorím stávkovú kanceláriu?",
-        "a": "Kurz sa od skenovania zmenil. Vždy si pred uzavretím stávky skontrolujte kurzy na stávkovom lístku a prepočítajte ich."
+        "a": "Kurz sa od skenovania zmenil. Vždy si pred uzavretím stávky skontroluj kurzy na stávkovom lístku a prepočítaj ich."
       }
     ]
   },
@@ -2162,7 +2162,7 @@
       },
       {
         "q": "Ako rýchly musím byť?",
-        "a": "Live surebety často trvajú 10 – 60 sekúnd. V tomto okne by ste mali stihnúť uzavrieť obe stávky, preto majte účty vopred dobité a byť prihlásený."
+        "a": "Live surebety často trvajú 10 – 60 sekúnd. V tomto okne by ste mali stihnúť uzavrieť obe stávky, preto majte účty vopred dobité a buďte prihlásený."
       },
       {
         "q": "Obmedzujú bookmakeri live arbitrážnikov rýchlejšie?",
@@ -2204,12 +2204,12 @@
             "0.50 × 2.10 − 1 = +5%"
           ],
           [
-            "Vklad €50",
-            "Očakávaný zisk €2.50 na stávku"
+            "Vklad 50 €",
+            "Očakávaný zisk 2,50 € na stávku"
           ],
           [
-            "300 stávok po €50 (obrat €15,000)",
-            "Očakávaný zisk približne €750"
+            "300 stávok po 50 € (obrat 15 000 €)",
+            "Očakávaný zisk približne 750 €"
           ]
         ],
         "note": "Očakávaný zisk je priemer. Skutočné výsledky kolíšu nad ním aj pod ním, najmä pri malom počte stávok."
@@ -2385,7 +2385,7 @@
       {
         "type": "ul",
         "items": [
-          "**Pokrytie stávkových kancelárií:** nástroj musí zahŕňať kancelárie, ktoré môžete reálne používať.",
+          "**Pokrytie stávkových kancelárií:** nástroj musí zahŕňať kancelárie s licenciou ÚRHH, ktoré môžete reálne používať.",
           "**Frekvencia aktualizácie:** pri prematch stávkach stačí pár sekúnd, pri [live surebetoch](/en/guides/live-arbitrage-betting-scanner) ešte rýchlejšie.",
           "**Filtre:** šport, trh, stávková kancelária a minimálny zisk.",
           "**Vstavané sledovanie:** surebety uzavreté zo skenera by sa mali evidovať automaticky.",

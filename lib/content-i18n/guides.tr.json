@@ -2,9 +2,9 @@
   "matched-betting": {
     "title": "Matched betting: Hoş geldin bonuslarından kâr elde etmek",
     "metaTitle": "Matched betting – bahis sitesi bonuslarından nasıl yararlanılır",
-    "description": "Matched betting rehberi: lisanslı bahis sitelerindeki hoş geldin bonuslarını ve bedava bahisleri kâra çevirmenin yolu ve surebet'ten farkı.",
+    "description": "Matched betting rehberi: bonusları ve bedava bahisleri kâra çevirme mantığı, surebet'ten farkı ve Türkiye'de iddaa sisteminde neden sınırlı olduğu.",
     "keyword": "matched betting",
-    "intro": "Matched betting, bahis sitelerinin bonuslarını ve bedava bahislerini gerçek paraya çevirme tekniğidir. Aynı etkinliğe hem lehte hem aleyhte bahis yaparak tüm sonuçları kapsarsınız; böylece sonuç fark etmez ve geriye bonustan gelen garantili bir kâr kalır.",
+    "intro": "Matched betting, bahis sitelerinin bonuslarını ve bedava bahislerini gerçek paraya çevirme tekniğidir. Aynı etkinliğe hem lehte hem aleyhte bahis yaparak tüm sonuçları kapsarsınız; böylece sonuç fark etmez ve geriye bonustan gelen garantili bir kâr kalır. Türkiye'de ise iddaa sistemi devlet kontrolünde olduğu için bu tekniğin uygulanabilirliği çok sınırlıdır.",
     "blocks": [
       {
         "type": "h2",
@@ -12,7 +12,7 @@
       },
       {
         "type": "p",
-        "text": "Bir bedava bahis ya da bonus aldığınızda, onu bir bahis sitesinde bir sonuca yatırır, aynı sonucun aleyhine ise bir bahis borsasında lay bahsi yaparsınız ya da başka bir bahis sitesinde karşıt sonuca oynarsınız. Bedava bahis kendi paranızdan hiçbir şey harcatmadığı için, hangi taraf kazanırsa kazansın nominal değerinin büyük bölümünü kâr olarak garantilersiniz."
+        "text": "Teoride, bir bedava bahis ya da bonus aldığınızda onu bir sonuca yatırır, aynı sonucun aleyhine ise bir bahis borsasında lay bahsi yaparsınız ya da başka bir bahis sitesinde karşıt sonuca oynarsınız. Bedava bahis kendi paranızdan hiçbir şey harcatmadığı için, hangi taraf kazanırsa kazansın nominal değerinin büyük bölümünü kâr olarak garantilersiniz. Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunar; yurt dışı siteler ve bahis borsaları ise yasa dışıdır ve engellenir. Bu yüzden bu yöntemi burada uygulamak pratikte mümkün değildir."
       },
       {
         "type": "h2",
@@ -20,14 +20,14 @@
       },
       {
         "type": "p",
-        "text": "Hoş geldin bonuslarının koşulları, bahis sitesine ve bahis yaptığınız ülkeye göre değişir. Bazı düzenlemeli pazarlarda tüketiciyi korumak için bonus tutarlarına üst sınır getirilir ve çevrim şartları sınırlandırılır. Herhangi bir teklifi kabul etmeden önce ilgili şartlar ve koşulları mutlaka okuyun."
+        "text": "Kampanya ve bonus koşulları bayiye göre değişir ve iddaa sisteminin kurallarına tabidir. Spor Toto Teşkilatı'nın düzenlemeleri bonus ve kampanyaları sınırlayabilir. Herhangi bir teklifi kabul etmeden önce ilgili şartlar ve koşulları mutlaka okuyun ve güncel kuralları kontrol edin."
       },
       {
         "type": "ul",
         "items": [
-          "Bonusun kilidini açmak için gereken minimum oranı kontrol edin – birçok bahis sitesi alt sınırı 1.80 veya daha yüksek tutar.",
+          "Bir kampanyanın kilidini açmak için gereken minimum oranı kontrol edin – bazı bahis siteleri alt sınırı 1.80 veya daha yüksek tutar.",
           "Bonusunuzun veya ücretsiz bahsinizin kullanılmadan sona ermemesi için son kullanma süresine dikkat edin.",
-          "Çevrim şartlarını en düşük riskle tamamlamak için surebet (arbitraj bahisleri) kullanmayı değerlendirin."
+          "Türkiye'de lisanslı bayiler aynı iddaa oranlarını sunduğundan, çevrim şartlarını surebet ile tamamlamanız mümkün değildir; yasa dışı sitelere yönelmeyin ve bahsi yalnızca kaybetmeyi göze alabileceğiniz tutarla oynayın."
         ]
       },
       {
@@ -36,36 +36,36 @@
       },
       {
         "type": "p",
-        "text": "Surebet'ler bonus çevrim şartlarını tamamlamak için idealdir, çünkü tek bir sonuca gerçek para yatırmış olmazsınız. Çevrim şartını tamamladıktan sonra promosyonlara bağlı kalmadan arbitraj fırsatları bulmaya devam edebilirsiniz."
+        "text": "Surebet'ler, oranların bahis siteleri arasında farklılaştığı pazarlarda bonus çevrim şartlarını tamamlamak için idealdir. Türkiye'de ise lisanslı iddaa bayileri aynı oranları sunduğu için bayiler arasında surebet fırsatı oluşmaz; yabancı siteler ise yasa dışıdır ve engelli olduğundan bunları önermiyoruz. BetTrackerAI burada daha çok bahislerinizi ve bonuslarınızı takip etmeniz için faydalıdır."
       }
     ],
     "faq": [
       {
         "q": "Matched betting yasal mı?",
-        "a": "Evet. Bonusları bahis sitesinin yayımladığı koşullar çerçevesinde değerlendirmek tamamen yasaldır. Ancak bahis siteleri, promosyonların amacına uygun bahis oynamadığınızı düşünürse veya koşulları ihlal ederseniz teklifleri geri çekme ya da hesabınızı kısıtlama hakkını saklı tutar."
+        "a": "Lisanslı bir iddaa bayisinin yayımladığı koşullar çerçevesinde bonus ve kampanyalardan yararlanmak yasaldır. Ancak Türkiye'de yurt dışı bahis siteleri ve bahis borsaları yasa dışıdır; matched betting için bunları kullanmak yasal değildir. Ayrıca bayiler, koşulları ihlal ettiğinizi düşünürse teklifleri geri çekme ya da hesabınızı kısıtlama hakkını saklı tutar. Bahis oynamak size zarar vermeye başlarsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       },
       {
         "q": "Tipik hoş geldin bonuslarının değeri ne kadardır?",
-        "a": "Bonus tutarları ve çevrim şartları bahis sitesine ve yargı bölgesine göre değişir. Bazı düzenlemeye tabi pazarlarda hoş geldin teklifleri sınırlandırılabilir – örneğin €1,000 veya bonusun on katı çevrim üst sınırıyla €1,000 gibi. Seçtiğiniz bahis sitesinin güncel koşullarını her zaman kontrol edin ve ülkenizde geçerli bir lisansa sahip olduğunu doğrulayın."
+        "a": "Kampanya tutarları ve çevrim şartları bayiye göre değişir ve iddaa sisteminin kurallarına bağlıdır. Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayilerin güncel kampanya koşullarını her zaman kendi sitelerinden kontrol edin ve Spor Toto Teşkilatı'nın güncel kurallarına bakın. Kazançlara ilişkin kurallar da iddaa sistemi tarafından belirlenir; güncel durumu mutlaka kontrol edin."
       }
     ],
     "category": "Strateji",
     "ctaLabel": "Güncel bonusları gör"
   },
   "er-surebets-lovligt": {
-    "title": "Surebet yasal mı? Kurallar ve vergi konusunda bilinmesi gerekenler",
-    "metaTitle": "Surebet yasal mı? Kurallar, vergi ve bahis sitesi şartları",
-    "description": "Surebet oynamak yasal mı, kazançlardan vergi ödemek gerekir mi? Kuralları ve bahis sitelerinin arbitraj bahislerine karşı neler yapabileceğini bu rehberde bulabilirsiniz.",
+    "title": "Surebet yasal mı? Türkiye'de kurallar ve vergi konusunda bilinmesi gerekenler",
+    "metaTitle": "Surebet yasal mı? Türkiye'de kurallar, vergi ve iddaa gerçekleri",
+    "description": "Türkiye'de surebet mümkün mü, yasal mı, kazançlardan vergi ödemek gerekir mi? iddaa sisteminin kurallarını ve pratikteki sınırları bu rehberde bulabilirsiniz.",
     "keyword": "surebet yasal mı",
-    "intro": "Kısa cevap: evet. Surebet oynamak çoğu yargı bölgesinde yasaldır. Lisanslı bahis sitelerinde sıradan bahisler oynuyor ve en iyi değeri bulmak için oranları karşılaştırıyorsunuz – bu sürecin hiçbir bölümü yasa dışı değildir.",
+    "intro": "Kısa cevap: oranları karşılaştırmak yasaldır, ancak Türkiye'de pratikte surebet fırsatı yoktur. Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler Spor Toto Teşkilatı'nın iddaa sistemi üzerinden aynı oranları sunar; bu yüzden bayiler arasında surebet oluşmaz. Yurt dışı bahis siteleri ise yasa dışıdır ve erişime engellidir; bu siteleri önermiyoruz.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Bahis siteleri neler yapabilir?"
+        "text": "Bayiler neler yapabilir?"
       },
       {
         "type": "p",
-        "text": "Surebet'ler yasal olsa da bahis siteleri, sürekli olarak garanti kâr getiren bahisler oynayan müşterileri istemez. Kullanım koşullarında maksimum bahis tutarlarını düşürme, piyasaları sınırlama veya hesapları kısıtlama hakkını saklı tutarlar. Ancak yatırdığınız bakiyeyi iade etmek ve geçerli kazançları ödemek zorundadırlar."
+        "text": "Türkiye'de iddaa oranları sistem tarafından belirlenir ve lisanslı bayilerde aynıdır. Bu nedenle bayiler arasındaki oran farkından garanti kâr elde etmek mümkün değildir. Bayiler kullanım koşullarında bahis limitleri ve hesap kısıtlamaları gibi uygulamalar getirebilir; ayrıntılar için ilgili bayinin koşullarını ve iddaa kurallarını inceleyin. Geçerli kazançların ödenmesi iddaa kurallarına tabidir."
       },
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Bahis kazançlarının vergilendirilmesi ülkeden ülkeye değişir. Düzenlemeye tabi birçok pazarda, ulusal kumar düzenleyicisinden lisans almış operatörlerin kazançları oyuncu için vergisizdir. Offshore veya lisanssız operatörler kullanırsanız kazançlarınız vergiye tabi olabilir. Yaşadığınız yerdeki vergi kurallarını kontrol edin; durumunuzdan emin değilseniz yerel vergi makamınıza danışın."
+        "text": "Türkiye'de bahis kazançlarına ilişkin kurallar iddaa sistemi tarafından belirlenir. Güncel kuralları Spor Toto Teşkilatı'nın ve lisanslı bayinizin açıklamalarından kontrol edin; durumunuzdan emin değilseniz bir mali müşavire veya vergi dairesine danışın. Yurt dışı ve lisanssız siteler yasa dışıdır ve engellenmiştir; bu sitelerde bahis oynamayın."
       },
       {
         "type": "tip",
-        "text": "Ulusal düzenleyiciniz tarafından lisanslanmış bahis sitelerini tercih edin. Bu genellikle vergi avantajı ve kumar otoritenizden tüketici koruması sağlar."
+        "text": "Yalnızca Spor Toto Teşkilatı (iddaa) lisanslı bayileri tercih edin: Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur. Bu, yasal güvence ve tüketici koruması sağlar."
       },
       {
         "type": "h2",
@@ -85,28 +85,28 @@
       },
       {
         "type": "p",
-        "text": "Surebet oynasanız bile kumar üzerindeki kontrolü elinizde tutmak önemlidir. Para yatırma limitleri belirleyin ve ara vermeniz gerektiğinde ülkenizdeki kendini dışlama kaydını kullanın. Desteğe ihtiyacınız olursa bölgenizdeki tanınmış bir kumar yardım hattıyla iletişime geçin."
+        "text": "Bahis oynarken bile kumar üzerindeki kontrolü elinizde tutmak önemlidir. Para yatırma limitleri belirleyin ve ara vermeniz gerektiğinde bayinizin sunduğu araçları kullanın. Desteğe ihtiyacınız olursa Yeşilay Danışmanlık Merkezi (YEDAM) ile 115 numaralı hattan iletişime geçin."
       }
     ],
     "faq": [
       {
-        "q": "Bahis sitesi surebet kazancını ödemeyi reddedebilir mi?",
-        "a": "Bahis sitesi geçerli kazançları ödemek zorundadır. Oranlarda açık bir hata varsa bahsi iptal edebilir ve bundan sonra hesabı kısıtlayabilir."
+        "q": "Bayi bahis kazancını ödemeyi reddedebilir mi?",
+        "a": "Lisanslı bayi, geçerli kazançları iddaa kurallarına göre ödemek zorundadır. Oranlarda açık bir hata varsa bahis iptal edilebilir. Hesap kısıtlamaları için ilgili bayinin kullanım koşullarına bakın."
       },
       {
-        "q": "Surebet kazançlarından vergi ödemem gerekir mi?",
-        "a": "Ülkenize bağlıdır. Düzenlemeye tabi birçok pazarda, lisanslı operatörlerin kazançları oyuncu için vergisizdir. Yaşadığınız yerdeki vergi kurallarını kontrol edin."
+        "q": "Bahis kazançlarından vergi ödemem gerekir mi?",
+        "a": "iddaa sisteminin kurallarına bağlıdır. Güncel kuralları Spor Toto Teşkilatı'ndan ve lisanslı bayinizden kontrol edin. Yurt dışı siteler yasa dışıdır, bu nedenle kullanmayın."
       }
     ],
     "category": "Kurallar",
-    "ctaLabel": "Lisanslı bahis sitelerindeki surebet'leri gör"
+    "ctaLabel": "Lisanslı bayilerdeki iddaa oranlarını gör"
   },
   "undgaa-begraensning": {
     "title": "Bahis sitesi limitlerinden nasıl kaçınılır ve hesaplarınız nasıl daha uzun süre açık tutulur",
     "metaTitle": "Bahis Sitesi Limitlerinden Kaçınma – Arbing Rehberi 2026",
-    "description": "Arber olarak bahis sitesi limitlerinden nasıl kaçınılır: doğal görünen bir bahis stratejisi, arbitraj bahisleri için en iyi bahis siteleri ve € cinsinden örnekler.",
+    "description": "Arber olarak bahis sitesi limitlerinden nasıl kaçınılır: doğal görünen bir bahis stratejisi, bahis sitesi türleri, Türkiye'deki iddaa yapısı ve ₺ cinsinden örnekler.",
     "keyword": "bahis sitesi limitlerinden nasıl kaçınılır",
-    "intro": "Bahis sitesi limitlerinden kaçınmak için sıradan bir müşteri gibi bahis oynamanız gerekir: yuvarlak bahis tutarları, popüler piyasalar, normal bahislerden oluşan bir karışım ve her oran düşüşüne anında tepki vermemek. Soft bahis siteleri, kapanış oranını sürekli geçen hesapları sınırlar. Bunu sonsuza kadar engelleyemezsiniz, ancak akıllı bir bahis stratejisi hesaplarınızı haftalar yerine aylarca açık tutabilir.",
+    "intro": "Bahis sitesi limitlerinden kaçınmak için sıradan bir müşteri gibi bahis oynamanız gerekir: yuvarlak bahis tutarları, popüler piyasalar, normal bahislerden oluşan bir karışım ve her oran düşüşüne anında tepki vermemek. Soft bahis siteleri, kapanış oranını sürekli geçen hesapları sınırlar. Bunu sonsuza kadar engelleyemezsiniz, ancak akıllı bir bahis stratejisi hesaplarınızı haftalar yerine aylarca açık tutabilir. Türkiye'de ise bahis, Spor Toto Teşkilatı'nın denetimindeki iddaa sistemi üzerinden yapılır ve lisanslı bayiler aynı oranları sunar. Bu nedenle bu rehber ağırlıklı olarak genel bilgi niteliğindedir.",
     "blocks": [
       {
         "type": "h2",
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**Kapanış oranını geçmek:** en güçlü sinyal. Aldığınız oranlar sürekli olarak nihai fiyattan daha iyiyse işaretlenirsiniz.",
-          "**Düzensiz bahis tutarları:** €463.27 hesap makinesi gibi görünür. €460 ise bir insan gibi görünür.",
+          "**Düzensiz bahis tutarları:** ₺1.234,56 hesap makinesi gibi görünür. ₺1.200 ise bir insan gibi görünür.",
           "**Niş piyasalar:** küçük bir ligin ikinci kümesindeki korner bahisleri dikkat çeker.",
           "**Sadece para çekmek:** bonus veya düzenli bahis olmadan sık sık para çekmek profesyonel görünür."
         ]
@@ -132,60 +132,60 @@
       {
         "type": "ul",
         "items": [
-          "**Bahis tutarlarınızı** tam onluklara **yuvarlayın.** Kâr neredeyse hiç değişmez.",
+          "**Bahis tutarlarınızı** tam yüzlüklere **yuvarlayın.** Kâr neredeyse hiç değişmez.",
           "**Ana akım piyasalara bağlı kalın:** büyük ligler, 1X2, alt/üst ve tenişte maç kazananı.",
           "**Normal bahisleri araya katın:** haftada birkaç küçük normal bahis, tercihen büyük maçlara.",
           "**Aşırı fiyat hatalarından kaçının:** %8–10'un üzerindeki surebet'ler dikkat çeker ve çoğu zaman zaten iptal edilir.",
           "**Anında tepki vermeyin:** oran değiştiği an bahis yapmak klasik bir arber davranışıdır.",
-          "**Hacminizi dağıtın:** tek bir bahis sitesini yormak yerine bahislerinizi birçok siteye yayın."
+          "**Hacminizi dağıtın:** tek bir bahis sitesini yormak yerine bahislerinizi birden fazla yasal siteye yayın."
         ]
       },
       {
         "type": "example",
-        "title": "Örnek: yuvarlanmış bahis tutarları, toplam bahis €1,000",
+        "title": "Örnek: yuvarlanmış bahis tutarları, toplam bahis ₺10.000",
         "rows": [
           [
-            "2.10 / 2.00 oranlarında tam dağılım",
-            "€487.80 / €512.20"
+            "2,10 / 2,00 oranlarında tam dağılım",
+            "₺4.878,05 / ₺5.121,95"
           ],
           [
             "Yuvarlanmış dağılım",
-            "€490 / €510"
+            "₺4.900 / ₺5.100"
           ],
           [
-            "A kazanırsa kâr (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "A kazanırsa kâr (2,10)",
+            "₺10.290 − ₺10.000 = ₺290,00"
           ],
           [
-            "B kazanırsa kâr (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "B kazanırsa kâr (2,00)",
+            "₺10.200 − ₺10.000 = ₺200,00"
           ],
           [
             "Karşılaştırma için tam dağılım",
-            "her iki sonuçta da yaklaşık €24.39"
+            "her iki sonuçta da yaklaşık ₺243,90"
           ]
         ],
         "note": "Yuvarlanmış bahis tutarları yine de iki sonuçta da kârı garantiler ve bahis sitesine çok daha doğal görünür."
       },
       {
         "type": "h2",
-        "text": "Arbitraj bahisleri için en iyi bahis siteleri"
+        "text": "Bahis sitesi türleri ve Türkiye'deki durum"
       },
       {
         "type": "p",
-        "text": "İyi bir arbitraj kurulumu iki tür bahis sitesini bir araya getirir. Soft bahis siteleri hatalı fiyatlanmış oranları sunar; sharp bahis siteleri ya da borsalar ise kazananları sınırlamadan yüksek tutarlı bahisleri kabul eder."
+        "text": "Arbitraj kurulumları genellikle iki tür bahis sitesini bir araya getirir: hatalı fiyatlanmış oranlar sunan soft siteler ve kazananları sınırlamadan yüksek tutarlı bahis kabul eden sharp siteler ya da borsalar. Türkiye'de durum farklıdır: Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunar, bu yüzden aralarında surebet oluşmaz. Yurt dışı bahis siteleri yasa dışıdır ve engellenir; bu siteleri kullanmanızı önermiyoruz."
       },
       {
         "type": "ul",
         "items": [
-          "**Soft bahis siteleri:** surebet'lerin çoğunun kaynağıdır ama hızlı limit koyarlar. Dikkatli kullanın.",
-          "**Sharp bahis siteleri:** düşük marjlar ve yüksek limitler sunar. İkinci bacak için idealdir.",
-          "**Bahis borsaları:** diğer kullanıcılara karşı bahis oynarsınız, bu yüzden kazandığınız için sınırlanmazsınız. Komisyon kârı biraz azaltır."
+          "**Soft bahis siteleri:** başka pazarlarda surebet'lerin çoğunun kaynağıdır ama hızlı limit koyarlar. Türkiye'de lisanslı bayiler aynı iddaa oranlarını sunduğundan bu model geçerli değildir.",
+          "**Sharp bahis siteleri:** düşük marjlar ve yüksek limitler sunar. Türkiye'de yurt dışı siteler yasa dışı olduğundan bunlara yönlenmemelisiniz.",
+          "**Bahis borsaları:** diğer kullanıcılara karşı bahis oynanır, bu yüzden kazanan oyuncular sınırlanmaz; komisyon kârı biraz azaltır. Yasal durumu her ülkede ayrıca kontrol etmek gerekir; Türkiye'de lisanssız ve engelli sitelerden uzak durun."
         ]
       },
       {
         "type": "p",
-        "text": "[Surebet için en iyi bahis siteleri](/en/guides/best-bookmakers-for-surebets) hakkındaki tam genel bakışı okuyun. Her zaman ülkenizde lisanslı bahis sitelerini kullanın."
+        "text": "[Surebet için en iyi bahis siteleri](/en/guides/best-bookmakers-for-surebets) hakkındaki tam genel bakışı okuyun. Türkiye'de yalnızca Spor Toto Teşkilatı (iddaa) lisanslı bayileri kullanın."
       },
       {
         "type": "h2",
@@ -194,40 +194,40 @@
       {
         "type": "ul",
         "items": [
-          "**Bakiyenizi çekin:** hesap artık surebet için kullanılamıyorsa parayı çekin.",
+          "**Bakiyenizi çekin:** hesap artık kullanılamıyorsa parayı çekin.",
           "**Yeni hesap açmayın:** başkasının adına hesap açmak kuralları ihlal eder ve kazançlara el konulmasına yol açabilir.",
-          "**Hacmi kaydırın:** bahislerinizi diğer hesaplarınıza ve sharp bahis sitelerine ya da borsalara yönlendirin.",
+          "**Hacmi kaydırın:** bahislerinizi yalnızca kendi adınıza açılmış, lisanslı diğer hesaplarınıza yönlendirin; yasa dışı sitelere asla yönelmeyin.",
           "**Bahis sitesi bazında takip edin:** bir [bahis takipçisi](/en/guides/bet-tracker) hangi hesapların korunmaya değer olduğunu gösterir."
         ]
       },
       {
         "type": "p",
-        "text": "Kullanabileceğiniz bahis sitesi ne kadar çoksa, her hesaptan geçmesi gereken hacim o kadar azalır. [BetTracker AI](/en) birçok bahis sitesinde surebet bulur; böylece bahislerinizi yayabilir ve hesaplarınızı daha uzun süre açık tutabilirsiniz."
+        "text": "Türkiye'de lisanslı bayilerin oranları aynı olduğundan bayiler arasında surebet bulunmaz. Yine de [BetTracker AI](/en) ile bahislerinizi ve hesap bazında hacminizi takip edebilir, bütçenizi kontrol altında tutabilirsiniz. Surebet bulma özelliği ise yasal olarak birden fazla bahis sitesinin farklı oranlar sunduğu pazarlarda anlam kazanır."
       }
     ],
     "faq": [
       {
         "q": "Bahis sitesi limitlerinden tamamen kaçınabilir miyim?",
-        "a": "Soft bahis sitelerinde uzun vadede hayır. Ancak doğal bir bahis düzeni limitleri aylarca geciktirebilir; sharp bahis siteleri ve borsalar ise nadiren limit koyar."
+        "a": "Soft bahis sitelerinde uzun vadede hayır. Ancak doğal bir bahis düzeni limitleri aylarca geciktirebilir; sharp bahis siteleri ve borsalar ise nadiren limit koyar. Türkiye'de lisanslı bayilerin kuralları için güncel bayi koşullarını kontrol edin."
       },
       {
         "q": "Bahis sitelerinin beni sınırlaması yasal mı?",
-        "a": "Evet, bahis siteleri genellikle kimlerden bahis kabul edeceğine kendileri karar verir. Bkz. [surebet yasal mı?](/en/guides/are-surebets-legal)"
+        "a": "Genel olarak evet, bahis siteleri kimlerden bahis kabul edeceğine kendileri karar verir. Türkiye'de geçerli kurallar için güncel iddaa mevzuatını ve bayi koşullarını kontrol edin. Bkz. [surebet yasal mı?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Kaç bahis sitesi kullanmalıyım?",
-        "a": "Beş ile on arası iyi bir başlangıçtır. Hacminizi dağıtır ve aralarından seçebileceğiniz daha fazla surebet sunar."
+        "a": "Türkiye'de lisanslı bayiler (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunduğundan çok sayıda hesap açmak ek surebet fırsatı yaratmaz. Hesap kullanacaksanız yalnızca lisanslı bayilerde ve kendi adınıza açın; yurt dışı siteler yasa dışıdır ve önerilmez."
       }
     ],
     "category": "Strateji",
-    "ctaLabel": "Daha fazla bahis sitesinde surebet bulun"
+    "ctaLabel": "Bahislerinizi BetTracker AI ile takip edin"
   },
   "surebet-beregner": {
     "title": "Ücretsiz surebet hesaplayıcı: bahis tutarlarınızı saniyeler içinde hesaplayın",
     "metaTitle": "Ücretsiz Surebet Hesaplayıcı – Bahis Tutarı Hesapla 2026",
-    "description": "Bahsinizi iki ya da üç sonuca bölmek için ücretsiz surebet hesaplayıcıyı kullanın. Formül, € cinsinden örnekler ve bahis tutarlarını güvenle yuvarlama yöntemi.",
+    "description": "Bahsinizi iki ya da üç sonuca bölmek için ücretsiz surebet hesaplayıcıyı kullanın. Formül, ₺ cinsinden örnekler ve bahis tutarlarını güvenle yuvarlama yöntemi.",
     "keyword": "ücretsiz surebet hesaplayıcı",
-    "intro": "Surebet hesaplayıcı, toplam bahis tutarınızı her sonuca öyle böler ki ne olursa olsun ödeme aynı olur. Oranları ve tutarınızı girin; hesaplayıcı sonuç başına bahis tutarını, ödemeyi ve kârınızı € ve % olarak gösterir. Formül basittir, ama bahisleri yatırmak için yalnızca birkaç dakikanız olduğunda hesaplayıcı hataları önler.",
+    "intro": "Surebet hesaplayıcı, toplam bahis tutarınızı her sonuca öyle böler ki ne olursa olsun ödeme aynı olur. Oranları ve tutarınızı girin; hesaplayıcı sonuç başına bahis tutarını, ödemeyi ve kârınızı ₺ ve % olarak gösterir. Formül basittir, ama bahisleri yatırmak için yalnızca birkaç dakikanız olduğunda hesaplayıcı hataları önler.",
     "blocks": [
       {
         "type": "h2",
@@ -247,7 +247,7 @@
       },
       {
         "type": "example",
-        "title": "Örnek: iki sonuç, toplam bahis €1,500",
+        "title": "Örnek: iki sonuç, toplam bahis ₺15,000",
         "rows": [
           [
             "A oranı 2.10, B oranı 2.05",
@@ -255,19 +255,19 @@
           ],
           [
             "A'ya yatırılan tutar",
-            "€740.97"
+            "₺7,409.70"
           ],
           [
             "B'ye yatırılan tutar",
-            "€759.03"
+            "₺7,590.30"
           ],
           [
             "Her iki durumda ödeme",
-            "yaklaşık €1,556.03"
+            "yaklaşık ₺15,560.30"
           ],
           [
             "Kâr",
-            "yaklaşık €56.03 (%3.7)"
+            "yaklaşık ₺560.30 (%3.7)"
           ]
         ]
       },
@@ -277,23 +277,23 @@
       },
       {
         "type": "p",
-        "text": "Futbol ve buz hokeyindeki 1X2 marketlerinde üçüncü bir sonuç aynı formüle eklenir. Elle hesaplamak zahmetli hale gelir; hesaplayıcı en çok zamanı tam da burada kazandırır."
+        "text": "Futbol gibi 1X2 marketlerinde üçüncü bir sonuç aynı formüle eklenir. Elle hesaplamak zahmetli hale gelir; hesaplayıcı en çok zamanı tam da burada kazandırır."
       },
       {
         "type": "example",
-        "title": "Örnek: 1X2, toplam bahis €1,000",
+        "title": "Örnek: 1X2, toplam bahis ₺10,000",
         "rows": [
           [
             "Ev sahibi galibiyeti, oran 2.50",
-            "Bahis €408.23"
+            "Bahis ₺4,082.33"
           ],
           [
             "Beraberlik, oran 3.50",
-            "Bahis €291.59"
+            "Bahis ₺2,915.95"
           ],
           [
             "Deplasman galibiyeti, oran 3.40",
-            "Bahis €300.17"
+            "Bahis ₺3,001.72"
           ],
           [
             "Ters oranların toplamı",
@@ -301,7 +301,7 @@
           ],
           [
             "Kâr",
-            "yaklaşık €20.58 (%2.1)"
+            "yaklaşık ₺205.83 (%2.1)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "€740.97 gibi bahis tutarları bahis sitesine şüpheli görünür. Tam euroya ya da onluklara yuvarlayın. €741 ve €759'a yuvarlarsanız kâr yaklaşık €56 olarak kalır; sonuçlar arasındaki fark yalnızca birkaç sent olur."
+        "text": "₺7,409.70 gibi bahis tutarları kuponda alışılmadık görünür. Tam liraya ya da onluklara yuvarlayın. ₺7,410 ve ₺7,590'a yuvarlarsanız kâr yaklaşık ₺560 olarak kalır; sonuçlar arasındaki fark yalnızca birkaç lira olur."
       },
       {
         "type": "p",
-        "text": "Bahis tutarlarını bilerek dengesiz de dağıtabilirsiniz. Yalnızca bir sonuçta ana paranızı çıkarırsanız orada €0 kazanırsınız, diğerinde ise daha fazla. Yukarıdaki örnekte A'ya €768.29, B'ye €731.71 yatırmak, A kazanırsa €113.41, B kazanırsa €0 kâr sağlar."
+        "text": "Bahis tutarlarını bilerek dengesiz de dağıtabilirsiniz. Yalnızca bir sonuçta ana paranızı çıkarırsanız orada ₺0 kazanırsınız, diğerinde ise daha fazla. Yukarıdaki örnekte A'ya ₺7,682.90, B'ye ₺7,317.10 yatırmak, A kazanırsa ₺1,134.09, B kazanırsa ₺0 kâr sağlar."
       },
       {
         "type": "tip",
@@ -335,7 +335,7 @@
       },
       {
         "type": "p",
-        "text": "Ücretsiz [surebet hesaplayıcıyı](/en/calculator) iki veya üç sonuçla deneyin. Oranları kendiniz girmek istemiyorsanız, [BetTracker AI](/en) surebet'leri bulur ve bahis tutarlarını otomatik hesaplar."
+        "text": "Ücretsiz [surebet hesaplayıcıyı](/en/calculator) iki veya üç sonuçla deneyin. Oranları kendiniz girmek istemiyorsanız, [BetTracker AI](/en) surebet'leri bulur ve bahis tutarlarını otomatik hesaplar. Not: Türkiye'de Spor Toto Teşkilatı (iddaa) sisteminde Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğu için bunlar arasında surebet mümkün değildir. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bu siteleri kullanmanızı önermiyoruz. Hesaplayıcı, oranları kendiniz girdiğiniz genel bir matematik aracı olarak çalışır."
       }
     ],
     "faq": [
@@ -349,7 +349,7 @@
       },
       {
         "q": "Hesaplayıcı neden negatif kâr gösteriyor?",
-        "a": "Oranların tersinin toplamı 1'in üzerinde, yani ortada bir surebet yok. Büyük olasılıkla oranlardan biri değişmiştir."
+        "a": "Oranların tersinin toplamı 1'in üzerinde, yani ortada bir surebet yok. Büyük olasılıkla oranlardan biri değişmiştir. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğundan, bayiler arasında girdiğiniz oranlarda da genellikle surebet çıkmaz."
       }
     ],
     "category": "Temel Bilgiler",
@@ -368,19 +368,19 @@
       },
       {
         "type": "p",
-        "text": "Çoğu online bahis sitesinin kullandığı ondalık oranlarda ödeme, bahis tutarı çarpı orandır. Kâr ise ödemeden bahis tutarının çıkarılmasıyla bulunur."
+        "text": "Çoğu online bahis sitesinin kullandığı ondalık oranlarda ödeme, bahis tutarı çarpı orandır. Kâr ise ödemeden bahis tutarının çıkarılmasıyla bulunur. Türkiye'de iddaa oranları da ondalık gösterilir. Net kazancınızı etkileyebilecek kesintiler için iddaa sisteminin güncel kurallarını kontrol edin."
       },
       {
         "type": "example",
-        "title": "2.50 oranla €200 bahis",
+        "title": "2.50 oranla ₺200 bahis",
         "rows": [
           [
             "Ödeme",
-            "€200 × 2.50 = €500"
+            "₺200 × 2.50 = ₺500"
           ],
           [
             "Kâr",
-            "€500 − €200 = €300"
+            "₺500 − ₺200 = ₺300"
           ]
         ]
       },
@@ -398,7 +398,7 @@
       },
       {
         "type": "p",
-        "text": "Tüm sonuçların örtülü olasılıklarını toplayın. Toplam %100'ün üzerindedir ve aradaki fark bahis sitesinin marjıdır. Farklı bahis siteleri arasında toplam %100'ün altındaysa, elinizde bir surebet (yani arbitraj bahsi) var demektir."
+        "text": "Tüm sonuçların örtülü olasılıklarını toplayın. Toplam %100'ün üzerindedir ve aradaki fark bahis sitesinin marjıdır. Farklı bahis siteleri arasında toplam %100'ün altındaysa, elinizde bir surebet (yani arbitraj bahsi) var demektir. Ancak Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı iddaa bayileri aynı iddaa oranlarını sunduğundan, aralarında surebet çıkmaz; yurt dışı siteler ise yasa dışıdır ve engellenmiştir, bu yüzden onları önermiyoruz. Bu hesaplama burada eğitim ve oran karşılaştırma amaçlıdır."
       },
       {
         "type": "example",
@@ -417,7 +417,7 @@
       },
       {
         "type": "tip",
-        "text": "Ücretsiz surebet hesaplayıcımız bu üç hesaplamanın hepsini sizin yerinize yapar ve bahis tutarını birden fazla sonuca dağıtır."
+        "text": "Ücretsiz surebet hesaplayıcımız bu üç hesaplamanın hepsini sizin yerinize yapar ve bahis tutarını birden fazla sonuca dağıtır. Bahis oynamak size zarar veriyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       }
     ],
     "faq": [
@@ -427,7 +427,7 @@
       },
       {
         "q": "Ondalık oran ile kesirli oran arasındaki fark nedir?",
-        "a": "Ondalık oranlar, yatırılan birim başına toplam ödemeyi gösterir, örneğin 2.50. 3/2 gibi kesirli oranlar ise yalnızca kârı gösterir. Çoğu online bahis sitesi ondalık oran kullanır; kesirli oranlar ise İngiltere ve İrlanda'da hâlâ yaygındır."
+        "a": "Ondalık oranlar, yatırılan birim başına toplam ödemeyi gösterir, örneğin 2.50. 3/2 gibi kesirli oranlar ise yalnızca kârı gösterir. Çoğu online bahis sitesi ve iddaa ondalık oran kullanır; kesirli oranlar ise İngiltere ve İrlanda'da hâlâ yaygındır."
       }
     ],
     "category": "Temeller",
@@ -438,7 +438,7 @@
     "metaTitle": "Value betting ve surebet – farklar, risk ve kâr",
     "description": "Value betting ve surebet, hatalı fiyatlanmış oranlardan yararlanır ama farklı çalışır. Risk ve kâr potansiyelini karşılaştırın, bahis tarzınıza hangi stratejinin uyduğunu görün.",
     "keyword": "value betting ve surebet",
-    "intro": "Hem value betting hem de surebet, bahis sitelerinin fiyatlama hatalarından yararlanır. Temel fark şu: surebet garantili kârı anında kilitler, value betting ise kârı çok sayıda bahis üzerinden zamanla getirir.",
+    "intro": "Hem value betting hem de surebet, bahis sitelerinin fiyatlama hatalarından yararlanır. Temel fark şu: surebet garantili kârı anında kilitler, value betting ise kârı çok sayıda bahis üzerinden zamanla getirir. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için bu bayiler arasında surebet mümkün değildir; aşağıda bunu da açıkça anlatıyoruz.",
     "blocks": [
       {
         "type": "h2",
@@ -446,7 +446,7 @@
       },
       {
         "type": "p",
-        "text": "Value bet, oranın gerçek olasılığın işaret ettiğinden yüksek olduğu bahistir. Bir maç gerçekten 50/50 ise ve bir bahis sitesi 2.20 oran veriyorsa, bu bir value bet'tir. Yalnızca tek bir sonuca bahis yaparsınız ve tek tek bahisleri kaybedebilirsiniz, ancak zamanla bu avantaj kâra dönüşür."
+        "text": "Value bet, oranın gerçek olasılığın işaret ettiğinden yüksek olduğu bahistir. Bir maç gerçekten 50/50 ise ve iddaa'da bir sonuca 2.20 oran veriliyorsa, bu bir value bet'tir. Yalnızca tek bir sonuca bahis yaparsınız ve tek tek bahisleri kaybedebilirsiniz, ancak zamanla bu avantaj kâra dönüşebilir. Örneğin 1.000 ₺'lik bir bahiste 2.20 oran, 50/50 bir sonuca göre beklenen getiriyi artırır; yine de hiçbir kazanç garanti değildir."
       },
       {
         "type": "h2",
@@ -454,7 +454,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet'te (arbitraj bahsi) tüm sonuçlara farklı bahis sitelerinden bahis yaparsınız, böylece sonuç ne olursa olsun kazanırsınız. Bahis başına kâr daha küçüktür ama her işlemde garantidir."
+        "text": "Surebet'te (arbitraj bahsi) tüm sonuçlara farklı bahis sitelerinden bahis yaparsınız, böylece sonuç ne olursa olsun kazanırsınız. Bahis başına kâr daha küçüktür ama her işlemde garantidir. Ancak Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi tüm lisanslı bayiler aynı iddaa oranlarını sunar; bu nedenle bu bayiler arasında surebet fırsatı oluşmaz. Yurt dışı bahis siteleri yasa dışıdır ve engellenmiştir, bu yüzden onları önermiyoruz."
       },
       {
         "type": "example",
@@ -485,114 +485,114 @@
       {
         "type": "ul",
         "items": [
-          "Büyük dalgalanmalar ve ani düşüşler olmadan istikrarlı kâr istiyorsanız surebet'i seçin.",
+          "Büyük dalgalanmalar ve ani düşüşler olmadan istikrarlı kâr istiyorsanız surebet'i seçin; ancak Türkiye'de lisanslı iddaa bayileri arasında surebet bulunamayacağını unutmayın.",
           "Kayıp serilerine katlanabiliyorsanız ve dalgalanmayı atlatacak kadar geniş bir kasanız varsa value betting'i seçin.",
-          "Birçok kişi ikisini birleştiriyor: düzenli gelir için surebet, uzun vadeli avantajı en üst düzeye çıkarmak için value bet."
+          "Oranların serbestçe değiştiği piyasalarda birçok kişi ikisini birleştiriyor: düzenli gelir için surebet, uzun vadeli avantajı en üst düzeye çıkarmak için value bet. Türkiye'de ise iddaa sisteminde bu seçenek yoktur."
         ]
       },
       {
         "type": "tip",
-        "text": "Yeni başlıyorsanız surebet'lerle başlayın. Büyük kayıplar riskine girmeden bahis sitelerinin nasıl çalıştığını öğrenirsiniz."
+        "text": "Yeni başlıyorsanız önce bahislerinizi takip etmeyi ve oranları değerlendirmeyi öğrenin; büyük kayıplar riskine girmeden nasıl çalıştığını görürsünüz. Yalnızca lisanslı iddaa bayilerini (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) kullanın, yurt dışı sitelerden uzak durun. Kazanç kuralları iddaa sistemi tarafından belirlenir, güncel kuralları mutlaka kontrol edin. Bahis kontrolden çıkıyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Value betting surebet'lerden daha mı kârlı?",
-        "a": "Value betting uzun vadede daha yüksek kâr sağlayabilir, ancak dalgalanma çok daha fazladır. Surebet'ler ise her bahiste daha küçük ama daha istikrarlı bir kâr sunar."
+        "a": "Value betting uzun vadede daha yüksek kâr sağlayabilir, ancak dalgalanma çok daha fazladır. Surebet'ler ise her bahiste daha küçük ama daha istikrarlı bir kâr sunar. Türkiye'de lisanslı iddaa bayileri aynı oranları verdiği için bu bayiler arasında surebet mümkün değildir."
       },
       {
         "q": "Bahis siteleri value betting yapan hesapları da kısıtlıyor mu?",
-        "a": "Evet. Bahis siteleri hangi stratejiyi kullanırsa kullansın kazanan müşterileri kısıtlar. Yine de value betting'de kaybeden bahisler de oynadığınız için fark edilmesi biraz daha zor olabilir."
+        "a": "Birçok ülkede bahis siteleri hangi stratejiyi kullanırsa kullansın kazanan müşterileri kısıtlayabilir. Türkiye'de oranlar iddaa sisteminden geldiği için bayiler aynı oranları sunar; hesap kurallarını bayinin güncel koşullarından kontrol edin. Yasa dışı yurt dışı sitelere yönelmeyin."
       }
     ],
     "category": "Strateji",
-    "ctaLabel": "Surebet'leri gerçek zamanlı deneyin"
+    "ctaLabel": "Oranları gerçek zamanlı deneyin"
   },
   "bedste-bookmakere-til-surebets": {
-    "title": "Surebet için en iyi bahis siteleri",
-    "metaTitle": "Surebet için en iyi bahis siteleri (2026)",
-    "description": "Surebet için hangi bahis sitelerini kullanmalısınız? Arbitraj bahisleri için iyi bir bahis sitesini neyin belirlediğini ve hesap portföyünüzü nasıl oluşturacağınızı öğrenin.",
+    "title": "Surebet için en iyi bahis siteleri: Türkiye'de durum nedir?",
+    "metaTitle": "Surebet için en iyi bahis siteleri ve Türkiye gerçeği (2026)",
+    "description": "Türkiye'de surebet mümkün mü? Nesine, Bilyoner, Misli gibi iddaa bayilerinin neden aynı oranları sunduğunu ve iyi bir bahis sitesinde nelere dikkat etmeniz gerektiğini öğrenin.",
     "keyword": "surebet için en iyi bahis siteleri",
-    "intro": "Surebet için en iyi olan tek bir bahis sitesi yoktur. Arbitraj bahisi fırsatları bahis siteleri arasında ortaya çıkar. Bu yüzden en önemlisi, farklı oran sağlayıcıları kullanan ve piyasaya farklı yaklaşan birkaç operatörde hesabınızın olmasıdır.",
+    "intro": "Surebet için en iyi olan tek bir bahis sitesi yoktur. Arbitraj bahisi fırsatları, oranlarını birbirinden bağımsız belirleyen siteler arasında ortaya çıkar. Türkiye'de durum farklıdır: bahis, Spor Toto Teşkilatı'nın yönettiği iddaa sistemiyle devlet kontrolündedir ve lisanslı bayilerin hepsi aynı iddaa oranlarını sunar. Bu yüzden lisanslı Türk bayileri arasında surebet mümkün değildir.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Birden fazla bahis sitesi neden daha fazla surebet demek?"
+        "text": "Türkiye'de birden fazla bahis sitesi neden surebet anlamına gelmez?"
       },
       {
         "type": "p",
-        "text": "Birçok bahis sitesi aynı oran platformunu kullanır, bu yüzden fiyatları neredeyse birebir aynıdır. Surebet'ler çoğunlukla oranları kendi yöntemleriyle belirleyen siteler arasında ortaya çıkar. Yalnızca aynı platformu kullanan sitelerde hesabınız varsa, çok daha az arbitraj bahisi fırsatı görürsünüz."
+        "text": "Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler iddaa sistemi üzerinden aynı oranları sunar, bu yüzden fiyatları birebir aynıdır. Fiyat farkı olmayınca iki sonuca birden oynayarak garanti kâr elde edeceğiniz bir arbitraj fırsatı da ortaya çıkmaz. Yurt dışındaki siteler Türkiye'de yasa dışıdır ve engellenir; bu yüzden onları önermiyoruz."
       },
       {
         "type": "h2",
-        "text": "Nelere dikkat etmelisiniz?"
+        "text": "Bir bayide nelere dikkat etmelisiniz?"
       },
       {
         "type": "ul",
         "items": [
-          "Ülkenizdeki ilgili kumar düzenleyici kurumdan lisanslı olmalı; böylece korunursunuz ve kazançlarınızın vergi durumunu doğrulayabilirsiniz.",
+          "Spor Toto Teşkilatı (iddaa) kapsamında lisanslı olmalı; böylece korunursunuz. Kazançlarla ilgili kurallar iddaa sistemi tarafından belirlenir, güncel kuralları mutlaka kontrol edin.",
           "Hızlı para yatırma ve çekme işlemleri sunmalı; böylece parayı ihtiyaç duyulan yere kolayca aktarabilirsiniz.",
-          "Geniş spor ve bahis marketi yelpazesi olmalı, özellikle tenis, futbol ve basketbolda.",
-          "Popüler marketlerde rekabetçi oranlar ve düşük kâr marjı sunmalı.",
-          "Makul şartlara sahip, surebet'lerle çevrimini tamamlayabileceğiniz bir hoş geldin bonusu olmalı."
+          "Geniş spor ve bahis marketi yelpazesi olmalı, özellikle futbol, basketbol ve tenisde.",
+          "Kullanımı kolay, hızlı ve güvenilir bir arayüz ile mobil uygulama sunmalı.",
+          "Kampanya sunuyorsa şartları açık ve makul olmalı; katılmadan önce koşulları mutlaka okuyun."
         ]
       },
       {
         "type": "h2",
-        "text": "Bahis sitesi portföyünüzü nasıl oluşturursunuz?"
+        "text": "Türkiye'de bayi hesaplarınızı nasıl yönetirsiniz?"
       },
       {
         "type": "p",
-        "text": "Farklı platformlara yayılmış beş ila sekiz lisanslı bahis sitesiyle başlayın. Bu, çok fazla bakiyeyi yönetmek zorunda kalmadan size geniş bir fırsat yelpazesi sunar. Düzeni oturttuktan sonra daha fazla siteyle genişletebilirsiniz."
+        "text": "Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayilerden size uygun olanlarda hesap açabilirsiniz. Ancak hepsi aynı iddaa oranlarını sunduğu için çok sayıda hesap açmak size ek bir fiyat avantajı sağlamaz. Bu yüzden birkaç hesapla başlamak ve bakiyeyi sade tutmak daha mantıklıdır."
       },
       {
         "type": "tip",
-        "text": "BetTrackerAI'da hesabınızın olduğu bahis sitelerini tek tek seçebilirsiniz; böylece yalnızca gerçekten oynayabileceğiniz surebet'leri görürsünüz."
+        "text": "BetTrackerAI'da hesabınızın olduğu lisanslı bayileri seçebilir, bahislerinizi ve oranları tek yerden takip edebilirsiniz."
       },
       {
         "type": "h2",
-        "text": "Kendi oranlarını belirleyen bahis siteleri altın değerinde"
+        "text": "Türkiye'de oranlar neden her yerde aynı?"
       },
       {
         "type": "p",
-        "text": "Oranları satın almak yerine kendisi belirleyen bahis siteleri, haberlere genellikle daha yavaş ya da farklı tepki verir. Fiyat farkları tam da burada ortaya çıkar. Öte yandan, kazanan hesapları gubbing yoluyla (hesabı sessizce kısıtlama) en hızlı kısıtlayanlar da çoğunlukla bu siteler olur."
+        "text": "Serbest piyasalarda kendi oranlarını belirleyen bahis siteleri haberlere farklı tepki verir ve fiyat farkları tam da bu yüzden ortaya çıkar. İddaa'da ise oranlar merkezi sistemden gelir ve lisanslı bayiler bunları kendileri belirlemez. Bu nedenle yerel bayiler arasında fiyat farkı beklenmemelidir. Daha iyi oran vaat eden yurt dışı siteleri Türkiye'de yasa dışıdır; bu sitelere yönelmenizi önermiyoruz."
       }
     ],
     "faq": [
       {
-        "q": "Surebet için kaç bahis sitesine ihtiyacım var?",
-        "a": "İyi bir başlangıç noktası beş ila sekiz düzenlemeye tabi bahis sitesidir. Ne kadar farklı oran platformunu kapsarsanız, o kadar fazla surebet'e erişirsiniz."
+        "q": "Türkiye'de surebet için kaç bahis sitesine ihtiyacım var?",
+        "a": "Lisanslı iddaa bayileri aynı oranları sunduğu için birden fazla hesap açmak surebet fırsatı yaratmaz. Bir ya da birkaç lisanslı bayi, bahislerinizi oynamak ve takip etmek için yeterlidir."
       },
       {
-        "q": "Arbitraj bahisleri için lisanssız bahis sitelerini kullanabilir miyim?",
-        "a": "Önerilmez. Bulunduğunuz ülkede lisansı olmayan bahis siteleri engellenmiş olabilir; bu sitelerden elde edilen kazançlar farklı vergi uygulamasına tabi olabilir veya düzenleyici korumadan yoksun olabilir. Bulunduğunuz yerdeki kuralları mutlaka kontrol edin."
+        "q": "Arbitraj bahisleri için yabancı veya lisanssız bahis sitelerini kullanabilir miyim?",
+        "a": "Hayır, önermiyoruz. Türkiye'de yurt dışı bahis siteleri yasa dışıdır ve engellenmiştir; ayrıca düzenleyici korumadan yoksundur. Yalnızca Spor Toto Teşkilatı (iddaa) kapsamında lisanslı bayileri kullanın ve güncel kuralları kontrol edin. Kumar kontrolünüzü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       }
     ],
     "category": "Strateji",
-    "ctaLabel": "Bahis sitelerinizdeki surebet'leri görün"
+    "ctaLabel": "Bahislerinizi ve oranları takip edin"
   },
   "skat-paa-spillegevinster": {
-    "title": "Bahis kazançlarında vergi – uluslararası bahis rehberi",
+    "title": "Bahis kazançlarında vergi – Türkiye iddaa rehberi",
     "metaTitle": "Bahis Kazançlarında Vergi – Bilmeniz Gerekenler",
-    "description": "Bahis kazançlarından ve surebet'lerden vergi ödemeniz gerekir mi? Lisanslı ve offshore bahis siteleri için vergi kurallarının nasıl işlediğini ve nelerin belgelenmesi gerektiğini öğrenin.",
+    "description": "İddaa kazançlarından vergi ödemeniz gerekir mi? Türkiye'deki iddaa sisteminde kazanç kurallarının nasıl işlediğini, güncel kuralları nereden kontrol edeceğinizi ve nelerin kayıt altına alınması gerektiğini öğrenin.",
     "keyword": "bahis kazançlarında vergi",
-    "intro": "Düzenlemeye tabi birçok piyasada cevap basittir: lisanslı bahis sitelerinden elde edilen kazançlar oyuncu için vergiden muaftır. Devlete vergiyi bahis sitesi öder, siz değil. Ancak kurallar yaşadığınız yere ve bahis oynadığınız yere bağlıdır.",
+    "intro": "Türkiye'de yasal spor bahsi, Spor Toto Teşkilatı'nın denetimindeki iddaa sistemi üzerinden oynanır. Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler bu sistemin parçasıdır. Kazançlara ilişkin kuralları iddaa sistemi belirler, bu yüzden güncel kuralları mutlaka kontrol edin.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Lisanslı bahis siteleri: genellikle vergiden muaf"
+        "text": "İddaa kazançları: kurallar iddaa sistemince belirlenir"
       },
       {
         "type": "p",
-        "text": "Ülkenizdeki kumar düzenleyici kurumdan lisans almış bir sağlayıcıyla bahis oynadığınızda, kumar vergisini genellikle sağlayıcı kendi geliri üzerinden öder. Bu nedenle kazançlarınız genellikle vergiden muaftır ve çoğu durumda vergi dairenize bildirmeniz gerekmez. Bulunduğunuz yerdeki kuralları mutlaka kontrol edin."
+        "text": "Nesine, Bilyoner, Misli, Oley, Birebin ya da Tuttur gibi lisanslı bir bayi üzerinden iddaa oynadığınızda, kazançlara uygulanan kurallar iddaa sistemi tarafından belirlenir. Bu kurallar değişebileceği için güncel durumu Spor Toto Teşkilatı'nın ve bayinizin resmi açıklamalarından mutlaka kontrol edin. Vergi dairenize bir bildirim yapıp yapmayacağınızdan emin değilseniz de yetkili kurumlara danışın."
       },
       {
         "type": "h2",
-        "text": "Yerel lisansı olmayan offshore bahis siteleri"
+        "text": "Yurt dışı ve engellenmiş bahis siteleri"
       },
       {
         "type": "p",
-        "text": "Bulunduğunuz ülkede lisansı olmayan sağlayıcılarla bahis oynarsanız, kazançlarınız vergiye tabi olabilir. Kurallar, sağlayıcının başka bir ülkede lisansı olup olmadığı ve sizin vergi mukimliğiniz gibi etkenlere bağlıdır. Düzenlemeye tabi bahis sitelerine bağlı kalmanın çoğu zaman daha kolay olmasının nedenlerinden biri de budur."
+        "text": "Türkiye'de yurt dışı kaynaklı bahis siteleri yasa dışıdır ve erişime engellenir. Bu sitelerde bahis oynamanızı önermiyoruz. Bu tür sitelerde hukuki ve mali riskler vardır, paranızı geri alamama ihtimaliniz de bulunur. Lisanslı iddaa bayilerine bağlı kalmak hem daha güvenli hem de çok daha kolaydır."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Evet. Vergi açısından bir surebet, yalnızca iki ya da üç sıradan bahisten oluşur. Surebet, value bet ya da standart bahis oynuyor olsanız da lisanslı bahis sitelerinden elde edilen kazançlar genellikle vergiden muaftır. Aynı ilkeler geçerlidir."
+        "text": "Önce dürüst olalım: Türkiye'deki tüm lisanslı bayiler aynı iddaa oranlarını sunar. Bu yüzden Nesine, Bilyoner, Misli gibi lisanslı bayiler arasında surebet mümkün değildir. Vergi açısından da iddaa kuponunuz, nasıl bir strateji izlerseniz izleyin, sıradan bir bahis olarak ele alınır ve aynı iddaa kuralları geçerlidir. BetTrackerAI'yi oran takibi ve bahis kaydı için kullanabilirsiniz."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Bahis sizin asıl mesleğinizse ve büyük ölçekte yapıyorsanız, bazı ülkelerde farklı kurallar geçerli olabilir. Kendi durumunuzdan emin değilseniz yerel vergi dairesiyle ya da yetkin bir mali müşavirle iletişime geçin."
+        "text": "Bahis sizin asıl mesleğinizse ve büyük ölçekte yapıyorsanız, farklı kurallar geçerli olabilir. Kendi durumunuzdan emin değilseniz vergi dairesiyle ya da yetkin bir mali müşavirle iletişime geçin."
       }
     ],
     "faq": [
       {
-        "q": "Lisanslı bahis sitelerinden elde ettiğim kazançlar için vergi ödemem gerekir mi?",
-        "a": "Düzenlemeye tabi piyasaların çoğunda hayır. Yerel lisanslı operatörlerden elde edilen kazançlar genellikle oyuncu için vergiden muaftır. Yaşadığınız yerdeki vergi kurallarını mutlaka kontrol edin."
+        "q": "İddaa kazançlarım için vergi ödemem gerekir mi?",
+        "a": "Kazançlara ilişkin kuralları iddaa sistemi belirler ve bu kurallar değişebilir. Güncel kuralları Spor Toto Teşkilatı'nın ve bayinizin (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) resmi açıklamalarından kontrol edin."
       },
       {
-        "q": "Bir bahis sitesinin ülkemde lisanslı olup olmadığını nasıl öğrenebilirim?",
-        "a": "Ülkenizin ulusal bahis düzenleyici kurumunun web sitesinde onaylı operatörlerin bir listesi bulunur. Lisanslı bahis siteleri de genellikle düzenleyici kurumun logosunu sitelerinde gösterir."
+        "q": "Bir bahis sitesinin Türkiye'de lisanslı olup olmadığını nasıl öğrenebilirim?",
+        "a": "Yasal iddaa bayileri Spor Toto Teşkilatı'nın yetkilendirdiği sitelerdir. Yetkili bayi listesini Spor Toto Teşkilatı'nın resmi web sitesinden kontrol edebilirsiniz. Listede olmayan ya da erişime engellenmiş siteler yasa dışıdır ve kullanılmamalıdır."
       }
     ],
     "category": "Kurallar",
@@ -631,9 +631,9 @@
   "bankroll-management": {
     "title": "Spor bahislerinde ve arbitrajda kasa yönetimi rehberi",
     "metaTitle": "Spor Bahislerinde Kasa Yönetimi Rehberi 2026",
-    "description": "Spor bahislerinde kasa yönetimi: bahis tutarını nasıl belirleyeceğiniz, parayı bahis siteleri arasında nasıl bölüştüreceğiniz ve ROI'yi nasıl hesaplayacağınız, € cinsinden çözümlü örneklerle.",
+    "description": "Spor bahislerinde kasa yönetimi: bahis tutarını nasıl belirleyeceğiniz, parayı hesaplar arasında nasıl bölüştüreceğiniz ve ROI'yi nasıl hesaplayacağınız, ₺ cinsinden çözümlü örneklerle.",
     "keyword": "spor bahislerinde kasa yönetimi rehberi",
-    "intro": "İyi bir kasa yönetimi; bahse ne kadar para ayıracağınıza, her bahiste ne kadar yatıracağınıza ve paranın bahis siteleri arasında nasıl dağılacağına önceden karar vermek demektir. Value bet'lerde her bahis için kasanızın %1–2'sini yatırın. Surebet'lerde sınır likiditedir: bir surebet ortaya çıktığında paranız doğru bahis sitelerinde hazır olmalıdır. ROI'yi ölçebilmek için her şeyi kayıt altında tutun.",
+    "intro": "İyi bir kasa yönetimi; bahse ne kadar para ayıracağınıza, her bahiste ne kadar yatıracağınıza ve paranın hesaplarınız arasında nasıl dağılacağına önceden karar vermek demektir. Value bet'lerde her bahis için kasanızın %1–2'sini yatırın. Surebet'lerde sınır likiditedir: bir surebet ortaya çıktığında paranız doğru hesaplarda hazır olmalıdır. Türkiye'de Nesine, Bilyoner, Misli gibi lisanslı iddaa bayileri aynı iddaa oranlarını sunduğundan bu bayiler arasında surebet mümkün değildir; yabancı siteler ise yasa dışıdır ve engellenmiştir, bu yüzden onlara yönelmeyin. ROI'yi ölçebilmek için her şeyi kayıt altında tutun.",
     "blocks": [
       {
         "type": "h2",
@@ -642,7 +642,7 @@
       {
         "type": "ul",
         "items": [
-          "**Parayı ayırın:** kasanız kaybetmeyi göze alabileceğiniz paradan oluşur ve günlük finansınızdan ayrı tutulur.",
+          "**Parayı ayırın:** kasanız kaybetmeyi göze alabileceğiniz paradan oluşur ve günlük finansınızdan ayrı tutulur. Bahis kontrolden çıkmaya başlarsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz.",
           "**Sabit bahis kuralları:** bahis tutarını sezgiyle değil, bahse girmeden önce belirleyin.",
           "**Kayıpları kovalamayın:** kayıptan sonra bahis tutarını artırmak, kasayı tüketmenin en hızlı yoludur.",
           "**Aylık gözden geçirin:** bahis tutarlarını tek bir iyi haftaya göre değil, kasanıza göre artırın veya azaltın."
@@ -654,53 +654,53 @@
       },
       {
         "type": "p",
-        "text": "Value bet'ler kaybedebilir; bu yüzden bahis tutarı, kayıp serilerine dayanacak kadar küçük olmalıdır. Surebet'ler doğru uygulandığında kaybettirmez, dolayısıyla risk uygulamadadır: oran değişiklikleri, iptal edilen bahisler ve eksik kalan bacaklar."
+        "text": "Value bet'ler kaybedebilir; bu yüzden bahis tutarı, kayıp serilerine dayanacak kadar küçük olmalıdır. Surebet'ler doğru uygulandığında kaybettirmez, dolayısıyla risk uygulamadadır: oran değişiklikleri, iptal edilen bahisler ve eksik kalan bacaklar. Türkiye'de lisanslı iddaa bayilerinin oranları aynı olduğu için surebet fırsatı oluşmaz; aşağıdaki surebet örneği yalnızca hesabın mantığını göstermek içindir."
       },
       {
         "type": "example",
-        "title": "Örnek: value bet'lerde sabit bahis tutarı, kasa €2,000",
+        "title": "Örnek: value bet'lerde sabit bahis tutarı, kasa ₺50.000",
         "rows": [
           [
-            "Bahis başına tutar (%1.5)",
-            "€30"
+            "Bahis başına tutar (%1,5)",
+            "₺750"
           ],
           [
             "Üst üste 10 kaybeden bahis",
-            "−€300 (kasanın %15'i)"
+            "−₺7.500 (kasanın %15'i)"
           ],
           [
             "Kalan kasa",
-            "€1,700"
+            "₺42.500"
           ],
           [
-            "Gözden geçirme sonrası yeni bahis tutarı (%1.5)",
-            "€25.50"
+            "Gözden geçirme sonrası yeni bahis tutarı (%1,5)",
+            "₺637,50"
           ]
         ],
         "note": "%1–2'lik bahis tutarı, her value bet oyuncusunun yaşadığı kayıp serileri boyunca oyunda kalmanızı sağlar."
       },
       {
         "type": "example",
-        "title": "Örnek: surebet kasasının bahis siteleri arasında bölüştürülmesi, €3,000",
+        "title": "Örnek: surebet kasasının hesaplar arasında bölüştürülmesi, ₺120.000 (hesaplama örneği)",
         "rows": [
           [
-            "6 bahis sitesi × €500",
-            "€3,000"
+            "6 hesap × ₺20.000",
+            "₺120.000"
           ],
           [
             "Tipik surebet toplam bahis tutarı",
-            "€400"
+            "₺16.000"
           ],
           [
             "Ortalama %2 ile ayda 60 surebet",
-            "€400 × 60 × 2% = €480"
+            "₺16.000 × 60 × %2 = ₺19.200"
           ],
           [
             "Kasa üzerinden aylık getiri",
-            "€480 / €3,000 = 16%"
+            "₺19.200 / ₺120.000 = %16"
           ]
         ],
-        "note": "Surebet başına kâr küçüktür, ancak kasa ayda birçok kez döner. Sonuçlar limitlere ve bulunabilen surebet'lere göre değişir."
+        "note": "Surebet başına kâr küçüktür, ancak kasa ayda birçok kez döner. Sonuçlar limitlere ve bulunabilen surebet'lere göre değişir. Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunduğundan bu bayiler arasında böyle bir fırsat çıkmaz; bu tablo yalnızca örnektir. Yabancı ve yasa dışı sitelere yönelmeyin."
       },
       {
         "type": "h2",
@@ -708,7 +708,7 @@
       },
       {
         "type": "p",
-        "text": "ROI, net kârın toplam çevrime bölünmesiyle bulunur. Yatırdığınız her € başına ne kadar kazandığınızı gösterir ve stratejileri, spor dallarını ve bahis sitelerini karşılaştırmanın en iyi yoludur."
+        "text": "ROI, net kârın toplam çevrime bölünmesiyle bulunur. Yatırdığınız her ₺ başına ne kadar kazandığınızı gösterir ve stratejileri, spor dallarını ve bahis sitelerini karşılaştırmanın en iyi yoludur."
       },
       {
         "type": "example",
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Toplam yatırılan tutar",
-            "€18,500"
+            "₺500.000"
           ],
           [
             "Toplam geri dönüş",
-            "€18,870"
+            "₺510.000"
           ],
           [
             "Net kâr",
-            "€370"
+            "₺10.000"
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "₺10.000 / ₺500.000 = %2,0"
           ]
         ]
       },
@@ -743,24 +743,24 @@
       {
         "type": "ul",
         "items": [
-          "**Bahis sitesi başına bakiye:** bir bahis sitesindeki bakiye tükenmeden önce parayı taşıyın.",
+          "**Hesap başına bakiye:** Nesine, Bilyoner, Misli gibi bir hesaptaki bakiye tükenmeden önce parayı taşıyın.",
           "**Strateji başına kâr:** surebet'lerin mi yoksa value bet'lerin mi kazandırdığını görün.",
           "**Drawdown:** kayıp dönemlerini erkenden fark edin ve bahis tutarlarını zamanında düşürün."
         ]
       },
       {
         "type": "tip",
-        "text": "Kasanızın yaklaşık %20'sini bahis sitelerinin dışında yedekte tutun. Böylece en çok surebet çıkan hesaplara bakiye ekleyebilirsiniz."
+        "text": "Kasanızın yaklaşık %20'sini bahis hesaplarınızın dışında yedekte tutun. Böylece ihtiyaç duyduğunuz lisanslı hesaplara kolayca bakiye ekleyebilirsiniz. Kazançlara ilişkin güncel kuralları iddaa sisteminden ve Spor Toto Teşkilatı'ndan kontrol edin."
       },
       {
         "type": "p",
-        "text": "Bir [bahis takip aracı](/en/guides/bet-tracker) kasa yönetimini otomatik hale getirir. [BetTracker AI](/en) surebet'lerinizi kaydeder, bahis sitesi başına bakiyenizi gösterir ve ROI'yi sizin yerinize hesaplar."
+        "text": "Bir [bahis takip aracı](/en/guides/bet-tracker) kasa yönetimini otomatik hale getirir. [BetTracker AI](/en) bahislerinizi kaydeder, hesap başına bakiyenizi gösterir ve ROI'yi sizin yerinize hesaplar."
       }
     ],
     "faq": [
       {
         "q": "Surebet için kasam ne kadar büyük olmalı?",
-        "a": "Birçok kişi, 4–6 bahis sitesine dağıttığı €1,000–€3,000 ile başlar. Daha azıyla da olur, ancak surebet başına kâr çok küçülür."
+        "a": "Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için aralarında surebet mümkün değildir ve yabancı siteler yasa dışıdır; bu yüzden onlara yönelmenizi önermiyoruz. Surebet'in mümkün olduğu pazarlarda birçok kişi, 4–6 bahis sitesine dağıttığı ₺40.000–₺120.000 ile başlar. Daha azıyla da olur, ancak surebet başına kâr çok küçülür."
       },
       {
         "q": "Value bet'lerde kasamın yüzde kaçını yatırmalıyım?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Bahislerimde ROI'yi nasıl hesaplarım?",
-        "a": "Net kârı toplam yatırılan tutara bölün. €18,500 yatırıp €370 kâr ederseniz ROI %2.0 olur."
+        "a": "Net kârı toplam yatırılan tutara bölün. ₺500.000 yatırıp ₺10.000 kâr ederseniz ROI %2,0 olur."
       }
     ],
     "category": "Strateji",
@@ -777,9 +777,9 @@
   "arbitrage-betting": {
     "title": "Arbitraj bahis nasıl çalışır? Her sonuçta kârı garantiye alın",
     "metaTitle": "Arbitraj Bahis Nasıl Çalışır? Rehber 2026",
-    "description": "Arbitraj bahis nasıl çalışır: formül, € cinsinden çözümlü örnekler ve garanti kâr için ilk surebet'inizi adım adım nasıl oynayacağınız.",
+    "description": "Arbitraj bahis nasıl çalışır: formül, ₺ cinsinden çözümlü örnekler ve surebet mantığının adım adım anlatımı. Türkiye'deki iddaa sisteminin sınırları da dahil.",
     "keyword": "arbitraj bahis nasıl çalışır",
-    "intro": "Arbitraj bahis, ters oranların toplamı 1'in altında olduğunda aynı karşılaşmanın tüm sonuçlarına farklı bahis sitelerinde bahis yapmaktır. Bahis tutarını, ne olursa olsun ödeme aynı olacak şekilde bölüştürürsünüz. Toplam bahis tutarı ile ödeme arasındaki fark kârınızdır; genellikle surebet başına %1–3 olan bu kâr şansa değil, matematiğe dayanır.",
+    "intro": "Arbitraj bahis, ters oranların toplamı 1'in altında olduğunda aynı karşılaşmanın tüm sonuçlarına farklı bahis sitelerinde bahis yapmaktır. Bahis tutarını, ne olursa olsun ödeme aynı olacak şekilde bölüştürürsünüz. Toplam bahis tutarı ile ödeme arasındaki fark kârınızdır; genellikle surebet başına %1–3 olan bu kâr şansa değil, matematiğe dayanır. Not: Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için bu yöntem burada pratikte uygulanamaz; aşağıda mantığı ve bu sınırı açıkça anlatıyoruz.",
     "blocks": [
       {
         "type": "h2",
@@ -787,7 +787,7 @@
       },
       {
         "type": "p",
-        "text": "Her bahis sitesi kendi oranlarını belirler ve bunlara %4–7 aralığında bir marj ekler. Ancak sakatlıklara, ilk 11'lere ve yüksek tutarlı bahislere farklı hızlarda tepki verirler. Bir site oranı düşürmekte gecikirken başka bir site karşıt sonucun oranını çoktan yükseltmişse, bu iki oran birlikte bir fazlalık yaratır. İşte buna surebet denir. Konuya yeniyseniz [surebet nedir](/en/guides/what-are-surebets) yazımızla başlayın."
+        "text": "Serbest bahis piyasalarında her bahis sitesi kendi oranlarını belirler ve bunlara %4–7 aralığında bir marj ekler. Siteler sakatlıklara, ilk 11'lere ve yüksek tutarlı bahislere farklı hızlarda tepki verir. Bir site oranı düşürmekte gecikirken başka bir site karşıt sonucun oranını çoktan yükseltmişse, bu iki oran birlikte bir fazlalık yaratır. İşte buna surebet denir. Türkiye'de ise durum farklıdır: Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler Spor Toto Teşkilatı'nın aynı iddaa oranlarını sunar, bu nedenle bu bayiler arasında surebet oluşmaz. Konuya yeniyseniz [surebet nedir](/en/guides/what-are-surebets) yazımızla başlayın."
       },
       {
         "type": "p",
@@ -795,15 +795,15 @@
       },
       {
         "type": "example",
-        "title": "Örnek: İki sonuçlu tenis maçı, toplam bahis tutarı €1,000",
+        "title": "Örnek: İki sonuçlu tenis maçı, toplam bahis tutarı ₺10,000",
         "rows": [
           [
             "1. bahis sitesinde Oyuncu A, oran 2.08",
-            "Bahis tutarı €492.68"
+            "Bahis tutarı ₺4,926.83"
           ],
           [
             "2. bahis sitesinde Oyuncu B, oran 2.02",
-            "Bahis tutarı €507.32"
+            "Bahis tutarı ₺5,073.17"
           ],
           [
             "1/2.08 + 1/2.02",
@@ -811,14 +811,14 @@
           ],
           [
             "Kim kazanırsa kazansın ödeme",
-            "yaklaşık €1,024.78"
+            "yaklaşık ₺10,247.81"
           ],
           [
             "Garanti kâr",
-            "yaklaşık €24.78 (%2.5)"
+            "yaklaşık ₺247.81 (%2.5)"
           ]
         ],
-        "note": "Toplam 1'in altında olduğu için maçı kim kazanırsa kazansın yaklaşık €24.78 kazanırsınız."
+        "note": "Toplam 1'in altında olduğu için maçı kim kazanırsa kazansın yaklaşık ₺247.81 kazanırsınız. Bu bir matematik örneğidir; Türkiye'deki lisanslı iddaa bayilerinde böyle bir oran farkı oluşmaz."
       },
       {
         "type": "h2",
@@ -830,19 +830,19 @@
       },
       {
         "type": "example",
-        "title": "Örnek: Premier League maçı, toplam bahis tutarı €2,000",
+        "title": "Örnek: Premier League maçı, toplam bahis tutarı ₺20,000",
         "rows": [
           [
             "Ev sahibi galibiyeti, oran 2.15",
-            "Bahis tutarı €942.69"
+            "Bahis tutarı ₺9,426.80"
           ],
           [
             "Beraberlik, oran 3.60",
-            "Bahis tutarı €562.99"
+            "Bahis tutarı ₺5,629.90"
           ],
           [
             "Deplasman galibiyeti, oran 4.10",
-            "Bahis tutarı €494.33"
+            "Bahis tutarı ₺4,943.30"
           ],
           [
             "Oranların tersinin toplamı",
@@ -850,11 +850,11 @@
           ],
           [
             "Her sonuçta ödeme",
-            "yaklaşık €2,026.75"
+            "yaklaşık ₺20,267.60"
           ],
           [
             "Garanti kâr",
-            "yaklaşık €26.75 (%1.3)"
+            "yaklaşık ₺267.60 (%1.3)"
           ]
         ]
       },
@@ -864,7 +864,7 @@
       },
       {
         "type": "p",
-        "text": "Teoride bir düzine tarayıcı sekmesi açıp oranları karşılaştırabilirsiniz, ancak surebet'ler çoğu zaman yalnızca birkaç dakika sürer. Hesabı bitirdiğinizde oran genellikle çoktan değişmiş olur. Bu yüzden çoğu bahisçi, bahis sitelerini sürekli karşılaştıran bir oran tarayıcısı kullanır. [Surebet'leri otomatik bulma](/en/guides/find-surebets-automatically) hakkında daha fazlasını okuyun."
+        "text": "Teoride bir düzine tarayıcı sekmesi açıp oranları karşılaştırabilirsiniz, ancak surebet'ler çoğu zaman yalnızca birkaç dakika sürer. Hesabı bitirdiğinizde oran genellikle çoktan değişmiş olur. Bu yüzden serbest piyasalarda çoğu bahisçi, bahis sitelerini sürekli karşılaştıran bir oran tarayıcısı kullanır. [Surebet'leri otomatik bulma](/en/guides/find-surebets-automatically) hakkında daha fazlasını okuyun."
       },
       {
         "type": "ul",
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Hesap açın:** En az iki lisanslı bahis sitesinde, mümkünse daha fazlasında hesap açın ve önceden para yatırın.",
+          "**1. Hesap açın:** Serbest piyasalarda en az iki lisanslı bahis sitesinde hesap gerekir. Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunduğundan bu adım burada işe yaramaz. Yurt dışı siteler yasa dışıdır ve engellidir; kullanmayın.",
           "**2. Surebet bulun:** Oranların tersinin toplamı 1,00'ın altında olmalı.",
           "**3. Bahis tutarlarını hesaplayın:** Her sonuçta ödeme eşit olmalı.",
           "**4. İki bahsi de hızlıca yapın,** önce değişme ihtimali en yüksek orandan başlayın.",
@@ -890,25 +890,25 @@
       },
       {
         "type": "p",
-        "text": "Matematik risksizdir; uygulama her zaman öyle değildir. İkinci bahsi yaparken **oranın değişmesi**, bariz fiyat hatalarında **iptal edilen bahisler** ve **kısıtlanan hesaplar** asıl risklerdir. Başlangıçta bahis tutarlarını ılımlı tutun ve [bahis sitesi kısıtlamalarından nasıl kaçınılır](/en/guides/avoid-bookmaker-limits) yazısını okuyun."
+        "text": "Matematik risksizdir; uygulama her zaman öyle değildir. İkinci bahsi yaparken **oranın değişmesi**, bariz fiyat hatalarında **iptal edilen bahisler** ve **kısıtlanan hesaplar** asıl risklerdir. Başlangıçta bahis tutarlarını ılımlı tutun ve [bahis sitesi kısıtlamalarından nasıl kaçınılır](/en/guides/avoid-bookmaker-limits) yazısını okuyun. Kazanç kurallarını iddaa sistemi belirler; güncel kuralları mutlaka kontrol edin. Bahis kontrolünüzü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       },
       {
         "type": "p",
-        "text": "Bahis tutarları hesaplanmış canlı surebet'leri görmek ister misiniz? [BetTracker AI](/en) sizin yerinize bahis sitelerini tarar ve surebet'leri gerçek zamanlı gösterir."
+        "text": "Oranları ve bahislerinizi tek yerden izlemek ister misiniz? [BetTracker AI](/en) oranları karşılaştırır, bahislerinizi takip etmenize yardımcı olur ve surebet'leri destekleyen piyasalarda gerçek zamanlı gösterir. Türkiye'deki lisanslı iddaa bayileri arasında surebet çıkmadığını unutmayın."
       }
     ],
     "faq": [
       {
         "q": "Arbitraj bahis yasal mı?",
-        "a": "Evet, bir etkinliğin tüm sonuçlarına bahis yapmak çoğu ülkede yasa dışı değildir. Yine de bahis siteleri hesabınızı kısıtlayabilir. Bkz. [surebet yasal mı?](/en/guides/are-surebets-legal)"
+        "a": "Bir etkinliğin tüm sonuçlarına bahis yapmak birçok ülkede yasa dışı değildir. Türkiye'de ise bahis, Spor Toto Teşkilatı'nın iddaa sistemiyle devlet kontrolündedir. Lisanslı bayiler aynı oranları sunduğundan arbitraj fiilen mümkün değildir; yurt dışı siteler ise yasa dışıdır ve engellidir, bu yüzden kullanmamalısınız. Bkz. [surebet yasal mı?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Surebet ile ne kadar kazanılır?",
-        "a": "Tipik bir surebet, toplam bahis tutarının %1–3'ü kadar getiri sağlar. Surebet başına €1,000, ayda 40 surebet ve ortalama %1.5 ile bu yaklaşık ayda €600 eder."
+        "a": "Tipik bir surebet, toplam bahis tutarının %1–3'ü kadar getiri sağlar. Surebet başına ₺10,000, ayda 40 surebet ve ortalama %1.5 ile bu yaklaşık ayda ₺6,000 eder. Bu, serbest piyasalar için teorik bir hesaptır; Türkiye'de iddaa bayileri arasında uygulanamaz."
       },
       {
         "q": "Kaç bahis sitesine ihtiyacım var?",
-        "a": "En az iki, ancak ne kadar çok hesabınız olursa o kadar çok surebet yakalayabilirsiniz. Birçok arber beş ila on bahis sitesiyle çalışır."
+        "a": "En az iki, ancak ne kadar çok hesabınız olursa o kadar çok surebet yakalayabilirsiniz. Serbest piyasalarda birçok arber beş ila on bahis sitesiyle çalışır. Türkiye'de lisanslı bayilerin (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) oranları aynı olduğundan hesap sayısı bir fark yaratmaz."
       },
       {
         "q": "İkinci bahsimden önce oranlar değişirse ne olur?",
@@ -921,7 +921,7 @@
   "hvad-er-surebets": {
     "title": "Surebet nedir? Garanti oranlar nasıl işler?",
     "metaTitle": "Surebet nedir? Arbitraj bahis için eksiksiz rehber",
-    "description": "Surebet'in ne olduğunu, nasıl ortaya çıktığını ve farklı bahis sitelerinde tüm sonuçlara bahis yaparak garanti kârı nasıl elde edeceğinizi öğrenin.",
+    "description": "Surebet'in ne olduğunu, nasıl ortaya çıktığını ve tüm sonuçlara bahis yaparak garanti kârın nasıl hesaplandığını öğrenin. Türkiye'de iddaa sisteminde neden mümkün olmadığını da görün.",
     "keyword": "surebet",
     "intro": "Surebet – diğer adıyla arbitraj bahis ya da arbing – farklı bahis sitelerindeki oranların öyle bir birleşimidir ki bir maçın tüm olası sonuçlarına bahis yapsanız bile maç nasıl biterse bitsin kâr edersiniz. Kulağa gerçek olamayacak kadar iyi geliyor, ama bu tamamen matematiktir.",
     "blocks": [
@@ -931,11 +931,11 @@
       },
       {
         "type": "p",
-        "text": "Bahis siteleri oranlarını birbirinden bağımsız belirler. Farklı modeller kullanırlar, haberlere farklı tepki verirler ve belirli sonuçlara bahis çekmek isterler. Bunun sonucunda bir site ev sahibi takıma yüksek oran verirken başka bir site deplasman takımına yüksek oran verebilir. Aradaki fark yeterince büyüdüğünde ortaya bir surebet çıkar."
+        "text": "Serbest bahis piyasalarında bahis siteleri oranlarını birbirinden bağımsız belirler. Farklı modeller kullanırlar, haberlere farklı tepki verirler ve belirli sonuçlara bahis çekmek isterler. Bunun sonucunda bir site ev sahibi takıma yüksek oran verirken başka bir site deplasman takımına yüksek oran verebilir. Aradaki fark yeterince büyüdüğünde ortaya bir surebet çıkar. Türkiye'de ise durum farklıdır: bahis devlet denetimindeki iddaa sistemiyle yürür ve lisanslı bayiler (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunar. Bu yüzden lisanslı bayiler arasında surebet mümkün değildir. Yurt dışı siteler ise yasa dışıdır ve engellenmiştir; bu sitelere yönlendirmiyoruz."
       },
       {
         "type": "p",
-        "text": "Surebet fırsatları genellikle yalnızca birkaç dakika sürer. Bahis siteleri oranlarını güncellediği anda fırsat ortadan kalkar. Bu yüzden ya saatlerce elle arama yapmanız ya da piyasayı kesintisiz izleyen bir tarayıcı kullanmanız gerekir."
+        "text": "Surebet fırsatları, oranların bağımsız belirlendiği piyasalarda genellikle yalnızca birkaç dakika sürer. Bahis siteleri oranlarını güncellediği anda fırsat ortadan kalkar. Bu yüzden ya saatlerce elle arama yapmanız ya da piyasayı kesintisiz izleyen bir tarayıcı kullanmanız gerekir."
       },
       {
         "type": "h2",
@@ -966,7 +966,7 @@
             "yaklaşık %3.7"
           ]
         ],
-        "note": "Toplam 1'in altında olduğu için bu kombinasyon bir surebet'tir."
+        "note": "Toplam 1'in altında olduğu için bu kombinasyon bir surebet'tir. (Bu örnek teoriktir; iddaa'da lisanslı bayiler aynı oranları sunar.)"
       },
       {
         "type": "h2",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Kim kazanırsa kazansın kazancınız aynı olacak şekilde bahis tutarınızı bölmeniz gerekir. Yukarıdaki örnekte toplam 1,000 birimlik bahisle A oyuncusuna yaklaşık 494 birim, B oyuncusuna yaklaşık 506 birim yatırırsınız. Her iki sonuçta da yaklaşık 1,037 birim geri alırsınız; yani kârınız kabaca 37 birim olur."
+        "text": "Kim kazanırsa kazansın kazancınız aynı olacak şekilde bahis tutarınızı bölmeniz gerekir. Yukarıdaki örnekte toplam 1.000 ₺'lik bahisle A oyuncusuna yaklaşık 494 ₺, B oyuncusuna yaklaşık 506 ₺ yatırırsınız. Her iki sonuçta da yaklaşık 1.037 ₺ geri alırsınız; yani kârınız kabaca 37 ₺ olur."
       },
       {
         "type": "tip",
@@ -989,8 +989,8 @@
         "items": [
           "Bahislerinizi yatırırken oranlar değişebilir. Önce oranı en değişken olan bahsi oynayın.",
           "Pazarın iki bahis sitesinde de birebir aynı olduğunu kontrol edin; örneğin uzatmaların sayılıp sayılmadığına bakın.",
-          "Hızlı hareket edebilmek için birden fazla bahis sitesinde bakiye bulundurun.",
-          "Bahis siteleri yalnızca surebet oynayan hesapları kısıtlayabilir. Gubbing'den ve hesap limitlerinden kaçınma rehberimizi okuyun."
+          "Lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı oranları sunduğundan birden fazla bayide bakiye tutmak surebet için avantaj sağlamaz. Yasa dışı yurt dışı sitelere asla bakiye yatırmayın.",
+          "Bahis kazançlarına ilişkin kuralları iddaa sisteminin güncel düzenlemelerinden kontrol edin. Bahis kontrolünüzü kaybediyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
         ]
       }
     ],
@@ -1005,7 +1005,7 @@
       },
       {
         "q": "Surebet'ler nasıl bulunur?",
-        "a": "Oranları elle karşılaştırabilirsiniz ama bu yavaştır. BetTrackerAI gibi bir surebet tarayıcısı, bulunduğunuz pazarda faaliyet gösteren bahis sitelerini izler ve fırsatlar ortaya çıkar çıkmaz size gösterir."
+        "a": "Oranları elle karşılaştırabilirsiniz ama bu yavaştır. Oranların bağımsız belirlendiği piyasalarda bir surebet tarayıcısı fırsatları ortaya çıkar çıkmaz gösterir. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için bayiler arasında surebet çıkmaz; BetTrackerAI'yi oran karşılaştırma ve bahis takibi için kullanabilirsiniz. Yasa dışı yurt dışı siteleri önermiyoruz."
       }
     ],
     "category": "Temel Bilgiler",
@@ -1036,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Örnek: bir turnuvada üç oyuncu, toplam bahis tutarı €1,000",
+        "title": "Örnek: bir turnuvada üç oyuncu, toplam bahis tutarı ₺10.000",
         "rows": [
           [
             "A oyuncusu, oran 3.00",
-            "bahis tutarı yaklaşık €444"
+            "bahis tutarı yaklaşık ₺4.444"
           ],
           [
             "B oyuncusu, oran 4.00",
-            "bahis tutarı yaklaşık €333"
+            "bahis tutarı yaklaşık ₺3.333"
           ],
           [
             "C oyuncusu, oran 6.00",
-            "bahis tutarı yaklaşık €222"
+            "bahis tutarı yaklaşık ₺2.222"
           ],
           [
             "S = 0.333 + 0.250 + 0.167",
@@ -1056,11 +1056,11 @@
           ],
           [
             "Üçünden biri kazanırsa",
-            "ödeme yaklaşık €1,333, kâr yaklaşık €333"
+            "ödeme yaklaşık ₺13.333, kâr yaklaşık ₺3.333"
           ],
           [
             "Üçü de kaybederse",
-            "€1,000 kayıp"
+            "₺10.000 kayıp"
           ]
         ],
         "note": "Kâr yalnızca üç oyuncunuzdan biri kazanırsa elde edilir. Bunun ne kadar olası olduğuna kendiniz karar vermelisiniz."
@@ -1074,12 +1074,12 @@
         "items": [
           "Olasılığın büyük kısmının birkaç sonuçta toplandığını düşündüğünüzde; örneğin bir turnuvadaki üç favori.",
           "Tek bir sonuca oynamak yerine riski yaymak istediğinizde.",
-          "Birden fazla bahis sitesinde daha iyi oranlar bulabildiğinizde ve bahis tutarınızı bunlar arasında dağıtmak istediğinizde."
+          "Lisanslı iddaa bayilerinde (Nesine, Bilyoner, Misli gibi) oranlar aynı olduğundan, bahis tutarınızı tek bir bayi içinde birkaç sonuç arasında dağıtmak istediğinizde."
         ]
       },
       {
         "type": "tip",
-        "text": "Dutching, surebet'lerin yerini tutmaz. Garanti kâr istiyorsanız tüm sonuçları farklı bahis sitelerinden kapsamanız gerekir. Hesaplayıcı aradaki farkı anında gösterir."
+        "text": "Dutching, surebet'lerin yerini tutmaz. Garanti kâr için tüm sonuçları kapsamanız ve oranların farklı kaynaklarda birbirinden ayrışması gerekir. Türkiye'de lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunduğu için bunlar arasında surebet mümkün değildir. Yurt dışı bahis siteleri ise yasa dışıdır ve erişime engellenmiştir; bunları önermiyoruz. Hesaplayıcı, dutching ile surebet arasındaki farkı yine de anında gösterir."
       }
     ],
     "faq": [
@@ -1101,30 +1101,30 @@
   },
   "tennis-surebets": {
     "title": "Teniste surebet: nasıl bulunur ve nasıl oynanır",
-    "metaTitle": "Tenis surebet – tenis oranlarında garantili kazanç bulun",
-    "description": "Tenis yalnızca iki sonuç olduğu için surebet'e çok uygundur. Çalışılmış bir örneğe ve tenis arbitraj bahsinde kaçınmanız gereken tuzaklara göz atın.",
+    "metaTitle": "Tenis surebet – nasıl çalışır ve Türkiye'de neler mümkün",
+    "description": "Tenis yalnızca iki sonuç olduğu için surebet mantığına çok uygundur. Çalışılmış bir örneğe, tenis arbitraj bahsindeki tuzaklara ve Türkiye'deki iddaa sisteminin sınırlarına göz atın.",
     "keyword": "tenis surebet",
-    "intro": "Tenis, surebet oynamak için en kolay spor dallarından biridir. Bir maçın yalnızca iki sonucu vardır ve beraberlik yoktur; yani iki bahis sitesi ve iki bahis yeterlidir.",
+    "intro": "Tenis, surebet mantığını anlamak için en kolay spor dallarından biridir. Bir maçın yalnızca iki sonucu vardır ve beraberlik yoktur; yani teorik olarak iki farklı oran ve iki bahis yeterlidir. Türkiye'de ise lisanslı bayiler (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunduğu için aralarında surebet mümkün değildir.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Tenis neden surebet'e uygun?"
+        "text": "Tenis neden surebet mantığına uygun?"
       },
       {
         "type": "p",
-        "text": "İki sonuç olduğunda hesaplama basittir ve yalnızca iki bahis oynamanız gerekir. Her gün farklı saat dilimlerinde çok sayıda maç oynanır; bahis siteleri de sürekli yeni oranlar belirler ve bunu aynı şekilde yapmazlar."
+        "text": "İki sonuç olduğunda hesaplama basittir ve yalnızca iki bahis oynamanız gerekir. Her gün farklı saat dilimlerinde çok sayıda maç oynanır. Oranları bağımsız belirleyen pazarlarda bu fark yaratır; ancak Türkiye'de iddaa sistemi devlet kontrolündedir ve lisanslı bayiler aynı oranları sunar. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bunları önermiyoruz."
       },
       {
         "type": "example",
-        "title": "Örnek: 1.95 ve 2.20 oranları, toplam bahis tutarı €1,000",
+        "title": "Teorik örnek: 1.95 ve 2.20 oranları, toplam bahis tutarı ₺10,000",
         "rows": [
           [
-            "1. bahis sitesinde Oyuncu A, oran 1.95",
-            "bahis tutarı yaklaşık €530"
+            "1. kaynakta Oyuncu A, oran 1.95",
+            "bahis tutarı yaklaşık ₺5,300"
           ],
           [
-            "2. bahis sitesinde Oyuncu B, oran 2.20",
-            "bahis tutarı yaklaşık €470"
+            "2. kaynakta Oyuncu B, oran 2.20",
+            "bahis tutarı yaklaşık ₺4,700"
           ],
           [
             "1/1.95 + 1/2.20",
@@ -1132,14 +1132,14 @@
           ],
           [
             "Kazanandan bağımsız ödeme",
-            "yaklaşık €1,034"
+            "yaklaşık ₺10,340"
           ],
           [
             "Kâr",
-            "yaklaşık €34 (%3.4)"
+            "yaklaşık ₺340 (%3.4)"
           ]
         ],
-        "note": "Toplam 1'in altında olduğu için bu kombinasyon bir surebet'tir."
+        "note": "Toplam 1'in altında olduğu için bu kombinasyon teorik olarak bir surebet'tir. Türkiye'de lisanslı iddaa bayileri aynı oranları verdiği için bu örnek yalnızca hesaplama mantığını göstermek içindir."
       },
       {
         "type": "h2",
@@ -1148,36 +1148,36 @@
       {
         "type": "ul",
         "items": [
-          "Maçtan çekilen oyuncular: Bir oyuncu maç ortasında çekilirse bahis sitelerinin kuralları farklı olabilir. Bazıları bahsi iptal eder, bazıları sonuçlandırır. Her iki sitenin de şartlarını okuyun.",
+          "Maçtan çekilen oyuncular: Bir oyuncu maç ortasında çekilirse bahis kuralları farklı olabilir. Bazıları bahsi iptal eder, bazıları sonuçlandırır. İlgili iddaa bayisinin şartlarını ve güncel iddaa kurallarını okuyun.",
           "Hükmen galibiyetler ve hiç oynanmayan maçlar bahislerin iptal edilmesine ve açık bir pozisyonda kalmanıza yol açabilir.",
           "Yanlış maç: Oyuncu adlarını ve turnuvayı kontrol edin; özellikle isimlerin birbirine benzeyebildiği küçük turnuvalarda dikkatli olun.",
-          "Canlı oranlar hızlı değişir. Maç öncesi surebet'leri zamanında oynamak daha kolaydır."
+          "Canlı oranlar hızlı değişir. Maç öncesi oranları zamanında takip etmek daha kolaydır."
         ]
       },
       {
         "type": "tip",
-        "text": "Önce oranların en çok dalgalandığı yerde bahsi oynayın, diğerini ardından oynayın. Böylece surebet'in yarısıyla kalma riski en aza iner."
+        "text": "Surebet'in mümkün olduğu pazarlarda önce oranların en çok dalgalandığı yerde bahsi oynayın, diğerini ardından oynayın. Böylece surebet'in yarısıyla kalma riski en aza iner. Kazanç kuralları iddaa sistemi tarafından belirlenir; güncel kuralları kontrol edin. Bahis kontrolünüzü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) başvurabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Tenis neden surebet için uygundur?",
-        "a": "Çünkü yalnızca iki sonuç vardır ve beraberlik yoktur. İki bahis sitesi yeterlidir ve iki bahis oynarsınız."
+        "a": "Çünkü yalnızca iki sonuç vardır ve beraberlik yoktur. Teorik olarak iki farklı oran ve iki bahis yeterlidir. Ancak Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğundan aralarında surebet oluşmaz. Yurt dışı siteler yasa dışıdır ve engellenmiştir."
       },
       {
-        "q": "Surebet oynarken bir oyuncu maç ortasında çekilirse ne olur?",
-        "a": "Bahis sitelerinin kurallarına bağlıdır. Bazıları maç tamamlanmazsa bahsi iptal eder, bazıları ise sonuçlandırır. Tenis arbitraj bahsindeki en büyük risklerden biridir; bu yüzden önce şartları okuyun."
+        "q": "Bir oyuncu maç ortasında çekilirse bahsime ne olur?",
+        "a": "Bahis kurallarına bağlıdır. Maç tamamlanmazsa bazı kurallar bahsi iptal eder, bazıları ise sonuçlandırır. Tenis bahsindeki en büyük risklerden biridir; bu yüzden önce şartları ve güncel iddaa kurallarını okuyun."
       }
     ],
     "category": "Strateji",
-    "ctaLabel": "Güncel surebet'leri görün"
+    "ctaLabel": "Güncel oranları görün"
   },
   "fodbold-surebets": {
     "title": "Futbolda surebet: üç sonucu nasıl kapsarsınız",
     "metaTitle": "Futbol surebet – 1X2 oranlarında bahis tutarını nasıl bölersiniz",
-    "description": "Futbolda üç sonuç vardır; bu yüzden surebet için üç bahis gerekir. Bahis tutarınızı ev sahibi galibiyeti, beraberlik ve deplasman galibiyeti arasında nasıl böleceğinizi ve hangi tuzaklardan kaçınmanız gerektiğini öğrenin.",
+    "description": "Futbolda üç sonuç vardır; bu yüzden surebet için üç bahis gerekir. Bahis tutarınızı ev sahibi galibiyeti, beraberlik ve deplasman galibiyeti arasında nasıl böleceğinizi, hangi tuzaklardan kaçınmanız gerektiğini ve Türkiye'deki iddaa sisteminin bu konudaki sınırlarını öğrenin.",
     "keyword": "futbol surebet",
-    "intro": "Futbolda üç olası sonuç vardır: ev sahibi galibiyeti, beraberlik ve deplasman galibiyeti. Bu nedenle 1X2 pazarında bir surebet için üç bahis gerekir ve en iyi oranlar çoğu zaman üç farklı bahis sitesinde bulunur.",
+    "intro": "Futbolda üç olası sonuç vardır: ev sahibi galibiyeti, beraberlik ve deplasman galibiyeti. Bu nedenle 1X2 pazarında bir surebet için üç bahis gerekir ve en iyi oranlar normalde üç farklı bahis sitesinde bulunur. Türkiye'de ise durum farklıdır: Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunar, bu yüzden bu bayiler arasında surebet mümkün değildir. Yabancı siteler yasa dışıdır ve engellenmiştir; bu rehber onları önermez. Aşağıdaki hesaplama, yöntemi anlamanız için genel bir bilgidir.",
     "blocks": [
       {
         "type": "h2",
@@ -1189,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Örnek: üç bahis sitesi, toplam bahis tutarı €1,000",
+        "title": "Örnek (teorik): üç bahis sitesi, toplam bahis tutarı ₺10,000",
         "rows": [
           [
             "1. bahis sitesinde ev sahibi galibiyeti, oran 2.40",
-            "bahis tutarı yaklaşık €424"
+            "bahis tutarı yaklaşık ₺4,239"
           ],
           [
             "2. bahis sitesinde beraberlik, oran 3.80",
-            "bahis tutarı yaklaşık €268"
+            "bahis tutarı yaklaşık ₺2,678"
           ],
           [
             "3. bahis sitesinde deplasman galibiyeti, oran 3.30",
-            "bahis tutarı yaklaşık €308"
+            "bahis tutarı yaklaşık ₺3,083"
           ],
           [
             "1/2.40 + 1/3.80 + 1/3.30",
@@ -1209,14 +1209,14 @@
           ],
           [
             "Sonuç ne olursa olsun getiri",
-            "yaklaşık €1,017"
+            "yaklaşık ₺10,174"
           ],
           [
             "Kâr",
-            "yaklaşık €17 (%1.7)"
+            "yaklaşık ₺174 (%1.7)"
           ]
         ],
-        "note": "Kâr tenise göre daha düşüktür; üç bahis ise siz bahisleri oynarken oranların değişme riskini artırır."
+        "note": "Kâr tenise göre daha düşüktür; üç bahis ise siz bahisleri oynarken oranların değişme riskini artırır. Ayrıca bu örnek teoriktir: Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğundan böyle bir fark oluşmaz. Yabancı siteler yasa dışıdır ve engellidir; bu nedenle kullanmayın."
       },
       {
         "type": "h2",
@@ -1228,22 +1228,22 @@
           "Pazarın tüm bahis sitelerinde aynı maç süresi için geçerli olduğundan emin olun. 1X2 normalde yalnızca normal süreyi kapsar, ancak kupa maçları ve play-off maçları için kuralları mutlaka kontrol edin.",
           "Ertelenen ve yarıda kalan maçlar farklı şekilde sonuçlandırılır; bu yüzden her bahis sitesinin kurallarını okuyun.",
           "Üç bahis, oranların değişme riskini artırır. En çok dalgalanan bahsi ilk önce oynayın – genellikle bu, en yüksek oranlı bahis veya likiditesi en düşük pazardaki bahistir.",
-          "İki bahis sitesiyle kalmak ve oran değişimlerine maruz kalmayı azaltmak istiyorsanız Asya handikap veya 2.5 gol alt/üst gibi iki sonuçlu pazarları değerlendirin."
+          "İki bahis sitesiyle kalmak ve oran değişimlerine maruz kalmayı azaltmak istiyorsanız Asya handikap veya 2.5 gol alt/üst gibi iki sonuçlu pazarları değerlendirin. Türkiye'de lisanslı bayilerin oranları aynı olduğu için bu yöntem de iddaa içinde fark yaratmaz."
         ]
       },
       {
         "type": "tip",
-        "text": "BetTrackerAI'da bakiyenizin bulunduğu bahis sitelerini seçin; böylece yalnızca gerçekten oynayabileceğiniz surebet'leri görürsünüz."
+        "text": "BetTrackerAI'da hesabınızın bulunduğu lisanslı bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) seçerek iddaa bahislerinizi takip edebilir ve oranları karşılaştırabilirsiniz. Kazançlarla ilgili güncel kuralları iddaa sisteminden ve Spor Toto Teşkilatı'ndan kontrol edin. Bahis oynamak size zarar vermeye başlarsa Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Futbol surebet'leri neden tenis surebet'lerinden daha zordur?",
-        "a": "Çünkü iki yerine üç sonuç vardır. Çoğu zaman üç farklı bahis sitesinde üç bahis oynamanız gerekir ve bahisleri oynarken oranların değişme riski daha yüksektir."
+        "a": "Çünkü iki yerine üç sonuç vardır. Çoğu zaman üç farklı bahis sitesinde üç bahis oynamanız gerekir ve bahisleri oynarken oranların değişme riski daha yüksektir. Türkiye'de lisanslı bayiler aynı iddaa oranlarını sunduğu için bu bayiler arasında surebet bulunmaz."
       },
       {
         "q": "1X2 pazarı uzatmaları kapsar mı?",
-        "a": "Normalde kapsamaz. 1X2 genellikle yalnızca 90 dakikayı ve eklenen süreyi kapsar, ancak kurallar değişebilir. Bahislerinizi oynamadan önce her bahis sitesinin şart ve koşullarını mutlaka kontrol edin."
+        "a": "Normalde kapsamaz. 1X2 genellikle yalnızca 90 dakikayı ve eklenen süreyi kapsar, ancak kurallar değişebilir. Bahislerinizi oynamadan önce iddaa bayinizin şart ve koşullarını mutlaka kontrol edin."
       }
     ],
     "category": "Strateji",
@@ -1251,8 +1251,8 @@
   },
   "bookmakerens-margin": {
     "title": "Bahis sitesinin marjı: Oranların gerçekte neye mal olduğunu görün",
-    "metaTitle": "Bahis Şirketi Marjı – Overround Hesaplama ve Daha Yüksek Oranlar Bulma",
-    "description": "Bahis şirketleri, oranlarına eklenen marj sayesinde kazanır. Marjı nasıl hesaplayacağınızı ve size en iyi oranları veren bahis şirketlerini nasıl bulacağınızı öğrenin.",
+    "metaTitle": "Bahis Şirketi Marjı – Overround Hesaplama ve iddaa Oranlarını Karşılaştırma",
+    "description": "Bahis şirketleri, oranlarına eklenen marj sayesinde kazanır. Marjı nasıl hesaplayacağınızı ve iddaa oranlarında hangi piyasaların sizin için daha avantajlı olduğunu öğrenin.",
     "keyword": "bahis şirketi marjı",
     "intro": "Bir piyasadaki zımni olasılıkları topladığınızda sonuç %100'ün üzerine çıkar. Aradaki fark, overround olarak da bilinen bahis şirketinin marjıdır. Yani bahis oynamanın bedeli.",
     "blocks": [
@@ -1293,7 +1293,7 @@
       },
       {
         "type": "p",
-        "text": "Marj ne kadar düşükse, aynı olasılık için o kadar yüksek oran alırsınız. Çok sayıda bahiste %3 ile %7 arasındaki fark, kasanız üzerinde ciddi bir etki yaratır. Bu yüzden kullandığınız bahis şirketlerinin marjlarını, en çok oynadığınız piyasalarda karşılaştırın."
+        "text": "Marj ne kadar düşükse, aynı olasılık için o kadar yüksek oran alırsınız. Çok sayıda bahiste %3 ile %7 arasındaki fark, kasanız üzerinde ciddi bir etki yaratır. Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğu için marj farkı bayiler arasında değil, piyasalar ve ligler arasında ortaya çıkar. Bu yüzden en çok oynadığınız piyasalarda marjı hesaplayıp karşılaştırın."
       },
       {
         "type": "h2",
@@ -1301,17 +1301,17 @@
       },
       {
         "type": "p",
-        "text": "Birden fazla bahis şirketindeki en yüksek oranların birlikte hesaplanan toplamı 1'in altında kaldığında surebet ortaya çıkar. Bu durumda bahis şirketlerinin marjı, fiyat konusundaki görüş ayrılıklarıyla fazlasıyla dengelenir. Bir tarayıcının aradığı da tam olarak budur."
+        "text": "Birden fazla bahis şirketindeki en yüksek oranların birlikte hesaplanan toplamı 1'in altında kaldığında surebet ortaya çıkar. Ancak Türkiye'deki lisanslı bayilerin hepsi aynı iddaa oranlarını sunduğundan, aralarında surebet fırsatı oluşmaz. Yurt dışı siteler ise yasa dışıdır ve engellenmiştir; bu yüzden onları önermiyoruz. Marj hesabı yine de oranların gerçek maliyetini görmek için faydalıdır."
       },
       {
         "type": "tip",
-        "text": "Oranları hesap makinemize girin, toplamı anında görün. Sonuç 1'in altındaysa elinizde bir surebet var demektir."
+        "text": "Oranları hesap makinemize girin, toplamı anında görün. iddaa oranlarında toplam 1'in üzerinde çıkar; aradaki fark bahsin maliyetini, yani marjı gösterir."
       }
     ],
     "faq": [
       {
         "q": "İyi bir bahis şirketi marjı nedir?",
-        "a": "Ne kadar düşükse o kadar iyidir. Popüler futbol piyasalarında %3–6 arası bir marj olağandır; küçük ligler ve özel piyasalarda marjlar çoğunlukla daha yüksektir."
+        "a": "Ne kadar düşükse o kadar iyidir. Popüler futbol piyasalarında marjlar genellikle daha düşüktür; küçük ligler ve özel piyasalarda ise çoğunlukla daha yüksektir. iddaa oranlarında güncel marjı yukarıdaki formülle kendiniz hesaplayabilirsiniz."
       },
       {
         "q": "Overround nedir?",
@@ -1324,9 +1324,9 @@
   "asiatisk-handicap": {
     "title": "Asya Handikapı Nedir? Tam, Yarım ve Çeyrek Handikaplar",
     "metaTitle": "Asya Handikapı Nedir? – Örneklerle Basit Rehber",
-    "description": "Asya handikapını anlayın: -0.5, -1 ve -0.25 ne anlama gelir, bahis tutarınız ne zaman iade edilir ve surebet oynarken handikap çizgisi neden önemlidir.",
+    "description": "Asya handikapını anlayın: -0.5, -1 ve -0.25 ne anlama gelir, bahis tutarınız ne zaman iade edilir ve surebet mantığında handikap çizgisi neden önemlidir.",
     "keyword": "asya handikapı",
-    "intro": "Asya handikapı, beraberliğin ortadan kaldırıldığı veya ikiye bölündüğü bir futbol bahis piyasasıdır. Böylece geriye yalnızca iki sonuç kalır; bu yüzden surebet ve arbitraj fırsatı arayanlar tarafından sıkça tercih edilir.",
+    "intro": "Asya handikapı, beraberliğin ortadan kaldırıldığı veya ikiye bölündüğü bir futbol bahis piyasasıdır. Böylece geriye yalnızca iki sonuç kalır; bu yüzden surebet ve arbitraj fırsatı arayanlar tarafından, özellikle farklı oranların bulunduğu piyasalarda sıkça tercih edilir.",
     "blocks": [
       {
         "type": "h2",
@@ -1354,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Ev sahibi -0.25, €100 bahis tutarıyla",
+        "title": "Ev sahibi -0.25, ₺1.000 bahis tutarıyla",
         "rows": [
           [
             "Ev sahibi kazanır",
@@ -1362,7 +1362,7 @@
           ],
           [
             "Beraberlik",
-            "€50 iade, €50 kayıp"
+            "₺500 iade, ₺500 kayıp"
           ],
           [
             "Ev sahibi kaybeder",
@@ -1377,11 +1377,11 @@
       },
       {
         "type": "p",
-        "text": "Piyasada yalnızca iki sonuç bulunduğundan, bir bahis şirketinde ev sahibi -0.5'i, başka bir şirkette deplasman +0.5'i birleştirebilirsiniz; yani surebet için sadece iki bahis şirketi yeterlidir. Her iki tarafta da karşılık gelen handikap çizgisinin olduğundan emin olun: -0.5 ile +0.5, -0.25 ile +0.25 eşleşir."
+        "text": "Piyasada yalnızca iki sonuç bulunduğundan, teoride bir bahis şirketinde ev sahibi -0.5'i, başka bir şirkette deplasman +0.5'i birleştirmek surebet için yeterlidir. Ancak Türkiye'de iddaa sistemi devlet kontrolündedir; Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunar, bu yüzden bu bayiler arasında surebet mümkün değildir. Yurt dışı siteler yasadışıdır ve engellenmiştir; bu sitelere yönlendirmiyoruz. Yine de eşleşme mantığını bilmekte fayda var: -0.5 ile +0.5, -0.25 ile +0.25 eşleşir."
       },
       {
         "type": "tip",
-        "text": "Surebet oynamadan önce handikap çizgisini mutlaka kontrol edin. Çeyrek çizgilik bir fark, garanti kazancı riskli bir bahse dönüştürebilir."
+        "text": "Bahis yapmadan önce handikap çizgisini ve güncel iddaa kurallarını mutlaka kontrol edin. Çeyrek çizgilik bir fark, garanti sandığınız kazancı riskli bir bahse dönüştürebilir."
       }
     ],
     "faq": [
@@ -1400,9 +1400,9 @@
   "bet-tracker": {
     "title": "Bahis tablosuna alternatif: her bahsi otomatik takip edin",
     "metaTitle": "Bahis Tablosuna Alternatif – Bahis Takip Aracı 2026",
-    "description": "Bahis tablonuzu bir bahis takip aracıyla değiştirin: nelerin kaydedileceği, ROI'nin nasıl hesaplanacağı, € cinsinden örnekler ve en iyi bahis takip uygulamasının neler sunması gerektiği.",
+    "description": "Bahis tablonuzu bir bahis takip aracıyla değiştirin: nelerin kaydedileceği, ROI'nin nasıl hesaplanacağı, ₺ cinsinden örnekler ve en iyi bahis takip uygulamasının neler sunması gerektiği.",
     "keyword": "bahis tablosuna alternatif",
-    "intro": "Bahis tablosuna en iyi alternatif, her bahsi, bahis tutarını ve sonucu sizin yerinize kaydeden; ROI'yi, bahis şirketi bazında kârı ve bakiyeyi otomatik hesaplayan bir bahis takip aracıdır. Haftada onlarca surebet oynamaya başladığınız anda tablolar bozulur: formüller yanlışlıkla silinir, bahisler eksik kalır, iptal edilen bahisler rakamları çarpıtır. Takip aracı ise gerçek tabloyu size saniyeler içinde gösterir.",
+    "intro": "Bahis tablosuna en iyi alternatif, her bahsi, bahis tutarını ve sonucu sizin yerinize kaydeden; ROI'yi, bayi bazında kârı ve bakiyeyi otomatik hesaplayan bir bahis takip aracıdır. Haftada onlarca kupon oynamaya başladığınız anda tablolar bozulur: formüller yanlışlıkla silinir, bahisler eksik kalır, iptal edilen maçlar rakamları çarpıtır. Takip aracı ise gerçek tabloyu size saniyeler içinde gösterir. Not: Türkiye'de lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunar; bu nedenle bayiler arasında surebet mümkün değildir. Takip aracı yine de iddaa kuponlarınız için çok işe yarar.",
     "blocks": [
       {
         "type": "h2",
@@ -1410,15 +1410,15 @@
       },
       {
         "type": "p",
-        "text": "Ayda on bahis için bir tablo yeterlidir. Arbitraj bahisinde ise her surebet'in farklı bahis sitelerinde iki veya üç bacağı vardır. Yani 50 surebet, elle girmeniz, sonuçlandırmanız ve mutabakatını yapmanız gereken 100–150 satır demektir."
+        "text": "Ayda on kupon için bir tablo yeterlidir. Ancak haftada onlarca kupon, farklı pazarlar, kombine bahisler ve birden fazla bayi hesabı olduğunda; elle girmeniz, sonuçlandırmanız ve mutabakatını yapmanız gereken yüzlerce satır birikir. Örneğin ayda 50 kupon, çok ayaklı kombinelerle birlikte kolayca 100–150 satıra ulaşır."
       },
       {
         "type": "ul",
         "items": [
           "**Elle giriş hataları:** Tek bir yanlış oran ya da bahis miktarı ROI rakamınızı bozar.",
-          "**Eksik bacaklar:** Bir bacak kaydedilmezse kazanan bir surebet kayıp gibi görünür.",
-          "**İadeler ve kısmi kabul:** Basit formüllerle doğru biçimde yönetmek zordur.",
-          "**Bahis sitesi bazında genel görünüm yok:** Paranızın gerçekte nerede durduğunu kolayca göremezsiniz."
+          "**Eksik kayıtlar:** Bir kupon ya da kuponun bir ayağı kaydedilmezse sonucunuz olduğundan farklı görünür.",
+          "**İadeler ve iptal edilen maçlar:** Basit formüllerle doğru biçimde yönetmek zordur.",
+          "**Bayi bazında genel görünüm yok:** Paranızın gerçekte nerede durduğunu kolayca göremezsiniz."
         ]
       },
       {
@@ -1429,38 +1429,38 @@
         "type": "ul",
         "items": [
           "**Tarih ve karşılaşma:** Bahsi daha sonra kolayca bulabilmeniz için.",
-          "**Bahis sitesi, pazar ve oran:** Kupon onaylandığındaki haliyle, aynen.",
-          "**Bahis miktarı ve sonuç:** Kazandı, kaybetti, iade veya Asya handikaplarında yarı kazandı.",
-          "**Bahis türü:** Surebet, value bet veya normal bahis; böylece stratejileri karşılaştırabilirsiniz.",
-          "**Kapanış oranı:** Value bet oynuyorsanız, piyasayı yenip yenmediğinizi görmek için."
+          "**Bayi, pazar ve oran:** Kupon onaylandığındaki haliyle, aynen.",
+          "**Bahis miktarı ve sonuç:** Kazandı, kaybetti veya iade (örneğin iptal edilen maç).",
+          "**Bahis türü:** Tekli, kombine veya canlı bahis; böylece stratejileri karşılaştırabilirsiniz.",
+          "**Kapanış oranı:** Oran hareketlerini izliyorsanız, oynadığınız oranın piyasaya göre nasıl durduğunu görmek için."
         ]
       },
       {
         "type": "example",
-        "title": "Örnek: Takip edilen bir aylık surebet",
+        "title": "Örnek: Takip edilen bir aylık bahis sonucu (gösterim amaçlı hesap)",
         "rows": [
           [
-            "Surebet sayısı",
+            "Bahis sayısı",
             "60"
           ],
           [
-            "Toplam bahis hacmi (tüm bacaklar)",
-            "€24,000"
+            "Toplam bahis hacmi (tüm ayaklar)",
+            "₺240.000"
           ],
           [
             "Toplam geri dönüş",
-            "€24,720"
+            "₺247.200"
           ],
           [
             "Net kâr",
-            "€720"
+            "₺7.200"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "₺7.200 / ₺240.000 = %3,0"
           ]
         ],
-        "note": "Takip yapmazsanız yalnızca bakiyenizin hareket ettiğini görürsünüz. Takip yaptığınızda ise çevirdiğiniz her €100 için €3 kazandığınızı görürsünüz."
+        "note": "Bu rakamlar yalnızca takip mantığını göstermek için örnektir; gerçek sonuçlar değişir. Takip yapmazsanız yalnızca bakiyenizin hareket ettiğini görürsünüz. Takip yaptığınızda ise çevirdiğiniz her ₺100 için ne kadar kazandığınızı ya da kaybettiğinizi (bu örnekte ₺3 kazanç) net biçimde görürsünüz."
       },
       {
         "type": "h2",
@@ -1469,10 +1469,10 @@
       {
         "type": "ul",
         "items": [
-          "**Surebet bacaklarını gruplamalı:** Böylece arbitrajın tamamı tek bir pozisyon ve tek bir kâr olarak görünür.",
-          "**ROI'yi otomatik hesaplamalı:** Ay, spor, pazar ve bahis sitesi bazında.",
-          "**Bahis sitesi bazında bakiyeyi göstermeli:** Böylece nereye para yatıracağınızı veya nereden çekeceğinizi bilirsiniz.",
-          "**İadeleri ve oran değişikliklerini yönetmeli:** Toplamları bozmadan.",
+          "**Kuponları ve çok ayaklı bahisleri gruplamalı:** Böylece kombine kuponun tamamı tek bir pozisyon ve tek bir kâr/zarar olarak görünür.",
+          "**ROI'yi otomatik hesaplamalı:** Ay, spor, pazar ve bayi bazında.",
+          "**Bayi bazında bakiyeyi göstermeli:** Nesine, Bilyoner, Misli gibi hesaplarınızın her birinde ne kadar paranız olduğunu bilir, nereye para yatıracağınıza veya nereden çekeceğinize buna göre karar verirsiniz.",
+          "**İadeleri ve iptal edilen maçları yönetmeli:** Toplamları bozmadan.",
           "**Mobilde çalışmalı:** Çünkü bahislerinizi hareket halindeyken oynarsınız."
         ]
       },
@@ -1486,25 +1486,25 @@
       },
       {
         "type": "p",
-        "text": "Otomatik bir bahis takip uygulaması sizi yazma zahmetinden kurtarır: Tarayıcıdan bir surebet oynadığınızda bacaklar, oranlar ve bahis miktarları sizin yerinize kaydedilir. Yalnızca sonucu onaylarsınız. [Bahiste ROI nasıl hesaplanır](/en/guides/roi-betting) yazımızı okuyun ve gerçek rakamlarınıza dayanarak [kasa yönetimi](/en/guides/bankroll-management) planınızı oluşturun."
+        "text": "Otomatik bir bahis takip uygulaması sizi yazma zahmetinden kurtarır: Tarayıcıdan bir bahis oynadığınızda ayaklar, oranlar ve bahis miktarları sizin yerinize kaydedilir. Yalnızca sonucu onaylarsınız. [Bahiste ROI nasıl hesaplanır](/en/guides/roi-betting) yazımızı okuyun ve gerçek rakamlarınıza dayanarak [kasa yönetimi](/en/guides/bankroll-management) planınızı oluşturun."
       },
       {
         "type": "p",
-        "text": "[BetTracker AI](/en), surebet tarayıcısını ve bahis takipçisini tek bir yerde birleştirir. Böylece oynadığınız her surebet otomatik olarak takip edilir ve ROI'niz her zaman güncel kalır."
+        "text": "[BetTracker AI](/en), oran karşılaştırma araçlarını ve bahis takipçisini tek bir yerde birleştirir. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğundan surebet fırsatı bulunmaz; yurt dışı bahis siteleri ise yasa dışıdır ve engellenmiştir, bu yüzden önermiyoruz. Ancak oynadığınız her iddaa kuponu otomatik olarak takip edilir ve ROI'niz her zaman güncel kalır. Kazanç kurallarını iddaa sistemi belirler; güncel kuralları mutlaka kontrol edin. Bahis kontrolünüzü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Hâlâ tablo kullanabilir miyim?",
-        "a": "Evet, az sayıda bahis için kullanabilirsiniz. Ancak haftada birkaç surebet'ten fazlasını oynamaya başladığınızda, bahis takipçisi çok daha hızlıdır ve hataya çok daha az açıktır."
+        "a": "Evet, az sayıda bahis için kullanabilirsiniz. Ancak haftada birkaç kuponun fazlasını oynamaya başladığınızda, bahis takipçisi çok daha hızlıdır ve hataya çok daha az açıktır."
       },
       {
-        "q": "Surebet için iyi bir ROI nedir?",
-        "a": "Genellikle bahis hacminin %1–4'ü kadardır. Daha yüksek rakamlar mümkündür ancak çoğunlukla daha fazla limit ve iade edilen bahisle birlikte gelir."
+        "q": "Bahiste iyi bir ROI nedir?",
+        "a": "Surebet'te ROI genellikle bahis hacminin %1–4'ü kadardır. Ancak Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğundan bayiler arasında surebet mümkün değildir ve yurt dışı siteler yasa dışı olduğu için önermiyoruz. Normal iddaa bahislerinde sonuç büyük ölçüde şansa ve seçimlerinize bağlıdır; bu yüzden ROI'nizi düzenli takip edip gerçekçi kalmak önemlidir."
       },
       {
         "q": "Normal bahisleri de takip etmeli miyim?",
-        "a": "Evet. Her şeyi takip etmek gerçek sonucunuzu gösterir ve normal bahislerinizin surebet kârınızı eritip eritmediğini ortaya koyar."
+        "a": "Evet. Her şeyi takip etmek gerçek sonucunuzu gösterir ve hangi bahis türlerinin toplam kârınızı eritip eritmediğini ortaya koyar."
       }
     ],
     "category": "Strateji",
@@ -1527,26 +1527,26 @@
       },
       {
         "type": "example",
-        "title": "Örnek: Bir aylık surebet",
+        "title": "Örnek: Bir aylık bahis dönemi",
         "rows": [
           [
             "Toplam bahis miktarı",
-            "€40,000"
+            "400.000 ₺"
           ],
           [
             "Toplam ödeme",
-            "€41,000"
+            "410.000 ₺"
           ],
           [
             "Kâr",
-            "€1,000"
+            "10.000 ₺"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "10.000 / 400.000 × 100 = %2,5"
           ]
         ],
-        "note": "Oynadığınız her sterlin için 2.5p kazandınız."
+        "note": "Oynadığınız her 100 ₺ için 2,5 ₺ kazandınız."
       },
       {
         "type": "h2",
@@ -1565,7 +1565,7 @@
         "items": [
           "Uzun vadede normal bahisler: Bahis sitesi marj aldığı için çoğu bahisçi %0'ın altında kalır.",
           "Value betting: Çok sayıda bahiste %2–5 iyi bir sonuçtur.",
-          "Surebet: Genellikle surebet başına %1–5 arasıdır, ancak tüm sonuçlar kapsandığı için neredeyse risksizdir."
+          "Surebet: Oranların farklılaştığı serbest pazarlarda genellikle surebet başına %1–5 arasıdır ve tüm sonuçlar kapsandığı için neredeyse risksizdir. Türkiye'de ise Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı iddaa bayileri aynı oranları sunduğu için bayiler arasında surebet mümkün değildir. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bu sitelere yönlendirmiyoruz."
         ]
       },
       {
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Bahiste ROI nasıl hesaplanır?",
-        "a": "Kârınızı toplam bahis miktarınıza bölün ve 100 ile çarpın. €10,000 oynayıp €300 kazandıysanız ROI'niz %3'tür."
+        "a": "Kârınızı toplam bahis miktarınıza bölün ve 100 ile çarpın. 100.000 ₺ oynayıp 3.000 ₺ kazandıysanız ROI'niz %3'tür."
       },
       {
         "q": "ROI ile kâr arasındaki fark nedir?",
@@ -1593,9 +1593,9 @@
   "surebet-danmark-alternativ": {
     "title": "BetTrackerAI vs. Surebet Danmark: daha uygun fiyatlı alternatif",
     "metaTitle": "Surebet Danmark Alternatifi – BetTrackerAI Karşılaştırması (2025)",
-    "description": "BetTrackerAI ile Surebet Danmark'ı karşılaştırın: fiyatlandırma, özellikler, bahis şirketi kapsamı ve bahis takibi. İhtiyacınıza uygun surebet aracını bulun.",
+    "description": "BetTrackerAI ile Surebet Danmark'ı karşılaştırın: fiyatlandırma, özellikler, bahis şirketi kapsamı ve bahis takibi. İhtiyacınıza uygun aracı bulun.",
     "keyword": "surebet aracı karşılaştırması",
-    "intro": "Surebet Danmark ve BetTrackerAI, lisanslı bahis şirketlerindeki surebet'leri (arbitraj bahisleri) tarar. İkisi de 7 günlük ücretsiz deneme sunar. Asıl farklar fiyatlandırmada ve surebet tarayıcısının ötesinde sunulan araçlardadır.",
+    "intro": "Surebet Danmark ve BetTrackerAI, lisanslı bahis şirketlerindeki surebet'leri (arbitraj bahisleri) tarar. İkisi de 7 günlük ücretsiz deneme sunar. Asıl farklar fiyatlandırmada ve surebet tarayıcısının ötesinde sunulan araçlardadır. Türkiye'de iddaa sistemi devlet kontrolündedir ve lisanslı bayiler aynı oranları sunduğu için bu bayiler arasında surebet mümkün değildir; bu yüzden bahis takibi Türkiye'deki okuyucular için özellikle önemlidir.",
     "blocks": [
       {
         "type": "h2",
@@ -1615,7 +1615,7 @@
           ],
           [
             "Bahis şirketleri",
-            "İkisinde de: yalnızca lisanslı bahis şirketleri"
+            "İkisinde de: yalnızca lisanslı bahis şirketleri · Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunar"
           ],
           [
             "Bildirimler",
@@ -1642,7 +1642,7 @@
       },
       {
         "type": "p",
-        "text": "Bu önemli, çünkü surebet'ler bahis başına genellikle %1–5 kazandırır. Aylık ücret ne kadar düşükse, abonelik kendini amorti edene kadar o kadar az ciroya ihtiyaç duyarsınız."
+        "text": "Bu önemli, çünkü surebet'ler bahis başına genellikle %1–5 kazandırır. Aylık ücret ne kadar düşükse, abonelik kendini amorti edene kadar o kadar az ciroya ihtiyaç duyarsınız. Türkiye'de ise lisanslı iddaa bayileri aynı oranları sunduğundan bu bayiler arasında surebet fırsatı oluşmaz."
       },
       {
         "type": "h2",
@@ -1650,7 +1650,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet'ler ancak tam olarak ne kazandığınızı biliyorsanız kârlıdır. BetTrackerAI'da surebet'lerinizi ve para yatırma işlemlerinizi kaydeder, her bahis şirketindeki kârınızı, ROI'nizi ve bakiyenizi tek yerde görürsünüz. Ayrıca bahis kuponunu elle girmek yerine içe aktarabilirsiniz."
+        "text": "Bahislerden ancak tam olarak ne kazandığınızı veya kaybettiğinizi biliyorsanız doğru sonuç çıkarabilirsiniz. BetTrackerAI'da bahislerinizi ve para yatırma işlemlerinizi kaydeder, Nesine, Bilyoner, Misli gibi her bayideki kâr/zararınızı, ROI'nizi ve bakiyenizi tek yerde görürsünüz. Ayrıca bahis kuponunu elle girmek yerine içe aktarabilirsiniz."
       },
       {
         "type": "h2",
@@ -1659,14 +1659,14 @@
       {
         "type": "ul",
         "items": [
-          "Surebet'leri daha düşük fiyata almak ve hesaplarınızı ayrıntılı takip etmek istiyorsanız BetTrackerAI'ı seçin.",
+          "Araçlara daha düşük fiyata ulaşmak ve iddaa bahislerinizi ile bayi hesaplarınızı ayrıntılı takip etmek istiyorsanız BetTrackerAI'ı seçin.",
           "Zaten Surebet Danmark platformunu kullanıyor ve maliyetten memnunsanız Surebet Danmark'ı seçin.",
-          "Emin değilseniz ikisini de deneyin. İkisi de 7 günlük ücretsiz deneme sunduğu için aynı etkinliklerdeki surebet'leri karşılaştırabilirsiniz."
+          "Emin değilseniz ikisini de deneyin. İkisi de 7 günlük ücretsiz deneme sunduğu için araçları kendi ihtiyacınıza göre karşılaştırabilirsiniz."
         ]
       },
       {
         "type": "tip",
-        "text": "Hangi aracı seçerseniz seçin: önce oranları en oynak olan bahsi yapın ve marketin iki bahis şirketinde de birebir aynı olduğundan emin olun."
+        "text": "Hangi aracı seçerseniz seçin: bahis yapmadan önce oranları ve marketin birebir aynı olduğunu kontrol edin. Türkiye'de yalnızca Spor Toto Teşkilatı (iddaa) lisanslı bayilerini kullanın; yurt dışı siteler yasa dışıdır ve engellenmiştir, bu sitelere yönlendirmiyoruz. Bahis bir bağımlılık haline geliyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       }
     ],
     "faq": [
@@ -1676,7 +1676,7 @@
       },
       {
         "q": "İki araç da yalnızca lisanslı bahis şirketlerini mi kullanıyor?",
-        "a": "Evet. Her iki platform da düzenlemeye tabi, lisanslı bahis şirketlerine odaklanır; böylece yasal şekilde ve oyuncu korumalarıyla bahis yaparsınız."
+        "a": "Evet. Her iki platform da düzenlemeye tabi, lisanslı bahis şirketlerine odaklanır. Türkiye'de yasal seçenek, Spor Toto Teşkilatı (iddaa) lisanslı bayileridir (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur). Bu bayiler aynı iddaa oranlarını sunduğundan aralarında surebet oluşmaz. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bunları önermiyoruz."
       },
       {
         "q": "BetTrackerAI'ı ücretsiz deneyebilir miyim?",
@@ -1688,10 +1688,10 @@
   },
   "betting-regnskab": {
     "title": "Bahis muhasebesi: bankroll'ünüzü nasıl takip edersiniz",
-    "metaTitle": "Bahis Muhasebesi – Bahis Şirketleri Genelinde Bakiyenizi Takip Edin",
-    "description": "Bahislerinizin muhasebesini nasıl tutacağınızı öğrenin: her bahis şirketindeki para yatırma, çekme işlemleri ve bakiye. Birden fazla sitede bahis yaparken hiçbir şeyi gözden kaçırmayın.",
+    "metaTitle": "Bahis Muhasebesi – iddaa Platformları Genelinde Bakiyenizi Takip Edin",
+    "description": "Bahislerinizin muhasebesini nasıl tutacağınızı öğrenin: her lisanslı iddaa platformundaki para yatırma, çekme işlemleri ve bakiye. Birden fazla platformda bahis yaparken hiçbir şeyi gözden kaçırmayın.",
     "keyword": "bahis takipçisi",
-    "intro": "Sure bet oynadığınızda paranız aynı anda birçok bahis şirketinde durur. Bahis muhasebesi, paranızın nerede olduğunu ve hepsini topladığınızda ne kadar kazandığınızı gösterir.",
+    "intro": "Nesine, Bilyoner, Misli gibi birden fazla lisanslı iddaa platformunda hesabınız varsa paranız aynı anda birçok yerde durur. Not: Lisanslı bayiler aynı iddaa oranlarını sunduğundan aralarında sure bet mümkün değildir; yabancı siteler ise yasa dışıdır ve engellenmiştir, bu yüzden onları önermiyoruz. Bahis muhasebesi, paranızın nerede olduğunu ve hepsini topladığınızda ne kadar kazandığınızı veya kaybettiğinizi gösterir.",
     "blocks": [
       {
         "type": "h2",
@@ -1699,7 +1699,7 @@
       },
       {
         "type": "p",
-        "text": "Arbitraj bahsinde bir bahis şirketinde kazanır, diğerinde kaybedersiniz. Bakiyeniz sürekli değişir ve paranızın doğru yerlerde olması için düzenli olarak para yatırıp çekmeniz gerekir. Düzgün bir muhasebe olmadan genel olarak kârda olup olmadığınızı görmek zordur."
+        "text": "Birden fazla iddaa platformunda hesabınız olduğunda birinde kazanır, diğerinde kaybedersiniz. Bakiyeniz sürekli değişir ve paranızın doğru yerlerde olması için düzenli olarak para yatırıp çekmeniz gerekir. Düzgün bir muhasebe olmadan genel olarak kârda olup olmadığınızı görmek zordur."
       },
       {
         "type": "h2",
@@ -1708,31 +1708,31 @@
       {
         "type": "ul",
         "items": [
-          "Her bahis şirketindeki tüm para yatırma ve çekme işlemleri",
-          "Her bahis şirketindeki güncel bakiyeniz",
+          "Her platformdaki tüm para yatırma ve çekme işlemleri",
+          "Her platformdaki güncel bakiyeniz",
           "Tüm bahisler: miktar, oran ve sonuç",
           "Toplam kârınız: güncel bakiyeler artı çekilenler eksi yatırılanlar"
         ]
       },
       {
         "type": "example",
-        "title": "Örnek: bahis şirketleri genelinde toplam kâr",
+        "title": "Örnek: platformlar genelinde toplam kâr",
         "rows": [
           [
             "Toplam yatırılan",
-            "€10,000"
+            "₺100.000"
           ],
           [
             "Toplam çekilen",
-            "€3,000"
+            "₺30.000"
           ],
           [
-            "Bahis şirketlerindeki güncel bakiye",
-            "€7,800"
+            "Platformlardaki güncel bakiye",
+            "₺78.000"
           ],
           [
             "Kâr",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "₺30.000 + ₺78.000 − ₺100.000 = ₺8.000"
           ]
         ]
       },
@@ -1744,19 +1744,19 @@
         "type": "ul",
         "items": [
           "Para yatırma ve çekme işlemlerini aynı gün kaydedin.",
-          "Bakiyenizi haftada bir kez bahis şirketinin kendi gösterdiği bakiyeyle karşılaştırıp tutarlılığını kontrol edin.",
+          "Bakiyenizi haftada bir kez platformun kendi gösterdiği bakiyeyle karşılaştırıp tutarlılığını kontrol edin.",
           "Bahis paranızı gündelik paranızdan ayrı tutun; böylece başka işler için ayırdığınız parayla yanlışlıkla bahis yapmazsınız."
         ]
       },
       {
         "type": "tip",
-        "text": "BetTrackerAI'deki hesaplar, her bahis sitesi için bakiyeyi, yatırımları ve kârı gösterir; böylece paranızın nerede durduğunu her zaman bilirsiniz."
+        "text": "BetTrackerAI'deki hesaplar, her platform için bakiyeyi, yatırımları ve kârı gösterir; böylece paranızın nerede durduğunu her zaman bilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Bahis kazançlarından vergi öder miyim?",
-        "a": "Bahis kazançlarının vergilendirilmesi ülkeden ülkeye değişir. Bazı düzenlenmiş pazarlarda lisanslı bahis sitelerinden elde edilen kazançlar vergiden muaf olabilirken, bazılarında bunları beyan etmeniz gerekebilir. Yaşadığınız yerdeki vergi kurallarını kontrol edin veya yerel bir uzmana danışın."
+        "a": "Türkiye'de bahis kazançlarına ilişkin kurallar iddaa sistemi tarafından belirlenir ve zamanla değişebilir. Güncel kuralları Spor Toto Teşkilatı (iddaa) ve kullandığınız lisanslı platformun açıklamalarından kontrol edin; emin değilseniz bir mali müşavire danışın."
       },
       {
         "q": "Bahis takip tablomu ne sıklıkla güncellemeliyim?",
@@ -1769,11 +1769,11 @@
   "tjen-penge-paa-odds-uden-risiko": {
     "title": "Spor bahislerinde risksiz para kazanın: hedging ve arbitraj nasıl çalışır?",
     "metaTitle": "Spor Bahislerinde Risksiz Para Kazanma 2026",
-    "description": "Spor bahislerinde risksiz para nasıl kazanılır? € cinsinden örneklerle surebet ve hedging, gerçekçi bir bahis stratejisi ve gerçek tuzaklar.",
+    "description": "Spor bahislerinde risksiz para nasıl kazanılır? ₺ cinsinden örneklerle surebet ve hedging, iddaa'nın sınırları, gerçekçi bir bahis stratejisi ve gerçek tuzaklar.",
     "keyword": "spor bahislerinde risksiz para kazanma",
     "category": "Strateji",
     "ctaLabel": "Garantili kârlı surebet'leri görün",
-    "intro": "Aynı etkinliğin tüm sonuçlarına farklı bahis sitelerinde oynadığınızda, birleşik oranlar yatırdığınız tutardan fazlasını ödüyorsa spor bahislerinde risksiz para kazanabilirsiniz. Buna spor arbitrajı ya da surebet denir. Kâr, maç başlamadan önce sabitlenir ve genellikle %1–3 civarındadır. Risk sonuçta değil; oranların değişmesinde, hatalarda ve hesap limitlerinde yatar.",
+    "intro": "Aynı etkinliğin tüm sonuçlarına farklı bahis sitelerinde oynadığınızda, birleşik oranlar yatırdığınız tutardan fazlasını ödüyorsa spor bahislerinde risksiz para kazanabilirsiniz. Buna spor arbitrajı ya da surebet denir. Kâr, maç başlamadan önce sabitlenir ve genellikle %1–3 civarındadır. Risk sonuçta değil; oranların değişmesinde, hatalarda ve hesap limitlerinde yatar. Türkiye'de durum farklıdır: Spor Toto Teşkilatı'nın denetimindeki iddaa sisteminde Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı oranları sunduğu için lisanslı bayiler arasında surebet mümkün değildir. Yurtdışı siteler ise yasadışıdır ve engellenmiştir; bu yazı onları önermez.",
     "blocks": [
       {
         "type": "h2",
@@ -1781,19 +1781,19 @@
       },
       {
         "type": "p",
-        "text": "Bir bahis sitesi, fiyatlarının toplamı %100 olasılığın üzerine çıktığı için kazanır. İki bahis sitesi aynı etkinliği farklı değerlendirdiğinde, her birinde farklı bir sonuç için en iyi oranı alırsınız. Birleşik olasılık %100'ün altına düştüğünde garantili bir kâr elde edersiniz. Bu, tahmin değil matematiksel bahistir. Mekanizmanın tamamı [arbitraj bahsi nasıl çalışır?](/en/guides/arbitrage-betting) yazısında anlatılıyor."
+        "text": "Bir bahis sitesi, fiyatlarının toplamı %100 olasılığın üzerine çıktığı için kazanır. İki bahis sitesi aynı etkinliği farklı değerlendirdiğinde, her birinde farklı bir sonuç için en iyi oranı alırsınız. Birleşik olasılık %100'ün altına düştüğünde garantili bir kâr elde edersiniz. Bu, tahmin değil matematiksel bahistir. Mekanizmanın tamamı [arbitraj bahsi nasıl çalışır?](/en/guides/arbitrage-betting) yazısında anlatılıyor. Türkiye'de lisanslı iddaa bayileri aynı oranları verdiği için bu fırsat bayiler arasında oluşmaz; çözüm olarak yasadışı yurtdışı sitelere yönelmeyin."
       },
       {
         "type": "example",
-        "title": "Örnek: iki sonuçlu basketbol maçı (uzatmalar dahil), €1,000",
+        "title": "Teorik örnek: iki sonuçlu basketbol maçı (uzatmalar dahil), ₺10,000",
         "rows": [
           [
             "1. bahis sitesinde A Takımı, oran 1.95",
-            "Bahis tutarı €520.88"
+            "Bahis tutarı ₺5,208.80"
           ],
           [
             "2. bahis sitesinde B Takımı, oran 2.12",
-            "Bahis tutarı €479.12"
+            "Bahis tutarı ₺4,791.20"
           ],
           [
             "Ters oranların toplamı",
@@ -1801,11 +1801,11 @@
           ],
           [
             "Kim kazanırsa kazansın ödeme",
-            "yaklaşık €1,015.72"
+            "yaklaşık ₺10,157"
           ],
           [
             "Garantili kâr",
-            "yaklaşık €15.72 (%1.6)"
+            "yaklaşık ₺157 (%1.6)"
           ]
         ]
       },
@@ -1815,34 +1815,34 @@
       },
       {
         "type": "p",
-        "text": "Hedging aynı matematiği kullanır, ancak daha önce oynadığınız bir bahisten yola çıkar. Oran lehinize değiştiğinde, başka bir bahis sitesinde karşı sonuca oynarsınız ve sonuç ne olursa olsun kârı kilitlersiniz."
+        "text": "Hedging aynı matematiği kullanır, ancak daha önce oynadığınız bir bahisten yola çıkar. Oran lehinize değiştiğinde, karşı sonuca oynarsınız ve sonuç ne olursa olsun kârı kilitlersiniz. Türkiye'de bayiler aynı iddaa oranlarını sunduğu için bu yöntem, bayiler arasındaki fark yerine zaman içindeki oran hareketine dayanır. Kazanç kurallarını ve güncel düzenlemeleri mutlaka kontrol edin."
       },
       {
         "type": "example",
-        "title": "Örnek: maç öncesi €500 ile oynanan 2.5 gol üstü bahsi",
+        "title": "Örnek: maç öncesi ₺5,000 ile oynanan 2.5 gol üstü bahsi",
         "rows": [
           [
             "İlk bahis: 2.5 gol üstü, oran 2.40",
-            "Bahis tutarı €500, olası ödeme €1,200"
+            "Bahis tutarı ₺5,000, olası ödeme ₺12,000"
           ],
           [
             "Erken bir golden sonra: 2.5 gol altı, oran 2.60",
-            "Bahis tutarı €461.54"
+            "Bahis tutarı ₺4,615.38"
           ],
           [
             "Toplam yatırılan tutar",
-            "€961.54"
+            "₺9,615.38"
           ],
           [
             "Her sonuçta ödeme",
-            "€1,200"
+            "₺12,000"
           ],
           [
             "Kilitlenen kâr",
-            "yaklaşık €238.46 (%24.8)"
+            "yaklaşık ₺2,384.62 (%24.8)"
           ]
         ],
-        "note": "Formül: hedge bahis tutarı = olası ödeme ÷ yeni oran. Burada 1,200 ÷ 2.60 = €461.54."
+        "note": "Formül: hedge bahis tutarı = olası ödeme ÷ yeni oran. Burada 12,000 ÷ 2.60 = ₺4,615.38."
       },
       {
         "type": "h2",
@@ -1850,15 +1850,15 @@
       },
       {
         "type": "p",
-        "text": "Surebet başına garantili kâr küçüktür; bu yüzden sonuçlar hacimden ve disiplinden gelir. Gerçekçi bir arbitraj bahsi stratejisi şöyle görünür:"
+        "text": "Surebet başına garantili kâr küçüktür; bu yüzden sonuçlar hacimden ve disiplinden gelir. Oranların gerçekten farklı olduğu pazarlarda gerçekçi bir arbitraj bahsi stratejisi şöyle görünür:"
       },
       {
         "type": "example",
-        "title": "Gerçekçi aylık rakamlar",
+        "title": "Varsayımsal aylık rakamlar",
         "rows": [
           [
             "Surebet başına bahis tutarı",
-            "€1,000"
+            "₺10,000"
           ],
           [
             "Ortalama kâr",
@@ -1870,19 +1870,19 @@
           ],
           [
             "Beklenen aylık sonuç",
-            "yaklaşık €600"
+            "yaklaşık ₺6,000"
           ],
           [
-            "Aynı düzen, surebet başına €2,500 ile",
-            "yaklaşık €1,500"
+            "Aynı düzen, surebet başına ₺25,000 ile",
+            "yaklaşık ₺15,000"
           ]
         ]
       },
       {
         "type": "ul",
         "items": [
-          "**Bahislerinizi dağıtın:** birkaç bahis sitesine yayın ki hiçbir hesap dikkat çekmesin.",
-          "**Bakiyelerinizi hazır tutun:** her bahis sitesinde dakikalar içinde işlem yapabilmeniz için yeterli bakiye bulundurun.",
+          "**Bahislerinizi dağıtın:** hiçbir hesap dikkat çekmesin diye bahislerinizi lisanslı bayiler (Nesine, Bilyoner, Misli gibi) arasında makul biçimde yayın.",
+          "**Bakiyelerinizi hazır tutun:** her lisanslı bayide dakikalar içinde işlem yapabilmeniz için yeterli bakiye bulundurun.",
           "**Her bahsi kaydedin:** sadece hissiyatınızı değil, gerçek ROI'nizi görün. [Bahis takip aracı](/en/guides/bet-tracker) bunu otomatik yapar."
         ]
       },
@@ -1901,13 +1901,13 @@
       },
       {
         "type": "p",
-        "text": "Akıllı bahis, yalnızca matematiksel değil pratik riskleri de ortadan kaldırmak demektir. [BetTracker AI](/en), bahis dağılımı hesaplanmış surebet'leri gösterir; böylece oran değişmeden bahislerinizi oynayabilirsiniz."
+        "text": "Akıllı bahis, yalnızca matematiksel değil pratik riskleri de ortadan kaldırmak demektir. [BetTracker AI](/en), bahis dağılımı hesaplanmış surebet'leri gösterir; böylece oran değişmeden bahislerinizi oynayabilirsiniz. Türkiye'de ise en çok, iddaa bahislerinizi kaydetmek ve gerçek sonucunuzu görmek için işinize yarar. Bahis oynamak size zarar vermeye başlarsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Spor bahislerinde gerçekten hiç risk almadan para kazanılabilir mi?",
-        "a": "Doğru yerleştirilmiş bir surebet'te maçın sonucu fark etmez. Geriye kalan riskler pratik nitelikte: oranların değişmesi, iptal edilen bahisler ve yanlış pazar seçimi."
+        "a": "Doğru yerleştirilmiş bir surebet'te maçın sonucu fark etmez. Geriye kalan riskler pratik nitelikte: oranların değişmesi, iptal edilen bahisler ve yanlış pazar seçimi. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için bayiler arasında surebet bulunmaz; yurtdışı siteler yasadışıdır ve engellidir."
       },
       {
         "q": "Surebet ile hedge arasındaki fark nedir?",
@@ -1915,18 +1915,18 @@
       },
       {
         "q": "Başlamak için ne kadar paraya ihtiyacım var?",
-        "a": "Birkaç bahis sitesine dağıttığınız €200–500 ile başlayabilirsiniz. Ancak bahis tutarları küçük olduğunda bir surebet yalnızca birkaç euro kazandırır."
+        "a": "Birkaç bahis sitesine dağıttığınız ₺2,000–5,000 ile başlayabilirsiniz. Ancak bahis tutarları küçük olduğunda bir surebet yalnızca birkaç on lira kazandırır."
       }
     ]
   },
   "find-surebets-automatisk": {
     "title": "Surebet'leri otomatik bulun: oran tarayıcı fiyat hatalarını nasıl yakalar",
     "metaTitle": "Surebet'leri Otomatik Bulma – Oran Tarayıcı 2026",
-    "description": "Oran tarayıcıyla surebet'leri otomatik olarak nasıl bulursunuz: bahis yazılımı fiyat hatalarını nasıl tespit eder, € cinsinden örnekler ve dikkat edilmesi gerekenler.",
+    "description": "Oran tarayıcıyla surebet'leri otomatik olarak nasıl bulursunuz: bahis yazılımı fiyat hatalarını nasıl tespit eder, ₺ cinsinden örnekler ve Türkiye'de iddaa sisteminin sınırları.",
     "keyword": "surebet otomatik bulma",
     "category": "Strateji",
     "ctaLabel": "Surebet tarayıcıyı başlat",
-    "intro": "Surebet'leri otomatik bulmak için, düzinelerce bahis sitesinin oranlarını birkaç saniyede bir karşılaştıran bir oran tarayıcı kullanırsınız. Ters oranların toplamı 1'in altına düştüğünde yazılım, bahis tutarları hesaplanmış halde surebet'i işaretler. Elle saatler sürecek fiyat hatalarını, bahis sitesi düzeltmeden önce saniyeler içinde yakalar.",
+    "intro": "Surebet'leri otomatik bulmak için, birçok bahis sitesinin oranlarını birkaç saniyede bir karşılaştıran bir oran tarayıcı kullanılır. Ters oranların toplamı 1'in altına düştüğünde yazılım, bahis tutarları hesaplanmış halde surebet'i işaretler. Elle saatler sürecek fiyat hatalarını, bahis sitesi düzeltmeden önce saniyeler içinde yakalar. Türkiye'de durum farklıdır: Spor Toto Teşkilatı'nın iddaa sistemi altındaki lisanslı bayiler aynı iddaa oranlarını sunar, bu yüzden bu bayiler arasında surebet mümkün değildir. Bu rehber yöntemin mantığını anlatır.",
     "blocks": [
       {
         "type": "h2",
@@ -1934,7 +1934,7 @@
       },
       {
         "type": "p",
-        "text": "Tek bir futbol maçında 100'den fazla pazar olabilir. Bunu 15 bahis sitesiyle ve günde birkaç yüz maçla çarptığınızda milyonlarca fiyat kombinasyonu ortaya çıkar. Çoğu surebet 2–10 dakika sürer. Sekmeleri karşılaştırıp hesabı yaptığınızda ise oran genellikle çoktan değişmiş olur."
+        "text": "Tek bir futbol maçında 100'den fazla pazar olabilir. Bunu onlarca bahis sitesiyle ve günde birkaç yüz maçla çarptığınızda milyonlarca fiyat kombinasyonu ortaya çıkar. Çoğu surebet 2–10 dakika sürer. Sekmeleri karşılaştırıp hesabı yaptığınızda ise oran genellikle çoktan değişmiş olur. Türkiye'deki lisanslı iddaa bayilerinde ise oranlar aynı olduğundan böyle bir fark oluşmaz."
       },
       {
         "type": "ul",
@@ -1954,15 +1954,15 @@
       },
       {
         "type": "example",
-        "title": "Örnek: tarayıcının yakaladığı fiyat hatası, toplam bahis tutarı €1,000",
+        "title": "Örnek: tarayıcının yakaladığı fiyat hatası, toplam bahis tutarı ₺10.000",
         "rows": [
           [
             "1. bahis sitesinde 2.5 gol üstü, oran 2.25",
-            "Bahis tutarı €461.72"
+            "Bahis tutarı ₺4.617,20"
           ],
           [
             "2. bahis sitesinde 2.5 gol altı, oran 1.93",
-            "Bahis tutarı €538.28"
+            "Bahis tutarı ₺5.382,80"
           ],
           [
             "1/2.25 + 1/1.93",
@@ -1970,14 +1970,14 @@
           ],
           [
             "Her sonuçta ödeme",
-            "yaklaşık €1,038.88"
+            "yaklaşık ₺10.388,80"
           ],
           [
             "Garanti kâr",
-            "yaklaşık €38.88 (3.9%)"
+            "yaklaşık ₺388,80 (%3,9)"
           ]
         ],
-        "note": "1. bahis sitesi bir takım haberi güncellemesine henüz tepki vermemişti. Tarayıcı bu farkı saniyeler içinde işaretledi."
+        "note": "1. bahis sitesi bir takım haberi güncellemesine henüz tepki vermemişti. Tarayıcı bu farkı saniyeler içinde işaretledi. Bu örnek yalnızca hesabı göstermek içindir: Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğundan, aralarında böyle bir fark oluşmaz."
       },
       {
         "type": "h2",
@@ -2007,22 +2007,22 @@
       {
         "type": "ul",
         "items": [
-          "**Bahis sitesi kapsamı:** ne kadar çok bahis sitesi olursa o kadar çok surebet bulunur. Hesabınız olan sitelerin kapsamda olduğundan emin olun.",
+          "**Bahis sitesi kapsamı:** Türkiye'de yalnızca Spor Toto Teşkilatı (iddaa) lisanslı bayilerinde (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) oynayın. Bu bayiler aynı oranları sunar. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bunları kullanmayın.",
           "**Güncelleme sıklığı:** oranlar, özellikle [canlı surebet'ler](/en/guides/live-arbitrage-betting-scanner) için birkaç saniyede bir yenilenmelidir.",
           "**Filtreler:** spor, pazar, minimum kâr ve bahis siteleri; böylece yalnızca gerçekten oynayabileceklerinizi görürsünüz.",
           "**Bahis tutarı hesaplayıcı:** dahili olarak gelir, böylece bahisleri hemen yerleştirebilirsiniz. Rakamları [surebet hesaplayıcıda](/en/calculator) da kontrol edebilirsiniz.",
-          "**Bahis takibi:** bahislerinizi sonradan kaydetmek gerçek ROI'nizi gösterir. Bkz. [bahis takipçisi](/en/guides/bet-tracker)."
+          "**Bahis takibi:** bahislerinizi sonradan kaydetmek gerçek ROI'nizi gösterir. Bkz. [bahis takipçisi](/en/guides/bet-tracker). Kazanç kuralları iddaa sistemi tarafından belirlenir; güncel kuralları kontrol edin."
         ]
       },
       {
         "type": "p",
-        "text": "Bahis sitelerinizi seçin, minimum kârı %1 olarak ayarlayın ve bahisleri hızlıca, arka arkaya yerleştirin. [BetTracker AI](/en) bahis sitelerini sizin yerinize tarar ve surebet'leri bahis tutarı dağılımı hazır halde gerçek zamanlı gösterir."
+        "text": "Oranları karşılaştırmak ve bahislerinizi takip etmek için [BetTracker AI](/en) kullanabilirsiniz. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğundan surebet fırsatı beklemeyin ve yasa dışı sitelere yönelmeyin. Bahis oynamak kontrolünüzden çıkıyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Bir tarayıcı günde kaç surebet bulur?",
-        "a": "Genellikle düzinelerden birkaç yüze kadar değişir; bu, kaç bahis sitesi ve spor dalı eklediğinize ve minimum kâr ayarınıza bağlıdır."
+        "a": "Bu, kaç bahis sitesi ve spor dalı tarandığına ve minimum kâr ayarına bağlıdır. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için aralarında surebet bulunmaz; yasa dışı yurt dışı sitelere yönelmeyin."
       },
       {
         "q": "Bahisleri otomatik olarak yerleştirebilir miyim?",
@@ -2037,11 +2037,11 @@
   "live-arbitrage-betting-scanner": {
     "title": "Canlı arbitraj bahis tarayıcısı: maç sırasında canlı surebet'ler nasıl yakalanır",
     "metaTitle": "Canlı Arbitraj Bahis Tarayıcısı – Canlı Surebet 2026",
-    "description": "Canlı arbitraj bahis tarayıcısı maçlar sırasında surebet'leri nasıl bulur: hız, bahis gecikmeleri, € cinsinden örnek hesaplamalar ve sık yapılan hatalardan kaçınma yolları.",
+    "description": "Canlı arbitraj bahis tarayıcısı maçlar sırasında surebet'leri nasıl bulur: hız, bahis gecikmeleri, ₺ cinsinden örnek hesaplamalar, sık yapılan hatalardan kaçınma yolları ve Türkiye'deki iddaa sisteminin sınırları.",
     "keyword": "canlı arbitraj bahis tarayıcısı",
     "category": "Strateji",
     "ctaLabel": "Canlı surebet'leri gör",
-    "intro": "Canlı arbitraj bahis tarayıcısı, maçlar devam ederken bahis şirketlerinin canlı oranlarını karşılaştırır ve fiyatlar birbirinden ayrıştığı anda surebet'leri işaretler. Bahis şirketleri gollere, ara verilen anlara ve kırmızı kartlara farklı hızlarda tepki verdiği için canlı surebet'ler maç öncesine göre daha sık ortaya çıkar. Aynı zamanda çok daha hızlı kaybolurlar, çoğu zaman 10–60 saniye içinde. Bu yüzden hız ve disiplin her zamankinden daha önemlidir.",
+    "intro": "Canlı arbitraj bahis tarayıcısı, maçlar devam ederken bahis şirketlerinin canlı oranlarını karşılaştırır ve fiyatlar birbirinden ayrıştığı anda surebet'leri işaretler. Bahis şirketleri gollere, ara verilen anlara ve kırmızı kartlara farklı hızlarda tepki verdiği için canlı surebet'ler maç öncesine göre daha sık ortaya çıkar. Aynı zamanda çok daha hızlı kaybolurlar, çoğu zaman 10–60 saniye içinde. Bu yüzden hız ve disiplin her zamankinden daha önemlidir. Önemli not: Türkiye'de bahis, Spor Toto Teşkilatı'nın denetimindeki iddaa sistemiyle yürür. Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğu için bu bayiler arasında surebet mümkün değildir. Yurt dışı bahis siteleri ise yasaldışıdır ve engellenir; bu sitelerde bahis oynamanızı önermiyoruz. Aşağıdaki örnekler yalnızca yöntemi anlatmak içindir.",
     "blocks": [
       {
         "type": "h2",
@@ -2049,7 +2049,7 @@
       },
       {
         "type": "p",
-        "text": "Maç başlamadan önce oranlar yavaş hareket eder. Maç sırasında ise her olay olasılıkları anında değiştirir. Daha yavaş bir veri akışı kullanan ya da piyasaları birkaç saniye daha uzun süre askıya alan bir bahis şirketinin oranı, piyasanın geri kalanıyla uyuşmaz hale gelir. Bu fark, canlı bir surebet'tir."
+        "text": "Maç başlamadan önce oranlar yavaş hareket eder. Maç sırasında ise her olay olasılıkları anında değiştirir. Daha yavaş bir veri akışı kullanan ya da piyasaları birkaç saniye daha uzun süre askıya alan bir bahis şirketinin oranı, piyasanın geri kalanıyla uyuşmaz hale gelir. Bu fark, canlı bir surebet'tir. Tek bir sistemin ortak oranları sunduğu iddaa'da ise bayiler arasında böyle bir fark oluşmaz."
       },
       {
         "type": "ul",
@@ -2065,15 +2065,15 @@
       },
       {
         "type": "example",
-        "title": "Örnek: servis kırılmasından sonra canlı tenis, toplam bahis tutarı €800",
+        "title": "Örnek: servis kırılmasından sonra canlı tenis, toplam bahis tutarı ₺8.000",
         "rows": [
           [
             "Oyuncu A, 1. bahis şirketinde, oran 1.72",
-            "Bahis tutarı €467.63"
+            "Bahis tutarı ₺4.676,30"
           ],
           [
             "Oyuncu B, 2. bahis şirketinde, oran 2.42",
-            "Bahis tutarı €332.37"
+            "Bahis tutarı ₺3.323,70"
           ],
           [
             "1/1.72 + 1/2.42",
@@ -2081,26 +2081,26 @@
           ],
           [
             "Kim kazanırsa kazansın ödeme",
-            "yaklaşık €804.33"
+            "yaklaşık ₺8.043,30"
           ],
           [
             "Garanti kâr",
-            "yaklaşık €4.33 (%0.5)"
+            "yaklaşık ₺43,30 (%0.5)"
           ]
         ],
-        "note": "Canlı bahislerde marjlar çoğu zaman maç öncesinden daha düşüktür. Daha fazla sayıda bahis bunu dengeler, ancak yalnızca bahisleri hızlı ve doğru yerleştirirseniz."
+        "note": "Canlı bahislerde marjlar çoğu zaman maç öncesinden daha düşüktür. Daha fazla sayıda bahis bunu dengeler, ancak yalnızca bahisleri hızlı ve doğru yerleştirirseniz. Bu örnek varsayımsaldır; lisanslı iddaa bayileri aynı oranları sunduğu için aralarında böyle bir fark oluşmaz."
       },
       {
         "type": "example",
-        "title": "Örnek: erken golden sonra alt/üst, toplam bahis tutarı €1,000",
+        "title": "Örnek: erken golden sonra alt/üst, toplam bahis tutarı ₺10.000",
         "rows": [
           [
             "3.5 gol üstü, 1. bahis şirketinde, oran 2.30",
-            "Bahis tutarı €451.07"
+            "Bahis tutarı ₺4.510,70"
           ],
           [
             "3.5 gol altı, 2. bahis şirketinde, oran 1.89",
-            "Bahis tutarı €548.93"
+            "Bahis tutarı ₺5.489,30"
           ],
           [
             "Ters oranların toplamı",
@@ -2108,11 +2108,11 @@
           ],
           [
             "Her sonuçta ödeme",
-            "yaklaşık €1,037.47"
+            "yaklaşık ₺10.374,70"
           ],
           [
             "Garanti kâr",
-            "yaklaşık €37.47 (%3.7)"
+            "yaklaşık ₺374,70 (%3.7)"
           ]
         ]
       },
@@ -2152,13 +2152,13 @@
       },
       {
         "type": "p",
-        "text": "Yeniyseniz maç öncesiyle başlayın, rutininiz oturduktan sonra canlıya geçin. Önce [surebet'leri otomatik olarak nasıl bulacağınızı](/en/guides/find-surebets-automatically) okuyun. Hazır olduğunuzda [BetTracker AI](/en), bahis tutarı dağılımı gerçek zamanlı hesaplanmış canlı surebet'leri gösterir."
+        "text": "Yeniyseniz maç öncesiyle başlayın, rutininiz oturduktan sonra canlıya geçin. Önce [surebet'leri otomatik olarak nasıl bulacağınızı](/en/guides/find-surebets-automatically) okuyun. Türkiye'de lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı oranları sunduğundan, [BetTracker AI](/en)'ı bu bayiler arasında surebet aramak için değil, oranlarınızı ve bahislerinizi takip etmek için kullanın; kazançla ilgili güncel kuralları iddaa sisteminden kontrol edin. Bahis kontrolünüzü kaybediyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Canlı surebet'ler maç öncesine göre daha kârlı mı?",
-        "a": "Sayıca daha fazlalar, ancak marjlar çoğu zaman daha düşük ve işlem riski daha yüksek. Net sonuç, ne kadar hızlı ve doğru davrandığınıza bağlı."
+        "a": "Sayıca daha fazlalar, ancak marjlar çoğu zaman daha düşük ve işlem riski daha yüksek. Net sonuç, ne kadar hızlı ve doğru davrandığınıza bağlı. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için bu bayiler arasında surebet fırsatı çıkmaz."
       },
       {
         "q": "Ne kadar hızlı olmam gerekiyor?",
@@ -2166,18 +2166,18 @@
       },
       {
         "q": "Bahis siteleri canlı arbitraj yapanları daha hızlı mı limitler?",
-        "a": "Çoğu zaman evet, çünkü yavaş kalan oranlar üzerinden yapılan canlı arbitraj kolayca fark edilir. Arada normal bahisler de oynayın ve [bahis sitesi limitlerinden nasıl kaçınılır](/en/guides/avoid-bookmaker-limits) rehberini okuyun."
+        "a": "Çoğu zaman evet, çünkü yavaş kalan oranlar üzerinden yapılan canlı arbitraj kolayca fark edilir. Arada normal bahisler de oynayın ve [bahis sitesi limitlerinden nasıl kaçınılır](/en/guides/avoid-bookmaker-limits) rehberini okuyun. Türkiye'de yurt dışı siteler yasaldışıdır ve engellenir; bu sitelere yönelmeyin."
       }
     ]
   },
   "find-value-bets-med-ai": {
     "title": "Yapay zekâ ile value bet bulun: yapay zekâ oran tarayıcısı +EV bahisleri nasıl yakalar",
     "metaTitle": "Yapay Zekâ ile Value Bet Bulun – Yapay Zekâ Oran Tarayıcı 2026",
-    "description": "Yapay zekâ ile value bet nasıl bulunur: yapay zekâ oran tarayıcısı adil oranı nasıl hesaplar, +EV bahisleri nasıl yakalar ve neler bekleyebilirsiniz? € cinsinden örneklerle.",
+    "description": "Yapay zekâ ile value bet nasıl bulunur: yapay zekâ oran tarayıcısı adil oranı nasıl hesaplar, iddaa oranlarındaki +EV bahisleri nasıl yakalar ve neler bekleyebilirsiniz? ₺ cinsinden örneklerle.",
     "keyword": "yapay zeka ile value bet bulma",
     "category": "Strateji",
     "ctaLabel": "Yapay zekâ ile value bet bul",
-    "intro": "Yapay zekâ ile value bet bulmak için, her sonucun adil olasılığını tahmin eden bir yapay zekâ oran tarayıcısı kullanırsınız. Bu tahmin genellikle marjı çıkarılmış sharp bahis şirketi oranlarına dayanır ve soft bahis şirketlerinin oranlarıyla karşılaştırılır. Sunulan oran adil orandan yüksekse, bahsin beklenen değeri pozitiftir (+EV). Yapay zekâ bu karşılaştırmayı binlerce pazarda saniyeler içinde yapar.",
+    "intro": "Yapay zekâ ile value bet bulmak için, her sonucun adil olasılığını tahmin eden bir yapay zekâ oran tarayıcısı kullanırsınız. Bu tahmin genellikle marjı çıkarılmış referans piyasa oranlarına dayanır ve iddaa bayilerinin (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) sunduğu oranlarla karşılaştırılır. Sunulan oran adil orandan yüksekse, bahsin beklenen değeri pozitiftir (+EV). Yapay zekâ bu karşılaştırmayı binlerce pazarda saniyeler içinde yapar. Türkiye'de bahis, Spor Toto Teşkilatı'nın denetimindeki iddaa sistemi üzerinden yasal olarak oynanır; yurt dışı siteler yasadışıdır ve engellenmiştir.",
     "blocks": [
       {
         "type": "h2",
@@ -2196,7 +2196,7 @@
             "%50 (adil oran 2.00)"
           ],
           [
-            "Soft bahis şirketinde sunulan oran",
+            "İddaa bayisinde sunulan oran (varsayımsal)",
             "2.10"
           ],
           [
@@ -2204,15 +2204,15 @@
             "0.50 × 2.10 − 1 = +5%"
           ],
           [
-            "€50 bahis tutarı",
-            "Bahis başına beklenen kâr €2.50"
+            "₺500 bahis tutarı",
+            "Bahis başına beklenen kâr ₺25"
           ],
           [
-            "€50'luk 300 bahis (€15,000 ciro)",
-            "Beklenen kâr yaklaşık €750"
+            "₺500'lük 300 bahis (₺150.000 ciro)",
+            "Beklenen kâr yaklaşık ₺7.500"
           ]
         ],
-        "note": "Beklenen kâr bir ortalamadır. Gerçek sonuçlar, özellikle az sayıda bahiste, bu değerin altına da üstüne de sapar."
+        "note": "Beklenen kâr bir ortalamadır. Gerçek sonuçlar, özellikle az sayıda bahiste, bu değerin altına da üstüne de sapar. Kazançlara ilişkin kurallar iddaa sistemi tarafından belirlenir; güncel kuralları kontrol edin."
       },
       {
         "type": "h2",
@@ -2220,7 +2220,7 @@
       },
       {
         "type": "p",
-        "text": "Sharp bahis şirketlerinin marjları düşüktür ve profesyonel paraya hızla uyum sağlarlar. Bu yüzden oranları, gerçek olasılığın en iyi tahminidir. Yapay zekâ sharp orandaki marjı çıkarır ve adil oranı hesaplar."
+        "text": "Sharp piyasaların marjları düşüktür ve profesyonel paraya hızla uyum sağlarlar. Bu yüzden oranları, gerçek olasılığın en iyi tahminidir. Yapay zekâ referans orandaki marjı çıkarır ve adil oranı hesaplar. Bu oranlar yalnızca analiz verisidir; BetTrackerAI yurt dışı bahis sitelerine yönlendirmez ve bu sitelerde bahis oynamayı önermez."
       },
       {
         "type": "example",
@@ -2247,7 +2247,7 @@
       {
         "type": "ul",
         "items": [
-          "**Pazar eşleştirme:** Yapay zekâ, bahis şirketleri arasında aynı etkinlikleri ve çizgileri tanır.",
+          "**Pazar eşleştirme:** Yapay zekâ, farklı oran kaynaklarında aynı etkinlikleri ve çizgileri tanır.",
           "**Hız:** Pazarlar hareket ettikçe oranlar birkaç saniyede bir yeniden hesaplanır.",
           "**Filtreleme:** Tarayıcı, çok küçük avantajları ve iptal edilme ihtimali yüksek şüpheli aykırı oranları eler."
         ]
@@ -2259,9 +2259,9 @@
       {
         "type": "ul",
         "items": [
-          "**Surebet'ler:** Her sonuçta garanti kâr sağlar, ancak marjlar düşüktür ve limitler hızlı gelir.",
-          "**Value bet'ler:** Beklenen kârı daha yüksek tekli bahislerdir, ancak varyans ve kayıp serileri de beraberinde gelir.",
-          "**İkisini birleştirin:** Birçok bahisçi istikrarlı kâr için surebet, ROI'yi yükseltmek için value bet kullanır."
+          "**Surebet'ler:** Her sonuçta garanti kâr sağlar. Ancak Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğu için aralarında surebet mümkün değildir. Yurt dışı siteler ise yasadışıdır ve önerilmez.",
+          "**Value bet'ler:** Beklenen kârı daha yüksek tekli bahislerdir, ancak varyans ve kayıp serileri de beraberinde gelir. İddaa oranlarında marj yüksek olabileceğinden bu tür fırsatlar nadir çıkabilir.",
+          "**Analiz ve takibe odaklanın:** Surebet imkânı olmadığı için, oranları değerlendirmek ve bahislerinizi düzenli kaydetmek en sağlıklı yaklaşımdır."
         ]
       },
       {
@@ -2283,11 +2283,11 @@
       },
       {
         "type": "tip",
-        "text": "Her value bet'i bir [bahis takipçisine](/en/guides/bet-tracker) kaydedin. 300–500 bahisten sonra ROI'niz avantajın gerçek olup olmadığını gösterir."
+        "text": "Her value bet'i bir [bahis takipçisine](/en/guides/bet-tracker) kaydedin. 300–500 bahisten sonra ROI'niz avantajın gerçek olup olmadığını gösterir. Bahis kontrolünüzü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz."
       },
       {
         "type": "p",
-        "text": "[BetTracker AI](/en), bahis şirketlerini taramak, adil oranları hesaplamak ve value bet'leri ile surebet'leri gerçek zamanlı göstermek için yapay zekâ kullanır."
+        "text": "[BetTracker AI](/en), oranları taramak, adil oranları hesaplamak ve value bet'leri gerçek zamanlı göstermek için yapay zekâ kullanır."
       }
     ],
     "faq": [
@@ -2297,22 +2297,22 @@
       },
       {
         "q": "Value betting ile ne kadar kazanabilirim?",
-        "a": "Gerçekçi uzun vadeli ROI çoğunlukla cironun %2–5'i kadardır. Bu oran avantaja, kullandığınız bahis şirketlerine ve hesaplarınızın ne kadar süre açık kaldığına bağlıdır."
+        "a": "Gerçekçi uzun vadeli ROI çoğunlukla cironun %2–5'i kadardır. Bu oran avantaja ve bahis sayınıza bağlıdır. İddaa oranlarındaki marj nedeniyle Türkiye'de bu aralığa ulaşmak zor olabilir. Kazançlara ilişkin güncel kuralları kontrol edin."
       },
       {
         "q": "Bahis siteleri value bet oynayanları limitler mi?",
-        "a": "Evet, soft bahis şirketleri kapanış çizgisini geçen müşterileri sıklıkla limitler. [Bahis sitesi limitlerinden nasıl kaçınılır](/en/guides/avoid-bookmaker-limits) rehberini okuyun."
+        "a": "Bazı ülkelerde bahis şirketleri kapanış çizgisini geçen müşterileri sıklıkla limitler. Türkiye'de lisanslı iddaa bayileri aynı iddaa oranlarını sunar; hesap ve bahis limitleri için bayinin güncel kurallarını kontrol edin. [Bahis sitesi limitlerinden nasıl kaçınılır](/en/guides/avoid-bookmaker-limits) rehberini okuyun."
       }
     ]
   },
   "bedste-odds-vaerktoej-danmark": {
     "title": "2026'nın en iyi spor bahisleri araçları: yapay zekâ oran tarayıcıları ve takipçiler",
     "metaTitle": "2026'nın En İyi Spor Bahisleri Araçları – Yapay Zekâ ve Oran Tarayıcıları",
-    "description": "2026'nın en iyi spor bahisleri araçları: yapay zekâ oran tarayıcıları, oran karşılaştırma, surebet hesaplayıcıları ve bahis takipçileri. € cinsinden maliyetleri ve nasıl seçeceğiniz.",
+    "description": "2026'nın en iyi spor bahisleri araçları: yapay zekâ oran tarayıcıları, oran karşılaştırma, surebet hesaplayıcıları ve bahis takipçileri. Maliyetleri ve Türkiye'deki iddaa sistemine göre nasıl seçeceğiniz.",
     "keyword": "en iyi spor bahisleri araçları",
     "category": "Strateji",
     "ctaLabel": "BetTracker AI'yı deneyin",
-    "intro": "En iyi spor bahisleri araçları şunlardır: surebet ve value bet bulan bir yapay zekâ oran tarayıcısı, birçok bahis şirketi arasında oran karşılaştırma, tam bahis tutarlarını hesaplayan bir surebet hesaplayıcısı ve ROI'nizi ölçen bir bahis takipçisi. Kullandığınız bahis şirketlerini kapsayan, oranları birkaç saniyede bir güncelleyen ve gerçekçi bir cirodan kendini amorti eden bir bahis yazılımı seçin.",
+    "intro": "En iyi spor bahisleri araçları şunlardır: oran hareketlerini ve value bet fırsatlarını bulan bir yapay zekâ oran tarayıcısı, oran karşılaştırma, tam bahis tutarlarını hesaplayan bir hesaplayıcı ve ROI'nizi ölçen bir bahis takipçisi. Türkiye'de Spor Toto Teşkilatı'nın (iddaa) lisanslı bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunduğu için bu bayiler arasında surebet mümkün değildir; bu yüzden bahis takipçisi en değerli araçtır. Oranları birkaç saniyede bir güncelleyen ve gerçekçi bir cirodan kendini amorti eden bir bahis yazılımı seçin.",
     "blocks": [
       {
         "type": "h2",
@@ -2321,8 +2321,8 @@
       {
         "type": "ul",
         "items": [
-          "**Yapay zekâ oran tarayıcısı:** bahis siteleri arasında surebet ve value bet fırsatlarını otomatik olarak bulur.",
-          "**Oran karşılaştırma:** her sonuç için mevcut en yüksek oranı gösterir.",
+          "**Yapay zekâ oran tarayıcısı:** oranları sürekli izleyerek value bet fırsatlarını otomatik olarak bulur. Türkiye'de lisanslı bayilerin oranları aynı olduğundan bu bayiler arasında surebet çıkmaz.",
+          "**Oran karşılaştırma:** her sonuç için mevcut oranı gösterir. Lisanslı iddaa bayilerinde oranlar aynıdır; fark yaratan, oranların zaman içindeki değişimidir.",
           "**Surebet hesaplayıcı:** bahis tutarını, hangi sonuç gelirse gelsin kâr aynı kalacak şekilde böler. [Surebet hesaplayıcıyı](/en/calculator) deneyin.",
           "**Bahis takipçisi:** her bahsi kaydeder ve ROI'yi hesaplar. [Bahis takipçisine](/en/guides/bet-tracker) göz atın."
         ]
@@ -2333,13 +2333,13 @@
       },
       {
         "type": "p",
-        "text": "Manuel oran karşılaştırma, tek bir maç için en iyi oranı bulur. Yapay zekâ oran tarayıcısı ise tüm bahis sitelerindeki tüm pazarları sürekli karşılaştırır ve yalnızca avantaj sağladığınız kombinasyonları gösterir."
+        "text": "Manuel oran karşılaştırma, tek bir maç için oranı kontrol etmenizi sağlar. Yapay zekâ oran tarayıcısı ise pazarları sürekli izler ve yalnızca avantaj sağladığınız fırsatları gösterir."
       },
       {
         "type": "ul",
         "items": [
           "**Kapsam:** bir avuç pazar yerine binlerce pazar.",
-          "**Hız:** surebet'ler, oranlar düzeltilmeden önce saniyeler içinde işaretlenir.",
+          "**Hız:** fırsatlar, oranlar düzeltilmeden önce saniyeler içinde işaretlenir.",
           "**Doğruluk:** eşleştirme ve bahis tutarı hesapları sizin yerinize yapılır."
         ]
       },
@@ -2349,7 +2349,7 @@
       },
       {
         "type": "p",
-        "text": "Bir araç ancak bulduğu kâr, kendi fiyatından yüksekse anlamlıdır. Başa baş noktasına ulaşmak için gereken bahis hacmini hesaplayın."
+        "text": "Bir araç ancak bulduğu kâr, kendi fiyatından yüksekse anlamlıdır. Başa baş noktasına ulaşmak için gereken bahis hacmini hesaplayın. Aşağıdaki örnek, surebet'in mümkün olduğu bir pazar için genel bir hesaptır; Türkiye'deki lisanslı iddaa bayileri arasında surebet bulunmaz."
       },
       {
         "type": "example",
@@ -2357,7 +2357,7 @@
         "rows": [
           [
             "Abonelik",
-            "aylık yaklaşık €33"
+            "aylık yaklaşık €33 (kura göre yaklaşık ₺1.500)"
           ],
           [
             "Surebet'lerde ortalama ROI",
@@ -2365,18 +2365,18 @@
           ],
           [
             "Başa baş için gereken bahis hacmi",
-            "€33 / 2% = €1,650"
+            "₺1.500 / 2% = ₺75.000"
           ],
           [
-            "Tipik bahis hacmi (60 surebet × €400)",
-            "€24,000"
+            "Tipik bahis hacmi (60 surebet × ₺2.000)",
+            "₺120.000"
           ],
           [
             "Abonelik sonrası kâr",
-            "€480 − €33 = €447"
+            "₺2.400 − ₺1.500 = ₺900"
           ]
         ],
-        "note": "Fiyatlar yaklaşık euro tutarlarıdır. BetTracker AI, Basic için aylık yaklaşık €20'dan, Premium için yaklaşık €33'dan başlayan fiyatlarla sunulur."
+        "note": "Fiyatlar yaklaşık euro tutarlarıdır; ₺ karşılıkları döviz kuruna göre değişir. BetTracker AI, Basic için aylık yaklaşık €20'dan, Premium için yaklaşık €33'dan başlayan fiyatlarla sunulur."
       },
       {
         "type": "h2",
@@ -2385,16 +2385,16 @@
       {
         "type": "ul",
         "items": [
-          "**Bahis sitesi kapsamı:** araç, gerçekten kullanabileceğiniz bahis sitelerini içermelidir.",
+          "**Bahis sitesi kapsamı:** araç, Spor Toto Teşkilatı (iddaa) lisanslı Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi kullanabileceğiniz yasal bayileri içermelidir. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bunları kullanmayın.",
           "**Güncelleme sıklığı:** maç öncesi için birkaç saniye, [canlı surebet'ler](/en/guides/live-arbitrage-betting-scanner) için daha da hızlı.",
           "**Filtreler:** spor, pazar, bahis sitesi ve minimum kâr.",
-          "**Dahili takip:** tarayıcıdan oynanan surebet'ler otomatik olarak takip edilmelidir.",
+          "**Dahili takip:** oynadığınız bahisler otomatik olarak takip edilmelidir.",
           "**Adil fiyat:** aylık maliyeti beklediğiniz bahis hacmiyle karşılaştırın. [Surebet aracı karşılaştırmasına](/en/guides/surebet-tool-comparison) göz atın."
         ]
       },
       {
         "type": "tip",
-        "text": "Tarayıcı, hesaplayıcı ve takipçiyi bir arada sunan tek bir araçla başlayın. Ayrı araçlar arasında gidip gelmek zaman kaybettirir; surebet'lerde ise en az tanımayacağınız şey zamandır."
+        "text": "Tarayıcı, hesaplayıcı ve takipçiyi bir arada sunan tek bir araçla başlayın. Ayrı araçlar arasında gidip gelmek zaman kaybettirir; oran analizinde ise en az tanımayacağınız şey zamandır."
       },
       {
         "type": "p",
@@ -2404,15 +2404,15 @@
     "faq": [
       {
         "q": "Hangi bahis aracıyla başlamalıyım?",
-        "a": "Dahili hesaplayıcısı ve takipçisi olan bir surebet tarayıcısıyla. Fırsatı bulmayı, bahsi oynamayı ve sonucu ölçmeyi tek yerde toplar."
+        "a": "Türkiye'de lisanslı bayilerin oranları aynı olduğundan, dahili hesaplayıcısı olan bir bahis takipçisiyle başlayın. Bahsi oynamayı ve sonucu tek yerde ölçmeyi sağlar."
       },
       {
         "q": "Ücretsiz bahis araçları yeterli mi?",
-        "a": "Ücretsiz hesaplayıcılar ve takipçiler işinizi görür. Ücretsiz oran tarayıcıları ise genellikle gecikmeli ya da sınırlı sayıda surebet gösterir; siz harekete geçene kadar bu fırsatlar çoğunlukla kaybolmuş olur."
+        "a": "Ücretsiz hesaplayıcılar ve takipçiler işinizi görür. Ücretsiz oran tarayıcıları ise genellikle gecikmeli ya da sınırlı sayıda fırsat gösterir; siz harekete geçene kadar bu fırsatlar çoğunlukla kaybolmuş olur."
       },
       {
         "q": "Bahis yazılımı yasal mı?",
-        "a": "Oranları karşılaştırmak ve bahisleri takip etmek için araç kullanmak yasaldır. Otomatik bahis oynatma ise genellikle bahis sitelerinin kullanım şartlarını ihlal eder. [Surebet'ler yasal mı?](/en/guides/are-surebets-legal) yazımıza bakın."
+        "a": "Oranları karşılaştırmak ve bahisleri takip etmek için araç kullanmak yasaldır. Ancak yurt dışı bahis siteleri Türkiye'de yasa dışıdır ve engellenmiştir; bunları kullanmayın. Kazançlara ilişkin kuralları iddaa sistemi belirler, güncel kuralları kontrol edin. Bahis kontrolünüzü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ni (YEDAM, 115) arayabilirsiniz. [Surebet'ler yasal mı?](/en/guides/are-surebets-legal) yazımıza bakın."
       }
     ]
   }

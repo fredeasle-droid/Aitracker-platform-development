@@ -48,7 +48,7 @@
     "metaTitle": "Surebety na hokej na lodzie – zysk z NHL i lig",
     "description": "Surebety na hokej na lodzie z NHL, SHL i innych lig. Poznaj różnicę między rynkami na czas regulaminowy i zwycięzcę meczu oraz znajdź okazje do pewnego zysku.",
     "keyword": "surebety hokej na lodzie",
-    "intro": "Hokej na lodzie to niedoceniany sport pod kątem surbetów. Wielu bukmacherów wycenia ligi nordyckie w różny sposób, a różnica między rynkiem na czas regulaminowy a rynkiem na zwycięzcę meczu stwarza dodatkowe możliwości zakładów arbitrażowych.",
+    "intro": "Hokej na lodzie to niedoceniany sport pod kątem surebetów. Wielu bukmacherów wycenia ligi nordyckie w różny sposób, a różnica między rynkiem na czas regulaminowy a rynkiem na zwycięzcę meczu stwarza dodatkowe możliwości zakładów arbitrażowych.",
     "blocks": [
       {
         "type": "h2",
@@ -60,7 +60,7 @@
       },
       {
         "type": "h2",
-        "text": "Dobre ligi do surbetów na hokej na lodzie"
+        "text": "Dobre ligi do surebetów na hokej na lodzie"
       },
       {
         "type": "ul",
@@ -82,7 +82,7 @@
       },
       {
         "q": "Czy istnieją surebety na mniejsze ligi hokejowe?",
-        "a": "Tak. Bukmacherzy często różnie wyceniają mniejsze ligi krajowe, dlatego okazje arbitrażowe pojawiają się regularnie. Przed postawieniem zakładów upewnij się, że bukmacherzy posiadają licencję uprawniającą do działalności w Twoim kraju."
+        "a": "Tak. Bukmacherzy często różnie wyceniają mniejsze ligi krajowe, dlatego okazje arbitrażowe pojawiają się regularnie. Przed postawieniem zakładów upewnij się, że bukmacherzy posiadają licencję Ministerstwa Finansów uprawniającą do działalności w Polsce, a strony bez licencji (z rejestru domen zakazanych) omijaj z daleka."
       }
     ]
   },
@@ -91,11 +91,11 @@
     "metaTitle": "Surebety piłkarskie – gwarantowany zysk na meczach",
     "description": "Znajdź surebety na piłkę nożną w czasie rzeczywistym. BetTrackerAI skanuje kursy w Premier League, Lidze Mistrzów i setkach innych lig u licencjonowanych bukmacherów.",
     "keyword": "surebety piłkarskie",
-    "intro": "Piłka nożna generuje więcej surbetów niż jakikolwiek inny sport. Mecze rozgrywane są przez całą dobę, a każde spotkanie oferuje setki rynków wycenianych różnie przez poszczególnych bukmacherów.",
+    "intro": "Piłka nożna generuje więcej surebetów niż jakikolwiek inny sport. Mecze rozgrywane są przez całą dobę, a każde spotkanie oferuje setki rynków wycenianych różnie przez poszczególnych bukmacherów.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Dlaczego piłka nożna generuje tak wiele surbetów"
+        "text": "Dlaczego piłka nożna generuje tak wiele surebetów"
       },
       {
         "type": "p",
@@ -116,7 +116,7 @@
       },
       {
         "type": "tip",
-        "text": "Zawsze sprawdzaj, czy rynek dotyczy wyłącznie regulaminowego czasu gry. Dogrywka i rzuty karne rzadko są uwzględniane w surbetach piłkarskich."
+        "text": "Zawsze sprawdzaj, czy rynek dotyczy wyłącznie regulaminowego czasu gry. Dogrywka i rzuty karne rzadko są uwzględniane w surebetach piłkarskich."
       },
       {
         "type": "h2",
@@ -124,12 +124,12 @@
       },
       {
         "type": "p",
-        "text": "Wiele surbetów piłkarskich pojawia się w momencie ogłoszenia składów drużyn, zazwyczaj około godziny przed rozpoczęciem meczu. Niektórzy bukmacherzy reagują szybko, inni wolniej, a w tym oknie czasowym ujawniają się różnice w kursach."
+        "text": "Wiele surebetów piłkarskich pojawia się w momencie ogłoszenia składów drużyn, zazwyczaj około godziny przed rozpoczęciem meczu. Niektórzy bukmacherzy reagują szybko, inni wolniej, a w tym oknie czasowym ujawniają się różnice w kursach."
       }
     ],
     "faq": [
       {
-        "q": "W których ligach piłkarskich pojawia się najwięcej surbetów?",
+        "q": "W których ligach piłkarskich pojawia się najwięcej surebetów?",
         "a": "Mniejsze ligi często oferują wyższe procenty zysku, jednak duże ligi, takie jak Premier League czy Liga Mistrzów, dysponują większą liczbą rynków i wyższymi limitami stawek."
       },
       {
@@ -177,7 +177,7 @@
       },
       {
         "q": "Którzy bukmacherzy oferują esports?",
-        "a": "Większość głównych licencjonowanych bukmacherów oferuje esports, zwłaszcza CS2 i League of Legends. Sprawdź dostępność i licencję w swoim kraju."
+        "a": "Większość głównych licencjonowanych bukmacherów oferuje esports, zwłaszcza CS2 i League of Legends. Sprawdź dostępność oferty oraz to, czy dany bukmacher posiada licencję Ministerstwa Finansów – korzystaj wyłącznie z licencjonowanych operatorów."
       }
     ]
   },
@@ -234,11 +234,11 @@
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebety na Bet365",
-    "metaTitle": "Bet365 Surebety – Znajdź Gwarantowany Zysk",
-    "description": "Znajdź surebety na Bet365 w czasie rzeczywistym. BetTrackerAI porównuje kursy Bet365 z innymi bukmacherami i pokazuje, gdzie zagwarantować sobie zysk.",
+    "title": "Surebety na Bet365 – co warto wiedzieć w Polsce",
+    "metaTitle": "Bet365 Surebety w Polsce – licencjonowane alternatywy",
+    "description": "Bet365 nie ma polskiej licencji. Znajdź surebety u licencjonowanych bukmacherów, takich jak STS, Fortuna, Betclic i Superbet. BetTrackerAI porównuje kursy w czasie rzeczywistym.",
     "keyword": "bet365 surebety",
-    "intro": "Bet365 to jeden z największych bukmacherów na świecie, oferujący jeden z najszerszych wyborów sportów i rynków. Sprawia to, że Bet365 jest jednym z bukmacherów najczęściej pojawiających się w surebeach.",
+    "intro": "Bet365 to jeden z największych bukmacherów na świecie, oferujący jeden z najszerszych wyborów sportów i rynków. W Polsce nie posiada jednak licencji Ministerstwa Finansów, więc nie jest legalną opcją dla polskich graczy. Surebety warto szukać wśród licencjonowanych bukmacherów, takich jak STS, Fortuna, Betclic, Superbet, Totolotek, LV BET, eToto czy Betfan.",
     "blocks": [
       {
         "type": "h2",
@@ -246,38 +246,38 @@
       },
       {
         "type": "p",
-        "text": "Bet365 jest licencjonowanym bukmacherem w wielu jurysdykcjach i oferuje kursy na bardzo dużą liczbę spotkań, w tym na niższe ligi i rynki na żywo. Ta szerokość oferty sprawia, że Bet365 często posiada kursy odbiegające od reszty rynku."
+        "text": "Bet365 jest licencjonowanym bukmacherem w wielu jurysdykcjach, ale nie w Polsce. W Polsce legalnie mogą działać wyłącznie bukmacherzy z licencją Ministerstwa Finansów, a strony bez licencji trafiają na oficjalną listę blokad. Nie zachęcamy do korzystania z takich stron."
       },
       {
         "type": "h2",
-        "text": "Jak znaleźć surebety z Bet365"
+        "text": "Jak znaleźć surebety u licencjonowanych bukmacherów"
       },
       {
         "type": "p",
-        "text": "Surebet z Bet365 powstaje wtedy, gdy Bet365 oferuje wyższe kursy na jeden wynik niż inni bukmacherzy na wyniki przeciwne. BetTrackerAI stale monitoruje kursy Bet365 i porównuje je z resztą rynku."
+        "text": "Surebet powstaje wtedy, gdy jeden bukmacher oferuje wyższe kursy na jeden wynik niż inni bukmacherzy na wyniki przeciwne. BetTrackerAI stale monitoruje kursy licencjonowanych w Polsce bukmacherów, m.in. STS, Fortuny, Betclic i Superbet, i porównuje je z resztą rynku."
       },
       {
         "type": "ul",
         "items": [
-          "Wybierz Bet365 i pozostałych bukmacherów za pomocą filtra na stronie surebeów.",
+          "Wybierz licencjonowanych bukmacherów, np. STS, Fortunę i Betclic, za pomocą filtra na stronie surebeów.",
           "Sortuj według zysku i wybierz surebet ze stabilnymi kursami.",
-          "Użyj kalkulatora, aby rozdzielić stawkę i zaokrąglić kwotę.",
+          "Użyj kalkulatora, aby rozdzielić stawkę i zaokrąglić kwotę. Uwzględnij podatek od gier w wysokości 12%, pobierany od każdej stawki, bo może on zmniejszyć lub całkowicie zniwelować zysk. Sprawdź aktualne przepisy.",
           "Najpierw postaw zakład u bukmachera oferującego najbardziej zmienne kursy."
         ]
       },
       {
         "type": "tip",
-        "text": "Rozłóż swoje zakłady na kilku bukmacherów, aby nie korzystać wyłącznie z Bet365. Dzięki temu przedłużysz żywotność swojego konta."
+        "text": "Rozłóż swoje zakłady na kilku licencjonowanych bukmacherów, takich jak Superbet, Totolotek czy LV BET, aby nie korzystać wyłącznie z jednego. Dzięki temu przedłużysz żywotność swoich kont. Graj odpowiedzialnie i korzystaj z narzędzi samowykluczenia u operatorów. Pomoc znajdziesz też pod numerem telefonu zaufania Krajowego Biura ds. Przeciwdziałania Narkomanii."
       }
     ],
     "faq": [
       {
-        "q": "Czy zakłady arbitrażowe są dozwolone w Bet365?",
-        "a": "Zakłady arbitrażowe są legalne. Jednak podobnie jak wszyscy bukmacherzy, Bet365 może ograniczyć konta zgodnie ze swoim regulaminem, jeśli wykryje wzorce obstawiania systematycznie zapewniające gwarantowany zysk."
+        "q": "Czy zakłady arbitrażowe są dozwolone u bukmacherów w Polsce?",
+        "a": "Zakłady arbitrażowe u bukmacherów licencjonowanych przez Ministerstwo Finansów nie są zakazane. Jednak podobnie jak inni bukmacherzy, operatorzy tacy jak STS czy Fortuna mogą ograniczyć konta zgodnie ze swoim regulaminem, jeśli wykryją wzorce obstawiania systematycznie zapewniające gwarantowany zysk."
       },
       {
-        "q": "Czy Bet365 posiada licencję bukmacherską?",
-        "a": "Tak. Bet365 posiada licencje na wielu regulowanych rynkach na całym świecie. Sprawdź lokalne przepisy podatkowe obowiązujące w Twoim kraju, ponieważ zasady opodatkowania wygranych mogą się różnić w zależności od jurysdykcji."
+        "q": "Czy Bet365 posiada licencję bukmacherską w Polsce?",
+        "a": "Nie. Bet365 posiada licencje na wielu rynkach na świecie, ale nie ma licencji Ministerstwa Finansów na działalność w Polsce. Strony bez licencji znajdują się na oficjalnej liście blokad i nie powinieneś z nich korzystać. Wybieraj licencjonowanych bukmacherów, np. STS, Fortunę, Betclic, Superbet, Totolotek, LV BET, eToto lub Betfan. W Polsce od każdej stawki pobierany jest podatek od gier w wysokości 12%, a wyższe wygrane mogą podlegać podatkowi dochodowemu. Sprawdź aktualne zasady."
       }
     ]
   },

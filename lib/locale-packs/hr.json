@@ -625,7 +625,7 @@
     "findOnSport": "Pronađite surebetove za svoj sport",
     "surebetsAtBookmakers": "Surebetovi u kladionicama",
     "guideIndexTitle": "Vodiči za surebet i arbitražno klađenje – BetTrackerAI",
-    "guideIndexDescription": "Naučite surebetove od nule: što su, kako izračunati uloge, pravila i porez u Danskoj te kako izbjeći ograničenja računa.",
+    "guideIndexDescription": "Naučite surebetove od nule: što su, kako izračunati uloge, pravila i porez u Hrvatskoj te kako izbjeći ograničenja računa.",
     "guideIndexH1": "Sve što trebate znati o surebetovima",
     "guideIndexLead": "Kratki, praktični vodiči pisani za hrvatske klađenike. Od prvog izračuna do očuvanja otvorenih računa.",
     "guideIndexName": "Vodiči za surebet",
@@ -638,7 +638,7 @@
   },
   "daily": {
     "metaTitle": "Današnji surebetovi – najbolji surebetovi upravo sada",
-    "metaDescription": "Pogledajte današnje najbolje surebetove u danskim i međunarodnim kladionicama, ažurirane u kontinuitetu. Sport, utakmica, tržište i zajamčena zarada za najjače prilike upravo sada.",
+    "metaDescription": "Pogledajte današnje najbolje surebetove u licenciranim kladionicama u Hrvatskoj, ažurirane u kontinuitetu. Sport, utakmica, tržište i zajamčena zarada za najjače prilike upravo sada.",
     "name": "Današnji surebetovi",
     "h1": "Današnji surebetovi",
     "empty": "Trenutačno nema aktivnih surebetova. Skener radi non-stop, zato svratite ponovno uskoro.",
@@ -700,7 +700,7 @@
       },
       {
         "q": "Koje kladionice uspoređujete?",
-        "a": "Uspoređujemo koeficijente danskih i međunarodnih kladionica, među ostalima Danske Spil, bet365, Unibet, LeoVegas, Betano i Pinnacle."
+        "a": "Uspoređujemo koeficijente kladionica licenciranih u Hrvatskoj, među ostalima SuperSport, Germania Sport, PSK, Admiral, Mozzart, Favbet i Arena Sport."
       },
       {
         "q": "Kako dobivam obavijesti o novim surebetovima?",

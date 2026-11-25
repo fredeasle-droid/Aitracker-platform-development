@@ -25,7 +25,7 @@
       {
         "type": "ul",
         "items": [
-          "Provjerite minimalne kvote potrebne za aktivaciju bonusa – mnoge kladionice postavljaju donju granicu od 1.80 ili više.",
+          "Provjerite minimalne kvote potrebne za aktivaciju bonusa – mnoge kladionice postavljaju donju granicu od 1,80 ili više.",
           "Zabilježite rok valjanosti kako vam bonus ili besplatna oklada ne bi istekli neiskorišteni.",
           "Razmislite o surebetovima (arbitražnim okladama) za ispunjavanje uvjeta obrta uz minimalan rizik."
         ]
@@ -46,7 +46,7 @@
       },
       {
         "q": "Koliko vrijede uobičajeni bonusi dobrodošlice?",
-        "a": "Iznosi bonusa i uvjeti klađenja razlikuju se ovisno o kladionici i jurisdikciji. Na nekim reguliranim tržištima bonusi dobrodošlice mogu biti ograničeni – primjerice na €1,000 ili €1,000 uz maksimalni obrt od deset puta iznosa bonusa. Uvijek provjerite aktualne uvjete kod kladionice koju odaberete i uvjerite se da ima valjanu licencu u vašoj zemlji."
+        "a": "Iznosi bonusa i uvjeti klađenja razlikuju se ovisno o kladionici i jurisdikciji. Na nekim reguliranim tržištima bonusi dobrodošlice mogu biti ograničeni – primjerice na 100 € uz maksimalni obrt od deset puta iznosa bonusa. Uvijek provjerite aktualne uvjete kod kladionice koju odaberete i uvjerite se da ima valjanu licencu Ministarstva financija RH."
       }
     ],
     "category": "Strategija",
@@ -55,9 +55,9 @@
   "er-surebets-lovligt": {
     "title": "Jesu li surebetovi legalni? Pravila i porezna pitanja",
     "metaTitle": "Jesu li surebetovi legalni? Pravila, porezi i uvjeti kladionica",
-    "description": "Je li legalno igrati surebetove i plaća li se porez na dobitke? Pregled pravila i što kladionice mogu poduzeti protiv arbitražnog klađenja.",
+    "description": "Je li legalno igrati surebetove i plaća li se porez na dobitke? Pregled pravila u Hrvatskoj i što kladionice mogu poduzeti protiv arbitražnog klađenja.",
     "keyword": "jesu li surebetovi legalni",
-    "intro": "Kratak odgovor je da. Igranje surebetova legalno je u većini jurisdikcija. Jednostavno igrate obične oklade u licenciranim kladionicama i uspoređujete kvote kako biste pronašli najbolju vrijednost – ništa u tom postupku nije nezakonito.",
+    "intro": "Kratak odgovor je da. Igranje surebetova legalno je u Hrvatskoj, kao i u većini jurisdikcija. Jednostavno igrate obične oklade u licenciranim kladionicama poput SuperSporta, Germania Sporta ili Admirala i uspoređujete kvote kako biste pronašli najbolju vrijednost – ništa u tom postupku nije nezakonito.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Porezni tretman dobitaka od klađenja razlikuje se od zemlje do zemlje. Na mnogim reguliranim tržištima dobici od operatera koje je licencirao nacionalni regulator igara na sreću za igrača su neoporezivi. Ako koristite offshore ili nelicencirane operatere, vaši dobici mogu biti oporezivi. Provjerite porezna pravila u mjestu u kojem živite ili se obratite lokalnoj poreznoj upravi ako niste sigurni u svoju situaciju."
+        "text": "U Hrvatskoj operater koji ima licenciju Ministarstva financija RH porez na dobitke iznad propisanog praga obračunava i zadržava na izvoru, prije isplate. Točan prag i stope mogu se mijenjati, stoga provjerite aktualna pravila na stranicama Ministarstva financija RH ili Porezne uprave, odnosno kod svoje kladionice. Ako niste sigurni u svoju situaciju, obratite se poreznom savjetniku."
       },
       {
         "type": "tip",
-        "text": "Držite se kladionica koje je licencirao vaš nacionalni regulator. To obično donosi porezne prednosti i zaštitu potrošača od nadležnog tijela za igre na sreću."
+        "text": "Držite se kladionica koje imaju licenciju Ministarstva financija RH, primjerice SuperSport, Germania Sport, PSK, Hrvatska Lutrija, Admiral, Mozzart, Favbet ili Arena Sport. Samo licencirani operateri smiju nuditi klađenje u Hrvatskoj, a nelicencirane stranice su blokirane. Licencirani operateri nude i zaštitu potrošača te jasna pravila o isplati i porezu."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Čak i sa surebetovima važno je zadržati kontrolu nad klađenjem. Postavite limite uplata, a ako vam je potrebna stanka, iskoristite registar samoisključenja u svojoj zemlji. Ako trebate pomoć, obratite se priznatoj liniji za pomoć kockarima u svojoj regiji."
+        "text": "Čak i sa surebetovima važno je zadržati kontrolu nad klađenjem. Postavite limite uplata, a ako vam je potrebna stanka, iskoristite alate za samoisključenje koje nudi vaša kladionica. Ako trebate pomoć, obratite se lokalnim službama za podršku, primjerice Klubu ovisnika o kockanju."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Moram li platiti porez na dobitke od surebetova?",
-        "a": "Ovisi o vašoj zemlji. Na mnogim reguliranim tržištima dobici od licenciranih operatera za igrača su neoporezivi. Provjerite porezna pravila u mjestu u kojem živite."
+        "a": "Porez na dobitke iznad propisanog praga licencirani operater zadržava na izvoru prije isplate. Točna pravila, prag i stope mogu se mijenjati, pa provjerite aktualne propise ili pitanje postavite svojoj kladionici."
       }
     ],
     "category": "Pravila",
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**Nadmašivanje zatvarajuće kvote:** najjači signal. Ako su vaše kvote dosljedno bolje od završne, bit ćete označeni.",
-          "**Neokrugli ulozi:** €463.27 izgleda kao kalkulator. €460 izgleda kao čovjek.",
+          "**Neokrugli ulozi:** 463,27 € izgleda kao kalkulator. 460 € izgleda kao čovjek.",
           "**Nišna tržišta:** korneri u drugoj ligi male zemlje privlače pozornost.",
           "**Samo isplate:** česte isplate bez bonusa i redovitih oklada djeluju profesionalno."
         ]
@@ -142,27 +142,27 @@
       },
       {
         "type": "example",
-        "title": "Primjer: zaokruženi ulozi, ukupni ulog €1,000",
+        "title": "Primjer: zaokruženi ulozi, ukupni ulog 1.000 €",
         "rows": [
           [
-            "Točna raspodjela pri kvotama 2.10 / 2.00",
-            "€487.80 / €512.20"
+            "Točna raspodjela pri kvotama 2,10 / 2,00",
+            "487,80 € / 512,20 €"
           ],
           [
             "Zaokružena raspodjela",
-            "€490 / €510"
+            "490 € / 510 €"
           ],
           [
-            "Dobit ako pobijedi A (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "Dobit ako pobijedi A (2,10)",
+            "1.029 € − 1.000 € = 29,00 €"
           ],
           [
-            "Dobit ako pobijedi B (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "Dobit ako pobijedi B (2,00)",
+            "1.020 € − 1.000 € = 20,00 €"
           ],
           [
             "Točna raspodjela za usporedbu",
-            "oko €24.39 u oba slučaja"
+            "oko 24,39 € u oba slučaja"
           ]
         ],
         "note": "Zaokruženi ulozi i dalje osiguravaju dobit na oba ishoda, a kladionici izgledaju puno prirodnije."
@@ -173,19 +173,19 @@
       },
       {
         "type": "p",
-        "text": "Dobra arbitražna postava kombinira dvije vrste kladionica. Soft kladionice nude pogrešno procijenjene kvote, a sharp kladionice ili burze prihvaćaju velike uloge bez ograničavanja dobitnika."
+        "text": "Dobra arbitražna postava kombinira dvije vrste kladionica. Soft kladionice nude pogrešno procijenjene kvote, a sharp kladionice (ili burze, ako ih nudi licencirani operater) prihvaćaju velike uloge bez ograničavanja dobitnika."
       },
       {
         "type": "ul",
         "items": [
           "**Soft kladionice:** izvor većine surebetova, ali brzo ograničavaju račune. Koristite ih oprezno.",
           "**Sharp kladionice:** niže marže i visoki limiti. Idealne za drugu nogu oklade.",
-          "**Burze za klađenje:** klađenje je protiv drugih korisnika, pa vas ne ograničavaju zbog dobitaka. Provizija blago smanjuje dobit."
+          "**Burze za klađenje:** klađenje je protiv drugih korisnika, pa vas ne ograničavaju zbog dobitaka. Provizija blago smanjuje dobit. Koristite ih samo ako ih nudi operater s licencijom Ministarstva financija RH."
         ]
       },
       {
         "type": "p",
-        "text": "Pročitajte cjelovit pregled [najboljih kladionica za surebetove](/en/guides/best-bookmakers-for-surebets). Uvijek birajte kladionice s licencijom u svojoj zemlji."
+        "text": "Pročitajte cjelovit pregled [najboljih kladionica za surebetove](/en/guides/best-bookmakers-for-surebets). Uvijek birajte kladionice s licencijom Ministarstva financija RH, poput SuperSporta, Germania Sporta, PSK-a, Hrvatske Lutrije, Admirala, Mozzarta, Favbeta ili Arena Sporta."
       },
       {
         "type": "h2",
@@ -196,7 +196,7 @@
         "items": [
           "**Isplatite sredstva** ako se račun više ne može koristiti za surebetove.",
           "**Ne otvarajte novi račun** na tuđe ime. To krši uvjete korištenja i može dovesti do oduzimanja dobitka.",
-          "**Prebacite volumen** na svoje ostale račune te na sharp kladionice ili burze.",
+          "**Prebacite volumen** na svoje ostale račune kod licenciranih kladionica, uključujući one s višim limitima.",
           "**Pratite po kladionicama:** [bet tracker](/en/guides/bet-tracker) pokazuje koje je račune vrijedno zaštititi."
         ]
       },
@@ -208,7 +208,7 @@
     "faq": [
       {
         "q": "Mogu li potpuno izbjeći ograničenja kladionica?",
-        "a": "Ne u soft kladionicama na duge staze. No prirodan obrazac klađenja može odgoditi ograničenja za mjesecima, a sharp kladionice i burze rijetko ograničavaju račune."
+        "a": "Ne u soft kladionicama na duge staze. No prirodan obrazac klađenja može odgoditi ograničenja za mjesecima, a sharp kladionice i burze (gdje su dostupne kod licenciranih operatera) rijetko ograničavaju račune."
       },
       {
         "q": "Je li zakonito da me kladionice ograničavaju?",
@@ -216,7 +216,7 @@
       },
       {
         "q": "Koliko kladionica trebam koristiti?",
-        "a": "Pet do deset dobar je početak. Tako raspoređujete volumen i imate više surebetova na izbor."
+        "a": "Pet do deset dobar je početak, koliko god vam licencirano tržište omogućuje. Tako raspoređujete volumen i imate više surebetova na izbor."
       }
     ],
     "category": "Strategija",
@@ -247,27 +247,27 @@
       },
       {
         "type": "example",
-        "title": "Primjer: dva ishoda, ukupni ulog €1,500",
+        "title": "Primjer: dva ishoda, ukupni ulog 1.500 €",
         "rows": [
           [
-            "Kvota A 2.10 i kvota B 2.05",
-            "S = 0.476 + 0.488 = 0.964"
+            "Kvota A 2,10 i kvota B 2,05",
+            "S = 0,476 + 0,488 = 0,964"
           ],
           [
             "Ulog na A",
-            "€740.97"
+            "740,97 €"
           ],
           [
             "Ulog na B",
-            "€759.03"
+            "759,03 €"
           ],
           [
             "Isplata u oba slučaja",
-            "oko €1,556.03"
+            "oko 1.556,03 €"
           ],
           [
             "Dobit",
-            "oko €56.03 (3.7%)"
+            "oko 56,03 € (3,7%)"
           ]
         ]
       },
@@ -281,27 +281,27 @@
       },
       {
         "type": "example",
-        "title": "Primjer: 1X2, ukupni ulog €1,000",
+        "title": "Primjer: 1X2, ukupni ulog 1.000 €",
         "rows": [
           [
-            "Pobjeda domaćina, kvota 2.50",
-            "Ulog €408.23"
+            "Pobjeda domaćina, kvota 2,50",
+            "Ulog 408,23 €"
           ],
           [
-            "Neriješeno, kvota 3.50",
-            "Ulog €291.59"
+            "Neriješeno, kvota 3,50",
+            "Ulog 291,59 €"
           ],
           [
-            "Pobjeda gosta, kvota 3.40",
-            "Ulog €300.17"
+            "Pobjeda gosta, kvota 3,40",
+            "Ulog 300,17 €"
           ],
           [
             "Zbroj inverznih kvota",
-            "0.980"
+            "0,980"
           ],
           [
             "Dobit",
-            "oko €20.58 (2.1%)"
+            "oko 20,58 € (2,1%)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "Ulozi poput €740.97 kladionici djeluju sumnjivo. Zaokružite na cijele eure ili desetice. Ako zaokružite na €741 i €759, dobit ostaje oko €56, uz razliku od samo nekoliko centi među ishodima."
+        "text": "Ulozi poput 740,97 € kladionici djeluju sumnjivo. Zaokružite na cijele eure ili desetice. Ako zaokružite na 741 € i 759 €, dobit ostaje oko 56 €, uz razliku od samo nekoliko centi među ishodima."
       },
       {
         "type": "p",
-        "text": "Uloge možete i namjerno iskriviti. Ako na jednom ishodu samo pokrijete ulog, ondje dobivate €0, a na drugom više. U gornjem primjeru €768.29 na A i €731.71 na B daje dobit od €113.41 ako pobijedi A i €0 ako pobijedi B."
+        "text": "Uloge možete i namjerno iskriviti. Ako na jednom ishodu samo pokrijete ulog, ondje dobivate 0 €, a na drugom više. U gornjem primjeru 768,29 € na A i 731,71 € na B daje dobit od 113,41 € ako pobijedi A i 0 € ako pobijedi B."
       },
       {
         "type": "tip",
@@ -398,7 +398,7 @@
       },
       {
         "type": "p",
-        "text": "Zbrojite impliciране vjerojatnosti svih ishoda. Zbroj je veći od 100%, a višak je marža kladionice. Ako je zbroj kod različitih kladionica manji od 100%, imate surebet (poznat i kao arbitražna oklada)."
+        "text": "Zbrojite implicirane vjerojatnosti svih ishoda. Zbroj je veći od 100%, a višak je marža kladionice. Ako je zbroj kod različitih kladionica manji od 100%, imate surebet (poznat i kao arbitražna oklada)."
       },
       {
         "type": "example",
@@ -406,11 +406,11 @@
         "rows": [
           [
             "1/1.85 + 1/1.95",
-            "54.1% + 51.3% = 105.4%"
+            "54.05% + 51.28% = 105.33%"
           ],
           [
             "Marža kladionice",
-            "oko 5.4%"
+            "oko 5.3%"
           ]
         ],
         "note": "Što je marža manja, to su kvote bolje za igrača."
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Licenca nacionalnog regulatora igara na sreću, kako biste bili zaštićeni i mogli provjeriti porezni tretman svojih dobitaka.",
+          "Licenca Ministarstva financija RH, kako biste bili zaštićeni i mogli provjeriti porezni tretman svojih dobitaka (porez na dobitke iznad propisanog praga operater obustavlja na izvoru, a važeća pravila uvijek provjerite).",
           "Brze uplate i isplate, da novac možete brzo prebaciti tamo gdje vam treba.",
           "Širok izbor sportova i tržišta, osobito tenisa, nogometa i košarke.",
           "Konkurentni koeficijenti i niska marža kladionice na popularnim tržištima.",
@@ -565,34 +565,34 @@
       },
       {
         "q": "Mogu li za arbitražno klađenje koristiti kladionice bez licence?",
-        "a": "Ne preporučuje se. Kladionice bez licence u vašoj jurisdikciji mogu biti blokirane, a dobitci kod njih mogu podlijegati drukčijem poreznom tretmanu ili nemati regulatornu zaštitu. Uvijek provjerite propise koji vrijede tamo gdje živite."
+        "a": "Ne preporučuje se. U Hrvatskoj klađenje smiju nuditi samo operateri s licencom Ministarstva financija RH, a stranice bez licence su blokirane. Dobitci kod njih nemaju regulatornu zaštitu i mogu podlijegati drukčijem poreznom tretmanu. Uvijek provjerite važeća pravila."
       }
     ],
     "category": "Strategija",
     "ctaLabel": "Pogledajte surebetove u svojim kladionicama"
   },
   "skat-paa-spillegevinster": {
-    "title": "Porez na dobitke od klađenja – međunarodni vodič",
-    "metaTitle": "Porez na dobitke od klađenja – što trebate znati",
-    "description": "Plaća li se porez na dobitke od klađenja i surebetova? Saznajte kako funkcioniraju porezna pravila za licencirane i offshore kladionice te što trebate dokumentirati.",
+    "title": "Porez na dobitke od klađenja u Hrvatskoj – vodič",
+    "metaTitle": "Porez na dobitke od klađenja u Hrvatskoj – što trebate znati",
+    "description": "Plaća li se porez na dobitke od klađenja i surebetova u Hrvatskoj? Saznajte kako funkcionira obustava poreza kod licenciranih kladionica i što trebate dokumentirati.",
     "keyword": "porez na dobitke od klađenja",
-    "intro": "Na mnogim reguliranim tržištima odgovor je jednostavan: dobitci od licenciranih kladionica za igrača su neoporezovani. Kladionica plaća davanja državi, a ne vi. No pravila ovise o tome gdje živite i gdje se kladite.",
+    "intro": "U Hrvatskoj klađenje smiju nuditi samo operateri s licencom Ministarstva financija RH. Porez na dobitke iznad propisanog praga obustavlja sam operater na izvoru, prije isplate. Pravila se mogu mijenjati, zato uvijek provjerite aktualne propise.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Licencirane kladionice: obično bez poreza"
+        "text": "Licencirane kladionice: porez se obustavlja na izvoru"
       },
       {
         "type": "p",
-        "text": "Kada se kladite kod operatera s licencom nacionalnog regulatora igara na sreću, operater u pravilu plaća porez na igre na sreću na svoj prihod. Vaši su dobitci stoga općenito neoporezovani, a u većini slučajeva ih ne morate prijavljivati poreznoj upravi. Uvijek provjerite propise koji vrijede tamo gdje živite."
+        "text": "Kada se kladite kod operatera s licencom Ministarstva financija RH (primjerice SuperSport, Germania Sport, PSK, Hrvatska Lutrija, Admiral, Mozzart, Favbet ili Arena Sport), porez na dobitke iznad propisanog praga obračunava i obustavlja operater prije isplate. Tako kladionica za vas odrađuje većinu administracije. Točne pragove i stope uvijek provjerite u važećim propisima."
       },
       {
         "type": "h2",
-        "text": "Offshore kladionice bez lokalne licence"
+        "text": "Kladionice bez licence u Hrvatskoj"
       },
       {
         "type": "p",
-        "text": "Ako se kladite kod operatera koji nemaju licencu u vašoj jurisdikciji, dobitci mogu biti oporezivi. Pravila ovise o čimbenicima poput toga ima li operater licencu u drugoj državi te o vašem poreznom rezidentstvu. To je jedan od razloga zašto je često jednostavnije ostati kod reguliranih kladionica."
+        "text": "Operateri bez licence Ministarstva financija RH ne smiju nuditi klađenje u Hrvatskoj, a njihove se stranice blokiraju. Ne preporučujemo ih: nemate zaštitu kao igrač, isplata nije zajamčena, a porezni status dobitaka može biti nejasan. Kladite se samo kod licenciranih operatera."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Da. Za potrebe oporezivanja surebet su jednostavno dvije ili tri obične oklade. Dobitci od licenciranih kladionica općenito su neoporezovani, bilo da igrate sigurne oklade, value betove ili standardne oklade. Vrijede ista načela."
+        "text": "Da. Za potrebe oporezivanja surebet su jednostavno dvije ili tri obične oklade. Ista pravila o porezu na dobitke vrijede bez obzira igrate li sigurne oklade, value betove ili standardne oklade. Provjerite važeća pravila."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Ako vam je klađenje glavno zanimanje i bavite se njime u većem opsegu, u nekim jurisdikcijama mogu vrijediti drukčija pravila. Ako niste sigurni kakva je vaša situacija, obratite se lokalnoj poreznoj upravi ili kvalificiranom računovođi."
+        "text": "Ako vam je klađenje glavno zanimanje i bavite se njime u većem opsegu, mogu vrijediti drukčija pravila. Ako niste sigurni kakva je vaša situacija, obratite se Poreznoj upravi ili kvalificiranom računovođi."
       }
     ],
     "faq": [
       {
         "q": "Moram li platiti porez na dobitke kod licenciranih kladionica?",
-        "a": "Na većini reguliranih tržišta ne. Dobitci kod lokalno licenciranih operatera obično su za igrača oslobođeni poreza. Provjerite porezna pravila u zemlji u kojoj živite."
+        "a": "Ovisi o iznosu dobitka. Porez na dobitke iznad određenog praga obustavlja operater na izvoru, prije isplate. Točne pragove i stope provjerite u važećim propisima."
       },
       {
-        "q": "Kako mogu provjeriti ima li kladionica licencu u mojoj zemlji?",
-        "a": "Nacionalni regulator igara na sreću na svojim web-stranicama objavljuje popis odobrenih operatera, a licencirane kladionice obično na svojoj stranici ističu logotip regulatora."
+        "q": "Kako mogu provjeriti ima li kladionica licencu u Hrvatskoj?",
+        "a": "Provjerite popis licenciranih organizatora igara na sreću koji objavljuje Ministarstvo financija RH. Licencirane kladionice obično na svojoj stranici navode podatke o licenci."
       }
     ],
     "category": "Pravila",
@@ -658,46 +658,46 @@
       },
       {
         "type": "example",
-        "title": "Primjer: fiksni ulog za value betove, bankroll €2,000",
+        "title": "Primjer: fiksni ulog za value betove, bankroll 2.000 €",
         "rows": [
           [
-            "Ulog po okladi (1.5%)",
-            "€30"
+            "Ulog po okladi (1,5%)",
+            "30 €"
           ],
           [
             "10 izgubljenih oklada zaredom",
-            "−€300 (15% bankrolla)"
+            "−300 € (15% bankrolla)"
           ],
           [
             "Preostali bankroll",
-            "€1,700"
+            "1.700 €"
           ],
           [
-            "Novi ulog nakon pregleda (1.5%)",
-            "€25.50"
+            "Novi ulog nakon pregleda (1,5%)",
+            "25,50 €"
           ]
         ],
         "note": "Ulog od 1–2% drži vas u igri kroz loše serije koje doživi svaki value bettor."
       },
       {
         "type": "example",
-        "title": "Primjer: raspodjela surebet bankrolla po kladionicama, €3,000",
+        "title": "Primjer: raspodjela surebet bankrolla po kladionicama, 3.000 €",
         "rows": [
           [
-            "6 kladionica × €500",
-            "€3,000"
+            "6 kladionica × 500 €",
+            "3.000 €"
           ],
           [
             "Tipičan ukupni ulog po surebetu",
-            "€400"
+            "400 €"
           ],
           [
             "60 surebetova mjesečno uz prosjek od 2%",
-            "€400 × 60 × 2% = €480"
+            "400 € × 60 × 2% = 480 €"
           ],
           [
             "Mjesečni povrat na bankroll",
-            "€480 / €3,000 = 16%"
+            "480 € / 3.000 € = 16%"
           ]
         ],
         "note": "Zarada po surebetu je mala, ali se bankroll u mjesecu obrne mnogo puta. Rezultati ovise o limitima i dostupnim surebetovima."
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Ukupno uloženo",
-            "€18,500"
+            "18.500 €"
           ],
           [
             "Ukupno vraćeno",
-            "€18,870"
+            "18.870 €"
           ],
           [
             "Neto dobit",
-            "€370"
+            "370 €"
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "370 € / 18.500 € = 2,0%"
           ]
         ]
       },
@@ -760,7 +760,7 @@
     "faq": [
       {
         "q": "Koliko bi velik trebao biti moj bankroll za surebetove?",
-        "a": "Mnogi kreću s €1,000–€3,000 raspoređenih na 4–6 kladionica. Moguće je i s manje, ali zarada po surebetu tada postaje vrlo mala."
+        "a": "Mnogi kreću s 1.000–3.000 € raspoređenih na 4–6 kladionica. Moguće je i s manje, ali zarada po surebetu tada postaje vrlo mala."
       },
       {
         "q": "Koliki postotak bankrolla trebam uložiti na value betove?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Kako izračunati ROI na svoje oklade?",
-        "a": "Podijelite neto dobit s ukupnim ulozima. Dobit od €370 na €18,500 uloženog daje ROI od 2.0%."
+        "a": "Podijelite neto dobit s ukupnim ulozima. Dobit od 370 € na 18.500 € uloženog daje ROI od 2,0%."
       }
     ],
     "category": "Strategija",
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Otvorite račune** u barem dvije licencirane kladionice, najbolje u više njih, i unaprijed uplatite sredstva.",
+          "**1. Otvorite račune** u barem dvije kladionice s dozvolom Ministarstva financija RH (npr. SuperSport, Germania Sport, Admiral, Mozzart, Favbet ili Arena Sport), najbolje u više njih, i unaprijed uplatite sredstva.",
           "**2. Pronađite surebet** u kojem je zbroj inverznih koeficijenata manji od 1.00.",
           "**3. Izračunajte uloge** tako da isplata bude jednaka za svaki ishod.",
           "**4. Brzo uplatite obje oklade,** počevši s cijenom koja će se najvjerojatnije promijeniti.",
@@ -900,7 +900,7 @@
     "faq": [
       {
         "q": "Je li klađenje na arbitražu legalno?",
-        "a": "Da, klađenje na sve ishode nekog događaja u većini zemalja nije zabranjeno. Kladionice vam ipak mogu ograničiti račun. Pogledajte [jesu li surebetovi legalni](/en/guides/are-surebets-legal)."
+        "a": "Da, klađenje na sve ishode nekog događaja u većini zemalja nije zabranjeno. U Hrvatskoj se smijete kladiti samo kod operatera s dozvolom Ministarstva financija RH, a nelicencirane stranice su blokirane. Kladionice vam ipak mogu ograničiti račun. Porez na dobitke iznad određenog praga operater obračunava i zadržava na izvoru, a važeća pravila provjerite kod operatera ili Ministarstva financija. Pogledajte [jesu li surebetovi legalni](/en/guides/are-surebets-legal)."
       },
       {
         "q": "Koliko se može zaraditi surebetovima?",
@@ -908,7 +908,7 @@
       },
       {
         "q": "Koliko kladionica mi je potrebno?",
-        "a": "Najmanje dvije, ali što više računa imate, to više surebetova možete iskoristiti. Mnogi arberi rade s pet do deset kladionica."
+        "a": "Najmanje dvije, ali što više računa imate, to više surebetova možete iskoristiti. Mnogi arberi rade s pet do deset kladionica, a na hrvatskom licenciranom tržištu izbor je manji pa i surebetova može biti manje."
       },
       {
         "q": "Što ako se koeficijenti promijene prije moje druge oklade?",
@@ -951,19 +951,19 @@
         "rows": [
           [
             "Igrač A u kladionici 1",
-            "kvota 2.10"
+            "kvota 2,10"
           ],
           [
             "Igrač B u kladionici 2",
-            "kvota 2.05"
+            "kvota 2,05"
           ],
           [
-            "1/2.10 + 1/2.05",
-            "0.476 + 0.488 = 0.964"
+            "1/2,10 + 1/2,05",
+            "0,476 + 0,488 = 0,964"
           ],
           [
             "Zajamčena dobit",
-            "oko 3.7%"
+            "oko 3,7%"
           ]
         ],
         "note": "Zbroj je manji od 1, pa je ova kombinacija surebet."
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Ulog treba podijeliti tako da isplata bude ista bez obzira na to tko pobijedi. Uz ukupni ulog od 1,000 jedinica u gornjem primjeru, na igrača A uplaćujete oko 494 jedinice, a na igrača B oko 506 jedinica. Oba ishoda vraćaju oko 1,037 jedinica, što znači dobit od otprilike 37 jedinica."
+        "text": "Ulog treba podijeliti tako da isplata bude ista bez obzira na to tko pobijedi. Uz ukupni ulog od 1.000 eura u gornjem primjeru, na igrača A uplaćujete oko 494 eura, a na igrača B oko 506 eura. Oba ishoda vraćaju oko 1.037 eura, što znači dobit od otprilike 37 eura."
       },
       {
         "type": "tip",
@@ -1036,31 +1036,31 @@
       },
       {
         "type": "example",
-        "title": "Primjer: tri igrača na turniru, ukupni ulog €1,000",
+        "title": "Primjer: tri igrača na turniru, ukupni ulog 1.000 €",
         "rows": [
           [
-            "Igrač A, kvota 3.00",
-            "ulog oko €444"
+            "Igrač A, kvota 3,00",
+            "ulog oko 444 €"
           ],
           [
-            "Igrač B, kvota 4.00",
-            "ulog oko €333"
+            "Igrač B, kvota 4,00",
+            "ulog oko 333 €"
           ],
           [
-            "Igrač C, kvota 6.00",
-            "ulog oko €222"
+            "Igrač C, kvota 6,00",
+            "ulog oko 222 €"
           ],
           [
-            "S = 0.333 + 0.250 + 0.167",
-            "0.750"
+            "S = 0,333 + 0,250 + 0,167",
+            "0,750"
           ],
           [
             "Ako pobijedi jedan od trojice",
-            "isplata oko €1,333, dobit oko €333"
+            "isplata oko 1.333 €, dobit oko 333 €"
           ],
           [
             "Ako ne pobijedi nijedan od trojice",
-            "gubitak od €1,000"
+            "gubitak od 1.000 €"
           ]
         ],
         "note": "Dobit se ostvaruje samo ako pobijedi jedan od vaših triju igrača. Koliko je to vjerojatno, morate procijeniti sami."
@@ -1116,27 +1116,27 @@
       },
       {
         "type": "example",
-        "title": "Primjer: koeficijenti 1.95 i 2.20, ukupni ulog €1,000",
+        "title": "Primjer: koeficijenti 1,95 i 2,20, ukupni ulog 1.000 €",
         "rows": [
           [
-            "Igrač A u kladionici 1, koeficijent 1.95",
-            "ulog oko €530"
+            "Igrač A u kladionici 1, koeficijent 1,95",
+            "ulog oko 530 €"
           ],
           [
-            "Igrač B u kladionici 2, koeficijent 2.20",
-            "ulog oko €470"
+            "Igrač B u kladionici 2, koeficijent 2,20",
+            "ulog oko 470 €"
           ],
           [
-            "1/1.95 + 1/2.20",
-            "0.513 + 0.455 = 0.967"
+            "1/1,95 + 1/2,20",
+            "0,513 + 0,455 = 0,967"
           ],
           [
             "Isplata bez obzira na pobjednika",
-            "oko €1,034"
+            "oko 1.034 €"
           ],
           [
             "Dobit",
-            "oko €34 (3.4%)"
+            "oko 34 € (3,4%)"
           ]
         ],
         "note": "Zbroj je manji od 1, pa je ova kombinacija surebet."
@@ -1189,31 +1189,31 @@
       },
       {
         "type": "example",
-        "title": "Primjer: tri kladionice, ukupni ulog €1,000",
+        "title": "Primjer: tri kladionice, ukupni ulog 1.000 €",
         "rows": [
           [
-            "Pobjeda domaćina u kladionici 1, koeficijent 2.40",
-            "ulog oko €424"
+            "Pobjeda domaćina u kladionici 1, koeficijent 2,40",
+            "ulog oko 424 €"
           ],
           [
-            "Neriješeno u kladionici 2, koeficijent 3.80",
-            "ulog oko €268"
+            "Neriješeno u kladionici 2, koeficijent 3,80",
+            "ulog oko 268 €"
           ],
           [
-            "Pobjeda gosta u kladionici 3, koeficijent 3.30",
-            "ulog oko €308"
+            "Pobjeda gosta u kladionici 3, koeficijent 3,30",
+            "ulog oko 308 €"
           ],
           [
-            "1/2.40 + 1/3.80 + 1/3.30",
-            "0.417 + 0.263 + 0.303 = 0.983"
+            "1/2,40 + 1/3,80 + 1/3,30",
+            "0,417 + 0,263 + 0,303 = 0,983"
           ],
           [
             "Povrat bez obzira na ishod",
-            "oko €1,017"
+            "oko 1.017 €"
           ],
           [
             "Dobit",
-            "oko €17 (1.7%)"
+            "oko 17 € (1,7 %)"
           ]
         ],
         "note": "Dobit je manja nego u tenisu, a tri oklade znače veći rizik da se koeficijenti promijene dok ih uplaćujete."
@@ -1228,7 +1228,7 @@
           "Provjerite da se tržište u svim kladionicama odnosi na isto trajanje utakmice. 1X2 obično vrijedi samo za regularno vrijeme, ali provjerite pravila za kup utakmice i doigravanje.",
           "Odgođene i prekinute utakmice obračunavaju se različito, zato pročitajte pravila svake kladionice.",
           "Tri oklade stvaraju veći rizik promjene koeficijenata. Prvo uplatite najnestabilniju okladu – to je obično ona s najvišim koeficijentom ili na najmanje likvidnom tržištu.",
-          "Razmislite o tržištima s dva ishoda, kao što su azijski hendikep ili više/manje od 2.5 gola, ako želite ostati kod dvije kladionice i smanjiti izloženost promjenama koeficijenata."
+          "Razmislite o tržištima s dva ishoda, kao što su azijski hendikep ili više/manje od 2,5 gola, ako želite ostati kod dvije kladionice i smanjiti izloženost promjenama koeficijenata."
         ]
       },
       {
@@ -1243,7 +1243,7 @@
       },
       {
         "q": "Uključuje li tržište 1X2 produžetke?",
-        "a": "Obično ne. 1X2 u pravilu obuhvaća samo 90 minuta plus sudačko produžetak, ali pravila se mogu razlikovati. Prije uplate oklada uvijek provjerite uvjete u svakoj kladionici."
+        "a": "Obično ne. 1X2 u pravilu obuhvaća samo 90 minuta plus sudačku nadoknadu, ali pravila se mogu razlikovati. Prije uplate oklada uvijek provjerite uvjete u svakoj kladionici."
       }
     ],
     "category": "Strategija",
@@ -1445,22 +1445,22 @@
           ],
           [
             "Ukupni promet (sve opklade)",
-            "€24,000"
+            "24.000 €"
           ],
           [
             "Ukupno isplaćeno",
-            "€24,720"
+            "24.720 €"
           ],
           [
             "Neto dobit",
-            "€720"
+            "720 €"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "720 € / 24.000 € = 3,0 %"
           ]
         ],
-        "note": "Bez praćenja vidite samo kako vam se mijenja stanje računa. S praćenjem vidite da svakih €100 prometa donosi €3."
+        "note": "Bez praćenja vidite samo kako vam se mijenja stanje računa. S praćenjem vidite da svakih 100 € prometa donosi 3 €."
       },
       {
         "type": "h2",
@@ -1500,7 +1500,7 @@
       },
       {
         "q": "Što je dobar ROI za surebetove?",
-        "a": "Obično 1–4% prometa. Veće brojke su moguće, ali često dolaze s više ograničenja i poništenih oklada."
+        "a": "Obično 1–4 % prometa. Veće brojke su moguće, ali često dolaze s više ograničenja i poništenih oklada."
       },
       {
         "q": "Trebam li pratiti i obične oklade?",
@@ -1531,22 +1531,22 @@
         "rows": [
           [
             "Ukupni ulog",
-            "€40,000"
+            "40.000 €"
           ],
           [
             "Ukupna isplata",
-            "€41,000"
+            "41.000 €"
           ],
           [
             "Dobit",
-            "€1,000"
+            "1.000 €"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "1.000 / 40.000 × 100 = 2,5%"
           ]
         ],
-        "note": "Zaradili ste 2.5p za svaku uloženu funtu."
+        "note": "Zaradili ste 2,5 centa za svaki uloženi euro."
       },
       {
         "type": "h2",
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Kako izračunati ROI u klađenju?",
-        "a": "Uzmite svoju dobit, podijelite je s ukupnim ulogom i pomnožite sa 100. Ako ste uložili €10,000 i zaradili €300, vaš ROI iznosi 3%."
+        "a": "Uzmite svoju dobit, podijelite je s ukupnim ulogom i pomnožite sa 100. Ako ste uložili 10.000 € i zaradili 300 €, vaš ROI iznosi 3%."
       },
       {
         "q": "Koja je razlika između ROI-ja i dobiti?",
@@ -1638,7 +1638,7 @@
       },
       {
         "type": "p",
-        "text": "Surebet Danmark košta oko €134 mjesečno. BetTrackerAI košta oko €20 mjesečno za Basic (surebetovi do 5 % profita) i oko €33 za Premium (svi surebetovi plus SMS upozorenja). S Premiumom štedite oko €100 mjesečno – to je oko €1,200 godišnje."
+        "text": "Surebet Danmark košta oko €134 mjesečno. BetTrackerAI košta oko €20 mjesečno za Basic (surebetovi do 5 % profita) i oko €33 za Premium (svi surebetovi plus SMS upozorenja). S Premiumom štedite oko €100 mjesečno – to je oko €1.200 godišnje."
       },
       {
         "type": "p",
@@ -1689,7 +1689,7 @@
   "betting-regnskab": {
     "title": "Evidencija klađenja: kako pratiti svoj bankroll",
     "metaTitle": "Evidencija klađenja – pratite stanje kod svih kladionica",
-    "description": "Naučite voditi evidenciju svog klađenja: uplate, isplate i stanje kod svake kladionice. Nikad ne gubite pregled kad se klade na više stranica.",
+    "description": "Naučite voditi evidenciju svog klađenja: uplate, isplate i stanje kod svake kladionice. Nikad ne gubite pregled kad se kladite kod više kladionica.",
     "keyword": "praćenje oklada",
     "intro": "Kad igrate sigurne oklade, novac vam istodobno stoji kod mnogo kladionica. Evidencija klađenja pokazuje vam gdje se novac nalazi i koliko ste ukupno zaradili kad sve zbrojite.",
     "blocks": [
@@ -1720,19 +1720,19 @@
         "rows": [
           [
             "Ukupne uplate",
-            "€10,000"
+            "10.000 €"
           ],
           [
             "Ukupno isplaćeno",
-            "€3,000"
+            "3.000 €"
           ],
           [
             "Trenutačno stanje kod kladionica",
-            "€7,800"
+            "7.800 €"
           ],
           [
             "Profit",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3.000 € + 7.800 € − 10.000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1756,7 @@
     "faq": [
       {
         "q": "Plaćam li porez na dobitke od klađenja?",
-        "a": "Porezni tretman dobitaka od igara na sreću razlikuje se od države do države. Na nekim reguliranim tržištima dobici kod licenciranih kladionica ne oporezuju se, dok ih drugdje treba prijaviti. Provjerite porezna pravila u zemlji u kojoj živite ili se obratite lokalnom savjetniku."
+        "a": "U Hrvatskoj licencirani operater porez na dobitke iznad određenog praga obračunava i zadržava na izvoru, pa ga obično ne morate sami plaćati. Točan prag i važeća pravila uvijek provjerite kod svoje kladionice, Ministarstva financija RH ili poreznog savjetnika, jer se propisi mogu mijenjati."
       },
       {
         "q": "Koliko često trebam ažurirati svoj bet tracker?",
@@ -1907,11 +1907,11 @@
     "faq": [
       {
         "q": "Može li se stvarno zaraditi na sportskom klađenju bez ikakvog rizika?",
-        "a": "Kod ispravno odigranog surebeta ishod utakmice nije bitan. Preostali rizik je praktične naravi: promjena kvota, poništeni klađenje i odabir pogrešnog tržišta."
+        "a": "Kod ispravno odigranog surebeta ishod utakmice nije bitan. Preostali rizik je praktične naravi: promjena kvota, poništene oklade i odabir pogrešnog tržišta."
       },
       {
         "q": "U čemu je razlika između surebetova i hedginga?",
-        "a": "Surebet se igra na sve ishode odjednom. Hedging počinje jednim klađenjem, a suprotni ishod pokrivate kasnije, kad se kvota pomakne u vašu korist."
+        "a": "Surebet se igra na sve ishode odjednom. Hedging počinje jednom okladom, a suprotni ishod pokrivate kasnije, kad se kvota pomakne u vašu korist."
       },
       {
         "q": "Koliko novca mi treba za početak?",
@@ -2205,10 +2205,10 @@
           ],
           [
             "Ulog €50",
-            "Očekivana dobit €2.50 po okladi"
+            "Očekivana dobit €2,50 po okladi"
           ],
           [
-            "300 oklada od €50 (promet €15,000)",
+            "300 oklada od €50 (promet €15.000)",
             "Očekivana dobit oko €750"
           ]
         ],
@@ -2365,11 +2365,11 @@
           ],
           [
             "Promet potreban za izlazak na nulu",
-            "€33 / 2% = €1,650"
+            "€33 / 2% = €1.650"
           ],
           [
             "Tipičan promet (60 surebetova × €400)",
-            "€24,000"
+            "€24.000"
           ],
           [
             "Dobit nakon pretplate",
@@ -2385,7 +2385,7 @@
       {
         "type": "ul",
         "items": [
-          "**Pokrivenost kladionica:** alat mora obuhvaćati kladionice koje stvarno možete koristiti.",
+          "**Pokrivenost kladionica:** alat mora obuhvaćati kladionice koje stvarno možete koristiti, odnosno one licencirane u Hrvatskoj, poput SuperSporta, Germania Sporta, PSK-a, Admirala ili Mozzarta.",
           "**Učestalost osvježavanja:** nekoliko sekundi za prematch, a brže za [live surebetove](/en/guides/live-arbitrage-betting-scanner).",
           "**Filtri:** sport, tržište, kladionica i minimalna dobit.",
           "**Ugrađeno praćenje:** surebetovi uplaćeni putem skenera trebali bi se pratiti automatski.",
@@ -2412,7 +2412,7 @@
       },
       {
         "q": "Je li softver za klađenje legalan?",
-        "a": "Korištenje alata za usporedbu koeficijenata i praćenje oklada legalno je. Automatsko uplaćivanje oklada obično krši uvjete kladionica. Pogledajte [jesu li surebetovi legalni?](/en/guides/are-surebets-legal)"
+        "a": "Korištenje alata za usporedbu koeficijenata i praćenje oklada legalno je, a okladu uvijek uplaćujete samo kod operatera s licencijom Ministarstva financija RH. Automatsko uplaćivanje oklada obično krši uvjete kladionica. Pogledajte [jesu li surebetovi legalni?](/en/guides/are-surebets-legal)"
       }
     ]
   }

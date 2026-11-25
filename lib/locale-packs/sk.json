@@ -625,7 +625,7 @@
     "findOnSport": "Nájdite surebety vo svojom obľúbenom športe",
     "surebetsAtBookmakers": "Surebety v stávkových kanceláriách",
     "guideIndexTitle": "Sprievodcovia surebetmi a arbitrážnymi stávkami – BetTrackerAI",
-    "guideIndexDescription": "Naučte sa surebety od základov: čo to je, ako vypočítať vklady, aké sú pravidlá a dane v Dánsku a ako sa vyhnúť obmedzeniu účtu.",
+    "guideIndexDescription": "Naučte sa surebety od základov: čo to je, ako vypočítať vklady, aké sú pravidlá a dane na Slovensku a ako sa vyhnúť obmedzeniu účtu.",
     "guideIndexH1": "Všetko, čo potrebujete vedieť o surebetoch",
     "guideIndexLead": "Stručné praktické návody pre stávkarov na Slovensku. Od prvého výpočtu až po udržanie vašich účtov aktívnych.",
     "guideIndexName": "Sprievodcovia surebetmi",
@@ -638,7 +638,7 @@
   },
   "daily": {
     "metaTitle": "Dnešné surebety – najlepšie surebety práve teraz",
-    "metaDescription": "Pozrite si dnešné najlepšie surebety v dánskych aj medzinárodných stávkových kanceláriách, aktualizované priebežne. Šport, zápas, trh a garantovaný zisk pri najsilnejších príležitostiach práve teraz.",
+    "metaDescription": "Pozrite si dnešné najlepšie surebety v licencovaných stávkových kanceláriách na Slovensku, aktualizované priebežne. Šport, zápas, trh a garantovaný zisk pri najsilnejších príležitostiach práve teraz.",
     "name": "Dnešné surebety",
     "h1": "Dnešné surebety",
     "empty": "Momentálne nie sú aktívne žiadne surebety. Skener beží nepretržite, skúste to o chvíľu znova.",
@@ -700,7 +700,7 @@
       },
       {
         "q": "Ktoré stávkové kancelárie porovnávate?",
-        "a": "Porovnávame kurzy dánskych aj medzinárodných stávkových kancelárií, napríklad Danske Spil, bet365, Unibet, LeoVegas, Betano a Pinnacle."
+        "a": "Porovnávame kurzy stávkových kancelárií s licenciou ÚRHH, napríklad Niké, Tipsport, Fortuna, Doxxbet, Synot Tip, Tipos a Monaco."
       },
       {
         "q": "Ako sa dozviem o nových surebetoch?",

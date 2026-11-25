@@ -12,7 +12,7 @@
       },
       {
         "type": "p",
-        "text": "Když využijete sázku zdarma nebo bonus, vsadíte ho u bookmakera na jeden výsledek a stejný výsledek vsadíte proti (lay) na sázkové burze, případně vsadíte na opačný výsledek u jiného bookmakera. Protože sázka zdarma nic nestojí z vašich peněz, zajistíte si většinu její nominální hodnoty jako zisk bez ohledu na to, která strana vyhraje."
+        "text": "Když využijete sázku zdarma nebo bonus, vsadíte ho u bookmakera na jeden výsledek a na opačný výsledek vsadíte u jiného licencovaného bookmakera v Česku. Protože sázka zdarma nic nestojí z vašich peněz, zajistíte si většinu její nominální hodnoty jako zisk bez ohledu na to, která strana vyhraje."
       },
       {
         "type": "h2",
@@ -25,7 +25,7 @@
       {
         "type": "ul",
         "items": [
-          "Zkontrolujte minimální kurz potřebný k odemčení bonusu – mnoho sázkových kanceláří stanovuje hranici 1.80 nebo vyšší.",
+          "Zkontrolujte minimální kurz potřebný k odemčení bonusu – mnoho sázkových kanceláří stanovuje hranici 1,80 nebo vyšší.",
           "Všimněte si doby platnosti, aby váš bonus nebo sázka zdarma nepropadly nevyužité.",
           "Zvažte využití surebetů (arbitrážních sázek) ke splnění požadavků na obrat s minimálním rizikem."
         ]
@@ -46,7 +46,7 @@
       },
       {
         "q": "Jakou hodnotu mají typické uvítací bonusy?",
-        "a": "Výše bonusů a požadavky na protočení se liší podle sázkové kanceláře a jurisdikce. Na některých regulovaných trzích mohou být uvítací nabídky omezeny – například na €1,000 nebo €1,000 s maximálním protočením desetinásobku bonusu. Vždy si ověřte aktuální podmínky u zvolené sázkové kanceláře a přesvědčte se, že má platnou licenci ve vaší zemi."
+        "a": "Výše bonusů a požadavky na protočení se liší podle sázkové kanceláře a jurisdikce. Na některých regulovaných trzích mohou být uvítací nabídky omezeny – například na 5 000 Kč s maximálním protočením desetinásobku bonusu. Vždy si ověřte aktuální podmínky u zvolené sázkové kanceláře a přesvědčte se, že má platnou licenci Ministerstva financí ČR."
       }
     ],
     "category": "Strategie",
@@ -55,9 +55,9 @@
   "er-surebets-lovligt": {
     "title": "Jsou surebety legální? Pravidla a daňové aspekty",
     "metaTitle": "Jsou surebety legální? Pravidla, daně a podmínky sázkových kanceláří",
-    "description": "Je legální sázet surebety a platí se z výher daň? Přečtěte si, jaká platí pravidla a co mohou sázkové kanceláře proti arbitrážnímu sázení podniknout.",
+    "description": "Je v Česku legální sázet surebety a platí se z výher daň? Přečtěte si, jaká platí pravidla a co mohou sázkové kanceláře proti arbitrážnímu sázení podniknout.",
     "keyword": "jsou surebety legální",
-    "intro": "Stručná odpověď zní ano. Sázení surebetů je ve většině jurisdikcí legální. Jen vsazujete běžné sázky u licencovaných sázkových kanceláří a porovnáváte kurzy, abyste našli nejlepší hodnotu – na tomto postupu není nic nezákonného.",
+    "intro": "Stručná odpověď zní ano. Sázení surebetů je v České republice legální, pokud sázíte u provozovatelů s licencí Ministerstva financí ČR. Jen vsazujete běžné sázky u licencovaných sázkových kanceláří a porovnáváte kurzy, abyste našli nejlepší hodnotu – na tomto postupu není nic nezákonného.",
     "blocks": [
       {
         "type": "h2",
@@ -65,7 +65,7 @@
       },
       {
         "type": "p",
-        "text": "Ačkoli jsou surebety legální, sázkové kanceláře nevítají zákazníky, kteří pravidelně sázejí na zaručený zisk. Ve svých obchodních podmínkách si vyhrazují právo snížit maximální vklady, omezit sázkové trhy nebo omezit účet. Vždy však musí vrátit vaše vložené prostředky a vyplatit všechny platné výhry."
+        "text": "Ačkoli jsou surebety legální, sázkové kanceláře jako Tipsport, Fortuna nebo Chance nevítají zákazníky, kteří pravidelně sázejí na zaručený zisk. Ve svých obchodních podmínkách si vyhrazují právo snížit maximální vklady, omezit sázkové trhy nebo omezit účet. Vždy však musí vrátit vaše vložené prostředky a vyplatit všechny platné výhry."
       },
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Zdanění sázkových výher se v jednotlivých zemích liší. Na mnoha regulovaných trzích jsou výhry od provozovatelů s licencí vnitrostátního regulátora hazardu pro hráče bez daně. Pokud využíváte offshore nebo nelicencované provozovatele, mohou být vaše výhry zdanitelné. Zjistěte si daňová pravidla v místě svého bydliště, případně se obraťte na příslušný daňový úřad, pokud si nejste jistí svou situací."
+        "text": "Výhry od provozovatelů s licencí Ministerstva financí ČR jsou pro hráče osvobozeny od daně do vysokého limitu na jednu výhru. Konkrétní podmínky a výši limitu si však vždy ověřte v aktuálně platných pravidlech, případně se obraťte na finanční úřad nebo daňového poradce, pokud si nejste jistí svou situací. Nelicencované weby jsou v České republice blokované a nedoporučujeme je používat."
       },
       {
         "type": "tip",
-        "text": "Držte se sázkových kanceláří s licencí od vašeho národního regulátora. Obvykle to přináší daňové výhody a spotřebitelskou ochranu ze strany orgánu dohledu nad hazardem."
+        "text": "Držte se sázkových kanceláří s licencí Ministerstva financí ČR, například Tipsport, Fortuna, Chance, Betano, Synot Tip, Sazka bet, Kingsbet nebo Merkur. Obvykle to přináší daňové výhody a spotřebitelskou ochranu ze strany orgánu dohledu nad hazardem."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "I u surebetů je důležité mít své hraní pod kontrolou. Nastavte si limity vkladů a pokud potřebujete pauzu, využijte rejstřík samovyloučení ve své zemi. Pokud potřebujete podporu, obraťte se na uznávanou linku pomoci pro hráče ve svém regionu."
+        "text": "I u surebetů je důležité mít své hraní pod kontrolou. Nastavte si limity vkladů a pokud potřebujete pauzu, můžete se zapsat do Rejstříku vyloučených osob. Pokud potřebujete podporu, obraťte se na Národní linku pro odvykání."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Musím z výher ze surebetů platit daň?",
-        "a": "Záleží na vaší zemi. Na mnoha regulovaných trzích jsou výhry od licencovaných provozovatelů pro hráče bez daně. Zjistěte si daňová pravidla v místě svého bydliště."
+        "a": "Výhry od provozovatelů s licencí Ministerstva financí ČR jsou osvobozeny od daně do vysokého limitu na jednu výhru. Aktuální pravidla a limity si vždy ověřte u příslušných úřadů."
       }
     ],
     "category": "Pravidla",
@@ -104,7 +104,7 @@
   "undgaa-begraensning": {
     "title": "Jak se vyhnout limitům u sázkových kanceláří a udržet si účty otevřené déle",
     "metaTitle": "Jak se vyhnout limitům u sázkových kanceláří – průvodce arbingem 2026",
-    "description": "Jak se jako arber vyhnout limitům u sázkových kanceláří: sázková strategie, která působí přirozeně, nejlepší sázkové kanceláře pro arbitrážní sázení a příklady v €.",
+    "description": "Jak se jako arber vyhnout limitům u sázkových kanceláří: sázková strategie, která působí přirozeně, nejlepší sázkové kanceláře pro arbitrážní sázení a příklady v Kč.",
     "keyword": "jak se vyhnout limitům u sázkových kanceláří",
     "intro": "Abyste se vyhnuli limitům u sázkových kanceláří, musíte sázet jako běžný zákazník: zaokrouhlené vklady, oblíbené trhy, mix běžných sázek a žádná okamžitá reakce na každý pokles kurzu. Soft sázkové kanceláře omezují účty, které soustavně překonávají uzavírací kurz. Navždy se tomu vyhnout nelze, ale chytrá sázková strategie dokáže udržet vaše účty otevřené měsíce místo týdnů.",
     "blocks": [
@@ -114,13 +114,13 @@
       },
       {
         "type": "p",
-        "text": "Soft sázkové kanceláře vydělávají na rekreačních sázkařích, ne na zákaznících, kteří berou jen chybně nastavené kurzy. Jejich systémy řízení rizik sledují vzorce: sázíte na kurzy, které krátce poté klesnou? Sázíte jen na okrajové trhy? Jsou vaše vklady vypočítané na cent přesně? Každý z těchto signálů zvyšuje vaše rizikové skóre."
+        "text": "Soft sázkové kanceláře vydělávají na rekreačních sázkařích, ne na zákaznících, kteří berou jen chybně nastavené kurzy. Jejich systémy řízení rizik sledují vzorce: sázíte na kurzy, které krátce poté klesnou? Sázíte jen na okrajové trhy? Jsou vaše vklady vypočítané na halíř přesně? Každý z těchto signálů zvyšuje vaše rizikové skóre."
       },
       {
         "type": "ul",
         "items": [
           "**Překonávání uzavíracího kurzu:** nejsilnější signál. Pokud jsou vaše kurzy soustavně lepší než konečná cena, jste označeni jako rizikoví.",
-          "**Nezaokrouhlené vklady:** €463.27 vypadá jako z kalkulačky. €460 vypadá jako od člověka.",
+          "**Nezaokrouhlené vklady:** 2 316,40 Kč vypadá jako z kalkulačky. 2 300 Kč vypadá jako od člověka.",
           "**Okrajové trhy:** rohy ve druhé lize malé soutěže přitahují pozornost.",
           "**Pouze výběry:** časté výběry bez bonusů či běžných sázek působí profesionálně."
         ]
@@ -142,27 +142,27 @@
       },
       {
         "type": "example",
-        "title": "Příklad: zaokrouhlené vklady, celkový vklad €1,000",
+        "title": "Příklad: zaokrouhlené vklady, celkový vklad 10 000 Kč",
         "rows": [
           [
             "Přesné rozdělení při kurzech 2.10 / 2.00",
-            "€487.80 / €512.20"
+            "4 878,05 Kč / 5 121,95 Kč"
           ],
           [
             "Zaokrouhlené rozdělení",
-            "€490 / €510"
+            "4 880 Kč / 5 120 Kč"
           ],
           [
             "Zisk, pokud vyhraje A (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "10 248 Kč − 10 000 Kč = 248,00 Kč"
           ],
           [
             "Zisk, pokud vyhraje B (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "10 240 Kč − 10 000 Kč = 240,00 Kč"
           ],
           [
             "Přesné rozdělení pro srovnání",
-            "přibližně €24.39 při obou výsledcích"
+            "přibližně 243,90 Kč při obou výsledcích"
           ]
         ],
         "note": "Zaokrouhlené vklady vám stále zajistí zisk při obou výsledcích a sázkové kanceláři připadají mnohem přirozenější."
@@ -185,7 +185,7 @@
       },
       {
         "type": "p",
-        "text": "Přečtěte si kompletní přehled [nejlepších sázkových kanceláří pro surebety](/en/guides/best-bookmakers-for-surebets). Vždy využívejte licencované sázkové kanceláře ve své zemi."
+        "text": "Přečtěte si kompletní přehled [nejlepších sázkových kanceláří pro surebety](/en/guides/best-bookmakers-for-surebets). V Česku využívejte vždy jen sázkové kanceláře s licencí Ministerstva financí ČR, například Tipsport, Fortuna, Chance, Betano, Synot Tip, Sazka bet, Kingsbet nebo Merkur."
       },
       {
         "type": "h2",
@@ -225,9 +225,9 @@
   "surebet-beregner": {
     "title": "Kalkulačka surebetů zdarma: spočítejte si vklady během pár sekund",
     "metaTitle": "Kalkulačka surebetů zdarma – výpočet vkladů 2026",
-    "description": "Pomocí kalkulačky surebetů zdarma rozdělte vklad mezi dva nebo tři výsledky. Vzorec, příklady v € a jak bezpečně zaokrouhlovat vklady.",
+    "description": "Pomocí kalkulačky surebetů zdarma rozdělte vklad mezi dva nebo tři výsledky. Vzorec, příklady v Kč a jak bezpečně zaokrouhlovat vklady.",
     "keyword": "kalkulačka surebetů zdarma",
-    "intro": "Kalkulačka surebetů rozdělí váš celkový vklad mezi všechny výsledky tak, aby byla výplata stejná, ať se stane cokoli. Zadejte kurzy a svou částku a kalkulačka ukáže vklad na každý výsledek, výplatu i zisk v € a %. Vzorec je jednoduchý, ale kalkulačka předchází chybám, když máte na uzavření sázek jen pár minut.",
+    "intro": "Kalkulačka surebetů rozdělí váš celkový vklad mezi všechny výsledky tak, aby byla výplata stejná, ať se stane cokoli. Zadejte kurzy a svou částku a kalkulačka ukáže vklad na každý výsledek, výplatu i zisk v Kč a %. Vzorec je jednoduchý, ale kalkulačka předchází chybám, když máte na uzavření sázek jen pár minut.",
     "blocks": [
       {
         "type": "h2",
@@ -247,27 +247,27 @@
       },
       {
         "type": "example",
-        "title": "Příklad: dva výsledky, celkový vklad €1,500",
+        "title": "Příklad: dva výsledky, celkový vklad 30 000 Kč",
         "rows": [
           [
-            "Kurz A 2.10 a kurz B 2.05",
-            "S = 0.476 + 0.488 = 0.964"
+            "Kurz A 2,10 a kurz B 2,05",
+            "S = 0,476 + 0,488 = 0,964"
           ],
           [
             "Vklad na A",
-            "€740.97"
+            "14 819,28 Kč"
           ],
           [
             "Vklad na B",
-            "€759.03"
+            "15 180,72 Kč"
           ],
           [
             "Výplata při obou výsledcích",
-            "přibližně €1,556.03"
+            "přibližně 31 120,48 Kč"
           ],
           [
             "Zisk",
-            "přibližně €56.03 (3.7%)"
+            "přibližně 1 120,48 Kč (3,7 %)"
           ]
         ]
       },
@@ -281,27 +281,27 @@
       },
       {
         "type": "example",
-        "title": "Příklad: 1X2, celkový vklad €1,000",
+        "title": "Příklad: 1X2, celkový vklad 20 000 Kč",
         "rows": [
           [
-            "Výhra domácích, kurz 2.50",
-            "Vklad €408.23"
+            "Výhra domácích, kurz 2,50",
+            "Vklad 8 164,66 Kč"
           ],
           [
-            "Remíza, kurz 3.50",
-            "Vklad €291.59"
+            "Remíza, kurz 3,50",
+            "Vklad 5 831,90 Kč"
           ],
           [
-            "Výhra hostů, kurz 3.40",
-            "Vklad €300.17"
+            "Výhra hostů, kurz 3,40",
+            "Vklad 6 003,43 Kč"
           ],
           [
             "Součet převrácených hodnot kurzů",
-            "0.980"
+            "0,980"
           ],
           [
             "Zisk",
-            "přibližně €20.58 (2.1%)"
+            "přibližně 411,66 Kč (2,1 %)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "Vklady jako €740.97 působí na sázkovou kancelář podezřele. Zaokrouhlujte na celá eura nebo na desítky eur. Pokud zaokrouhlíte na €741 a €759, zisk zůstane kolem €56 a rozdíl mezi výsledky bude jen několik centů."
+        "text": "Vklady jako 14 819,28 Kč působí na sázkovou kancelář podezřele. Zaokrouhlujte na celé koruny nebo na desítky korun. Pokud zaokrouhlíte na 14 820 Kč a 15 180 Kč, zisk zůstane kolem 1 120 Kč a rozdíl mezi výsledky bude jen několik korun."
       },
       {
         "type": "p",
-        "text": "Vklady můžete také záměrně nevyvážit. Pokud na jednom výsledku pokryjete jen svůj vklad, vyděláte tam €0 a na druhém víc. Ve výše uvedeném příkladu vklad €768.29 na A a €731.71 na B přinese zisk €113.41, pokud vyhraje A, a €0, pokud vyhraje B."
+        "text": "Vklady můžete také záměrně nevyvážit. Pokud na jednom výsledku pokryjete jen svůj vklad, vyděláte tam 0 Kč a na druhém víc. Ve výše uvedeném příkladu vklad 15 365,85 Kč na A a 14 634,15 Kč na B přinese zisk 2 268,29 Kč, pokud vyhraje A, a 0 Kč, pokud vyhraje B."
       },
       {
         "type": "tip",
@@ -372,15 +372,15 @@
       },
       {
         "type": "example",
-        "title": "Vklad €200 při kurzu 2.50",
+        "title": "Vklad 1 000 Kč při kurzu 2.50",
         "rows": [
           [
             "Výplata",
-            "€200 × 2.50 = €500"
+            "1 000 Kč × 2.50 = 2 500 Kč"
           ],
           [
             "Zisk",
-            "€500 − €200 = €300"
+            "2 500 Kč − 1 000 Kč = 1 500 Kč"
           ]
         ]
       },
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Licence od vašeho národního regulátora hazardu, díky které jste chráněni a můžete si ověřit daňové zacházení s výhrami.",
+          "Licence od Ministerstva financí ČR, díky které jste chráněni a můžete si ověřit daňové zacházení s výhrami (aktuální pravidla si vždy zkontrolujte).",
           "Rychlé vklady a výběry, abyste mohli přesouvat peníze tam, kde je zrovna potřebujete.",
           "Široká nabídka sportů a trhů, zejména tenisu, fotbalu a basketbalu.",
           "Konkurenceschopné kurzy a nízká marže sázkové kanceláře u oblíbených trhů.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Začněte s pěti až osmi licencovanými sázkovými kancelářemi na různých platformách. Získáte tak dostatek příležitostí a nebudete muset hlídat příliš mnoho zůstatků. Jakmile si na rutinu zvyknete, můžete portfolio rozšířit."
+        "text": "Začněte s pěti až osmi licencovanými sázkovými kancelářemi na různých platformách, například z nabídky Tipsport, Fortuna, Chance, Betano, Synot Tip, Sazka bet, Kingsbet nebo Merkur. Získáte tak dostatek příležitostí a nebudete muset hlídat příliš mnoho zůstatků. Jakmile si na rutinu zvyknete, můžete portfolio rozšířit."
       },
       {
         "type": "tip",
@@ -565,18 +565,18 @@
       },
       {
         "q": "Mohu pro arbitrážní sázení používat sázkové kanceláře bez licence?",
-        "a": "Nedoporučuje se to. Sázkové kanceláře bez licence ve vaší jurisdikci mohou být blokovány a na výhry z nich se může vztahovat jiné daňové zacházení nebo u nich může chybět regulatorní ochrana. Vždy si ověřte pravidla platná tam, kde žijete."
+        "a": "Nedoporučuje se to. V České republice smějí sázky nabízet jen provozovatelé s licencí Ministerstva financí ČR, sázkové kanceláře bez licence jsou blokovány a u nich může chybět regulatorní ochrana i jasné daňové zacházení s výhrami. Aktuální pravidla si vždy ověřte."
       }
     ],
     "category": "Strategie",
     "ctaLabel": "Zobrazit surebety u vašich sázkových kanceláří"
   },
   "skat-paa-spillegevinster": {
-    "title": "Daně z hazardních výher – mezinárodní průvodce sázením",
-    "metaTitle": "Daně z hazardních výher – co potřebujete vědět",
-    "description": "Musíte z výher ze sázení a surebetů platit daň? Zjistěte, jak fungují daňová pravidla u licencovaných a offshore sázkových kanceláří a co si dokumentovat.",
+    "title": "Daně z hazardních výher v Česku – průvodce sázením",
+    "metaTitle": "Daně z hazardních výher v ČR – co potřebujete vědět",
+    "description": "Musíte z výher ze sázení a surebetů platit daň? Zjistěte, jak fungují daňová pravidla u sázkových kanceláří s českou licencí, proč nelicencované weby nejsou dobrý nápad a co si dokumentovat.",
     "keyword": "daně z hazardních výher",
-    "intro": "V mnoha regulovaných trzích je odpověď jednoduchá: výhry od licencovaných sázkových kanceláří jsou pro hráče osvobozené od daně. Odvod státu platí sázková kancelář, nikoli vy. Pravidla se ale liší podle toho, kde žijete a kde sázíte.",
+    "intro": "V Česku je odpověď poměrně jednoduchá: výhry od sázkových kanceláří s licencí Ministerstva financí ČR jsou pro hráče osvobozené od daně až do vysokého limitu na jednu výhru. Odvod státu platí sázková kancelář, nikoli vy. Aktuální pravidla a výši limitu si ale vždy ověřte.",
     "blocks": [
       {
         "type": "h2",
@@ -584,15 +584,15 @@
       },
       {
         "type": "p",
-        "text": "Pokud sázíte u provozovatele s licencí od národního regulátora hazardu, platí provozovatel odvody z hazardu ze svých příjmů. Vaše výhry tak bývají obecně osvobozeny od daně a ve většině případů je nemusíte hlásit daňovému úřadu. Vždy si ověřte pravidla platná tam, kde žijete."
+        "text": "Pokud sázíte u provozovatele s licencí Ministerstva financí ČR, například u Tipsportu, Fortuny, Chance, Betana, Synot Tipu, Sazka bet, Kingsbetu nebo Merkuru, platí provozovatel odvody z hazardu ze svých příjmů. Vaše výhry jsou tak do vysokého limitu na jednu výhru osvobozeny od daně a ve většině případů je nemusíte uvádět v daňovém přiznání. Aktuální pravidla a limit si vždy ověřte u Ministerstva financí nebo na finančním úřadě."
       },
       {
         "type": "h2",
-        "text": "Offshore sázkové kanceláře bez místní licence"
+        "text": "Sázkové kanceláře bez české licence"
       },
       {
         "type": "p",
-        "text": "Pokud sázíte u provozovatelů, kteří nemají licenci ve vaší jurisdikci, mohou být výhry zdanitelné. Pravidla závisejí na faktorech, jako je to, zda provozovatel drží licenci v jiné zemi, a na vaší daňové rezidenci. To je jeden z důvodů, proč bývá často jednodušší držet se regulovaných sázkových kanceláří."
+        "text": "V Česku smějí sázky nabízet jen provozovatelé s licencí Ministerstva financí a nelicencované weby jsou blokované. U provozovatelů bez české licence nemusí osvobození od daně platit a výhry mohou být zdanitelné, přičemž záleží i na vaší daňové rezidenci. To je jeden z důvodů, proč je jednodušší a bezpečnější držet se licencovaných sázkových kanceláří."
       },
       {
         "type": "h2",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Pokud je sázení vaším hlavním zaměstnáním ve značném rozsahu, mohou se v některých jurisdikcích uplatnit jiná pravidla. Pokud si nejste jistí svou situací, obraťte se na místní daňový úřad nebo kvalifikovaného účetního."
+        "text": "Pokud je sázení vaším hlavním zaměstnáním ve značném rozsahu, mohou se uplatnit jiná pravidla. Pokud si nejste jistí svou situací, obraťte se na místní finanční úřad nebo kvalifikovaného daňového poradce či účetního."
       }
     ],
     "faq": [
       {
         "q": "Musím platit daň z výher u licencovaných sázkových kanceláří?",
-        "a": "Na většině regulovaných trhů ne. Výhry od místně licencovaných provozovatelů bývají pro hráče obvykle osvobozené od daně. Ověřte si daňová pravidla ve své zemi."
+        "a": "Obvykle ne. Výhry od provozovatelů s licencí Ministerstva financí ČR jsou pro hráče osvobozené od daně až do vysokého limitu na jednu výhru. Aktuální pravidla a limit si ověřte před výplatou větší výhry."
       },
       {
-        "q": "Jak zjistím, jestli má sázková kancelář licenci v mé zemi?",
-        "a": "Seznam schválených provozovatelů najdete na webu národního regulátora hazardu. Licencované sázkové kanceláře navíc obvykle zobrazují logo regulátora na svých stránkách."
+        "q": "Jak zjistím, jestli má sázková kancelář licenci v Česku?",
+        "a": "Seznam povolených provozovatelů najdete na webu Ministerstva financí ČR. Nelicencované weby jsou v Česku blokované, takže u nich nesázejte."
       }
     ],
     "category": "Pravidla",
@@ -631,7 +631,7 @@
   "bankroll-management": {
     "title": "Průvodce správou bankrollu pro sportovní sázení a arbitráž",
     "metaTitle": "Správa bankrollu při sportovním sázení: průvodce 2026",
-    "description": "Správa bankrollu při sportovním sázení: jak určit výši vkladů, rozdělit peníze mezi sázkové kanceláře a spočítat ROI, včetně příkladů v €.",
+    "description": "Správa bankrollu při sportovním sázení: jak určit výši vkladů, rozdělit peníze mezi sázkové kanceláře a spočítat ROI, včetně příkladů v Kč.",
     "keyword": "správa bankrollu při sportovním sázení",
     "intro": "Dobrá správa bankrollu znamená předem určit, kolik peněz vyhradíte na sázení, kolik vsadíte na jednu sázku a jak peníze rozdělíte mezi sázkové kanceláře. U value betů vsázejte 1–2 % bankrollu na sázku. U surebetů je limitem likvidita: vaše peníze musí být ve chvíli, kdy se surebet objeví, u správných sázkových kanceláří. Vše si zaznamenávejte, abyste mohli měřit ROI.",
     "blocks": [
@@ -658,46 +658,46 @@
       },
       {
         "type": "example",
-        "title": "Příklad: pevný vklad u value betů, bankroll €2,000",
+        "title": "Příklad: pevný vklad u value betů, bankroll 50 000 Kč",
         "rows": [
           [
-            "Vklad na sázku (1.5 %)",
-            "€30"
+            "Vklad na sázku (1,5 %)",
+            "750 Kč"
           ],
           [
             "10 prohraných sázek v řadě",
-            "−€300 (15 % bankrollu)"
+            "−7 500 Kč (15 % bankrollu)"
           ],
           [
             "Zbývající bankroll",
-            "€1,700"
+            "42 500 Kč"
           ],
           [
-            "Nový vklad po kontrole (1.5 %)",
-            "€25.50"
+            "Nový vklad po kontrole (1,5 %)",
+            "637,50 Kč"
           ]
         ],
         "note": "Vklad 1–2 % vás udrží ve hře i během sérií proher, které zažije každý hráč value betů."
       },
       {
         "type": "example",
-        "title": "Příklad: rozdělení bankrollu €3,000 mezi sázkové kanceláře při surebetech",
+        "title": "Příklad: rozdělení bankrollu 75 000 Kč mezi sázkové kanceláře při surebetech",
         "rows": [
           [
-            "6 sázkových kanceláří × €500",
-            "€3,000"
+            "6 sázkových kanceláří × 12 500 Kč",
+            "75 000 Kč"
           ],
           [
             "Typický celkový vklad na surebet",
-            "€400"
+            "10 000 Kč"
           ],
           [
             "60 surebetů měsíčně při průměru 2 %",
-            "€400 × 60 × 2% = €480"
+            "10 000 Kč × 60 × 2 % = 12 000 Kč"
           ],
           [
             "Měsíční výnos z bankrollu",
-            "€480 / €3,000 = 16%"
+            "12 000 Kč / 75 000 Kč = 16 %"
           ]
         ],
         "note": "Zisk z jednoho surebetu je malý, ale bankroll se za měsíc otočí mnohokrát. Výsledky se liší podle limitů a dostupných surebetů."
@@ -708,7 +708,7 @@
       },
       {
         "type": "p",
-        "text": "ROI je čistý zisk vydělený celkovým obratem. Říká vám, kolik vyděláte na každém vsazeném €, a je nejlepším způsobem, jak porovnat strategie, sporty i sázkové kanceláře."
+        "text": "ROI je čistý zisk vydělený celkovým obratem. Říká vám, kolik vyděláte na každé vsazené koruně, a je nejlepším způsobem, jak porovnat strategie, sporty i sázkové kanceláře."
       },
       {
         "type": "example",
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Celkem vsazeno",
-            "€18,500"
+            "460 000 Kč"
           ],
           [
             "Celkem vyplaceno",
-            "€18,870"
+            "469 200 Kč"
           ],
           [
             "Čistý zisk",
-            "€370"
+            "9 200 Kč"
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "9 200 Kč / 460 000 Kč = 2,0 %"
           ]
         ]
       },
@@ -760,7 +760,7 @@
     "faq": [
       {
         "q": "Jak velký by měl být můj bankroll pro surebety?",
-        "a": "Mnoho lidí začíná s €1,000–€3,000 rozdělenými mezi 4–6 sázkových kanceláří. Jde to i s méně, ale zisk z jednoho surebetu je pak velmi malý."
+        "a": "Mnoho lidí začíná s 25 000–75 000 Kč rozdělenými mezi 4–6 sázkových kanceláří. Jde to i s méně, ale zisk z jednoho surebetu je pak velmi malý."
       },
       {
         "q": "Kolik procent bankrollu vsázet na value bety?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Jak spočítám ROI svých sázek?",
-        "a": "Vydělte čistý zisk celkovou vsazenou částkou. Zisk €370 při vsazených €18,500 odpovídá ROI 2.0 %."
+        "a": "Vydělte čistý zisk celkovou vsazenou částkou. Zisk 9 200 Kč při vsazených 460 000 Kč odpovídá ROI 2,0 %."
       }
     ],
     "category": "Strategie",
@@ -777,7 +777,7 @@
   "arbitrage-betting": {
     "title": "Jak funguje arbitrážní sázení? Zajistěte si zisk při každém výsledku",
     "metaTitle": "Jak funguje arbitrážní sázení? Průvodce 2026",
-    "description": "Jak funguje arbitrážní sázení: vzorec, příklady v € a postup krok za krokem, jak vsadit svůj první surebet a zajistit si zisk.",
+    "description": "Jak funguje arbitrážní sázení: vzorec, příklady v Kč a postup krok za krokem, jak vsadit svůj první surebet a zajistit si zisk.",
     "keyword": "jak funguje arbitrážní sázení",
     "intro": "Arbitrážní sázení funguje tak, že vsadíte na každý možný výsledek téže události u různých sázkových kanceláří, pokud je součet převrácených hodnot kurzů menší než 1. Vklad rozdělíte tak, aby byla výplata stejná bez ohledu na výsledek. Rozdíl mezi celkovým vkladem a výplatou je váš zisk, obvykle 1–3 % na surebet, zajištěný matematikou, ne štěstím.",
     "blocks": [
@@ -795,15 +795,15 @@
       },
       {
         "type": "example",
-        "title": "Příklad: tenisový zápas se dvěma výsledky, celková sázka €1,000",
+        "title": "Příklad: tenisový zápas se dvěma výsledky, celková sázka 25 000 Kč",
         "rows": [
           [
             "Hráč A u sázkové kanceláře 1, kurz 2.08",
-            "Vklad €492.68"
+            "Vklad 12 317 Kč"
           ],
           [
             "Hráč B u sázkové kanceláře 2, kurz 2.02",
-            "Vklad €507.32"
+            "Vklad 12 683 Kč"
           ],
           [
             "1/2.08 + 1/2.02",
@@ -811,14 +811,14 @@
           ],
           [
             "Výplata bez ohledu na vítěze",
-            "cca €1,024.78"
+            "cca 25 620 Kč"
           ],
           [
             "Zajištěný zisk",
-            "cca €24.78 (2.5%)"
+            "cca 620 Kč (2,5 %)"
           ]
         ],
-        "note": "Součet je nižší než 1, takže vyděláte zhruba €24.78 bez ohledu na to, kdo zápas vyhraje."
+        "note": "Součet je nižší než 1, takže vyděláte zhruba 620 Kč bez ohledu na to, kdo zápas vyhraje."
       },
       {
         "type": "h2",
@@ -830,19 +830,19 @@
       },
       {
         "type": "example",
-        "title": "Příklad: zápas Premier League, celková sázka €2,000",
+        "title": "Příklad: zápas Premier League, celková sázka 50 000 Kč",
         "rows": [
           [
             "Výhra domácích, kurz 2.15",
-            "Vklad €942.69"
+            "Vklad 23 567 Kč"
           ],
           [
             "Remíza, kurz 3.60",
-            "Vklad €562.99"
+            "Vklad 14 075 Kč"
           ],
           [
             "Výhra hostů, kurz 4.10",
-            "Vklad €494.33"
+            "Vklad 12 358 Kč"
           ],
           [
             "Součet převrácených hodnot kurzů",
@@ -850,11 +850,11 @@
           ],
           [
             "Výplata při každém výsledku",
-            "cca €2,026.75"
+            "cca 50 670 Kč"
           ],
           [
             "Zajištěný zisk",
-            "cca €26.75 (1.3%)"
+            "cca 670 Kč (1,3 %)"
           ]
         ]
       },
@@ -900,11 +900,11 @@
     "faq": [
       {
         "q": "Je arbitrážní sázení legální?",
-        "a": "Ano, sázet na všechny výsledky události ve většině zemí není protizákonné. Sázkové kanceláře vám přesto mohou účet omezit. Více v článku [jsou surebety legální?](/en/guides/are-surebets-legal)"
+        "a": "Ano, sázet na všechny výsledky události u kanceláří s licencí Ministerstva financí ČR není protizákonné. Sázkové kanceláře vám přesto mohou účet omezit. Více v článku [jsou surebety legální?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Kolik se dá se surebety vydělat?",
-        "a": "Typický surebet vynese 1–3 % z celkového vkladu. Při €1,000 na jeden surebet, 40 surebetech měsíčně a průměru 1.5 % to dělá zhruba €600 měsíčně."
+        "a": "Typický surebet vynese 1–3 % z celkového vkladu. Při 25 000 Kč na jeden surebet, 40 surebetech měsíčně a průměru 1,5 % to dělá zhruba 15 000 Kč měsíčně."
       },
       {
         "q": "Kolik sázkových kanceláří potřebuji?",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Vklad je třeba rozdělit tak, aby byla výplata stejná bez ohledu na to, kdo vyhraje. Při celkovém vkladu 1,000 jednotek ve výše uvedeném příkladu vsadíte přibližně 494 jednotek na hráče A a přibližně 506 jednotek na hráče B. Oba výsledky vám vrátí přibližně 1,037 jednotek, tedy zisk zhruba 37 jednotek."
+        "text": "Vklad je třeba rozdělit tak, aby byla výplata stejná bez ohledu na to, kdo vyhraje. Při celkovém vkladu 10 000 Kč ve výše uvedeném příkladu vsadíte přibližně 4 940 Kč na hráče A a přibližně 5 060 Kč na hráče B. Oba výsledky vám vrátí přibližně 10 370 Kč, tedy zisk zhruba 370 Kč."
       },
       {
         "type": "tip",
@@ -1036,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Příklad: tři hráči v turnaji, celkový vklad €1,000",
+        "title": "Příklad: tři hráči v turnaji, celkový vklad 30 000 Kč",
         "rows": [
           [
             "Hráč A, kurz 3.00",
-            "vklad cca €444"
+            "vklad cca 13 333 Kč"
           ],
           [
             "Hráč B, kurz 4.00",
-            "vklad cca €333"
+            "vklad cca 10 000 Kč"
           ],
           [
             "Hráč C, kurz 6.00",
-            "vklad cca €222"
+            "vklad cca 6 667 Kč"
           ],
           [
             "S = 0.333 + 0.250 + 0.167",
@@ -1056,11 +1056,11 @@
           ],
           [
             "Pokud vyhraje jeden ze tří",
-            "výplata cca €1,333, zisk cca €333"
+            "výplata cca 40 000 Kč, zisk cca 10 000 Kč"
           ],
           [
             "Pokud nevyhraje žádný ze tří",
-            "ztráta €1,000"
+            "ztráta 30 000 Kč"
           ]
         ],
         "note": "Zisk získáte jen v případě, že vyhraje jeden z vašich tří hráčů. Jak je to pravděpodobné, musíte posoudit sami."
@@ -1116,15 +1116,15 @@
       },
       {
         "type": "example",
-        "title": "Příklad: kurzy 1.95 a 2.20, celkový vklad €1,000",
+        "title": "Příklad: kurzy 1.95 a 2.20, celkový vklad 10 000 Kč",
         "rows": [
           [
             "Hráč A v sázkové kanceláři 1, kurz 1.95",
-            "vklad přibl. €530"
+            "vklad přibl. 5 300 Kč"
           ],
           [
             "Hráč B v sázkové kanceláři 2, kurz 2.20",
-            "vklad přibl. €470"
+            "vklad přibl. 4 700 Kč"
           ],
           [
             "1/1.95 + 1/2.20",
@@ -1132,11 +1132,11 @@
           ],
           [
             "Výplata bez ohledu na vítěze",
-            "přibl. €1,034"
+            "přibl. 10 340 Kč"
           ],
           [
             "Zisk",
-            "přibl. €34 (3.4%)"
+            "přibl. 340 Kč (3.4%)"
           ]
         ],
         "note": "Součet je menší než 1, takže tato kombinace je surebet."
@@ -1189,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Příklad: tři sázkové kanceláře, celkový vklad €1,000",
+        "title": "Příklad: tři sázkové kanceláře, celkový vklad 10 000 Kč",
         "rows": [
           [
             "Výhra domácích v sázkové kanceláři 1, kurz 2.40",
-            "vklad přibl. €424"
+            "vklad přibl. 4 240 Kč"
           ],
           [
             "Remíza v sázkové kanceláři 2, kurz 3.80",
-            "vklad přibl. €268"
+            "vklad přibl. 2 680 Kč"
           ],
           [
             "Výhra hostů v sázkové kanceláři 3, kurz 3.30",
-            "vklad přibl. €308"
+            "vklad přibl. 3 080 Kč"
           ],
           [
             "1/2.40 + 1/3.80 + 1/3.30",
@@ -1209,11 +1209,11 @@
           ],
           [
             "Výplata bez ohledu na výsledek",
-            "přibl. €1,017"
+            "přibl. 10 175 Kč"
           ],
           [
             "Zisk",
-            "přibl. €17 (1.7%)"
+            "přibl. 175 Kč (1.7%)"
           ]
         ],
         "note": "Zisk je menší než u tenisu a tři sázky znamenají vyšší riziko, že se kurzy změní, než je stihnete zadat."
@@ -1354,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Domácí -0.25 při vkladu €100",
+        "title": "Domácí -0.25 při vkladu 2 500 Kč",
         "rows": [
           [
             "Domácí vyhrají",
@@ -1362,7 +1362,7 @@
           ],
           [
             "Remíza",
-            "€50 vráceno, €50 prohráno"
+            "1 250 Kč vráceno, 1 250 Kč prohráno"
           ],
           [
             "Domácí prohrají",
@@ -1400,7 +1400,7 @@
   "bet-tracker": {
     "title": "Alternativa k sázkové tabulce: sledujte každou sázku automaticky",
     "metaTitle": "Alternativa k sázkové tabulce – bet tracker 2026",
-    "description": "Nahraďte sázkovou tabulku bet trackerem: co zaznamenávat, jak spočítat ROI, příklady v € a co by měla umět nejlepší aplikace pro sledování sázek.",
+    "description": "Nahraďte sázkovou tabulku bet trackerem: co zaznamenávat, jak spočítat ROI, příklady v Kč a co by měla umět nejlepší aplikace pro sledování sázek.",
     "keyword": "alternativa k sázkové tabulce",
     "intro": "Nejlepší alternativou k sázkové tabulce je bet tracker, který za vás zaznamená každou sázku, vklad i výsledek a automaticky spočítá ROI, zisk podle jednotlivých sázkových kanceláří i zůstatek. Tabulky přestanou fungovat, jakmile vsadíte týdně desítky surebetů: vzorce se přepíšou, některé sázky chybí a zrušené sázky zkreslují čísla. Tracker vám ukáže skutečný stav během pár vteřin.",
     "blocks": [
@@ -1445,22 +1445,22 @@
           ],
           [
             "Celkový obrat (všechny sázky)",
-            "€24,000"
+            "600 000 Kč"
           ],
           [
             "Celkem vyplaceno",
-            "€24,720"
+            "618 000 Kč"
           ],
           [
             "Čistý zisk",
-            "€720"
+            "18 000 Kč"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "18 000 Kč / 600 000 Kč = 3,0 %"
           ]
         ],
-        "note": "Bez sledování vidíte jen to, jak se hýbe váš zůstatek. Se sledováním zjistíte, že z každých 100 €, které protočíte, vyděláte 3 €."
+        "note": "Bez sledování vidíte jen to, jak se hýbe váš zůstatek. Se sledováním zjistíte, že z každých 1 000 Kč, které protočíte, vyděláte 30 Kč."
       },
       {
         "type": "h2",
@@ -1531,19 +1531,19 @@
         "rows": [
           [
             "Celkový vklad",
-            "€40,000"
+            "400 000 Kč"
           ],
           [
             "Celková výplata",
-            "€41,000"
+            "410 000 Kč"
           ],
           [
             "Zisk",
-            "€1,000"
+            "10 000 Kč"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "10 000 / 400 000 × 100 = 2,5 %"
           ]
         ],
         "note": "Z každé vsazené koruny jste vydělali 2,5 haléře."
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Jak spočítám ROI v sázení?",
-        "a": "Vezměte svůj zisk, vydělte ho celkovým vkladem a vynásobte 100. Pokud jste vsadili 10 000 € a vydělali 300 €, vaše ROI je 3 %."
+        "a": "Vezměte svůj zisk, vydělte ho celkovým vkladem a vynásobte 100. Pokud jste vsadili 100 000 Kč a vydělali 3 000 Kč, vaše ROI je 3 %."
       },
       {
         "q": "Jaký je rozdíl mezi ROI a ziskem?",
@@ -1595,7 +1595,7 @@
     "metaTitle": "Alternativa k Surebet Danmark – srovnání s BetTrackerAI (2025)",
     "description": "Porovnejte BetTrackerAI a Surebet Danmark: ceny, funkce, nabídku sázkových kanceláří i evidenci sázek. Vyberte si surebet nástroj, který vám sedí.",
     "keyword": "srovnání surebet nástrojů",
-    "intro": "Surebet Danmark i BetTrackerAI vyhledávají surebety (též arbitrážní sázky) u licencovaných sázkových kanceláří. Oba nabízejí 7denní zkušební verzi zdarma. Hlavní rozdíly jsou v ceně a v nástrojích, které dostanete navíc k samotnému surebet scanneru.",
+    "intro": "Surebet Danmark i BetTrackerAI vyhledávají surebety (též arbitrážní sázky) u licencovaných sázkových kanceláří, v Česku například u Tipsportu, Fortuny nebo Chance. Oba nabízejí 7denní zkušební verzi zdarma. Hlavní rozdíly jsou v ceně a v nástrojích, které dostanete navíc k samotnému surebet scanneru.",
     "blocks": [
       {
         "type": "h2",
@@ -1615,7 +1615,7 @@
           ],
           [
             "Sázkové kanceláře",
-            "Obě: pouze licencované sázkové kanceláře"
+            "Obě: pouze licencované sázkové kanceláře (v ČR s licencí Ministerstva financí)"
           ],
           [
             "Upozornění",
@@ -1676,7 +1676,7 @@
       },
       {
         "q": "Používají oba nástroje jen licencované sázkové kanceláře?",
-        "a": "Ano. Obě platformy se zaměřují na regulované, licencované sázkové kanceláře, takže sázíte legálně a s ochranou hráčů."
+        "a": "Ano. Obě platformy se zaměřují na regulované, licencované sázkové kanceláře, takže sázíte legálně a s ochranou hráčů. V Česku jde o provozovatele s licencí Ministerstva financí ČR, například Tipsport, Fortuna, Chance, Betano nebo Sazka bet."
       },
       {
         "q": "Mohu si BetTrackerAI vyzkoušet zdarma?",
@@ -1720,19 +1720,19 @@
         "rows": [
           [
             "Vklady celkem",
-            "€10,000"
+            "250 000 Kč"
           ],
           [
             "Celkem vybráno",
-            "€3,000"
+            "75 000 Kč"
           ],
           [
             "Aktuální zůstatek u sázkových kanceláří",
-            "€7,800"
+            "195 000 Kč"
           ],
           [
             "Zisk",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "75 000 Kč + 195 000 Kč − 250 000 Kč = 20 000 Kč"
           ]
         ]
       },
@@ -1756,7 +1756,7 @@
     "faq": [
       {
         "q": "Platí se daň z výher ze sázení?",
-        "a": "Daňové zacházení s výhrami z hazardu se liší podle jurisdikce. Na některých regulovaných trzích jsou výhry od licencovaných sázkových kanceláří osvobozené od daně, jinde je možná budete muset přiznat. Zjistěte si daňová pravidla v místě svého bydliště nebo se poraďte s místním poradcem."
+        "a": "V Česku jsou výhry od sázkových kanceláří s licencí Ministerstva financí ČR osvobozené od daně až do vysokého limitu na jednu výhru. U vyšších výher mohou platit jiná pravidla. Aktuální podmínky a výši limitu si vždy ověřte v platné legislativě nebo se poraďte s daňovým poradcem."
       },
       {
         "q": "Jak často bych měl aktualizovat svůj sázkový deník?",
@@ -1769,7 +1769,7 @@
   "tjen-penge-paa-odds-uden-risiko": {
     "title": "Jak vydělat na sázení bez rizika: jak fungují hedging a arbitráž",
     "metaTitle": "Jak vydělat na sázkách bez rizika 2026",
-    "description": "Jak vydělat na sázení bez rizika: surebety a hedging na vzorových příkladech v €, realistická sázková strategie a skutečná úskalí.",
+    "description": "Jak vydělat na sázení bez rizika: surebety a hedging na vzorových příkladech v Kč, realistická sázková strategie a skutečná úskalí.",
     "keyword": "jak vydělat na sázení bez rizika",
     "category": "Strategie",
     "ctaLabel": "Zobrazit surebety s garantovaným ziskem",
@@ -1785,15 +1785,15 @@
       },
       {
         "type": "example",
-        "title": "Příklad: basketbalový zápas se dvěma výsledky (včetně prodloužení), €1,000",
+        "title": "Příklad: basketbalový zápas se dvěma výsledky (včetně prodloužení), 25 000 Kč",
         "rows": [
           [
             "Tým A u sázkové kanceláře 1, kurz 1.95",
-            "Vklad €520.88"
+            "Vklad 13 022 Kč"
           ],
           [
             "Tým B u sázkové kanceláře 2, kurz 2.12",
-            "Vklad €479.12"
+            "Vklad 11 978 Kč"
           ],
           [
             "Součet převrácených hodnot kurzů",
@@ -1801,11 +1801,11 @@
           ],
           [
             "Výplata bez ohledu na vítěze",
-            "cca €1,015.72"
+            "cca 25 393 Kč"
           ],
           [
             "Garantovaný zisk",
-            "cca €15.72 (1.6%)"
+            "cca 393 Kč (1,6 %)"
           ]
         ]
       },
@@ -1819,30 +1819,30 @@
       },
       {
         "type": "example",
-        "title": "Příklad: over 2.5 gólu vsazeno před zápasem za €500",
+        "title": "Příklad: over 2.5 gólu vsazeno před zápasem za 10 000 Kč",
         "rows": [
           [
             "Původní sázka: over 2.5 gólu, kurz 2.40",
-            "Vklad €500, potenciální výplata €1,200"
+            "Vklad 10 000 Kč, potenciální výplata 24 000 Kč"
           ],
           [
             "Po brzkém gólu: under 2.5 gólu, kurz 2.60",
-            "Vklad €461.54"
+            "Vklad 9 231 Kč"
           ],
           [
             "Celkem vsazeno",
-            "€961.54"
+            "19 231 Kč"
           ],
           [
             "Výplata při jakémkoli výsledku",
-            "€1,200"
+            "24 000 Kč"
           ],
           [
             "Zajištěný zisk",
-            "cca €238.46 (24.8%)"
+            "cca 4 769 Kč (24,8 %)"
           ]
         ],
-        "note": "Vzorec: zajišťovací vklad = potenciální výplata ÷ nový kurz. Zde 1,200 ÷ 2.60 = €461.54."
+        "note": "Vzorec: zajišťovací vklad = potenciální výplata ÷ nový kurz. Zde 24 000 ÷ 2.60 ≈ 9 231 Kč."
       },
       {
         "type": "h2",
@@ -1858,11 +1858,11 @@
         "rows": [
           [
             "Vklad na jeden surebet",
-            "€1,000"
+            "25 000 Kč"
           ],
           [
             "Průměrný zisk",
-            "1.5%"
+            "1,5 %"
           ],
           [
             "Surebety za měsíc",
@@ -1870,11 +1870,11 @@
           ],
           [
             "Očekávaný měsíční výsledek",
-            "cca €600"
+            "cca 15 000 Kč"
           ],
           [
-            "Stejné nastavení při €2,500 na surebet",
-            "cca €1,500"
+            "Stejné nastavení při 60 000 Kč na surebet",
+            "cca 36 000 Kč"
           ]
         ]
       },
@@ -1915,14 +1915,14 @@
       },
       {
         "q": "Kolik peněz potřebuji na začátek?",
-        "a": "Začít můžete s €200–500 rozloženými mezi několik sázkových kanceláří. S menšími vklady ale surebet vynese jen pár eur."
+        "a": "Začít můžete s 5 000–12 000 Kč rozloženými mezi několik sázkových kanceláří. S menšími vklady ale surebet vynese jen pár desítek korun."
       }
     ]
   },
   "find-surebets-automatisk": {
     "title": "Jak najít surebety automaticky: jak skener kurzů odhalí chyby v kurzech",
     "metaTitle": "Surebety automaticky – skener kurzů 2026",
-    "description": "Jak najít surebety automaticky pomocí skeneru kurzů: jak sázkový software odhalí chyby v kurzech, příklady v € a na co si dát pozor.",
+    "description": "Jak najít surebety automaticky pomocí skeneru kurzů: jak sázkový software odhalí chyby v kurzech, příklady v Kč a na co si dát pozor.",
     "keyword": "najít surebety automaticky",
     "category": "Strategie",
     "ctaLabel": "Spustit skener surebetů",
@@ -1954,15 +1954,15 @@
       },
       {
         "type": "example",
-        "title": "Příklad: chyba v kurzu odhalená skenerem, celkový vklad €1,000",
+        "title": "Příklad: chyba v kurzu odhalená skenerem, celkový vklad 25 000 Kč",
         "rows": [
           [
             "Over 2.5 gólu u sázkové kanceláře 1, kurz 2.25",
-            "Vklad €461.72"
+            "Vklad 11 543 Kč"
           ],
           [
             "Under 2.5 gólu u sázkové kanceláře 2, kurz 1.93",
-            "Vklad €538.28"
+            "Vklad 13 457 Kč"
           ],
           [
             "1/2.25 + 1/1.93",
@@ -1970,11 +1970,11 @@
           ],
           [
             "Výplata při každém výsledku",
-            "cca €1,038.88"
+            "cca 25 972 Kč"
           ],
           [
             "Zajištěný zisk",
-            "cca €38.88 (3.9%)"
+            "cca 972 Kč (3.9%)"
           ]
         ],
         "note": "Sázková kancelář 1 nezareagovala na novinku o sestavě týmu. Skener tuto mezeru označil během několika sekund."
@@ -2037,7 +2037,7 @@
   "live-arbitrage-betting-scanner": {
     "title": "Scanner live arbitrážních sázek: jak zachytit live surebety během zápasu",
     "metaTitle": "Scanner live arbitrážních sázek – live surebety 2026",
-    "description": "Jak scanner live arbitrážních sázek hledá surebety během zápasů: rychlost, zpoždění sázek, názorné příklady v € a jak se vyhnout typickým chybám.",
+    "description": "Jak scanner live arbitrážních sázek hledá surebety během zápasů: rychlost, zpoždění sázek, názorné příklady v Kč a jak se vyhnout typickým chybám.",
     "keyword": "scanner live arbitrážních sázek",
     "category": "Strategie",
     "ctaLabel": "Zobrazit live surebety",
@@ -2065,15 +2065,15 @@
       },
       {
         "type": "example",
-        "title": "Příklad: live tenis po breaku, celkový vklad €800",
+        "title": "Příklad: live tenis po breaku, celkový vklad 20 000 Kč",
         "rows": [
           [
             "Hráč A u sázkové kanceláře 1, kurz 1.72",
-            "Vklad €467.63"
+            "Vklad 11 691 Kč"
           ],
           [
             "Hráč B u sázkové kanceláře 2, kurz 2.42",
-            "Vklad €332.37"
+            "Vklad 8 309 Kč"
           ],
           [
             "1/1.72 + 1/2.42",
@@ -2081,26 +2081,26 @@
           ],
           [
             "Výplata při jakémkoli výsledku",
-            "přibl. €804.33"
+            "přibl. 20 108 Kč"
           ],
           [
             "Zajištěný zisk",
-            "přibl. €4.33 (0.5%)"
+            "přibl. 108 Kč (0.5%)"
           ]
         ],
         "note": "Live marže bývají menší než předzápasové. Vyšší počet sázek to vyrovná, ale jen pokud jednáte rychle a přesně."
       },
       {
         "type": "example",
-        "title": "Příklad: over/under po rané brance, celkový vklad €1,000",
+        "title": "Příklad: over/under po rané brance, celkový vklad 25 000 Kč",
         "rows": [
           [
             "Over 3.5 gólu u sázkové kanceláře 1, kurz 2.30",
-            "Vklad €451.07"
+            "Vklad 11 277 Kč"
           ],
           [
             "Under 3.5 gólu u sázkové kanceláře 2, kurz 1.89",
-            "Vklad €548.93"
+            "Vklad 13 723 Kč"
           ],
           [
             "Součet převrácených hodnot kurzů",
@@ -2108,11 +2108,11 @@
           ],
           [
             "Výplata při každém výsledku",
-            "přibl. €1,037.47"
+            "přibl. 25 937 Kč"
           ],
           [
             "Zajištěný zisk",
-            "přibl. €37.47 (3.7%)"
+            "přibl. 937 Kč (3.7%)"
           ]
         ]
       },
@@ -2173,7 +2173,7 @@
   "find-value-bets-med-ai": {
     "title": "Jak najít value bety pomocí AI: jak AI skener kurzů odhalí +EV sázky",
     "metaTitle": "Value bety s AI – AI skener kurzů 2026",
-    "description": "Jak najít value bety pomocí AI: jak AI skener kurzů počítá férové kurzy, odhaluje +EV sázky a co můžete reálně čekat, s příklady v €.",
+    "description": "Jak najít value bety pomocí AI: jak AI skener kurzů počítá férové kurzy, odhaluje +EV sázky a co můžete reálně čekat, s příklady v Kč.",
     "keyword": "value bety pomocí ai",
     "category": "Strategie",
     "ctaLabel": "Najděte value bety s AI",
@@ -2204,12 +2204,12 @@
             "0.50 × 2.10 − 1 = +5%"
           ],
           [
-            "Vsazená částka €50",
-            "Očekávaný zisk €2.50 na sázku"
+            "Vsazená částka 1 000 Kč",
+            "Očekávaný zisk 50 Kč na sázku"
           ],
           [
-            "300 sázek po €50 (obrat €15,000)",
-            "Očekávaný zisk přibližně €750"
+            "300 sázek po 1 000 Kč (obrat 300 000 Kč)",
+            "Očekávaný zisk přibližně 15 000 Kč"
           ]
         ],
         "note": "Očekávaný zisk je průměr. Skutečné výsledky kolem něj kolísají nahoru i dolů, zvlášť při malém počtu sázek."
@@ -2357,7 +2357,7 @@
         "rows": [
           [
             "Předplatné",
-            "cca €33 měsíčně"
+            "cca €33 měsíčně (cca 825 Kč)"
           ],
           [
             "Průměrné ROI u surebetů",
@@ -2365,18 +2365,18 @@
           ],
           [
             "Obrat potřebný k dosažení bodu zvratu",
-            "€33 / 2% = €1,650"
+            "825 Kč / 2% = 41 250 Kč"
           ],
           [
-            "Typický obrat (60 surebetů × €400)",
-            "€24,000"
+            "Typický obrat (60 surebetů × 10 000 Kč)",
+            "600 000 Kč"
           ],
           [
             "Zisk po odečtení předplatného",
-            "€480 − €33 = €447"
+            "12 000 Kč − 825 Kč = 11 175 Kč"
           ]
         ],
-        "note": "Ceny jsou přibližné částky v eurech. BetTracker AI stojí od cca €20 měsíčně za Basic a cca €33 za Premium."
+        "note": "Předplatné se účtuje v eurech, částky v Kč jsou orientační přepočet (cca 25 Kč za €1). BetTracker AI stojí od cca €20 měsíčně za Basic a cca €33 za Premium."
       },
       {
         "type": "h2",
@@ -2385,7 +2385,7 @@
       {
         "type": "ul",
         "items": [
-          "**Pokrytí sázkových kanceláří:** nástroj musí zahrnovat kanceláře, které skutečně můžete používat.",
+          "**Pokrytí sázkových kanceláří:** nástroj musí zahrnovat licencované kanceláře, jako jsou Tipsport, Fortuna, Chance, Betano, Synot Tip, Sazka bet, Kingsbet nebo Merkur, které skutečně můžete používat.",
           "**Frekvence aktualizace:** několik sekund u prematch sázek, u [live surebetů](/en/guides/live-arbitrage-betting-scanner) ještě rychleji.",
           "**Filtry:** sport, trh, sázková kancelář a minimální zisk.",
           "**Vestavěné sledování:** surebety vsazené ze skeneru by se měly evidovat automaticky.",
@@ -2412,7 +2412,7 @@
       },
       {
         "q": "Je sázkařský software legální?",
-        "a": "Používání nástrojů k porovnávání kurzů a evidenci sázek je legální. Automatické vsazování sázek však obvykle porušuje podmínky sázkových kanceláří. Viz [jsou surebety legální?](/en/guides/are-surebets-legal)"
+        "a": "Používání nástrojů k porovnávání kurzů a evidenci sázek je legální. Automatické vsazování sázek však obvykle porušuje podmínky sázkových kanceláří. Sázet byste přitom měli jen u operátorů s licencí Ministerstva financí ČR. Viz [jsou surebety legální?](/en/guides/are-surebets-legal)"
       }
     ]
   }

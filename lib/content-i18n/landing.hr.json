@@ -235,10 +235,10 @@
   },
   "bookmaker/bet365": {
     "title": "Surebetovi kladionice Bet365",
-    "metaTitle": "Bet365 surebetovi – pronađite prilike za zajamčenu zaradu",
-    "description": "Pronađite surebetove kladionice Bet365 u stvarnom vremenu. BetTrackerAI uspoređuje koeficijente Bet365 s drugim kladionicama i pokazuje vam gdje možete osigurati zajamčenu zaradu.",
+    "metaTitle": "Bet365 surebetovi – što trebate znati u Hrvatskoj",
+    "description": "Zanimaju vas surebetovi kladionice Bet365? BetTrackerAI uspoređuje koeficijente u stvarnom vremenu, ali u Hrvatskoj se smiju koristiti samo kladionice s dozvolom Ministarstva financija RH. Pogledajte kako pronaći surebetove među licenciranim kladionicama.",
     "keyword": "bet365 surebetovi",
-    "intro": "Bet365 je jedna od najvećih svjetskih kladionica i nudi vrlo širok izbor sportova i tržišta. Zbog toga je Bet365 jedna od kladionica koje se najčešće pojavljuju u surebetovima.",
+    "intro": "Bet365 je jedna od najvećih svjetskih kladionica i nudi vrlo širok izbor sportova i tržišta, zbog čega se često pojavljuje u surebetovima na drugim tržištima. U Hrvatskoj, međutim, smiju se klađenjem baviti samo operateri s dozvolom Ministarstva financija RH, a Bet365 nije na popisu kladionica koje koristimo kao primjere (SuperSport, Germania Sport, PSK, Hrvatska Lutrija, Admiral, Mozzart, Favbet, Arena Sport).",
     "blocks": [
       {
         "type": "h2",
@@ -246,20 +246,20 @@
       },
       {
         "type": "p",
-        "text": "Bet365 je licencirana kladionica u više jurisdikcija i nudi koeficijente na vrlo velik broj utakmica, uključujući niže lige i live tržišta. Zbog te širine Bet365 često ima koeficijente koji se razlikuju od ostatka tržišta."
+        "text": "Bet365 je licencirana kladionica u više jurisdikcija i nudi koeficijente na vrlo velik broj utakmica, uključujući niže lige i live tržišta. Ipak, nije među kladionicama s dozvolom Ministarstva financija RH (aktualni popis provjerite kod Ministarstva), a nelicencirane stranice u Hrvatskoj su blokirane. BetTrackerAI ne potiče klađenje na nelicenciranim stranicama."
       },
       {
         "type": "h2",
-        "text": "Kako pronaći surebetove s kladionicom Bet365"
+        "text": "Kako pronaći surebetove među licenciranim kladionicama"
       },
       {
         "type": "p",
-        "text": "Surebet s kladionicom Bet365 nastaje kada Bet365 ima viši koeficijent na jedan ishod od koeficijenata koje druge kladionice nude na suprotne ishode. BetTrackerAI neprekidno prati koeficijente Bet365 i uspoređuje ih s ostatkom tržišta."
+        "text": "Surebet nastaje kada jedna kladionica ima viši koeficijent na jedan ishod od koeficijenata koje druge kladionice nude na suprotne ishode. BetTrackerAI neprekidno prati koeficijente licenciranih kladionica u Hrvatskoj, poput SuperSporta, Germania Sporta ili Admirala, i uspoređuje ih međusobno."
       },
       {
         "type": "ul",
         "items": [
-          "Odaberite Bet365 i svoje ostale kladionice pomoću filtra na stranici sa surebetovima.",
+          "Odaberite svoje licencirane kladionice (npr. SuperSport, Germania Sport, Admiral) pomoću filtra na stranici sa surebetovima.",
           "Sortirajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
           "Pomoću kalkulatora rasporedite ulog i zaokružite iznos.",
           "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
@@ -267,26 +267,26 @@
       },
       {
         "type": "tip",
-        "text": "Rasporedite klađenje na više kladionica kako se ne biste oslanjali samo na Bet365. Tako produljujete vijek trajanja svojeg računa."
+        "text": "Rasporedite klađenje na više licenciranih kladionica, primjerice Mozzart, Favbet i Arena Sport, kako se ne biste oslanjali samo na jednu. Tako produljujete vijek trajanja svojih računa."
       }
     ],
     "faq": [
       {
         "q": "Je li arbitražno klađenje dopušteno u kladionici Bet365?",
-        "a": "Arbitražno klađenje je legalno. Ipak, kao i sve kladionice, Bet365 može ograničiti račune prema svojim uvjetima poslovanja ako uoči obrasce klađenja kojima se dosljedno osigurava zajamčena zarada."
+        "a": "Arbitražno klađenje samo po sebi nije zabranjeno. Ipak, u Hrvatskoj se smijete kladiti samo kod operatera s dozvolom Ministarstva financija RH, a Bet365 nije među njima. Kao i druge kladionice, licencirani operateri mogu ograničiti račune prema svojim uvjetima poslovanja ako uoče obrasce klađenja kojima se dosljedno osigurava zajamčena zarada."
       },
       {
         "q": "Posluje li Bet365 s licencijom za igre na sreću?",
-        "a": "Da. Bet365 posjeduje licencije na više reguliranih tržišta u svijetu. Provjerite porezna pravila koja vrijede za vas, jer se tretman dobitaka razlikuje od jurisdikcije do jurisdikcije."
+        "a": "Bet365 posjeduje licencije na više reguliranih tržišta u svijetu, ali to nije dozvola Ministarstva financija RH. U Hrvatskoj smiju klađenje nuditi samo licencirani operateri, a nelicencirane stranice su blokirane. Kod licenciranih operatera porez na dobitke iznad propisanog praga operater obračunava i zadržava na izvoru, a važeća pravila provjerite kod Ministarstva financija ili Porezne uprave. Ako vam klađenje postane problem, koristite alate za samoisključenje kod operatera ili se obratite lokalnim službama za pomoć, primjerice Klubu ovisnika o kockanju."
       }
     ]
   },
   "bookmaker/unibet": {
     "title": "Surebetovi kladionice Unibet",
     "metaTitle": "Unibet surebetovi – pronađite prilike za arbitražno klađenje",
-    "description": "Pronađite surebetove kladionice Unibet u stvarnom vremenu. BetTrackerAI uspoređuje koeficijente Unibeta s drugim kladionicama kako biste arbitražnim klađenjem osigurali zajamčenu zaradu.",
+    "description": "Pogledajte kako BetTrackerAI uspoređuje koeficijente Unibeta s drugim kladionicama u stvarnom vremenu. U Hrvatskoj se smije klađenje samo kod operatera s licencijom Ministarstva financija RH.",
     "keyword": "unibet surebetovi",
-    "intro": "Unibet je jedna od najpopularnijih kladionica u svijetu. Unibet koristi Kambi platformu za koeficijente, pa su koeficijenti u Unibetu često slični onima u drugim kladionicama koje koriste Kambi.",
+    "intro": "Unibet je jedna od najpopularnijih kladionica u svijetu. Unibet koristi Kambi platformu za koeficijente, pa su koeficijenti u Unibetu često slični onima u drugim kladionicama koje koriste Kambi. Unibet nije na popisu kladionica s licencijom Ministarstva financija RH, a nelicencirane stranice u Hrvatskoj su blokirane.",
     "blocks": [
       {
         "type": "h2",
@@ -294,7 +294,7 @@
       },
       {
         "type": "p",
-        "text": "Unibet posjeduje licencije na više reguliranih tržišta i nudi širok izbor sportova. Budući da Unibet dijeli platformu za koeficijente s nekoliko drugih kladionica, surebetovi se najčešće pojavljuju između Unibeta i kladionica koje koriste drugu platformu."
+        "text": "Unibet posjeduje licencije na više reguliranih tržišta i nudi širok izbor sportova, no u Hrvatskoj nije među operaterima licenciranima od strane Ministarstva financija RH. Budući da Unibet dijeli platformu za koeficijente s nekoliko drugih kladionica, surebetovi se najčešće pojavljuju između Unibeta i kladionica koje koriste drugu platformu. U Hrvatskoj okladu uplaćujte isključivo kod licenciranih kladionica, poput SuperSporta, Germania Sporta, PSK-a, Admirala, Mozzarta, Favbeta ili Arena Sporta."
       },
       {
         "type": "h2",
@@ -302,12 +302,12 @@
       },
       {
         "type": "p",
-        "text": "Surebet s kladionicom Unibet javlja se kada Unibet ima viši koeficijent na jedan ishod od koeficijenata koje druge kladionice nude na suprotne ishode. BetTrackerAI neprekidno prati koeficijente Unibeta i uspoređuje ih s ostatkom tržišta."
+        "text": "Surebet s kladionicom Unibet javlja se kada Unibet ima viši koeficijent na jedan ishod od koeficijenata koje druge kladionice nude na suprotne ishode. BetTrackerAI neprekidno prati koeficijente Unibeta i uspoređuje ih s ostatkom tržišta. Za hrvatske igrače praktično su važni samo surebetovi između kladionica koje imaju hrvatsku licenciju."
       },
       {
         "type": "ul",
         "items": [
-          "Odaberite Unibet i svoje ostale kladionice pomoću filtra na stranici sa surebetovima.",
+          "Odaberite svoje licencirane kladionice (npr. SuperSport, Admiral, Mozzart) pomoću filtra na stranici sa surebetovima.",
           "Sortirajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
           "Pomoću kalkulatora podijelite ulog i zaokružite iznose.",
           "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
@@ -315,47 +315,47 @@
       },
       {
         "type": "tip",
-        "text": "Rasporedite klađenje na više kladionica kako se ne biste oslanjali samo na Unibet. Tako ćete produljiti vijek trajanja svojeg računa i lakše izbjeći ograničenja."
+        "text": "Rasporedite klađenje na više licenciranih kladionica, primjerice SuperSport, Germania Sport, Favbet i Arena Sport, kako se ne biste oslanjali samo na jednu. Tako ćete produljiti vijek trajanja svojeg računa i lakše izbjeći ograničenja. Dobitke iznad zakonskog praga porezno zadržava operater, pa provjerite aktualna pravila."
       }
     ],
     "faq": [
       {
         "q": "Je li legalno uplaćivati surebetove u kladionici Unibet?",
-        "a": "Da, arbitražno klađenje je legalno. Ipak, kao i sve kladionice, Unibet može ograničiti račune prema svojim uvjetima poslovanja ako na njima igrači uplaćuju isključivo oklade sa zajamčenom zaradom."
+        "a": "Arbitražno klađenje samo po sebi nije zabranjeno, ali u Hrvatskoj smijete klađenje obavljati samo kod operatera licenciranih od strane Ministarstva financija RH. Unibet nije na tom popisu, a nelicencirane stranice su blokirane, pa ih ne preporučujemo. Kao i sve kladionice, i licencirani operateri mogu ograničiti račune prema svojim uvjetima poslovanja ako igrači uplaćuju isključivo oklade sa zajamčenom zaradom."
       },
       {
         "q": "Koje su kladionice slične kladionici Unibet?",
-        "a": "Unibet koristi Kambi, koji koeficijente isporučuje i nekolicini drugih kladionica. Zato Unibet kombinirajte s kladionicama koje koriste druge platforme kako biste pronašli više surebetova."
+        "a": "Unibet koristi Kambi, koji koeficijente isporučuje i nekolicini drugih kladionica. U Hrvatskoj kao alternativu razmotrite kladionice s licencijom Ministarstva financija RH, poput SuperSporta, Germania Sporta, PSK-a, Admirala, Mozzarta, Favbeta i Arena Sporta, te ih kombinirajte kako biste pronašli više surebetova."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebetovi kladionice Betano",
-    "metaTitle": "Betano surebetovi – pronađite arbitražne oklade u kladionici Betano",
-    "description": "Pronađite surebetove na Betanu u stvarnom vremenu. BetTrackerAI uspoređuje Betanove koeficijente s koeficijentima drugih kladionica s licencom i pokazuje gdje možete osigurati zajamčenu zaradu.",
-    "keyword": "betano surebet",
-    "intro": "Betano je jedna od novijih kladionica na reguliranom tržištu i koristi vlastitu platformu za određivanje koeficijenata. Zbog toga se Betanovi koeficijenti često razlikuju od ostatka tržišta, što otvara prilike za arbitražno klađenje.",
+    "title": "Surebetovi u kladionicama s licencom u Hrvatskoj",
+    "metaTitle": "Surebetovi u Hrvatskoj – arbitražne oklade u kladionicama s licencom",
+    "description": "Pronađite surebetove u hrvatskim kladionicama s licencom u stvarnom vremenu. BetTrackerAI uspoređuje koeficijente kladionica poput SuperSporta, Admirala i Mozzarta te pokazuje gdje možete osigurati zajamčenu zaradu.",
+    "keyword": "surebet kladionice Hrvatska",
+    "intro": "Hrvatsko tržište je licencirano: klađenje smiju nuditi samo operateri s licencom Ministarstva financija RH, a nelicencirane stranice su blokirane. Svaka kladionica, primjerice SuperSport, Germania Sport, PSK, Admiral, Mozzart, Favbet ili Arena Sport, određuje koeficijente na svoj način. Zbog toga se koeficijenti često razlikuju, što otvara prilike za arbitražno klađenje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "O kladionici Betano"
+        "text": "O kladionicama s licencom u Hrvatskoj"
       },
       {
         "type": "p",
-        "text": "Betano ima licencu u više jurisdikcija i nudi široku paletu sportova. Budući da koeficijente određuje samostalno, u usporedbi s etabliranim kladionicama često se pojavljuje u surebetovima."
+        "text": "Kladionice s licencom Ministarstva financija RH nude široku paletu sportova, a koeficijente određuju samostalno. Zato se u usporedbi jedne kladionice s drugom, primjerice SuperSporta s Mozzartom ili Favbetom, povremeno pojavljuju surebetovi."
       },
       {
         "type": "h2",
-        "text": "Kako pronaći surebetove s Betanom"
+        "text": "Kako pronaći surebetove u hrvatskim kladionicama"
       },
       {
         "type": "p",
-        "text": "Surebet s Betanom nastaje kada Betano nudi više koeficijente na jedan ishod nego druge kladionice na suprotne ishode. BetTrackerAI neprekidno prati Betanove koeficijente i uspoređuje ih s ostatkom tržišta."
+        "text": "Surebet nastaje kada jedna kladionica nudi viši koeficijent na jedan ishod nego druge kladionice na suprotne ishode. BetTrackerAI neprekidno prati koeficijente kladionica s licencom i uspoređuje ih međusobno."
       },
       {
         "type": "ul",
         "items": [
-          "Odaberite Betano i ostale svoje kladionice pomoću filtra na stranici sa surebetovima.",
+          "Odaberite svoje kladionice s licencom pomoću filtra na stranici sa surebetovima.",
           "Poredajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
           "Pomoću kalkulatora podijelite ulog i zaokružite iznose.",
           "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
@@ -363,17 +363,17 @@
       },
       {
         "type": "tip",
-        "text": "Rasporedite klađenje na više kladionica kako ne biste igrali samo na Betanu. Tako produljujete vijek svojeg računa i lakše izbjegavate ograničenja."
+        "text": "Rasporedite klađenje na više kladionica kako ne biste igrali samo u jednoj, primjerice samo na SuperSportu. Tako produljujete vijek svojih računa i lakše izbjegavate ograničenja. Za porez na dobitke provjerite važeća pravila jer ga operater obustavlja na izvoru."
       }
     ],
     "faq": [
       {
-        "q": "Smijem li uplaćivati surebetove na Betanu?",
-        "a": "Da, arbitražno klađenje je legalno. No kao i sve kladionice, Betano prema svojim uvjetima poslovanja može ograničiti račune ako uoči obrasce klađenja koji dosljedno osiguravaju zajamčenu zaradu."
+        "q": "Smijem li uplaćivati surebetove u hrvatskim kladionicama?",
+        "a": "Da, klađenje u kladionicama s licencom Ministarstva financija RH je legalno, a arbitraža je samo način odabira oklada. No kao i druge kladionice, one prema svojim uvjetima poslovanja mogu ograničiti račune ako uoče obrasce klađenja koji dosljedno osiguravaju zajamčenu zaradu."
       },
       {
-        "q": "Ima li Betano licencu?",
-        "a": "Da. Betano ima licencu na više reguliranih tržišta. Kod nadležnog regulatora igara na sreću provjerite ima li Betano licencu u zemlji u kojoj živite."
+        "q": "Kako znam ima li kladionica licencu u Hrvatskoj?",
+        "a": "Klađenje smiju nuditi samo operateri s licencom Ministarstva financija RH, a nelicencirane stranice su blokirane. Prije otvaranja računa provjerite nalazi li se kladionica na službenom popisu ovlaštenih organizatora i klađenje na nelicenciranim stranicama nemojte koristiti."
       }
     ]
   },
@@ -382,7 +382,7 @@
     "metaTitle": "LeoVegas surebetovi – pronađite prilike za arbitražno klađenje",
     "description": "Pronađite surebetove na LeoVegasu u stvarnom vremenu. BetTrackerAI uspoređuje LeoVegas koeficijente s koeficijentima drugih kladionica i pokazuje gdje možete osigurati zajamčenu zaradu.",
     "keyword": "leovegas surebet",
-    "intro": "LeoVegas je poznat po ponudi casina, ali nudi i bogat izbor sportskog klađenja. Kladionica koristi platformu Kambi i redovito se pojavljuje u prilikama za arbitražno klađenje.",
+    "intro": "LeoVegas je poznat po ponudi casina, ali nudi i bogat izbor sportskog klađenja. Kladionica koristi platformu Kambi i redovito se pojavljuje u prilikama za arbitražno klađenje. U Hrvatskoj smiju poslovati samo operatori s dozvolom Ministarstva financija RH, a LeoVegas nije među licenciranim kladionicama koje navodimo kao primjere.",
     "blocks": [
       {
         "type": "h2",
@@ -390,7 +390,7 @@
       },
       {
         "type": "p",
-        "text": "LeoVegas je kladionica s licencom i pregledrnom aplikacijom koja omogućuje brzo uplaćivanje oklada. To je važno kod surebetova, gdje se koeficijenti mogu promijeniti u nekoliko sekundi. Prije otvaranja računa provjerite ima li LeoVegas licencu i je li dostupan u vašoj zemlji."
+        "text": "LeoVegas je međunarodna kladionica s preglednom aplikacijom koja omogućuje brzo uplaćivanje oklada. To je važno kod surebetova, gdje se koeficijenti mogu promijeniti u nekoliko sekundi. Na hrvatskom tržištu smiju se kladiti samo kod operatora s dozvolom Ministarstva financija RH, a nelicencirane stranice se blokiraju. Prije otvaranja računa provjerite ima li kladionica hrvatsku dozvolu; mi ne preporučujemo klađenje na nelicenciranim stranicama."
       },
       {
         "type": "h2",
@@ -398,12 +398,12 @@
       },
       {
         "type": "p",
-        "text": "Surebet s LeoVegasom nastaje kada LeoVegas nudi više koeficijente na jedan ishod nego druge kladionice na suprotne ishode. BetTrackerAI neprekidno prati LeoVegas koeficijente i uspoređuje ih s kladionicama koje posluju na vašem tržištu."
+        "text": "Surebet s LeoVegasom nastaje kada LeoVegas nudi više koeficijente na jedan ishod nego druge kladionice na suprotne ishode. BetTrackerAI neprekidno prati LeoVegas koeficijente i uspoređuje ih s kladionicama koje posluju na vašem tržištu, primjerice SuperSport, Germania Sport, PSK, Admiral, Mozzart, Favbet ili Arena Sport. Kao igrač iz Hrvatske koristite samo kladionice licencirane u Hrvatskoj."
       },
       {
         "type": "ul",
         "items": [
-          "Odaberite LeoVegas i ostale svoje kladionice pomoću filtra na stranici sa surebetovima.",
+          "Odaberite svoje licencirane kladionice (npr. SuperSport, Germania Sport, Admiral) pomoću filtra na stranici sa surebetovima.",
           "Poredajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
           "Pomoću kalkulatora podijelite ulog i zaokružite iznose.",
           "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Rasporedite klađenje na nekoliko kladionica kako ne biste igrali samo na LeoVegasu. Tako produljujete vijek svojeg računa i smanjujete rizik od ograničenja računa."
+        "text": "Rasporedite klađenje na nekoliko licenciranih kladionica, primjerice SuperSport, Mozzart, Favbet i Arena Sport, kako ne biste igrali samo kod jednog operatora. Tako produljujete vijek svojeg računa i smanjujete rizik od ograničenja računa. Dobitke iznad zakonskog praga operater oporezuje na izvoru, pa provjerite aktualna pravila. Ako osjetite da klađenje postaje problem, koristite alate za samoisključenje kod operatora ili se obratite lokalnim službama za pomoć, npr. Klubu ovisnika o kockanju."
       }
     ],
     "faq": [
       {
         "q": "Mogu li uplaćivati surebetove na LeoVegasu?",
-        "a": "Da, arbitražno klađenje je legalno. No kao i sve kladionice, LeoVegas prema svojim uvjetima poslovanja može ograničiti račune ako uoči obrasce klađenja koji dosljedno jamče zaradu."
+        "a": "Arbitražno klađenje samo po sebi nije zabranjeno, ali u Hrvatskoj se smijete kladiti samo kod operatora s dozvolom Ministarstva financija RH. LeoVegas nije među licenciranim kladionicama koje navodimo kao primjere, pa ne preporučujemo klađenje na nelicenciranim stranicama. Kao i sve kladionice, i LeoVegas prema svojim uvjetima poslovanja može ograničiti račune ako uoči obrasce klađenja koji dosljedno jamče zaradu. Provjerite aktualna lokalna pravila."
       },
       {
         "q": "Je li LeoVegas dobar za surebetove?",
-        "a": "LeoVegas je dobra dopunska kladionica, osobito u kombinaciji s kladionicama koje ne koriste platformu Kambi, jer se tako povećava broj dostupnih prilika za arbitražu."
+        "a": "LeoVegas koristi platformu Kambi, pa se kombinira s kladionicama koje ne koriste tu platformu kako bi se povećao broj prilika za arbitražu. No kao igrač iz Hrvatske oslonite se na licencirane kladionice poput SuperSporta, Germania Sporta, PSK-a, Admirala, Mozzarta, Favbeta ili Arena Sporta i usporedite njihove koeficijente u BetTrackerAI-ju."
       }
     ]
   }

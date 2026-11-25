@@ -36,7 +36,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   en: {
     metaTitle: "Today's Surebets – the Best Sure Bets Right Now",
     metaDescription:
-      "See today's best surebets across Danish and international bookmakers, updated continuously. Sport, match, market and guaranteed profit for the strongest opportunities right now.",
+      "See today's best surebets across local and international bookmakers, updated continuously. Sport, match, market and guaranteed profit for the strongest opportunities right now.",
     name: "Today's surebets",
     h1: "Today's surebets",
     lead: (time) => `The strongest surebets at bookmakers right now, sorted by guaranteed profit. Updated at ${time}.`,
@@ -73,7 +73,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   sv: {
     metaTitle: 'Dagens surebets – de bästa säkra spelen just nu',
     metaDescription:
-      'Se dagens bästa surebets hos danska och internationella spelbolag, uppdaterade löpande. Sport, match, marknad och garanterad vinst för de starkaste möjligheterna just nu.',
+      'Se dagens bästa surebets hos svenska och internationella spelbolag, uppdaterade löpande. Sport, match, marknad och garanterad vinst för de starkaste möjligheterna just nu.',
     name: 'Dagens surebets',
     h1: 'Dagens surebets',
     lead: (time) => `De starkaste surebetsen hos spelbolagen just nu, sorterade efter garanterad vinst. Uppdaterad kl. ${time}.`,
@@ -110,7 +110,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   no: {
     metaTitle: 'Dagens surebets – de beste sikre oddsene akkurat nå',
     metaDescription:
-      'Se dagens beste surebets hos danske og internasjonale bookmakere, oppdatert løpende. Sport, kamp, marked og garantert profitt for de sterkeste mulighetene akkurat nå.',
+      'Se dagens beste surebets som analyse, oppdatert løpende. Sport, kamp, marked og teoretisk profitt for de sterkeste mulighetene, men surebetting er ikke mulig hos Norsk Tipping alene.',
     name: 'Dagens surebets',
     h1: 'Dagens surebets',
     lead: (time) => `De sterkeste surebetsene hos bookmakerne akkurat nå, sortert etter garantert profitt. Oppdatert kl. ${time}.`,
@@ -147,7 +147,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   de: {
     metaTitle: 'Surebets heute – die besten Sure Bets im Überblick',
     metaDescription:
-      'Die besten Surebets von heute bei dänischen und internationalen Buchmachern, laufend aktualisiert. Sportart, Spiel, Markt und garantierter Gewinn der stärksten Chancen im Moment.',
+      'Die besten Surebets von heute bei deutschen und internationalen Buchmachern, laufend aktualisiert. Sportart, Spiel, Markt und garantierter Gewinn der stärksten Chancen im Moment.',
     name: 'Surebets heute',
     h1: 'Surebets heute',
     lead: (time) => `Die stärksten Surebets bei den Buchmachern im Moment, sortiert nach garantiertem Gewinn. Aktualisiert um ${time} Uhr.`,
@@ -184,7 +184,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   es: {
     metaTitle: "Surebets de hoy – las mejores apuestas seguras ahora mismo",
     metaDescription:
-      "Descubre las mejores surebets de hoy en casas de apuestas danesas e internacionales, actualizadas continuamente. Deporte, partido, mercado y beneficio garantizado para las mejores oportunidades ahora mismo.",
+      "Descubre las mejores surebets de hoy en casas de apuestas con licencia DGOJ, actualizadas continuamente. Deporte, partido, mercado y beneficio garantizado para las mejores oportunidades ahora mismo.",
     name: "Surebets de hoy",
     h1: "Surebets de hoy",
     lead: (time) => `Las surebets más rentables en las casas de apuestas ahora mismo, ordenadas por beneficio garantizado. Actualizado a las ${time}.`,
@@ -221,7 +221,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   br: {
     metaTitle: "Surebets de Hoje – as Melhores Sure Bets Agora",
     metaDescription:
-      "Veja as melhores surebets de hoje em casas de apostas dinamarquesas e internacionais, atualizadas continuamente. Esporte, partida, mercado e lucro garantido para as melhores oportunidades agora.",
+      "Veja as melhores surebets de hoje em casas de apostas autorizadas no Brasil (.bet.br), atualizadas continuamente. Esporte, partida, mercado e lucro garantido para as melhores oportunidades agora.",
     name: "Surebets de hoje",
     h1: "Surebets de hoje",
     lead: (time) => `As surebets mais lucrativas nas casas de apostas agora, ordenadas por lucro garantido. Atualizado às ${time}.`,
@@ -258,7 +258,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   pt: {
     metaTitle: "Surebets de Hoje – as Melhores Sure Bets Agora",
     metaDescription:
-      "Vê as melhores surebets de hoje em casas de apostas dinamarquesas e internacionais, atualizadas continuamente. Desporto, jogo, mercado e lucro garantido para as melhores oportunidades agora.",
+      "Vê as melhores surebets de hoje em casas de apostas licenciadas em Portugal, atualizadas continuamente. Desporto, jogo, mercado e lucro garantido para as melhores oportunidades agora.",
     name: "Surebets de hoje",
     h1: "Surebets de hoje",
     lead: (time) => `As surebets mais lucrativas nas casas de apostas agora, ordenadas por lucro garantido. Atualizado às ${time}.`,
@@ -295,7 +295,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   fr: {
     metaTitle: "Surebets du jour – les meilleures opportunités en ce moment",
     metaDescription:
-      "Découvrez les meilleures surebets du jour chez les bookmakers danois et internationaux, mises à jour en continu. Sport, match, marché et profit garanti pour les meilleures opportunités en ce moment.",
+      "Découvrez les meilleures surebets du jour chez les bookmakers agréés par l'ANJ, mises à jour en continu. Sport, match, marché et profit garanti pour les meilleures opportunités en ce moment.",
     name: "Surebets du jour",
     h1: "Surebets du jour",
     lead: (time) => `Les surebets les plus rentables chez les bookmakers en ce moment, triées par profit garanti. Mise à jour à ${time}.`,
@@ -332,7 +332,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   it: {
     metaTitle: "Surebets di oggi – le migliori scommesse sicure in questo momento",
     metaDescription:
-      "Scopri i migliori surebets di oggi tra i bookmaker danesi e internazionali, aggiornati continuamente. Sport, partita, mercato e profitto garantito per le opportunità più interessanti in questo momento.",
+      "Scopri i migliori surebets di oggi tra i bookmaker italiani con licenza ADM, aggiornati continuamente. Sport, partita, mercato e profitto garantito per le opportunità più interessanti in questo momento.",
     name: "Surebets di oggi",
     h1: "Surebets di oggi",
     lead: (time) => `I surebets più redditizi sui bookmaker in questo momento, ordinati per profitto garantito. Aggiornato alle ${time}.`,
@@ -369,7 +369,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   pl: {
     metaTitle: "Dzisiejsze surebets – najlepsze pewne zakłady teraz",
     metaDescription:
-      "Zobacz dzisiejsze najlepsze surebets u duńskich i międzynarodowych bukmacherów, aktualizowane na bieżąco. Sport, mecz, rynek i gwarantowany zysk dla najmocniejszych okazji w tej chwili.",
+      "Zobacz dzisiejsze najlepsze surebets u licencjonowanych w Polsce bukmacherów, aktualizowane na bieżąco. Sport, mecz, rynek i gwarantowany zysk dla najmocniejszych okazji w tej chwili.",
     name: "Dzisiejsze surebets",
     h1: "Dzisiejsze surebets",
     lead: (time) => `Najmocniejsze surebets u bukmacherów w tej chwili, posortowane według gwarantowanego zysku. Zaktualizowano o ${time}.`,
@@ -443,7 +443,7 @@ const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   nl: {
     metaTitle: "Surebets van vandaag – de beste surebets op dit moment",
     metaDescription:
-      "Bekijk de beste surebets van vandaag bij Deense en internationale bookmakers, continu bijgewerkt. Sport, wedstrijd, markt en gegarandeerde winst voor de sterkste kansen op dit moment.",
+      "Bekijk de beste surebets van vandaag bij Nederlandse en internationale bookmakers, continu bijgewerkt. Sport, wedstrijd, markt en gegarandeerde winst voor de sterkste kansen op dit moment.",
     name: "Surebets van vandaag",
     h1: "Surebets van vandaag",
     lead: (time) => `De sterkste surebets bij bookmakers op dit moment, gesorteerd op gegarandeerde winst. Bijgewerkt om ${time}.`,
@@ -518,7 +518,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Are surebets completely risk-free?', a: 'Once every bet is placed at the displayed odds, the result is locked in. The risk is that odds can change before you have placed all your bets, or that a bookmaker limits your account. That is why we always show when a surebet was last updated.' },
       { q: 'How does the free trial work?', a: `You get ${PRICING.trialDays} days free with full access to BetTrackerAI Pro. You can cancel at any time during the trial.` },
       { q: 'How much does BetTrackerAI Pro cost?', a: `${price} DKK/month on monthly billing or ${yearly} DKK/month on yearly billing – a saving of ${discount}%. You can pay with Visa, Mastercard, MobilePay or bank transfer.` },
-      { q: 'Which bookmakers do you compare?', a: 'We compare odds from Danish and international bookmakers, including Danske Spil, bet365, Unibet, LeoVegas, Betano and Pinnacle.' },
+      { q: 'Which bookmakers do you compare?', a: 'We compare odds from licensed local and international bookmakers, including bet365, Unibet, Betfair, William Hill, bwin and Pinnacle.' },
       { q: 'How do I get notified about new surebets?', a: 'You can follow along on the platform, get SMS alerts with our SMS service, or follow our Telegram channel.' },
       { q: 'Who can use BetTrackerAI?', a: `You must be at least ${AGE} years old. Always gamble responsibly – if you need help, contact BeGambleAware (begambleaware.org).` },
     ],
@@ -547,7 +547,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Är surebets helt riskfria?', a: 'När alla insatser är placerade till de visade oddsen är resultatet låst. Risken ligger i att oddsen hinner ändras innan du har placerat alla spel, eller att ett spelbolag begränsar ditt konto. Därför visar vi alltid när en surebet senast uppdaterades.' },
       { q: 'Hur fungerar den kostnadsfria provperioden?', a: `Du får ${PRICING.trialDays} dagar gratis med full tillgång till BetTrackerAI Pro. Du kan säga upp när som helst under provperioden.` },
       { q: 'Vad kostar BetTrackerAI Pro?', a: `${price} DKK/mån vid månadsbetalning eller ${yearly} DKK/mån vid årsbetalning – en besparing på ${discount} %. Du kan betala med Visa, Mastercard, MobilePay eller banköverföring.` },
-      { q: 'Vilka spelbolag jämför ni?', a: 'Vi jämför odds från danska och internationella spelbolag, bland annat Danske Spil, bet365, Unibet, LeoVegas, Betano och Pinnacle.' },
+      { q: 'Vilka spelbolag jämför ni?', a: 'Vi jämför odds från svenska och internationella spelbolag, bland annat Svenska Spel Sport & Casino, bet365, Unibet, LeoVegas, Betsson och Mr Green.' },
       { q: 'Hur får jag besked om nya surebets?', a: 'Du kan följa med direkt på plattformen, få besked via SMS med vår SMS-tjänst eller följa vår Telegram-kanal.' },
       { q: 'Vem kan använda BetTrackerAI?', a: `Du måste ha fyllt ${AGE} år. Spela alltid ansvarsfullt – behöver du hjälp kan du kontakta Stödlinjen (stodlinjen.se) eller stänga av dig själv via Spelpaus.se.` },
     ],
@@ -576,7 +576,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Er surebets helt uten risiko?', a: 'Når alle innsatser er plassert til de viste oddsene, er resultatet låst. Risikoen ligger i at oddsen kan endre seg før du har plassert alle spill, eller at en bookmaker begrenser kontoen din. Derfor viser vi alltid når en surebet sist ble oppdatert.' },
       { q: 'Hvordan fungerer den gratis prøveperioden?', a: `Du får ${PRICING.trialDays} dager gratis med full tilgang til BetTrackerAI Pro. Du kan si opp når som helst i prøveperioden.` },
       { q: 'Hva koster BetTrackerAI Pro?', a: `${price} DKK/mnd ved månedlig betaling eller ${yearly} DKK/mnd ved årlig betaling – en besparelse på ${discount} %. Du kan betale med Visa, Mastercard, MobilePay eller bankoverføring.` },
-      { q: 'Hvilke bookmakere sammenligner dere?', a: 'Vi sammenligner odds fra danske og internasjonale bookmakere, blant annet Danske Spil, bet365, Unibet, LeoVegas, Betano og Pinnacle.' },
+      { q: 'Hvilke bookmakere sammenligner dere?', a: 'Vi sammenligner odds med Norsk Tipping, eneste lisensierte aktør i Norge under Lotteritilsynet. Gevinster er skattefrie.' },
       { q: 'Hvordan får jeg beskjed om nye surebets?', a: 'Du kan følge med direkte på plattformen, få beskjed på SMS med vår SMS-tjeneste eller følge Telegram-kanalen vår.' },
       { q: 'Hvem kan bruke BetTrackerAI?', a: `Du må være fylt ${AGE} år. Spill alltid ansvarlig – trenger du hjelp, kan du kontakte Hjelpelinjen (hjelpelinjen.no).` },
     ],
@@ -605,7 +605,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Sind Surebets völlig risikofrei?', a: 'Sobald alle Wetten zu den angezeigten Quoten platziert sind, steht das Ergebnis fest. Das Risiko liegt darin, dass sich Quoten ändern können, bevor du alle Wetten platziert hast, oder dass ein Buchmacher dein Konto begrenzt. Deshalb zeigen wir immer an, wann eine Surebet zuletzt aktualisiert wurde.' },
       { q: 'Wie funktioniert die kostenlose Testphase?', a: `Du erhältst ${PRICING.trialDays} Tage kostenlos mit vollem Zugriff auf BetTrackerAI Pro. Du kannst während der Testphase jederzeit kündigen.` },
       { q: 'Was kostet BetTrackerAI Pro?', a: `${price} DKK/Monat bei monatlicher Zahlung oder ${yearly} DKK/Monat bei jährlicher Zahlung – eine Ersparnis von ${discount} %. Du kannst mit Visa, Mastercard, MobilePay oder per Banküberweisung zahlen.` },
-      { q: 'Welche Buchmacher vergleicht ihr?', a: 'Wir vergleichen Quoten dänischer und internationaler Buchmacher, unter anderem Danske Spil, bet365, Unibet, LeoVegas, Betano und Pinnacle.' },
+      { q: 'Welche Buchmacher vergleicht ihr?', a: 'Wir vergleichen Quoten deutscher und internationaler Buchmacher, unter anderem Tipico, bwin, bet365, Interwetten, Betway und ODDSET.' },
       { q: 'Wie erfahre ich von neuen Surebets?', a: 'Du kannst direkt auf der Plattform mitverfolgen, per SMS-Dienst benachrichtigt werden oder unserem Telegram-Kanal folgen.' },
       { q: 'Wer kann BetTrackerAI nutzen?', a: `Du musst mindestens ${AGE} Jahre alt sein. Spiele immer verantwortungsvoll – wenn du Hilfe brauchst, wende dich an die BZgA (check-dein-spiel.de) oder lass dich über das Sperrsystem OASIS sperren.` },
     ],
@@ -634,7 +634,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: '¿Las surebets son completamente libres de riesgo?', a: 'Una vez colocadas todas las apuestas a las cuotas mostradas, el resultado queda asegurado. El riesgo está en que las cuotas pueden cambiar antes de que hayas colocado todas tus apuestas, o en que un bookmaker limite tu cuenta. Por eso siempre mostramos cuándo se actualizó por última vez una surebet.' },
       { q: '¿Cómo funciona la prueba gratuita?', a: `Tienes ${PRICING.trialDays} días gratis con acceso completo a BetTrackerAI Pro. Puedes cancelar en cualquier momento durante la prueba.` },
       { q: '¿Cuánto cuesta BetTrackerAI Pro?', a: `${price} DKK/mes con facturación mensual o ${yearly} DKK/mes con facturación anual, un ahorro del ${discount}%. Puedes pagar con Visa, Mastercard, MobilePay o transferencia bancaria.` },
-      { q: '¿Qué bookmakers comparáis?', a: 'Comparamos cuotas de bookmakers daneses e internacionales, entre ellos Danske Spil, bet365, Unibet, LeoVegas, Betano y Pinnacle.' },
+      { q: '¿Qué bookmakers comparáis?', a: 'Comparamos cuotas de bookmakers con licencia en España, entre ellos Codere, bet365, Sportium, bwin, Luckia y Retabet.' },
       { q: '¿Cómo me avisan de nuevas surebets?', a: 'Puedes seguirlas en la plataforma, recibir alertas por SMS con nuestro servicio de SMS o seguir nuestro canal de Telegram.' },
       { q: '¿Quién puede usar BetTrackerAI?', a: `Debes tener al menos ${AGE} años. Juega siempre de forma responsable; si necesitas ayuda, contacta con BeGambleAware (begambleaware.org).` },
     ],
@@ -663,7 +663,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'As surebets são completamente sem risco?', a: 'Assim que todas as apostas são feitas nas odds exibidas, o resultado está garantido. O risco é que as odds podem mudar antes de você concluir todas as apostas, ou que um bookmaker limite sua conta. Por isso, sempre mostramos quando uma surebet foi atualizada pela última vez.' },
       { q: 'Como funciona o período de teste gratuito?', a: `Você tem ${PRICING.trialDays} dias grátis com acesso completo ao BetTrackerAI Pro. Você pode cancelar a qualquer momento durante o período de teste.` },
       { q: 'Quanto custa o BetTrackerAI Pro?', a: `${price} DKK/mês no plano mensal ou ${yearly} DKK/mês no plano anual – uma economia de ${discount}%. Você pode pagar com Visa, Mastercard, MobilePay ou transferência bancária.` },
-      { q: 'Quais bookmakers vocês comparam?', a: 'Comparamos odds de bookmakers dinamarqueses e internacionais, incluindo Danske Spil, bet365, Unibet, LeoVegas, Betano e Pinnacle.' },
+      { q: 'Quais bookmakers vocês comparam?', a: 'Comparamos odds de bookmakers autorizados pela SPA, incluindo Betano, Superbet, bet365, Sportingbet, KTO e Estrela Bet.' },
       { q: 'Como recebo notificações sobre novas surebets?', a: 'Você pode acompanhar pela plataforma, receber alertas por SMS com nosso serviço de SMS, ou seguir nosso canal no Telegram.' },
       { q: 'Quem pode usar o BetTrackerAI?', a: `Você deve ter pelo menos ${AGE} anos. Aposte sempre com responsabilidade – se precisar de ajuda, entre em contato com a BeGambleAware (begambleaware.org).` },
     ],
@@ -692,7 +692,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'As surebets são completamente sem risco?', a: 'Assim que todas as apostas estão colocadas às odds apresentadas, o resultado fica garantido. O risco está em as odds poderem mudar antes de teres colocado todas as apostas, ou em a casa de apostas limitar a tua conta. Por isso mostramos sempre quando uma surebet foi atualizada pela última vez.' },
       { q: 'Como funciona o período de teste gratuito?', a: `Tens ${PRICING.trialDays} dias gratuitos com acesso completo ao BetTrackerAI Pro. Podes cancelar a qualquer momento durante o período de teste.` },
       { q: 'Quanto custa o BetTrackerAI Pro?', a: `${price} DKK/mês na faturação mensal ou ${yearly} DKK/mês na faturação anual – uma poupança de ${discount}%. Podes pagar com Visa, Mastercard, MobilePay ou transferência bancária.` },
-      { q: 'Que casas de apostas comparam?', a: 'Comparamos odds de casas de apostas dinamarquesas e internacionais, incluindo Danske Spil, bet365, Unibet, LeoVegas, Betano e Pinnacle.' },
+      { q: 'Que casas de apostas comparam?', a: 'Comparamos odds de casas de apostas licenciadas pelo SRIJ, incluindo Betano, Betclic, Placard, Solverde, bwin e Luckia.' },
       { q: 'Como recebo notificações sobre novas surebets?', a: 'Podes acompanhar na plataforma, receber alertas por SMS com o nosso serviço de SMS, ou seguir o nosso canal de Telegram.' },
       { q: 'Quem pode usar o BetTrackerAI?', a: `Tens de ter pelo menos ${AGE} anos. Joga sempre de forma responsável – se precisares de ajuda, contacta a BeGambleAware (begambleaware.org).` },
     ],
@@ -721,7 +721,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Les surebets sont-ils totalement sans risque ?', a: 'Une fois toutes les mises placées aux cotes affichées, le résultat est garanti. Le risque est que les cotes changent avant que tu aies placé toutes tes mises, ou qu\'un bookmaker limite ton compte. C\'est pourquoi nous indiquons toujours la dernière mise à jour d\'un surebet.' },
       { q: 'Comment fonctionne l\'essai gratuit ?', a: `Tu bénéficies de ${PRICING.trialDays} jours gratuits avec un accès complet à BetTrackerAI Pro. Tu peux annuler à tout moment pendant l\'essai.` },
       { q: 'Combien coûte BetTrackerAI Pro ?', a: `${price} DKK/mois avec la facturation mensuelle ou ${yearly} DKK/mois avec la facturation annuelle – soit une économie de ${discount}%. Tu peux payer par Visa, Mastercard, MobilePay ou virement bancaire.` },
-      { q: 'Quels bookmakers comparez-vous ?', a: 'Nous comparons les cotes de bookmakers danois et internationaux, notamment Danske Spil, bet365, Unibet, LeoVegas, Betano et Pinnacle.' },
+      { q: 'Quels bookmakers comparez-vous ?', a: 'Nous comparons les cotes de bookmakers agréés par l\'ANJ, notamment Winamax, Betclic, Unibet, Parions Sport en ligne, PMU et ZEbet.' },
       { q: 'Comment être alerté des nouveaux surebets ?', a: 'Tu peux suivre les opportunités directement sur la plateforme, recevoir des alertes SMS via notre service SMS, ou suivre notre chaîne Telegram.' },
       { q: 'Qui peut utiliser BetTrackerAI ?', a: `Tu dois avoir au moins ${AGE} ans. Joue toujours de manière responsable – si tu as besoin d\'aide, contacte BeGambleAware (begambleaware.org).` },
     ],
@@ -750,7 +750,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'I surebets sono completamente privi di rischio?', a: 'Una volta piazzate tutte le scommesse alle quote visualizzate, il risultato è garantito. Il rischio è che le quote possano cambiare prima che tu abbia piazzato tutte le scommesse, o che un bookmaker limiti il tuo account. Per questo mostriamo sempre quando un surebet è stato aggiornato l\'ultima volta.' },
       { q: 'Come funziona la prova gratuita?', a: `Hai ${PRICING.trialDays} giorni gratuiti con accesso completo a BetTrackerAI Pro. Puoi disdire in qualsiasi momento durante la prova.` },
       { q: 'Quanto costa BetTrackerAI Pro?', a: `${price} DKK/mese con fatturazione mensile o ${yearly} DKK/mese con fatturazione annuale – un risparmio del ${discount}%. Puoi pagare con Visa, Mastercard, MobilePay o bonifico bancario.` },
-      { q: 'Quali bookmaker confrontate?', a: 'Confrontiamo le quote di bookmaker danesi e internazionali, tra cui Danske Spil, bet365, Unibet, LeoVegas, Betano e Pinnacle.' },
+      { q: 'Quali bookmaker confrontate?', a: 'Confrontiamo le quote di bookmaker con licenza ADM, tra cui Snai, Sisal, Goldbet, Eurobet, bet365 e Planetwin365.' },
       { q: 'Come ricevo notifiche sui nuovi surebets?', a: 'Puoi seguire la piattaforma direttamente, ricevere avvisi SMS con il nostro servizio SMS, oppure seguire il nostro canale Telegram.' },
       { q: 'Chi può usare BetTrackerAI?', a: `Devi avere almeno ${AGE} anni. Gioca sempre in modo responsabile – se hai bisogno di aiuto, contatta BeGambleAware (begambleaware.org).` },
     ],
@@ -779,7 +779,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Czy surebets są całkowicie wolne od ryzyka?', a: 'Gdy każdy zakład zostanie postawiony po wyświetlonych kursach, wynik jest zagwarantowany. Ryzyko polega na tym, że kursy mogą się zmienić, zanim postawisz wszystkie zakłady, lub że bukmacher ograniczy Twoje konto. Dlatego zawsze pokazujemy, kiedy surebet był ostatnio aktualizowany.' },
       { q: 'Jak działa bezpłatny okres próbny?', a: `Otrzymujesz ${PRICING.trialDays} dni za darmo z pełnym dostępem do BetTrackerAI Pro. Możesz anulować w dowolnym momencie podczas okresu próbnego.` },
       { q: 'Ile kosztuje BetTrackerAI Pro?', a: `${price} DKK/miesiąc przy rozliczeniu miesięcznym lub ${yearly} DKK/miesiąc przy rozliczeniu rocznym – oszczędność wynosi ${discount}%. Możesz zapłacić kartą Visa, Mastercard, MobilePay lub przelewem bankowym.` },
-      { q: 'Których bukmacherów porównujecie?', a: 'Porównujemy kursy duńskich i międzynarodowych bukmacherów, w tym Danske Spil, bet365, Unibet, LeoVegas, Betano i Pinnacle.' },
+      { q: 'Których bukmacherów porównujecie?', a: 'Porównujemy kursy licencjonowanych w Polsce bukmacherów, w tym STS, Fortuna, Betclic, Superbet, Totolotek i LV BET.' },
       { q: 'Jak mogę otrzymywać powiadomienia o nowych surebets?', a: 'Możesz śledzić platformę na bieżąco, otrzymywać alerty SMS za pośrednictwem naszej usługi SMS lub obserwować nasz kanał Telegram.' },
       { q: 'Kto może korzystać z BetTrackerAI?', a: `Musisz mieć co najmniej ${AGE} lat. Zawsze graj odpowiedzialnie – jeśli potrzebujesz pomocy, skontaktuj się z BeGambleAware (begambleaware.org).` },
     ],
@@ -808,7 +808,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Ovatko surebet-kohteet täysin riskittömiä?', a: 'Kun kaikki vedot on asetettu näytetyillä kertoimilla, tulos on lukittu. Riskinä on, että kertoimet voivat muuttua ennen kuin olet asettanut kaikki vetosi, tai että vedonlyöntitoimisto rajoittaa tiliäsi. Siksi näytämme aina, milloin surebet on viimeksi päivitetty.' },
       { q: 'Miten ilmainen kokeilu toimii?', a: `Saat ${PRICING.trialDays} päivää ilmaiseksi täydellä pääsyllä BetTrackerAI Pro -palveluun. Voit peruuttaa milloin tahansa kokeilujakson aikana.` },
       { q: 'Paljonko BetTrackerAI Pro maksaa?', a: `${price} DKK/kuukausi kuukausilaskutuksella tai ${yearly} DKK/kuukausi vuosilaskutuksella – säästät ${discount}%. Voit maksaa Visalla, Mastercardilla, MobilePaylla tai tilisiirrolla.` },
-      { q: 'Mitä vedonlyöntitoimistoja vertailette?', a: 'Vertailemme kertoimia tanskalaisilta ja kansainvälisiltä vedonlyöntitoimistoilta, mukaan lukien Danske Spil, bet365, Unibet, LeoVegas, Betano ja Pinnacle.' },
+      { q: 'Mitä vedonlyöntitoimistoja vertailette?', a: 'Vertailemme kertoimia suomalaisilta ja kansainvälisiltä lisensoiduilta vedonlyöntitoimistoilta, mukaan lukien Veikkaus, sitä mukaa kun markkina avautuu.' },
       { q: 'Miten saan ilmoituksia uusista surebet-kohteista?', a: 'Voit seurata kohteita alustalla, saada SMS-hälytyksiä SMS-palvelumme kautta tai seurata Telegram-kanaviamme.' },
       { q: 'Kuka voi käyttää BetTrackerAI:ta?', a: `Sinun on oltava vähintään ${AGE} vuotta vanha. Pelaa aina vastuullisesti – jos tarvitset apua, ota yhteyttä BeGambleAware-palveluun (begambleaware.org).` },
     ],
@@ -837,7 +837,7 @@ const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
       { q: 'Zijn surebets volledig risicovrij?', a: 'Zodra elke weddenschap is geplaatst tegen de weergegeven odds, staat het resultaat vast. Het risico is dat odds kunnen veranderen voordat je al je weddenschappen hebt geplaatst, of dat een bookmaker je account beperkt. Daarom tonen we altijd wanneer een surebet voor het laatst is bijgewerkt.' },
       { q: 'Hoe werkt de gratis proefperiode?', a: `Je krijgt ${PRICING.trialDays} dagen gratis met volledige toegang tot BetTrackerAI Pro. Je kunt op elk moment tijdens de proefperiode opzeggen.` },
       { q: 'Wat kost BetTrackerAI Pro?', a: `${price} DKK/maand bij maandelijkse facturering of ${yearly} DKK/maand bij jaarlijkse facturering – een besparing van ${discount}%. Je kunt betalen met Visa, Mastercard, MobilePay of bankoverschrijving.` },
-      { q: 'Welke bookmakers vergelijken jullie?', a: 'We vergelijken odds van Deense en internationale bookmakers, waaronder Danske Spil, bet365, Unibet, LeoVegas, Betano en Pinnacle.' },
+      { q: 'Welke bookmakers vergelijken jullie?', a: 'We vergelijken odds van Nederlandse en internationale bookmakers, waaronder TOTO, bet365, Unibet, BetCity, Jack\'s.nl en Holland Casino Online.' },
       { q: 'Hoe word ik op de hoogte gesteld van nieuwe surebets?', a: 'Je kunt het platform volgen, sms-meldingen ontvangen via onze sms-service, of ons Telegram-kanaal volgen.' },
       { q: 'Wie kan BetTrackerAI gebruiken?', a: `Je moet minimaal ${AGE} jaar oud zijn. Gok altijd verantwoord – als je hulp nodig hebt, neem dan contact op met BeGambleAware (begambleaware.org).` },
     ],

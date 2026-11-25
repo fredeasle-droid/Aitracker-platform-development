@@ -1,10 +1,10 @@
 {
   "sport/basketball": {
     "title": "Surebetek kosárlabdára",
-    "metaTitle": "Kosárlabda surebetek – garantált profit az NBA-n és az Euroligán",
-    "description": "Találj kosárlabda surebeteket az NBA, az Euroliga és az európai ligák mérkőzéseire. A pontpiacok és a hendikepek számos arbitrázslehetőséget kínálnak licencelt fogadóirodáknál.",
+    "metaTitle": "Kosárlabda surebetek – NBA és Euroliga oddsok összehasonlítása",
+    "description": "Ismerd meg a kosárlabda surebetek működését az NBA, az Euroliga és az európai ligák példáján. Magyarországon a Tippmix (Szerencsejáték Zrt.) az egyetlen szabályozott szolgáltató, így licencelt magyar fogadóirodák között surebet nem kivitelezhető.",
     "keyword": "kosárlabda surebetek",
-    "intro": "A kosárlabda rengeteg surebetet kínál az összpontszám- és a hendikeppiacokon. Az NBA-ben széles a fogadási kínálat, a fogadóirodák pedig eltérő sebességgel igazítják a vonalaikat, ami arbitrázslehetőségeket teremt.",
+    "intro": "A kosárlabda elméletben rengeteg surebet-lehetőséget kínál az összpontszám- és a hendikeppiacokon, mert a fogadóirodák eltérő sebességgel igazítják a vonalaikat. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium: a Tippmixet a Szerencsejáték Zrt. működteti az SZTFH felügyelete alatt, a külföldi oldalak pedig blokkoltak. Ezért licencelt magyar fogadóirodák között surebetezni nem lehet, az alábbi tartalom pedig az elvek megértését és az oddsok követését segíti.",
     "blocks": [
       {
         "type": "h2",
@@ -25,30 +25,30 @@
       },
       {
         "type": "p",
-        "text": "A pontpiacoknál két fogadóiroda eltérő vonalat kínálhat, például az egyik 214.5 felett, a másik 216.5 alatt. Ha a mérkőzés pontosan 215 vagy 216 ponttal ér véget, mindkét fogadásod nyer. Ezt hívják 'middle'-nek, és további profitlehetőséget jelent a kosárlabdában."
+        "text": "A pontpiacoknál két fogadóiroda eltérő vonalat kínálhat, például az egyik 214.5 felett, a másik 216.5 alatt. Ha a mérkőzés pontosan 215 vagy 216 ponttal ér véget, mindkét fogadásod nyer. Ezt hívják 'middle'-nek, és elméletben további profitlehetőséget jelent a kosárlabdában. Ez általános példa: Magyarországon csak a Tippmix szabályozott, így licencelt magyar szolgáltatók között ez a megoldás nem használható. Nem licencelt vagy blokkolt oldalakat nem ajánlunk."
       },
       {
         "type": "tip",
-        "text": "Ellenőrizd, hogy a hosszabbítás beleszámít-e. Kosárlabdában szinte mindig igen, de nem minden fogadóirodánál és nem minden piacon."
+        "text": "Ellenőrizd, hogy a hosszabbítás beleszámít-e. Kosárlabdában szinte mindig igen, de nem minden piacon, ezért a Tippmixnél is mindig olvasd el az adott piac szabályait."
       }
     ],
     "faq": [
       {
         "q": "Beleszámít a hosszabbítás a kosárlabda surebetekbe?",
-        "a": "A legtöbb piacon igen, de mindig ellenőrizd az adott piac szabályait az egyes fogadóirodáknál. A hosszabbítást nem tartalmazó piac arbitrázs céljából nem kombinálható a hosszabbítást is tartalmazóval."
+        "a": "A legtöbb piacon igen, de mindig ellenőrizd az adott piac szabályait a Tippmixnél. Elméletben a hosszabbítást nem tartalmazó piac arbitrázs céljából nem kombinálható a hosszabbítást is tartalmazóval."
       },
       {
         "q": "Mikor játsszák általában az NBA-meccseket?",
-        "a": "Az NBA-meccseket jellemzően Észak-Amerikában esténként játsszák, ami magyarországi idő szerint általában éjszakára esik. Sok surebet már jóval, akár több órával a nyitóugrás előtt megjelenhet, így van időd mindkét oldalon megkötni az arbitrázsfogadást."
+        "a": "Az NBA-meccseket jellemzően Észak-Amerikában esténként játsszák, ami magyarországi idő szerint általában éjszakára esik. Az oddsok már jóval, akár több órával a nyitóugrás előtt megjelennek, így van időd összevetni a vonalakat és átgondolni a fogadásodat. Fogadj felelősen, és ha szükséged van segítségre, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
       }
     ]
   },
   "sport/ishockey": {
     "title": "Jégkorong surebetek",
-    "metaTitle": "Jégkorong surebetek – garantált profit az NHL-en és más ligákban",
-    "description": "Jégkorong surebetek az NHL-ből, az SHL-ből és más ligákból. Ismerd meg a rendes játékidős és a győztes piacok közötti különbséget, és találd meg a garantált profitot kínáló lehetőségeket.",
+    "metaTitle": "Jégkorong surebetek – hogyan működik az arbitrázs az NHL-en és más ligákban",
+    "description": "Jégkorong surebetek az NHL-ből, az SHL-ből és más ligákból. Ismerd meg a rendes játékidős és a győztes piacok közötti különbséget, és azt, hogyan működik az arbitrázsfogadás Magyarországon.",
     "keyword": "jégkorong surebetek",
-    "intro": "A jégkorong alulértékelt sportág a surebetek terén. Sok fogadóiroda eltérően árazza az északi ligákat, a rendes játékidős és a győztes piacok közötti különbség pedig újabb lehetőségeket teremt az arbitrázsfogadásra.",
+    "intro": "A jégkorong alulértékelt sportág a surebetek terén. A fogadóirodák sok országban eltérően árazzák az északi ligákat, a rendes játékidős és a győztes piacok közötti különbség pedig újabb lehetőségeket teremt az arbitrázsfogadásra. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium: az egyetlen engedélyezett szolgáltató a Szerencsejáték Zrt. (Tippmix), a külföldi oldalak pedig blokkoltak. Több engedélyezett magyar fogadóiroda között ezért surebetet kötni nem lehetséges, ez az útmutató pedig az elvek megértését segíti.",
     "blocks": [
       {
         "type": "h2",
@@ -56,7 +56,7 @@
       },
       {
         "type": "p",
-        "text": "A jégkorongban létezik csak a rendes játékidőre szóló 1X2 piac, és a hosszabbítást, illetve a szétlövést is magában foglaló győztes piac is. Ezt a kettőt soha nem szabad összekeverni ugyanabban a surebetben. A fogadás megkötése előtt mindig ellenőrizd, hogy az egyes fogadóirodáknál pontosan melyik piacra fogadsz."
+        "text": "A jégkorongban létezik csak a rendes játékidőre szóló 1X2 piac, és a hosszabbítást, illetve a szétlövést is magában foglaló győztes piac is. Ezt a kettőt soha nem szabad összekeverni ugyanabban a surebetben. A fogadás megkötése előtt mindig ellenőrizd, hogy pontosan melyik piacra fogadsz, például a Tippmixen is."
       },
       {
         "type": "h2",
@@ -65,14 +65,14 @@
       {
         "type": "ul",
         "items": [
-          "NHL: rengeteg mérkőzés és magas maximális tétek.",
-          "SHL és Liiga: az északi régióban népszerűek, a fogadóirodák pedig eltérően árazzák őket.",
-          "Hazai bajnokságok: kisebb ligák, ahol a fogadóirodák gyakran eltérően ítélik meg az esélyeket."
+          "NHL: rengeteg mérkőzés és általában magas maximális tétek.",
+          "SHL és Liiga: az északi régióban népszerűek, és az árazásuk fogadóirodánként eltérhet.",
+          "Kisebb bajnokságok: itt a fogadóirodák gyakran eltérően ítélik meg az esélyeket, de a Tippmix kínálatát érdemes külön ellenőrizni."
         ]
       },
       {
         "type": "tip",
-        "text": "A jégkorong gyakran magas profitot kínál surebetenként, de a maximális tétek alacsonyabbak, mint a labdarúgásban."
+        "text": "A jégkorong gyakran magas profitot kínál surebetenként, de a maximális tétek alacsonyabbak, mint a labdarúgásban. Magyarországon az egyetlen engedélyezett iroda miatt ez inkább elméleti ismeret, a Szerencsejáték Zrt.-nél szerzett nyeremények viszont a játékosok számára adómentesek."
       }
     ],
     "faq": [
@@ -82,16 +82,16 @@
       },
       {
         "q": "Vannak surebetek a kisebb jégkorong-ligákban is?",
-        "a": "Igen. A fogadóirodák a kisebb hazai ligákat gyakran eltérően árazzák, ezért rendszeresen adódnak arbitrázslehetőségek. Fogadás előtt ellenőrizd, hogy a fogadóiroda rendelkezik-e engedéllyel Magyarországon."
+        "a": "Elvben igen, mert a fogadóirodák a kisebb ligákat gyakran eltérően árazzák. Magyarországon viszont csak a Szerencsejáték Zrt. (Tippmix) rendelkezik engedéllyel, a külföldi oldalak blokkoltak, engedély nélküli irodákat pedig nem ajánlunk. Ezért itt engedélyezett irodák között nincs surebet-lehetőség. Az aktuális szabályokat mindig ellenőrizd az SZTFH oldalán."
       }
     ]
   },
   "sport/fodbold": {
     "title": "Labdarúgás surebetek",
-    "metaTitle": "Labdarúgás surebetek – találj garantált profitot a mérkőzéseken",
-    "description": "Találj surebeteket labdarúgásra valós időben. A BetTrackerAI a Premier League, a Bajnokok Ligája és több száz másik liga szorzóit vizsgálja engedéllyel rendelkező fogadóirodáknál.",
+    "metaTitle": "Labdarúgás surebetek – így működik az arbitrázs a mérkőzéseken",
+    "description": "Ismerd meg a labdarúgás surebeteket. A BetTrackerAI a Premier League, a Bajnokok Ligája és több száz másik liga szorzóit követi. Magyarországon a Tippmix (Szerencsejáték Zrt.) az egyetlen legális szolgáltató, ezért hazai fogadóirodák között surebet nem köthető.",
     "keyword": "labdarúgás surebetek",
-    "intro": "A labdarúgásban van a legtöbb surebet az összes sportág közül. A mérkőzések éjjel-nappal zajlanak, és minden találkozóhoz több száz piac tartozik, amelyeket a fogadóirodák eltérően árazanak.",
+    "intro": "A labdarúgásban van a legtöbb surebet az összes sportág közül, ahol több engedélyezett fogadóiroda versenyez egymással. A mérkőzések éjjel-nappal zajlanak, és minden találkozóhoz több száz piac tartozik, amelyeket a fogadóirodák eltérően árazanak. Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Tippmix, Szerencsejáték Zrt.), a külföldi oldalak pedig le vannak tiltva, ezért itt a surebetting hazai engedélyes fogadóirodák között nem lehetséges. Engedély nélküli oldalakat nem ajánlunk.",
     "blocks": [
       {
         "type": "h2",
@@ -124,13 +124,13 @@
       },
       {
         "type": "p",
-        "text": "Sok labdarúgó surebet akkor jelenik meg, amikor a csapatok kezdőcsapatát nagyjából egy órával a kezdés előtt kihirdetik. Egyes fogadóirodák gyorsan igazítanak, mások lassabban reagálnak, és ebben az időablakban árazási különbségek jelennek meg."
+        "text": "Sok labdarúgó surebet akkor jelenik meg, amikor a csapatok kezdőcsapatát nagyjából egy órával a kezdés előtt kihirdetik. Egyes fogadóirodák gyorsan igazítanak, mások lassabban reagálnak, és ebben az időablakban árazási különbségek jelennek meg. Magyarországon, ahol csak a Tippmix működik legálisan, ez a különbség nem használható ki, mert nincs másik engedélyes iroda, amelynél az ellenfogadást megköthetnéd."
       }
     ],
     "faq": [
       {
         "q": "Melyik labdarúgó-ligákban van a legtöbb surebet?",
-        "a": "A kisebb ligák gyakran magasabb profitszázalékot kínálnak, de a nagy ligákban, például a Premier League-ben és a Bajnokok Ligájában több a piac és magasabbak a maximális tétek."
+        "a": "A kisebb ligák gyakran magasabb profitszázalékot kínálnak, de a nagy ligákban, például a Premier League-ben és a Bajnokok Ligájában több a piac és magasabbak a maximális tétek. Ez azokra a piacokra igaz, ahol több szabályozott fogadóiroda működik; Magyarországon a Tippmix mellett nincs másik engedélyes lehetőség."
       },
       {
         "q": "Köthetők surebetek élő labdarúgó-mérkőzésekre is?",
@@ -141,9 +141,9 @@
   "sport/esport": {
     "title": "E-sport surebetek",
     "metaTitle": "E-sport surebetek – arbitrázsfogadás CS2-re, LoL-ra és Dota 2-re",
-    "description": "Az e-sport a surebetek egyik leggyorsabban növekvő piaca. Találj arbitrázsfogadási lehetőségeket CS2-re, League of Legendsre és Dota 2-re engedéllyel rendelkező fogadóirodáknál.",
+    "description": "Az e-sport a surebetek egyik leggyorsabban növekvő piaca. Ismerd meg az arbitrázsfogadás működését CS2-re, League of Legendsre és Dota 2-re, és azt, mit jelent ez a magyar piacon, ahol csak a Tippmix engedélyezett.",
     "keyword": "e-sport surebetek",
-    "intro": "Az e-sportban nagy árkülönbségek vannak a fogadóirodák között. A piac viszonylag új, sok fogadóirodának kevesebb szakértője van a területen, a szorzók pedig a mérkőzés kezdete előtt gyakran jelentősen elmozdulnak.",
+    "intro": "Az e-sportban nagy árkülönbségek vannak a fogadóirodák között. A piac viszonylag új, sok fogadóirodának kevesebb szakértője van a területen, a szorzók pedig a mérkőzés kezdete előtt gyakran jelentősen elmozdulnak. Magyarországon azonban az online sportfogadást gyakorlatilag a Szerencsejáték Zrt. (Tippmix) működteti, így a hazai engedélyes fogadóirodák közötti surebet nem lehetséges.",
     "blocks": [
       {
         "type": "h2",
@@ -151,11 +151,11 @@
       },
       {
         "type": "p",
-        "text": "A fogadóirodák kevesebb erőforrást fordítanak az e-sportra, mint a labdarúgásra, a csapatok összeállításáról szóló hírek pedig gyorsan terjednek a közösségen belül. Ez nagyobb szorzókülönbségeket, és gyakran magasabb profitot eredményez surebetenként."
+        "text": "A fogadóirodák kevesebb erőforrást fordítanak az e-sportra, mint a labdarúgásra, a csapatok összeállításáról szóló hírek pedig gyorsan terjednek a közösségen belül. Ez nagyobb szorzókülönbségeket, és gyakran magasabb profitot eredményez surebetenként. Ez a nemzetközi piacokra jellemző; Magyarországon egyetlen engedélyes fogadóiroda van, ezért a szorzókülönbségeket itt nem lehet kihasználni."
       },
       {
         "type": "h2",
-        "text": "Népszerű játékok arbitrázsfogadáshoz"
+        "text": "Népszerű játékok az e-sport szorzók összehasonlításához"
       },
       {
         "type": "ul",
@@ -167,26 +167,26 @@
       },
       {
         "type": "tip",
-        "text": "Vigyázz az elhalasztott mérkőzésekkel. A fogadóirodák eltérő szabályokat alkalmaznak arra, hogy a fogadás meddig marad érvényes."
+        "text": "Vigyázz az elhalasztott mérkőzésekkel. A fogadóirodák eltérő szabályokat alkalmaznak arra, hogy a fogadás meddig marad érvényes, ezért a Tippmix szabályzatát is mindig olvasd el."
       }
     ],
     "faq": [
       {
         "q": "Jók az e-sportok surebetekhez?",
-        "a": "Igen, a profit gyakran magasabb, mint a hagyományos sportágakban. A maximális tétek azonban jellemzően alacsonyabbak."
+        "a": "Nemzetközileg a profit gyakran magasabb, mint a hagyományos sportágakban, a maximális tétek azonban jellemzően alacsonyabbak. Magyarországon, ahol csak a Tippmix (Szerencsejáték Zrt.) engedélyezett, engedélyes fogadóirodák között nem lehet surebetet csinálni. Tiltott vagy blokkolt oldalakat nem javaslunk."
       },
       {
         "q": "Mely fogadóirodák kínálnak e-sportot?",
-        "a": "A legtöbb nagy, engedéllyel rendelkező fogadóiroda kínál e-sportot, különösen CS2-t és League of Legendset. Ellenőrizd az elérhetőséget és az engedélyt Magyarországon."
+        "a": "Magyarországon a Tippmix (Szerencsejáték Zrt.) az engedélyezett szolgáltató, e-sport kínálata azonban változhat, ezért mindig ellenőrizd az aktuális kínálatot. Az engedélyekkel kapcsolatos információkért érdemes a Szabályozott Tevékenységek Felügyeleti Hatóság (SZTFH) oldalát és a hatályos szabályokat megnézni."
       }
     ]
   },
   "sport/tennis": {
     "title": "Tenisz surebetek",
-    "metaTitle": "Tenisz surebetek – garantált profit ATP, WTA és Challenger mérkőzéseken",
-    "description": "A tenisz ideális surebetekhez: mindössze két kimenetel és egész évben zajló mérkőzések. Találj tenisz arbitrázslehetőségeket az ATP, a WTA és a Challenger világszerte zajló tornáin.",
+    "metaTitle": "Tenisz surebetek – ATP, WTA és Challenger mérkőzések, Tippmix-szel a magyar piacon",
+    "description": "A tenisz elméletben ideális surebetekhez: mindössze két kimenetel és egész évben zajló mérkőzések. Ismerd meg a tenisz arbitrázs működését az ATP, a WTA és a Challenger tornáin, és tudd meg, mi a helyzet Magyarországon, ahol a szabályozott piacot a Szerencsejáték Zrt. (Tippmix) működteti.",
     "keyword": "tenisz surebetek",
-    "intro": "A tenisz sok surebet-fogadó kedvenc sportága. Mindössze két kimenetel lehetséges, nincs döntetlen, és az év szinte minden napján zajlik valahol torna.",
+    "intro": "A tenisz sok surebet-fogadó kedvenc sportága. Mindössze két kimenetel lehetséges, nincs döntetlen, és az év szinte minden napján zajlik valahol torna. Fontos tudni, hogy Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt. – Tippmix, felügyeletét az SZTFH látja el), a külföldi oldalak pedig blokkoltak. Így licencelt magyar fogadóirodák között surebetet kötni nem lehetséges, az alábbiak ezért elsősorban a tenisz surebetek működését mutatják be.",
     "blocks": [
       {
         "type": "h2",
@@ -207,11 +207,11 @@
       },
       {
         "type": "p",
-        "text": "A tenisz legnagyobb kockázata, ha egy játékos feladja a mérkőzést. A fogadóirodák szabályai eltérőek: egyesek érvénytelenítik a fogadást, mások elszámolják, ha az első játszma már befejeződött. Ha a két fogadóirodád eltérő szabályt alkalmaz, mindkét fogadást elveszítheted."
+        "text": "A tenisz legnagyobb kockázata, ha egy játékos feladja a mérkőzést. A fogadóirodák szabályai eltérőek: egyesek érvénytelenítik a fogadást, mások elszámolják, ha az első játszma már befejeződött. Ha két fogadóiroda eltérő szabályt alkalmaz, mindkét fogadást elveszítheted. Magyarországon ez a kockázat a gyakorlatban nem merül fel surebetként, mert a szabályozott piacon csak a Tippmix érhető el."
       },
       {
         "type": "tip",
-        "text": "Mielőtt megkötöd az első tenisz surebetedet, olvasd el a fogadóirodák szabályait a feladott teniszmérkőzésekre vonatkozóan."
+        "text": "Mielőtt bármilyen teniszfogadást megkötsz, olvasd el a Tippmix hivatalos szabályait a feladott teniszmérkőzésekre vonatkozóan. Ne használj nem engedélyezett vagy blokkolt külföldi oldalakat."
       },
       {
         "type": "h2",
@@ -219,209 +219,209 @@
       },
       {
         "type": "p",
-        "text": "A mérkőzés győztesén kívül az összesített gémszámra, a játszmahendikepekre és az egyes játszmák győztesére is találhatók surebetek. Ezeken a piacokon gyakran alacsonyabbak a maximális tétek."
+        "text": "A mérkőzés győztesén kívül az összesített gémszámra, a játszmahendikepekre és az egyes játszmák győztesére is találhatók surebetek olyan piacokon, ahol több iroda működik. Ezeken a piacokon gyakran alacsonyabbak a maximális tétek."
       }
     ],
     "faq": [
       {
         "q": "Jó a tenisz surebetekhez?",
-        "a": "Igen. A mindössze két kimenetel és a rengeteg mérkőzés miatt a tenisz az egyik legjobb sport a surebetekhez, különösen kezdőknek."
+        "a": "Elméletben igen. A mindössze két kimenetel és a rengeteg mérkőzés miatt a tenisz az egyik legjobb sport a surebetekhez. Magyarországon azonban a szabályozott piacot a Szerencsejáték Zrt. (Tippmix) egyedül működteti, így licencelt irodák között surebetezni nem lehet. Nem engedélyezett oldalakat nem ajánlunk."
       },
       {
         "q": "Mi történik, ha egy játékos feladja a mérkőzést?",
-        "a": "Ez fogadóirodánként eltérő. Néhány minden fogadást érvénytelenít, mások elszámolják azokat, ha már lejátszottak bizonyos számú játszmát. Ellenőrizd a szabályokat mindkét fogadóirodánál."
+        "a": "Ez fogadóirodánként eltérő. Néhány minden fogadást érvénytelenít, mások elszámolják azokat, ha már lejátszottak bizonyos számú játszmát. Magyarországon mindig a Tippmix aktuális szabályait ellenőrizd."
       }
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebetek a Bet365-nél",
-    "metaTitle": "Bet365 surebetek – Találd meg a garantált profit lehetőségeit",
-    "description": "Találj surebeteket a Bet365-nél valós időben. A BetTrackerAI összehasonlítja a Bet365 oddsait a többi fogadóirodáéval, és megmutatja, hol rögzíthetsz garantált profitot.",
-    "keyword": "bet365 surebetek",
-    "intro": "A Bet365 a világ egyik legnagyobb fogadóirodája, amely az egyik legszélesebb sport- és piackínálatot nyújtja. Emiatt a Bet365 az egyik leggyakrabban szereplő fogadóiroda a surebetekben.",
+    "title": "Surebetek és a Tippmix",
+    "metaTitle": "Tippmix surebetek – Mit érdemes tudni a magyar piacról",
+    "description": "Nézd meg, mit jelent a surebetting a Tippmix mellett. A BetTrackerAI követi a Tippmix oddsait, és őszintén megmutatja a magyar piac korlátait.",
+    "keyword": "tippmix surebetek",
+    "intro": "A Tippmix a Szerencsejáték Zrt. sportfogadási terméke, és Magyarországon a szabályozott online sportfogadás állami szereplője. Mivel nincs másik engedélyes magyar fogadóiroda, a surebetek két szabályozott magyar fogadóiroda között nem lehetségesek. A BetTrackerAI-t ettől még használhatod az oddsok követésére és a saját fogadásaid nyilvántartására.",
     "blocks": [
       {
         "type": "h2",
-        "text": "A Bet365-ről"
+        "text": "A Tippmixről"
       },
       {
         "type": "p",
-        "text": "A Bet365 több joghatóságban is engedéllyel rendelkező fogadóiroda, amely rendkívül sok mérkőzésre kínál oddsokat, az alsóbb ligákat és az élő piacokat is beleértve. Ez a széles kínálat azt jelenti, hogy a Bet365 oddsai gyakran eltérnek a piac többi részétől."
+        "text": "A Tippmixet a Szerencsejáték Zrt. üzemelteti, a tevékenységet a Szabályozott Tevékenységek Felügyeleti Hatósága (SZTFH) felügyeli. Sportesemények széles körére kínál oddsokat, az élő fogadást is beleértve. Mivel a külföldi oldalak Magyarországon blokkoltak, a Tippmix oddsait nem tudod másik engedélyes magyar fogadóirodáéval összevetni."
       },
       {
         "type": "h2",
-        "text": "Hogyan találj surebeteket a Bet365-tel"
+        "text": "Mi a helyzet a surebetekkel a Tippmixszel?"
       },
       {
         "type": "p",
-        "text": "Bet365-tel akkor jön létre surebet, ha a Bet365 magasabb oddsot kínál az egyik kimenetelre, mint amennyit más fogadóirodák az ellentétes kimenetelekre. A BetTrackerAI folyamatosan figyeli a Bet365 oddsait, és összeveti őket a piac többi részével."
+        "text": "Surebet akkor jön létre, ha két vagy több fogadóiroda oddsai közötti eltérés miatt minden kimenetelre úgy tehetsz tétet, hogy az eredménytől függetlenül nyereséged marad. Magyarországon a Tippmix az egyetlen engedélyes szereplő, ezért két szabályozott magyar fogadóiroda között ez nem megvalósítható. Nem javasoljuk engedély nélküli vagy blokkolt külföldi oldalak használatát. A BetTrackerAI-val ugyanakkor nyomon követheted a Tippmix oddsait és a saját fogadásaidat."
       },
       {
         "type": "ul",
         "items": [
-          "Válaszd ki a Bet365-öt és a többi fogadóirodádat a surebetek oldalon található szűrővel.",
-          "Rendezd profit szerint, és válassz stabil oddsú surebetet.",
-          "A kalkulátorral oszd el a tétet, és kerekítsd az összegeket.",
-          "Először azzal a fogadóirodával told meg a fogadást, amelynél a legingadozóbbak az oddsok."
+          "Add hozzá a Tippmixen megtett fogadásaidat a BetTrackerAI-hoz, és kövesd az oddsokat.",
+          "Rendezd a fogadásaidat eredmény szerint, és értékeld ki a saját statisztikáidat.",
+          "A kalkulátorral ellenőrizd a tétet és a lehetséges nyereményt, kerek összegekkel (például 5 000 Ft).",
+          "Mindig csak akkora tétet tégy meg, amelynek elvesztését nyugodtan megengedheted magadnak."
         ]
       },
       {
         "type": "tip",
-        "text": "Oszd el a fogadásaidat több fogadóiroda között, hogy ne csak a Bet365-öt használd. Ezzel meghosszabbíthatod a számlád élettartamát."
+        "text": "Szabj magadnak költségkeretet és limitet, és tartsd be. Ha a játék kezd problémát okozni, a Szerencsejáték Zrt. felelős játék programja és a nemzeti addiktológiai segélyvonal segítséget nyújt."
       }
     ],
     "faq": [
       {
-        "q": "Megengedett az arbitrázsfogadás a Bet365-nél?",
-        "a": "Az arbitrázsfogadás legális. Ugyanakkor, mint minden fogadóiroda, a Bet365 is korlátozhatja a számlákat az általános szerződési feltételei alapján, ha olyan fogadási mintázatot észlel, amely következetesen garantált profitot biztosít."
+        "q": "Lehetséges arbitrázsfogadás a Tippmixszel?",
+        "a": "Magyarországon a Tippmix az egyetlen engedélyes online sportfogadási lehetőség, ezért két engedélyes fogadóiroda közötti arbitrázs nem megvalósítható. Engedély nélküli oldalak használatát nem javasoljuk. Ellenőrizd az aktuális hazai szabályokat és a Tippmix általános szerződési feltételeit."
       },
       {
-        "q": "Rendelkezik a Bet365 szerencsejáték-engedéllyel?",
-        "a": "Igen. A Bet365 világszerte több szabályozott piacon rendelkezik engedéllyel. Tájékozódj a helyi adószabályokról, mivel a nyeremények adózása joghatóságonként eltérő."
+        "q": "Rendelkezik a Tippmix szerencsejáték-engedéllyel?",
+        "a": "Igen. A Tippmixet a Szerencsejáték Zrt. üzemelteti, a tevékenységet az SZTFH felügyeli. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékosok számára adómentesek, de az aktuális szabályokról mindig tájékozódj a hivatalos forrásokból."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebetek az Unibetnél",
-    "metaTitle": "Unibet surebetek – Találd meg az arbitrázsfogadási lehetőségeket",
-    "description": "Találj surebeteket az Unibetnél valós időben. A BetTrackerAI összehasonlítja az Unibet oddsait a többi fogadóirodáéval, így arbitrázsfogadással garantált profitot rögzíthetsz.",
-    "keyword": "unibet surebetek",
-    "intro": "Az Unibet világszerte az egyik legnépszerűbb fogadóiroda. Az Unibet a Kambi oddsplatformot használja, ezért az Unibet oddsai gyakran hasonlítanak a többi Kambi-alapú fogadóiroda oddsaira.",
+    "title": "Surebetek a Tippmixen",
+    "metaTitle": "Tippmix surebetek – Mit érdemes tudni az arbitrázsfogadásról",
+    "description": "Nézd meg, hogyan működik a surebet a Tippmixen. A BetTrackerAI összehasonlítja az oddsokat és követi a fogadásaidat, de Magyarországon engedélyes fogadóirodák között surebet nem lehetséges.",
+    "keyword": "tippmix surebetek",
+    "intro": "A Tippmix a Szerencsejáték Zrt. online sportfogadási szolgáltatása, amely Magyarországon gyakorlatilag állami monopóliumként működik. A külföldi oldalak blokkoltak, ezért a Tippmix oddsait nem lehet másik magyarországi engedélyes fogadóirodáéval összevetni.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Az Unibetről"
+        "text": "A Tippmixről"
       },
       {
         "type": "p",
-        "text": "Az Unibet több szabályozott piacon rendelkezik engedéllyel, és széles sportkínálatot nyújt. Mivel az Unibet az oddsplatformján más fogadóirodákkal osztozik, surebetek leggyakrabban az Unibet és a más platformon működő fogadóirodák között alakulnak ki."
+        "text": "A Tippmixet a Szerencsejáték Zrt. üzemelteti az SZTFH (Szabályozott Tevékenységek Felügyeleti Hatósága) felügyelete alatt, és széles sportkínálatot nyújt. Mivel nincs másik engedélyes hazai fogadóiroda, a Tippmix és más magyar fogadóirodák között surebet nem alakulhat ki. Engedély nélküli oldalakat nem javasolunk."
       },
       {
         "type": "h2",
-        "text": "Hogyan találj surebeteket az Unibettel"
+        "text": "Hogyan működik a surebet, és mit kezdhetsz a Tippmixszel"
       },
       {
         "type": "p",
-        "text": "Az Unibettel akkor jön létre surebet, ha az Unibet magasabb oddsot kínál az egyik kimenetelre, mint amennyit más fogadóirodák az ellentétes kimenetelekre. A BetTrackerAI folyamatosan figyeli az Unibet oddsait, és összeveti őket a piac többi részével."
+        "text": "Surebet elméletben akkor jön létre, ha az egyik fogadóiroda magasabb oddsot kínál az egyik kimenetelre, mint amennyit mások az ellentétes kimenetelekre. Magyarországon a Tippmix az egyetlen engedélyes szolgáltató, ezért ilyen összevetés itt nem lehetséges. A BetTrackerAI-val ugyanakkor nyomon követheted a Tippmix oddsait és a saját fogadásaidat."
       },
       {
         "type": "ul",
         "items": [
-          "Válaszd ki az Unibetet és a többi fogadóirodádat a surebetek oldalon található szűrővel.",
-          "Rendezd profit szerint, és válassz stabil oddsú surebetet.",
-          "A kalkulátorral oszd el a tétet, és kerekítsd az összegeket.",
-          "Először azzal a fogadóirodával told meg a fogadást, amelynél a legingadozóbbak az oddsok."
+          "Rögzítsd a Tippmixen leadott fogadásaidat a BetTrackerAI-ban.",
+          "Rendezd a fogadásaidat eredmény szerint, és válassz stabil oddsú piacokat.",
+          "A kalkulátorral határozd meg a tétet, és kerekítsd az összegeket (például 5 000 Ft-ra).",
+          "Mindig csak engedélyes módon, a Tippmixen fogadj, blokkolt külföldi oldalakat ne használj."
         ]
       },
       {
         "type": "tip",
-        "text": "Oszd el a fogadásaidat több fogadóiroda között, hogy ne csak az Unibetet használd. Ezzel meghosszabbíthatod a számlád élettartamát, és elkerülheted a korlátozásokat."
+        "text": "Fogadj mindig felelősen, és csak annyit tegyél meg, amennyit megengedhetsz magadnak. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékosok számára adómentesek, de a hatályos szabályokat érdemes ellenőrizni. Ha úgy érzed, elvesztetted az irányítást, kérj segítséget a Szerencsejáték Zrt. felelős játékprogramjától vagy a nemzeti addiktológiai segélyvonaltól."
       }
     ],
     "faq": [
       {
-        "q": "Legális surebeteket kötni az Unibetnél?",
-        "a": "Igen, az arbitrázsfogadás legális. Ugyanakkor, mint minden fogadóiroda, az Unibet is korlátozhatja a számlákat az általános szerződési feltételei alapján, ha azokról kizárólag garantált profitot hozó fogadások származnak."
+        "q": "Legális surebeteket kötni a Tippmixen?",
+        "a": "Magyarországon a Tippmix az egyetlen engedélyes online sportfogadási szolgáltatás, ezért engedélyes fogadóirodák között surebet nem köthető. Külföldi, blokkolt vagy engedély nélküli oldalakat nem javasolunk. A hatályos szabályokat mindig ellenőrizd."
       },
       {
-        "q": "Mely fogadóirodák hasonlítanak az Unibethez?",
-        "a": "Az Unibet a Kambit használja, amely több más fogadóirodának is szállít oddsokat. Ezért több surebet megtalálásához kombináld az Unibetet más platformon működő fogadóirodákkal."
+        "q": "Mely fogadóirodák hasonlítanak a Tippmixhez?",
+        "a": "Magyarországon a Tippmixhez hasonló engedélyes fogadóiroda nincs, mert a piac gyakorlatilag állami monopólium. Ezért nem ajánlunk másik fogadóirodát surebetekhez; a BetTrackerAI-t a fogadásaid követésére és az oddsok áttekintésére használd."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebetek a Betanónál",
-    "metaTitle": "Betano surebetek – találj arbitrázsfogadásokat a Betanónál",
-    "description": "Találj surebeteket a Betanónál valós időben. A BetTrackerAI összeveti a Betano oddsait más engedéllyel rendelkező fogadóirodák oddsaival, és megmutatja, hol zárhatsz le garantált profitot.",
-    "keyword": "betano surebet",
-    "intro": "A Betano a szabályozott piac egyik újabb fogadóirodája, amely saját oddsképző platformot használ. Emiatt a Betano oddsai gyakran eltérnek a piac többi szereplőjétől, ami arbitrázsfogadási lehetőségeket teremt.",
+    "title": "Surebetek a Tippmixen",
+    "metaTitle": "Tippmix surebetek – mit érdemes tudni az arbitrázsfogadásról",
+    "description": "Nézd meg, hogyan működik a surebet a Tippmix esetében. A BetTrackerAI követi az oddsokat és a fogadásaidat, de Magyarországon a Tippmix az egyetlen engedélyes szereplő, ezért két engedélyes fogadóiroda között nem lehet surebetet zárni.",
+    "keyword": "tippmix surebet",
+    "intro": "A Tippmix a Szerencsejáték Zrt. online sportfogadási terméke, és Magyarországon gyakorlatilag állami monopóliumként működik. Mivel nincs másik engedélyes magyar fogadóiroda, amellyel összevethetnéd az oddsait, a klasszikus arbitrázsfogadás itt nem megvalósítható.",
     "blocks": [
       {
         "type": "h2",
-        "text": "A Betanóról"
+        "text": "A Tippmixről"
       },
       {
         "type": "p",
-        "text": "A Betano több joghatóságban is rendelkezik engedéllyel, és széles sportkínálatot nyújt. Mivel az oddsait önállóan határozza meg, a bevált, régóta működő fogadóirodákkal összevetve gyakran szerepel surebetekben."
+        "text": "A Tippmixet a Szerencsejáték Zrt. üzemelteti, a felügyeletet az SZTFH (Szabályozott Tevékenységek Felügyeleti Hatósága) látja el. A külföldi fogadóoldalak blokkoltak, a Szerencsejáték Zrt.-től származó nyeremények pedig a játékosok számára adómentesek. Mivel a piacon nincs engedélyes versenytárs, surebet nem alakulhat ki két magyar engedélyes iroda oddsai között."
       },
       {
         "type": "h2",
-        "text": "Hogyan találj surebeteket a Betanóval?"
+        "text": "Mire használhatod a BetTrackerAI-t a Tippmix mellett?"
       },
       {
         "type": "p",
-        "text": "Betanós surebet akkor jön létre, ha a Betano magasabb oddsot kínál az egyik kimenetelre, mint amennyit más fogadóirodák kínálnak az ellentétes kimenetelekre. A BetTrackerAI folyamatosan figyeli a Betano oddsait, és összeveti őket a piac többi szereplőjének oddsaival."
+        "text": "Surebet akkor jön létre, ha az egyik fogadóiroda magasabb oddsot kínál egy kimenetelre, mint amennyit más irodák kínálnak az ellentétes kimenetelekre. Ehhez legalább két engedélyes fogadóiroda kellene, Magyarországon viszont csak a Tippmix érhető el legálisan. A BetTrackerAI ettől függetlenül segít nyomon követni a Tippmixen leadott fogadásaidat és az eredményeidet."
       },
       {
         "type": "ul",
         "items": [
-          "A surebetek oldalon a szűrő segítségével válaszd ki a Betanót és a többi fogadóirodádat.",
-          "Rendezd a találatokat profit szerint, és válassz olyan surebetet, amelynek stabilak az oddsai.",
-          "A kalkulátorral ossz fel a tétet, és kerekítsd az összegeket.",
-          "Először annál a fogadóirodánál told meg a tétet, ahol a legingadozóbbak az oddsok."
+          "Rögzítsd a Tippmixen megtett fogadásaidat a BetTrackerAI-ban, hogy mindig átlásd a tétjeidet és az eredményeidet.",
+          "Rendezd a fogadásaidat profit szerint, és nézd meg, mely sportágakban és piacokon teljesítesz a legjobban.",
+          "A kalkulátorral tervezd meg a tétet, és kerekítsd az összegeket, például 5 000 vagy 10 000 Ft-ra.",
+          "Előre határozz meg havi keretet, és tartsd is magad hozzá."
         ]
       },
       {
         "type": "tip",
-        "text": "Oszd meg a fogadásaidat több fogadóiroda között, hogy ne csak a Betanót használd. Így hosszabb ideig megmarad a fiókod, és könnyebben elkerülheted a korlátozásokat."
+        "text": "Ne keress megkerülő megoldásokat külföldi, blokkolt vagy nem engedélyezett oldalakon: ott nincs játékosvédelem. Ha úgy érzed, hogy a fogadás kicsúszik az irányításod alól, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
       }
     ],
     "faq": [
       {
-        "q": "Szabad surebeteket fogadni a Betanónál?",
-        "a": "Igen, az arbitrázsfogadás legális. Ugyanakkor, mint minden fogadóiroda, a Betano is korlátozhatja a fiókokat az általános szerződési feltételei alapján, ha olyan fogadási mintát észlel, amely folyamatosan garantált profitot eredményez."
+        "q": "Szabad surebeteket fogadni a Tippmixen?",
+        "a": "Az arbitrázsfogadás önmagában nem tiltott, de Magyarországon a Tippmix az egyetlen engedélyes szereplő, így két engedélyes fogadóiroda közötti surebet nem lehetséges. Külföldi, blokkolt vagy nem engedélyezett oldalak használatát nem javasoljuk. Az aktuális szabályokról érdemes tájékozódni az SZTFH-nál."
       },
       {
-        "q": "Rendelkezik engedéllyel a Betano?",
-        "a": "Igen, a Betano több szabályozott piacon is rendelkezik engedéllyel. A hazai szerencsejáték-felügyeleti hatóságnál ellenőrizd, hogy a Betano rendelkezik-e engedéllyel ott, ahol élsz."
+        "q": "Rendelkezik engedéllyel a Tippmix?",
+        "a": "Igen, a Tippmixet a Szerencsejáték Zrt. üzemelteti az SZTFH felügyelete alatt. A Szerencsejáték Zrt.-től származó nyeremények a játékosok számára adómentesek, de az aktuális szabályokat mindig ellenőrizd az illetékes hatóságnál."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebetek a LeoVegasnál",
-    "metaTitle": "LeoVegas surebetek – találd meg az arbitrázsfogadási lehetőségeket",
-    "description": "Találj surebeteket a LeoVegasnál valós időben. A BetTrackerAI összeveti a LeoVegas oddsait más fogadóirodák oddsaival, és megmutatja, hol zárhatsz le garantált profitot.",
-    "keyword": "leovegas surebet",
-    "intro": "A LeoVegas elsősorban kaszinókínálatáról ismert, de széles sportfogadási választékot is biztosít. A fogadóiroda a Kambi platformot használja, és rendszeresen szerepel arbitrázsfogadási lehetőségekben.",
+    "title": "Surebetek a Tippmixnél",
+    "metaTitle": "Tippmix surebetek – lehetséges Magyarországon az arbitrázsfogadás?",
+    "description": "Nézd meg, mit jelent a surebet a Tippmix (Szerencsejáték Zrt.) esetében. A BetTrackerAI oddsösszehasonlítója és fogadáskövetője segít átlátni a piacot, és őszintén megmutatja a hazai korlátokat is.",
+    "keyword": "tippmix surebet",
+    "intro": "A Tippmix a Szerencsejáték Zrt. online sportfogadási kínálata, és Magyarországon gyakorlatilag állami monopóliumként működik. Széles sportfogadási választékot kínál. Mivel nincs mellette másik engedélyes fogadóiroda, a hazai engedélyes fogadóirodák közötti surebet (arbitrázsfogadás) nem megvalósítható.",
     "blocks": [
       {
         "type": "h2",
-        "text": "A LeoVegasról"
+        "text": "A Tippmixről"
       },
       {
         "type": "p",
-        "text": "A LeoVegas engedéllyel rendelkező fogadóiroda, felhasználóbarát alkalmazása pedig gyors fogadást tesz lehetővé. Ez a surebeteknél kulcsfontosságú, hiszen az oddsok másodpercek alatt megváltozhatnak. Fiók nyitása előtt ellenőrizd, hogy a LeoVegas rendelkezik-e engedéllyel, és elérhető-e Magyarországon."
+        "text": "A Tippmixet a Szerencsejáték Zrt. üzemelteti, a területet a Szabályozott Tevékenységek Felügyeleti Hatósága (SZTFH) felügyeli. A felhasználóbarát alkalmazás gyors fogadást tesz lehetővé, ami az oddsok követésénél is hasznos, hiszen az oddsok percek alatt változhatnak. A Szerencsejáték Zrt.-nél elért nyeremények a játékosok számára adómentesek, de a hatályos szabályokat mindig ellenőrizd a hivatalos forrásoknál."
       },
       {
         "type": "h2",
-        "text": "Hogyan találj surebeteket a LeoVegasszal?"
+        "text": "Hogyan használhatod a BetTrackerAI-t a Tippmix mellett?"
       },
       {
         "type": "p",
-        "text": "LeoVegasos surebet akkor jön létre, ha a LeoVegas magasabb oddsot kínál az egyik kimenetelre, mint amennyit más fogadóirodák kínálnak az ellentétes kimenetelekre. A BetTrackerAI folyamatosan figyeli a LeoVegas oddsait, és összeveti őket a piacodon elérhető fogadóirodák oddsaival."
+        "text": "Surebet akkor jön létre, ha legalább két fogadóiroda oddsai közötti eltérés miatt minden kimenetelre úgy fogadhatsz, hogy az eredmény garantáltan nyereséges. Mivel Magyarországon csak a Tippmix engedélyes, engedélyes fogadóirodák között ez nem lehetséges. Külföldi oldalak blokkoltak, és engedély nélküli oldalak használatát nem ajánljuk. A BetTrackerAI-t ezért inkább oddsok megismerésére és saját fogadásaid követésére használd."
       },
       {
         "type": "ul",
         "items": [
-          "A surebetek oldalon a szűrő segítségével válaszd ki a LeoVegast és a többi fogadóirodádat.",
-          "Rendezd a találatokat profit szerint, és válassz olyan surebetet, amelynek stabilak az oddsai.",
-          "A kalkulátorral ossz fel a tétet, és kerekítsd az összegeket.",
-          "Először annál a fogadóirodánál told meg a tétet, amelyik a legingadozóbb oddsokat kínálja."
+          "A BetTrackerAI-ban válaszd ki a Tippmixet, és nézd meg az oddsait az érdekelt piacokon.",
+          "Figyeld az oddsok alakulását, és csak olyan fogadást fontolj meg, amelynek stabilak az oddsai.",
+          "A kalkulátorral tervezd meg a tétet, és kerekítsd az összegeket, például 5 000 vagy 10 000 Ft-ra.",
+          "Rögzítsd a fogadásaidat a nyomkövetőben, hogy mindig lásd a tétjeid és az eredményeid alakulását."
         ]
       },
       {
         "type": "tip",
-        "text": "Oszd meg a fogadásaidat több fogadóiroda között, hogy ne csak a LeoVegast használd. Így hosszabb ideig megmarad a fiókod, és csökken a fiókkorlátozások kockázata."
+        "text": "Szabj magadnak havi költségkeretet, és tartsd be. Ha úgy érzed, hogy a fogadás kezd kicsúszni az irányításod alól, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
       }
     ],
     "faq": [
       {
-        "q": "Lehet surebeteket fogadni a LeoVegasnál?",
-        "a": "Igen, az arbitrázsfogadás legális. Ugyanakkor, mint minden fogadóiroda, a LeoVegas is korlátozhatja a fiókokat az általános szerződési feltételei alapján, ha olyan fogadási mintát észlel, amely folyamatosan garantált profitot eredményez."
+        "q": "Lehet surebeteket fogadni a Tippmixnél?",
+        "a": "Gyakorlatilag nem. Magyarországon az online sportfogadás a Szerencsejáték Zrt. (Tippmix) monopóliuma, így nincs másik engedélyes fogadóiroda, amellyel surebetet lehetne építeni. A külföldi oldalak blokkoltak, és engedély nélküli oldalak használatát nem javasoljuk. A hatályos szabályokat mindig ellenőrizd."
       },
       {
-        "q": "Jó a LeoVegas surebetekhez?",
-        "a": "A LeoVegas kiváló kiegészítő fogadóiroda, különösen akkor, ha olyan fogadóirodákkal kombinálod, amelyek nem a Kambi platformot használják, mert így több arbitrázslehetőség nyílik meg előtted."
+        "q": "Jó a Tippmix surebetekhez?",
+        "a": "Surebetekhez nem, mert nincs másik engedélyes fogadóiroda az oddsok összevetésére. Fogadáskövetésre és az oddsok megismerésére viszont jól használható a BetTrackerAI-jal együtt, és a Szerencsejáték Zrt.-nél elért nyeremények a játékosok számára adómentesek."
       }
     ]
   }

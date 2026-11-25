@@ -14,7 +14,7 @@
         "type": "ul",
         "items": [
           "Spielsieger inklusive Verlängerung: zwei mögliche Ausgänge und einfache Berechnung.",
-          "Über/Unter bei den Gesamtpunkten, zum Beispiel über oder unter 215.5 Punkte.",
+          "Über/Unter bei den Gesamtpunkten, zum Beispiel über oder unter 215,5 Punkte.",
           "Punkte-Handicap, bei dem der Favorit mit einem bestimmten Vorsprung gewinnen muss.",
           "Spielerwetten wie erzielte Punkte, Rebounds und Assists."
         ]
@@ -25,7 +25,7 @@
       },
       {
         "type": "p",
-        "text": "Bei Punktemärkten bieten zwei Wettanbieter mitunter unterschiedliche Linien an, etwa über 214.5 bei dem einen und unter 216.5 bei dem anderen. Endet die Partie mit genau 215 oder 216 Punkten, gewinnst du beide Wetten. Das nennt man einen „Middle“ – eine zusätzliche Gewinnchance im Basketball."
+        "text": "Bei Punktemärkten bieten zwei Wettanbieter mitunter unterschiedliche Linien an, etwa über 214,5 bei dem einen und unter 216,5 bei dem anderen. Endet die Partie mit genau 215 oder 216 Punkten, gewinnst du beide Wetten. Das nennt man einen „Middle“ – eine zusätzliche Gewinnchance im Basketball."
       },
       {
         "type": "tip",
@@ -46,9 +46,9 @@
   "sport/ishockey": {
     "title": "Surebets im Eishockey",
     "metaTitle": "Eishockey-Surebets – garantierter Gewinn in NHL & Co.",
-    "description": "Eishockey-Surebets aus NHL, SHL und weiteren Ligen. Lerne den Unterschied zwischen regulärer Spielzeit und Siegwetten kennen und finde Chancen auf garantierten Gewinn.",
+    "description": "Eishockey-Surebets aus NHL, ICE Hockey League, SHL und weiteren Ligen. Lerne den Unterschied zwischen regulärer Spielzeit und Siegwetten kennen und finde Chancen auf garantierten Gewinn.",
     "keyword": "Eishockey Surebets",
-    "intro": "Eishockey ist eine unterschätzte Sportart für Surebets. Viele Wettanbieter bewerten die nordischen Ligen unterschiedlich, und der Unterschied zwischen Wetten auf die reguläre Spielzeit und Siegwetten eröffnet zusätzliche Möglichkeiten für Arbitrage-Wetten.",
+    "intro": "Eishockey ist eine unterschätzte Sportart für Surebets. Viele Wettanbieter bewerten die europäischen Ligen unterschiedlich, und der Unterschied zwischen Wetten auf die reguläre Spielzeit und Siegwetten eröffnet zusätzliche Möglichkeiten für Arbitrage-Wetten.",
     "blocks": [
       {
         "type": "h2",
@@ -67,7 +67,7 @@
         "items": [
           "NHL: viele Spiele und hohe Maximaleinsätze.",
           "SHL und Liiga: im Norden Europas beliebt und bei den Wettanbietern unterschiedlich bewertet.",
-          "Nationale Ligen: kleinere Ligen, in denen sich die Wettanbieter bei den Quoten oft uneinig sind."
+          "ICE Hockey League und andere nationale Ligen: kleinere Ligen, in denen sich die Wettanbieter bei den Quoten oft uneinig sind."
         ]
       },
       {
@@ -109,7 +109,7 @@
         "type": "ul",
         "items": [
           "1X2: Heimsieg, Unentschieden und Auswärtssieg. Drei Ausgänge, du brauchst also drei Wetten.",
-          "Über/Unter bei den Toren, zum Beispiel über oder unter 2.5 Tore. Nur zwei Ausgänge und oft hohe Liquidität.",
+          "Über/Unter bei den Toren, zum Beispiel über oder unter 2,5 Tore. Nur zwei Ausgänge und oft hohe Liquidität.",
           "Asiatisches Handicap: zwei Ausgänge und niedrige Marge, aber lies die Abrechnungsregeln für halbe und ganze Tore genau durch.",
           "Beide Teams treffen: Ja oder Nein. Ein einfacher Markt mit zwei Ausgängen."
         ]
@@ -141,7 +141,7 @@
   "sport/esport": {
     "title": "Surebets auf E-Sport",
     "metaTitle": "E-Sport-Surebets – Arbitrage-Wetten auf CS2, LoL & Dota 2",
-    "description": "E-Sport zählt zu den am schnellsten wachsenden Märkten für Surebets. Finde Arbitrage-Chancen auf CS2, League of Legends und Dota 2 bei lizenzierten Wettanbietern.",
+    "description": "E-Sport zählt zu den am schnellsten wachsenden Märkten für Surebets. Finde Arbitrage-Chancen auf CS2, League of Legends und Dota 2 bei in Österreich lizenzierten Wettanbietern.",
     "keyword": "E-Sport Surebets",
     "intro": "Im E-Sport gibt es große Preisunterschiede zwischen den Wettanbietern. Der Markt ist noch relativ jung, viele Wettanbieter haben nur wenige Spezialisten auf diesem Gebiet, und die Quoten bewegen sich vor Spielbeginn oft deutlich.",
     "blocks": [
@@ -177,7 +177,7 @@
       },
       {
         "q": "Welche Wettanbieter bieten E-Sport an?",
-        "a": "Die meisten großen lizenzierten Wettanbieter haben E-Sport im Programm, vor allem CS2 und League of Legends. Prüfe Verfügbarkeit und Lizenz für Österreich."
+        "a": "Die meisten großen in Österreich lizenzierten Wettanbieter haben E-Sport im Programm, vor allem CS2 und League of Legends. Das Angebot unterscheidet sich je nach Anbieter, prüfe daher Verfügbarkeit und Lizenz für Österreich direkt beim jeweiligen Wettanbieter."
       }
     ]
   },
@@ -272,42 +272,42 @@
     ],
     "faq": [
       {
-        "q": "Ist Arbitrage-Wetten bei Bet365 erlaubt?",
+        "q": "Sind Arbitrage-Wetten bei Bet365 erlaubt?",
         "a": "Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann Bet365 Konten aber gemäß seinen Geschäftsbedingungen einschränken, wenn Wettmuster erkannt werden, mit denen laufend ein garantierter Gewinn erzielt wird."
       },
       {
         "q": "Hat Bet365 eine Glücksspiellizenz?",
-        "a": "Ja. Bet365 besitzt Lizenzen in mehreren regulierten Märkten weltweit. Informiere dich über die steuerlichen Regeln an deinem Wohnsitz, denn die Behandlung von Gewinnen unterscheidet sich je nach Rechtsordnung."
+        "a": "Ja. Bet365 besitzt Lizenzen in mehreren regulierten Märkten. In Österreich ist Sportwetten Ländersache und wird durch die Gesetze der Bundesländer geregelt. Für Privatspieler sind Gewinne in der Regel steuerfrei, die Wettgebühr führen die Anbieter ab. Prüfe bitte die aktuellen Regeln, bevor du wettest."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebets bei Unibet",
-    "metaTitle": "Unibet Sure Bets – Arbitrage-Wetten finden",
-    "description": "Finde Sure Bets bei Unibet in Echtzeit. BetTrackerAI vergleicht die Quoten von Unibet mit anderen Wettanbietern, damit du dir mit Arbitrage-Wetten einen garantierten Gewinn sichern kannst.",
-    "keyword": "unibet sure bets",
-    "intro": "Unibet zählt weltweit zu den beliebtesten Wettanbietern. Unibet nutzt die Quotenplattform von Kambi, deshalb ähneln die Quoten bei Unibet oft jenen anderer Wettanbieter auf Kambi-Basis.",
+    "title": "Surebets bei bet365",
+    "metaTitle": "bet365 Sure Bets – Arbitrage-Wetten finden",
+    "description": "Finde Sure Bets bei bet365 in Echtzeit. BetTrackerAI vergleicht die Quoten von bet365 mit anderen Wettanbietern, damit du dir mit Arbitrage-Wetten einen garantierten Gewinn sichern kannst.",
+    "keyword": "bet365 sure bets",
+    "intro": "bet365 zählt weltweit zu den beliebtesten Wettanbietern. bet365 betreibt eine eigene Quotenplattform, deshalb unterscheiden sich die Quoten bei bet365 oft deutlich von jenen anderer Wettanbieter wie tipp3, Admiral oder bwin.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Über Unibet"
+        "text": "Über bet365"
       },
       {
         "type": "p",
-        "text": "Unibet verfügt in mehreren regulierten Märkten über Lizenzen und bietet eine große Auswahl an Sportarten. Da Unibet seine Quotenplattform mit mehreren anderen Wettanbietern teilt, entstehen Sure Bets meist zwischen Unibet und Wettanbietern auf anderen Plattformen."
+        "text": "bet365 verfügt in mehreren regulierten Märkten über Lizenzen, darunter Österreich, und bietet eine große Auswahl an Sportarten. Da bet365 eine eigene Quotenplattform nutzt, entstehen Sure Bets häufig zwischen bet365 und Wettanbietern wie tipp3, Admiral, bwin, Interwetten oder Tipico."
       },
       {
         "type": "h2",
-        "text": "So findest du Sure Bets mit Unibet"
+        "text": "So findest du Sure Bets mit bet365"
       },
       {
         "type": "p",
-        "text": "Eine Sure Bet mit Unibet entsteht, wenn Unibet auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die gegenteiligen Ausgänge. BetTrackerAI beobachtet die Quoten von Unibet laufend und vergleicht sie mit dem restlichen Markt."
+        "text": "Eine Sure Bet mit bet365 entsteht, wenn bet365 auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die gegenteiligen Ausgänge. BetTrackerAI beobachtet die Quoten von bet365 laufend und vergleicht sie mit dem restlichen Markt."
       },
       {
         "type": "ul",
         "items": [
-          "Wähle Unibet und deine anderen Wettanbieter mit dem Filter auf der Surebets-Seite aus.",
+          "Wähle bet365 und deine anderen Wettanbieter mit dem Filter auf der Surebets-Seite aus.",
           "Sortiere nach Gewinn und wähle eine Surebet mit stabilen Quoten.",
           "Nutze den Rechner, um deinen Einsatz aufzuteilen und die Beträge zu runden.",
           "Platziere zuerst die Wette beim Wettanbieter mit den volatilsten Quoten."
@@ -315,17 +315,17 @@
       },
       {
         "type": "tip",
-        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf Unibet. So bleibt dein Konto länger aktiv und du vermeidest Limitierungen."
+        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf bet365. So bleibt dein Konto länger aktiv und du vermeidest Limitierungen."
       }
     ],
     "faq": [
       {
-        "q": "Ist es legal, bei Unibet Surebets zu platzieren?",
-        "a": "Ja, Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann Unibet aber gemäß seinen Geschäftsbedingungen Konten limitieren oder einschränken, wenn darüber ausschließlich Wetten mit garantiertem Gewinn platziert werden."
+        "q": "Ist es legal, bei bet365 Surebets zu platzieren?",
+        "a": "Ja, Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann bet365 aber gemäß seinen Geschäftsbedingungen Konten limitieren oder einschränken, wenn darüber ausschließlich Wetten mit garantiertem Gewinn platziert werden. Informiere dich außerdem über die aktuellen Regeln in deinem Bundesland."
       },
       {
-        "q": "Welche Wettanbieter sind mit Unibet vergleichbar?",
-        "a": "Unibet setzt auf Kambi, das auch mehrere andere Wettanbieter mit Quoten beliefert. Kombiniere Unibet daher mit Wettanbietern auf anderen Plattformen, um mehr Surebets zu finden."
+        "q": "Welche Wettanbieter sind mit bet365 vergleichbar?",
+        "a": "bet365 setzt auf eine eigene Quotenplattform. Kombiniere bet365 daher mit in Österreich lizenzierten Wettanbietern wie tipp3, Admiral, bwin, Interwetten oder Tipico, um mehr Surebets zu finden."
       }
     ]
   },
@@ -334,7 +334,7 @@
     "metaTitle": "Betano Surebets – Arbitrage-Wetten bei Betano finden",
     "description": "Finde Surebets bei Betano in Echtzeit. BetTrackerAI vergleicht die Quoten von Betano mit anderen lizenzierten Wettanbietern und zeigt dir, wo du dir einen garantierten Gewinn sichern kannst.",
     "keyword": "betano surebets",
-    "intro": "Betano zählt zu den neueren Wettanbietern auf dem regulierten Markt und arbeitet mit einer eigenen Plattform zur Quotenberechnung. Deshalb weichen die Quoten von Betano oft vom Rest des Marktes ab, wodurch Arbitrage-Chancen entstehen.",
+    "intro": "Betano zählt zu den neueren Wettanbietern auf den regulierten Märkten Europas und arbeitet mit einer eigenen Plattform zur Quotenberechnung. Deshalb weichen die Quoten von Betano oft vom Rest des Marktes ab, wodurch Arbitrage-Chancen entstehen. Beachte: In Österreich ist Sportwetten Ländersache, nutze daher nur Anbieter, die für dein Bundesland lizenziert sind.",
     "blocks": [
       {
         "type": "h2",
@@ -342,7 +342,7 @@
       },
       {
         "type": "p",
-        "text": "Betano besitzt Lizenzen in mehreren Rechtsordnungen und bietet eine große Auswahl an Sportarten. Da Betano seine Quoten eigenständig festlegt, taucht der Wettanbieter im Vergleich mit etablierten Anbietern häufig in Surebets auf."
+        "text": "Betano besitzt Lizenzen in mehreren Rechtsordnungen und bietet eine große Auswahl an Sportarten. Da Betano seine Quoten eigenständig festlegt, taucht der Wettanbieter im Vergleich mit etablierten Anbietern wie tipp3, Admiral, bwin oder Interwetten häufig in Surebets auf. Ob Betano in deinem Bundesland zugelassen ist, solltest du vor der Nutzung selbst prüfen."
       },
       {
         "type": "h2",
@@ -363,7 +363,7 @@
       },
       {
         "type": "tip",
-        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf Betano. So bleibt dein Konto länger aktiv und du vermeidest Einschränkungen."
+        "text": "Verteile deine Wetten auf mehrere in Österreich lizenzierte Wettanbieter, zum Beispiel bwin, Admiral, Tipico oder bet365, und setze nicht nur auf einen einzelnen Anbieter. So bleibt dein Konto länger aktiv und du vermeidest Einschränkungen."
       }
     ],
     "faq": [
@@ -373,37 +373,37 @@
       },
       {
         "q": "Hat Betano eine Lizenz?",
-        "a": "Ja. Betano ist in mehreren regulierten Märkten lizenziert. Prüfe bei der zuständigen Glücksspielbehörde, ob Betano dort, wo du lebst, eine Lizenz besitzt."
+        "a": "Betano ist in mehreren regulierten Märkten lizenziert. In Österreich wird Sportwetten jedoch von den Bundesländern geregelt. Prüfe daher bei der zuständigen Landesbehörde, ob Betano in deinem Bundesland eine Lizenz besitzt, und nutze nur lizenzierte Anbieter. Die aktuellen Regeln findest du auch beim Bundesministerium für Finanzen."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets bei LeoVegas",
-    "metaTitle": "LeoVegas Surebets – Arbitrage-Wetten finden",
-    "description": "Finde Surebets bei LeoVegas in Echtzeit. BetTrackerAI vergleicht die Quoten von LeoVegas mit anderen Wettanbietern und zeigt dir, wo du dir einen garantierten Gewinn sichern kannst.",
-    "keyword": "leovegas surebets",
-    "intro": "LeoVegas ist vor allem für sein Casino-Angebot bekannt, bietet aber auch eine große Auswahl an Sportwetten. Der Wettanbieter nutzt die Kambi-Plattform und taucht regelmäßig in Arbitrage-Chancen auf.",
+    "title": "Surebets bei bwin",
+    "metaTitle": "bwin Surebets – Arbitrage-Wetten finden",
+    "description": "Finde Surebets bei bwin in Echtzeit. BetTrackerAI vergleicht die Quoten von bwin mit anderen Wettanbietern und zeigt dir, wo du dir einen garantierten Gewinn sichern kannst.",
+    "keyword": "bwin surebets",
+    "intro": "bwin ist einer der bekanntesten Anbieter für Sportwetten in Österreich und bietet eine große Auswahl an Sportarten und Wettmärkten. Der Wettanbieter taucht regelmäßig in Arbitrage-Chancen auf.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Über LeoVegas"
+        "text": "Über bwin"
       },
       {
         "type": "p",
-        "text": "LeoVegas ist ein lizenzierter Wettanbieter mit einer benutzerfreundlichen App, über die sich Wetten schnell platzieren lassen. Das ist bei Surebets wichtig, denn Quoten können sich innerhalb von Sekunden ändern. Prüfe vor der Kontoeröffnung, ob LeoVegas in Österreich lizenziert und verfügbar ist."
+        "text": "bwin ist ein lizenzierter Wettanbieter mit einer benutzerfreundlichen App, über die sich Wetten schnell platzieren lassen. Das ist bei Surebets wichtig, denn Quoten können sich innerhalb von Sekunden ändern. Prüfe vor der Kontoeröffnung, ob bwin in deinem Bundesland lizenziert und verfügbar ist."
       },
       {
         "type": "h2",
-        "text": "So findest du Surebets mit LeoVegas"
+        "text": "So findest du Surebets mit bwin"
       },
       {
         "type": "p",
-        "text": "Eine Surebet mit LeoVegas entsteht, wenn LeoVegas auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die jeweiligen Gegenausgänge. BetTrackerAI überwacht die Quoten von LeoVegas laufend und vergleicht sie mit Wettanbietern, die auf dem österreichischen Markt tätig sind."
+        "text": "Eine Surebet mit bwin entsteht, wenn bwin auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die jeweiligen Gegenausgänge. BetTrackerAI überwacht die Quoten von bwin laufend und vergleicht sie mit in Österreich lizenzierten Wettanbietern wie tipp3, Admiral, Interwetten oder Tipico."
       },
       {
         "type": "ul",
         "items": [
-          "Wähle über den Filter auf der Surebets-Seite LeoVegas und deine anderen Wettanbieter aus.",
+          "Wähle über den Filter auf der Surebets-Seite bwin und deine anderen Wettanbieter aus.",
           "Sortiere nach Gewinn und wähle eine Surebet mit stabilen Quoten.",
           "Nutze den Rechner, um deinen Einsatz aufzuteilen und die Beträge zu runden.",
           "Platziere zuerst die Wette beim Wettanbieter mit den volatilsten Quoten."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf LeoVegas. So bleibt dein Konto länger aktiv und das Risiko von Limitierungen sinkt."
+        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf bwin. So bleibt dein Konto länger aktiv und das Risiko von Limitierungen sinkt."
       }
     ],
     "faq": [
       {
-        "q": "Kann man bei LeoVegas Surebets platzieren?",
-        "a": "Ja, Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann LeoVegas aber gemäß seinen Geschäftsbedingungen Konten einschränken, wenn Wettmuster erkannt werden, mit denen laufend ein Gewinn garantiert wird."
+        "q": "Kann man bei bwin Surebets platzieren?",
+        "a": "Ja, Arbitrage-Wetten sind grundsätzlich nicht verboten. Wie alle Wettanbieter kann bwin aber gemäß seinen Geschäftsbedingungen Konten einschränken, wenn Wettmuster erkannt werden, mit denen laufend ein Gewinn garantiert wird. Prüfe die aktuellen Bedingungen und die geltenden Regeln in deinem Bundesland."
       },
       {
-        "q": "Eignet sich LeoVegas für Surebets?",
-        "a": "LeoVegas ist ein guter ergänzender Wettanbieter, vor allem in Kombination mit Anbietern außerhalb der Kambi-Plattform, da sich dadurch die Zahl der verfügbaren Arbitrage-Chancen erhöht."
+        "q": "Eignet sich bwin für Surebets?",
+        "a": "bwin ist ein guter Wettanbieter für Surebets, vor allem in Kombination mit anderen in Österreich lizenzierten Anbietern wie tipp3, Admiral oder Interwetten, da sich dadurch die Zahl der verfügbaren Arbitrage-Chancen erhöht."
       }
     ]
   }

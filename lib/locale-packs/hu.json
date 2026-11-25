@@ -625,7 +625,7 @@
     "findOnSport": "Találj surebeteket a kedvenc sportágadban",
     "surebetsAtBookmakers": "Surebetek a fogadóirodáknál",
     "guideIndexTitle": "Surebet és arbitrázsfogadás útmutatók – BetTrackerAI",
-    "guideIndexDescription": "Ismerd meg a surebeteket az alapoktól: mik ezek, hogyan számold ki a tétjeidet, milyen a dániai szabályozás és adózás, és hogyan kerüld el a korlátozást.",
+    "guideIndexDescription": "Ismerd meg a surebeteket az alapoktól: mik ezek, hogyan számold ki a tétjeidet, milyen a magyarországi szabályozás és adózás, és mit érdemes tudni a korlátozásról.",
     "guideIndexH1": "Minden, amit a surebetekről tudni érdemes",
     "guideIndexLead": "Rövid, gyakorlatias útmutatók magyar fogadóknak. Az első kalkulációtól a számláid nyitva tartásáig.",
     "guideIndexName": "Surebet útmutatók",
@@ -700,7 +700,7 @@
       },
       {
         "q": "Mely fogadóirodákat hasonlítjátok össze?",
-        "a": "Dán és nemzetközi fogadóirodák szorzóit hasonlítjuk össze, köztük a Danske Spil, bet365, Unibet, LeoVegas, Betano és Pinnacle kínálatát."
+        "a": "A magyar piacon a Tippmix (Szerencsejáték Zrt.) engedélyezett kínálatának szorzóit követjük. Mivel az online sportfogadás gyakorlatilag állami monopólium, a szabályozott magyar fogadóirodák között surebet nem lehetséges."
       },
       {
         "q": "Hogyan értesülök az új surebetekről?",

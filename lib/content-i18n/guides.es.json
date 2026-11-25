@@ -1,14 +1,14 @@
 {
   "matched-betting": {
-    "title": "Apuestas combinadas: cómo sacar partido a los bonos de bienvenida",
-    "metaTitle": "Apuestas combinadas – cómo aprovechar los bonos de casas de apuestas",
-    "description": "Apuestas combinadas explicadas: cómo usar bonos de bienvenida y apuestas gratis en casas de apuestas con licencia para asegurar un beneficio, y en qué se diferencian de las surebets.",
-    "keyword": "apuestas combinadas",
-    "intro": "Las apuestas combinadas son una técnica para convertir los bonos y apuestas gratis de las casas de apuestas en dinero real. Al apostar a favor y en contra del mismo evento, cubres todos los resultados posibles y el desenlace deja de importar: lo que queda es un beneficio garantizado gracias al bono.",
+    "title": "Matched betting: cómo sacar partido a los bonos de bienvenida",
+    "metaTitle": "Matched betting – cómo aprovechar los bonos de casas de apuestas",
+    "description": "Matched betting explicado: cómo usar bonos de bienvenida y apuestas gratis en casas de apuestas con licencia de la DGOJ para asegurar un beneficio, y en qué se diferencia de las surebets.",
+    "keyword": "matched betting",
+    "intro": "El matched betting es una técnica para convertir los bonos y apuestas gratis de las casas de apuestas en dinero real. Al apostar a favor y en contra del mismo evento, cubres todos los resultados posibles y el desenlace deja de importar: lo que queda es un beneficio garantizado gracias al bono.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Cómo funcionan las apuestas combinadas"
+        "text": "Cómo funciona el matched betting"
       },
       {
         "type": "p",
@@ -20,19 +20,19 @@
       },
       {
         "type": "p",
-        "text": "Los bonos de bienvenida tienen condiciones distintas según la casa de apuestas y el país desde el que apuestas. En algunos mercados regulados se limitan los importes de los bonos y los requisitos de apuesta para proteger al consumidor. Lee siempre los términos y condiciones específicos antes de aceptar cualquier oferta."
+        "text": "Los bonos de bienvenida tienen condiciones distintas según la casa de apuestas, como Codere, bet365, Sportium, bwin, Luckia, Retabet, Kirolbet o William Hill. En mercados regulados como el español pueden limitarse los importes de los bonos y los requisitos de apuesta para proteger al consumidor. Lee siempre los términos y condiciones específicos antes de aceptar cualquier oferta."
       },
       {
         "type": "ul",
         "items": [
-          "Comprueba las cuotas mínimas necesarias para desbloquear el bono: muchas casas de apuestas exigen un mínimo de 1.80 o superior.",
+          "Comprueba las cuotas mínimas necesarias para desbloquear el bono: muchas casas de apuestas exigen un mínimo de 1,80 o superior.",
           "Fíjate en el plazo de caducidad para que tu bono o apuesta gratis no expire sin usar.",
           "Considera usar surebets (apuestas de arbitraje) para cumplir los requisitos de facturación con el mínimo riesgo posible."
         ]
       },
       {
         "type": "h2",
-        "text": "Combinar apuestas combinadas con surebets"
+        "text": "Combinar matched betting con surebets"
       },
       {
         "type": "p",
@@ -41,23 +41,23 @@
     ],
     "faq": [
       {
-        "q": "¿Son legales las apuestas combinadas?",
-        "a": "Sí. Aprovechar los bonos dentro de los términos publicados por la casa de apuestas es perfectamente legal. No obstante, las casas de apuestas se reservan el derecho de retirar ofertas o limitar cuentas si consideran que no apuestas conforme al espíritu de sus promociones o si incumples sus condiciones."
+        "q": "¿Es legal el matched betting?",
+        "a": "Sí. Aprovechar los bonos dentro de los términos publicados por la casa de apuestas es perfectamente legal. No obstante, las casas de apuestas se reservan el derecho de retirar ofertas o limitar cuentas si consideran que no apuestas conforme al espíritu de sus promociones o si incumples sus condiciones. Recuerda además que las ganancias netas del juego tributan como renta en España, así que consulta la normativa fiscal vigente."
       },
       {
         "q": "¿Cuánto valen habitualmente los bonos de bienvenida?",
-        "a": "El valor de los bonos y los requisitos de apuesta varían según la casa de apuestas y la jurisdicción. En algunos mercados regulados, las ofertas de bienvenida pueden estar limitadas, por ejemplo a €1.000 o €1.000 con un rollover máximo de diez veces el importe del bono. Consulta siempre las condiciones vigentes en la casa de apuestas que elijas y verifica que dispone de una licencia válida en tu país."
+        "a": "El valor de los bonos y los requisitos de apuesta varían según la casa de apuestas. En España, las ofertas de bienvenida están sujetas a la normativa de la DGOJ y pueden tener límites de importe y de rollover. Consulta siempre las condiciones vigentes en la casa de apuestas que elijas y verifica que dispone de una licencia válida de la DGOJ (dominio .es)."
       }
     ],
     "category": "Estrategia",
     "ctaLabel": "Ver bonos actuales"
   },
   "er-surebets-lovligt": {
-    "title": "¿Son legales las surebets? Normativa y consideraciones fiscales",
-    "metaTitle": "¿Son legales las surebets? Normativa, impuestos y condiciones",
-    "description": "¿Es legal hacer surebets y hay que tributar por las ganancias? Te explicamos la normativa y qué pueden hacer las casas de apuestas ante el arbitraje.",
+    "title": "¿Son legales las surebets en España? Normativa y consideraciones fiscales",
+    "metaTitle": "¿Son legales las surebets en España? Normativa, impuestos y condiciones",
+    "description": "¿Es legal hacer surebets en España y hay que tributar por las ganancias? Te explicamos la normativa de la DGOJ y qué pueden hacer las casas de apuestas ante el arbitraje.",
     "keyword": "surebets legales",
-    "intro": "La respuesta corta es sí. Las surebets son legales en la mayoría de jurisdicciones. Simplemente estás realizando apuestas ordinarias en casas de apuestas con licencia y comparando cuotas para encontrar el mejor valor; nada en este proceso es ilegal.",
+    "intro": "La respuesta corta es sí. Las surebets son legales en España. Simplemente estás realizando apuestas ordinarias en casas de apuestas con licencia de la Dirección General de Ordenación del Juego (DGOJ) y comparando cuotas para encontrar el mejor valor; nada en este proceso es ilegal.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "El tratamiento fiscal de las ganancias de apuestas varía según el país. En muchos mercados regulados, las ganancias obtenidas en operadores con licencia del regulador nacional del juego están exentas de impuestos para el jugador. Si utilizas operadores extranjeros o sin licencia, tus ganancias podrían estar sujetas a tributación. Consulta la normativa fiscal de tu país o contacta con la autoridad tributaria competente si tienes dudas sobre tu situación."
+        "text": "En España, las ganancias netas del juego se consideran renta sujeta a tributación. Esto es así tanto si juegas en operadores con licencia de la DGOJ como en cualquier otro. Las normas fiscales pueden cambiar, así que consulta la normativa vigente en la Agencia Tributaria o con un asesor fiscal si tienes dudas sobre tu situación."
       },
       {
         "type": "tip",
-        "text": "Apuesta solo en casas de apuestas con licencia de tu regulador nacional. Esto suele ofrecer ventajas fiscales y protección al consumidor por parte de tu autoridad del juego."
+        "text": "Apuesta solo en casas de apuestas con licencia de la DGOJ (dominios .es), como Codere, bet365, Sportium, bwin, Luckia, Retabet, Kirolbet o William Hill. Así cuentas con la protección al consumidor y la supervisión de la autoridad del juego."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Incluso con las surebets, es importante mantener el control sobre tus apuestas. Establece límites de depósito y utiliza el registro de autoexclusión de tu país si necesitas un descanso. Si necesitas ayuda, contacta con una línea de atención al jugador reconocida en tu región."
+        "text": "Incluso con las surebets, es importante mantener el control sobre tus apuestas. Establece límites de depósito y, si necesitas un descanso, inscríbete en el Registro General de Interdicciones de Acceso al Juego (RGIAJ), el registro nacional de autoexclusión. Si necesitas ayuda, consulta jugarbien.es."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "¿Tengo que pagar impuestos por las ganancias de las surebets?",
-        "a": "Depende de tu país. En muchos mercados regulados, las ganancias obtenidas en operadores con licencia están exentas de impuestos para el jugador. Consulta la normativa fiscal donde residas."
+        "a": "En España, las ganancias netas del juego se consideran renta sujeta a tributación, también las obtenidas en operadores con licencia. Consulta la normativa fiscal vigente o a un asesor fiscal."
       }
     ],
     "category": "Normativa",
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**Batir la línea de cierre:** la señal más clara. Si tus cuotas son sistemáticamente mejores que el precio final, te marcarán.",
-          "**Importes irregulares:** €463,27 parece una calculadora. €460 parece una persona.",
+          "**Importes irregulares:** 463,27 € parece una calculadora. 460 € parece una persona.",
           "**Mercados de nicho:** córneres en la segunda división de una liga menor llaman la atención.",
           "**Solo retirar dinero:** retiradas frecuentes sin bonos ni apuestas habituales tienen un perfil claramente profesional."
         ]
@@ -142,27 +142,27 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: importes redondeados, apuesta total €1.000",
+        "title": "Ejemplo: importes redondeados, apuesta total 1.000 €",
         "rows": [
           [
             "División exacta a cuotas 2,10 / 2,00",
-            "€487,80 / €512,20"
+            "487,80 € / 512,20 €"
           ],
           [
             "División redondeada",
-            "€490 / €510"
+            "490 € / 510 €"
           ],
           [
             "Beneficio si gana A (2,10)",
-            "€1.029 − €1.000 = €29,00"
+            "1.029 € − 1.000 € = 29,00 €"
           ],
           [
             "Beneficio si gana B (2,00)",
-            "€1.020 − €1.000 = €20,00"
+            "1.020 € − 1.000 € = 20,00 €"
           ],
           [
             "División exacta para comparar",
-            "aprox. €24,39 en cualquier caso"
+            "aprox. 24,39 € en cualquier caso"
           ]
         ],
         "note": "Los importes redondeados siguen garantizando beneficio en ambos resultados y resultan mucho más naturales a ojos de la casa de apuestas."
@@ -180,12 +180,12 @@
         "items": [
           "**Casas de apuestas blandas:** la fuente de la mayoría de las surebets, pero restringen rápido. Úsalas con cuidado.",
           "**Casas de apuestas sharp:** márgenes más bajos y límites altos. Ideales para la segunda pata del arbitraje.",
-          "**Exchanges de apuestas:** apuestas contra otros usuarios, por lo que no te restringen por ganar. La comisión reduce ligeramente el beneficio."
+          "**Exchanges de apuestas:** apuestas contra otros usuarios, por lo que no te restringen por ganar. La comisión reduce ligeramente el beneficio. Comprueba siempre que el operador cuente con licencia de la DGOJ."
         ]
       },
       {
         "type": "p",
-        "text": "Lee el resumen completo de las [mejores casas de apuestas para surebets](/es/guias/mejores-casas-de-apuestas-surebets). Utiliza siempre casas de apuestas con licencia en tu país."
+        "text": "Lee el resumen completo de las [mejores casas de apuestas para surebets](/es/guias/mejores-casas-de-apuestas-surebets). Utiliza siempre casas de apuestas con licencia de la DGOJ (dominios .es), como Codere, bet365, Sportium, bwin, Luckia, Retabet, Kirolbet o William Hill."
       },
       {
         "type": "h2",
@@ -277,7 +277,7 @@
       },
       {
         "type": "p",
-        "text": "En los mercados 1X2 de fútbol y hockey sobre hielo, un tercer resultado entra en la misma fórmula. Hacerlo a mano resulta tedioso, y es precisamente aquí donde una calculadora ahorra más tiempo."
+        "text": "En los mercados 1X2 de fútbol y balonmano, un tercer resultado entra en la misma fórmula. Hacerlo a mano resulta tedioso, y es precisamente aquí donde una calculadora ahorra más tiempo."
       },
       {
         "type": "example",
@@ -372,15 +372,15 @@
       },
       {
         "type": "example",
-        "title": "Apuesta de €200 a una cuota de 2,50",
+        "title": "Apuesta de 200 € a una cuota de 2,50",
         "rows": [
           [
             "Retorno",
-            "€200 × 2,50 = €500"
+            "200 € × 2,50 = 500 €"
           ],
           [
             "Beneficio",
-            "€500 − €200 = €300"
+            "500 € − 200 € = 300 €"
           ]
         ]
       },
@@ -446,7 +446,7 @@
       },
       {
         "type": "p",
-        "text": "Una apuesta de valor es aquella en la que la cuota ofrecida es superior a la probabilidad real del evento. Si un partido es genuinamente 50/50 y una casa de apuestas ofrece una cuota de 2.20, eso es una apuesta de valor. Solo apuestas a un resultado y puedes perder apuestas individuales, pero a largo plazo la ventaja genera beneficio."
+        "text": "Una apuesta de valor es aquella en la que la cuota ofrecida es superior a la probabilidad real del evento. Si un partido es genuinamente 50/50 y una casa de apuestas ofrece una cuota de 2,20, eso es una apuesta de valor. Solo apuestas a un resultado y puedes perder apuestas individuales, pero a largo plazo la ventaja genera beneficio."
       },
       {
         "type": "h2",
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Con licencia del organismo regulador de juego de tu país, para estar protegido y poder verificar el tratamiento fiscal de tus ganancias.",
+          "Con licencia de la Dirección General de Ordenación del Juego (DGOJ) y dominio .es, para estar protegido y poder verificar el tratamiento fiscal de tus ganancias.",
           "Depósitos y retiradas rápidas, para mover el dinero donde lo necesitas.",
           "Amplia variedad de deportes y mercados, especialmente tenis, fútbol y baloncesto.",
           "Cuotas competitivas y margen bajo en los mercados más populares.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Empieza con entre cinco y ocho casas de apuestas con licencia repartidas entre diferentes plataformas. Esto te da un buen abanico de oportunidades sin tener que gestionar demasiados saldos a la vez. Una vez que tengas la rutina controlada, puedes ir ampliando con más cuentas."
+        "text": "Empieza con entre cinco y ocho casas de apuestas con licencia de la DGOJ repartidas entre diferentes plataformas. Esto te da un buen abanico de oportunidades sin tener que gestionar demasiados saldos a la vez. Una vez que tengas la rutina controlada, puedes ir ampliando con más cuentas."
       },
       {
         "type": "tip",
@@ -561,38 +561,38 @@
     "faq": [
       {
         "q": "¿Cuántas casas de apuestas necesito para hacer surebets?",
-        "a": "Un buen punto de partida son entre cinco y ocho casas de apuestas reguladas. Cuantas más plataformas de cuotas distintas cubras, más surebets tendrás a tu disposición."
+        "a": "Un buen punto de partida son entre cinco y ocho casas de apuestas con licencia de la DGOJ. Cuantas más plataformas de cuotas distintas cubras, más surebets tendrás a tu disposición."
       },
       {
         "q": "¿Puedo usar casas de apuestas sin licencia para el arbitraje?",
-        "a": "No es recomendable. Las casas sin licencia en tu jurisdicción pueden estar bloqueadas, y las ganancias obtenidas en ellas podrían tener un tratamiento fiscal diferente o carecer de protección regulatoria. Consulta siempre la normativa vigente en tu lugar de residencia."
+        "a": "No es recomendable. En España solo pueden ofrecer apuestas los operadores con licencia de la DGOJ (dominios .es). Las casas sin licencia pueden estar bloqueadas y no cuentan con protección regulatoria. Además, las ganancias netas del juego tributan como renta en España, así que consulta siempre la normativa fiscal vigente."
       }
     ],
     "category": "Estrategia",
     "ctaLabel": "Ver surebets en tus casas de apuestas"
   },
   "skat-paa-spillegevinster": {
-    "title": "Impuestos sobre ganancias de apuestas – guía internacional",
-    "metaTitle": "Impuestos en Apuestas – Lo Que Debes Saber",
-    "description": "¿Hay que pagar impuestos por ganancias de apuestas y surebets? Descubre cómo funcionan las normas fiscales con casas licenciadas y offshore, y qué documentar.",
+    "title": "Impuestos sobre ganancias de apuestas en España – guía",
+    "metaTitle": "Impuestos en Apuestas en España – Lo Que Debes Saber",
+    "description": "¿Hay que pagar impuestos por ganancias de apuestas y surebets en España? Descubre cómo funcionan las normas fiscales con casas con licencia de la DGOJ y qué documentar.",
     "keyword": "impuestos ganancias apuestas",
-    "intro": "En muchos mercados regulados, la respuesta es clara: las ganancias obtenidas en casas de apuestas con licencia están exentas de impuestos para el jugador. Es el operador quien tributa al Estado, no tú. Pero las normas dependen de dónde vives y dónde apuestas.",
+    "intro": "En España, las ganancias netas del juego se consideran renta sujeta a tributación, también las obtenidas en casas de apuestas con licencia de la DGOJ. Que el operador pague sus propios impuestos no significa que tú quedes exento. Las normas pueden cambiar, así que consulta siempre la normativa vigente.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Casas de apuestas con licencia: generalmente exentas de impuestos"
+        "text": "Casas de apuestas con licencia de la DGOJ: las ganancias netas tributan"
       },
       {
         "type": "p",
-        "text": "Cuando apuestas con un operador autorizado por el regulador de juego de tu país, normalmente es ese operador quien paga los impuestos sobre sus ingresos. Por ello, tus ganancias suelen estar exentas de tributación y, en la mayoría de los casos, no es necesario declararlas ante la autoridad fiscal. Consulta siempre la normativa vigente en tu lugar de residencia."
+        "text": "En España solo pueden ofrecer apuestas los operadores con licencia de la Dirección General de Ordenación del Juego (DGOJ), con dominio .es, como Codere, bet365, Sportium, bwin, Luckia, Retabet, Kirolbet o William Hill. Apostar en una casa autorizada es la opción segura, pero tus ganancias netas siguen considerándose renta sujeta a tributación. Consulta siempre la normativa vigente o a un asesor fiscal cualificado para saber cómo declararlas."
       },
       {
         "type": "h2",
-        "text": "Casas de apuestas offshore sin licencia local"
+        "text": "Casas de apuestas sin licencia en España"
       },
       {
         "type": "p",
-        "text": "Si apuestas con operadores que no disponen de licencia en tu jurisdicción, las ganancias podrían estar sujetas a impuestos. Las normas dependen de factores como si el operador cuenta con licencia en otro país y tu propia residencia fiscal. Esta es una razón más para apostar con casas reguladas."
+        "text": "Los operadores sin licencia de la DGOJ no están autorizados a ofrecer apuestas en España, y no te recomendamos usarlos: no tienes las garantías de protección del jugador ni acceso a herramientas como la autoexclusión del RGIAJ. Además, las obligaciones fiscales sobre tus ganancias no desaparecen. Esta es una razón más para apostar solo con casas reguladas."
       },
       {
         "type": "h2",
@@ -600,11 +600,11 @@
       },
       {
         "type": "p",
-        "text": "Sí. A efectos fiscales, una surebet no es más que dos o tres apuestas ordinarias. Las ganancias obtenidas en casas con licencia están generalmente exentas de impuestos, ya sea mediante surebets, value bets o apuestas convencionales. Los mismos principios se aplican en todos los casos."
+        "text": "Sí. A efectos fiscales, una surebet no es más que dos o tres apuestas ordinarias. Las ganancias netas obtenidas en casas con licencia se tratan igual, ya sea mediante surebets, value bets o apuestas convencionales. Los mismos principios se aplican en todos los casos; consulta la normativa vigente para saber cómo declararlas."
       },
       {
         "type": "tip",
-        "text": "Lleva un registro de tus apuestas. Así podrás justificar fácilmente el origen del dinero si tu banco te lo solicita."
+        "text": "Lleva un registro de tus apuestas. Así podrás calcular tus ganancias netas, tenerlas a mano para tu declaración y justificar fácilmente el origen del dinero si tu banco te lo solicita."
       },
       {
         "type": "h2",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Si las apuestas constituyen tu actividad principal a una escala considerable, es posible que se apliquen normas distintas en determinadas jurisdicciones. Si tienes dudas sobre tu situación particular, consulta con la autoridad tributaria de tu país o con un asesor fiscal cualificado."
+        "text": "Si las apuestas constituyen tu actividad principal a una escala considerable, es posible que se apliquen normas distintas a tu caso. Si tienes dudas sobre tu situación particular, consulta con la autoridad tributaria o con un asesor fiscal cualificado. Y recuerda que si el juego deja de ser un entretenimiento, puedes encontrar ayuda en jugarbien.es."
       }
     ],
     "faq": [
       {
         "q": "¿Tengo que pagar impuestos por las ganancias obtenidas en casas con licencia?",
-        "a": "En la mayoría de los mercados regulados, no. Las ganancias procedentes de operadores con licencia local suelen estar exentas de impuestos para el jugador. Consulta la normativa fiscal aplicable en tu lugar de residencia."
+        "a": "En España, las ganancias netas del juego se consideran renta sujeta a tributación, incluso si proceden de operadores con licencia de la DGOJ. Consulta la normativa fiscal vigente o a un asesor fiscal para saber cómo declararlas."
       },
       {
-        "q": "¿Cómo puedo saber si una casa de apuestas tiene licencia en mi país?",
-        "a": "El regulador de juego de tu país publica en su web un listado de operadores autorizados, y las casas con licencia suelen mostrar el logotipo del regulador en su sitio."
+        "q": "¿Cómo puedo saber si una casa de apuestas tiene licencia en España?",
+        "a": "La DGOJ publica en su web un listado de operadores autorizados. Las casas con licencia operan en dominios .es y suelen mostrar en su sitio la información de su autorización y los enlaces de juego responsable."
       }
     ],
     "category": "Normativa",
@@ -795,15 +795,15 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: partido de tenis a dos resultados, apuesta total €1.000",
+        "title": "Ejemplo: partido de tenis a dos resultados, apuesta total 1.000 €",
         "rows": [
           [
             "Jugador A en casa 1, cuota 2,08",
-            "Apuesta €492,68"
+            "Apuesta 492,68 €"
           ],
           [
             "Jugador B en casa 2, cuota 2,02",
-            "Apuesta €507,32"
+            "Apuesta 507,32 €"
           ],
           [
             "1/2,08 + 1/2,02",
@@ -811,14 +811,14 @@
           ],
           [
             "Pago gane quien gane",
-            "aprox. €1.024,78"
+            "aprox. 1.024,78 €"
           ],
           [
             "Beneficio garantizado",
-            "aprox. €24,78 (2,5%)"
+            "aprox. 24,78 € (2,5%)"
           ]
         ],
-        "note": "El total es inferior a 1, por lo que obtienes aproximadamente €24,78 independientemente de quién gane el partido."
+        "note": "El total es inferior a 1, por lo que obtienes aproximadamente 24,78 € independientemente de quién gane el partido."
       },
       {
         "type": "h2",
@@ -830,19 +830,19 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: partido de liga, apuesta total €2.000",
+        "title": "Ejemplo: partido de liga, apuesta total 2.000 €",
         "rows": [
           [
             "Victoria local, cuota 2,15",
-            "Apuesta €942,69"
+            "Apuesta 942,69 €"
           ],
           [
             "Empate, cuota 3,60",
-            "Apuesta €562,99"
+            "Apuesta 562,99 €"
           ],
           [
             "Victoria visitante, cuota 4,10",
-            "Apuesta €494,33"
+            "Apuesta 494,33 €"
           ],
           [
             "Suma de cuotas inversas",
@@ -850,11 +850,11 @@
           ],
           [
             "Pago en cualquier resultado",
-            "aprox. €2.026,75"
+            "aprox. 2.026,75 €"
           ],
           [
             "Beneficio garantizado",
-            "aprox. €26,75 (1,3%)"
+            "aprox. 26,75 € (1,3%)"
           ]
         ]
       },
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Abre cuentas** en al menos dos casas de apuestas con licencia, idealmente más, y deposita fondos con antelación.",
+          "**1. Abre cuentas** en al menos dos casas de apuestas con licencia de la DGOJ (dominios .es), como Codere, bet365, Sportium, bwin, Luckia, Retabet, Kirolbet o William Hill, y deposita fondos con antelación.",
           "**2. Encuentra una surebet** en la que la suma de las cuotas inversas sea inferior a 1,00.",
           "**3. Calcula las apuestas** de modo que el pago sea igual en todos los resultados.",
           "**4. Coloca ambas apuestas rápidamente,** empezando por la cuota con más probabilidades de moverse.",
@@ -900,11 +900,11 @@
     "faq": [
       {
         "q": "¿Es legal el arbitraje en apuestas?",
-        "a": "Sí, apostar en todos los resultados de un evento no es ilegal en la mayoría de los países. Las casas de apuestas pueden igualmente limitar tu cuenta. Consulta [¿son legales las surebets?](/es/guias/son-legales-las-surebets)"
+        "a": "Sí, apostar en todos los resultados de un evento no es ilegal en España, siempre que lo hagas en casas de apuestas con licencia de la DGOJ. Las casas de apuestas pueden igualmente limitar tu cuenta. Consulta [¿son legales las surebets?](/es/guias/son-legales-las-surebets)"
       },
       {
         "q": "¿Cuánto se puede ganar con las surebets?",
-        "a": "Una surebet típica devuelve entre el 1 y el 3% de la apuesta total. Con €1.000 por surebet, 40 surebets al mes y una media del 1,5%, eso supone aproximadamente €600 al mes."
+        "a": "Una surebet típica devuelve entre el 1 y el 3% de la apuesta total. Con 1.000 € por surebet, 40 surebets al mes y una media del 1,5%, eso supone aproximadamente 600 € al mes. Recuerda que las ganancias netas de juego son renta sujeta a tributación en España, así que consulta las normas fiscales vigentes."
       },
       {
         "q": "¿Cuántas casas de apuestas necesito?",
@@ -951,15 +951,15 @@
         "rows": [
           [
             "Jugador A en casa de apuestas 1",
-            "cuota 2.10"
+            "cuota 2,10"
           ],
           [
             "Jugador B en casa de apuestas 2",
-            "cuota 2.05"
+            "cuota 2,05"
           ],
           [
-            "1/2.10 + 1/2.05",
-            "0.476 + 0.488 = 0.964"
+            "1/2,10 + 1/2,05",
+            "0,476 + 0,488 = 0,964"
           ],
           [
             "Beneficio garantizado",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Debes dividir tu apuesta de modo que el pago sea el mismo sin importar quién gane. Con una apuesta total de 1.000 unidades en el ejemplo anterior, colocas aproximadamente 494 unidades en el jugador A y aproximadamente 506 unidades en el jugador B. Ambos resultados devuelven aproximadamente 1.037 unidades, lo que supone un beneficio de unas 37 unidades."
+        "text": "Debes dividir tu apuesta de modo que el pago sea el mismo sin importar quién gane. Con una apuesta total de 1.000 € en el ejemplo anterior, colocas aproximadamente 494 € en el jugador A y aproximadamente 506 € en el jugador B. Ambos resultados devuelven aproximadamente 1.037 €, lo que supone un beneficio de unos 37 €."
       },
       {
         "type": "tip",
@@ -1005,7 +1005,7 @@
       },
       {
         "q": "¿Cómo se encuentran las surebets?",
-        "a": "Puedes comparar cuotas manualmente, pero es un proceso lento. Un escáner de surebets como BetTrackerAI monitoriza las casas de apuestas que operan en tu mercado y muestra las oportunidades en cuanto surgen."
+        "a": "Puedes comparar cuotas manualmente, pero es un proceso lento. Un escáner de surebets como BetTrackerAI monitoriza las casas de apuestas con licencia de la DGOJ que operan en España y muestra las oportunidades en cuanto surgen."
       }
     ],
     "category": "Fundamentos",
@@ -1036,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: tres jugadores en un torneo, apuesta total €1.000",
+        "title": "Ejemplo: tres jugadores en un torneo, apuesta total 1.000 €",
         "rows": [
           [
             "Jugador A, cuota 3,00",
-            "apuesta aprox. €444"
+            "apuesta aprox. 444 €"
           ],
           [
             "Jugador B, cuota 4,00",
-            "apuesta aprox. €333"
+            "apuesta aprox. 333 €"
           ],
           [
             "Jugador C, cuota 6,00",
-            "apuesta aprox. €222"
+            "apuesta aprox. 222 €"
           ],
           [
             "S = 0,333 + 0,250 + 0,167",
@@ -1056,11 +1056,11 @@
           ],
           [
             "Si uno de los tres gana",
-            "pago aprox. €1.333, beneficio aprox. €333"
+            "pago aprox. 1.333 €, beneficio aprox. 333 €"
           ],
           [
             "Si ninguno de los tres gana",
-            "pérdida de €1.000"
+            "pérdida de 1.000 €"
           ]
         ],
         "note": "El beneficio solo se obtiene si uno de tus tres jugadores gana. Debes valorar por ti mismo qué probabilidad tiene eso de ocurrir."
@@ -1116,15 +1116,15 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: cuotas 1,95 y 2,20, apuesta total €1.000",
+        "title": "Ejemplo: cuotas 1,95 y 2,20, apuesta total 1.000 €",
         "rows": [
           [
             "Jugador A en casa 1, cuota 1,95",
-            "apuesta aprox. €530"
+            "apuesta aprox. 530 €"
           ],
           [
             "Jugador B en casa 2, cuota 2,20",
-            "apuesta aprox. €470"
+            "apuesta aprox. 470 €"
           ],
           [
             "1/1,95 + 1/2,20",
@@ -1132,11 +1132,11 @@
           ],
           [
             "Retorno independientemente del ganador",
-            "aprox. €1.034"
+            "aprox. 1.034 €"
           ],
           [
             "Beneficio",
-            "aprox. €34 (3,4%)"
+            "aprox. 34 € (3,4%)"
           ]
         ],
         "note": "La suma es inferior a 1, por lo que la combinación es una surebet."
@@ -1354,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Equipo local -0.25 con una apuesta de €100",
+        "title": "Equipo local -0.25 con una apuesta de 100 €",
         "rows": [
           [
             "El equipo local gana",
@@ -1362,7 +1362,7 @@
           ],
           [
             "Empate",
-            "€50 devueltos, €50 perdidos"
+            "50 € devueltos, 50 € perdidos"
           ],
           [
             "El equipo local pierde",
@@ -1445,22 +1445,22 @@
           ],
           [
             "Volumen total (todas las patas)",
-            "€24.000"
+            "24.000 €"
           ],
           [
             "Total recuperado",
-            "€24.720"
+            "24.720 €"
           ],
           [
             "Beneficio neto",
-            "€720"
+            "720 €"
           ],
           [
             "ROI",
-            "€720 / €24.000 = 3,0%"
+            "720 € / 24.000 € = 3,0 %"
           ]
         ],
-        "note": "Sin seguimiento solo ves cómo se mueve tu saldo. Con seguimiento ves que por cada €100 que mueves ganas €3."
+        "note": "Sin seguimiento solo ves cómo se mueve tu saldo. Con seguimiento ves que por cada 100 € que mueves ganas 3 €."
       },
       {
         "type": "h2",
@@ -1531,19 +1531,19 @@
         "rows": [
           [
             "Apuesta total",
-            "€40,000"
+            "40.000 €"
           ],
           [
             "Cobro total",
-            "€41,000"
+            "41.000 €"
           ],
           [
             "Beneficio",
-            "€1,000"
+            "1.000 €"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "1.000 / 40.000 × 100 = 2,5%"
           ]
         ],
         "note": "Has ganado 2,5 € por cada 100 € apostados."
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "¿Cómo calculo el ROI en apuestas?",
-        "a": "Divide tu beneficio entre la apuesta total y multiplica por 100. Si has apostado €10,000 y has ganado €300, tu ROI es del 3%."
+        "a": "Divide tu beneficio entre la apuesta total y multiplica por 100. Si has apostado 10.000 € y has ganado 300 €, tu ROI es del 3%."
       },
       {
         "q": "¿Cuál es la diferencia entre ROI y beneficio?",
@@ -1676,7 +1676,7 @@
       },
       {
         "q": "¿Ambas herramientas trabajan solo con casas de apuestas con licencia?",
-        "a": "Sí. Las dos plataformas se centran en casas de apuestas reguladas y con licencia oficial, lo que garantiza que apuestes de forma legal y con las protecciones al jugador correspondientes."
+        "a": "Sí. Las dos plataformas se centran en casas de apuestas reguladas y con licencia oficial, es decir, operadores con licencia de la DGOJ (dominios .es), lo que garantiza que apuestes de forma legal y con las protecciones al jugador correspondientes."
       },
       {
         "q": "¿Puedo probar BetTrackerAI gratis?",
@@ -1720,19 +1720,19 @@
         "rows": [
           [
             "Total depositado",
-            "€10,000"
+            "10.000 €"
           ],
           [
             "Total retirado",
-            "€3,000"
+            "3.000 €"
           ],
           [
             "Saldo actual en casas de apuestas",
-            "€7,800"
+            "7.800 €"
           ],
           [
             "Beneficio",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3.000 € + 7.800 € − 10.000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1756,7 @@
     "faq": [
       {
         "q": "¿Tengo que pagar impuestos por las ganancias de apuestas?",
-        "a": "El tratamiento fiscal de las ganancias del juego varía según el país. En algunos mercados regulados las ganancias obtenidas en casas con licencia están exentas de impuestos, mientras que en otros puede ser necesario declararlas. Consulta la normativa fiscal de tu lugar de residencia o habla con un asesor local."
+        "a": "En España, las ganancias netas del juego se consideran renta sujeta a tributación, también las obtenidas en casas de apuestas con licencia de la DGOJ. Consulta la normativa fiscal vigente o habla con un asesor fiscal para saber cómo declararlas en tu caso."
       },
       {
         "q": "¿Con qué frecuencia debo actualizar mi bet tracker?",
@@ -1785,15 +1785,15 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: partido de baloncesto a dos resultados (incl. prórroga), €1.000",
+        "title": "Ejemplo: partido de baloncesto a dos resultados (incl. prórroga), 1.000 €",
         "rows": [
           [
             "Equipo A en casa 1, cuota 1,95",
-            "Apuesta €520,88"
+            "Apuesta 520,88 €"
           ],
           [
             "Equipo B en casa 2, cuota 2,12",
-            "Apuesta €479,12"
+            "Apuesta 479,12 €"
           ],
           [
             "Suma de cuotas inversas",
@@ -1801,11 +1801,11 @@
           ],
           [
             "Pago gane quien gane",
-            "aprox. €1.015,72"
+            "aprox. 1.015,72 €"
           ],
           [
             "Beneficio garantizado",
-            "aprox. €15,72 (1,6 %)"
+            "aprox. 15,72 € (1,6 %)"
           ]
         ]
       },
@@ -1819,30 +1819,30 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: más de 2,5 goles apostado antes del partido por €500",
+        "title": "Ejemplo: más de 2,5 goles apostado antes del partido por 500 €",
         "rows": [
           [
             "Apuesta original: más de 2,5 goles, cuota 2,40",
-            "Apuesta €500, pago potencial €1.200"
+            "Apuesta 500 €, pago potencial 1.200 €"
           ],
           [
             "Tras un gol tempranero: menos de 2,5 goles, cuota 2,60",
-            "Apuesta €461,54"
+            "Apuesta 461,54 €"
           ],
           [
             "Total apostado",
-            "€961,54"
+            "961,54 €"
           ],
           [
             "Pago en cualquier resultado",
-            "€1.200"
+            "1.200 €"
           ],
           [
             "Beneficio asegurado",
-            "aprox. €238,46 (24,8 %)"
+            "aprox. 238,46 € (24,8 %)"
           ]
         ],
-        "note": "La fórmula: apuesta de cobertura = pago potencial ÷ nueva cuota. Aquí 1.200 ÷ 2,60 = €461,54."
+        "note": "La fórmula: apuesta de cobertura = pago potencial ÷ nueva cuota. Aquí 1.200 ÷ 2,60 = 461,54 €."
       },
       {
         "type": "h2",
@@ -1858,7 +1858,7 @@
         "rows": [
           [
             "Apuesta por surebet",
-            "€1.000"
+            "1.000 €"
           ],
           [
             "Beneficio medio",
@@ -1870,11 +1870,11 @@
           ],
           [
             "Resultado mensual esperado",
-            "aprox. €600"
+            "aprox. 600 €"
           ],
           [
-            "Misma configuración a €2.500 por surebet",
-            "aprox. €1.500"
+            "Misma configuración a 2.500 € por surebet",
+            "aprox. 1.500 €"
           ]
         ]
       },
@@ -1915,7 +1915,7 @@
       },
       {
         "q": "¿Cuánto dinero necesito para empezar?",
-        "a": "Puedes empezar con €200–500 repartidos entre varias casas de apuestas. Con apuestas pequeñas, eso sí, una surebet solo devuelve unos pocos euros."
+        "a": "Puedes empezar con 200–500 € repartidos entre varias casas de apuestas. Con apuestas pequeñas, eso sí, una surebet solo devuelve unos pocos euros."
       }
     ]
   },
@@ -1954,15 +1954,15 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: error de precio detectado por el escáner, apuesta total €1.000",
+        "title": "Ejemplo: error de precio detectado por el escáner, apuesta total 1.000 €",
         "rows": [
           [
             "Más de 2.5 goles en la casa 1, cuota 2.25",
-            "Apuesta €461,72"
+            "Apuesta 461,72 €"
           ],
           [
             "Menos de 2.5 goles en la casa 2, cuota 1.93",
-            "Apuesta €538,28"
+            "Apuesta 538,28 €"
           ],
           [
             "1/2.25 + 1/1.93",
@@ -1970,11 +1970,11 @@
           ],
           [
             "Pago en cualquier resultado",
-            "aprox. €1.038,88"
+            "aprox. 1.038,88 €"
           ],
           [
             "Beneficio garantizado",
-            "aprox. €38,88 (3,9%)"
+            "aprox. 38,88 € (3,9%)"
           ]
         ],
         "note": "La casa 1 no había reaccionado a una novedad sobre la alineación. El escáner detectó la diferencia en cuestión de segundos."
@@ -2065,54 +2065,54 @@
       },
       {
         "type": "example",
-        "title": "Ejemplo: tenis en directo tras un break, apuesta total €800",
+        "title": "Ejemplo: tenis en directo tras un break, apuesta total 800 €",
         "rows": [
           [
-            "Jugador A en casa 1, cuota 1.72",
-            "Apuesta €467.63"
+            "Jugador A en casa 1, cuota 1,72",
+            "Apuesta 467,63 €"
           ],
           [
-            "Jugador B en casa 2, cuota 2.42",
-            "Apuesta €332.37"
+            "Jugador B en casa 2, cuota 2,42",
+            "Apuesta 332,37 €"
           ],
           [
-            "1/1.72 + 1/2.42",
-            "0.581 + 0.413 = 0.995"
+            "1/1,72 + 1/2,42",
+            "0,581 + 0,413 = 0,995"
           ],
           [
             "Pago gane quien gane",
-            "aprox. €804.33"
+            "aprox. 804,33 €"
           ],
           [
             "Beneficio garantizado",
-            "aprox. €4.33 (0.5%)"
+            "aprox. 4,33 € (0,5 %)"
           ]
         ],
         "note": "Los márgenes en directo suelen ser menores que en prematch. Un mayor número de apuestas lo compensa, pero solo si la ejecución es rápida y precisa."
       },
       {
         "type": "example",
-        "title": "Ejemplo: más/menos goles tras un gol tempranero, apuesta total €1,000",
+        "title": "Ejemplo: más/menos goles tras un gol tempranero, apuesta total 1.000 €",
         "rows": [
           [
-            "Más de 3.5 goles en casa 1, cuota 2.30",
-            "Apuesta €451.07"
+            "Más de 3,5 goles en casa 1, cuota 2,30",
+            "Apuesta 451,07 €"
           ],
           [
-            "Menos de 3.5 goles en casa 2, cuota 1.89",
-            "Apuesta €548.93"
+            "Menos de 3,5 goles en casa 2, cuota 1,89",
+            "Apuesta 548,93 €"
           ],
           [
             "Suma de cuotas inversas",
-            "0.435 + 0.529 = 0.964"
+            "0,435 + 0,529 = 0,964"
           ],
           [
             "Pago en cualquier resultado",
-            "aprox. €1,037.47"
+            "aprox. 1.037,47 €"
           ],
           [
             "Beneficio garantizado",
-            "aprox. €37.47 (3.7%)"
+            "aprox. 37,47 € (3,7 %)"
           ]
         ]
       },
@@ -2193,23 +2193,23 @@
         "rows": [
           [
             "Probabilidad justa",
-            "50% (cuota justa 2.00)"
+            "50% (cuota justa 2,00)"
           ],
           [
             "Cuota ofrecida en casa soft",
-            "2.10"
+            "2,10"
           ],
           [
             "Valor esperado",
-            "0.50 × 2.10 − 1 = +5%"
+            "0,50 × 2,10 − 1 = +5%"
           ],
           [
-            "Apuesta de €50",
-            "Beneficio esperado €2.50 por apuesta"
+            "Apuesta de 50 €",
+            "Beneficio esperado 2,50 € por apuesta"
           ],
           [
-            "300 apuestas de €50 (€15,000 de volumen)",
-            "Beneficio esperado aprox. €750"
+            "300 apuestas de 50 € (15.000 € de volumen)",
+            "Beneficio esperado aprox. 750 €"
           ]
         ],
         "note": "El beneficio esperado es una media. Los resultados reales oscilan por encima y por debajo, especialmente con un número reducido de apuestas."
@@ -2228,11 +2228,11 @@
         "rows": [
           [
             "Cuotas sharp",
-            "1.95 / 1.95"
+            "1,95 / 1,95"
           ],
           [
             "Probabilidades implícitas",
-            "51.28% + 51.28% = 102.56%"
+            "51,28% + 51,28% = 102,56%"
           ],
           [
             "Probabilidad justa tras eliminar el margen",
@@ -2240,7 +2240,7 @@
           ],
           [
             "Cuotas justas",
-            "2.00 / 2.00"
+            "2,00 / 2,00"
           ]
         ]
       },
@@ -2385,7 +2385,7 @@
       {
         "type": "ul",
         "items": [
-          "**Cobertura de casas de apuestas:** la herramienta debe incluir las casas que realmente puedes utilizar.",
+          "**Cobertura de casas de apuestas:** la herramienta debe incluir las casas con licencia de la DGOJ que realmente puedes utilizar.",
           "**Frecuencia de actualización:** pocos segundos para apuestas prematch, más rápido para [surebets en directo](/es/guias/scanner-arbitrage-betting-en-vivo).",
           "**Filtros:** deporte, mercado, casa de apuestas y beneficio mínimo.",
           "**Seguimiento integrado:** las surebets realizadas desde el escáner deben registrarse automáticamente.",

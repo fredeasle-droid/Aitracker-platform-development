@@ -39,7 +39,7 @@
       },
       {
         "q": "A que horas se jogam normalmente os jogos da NBA?",
-        "a": "Os jogos da NBA disputam-se tipicamente ao final da tarde e à noite na América do Norte. Dependendo do seu fuso horário, muitas surebets podem surgir várias horas antes do início do jogo, dando-lhe tempo para colocar os dois lados da aposta de arbitragem."
+        "a": "Os jogos da NBA disputam-se tipicamente ao final da tarde e à noite na América do Norte, o que em Portugal corresponde normalmente à noite e à madrugada. Muitas surebets podem surgir várias horas antes do início do jogo, dando-lhe tempo para colocar os dois lados da aposta de arbitragem."
       }
     ]
   },
@@ -67,7 +67,7 @@
         "items": [
           "NHL: muitos jogos e limites máximos de aposta elevados.",
           "SHL e Liiga: populares na região nórdica e cotadas de forma diferente pelas casas de apostas.",
-          "Ligas domésticas: ligas menores onde as casas de apostas frequentemente divergem nas cotações."
+          "Ligas menores: ligas europeias de menor dimensão onde as casas de apostas frequentemente divergem nas cotações."
         ]
       },
       {
@@ -82,7 +82,7 @@
       },
       {
         "q": "Existem surebets em ligas de hóquei no gelo mais pequenas?",
-        "a": "Sim. As casas de apostas cotam frequentemente as ligas domésticas menores de forma diferente, pelo que surgem oportunidades de arbitragem com regularidade. Verifique se as casas de apostas estão devidamente licenciadas para operar no seu país antes de apostar."
+        "a": "Sim. As casas de apostas cotam frequentemente as ligas menores de forma diferente, pelo que surgem oportunidades de arbitragem com regularidade. Verifique se as casas de apostas estão licenciadas pelo SRIJ (domínios .pt), como a Betano, a Betclic ou a Solverde, antes de apostar."
       }
     ]
   },
@@ -147,7 +147,7 @@
     "blocks": [
       {
         "type": "h2",
-        "text": "Por que os esports geram lucros elevados"
+        "text": "Porque é que os esports geram lucros elevados"
       },
       {
         "type": "p",
@@ -177,7 +177,7 @@
       },
       {
         "q": "Quais as casas de apostas que oferecem esports?",
-        "a": "A maioria das principais casas de apostas licenciadas oferece esports, especialmente CS2 e League of Legends. Verifica a disponibilidade e a licença no teu país."
+        "a": "A maioria das principais casas de apostas licenciadas oferece esports, especialmente CS2 e League of Legends. Verifica a disponibilidade e se o operador tem licença do SRIJ (domínio .pt)."
       }
     ]
   },
@@ -234,107 +234,11 @@
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebets no Bet365",
-    "metaTitle": "Bet365 Surebets – Encontra Lucro Garantido Agora",
-    "description": "Encontra surebets no Bet365 em tempo real. O BetTrackerAI compara as odds do Bet365 com outros bookmakers e mostra-te onde garantir lucro certo.",
-    "keyword": "bet365 surebets",
-    "intro": "O Bet365 é um dos maiores bookmakers do mundo e oferece uma das mais vastas seleções de desportos e mercados. Isto torna o Bet365 um dos bookmakers mais frequentemente envolvidos em surebets.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Sobre o Bet365"
-      },
-      {
-        "type": "p",
-        "text": "O Bet365 é um bookmaker licenciado em múltiplas jurisdições e oferece odds num número muito elevado de jogos, incluindo ligas secundárias e mercados em direto. Esta amplitude significa que o Bet365 apresenta frequentemente odds que diferem do restante mercado."
-      },
-      {
-        "type": "h2",
-        "text": "Como encontrar surebets com o Bet365"
-      },
-      {
-        "type": "p",
-        "text": "Uma surebet com o Bet365 surge quando este tem odds mais altas num determinado resultado do que outros bookmakers têm nos resultados opostos. O BetTrackerAI monitoriza as odds do Bet365 de forma contínua e compara-as com o restante mercado."
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Seleciona o Bet365 e os teus outros bookmakers através do filtro na página de surebets.",
-          "Ordena por lucro e escolhe uma surebet com odds estáveis.",
-          "Usa a calculadora para distribuir o teu valor de aposta e arredondar o montante.",
-          "Coloca primeiro a aposta no bookmaker com as odds mais voláteis."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Distribui as tuas apostas por vários bookmakers para não usares apenas o Bet365. Isto prolonga a vida útil da tua conta."
-      }
-    ],
-    "faq": [
-      {
-        "q": "As apostas de arbitragem são permitidas no Bet365?",
-        "a": "As apostas de arbitragem são legais. No entanto, como todos os bookmakers, o Bet365 pode restringir contas ao abrigo dos seus termos e condições caso detete padrões de apostas que garantam lucro de forma consistente."
-      },
-      {
-        "q": "O Bet365 possui uma licença de jogo?",
-        "a": "Sim. O Bet365 detém licenças em vários mercados regulados em todo o mundo. Consulta as regras fiscais aplicáveis na tua jurisdição, uma vez que o tratamento dos ganhos varia consoante o país."
-      }
-    ]
-  },
-  "bookmaker/unibet": {
-    "title": "Surebets na Unibet",
-    "metaTitle": "Unibet Surebets – Encontra Apostas de Arbitragem",
-    "description": "Encontra surebets na Unibet em tempo real. O BetTrackerAI compara as odds da Unibet com outros bookmakers para garantires lucro através de apostas de arbitragem.",
-    "keyword": "unibet surebets",
-    "intro": "A Unibet é um dos bookmakers mais populares a nível mundial. A Unibet utiliza a plataforma de odds Kambi, pelo que as odds da Unibet são frequentemente semelhantes às de outros bookmakers que também operam com a Kambi.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Sobre a Unibet"
-      },
-      {
-        "type": "p",
-        "text": "A Unibet possui licenças em vários mercados regulados e oferece uma vasta gama de desportos. Como a Unibet partilha a sua plataforma de odds com vários outros bookmakers, as surebets surgem mais frequentemente entre a Unibet e bookmakers que operam em plataformas diferentes."
-      },
-      {
-        "type": "h2",
-        "text": "Como encontrar surebets com a Unibet"
-      },
-      {
-        "type": "p",
-        "text": "Uma surebet com a Unibet ocorre quando a Unibet oferece odds mais altas num determinado resultado do que outros bookmakers oferecem nos resultados opostos. O BetTrackerAI monitoriza as odds da Unibet de forma contínua e compara-as com o restante mercado."
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Seleciona a Unibet e os restantes bookmakers através do filtro na página de surebets.",
-          "Ordena por lucro e escolhe uma surebet com odds estáveis.",
-          "Usa a calculadora para dividir o teu valor de aposta e arredondar os montantes.",
-          "Coloca primeiro a aposta no bookmaker com as odds mais voláteis."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Distribui as tuas apostas por vários bookmakers e não uses apenas a Unibet. Isso prolongará a vida útil da tua conta e ajudará a evitar limitações."
-      }
-    ],
-    "faq": [
-      {
-        "q": "É legal fazer surebets na Unibet?",
-        "a": "Sim, as apostas de arbitragem são legais. No entanto, como todos os bookmakers, a Unibet pode limitar ou restringir contas ao abrigo dos seus termos e condições, caso estas apenas realizem apostas com lucro garantido."
-      },
-      {
-        "q": "Que bookmakers são semelhantes à Unibet?",
-        "a": "A Unibet utiliza a Kambi, que também fornece odds a vários outros bookmakers. Por isso, combina a Unibet com bookmakers em plataformas diferentes para encontrares mais surebets."
-      }
-    ]
-  },
-  "bookmaker/betano": {
     "title": "Surebets no Betano",
-    "metaTitle": "Betano surebets – encontra apostas de arbitragem no Betano",
-    "description": "Encontra surebets no Betano em tempo real. O BetTrackerAI compara as odds do Betano com outros operadores licenciados e mostra onde podes garantir lucro.",
+    "metaTitle": "Betano Surebets – Encontra Lucro Garantido Agora",
+    "description": "Encontra surebets no Betano em tempo real. O BetTrackerAI compara as odds do Betano com outros bookmakers licenciados em Portugal e mostra-te onde garantir lucro certo.",
     "keyword": "betano surebets",
-    "intro": "O Betano é um dos operadores mais recentes no mercado regulado e utiliza a sua própria plataforma de definição de odds. Isto significa que as odds do Betano divergem frequentemente do restante mercado, criando oportunidades de apostas de arbitragem.",
+    "intro": "O Betano é um dos bookmakers licenciados em Portugal e oferece uma vasta seleção de desportos e mercados. Isto torna o Betano um dos bookmakers frequentemente envolvidos em surebets.",
     "blocks": [
       {
         "type": "h2",
@@ -342,7 +246,103 @@
       },
       {
         "type": "p",
-        "text": "O Betano possui licença em várias jurisdições e oferece uma vasta gama de desportos. Como o Betano define as suas odds de forma independente, está frequentemente envolvido em surebets quando comparado com operadores mais estabelecidos."
+        "text": "O Betano é um bookmaker licenciado pelo SRIJ (Serviço de Regulação e Inspeção de Jogos) e oferece odds num número muito elevado de jogos, incluindo ligas secundárias e mercados em direto. Esta amplitude significa que o Betano apresenta frequentemente odds que diferem do restante mercado."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar surebets com o Betano"
+      },
+      {
+        "type": "p",
+        "text": "Uma surebet com o Betano surge quando este tem odds mais altas num determinado resultado do que outros bookmakers, como o Betclic, o Placard ou a Solverde, têm nos resultados opostos. O BetTrackerAI monitoriza as odds do Betano de forma contínua e compara-as com o restante mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Seleciona o Betano e os teus outros bookmakers através do filtro na página de surebets.",
+          "Ordena por lucro e escolhe uma surebet com odds estáveis.",
+          "Usa a calculadora para distribuir o teu valor de aposta e arredondar o montante.",
+          "Coloca primeiro a aposta no bookmaker com as odds mais voláteis."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Distribui as tuas apostas por vários bookmakers licenciados, como o Betclic, a bwin ou a Luckia, para não usares apenas o Betano. Isto prolonga a vida útil da tua conta."
+      }
+    ],
+    "faq": [
+      {
+        "q": "As apostas de arbitragem são permitidas no Betano?",
+        "a": "As apostas de arbitragem não são ilegais. No entanto, como todos os bookmakers, o Betano pode restringir contas ao abrigo dos seus termos e condições caso detete padrões de apostas que garantam lucro de forma consistente."
+      },
+      {
+        "q": "O Betano possui uma licença de jogo?",
+        "a": "Sim. Em Portugal, o Betano opera com licença do SRIJ, tal como os restantes operadores autorizados a oferecer apostas online (domínios .pt). O imposto sobre apostas desportivas recai sobre o operador e, em geral, os ganhos não são tributados para o jogador, mas consulta sempre as regras em vigor."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Surebets na Betano",
+    "metaTitle": "Betano Surebets – Encontra Apostas de Arbitragem",
+    "description": "Encontra surebets na Betano em tempo real. O BetTrackerAI compara as odds da Betano com outros bookmakers licenciados pelo SRIJ para garantires lucro através de apostas de arbitragem.",
+    "keyword": "betano surebets",
+    "intro": "A Betano é um dos bookmakers mais populares em Portugal e opera com licença do SRIJ. As odds da Betano são frequentemente semelhantes às de outros bookmakers licenciados, pelo que as surebets surgem sobretudo quando as odds de um evento divergem entre operadores.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre a Betano"
+      },
+      {
+        "type": "p",
+        "text": "A Betano está licenciada pelo SRIJ para operar em Portugal (domínio .pt) e oferece uma vasta gama de desportos. Como cada bookmaker define as suas próprias odds, as surebets surgem mais frequentemente entre a Betano e bookmakers licenciados com abordagens de odds diferentes, como a Betclic ou a Solverde."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar surebets com a Betano"
+      },
+      {
+        "type": "p",
+        "text": "Uma surebet com a Betano ocorre quando a Betano oferece odds mais altas num determinado resultado do que outros bookmakers oferecem nos resultados opostos. O BetTrackerAI monitoriza as odds da Betano de forma contínua e compara-as com o restante mercado licenciado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Seleciona a Betano e os restantes bookmakers através do filtro na página de surebets.",
+          "Ordena por lucro e escolhe uma surebet com odds estáveis.",
+          "Usa a calculadora para dividir o teu valor de aposta e arredondar os montantes.",
+          "Coloca primeiro a aposta no bookmaker com as odds mais voláteis."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Distribui as tuas apostas por vários bookmakers e não uses apenas a Betano. Isso prolongará a vida útil da tua conta e ajudará a evitar limitações."
+      }
+    ],
+    "faq": [
+      {
+        "q": "É legal fazer surebets na Betano?",
+        "a": "Sim, as apostas de arbitragem são legais. No entanto, como todos os bookmakers, a Betano pode limitar ou restringir contas ao abrigo dos seus termos e condições, caso estas apenas realizem apostas com lucro garantido. Usa sempre operadores licenciados pelo SRIJ (domínios .pt)."
+      },
+      {
+        "q": "Que bookmakers são semelhantes à Betano?",
+        "a": "Bookmakers licenciados em Portugal, como a Betclic, a Solverde, a bwin ou a Placard, oferecem uma gama de desportos e mercados semelhante. Por isso, combina a Betano com vários deles para encontrares mais surebets."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebets no Betano",
+    "metaTitle": "Betano surebets – encontra apostas de arbitragem no Betano",
+    "description": "Encontra surebets no Betano em tempo real. O BetTrackerAI compara as odds do Betano com outros operadores licenciados pelo SRIJ e mostra onde podes garantir lucro.",
+    "keyword": "betano surebets",
+    "intro": "O Betano é um dos operadores mais recentes no mercado regulado português e utiliza a sua própria plataforma de definição de odds. Isto significa que as odds do Betano divergem frequentemente do restante mercado, criando oportunidades de apostas de arbitragem.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre o Betano"
+      },
+      {
+        "type": "p",
+        "text": "O Betano possui licença em várias jurisdições, incluindo Portugal, onde é licenciado pelo SRIJ, e oferece uma vasta gama de desportos. Como o Betano define as suas odds de forma independente, está frequentemente envolvido em surebets quando comparado com operadores mais estabelecidos, como o Betclic, o Solverde ou o bwin."
       },
       {
         "type": "h2",
@@ -363,7 +363,7 @@
       },
       {
         "type": "tip",
-        "text": "Distribui as tuas apostas por vários operadores para não dependeres apenas do Betano. Isto prolonga a vida útil da tua conta e ajuda-te a evitar restrições."
+        "text": "Distribui as tuas apostas por vários operadores licenciados, como o Betclic, o Placard ou o Luckia, para não dependeres apenas do Betano. Isto prolonga a vida útil da tua conta e ajuda-te a evitar restrições."
       }
     ],
     "faq": [
@@ -373,37 +373,37 @@
       },
       {
         "q": "O Betano tem licença?",
-        "a": "Sim. O Betano possui licença em vários mercados regulados. Consulta o regulador de jogo do teu país para confirmar se o Betano opera com licença na tua jurisdição."
+        "a": "Sim. Em Portugal, o Betano opera com licença do SRIJ (Serviço de Regulação e Inspeção de Jogos), através do seu site .pt. Consulta a lista de operadores licenciados no site do SRIJ para confirmares o estado atual da licença e aposta apenas em operadores licenciados."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets no LeoVegas",
-    "metaTitle": "LeoVegas Surebets – Encontra Oportunidades de Arbitragem",
-    "description": "Encontra surebets no LeoVegas em tempo real. O BetTrackerAI compara as odds do LeoVegas com outros bookmakers e mostra-te onde podes garantir lucro certo.",
-    "keyword": "leovegas surebets",
-    "intro": "O LeoVegas é conhecido pela sua oferta de casino, mas disponibiliza também uma vasta seleção de apostas desportivas. O bookmaker utiliza a plataforma Kambi e aparece regularmente em oportunidades de apostas de arbitragem.",
+    "title": "Surebets no Betano",
+    "metaTitle": "Betano Surebets – Encontra Oportunidades de Arbitragem",
+    "description": "Encontra surebets no Betano em tempo real. O BetTrackerAI compara as odds do Betano com outros bookmakers licenciados em Portugal e mostra-te onde podes garantir lucro certo.",
+    "keyword": "betano surebets",
+    "intro": "O Betano é um operador licenciado pelo SRIJ (Serviço de Regulação e Inspeção de Jogos) e disponibiliza uma vasta seleção de apostas desportivas, a par da oferta de casino. O bookmaker aparece regularmente em oportunidades de apostas de arbitragem.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Sobre o LeoVegas"
+        "text": "Sobre o Betano"
       },
       {
         "type": "p",
-        "text": "O LeoVegas é um bookmaker licenciado com uma aplicação intuitiva que permite colocar apostas rapidamente. Isto é fundamental nas surebets, onde as odds podem mudar em segundos. Confirma que o LeoVegas está licenciado e disponível no teu país antes de abrires uma conta."
+        "text": "O Betano é um bookmaker licenciado em Portugal com uma aplicação intuitiva que permite colocar apostas rapidamente. Isto é fundamental nas surebets, onde as odds podem mudar em segundos. Confirma sempre que o Betano está licenciado pelo SRIJ e que estás a usar o site .pt antes de abrires uma conta."
       },
       {
         "type": "h2",
-        "text": "Como encontrar surebets com o LeoVegas"
+        "text": "Como encontrar surebets com o Betano"
       },
       {
         "type": "p",
-        "text": "Uma surebet com o LeoVegas ocorre quando este bookmaker oferece odds mais altas num determinado resultado do que os outros bookmakers oferecem nos resultados opostos. O BetTrackerAI monitoriza as odds do LeoVegas de forma contínua e compara-as com os bookmakers que operam no teu mercado."
+        "text": "Uma surebet com o Betano ocorre quando este bookmaker oferece odds mais altas num determinado resultado do que os outros bookmakers oferecem nos resultados opostos. O BetTrackerAI monitoriza as odds do Betano de forma contínua e compara-as com as de outros bookmakers licenciados em Portugal, como o Betclic, o Placard, a Solverde, o bwin, o ESC Online, o Luckia ou o Lebull."
       },
       {
         "type": "ul",
         "items": [
-          "Seleciona o LeoVegas e os restantes bookmakers através do filtro na página de surebets.",
+          "Seleciona o Betano e os restantes bookmakers através do filtro na página de surebets.",
           "Ordena por lucro e escolhe uma surebet com odds estáveis.",
           "Usa a calculadora para dividir o teu valor de aposta e arredonda os montantes.",
           "Coloca primeiro a aposta no bookmaker com as odds mais voláteis."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Distribui as tuas apostas por vários bookmakers e não uses apenas o LeoVegas. Isto prolonga a vida útil da tua conta e reduz o risco de limitações."
+        "text": "Distribui as tuas apostas por vários bookmakers e não uses apenas o Betano. Isto prolonga a vida útil da tua conta e reduz o risco de limitações. Aposta sempre com moderação; se precisares de ajuda, podes recorrer à autoexclusão do SRIJ ou à Linha Vida / SICAD."
       }
     ],
     "faq": [
       {
-        "q": "É possível fazer surebets no LeoVegas?",
-        "a": "Sim, as apostas de arbitragem são legais. No entanto, como qualquer bookmaker, o LeoVegas pode restringir contas ao abrigo dos seus termos e condições caso detete padrões de apostas que garantam lucro de forma consistente."
+        "q": "É possível fazer surebets no Betano?",
+        "a": "Sim, as apostas de arbitragem são legais. No entanto, como qualquer bookmaker, o Betano pode restringir contas ao abrigo dos seus termos e condições caso detete padrões de apostas que garantam lucro de forma consistente."
       },
       {
-        "q": "O LeoVegas é um bom bookmaker para surebets?",
-        "a": "O LeoVegas é um excelente bookmaker complementar, especialmente quando combinado com bookmakers fora da plataforma Kambi, pois isso aumenta o número de oportunidades de arbitragem disponíveis."
+        "q": "O Betano é um bom bookmaker para surebets?",
+        "a": "O Betano é um excelente bookmaker complementar, especialmente quando combinado com outros bookmakers licenciados em Portugal, pois isso aumenta o número de oportunidades de arbitragem disponíveis."
       }
     ]
   }
