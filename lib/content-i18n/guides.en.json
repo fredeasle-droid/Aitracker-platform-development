@@ -1,0 +1,2419 @@
+{
+  "matched-betting": {
+    "title": "Matched betting: extracting profit from welcome bonuses",
+    "metaTitle": "Matched betting – how to exploit bookmaker bonuses",
+    "description": "Matched betting explained: how to use welcome bonuses and free bets at licensed bookmakers to lock in a profit, and how it differs from sure bets.",
+    "keyword": "matched betting",
+    "intro": "Matched betting is a technique for converting bookmakers' bonuses and free bets into real cash. By backing and laying the same event, you cover all outcomes so the result doesn't matter – what remains is a guaranteed profit from the bonus.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "How matched betting works"
+      },
+      {
+        "type": "p",
+        "text": "When you claim a free bet or bonus, you place it on one outcome at a bookmaker and lay (bet against) the same outcome at a betting exchange or back the opposite result with another bookmaker. Because the free bet stakes nothing of your own money, you lock in most of its face value as profit regardless of which side wins."
+      },
+      {
+        "type": "h2",
+        "text": "Bonus terms and restrictions"
+      },
+      {
+        "type": "p",
+        "text": "Welcome bonuses carry different terms depending on the bookmaker and the country in which you're betting. Some regulated markets cap bonus amounts and limit wagering requirements to protect consumers. Always read the specific terms and conditions before you accept any offer."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Check the minimum odds required to unlock the bonus – many bookmakers set a floor of 1.80 or higher.",
+          "Note the expiry period so your bonus or free bet doesn't lapse unused.",
+          "Consider using sure bets (arbitrage bets) to meet turnover requirements with minimal risk."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Combining matched betting with sure bets"
+      },
+      {
+        "type": "p",
+        "text": "Sure bets are ideal for clearing bonus wagering requirements because you're not staking real money on a single outcome. Once you've met the rollover, you can carry on finding arbitrage opportunities without relying on promotions."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is matched betting legal?",
+        "a": "Yes. Exploiting bonuses within the bookmaker's published terms is perfectly legal. However, bookmakers reserve the right to withdraw offers or limit accounts if they believe you are not betting in the spirit of their promotions or if you breach the terms."
+      },
+      {
+        "q": "How much are typical welcome bonuses worth?",
+        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at €1,000 or €1,000 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose and confirm that it holds a valid licence in your country."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "See current bonuses"
+  },
+  "er-surebets-lovligt": {
+    "title": "Are surebets legal? Rules and tax considerations",
+    "metaTitle": "Are surebets legal? Rules, tax and bookmaker terms",
+    "description": "Is it legal to place surebets, and do you have to pay tax on winnings? Here are the rules and what bookmakers can do about arbitrage betting.",
+    "keyword": "are surebets legal",
+    "intro": "The short answer is yes. Placing surebets is legal in most jurisdictions. You are simply placing ordinary bets with licensed bookmakers and comparing odds to find the best value – nothing about this process is illegal.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "What can bookmakers do?"
+      },
+      {
+        "type": "p",
+        "text": "Although surebets are legal, bookmakers do not welcome customers who consistently place guaranteed-profit bets. In their terms and conditions, they reserve the right to reduce maximum stakes, limit markets or restrict accounts. However, they must always return your deposited funds and pay out any valid winnings."
+      },
+      {
+        "type": "h2",
+        "text": "Do you have to pay tax on winnings?"
+      },
+      {
+        "type": "p",
+        "text": "Tax treatment of betting winnings varies by country. In many regulated markets, winnings from operators licensed by your national gambling regulator are tax-free for the player. If you use offshore or unlicensed operators, your winnings may be taxable. Check the tax rules where you live, or consult your local tax authority if you are unsure about your situation."
+      },
+      {
+        "type": "tip",
+        "text": "Stick to bookmakers licensed by your national regulator. This typically offers tax advantages and consumer protection from your gambling authority."
+      },
+      {
+        "type": "h2",
+        "text": "Responsible gambling"
+      },
+      {
+        "type": "p",
+        "text": "Even with surebets, it is important to maintain control over your gambling. Set deposit limits, and use your country's self-exclusion register if you need a break. If you need support, contact a recognised gambling helpline in your region."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can a bookmaker refuse to pay out winnings from a surebet?",
+        "a": "A bookmaker must pay out valid winnings. It can void a bet if there was an obvious error in the odds, and it can restrict the account going forward."
+      },
+      {
+        "q": "Do I have to pay tax on surebet winnings?",
+        "a": "It depends on your country. In many regulated markets, winnings from licensed operators are tax-free for the player. Check the tax rules where you live."
+      }
+    ],
+    "category": "Rules",
+    "ctaLabel": "See surebets at licensed bookmakers"
+  },
+  "undgaa-begraensning": {
+    "title": "How to avoid bookmaker limits and keep your accounts open longer",
+    "metaTitle": "How to Avoid Bookmaker Limits – Arbing Guide 2026",
+    "description": "How to avoid bookmaker limits as an arber: a betting strategy that looks natural, the best bookmakers for arbitrage betting and examples in €.",
+    "keyword": "how to avoid bookmaker limits",
+    "intro": "To avoid bookmaker limits, you need to bet like a normal customer: round stakes, popular markets, a mix of regular bets and no instant reaction to every price drop. Soft bookmakers limit accounts that consistently beat the closing line. You cannot avoid it forever, but a smart betting strategy can keep your accounts open for months instead of weeks.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why bookmakers limit accounts"
+      },
+      {
+        "type": "p",
+        "text": "Soft bookmakers make money from recreational bettors, not from customers who only take mispriced odds. Their risk systems look at patterns: do you bet on prices that drop shortly afterwards? Do you only bet obscure markets? Are your stakes calculated to the cent? Each of these signals raises your risk score."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Beating the closing line:** the strongest signal. If your odds are consistently better than the final price, you get flagged.",
+          "**Uneven stakes:** €463.27 looks like a calculator. €460 looks like a person.",
+          "**Niche markets:** corners in the second division of a small league attract attention.",
+          "**Only withdrawing:** frequent withdrawals without bonuses or regular bets look professional."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Betting strategy that keeps your accounts open"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Round your stakes** to whole tens. The profit barely changes.",
+          "**Stick to mainstream markets:** major leagues, 1X2, over/under and match winner in tennis.",
+          "**Mix in normal bets:** a few small regular bets per week, ideally on big matches.",
+          "**Avoid extreme pricing errors:** surebets above 8–10% attract attention and are often voided anyway.",
+          "**Do not react instantly:** betting the second a price moves is a classic arber pattern.",
+          "**Spread your volume** across many bookmakers instead of hammering one."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Example: rounded stakes, total stake €1,000",
+        "rows": [
+          [
+            "Exact split at odds 2.10 / 2.00",
+            "€487.80 / €512.20"
+          ],
+          [
+            "Rounded split",
+            "€490 / €510"
+          ],
+          [
+            "Profit if A wins (2.10)",
+            "€1,029 − €1,000 = €29.00"
+          ],
+          [
+            "Profit if B wins (2.00)",
+            "€1,020 − €1,000 = €20.00"
+          ],
+          [
+            "Exact split for comparison",
+            "approx. €24.39 either way"
+          ]
+        ],
+        "note": "The rounded stakes still lock in a profit on both results, and they look far more natural to the bookmaker."
+      },
+      {
+        "type": "h2",
+        "text": "Best bookmakers for arbitrage betting"
+      },
+      {
+        "type": "p",
+        "text": "A good arbitrage setup combines two types of bookmaker. Soft bookmakers offer the mispriced odds, and sharp bookmakers or exchanges accept large stakes without limiting winners."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Soft bookmakers:** the source of most surebets, but they limit quickly. Use them carefully.",
+          "**Sharp bookmakers:** lower margins and high limits. Ideal for the second leg.",
+          "**Betting exchanges:** you bet against other users, so you are not limited for winning. Commission reduces the profit slightly."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read the full overview of the [best bookmakers for surebets](/en/guides/best-bookmakers-for-surebets). Always use licensed bookmakers in your country."
+      },
+      {
+        "type": "h2",
+        "text": "What to do when an account is limited"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Withdraw your balance** if the account can no longer be used for surebets.",
+          "**Do not open a new account** under someone else's name. It breaks the terms and can lead to confiscated winnings.",
+          "**Move volume** to your other accounts and to sharp bookmakers or exchanges.",
+          "**Track per bookmaker:** a [bet tracker](/en/guides/bet-tracker) shows which accounts are worth protecting."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The more bookmakers you can use, the less volume each account needs. [BetTracker AI](/en) finds surebets across many bookmakers, so you can spread your bets and keep your accounts open longer."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can I avoid bookmaker limits completely?",
+        "a": "Not at soft bookmakers in the long run. But a natural betting pattern can delay limits by months, and sharp bookmakers and exchanges rarely limit at all."
+      },
+      {
+        "q": "Is it legal for bookmakers to limit me?",
+        "a": "Yes, bookmakers can usually decide who they accept bets from. See [are surebets legal?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "How many bookmakers should I use?",
+        "a": "Five to ten is a good start. It spreads your volume and gives you more surebets to choose from."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Find surebets at more bookmakers"
+  },
+  "surebet-beregner": {
+    "title": "Free surebet calculator: work out your stakes in seconds",
+    "metaTitle": "Free Surebet Calculator – Calculate Stakes 2026",
+    "description": "Use a free surebet calculator to split your stake across two or three outcomes. The formula, examples in € and how to round stakes safely.",
+    "keyword": "free surebet calculator",
+    "intro": "A surebet calculator splits your total stake across every outcome so the payout is the same whatever happens. Enter the odds and your amount, and the calculator shows the stake per outcome, the payout and your profit in € and %. The formula is simple, but a calculator prevents mistakes when you only have minutes to place the bets.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "How to calculate surebet stakes: the formula"
+      },
+      {
+        "type": "p",
+        "text": "First add up the inverse odds: 1/odds A + 1/odds B (+ 1/odds C for three outcomes). Call this total S. The stake on one outcome is total stake × 1/odds, divided by S. The payout is total stake divided by S."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Stake per outcome:** total stake × (1/odds) ÷ S",
+          "**Payout:** total stake ÷ S",
+          "**Profit in %:** (1 ÷ S − 1) × 100"
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Example: two outcomes, total stake €1,500",
+        "rows": [
+          [
+            "Odds A 2.10 and odds B 2.05",
+            "S = 0.476 + 0.488 = 0.964"
+          ],
+          [
+            "Stake on A",
+            "€740.97"
+          ],
+          [
+            "Stake on B",
+            "€759.03"
+          ],
+          [
+            "Payout either way",
+            "approx. €1,556.03"
+          ],
+          [
+            "Profit",
+            "approx. €56.03 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sports arbitrage with three outcomes"
+      },
+      {
+        "type": "p",
+        "text": "In football and ice hockey 1X2 markets, a third outcome goes into the same formula. By hand that gets tedious, and this is exactly where a calculator saves the most time."
+      },
+      {
+        "type": "example",
+        "title": "Example: 1X2, total stake €1,000",
+        "rows": [
+          [
+            "Home win, odds 2.50",
+            "Stake €408.23"
+          ],
+          [
+            "Draw, odds 3.50",
+            "Stake €291.59"
+          ],
+          [
+            "Away win, odds 3.40",
+            "Stake €300.17"
+          ],
+          [
+            "Sum of inverse odds",
+            "0.980"
+          ],
+          [
+            "Profit",
+            "approx. €20.58 (2.1%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Rounding and uneven stakes"
+      },
+      {
+        "type": "p",
+        "text": "Stakes like €740.97 look suspicious to a bookmaker. Round to whole euros or tens. If you round to €741 and €759, the profit stays at about €56, with only a few cents of difference between outcomes."
+      },
+      {
+        "type": "p",
+        "text": "You can also skew the stakes on purpose. If you only cover your stake on one outcome, you win €0 there and more on the other. In the example above, €768.29 on A and €731.71 on B gives a profit of €113.41 if A wins and €0 if B wins."
+      },
+      {
+        "type": "tip",
+        "text": "Always calculate with the odds actually shown on your bet slip, not the ones from the scanner. Prices can shift by a tick between the scan and the click."
+      },
+      {
+        "type": "h2",
+        "text": "The surebet calculator as an everyday betting tool"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Before the bet:** check the sum of inverse odds is still below 1.",
+          "**During the bet:** recalculate if a price changes.",
+          "**After the bet:** log the result so you can track your ROI in a [bet tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Try the free [surebet calculator](/en/calculator) with two or three outcomes. If you would rather not type in odds yourself, [BetTracker AI](/en) finds surebets and calculates the stakes automatically."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is the surebet calculator free?",
+        "a": "Yes, the BetTracker AI calculator is free and works with two and three outcomes."
+      },
+      {
+        "q": "Can I use the calculator for hedging?",
+        "a": "Yes. Enter your original odds and the new odds on the opposite outcome to see how much to stake to lock in a profit. More in [make money on sports betting without risk](/en/guides/make-money-betting-without-risk)."
+      },
+      {
+        "q": "Why does the calculator show a negative profit?",
+        "a": "The sum of inverse odds is above 1, so there is no surebet. Most likely one of the prices has moved."
+      }
+    ],
+    "category": "Basics",
+    "ctaLabel": "Open the surebet calculator"
+  },
+  "odds-beregner": {
+    "title": "How to use an odds calculator",
+    "metaTitle": "Odds calculator – convert odds to probability and winnings",
+    "description": "Learn to convert decimal odds to probability, calculate your potential winnings, and find the bookmaker's margin with an odds calculator.",
+    "keyword": "odds calculator",
+    "intro": "An odds calculator turns odds into something you can use: how much you'll win, how likely the bookmaker thinks the outcome is, and how much the bookmaker is taking. Here are the three calculations you need to know.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "1. Potential winnings"
+      },
+      {
+        "type": "p",
+        "text": "With decimal odds, which most online bookmakers use, the payout is stake multiplied by odds. The profit is the payout minus the stake."
+      },
+      {
+        "type": "example",
+        "title": "€200 stake at odds of 2.50",
+        "rows": [
+          [
+            "Payout",
+            "€200 × 2.50 = €500"
+          ],
+          [
+            "Profit",
+            "€500 − €200 = €300"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "2. Implied probability"
+      },
+      {
+        "type": "p",
+        "text": "The probability the bookmaker is working with is 1 divided by the odds. Odds of 2.50 equals 40%. If you believe the chance is higher, it's a value bet."
+      },
+      {
+        "type": "h2",
+        "text": "3. Bookmaker margin"
+      },
+      {
+        "type": "p",
+        "text": "Add up the implied probabilities for all outcomes. The total is over 100%, and the excess is the bookmaker margin. If the total is under 100% across different bookmakers, you have a surebet (also known as an arbitrage bet)."
+      },
+      {
+        "type": "example",
+        "title": "Tennis: odds of 1.85 and 1.95 at the same bookmaker",
+        "rows": [
+          [
+            "1/1.85 + 1/1.95",
+            "54.1% + 51.3% = 105.4%"
+          ],
+          [
+            "Bookmaker margin",
+            "approx. 5.4%"
+          ]
+        ],
+        "note": "The lower the margin, the better odds you get as a punter."
+      },
+      {
+        "type": "tip",
+        "text": "Our free sure bet calculator does all three calculations for you and distributes the stake across multiple outcomes."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How do you convert odds to a percentage?",
+        "a": "Divide 1 by the odds and multiply by 100. Odds of 2.00 equals 50%, and odds of 4.00 equals 25%."
+      },
+      {
+        "q": "What's the difference between decimal odds and fractional odds?",
+        "a": "Decimal odds show the total payout per unit staked, e.g. 2.50. Fractional odds, such as 3/2, show only the profit. Most online bookmakers use decimal odds, though fractional odds remain common in the UK and Ireland."
+      }
+    ],
+    "category": "Fundamentals",
+    "ctaLabel": "Open the calculator"
+  },
+  "value-betting-vs-surebets": {
+    "title": "Value betting vs surebets: what's the difference?",
+    "metaTitle": "Value betting vs surebets – differences, risk & profit",
+    "description": "Value betting and surebets both exploit mispriced odds but work differently. Compare risk, profit potential and which strategy suits your betting style.",
+    "keyword": "value betting vs surebets",
+    "intro": "Both value betting and surebets exploit bookmakers' pricing errors. The key difference: surebets lock in guaranteed profit instantly, whilst value betting delivers profit over a large sample of bets.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "What is value betting?"
+      },
+      {
+        "type": "p",
+        "text": "A value bet is a wager where the odds are higher than the true probability suggests. If a match is genuinely 50/50 and a bookmaker offers odds of 2.20, that's a value bet. You only bet on one outcome and can lose individual bets, but over time the edge delivers profit."
+      },
+      {
+        "type": "h2",
+        "text": "What is a surebet?"
+      },
+      {
+        "type": "p",
+        "text": "With a surebet (arbitrage bet) you back all outcomes across different bookmakers so you win regardless of the result. The profit per bet is smaller, but it's guaranteed on every trade."
+      },
+      {
+        "type": "example",
+        "title": "Comparison",
+        "rows": [
+          [
+            "Risk per bet",
+            "Surebets: low · Value: high"
+          ],
+          [
+            "Profit per bet",
+            "Surebets: 1–5% · Value: varies"
+          ],
+          [
+            "Bets before profit shows",
+            "Surebets: 1 · Value: hundreds"
+          ],
+          [
+            "Accounts required",
+            "Surebets: several · Value: one or more"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Which strategy suits you?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Choose surebets if you want stable profit without large swings or drawdowns.",
+          "Choose value betting if you can tolerate losing runs and have a large enough bankroll to ride out variance.",
+          "Many combine both: surebets for steady income and value bets to maximise long-term edge."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "If you're starting out, begin with surebets. You'll learn how bookmakers operate without risking large losses."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is value betting more profitable than surebets?",
+        "a": "Value betting can deliver higher profit over the long term, but with far greater variance. Surebets offer smaller, more stable profit on every bet."
+      },
+      {
+        "q": "Do bookmakers limit your account with value betting too?",
+        "a": "Yes. Bookmakers limit winning customers regardless of strategy, though value betting can be slightly harder to detect because you also place losing bets."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Try surebets in real time"
+  },
+  "bedste-bookmakere-til-surebets": {
+    "title": "Best bookmakers for surebets",
+    "metaTitle": "Best bookmakers for surebets (2026)",
+    "description": "Which bookmakers should you use for surebets? See what makes a good arbitrage betting bookmaker and how to build your portfolio of accounts.",
+    "keyword": "best bookmakers surebets",
+    "intro": "There isn't one single bookmaker that's best for surebets. Arbitrage betting opportunities arise between bookmakers, so the most important thing is to have accounts with several operators using different odds providers and different approaches to the market.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why multiple bookmakers give you more surebets"
+      },
+      {
+        "type": "p",
+        "text": "Many bookmakers use the same odds platform and therefore have near-identical prices. Surebets most often arise between bookmakers that set odds in their own different ways. If you only have accounts with bookmakers on the same platform, you'll see far fewer arbitrage betting opportunities."
+      },
+      {
+        "type": "h2",
+        "text": "What to look for"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Licensed by your national gambling regulator, so you're protected and can verify the tax treatment of your winnings.",
+          "Fast deposits and withdrawals, so you can move money where it's needed.",
+          "Wide range of sports and markets, especially tennis, football and basketball.",
+          "Competitive odds and low bookmaker margin on popular markets.",
+          "A welcome bonus with reasonable terms that you can clear using surebets."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "How to build your bookmaker portfolio"
+      },
+      {
+        "type": "p",
+        "text": "Start with five to eight licensed bookmakers spread across different platforms. This gives you a good range of opportunities without having to manage too many balances. Once you've got the routine down, you can expand with more."
+      },
+      {
+        "type": "tip",
+        "text": "In BetTrackerAI you can select exactly which bookmakers you have accounts with, so you only see surebets you can actually place."
+      },
+      {
+        "type": "h2",
+        "text": "Bookmakers with their own odds are worth their weight in gold"
+      },
+      {
+        "type": "p",
+        "text": "Bookmakers that set their own odds instead of buying them often react more slowly or differently to news. This is precisely where the price differences arise. On the flip side, they're also often the quickest to limit winning accounts through gubbing."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many bookmakers do I need for surebets?",
+        "a": "A good starting point is five to eight regulated bookmakers. The more different odds platforms you cover, the more surebets you'll have access to."
+      },
+      {
+        "q": "Can I use unlicensed bookmakers for arbitrage betting?",
+        "a": "It's not recommended. Bookmakers without a licence in your jurisdiction may be blocked, and winnings from them may be subject to different tax treatment or lack regulatory protection. Always check the rules where you live."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "See surebets at your bookmakers"
+  },
+  "skat-paa-spillegevinster": {
+    "title": "Tax on gambling winnings – international betting guide",
+    "metaTitle": "Tax on Gambling Winnings – What You Need to Know",
+    "description": "Do you need to pay tax on betting winnings and surebets? Learn how tax rules work for licensed and offshore bookmakers, and what to document.",
+    "keyword": "tax on gambling winnings",
+    "intro": "In many regulated markets, the answer is straightforward: winnings from licensed bookmakers are tax-free for the player. The bookmaker pays duty to the state, not you. But the rules depend on where you live and where you bet.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Licensed bookmakers: typically tax-free"
+      },
+      {
+        "type": "p",
+        "text": "When you bet with a provider licensed by your national gambling regulator, the provider usually pays gambling duty on their revenue. Your winnings are therefore generally tax-free, and in most cases you don't need to report them to your tax authority. Always check the rules where you live."
+      },
+      {
+        "type": "h2",
+        "text": "Offshore bookmakers without a local licence"
+      },
+      {
+        "type": "p",
+        "text": "If you bet with providers that do not hold a licence in your jurisdiction, the winnings may be taxable. The rules depend on factors such as whether the provider holds a licence in another country and your own tax residence. This is one reason why it's often simpler to stick with regulated bookmakers."
+      },
+      {
+        "type": "h2",
+        "text": "Does this apply to surebets too?"
+      },
+      {
+        "type": "p",
+        "text": "Yes. For tax purposes, a surebet is simply two or three ordinary bets. Winnings from licensed bookmakers are generally tax-free, whether you're placing sure bets, value bets or standard bets. The same principles apply."
+      },
+      {
+        "type": "tip",
+        "text": "Keep a record of your bets. It makes it easy to document where the money comes from if your bank asks."
+      },
+      {
+        "type": "h2",
+        "text": "Professional gambling"
+      },
+      {
+        "type": "p",
+        "text": "If betting is your main occupation on a substantial scale, different rules may apply in certain jurisdictions. If you're unsure about your own situation, contact your local tax authority or a qualified accountant."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do I need to pay tax on winnings from licensed bookmakers?",
+        "a": "In most regulated markets, no. Winnings from locally licensed providers are typically tax-free for the player. Check the tax rules where you live."
+      },
+      {
+        "q": "How can I see if a bookmaker is licensed in my country?",
+        "a": "Your national gambling regulator will have a list of approved providers on its website, and licensed bookmakers usually display the regulator's logo on their site."
+      }
+    ],
+    "category": "Rules",
+    "ctaLabel": "Read about the rules for surebets"
+  },
+  "bankroll-management": {
+    "title": "Bankroll management guide for sports betting and arbitrage",
+    "metaTitle": "Bankroll Management Guide for Sports Betting 2026",
+    "description": "Bankroll management for sports betting: how to size stakes, split money across bookmakers and calculate ROI, with worked examples in €.",
+    "keyword": "bankroll management guide for sports betting",
+    "intro": "Good bankroll management means deciding in advance how much money is dedicated to betting, how much you stake per bet and how the money is split across bookmakers. For value betting, stake 1–2% of your bankroll per bet. For surebets, the limit is liquidity: your money must sit at the right bookmakers when a surebet appears. Track everything to measure ROI.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Bankroll management: the basic rules"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Separate money:** your bankroll is money you can afford to lose and is kept apart from everyday finances.",
+          "**Fixed stake rules:** decide the stake size before you bet, not on gut feeling.",
+          "**No chasing losses:** raising stakes after a loss is the fastest way to empty a bankroll.",
+          "**Review monthly:** adjust stakes up or down based on your bankroll, not on one good week."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Stake sizing for value bets and surebets"
+      },
+      {
+        "type": "p",
+        "text": "Value bets can lose, so the stake must be small enough to survive losing streaks. Surebets do not lose when executed correctly, so the risk is execution: odds changes, voids and missing legs."
+      },
+      {
+        "type": "example",
+        "title": "Example: flat staking for value bets, bankroll €2,000",
+        "rows": [
+          [
+            "Stake per bet (1.5%)",
+            "€30"
+          ],
+          [
+            "10 losing bets in a row",
+            "−€300 (15% of bankroll)"
+          ],
+          [
+            "Bankroll left",
+            "€1,700"
+          ],
+          [
+            "New stake after review (1.5%)",
+            "€25.50"
+          ]
+        ],
+        "note": "A 1–2% stake keeps you in the game through the losing streaks that every value bettor experiences."
+      },
+      {
+        "type": "example",
+        "title": "Example: surebet bankroll split across bookmakers, €3,000",
+        "rows": [
+          [
+            "6 bookmakers × €500",
+            "€3,000"
+          ],
+          [
+            "Typical surebet total stake",
+            "€400"
+          ],
+          [
+            "60 surebets per month at 2% average",
+            "€400 × 60 × 2% = €480"
+          ],
+          [
+            "Monthly return on bankroll",
+            "€480 / €3,000 = 16%"
+          ]
+        ],
+        "note": "The profit per surebet is small, but the bankroll is turned over many times a month. Results vary with limits and available surebets."
+      },
+      {
+        "type": "h2",
+        "text": "Sports betting ROI calculator: measure what you earn"
+      },
+      {
+        "type": "p",
+        "text": "ROI is net profit divided by total turnover. It tells you how much you earn per € staked and is the best way to compare strategies, sports and bookmakers."
+      },
+      {
+        "type": "example",
+        "title": "Example: ROI calculation",
+        "rows": [
+          [
+            "Total staked",
+            "€18,500"
+          ],
+          [
+            "Total returned",
+            "€18,870"
+          ],
+          [
+            "Net profit",
+            "€370"
+          ],
+          [
+            "ROI",
+            "€370 / €18,500 = 2.0%"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read more about [ROI on betting](/en/guides/roi-betting), or check single surebets in the [surebet calculator](/en/calculator)."
+      },
+      {
+        "type": "h2",
+        "text": "Track your bets for free and protect your bankroll"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Balance per bookmaker:** move money before a bookmaker runs dry.",
+          "**Profit per strategy:** see whether surebets or value bets are paying off.",
+          "**Drawdown:** spot losing periods early and lower stakes in time."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Keep around 20% of your bankroll in reserve outside the bookmakers. It lets you top up the accounts where most surebets appear."
+      },
+      {
+        "type": "p",
+        "text": "A [bet tracker](/en/guides/bet-tracker) makes bankroll management automatic. [BetTracker AI](/en) logs your surebets, shows your balance per bookmaker and calculates ROI for you."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How big should my bankroll be for surebets?",
+        "a": "Many start with €1,000–€3,000 spread across 4–6 bookmakers. Less works, but the profit per surebet becomes very small."
+      },
+      {
+        "q": "What percentage should I stake on value bets?",
+        "a": "1–2% of your bankroll per bet is a common, conservative rule. Larger stakes increase the risk of ruin during losing streaks."
+      },
+      {
+        "q": "How do I calculate ROI on my bets?",
+        "a": "Divide net profit by total stakes. €370 profit on €18,500 staked gives an ROI of 2.0%."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Track your bankroll for free"
+  },
+  "arbitrage-betting": {
+    "title": "How does arbitrage betting work? Lock in profit on every result",
+    "metaTitle": "How Does Arbitrage Betting Work? Guide 2026",
+    "description": "How arbitrage betting works: the formula, worked examples in €, and how to place your first surebet step by step for a locked-in profit.",
+    "keyword": "how does arbitrage betting work",
+    "intro": "Arbitrage betting works by backing every outcome of the same event at different bookmakers when the sum of the inverse odds is below 1. You split your stake so the payout is identical whatever happens. The gap between total stake and payout is your profit, usually 1–3% per surebet, secured by maths rather than luck.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Surebets explained: when two bookmakers disagree on price"
+      },
+      {
+        "type": "p",
+        "text": "Every bookmaker sets its own odds and builds in a margin of 4–7%. But they react at different speeds to injuries, line-ups and big bets. When one bookmaker is slow to cut a price while another has already raised the opposite outcome, the two prices together leave a surplus. That is a surebet. New to the concept? Start with [what surebets are](/en/guides/what-are-surebets)."
+      },
+      {
+        "type": "p",
+        "text": "The test is simple: calculate 1 ÷ odds for each outcome and add them up. If the total is below 1.00, you have an arbitrage. The lower the total, the bigger the profit."
+      },
+      {
+        "type": "example",
+        "title": "Example: two-way tennis match, total stake €1,000",
+        "rows": [
+          [
+            "Player A at bookmaker 1, odds 2.08",
+            "Stake €492.68"
+          ],
+          [
+            "Player B at bookmaker 2, odds 2.02",
+            "Stake €507.32"
+          ],
+          [
+            "1/2.08 + 1/2.02",
+            "0.481 + 0.495 = 0.976"
+          ],
+          [
+            "Payout whoever wins",
+            "approx. €1,024.78"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €24.78 (2.5%)"
+          ]
+        ],
+        "note": "The total is below 1, so you make about €24.78 regardless of who wins the match."
+      },
+      {
+        "type": "h2",
+        "text": "Arbitrage betting guide: three outcomes in football"
+      },
+      {
+        "type": "p",
+        "text": "Football has home win, draw and away win. The principle is the same, you just need three prices and often three bookmakers. Because the margin is spread over three outcomes, 1X2 surebets are rarer and the profit tends to be a little lower than in tennis."
+      },
+      {
+        "type": "example",
+        "title": "Example: Premier League match, total stake €2,000",
+        "rows": [
+          [
+            "Home win, odds 2.15",
+            "Stake €942.69"
+          ],
+          [
+            "Draw, odds 3.60",
+            "Stake €562.99"
+          ],
+          [
+            "Away win, odds 4.10",
+            "Stake €494.33"
+          ],
+          [
+            "Sum of inverse odds",
+            "0.987"
+          ],
+          [
+            "Payout on every result",
+            "approx. €2,026.75"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €26.75 (1.3%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "How to place surebets: by hand or with a scanner"
+      },
+      {
+        "type": "p",
+        "text": "In theory you can compare odds across a dozen browser tabs, but surebets often last only a few minutes. By the time you have done the maths, the price has usually moved. That is why most bettors use an odds scanner that compares bookmakers continuously. Read more about how to [find surebets automatically](/en/guides/find-surebets-automatically)."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**By hand:** free, but slow, and you rarely get there before the price changes.",
+          "**With a scanner:** surebets appear with the stake split already calculated, so you can act immediately.",
+          "**Calculator:** whichever method you use, check the stakes in the [surebet calculator](/en/calculator) before placing."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Risk-free bets in practice: five steps to your first surebet"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**1. Open accounts** with at least two licensed bookmakers, ideally more, and deposit in advance.",
+          "**2. Find a surebet** where the sum of inverse odds is below 1.00.",
+          "**3. Calculate the stakes** so the payout is equal on every outcome.",
+          "**4. Place both bets quickly,** starting with the price most likely to move.",
+          "**5. Check your bet slips:** market, line and odds must match your calculation exactly."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "The maths is risk-free; the execution is not always. **Odds moving** while you place the second bet, **voided bets** on obvious pricing errors and **limited accounts** are the real risks. Keep stakes moderate at first and read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+      },
+      {
+        "type": "p",
+        "text": "Want to see live surebets with the stakes already worked out? [BetTracker AI](/en) scans the bookmakers for you and shows surebets in real time."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is arbitrage betting legal?",
+        "a": "Yes, betting on every outcome of an event is not illegal in most countries. Bookmakers can still limit your account. See [are surebets legal?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "How much can you make with surebets?",
+        "a": "A typical surebet returns 1–3% of the total stake. With €1,000 per surebet, 40 surebets a month and an average of 1.5%, that is roughly €600 a month."
+      },
+      {
+        "q": "How many bookmakers do I need?",
+        "a": "At least two, but the more accounts you have, the more surebets you can take. Many arbers work with five to ten bookmakers."
+      },
+      {
+        "q": "What if the odds change before my second bet?",
+        "a": "Recalculate the second bet at the new price. If the total is still below 1, you have a smaller surebet. If it is above, limit the loss by covering at the best price available."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Find surebets now"
+  },
+  "hvad-er-surebets": {
+    "title": "What are surebets? How guaranteed odds work",
+    "metaTitle": "What are surebets? Complete guide to arbitrage betting",
+    "description": "Learn what surebets are, how they occur, and how you bet on all outcomes with different bookmakers to secure a guaranteed profit.",
+    "keyword": "surebets",
+    "intro": "A surebet – also called arbitrage betting or arbing – is a combination of odds across different bookmakers where you can bet on all possible outcomes of a match and still make a profit, regardless of how it ends. It sounds too good to be true, but it's pure mathematics.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why do surebets exist?"
+      },
+      {
+        "type": "p",
+        "text": "Bookmakers set their odds independently of one another. They use different models, react differently to news and want to attract bets on particular outcomes. As a result, one bookmaker might offer high odds on the home team whilst another offers high odds on the away team. When the difference becomes large enough, a surebet occurs."
+      },
+      {
+        "type": "p",
+        "text": "Surebets typically last only minutes. As soon as bookmakers adjust their odds, the opportunity disappears. That's why it requires either many hours of manual searching or a scanner that monitors the market continuously."
+      },
+      {
+        "type": "h2",
+        "text": "How to tell if it's a surebet"
+      },
+      {
+        "type": "p",
+        "text": "You calculate the inverse value of each odds (1 divided by the odds) and add them together. If the sum is below 1, you have a surebet. The lower the sum, the greater your profit."
+      },
+      {
+        "type": "example",
+        "title": "Example: tennis with two outcomes",
+        "rows": [
+          [
+            "Player A at bookmaker 1",
+            "odds 2.10"
+          ],
+          [
+            "Player B at bookmaker 2",
+            "odds 2.05"
+          ],
+          [
+            "1/2.10 + 1/2.05",
+            "0.476 + 0.488 = 0.964"
+          ],
+          [
+            "Guaranteed profit",
+            "approx. 3.7%"
+          ]
+        ],
+        "note": "The sum is below 1, so this combination is a surebet."
+      },
+      {
+        "type": "h2",
+        "text": "How do you split your stake?"
+      },
+      {
+        "type": "p",
+        "text": "Your stake must be divided so that the payout is the same regardless of who wins. With a total stake of 1,000 units in the example above, you place approximately 494 units on player A and approximately 506 units on player B. Both outcomes return approximately 1,037 units, meaning a profit of roughly 37 units."
+      },
+      {
+        "type": "tip",
+        "text": "You don't need to calculate this yourself. Our free sure bet calculator splits the stake automatically and shows your guaranteed profit."
+      },
+      {
+        "type": "h2",
+        "text": "What should you watch out for?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Odds can change whilst you're placing your bets. Place the bet with the most unstable odds first.",
+          "Check that the market is exactly the same at both bookmakers, such as whether extra time counts.",
+          "Keep funds at multiple bookmakers so you can act quickly.",
+          "Bookmakers may limit accounts that only bet on surebets. Read our guide on avoiding gubbing and account limits."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "Are surebets risk-free?",
+        "a": "Mathematically, the profit is guaranteed once both bets are placed at the correct odds. In practice, the risk lies in odds changing, cancelled bets or errors in the market."
+      },
+      {
+        "q": "How much can you earn from surebets?",
+        "a": "Most surebets return between 1 and 5% of your stake. The profit comes from doing it many times, not from individual big wins."
+      },
+      {
+        "q": "How do you find surebets?",
+        "a": "You can compare odds manually, but it's slow. A surebet scanner like BetTrackerAI monitors bookmakers that operate in your market and shows opportunities as soon as they arise."
+      }
+    ],
+    "category": "Fundamentals",
+    "ctaLabel": "View current surebets"
+  },
+  "dutching-betting": {
+    "title": "Dutching: how to split your stake across multiple outcomes",
+    "metaTitle": "Dutching betting – explanation, formula and example",
+    "description": "Dutching means splitting your stake across multiple outcomes so you get the same return regardless of which one wins. See the formula and an example.",
+    "keyword": "dutching betting",
+    "intro": "Dutching is a betting method where you back multiple outcomes in the same event and distribute your stake so that you receive the same payout regardless of which of your selections wins. The method is particularly useful in tournaments and markets with many possible outcomes.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "The difference between dutching and surebets"
+      },
+      {
+        "type": "p",
+        "text": "With a surebet you cover all outcomes and win regardless of the result. With dutching you only cover some of the outcomes. If one of them wins, you get the same return, but if none of them win, you lose your entire stake. Dutching is therefore not risk-free."
+      },
+      {
+        "type": "h2",
+        "text": "The formula"
+      },
+      {
+        "type": "p",
+        "text": "Calculate 1/odds for each outcome and add them together. Call the sum S. The stake on an outcome is the total stake times (1/odds) divided by S. The payout will be the total stake divided by S."
+      },
+      {
+        "type": "example",
+        "title": "Example: three players in a tournament, total stake €1,000",
+        "rows": [
+          [
+            "Player A, odds 3.00",
+            "stake approx. €444"
+          ],
+          [
+            "Player B, odds 4.00",
+            "stake approx. €333"
+          ],
+          [
+            "Player C, odds 6.00",
+            "stake approx. €222"
+          ],
+          [
+            "S = 0.333 + 0.250 + 0.167",
+            "0.750"
+          ],
+          [
+            "If one of the three wins",
+            "payout approx. €1,333, profit approx. €333"
+          ],
+          [
+            "If none of the three win",
+            "loss of €1,000"
+          ]
+        ],
+        "note": "The profit is only realised if one of your three players wins. You must judge for yourself how likely that is."
+      },
+      {
+        "type": "h2",
+        "text": "When does dutching make sense?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "When you believe a few outcomes hold most of the probability, e.g. the three favourites in a tournament.",
+          "When you want to spread risk instead of backing a single outcome.",
+          "When you can get better odds at multiple bookmakers and want to distribute your stake between them."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Dutching is not a substitute for surebets. If you want guaranteed profit, you need to cover all outcomes at different bookmakers. The calculator shows the difference immediately."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is dutching the same as arbitrage betting?",
+        "a": "No. With arbitrage betting (surebets) you cover all outcomes and win regardless of the result. With dutching you only cover some of the outcomes and can lose your entire stake."
+      },
+      {
+        "q": "Can you lose money on dutching?",
+        "a": "Yes. If none of the outcomes you've bet on win, you lose your entire total stake."
+      },
+      {
+        "q": "How do you calculate dutching stakes?",
+        "a": "Add 1/odds together for your outcomes (S). The stake on each outcome is the total stake times 1/odds divided by S."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Use the calculator to split your stake"
+  },
+  "tennis-surebets": {
+    "title": "Surebets in tennis: how to find and play them",
+    "metaTitle": "Tennis surebets – find guaranteed profit on tennis odds",
+    "description": "Tennis is ideal for surebets because there are only two outcomes. See a worked example and the pitfalls you must avoid when arbitrage betting on tennis.",
+    "keyword": "tennis surebets",
+    "intro": "Tennis is one of the easiest sports for playing surebets. A match has only two outcomes and no draw, so you only need two bookmakers and two bets.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why tennis suits surebets"
+      },
+      {
+        "type": "p",
+        "text": "With two outcomes, the calculation is straightforward, and you only need to place two bets. Many matches are played every day across time zones, so bookmakers are constantly setting new odds, and they don't do it uniformly."
+      },
+      {
+        "type": "example",
+        "title": "Example: odds 1.95 and 2.20, total stake €1,000",
+        "rows": [
+          [
+            "Player A at bookmaker 1, odds 1.95",
+            "stake approx. €530"
+          ],
+          [
+            "Player B at bookmaker 2, odds 2.20",
+            "stake approx. €470"
+          ],
+          [
+            "1/1.95 + 1/2.20",
+            "0.513 + 0.455 = 0.967"
+          ],
+          [
+            "Payout regardless of winner",
+            "approx. €1,034"
+          ],
+          [
+            "Profit",
+            "approx. €34 (3.4%)"
+          ]
+        ],
+        "note": "The sum is below 1, so the combination is a surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Pitfalls in tennis surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Retired players: If a player retires mid-match, bookmakers' rules can differ. Some void the bet, others settle it. Read the terms at both.",
+          "Walkovers and matches that are never played can result in voided bets and an open position.",
+          "Wrong match: Check players' names and the tournament, especially in smaller tournaments where names can be similar.",
+          "Live odds change quickly. Pre-match surebets are easier to place in time."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Place the bet first where the odds are most volatile, then place the other afterwards. That way the risk of being left with half a surebet is minimised."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Why is tennis good for surebets?",
+        "a": "Because there are only two outcomes and no draw. You only need two bookmakers and place two bets."
+      },
+      {
+        "q": "What happens if a player retires mid-match in a surebet?",
+        "a": "It depends on the bookmakers' rules. Some void the bet if the match isn't completed, whilst others settle it. It's one of the biggest risks in tennis arbitrage betting, so read the terms first."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "See current surebets"
+  },
+  "fodbold-surebets": {
+    "title": "Surebets in football: how to cover three outcomes",
+    "metaTitle": "Football surebets – how to split 1X2 odds",
+    "description": "Football has three outcomes, so a surebet requires three bets. Learn how to split your stake across home win, draw and away win, and which pitfalls to avoid.",
+    "keyword": "football surebets",
+    "intro": "Football has three possible outcomes: home win, draw and away win. A surebet on the 1X2 market therefore requires three bets, and the best odds are often found at three different bookmakers.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "How to calculate three outcomes"
+      },
+      {
+        "type": "p",
+        "text": "The formula is the same as for two outcomes. Add 1/odds together for all three outcomes. If the sum is below 1, you have a surebet. The stake for each outcome is the total stake multiplied by 1/odds divided by the sum."
+      },
+      {
+        "type": "example",
+        "title": "Example: three bookmakers, total stake €1,000",
+        "rows": [
+          [
+            "Home win at bookmaker 1, odds 2.40",
+            "stake approx. €424"
+          ],
+          [
+            "Draw at bookmaker 2, odds 3.80",
+            "stake approx. €268"
+          ],
+          [
+            "Away win at bookmaker 3, odds 3.30",
+            "stake approx. €308"
+          ],
+          [
+            "1/2.40 + 1/3.80 + 1/3.30",
+            "0.417 + 0.263 + 0.303 = 0.983"
+          ],
+          [
+            "Return regardless of outcome",
+            "approx. €1,017"
+          ],
+          [
+            "Profit",
+            "approx. €17 (1.7%)"
+          ]
+        ],
+        "note": "The profit is smaller than in tennis, and three bets mean a greater risk that odds will change whilst you're placing them."
+      },
+      {
+        "type": "h2",
+        "text": "Pitfalls in football surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Check that the market applies to the same match time at all bookmakers. 1X2 normally only covers regular time, but verify the rules for cup ties and play-off matches.",
+          "Postponed and abandoned matches are settled differently, so read the rules at each bookmaker.",
+          "Three bets create a greater risk that odds will change. Place the most volatile bet first – usually the bet with the highest odds or on the least liquid market.",
+          "Consider using two-outcome markets such as Asian handicap or over/under 2.5 goals if you want to stick to two bookmakers and reduce exposure to odds shifts."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Select the bookmakers where you already have funds in BetTrackerAI, so you only see surebets you can actually place."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Why are football surebets harder than tennis surebets?",
+        "a": "Because there are three outcomes instead of two. You need to place three bets, often at three different bookmakers, and the risk of odds changing whilst you place them is greater."
+      },
+      {
+        "q": "Does the 1X2 market include extra time?",
+        "a": "Normally not. 1X2 generally only covers the 90 minutes plus stoppage time, but rules may vary. Always check the terms and conditions at each bookmaker before placing your bets."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "View current surebets"
+  },
+  "bookmakerens-margin": {
+    "title": "Bookmaker's margin: how to see what odds really cost",
+    "metaTitle": "Bookmaker's margin – calculate overround and find better odds",
+    "description": "Bookmakers profit from a built-in margin in their odds. Learn to calculate it and find the bookmakers that give you the best odds.",
+    "keyword": "bookmaker margin",
+    "intro": "When you add up the implied probabilities from a market, the total comes to more than 100%. The excess is the bookmaker's margin, also called overround. It's the price you pay to bet.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "How to calculate the margin"
+      },
+      {
+        "type": "p",
+        "text": "Calculate 1/odds for all outcomes in the market and add them together. Subtract 1 from the total and you have the margin."
+      },
+      {
+        "type": "example",
+        "title": "Example: football match with odds 2.10, 3.40 and 3.60",
+        "rows": [
+          [
+            "1/2.10 + 1/3.40 + 1/3.60",
+            "0.476 + 0.294 + 0.278 = 1.048"
+          ],
+          [
+            "Bookmaker's margin",
+            "approx. 4.8%"
+          ],
+          [
+            "Payout percentage",
+            "approx. 95.4%"
+          ],
+          [
+            "Home win without margin",
+            "approx. 45.4%"
+          ]
+        ],
+        "note": "Odds of 2.10 equate to 47.6%, but without the margin the true probability is approximately 45.4%."
+      },
+      {
+        "type": "h2",
+        "text": "Why does the margin matter?"
+      },
+      {
+        "type": "p",
+        "text": "The lower the margin, the better odds you get for the same probability. Over many bets, the difference between 3% and 7% makes a significant difference to your bankroll. So compare margins at the bookmakers you use on the markets you bet most."
+      },
+      {
+        "type": "h2",
+        "text": "Margin and surebets"
+      },
+      {
+        "type": "p",
+        "text": "A surebet arises when the best odds from multiple bookmakers together give a total below 1. The bookmakers' margin is then more than offset by their disagreement on price. That's what a scanner looks for."
+      },
+      {
+        "type": "tip",
+        "text": "Use our calculator to enter odds and see the total straight away. If it's below 1, you have a surebet."
+      }
+    ],
+    "faq": [
+      {
+        "q": "What is a good bookmaker margin?",
+        "a": "The lower, the better. On popular football markets a margin of 3–6% is typical, and smaller leagues and specialist markets often have higher margins."
+      },
+      {
+        "q": "What is overround?",
+        "a": "Overround is the English term for the bookmaker's margin, i.e. how much the implied probabilities add up to over 100%."
+      }
+    ],
+    "category": "Basics",
+    "ctaLabel": "Calculate the total of your odds"
+  },
+  "asiatisk-handicap": {
+    "title": "Asian Handicap Explained: Whole, Half and Quarter Lines",
+    "metaTitle": "Asian Handicap Explained – Simple Guide with Examples",
+    "description": "Understand Asian handicap: what -0.5, -1 and -0.25 mean, when you get your stake back, and why the line matters when placing surebets.",
+    "keyword": "asian handicap",
+    "intro": "Asian handicap is a football betting market where the draw is eliminated or split. This creates just two outcomes, which is why it's often used by those looking for surebets and arbitrage betting opportunities.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Whole lines: stake returned on draw"
+      },
+      {
+        "type": "p",
+        "text": "With a handicap of 0 or a whole number, your stake can be returned. Home team 0 means you get your money back if the match ends in a draw. Home team -1 means the team must win by at least two goals to return a profit. If they win by exactly one goal, you get your stake back."
+      },
+      {
+        "type": "h2",
+        "text": "Half lines: no stake returned"
+      },
+      {
+        "type": "p",
+        "text": "At -0.5, the team must win. A draw or loss results in a lost bet. At +0.5, you win if the team wins or draws. It's always either a win or a loss, and the stake is never returned."
+      },
+      {
+        "type": "h2",
+        "text": "Quarter lines: stake split in two"
+      },
+      {
+        "type": "p",
+        "text": "At -0.25, the stake is split in two: half on 0 and half on -0.5. At +0.25, it's half on 0 and half on +0.5. The result can therefore be a half win or a half loss."
+      },
+      {
+        "type": "example",
+        "title": "Home team -0.25 with €100 stake",
+        "rows": [
+          [
+            "Home team wins",
+            "both halves win"
+          ],
+          [
+            "Draw",
+            "€50 returned, €50 lost"
+          ],
+          [
+            "Home team loses",
+            "both halves lost"
+          ]
+        ],
+        "note": "With +0.25 on the away team, it's reversed: a draw gives a win on one half and the stake back on the other."
+      },
+      {
+        "type": "h2",
+        "text": "Asian handicap and surebets"
+      },
+      {
+        "type": "p",
+        "text": "Because the market has two outcomes, you can combine home team -0.5 at one bookmaker with away team +0.5 at another and only need two bookmakers for a surebet. Make sure both sides have the corresponding line: -0.5 pairs with +0.5, and -0.25 pairs with +0.25."
+      },
+      {
+        "type": "tip",
+        "text": "Always check the line before placing a surebet. A difference of a quarter line can turn a guaranteed win into a risky bet."
+      }
+    ],
+    "faq": [
+      {
+        "q": "What does Asian handicap -0.5 mean?",
+        "a": "The team must win the match to return a profit. A draw or loss results in a lost bet."
+      },
+      {
+        "q": "Do I get my stake back with Asian handicap?",
+        "a": "With whole lines, such as 0 or -1, you get your stake back if the match result exactly matches the handicap. With half lines this never happens, and with quarter lines you can get a half win or half loss."
+      }
+    ],
+    "category": "Fundamentals",
+    "ctaLabel": "View current surebets"
+  },
+  "bet-tracker": {
+    "title": "Betting spreadsheet alternative: track every bet automatically",
+    "metaTitle": "Betting Spreadsheet Alternative – Bet Tracker 2026",
+    "description": "Swap your betting spreadsheet for a bet tracker: what to log, how to calculate ROI, examples in € and what the best bet tracker app should do.",
+    "keyword": "betting spreadsheet alternative",
+    "intro": "The best betting spreadsheet alternative is a bet tracker that logs every bet, stake and result for you and calculates ROI, profit per bookmaker and balance automatically. Spreadsheets break as soon as you place dozens of surebets a week: formulas get overwritten, legs go missing and voided bets distort the numbers. A tracker gives you the real picture in seconds.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why the betting spreadsheet stops working"
+      },
+      {
+        "type": "p",
+        "text": "A spreadsheet is fine for ten bets a month. For arbitrage betting, every surebet has two or three legs at different bookmakers, so 50 surebets means 100–150 rows to type, settle and reconcile by hand."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Manual errors:** one wrong odds value or stake ruins your ROI figure.",
+          "**Missing legs:** if one leg is not logged, a winning surebet looks like a loss.",
+          "**Voids and partial acceptance:** hard to handle correctly with simple formulas.",
+          "**No overview per bookmaker:** you cannot easily see where your money actually sits."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Bet tracking: what to log on every bet"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Date and event**, so you can find the bet later.",
+          "**Bookmaker, market and odds**, exactly as accepted on the bet slip.",
+          "**Stake and result**: won, lost, void or half-won on Asian lines.",
+          "**Type of bet**: surebet, value bet or normal bet, so you can compare strategies.",
+          "**Closing odds** if you value bet, to see whether you beat the market."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Example: one month of tracked surebets",
+        "rows": [
+          [
+            "Number of surebets",
+            "60"
+          ],
+          [
+            "Total turnover (all legs)",
+            "€24,000"
+          ],
+          [
+            "Total returned",
+            "€24,720"
+          ],
+          [
+            "Net profit",
+            "€720"
+          ],
+          [
+            "ROI",
+            "€720 / €24,000 = 3.0%"
+          ]
+        ],
+        "note": "Without tracking you only see your balance moving. With tracking you see that every €100 you turn over earns €3."
+      },
+      {
+        "type": "h2",
+        "text": "Best bet tracker app: what it should do"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Group surebet legs**, so the whole arb is shown as one position with one profit.",
+          "**Calculate ROI automatically** per month, sport, market and bookmaker.",
+          "**Show balance per bookmaker**, so you know where to deposit or withdraw.",
+          "**Handle voids and odds changes** without breaking the totals.",
+          "**Work on mobile**, because you place bets on the go."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Log the bet the moment it is accepted, not at the end of the day. Most tracking mistakes come from logging from memory."
+      },
+      {
+        "type": "h2",
+        "text": "Automated bet tracking app: track your bets for free"
+      },
+      {
+        "type": "p",
+        "text": "An automated bet tracking app saves you the typing: when you place a surebet from the scanner, the legs, odds and stakes are logged for you. You only confirm the result. Read how to [calculate ROI on betting](/en/guides/roi-betting) and set up [bankroll management](/en/guides/bankroll-management) based on your real numbers."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) combines the surebet scanner and the bet tracker in one place, so every surebet you place is tracked automatically and your ROI is always up to date."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can I still use a spreadsheet?",
+        "a": "Yes, for a small number of bets. Once you place more than a few surebets a week, a bet tracker is faster and far less error-prone."
+      },
+      {
+        "q": "What is a good ROI for surebets?",
+        "a": "Typically 1–4% of turnover. Higher figures are possible but often come with more limits and voided bets."
+      },
+      {
+        "q": "Should I track normal bets too?",
+        "a": "Yes. Tracking everything shows your real result and reveals whether your normal bets are eating into your surebet profit."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Track your bets for free"
+  },
+  "roi-betting": {
+    "title": "ROI on betting: how to calculate your return",
+    "metaTitle": "ROI Betting – How to Calculate Return on Your Bets",
+    "description": "Learn to calculate ROI and yield on betting with examples. See what a good return is, and why ROI tells you more than your total profit.",
+    "keyword": "roi betting",
+    "intro": "ROI stands for return on investment and shows how many per cent you earn relative to what you've staked. It's the figure that tells you whether your strategy works, regardless of how large your stakes are.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "The formula"
+      },
+      {
+        "type": "p",
+        "text": "ROI = profit divided by total stake, multiplied by 100. Profit is what you've been paid out, minus what you've staked."
+      },
+      {
+        "type": "example",
+        "title": "Example: a month of sure bets",
+        "rows": [
+          [
+            "Total stake",
+            "€40,000"
+          ],
+          [
+            "Total payout",
+            "€41,000"
+          ],
+          [
+            "Profit",
+            "€1,000"
+          ],
+          [
+            "ROI",
+            "1,000 / 40,000 × 100 = 2.5%"
+          ]
+        ],
+        "note": "You've earned 2.5p for every pound you've staked."
+      },
+      {
+        "type": "h2",
+        "text": "ROI and yield are the same thing"
+      },
+      {
+        "type": "p",
+        "text": "In betting, the terms ROI and yield are often used for the same figure: profit relative to total stake. Some instead calculate ROI relative to your bankroll. That gives a higher figure, because the same bankroll is used many times over. Always check which method a figure has been calculated with before comparing."
+      },
+      {
+        "type": "h2",
+        "text": "What is a good ROI?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Ordinary bets in the long term: most punters sit below 0%, because the bookmaker takes a margin.",
+          "Value betting: 2–5% over many bets is a good result.",
+          "Sure bets: typically 1–5% per sure bet, but almost without risk, because all outcomes are covered."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "ROI is most meaningful over many bets. After 20 bets, the figure can swing a lot. After several hundred bets, it shows whether your strategy holds up."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How do I calculate ROI on betting?",
+        "a": "Take your profit, divide by your total stake and multiply by 100. If you've staked €10,000 and earned €300, your ROI is 3%."
+      },
+      {
+        "q": "What's the difference between ROI and profit?",
+        "a": "Profit is the amount you've earned. ROI is profit as a percentage of your stake. It makes it possible to compare results with different stakes."
+      },
+      {
+        "q": "Can I see my ROI automatically?",
+        "a": "Yes. The accounts in BetTrackerAI calculate your ROI based on the bets you record."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "See your ROI in the accounts"
+  },
+  "surebet-danmark-alternativ": {
+    "title": "BetTrackerAI vs. Surebet Danmark: the more affordable alternative",
+    "metaTitle": "Surebet Danmark Alternative – BetTrackerAI Compared (2025)",
+    "description": "Compare BetTrackerAI and Surebet Danmark: pricing, features, bookmaker coverage and bet tracking. Find the surebet tool that fits your needs.",
+    "keyword": "surebet tool comparison",
+    "intro": "Surebet Danmark and BetTrackerAI both scan for surebets (also called arbitrage bets) at licensed bookmakers. Both offer a 7-day free trial. The key differences lie in pricing and in the tools you get beyond the surebet scanner itself.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "At a glance"
+      },
+      {
+        "type": "example",
+        "title": "BetTrackerAI and Surebet Danmark side by side",
+        "rows": [
+          [
+            "Price per month",
+            "BetTrackerAI from approx. €20 · Surebet Danmark approx. €134"
+          ],
+          [
+            "Free trial",
+            "Both: 7 days"
+          ],
+          [
+            "Bookmakers",
+            "Both: licensed bookmakers only"
+          ],
+          [
+            "Notifications",
+            "BetTrackerAI: push and SMS (Premium) · Surebet Danmark: live notifications"
+          ],
+          [
+            "Bet accounting",
+            "BetTrackerAI: full tracking with ROI and balance per bookmaker · Surebet Danmark: bet tracker"
+          ],
+          [
+            "Free tools and guides",
+            "BetTrackerAI: sure bet calculator and educational guides"
+          ]
+        ],
+        "note": "Prices checked on both sites on 23 November 2025 and may change."
+      },
+      {
+        "type": "h2",
+        "text": "Price: a significant difference"
+      },
+      {
+        "type": "p",
+        "text": "Surebet Danmark costs approx. €134 per month. BetTrackerAI costs approx. €20 per month for Basic (surebets up to 5% profit) and approx. €33 for Premium (all surebets plus SMS alerts). With Premium you save approx. €100 per month – that's approx. €1,200 a year."
+      },
+      {
+        "type": "p",
+        "text": "This matters because surebets typically yield 1–5% per bet. A lower monthly fee means you need far less turnover before the subscription pays for itself."
+      },
+      {
+        "type": "h2",
+        "text": "Bet tracking: where BetTrackerAI stands out"
+      },
+      {
+        "type": "p",
+        "text": "Surebets are only profitable if you know exactly what you've earned. In BetTrackerAI you log your surebets and deposits, and you see your profit, ROI and balance at each bookmaker in one place. You can also import a bet slip instead of entering it manually."
+      },
+      {
+        "type": "h2",
+        "text": "Which tool suits you?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Choose BetTrackerAI if you want surebets at a lower price whilst tracking your accounts in detail.",
+          "Choose Surebet Danmark if you already use their platform and are satisfied with the cost.",
+          "If you're unsure, try both. Both offer 7-day free trials, so you can compare surebets on the same events."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Whichever tool you choose: always place the bet with the most volatile odds first, and confirm that the market is identical at both bookmakers."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is BetTrackerAI cheaper than Surebet Danmark?",
+        "a": "Yes. BetTrackerAI costs approx. €20 or approx. €33 per month, while Surebet Danmark costs approx. €134 per month (as of 23 November 2025)."
+      },
+      {
+        "q": "Do both tools only use licensed bookmakers?",
+        "a": "Yes. Both platforms focus on regulated, licensed bookmakers, ensuring you bet legally and with player protections in place."
+      },
+      {
+        "q": "Can I try BetTrackerAI for free?",
+        "a": "Yes. You get a 7-day free trial with full access, and you can cancel at any time during the trial period."
+      }
+    ],
+    "category": "Fundamentals",
+    "ctaLabel": "Try BetTrackerAI free for 7 days"
+  },
+  "betting-regnskab": {
+    "title": "Betting accounts: how to keep track of your bankroll",
+    "metaTitle": "Betting Accounts – Track Your Balance Across Bookmakers",
+    "description": "Learn how to keep accounts for your betting: deposits, withdrawals and balance at each bookmaker. Never lose track when betting across multiple sites.",
+    "keyword": "bet tracker",
+    "intro": "When you place sure bets, you have money sitting with many bookmakers at once. A betting account shows you where your money is and how much you've earned when you add it all together.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why you lose track"
+      },
+      {
+        "type": "p",
+        "text": "With arbitrage betting you win at one bookmaker and lose at another. Your balance is constantly shifting, and you need to deposit and withdraw regularly to have money in the right places. Without proper accounts, it's hard to see whether you're up overall."
+      },
+      {
+        "type": "h2",
+        "text": "What your accounts should include"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "All deposits and withdrawals at each bookmaker",
+          "Your current balance at each bookmaker",
+          "All bets with stake, odds and result",
+          "Your total profit: current balances plus withdrawals minus deposits"
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Example: total profit across bookmakers",
+        "rows": [
+          [
+            "Total deposits",
+            "€10,000"
+          ],
+          [
+            "Total withdrawn",
+            "€3,000"
+          ],
+          [
+            "Balance with bookmakers now",
+            "€7,800"
+          ],
+          [
+            "Profit",
+            "€3,000 + €7,800 − €10,000 = €800"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Good habits for bankroll management"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Record deposits and withdrawals the same day.",
+          "Reconcile your balance with the bookmaker's own balance once a week.",
+          "Keep your betting money separate from your everyday money, so you don't accidentally bet with money you need for other things."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "The accounts in BetTrackerAI show balance, deposits and profit per bookmaker, so you always know where your money stands."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Do I pay tax on betting winnings?",
+        "a": "Tax treatment of gambling winnings varies by jurisdiction. In some regulated markets winnings from licensed bookmakers are tax-free, while in others you may need to declare them. Check the tax rules where you live or consult a local adviser."
+      },
+      {
+        "q": "How often should I update my bet tracker?",
+        "a": "Record bets and deposits straight away, and reconcile balances once a week."
+      }
+    ],
+    "category": "Strategy",
+    "ctaLabel": "Open your accounts"
+  },
+  "tjen-penge-paa-odds-uden-risiko": {
+    "title": "Make money on sports betting without risk: how hedging and arbitrage work",
+    "metaTitle": "Make Money on Sports Betting Without Risk 2026",
+    "description": "How to make money on sports betting without risk: surebets and hedging with worked examples in €, a realistic betting strategy and the real pitfalls.",
+    "keyword": "make money on sports betting without risk",
+    "category": "Strategy",
+    "ctaLabel": "See guaranteed-profit surebets",
+    "intro": "You can make money on sports betting without risk by backing every outcome of the same event at different bookmakers when the combined odds pay out more than you stake. This is sports arbitrage, or a surebet. The profit is fixed before kick-off, usually 1–3%. The risk is not in the result but in odds moving, mistakes and account limits.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sports arbitrage: why the profit is guaranteed"
+      },
+      {
+        "type": "p",
+        "text": "A bookmaker makes money because its prices add up to more than 100% probability. When two bookmakers rate the same event differently, you take the best price on a different outcome at each one. If the combined probability falls below 100%, you have a guaranteed profit. This is mathematical betting, not guessing. The full mechanism is explained in [how does arbitrage betting work?](/en/guides/arbitrage-betting)"
+      },
+      {
+        "type": "example",
+        "title": "Example: two-way basketball game (incl. overtime), €1,000",
+        "rows": [
+          [
+            "Team A at bookmaker 1, odds 1.95",
+            "Stake €520.88"
+          ],
+          [
+            "Team B at bookmaker 2, odds 2.12",
+            "Stake €479.12"
+          ],
+          [
+            "Sum of inverse odds",
+            "0.513 + 0.472 = 0.985"
+          ],
+          [
+            "Payout whoever wins",
+            "approx. €1,015.72"
+          ],
+          [
+            "Guaranteed profit",
+            "approx. €15.72 (1.6%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Guaranteed profit betting with hedging: lock in a running bet"
+      },
+      {
+        "type": "p",
+        "text": "Hedging uses the same maths but starts from a bet you have already placed. If the price moves in your favour, you back the opposite outcome at another bookmaker and lock in a profit whatever the result."
+      },
+      {
+        "type": "example",
+        "title": "Example: over 2.5 goals backed pre-match for €500",
+        "rows": [
+          [
+            "Original bet: over 2.5 goals, odds 2.40",
+            "Stake €500, potential payout €1,200"
+          ],
+          [
+            "After an early goal: under 2.5 goals, odds 2.60",
+            "Stake €461.54"
+          ],
+          [
+            "Total staked",
+            "€961.54"
+          ],
+          [
+            "Payout on every result",
+            "€1,200"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €238.46 (24.8%)"
+          ]
+        ],
+        "note": "The formula: hedge stake = potential payout ÷ new odds. Here 1,200 ÷ 2.60 = €461.54."
+      },
+      {
+        "type": "h2",
+        "text": "Betting strategy: small margins, lots of bets"
+      },
+      {
+        "type": "p",
+        "text": "The guaranteed profit per surebet is small, so results come from volume and discipline. A realistic arbitrage betting strategy looks like this:"
+      },
+      {
+        "type": "example",
+        "title": "Realistic monthly numbers",
+        "rows": [
+          [
+            "Stake per surebet",
+            "€1,000"
+          ],
+          [
+            "Average profit",
+            "1.5%"
+          ],
+          [
+            "Surebets per month",
+            "40"
+          ],
+          [
+            "Expected monthly result",
+            "approx. €600"
+          ],
+          [
+            "Same setup at €2,500 per surebet",
+            "approx. €1,500"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Spread your bets** across several bookmakers so no single account stands out.",
+          "**Keep balances ready** at every bookmaker so you can act within minutes.",
+          "**Log every bet** so you see your real ROI, not just a feeling. A [bet tracker](/en/guides/bet-tracker) does it automatically."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Mathematical betting: four risks that have nothing to do with maths"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Odds movement:** the price can drop between your first and second bet. Always place the least stable price first.",
+          "**Voided bets:** on obvious pricing errors the bookmaker may void the bet, leaving you with one unhedged side.",
+          "**Different rules:** retirements, walkovers and overtime are settled differently. Check both bookmakers settle the market the same way.",
+          "**Account limits:** bookmakers can cut your maximum stake. Read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Betting smart means removing the practical risks, not just the mathematical ones. [BetTracker AI](/en) shows you surebets with the stake split calculated, so you can place the bets before the price moves."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Can you really make money on sports betting with no risk at all?",
+        "a": "On a correctly placed surebet the result does not matter. The remaining risk is practical: odds moving, voided bets and picking the wrong market."
+      },
+      {
+        "q": "What is the difference between surebets and hedging?",
+        "a": "A surebet is placed on every outcome at once. Hedging starts with one bet and covers the opposite outcome later, once the price has moved in your favour."
+      },
+      {
+        "q": "How much money do I need to start?",
+        "a": "You can start with €200–500 spread across a few bookmakers. With smaller stakes, though, a surebet only returns a few euros."
+      }
+    ]
+  },
+  "find-surebets-automatisk": {
+    "title": "Find surebets automatically: how an odds scanner spots pricing errors",
+    "metaTitle": "Find Surebets Automatically – Odds Scanner 2026",
+    "description": "How to find surebets automatically with an odds scanner: how betting software spots pricing errors, worked examples in € and what to look for.",
+    "keyword": "find surebets automatically",
+    "category": "Strategy",
+    "ctaLabel": "Start the surebet scanner",
+    "intro": "To find surebets automatically, you use an odds scanner that compares prices across dozens of bookmakers every few seconds. When the sum of the inverse odds drops below 1, the software flags the surebet with stakes already calculated. It catches pricing errors in seconds that would take you hours to find by hand, and before the bookmaker corrects them.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Why finding surebets by hand rarely works"
+      },
+      {
+        "type": "p",
+        "text": "A single football match can have 100+ markets. Multiply that by 15 bookmakers and several hundred matches a day, and you have millions of price combinations. Most surebets last 2–10 minutes. By the time you have compared tabs and done the maths, the price has usually moved."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Volume:** a scanner checks every market at once, you check a handful.",
+          "**Speed:** the software reacts within seconds of a price change.",
+          "**Accuracy:** the stake split is calculated for you, so there are no typing errors."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Software to find odds errors: how the scanner works"
+      },
+      {
+        "type": "p",
+        "text": "Betting software collects prices from bookmakers continuously, matches identical events and markets, and calculates the sum of inverse odds for every combination. The core of the job is matching: \"Man Utd\" and \"Manchester United\" must be recognised as the same team, and \"over 2.5\" must be the same line at both bookmakers."
+      },
+      {
+        "type": "example",
+        "title": "Example: pricing error spotted by the scanner, total stake €1,000",
+        "rows": [
+          [
+            "Over 2.5 goals at bookmaker 1, odds 2.25",
+            "Stake €461.72"
+          ],
+          [
+            "Under 2.5 goals at bookmaker 2, odds 1.93",
+            "Stake €538.28"
+          ],
+          [
+            "1/2.25 + 1/1.93",
+            "0.444 + 0.518 = 0.963"
+          ],
+          [
+            "Payout on every result",
+            "approx. €1,038.88"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €38.88 (3.9%)"
+          ]
+        ],
+        "note": "Bookmaker 1 had not reacted to a team news update. The scanner flagged the gap within seconds."
+      },
+      {
+        "type": "h2",
+        "text": "Pricing errors: the real ones and the traps"
+      },
+      {
+        "type": "p",
+        "text": "Not every high-profit surebet is a gift. Profits above 8–10% are often a sign that something is wrong rather than a genuine opportunity."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Obvious errors:** odds of 15.0 where everyone else offers 1.50 are often voided by the bookmaker. Avoid them.",
+          "**Different rules:** a tennis market settled on retirement at one bookmaker and voided at the other is not a real surebet.",
+          "**Different lines:** Asian handicap −0.5 and −0.25 look alike but behave differently. Read about [Asian handicap](/en/guides/asian-handicap).",
+          "**Healthy surebets:** 1–4% profit on mainstream markets is the sweet spot. That is where most of your profit will come from."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Set a minimum profit of 1% and a maximum of around 8% in the scanner. That filters out noise and most of the errors that get voided."
+      },
+      {
+        "type": "h2",
+        "text": "What to look for in an odds scanner"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Bookmaker coverage:** the more bookmakers, the more surebets. Make sure the ones you have accounts with are included.",
+          "**Update frequency:** prices must be refreshed every few seconds, especially for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filters:** sport, market, minimum profit and bookmakers, so you only see what you can actually play.",
+          "**Stake calculator:** built in, so you can place the bets immediately. You can also check the numbers in the [surebet calculator](/en/calculator).",
+          "**Bet tracking:** logging your bets afterwards shows your real ROI. See [bet tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Pick your bookmakers, set a minimum profit of 1% and place the bets quickly, one after the other. [BetTracker AI](/en) scans the bookmakers for you and shows surebets in real time with the stake split already calculated."
+      }
+    ],
+    "faq": [
+      {
+        "q": "How many surebets does a scanner find per day?",
+        "a": "Typically anywhere from dozens to several hundred, depending on how many bookmakers and sports you include and your minimum profit setting."
+      },
+      {
+        "q": "Can I place bets automatically?",
+        "a": "Automated bet placing breaks the terms of most bookmakers and gets accounts closed quickly. Let the scanner find the surebets and place the bets yourself."
+      },
+      {
+        "q": "Why has the surebet disappeared when I open the bookmaker?",
+        "a": "The price has moved since the scan. Always check the odds on your bet slip and recalculate before placing."
+      }
+    ]
+  },
+  "live-arbitrage-betting-scanner": {
+    "title": "Live arbitrage betting scanner: how to catch live surebets in play",
+    "metaTitle": "Live Arbitrage Betting Scanner – Live Surebets 2026",
+    "description": "How a live arbitrage betting scanner finds surebets during matches: speed, bet delays, worked examples in € and how to avoid the classic mistakes.",
+    "keyword": "live arbitrage betting scanner",
+    "category": "Strategy",
+    "ctaLabel": "See live surebets",
+    "intro": "A live arbitrage betting scanner compares in-play odds across bookmakers while matches are running and flags surebets the moment prices diverge. Live surebets appear more often than pre-match because bookmakers react at different speeds to goals, breaks and red cards. They also disappear faster, often within 10–60 seconds, so speed and discipline matter more than ever.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Live surebets: why in-play creates more opportunities"
+      },
+      {
+        "type": "p",
+        "text": "Before kick-off, prices move slowly. In play, every event shifts the probabilities instantly. A bookmaker that uses a slower data feed, or suspends markets for a few seconds longer, ends up with a price that no longer matches the rest of the market. That gap is a live surebet."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Tennis:** a break of serve changes the odds dramatically, and bookmakers update at different speeds.",
+          "**Football:** goals, red cards and penalties create brief price gaps in 1X2 and over/under markets.",
+          "**Basketball:** fast scoring runs cause frequent swings in two-way markets."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sports arbitrage in play: a worked example"
+      },
+      {
+        "type": "example",
+        "title": "Example: live tennis after a break, total stake €800",
+        "rows": [
+          [
+            "Player A at bookmaker 1, odds 1.72",
+            "Stake €467.63"
+          ],
+          [
+            "Player B at bookmaker 2, odds 2.42",
+            "Stake €332.37"
+          ],
+          [
+            "1/1.72 + 1/2.42",
+            "0.581 + 0.413 = 0.995"
+          ],
+          [
+            "Payout whoever wins",
+            "approx. €804.33"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €4.33 (0.5%)"
+          ]
+        ],
+        "note": "Live margins are often smaller than pre-match. A higher bet count compensates, but only if your execution is fast and accurate."
+      },
+      {
+        "type": "example",
+        "title": "Example: over/under after an early goal, total stake €1,000",
+        "rows": [
+          [
+            "Over 3.5 goals at bookmaker 1, odds 2.30",
+            "Stake €451.07"
+          ],
+          [
+            "Under 3.5 goals at bookmaker 2, odds 1.89",
+            "Stake €548.93"
+          ],
+          [
+            "Sum of inverse odds",
+            "0.435 + 0.529 = 0.964"
+          ],
+          [
+            "Payout on every result",
+            "approx. €1,037.47"
+          ],
+          [
+            "Locked-in profit",
+            "approx. €37.47 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Bet delays and suspended markets: the live risks"
+      },
+      {
+        "type": "p",
+        "text": "Live betting adds risks that do not exist pre-match. Bookmakers use a bet delay of 3–10 seconds, during which the price can change or the bet can be rejected."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Bet delay:** your bet is only accepted after a few seconds. If the price moves, it may be rejected.",
+          "**Suspended markets:** after a goal or a break, markets close briefly. Never place the first leg while the second market is suspended.",
+          "**Partial acceptance:** some bookmakers accept only part of your stake live. Check the confirmation before placing the second leg.",
+          "**Recalculate quickly:** if the second leg moves, recalculate in the [surebet calculator](/en/calculator) and cover at the best price available."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Place the leg at the bookmaker with the longest bet delay first. Once it is accepted, place the second leg at the faster bookmaker."
+      },
+      {
+        "type": "h2",
+        "text": "Odds comparison live: what your scanner must do"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Update every few seconds:** live prices older than 10 seconds are useless.",
+          "**Show the price age:** so you can see how fresh the surebet is.",
+          "**Filter live and pre-match separately:** live surebets need a different approach and lower stakes at first.",
+          "**Log every bet:** live results vary more, so a [bet tracker](/en/guides/bet-tracker) is essential to see if you are actually profitable."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Start pre-match if you are new, and move to live once your routine is solid. Read how to [find surebets automatically](/en/guides/find-surebets-automatically) first. When you are ready, [BetTracker AI](/en) shows live surebets with the stake split calculated in real time."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Are live surebets more profitable than pre-match?",
+        "a": "There are more of them, but margins are often smaller and the execution risk is higher. The net result depends on how fast and accurate you are."
+      },
+      {
+        "q": "How fast do I need to be?",
+        "a": "Live surebets often last 10–60 seconds. You should be able to place both legs within that window, so have accounts funded and logged in beforehand."
+      },
+      {
+        "q": "Do bookmakers limit live arbers faster?",
+        "a": "Often yes, because live arbing on slow prices is easy to spot. Mix in normal bets and read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "find-value-bets-med-ai": {
+    "title": "Find value bets with AI: how an AI odds scanner spots +EV bets",
+    "metaTitle": "Find Value Bets with AI – AI Odds Scanner 2026",
+    "description": "How to find value bets with AI: how an AI odds scanner calculates fair odds, spots +EV bets and what you can expect, with examples in €.",
+    "keyword": "find value bets with ai",
+    "category": "Strategy",
+    "ctaLabel": "Find value bets with AI",
+    "intro": "To find value bets with AI, you use an AI odds scanner that estimates the fair probability of each outcome, typically from sharp bookmaker prices with the margin removed, and compares it with the odds at soft bookmakers. When the offered odds are higher than the fair odds, the bet has positive expected value (+EV). The AI does the comparison across thousands of markets in seconds.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Value betting: what +EV actually means"
+      },
+      {
+        "type": "p",
+        "text": "A value bet is a bet where the odds are higher than the true probability justifies. You can lose any single value bet, but over hundreds of bets the positive expected value turns into profit."
+      },
+      {
+        "type": "example",
+        "title": "Example: expected value on a single bet",
+        "rows": [
+          [
+            "Fair probability",
+            "50% (fair odds 2.00)"
+          ],
+          [
+            "Offered odds at soft bookmaker",
+            "2.10"
+          ],
+          [
+            "Expected value",
+            "0.50 × 2.10 − 1 = +5%"
+          ],
+          [
+            "Stake €50",
+            "Expected profit €2.50 per bet"
+          ],
+          [
+            "300 bets of €50 (€15,000 turnover)",
+            "Expected profit approx. €750"
+          ]
+        ],
+        "note": "Expected profit is an average. Actual results swing above and below it, especially over a small number of bets."
+      },
+      {
+        "type": "h2",
+        "text": "AI odds scanner: how fair odds are calculated"
+      },
+      {
+        "type": "p",
+        "text": "Sharp bookmakers have low margins and adjust quickly to professional money, so their prices are the best estimate of the true probability. The AI removes the margin from the sharp price and calculates fair odds."
+      },
+      {
+        "type": "example",
+        "title": "Example: removing the margin from sharp odds",
+        "rows": [
+          [
+            "Sharp odds",
+            "1.95 / 1.95"
+          ],
+          [
+            "Implied probabilities",
+            "51.28% + 51.28% = 102.56%"
+          ],
+          [
+            "Fair probability after margin removal",
+            "50% / 50%"
+          ],
+          [
+            "Fair odds",
+            "2.00 / 2.00"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Market matching:** AI recognises identical events and lines across bookmakers.",
+          "**Speed:** prices are recalculated every few seconds as markets move.",
+          "**Filtering:** the scanner ignores tiny edges and suspicious outliers that are likely to be voided."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI sports betting: value bets vs surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Surebets:** guaranteed profit on every result, but small margins and fast limits.",
+          "**Value bets:** single bets with higher expected profit, but with variance and losing streaks.",
+          "**Combine them:** many bettors use surebets for steady profit and value bets to increase ROI."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Read the full comparison of [value betting vs surebets](/en/guides/value-bets-vs-surebets)."
+      },
+      {
+        "type": "h2",
+        "text": "AI betting in practice: rules that protect you"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Stake 1–2% of your bankroll** per value bet. See [bankroll management](/en/guides/bankroll-management).",
+          "**Minimum edge of 2–3%** to leave room for errors in the fair odds estimate.",
+          "**Track closing odds:** beating the closing line consistently is the best sign that your bets have value.",
+          "**Judge after hundreds of bets**, never after one week."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Log every value bet in a [bet tracker](/en/guides/bet-tracker). After 300–500 bets, your ROI shows whether the edge is real."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) uses AI to scan the bookmakers, calculate fair odds and show value bets and surebets in real time."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Does AI guarantee profit on value bets?",
+        "a": "No. AI finds bets with positive expected value, but individual bets can lose. Profit comes over a large number of bets."
+      },
+      {
+        "q": "How much can I make with value betting?",
+        "a": "A realistic long-term ROI is often 2–5% of turnover, depending on edge, bookmakers and how long your accounts stay open."
+      },
+      {
+        "q": "Do bookmakers limit value bettors?",
+        "a": "Yes, soft bookmakers often limit customers who beat the closing line. Read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "bedste-odds-vaerktoej-danmark": {
+    "title": "Best sports betting tools in 2026: AI odds scanners and trackers",
+    "metaTitle": "Best Sports Betting Tools 2026 – AI & Odds Scanners",
+    "description": "The best sports betting tools in 2026: AI odds scanners, odds comparison, surebet calculators and bet trackers, what they cost in € and what to choose.",
+    "keyword": "best sports betting tools",
+    "category": "Strategy",
+    "ctaLabel": "Try BetTracker AI",
+    "intro": "The best sports betting tools are an AI odds scanner that finds surebets and value bets, odds comparison across many bookmakers, a surebet calculator for exact stakes and a bet tracker that measures your ROI. Choose betting software that covers the bookmakers you use, updates prices every few seconds and pays for itself with a realistic turnover.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "The betting tools every serious bettor needs"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**AI odds scanner:** finds surebets and value bets automatically across bookmakers.",
+          "**Odds comparison:** shows the best available price for every outcome.",
+          "**Surebet calculator:** splits the stake so the profit is the same on every result. Try the [surebet calculator](/en/calculator).",
+          "**Bet tracker:** logs every bet and calculates ROI. See [bet tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI odds scanner vs manual odds comparison"
+      },
+      {
+        "type": "p",
+        "text": "Manual odds comparison finds the best price for one match. An AI odds scanner compares every market at every bookmaker continuously and only shows the combinations where you have an edge."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Coverage:** thousands of markets instead of a handful.",
+          "**Speed:** surebets are flagged within seconds, before prices are corrected.",
+          "**Accuracy:** matching and stake calculations are done for you."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Betting software: what it costs and when it pays off"
+      },
+      {
+        "type": "p",
+        "text": "A tool only makes sense if the profit it finds is larger than its price. Calculate the turnover you need to break even."
+      },
+      {
+        "type": "example",
+        "title": "Example: break-even for a €33 per month tool",
+        "rows": [
+          [
+            "Subscription",
+            "approx. €33 per month"
+          ],
+          [
+            "Average ROI on surebets",
+            "2%"
+          ],
+          [
+            "Turnover needed to break even",
+            "€33 / 2% = €1,650"
+          ],
+          [
+            "Typical turnover (60 surebets × €400)",
+            "€24,000"
+          ],
+          [
+            "Profit after subscription",
+            "€480 − €33 = €447"
+          ]
+        ],
+        "note": "Prices are approximate euro amounts. BetTracker AI costs from approx. €20 per month for Basic and approx. €33 for Premium."
+      },
+      {
+        "type": "h2",
+        "text": "How to choose the best sports betting tools"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Bookmaker coverage:** the tool must include the bookmakers you can actually use.",
+          "**Update frequency:** a few seconds for pre-match, faster for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filters:** sport, market, bookmaker and minimum profit.",
+          "**Built-in tracking:** surebets placed from the scanner should be tracked automatically.",
+          "**Fair price:** compare monthly cost with your expected turnover. See the [surebet tool comparison](/en/guides/surebet-tool-comparison)."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Start with one tool that combines scanner, calculator and tracker. Juggling separate tools costs time, and time is what surebets do not give you."
+      },
+      {
+        "type": "p",
+        "text": "[BetTracker AI](/en) combines an AI odds scanner, odds comparison, a surebet calculator and a bet tracker in one platform. Read how to [find value bets with AI](/en/guides/find-value-bets-with-ai) and [find surebets automatically](/en/guides/find-surebets-automatically)."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Which betting tool should I start with?",
+        "a": "A surebet scanner with a built-in calculator and tracker. It covers finding, placing and measuring in one place."
+      },
+      {
+        "q": "Are free betting tools good enough?",
+        "a": "Free calculators and trackers are fine. Free odds scanners usually show delayed or limited surebets, which are often gone by the time you act."
+      },
+      {
+        "q": "Is betting software legal?",
+        "a": "Using tools to compare odds and track bets is legal. Automated bet placing usually breaks bookmaker terms. See [are surebets legal?](/en/guides/are-surebets-legal)"
+      }
+    ]
+  }
+}

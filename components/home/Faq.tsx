@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useState } from "react";
 import Link from "next/link";
 import {
@@ -25,15 +26,16 @@ const FAQ_JSON_LD = JSON.stringify({
 const num = (k: number) => String(k + 1).padStart(2, "0");
 
 function Eyebrow({ phone = false }: { phone?: boolean }) {
+  const { tx } = useLocale();
   return (
     <span className={`flex w-fit items-center gap-[6px] rounded-full font-semibold ${phone ? "h-7 border border-primary/50 bg-primary/10 px-3 text-[11.5px] text-primary-glow" : "eyebrow-chip h-[24px] px-[11px] text-[9.5px] uppercase tracking-[0.16em]"}`}>
       <MessageCircleQuestion className={phone ? "h-3.5 w-3.5" : "h-[12px] w-[12px]"} />
-      Ofte stillede spørgsmål
-    </span>
+      {tx("Ofte stillede spørgsmål")}</span>
   );
 }
 
 function SupportHeader({ call, phone = false }: { call: SupportCallState; phone?: boolean }) {
+  const { tx } = useLocale();
   return (
     <header className={`flex items-center gap-[9px] border-b border-border/70 ${phone ? "px-3.5 py-2.5" : "px-[14px] py-[8px]"}`}>
       <span className={`btn-glow relative flex shrink-0 items-center justify-center rounded-full ${phone ? "h-8 w-8" : "h-[26px] w-[26px]"}`}>
@@ -41,10 +43,9 @@ function SupportHeader({ call, phone = false }: { call: SupportCallState; phone?
         <span className="online-dot absolute -bottom-px -right-px h-[7px] w-[7px] rounded-full" />
       </span>
       <div className="min-w-0 flex-1">
-        <p className={`font-semibold ${phone ? "text-[13.5px] leading-[17px]" : "text-[11.5px] leading-[15px]"}`}>BetTrackerAI Support</p>
+        <p className={`font-semibold ${phone ? "text-[13.5px] leading-[17px]" : "text-[11.5px] leading-[15px]"}`}>{tx("BetTrackerAI Support")}</p>
         <p className={`truncate text-foreground/60 ${phone ? "text-[11px]" : "text-[9.5px] leading-[13px]"}`}>
-          <span className="text-success">Online</span> · skriv eller ring op
-        </p>
+          <span className="text-success">{tx("Online")}</span> {" "}{tx("· skriv eller ring op")}</p>
       </div>
       <CallButton call={call} phone={phone} />
     </header>
@@ -52,11 +53,12 @@ function SupportHeader({ call, phone = false }: { call: SupportCallState; phone?
 }
 
 function TrialLink({ phone = false }: { phone?: boolean }) {
+  const { tx } = useLocale();
   return (
     <p className={`text-foreground/65 ${phone ? "text-[12px]" : "text-[10.5px] leading-[14px]"}`}>
-      Stadig i tvivl?{" "}
+      {tx("Stadig i tvivl?")}{" "}
       <Link href="/konto" className="inline-flex items-center gap-[4px] font-semibold text-primary-glow hover:underline">
-        Prøv gratis i {PRICING.trialDays} dage <ArrowRight className={phone ? "h-3.5 w-3.5" : "h-[11px] w-[11px]"} />
+        {tx("Prøv gratis i")}{" "}{tx(PRICING.trialDays)} {" "}{tx("dage")}{" "}<ArrowRight className={phone ? "h-3.5 w-3.5" : "h-[11px] w-[11px]"} />
       </Link>
     </p>
   );
@@ -64,6 +66,7 @@ function TrialLink({ phone = false }: { phone?: boolean }) {
 
 /** Desktop canvas section (inside .mock-frame): compact question list on the left, live support chat on the right. */
 export function FaqSection() {
+  const { tx } = useLocale();
   const chat = useSupportChat();
   const call = useSupportCall();
   const [active, setActive] = useState<number | null>(null);
@@ -76,12 +79,11 @@ export function FaqSection() {
         <div>
           <Eyebrow />
           <h2 className="mt-[10px] text-[25px] font-bold leading-[30px]">
-            Spørg løs – <span className="text-gradient-brand">vi svarer på dansk.</span>
+            {tx("Spørg løs –")}{" "}<span className="text-gradient-brand">{tx("vi svarer på dansk.")}</span>
           </h2>
         </div>
         <p className="max-w-[300px] pb-[3px] text-right text-[11px] leading-[16px] text-foreground/70">
-          Vælg et spørgsmål eller skriv i chatten.
-        </p>
+          {tx("Vælg et spørgsmål eller skriv i chatten.")}</p>
       </div>
 
       <div className="mt-[14px] grid grid-cols-[1fr_440px] gap-[18px]">
@@ -100,7 +102,7 @@ export function FaqSection() {
                   className="faq-q group flex h-[28px] w-full items-center gap-[10px] rounded-[9px] px-[12px] text-left text-[11.5px] font-semibold leading-[15px]"
                 >
                   <span className="faq-num w-[18px] shrink-0 text-[10px] font-bold tabular-nums">{num(k)}</span>
-                  <span className="flex-1 truncate">{q}</span>
+                  <span className="flex-1 truncate">{tx(q)}</span>
                   <ChevronRight className="faq-arrow h-[12px] w-[12px] shrink-0" />
                 </button>
               </li>
@@ -122,6 +124,7 @@ export function FaqSection() {
 
 /** Phone layout section: one chat box, with the common questions as swipeable buttons above the typing box. */
 export function MobileFaq() {
+  const { tx } = useLocale();
   const chat = useSupportChat();
   const call = useSupportCall();
   return (
@@ -129,9 +132,9 @@ export function MobileFaq() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }} />
       <Eyebrow phone />
       <h2 className="mt-3 text-[24px] font-bold leading-[28px] tracking-[-0.3px]">
-        Spørg løs – <span className="text-gradient-brand">vi svarer på dansk.</span>
+        {tx("Spørg løs –")}{" "}<span className="text-gradient-brand">{tx("vi svarer på dansk.")}</span>
       </h2>
-      <p className="mt-1.5 text-[12.5px] leading-[19px] text-foreground/75">Tryk på et spørgsmål eller skriv dit eget.</p>
+      <p className="mt-1.5 text-[12.5px] leading-[19px] text-foreground/75">{tx("Tryk på et spørgsmål eller skriv dit eget.")}</p>
       <div className="faq-chat mt-4 flex h-[440px] flex-col overflow-hidden rounded-[14px]">
         <SupportHeader call={call} phone />
         {call.open ? <CallPanel call={call} phone /> : <SupportChat chat={chat} phone suggestions />}

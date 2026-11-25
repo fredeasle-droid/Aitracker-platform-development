@@ -15,9 +15,30 @@ import { eq } from 'drizzle-orm'
 import { db } from '@/lib/db'
 import { pushSettings, smsAlertSettings } from '@/lib/db/schema'
 import { getOwnerState } from '@/lib/admin'
+import type { Locale } from '@/lib/i18n'
+import { getServerLocale } from '@/lib/locale-server'
 
 export const dynamic = 'force-dynamic'
-export const metadata: Metadata = { title: 'Min side – BetTracker' }
+const ACCOUNT_TITLE: Record<Locale, string> = {
+  da: 'Min side – BetTracker',
+  en: 'My account – BetTracker',
+  sv: 'Mitt konto – BetTracker',
+  no: 'Min side – BetTracker',
+  de: 'Mein Konto – BetTracker',
+  es: 'Mi cuenta – BetTracker',
+  br: 'Minha conta – BetTracker',
+  pt: 'A minha conta – BetTracker',
+  fr: 'Mon compte – BetTracker',
+  it: 'Il mio account – BetTracker',
+  pl: 'Moje konto – BetTracker',
+  fi: 'Oma tili – BetTracker',
+  nl: 'Mijn account – BetTracker',
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale()
+  return { title: ACCOUNT_TITLE[locale], robots: { index: false, follow: false } }
+}
 
 async function loadInvoices(customerId: string): Promise<AccountInvoice[]> {
   try {

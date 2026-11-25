@@ -128,7 +128,7 @@ export default async function SourcesPage() {
         </a>
         <div className="text-sm leading-relaxed text-[#9fb2cc]">
           <h2 className="mb-1 font-semibold text-white">Sådan forbindes den</h2>
-          <p>Installer scriptet i Tampermonkey eller Violentmonkey, genindlæs OddsJams Arbitrage-side, og klik på knappen “Forbind BetTracker”. Lad OddsJam-fanen og modtagervinduet stå åbne, så rækkerne kan opdateres.</p>
+          <p>Installer scriptet i Tampermonkey eller Violentmonkey, og genindlæs OddsJams Arbitrage-side. Scriptet sender rækkerne direkte til BetTracker hvert 15. sekund uden ekstra vinduer. Lad bare OddsJam-fanen stå åben. Scriptet indeholder din personlige nøgle, så del det ikke med andre.</p>
           <p className="mt-2">Kun rækker, der vises i din browser, sendes. Sikkerhedskontroller bliver ikke omgået.</p>
         </div>
         <details className="flex flex-col gap-4 text-sm text-[#9fb2cc]">

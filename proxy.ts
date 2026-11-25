@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from 'next/server'
 import { getSessionCookie } from 'better-auth/cookies'
+import { LOCALE_HEADER, localePath, stripLocalePrefix } from '@/lib/i18n'
+import { canonicalRoute } from '@/lib/route-slugs'
 import { MAINTENANCE_BYPASS_COOKIE, getOpensAt, isMaintenanceActive } from '@/lib/maintenance'
 
 export const USER_COOKIE = 'bt_uid'
@@ -48,29 +50,57 @@ function maintenanceResponse(request: NextRequest): NextResponse | null {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
+  const { locale, path: publicPath } = stripLocalePrefix(pathname)
+  const path = locale ? canonicalRoute(locale, publicPath) : publicPath
 
   const closed = maintenanceResponse(request)
   if (closed) return closed
 
-  if (isMembersOnly(pathname) && !getSessionCookie(request)) {
-    const loginUrl = new URL('/konto', request.url)
+  // Old or untranslated addresses (e.g. /en/guide/hvad-er-surebets) move permanently to the localized one.
+  if (locale && (request.method === 'GET' || request.method === 'HEAD')) {
+    const wanted = localePath(locale, path)
+    const current = pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname
+    if (wanted !== current) {
+      const target = request.nextUrl.clone()
+      target.pathname = wanted
+      return NextResponse.redirect(target, 308)
+    }
+  }
+
+  if (isMembersOnly(path) && !getSessionCookie(request)) {
+    const loginUrl = new URL(locale ? localePath(locale, '/konto') : '/konto', request.url)
     loginUrl.searchParams.set('login', '1')
-    loginUrl.searchParams.set('next', pathname + request.nextUrl.search)
+    loginUrl.searchParams.set('next', (locale ? localePath(locale, path) : path) + request.nextUrl.search)
     return NextResponse.redirect(loginUrl)
   }
 
-  if (request.cookies.get(USER_COOKIE)?.value) return NextResponse.next()
+  const hasUid = Boolean(request.cookies.get(USER_COOKIE)?.value)
+  const uid = hasUid ? null : crypto.randomUUID()
+  if (uid) request.cookies.set(USER_COOKIE, uid)
 
-  const uid = crypto.randomUUID()
-  request.cookies.set(USER_COOKIE, uid)
-  const response = NextResponse.next({ request: { headers: request.headers } })
-  response.cookies.set(USER_COOKIE, uid, {
-    httpOnly: true,
-    secure: true,
-    sameSite: 'none',
-    path: '/',
-    maxAge: 60 * 60 * 24 * 365 * 2,
-  })
+  // Never trust a client-supplied locale header; only the URL prefix decides it.
+  const forwarded = new Headers(request.headers)
+  forwarded.delete(LOCALE_HEADER)
+  if (locale) forwarded.set(LOCALE_HEADER, locale)
+
+  let response: NextResponse
+  if (locale) {
+    const target = request.nextUrl.clone()
+    target.pathname = path
+    response = NextResponse.rewrite(target, { request: { headers: forwarded } })
+  } else {
+    response = NextResponse.next({ request: { headers: forwarded } })
+  }
+
+  if (uid) {
+    response.cookies.set(USER_COOKIE, uid, {
+      httpOnly: true,
+      secure: true,
+      sameSite: 'none',
+      path: '/',
+      maxAge: 60 * 60 * 24 * 365 * 2,
+    })
+  }
   return response
 }
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useId } from "react";
 
 export function LogoMark({ className }: { className?: string }) {
@@ -21,11 +22,12 @@ export function LogoMark({ className }: { className?: string }) {
 }
 
 export function Logo({ big, xl }: { big?: boolean; xl?: boolean }) {
+  const { tx } = useLocale();
   return (
     <div className={`flex items-center ${xl ? "gap-3" : "gap-[9px]"}`}>
       <LogoMark className={xl ? "h-[46px] w-[53px]" : big ? "h-[30px] w-[35px]" : "h-[26px] w-[29px]"} />
       <span className={`font-bold tracking-[-0.3px] ${xl ? "text-[32px]" : big ? "text-[21px]" : "text-[17px]"}`}>
-        BetTracker<span className="text-primary-glow">AI</span>
+        {tx("BetTracker")}<span className="text-primary-glow">{tx("AI")}</span>
       </span>
     </div>
   );

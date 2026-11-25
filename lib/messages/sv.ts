@@ -390,6 +390,8 @@ export const sv: Record<MessageKey, string> = {
   sbCatExchangeHint: 'Spela mot andra spelare',
   sbCatCrypto: 'Kryptobookmakare',
   sbCatCryptoHint: 'Insättning och uttag i krypto',
+  sbCatOther: 'Andra bookmakers',
+  sbCatOtherHint: 'Utländska bookmakers',
   sbCalcAria: 'Beräkna insats: {home} mot {away}',
   sbBestNow: 'Bäst just nu',
   sbBestShort: 'Bäst nu',

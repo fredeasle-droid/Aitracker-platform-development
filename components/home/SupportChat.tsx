@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useCallback, useEffect, useRef, useState, type FormEvent, type KeyboardEvent } from "react";
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport, type UIMessage } from "ai";
@@ -73,6 +74,7 @@ function Avatar({ phone }: { phone: boolean }) {
 
 /** The chat transcript and the box where visitors type their own question. */
 export function SupportChat({ chat, phone = false, suggestions = false }: { chat: SupportChatState; phone?: boolean; suggestions?: boolean }) {
+  const { tx } = useLocale();
   const { messages, status, sendMessage, stop, error, presetTyping, askPreset } = chat;
   const busy = status === "submitted" || status === "streaming";
   const [text, setText] = useState("");
@@ -124,40 +126,40 @@ export function SupportChat({ chat, phone = false, suggestions = false }: { chat
         {waiting && (
           <div className="flex items-end gap-[8px]">
             <Avatar phone={phone} />
-            <span className={`bubble-support animate-pulse rounded-[14px] rounded-bl-[4px] ${phone ? "px-3.5 py-2.5 text-[13px]" : "px-[12px] py-[8px] text-[11.5px]"}`}>Support skriver…</span>
+            <span className={`bubble-support animate-pulse rounded-[14px] rounded-bl-[4px] ${phone ? "px-3.5 py-2.5 text-[13px]" : "px-[12px] py-[8px] text-[11.5px]"}`}>{tx("Support skriver…")}</span>
           </div>
         )}
         {err && (
           <p role="alert" className={`self-center rounded-full border border-destructive/50 bg-destructive/15 text-center text-foreground ${phone ? "px-3 py-1.5 text-[12px]" : "px-[10px] py-[4px] text-[10.5px]"}`}>
-            {err}
+            {tx(err)}
           </p>
         )}
       </div>
 
       {suggestions && (
-        <div className="faq-suggest flex gap-2 overflow-x-auto px-3 pb-1 pt-2" role="group" aria-label="Populære spørgsmål">
+        <div className="faq-suggest flex gap-2 overflow-x-auto px-3 pb-1 pt-2" role="group" aria-label={tx("Populære spørgsmål")}>
           {FAQ_ENTRIES.map((e, k) => (
             <button key={e.q} type="button" onClick={() => askPreset(k)} className="faq-chip shrink-0 whitespace-nowrap rounded-full px-3 py-1.5 text-[12px] font-semibold">
-              {e.q}
+              {tx(e.q)}
             </button>
           ))}
         </div>
       )}
       <div className={phone ? "p-3 pt-2" : "px-[12px] pb-[10px] pt-[4px]"}>
-        {tooLong && <p className={`mb-1 text-destructive ${phone ? "text-[11px]" : "text-[9.5px]"}`}>Max {CHAT_LIMITS.maxChars} tegn</p>}
+        {tooLong && <p className={`mb-1 text-destructive ${phone ? "text-[11px]" : "text-[9.5px]"}`}>{tx("Max")}{" "}{tx(CHAT_LIMITS.maxChars)} {" "}{tx("tegn")}</p>}
         <form onSubmit={onSubmit} className="chat-composer flex items-end">
           <textarea
             value={text}
             onChange={(e) => setText(e.currentTarget.value)}
             onKeyDown={onKeyDown}
             rows={1}
-            placeholder="Skriv dit spørgsmål her…"
-            aria-label="Skriv dit spørgsmål til support"
+            placeholder={tx("Skriv dit spørgsmål her…")}
+            aria-label={tx("Skriv dit spørgsmål til support")}
             className={`min-w-0 flex-1 resize-none bg-transparent outline-none placeholder:text-foreground/50 ${phone ? "min-h-[42px] py-2.5 pl-3 pr-1 text-[14px] leading-[20px]" : "min-h-[34px] py-[8px] pl-[12px] pr-[4px] text-[11.5px] leading-[17px]"}`}
           />
           <button
             type="submit"
-            aria-label={busy ? "Stop" : "Send"}
+            aria-label={busy ? tx("Stop") : tx("Send")}
             disabled={!busy && (!text.trim() || tooLong)}
             className={`btn-glow m-1 flex shrink-0 items-center justify-center rounded-full disabled:opacity-50 ${phone ? "size-8" : "size-[26px]"}`}
           >

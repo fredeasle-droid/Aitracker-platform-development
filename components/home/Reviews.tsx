@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
 import { REVIEWS, REVIEW_SECONDS, type Review } from "./data";
@@ -40,7 +41,8 @@ export function useReviewRotation() {
 }
 
 export function ReviewAvatar({ review, className = "" }: { review: Review; className?: string }) {
-  return <img src={review.avatar} alt={review.name} loading="lazy" width={192} height={192} className={`rounded-full object-cover ${className}`} />;
+  const { tx } = useLocale();
+  return <img src={review.avatar} alt={tx(review.name)} loading="lazy" width={192} height={192} className={`rounded-full object-cover ${className}`} />;
 }
 
 /** The customer's photo for the current review; fades in each time the review changes. */

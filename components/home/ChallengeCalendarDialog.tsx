@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { ChevronLeft, ChevronRight, Percent, Send, Target, TrendingUp, X } from "lucide-react";
@@ -22,6 +23,7 @@ function fmtPct(n: number) {
 }
 
 export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const { tx } = useLocale();
   const ref = useRef<HTMLDialogElement>(null);
   const [month, setMonth] = useState(LAST_MONTH);
   const [selected, setSelected] = useState<ChallengeDay>(LAST_DAY);
@@ -74,18 +76,16 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
       <div className="p-4 sm:p-6">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[2.2px] text-primary-glow">365 dages challenge</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[2.2px] text-primary-glow">{tx("365 dages challenge")}</p>
             <h2 id="challenge-dialog-title" className="mt-1 text-[20px] font-bold leading-6 sm:text-[24px] sm:leading-7">
-              Dagens resultater
-            </h2>
+              {tx("Dagens resultater")}</h2>
             <p className="mt-1 text-[12.5px] text-foreground/70">
-              Dag {CHALLENGE.day} af {CHALLENGE.totalDays}. Vælg en dag i kalenderen.
-            </p>
+              {tx("Dag")}{" "}{tx(CHALLENGE.day)} {" "}{tx("af")}{" "}{tx(CHALLENGE.totalDays)}{tx(". Vælg en dag i kalenderen.")}</p>
           </div>
           <button
             type="button"
             onClick={onClose}
-            aria-label="Luk"
+            aria-label={tx("Luk")}
             className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-border text-foreground/80 transition-colors hover:bg-foreground/10"
           >
             <X className="h-4 w-4" aria-hidden="true" />
@@ -95,10 +95,10 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
         <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
           {stats.map(([label, value, Icon]) => (
             <div key={label} className="value-pill rounded-[12px] p-2.5 sm:p-3">
-              <p className="text-[10.5px] leading-[13px] text-foreground/75">{label}</p>
+              <p className="text-[10.5px] leading-[13px] text-foreground/75">{tx(label)}</p>
               <p className="mt-1 flex items-center gap-1 text-[15px] font-bold tabular-nums sm:text-[18px]">
                 <Icon className="h-3.5 w-3.5 shrink-0 text-primary-glow" strokeWidth={2.6} aria-hidden="true" />
-                {value}
+                {tx(value)}
               </p>
             </div>
           ))}
@@ -111,7 +111,7 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
                 type="button"
                 onClick={() => setMonth((m) => Math.max(FIRST_MONTH, m - 1))}
                 disabled={month <= FIRST_MONTH}
-                aria-label="Forrige måned"
+                aria-label={tx("Forrige måned")}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:bg-foreground/10 disabled:opacity-30"
               >
                 <ChevronLeft className="h-4 w-4" aria-hidden="true" />
@@ -124,7 +124,7 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
                 type="button"
                 onClick={() => setMonth((m) => Math.min(LAST_MONTH, m + 1))}
                 disabled={month >= LAST_MONTH}
-                aria-label="Næste måned"
+                aria-label={tx("Næste måned")}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-border transition-colors hover:bg-foreground/10 disabled:opacity-30"
               >
                 <ChevronRight className="h-4 w-4" aria-hidden="true" />
@@ -133,7 +133,7 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
 
             <div className="mt-3 grid grid-cols-7 gap-1 text-center text-[10.5px] font-medium uppercase tracking-wide text-foreground/60">
               {WEEKDAYS.map((w) => (
-                <span key={w}>{w}</span>
+                <span key={w}>{tx(w)}</span>
               ))}
             </div>
             <div className="mt-1.5 grid grid-cols-7 gap-1">
@@ -142,7 +142,7 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
                 if (typeof cell === "number") {
                   return (
                     <span key={cell} className="flex aspect-square items-start justify-start rounded-[10px] p-1.5 text-[11px] text-foreground/30">
-                      {cell}
+                      {tx(cell)}
                     </span>
                   );
                 }
@@ -171,19 +171,19 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
           </div>
 
           <div className="sms-card rounded-[14px] p-4" aria-live="polite">
-            <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-primary-glow">Dag {selected.day}</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[1.8px] text-primary-glow">{tx("Dag")}{" "}{tx(selected.day)}</p>
             <p className="mt-1 text-[14px] font-semibold capitalize leading-5">{longFmt.format(selected.date)}</p>
             {selected.profit === 0 ? (
-              <p className="mt-4 text-[13px] leading-5 text-foreground/75">Hviledag. Ingen surebets lagt denne dag.</p>
+              <p className="mt-4 text-[13px] leading-5 text-foreground/75">{tx("Hviledag. Ingen surebets lagt denne dag.")}</p>
             ) : (
               <dl className="mt-4 space-y-3">
                 <div>
-                  <dt className="text-[11px] text-foreground/70">Resultat</dt>
+                  <dt className="text-[11px] text-foreground/70">{tx("Resultat")}</dt>
                   <dd className="text-[24px] font-bold tabular-nums text-success">{fmtPct(selected.profit)}</dd>
                 </div>
                 <div>
-                  <dt className="text-[11px] text-foreground/70">Antal surebets</dt>
-                  <dd className="text-[18px] font-bold tabular-nums">{selected.surebets}</dd>
+                  <dt className="text-[11px] text-foreground/70">{tx("Antal surebets")}</dt>
+                  <dd className="text-[18px] font-bold tabular-nums">{tx(selected.surebets)}</dd>
                 </div>
               </dl>
             )}
@@ -191,7 +191,7 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
         </div>
 
         <div className="mt-5 flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-[12.5px] leading-[18px] text-foreground/75">Vi deler resultater, tips og feedback løbende i vores Telegram-gruppe.</p>
+          <p className="text-[12.5px] leading-[18px] text-foreground/75">{tx("Vi deler resultater, tips og feedback løbende i vores Telegram-gruppe.")}</p>
           <a
             href={TELEGRAM_URL}
             target="_blank"
@@ -199,8 +199,7 @@ export function ChallengeCalendarDialog({ open, onClose }: { open: boolean; onCl
             className="btn-glow flex h-11 shrink-0 items-center justify-center gap-2 rounded-full px-5 text-[13.5px] font-semibold"
           >
             <Send className="h-4 w-4" aria-hidden="true" />
-            Følg på Telegram
-          </a>
+            {tx("Følg på Telegram")}</a>
         </div>
       </div>
     </dialog>,

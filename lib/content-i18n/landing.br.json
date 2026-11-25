@@ -1,0 +1,428 @@
+{
+  "sport/basketball": {
+    "title": "Surebets em basquete",
+    "metaTitle": "Surebets no basquete – lucro garantido na NBA e Euroliga",
+    "description": "Encontre surebets no basquete da NBA, Euroliga e ligas europeias. Mercados de pontos e handicaps criam diversas oportunidades de arbitragem em casas de apostas licenciadas.",
+    "keyword": "surebets basquete",
+    "intro": "O basquete oferece inúmeras surebets em totais de pontos e handicaps. A NBA conta com mercados de apostas extensos, e as casas de apostas ajustam suas linhas em velocidades diferentes, criando oportunidades de arbitragem.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Mercados populares para arbitragem no basquete"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Vencedor da partida incluindo prorrogação: dois resultados e cálculo simples.",
+          "Total de pontos acima/abaixo, por exemplo mais ou menos de 215,5 pontos.",
+          "Handicap de pontos, em que o favorito precisa vencer por uma margem específica.",
+          "Mercados individuais de jogadores, como pontos marcados, rebotes e assistências."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Middling em totais de pontos"
+      },
+      {
+        "type": "p",
+        "text": "Nos mercados de pontos, duas casas de apostas podem oferecer linhas diferentes, por exemplo acima de 214,5 em uma e abaixo de 216,5 em outra. Se a partida terminar com exatamente 215 ou 216 pontos, você ganha as duas apostas. Isso é chamado de 'middle' e representa uma oportunidade de lucro adicional no basquete."
+      },
+      {
+        "type": "tip",
+        "text": "Verifique se a prorrogação é contabilizada. No basquete quase sempre é, mas nem todas as casas de apostas aplicam essa regra em todos os mercados."
+      }
+    ],
+    "faq": [
+      {
+        "q": "A prorrogação conta nas surebets de basquete?",
+        "a": "Na maioria dos mercados sim, mas sempre confira as regras específicas de cada mercado em cada casa de apostas. Um mercado que exclui a prorrogação não pode ser combinado com um que a inclui para fins de arbitragem."
+      },
+      {
+        "q": "Em que horário costumam acontecer os jogos da NBA?",
+        "a": "Os jogos da NBA geralmente são disputados à noite no horário da América do Norte. Dependendo do seu fuso horário, muitas surebets podem aparecer algumas horas antes do início da partida, dando tempo suficiente para cobrir os dois lados da aposta de arbitragem."
+      }
+    ]
+  },
+  "sport/ishockey": {
+    "title": "Surebets no hóquei no gelo",
+    "metaTitle": "Surebets no hóquei no gelo – lucro garantido na NHL",
+    "description": "Surebets no hóquei no gelo da NHL, SHL e outras ligas. Entenda a diferença entre mercados de tempo regulamentar e vencedor, e encontre oportunidades de lucro garantido.",
+    "keyword": "surebets hóquei no gelo",
+    "intro": "O hóquei no gelo é um esporte subestimado para surebets. Muitas casas de apostas precificam as ligas nórdicas de forma diferente, e a distinção entre os mercados de tempo regulamentar e vencedor cria oportunidades adicionais para apostas de arbitragem.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Tempo regulamentar ou incluindo prorrogação?"
+      },
+      {
+        "type": "p",
+        "text": "No hóquei no gelo, existe tanto um mercado 1X2 apenas para o tempo regulamentar quanto um mercado de vencedor que inclui prorrogação e disputa de pênaltis. Esses dois mercados nunca devem ser misturados na mesma surebet. Sempre verifique em qual mercado você está apostando em cada casa de apostas antes de confirmar suas apostas."
+      },
+      {
+        "type": "h2",
+        "text": "Boas ligas para surebets no hóquei no gelo"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "NHL: muitas partidas e limites máximos de apostas elevados.",
+          "SHL e Liiga: populares na região nórdica e precificadas de forma diferente pelas casas de apostas.",
+          "Ligas domésticas: ligas menores em que as casas de apostas frequentemente divergem na precificação."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "O hóquei no gelo costuma oferecer alto lucro por surebet, mas com limites máximos de apostas menores do que no futebol."
+      }
+    ],
+    "faq": [
+      {
+        "q": "É possível combinar 1X2 e vencedor incluindo prorrogação em uma surebet de hóquei no gelo?",
+        "a": "Não. São dois mercados distintos. Se você combiná-los, pode perder as duas apostas caso a partida vá para a prorrogação. Certifique-se sempre de que todas as apostas da sua arbitragem estão no mesmo tipo de mercado."
+      },
+      {
+        "q": "Existem surebets em ligas menores de hóquei no gelo?",
+        "a": "Sim. As casas de apostas costumam precificar ligas domésticas menores de forma diferente, por isso oportunidades de arbitragem surgem com regularidade. Verifique se as casas de apostas estão devidamente licenciadas para operar antes de realizar suas apostas."
+      }
+    ]
+  },
+  "sport/fodbold": {
+    "title": "Apostas de arbitragem no futebol",
+    "metaTitle": "Apostas de arbitragem no futebol – lucro garantido",
+    "description": "Encontre apostas de arbitragem no futebol em tempo real. O BetTrackerAI monitora odds em centenas de ligas e campeonatos em casas de apostas licenciadas.",
+    "keyword": "apostas de arbitragem no futebol",
+    "intro": "O futebol gera mais apostas de arbitragem do que qualquer outro esporte. Partidas acontecem a toda hora e cada jogo oferece centenas de mercados com precificações diferentes entre as casas de apostas.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Por que o futebol gera tantas apostas de arbitragem"
+      },
+      {
+        "type": "p",
+        "text": "As casas de apostas precisam precificar milhares de partidas de futebol toda semana, desde a Champions League até as divisões inferiores. Quanto menor a liga, menos atenção as casas dedicam a ela e maior a chance de discrepâncias de odds que criam oportunidades de arbitragem."
+      },
+      {
+        "type": "h2",
+        "text": "Os mercados mais utilizados"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1X2: vitória do mandante, empate e vitória do visitante. Três resultados possíveis, portanto são necessárias três apostas.",
+          "Mais/menos gols, por exemplo mais ou menos de 2,5 gols. Apenas dois resultados e geralmente alta liquidez.",
+          "Handicap asiático: dois resultados e margem baixa, mas leia com atenção as regras de liquidação para gols inteiros e fracionados.",
+          "Ambas as equipes marcam: sim ou não. Um mercado simples com apenas dois resultados."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Sempre verifique se o mercado considera apenas o tempo regulamentar. Prorrogação e pênaltis raramente são contabilizados nas apostas de arbitragem no futebol."
+      },
+      {
+        "type": "h2",
+        "text": "Quando surgem as apostas de arbitragem?"
+      },
+      {
+        "type": "p",
+        "text": "Muitas apostas de arbitragem no futebol aparecem quando as escalações são divulgadas, aproximadamente uma hora antes do início da partida. Algumas casas de apostas ajustam as odds rapidamente, outras reagem com mais lentidão, e é nessa janela que surgem as diferenças de precificação."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Quais ligas de futebol oferecem mais apostas de arbitragem?",
+        "a": "Ligas menores costumam apresentar percentuais de lucro mais altos, mas grandes campeonatos como a Premier League e a Champions League oferecem mais mercados e limites de aposta mais elevados."
+      },
+      {
+        "q": "É possível fazer apostas de arbitragem em partidas de futebol ao vivo?",
+        "a": "Sim, mas as odds ao vivo mudam muito rapidamente. É necessário registrar as duas apostas em questão de segundos."
+      }
+    ]
+  },
+  "sport/esport": {
+    "title": "Surebets em esports",
+    "metaTitle": "Surebets em esports – arbitragem em CS2, LoL e Dota 2",
+    "description": "Os esports são um dos mercados que mais crescem para surebets. Encontre oportunidades de apostas de arbitragem em CS2, League of Legends e Dota 2 em casas de apostas licenciadas.",
+    "keyword": "surebets esports",
+    "intro": "Os esports apresentam grandes diferenças de odds entre as casas de apostas. O mercado é relativamente novo, muitas casas contam com menos especialistas na área e as odds costumam variar bastante antes do início das partidas.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Por que os esports geram lucros mais altos"
+      },
+      {
+        "type": "p",
+        "text": "As casas de apostas dedicam menos recursos aos esports do que ao futebol, e as notícias sobre escalações se espalham rapidamente dentro da comunidade. Isso cria diferenças de odds maiores e, frequentemente, um lucro por surebet mais elevado."
+      },
+      {
+        "type": "h2",
+        "text": "Jogos populares para apostas de arbitragem"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Counter-Strike 2: o maior volume de partidas e mercados para handicaps de mapa e round.",
+          "League of Legends: grandes torneios com mercados estáveis.",
+          "Dota 2: altas diferenças de odds, porém com limites de apostas mais baixos."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Fique atento a partidas adiadas. As casas de apostas têm regras diferentes sobre por quanto tempo uma aposta permanece válida."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Os esports são bons para surebets?",
+        "a": "Sim, o lucro costuma ser maior do que nos esportes tradicionais. No entanto, os limites de apostas geralmente são mais baixos."
+      },
+      {
+        "q": "Quais casas de apostas oferecem esports?",
+        "a": "A maioria das principais casas de apostas licenciadas oferece esports, especialmente CS2 e League of Legends. Verifique a disponibilidade e a licença válida no seu país."
+      }
+    ]
+  },
+  "sport/tennis": {
+    "title": "Apostas de Arbitragem no Tênis",
+    "metaTitle": "Apostas de Arbitragem no Tênis – Lucro Garantido no ATP e WTA",
+    "description": "O tênis é ideal para apostas de arbitragem: apenas dois resultados e partidas o ano todo. Encontre oportunidades no ATP, WTA e Challenger com o BetTrackerAI.",
+    "keyword": "apostas de arbitragem no tênis",
+    "intro": "O tênis é o esporte preferido de muitos apostadores de arbitragem. São apenas dois resultados possíveis, sem empate, e os torneios acontecem praticamente todos os dias do ano.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "As Vantagens do Tênis"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Apenas dois resultados, então você precisa fazer somente duas apostas.",
+          "Sem empate, o que torna o cálculo bem simples.",
+          "Grande volume de partidas no Challenger e no ITF, onde as casas de apostas frequentemente divergem nas odds.",
+          "Partidas a qualquer hora do dia graças a torneios em diferentes fusos horários."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Atenção às Partidas com Abandono"
+      },
+      {
+        "type": "p",
+        "text": "O maior risco no tênis é quando um jogador abandona a partida. As casas de apostas têm regras diferentes: algumas anulam a aposta, outras a liquidam se o primeiro set já tiver sido concluído. Se as duas casas onde você apostou adotam regras distintas, você pode perder as duas apostas."
+      },
+      {
+        "type": "tip",
+        "text": "Leia as regras de cada casa de apostas para partidas com abandono no tênis antes de fazer sua primeira aposta de arbitragem."
+      },
+      {
+        "type": "h2",
+        "text": "Outros Mercados"
+      },
+      {
+        "type": "p",
+        "text": "Além do vencedor da partida, existem apostas de arbitragem em total de games, handicap de sets e vencedor de set individual. Esses mercados costumam ter limites de aposta mais baixos."
+      }
+    ],
+    "faq": [
+      {
+        "q": "O tênis é bom para apostas de arbitragem?",
+        "a": "Sim. Com apenas dois resultados e um grande número de partidas, o tênis é um dos melhores esportes para apostas de arbitragem, especialmente para quem está começando."
+      },
+      {
+        "q": "O que acontece se um jogador abandonar a partida?",
+        "a": "Depende da casa de apostas. Algumas anulam todas as apostas, outras as liquidam se um determinado número de sets já tiver sido disputado. Verifique as regras nas duas casas antes de apostar."
+      }
+    ]
+  },
+  "bookmaker/bet365": {
+    "title": "Surebets na Bet365",
+    "metaTitle": "Bet365 Surebets – Encontre Lucro Garantido Agora",
+    "description": "Encontre surebets na Bet365 em tempo real. O BetTrackerAI compara as odds da Bet365 com outras casas e mostra onde garantir lucro certo nas suas apostas.",
+    "keyword": "bet365 surebets",
+    "intro": "A Bet365 é uma das maiores casas de apostas do mundo e oferece uma das mais amplas seleções de esportes e mercados. Isso faz da Bet365 uma das casas mais frequentemente envolvidas em surebets.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre a Bet365"
+      },
+      {
+        "type": "p",
+        "text": "A Bet365 é uma casa de apostas licenciada em diversas jurisdições e oferece odds em um número muito grande de partidas, incluindo ligas menores e mercados ao vivo. Essa abrangência faz com que a Bet365 frequentemente apresente odds que divergem do restante do mercado."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar surebets com a Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Uma surebet com a Bet365 surge quando ela oferece odds mais altas em um resultado do que outras casas oferecem nos resultados opostos. O BetTrackerAI monitora as odds da Bet365 continuamente e as compara com o restante do mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecione a Bet365 e as demais casas de apostas usando o filtro na página de surebets.",
+          "Ordene pelo lucro e escolha uma surebet com odds estáveis.",
+          "Use a calculadora para distribuir sua stake e arredondar os valores.",
+          "Faça a aposta primeiro na casa que oferece as odds mais voláteis."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Distribua suas apostas entre várias casas para não depender apenas da Bet365. Isso prolonga a vida útil da sua conta."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Apostas de arbitragem são permitidas na Bet365?",
+        "a": "As apostas de arbitragem são legais. No entanto, como qualquer casa de apostas, a Bet365 pode restringir contas com base em seus termos e condições caso identifique padrões de apostas que garantam lucro consistente."
+      },
+      {
+        "q": "A Bet365 possui licença para operar?",
+        "a": "Sim. A Bet365 detém licenças em diversos mercados regulamentados ao redor do mundo. Verifique as regras locais aplicáveis, pois o tratamento dos ganhos pode variar conforme a jurisdição."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Surebets na Unibet",
+    "metaTitle": "Unibet Apostas de Arbitragem – Encontre Oportunidades",
+    "description": "Encontre apostas de arbitragem na Unibet em tempo real. O BetTrackerAI compara as odds da Unibet com outras casas para garantir lucro certo.",
+    "keyword": "unibet apostas de arbitragem",
+    "intro": "A Unibet é uma das casas de apostas mais populares do mundo. A Unibet utiliza a plataforma de odds Kambi, por isso as odds da Unibet costumam ser semelhantes às de outras casas que também operam com o Kambi.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre a Unibet"
+      },
+      {
+        "type": "p",
+        "text": "A Unibet possui licenças em diversos mercados regulamentados e oferece uma ampla variedade de esportes. Como a Unibet compartilha sua plataforma de odds com outras casas de apostas, as surebets surgem com mais frequência entre a Unibet e casas que operam em plataformas diferentes."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar apostas de arbitragem na Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Uma surebet na Unibet ocorre quando ela oferece odds mais altas em um resultado do que outras casas oferecem nos resultados opostos. O BetTrackerAI monitora as odds da Unibet continuamente e as compara com o restante do mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecione a Unibet e as demais casas de apostas usando o filtro na página de surebets.",
+          "Ordene pelo lucro e escolha uma surebet com odds estáveis.",
+          "Use a calculadora para dividir sua stake e arredondar os valores.",
+          "Faça a aposta primeiro na casa que oferece as odds mais voláteis."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Distribua suas apostas entre várias casas, sem depender apenas da Unibet. Isso prolongará a vida útil da sua conta e ajudará a evitar limitações."
+      }
+    ],
+    "faq": [
+      {
+        "q": "É legal fazer apostas de arbitragem na Unibet?",
+        "a": "Sim, as apostas de arbitragem são legais. No entanto, como qualquer casa de apostas, a Unibet pode limitar ou restringir contas em seus termos e condições caso apostem apenas em oportunidades de lucro garantido."
+      },
+      {
+        "q": "Quais casas de apostas são semelhantes à Unibet?",
+        "a": "A Unibet utiliza o Kambi, que também fornece odds para diversas outras casas. Por isso, combine a Unibet com casas que operam em plataformas diferentes para encontrar mais surebets."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebets na Betano",
+    "metaTitle": "Betano surebets – encontre apostas de arbitragem na Betano",
+    "description": "Encontre surebets na Betano em tempo real. O BetTrackerAI compara as odds da Betano com outros sites licenciados e mostra onde você pode garantir lucro certo.",
+    "keyword": "betano surebets",
+    "intro": "A Betano é uma das casas de apostas mais recentes no mercado regulamentado e utiliza sua própria plataforma de definição de odds. Isso faz com que as odds da Betano frequentemente se diferenciem do restante do mercado, criando oportunidades de apostas de arbitragem.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre a Betano"
+      },
+      {
+        "type": "p",
+        "text": "A Betano possui licença em diversas jurisdições e oferece uma ampla variedade de esportes. Por definir suas odds de forma independente, a Betano frequentemente aparece em surebets quando comparada a casas de apostas mais consolidadas."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar surebets com a Betano"
+      },
+      {
+        "type": "p",
+        "text": "Uma surebet com a Betano surge quando ela oferece odds mais altas em um resultado do que outras casas oferecem nos resultados opostos. O BetTrackerAI monitora as odds da Betano continuamente e as compara com o restante do mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecione a Betano e suas outras casas de apostas usando o filtro na página de surebets.",
+          "Ordene pelo lucro e escolha uma surebet com odds estáveis.",
+          "Use a calculadora para dividir sua aposta e arredondar os valores.",
+          "Faça a aposta primeiro na casa que apresentar as odds mais voláteis."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Distribua suas apostas entre várias casas para não depender apenas da Betano. Isso prolonga a vida útil da sua conta e ajuda a evitar restrições."
+      }
+    ],
+    "faq": [
+      {
+        "q": "É permitido fazer surebets na Betano?",
+        "a": "Sim, as apostas de arbitragem são legais. No entanto, como qualquer casa de apostas, a Betano pode limitar contas conforme seus termos e condições caso identifique padrões de apostas que garantam lucro consistente."
+      },
+      {
+        "q": "A Betano é licenciada?",
+        "a": "Sim. A Betano possui licença em diversos mercados regulamentados. Consulte o órgão regulador de jogos do seu país para confirmar se a Betano opera de forma autorizada na sua região."
+      }
+    ]
+  },
+  "bookmaker/leovegas": {
+    "title": "Apostas de Arbitragem na LeoVegas",
+    "metaTitle": "LeoVegas Apostas de Arbitragem – Lucro Garantido",
+    "description": "Encontre apostas de arbitragem na LeoVegas em tempo real. O BetTrackerAI compara as odds da LeoVegas com outras casas e mostra onde você pode garantir lucro.",
+    "keyword": "apostas de arbitragem leovegas",
+    "intro": "A LeoVegas é conhecida pelo seu cassino, mas também oferece uma ampla seleção de apostas esportivas. A casa utiliza a plataforma Kambi e aparece com frequência em oportunidades de apostas de arbitragem.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre a LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "A LeoVegas é uma casa de apostas licenciada com um aplicativo fácil de usar, que permite realizar apostas rapidamente. Isso é fundamental nas apostas de arbitragem, onde as odds podem mudar em segundos. Verifique se a LeoVegas está licenciada e disponível no seu país antes de abrir uma conta."
+      },
+      {
+        "type": "h2",
+        "text": "Como encontrar apostas de arbitragem na LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "Uma aposta de arbitragem na LeoVegas ocorre quando ela oferece odds mais altas em um resultado do que outras casas oferecem nos resultados opostos. O BetTrackerAI monitora as odds da LeoVegas continuamente e as compara com as casas que operam no seu mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecione a LeoVegas e suas outras casas de apostas usando o filtro na página de apostas de arbitragem.",
+          "Ordene pelo lucro e escolha uma aposta de arbitragem com odds estáveis.",
+          "Use a calculadora para dividir o valor apostado e arredonde os montantes.",
+          "Faça primeiro a aposta na casa com as odds mais voláteis."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Distribua suas apostas entre várias casas, sem depender apenas da LeoVegas. Isso prolonga a vida útil da sua conta e reduz o risco de limitações."
+      }
+    ],
+    "faq": [
+      {
+        "q": "É possível fazer apostas de arbitragem na LeoVegas?",
+        "a": "Sim, as apostas de arbitragem são legais. No entanto, como qualquer casa de apostas, a LeoVegas pode restringir contas pelos seus termos e condições caso identifique padrões de apostas que garantam lucro de forma consistente."
+      },
+      {
+        "q": "A LeoVegas é boa para apostas de arbitragem?",
+        "a": "A LeoVegas é uma boa casa complementar, especialmente quando combinada com casas fora da plataforma Kambi, pois isso aumenta o número de oportunidades de arbitragem disponíveis."
+      }
+    ]
+  }
+}

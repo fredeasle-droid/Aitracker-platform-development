@@ -7,8 +7,10 @@ import { LogIn, Menu, UserRound } from 'lucide-react'
 import { SidebarBody } from '@/components/desktop/desktop-sidebar'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 import { Logo } from '@/components/home/icons'
+import { LanguageMenu } from '@/components/site/language-menu'
 import { useLocale } from '@/components/locale-provider'
 import { authClient } from '@/lib/auth-client'
+import { canonicalPathname } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
 const NAV: { href: string; label: string }[] = [
@@ -62,12 +64,13 @@ export function AuthActions() {
 }
 
 function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?: string }) {
+  const { tx } = useLocale();
   const [open, setOpen] = useState(false)
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
-        aria-label="Åbn menu"
+        aria-label={tx("Åbn menu")}
         className="flex size-10 items-center justify-center rounded-full border border-border bg-background-deep/70 text-foreground transition-colors hover:bg-card md:hidden"
       >
         <Menu className="size-5" aria-hidden="true" />
@@ -79,7 +82,7 @@ function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?:
           menu ? `sb-root !min-h-0 border-sidebar-border bg-sidebar ${menuClassName ?? ''}` : 'bt-theme border-[#102b49] bg-[#050d1b]',
         )}
       >
-        <SheetTitle className="sr-only">Menu</SheetTitle>
+        <SheetTitle className="sr-only">{tx("Menu")}</SheetTitle>
         {menu ? (
           <div
             className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))] pt-6 [-webkit-overflow-scrolling:touch]"
@@ -87,7 +90,7 @@ function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?:
               if ((e.target as HTMLElement).closest('a')) setOpen(false)
             }}
           >
-            {menu}
+            {tx(menu)}
           </div>
         ) : (
           <>
@@ -108,7 +111,7 @@ function MobileMenu({ menu, menuClassName }: { menu?: ReactNode; menuClassName?:
 
 /** Desktop pages with the sidebar carry the logo there, so the top bar only shows on the homepage. */
 export function RootHeader() {
-  const pathname = usePathname()
+  const pathname = canonicalPathname(usePathname())
   return <GlobalHeader className={pathname === '/' ? undefined : 'lg:hidden'} />
 }
 
@@ -121,6 +124,7 @@ export function GlobalHeader({
   menu?: ReactNode
   menuClassName?: string
 }) {
+  const { tx } = useLocale();
   const pathname = usePathname()
 
   return (
@@ -134,16 +138,16 @@ export function GlobalHeader({
       <div className="mx-auto grid h-16 max-w-[1600px] grid-cols-[1fr_auto_1fr] items-center gap-3 px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-self-start">
           <MobileMenu menu={menu} menuClassName={menuClassName} />
-          <Link href="/" aria-label="BetTrackerAI forside" className="hidden text-foreground md:block">
+          <Link href="/" aria-label={tx("BetTrackerAI forside")} className="hidden text-foreground md:block">
             <Logo />
           </Link>
         </div>
 
-        <Link href="/" aria-label="BetTrackerAI forside" className="text-foreground md:hidden">
+        <Link href="/" aria-label={tx("BetTrackerAI forside")} className="text-foreground md:hidden">
           <Logo />
         </Link>
 
-        <nav aria-label="Hovedmenu" className="hidden h-full items-stretch md:flex">
+        <nav aria-label={tx("Hovedmenu")} className="hidden h-full items-stretch md:flex">
           {NAV.map(({ href, label }) => {
             const active = isActive(pathname, href)
             return (
@@ -156,14 +160,15 @@ export function GlobalHeader({
                   active ? 'text-foreground' : 'text-muted-foreground hover:text-foreground',
                 )}
               >
-                {label}
+                {tx(label)}
                 {active && <span className="absolute inset-x-3 bottom-0 h-0.5 rounded-full bg-primary-glow lg:inset-x-4" />}
               </Link>
             )
           })}
         </nav>
 
-        <div className="flex items-center justify-self-end">
+        <div className="flex items-center gap-2 justify-self-end">
+          <LanguageMenu />
           <AuthActions />
         </div>
       </div>

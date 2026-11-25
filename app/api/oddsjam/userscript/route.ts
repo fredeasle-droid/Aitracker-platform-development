@@ -1,36 +1,45 @@
+import { headers } from 'next/headers'
+import { auth } from '@/lib/auth'
 import { isProductionOddsJamBridgeRequest } from '@/lib/oddsjam-bridge-origin'
+import { createOddsJamIngestToken, isOwnerEmail } from '@/lib/oddsjam-token'
 
 export const dynamic = 'force-dynamic'
 
-export function GET(request: Request) {
+export async function GET(request: Request) {
   if (!isProductionOddsJamBridgeRequest(request)) {
     return Response.json({ error: 'Use the production BetTracker domain for OddsJam.' }, { status: 403 })
   }
-  const bridge = `${new URL(request.url).origin}/oddsjam-bro`
+  const session = await auth.api.getSession({ headers: await headers() })
+  if (!session) return Response.json({ error: 'Log ind på BetTracker først.' }, { status: 401 })
+  if (!isOwnerEmail(session.user.email)) return Response.json({ error: 'Kun ejere kan hente OddsJam-scriptet.' }, { status: 403 })
+
+  const origin = new URL(request.url).origin
+  const endpoint = `${origin}/api/ingest/oddsjam`
+  const token = createOddsJamIngestToken(session.user.id)
+  const host = new URL(origin).hostname
+
   const script = `// ==UserScript==
-// @name         BetTracker OddsJam visible-row bridge
+// @name         BetTracker OddsJam direct bridge
+// @version      2.0
 // @match        https://oddsjam.com/betting-tools/arbitrage*
 // @match        https://www.oddsjam.com/betting-tools/arbitrage*
 // @run-at       document-idle
-// @grant        none
+// @grant        GM_xmlhttpRequest
+// @connect      ${host}
 // ==/UserScript==
 (() => {
-  const BRIDGE = ${JSON.stringify(bridge)};
-  const BRIDGE_ORIGIN = new URL(BRIDGE).origin;
+  const ENDPOINT = ${JSON.stringify(endpoint)};
+  const TOKEN = ${JSON.stringify(token)};
   const MAX_ROWS = 100;
-  let popup = null;
-  let pendingRows = [];
   let lastFingerprint = '';
   let lastSentAt = 0;
-  let connected = false;
-  let everConnected = false;
-  let lastConnectAttemptAt = 0;
+  let sending = false;
   let scannedCount = 0;
-  let statusText = 'Klar til at scanne OddsJam';
+  let statusText = 'Starter…';
   const panel = document.createElement('div');
   panel.setAttribute('role', 'status');
   panel.setAttribute('aria-live', 'polite');
-  panel.style.cssText = 'position:fixed;top:238px;right:14px;z-index:2147483647;width:230px;border:1px solid #159ed0;border-radius:10px;background:#062d40;color:#fff;padding:12px 14px;font:13px/1.45 system-ui;box-shadow:0 4px 14px #0008';
+  panel.style.cssText = 'position:fixed;top:190px;right:14px;z-index:2147483647;width:230px;border:1px solid #159ed0;border-radius:10px;background:#062d40;color:#fff;padding:12px 14px;font:13px/1.45 system-ui;box-shadow:0 4px 14px #0008';
   const panelTitle = document.createElement('strong');
   panelTitle.textContent = 'BetTracker OddsJam';
   panelTitle.style.cssText = 'display:block;font-size:14px;margin-bottom:4px';
@@ -39,10 +48,11 @@ export function GET(request: Request) {
   statusLine.style.color = '#b8d9e8';
   panel.append(panelTitle, countLine, document.createElement('br'), statusLine);
   const updatePanel = () => {
-    countLine.textContent = 'Synlige rækker scannet: ' + scannedCount;
+    countLine.textContent = 'Synlige rækker: ' + scannedCount;
     statusLine.textContent = statusText;
   };
   updatePanel();
+  document.documentElement.append(panel);
 
   const visible = (node) => node instanceof HTMLElement && node.getClientRects().length > 0 && getComputedStyle(node).visibility !== 'hidden';
   const attrs = (node) => {
@@ -97,13 +107,7 @@ export function GET(request: Request) {
       seenLegs.add(signature);
       return { odds, text: nearestLegText(node, row), labels: nearestLegLabels(node, row, prices) };
     }).filter(Boolean).slice(0, 2);
-    return {
-      text,
-      labels: attrs(row),
-      legs,
-      capturedAt: Date.now(),
-      timezoneOffset: new Date().getTimezoneOffset(),
-    };
+    return { text, labels: attrs(row), legs, capturedAt: Date.now(), timezoneOffset: new Date().getTimezoneOffset() };
   };
   const rowKey = (row) => [
     row.text.replace(/\\s+/g, ' ').trim(),
@@ -132,83 +136,54 @@ export function GET(request: Request) {
       return true;
     }).slice(0, MAX_ROWS);
   };
-  const openBridge = () => {
-    if (!popup || popup.closed) popup = window.open(BRIDGE, 'oddsjam-bettracker-bridge', 'width=460,height=480');
-    return popup && !popup.closed;
-  };
-  const requestBridge = () => {
-    lastConnectAttemptAt = Date.now();
-    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return false; }
-    popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
-    return true;
-  };
-  const send = () => {
-    if (!pendingRows.length || !connected) return;
-    if (!openBridge()) { statusText = 'Tillad pop-ups for at forbinde'; updatePanel(); return; }
-    popup.postMessage({ type: 'oddsjam-data', rows: pendingRows }, BRIDGE_ORIGIN);
-    statusText = 'Sender rækker til BetTracker…';
+  const time = () => new Date().toLocaleTimeString('da-DK', { hour: '2-digit', minute: '2-digit' });
+  const send = (rows) => {
+    sending = true;
+    statusText = 'Sender…';
     updatePanel();
-    pendingRows = [];
-    lastSentAt = Date.now();
+    GM_xmlhttpRequest({
+      method: 'POST',
+      url: ENDPOINT,
+      headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + TOKEN },
+      data: JSON.stringify({ rows }),
+      timeout: 25000,
+      onload: (response) => {
+        sending = false;
+        let result = {};
+        try { result = JSON.parse(response.responseText || '{}'); } catch {}
+        if (response.status >= 200 && response.status < 300) {
+          lastSentAt = Date.now();
+          statusText = time() + ' – ' + (result.summary || ('Sendt ' + rows.length + ' rækker'));
+        } else {
+          lastFingerprint = '';
+          statusText = 'Fejl ' + response.status + ': ' + String(result.error || 'kunne ikke sende').slice(0, 120);
+        }
+        updatePanel();
+      },
+      onerror: () => { sending = false; lastFingerprint = ''; statusText = 'Netværksfejl – prøver igen'; updatePanel(); },
+      ontimeout: () => { sending = false; lastFingerprint = ''; statusText = 'Timeout – prøver igen'; updatePanel(); },
+    });
   };
   const scan = () => {
-    if (!location.pathname.includes('/betting-tools/arbitrage')) return;
-    if (popup && popup.closed) {
-      popup = null;
-      connected = false;
-      lastConnectAttemptAt = 0;
-      button.textContent = 'Forbind BetTracker igen';
-    }
+    if (!location.pathname.includes('/betting-tools/arbitrage') || sending) return;
     const rows = collectRows();
     scannedCount = rows.length;
-    statusText = rows.length ? (connected ? 'Forbundet — scanner automatisk' : 'Rækker fundet — venter på forbindelse') : 'Ingen synlige rækker fundet';
+    if (!rows.length) { statusText = 'Ingen synlige rækker fundet'; updatePanel(); return; }
     updatePanel();
-    if (!connected && popup && !popup.closed) popup.postMessage({ type: 'oddsjam-hello' }, BRIDGE_ORIGIN);
-    if (everConnected && (!popup || popup.closed) && Date.now() - lastConnectAttemptAt > 30000) {
-      statusText = 'Forbindelsen genoprettes…';
-      updatePanel();
-      if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
-      else button.textContent = 'Tillad popup og klik igen';
-    }
-    if (!rows.length) return;
     const fingerprint = JSON.stringify(rows.map(rowKey));
     if (fingerprint === lastFingerprint && Date.now() - lastSentAt < 45000) return;
     lastFingerprint = fingerprint;
-    pendingRows = rows;
-    send();
+    send(rows);
   };
-  const button = document.createElement('button');
-  button.type = 'button';
-  button.textContent = 'Forbind BetTracker';
-  button.setAttribute('aria-label', 'Forbind OddsJam til BetTracker');
-  button.style.cssText = 'position:fixed;top:190px;right:14px;z-index:2147483647;border:1px solid #159ed0;border-radius:8px;background:#062d40;color:#fff;padding:10px 14px;font:600 13px/1.2 system-ui;cursor:pointer;box-shadow:0 4px 14px #0008';
-  button.addEventListener('click', () => { if (requestBridge()) { button.textContent = 'Forbinder BetTracker…'; scan(); } else { button.textContent = 'Tillad popup og klik igen'; } });
-  document.documentElement.append(button, panel);
-  window.addEventListener('message', (event) => {
-    if (event.origin !== BRIDGE_ORIGIN || !event.data) return;
-    if (event.data.type === 'oddsjam-ready') { connected = true; everConnected = true; button.textContent = 'BetTracker forbundet'; statusText = 'Forbundet — scanner automatisk'; updatePanel(); send(); }
-    if (event.data.type === 'oddsjam-result') {
-      button.textContent = event.data.ok ? 'BetTracker forbundet' : 'BetTracker: forbindelsesfejl';
-      statusText = String(event.data.text || (event.data.ok ? 'Rækker sendt' : 'Kunne ikke sende rækker')).slice(0, 140);
-      updatePanel();
-    }
-  });
-  setTimeout(() => {
-    if (requestBridge()) button.textContent = 'Forbinder BetTracker…';
-    else button.textContent = 'Tillad popup og klik igen';
-  }, 2500);
   setTimeout(scan, 3000);
   setInterval(scan, 15000);
-  setInterval(() => {
-    if (!connected && button.textContent === 'Forbinder BetTracker…') button.textContent = 'Forbind BetTracker';
-  }, 30000);
 })();
 `
   return new Response(script, {
     headers: {
       'Content-Type': 'application/javascript; charset=utf-8',
       'Content-Disposition': 'attachment; filename="bettracker-oddsjam.user.js"',
-      'Cache-Control': 'no-store',
+      'Cache-Control': 'no-store, private',
     },
   })
 }

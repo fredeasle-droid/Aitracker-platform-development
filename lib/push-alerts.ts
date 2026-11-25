@@ -5,7 +5,7 @@ import { opportunities, pushAlertLog, pushSettings, pushSubscriptions, subscript
 import { ACTIVE_STATUSES } from '@/lib/billing'
 import { marginPercent } from '@/lib/odds'
 import { sendPushToSubscriptions, sendPushToUser, type PushPayload } from '@/lib/push'
-import { alertKey, copenhagenHour, isQuietHour } from '@/lib/sms-alerts'
+import { alertKey, copenhagenHour, isQuietHour, matchKeyOf } from '@/lib/sms-alerts'
 
 export const PUSH_LIMITS = { minProfit: 1, maxProfit: 50, minDaily: 1, maxDaily: 100 }
 
@@ -45,7 +45,7 @@ function buildPayload(row: typeof opportunities.$inferSelect, profit: number): P
     title: `Ny surebet: +${pct}% profit`,
     body: `${row.homeTeam} - ${row.awayTeam}\n${when}\n${row.aBookmaker} @${Number(row.aOdds).toFixed(2)} og ${row.bBookmaker} @${Number(row.bOdds).toFixed(2)}`,
     url: '/surebets',
-    tag: alertKey(row).slice(0, 120),
+    tag: matchKeyOf(alertKey(row)).slice(0, 120),
     image: `/api/push/card?${card.toString()}`,
     sticky: true,
   }
@@ -84,14 +84,14 @@ export async function dispatchPushAlerts() {
     const eligible = candidates.filter((c) => c.profit >= minProfit)
     if (eligible.length === 0) continue
 
-    const already = new Set(
+    const alreadyMatches = new Set(
       (await db
         .select({ key: pushAlertLog.alertKey })
         .from(pushAlertLog)
-        .where(and(eq(pushAlertLog.userId, settings.userId), inArray(pushAlertLog.alertKey, eligible.map((c) => c.key)))))
-        .map((r) => r.key),
+        .where(and(eq(pushAlertLog.userId, settings.userId), gt(pushAlertLog.sentAt, new Date(now.getTime() - 7 * DAY_MS)))))
+        .map((r) => matchKeyOf(r.key)),
     )
-    const pick = eligible.find((c) => !already.has(c.key))
+    const pick = eligible.find((c) => !alreadyMatches.has(matchKeyOf(c.key)))
     if (!pick) continue
 
     const claimed = await db

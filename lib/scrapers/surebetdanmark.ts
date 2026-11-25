@@ -13,17 +13,23 @@ type FeedRow = {
   freshness?: { actionable_now?: boolean }
   validation?: { status?: string }
   blocking_flags?: string[]
+  scanner?: { status?: string; pending?: boolean }
 }
+
+const ACCEPTED_VALIDATION = new Set(['validated', 'observed'])
+const MIN_PROFIT_PCT = 5
 type FeedResponse = { state?: string; feed?: { rows?: FeedRow[] } }
 
 function parseRow(row: FeedRow): ScrapedSurebet | null {
-  if (row.validation?.status !== 'validated' || !row.freshness?.actionable_now) return null
+  // The feed labels live rows "observed" whenever the provider runs in SOURCE_DEGRADED mode, so the scanner's own verdict is the real signal.
+  if (!ACCEPTED_VALIDATION.has(row.validation?.status ?? '') || !row.freshness?.actionable_now) return null
   if (row.blocking_flags?.length) return null
+  if (row.scanner && (row.scanner.pending || !row.scanner.status?.startsWith('POSITIVE'))) return null
 
   const teams = splitTeams(row.event?.name ?? '')
   const kickoff = row.event?.start_time ? new Date(row.event.start_time) : null
   const profit = Number(row.edge?.pct)
-  if (!teams || !kickoff || Number.isNaN(kickoff.getTime()) || !(profit > 0)) return null
+  if (!teams || !kickoff || Number.isNaN(kickoff.getTime()) || !(profit >= MIN_PROFIT_PCT)) return null
 
   const legs = (row.legs ?? [])
     .filter((leg) => leg.bookmaker && leg.selection && leg.source_current !== false)

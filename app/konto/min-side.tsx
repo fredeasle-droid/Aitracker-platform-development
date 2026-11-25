@@ -9,6 +9,7 @@ import { SmsAlertsForm } from '@/components/konto/min-side/sms-alerts-form'
 import { PushAlertsForm } from '@/components/konto/min-side/push-alerts-form'
 import { PushBroadcastForm } from '@/components/konto/min-side/push-broadcast-form'
 import { TelegramCard } from '@/components/konto/min-side/telegram-card'
+import { OwnerToolsCard } from '@/components/konto/min-side/owner-tools-card'
 import type { SmsSettingsInput } from './sms-actions'
 import type { PushSettingsInput } from './push-actions'
 import { formatDate, type AccountInvoice, type AccountSubscription, type AccountUser } from './account-types'
@@ -48,6 +49,7 @@ export function MinSide({ user, subscription, invoices, testAccess, smsSettings,
 
         <div className="mt-3 space-y-4 lg:mt-6 lg:grid lg:grid-cols-2 lg:items-start lg:gap-5 lg:space-y-0 xl:grid-cols-3">
           <div className="space-y-4 lg:row-span-2 xl:row-span-1">
+            {isOwner && <OwnerToolsCard />}
             <SubscriptionCard subscription={subscription} testAccess={testAccess} />
             <InvoiceList invoices={invoices} />
           </div>

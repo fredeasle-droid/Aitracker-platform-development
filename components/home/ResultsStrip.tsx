@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { Percent, Target, TrendingUp } from "lucide-react";
 import { CHALLENGE, RESULT_SERIES } from "./data";
 import { useCount } from "./use-count";
@@ -13,6 +14,7 @@ const area = `${line} L${pts[pts.length - 1]![0].toFixed(1)} ${H} L0 ${H} Z`;
 const end = pts[pts.length - 1]!;
 
 export function ResultsStrip({ inView }: { inView: boolean }) {
+  const { tx } = useLocale();
   const total = useCount(CHALLENGE.totalReturn, inView);
   const bets = useCount(CHALLENGE.surebets, inView);
   const margin = useCount(CHALLENGE.avgMargin, inView);
@@ -24,12 +26,12 @@ export function ResultsStrip({ inView }: { inView: boolean }) {
 
   return (
     <div className="challenge-strip absolute inset-x-0 bottom-0 h-[96px]">
-      <p className="absolute left-[32px] top-[20px] text-[10px] font-semibold uppercase tracking-[2.2px] text-primary-glow">Tallene bag rejsen</p>
-      <h3 className="absolute left-[32px] top-[38px] text-[19px] font-bold leading-[23px]">Se resultaterne – sort på hvidt</h3>
-      <p className="absolute left-[32px] top-[63px] text-[10.5px] leading-[14px] text-foreground/70">Følg fremgangen i realtid, dag for dag.</p>
+      <p className="absolute left-[32px] top-[20px] text-[10px] font-semibold uppercase tracking-[2.2px] text-primary-glow">{tx("Tallene bag rejsen")}</p>
+      <h3 className="absolute left-[32px] top-[38px] text-[19px] font-bold leading-[23px]">{tx("Se resultaterne – sort på hvidt")}</h3>
+      <p className="absolute left-[32px] top-[63px] text-[10.5px] leading-[14px] text-foreground/70">{tx("Følg fremgangen i realtid, dag for dag.")}</p>
 
       <div className="value-pill absolute left-[430px] top-[16px] h-[64px] w-[218px] rounded-[12px]">
-        <p className="absolute left-[12px] top-[8px] text-[9.5px] text-foreground/75">Samlet resultat</p>
+        <p className="absolute left-[12px] top-[8px] text-[9.5px] text-foreground/75">{tx("Samlet resultat")}</p>
         <p className="absolute left-[12px] top-[24px] flex items-center gap-[4px] text-[19px] font-bold leading-[22px] tabular-nums text-success">
           <TrendingUp className="h-[15px] w-[15px]" strokeWidth={2.6} aria-hidden="true" />+{total.toFixed(2)}%
         </p>
@@ -58,10 +60,10 @@ export function ResultsStrip({ inView }: { inView: boolean }) {
 
       {stats.map(([label, value, Icon], k) => (
         <div key={label} className="value-pill absolute top-[16px] flex h-[64px] w-[136px] flex-col justify-center rounded-[12px] pl-[12px]" style={{ left: 660 + k * 146 }}>
-          <p className="text-[9.5px] leading-[12px] text-foreground/75">{label}</p>
+          <p className="text-[9.5px] leading-[12px] text-foreground/75">{tx(label)}</p>
           <p className="mt-[3px] flex items-center gap-[5px] text-[19px] font-bold leading-[22px] tabular-nums">
             <Icon className="h-[14px] w-[14px] text-primary-glow" strokeWidth={2.6} aria-hidden="true" />
-            {value}
+            {tx(value)}
           </p>
         </div>
       ))}

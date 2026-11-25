@@ -1,5 +1,6 @@
 "use client";
 
+import { useLocale } from "@/components/locale-provider";
 import { Headphones, ShieldCheck, Sparkles, Trophy, Zap, type LucideIcon } from "lucide-react";
 import { SectionHeading, stagger } from "./desktop/effects";
 
@@ -22,9 +23,10 @@ export const BENEFITS_HEADING = {
 
 /** Desktop canvas version: heading row, then four cards. */
 export function BenefitsSection() {
+  const { tx } = useLocale();
   return (
     <section className="reveal relative ml-[28px] mt-[80px] w-[969px]">
-      <SectionHeading stack eyebrow={BENEFITS_HEADING.eyebrow} Icon={Sparkles} title={BENEFITS_HEADING.title} accent={BENEFITS_HEADING.accent} text={BENEFITS_HEADING.text} />
+      <SectionHeading stack eyebrow={tx(BENEFITS_HEADING.eyebrow)} Icon={Sparkles} title={tx(BENEFITS_HEADING.title)} accent={tx(BENEFITS_HEADING.accent)} text={tx(BENEFITS_HEADING.text)} />
       <div className="reveal-stagger mt-[24px] grid grid-cols-4 gap-[14px]">
         {BENEFITS.map(({ Icon, title, text }, k) => (
           <div key={title} style={stagger(k)} className="benefit-card spotlight h-[172px] p-[20px]">
@@ -32,8 +34,8 @@ export function BenefitsSection() {
             <span className="icon-tile flex h-[44px] w-[44px] items-center justify-center rounded-[13px]">
               <Icon className="h-[21px] w-[21px]" strokeWidth={2.2} />
             </span>
-            <p className="mt-[20px] font-display text-[14px] font-semibold leading-[18px] tracking-[-0.02em]">{title}</p>
-            <p className="mt-[7px] text-[10.5px] leading-[15.5px] text-muted-foreground">{text}</p>
+            <p className="mt-[20px] font-display text-[14px] font-semibold leading-[18px] tracking-[-0.02em]">{tx(title)}</p>
+            <p className="mt-[7px] text-[10.5px] leading-[15.5px] text-muted-foreground">{tx(text)}</p>
           </div>
         ))}
       </div>

@@ -10,19 +10,29 @@ import { SurebetsProvider } from '@/components/sb/surebets-context'
 import { GlobalFooter } from '@/components/site/global-footer'
 import { GlobalHeader } from '@/components/site/global-header'
 import { getOpportunity } from '@/lib/data'
+import { localePath } from '@/lib/i18n'
+import { getServerLocale } from '@/lib/locale-server'
+import { calculatorText } from '@/lib/messages/calculator'
 import { getSbData } from '@/lib/sb-data'
 
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  title: 'Beregn indsats – BetTrackerAI',
-  description: 'Gratis surebet beregner: find den rigtige indsats på hvert udfald og se din garanterede profit med det samme.',
-  alternates: { canonical: '/beregn' },
+// Members-only tool: localized for visitors, but kept out of the index (logged-out crawlers are redirected anyway).
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = await getServerLocale()
+  const text = calculatorText(locale)
+  return {
+    title: text.metaTitle,
+    description: text.metaDesc,
+    alternates: { canonical: localePath(locale, '/beregn') },
+    robots: { index: false, follow: true },
+  }
 }
 
 export default async function BeregnPage({ searchParams }: { searchParams: Promise<{ id?: string }> }) {
   const { id } = await searchParams
-  const [opportunity, data] = await Promise.all([getOpportunity(id ? Number(id) : undefined), getSbData()])
+  const [opportunity, data, locale] = await Promise.all([getOpportunity(id ? Number(id) : undefined), getSbData(), getServerLocale()])
+  const text = calculatorText(locale)
 
   return (
     <SurebetsProvider data={data}>
@@ -45,9 +55,9 @@ export default async function BeregnPage({ searchParams }: { searchParams: Promi
                   <StakeCalculator key={opportunity.id} opportunity={opportunity} />
                 ) : (
                   <div className="sb-panel p-8 text-center">
-                    <p className="text-muted-foreground">Kampen findes ikke længere.</p>
-                    <Link href="/surebets" className="mt-3 inline-block font-semibold text-cyan underline underline-offset-4">
-                      Se dagens surebets
+                    <p className="text-muted-foreground">{text.matchGone}</p>
+                    <Link href={localePath(locale, '/surebets')} className="mt-3 inline-block font-semibold text-cyan underline underline-offset-4">
+                      {text.seeSurebets}
                     </Link>
                   </div>
                 )}

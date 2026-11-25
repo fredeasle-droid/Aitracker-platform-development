@@ -20,6 +20,23 @@ const opportunityKey = (row: typeof opportunities.$inferSelect) => surebetIdenti
   ],
 })
 
+const MAX_PER_MATCH = 3
+
+const normalizeTeam = (name: string) =>
+  name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .split(/[^a-z0-9æøå]+/)
+    .filter(Boolean)
+    .sort()
+    .join(' ')
+
+const matchKey = (item: { homeTeam: string; awayTeam: string; kickoff: Date | string | null }) => {
+  const day = item.kickoff ? new Date(item.kickoff).toISOString().slice(0, 10) : ''
+  return `${normalizeTeam(item.homeTeam)}|${normalizeTeam(item.awayTeam)}|${day}`
+}
+
 const MIN_REFRESH_INTERVAL_MS = 20_000
 
 async function refreshedRecently() {
@@ -33,8 +50,16 @@ async function runRefresh() {
   const { items: scraped, reports } = await scrapeAll()
   if (scraped.length === 0) return { ok: false as const, count: 0, reports }
 
+  const perMatch = new Map<string, number>()
   const items = [...scraped]
     .sort((x, y) => marginPercent(y.legs[0].odds, y.legs[1].odds) - marginPercent(x.legs[0].odds, x.legs[1].odds))
+    .filter((item) => {
+      const key = matchKey(item)
+      const count = perMatch.get(key) ?? 0
+      if (count >= MAX_PER_MATCH) return false
+      perMatch.set(key, count + 1)
+      return true
+    })
     .slice(0, MAX_STORED_OPPORTUNITIES)
 
   const stats = await db.transaction(async (tx) => {

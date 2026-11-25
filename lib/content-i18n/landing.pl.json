@@ -1,0 +1,428 @@
+{
+  "sport/basketball": {
+    "title": "Surebety na koszykówkę",
+    "metaTitle": "Surebety na koszykówkę – gwarantowany zysk z NBA i Euroligi",
+    "description": "Znajdź surebety na koszykówkę w NBA, Eurolize i europejskich ligach. Rynki punktowe i handicapy tworzą liczne okazje do zakładów arbitrażowych u licencjonowanych bukmacherów.",
+    "keyword": "surebety na koszykówkę",
+    "intro": "Koszykówka oferuje liczne surebety na łączną liczbę punktów i handicapy. NBA dysponuje rozbudowanymi rynkami bukmacherskimi, a bukmacherzy aktualizują swoje linie w różnym tempie, co tworzy okazje do arbitrażu.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Popularne rynki do arbitrażu w koszykówce"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Zwycięzca meczu z uwzględnieniem dogrywki: dwa wyniki i prosta kalkulacja.",
+          "Over/under łączna liczba punktów, na przykład powyżej lub poniżej 215,5 punktu.",
+          "Handicap punktowy, w którym faworyt musi wygrać o określoną liczbę punktów.",
+          "Rynki indywidualne, takie jak zdobyte punkty, zbiórki i asysty."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Middling na rynkach punktowych"
+      },
+      {
+        "type": "p",
+        "text": "Na rynkach punktowych dwaj bukmacherzy mogą oferować różne linie, na przykład powyżej 214,5 u jednego i poniżej 216,5 u drugiego. Jeśli mecz zakończy się dokładnie wynikiem 215 lub 216 punktów, wygrywasz oba zakłady. Nazywa się to „middlingiem” i stanowi dodatkową okazję do zysku w koszykówce."
+      },
+      {
+        "type": "tip",
+        "text": "Sprawdź, czy dogrywka jest wliczana do wyniku. W koszykówce prawie zawsze tak jest, ale nie u wszystkich bukmacherów i nie na każdym rynku."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy dogrywka jest uwzględniana w surebeach na koszykówkę?",
+        "a": "W przypadku większości rynków tak, ale zawsze sprawdzaj szczegółowe zasady danego rynku u każdego bukmachera. Rynku wykluczającego dogrywkę nie można łączyć z rynkiem ją uwzględniającym w celach arbitrażowych."
+      },
+      {
+        "q": "O której zazwyczaj rozgrywane są mecze NBA?",
+        "a": "Mecze NBA są zazwyczaj rozgrywane wieczorami czasu północnoamerykańskiego. W zależności od strefy czasowej wiele surebet może pojawić się na kilka godzin przed rozpoczęciem meczu, co daje czas na postawienie obu stron zakładu arbitrażowego."
+      }
+    ]
+  },
+  "sport/ishockey": {
+    "title": "Surebety na hokej na lodzie",
+    "metaTitle": "Surebety na hokej na lodzie – zysk z NHL i lig",
+    "description": "Surebety na hokej na lodzie z NHL, SHL i innych lig. Poznaj różnicę między rynkami na czas regulaminowy i zwycięzcę meczu oraz znajdź okazje do pewnego zysku.",
+    "keyword": "surebety hokej na lodzie",
+    "intro": "Hokej na lodzie to niedoceniany sport pod kątem surbetów. Wielu bukmacherów wycenia ligi nordyckie w różny sposób, a różnica między rynkiem na czas regulaminowy a rynkiem na zwycięzcę meczu stwarza dodatkowe możliwości zakładów arbitrażowych.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Czas regulaminowy czy z dogrywką?"
+      },
+      {
+        "type": "p",
+        "text": "W hokeju na lodzie dostępny jest zarówno rynek 1X2 obejmujący wyłącznie czas regulaminowy, jak i rynek na zwycięzcę meczu uwzględniający dogrywkę i rzuty karne. Tych dwóch rynków nie wolno nigdy łączyć w ramach jednego surebetu. Przed postawieniem zakładów zawsze sprawdzaj, na który rynek obstawiasz u każdego bukmachera."
+      },
+      {
+        "type": "h2",
+        "text": "Dobre ligi do surbetów na hokej na lodzie"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "NHL: wiele meczów i wysokie limity maksymalnych stawek.",
+          "SHL i Liiga: popularne w regionie nordyckim i różnie wyceniane przez bukmacherów.",
+          "Ligi krajowe: mniejsze rozgrywki, w których bukmacherzy często różnią się w wycenach."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Hokej na lodzie często oferuje wysoki zysk z pojedynczego surebetu, ale niższe maksymalne stawki niż piłka nożna."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy można łączyć rynek 1X2 i rynek na zwycięzcę z dogrywką w surebecie hokejowym?",
+        "a": "Nie. To dwa różne rynki. Jeśli je połączysz, możesz stracić oba zakłady, gdy mecz przejdzie do dogrywki. Zawsze upewniaj się, że wszystkie nogi Twojego zakładu arbitrażowego dotyczą tego samego typu rynku."
+      },
+      {
+        "q": "Czy istnieją surebety na mniejsze ligi hokejowe?",
+        "a": "Tak. Bukmacherzy często różnie wyceniają mniejsze ligi krajowe, dlatego okazje arbitrażowe pojawiają się regularnie. Przed postawieniem zakładów upewnij się, że bukmacherzy posiadają licencję uprawniającą do działalności w Twoim kraju."
+      }
+    ]
+  },
+  "sport/fodbold": {
+    "title": "Surebety na piłkę nożną",
+    "metaTitle": "Surebety piłkarskie – gwarantowany zysk na meczach",
+    "description": "Znajdź surebety na piłkę nożną w czasie rzeczywistym. BetTrackerAI skanuje kursy w Premier League, Lidze Mistrzów i setkach innych lig u licencjonowanych bukmacherów.",
+    "keyword": "surebety piłkarskie",
+    "intro": "Piłka nożna generuje więcej surbetów niż jakikolwiek inny sport. Mecze rozgrywane są przez całą dobę, a każde spotkanie oferuje setki rynków wycenianych różnie przez poszczególnych bukmacherów.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Dlaczego piłka nożna generuje tak wiele surbetów"
+      },
+      {
+        "type": "p",
+        "text": "Bukmacherzy muszą wyceniać tysiące meczów piłkarskich tygodniowo – od Ligi Mistrzów aż po niższe dywizje. Im mniejsza liga, tym mniej uwagi poświęcają jej bukmacherzy, a tym większe prawdopodobieństwo rozbieżności w kursach tworzących okazje arbitrażowe."
+      },
+      {
+        "type": "h2",
+        "text": "Najczęściej wykorzystywane rynki"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1X2: wygrana gospodarzy, remis i wygrana gości. Trzy wyniki, więc potrzebujesz trzech zakładów.",
+          "Powyżej/poniżej goli, na przykład powyżej lub poniżej 2,5 gola. Tylko dwa wyniki i zazwyczaj wysoka płynność.",
+          "Handicap azjatycki: dwa wyniki i niska marża, ale dokładnie zapoznaj się z zasadami rozliczania dla połówkowych i pełnych goli.",
+          "Obie drużyny strzelą: tak lub nie. Przejrzysty rynek z dwoma wynikami."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Zawsze sprawdzaj, czy rynek dotyczy wyłącznie regulaminowego czasu gry. Dogrywka i rzuty karne rzadko są uwzględniane w surbetach piłkarskich."
+      },
+      {
+        "type": "h2",
+        "text": "Kiedy pojawiają się surebety?"
+      },
+      {
+        "type": "p",
+        "text": "Wiele surbetów piłkarskich pojawia się w momencie ogłoszenia składów drużyn, zazwyczaj około godziny przed rozpoczęciem meczu. Niektórzy bukmacherzy reagują szybko, inni wolniej, a w tym oknie czasowym ujawniają się różnice w kursach."
+      }
+    ],
+    "faq": [
+      {
+        "q": "W których ligach piłkarskich pojawia się najwięcej surbetów?",
+        "a": "Mniejsze ligi często oferują wyższe procenty zysku, jednak duże ligi, takie jak Premier League czy Liga Mistrzów, dysponują większą liczbą rynków i wyższymi limitami stawek."
+      },
+      {
+        "q": "Czy można obstawiać surebety na żywo w piłce nożnej?",
+        "a": "Tak, jednak kursy na żywo zmieniają się bardzo szybko. Wymaga to postawienia obu zakładów w ciągu kilku sekund."
+      }
+    ]
+  },
+  "sport/esport": {
+    "title": "Surebety na esports",
+    "metaTitle": "Esports surebety – zakłady arbitrażowe na CS2, LoL i Dota 2",
+    "description": "Esports to jeden z najszybciej rozwijających się rynków dla surebet. Znajdź okazje do zakładów arbitrażowych na CS2, League of Legends i Dota 2 u licencjonowanych bukmacherów.",
+    "keyword": "esports surebety",
+    "intro": "Esports charakteryzuje się dużymi różnicami kursów między bukmacherami. Rynek jest stosunkowo nowy, wielu bukmacherów dysponuje mniejszą liczbą specjalistów w tej dziedzinie, a kursy często znacznie się zmieniają przed rozpoczęciem meczu.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Dlaczego esports przynosi wysokie zyski"
+      },
+      {
+        "type": "p",
+        "text": "Bukmacherzy poświęcają mniej zasobów esportowi niż piłce nożnej, a informacje o składach drużyn szybko rozchodzą się w społeczności. Tworzy to większe różnice kursów i często wyższy zysk z każdego surebetu."
+      },
+      {
+        "type": "h2",
+        "text": "Popularne gry do zakładów arbitrażowych"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Counter-Strike 2: najwięcej meczów i rynków na handicapy mapowe i rundowe.",
+          "League of Legends: duże turnieje ze stabilnymi rynkami.",
+          "Dota 2: wysokie różnice kursów, ale niższe maksymalne stawki."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Uważaj na odłożone mecze. Bukmacherzy stosują różne zasady dotyczące tego, jak długo zakład pozostaje ważny."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy esports nadaje się do surebet?",
+        "a": "Tak, zysk jest często wyższy niż w tradycyjnych sportach. Maksymalne stawki są jednak zazwyczaj niższe."
+      },
+      {
+        "q": "Którzy bukmacherzy oferują esports?",
+        "a": "Większość głównych licencjonowanych bukmacherów oferuje esports, zwłaszcza CS2 i League of Legends. Sprawdź dostępność i licencję w swoim kraju."
+      }
+    ]
+  },
+  "sport/tennis": {
+    "title": "Surebety na tenis",
+    "metaTitle": "Surebety na tenis – gwarantowany zysk na ATP, WTA i Challenger",
+    "description": "Tenis to idealne rozwiązanie dla surebet: tylko dwa wyniki i mecze przez cały rok. Znajdź okazje do arbitrażu na turniejach ATP, WTA i Challenger na całym świecie.",
+    "keyword": "surebety na tenis",
+    "intro": "Tenis to ulubiony sport wielu graczy arbitrażowych. Są tylko dwa wyniki, brak remisu, a turnieje odbywają się niemal każdego dnia w roku.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Zalety tenisa"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Tylko dwa wyniki, więc wystarczą dwa zakłady.",
+          "Brak remisu, co znacznie upraszcza obliczenia.",
+          "Mnóstwo meczów na poziomie Challenger i ITF, gdzie bukmacherzy często się różnią w ocenach.",
+          "Mecze przez całą dobę dzięki turniejom w różnych strefach czasowych."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Uważaj na wycofania zawodników"
+      },
+      {
+        "type": "p",
+        "text": "Największe ryzyko w tenisie wiąże się z wycofaniem zawodnika w trakcie meczu. Bukmacherzy stosują różne zasady: jedni anulują zakład, inni rozliczają go, jeśli pierwszy set został dokończony. Jeśli dwaj Twoi bukmacherzy stosują różne reguły, możesz stracić oba zakłady."
+      },
+      {
+        "type": "tip",
+        "text": "Przed postawieniem pierwszego surebeta tenisowego zapoznaj się z zasadami obu bukmacherów dotyczącymi wycofań zawodników."
+      },
+      {
+        "type": "h2",
+        "text": "Inne rynki"
+      },
+      {
+        "type": "p",
+        "text": "Oprócz zwycięzcy meczu dostępne są surebety na łączną liczbę gemów, handicapy setowe oraz wyniki poszczególnych setów. Na tych rynkach maksymalne stawki są zazwyczaj niższe."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy tenis nadaje się do surebet?",
+        "a": "Tak. Tylko dwa wyniki i duża liczba meczów sprawiają, że tenis jest jednym z najlepszych sportów do surebet, szczególnie dla początkujących."
+      },
+      {
+        "q": "Co się dzieje, gdy zawodnik się wycofuje?",
+        "a": "To zależy od bukmachera. Niektórzy anulują wszystkie zakłady, inni rozliczają je po rozegraniu określonej liczby setów. Sprawdź zasady u obu bukmacherów."
+      }
+    ]
+  },
+  "bookmaker/bet365": {
+    "title": "Surebety na Bet365",
+    "metaTitle": "Bet365 Surebety – Znajdź Gwarantowany Zysk",
+    "description": "Znajdź surebety na Bet365 w czasie rzeczywistym. BetTrackerAI porównuje kursy Bet365 z innymi bukmacherami i pokazuje, gdzie zagwarantować sobie zysk.",
+    "keyword": "bet365 surebety",
+    "intro": "Bet365 to jeden z największych bukmacherów na świecie, oferujący jeden z najszerszych wyborów sportów i rynków. Sprawia to, że Bet365 jest jednym z bukmacherów najczęściej pojawiających się w surebeach.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Bet365 jest licencjonowanym bukmacherem w wielu jurysdykcjach i oferuje kursy na bardzo dużą liczbę spotkań, w tym na niższe ligi i rynki na żywo. Ta szerokość oferty sprawia, że Bet365 często posiada kursy odbiegające od reszty rynku."
+      },
+      {
+        "type": "h2",
+        "text": "Jak znaleźć surebety z Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Surebet z Bet365 powstaje wtedy, gdy Bet365 oferuje wyższe kursy na jeden wynik niż inni bukmacherzy na wyniki przeciwne. BetTrackerAI stale monitoruje kursy Bet365 i porównuje je z resztą rynku."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wybierz Bet365 i pozostałych bukmacherów za pomocą filtra na stronie surebeów.",
+          "Sortuj według zysku i wybierz surebet ze stabilnymi kursami.",
+          "Użyj kalkulatora, aby rozdzielić stawkę i zaokrąglić kwotę.",
+          "Najpierw postaw zakład u bukmachera oferującego najbardziej zmienne kursy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozłóż swoje zakłady na kilku bukmacherów, aby nie korzystać wyłącznie z Bet365. Dzięki temu przedłużysz żywotność swojego konta."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy zakłady arbitrażowe są dozwolone w Bet365?",
+        "a": "Zakłady arbitrażowe są legalne. Jednak podobnie jak wszyscy bukmacherzy, Bet365 może ograniczyć konta zgodnie ze swoim regulaminem, jeśli wykryje wzorce obstawiania systematycznie zapewniające gwarantowany zysk."
+      },
+      {
+        "q": "Czy Bet365 posiada licencję bukmacherską?",
+        "a": "Tak. Bet365 posiada licencje na wielu regulowanych rynkach na całym świecie. Sprawdź lokalne przepisy podatkowe obowiązujące w Twoim kraju, ponieważ zasady opodatkowania wygranych mogą się różnić w zależności od jurysdykcji."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Zakłady arbitrażowe w Unibet",
+    "metaTitle": "Unibet Zakłady Arbitrażowe – Znajdź Surebety",
+    "description": "Znajdź surebety w Unibet w czasie rzeczywistym. BetTrackerAI porównuje kursy Unibet z innymi bukmacherami, abyś mógł zagwarantować sobie zysk dzięki zakładom arbitrażowym.",
+    "keyword": "unibet surebety",
+    "intro": "Unibet to jeden z najpopularniejszych bukmacherów na świecie. Unibet korzysta z platformy kursowej Kambi, dlatego kursy w Unibet często przypominają te oferowane przez innych bukmacherów działających na tej samej platformie.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Unibet posiada licencje na wielu regulowanych rynkach i oferuje szeroki wybór sportów. Ponieważ Unibet dzieli swoją platformę kursową z kilkoma innymi bukmacherami, surebety najczęściej pojawiają się między Unibet a bukmacherami działającymi na innych platformach."
+      },
+      {
+        "type": "h2",
+        "text": "Jak znaleźć surebety z Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Surebet z Unibet pojawia się wtedy, gdy Unibet oferuje wyższe kursy na jeden wynik niż inni bukmacherzy na wyniki przeciwne. BetTrackerAI nieprzerwanie monitoruje kursy Unibet i porównuje je z resztą rynku."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wybierz Unibet i innych bukmacherów za pomocą filtra na stronie z surebetem.",
+          "Sortuj według zysku i wybierz surebet ze stabilnymi kursami.",
+          "Skorzystaj z kalkulatora, aby podzielić stawkę i zaokrąglić kwoty.",
+          "Najpierw postaw zakład u bukmachera oferującego najbardziej zmienne kursy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozłóż swoje zakłady na kilku bukmacherów, aby nie korzystać wyłącznie z Unibet. Przedłuży to żywotność Twojego konta i pomoże uniknąć limitów."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy stawianie surebet w Unibet jest legalne?",
+        "a": "Tak, zakłady arbitrażowe są legalne. Jednak podobnie jak wszyscy bukmacherzy, Unibet może ograniczyć lub zablokować konta zgodnie ze swoim regulaminem, jeśli gracz stawia wyłącznie zakłady z gwarantowanym zyskiem."
+      },
+      {
+        "q": "Którzy bukmacherzy są podobni do Unibet?",
+        "a": "Unibet korzysta z platformy Kambi, która dostarcza kursy również kilku innym bukmacherom. Dlatego łącz Unibet z bukmacherami działającymi na innych platformach, aby znaleźć więcej surebet."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebety w Betano",
+    "metaTitle": "Betano surebety – znajdź zakłady arbitrażowe w Betano",
+    "description": "Znajdź surebety w Betano w czasie rzeczywistym. BetTrackerAI porównuje kursy Betano z innymi licencjonowanymi bukmacherami i pokazuje, gdzie możesz zagwarantować sobie zysk.",
+    "keyword": "betano surebety",
+    "intro": "Betano to jeden z nowszych bukmacherów na regulowanym rynku, korzystający z własnej platformy do ustalania kursów. Oznacza to, że kursy Betano często różnią się od reszty rynku, co stwarza okazje do zakładów arbitrażowych.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O Betano"
+      },
+      {
+        "type": "p",
+        "text": "Betano posiada licencję w wielu jurysdykcjach i oferuje szeroki wybór sportów. Ponieważ Betano samodzielnie ustala kursy, często pojawia się w surebeach w porównaniu z uznanymi bukmacherami."
+      },
+      {
+        "type": "h2",
+        "text": "Jak znaleźć surebety z Betano"
+      },
+      {
+        "type": "p",
+        "text": "Surebet z Betano powstaje wtedy, gdy Betano oferuje wyższe kursy na jeden wynik niż inni bukmacherzy na wyniki przeciwne. BetTrackerAI nieprzerwanie monitoruje kursy Betano i porównuje je z resztą rynku."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wybierz Betano i innych bukmacherów za pomocą filtra na stronie surebet.",
+          "Sortuj według zysku i wybierz surebet ze stabilnymi kursami.",
+          "Skorzystaj z kalkulatora, aby podzielić stawkę i zaokrąglić kwoty.",
+          "Najpierw postaw zakład u bukmachera z najbardziej zmiennymi kursami."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozłóż swoje zakłady na kilku bukmacherów, żeby nie korzystać wyłącznie z Betano. Wydłuży to żywotność Twojego konta i pomoże uniknąć ograniczeń."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy można stawiać surebety w Betano?",
+        "a": "Tak, zakłady arbitrażowe są legalne. Jednak jak każdy bukmacher, Betano może ograniczyć konta zgodnie ze swoim regulaminem, jeśli wykryje wzorce obstawiania systematycznie gwarantujące zysk."
+      },
+      {
+        "q": "Czy Betano posiada licencję?",
+        "a": "Tak. Betano jest licencjonowane na wielu regulowanych rynkach. Sprawdź u krajowego regulatora hazardu, czy Betano posiada licencję obowiązującą w Twoim miejscu zamieszkania."
+      }
+    ]
+  },
+  "bookmaker/leovegas": {
+    "title": "Surebety w LeoVegas",
+    "metaTitle": "LeoVegas Surebety – Znajdź Okazje do Zakładów Arbitrażowych",
+    "description": "Znajdź surebety w LeoVegas w czasie rzeczywistym. BetTrackerAI porównuje kursy LeoVegas z innymi bukmacherami i pokazuje, gdzie możesz zagwarantować sobie zysk.",
+    "keyword": "leovegas surebety",
+    "intro": "LeoVegas znany jest przede wszystkim z oferty kasynowej, ale oferuje również szeroki wybór zakładów sportowych. Bukmacher korzysta z platformy Kambi i regularnie pojawia się w okazjach do zakładów arbitrażowych.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "O LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "LeoVegas to licencjonowany bukmacher z przyjazną użytkownikowi aplikacją, która umożliwia szybkie zawieranie zakładów. Ma to kluczowe znaczenie przy surebeach, gdzie kursy mogą zmienić się w ciągu sekund. Przed założeniem konta sprawdź, czy LeoVegas posiada licencję i jest dostępny w Twoim kraju."
+      },
+      {
+        "type": "h2",
+        "text": "Jak znajdować surebety z LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "Surebet z LeoVegas pojawia się wtedy, gdy LeoVegas oferuje wyższe kursy na jeden wynik niż inni bukmacherzy na wyniki przeciwne. BetTrackerAI nieprzerwanie monitoruje kursy LeoVegas i porównuje je z bukmacherami działającymi na Twoim rynku."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wybierz LeoVegas i innych bukmacherów za pomocą filtra na stronie surebeów.",
+          "Sortuj według zysku i wybierz surebet ze stabilnymi kursami.",
+          "Skorzystaj z kalkulatora, aby podzielić stawkę, i zaokrąglij kwoty.",
+          "Najpierw postaw zakład u bukmachera oferującego najbardziej zmienne kursy."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Rozłóż swoje zakłady na kilku bukmacherów, aby nie korzystać wyłącznie z LeoVegas. Wydłuży to żywotność Twojego konta i zmniejszy ryzyko nałożenia limitów."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Czy można stawiać surebety w LeoVegas?",
+        "a": "Tak, zakłady arbitrażowe są legalne. Jednak podobnie jak wszyscy bukmacherzy, LeoVegas może ograniczyć konta zgodnie ze swoimi regulaminami, jeśli wykryje wzorce obstawiania gwarantujące stały zysk."
+      },
+      {
+        "q": "Czy LeoVegas nadaje się do surebeów?",
+        "a": "LeoVegas sprawdza się jako uzupełniający bukmacher, szczególnie w połączeniu z bukmacherami spoza platformy Kambi, co zwiększa liczbę dostępnych okazji arbitrażowych."
+      }
+    ]
+  }
+}
