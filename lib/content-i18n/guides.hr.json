@@ -1,729 +1,729 @@
 {
   "matched-betting": {
-    "title": "Matched betting: extracting profit from welcome bonuses",
-    "metaTitle": "Matched betting – how to exploit bookmaker bonuses",
-    "description": "Matched betting explained: how to use welcome bonuses and free bets at licensed bookmakers to lock in a profit, and how it differs from sure bets.",
+    "title": "Matched betting: kako izvući profit iz bonusa dobrodošlice",
+    "metaTitle": "Matched betting – kako iskoristiti bonuse kladionica",
+    "description": "Matched betting objašnjen: kako iskoristiti bonuse dobrodošlice i besplatne oklade kod licenciranih kladionica da biste osigurali profit i po čemu se razlikuje od sigurnih oklada.",
     "keyword": "matched betting",
-    "intro": "Matched betting is a technique for converting bookmakers' bonuses and free bets into real cash. By backing and laying the same event, you cover all outcomes so the result doesn't matter – what remains is a guaranteed profit from the bonus.",
+    "intro": "Matched betting je tehnika kojom se bonusi i besplatne oklade kladionica pretvaraju u pravi novac. Ulaganjem na isti događaj i klađenjem protiv njega pokrivate sve ishode, pa rezultat nije važan – ostaje zajamčeni profit od bonusa.",
     "blocks": [
       {
         "type": "h2",
-        "text": "How matched betting works"
+        "text": "Kako funkcionira matched betting"
       },
       {
         "type": "p",
-        "text": "When you claim a free bet or bonus, you place it on one outcome at a bookmaker and lay (bet against) the same outcome at a betting exchange or back the opposite result with another bookmaker. Because the free bet stakes nothing of your own money, you lock in most of its face value as profit regardless of which side wins."
+        "text": "Kad preuzmete besplatnu okladu ili bonus, uplatite je na jedan ishod kod kladionice, a na isti ishod uplatite „lay” (klađenje protiv) na burzi oklada ili uplatite na suprotan rezultat kod druge kladionice. Budući da besplatna oklada ne košta ništa vašeg novca, osiguravate većinu njezine nominalne vrijednosti kao profit, bez obzira na to koja strana pobijedi."
       },
       {
         "type": "h2",
-        "text": "Bonus terms and restrictions"
+        "text": "Uvjeti i ograničenja bonusa"
       },
       {
         "type": "p",
-        "text": "Welcome bonuses carry different terms depending on the bookmaker and the country in which you're betting. Some regulated markets cap bonus amounts and limit wagering requirements to protect consumers. Always read the specific terms and conditions before you accept any offer."
+        "text": "Bonusi dobrodošlice imaju različite uvjete ovisno o kladionici i zemlji u kojoj se kladite. Neka regulirana tržišta ograničavaju iznose bonusa i uvjete okretanja kako bi zaštitila potrošače. Prije prihvaćanja bilo koje ponude uvijek pročitajte posebne uvjete i odredbe."
       },
       {
         "type": "ul",
         "items": [
-          "Check the minimum odds required to unlock the bonus – many bookmakers set a floor of 1.80 or higher.",
-          "Note the expiry period so your bonus or free bet doesn't lapse unused.",
-          "Consider using sure bets (arbitrage bets) to meet turnover requirements with minimal risk."
+          "Provjerite minimalne kvote potrebne za aktivaciju bonusa – mnoge kladionice postavljaju donju granicu od 1.80 ili više.",
+          "Zabilježite rok valjanosti kako vam bonus ili besplatna oklada ne bi istekli neiskorišteni.",
+          "Razmislite o surebetovima (arbitražnim okladama) za ispunjavanje uvjeta obrta uz minimalan rizik."
         ]
       },
       {
         "type": "h2",
-        "text": "Combining matched betting with sure bets"
+        "text": "Matched betting u kombinaciji sa surebetovima"
       },
       {
         "type": "p",
-        "text": "Sure bets are ideal for clearing bonus wagering requirements because you're not staking real money on a single outcome. Once you've met the rollover, you can carry on finding arbitrage opportunities without relying on promotions."
+        "text": "Surebetovi su idealni za ispunjavanje uvjeta klađenja bonusa jer ne ulažete pravi novac na jedan ishod. Kad ispunite uvjet obrta, možete nastaviti pronalaziti arbitražne prilike bez oslanjanja na promocije."
       }
     ],
     "faq": [
       {
-        "q": "Is matched betting legal?",
-        "a": "Yes. Exploiting bonuses within the bookmaker's published terms is perfectly legal. However, bookmakers reserve the right to withdraw offers or limit accounts if they believe you are not betting in the spirit of their promotions or if you breach the terms."
+        "q": "Je li matched betting legalan?",
+        "a": "Da. Iskorištavanje bonusa u okviru objavljenih uvjeta kladionice potpuno je legalno. Ipak, kladionice zadržavaju pravo povući ponude ili ograničiti račune ako smatraju da se ne kladite u duhu njihovih promocija ili ako prekršite uvjete."
       },
       {
-        "q": "How much are typical welcome bonuses worth?",
-        "a": "Bonus values and wagering requirements vary by bookmaker and jurisdiction. In some regulated markets, welcome offers may be capped – for instance at €1,000 or €1,000 with a maximum rollover of ten times the bonus. Always check the current terms at the bookmaker you choose and confirm that it holds a valid licence in your country."
+        "q": "Koliko vrijede uobičajeni bonusi dobrodošlice?",
+        "a": "Iznosi bonusa i uvjeti klađenja razlikuju se ovisno o kladionici i jurisdikciji. Na nekim reguliranim tržištima bonusi dobrodošlice mogu biti ograničeni – primjerice na €1,000 ili €1,000 uz maksimalni obrt od deset puta iznosa bonusa. Uvijek provjerite aktualne uvjete kod kladionice koju odaberete i uvjerite se da ima valjanu licencu u vašoj zemlji."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "See current bonuses"
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte aktualne bonuse"
   },
   "er-surebets-lovligt": {
-    "title": "Are surebets legal? Rules and tax considerations",
-    "metaTitle": "Are surebets legal? Rules, tax and bookmaker terms",
-    "description": "Is it legal to place surebets, and do you have to pay tax on winnings? Here are the rules and what bookmakers can do about arbitrage betting.",
-    "keyword": "are surebets legal",
-    "intro": "The short answer is yes. Placing surebets is legal in most jurisdictions. You are simply placing ordinary bets with licensed bookmakers and comparing odds to find the best value – nothing about this process is illegal.",
+    "title": "Jesu li surebetovi legalni? Pravila i porezna pitanja",
+    "metaTitle": "Jesu li surebetovi legalni? Pravila, porezi i uvjeti kladionica",
+    "description": "Je li legalno igrati surebetove i plaća li se porez na dobitke? Pregled pravila i što kladionice mogu poduzeti protiv arbitražnog klađenja.",
+    "keyword": "jesu li surebetovi legalni",
+    "intro": "Kratak odgovor je da. Igranje surebetova legalno je u većini jurisdikcija. Jednostavno igrate obične oklade u licenciranim kladionicama i uspoređujete kvote kako biste pronašli najbolju vrijednost – ništa u tom postupku nije nezakonito.",
     "blocks": [
       {
         "type": "h2",
-        "text": "What can bookmakers do?"
+        "text": "Što kladionice mogu učiniti?"
       },
       {
         "type": "p",
-        "text": "Although surebets are legal, bookmakers do not welcome customers who consistently place guaranteed-profit bets. In their terms and conditions, they reserve the right to reduce maximum stakes, limit markets or restrict accounts. However, they must always return your deposited funds and pay out any valid winnings."
+        "text": "Iako su surebetovi legalni, kladionice ne vole klijente koji dosljedno igraju oklade sa zajamčenom zaradom. U svojim uvjetima poslovanja zadržavaju pravo smanjiti maksimalne uloge, ograničiti tržišta ili ograničiti račune. Međutim, uvijek moraju vratiti uplaćena sredstva i isplatiti sve valjane dobitke."
       },
       {
         "type": "h2",
-        "text": "Do you have to pay tax on winnings?"
+        "text": "Plaća li se porez na dobitke?"
       },
       {
         "type": "p",
-        "text": "Tax treatment of betting winnings varies by country. In many regulated markets, winnings from operators licensed by your national gambling regulator are tax-free for the player. If you use offshore or unlicensed operators, your winnings may be taxable. Check the tax rules where you live, or consult your local tax authority if you are unsure about your situation."
+        "text": "Porezni tretman dobitaka od klađenja razlikuje se od zemlje do zemlje. Na mnogim reguliranim tržištima dobici od operatera koje je licencirao nacionalni regulator igara na sreću za igrača su neoporezivi. Ako koristite offshore ili nelicencirane operatere, vaši dobici mogu biti oporezivi. Provjerite porezna pravila u mjestu u kojem živite ili se obratite lokalnoj poreznoj upravi ako niste sigurni u svoju situaciju."
       },
       {
         "type": "tip",
-        "text": "Stick to bookmakers licensed by your national regulator. This typically offers tax advantages and consumer protection from your gambling authority."
+        "text": "Držite se kladionica koje je licencirao vaš nacionalni regulator. To obično donosi porezne prednosti i zaštitu potrošača od nadležnog tijela za igre na sreću."
       },
       {
         "type": "h2",
-        "text": "Responsible gambling"
+        "text": "Odgovorno klađenje"
       },
       {
         "type": "p",
-        "text": "Even with surebets, it is important to maintain control over your gambling. Set deposit limits, and use your country's self-exclusion register if you need a break. If you need support, contact a recognised gambling helpline in your region."
+        "text": "Čak i sa surebetovima važno je zadržati kontrolu nad klađenjem. Postavite limite uplata, a ako vam je potrebna stanka, iskoristite registar samoisključenja u svojoj zemlji. Ako trebate pomoć, obratite se priznatoj liniji za pomoć kockarima u svojoj regiji."
       }
     ],
     "faq": [
       {
-        "q": "Can a bookmaker refuse to pay out winnings from a surebet?",
-        "a": "A bookmaker must pay out valid winnings. It can void a bet if there was an obvious error in the odds, and it can restrict the account going forward."
+        "q": "Može li kladionica odbiti isplatu dobitka od surebeta?",
+        "a": "Kladionica mora isplatiti valjane dobitke. Može poništiti okladu ako je došlo do očite pogreške u kvotama, a može i ograničiti račun ubuduće."
       },
       {
-        "q": "Do I have to pay tax on surebet winnings?",
-        "a": "It depends on your country. In many regulated markets, winnings from licensed operators are tax-free for the player. Check the tax rules where you live."
+        "q": "Moram li platiti porez na dobitke od surebetova?",
+        "a": "Ovisi o vašoj zemlji. Na mnogim reguliranim tržištima dobici od licenciranih operatera za igrača su neoporezivi. Provjerite porezna pravila u mjestu u kojem živite."
       }
     ],
-    "category": "Rules",
-    "ctaLabel": "See surebets at licensed bookmakers"
+    "category": "Pravila",
+    "ctaLabel": "Pogledajte surebetove u licenciranim kladionicama"
   },
   "undgaa-begraensning": {
-    "title": "How to avoid bookmaker limits and keep your accounts open longer",
-    "metaTitle": "How to Avoid Bookmaker Limits – Arbing Guide 2026",
-    "description": "How to avoid bookmaker limits as an arber: a betting strategy that looks natural, the best bookmakers for arbitrage betting and examples in €.",
-    "keyword": "how to avoid bookmaker limits",
-    "intro": "To avoid bookmaker limits, you need to bet like a normal customer: round stakes, popular markets, a mix of regular bets and no instant reaction to every price drop. Soft bookmakers limit accounts that consistently beat the closing line. You cannot avoid it forever, but a smart betting strategy can keep your accounts open for months instead of weeks.",
+    "title": "Kako izbjeći ograničenja kladionica i dulje zadržati otvorene račune",
+    "metaTitle": "Kako izbjeći ograničenja kladionica – vodič za arbing 2026.",
+    "description": "Kako kao arber izbjeći ograničenja kladionica: strategija klađenja koja izgleda prirodno, najbolje kladionice za arbitražno klađenje i primjeri u €.",
+    "keyword": "kako izbjeći ograničenja kladionica",
+    "intro": "Da biste izbjegli ograničenja kladionica, morate se kladiti kao običan klijent: okrugli ulozi, popularna tržišta, mješavina redovitih oklada i bez trenutne reakcije na svaki pad kvote. Soft kladionice ograničavaju račune koji dosljedno nadmašuju zatvarajuću kvotu. Ne možete to izbjeći zauvijek, ali pametna strategija klađenja može vaše račune zadržati otvorenima mjesecima umjesto tjednima.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why bookmakers limit accounts"
+        "text": "Zašto kladionice ograničavaju račune"
       },
       {
         "type": "p",
-        "text": "Soft bookmakers make money from recreational bettors, not from customers who only take mispriced odds. Their risk systems look at patterns: do you bet on prices that drop shortly afterwards? Do you only bet obscure markets? Are your stakes calculated to the cent? Each of these signals raises your risk score."
+        "text": "Soft kladionice zarađuju na rekreativnim igračima, a ne na klijentima koji uzimaju samo pogrešno procijenjene kvote. Njihovi sustavi za procjenu rizika prate obrasce: kladite li se na kvote koje ubrzo nakon toga padnu? Kladite li se samo na opskurna tržišta? Jesu li vaši ulozi izračunati do centa? Svaki od tih signala povećava vašu ocjenu rizika."
       },
       {
         "type": "ul",
         "items": [
-          "**Beating the closing line:** the strongest signal. If your odds are consistently better than the final price, you get flagged.",
-          "**Uneven stakes:** €463.27 looks like a calculator. €460 looks like a person.",
-          "**Niche markets:** corners in the second division of a small league attract attention.",
-          "**Only withdrawing:** frequent withdrawals without bonuses or regular bets look professional."
+          "**Nadmašivanje zatvarajuće kvote:** najjači signal. Ako su vaše kvote dosljedno bolje od završne, bit ćete označeni.",
+          "**Neokrugli ulozi:** €463.27 izgleda kao kalkulator. €460 izgleda kao čovjek.",
+          "**Nišna tržišta:** korneri u drugoj ligi male zemlje privlače pozornost.",
+          "**Samo isplate:** česte isplate bez bonusa i redovitih oklada djeluju profesionalno."
         ]
       },
       {
         "type": "h2",
-        "text": "Betting strategy that keeps your accounts open"
+        "text": "Strategija klađenja koja čuva vaše račune otvorenima"
       },
       {
         "type": "ul",
         "items": [
-          "**Round your stakes** to whole tens. The profit barely changes.",
-          "**Stick to mainstream markets:** major leagues, 1X2, over/under and match winner in tennis.",
-          "**Mix in normal bets:** a few small regular bets per week, ideally on big matches.",
-          "**Avoid extreme pricing errors:** surebets above 8–10% attract attention and are often voided anyway.",
-          "**Do not react instantly:** betting the second a price moves is a classic arber pattern.",
-          "**Spread your volume** across many bookmakers instead of hammering one."
+          "**Zaokružite uloge** na pune desetice. Zarada se jedva promijeni.",
+          "**Držite se popularnih tržišta:** velike lige, 1X2, over/under i pobjednik meča u tenisu.",
+          "**Ubacite obične oklade:** nekoliko malih redovitih oklada tjedno, najbolje na velike utakmice.",
+          "**Izbjegavajte ekstremne pogreške u kvotama:** surebetovi iznad 8–10% privlače pozornost i često se ionako poništavaju.",
+          "**Ne reagirajte odmah:** klađenje u istoj sekundi kad se kvota promijeni klasičan je obrazac arbera.",
+          "**Rasporedite volumen** na više kladionica umjesto da stalno udarate po jednoj."
         ]
       },
       {
         "type": "example",
-        "title": "Example: rounded stakes, total stake €1,000",
+        "title": "Primjer: zaokruženi ulozi, ukupni ulog €1,000",
         "rows": [
           [
-            "Exact split at odds 2.10 / 2.00",
+            "Točna raspodjela pri kvotama 2.10 / 2.00",
             "€487.80 / €512.20"
           ],
           [
-            "Rounded split",
+            "Zaokružena raspodjela",
             "€490 / €510"
           ],
           [
-            "Profit if A wins (2.10)",
+            "Dobit ako pobijedi A (2.10)",
             "€1,029 − €1,000 = €29.00"
           ],
           [
-            "Profit if B wins (2.00)",
+            "Dobit ako pobijedi B (2.00)",
             "€1,020 − €1,000 = €20.00"
           ],
           [
-            "Exact split for comparison",
-            "approx. €24.39 either way"
+            "Točna raspodjela za usporedbu",
+            "oko €24.39 u oba slučaja"
           ]
         ],
-        "note": "The rounded stakes still lock in a profit on both results, and they look far more natural to the bookmaker."
+        "note": "Zaokruženi ulozi i dalje osiguravaju dobit na oba ishoda, a kladionici izgledaju puno prirodnije."
       },
       {
         "type": "h2",
-        "text": "Best bookmakers for arbitrage betting"
+        "text": "Najbolje kladionice za arbitražno klađenje"
       },
       {
         "type": "p",
-        "text": "A good arbitrage setup combines two types of bookmaker. Soft bookmakers offer the mispriced odds, and sharp bookmakers or exchanges accept large stakes without limiting winners."
+        "text": "Dobra arbitražna postava kombinira dvije vrste kladionica. Soft kladionice nude pogrešno procijenjene kvote, a sharp kladionice ili burze prihvaćaju velike uloge bez ograničavanja dobitnika."
       },
       {
         "type": "ul",
         "items": [
-          "**Soft bookmakers:** the source of most surebets, but they limit quickly. Use them carefully.",
-          "**Sharp bookmakers:** lower margins and high limits. Ideal for the second leg.",
-          "**Betting exchanges:** you bet against other users, so you are not limited for winning. Commission reduces the profit slightly."
+          "**Soft kladionice:** izvor većine surebetova, ali brzo ograničavaju račune. Koristite ih oprezno.",
+          "**Sharp kladionice:** niže marže i visoki limiti. Idealne za drugu nogu oklade.",
+          "**Burze za klađenje:** klađenje je protiv drugih korisnika, pa vas ne ograničavaju zbog dobitaka. Provizija blago smanjuje dobit."
         ]
       },
       {
         "type": "p",
-        "text": "Read the full overview of the [best bookmakers for surebets](/en/guides/best-bookmakers-for-surebets). Always use licensed bookmakers in your country."
+        "text": "Pročitajte cjelovit pregled [najboljih kladionica za surebetove](/en/guides/best-bookmakers-for-surebets). Uvijek birajte kladionice s licencijom u svojoj zemlji."
       },
       {
         "type": "h2",
-        "text": "What to do when an account is limited"
+        "text": "Što učiniti kad vam ograniče račun"
       },
       {
         "type": "ul",
         "items": [
-          "**Withdraw your balance** if the account can no longer be used for surebets.",
-          "**Do not open a new account** under someone else's name. It breaks the terms and can lead to confiscated winnings.",
-          "**Move volume** to your other accounts and to sharp bookmakers or exchanges.",
-          "**Track per bookmaker:** a [bet tracker](/en/guides/bet-tracker) shows which accounts are worth protecting."
+          "**Isplatite sredstva** ako se račun više ne može koristiti za surebetove.",
+          "**Ne otvarajte novi račun** na tuđe ime. To krši uvjete korištenja i može dovesti do oduzimanja dobitka.",
+          "**Prebacite volumen** na svoje ostale račune te na sharp kladionice ili burze.",
+          "**Pratite po kladionicama:** [bet tracker](/en/guides/bet-tracker) pokazuje koje je račune vrijedno zaštititi."
         ]
       },
       {
         "type": "p",
-        "text": "The more bookmakers you can use, the less volume each account needs. [BetTracker AI](/en) finds surebets across many bookmakers, so you can spread your bets and keep your accounts open longer."
+        "text": "Što više kladionica možete koristiti, to manji volumen treba svaki račun. [BetTracker AI](/en) pronalazi surebetove u mnogo kladionica, pa možete rasporediti oklade i dulje zadržati račune otvorenima."
       }
     ],
     "faq": [
       {
-        "q": "Can I avoid bookmaker limits completely?",
-        "a": "Not at soft bookmakers in the long run. But a natural betting pattern can delay limits by months, and sharp bookmakers and exchanges rarely limit at all."
+        "q": "Mogu li potpuno izbjeći ograničenja kladionica?",
+        "a": "Ne u soft kladionicama na duge staze. No prirodan obrazac klađenja može odgoditi ograničenja za mjesecima, a sharp kladionice i burze rijetko ograničavaju račune."
       },
       {
-        "q": "Is it legal for bookmakers to limit me?",
-        "a": "Yes, bookmakers can usually decide who they accept bets from. See [are surebets legal?](/en/guides/are-surebets-legal)"
+        "q": "Je li zakonito da me kladionice ograničavaju?",
+        "a": "Da, kladionice obično mogu same odlučiti od koga prihvaćaju oklade. Pogledajte [jesu li surebetovi legalni?](/en/guides/are-surebets-legal)"
       },
       {
-        "q": "How many bookmakers should I use?",
-        "a": "Five to ten is a good start. It spreads your volume and gives you more surebets to choose from."
+        "q": "Koliko kladionica trebam koristiti?",
+        "a": "Pet do deset dobar je početak. Tako raspoređujete volumen i imate više surebetova na izbor."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Find surebets at more bookmakers"
+    "category": "Strategija",
+    "ctaLabel": "Pronađite surebetove u više kladionica"
   },
   "surebet-beregner": {
-    "title": "Free surebet calculator: work out your stakes in seconds",
-    "metaTitle": "Free Surebet Calculator – Calculate Stakes 2026",
-    "description": "Use a free surebet calculator to split your stake across two or three outcomes. The formula, examples in € and how to round stakes safely.",
-    "keyword": "free surebet calculator",
-    "intro": "A surebet calculator splits your total stake across every outcome so the payout is the same whatever happens. Enter the odds and your amount, and the calculator shows the stake per outcome, the payout and your profit in € and %. The formula is simple, but a calculator prevents mistakes when you only have minutes to place the bets.",
+    "title": "Besplatni kalkulator surebetova: izračunajte uloge u nekoliko sekundi",
+    "metaTitle": "Besplatni kalkulator surebetova – izračun uloga 2026.",
+    "description": "Besplatnim kalkulatorom surebetova rasporedite ulog na dva ili tri ishoda. Formula, primjeri u € i kako sigurno zaokružiti uloge.",
+    "keyword": "besplatni kalkulator surebetova",
+    "intro": "Kalkulator surebetova raspoređuje vaš ukupni ulog na sve ishode tako da isplata bude jednaka bez obzira na rezultat. Unesite kvote i iznos, a kalkulator prikazuje ulog po ishodu, isplatu i dobit u € i %. Formula je jednostavna, ali kalkulator sprječava pogreške kad imate samo nekoliko minuta za klađenje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "How to calculate surebet stakes: the formula"
+        "text": "Kako izračunati uloge za surebet: formula"
       },
       {
         "type": "p",
-        "text": "First add up the inverse odds: 1/odds A + 1/odds B (+ 1/odds C for three outcomes). Call this total S. The stake on one outcome is total stake × 1/odds, divided by S. The payout is total stake divided by S."
+        "text": "Prvo zbrojite inverzne kvote: 1/kvota A + 1/kvota B (+ 1/kvota C za tri ishoda). Taj zbroj nazovimo S. Ulog na jedan ishod je ukupni ulog × 1/kvota, podijeljeno sa S. Isplata je ukupni ulog podijeljen sa S."
       },
       {
         "type": "ul",
         "items": [
-          "**Stake per outcome:** total stake × (1/odds) ÷ S",
-          "**Payout:** total stake ÷ S",
-          "**Profit in %:** (1 ÷ S − 1) × 100"
+          "**Ulog po ishodu:** ukupni ulog × (1/kvota) ÷ S",
+          "**Isplata:** ukupni ulog ÷ S",
+          "**Dobit u %:** (1 ÷ S − 1) × 100"
         ]
       },
       {
         "type": "example",
-        "title": "Example: two outcomes, total stake €1,500",
+        "title": "Primjer: dva ishoda, ukupni ulog €1,500",
         "rows": [
           [
-            "Odds A 2.10 and odds B 2.05",
+            "Kvota A 2.10 i kvota B 2.05",
             "S = 0.476 + 0.488 = 0.964"
           ],
           [
-            "Stake on A",
+            "Ulog na A",
             "€740.97"
           ],
           [
-            "Stake on B",
+            "Ulog na B",
             "€759.03"
           ],
           [
-            "Payout either way",
-            "approx. €1,556.03"
+            "Isplata u oba slučaja",
+            "oko €1,556.03"
           ],
           [
-            "Profit",
-            "approx. €56.03 (3.7%)"
+            "Dobit",
+            "oko €56.03 (3.7%)"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "Sports arbitrage with three outcomes"
+        "text": "Sportska arbitraža s tri ishoda"
       },
       {
         "type": "p",
-        "text": "In football and ice hockey 1X2 markets, a third outcome goes into the same formula. By hand that gets tedious, and this is exactly where a calculator saves the most time."
+        "text": "Na tržištima 1X2 u nogometu i hokeju na ledu treći ishod ulazi u istu formulu. Ručno to postaje zamorno, a upravo tu kalkulator štedi najviše vremena."
       },
       {
         "type": "example",
-        "title": "Example: 1X2, total stake €1,000",
+        "title": "Primjer: 1X2, ukupni ulog €1,000",
         "rows": [
           [
-            "Home win, odds 2.50",
-            "Stake €408.23"
+            "Pobjeda domaćina, kvota 2.50",
+            "Ulog €408.23"
           ],
           [
-            "Draw, odds 3.50",
-            "Stake €291.59"
+            "Neriješeno, kvota 3.50",
+            "Ulog €291.59"
           ],
           [
-            "Away win, odds 3.40",
-            "Stake €300.17"
+            "Pobjeda gosta, kvota 3.40",
+            "Ulog €300.17"
           ],
           [
-            "Sum of inverse odds",
+            "Zbroj inverznih kvota",
             "0.980"
           ],
           [
-            "Profit",
-            "approx. €20.58 (2.1%)"
+            "Dobit",
+            "oko €20.58 (2.1%)"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "Rounding and uneven stakes"
+        "text": "Zaokruživanje i neujednačeni ulozi"
       },
       {
         "type": "p",
-        "text": "Stakes like €740.97 look suspicious to a bookmaker. Round to whole euros or tens. If you round to €741 and €759, the profit stays at about €56, with only a few cents of difference between outcomes."
+        "text": "Ulozi poput €740.97 kladionici djeluju sumnjivo. Zaokružite na cijele eure ili desetice. Ako zaokružite na €741 i €759, dobit ostaje oko €56, uz razliku od samo nekoliko centi među ishodima."
       },
       {
         "type": "p",
-        "text": "You can also skew the stakes on purpose. If you only cover your stake on one outcome, you win €0 there and more on the other. In the example above, €768.29 on A and €731.71 on B gives a profit of €113.41 if A wins and €0 if B wins."
+        "text": "Uloge možete i namjerno iskriviti. Ako na jednom ishodu samo pokrijete ulog, ondje dobivate €0, a na drugom više. U gornjem primjeru €768.29 na A i €731.71 na B daje dobit od €113.41 ako pobijedi A i €0 ako pobijedi B."
       },
       {
         "type": "tip",
-        "text": "Always calculate with the odds actually shown on your bet slip, not the ones from the scanner. Prices can shift by a tick between the scan and the click."
+        "text": "Uvijek računajte s kvotama koje stvarno vidite na svom listiću, a ne s onima iz skenera. Kvote se između skeniranja i klika mogu malo promijeniti."
       },
       {
         "type": "h2",
-        "text": "The surebet calculator as an everyday betting tool"
+        "text": "Surebet kalkulator kao svakodnevni alat za klađenje"
       },
       {
         "type": "ul",
         "items": [
-          "**Before the bet:** check the sum of inverse odds is still below 1.",
-          "**During the bet:** recalculate if a price changes.",
-          "**After the bet:** log the result so you can track your ROI in a [bet tracker](/en/guides/bet-tracker)."
+          "**Prije klađenja:** provjerite je li zbroj inverznih kvota i dalje manji od 1.",
+          "**Tijekom klađenja:** ponovno izračunajte ako se kvota promijeni.",
+          "**Nakon klađenja:** zabilježite rezultat kako biste mogli pratiti svoj ROI u [alatu za praćenje oklada](/en/guides/bet-tracker)."
         ]
       },
       {
         "type": "p",
-        "text": "Try the free [surebet calculator](/en/calculator) with two or three outcomes. If you would rather not type in odds yourself, [BetTracker AI](/en) finds surebets and calculates the stakes automatically."
+        "text": "Isprobajte besplatni [surebet kalkulator](/en/calculator) s dva ili tri ishoda. Ako kvote radije ne biste unosili ručno, [BetTracker AI](/en) pronalazi surebetove i automatski izračunava uloge."
       }
     ],
     "faq": [
       {
-        "q": "Is the surebet calculator free?",
-        "a": "Yes, the BetTracker AI calculator is free and works with two and three outcomes."
+        "q": "Je li surebet kalkulator besplatan?",
+        "a": "Da, BetTracker AI kalkulator je besplatan i radi s dva i tri ishoda."
       },
       {
-        "q": "Can I use the calculator for hedging?",
-        "a": "Yes. Enter your original odds and the new odds on the opposite outcome to see how much to stake to lock in a profit. More in [make money on sports betting without risk](/en/guides/make-money-betting-without-risk)."
+        "q": "Mogu li kalkulator koristiti za hedging?",
+        "a": "Da. Unesite svoju izvornu kvotu i novu kvotu na suprotan ishod i vidjet ćete koliki ulog trebate uplatiti da biste osigurali dobit. Više u vodiču [kako zaraditi na sportskom klađenju bez rizika](/en/guides/make-money-betting-without-risk)."
       },
       {
-        "q": "Why does the calculator show a negative profit?",
-        "a": "The sum of inverse odds is above 1, so there is no surebet. Most likely one of the prices has moved."
+        "q": "Zašto kalkulator prikazuje negativnu dobit?",
+        "a": "Zbroj inverznih kvota veći je od 1, pa surebeta nema. Najvjerojatnije se promijenila jedna od kvota."
       }
     ],
-    "category": "Basics",
-    "ctaLabel": "Open the surebet calculator"
+    "category": "Osnove",
+    "ctaLabel": "Otvori surebet kalkulator"
   },
   "odds-beregner": {
-    "title": "How to use an odds calculator",
-    "metaTitle": "Odds calculator – convert odds to probability and winnings",
-    "description": "Learn to convert decimal odds to probability, calculate your potential winnings, and find the bookmaker's margin with an odds calculator.",
-    "keyword": "odds calculator",
-    "intro": "An odds calculator turns odds into something you can use: how much you'll win, how likely the bookmaker thinks the outcome is, and how much the bookmaker is taking. Here are the three calculations you need to know.",
+    "title": "Kako koristiti kalkulator kvota",
+    "metaTitle": "Kalkulator kvota – pretvorite kvote u vjerojatnost i dobitak",
+    "description": "Naučite pretvarati decimalne kvote u vjerojatnost, izračunati potencijalni dobitak i odrediti maržu kladionice pomoću kalkulatora kvota.",
+    "keyword": "kalkulator kvota",
+    "intro": "Kalkulator kvota pretvara kvote u korisne informacije: koliko ćete dobiti, koliko kladionica smatra vjerojatnim neki ishod i koliko kladionica zadržava za sebe. Evo tri izračuna koja morate znati.",
     "blocks": [
       {
         "type": "h2",
-        "text": "1. Potential winnings"
+        "text": "1. Potencijalni dobitak"
       },
       {
         "type": "p",
-        "text": "With decimal odds, which most online bookmakers use, the payout is stake multiplied by odds. The profit is the payout minus the stake."
+        "text": "Kod decimalnih kvota, koje koristi većina online kladionica, isplata je ulog pomnožen kvotom. Dobit je isplata umanjena za ulog."
       },
       {
         "type": "example",
-        "title": "€200 stake at odds of 2.50",
+        "title": "Ulog od €200 uz kvotu 2.50",
         "rows": [
           [
-            "Payout",
+            "Isplata",
             "€200 × 2.50 = €500"
           ],
           [
-            "Profit",
+            "Dobit",
             "€500 − €200 = €300"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "2. Implied probability"
+        "text": "2. Implicirana vjerojatnost"
       },
       {
         "type": "p",
-        "text": "The probability the bookmaker is working with is 1 divided by the odds. Odds of 2.50 equals 40%. If you believe the chance is higher, it's a value bet."
+        "text": "Vjerojatnost s kojom kladionica računa jednaka je 1 podijeljenom s kvotom. Kvota 2.50 odgovara 40%. Ako vjerujete da je stvarna šansa veća, riječ je o value betu."
       },
       {
         "type": "h2",
-        "text": "3. Bookmaker margin"
+        "text": "3. Marža kladionice"
       },
       {
         "type": "p",
-        "text": "Add up the implied probabilities for all outcomes. The total is over 100%, and the excess is the bookmaker margin. If the total is under 100% across different bookmakers, you have a surebet (also known as an arbitrage bet)."
+        "text": "Zbrojite impliciране vjerojatnosti svih ishoda. Zbroj je veći od 100%, a višak je marža kladionice. Ako je zbroj kod različitih kladionica manji od 100%, imate surebet (poznat i kao arbitražna oklada)."
       },
       {
         "type": "example",
-        "title": "Tennis: odds of 1.85 and 1.95 at the same bookmaker",
+        "title": "Tenis: kvote 1.85 i 1.95 u istoj kladionici",
         "rows": [
           [
             "1/1.85 + 1/1.95",
             "54.1% + 51.3% = 105.4%"
           ],
           [
-            "Bookmaker margin",
-            "approx. 5.4%"
+            "Marža kladionice",
+            "oko 5.4%"
           ]
         ],
-        "note": "The lower the margin, the better odds you get as a punter."
+        "note": "Što je marža manja, to su kvote bolje za igrača."
       },
       {
         "type": "tip",
-        "text": "Our free sure bet calculator does all three calculations for you and distributes the stake across multiple outcomes."
+        "text": "Naš besplatni kalkulator surebetova obavlja sva tri izračuna umjesto vas i raspoređuje ulog na više ishoda."
       }
     ],
     "faq": [
       {
-        "q": "How do you convert odds to a percentage?",
-        "a": "Divide 1 by the odds and multiply by 100. Odds of 2.00 equals 50%, and odds of 4.00 equals 25%."
+        "q": "Kako pretvoriti kvotu u postotak?",
+        "a": "Podijelite 1 s kvotom i pomnožite sa 100. Kvota 2.00 odgovara 50%, a kvota 4.00 odgovara 25%."
       },
       {
-        "q": "What's the difference between decimal odds and fractional odds?",
-        "a": "Decimal odds show the total payout per unit staked, e.g. 2.50. Fractional odds, such as 3/2, show only the profit. Most online bookmakers use decimal odds, though fractional odds remain common in the UK and Ireland."
+        "q": "Koja je razlika između decimalnih i razlomačkih kvota?",
+        "a": "Decimalne kvote prikazuju ukupnu isplatu po jedinici uloga, npr. 2.50. Razlomačke kvote, poput 3/2, prikazuju samo dobit. Većina online kladionica koristi decimalne kvote, dok su razlomačke i dalje uobičajene u Ujedinjenom Kraljevstvu i Irskoj."
       }
     ],
-    "category": "Fundamentals",
-    "ctaLabel": "Open the calculator"
+    "category": "Osnove",
+    "ctaLabel": "Otvori kalkulator"
   },
   "value-betting-vs-surebets": {
-    "title": "Value betting vs surebets: what's the difference?",
-    "metaTitle": "Value betting vs surebets – differences, risk & profit",
-    "description": "Value betting and surebets both exploit mispriced odds but work differently. Compare risk, profit potential and which strategy suits your betting style.",
-    "keyword": "value betting vs surebets",
-    "intro": "Both value betting and surebets exploit bookmakers' pricing errors. The key difference: surebets lock in guaranteed profit instantly, whilst value betting delivers profit over a large sample of bets.",
+    "title": "Value betting ili surebetovi: u čemu je razlika?",
+    "metaTitle": "Value betting ili surebetovi – razlike, rizik i dobit",
+    "description": "Value betting i surebetovi iskorištavaju pogrešno postavljene kvote, ali funkcioniraju na različite načine. Usporedite rizik, potencijal dobiti i saznajte koja strategija odgovara vašem stilu klađenja.",
+    "keyword": "value betting ili surebetovi",
+    "intro": "I value betting i surebetovi iskorištavaju pogreške kladionica u određivanju kvota. Ključna razlika: surebetovi odmah osiguravaju zajamčenu dobit, dok value betting donosi dobit tek na velikom uzorku oklada.",
     "blocks": [
       {
         "type": "h2",
-        "text": "What is value betting?"
+        "text": "Što je value betting?"
       },
       {
         "type": "p",
-        "text": "A value bet is a wager where the odds are higher than the true probability suggests. If a match is genuinely 50/50 and a bookmaker offers odds of 2.20, that's a value bet. You only bet on one outcome and can lose individual bets, but over time the edge delivers profit."
+        "text": "Value bet je oklada kod koje je kvota veća nego što bi to sugerirala stvarna vjerojatnost. Ako je utakmica doista 50:50, a kladionica nudi kvotu 2.20, riječ je o value betu. Klađenje je samo na jedan ishod i pojedine oklade možete izgubiti, ali će vam tijekom vremena prednost donijeti dobit."
       },
       {
         "type": "h2",
-        "text": "What is a surebet?"
+        "text": "Što je surebet?"
       },
       {
         "type": "p",
-        "text": "With a surebet (arbitrage bet) you back all outcomes across different bookmakers so you win regardless of the result. The profit per bet is smaller, but it's guaranteed on every trade."
+        "text": "Kod surebeta (arbitražne oklade) klađenjem na sve ishode u različitim kladionicama dobivate bez obzira na rezultat. Dobit po okladi je manja, ali je zajamčena u svakoj transakciji."
       },
       {
         "type": "example",
-        "title": "Comparison",
+        "title": "Usporedba",
         "rows": [
           [
-            "Risk per bet",
-            "Surebets: low · Value: high"
+            "Rizik po okladi",
+            "Surebetovi: nizak · Value: visok"
           ],
           [
-            "Profit per bet",
-            "Surebets: 1–5% · Value: varies"
+            "Dobit po okladi",
+            "Surebetovi: 1–5% · Value: varira"
           ],
           [
-            "Bets before profit shows",
-            "Surebets: 1 · Value: hundreds"
+            "Broj oklada do vidljive dobiti",
+            "Surebetovi: 1 · Value: stotine"
           ],
           [
-            "Accounts required",
-            "Surebets: several · Value: one or more"
+            "Potrebni računi",
+            "Surebetovi: nekoliko · Value: jedan ili više"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "Which strategy suits you?"
+        "text": "Koja strategija vam odgovara?"
       },
       {
         "type": "ul",
         "items": [
-          "Choose surebets if you want stable profit without large swings or drawdowns.",
-          "Choose value betting if you can tolerate losing runs and have a large enough bankroll to ride out variance.",
-          "Many combine both: surebets for steady income and value bets to maximise long-term edge."
+          "Odaberite surebetove ako želite stabilnu dobit bez velikih oscilacija i padova.",
+          "Odaberite value betting ako možete podnijeti serije gubitaka i imate dovoljno velik bankroll da izdržite varijancu.",
+          "Mnogi kombiniraju oba pristupa: surebetove za stalan prihod, a value betove za maksimiziranje dugoročne prednosti."
         ]
       },
       {
         "type": "tip",
-        "text": "If you're starting out, begin with surebets. You'll learn how bookmakers operate without risking large losses."
+        "text": "Ako tek počinjete, krenite sa surebetovima. Naučit ćete kako kladionice posluju, a da pritom ne riskirate velike gubitke."
       }
     ],
     "faq": [
       {
-        "q": "Is value betting more profitable than surebets?",
-        "a": "Value betting can deliver higher profit over the long term, but with far greater variance. Surebets offer smaller, more stable profit on every bet."
+        "q": "Je li value betting isplativiji od surebetova?",
+        "a": "Value betting dugoročno može donijeti veći profit, ali uz znatno veća odstupanja u rezultatima. Surebetovi donose manji, ali stabilniji profit na svakoj okladi."
       },
       {
-        "q": "Do bookmakers limit your account with value betting too?",
-        "a": "Yes. Bookmakers limit winning customers regardless of strategy, though value betting can be slightly harder to detect because you also place losing bets."
+        "q": "Ograničavaju li kladionice račune i kod value bettinga?",
+        "a": "Da. Kladionice ograničavaju dobitne igrače bez obzira na strategiju, no value betting može biti nešto teže otkriti jer klađenjem ujedno gubite i dio oklada."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Try surebets in real time"
+    "category": "Strategija",
+    "ctaLabel": "Isprobajte surebetove u stvarnom vremenu"
   },
   "bedste-bookmakere-til-surebets": {
-    "title": "Best bookmakers for surebets",
-    "metaTitle": "Best bookmakers for surebets (2026)",
-    "description": "Which bookmakers should you use for surebets? See what makes a good arbitrage betting bookmaker and how to build your portfolio of accounts.",
-    "keyword": "best bookmakers surebets",
-    "intro": "There isn't one single bookmaker that's best for surebets. Arbitrage betting opportunities arise between bookmakers, so the most important thing is to have accounts with several operators using different odds providers and different approaches to the market.",
+    "title": "Najbolje kladionice za surebetove",
+    "metaTitle": "Najbolje kladionice za surebetove (2026)",
+    "description": "Koje kladionice odabrati za surebetove? Saznajte što čini dobru kladionicu za arbitražno klađenje i kako složiti vlastiti portfelj računa.",
+    "keyword": "najbolje kladionice surebet",
+    "intro": "Ne postoji jedna kladionica koja je najbolja za surebetove. Prilike za arbitražno klađenje nastaju između kladionica, pa je najvažnije imati račune kod više operatera koji koriste različite pružatelje koeficijenata i drukčije pristupe tržištu.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why multiple bookmakers give you more surebets"
+        "text": "Zašto vam više kladionica donosi više surebetova"
       },
       {
         "type": "p",
-        "text": "Many bookmakers use the same odds platform and therefore have near-identical prices. Surebets most often arise between bookmakers that set odds in their own different ways. If you only have accounts with bookmakers on the same platform, you'll see far fewer arbitrage betting opportunities."
+        "text": "Mnoge kladionice koriste istu platformu za koeficijente pa imaju gotovo identične kvote. Surebetovi najčešće nastaju između kladionica koje koeficijente određuju na vlastiti način. Ako imate račune samo kod kladionica s iste platforme, vidjet ćete znatno manje prilika za arbitražno klađenje."
       },
       {
         "type": "h2",
-        "text": "What to look for"
+        "text": "Na što obratiti pažnju"
       },
       {
         "type": "ul",
         "items": [
-          "Licensed by your national gambling regulator, so you're protected and can verify the tax treatment of your winnings.",
-          "Fast deposits and withdrawals, so you can move money where it's needed.",
-          "Wide range of sports and markets, especially tennis, football and basketball.",
-          "Competitive odds and low bookmaker margin on popular markets.",
-          "A welcome bonus with reasonable terms that you can clear using surebets."
+          "Licenca nacionalnog regulatora igara na sreću, kako biste bili zaštićeni i mogli provjeriti porezni tretman svojih dobitaka.",
+          "Brze uplate i isplate, da novac možete brzo prebaciti tamo gdje vam treba.",
+          "Širok izbor sportova i tržišta, osobito tenisa, nogometa i košarke.",
+          "Konkurentni koeficijenti i niska marža kladionice na popularnim tržištima.",
+          "Dobrodošlica bonus s razumnim uvjetima koji možete odigrati surebetovima."
         ]
       },
       {
         "type": "h2",
-        "text": "How to build your bookmaker portfolio"
+        "text": "Kako složiti portfelj kladionica"
       },
       {
         "type": "p",
-        "text": "Start with five to eight licensed bookmakers spread across different platforms. This gives you a good range of opportunities without having to manage too many balances. Once you've got the routine down, you can expand with more."
+        "text": "Počnite s pet do osam licenciranih kladionica s različitih platformi. Tako ćete imati dobar izbor prilika, a nećete morati pratiti previše salda. Kad uhodate rutinu, možete dodati još kladionica."
       },
       {
         "type": "tip",
-        "text": "In BetTrackerAI you can select exactly which bookmakers you have accounts with, so you only see surebets you can actually place."
+        "text": "U BetTrackerAI možete točno odabrati kod kojih kladionica imate račune, pa vidite samo surebetove koje stvarno možete odigrati."
       },
       {
         "type": "h2",
-        "text": "Bookmakers with their own odds are worth their weight in gold"
+        "text": "Kladionice s vlastitim koeficijentima vrijede zlata"
       },
       {
         "type": "p",
-        "text": "Bookmakers that set their own odds instead of buying them often react more slowly or differently to news. This is precisely where the price differences arise. On the flip side, they're also often the quickest to limit winning accounts through gubbing."
+        "text": "Kladionice koje same određuju koeficijente umjesto da ih kupuju često sporije ili drukčije reagiraju na novosti. Upravo tu nastaju razlike u kvotama. S druge strane, one često i najbrže ograničavaju dobitne račune putem gubbinga."
       }
     ],
     "faq": [
       {
-        "q": "How many bookmakers do I need for surebets?",
-        "a": "A good starting point is five to eight regulated bookmakers. The more different odds platforms you cover, the more surebets you'll have access to."
+        "q": "Koliko mi kladionica treba za surebetove?",
+        "a": "Dobra polazna točka je pet do osam reguliranih kladionica. Što više različitih platformi s koeficijentima pokrijete, to ćete imati pristup većem broju surebetova."
       },
       {
-        "q": "Can I use unlicensed bookmakers for arbitrage betting?",
-        "a": "It's not recommended. Bookmakers without a licence in your jurisdiction may be blocked, and winnings from them may be subject to different tax treatment or lack regulatory protection. Always check the rules where you live."
+        "q": "Mogu li za arbitražno klađenje koristiti kladionice bez licence?",
+        "a": "Ne preporučuje se. Kladionice bez licence u vašoj jurisdikciji mogu biti blokirane, a dobitci kod njih mogu podlijegati drukčijem poreznom tretmanu ili nemati regulatornu zaštitu. Uvijek provjerite propise koji vrijede tamo gdje živite."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "See surebets at your bookmakers"
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte surebetove u svojim kladionicama"
   },
   "skat-paa-spillegevinster": {
-    "title": "Tax on gambling winnings – international betting guide",
-    "metaTitle": "Tax on Gambling Winnings – What You Need to Know",
-    "description": "Do you need to pay tax on betting winnings and surebets? Learn how tax rules work for licensed and offshore bookmakers, and what to document.",
-    "keyword": "tax on gambling winnings",
-    "intro": "In many regulated markets, the answer is straightforward: winnings from licensed bookmakers are tax-free for the player. The bookmaker pays duty to the state, not you. But the rules depend on where you live and where you bet.",
+    "title": "Porez na dobitke od klađenja – međunarodni vodič",
+    "metaTitle": "Porez na dobitke od klađenja – što trebate znati",
+    "description": "Plaća li se porez na dobitke od klađenja i surebetova? Saznajte kako funkcioniraju porezna pravila za licencirane i offshore kladionice te što trebate dokumentirati.",
+    "keyword": "porez na dobitke od klađenja",
+    "intro": "Na mnogim reguliranim tržištima odgovor je jednostavan: dobitci od licenciranih kladionica za igrača su neoporezovani. Kladionica plaća davanja državi, a ne vi. No pravila ovise o tome gdje živite i gdje se kladite.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Licensed bookmakers: typically tax-free"
+        "text": "Licencirane kladionice: obično bez poreza"
       },
       {
         "type": "p",
-        "text": "When you bet with a provider licensed by your national gambling regulator, the provider usually pays gambling duty on their revenue. Your winnings are therefore generally tax-free, and in most cases you don't need to report them to your tax authority. Always check the rules where you live."
+        "text": "Kada se kladite kod operatera s licencom nacionalnog regulatora igara na sreću, operater u pravilu plaća porez na igre na sreću na svoj prihod. Vaši su dobitci stoga općenito neoporezovani, a u većini slučajeva ih ne morate prijavljivati poreznoj upravi. Uvijek provjerite propise koji vrijede tamo gdje živite."
       },
       {
         "type": "h2",
-        "text": "Offshore bookmakers without a local licence"
+        "text": "Offshore kladionice bez lokalne licence"
       },
       {
         "type": "p",
-        "text": "If you bet with providers that do not hold a licence in your jurisdiction, the winnings may be taxable. The rules depend on factors such as whether the provider holds a licence in another country and your own tax residence. This is one reason why it's often simpler to stick with regulated bookmakers."
+        "text": "Ako se kladite kod operatera koji nemaju licencu u vašoj jurisdikciji, dobitci mogu biti oporezivi. Pravila ovise o čimbenicima poput toga ima li operater licencu u drugoj državi te o vašem poreznom rezidentstvu. To je jedan od razloga zašto je često jednostavnije ostati kod reguliranih kladionica."
       },
       {
         "type": "h2",
-        "text": "Does this apply to surebets too?"
+        "text": "Vrijedi li to i za surebetove?"
       },
       {
         "type": "p",
-        "text": "Yes. For tax purposes, a surebet is simply two or three ordinary bets. Winnings from licensed bookmakers are generally tax-free, whether you're placing sure bets, value bets or standard bets. The same principles apply."
+        "text": "Da. Za potrebe oporezivanja surebet su jednostavno dvije ili tri obične oklade. Dobitci od licenciranih kladionica općenito su neoporezovani, bilo da igrate sigurne oklade, value betove ili standardne oklade. Vrijede ista načela."
       },
       {
         "type": "tip",
-        "text": "Keep a record of your bets. It makes it easy to document where the money comes from if your bank asks."
+        "text": "Vodite evidenciju svojih oklada. Tako ćete lako dokazati podrijetlo novca ako vas banka to zatraži."
       },
       {
         "type": "h2",
-        "text": "Professional gambling"
+        "text": "Profesionalno klađenje"
       },
       {
         "type": "p",
-        "text": "If betting is your main occupation on a substantial scale, different rules may apply in certain jurisdictions. If you're unsure about your own situation, contact your local tax authority or a qualified accountant."
+        "text": "Ako vam je klađenje glavno zanimanje i bavite se njime u većem opsegu, u nekim jurisdikcijama mogu vrijediti drukčija pravila. Ako niste sigurni kakva je vaša situacija, obratite se lokalnoj poreznoj upravi ili kvalificiranom računovođi."
       }
     ],
     "faq": [
       {
-        "q": "Do I need to pay tax on winnings from licensed bookmakers?",
-        "a": "In most regulated markets, no. Winnings from locally licensed providers are typically tax-free for the player. Check the tax rules where you live."
+        "q": "Moram li platiti porez na dobitke kod licenciranih kladionica?",
+        "a": "Na većini reguliranih tržišta ne. Dobitci kod lokalno licenciranih operatera obično su za igrača oslobođeni poreza. Provjerite porezna pravila u zemlji u kojoj živite."
       },
       {
-        "q": "How can I see if a bookmaker is licensed in my country?",
-        "a": "Your national gambling regulator will have a list of approved providers on its website, and licensed bookmakers usually display the regulator's logo on their site."
+        "q": "Kako mogu provjeriti ima li kladionica licencu u mojoj zemlji?",
+        "a": "Nacionalni regulator igara na sreću na svojim web-stranicama objavljuje popis odobrenih operatera, a licencirane kladionice obično na svojoj stranici ističu logotip regulatora."
       }
     ],
-    "category": "Rules",
-    "ctaLabel": "Read about the rules for surebets"
+    "category": "Pravila",
+    "ctaLabel": "Pročitajte o pravilima za surebetove"
   },
   "bankroll-management": {
-    "title": "Bankroll management guide for sports betting and arbitrage",
-    "metaTitle": "Bankroll Management Guide for Sports Betting 2026",
-    "description": "Bankroll management for sports betting: how to size stakes, split money across bookmakers and calculate ROI, with worked examples in €.",
-    "keyword": "bankroll management guide for sports betting",
-    "intro": "Good bankroll management means deciding in advance how much money is dedicated to betting, how much you stake per bet and how the money is split across bookmakers. For value betting, stake 1–2% of your bankroll per bet. For surebets, the limit is liquidity: your money must sit at the right bookmakers when a surebet appears. Track everything to measure ROI.",
+    "title": "Vodič za upravljanje bankrollom u sportskom klađenju i arbitraži",
+    "metaTitle": "Vodič za upravljanje bankrollom u sportskom klađenju 2026.",
+    "description": "Upravljanje bankrollom u sportskom klađenju: kako odrediti visinu uloga, rasporediti novac po kladionicama i izračunati ROI, uz primjere u €.",
+    "keyword": "vodič za upravljanje bankrollom u sportskom klađenju",
+    "intro": "Dobro upravljanje bankrollom znači unaprijed odlučiti koliko je novca namijenjeno klađenju, koliko ulažete po okladi i kako se novac raspoređuje po kladionicama. Kod value betova ulažite 1–2% bankrolla po okladi. Kod surebetova ograničenje je likvidnost: novac mora biti u pravim kladionicama kad se pojavi surebet. Sve bilježite kako biste mogli izmjeriti ROI.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Bankroll management: the basic rules"
+        "text": "Upravljanje bankrollom: osnovna pravila"
       },
       {
         "type": "ul",
         "items": [
-          "**Separate money:** your bankroll is money you can afford to lose and is kept apart from everyday finances.",
-          "**Fixed stake rules:** decide the stake size before you bet, not on gut feeling.",
-          "**No chasing losses:** raising stakes after a loss is the fastest way to empty a bankroll.",
-          "**Review monthly:** adjust stakes up or down based on your bankroll, not on one good week."
+          "**Odvojeni novac:** bankroll je novac čiji gubitak si možete priuštiti i drži se odvojeno od svakodnevnih financija.",
+          "**Fiksna pravila za uloge:** visinu uloga odredite prije klađenja, a ne po osjećaju.",
+          "**Bez povrata izgubljenog:** podizanje uloga nakon gubitka najbrži je način da ispraznite bankroll.",
+          "**Mjesečni pregled:** uloge povećavajte ili smanjujte prema stanju bankrolla, a ne prema jednom dobrom tjednu."
         ]
       },
       {
         "type": "h2",
-        "text": "Stake sizing for value bets and surebets"
+        "text": "Određivanje uloga za value betove i surebetove"
       },
       {
         "type": "p",
-        "text": "Value bets can lose, so the stake must be small enough to survive losing streaks. Surebets do not lose when executed correctly, so the risk is execution: odds changes, voids and missing legs."
+        "text": "Value betovi mogu izgubiti, pa ulog mora biti dovoljno malen da preživite loše serije. Surebetovi ne gube kad se pravilno izvedu, pa je rizik u izvedbi: promjene kvota, poništene oklade i propuštene opklade na pojedini ishod."
       },
       {
         "type": "example",
-        "title": "Example: flat staking for value bets, bankroll €2,000",
+        "title": "Primjer: fiksni ulog za value betove, bankroll €2,000",
         "rows": [
           [
-            "Stake per bet (1.5%)",
+            "Ulog po okladi (1.5%)",
             "€30"
           ],
           [
-            "10 losing bets in a row",
-            "−€300 (15% of bankroll)"
+            "10 izgubljenih oklada zaredom",
+            "−€300 (15% bankrolla)"
           ],
           [
-            "Bankroll left",
+            "Preostali bankroll",
             "€1,700"
           ],
           [
-            "New stake after review (1.5%)",
+            "Novi ulog nakon pregleda (1.5%)",
             "€25.50"
           ]
         ],
-        "note": "A 1–2% stake keeps you in the game through the losing streaks that every value bettor experiences."
+        "note": "Ulog od 1–2% drži vas u igri kroz loše serije koje doživi svaki value bettor."
       },
       {
         "type": "example",
-        "title": "Example: surebet bankroll split across bookmakers, €3,000",
+        "title": "Primjer: raspodjela surebet bankrolla po kladionicama, €3,000",
         "rows": [
           [
-            "6 bookmakers × €500",
+            "6 kladionica × €500",
             "€3,000"
           ],
           [
-            "Typical surebet total stake",
+            "Tipičan ukupni ulog po surebetu",
             "€400"
           ],
           [
-            "60 surebets per month at 2% average",
+            "60 surebetova mjesečno uz prosjek od 2%",
             "€400 × 60 × 2% = €480"
           ],
           [
-            "Monthly return on bankroll",
+            "Mjesečni povrat na bankroll",
             "€480 / €3,000 = 16%"
           ]
         ],
-        "note": "The profit per surebet is small, but the bankroll is turned over many times a month. Results vary with limits and available surebets."
+        "note": "Zarada po surebetu je mala, ali se bankroll u mjesecu obrne mnogo puta. Rezultati ovise o limitima i dostupnim surebetovima."
       },
       {
         "type": "h2",
-        "text": "Sports betting ROI calculator: measure what you earn"
+        "text": "Kalkulator ROI-ja u klađenju: izmjerite koliko zarađujete"
       },
       {
         "type": "p",
-        "text": "ROI is net profit divided by total turnover. It tells you how much you earn per € staked and is the best way to compare strategies, sports and bookmakers."
+        "text": "ROI je neto dobit podijeljena ukupnim prometom. Pokazuje koliko zarađujete po svakom uloženom € i najbolji je način za usporedbu strategija, sportova i kladionica."
       },
       {
         "type": "example",
-        "title": "Example: ROI calculation",
+        "title": "Primjer: izračun ROI-ja",
         "rows": [
           [
-            "Total staked",
+            "Ukupno uloženo",
             "€18,500"
           ],
           [
-            "Total returned",
+            "Ukupno vraćeno",
             "€18,870"
           ],
           [
-            "Net profit",
+            "Neto dobit",
             "€370"
           ],
           [
@@ -734,725 +734,725 @@
       },
       {
         "type": "p",
-        "text": "Read more about [ROI on betting](/en/guides/roi-betting), or check single surebets in the [surebet calculator](/en/calculator)."
+        "text": "Pročitajte više o [ROI-ju u klađenju](/en/guides/roi-betting) ili provjerite pojedinačne surebetove u [kalkulatoru surebetova](/en/calculator)."
       },
       {
         "type": "h2",
-        "text": "Track your bets for free and protect your bankroll"
+        "text": "Besplatno pratite svoje oklade i zaštitite bankroll"
       },
       {
         "type": "ul",
         "items": [
-          "**Balance per bookmaker:** move money before a bookmaker runs dry.",
-          "**Profit per strategy:** see whether surebets or value bets are paying off.",
-          "**Drawdown:** spot losing periods early and lower stakes in time."
+          "**Stanje po kladionici:** prebacite novac prije nego kladionici ponestane sredstava.",
+          "**Zarada po strategiji:** vidite isplati li se više surebet ili value bet.",
+          "**Drawdown:** na vrijeme uočite loša razdoblja i pravodobno smanjite uloge."
         ]
       },
       {
         "type": "tip",
-        "text": "Keep around 20% of your bankroll in reserve outside the bookmakers. It lets you top up the accounts where most surebets appear."
+        "text": "Oko 20% bankrolla držite u pričuvi izvan kladionica. Tako možete nadopuniti račune na kojima se pojavljuje najviše surebetova."
       },
       {
         "type": "p",
-        "text": "A [bet tracker](/en/guides/bet-tracker) makes bankroll management automatic. [BetTracker AI](/en) logs your surebets, shows your balance per bookmaker and calculates ROI for you."
+        "text": "[Tracker oklada](/en/guides/bet-tracker) automatizira upravljanje bankrollom. [BetTracker AI](/en) bilježi vaše surebetove, prikazuje stanje po kladionici i umjesto vas računa ROI."
       }
     ],
     "faq": [
       {
-        "q": "How big should my bankroll be for surebets?",
-        "a": "Many start with €1,000–€3,000 spread across 4–6 bookmakers. Less works, but the profit per surebet becomes very small."
+        "q": "Koliko bi velik trebao biti moj bankroll za surebetove?",
+        "a": "Mnogi kreću s €1,000–€3,000 raspoređenih na 4–6 kladionica. Moguće je i s manje, ali zarada po surebetu tada postaje vrlo mala."
       },
       {
-        "q": "What percentage should I stake on value bets?",
-        "a": "1–2% of your bankroll per bet is a common, conservative rule. Larger stakes increase the risk of ruin during losing streaks."
+        "q": "Koliki postotak bankrolla trebam uložiti na value betove?",
+        "a": "1–2% bankrolla po okladi uobičajeno je, konzervativno pravilo. Veći ulozi povećavaju rizik od gubitka cijelog bankrolla tijekom loših serija."
       },
       {
-        "q": "How do I calculate ROI on my bets?",
-        "a": "Divide net profit by total stakes. €370 profit on €18,500 staked gives an ROI of 2.0%."
+        "q": "Kako izračunati ROI na svoje oklade?",
+        "a": "Podijelite neto dobit s ukupnim ulozima. Dobit od €370 na €18,500 uloženog daje ROI od 2.0%."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Track your bankroll for free"
+    "category": "Strategija",
+    "ctaLabel": "Besplatno pratite svoj bankroll"
   },
   "arbitrage-betting": {
-    "title": "How does arbitrage betting work? Lock in profit on every result",
-    "metaTitle": "How Does Arbitrage Betting Work? Guide 2026",
-    "description": "How arbitrage betting works: the formula, worked examples in €, and how to place your first surebet step by step for a locked-in profit.",
-    "keyword": "how does arbitrage betting work",
-    "intro": "Arbitrage betting works by backing every outcome of the same event at different bookmakers when the sum of the inverse odds is below 1. You split your stake so the payout is identical whatever happens. The gap between total stake and payout is your profit, usually 1–3% per surebet, secured by maths rather than luck.",
+    "title": "Kako funkcionira klađenje na arbitražu? Osigurajte zaradu na svaki ishod",
+    "metaTitle": "Kako funkcionira klađenje na arbitražu? Vodič 2026.",
+    "description": "Kako funkcionira klađenje na arbitražu: formula, primjeri u € i korak-po-korak vodič za svoj prvi surebet s zajamčenom zaradom.",
+    "keyword": "kako funkcionira klađenje na arbitražu",
+    "intro": "Klađenje na arbitražu funkcionira tako da se kod različitih kladionica kladite na svaki ishod istog događaja kad je zbroj inverznih kvota manji od 1. Ulog rasporedite tako da isplata bude jednaka bez obzira na ishod. Razlika između ukupnog uloga i isplate vaša je zarada, obično 1–3% po surebetu, osigurana matematikom, a ne srećom.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Surebets explained: when two bookmakers disagree on price"
+        "text": "Surebetovi objašnjeni: kad se dvije kladionice ne slažu oko cijene"
       },
       {
         "type": "p",
-        "text": "Every bookmaker sets its own odds and builds in a margin of 4–7%. But they react at different speeds to injuries, line-ups and big bets. When one bookmaker is slow to cut a price while another has already raised the opposite outcome, the two prices together leave a surplus. That is a surebet. New to the concept? Start with [what surebets are](/en/guides/what-are-surebets)."
+        "text": "Svaka kladionica određuje vlastite koeficijente i u njih ugrađuje maržu od 4–7%. No na ozljede, sastave i velike uplate reagiraju različitom brzinom. Kad jedna kladionica kasni sa smanjenjem koeficijenta, a druga je već podigla suprotan ishod, te dvije cijene zajedno ostavljaju višak. To je surebet. Prvi put čujete za taj pojam? Počnite s tekstom [što su surebetovi](/en/guides/what-are-surebets)."
       },
       {
         "type": "p",
-        "text": "The test is simple: calculate 1 ÷ odds for each outcome and add them up. If the total is below 1.00, you have an arbitrage. The lower the total, the bigger the profit."
+        "text": "Test je jednostavan: za svaki ishod izračunajte 1 ÷ koeficijent i zbrojite dobivene vrijednosti. Ako je zbroj manji od 1.00, imate arbitražu. Što je zbroj manji, to je zarada veća."
       },
       {
         "type": "example",
-        "title": "Example: two-way tennis match, total stake €1,000",
+        "title": "Primjer: teniski meč s dva ishoda, ukupni ulog €1,000",
         "rows": [
           [
-            "Player A at bookmaker 1, odds 2.08",
-            "Stake €492.68"
+            "Igrač A u kladionici 1, koeficijent 2.08",
+            "Ulog €492.68"
           ],
           [
-            "Player B at bookmaker 2, odds 2.02",
-            "Stake €507.32"
+            "Igrač B u kladionici 2, koeficijent 2.02",
+            "Ulog €507.32"
           ],
           [
             "1/2.08 + 1/2.02",
             "0.481 + 0.495 = 0.976"
           ],
           [
-            "Payout whoever wins",
-            "approx. €1,024.78"
+            "Isplata bez obzira na pobjednika",
+            "oko €1,024.78"
           ],
           [
-            "Locked-in profit",
-            "approx. €24.78 (2.5%)"
+            "Zajamčena zarada",
+            "oko €24.78 (2.5%)"
           ]
         ],
-        "note": "The total is below 1, so you make about €24.78 regardless of who wins the match."
+        "note": "Zbroj je manji od 1, pa zarađujete oko €24.78 bez obzira na to tko pobijedi u meču."
       },
       {
         "type": "h2",
-        "text": "Arbitrage betting guide: three outcomes in football"
+        "text": "Vodič za klađenje na arbitražu: tri ishoda u nogometu"
       },
       {
         "type": "p",
-        "text": "Football has home win, draw and away win. The principle is the same, you just need three prices and often three bookmakers. Because the margin is spread over three outcomes, 1X2 surebets are rarer and the profit tends to be a little lower than in tennis."
+        "text": "Nogomet ima pobjedu domaćina, neriješeno i pobjedu gosta. Načelo je isto, samo su vam potrebne tri cijene, a često i tri kladionice. Budući da je marža raspoređena na tri ishoda, 1X2 surebetovi su rjeđi, a zarada je obično nešto manja nego u tenisu."
       },
       {
         "type": "example",
-        "title": "Example: Premier League match, total stake €2,000",
+        "title": "Primjer: utakmica Premier lige, ukupni ulog €2,000",
         "rows": [
           [
-            "Home win, odds 2.15",
-            "Stake €942.69"
+            "Pobjeda domaćina, koeficijent 2.15",
+            "Ulog €942.69"
           ],
           [
-            "Draw, odds 3.60",
-            "Stake €562.99"
+            "Neriješeno, koeficijent 3.60",
+            "Ulog €562.99"
           ],
           [
-            "Away win, odds 4.10",
-            "Stake €494.33"
+            "Pobjeda gosta, koeficijent 4.10",
+            "Ulog €494.33"
           ],
           [
-            "Sum of inverse odds",
+            "Zbroj inverznih koeficijenata",
             "0.987"
           ],
           [
-            "Payout on every result",
-            "approx. €2,026.75"
+            "Isplata za svaki ishod",
+            "oko €2,026.75"
           ],
           [
-            "Locked-in profit",
-            "approx. €26.75 (1.3%)"
+            "Zajamčena zarada",
+            "oko €26.75 (1.3%)"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "How to place surebets: by hand or with a scanner"
+        "text": "Kako igrati surebetove: ručno ili uz skener"
       },
       {
         "type": "p",
-        "text": "In theory you can compare odds across a dozen browser tabs, but surebets often last only a few minutes. By the time you have done the maths, the price has usually moved. That is why most bettors use an odds scanner that compares bookmakers continuously. Read more about how to [find surebets automatically](/en/guides/find-surebets-automatically)."
+        "text": "U teoriji možete uspoređivati koeficijente u desetak kartica preglednika, ali surebetovi često traju tek nekoliko minuta. Dok završite s izračunom, cijena se obično već promijeni. Zato većina klađenika koristi skener koeficijenata koji neprekidno uspoređuje kladionice. Više o tome pročitajte u tekstu [kako automatski pronaći surebetove](/en/guides/find-surebets-automatically)."
       },
       {
         "type": "ul",
         "items": [
-          "**By hand:** free, but slow, and you rarely get there before the price changes.",
-          "**With a scanner:** surebets appear with the stake split already calculated, so you can act immediately.",
-          "**Calculator:** whichever method you use, check the stakes in the [surebet calculator](/en/calculator) before placing."
+          "**Ručno:** besplatno je, ali sporo, pa rijetko stignete prije promjene cijene.",
+          "**Uz skener:** surebetovi se prikazuju s već izračunatom raspodjelom uloga, pa možete reagirati odmah.",
+          "**Kalkulator:** koju god metodu koristili, prije klađenja provjerite uloge u [kalkulatoru surebetova](/en/calculator)."
         ]
       },
       {
         "type": "h2",
-        "text": "Risk-free bets in practice: five steps to your first surebet"
+        "text": "Klađenje bez rizika u praksi: pet koraka do prvog surebeta"
       },
       {
         "type": "ul",
         "items": [
-          "**1. Open accounts** with at least two licensed bookmakers, ideally more, and deposit in advance.",
-          "**2. Find a surebet** where the sum of inverse odds is below 1.00.",
-          "**3. Calculate the stakes** so the payout is equal on every outcome.",
-          "**4. Place both bets quickly,** starting with the price most likely to move.",
-          "**5. Check your bet slips:** market, line and odds must match your calculation exactly."
+          "**1. Otvorite račune** u barem dvije licencirane kladionice, najbolje u više njih, i unaprijed uplatite sredstva.",
+          "**2. Pronađite surebet** u kojem je zbroj inverznih koeficijenata manji od 1.00.",
+          "**3. Izračunajte uloge** tako da isplata bude jednaka za svaki ishod.",
+          "**4. Brzo uplatite obje oklade,** počevši s cijenom koja će se najvjerojatnije promijeniti.",
+          "**5. Provjerite listiće:** tržište, linija i koeficijenti moraju se točno podudarati s vašim izračunom."
         ]
       },
       {
         "type": "p",
-        "text": "The maths is risk-free; the execution is not always. **Odds moving** while you place the second bet, **voided bets** on obvious pricing errors and **limited accounts** are the real risks. Keep stakes moderate at first and read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+        "text": "Matematika je bez rizika, ali izvedba nije uvijek. Prava su rizika **promjena koeficijenata** dok uplaćujete drugu okladu, **poništene oklade** zbog očitih pogrešaka u koeficijentima i **ograničeni računi**. Za početak držite uloge umjerenima i pročitajte kako [izbjeći ograničenja kladionica](/en/guides/avoid-bookmaker-limits)."
       },
       {
         "type": "p",
-        "text": "Want to see live surebets with the stakes already worked out? [BetTracker AI](/en) scans the bookmakers for you and shows surebets in real time."
+        "text": "Želite vidjeti surebetove uživo s već izračunatim ulozima? [BetTracker AI](/en) skenira kladionice umjesto vas i prikazuje surebetove u stvarnom vremenu."
       }
     ],
     "faq": [
       {
-        "q": "Is arbitrage betting legal?",
-        "a": "Yes, betting on every outcome of an event is not illegal in most countries. Bookmakers can still limit your account. See [are surebets legal?](/en/guides/are-surebets-legal)"
+        "q": "Je li klađenje na arbitražu legalno?",
+        "a": "Da, klađenje na sve ishode nekog događaja u većini zemalja nije zabranjeno. Kladionice vam ipak mogu ograničiti račun. Pogledajte [jesu li surebetovi legalni](/en/guides/are-surebets-legal)."
       },
       {
-        "q": "How much can you make with surebets?",
-        "a": "A typical surebet returns 1–3% of the total stake. With €1,000 per surebet, 40 surebets a month and an average of 1.5%, that is roughly €600 a month."
+        "q": "Koliko se može zaraditi surebetovima?",
+        "a": "Tipičan surebet donosi 1–3% ukupnog uloga. Uz €1,000 po surebetu, 40 surebetova mjesečno i prosjek od 1.5%, to je otprilike €600 mjesečno."
       },
       {
-        "q": "How many bookmakers do I need?",
-        "a": "At least two, but the more accounts you have, the more surebets you can take. Many arbers work with five to ten bookmakers."
+        "q": "Koliko kladionica mi je potrebno?",
+        "a": "Najmanje dvije, ali što više računa imate, to više surebetova možete iskoristiti. Mnogi arberi rade s pet do deset kladionica."
       },
       {
-        "q": "What if the odds change before my second bet?",
-        "a": "Recalculate the second bet at the new price. If the total is still below 1, you have a smaller surebet. If it is above, limit the loss by covering at the best price available."
+        "q": "Što ako se koeficijenti promijene prije moje druge oklade?",
+        "a": "Ponovno izračunajte drugu okladu prema novoj cijeni. Ako je zbroj i dalje manji od 1, imate manji surebet. Ako je veći, ograničite gubitak tako da pokrijete ishod po najboljoj dostupnoj cijeni."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Find surebets now"
+    "category": "Strategija",
+    "ctaLabel": "Pronađi surebetove"
   },
   "hvad-er-surebets": {
-    "title": "What are surebets? How guaranteed odds work",
-    "metaTitle": "What are surebets? Complete guide to arbitrage betting",
-    "description": "Learn what surebets are, how they occur, and how you bet on all outcomes with different bookmakers to secure a guaranteed profit.",
-    "keyword": "surebets",
-    "intro": "A surebet – also called arbitrage betting or arbing – is a combination of odds across different bookmakers where you can bet on all possible outcomes of a match and still make a profit, regardless of how it ends. It sounds too good to be true, but it's pure mathematics.",
+    "title": "Što su surebetovi? Kako funkcioniraju zajamčeni koeficijenti",
+    "metaTitle": "Što su surebetovi? Cjeloviti vodič kroz klađenje na arbitražu",
+    "description": "Saznajte što su surebetovi, kako nastaju i kako se klađenjem na sve ishode u različitim kladionicama osigurava zajamčena zarada.",
+    "keyword": "surebetovi",
+    "intro": "Surebet – poznat i kao klađenje na arbitražu ili arbing – kombinacija je koeficijenata u različitim kladionicama kod koje možete uplatiti okladu na sve moguće ishode utakmice i svejedno ostvariti zaradu, bez obzira na to kako završi. Zvuči predobro da bi bilo istinito, ali riječ je o čistoj matematici.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why do surebets exist?"
+        "text": "Zašto surebetovi postoje?"
       },
       {
         "type": "p",
-        "text": "Bookmakers set their odds independently of one another. They use different models, react differently to news and want to attract bets on particular outcomes. As a result, one bookmaker might offer high odds on the home team whilst another offers high odds on the away team. When the difference becomes large enough, a surebet occurs."
+        "text": "Kladionice određuju svoje koeficijente neovisno jedna o drugoj. Koriste različite modele, različito reagiraju na vijesti i žele privući oklade na određene ishode. Zbog toga jedna kladionica može ponuditi visok koeficijent na domaću momčad, dok druga nudi visok koeficijent na gostujuću. Kad razlika postane dovoljno velika, nastaje surebet."
       },
       {
         "type": "p",
-        "text": "Surebets typically last only minutes. As soon as bookmakers adjust their odds, the opportunity disappears. That's why it requires either many hours of manual searching or a scanner that monitors the market continuously."
+        "text": "Surebetovi obično traju samo nekoliko minuta. Čim kladionice prilagode svoje kvote, prilika nestaje. Zato je za njih potrebno ili mnogo sati ručnog traženja ili skener koji neprekidno prati tržište."
       },
       {
         "type": "h2",
-        "text": "How to tell if it's a surebet"
+        "text": "Kako prepoznati surebet"
       },
       {
         "type": "p",
-        "text": "You calculate the inverse value of each odds (1 divided by the odds) and add them together. If the sum is below 1, you have a surebet. The lower the sum, the greater your profit."
+        "text": "Za svaku kvotu izračunate inverznu vrijednost (1 podijeljeno s kvotom) i zbrojite ih. Ako je zbroj manji od 1, imate surebet. Što je zbroj manji, to je vaša dobit veća."
       },
       {
         "type": "example",
-        "title": "Example: tennis with two outcomes",
+        "title": "Primjer: tenis s dva moguća ishoda",
         "rows": [
           [
-            "Player A at bookmaker 1",
-            "odds 2.10"
+            "Igrač A u kladionici 1",
+            "kvota 2.10"
           ],
           [
-            "Player B at bookmaker 2",
-            "odds 2.05"
+            "Igrač B u kladionici 2",
+            "kvota 2.05"
           ],
           [
             "1/2.10 + 1/2.05",
             "0.476 + 0.488 = 0.964"
           ],
           [
-            "Guaranteed profit",
-            "approx. 3.7%"
+            "Zajamčena dobit",
+            "oko 3.7%"
           ]
         ],
-        "note": "The sum is below 1, so this combination is a surebet."
+        "note": "Zbroj je manji od 1, pa je ova kombinacija surebet."
       },
       {
         "type": "h2",
-        "text": "How do you split your stake?"
+        "text": "Kako rasporediti ulog?"
       },
       {
         "type": "p",
-        "text": "Your stake must be divided so that the payout is the same regardless of who wins. With a total stake of 1,000 units in the example above, you place approximately 494 units on player A and approximately 506 units on player B. Both outcomes return approximately 1,037 units, meaning a profit of roughly 37 units."
+        "text": "Ulog treba podijeliti tako da isplata bude ista bez obzira na to tko pobijedi. Uz ukupni ulog od 1,000 jedinica u gornjem primjeru, na igrača A uplaćujete oko 494 jedinice, a na igrača B oko 506 jedinica. Oba ishoda vraćaju oko 1,037 jedinica, što znači dobit od otprilike 37 jedinica."
       },
       {
         "type": "tip",
-        "text": "You don't need to calculate this yourself. Our free sure bet calculator splits the stake automatically and shows your guaranteed profit."
+        "text": "Ovo ne morate računati sami. Naš besplatni kalkulator surebetova automatski raspoređuje ulog i prikazuje vašu zajamčenu dobit."
       },
       {
         "type": "h2",
-        "text": "What should you watch out for?"
+        "text": "Na što treba paziti?"
       },
       {
         "type": "ul",
         "items": [
-          "Odds can change whilst you're placing your bets. Place the bet with the most unstable odds first.",
-          "Check that the market is exactly the same at both bookmakers, such as whether extra time counts.",
-          "Keep funds at multiple bookmakers so you can act quickly.",
-          "Bookmakers may limit accounts that only bet on surebets. Read our guide on avoiding gubbing and account limits."
+          "Kvote se mogu promijeniti dok uplaćujete oklade. Prvo uplatite okladu s najnestabilnijom kvotom.",
+          "Provjerite je li tržište u obje kladionice potpuno isto, primjerice računa li se produžetak.",
+          "Držite sredstva u više kladionica kako biste mogli brzo reagirati.",
+          "Kladionice mogu ograničiti račune koji se klade samo na surebetove. Pročitajte naš vodič o izbjegavanju gubbinga i ograničenja računa."
         ]
       }
     ],
     "faq": [
       {
-        "q": "Are surebets risk-free?",
-        "a": "Mathematically, the profit is guaranteed once both bets are placed at the correct odds. In practice, the risk lies in odds changing, cancelled bets or errors in the market."
+        "q": "Jesu li surebetovi bez rizika?",
+        "a": "Matematički, dobit je zajamčena kad se obje oklade uplate po ispravnim kvotama. U praksi se rizik krije u promjeni kvota, poništenim okladama ili pogreškama na tržištu."
       },
       {
-        "q": "How much can you earn from surebets?",
-        "a": "Most surebets return between 1 and 5% of your stake. The profit comes from doing it many times, not from individual big wins."
+        "q": "Koliko se može zaraditi na surebetovima?",
+        "a": "Većina surebetova donosi između 1 i 5% uloga. Zarada dolazi od ponavljanja, a ne od pojedinačnih velikih dobitaka."
       },
       {
-        "q": "How do you find surebets?",
-        "a": "You can compare odds manually, but it's slow. A surebet scanner like BetTrackerAI monitors bookmakers that operate in your market and shows opportunities as soon as they arise."
+        "q": "Kako pronaći surebetove?",
+        "a": "Kvote možete uspoređivati ručno, ali to je sporo. Skener surebetova poput BetTrackerAI prati kladionice koje posluju na vašem tržištu i prikazuje prilike čim se pojave."
       }
     ],
-    "category": "Fundamentals",
-    "ctaLabel": "View current surebets"
+    "category": "Osnove",
+    "ctaLabel": "Pogledaj aktualne surebetove"
   },
   "dutching-betting": {
-    "title": "Dutching: how to split your stake across multiple outcomes",
-    "metaTitle": "Dutching betting – explanation, formula and example",
-    "description": "Dutching means splitting your stake across multiple outcomes so you get the same return regardless of which one wins. See the formula and an example.",
-    "keyword": "dutching betting",
-    "intro": "Dutching is a betting method where you back multiple outcomes in the same event and distribute your stake so that you receive the same payout regardless of which of your selections wins. The method is particularly useful in tournaments and markets with many possible outcomes.",
+    "title": "Dutching: kako rasporediti ulog na više ishoda",
+    "metaTitle": "Dutching klađenje – objašnjenje, formula i primjer",
+    "description": "Dutching znači raspodjelu uloga na više ishoda tako da dobijete isti povrat bez obzira na to koji pobijedi. Pogledajte formulu i primjer.",
+    "keyword": "dutching klađenje",
+    "intro": "Dutching je metoda klađenja kod koje se kladite na više ishoda istog događaja i ulog raspoređujete tako da dobijete istu isplatu bez obzira na to koji od vaših odabira pobijedi. Metoda je posebno korisna na turnirima i tržištima s mnogo mogućih ishoda.",
     "blocks": [
       {
         "type": "h2",
-        "text": "The difference between dutching and surebets"
+        "text": "Razlika između dutchinga i surebetova"
       },
       {
         "type": "p",
-        "text": "With a surebet you cover all outcomes and win regardless of the result. With dutching you only cover some of the outcomes. If one of them wins, you get the same return, but if none of them win, you lose your entire stake. Dutching is therefore not risk-free."
+        "text": "Kod surebeta pokrivate sve ishode i dobivate bez obzira na rezultat. Kod dutchinga pokrivate samo neke ishode. Ako jedan od njih pobijedi, dobivate isti povrat, ali ako nijedan ne pobijedi, gubite cijeli ulog. Dutching stoga nije bez rizika."
       },
       {
         "type": "h2",
-        "text": "The formula"
+        "text": "Formula"
       },
       {
         "type": "p",
-        "text": "Calculate 1/odds for each outcome and add them together. Call the sum S. The stake on an outcome is the total stake times (1/odds) divided by S. The payout will be the total stake divided by S."
+        "text": "Izračunajte 1/kvota za svaki ishod i zbrojite ih. Zbroj nazovite S. Ulog na pojedini ishod jednak je ukupnom ulogu pomnoženom s (1/kvota) i podijeljenom sa S. Isplata će biti ukupni ulog podijeljen sa S."
       },
       {
         "type": "example",
-        "title": "Example: three players in a tournament, total stake €1,000",
+        "title": "Primjer: tri igrača na turniru, ukupni ulog €1,000",
         "rows": [
           [
-            "Player A, odds 3.00",
-            "stake approx. €444"
+            "Igrač A, kvota 3.00",
+            "ulog oko €444"
           ],
           [
-            "Player B, odds 4.00",
-            "stake approx. €333"
+            "Igrač B, kvota 4.00",
+            "ulog oko €333"
           ],
           [
-            "Player C, odds 6.00",
-            "stake approx. €222"
+            "Igrač C, kvota 6.00",
+            "ulog oko €222"
           ],
           [
             "S = 0.333 + 0.250 + 0.167",
             "0.750"
           ],
           [
-            "If one of the three wins",
-            "payout approx. €1,333, profit approx. €333"
+            "Ako pobijedi jedan od trojice",
+            "isplata oko €1,333, dobit oko €333"
           ],
           [
-            "If none of the three win",
-            "loss of €1,000"
+            "Ako ne pobijedi nijedan od trojice",
+            "gubitak od €1,000"
           ]
         ],
-        "note": "The profit is only realised if one of your three players wins. You must judge for yourself how likely that is."
+        "note": "Dobit se ostvaruje samo ako pobijedi jedan od vaših triju igrača. Koliko je to vjerojatno, morate procijeniti sami."
       },
       {
         "type": "h2",
-        "text": "When does dutching make sense?"
+        "text": "Kada dutching ima smisla?"
       },
       {
         "type": "ul",
         "items": [
-          "When you believe a few outcomes hold most of the probability, e.g. the three favourites in a tournament.",
-          "When you want to spread risk instead of backing a single outcome.",
-          "When you can get better odds at multiple bookmakers and want to distribute your stake between them."
+          "Kada smatrate da nekoliko ishoda nosi većinu vjerojatnosti, npr. tri favorita na turniru.",
+          "Kada želite rasporediti rizik umjesto da se kladite na jedan ishod.",
+          "Kada u više kladionica možete dobiti bolje kvote i želite ulog rasporediti među njima."
         ]
       },
       {
         "type": "tip",
-        "text": "Dutching is not a substitute for surebets. If you want guaranteed profit, you need to cover all outcomes at different bookmakers. The calculator shows the difference immediately."
+        "text": "Dutching nije zamjena za surebetove. Ako želite zajamčenu dobit, morate pokriti sve ishode u različitim kladionicama. Kalkulator odmah pokazuje razliku."
       }
     ],
     "faq": [
       {
-        "q": "Is dutching the same as arbitrage betting?",
-        "a": "No. With arbitrage betting (surebets) you cover all outcomes and win regardless of the result. With dutching you only cover some of the outcomes and can lose your entire stake."
+        "q": "Je li dutching isto što i arbitražno klađenje?",
+        "a": "Ne. Kod arbitražnog klađenja (surebetova) pokrivate sve ishode i dobivate bez obzira na rezultat. Kod dutchinga pokrivate samo neke ishode i možete izgubiti cijeli ulog."
       },
       {
-        "q": "Can you lose money on dutching?",
-        "a": "Yes. If none of the outcomes you've bet on win, you lose your entire total stake."
+        "q": "Može li se izgubiti novac na dutchingu?",
+        "a": "Da. Ako nijedan ishod na koji ste se kladili ne pobijedi, gubite cijeli ukupni ulog."
       },
       {
-        "q": "How do you calculate dutching stakes?",
-        "a": "Add 1/odds together for your outcomes (S). The stake on each outcome is the total stake times 1/odds divided by S."
+        "q": "Kako izračunati uloge za dutching?",
+        "a": "Zbrojite 1/kvota za svoje ishode (S). Ulog na svaki ishod jednak je ukupnom ulogu pomnoženom s 1/kvota i podijeljenom sa S."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Use the calculator to split your stake"
+    "category": "Strategija",
+    "ctaLabel": "Upotrijebite kalkulator za raspodjelu uloga"
   },
   "tennis-surebets": {
-    "title": "Surebets in tennis: how to find and play them",
-    "metaTitle": "Tennis surebets – find guaranteed profit on tennis odds",
-    "description": "Tennis is ideal for surebets because there are only two outcomes. See a worked example and the pitfalls you must avoid when arbitrage betting on tennis.",
-    "keyword": "tennis surebets",
-    "intro": "Tennis is one of the easiest sports for playing surebets. A match has only two outcomes and no draw, so you only need two bookmakers and two bets.",
+    "title": "Surebetovi u tenisu: kako ih pronaći i igrati",
+    "metaTitle": "Surebetovi u tenisu – pronađite zajamčenu zaradu na teniskim koeficijentima",
+    "description": "Tenis je idealan za surebetove jer postoje samo dva ishoda. Pogledajte primjer izračuna i zamke koje morate izbjeći kad se klade na arbitražu u tenisu.",
+    "keyword": "surebetovi u tenisu",
+    "intro": "Tenis je jedan od najjednostavnijih sportova za igranje surebetova. Meč ima samo dva ishoda i nema neriješenog rezultata, pa su vam dovoljne dvije kladionice i dvije oklade.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why tennis suits surebets"
+        "text": "Zašto je tenis pogodan za surebetove"
       },
       {
         "type": "p",
-        "text": "With two outcomes, the calculation is straightforward, and you only need to place two bets. Many matches are played every day across time zones, so bookmakers are constantly setting new odds, and they don't do it uniformly."
+        "text": "S dva ishoda izračun je jednostavan, a treba vam samo dvije oklade. Svaki se dan igra mnogo mečeva u raznim vremenskim zonama, pa kladionice neprestano određuju nove koeficijente, i to ne ujednačeno."
       },
       {
         "type": "example",
-        "title": "Example: odds 1.95 and 2.20, total stake €1,000",
+        "title": "Primjer: koeficijenti 1.95 i 2.20, ukupni ulog €1,000",
         "rows": [
           [
-            "Player A at bookmaker 1, odds 1.95",
-            "stake approx. €530"
+            "Igrač A u kladionici 1, koeficijent 1.95",
+            "ulog oko €530"
           ],
           [
-            "Player B at bookmaker 2, odds 2.20",
-            "stake approx. €470"
+            "Igrač B u kladionici 2, koeficijent 2.20",
+            "ulog oko €470"
           ],
           [
             "1/1.95 + 1/2.20",
             "0.513 + 0.455 = 0.967"
           ],
           [
-            "Payout regardless of winner",
-            "approx. €1,034"
+            "Isplata bez obzira na pobjednika",
+            "oko €1,034"
           ],
           [
-            "Profit",
-            "approx. €34 (3.4%)"
+            "Dobit",
+            "oko €34 (3.4%)"
           ]
         ],
-        "note": "The sum is below 1, so the combination is a surebet."
+        "note": "Zbroj je manji od 1, pa je ova kombinacija surebet."
       },
       {
         "type": "h2",
-        "text": "Pitfalls in tennis surebets"
+        "text": "Zamke kod surebetova u tenisu"
       },
       {
         "type": "ul",
         "items": [
-          "Retired players: If a player retires mid-match, bookmakers' rules can differ. Some void the bet, others settle it. Read the terms at both.",
-          "Walkovers and matches that are never played can result in voided bets and an open position.",
-          "Wrong match: Check players' names and the tournament, especially in smaller tournaments where names can be similar.",
-          "Live odds change quickly. Pre-match surebets are easier to place in time."
+          "Odustajanje igrača: ako igrač odustane usred meča, pravila kladionica mogu se razlikovati. Neke poništavaju okladu, a druge je obračunavaju. Pročitajte uvjete u obje kladionice.",
+          "Predaja meča bez igranja (walkover) i mečevi koji se nikad ne odigraju mogu dovesti do poništenih oklada i otvorene pozicije.",
+          "Pogrešan meč: provjerite imena igrača i turnir, osobito na manjim turnirima gdje imena mogu biti slična.",
+          "Koeficijenti uživo mijenjaju se brzo. Surebetove prije početka meča lakše je odigrati na vrijeme."
         ]
       },
       {
         "type": "tip",
-        "text": "Place the bet first where the odds are most volatile, then place the other afterwards. That way the risk of being left with half a surebet is minimised."
+        "text": "Prvo uplatite okladu tamo gdje su koeficijenti najnestabilniji, a zatim drugu. Tako se najviše smanjuje rizik da ostanete samo s pola surebeta."
       }
     ],
     "faq": [
       {
-        "q": "Why is tennis good for surebets?",
-        "a": "Because there are only two outcomes and no draw. You only need two bookmakers and place two bets."
+        "q": "Zašto je tenis dobar za surebetove?",
+        "a": "Zato što postoje samo dva ishoda i nema neriješenog rezultata. Trebate samo dvije kladionice i uplaćujete dvije oklade."
       },
       {
-        "q": "What happens if a player retires mid-match in a surebet?",
-        "a": "It depends on the bookmakers' rules. Some void the bet if the match isn't completed, whilst others settle it. It's one of the biggest risks in tennis arbitrage betting, so read the terms first."
+        "q": "Što se događa ako igrač odustane usred meča kod surebeta?",
+        "a": "Ovisi o pravilima kladionica. Neke poništavaju okladu ako meč nije završen, dok je druge obračunavaju. To je jedan od najvećih rizika kod arbitraže u tenisu, zato prvo pročitajte uvjete."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "See current surebets"
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte trenutačne surebetove"
   },
   "fodbold-surebets": {
-    "title": "Surebets in football: how to cover three outcomes",
-    "metaTitle": "Football surebets – how to split 1X2 odds",
-    "description": "Football has three outcomes, so a surebet requires three bets. Learn how to split your stake across home win, draw and away win, and which pitfalls to avoid.",
-    "keyword": "football surebets",
-    "intro": "Football has three possible outcomes: home win, draw and away win. A surebet on the 1X2 market therefore requires three bets, and the best odds are often found at three different bookmakers.",
+    "title": "Surebetovi u nogometu: kako pokriti tri ishoda",
+    "metaTitle": "Surebetovi u nogometu – kako rasporediti koeficijente 1X2",
+    "description": "Nogomet ima tri ishoda, pa surebet zahtijeva tri oklade. Naučite kako rasporediti ulog na pobjedu domaćina, neriješeno i pobjedu gosta te kojih se zamki čuvati.",
+    "keyword": "surebetovi u nogometu",
+    "intro": "Nogomet ima tri moguća ishoda: pobjedu domaćina, neriješeno i pobjedu gosta. Surebet na tržištu 1X2 stoga zahtijeva tri oklade, a najbolji se koeficijenti često nalaze u tri različite kladionice.",
     "blocks": [
       {
         "type": "h2",
-        "text": "How to calculate three outcomes"
+        "text": "Kako izračunati tri ishoda"
       },
       {
         "type": "p",
-        "text": "The formula is the same as for two outcomes. Add 1/odds together for all three outcomes. If the sum is below 1, you have a surebet. The stake for each outcome is the total stake multiplied by 1/odds divided by the sum."
+        "text": "Formula je ista kao za dva ishoda. Zbrojite 1/koeficijent za sva tri ishoda. Ako je zbroj manji od 1, imate surebet. Ulog za svaki ishod jednak je ukupnom ulogu pomnoženom s 1/koeficijent i podijeljenom sa zbrojem."
       },
       {
         "type": "example",
-        "title": "Example: three bookmakers, total stake €1,000",
+        "title": "Primjer: tri kladionice, ukupni ulog €1,000",
         "rows": [
           [
-            "Home win at bookmaker 1, odds 2.40",
-            "stake approx. €424"
+            "Pobjeda domaćina u kladionici 1, koeficijent 2.40",
+            "ulog oko €424"
           ],
           [
-            "Draw at bookmaker 2, odds 3.80",
-            "stake approx. €268"
+            "Neriješeno u kladionici 2, koeficijent 3.80",
+            "ulog oko €268"
           ],
           [
-            "Away win at bookmaker 3, odds 3.30",
-            "stake approx. €308"
+            "Pobjeda gosta u kladionici 3, koeficijent 3.30",
+            "ulog oko €308"
           ],
           [
             "1/2.40 + 1/3.80 + 1/3.30",
             "0.417 + 0.263 + 0.303 = 0.983"
           ],
           [
-            "Return regardless of outcome",
-            "approx. €1,017"
+            "Povrat bez obzira na ishod",
+            "oko €1,017"
           ],
           [
-            "Profit",
-            "approx. €17 (1.7%)"
+            "Dobit",
+            "oko €17 (1.7%)"
           ]
         ],
-        "note": "The profit is smaller than in tennis, and three bets mean a greater risk that odds will change whilst you're placing them."
+        "note": "Dobit je manja nego u tenisu, a tri oklade znače veći rizik da se koeficijenti promijene dok ih uplaćujete."
       },
       {
         "type": "h2",
-        "text": "Pitfalls in football surebets"
+        "text": "Zamke kod surebetova u nogometu"
       },
       {
         "type": "ul",
         "items": [
-          "Check that the market applies to the same match time at all bookmakers. 1X2 normally only covers regular time, but verify the rules for cup ties and play-off matches.",
-          "Postponed and abandoned matches are settled differently, so read the rules at each bookmaker.",
-          "Three bets create a greater risk that odds will change. Place the most volatile bet first – usually the bet with the highest odds or on the least liquid market.",
-          "Consider using two-outcome markets such as Asian handicap or over/under 2.5 goals if you want to stick to two bookmakers and reduce exposure to odds shifts."
+          "Provjerite da se tržište u svim kladionicama odnosi na isto trajanje utakmice. 1X2 obično vrijedi samo za regularno vrijeme, ali provjerite pravila za kup utakmice i doigravanje.",
+          "Odgođene i prekinute utakmice obračunavaju se različito, zato pročitajte pravila svake kladionice.",
+          "Tri oklade stvaraju veći rizik promjene koeficijenata. Prvo uplatite najnestabilniju okladu – to je obično ona s najvišim koeficijentom ili na najmanje likvidnom tržištu.",
+          "Razmislite o tržištima s dva ishoda, kao što su azijski hendikep ili više/manje od 2.5 gola, ako želite ostati kod dvije kladionice i smanjiti izloženost promjenama koeficijenata."
         ]
       },
       {
         "type": "tip",
-        "text": "Select the bookmakers where you already have funds in BetTrackerAI, so you only see surebets you can actually place."
+        "text": "U BetTrackerAI odaberite kladionice u kojima već imate sredstava, pa ćete vidjeti samo surebetove koje stvarno možete odigrati."
       }
     ],
     "faq": [
       {
-        "q": "Why are football surebets harder than tennis surebets?",
-        "a": "Because there are three outcomes instead of two. You need to place three bets, often at three different bookmakers, and the risk of odds changing whilst you place them is greater."
+        "q": "Zašto su surebetovi u nogometu teži od surebetova u tenisu?",
+        "a": "Zato što su tri ishoda umjesto dva. Morate uplatiti tri oklade, često u tri različite kladionice, a rizik da se koeficijenti promijene dok ih uplaćujete veći je."
       },
       {
-        "q": "Does the 1X2 market include extra time?",
-        "a": "Normally not. 1X2 generally only covers the 90 minutes plus stoppage time, but rules may vary. Always check the terms and conditions at each bookmaker before placing your bets."
+        "q": "Uključuje li tržište 1X2 produžetke?",
+        "a": "Obično ne. 1X2 u pravilu obuhvaća samo 90 minuta plus sudačko produžetak, ali pravila se mogu razlikovati. Prije uplate oklada uvijek provjerite uvjete u svakoj kladionici."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "View current surebets"
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte trenutačne surebetove"
   },
   "bookmakerens-margin": {
-    "title": "Bookmaker's margin: how to see what odds really cost",
-    "metaTitle": "Bookmaker's margin – calculate overround and find better odds",
-    "description": "Bookmakers profit from a built-in margin in their odds. Learn to calculate it and find the bookmakers that give you the best odds.",
-    "keyword": "bookmaker margin",
-    "intro": "When you add up the implied probabilities from a market, the total comes to more than 100%. The excess is the bookmaker's margin, also called overround. It's the price you pay to bet.",
+    "title": "Marža kladionice: kako vidjeti koliko koeficijenti stvarno koštaju",
+    "metaTitle": "Marža kladionice – izračunajte overround i pronađite bolje koeficijente",
+    "description": "Kladionice zarađuju na marži ugrađenoj u koeficijente. Naučite je izračunati i pronaći kladionice koje nude najbolje koeficijente.",
+    "keyword": "marža kladionice",
+    "intro": "Kad zbrojite implicirane vjerojatnosti jednog tržišta, ukupno ispadne više od 100 %. Taj višak je marža kladionice, poznata i kao overround. To je cijena koju plaćate za klađenje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "How to calculate the margin"
+        "text": "Kako izračunati maržu"
       },
       {
         "type": "p",
-        "text": "Calculate 1/odds for all outcomes in the market and add them together. Subtract 1 from the total and you have the margin."
+        "text": "Izračunajte 1/koeficijent za sve ishode na tržištu i zbrojite ih. Oduzmite 1 od zbroja i dobit ćete maržu."
       },
       {
         "type": "example",
-        "title": "Example: football match with odds 2.10, 3.40 and 3.60",
+        "title": "Primjer: nogometna utakmica s koeficijentima 2.10, 3.40 i 3.60",
         "rows": [
           [
             "1/2.10 + 1/3.40 + 1/3.60",
             "0.476 + 0.294 + 0.278 = 1.048"
           ],
           [
-            "Bookmaker's margin",
-            "approx. 4.8%"
+            "Marža kladionice",
+            "oko 4.8%"
           ],
           [
-            "Payout percentage",
-            "approx. 95.4%"
+            "Postotak isplate",
+            "oko 95.4%"
           ],
           [
-            "Home win without margin",
-            "approx. 45.4%"
+            "Pobjeda domaćina bez marže",
+            "oko 45.4%"
           ]
         ],
-        "note": "Odds of 2.10 equate to 47.6%, but without the margin the true probability is approximately 45.4%."
+        "note": "Koeficijent 2.10 odgovara vjerojatnosti od 47.6%, ali bez marže stvarna vjerojatnost iznosi otprilike 45.4%."
       },
       {
         "type": "h2",
-        "text": "Why does the margin matter?"
+        "text": "Zašto je marža važna?"
       },
       {
         "type": "p",
-        "text": "The lower the margin, the better odds you get for the same probability. Over many bets, the difference between 3% and 7% makes a significant difference to your bankroll. So compare margins at the bookmakers you use on the markets you bet most."
+        "text": "Što je marža niža, to su koeficijenti za istu vjerojatnost bolji. Kroz mnogo oklada razlika između 3% i 7% znatno utječe na vaš bankroll. Zato usporedite marže u kladionicama koje koristite na tržištima na kojima se najviše klađenja."
       },
       {
         "type": "h2",
-        "text": "Margin and surebets"
+        "text": "Marža i surebetovi"
       },
       {
         "type": "p",
-        "text": "A surebet arises when the best odds from multiple bookmakers together give a total below 1. The bookmakers' margin is then more than offset by their disagreement on price. That's what a scanner looks for."
+        "text": "Surebet nastaje kada najbolji koeficijenti iz više kladionica zajedno daju zbroj manji od 1. Marža kladionica tada je više nego nadoknađena njihovim razlikama u procjeni cijene. Upravo to skener traži."
       },
       {
         "type": "tip",
-        "text": "Use our calculator to enter odds and see the total straight away. If it's below 1, you have a surebet."
+        "text": "Upotrijebite naš kalkulator: unesite koeficijente i odmah vidite zbroj. Ako je manji od 1, imate surebet."
       }
     ],
     "faq": [
       {
-        "q": "What is a good bookmaker margin?",
-        "a": "The lower, the better. On popular football markets a margin of 3–6% is typical, and smaller leagues and specialist markets often have higher margins."
+        "q": "Što je dobra marža kladionice?",
+        "a": "Što niža, to bolje. Na popularnim nogometnim tržištima uobičajena je marža od 3–6%, dok manje lige i specijalizirana tržišta često imaju veće marže."
       },
       {
-        "q": "What is overround?",
-        "a": "Overround is the English term for the bookmaker's margin, i.e. how much the implied probabilities add up to over 100%."
+        "q": "Što je overround?",
+        "a": "Overround je engleski izraz za maržu kladionice, tj. za iznos za koji zbroj impliciranih vjerojatnosti premašuje 100%."
       }
     ],
-    "category": "Basics",
-    "ctaLabel": "Calculate the total of your odds"
+    "category": "Osnove",
+    "ctaLabel": "Izračunajte zbroj svojih koeficijenata"
   },
   "asiatisk-handicap": {
-    "title": "Asian Handicap Explained: Whole, Half and Quarter Lines",
-    "metaTitle": "Asian Handicap Explained – Simple Guide with Examples",
-    "description": "Understand Asian handicap: what -0.5, -1 and -0.25 mean, when you get your stake back, and why the line matters when placing surebets.",
-    "keyword": "asian handicap",
-    "intro": "Asian handicap is a football betting market where the draw is eliminated or split. This creates just two outcomes, which is why it's often used by those looking for surebets and arbitrage betting opportunities.",
+    "title": "Azijski hendikep objašnjen: cjelobrojne, polovične i četvrtinske linije",
+    "metaTitle": "Azijski hendikep objašnjen – jednostavan vodič s primjerima",
+    "description": "Razumite azijski hendikep: što znače -0.5, -1 i -0.25, kada vam se vraća ulog i zašto je linija važna pri klađenju na surebetove.",
+    "keyword": "azijski hendikep",
+    "intro": "Azijski hendikep je nogometno tržište na kojem se neriješeni ishod eliminira ili dijeli. Tako ostaju samo dva ishoda, zbog čega ga često koriste oni koji traže surebetove i prilike za arbitražno klađenje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Whole lines: stake returned on draw"
+        "text": "Cjelobrojne linije: ulog se vraća kod neriješenog"
       },
       {
         "type": "p",
-        "text": "With a handicap of 0 or a whole number, your stake can be returned. Home team 0 means you get your money back if the match ends in a draw. Home team -1 means the team must win by at least two goals to return a profit. If they win by exactly one goal, you get your stake back."
+        "text": "Kod hendikepa 0 ili cijelog broja ulog vam se može vratiti. Domaćin 0 znači da dobivate ulog natrag ako utakmica završi neriješeno. Domaćin -1 znači da momčad mora pobijediti s najmanje dva gola razlike da biste ostvarili dobitak. Ako pobijedi s točno jednim golom razlike, ulog vam se vraća."
       },
       {
         "type": "h2",
-        "text": "Half lines: no stake returned"
+        "text": "Polovične linije: ulog se ne vraća"
       },
       {
         "type": "p",
-        "text": "At -0.5, the team must win. A draw or loss results in a lost bet. At +0.5, you win if the team wins or draws. It's always either a win or a loss, and the stake is never returned."
+        "text": "Kod -0.5 momčad mora pobijediti. Neriješeno ili poraz znači izgubljenu okladu. Kod +0.5 dobivate ako momčad pobijedi ili odigra neriješeno. Uvijek je ili dobitak ili gubitak, a ulog se nikad ne vraća."
       },
       {
         "type": "h2",
-        "text": "Quarter lines: stake split in two"
+        "text": "Četvrtinske linije: ulog se dijeli na dva dijela"
       },
       {
         "type": "p",
-        "text": "At -0.25, the stake is split in two: half on 0 and half on -0.5. At +0.25, it's half on 0 and half on +0.5. The result can therefore be a half win or a half loss."
+        "text": "Kod -0.25 ulog se dijeli na dva dijela: pola na 0, a pola na -0.5. Kod +0.25 pola ide na 0, a pola na +0.5. Rezultat tako može biti pola dobitka ili pola gubitka."
       },
       {
         "type": "example",
-        "title": "Home team -0.25 with €100 stake",
+        "title": "Domaćin -0.25 s ulogom od €100",
         "rows": [
           [
-            "Home team wins",
-            "both halves win"
+            "Domaćin pobjeđuje",
+            "obje polovice dobivaju"
           ],
           [
-            "Draw",
-            "€50 returned, €50 lost"
+            "Neriješeno",
+            "€50 vraćeno, €50 izgubljeno"
           ],
           [
-            "Home team loses",
-            "both halves lost"
+            "Domaćin gubi",
+            "obje polovice gube"
           ]
         ],
-        "note": "With +0.25 on the away team, it's reversed: a draw gives a win on one half and the stake back on the other."
+        "note": "Kod +0.25 na gosta vrijedi obrnuto: neriješeno donosi dobitak na jednoj polovici i povrat uloga na drugoj."
       },
       {
         "type": "h2",
-        "text": "Asian handicap and surebets"
+        "text": "Azijski hendikep i surebetovi"
       },
       {
         "type": "p",
-        "text": "Because the market has two outcomes, you can combine home team -0.5 at one bookmaker with away team +0.5 at another and only need two bookmakers for a surebet. Make sure both sides have the corresponding line: -0.5 pairs with +0.5, and -0.25 pairs with +0.25."
+        "text": "Budući da tržište ima dva ishoda, možete kombinirati domaćina -0.5 u jednoj kladionici i gosta +0.5 u drugoj, pa za surebet trebate samo dvije kladionice. Pazite da obje strane imaju odgovarajuću liniju: -0.5 ide uz +0.5, a -0.25 uz +0.25."
       },
       {
         "type": "tip",
-        "text": "Always check the line before placing a surebet. A difference of a quarter line can turn a guaranteed win into a risky bet."
+        "text": "Prije klađenja na surebet uvijek provjerite liniju. Razlika od jedne četvrtinske linije može zajamčeni dobitak pretvoriti u rizičnu okladu."
       }
     ],
     "faq": [
       {
-        "q": "What does Asian handicap -0.5 mean?",
-        "a": "The team must win the match to return a profit. A draw or loss results in a lost bet."
+        "q": "Što znači azijski hendikep -0.5?",
+        "a": "Momčad mora pobijediti u utakmici da biste ostvarili dobitak. Neriješeno ili poraz znači izgubljenu okladu."
       },
       {
-        "q": "Do I get my stake back with Asian handicap?",
-        "a": "With whole lines, such as 0 or -1, you get your stake back if the match result exactly matches the handicap. With half lines this never happens, and with quarter lines you can get a half win or half loss."
+        "q": "Vraća li mi se ulog kod azijskog hendikepa?",
+        "a": "Kod cjelobrojnih linija, poput 0 ili -1, ulog vam se vraća ako rezultat utakmice točno odgovara hendikepu. Kod polovičnih linija to se nikad ne događa, a kod četvrtinskih možete dobiti pola dobitka ili pola gubitka."
       }
     ],
-    "category": "Fundamentals",
-    "ctaLabel": "View current surebets"
+    "category": "Osnove",
+    "ctaLabel": "Pogledajte trenutne surebetove"
   },
   "bet-tracker": {
-    "title": "Betting spreadsheet alternative: track every bet automatically",
-    "metaTitle": "Betting Spreadsheet Alternative – Bet Tracker 2026",
-    "description": "Swap your betting spreadsheet for a bet tracker: what to log, how to calculate ROI, examples in € and what the best bet tracker app should do.",
-    "keyword": "betting spreadsheet alternative",
-    "intro": "The best betting spreadsheet alternative is a bet tracker that logs every bet, stake and result for you and calculates ROI, profit per bookmaker and balance automatically. Spreadsheets break as soon as you place dozens of surebets a week: formulas get overwritten, legs go missing and voided bets distort the numbers. A tracker gives you the real picture in seconds.",
+    "title": "Alternativa tablici za klađenje: automatski pratite svaku okladu",
+    "metaTitle": "Alternativa tablici za klađenje – tracker oklada 2026.",
+    "description": "Zamijenite tablicu za klađenje trackerom oklada: što bilježiti, kako izračunati ROI, primjeri u € i što bi najbolja aplikacija za praćenje oklada trebala nuditi.",
+    "keyword": "alternativa tablici za klađenje",
+    "intro": "Najbolja alternativa tablici za klađenje je tracker oklada koji umjesto vas bilježi svaku okladu, ulog i rezultat te automatski izračunava ROI, dobit po kladionici i stanje računa. Tablice zakažu čim tjedno uplatite desetke surebetova: formule se prebrišu, pojedine oklade nestanu, a poništene oklade iskrive brojke. Tracker vam za nekoliko sekundi daje stvarnu sliku.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why the betting spreadsheet stops working"
+        "text": "Zašto Excel tablica za praćenje oklada prestaje funkcionirati"
       },
       {
         "type": "p",
-        "text": "A spreadsheet is fine for ten bets a month. For arbitrage betting, every surebet has two or three legs at different bookmakers, so 50 surebets means 100–150 rows to type, settle and reconcile by hand."
+        "text": "Tablica je sasvim dovoljna za deset oklada mjesečno. No kod arbitražnog klađenja svaki surebet ima dvije ili tri opklade u različitim kladionicama, pa 50 surebetova znači 100–150 redaka koje morate ručno upisati, riješiti i uskladiti."
       },
       {
         "type": "ul",
         "items": [
-          "**Manual errors:** one wrong odds value or stake ruins your ROI figure.",
-          "**Missing legs:** if one leg is not logged, a winning surebet looks like a loss.",
-          "**Voids and partial acceptance:** hard to handle correctly with simple formulas.",
-          "**No overview per bookmaker:** you cannot easily see where your money actually sits."
+          "**Ručne pogreške:** jedan pogrešan koeficijent ili ulog iskrivi vaš ROI.",
+          "**Nedostajuće opklade:** ako jedna opklada nije upisana, dobitni surebet izgleda kao gubitak.",
+          "**Poništene i djelomično prihvaćene oklade:** s jednostavnim formulama teško ih je ispravno obraditi.",
+          "**Nema pregleda po kladionicama:** ne možete lako vidjeti gdje se vaš novac stvarno nalazi."
         ]
       },
       {
         "type": "h2",
-        "text": "Bet tracking: what to log on every bet"
+        "text": "Praćenje oklada: što upisati za svaku okladu"
       },
       {
         "type": "ul",
         "items": [
-          "**Date and event**, so you can find the bet later.",
-          "**Bookmaker, market and odds**, exactly as accepted on the bet slip.",
-          "**Stake and result**: won, lost, void or half-won on Asian lines.",
-          "**Type of bet**: surebet, value bet or normal bet, so you can compare strategies.",
-          "**Closing odds** if you value bet, to see whether you beat the market."
+          "**Datum i događaj**, kako biste okladu kasnije lako pronašli.",
+          "**Kladionica, tržište i koeficijent**, točno onako kako su prihvaćeni na listiću.",
+          "**Ulog i ishod**: dobitna, gubitna, poništena (void) ili napola dobitna kod azijskih linija.",
+          "**Vrsta oklade**: surebet, value bet ili obična oklada, kako biste mogli usporediti strategije.",
+          "**Zaključni koeficijent** ako igrate value betove, da vidite jeste li bolji od tržišta."
         ]
       },
       {
         "type": "example",
-        "title": "Example: one month of tracked surebets",
+        "title": "Primjer: mjesec dana praćenih surebetova",
         "rows": [
           [
-            "Number of surebets",
+            "Broj surebetova",
             "60"
           ],
           [
-            "Total turnover (all legs)",
+            "Ukupni promet (sve opklade)",
             "€24,000"
           ],
           [
-            "Total returned",
+            "Ukupno isplaćeno",
             "€24,720"
           ],
           [
-            "Net profit",
+            "Neto dobit",
             "€720"
           ],
           [
@@ -1460,85 +1460,85 @@
             "€720 / €24,000 = 3.0%"
           ]
         ],
-        "note": "Without tracking you only see your balance moving. With tracking you see that every €100 you turn over earns €3."
+        "note": "Bez praćenja vidite samo kako vam se mijenja stanje računa. S praćenjem vidite da svakih €100 prometa donosi €3."
       },
       {
         "type": "h2",
-        "text": "Best bet tracker app: what it should do"
+        "text": "Najbolja aplikacija za praćenje oklada: što bi trebala moći"
       },
       {
         "type": "ul",
         "items": [
-          "**Group surebet legs**, so the whole arb is shown as one position with one profit.",
-          "**Calculate ROI automatically** per month, sport, market and bookmaker.",
-          "**Show balance per bookmaker**, so you know where to deposit or withdraw.",
-          "**Handle voids and odds changes** without breaking the totals.",
-          "**Work on mobile**, because you place bets on the go."
+          "**Grupirati opklade surebeta**, tako da se cijela arbitraža prikazuje kao jedna pozicija s jednom dobiti.",
+          "**Automatski izračunati ROI** po mjesecu, sportu, tržištu i kladionici.",
+          "**Prikazati stanje po kladionici**, da znate gdje uplatiti ili isplatiti novac.",
+          "**Podnijeti poništene oklade i promjene koeficijenata** bez narušavanja ukupnih zbrojeva.",
+          "**Raditi na mobitelu**, jer oklade najčešće igrate u pokretu."
         ]
       },
       {
         "type": "tip",
-        "text": "Log the bet the moment it is accepted, not at the end of the day. Most tracking mistakes come from logging from memory."
+        "text": "Upišite okladu čim je prihvaćena, a ne na kraju dana. Većina pogrešaka u praćenju nastaje zato što se oklade upisuju po sjećanju."
       },
       {
         "type": "h2",
-        "text": "Automated bet tracking app: track your bets for free"
+        "text": "Aplikacija za automatsko praćenje oklada: pratite svoje oklade besplatno"
       },
       {
         "type": "p",
-        "text": "An automated bet tracking app saves you the typing: when you place a surebet from the scanner, the legs, odds and stakes are logged for you. You only confirm the result. Read how to [calculate ROI on betting](/en/guides/roi-betting) and set up [bankroll management](/en/guides/bankroll-management) based on your real numbers."
+        "text": "Aplikacija za automatsko praćenje oklada štedi vam tipkanje: kad odigrate surebet iz skenera, opklade, koeficijenti i ulozi upisuju se umjesto vas. Vi samo potvrdite ishod. Pročitajte kako [izračunati ROI u klađenju](/en/guides/roi-betting) i postavite [upravljanje bankrollom](/en/guides/bankroll-management) na temelju svojih stvarnih brojki."
       },
       {
         "type": "p",
-        "text": "[BetTracker AI](/en) combines the surebet scanner and the bet tracker in one place, so every surebet you place is tracked automatically and your ROI is always up to date."
+        "text": "[BetTracker AI](/en) objedinjuje skener surebetova i praćenje oklada na jednom mjestu, pa se svaki surebet koji odigrate prati automatski, a vaš ROI uvijek je ažuran."
       }
     ],
     "faq": [
       {
-        "q": "Can I still use a spreadsheet?",
-        "a": "Yes, for a small number of bets. Once you place more than a few surebets a week, a bet tracker is faster and far less error-prone."
+        "q": "Mogu li i dalje koristiti tablicu?",
+        "a": "Da, ako igrate malo oklada. Čim tjedno odigrate više od nekoliko surebetova, praćenje oklada putem aplikacije brže je i znatno manje podložno pogreškama."
       },
       {
-        "q": "What is a good ROI for surebets?",
-        "a": "Typically 1–4% of turnover. Higher figures are possible but often come with more limits and voided bets."
+        "q": "Što je dobar ROI za surebetove?",
+        "a": "Obično 1–4% prometa. Veće brojke su moguće, ali često dolaze s više ograničenja i poništenih oklada."
       },
       {
-        "q": "Should I track normal bets too?",
-        "a": "Yes. Tracking everything shows your real result and reveals whether your normal bets are eating into your surebet profit."
+        "q": "Trebam li pratiti i obične oklade?",
+        "a": "Da. Kad pratite sve, vidite svoj stvarni rezultat i otkrivate jedu li vaše obične oklade dobit od surebetova."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Track your bets for free"
+    "category": "Strategija",
+    "ctaLabel": "Pratite svoje oklade besplatno"
   },
   "roi-betting": {
-    "title": "ROI on betting: how to calculate your return",
-    "metaTitle": "ROI Betting – How to Calculate Return on Your Bets",
-    "description": "Learn to calculate ROI and yield on betting with examples. See what a good return is, and why ROI tells you more than your total profit.",
-    "keyword": "roi betting",
-    "intro": "ROI stands for return on investment and shows how many per cent you earn relative to what you've staked. It's the figure that tells you whether your strategy works, regardless of how large your stakes are.",
+    "title": "ROI u klađenju: kako izračunati svoj povrat",
+    "metaTitle": "ROI u klađenju – kako izračunati povrat na oklade",
+    "description": "Naučite izračunati ROI i yield u klađenju na primjerima. Saznajte što je dobar povrat i zašto vam ROI govori više od ukupne dobiti.",
+    "keyword": "roi klađenje",
+    "intro": "ROI je kratica za povrat na ulaganje (return on investment) i pokazuje koliko posto zarađujete u odnosu na uloženo. To je brojka koja govori funkcionira li vaša strategija, bez obzira na visinu uloga.",
     "blocks": [
       {
         "type": "h2",
-        "text": "The formula"
+        "text": "Formula"
       },
       {
         "type": "p",
-        "text": "ROI = profit divided by total stake, multiplied by 100. Profit is what you've been paid out, minus what you've staked."
+        "text": "ROI = dobit podijeljena s ukupnim ulogom, pomnožena sa 100. Dobit je ono što vam je isplaćeno minus ono što ste uložili."
       },
       {
         "type": "example",
-        "title": "Example: a month of sure bets",
+        "title": "Primjer: mjesec dana surebetova",
         "rows": [
           [
-            "Total stake",
+            "Ukupni ulog",
             "€40,000"
           ],
           [
-            "Total payout",
+            "Ukupna isplata",
             "€41,000"
           ],
           [
-            "Profit",
+            "Dobit",
             "€1,000"
           ],
           [
@@ -1546,188 +1546,188 @@
             "1,000 / 40,000 × 100 = 2.5%"
           ]
         ],
-        "note": "You've earned 2.5p for every pound you've staked."
+        "note": "Zaradili ste 2.5p za svaku uloženu funtu."
       },
       {
         "type": "h2",
-        "text": "ROI and yield are the same thing"
+        "text": "ROI i yield isto su što i isto"
       },
       {
         "type": "p",
-        "text": "In betting, the terms ROI and yield are often used for the same figure: profit relative to total stake. Some instead calculate ROI relative to your bankroll. That gives a higher figure, because the same bankroll is used many times over. Always check which method a figure has been calculated with before comparing."
+        "text": "U klađenju se pojmovi ROI i yield često koriste za istu brojku: dobit u odnosu na ukupni ulog. Neki ROI umjesto toga računaju u odnosu na bankroll. Tako dobivaju veću brojku, jer se isti bankroll obrće više puta. Prije usporedbe uvijek provjerite kojom je metodom brojka izračunata."
       },
       {
         "type": "h2",
-        "text": "What is a good ROI?"
+        "text": "Što je dobar ROI?"
       },
       {
         "type": "ul",
         "items": [
-          "Ordinary bets in the long term: most punters sit below 0%, because the bookmaker takes a margin.",
-          "Value betting: 2–5% over many bets is a good result.",
-          "Sure bets: typically 1–5% per sure bet, but almost without risk, because all outcomes are covered."
+          "Obične oklade na duge staze: većina kladioničara je ispod 0%, jer kladionica uzima maržu.",
+          "Value betting: 2–5% kroz mnogo oklada dobar je rezultat.",
+          "Surebetovi: obično 1–5% po surebetu, ali gotovo bez rizika, jer su pokriveni svi ishodi."
         ]
       },
       {
         "type": "tip",
-        "text": "ROI is most meaningful over many bets. After 20 bets, the figure can swing a lot. After several hundred bets, it shows whether your strategy holds up."
+        "text": "ROI je najsmisleniji kroz velik broj oklada. Nakon 20 oklada brojka se može jako mijenjati. Nakon nekoliko stotina oklada pokazuje drži li vaša strategija."
       }
     ],
     "faq": [
       {
-        "q": "How do I calculate ROI on betting?",
-        "a": "Take your profit, divide by your total stake and multiply by 100. If you've staked €10,000 and earned €300, your ROI is 3%."
+        "q": "Kako izračunati ROI u klađenju?",
+        "a": "Uzmite svoju dobit, podijelite je s ukupnim ulogom i pomnožite sa 100. Ako ste uložili €10,000 i zaradili €300, vaš ROI iznosi 3%."
       },
       {
-        "q": "What's the difference between ROI and profit?",
-        "a": "Profit is the amount you've earned. ROI is profit as a percentage of your stake. It makes it possible to compare results with different stakes."
+        "q": "Koja je razlika između ROI-ja i dobiti?",
+        "a": "Dobit je iznos koji ste zaradili. ROI je dobit izražena kao postotak uloga. Zahvaljujući tome možete uspoređivati rezultate s različitim ulozima."
       },
       {
-        "q": "Can I see my ROI automatically?",
-        "a": "Yes. The accounts in BetTrackerAI calculate your ROI based on the bets you record."
+        "q": "Mogu li svoj ROI vidjeti automatski?",
+        "a": "Da. Računi u BetTrackerAI izračunavaju vaš ROI na temelju oklada koje evidentirate."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "See your ROI in the accounts"
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte svoj ROI na računima"
   },
   "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: the more affordable alternative",
-    "metaTitle": "Surebet Danmark Alternative – BetTrackerAI Compared (2025)",
-    "description": "Compare BetTrackerAI and Surebet Danmark: pricing, features, bookmaker coverage and bet tracking. Find the surebet tool that fits your needs.",
-    "keyword": "surebet tool comparison",
-    "intro": "Surebet Danmark and BetTrackerAI both scan for surebets (also called arbitrage bets) at licensed bookmakers. Both offer a 7-day free trial. The key differences lie in pricing and in the tools you get beyond the surebet scanner itself.",
+    "title": "BetTrackerAI vs. Surebet Danmark: povoljnija alternativa",
+    "metaTitle": "Alternativa za Surebet Danmark – usporedba s BetTrackerAI (2025.)",
+    "description": "Usporedite BetTrackerAI i Surebet Danmark: cijene, funkcije, pokrivenost kladionica i praćenje oklada. Pronađite surebet alat koji vam odgovara.",
+    "keyword": "usporedba surebet alata",
+    "intro": "Surebet Danmark i BetTrackerAI skeniraju surebetove (poznate i kao arbitražne oklade) kod licenciranih kladionica. Oba nude besplatno probno razdoblje od 7 dana. Ključne razlike su u cijeni i u alatima koje dobivate uz sam surebet skener.",
     "blocks": [
       {
         "type": "h2",
-        "text": "At a glance"
+        "text": "Ukratko"
       },
       {
         "type": "example",
-        "title": "BetTrackerAI and Surebet Danmark side by side",
+        "title": "BetTrackerAI i Surebet Danmark jedan pored drugog",
         "rows": [
           [
-            "Price per month",
-            "BetTrackerAI from approx. €20 · Surebet Danmark approx. €134"
+            "Cijena po mjesecu",
+            "BetTrackerAI od oko €20 · Surebet Danmark oko €134"
           ],
           [
-            "Free trial",
-            "Both: 7 days"
+            "Besplatno probno razdoblje",
+            "Oba: 7 dana"
           ],
           [
-            "Bookmakers",
-            "Both: licensed bookmakers only"
+            "Kladionice",
+            "Oba: samo licencirane kladionice"
           ],
           [
-            "Notifications",
-            "BetTrackerAI: push and SMS (Premium) · Surebet Danmark: live notifications"
+            "Obavijesti",
+            "BetTrackerAI: push obavijesti i SMS (Premium) · Surebet Danmark: obavijesti uživo"
           ],
           [
-            "Bet accounting",
-            "BetTrackerAI: full tracking with ROI and balance per bookmaker · Surebet Danmark: bet tracker"
+            "Evidencija oklada",
+            "BetTrackerAI: potpuno praćenje s ROI-jem i stanjem po kladionici · Surebet Danmark: praćenje oklada"
           ],
           [
-            "Free tools and guides",
-            "BetTrackerAI: sure bet calculator and educational guides"
+            "Besplatni alati i vodiči",
+            "BetTrackerAI: kalkulator sigurnih oklada i edukativni vodiči"
           ]
         ],
-        "note": "Prices checked on both sites on 23 November 2025 and may change."
+        "note": "Cijene su provjerene na obje stranice 23. studenoga 2025. i mogu se promijeniti."
       },
       {
         "type": "h2",
-        "text": "Price: a significant difference"
+        "text": "Cijena: značajna razlika"
       },
       {
         "type": "p",
-        "text": "Surebet Danmark costs approx. €134 per month. BetTrackerAI costs approx. €20 per month for Basic (surebets up to 5% profit) and approx. €33 for Premium (all surebets plus SMS alerts). With Premium you save approx. €100 per month – that's approx. €1,200 a year."
+        "text": "Surebet Danmark košta oko €134 mjesečno. BetTrackerAI košta oko €20 mjesečno za Basic (surebetovi do 5 % profita) i oko €33 za Premium (svi surebetovi plus SMS upozorenja). S Premiumom štedite oko €100 mjesečno – to je oko €1,200 godišnje."
       },
       {
         "type": "p",
-        "text": "This matters because surebets typically yield 1–5% per bet. A lower monthly fee means you need far less turnover before the subscription pays for itself."
+        "text": "To je važno jer surebetovi obično donose 1–5 % po okladi. Niža mjesečna pretplata znači da vam treba znatno manji promet da se pretplata isplati."
       },
       {
         "type": "h2",
-        "text": "Bet tracking: where BetTrackerAI stands out"
+        "text": "Praćenje oklada: po čemu se BetTrackerAI ističe"
       },
       {
         "type": "p",
-        "text": "Surebets are only profitable if you know exactly what you've earned. In BetTrackerAI you log your surebets and deposits, and you see your profit, ROI and balance at each bookmaker in one place. You can also import a bet slip instead of entering it manually."
+        "text": "Surebetovi se isplate samo ako točno znate koliko ste zaradili. U BetTrackerAI bilježite svoje surebetove i uplate, a profit, ROI i stanje kod svake kladionice vidite na jednom mjestu. Listić možete i uvesti umjesto da ga ručno unosite."
       },
       {
         "type": "h2",
-        "text": "Which tool suits you?"
+        "text": "Koji alat vam odgovara?"
       },
       {
         "type": "ul",
         "items": [
-          "Choose BetTrackerAI if you want surebets at a lower price whilst tracking your accounts in detail.",
-          "Choose Surebet Danmark if you already use their platform and are satisfied with the cost.",
-          "If you're unsure, try both. Both offer 7-day free trials, so you can compare surebets on the same events."
+          "Odaberite BetTrackerAI ako želite surebetove po nižoj cijeni i detaljno praćenje svojih računa.",
+          "Odaberite Surebet Danmark ako već koristite njihovu platformu i zadovoljni ste cijenom.",
+          "Ako niste sigurni, isprobajte oba. Oba nude besplatno probno razdoblje od 7 dana, pa možete usporediti surebetove na istim događajima."
         ]
       },
       {
         "type": "tip",
-        "text": "Whichever tool you choose: always place the bet with the most volatile odds first, and confirm that the market is identical at both bookmakers."
+        "text": "Koji god alat odabrali: uvijek prvo uplatite okladu s najnestabilnijim koeficijentima i provjerite je li tržište kod obje kladionice identično."
       }
     ],
     "faq": [
       {
-        "q": "Is BetTrackerAI cheaper than Surebet Danmark?",
-        "a": "Yes. BetTrackerAI costs approx. €20 or approx. €33 per month, while Surebet Danmark costs approx. €134 per month (as of 23 November 2025)."
+        "q": "Je li BetTrackerAI jeftiniji od Surebet Danmark?",
+        "a": "Da. BetTrackerAI košta oko €20 ili oko €33 mjesečno, dok Surebet Danmark košta oko €134 mjesečno (stanje na dan 23. studenoga 2025.)."
       },
       {
-        "q": "Do both tools only use licensed bookmakers?",
-        "a": "Yes. Both platforms focus on regulated, licensed bookmakers, ensuring you bet legally and with player protections in place."
+        "q": "Koriste li oba alata samo licencirane kladionice?",
+        "a": "Da. Obje platforme usmjerene su na regulirane, licencirane kladionice, pa se klađenje odvija legalno i uz zaštitu igrača."
       },
       {
-        "q": "Can I try BetTrackerAI for free?",
-        "a": "Yes. You get a 7-day free trial with full access, and you can cancel at any time during the trial period."
+        "q": "Mogu li BetTrackerAI isprobati besplatno?",
+        "a": "Da. Dobivate besplatno probno razdoblje od 7 dana s punim pristupom i možete otkazati u bilo kojem trenutku tijekom probnog razdoblja."
       }
     ],
-    "category": "Fundamentals",
-    "ctaLabel": "Try BetTrackerAI free for 7 days"
+    "category": "Osnove",
+    "ctaLabel": "Isprobajte BetTrackerAI besplatno 7 dana"
   },
   "betting-regnskab": {
-    "title": "Betting accounts: how to keep track of your bankroll",
-    "metaTitle": "Betting Accounts – Track Your Balance Across Bookmakers",
-    "description": "Learn how to keep accounts for your betting: deposits, withdrawals and balance at each bookmaker. Never lose track when betting across multiple sites.",
-    "keyword": "bet tracker",
-    "intro": "When you place sure bets, you have money sitting with many bookmakers at once. A betting account shows you where your money is and how much you've earned when you add it all together.",
+    "title": "Evidencija klađenja: kako pratiti svoj bankroll",
+    "metaTitle": "Evidencija klađenja – pratite stanje kod svih kladionica",
+    "description": "Naučite voditi evidenciju svog klađenja: uplate, isplate i stanje kod svake kladionice. Nikad ne gubite pregled kad se klade na više stranica.",
+    "keyword": "praćenje oklada",
+    "intro": "Kad igrate sigurne oklade, novac vam istodobno stoji kod mnogo kladionica. Evidencija klađenja pokazuje vam gdje se novac nalazi i koliko ste ukupno zaradili kad sve zbrojite.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why you lose track"
+        "text": "Zašto gubite pregled"
       },
       {
         "type": "p",
-        "text": "With arbitrage betting you win at one bookmaker and lose at another. Your balance is constantly shifting, and you need to deposit and withdraw regularly to have money in the right places. Without proper accounts, it's hard to see whether you're up overall."
+        "text": "Kod arbitražnog klađenja kod jedne kladionice dobivate, a kod druge gubite. Stanje se neprestano mijenja, a uplaćivati i isplaćivati morate redovito kako bi novac bio na pravim mjestima. Bez uredne evidencije teško je vidjeti jeste li ukupno u plusu."
       },
       {
         "type": "h2",
-        "text": "What your accounts should include"
+        "text": "Što bi vaša evidencija trebala sadržavati"
       },
       {
         "type": "ul",
         "items": [
-          "All deposits and withdrawals at each bookmaker",
-          "Your current balance at each bookmaker",
-          "All bets with stake, odds and result",
-          "Your total profit: current balances plus withdrawals minus deposits"
+          "Sve uplate i isplate kod svake kladionice",
+          "Vaše trenutačno stanje kod svake kladionice",
+          "Sve oklade s ulogom, koeficijentom i ishodom",
+          "Vaš ukupni profit: trenutačna stanja plus isplate minus uplate"
         ]
       },
       {
         "type": "example",
-        "title": "Example: total profit across bookmakers",
+        "title": "Primjer: ukupni profit kod svih kladionica",
         "rows": [
           [
-            "Total deposits",
+            "Ukupne uplate",
             "€10,000"
           ],
           [
-            "Total withdrawn",
+            "Ukupno isplaćeno",
             "€3,000"
           ],
           [
-            "Balance with bookmakers now",
+            "Trenutačno stanje kod kladionica",
             "€7,800"
           ],
           [
@@ -1738,508 +1738,508 @@
       },
       {
         "type": "h2",
-        "text": "Good habits for bankroll management"
+        "text": "Dobre navike za upravljanje bankrollom"
       },
       {
         "type": "ul",
         "items": [
-          "Record deposits and withdrawals the same day.",
-          "Reconcile your balance with the bookmaker's own balance once a week.",
-          "Keep your betting money separate from your everyday money, so you don't accidentally bet with money you need for other things."
+          "Uplate i isplate bilježite istog dana.",
+          "Jednom tjedno uskladite svoje stanje sa stanjem koje prikazuje sama kladionica.",
+          "Novac za klađenje držite odvojeno od novca za svakodnevne troškove, kako se slučajno ne biste kladili novcem koji vam treba za druge stvari."
         ]
       },
       {
         "type": "tip",
-        "text": "The accounts in BetTrackerAI show balance, deposits and profit per bookmaker, so you always know where your money stands."
+        "text": "Računi u BetTrackerAI prikazuju stanje, uplate i dobit po kladionici, pa uvijek znate gdje vam se nalazi novac."
       }
     ],
     "faq": [
       {
-        "q": "Do I pay tax on betting winnings?",
-        "a": "Tax treatment of gambling winnings varies by jurisdiction. In some regulated markets winnings from licensed bookmakers are tax-free, while in others you may need to declare them. Check the tax rules where you live or consult a local adviser."
+        "q": "Plaćam li porez na dobitke od klađenja?",
+        "a": "Porezni tretman dobitaka od igara na sreću razlikuje se od države do države. Na nekim reguliranim tržištima dobici kod licenciranih kladionica ne oporezuju se, dok ih drugdje treba prijaviti. Provjerite porezna pravila u zemlji u kojoj živite ili se obratite lokalnom savjetniku."
       },
       {
-        "q": "How often should I update my bet tracker?",
-        "a": "Record bets and deposits straight away, and reconcile balances once a week."
+        "q": "Koliko često trebam ažurirati svoj bet tracker?",
+        "a": "Oklade i uplate unosite odmah, a stanja usklađujte jednom tjedno."
       }
     ],
-    "category": "Strategy",
-    "ctaLabel": "Open your accounts"
+    "category": "Strategija",
+    "ctaLabel": "Otvorite svoje račune"
   },
   "tjen-penge-paa-odds-uden-risiko": {
-    "title": "Make money on sports betting without risk: how hedging and arbitrage work",
-    "metaTitle": "Make Money on Sports Betting Without Risk 2026",
-    "description": "How to make money on sports betting without risk: surebets and hedging with worked examples in €, a realistic betting strategy and the real pitfalls.",
-    "keyword": "make money on sports betting without risk",
-    "category": "Strategy",
-    "ctaLabel": "See guaranteed-profit surebets",
-    "intro": "You can make money on sports betting without risk by backing every outcome of the same event at different bookmakers when the combined odds pay out more than you stake. This is sports arbitrage, or a surebet. The profit is fixed before kick-off, usually 1–3%. The risk is not in the result but in odds moving, mistakes and account limits.",
+    "title": "Zarada na klađenju bez rizika: kako funkcioniraju hedging i arbitraža",
+    "metaTitle": "Zarada na klađenju bez rizika 2026",
+    "description": "Kako zaraditi na klađenju bez rizika: surebetovi i hedging uz primjere izračuna u €, realna strategija klađenja i stvarne zamke.",
+    "keyword": "zarada na klađenju bez rizika",
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte surebetove sa zajamčenom dobiti",
+    "intro": "Na klađenju možete zaraditi bez rizika ako se u različitim kladionicama kladite na sve ishode istog događaja, a zbroj kvota isplaćuje više nego što ste uložili. To je sportska arbitraža, odnosno surebet. Dobit je poznata prije početka utakmice i obično iznosi 1–3%. Rizik nije u rezultatu, nego u promjeni kvota, pogreškama i ograničenjima računa.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Sports arbitrage: why the profit is guaranteed"
+        "text": "Sportska arbitraža: zašto je dobit zajamčena"
       },
       {
         "type": "p",
-        "text": "A bookmaker makes money because its prices add up to more than 100% probability. When two bookmakers rate the same event differently, you take the best price on a different outcome at each one. If the combined probability falls below 100%, you have a guaranteed profit. This is mathematical betting, not guessing. The full mechanism is explained in [how does arbitrage betting work?](/en/guides/arbitrage-betting)"
+        "text": "Kladionica zarađuje jer njezine kvote u zbroju daju više od 100% vjerojatnosti. Kad dvije kladionice isti događaj procijene različito, u svakoj uzmete najbolju kvotu za drugi ishod. Ako zbroj vjerojatnosti padne ispod 100%, dobit vam je zajamčena. To je matematičko klađenje, a ne nagađanje. Cijeli mehanizam objašnjen je u vodiču [kako funkcionira klađenje na arbitražu?](/en/guides/arbitrage-betting)"
       },
       {
         "type": "example",
-        "title": "Example: two-way basketball game (incl. overtime), €1,000",
+        "title": "Primjer: košarkaška utakmica s dva ishoda (uključujući produžetke), €1,000",
         "rows": [
           [
-            "Team A at bookmaker 1, odds 1.95",
-            "Stake €520.88"
+            "Momčad A u kladionici 1, kvota 1.95",
+            "Ulog €520.88"
           ],
           [
-            "Team B at bookmaker 2, odds 2.12",
-            "Stake €479.12"
+            "Momčad B u kladionici 2, kvota 2.12",
+            "Ulog €479.12"
           ],
           [
-            "Sum of inverse odds",
+            "Zbroj inverznih kvota",
             "0.513 + 0.472 = 0.985"
           ],
           [
-            "Payout whoever wins",
-            "approx. €1,015.72"
+            "Isplata bez obzira na pobjednika",
+            "oko €1,015.72"
           ],
           [
-            "Guaranteed profit",
-            "approx. €15.72 (1.6%)"
+            "Zajamčena dobit",
+            "oko €15.72 (1.6%)"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "Guaranteed profit betting with hedging: lock in a running bet"
+        "text": "Zajamčena dobit hedgingom: osigurajte okladu koja je u tijeku"
       },
       {
         "type": "p",
-        "text": "Hedging uses the same maths but starts from a bet you have already placed. If the price moves in your favour, you back the opposite outcome at another bookmaker and lock in a profit whatever the result."
+        "text": "Hedging se temelji na istoj matematici, ali polazi od oklade koju ste već odigrali. Ako se kvota pomakne u vašu korist, u drugoj kladionici igrate suprotan ishod i osiguravate dobit bez obzira na rezultat."
       },
       {
         "type": "example",
-        "title": "Example: over 2.5 goals backed pre-match for €500",
+        "title": "Primjer: više od 2.5 gola, odigrano prije utakmice za €500",
         "rows": [
           [
-            "Original bet: over 2.5 goals, odds 2.40",
-            "Stake €500, potential payout €1,200"
+            "Izvorna oklada: više od 2.5 gola, kvota 2.40",
+            "Ulog €500, potencijalna isplata €1,200"
           ],
           [
-            "After an early goal: under 2.5 goals, odds 2.60",
-            "Stake €461.54"
+            "Nakon ranog gola: manje od 2.5 gola, kvota 2.60",
+            "Ulog €461.54"
           ],
           [
-            "Total staked",
+            "Ukupni ulog",
             "€961.54"
           ],
           [
-            "Payout on every result",
+            "Isplata uz bilo koji rezultat",
             "€1,200"
           ],
           [
-            "Locked-in profit",
-            "approx. €238.46 (24.8%)"
+            "Osigurana dobit",
+            "oko €238.46 (24.8%)"
           ]
         ],
-        "note": "The formula: hedge stake = potential payout ÷ new odds. Here 1,200 ÷ 2.60 = €461.54."
+        "note": "Formula: ulog za hedging = potencijalna isplata ÷ nova kvota. Ovdje je 1,200 ÷ 2.60 = €461.54."
       },
       {
         "type": "h2",
-        "text": "Betting strategy: small margins, lots of bets"
+        "text": "Strategija klađenja: male marže, puno oklada"
       },
       {
         "type": "p",
-        "text": "The guaranteed profit per surebet is small, so results come from volume and discipline. A realistic arbitrage betting strategy looks like this:"
+        "text": "Zajamčena dobit po surebetu je mala, pa rezultati dolaze iz broja oklada i discipline. Realna strategija klađenja na arbitražu izgleda ovako:"
       },
       {
         "type": "example",
-        "title": "Realistic monthly numbers",
+        "title": "Realni mjesečni brojevi",
         "rows": [
           [
-            "Stake per surebet",
+            "Ulog po surebetu",
             "€1,000"
           ],
           [
-            "Average profit",
+            "Prosječna dobit",
             "1.5%"
           ],
           [
-            "Surebets per month",
+            "Surebetova mjesečno",
             "40"
           ],
           [
-            "Expected monthly result",
-            "approx. €600"
+            "Očekivani mjesečni rezultat",
+            "oko €600"
           ],
           [
-            "Same setup at €2,500 per surebet",
-            "approx. €1,500"
+            "Isti postav uz €2,500 po surebetu",
+            "oko €1,500"
           ]
         ]
       },
       {
         "type": "ul",
         "items": [
-          "**Spread your bets** across several bookmakers so no single account stands out.",
-          "**Keep balances ready** at every bookmaker so you can act within minutes.",
-          "**Log every bet** so you see your real ROI, not just a feeling. A [bet tracker](/en/guides/bet-tracker) does it automatically."
+          "**Rasporedite oklade** na više kladionica kako nijedan račun ne bi upadao u oči.",
+          "**Držite spremna sredstva** u svakoj kladionici kako biste mogli reagirati u nekoliko minuta.",
+          "**Bilježite svaku okladu** da biste vidjeli stvarni ROI, a ne samo osjećaj. [Bet tracker](/en/guides/bet-tracker) to radi automatski."
         ]
       },
       {
         "type": "h2",
-        "text": "Mathematical betting: four risks that have nothing to do with maths"
+        "text": "Matematičko klađenje: četiri rizika koji nemaju veze s matematikom"
       },
       {
         "type": "ul",
         "items": [
-          "**Odds movement:** the price can drop between your first and second bet. Always place the least stable price first.",
-          "**Voided bets:** on obvious pricing errors the bookmaker may void the bet, leaving you with one unhedged side.",
-          "**Different rules:** retirements, walkovers and overtime are settled differently. Check both bookmakers settle the market the same way.",
-          "**Account limits:** bookmakers can cut your maximum stake. Read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+          "**Promjena kvota:** kvota može pasti između vaše prve i druge oklade. Najnestabilniju kvotu uvijek igrajte prvu.",
+          "**Poništene oklade:** kod očitih pogrešaka u kvotama kladionica može poništiti okladu, a vama ostaje jedna nezaštićena strana.",
+          "**Različita pravila:** predaje tijekom meča, predaje bez borbe (walkover) i produžetci obračunavaju se na različite načine. Provjerite da obje kladionice isto obračunavaju tržište.",
+          "**Ograničenja računa:** kladionice vam mogu smanjiti maksimalni ulog. Pročitajte kako [izbjeći ograničenja kladionica](/en/guides/avoid-bookmaker-limits)."
         ]
       },
       {
         "type": "p",
-        "text": "Betting smart means removing the practical risks, not just the mathematical ones. [BetTracker AI](/en) shows you surebets with the stake split calculated, so you can place the bets before the price moves."
+        "text": "Pametno klađenje znači ukloniti praktične rizike, a ne samo matematičke. [BetTracker AI](/en) prikazuje vam surebetove s već izračunatom raspodjelom uloga, pa oklade možete odigrati prije nego se kvota promijeni."
       }
     ],
     "faq": [
       {
-        "q": "Can you really make money on sports betting with no risk at all?",
-        "a": "On a correctly placed surebet the result does not matter. The remaining risk is practical: odds moving, voided bets and picking the wrong market."
+        "q": "Može li se stvarno zaraditi na sportskom klađenju bez ikakvog rizika?",
+        "a": "Kod ispravno odigranog surebeta ishod utakmice nije bitan. Preostali rizik je praktične naravi: promjena kvota, poništeni klađenje i odabir pogrešnog tržišta."
       },
       {
-        "q": "What is the difference between surebets and hedging?",
-        "a": "A surebet is placed on every outcome at once. Hedging starts with one bet and covers the opposite outcome later, once the price has moved in your favour."
+        "q": "U čemu je razlika između surebetova i hedginga?",
+        "a": "Surebet se igra na sve ishode odjednom. Hedging počinje jednim klađenjem, a suprotni ishod pokrivate kasnije, kad se kvota pomakne u vašu korist."
       },
       {
-        "q": "How much money do I need to start?",
-        "a": "You can start with €200–500 spread across a few bookmakers. With smaller stakes, though, a surebet only returns a few euros."
+        "q": "Koliko novca mi treba za početak?",
+        "a": "Možete početi s €200–500 raspoređenih na nekoliko kladionica. No s manjim ulozima surebet donosi samo nekoliko eura zarade."
       }
     ]
   },
   "find-surebets-automatisk": {
-    "title": "Find surebets automatically: how an odds scanner spots pricing errors",
-    "metaTitle": "Find Surebets Automatically – Odds Scanner 2026",
-    "description": "How to find surebets automatically with an odds scanner: how betting software spots pricing errors, worked examples in € and what to look for.",
-    "keyword": "find surebets automatically",
-    "category": "Strategy",
-    "ctaLabel": "Start the surebet scanner",
-    "intro": "To find surebets automatically, you use an odds scanner that compares prices across dozens of bookmakers every few seconds. When the sum of the inverse odds drops below 1, the software flags the surebet with stakes already calculated. It catches pricing errors in seconds that would take you hours to find by hand, and before the bookmaker corrects them.",
+    "title": "Pronađite surebetove automatski: kako skener kvota otkriva pogreške u kvotama",
+    "metaTitle": "Automatsko pronalaženje surebetova – skener kvota 2026",
+    "description": "Kako automatski pronaći surebetove skenerom kvota: kako softver za klađenje otkriva pogreške u kvotama, primjeri izračuna u € i na što obratiti pozornost.",
+    "keyword": "automatsko pronalaženje surebetova",
+    "category": "Strategija",
+    "ctaLabel": "Pokrenite skener surebetova",
+    "intro": "Da biste automatski pronašli surebetove, koristite skener kvota koji svakih nekoliko sekundi uspoređuje kvote desetaka kladionica. Kad zbroj inverznih kvota padne ispod 1, softver označi surebet s već izračunatim ulozima. Pogreške u kvotama otkriva u nekoliko sekundi, a vama bi ručno trebalo nekoliko sati, i to prije nego što ih kladionica ispravi.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why finding surebets by hand rarely works"
+        "text": "Zašto ručno traženje surebetova rijetko uspijeva"
       },
       {
         "type": "p",
-        "text": "A single football match can have 100+ markets. Multiply that by 15 bookmakers and several hundred matches a day, and you have millions of price combinations. Most surebets last 2–10 minutes. By the time you have compared tabs and done the maths, the price has usually moved."
+        "text": "Jedna nogometna utakmica može imati više od 100 tržišta. Pomnožite to s 15 kladionica i nekoliko stotina utakmica dnevno i dobivate milijune kombinacija kvota. Većina surebetova traje 2–10 minuta. Dok usporedite kartice i izračunate ulog, kvota se obično već promijeni."
       },
       {
         "type": "ul",
         "items": [
-          "**Volume:** a scanner checks every market at once, you check a handful.",
-          "**Speed:** the software reacts within seconds of a price change.",
-          "**Accuracy:** the stake split is calculated for you, so there are no typing errors."
+          "**Opseg:** skener istodobno provjerava sva tržišta, a vi samo nekoliko.",
+          "**Brzina:** softver reagira unutar nekoliko sekundi od promjene kvote.",
+          "**Točnost:** raspodjela uloga izračunava se umjesto vas, pa nema pogrešaka u tipkanju."
         ]
       },
       {
         "type": "h2",
-        "text": "Software to find odds errors: how the scanner works"
+        "text": "Softver za pronalaženje pogrešnih kvota: kako radi skener"
       },
       {
         "type": "p",
-        "text": "Betting software collects prices from bookmakers continuously, matches identical events and markets, and calculates the sum of inverse odds for every combination. The core of the job is matching: \"Man Utd\" and \"Manchester United\" must be recognised as the same team, and \"over 2.5\" must be the same line at both bookmakers."
+        "text": "Softver za klađenje neprekidno prikuplja kvote kladionica, povezuje identične događaje i tržišta te za svaku kombinaciju izračunava zbroj inverznih kvota. Srž posla je prepoznavanje istih događaja: „Man Utd” i „Manchester United” moraju se prepoznati kao ista momčad, a „preko 2.5” mora biti ista granica kod obje kladionice."
       },
       {
         "type": "example",
-        "title": "Example: pricing error spotted by the scanner, total stake €1,000",
+        "title": "Primjer: pogreška u kvotama koju je uočio skener, ukupni ulog €1,000",
         "rows": [
           [
-            "Over 2.5 goals at bookmaker 1, odds 2.25",
-            "Stake €461.72"
+            "Preko 2.5 gola kod kladionice 1, kvota 2.25",
+            "Ulog €461.72"
           ],
           [
-            "Under 2.5 goals at bookmaker 2, odds 1.93",
-            "Stake €538.28"
+            "Ispod 2.5 gola kod kladionice 2, kvota 1.93",
+            "Ulog €538.28"
           ],
           [
             "1/2.25 + 1/1.93",
             "0.444 + 0.518 = 0.963"
           ],
           [
-            "Payout on every result",
-            "approx. €1,038.88"
+            "Isplata za svaki ishod",
+            "oko €1,038.88"
           ],
           [
-            "Locked-in profit",
-            "approx. €38.88 (3.9%)"
+            "Zajamčena dobit",
+            "oko €38.88 (3.9%)"
           ]
         ],
-        "note": "Bookmaker 1 had not reacted to a team news update. The scanner flagged the gap within seconds."
+        "note": "Kladionica 1 nije reagirala na novost o sastavu momčadi. Skener je tu razliku označio unutar nekoliko sekundi."
       },
       {
         "type": "h2",
-        "text": "Pricing errors: the real ones and the traps"
+        "text": "Pogreške u kvotama: prave i zamke"
       },
       {
         "type": "p",
-        "text": "Not every high-profit surebet is a gift. Profits above 8–10% are often a sign that something is wrong rather than a genuine opportunity."
+        "text": "Nije svaki surebet s visokom zaradom poklon. Zarada veća od 8–10% često je znak da nešto nije u redu, a ne prava prilika."
       },
       {
         "type": "ul",
         "items": [
-          "**Obvious errors:** odds of 15.0 where everyone else offers 1.50 are often voided by the bookmaker. Avoid them.",
-          "**Different rules:** a tennis market settled on retirement at one bookmaker and voided at the other is not a real surebet.",
-          "**Different lines:** Asian handicap −0.5 and −0.25 look alike but behave differently. Read about [Asian handicap](/en/guides/asian-handicap).",
-          "**Healthy surebets:** 1–4% profit on mainstream markets is the sweet spot. That is where most of your profit will come from."
+          "**Očite pogreške:** kvote od 15.0 tamo gdje svi ostali nude 1.50 kladionica često poništi. Izbjegavajte ih.",
+          "**Različita pravila:** teniško tržište koje jedna kladionica obračunava nakon predaje meča, a druga poništava, nije pravi surebet.",
+          "**Različite granice:** azijski hendikep −0.5 i −0.25 izgledaju slično, ali se ponašaju drukčije. Pročitajte više o [azijskom hendikepu](/en/guides/asian-handicap).",
+          "**Zdravi surebetovi:** zarada od 1–4% na uobičajenim tržištima idealna je zona. Odatle će doći većina vaše dobiti."
         ]
       },
       {
         "type": "tip",
-        "text": "Set a minimum profit of 1% and a maximum of around 8% in the scanner. That filters out noise and most of the errors that get voided."
+        "text": "U skeneru postavite minimalnu zaradu od 1% i maksimalnu od oko 8%. Tako filtrirate šum i većinu pogrešaka koje se poništavaju."
       },
       {
         "type": "h2",
-        "text": "What to look for in an odds scanner"
+        "text": "Na što paziti pri odabiru skenera kvota"
       },
       {
         "type": "ul",
         "items": [
-          "**Bookmaker coverage:** the more bookmakers, the more surebets. Make sure the ones you have accounts with are included.",
-          "**Update frequency:** prices must be refreshed every few seconds, especially for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
-          "**Filters:** sport, market, minimum profit and bookmakers, so you only see what you can actually play.",
-          "**Stake calculator:** built in, so you can place the bets immediately. You can also check the numbers in the [surebet calculator](/en/calculator).",
-          "**Bet tracking:** logging your bets afterwards shows your real ROI. See [bet tracker](/en/guides/bet-tracker)."
+          "**Pokrivenost kladionica:** što više kladionica, to više surebetova. Provjerite jesu li uključene one u kojima imate račune.",
+          "**Učestalost osvježavanja:** kvote se moraju osvježavati svakih nekoliko sekundi, osobito za [live surebetove](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filtri:** sport, tržište, minimalna zarada i kladionice, da vidite samo ono što stvarno možete igrati.",
+          "**Kalkulator uloga:** ugrađen, pa klađenje možete odigrati odmah. Brojke možete provjeriti i u [kalkulatoru surebetova](/en/calculator).",
+          "**Praćenje klađenja:** bilježenje klađenja poslije pokazuje vaš stvarni ROI. Pogledajte [bet tracker](/en/guides/bet-tracker)."
         ]
       },
       {
         "type": "p",
-        "text": "Pick your bookmakers, set a minimum profit of 1% and place the bets quickly, one after the other. [BetTracker AI](/en) scans the bookmakers for you and shows surebets in real time with the stake split already calculated."
+        "text": "Odaberite svoje kladionice, postavite minimalnu zaradu od 1% i klađenje odigrajte brzo, jedno za drugim. [BetTracker AI](/en) skenira kladionice umjesto vas i u stvarnom vremenu prikazuje surebetove s već izračunatom raspodjelom uloga."
       }
     ],
     "faq": [
       {
-        "q": "How many surebets does a scanner find per day?",
-        "a": "Typically anywhere from dozens to several hundred, depending on how many bookmakers and sports you include and your minimum profit setting."
+        "q": "Koliko surebetova skener pronađe na dan?",
+        "a": "Obično od nekoliko desetaka do nekoliko stotina, ovisno o tome koliko kladionica i sportova uključite te o postavci minimalne zarade."
       },
       {
-        "q": "Can I place bets automatically?",
-        "a": "Automated bet placing breaks the terms of most bookmakers and gets accounts closed quickly. Let the scanner find the surebets and place the bets yourself."
+        "q": "Mogu li klađenje odigravati automatski?",
+        "a": "Automatsko klađenje krši uvjete većine kladionica i vrlo brzo dovodi do zatvaranja računa. Prepustite skeneru da pronađe surebetove, a klađenje odigrajte sami."
       },
       {
-        "q": "Why has the surebet disappeared when I open the bookmaker?",
-        "a": "The price has moved since the scan. Always check the odds on your bet slip and recalculate before placing."
+        "q": "Zašto je surebet nestao kad otvorim kladionicu?",
+        "a": "Kvota se promijenila otkad je skeniranje obavljeno. Uvijek provjerite kvote na svom listiću i prije uplate ponovno izračunajte ulog."
       }
     ]
   },
   "live-arbitrage-betting-scanner": {
-    "title": "Live arbitrage betting scanner: how to catch live surebets in play",
-    "metaTitle": "Live Arbitrage Betting Scanner – Live Surebets 2026",
-    "description": "How a live arbitrage betting scanner finds surebets during matches: speed, bet delays, worked examples in € and how to avoid the classic mistakes.",
-    "keyword": "live arbitrage betting scanner",
-    "category": "Strategy",
-    "ctaLabel": "See live surebets",
-    "intro": "A live arbitrage betting scanner compares in-play odds across bookmakers while matches are running and flags surebets the moment prices diverge. Live surebets appear more often than pre-match because bookmakers react at different speeds to goals, breaks and red cards. They also disappear faster, often within 10–60 seconds, so speed and discipline matter more than ever.",
+    "title": "Skener za live arbitražno klađenje: kako uhvatiti live surebetove tijekom utakmice",
+    "metaTitle": "Skener za live arbitražno klađenje – live surebetovi 2026.",
+    "description": "Kako skener za live arbitražno klađenje pronalazi surebetove tijekom utakmica: brzina, odgoda uplate, primjeri izračuna u € i kako izbjeći klasične pogreške.",
+    "keyword": "skener za live arbitražno klađenje",
+    "category": "Strategija",
+    "ctaLabel": "Pogledajte live surebetove",
+    "intro": "Skener za live arbitražno klađenje uspoređuje live kvote kladionica dok utakmice traju i označava surebetove čim se kvote razilaze. Live surebetova ima više nego prije utakmice jer kladionice različitom brzinom reagiraju na golove, prekide i crvene kartone. Isto tako brže nestaju, često unutar 10–60 sekundi, pa su brzina i disciplina važniji nego ikad.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Live surebets: why in-play creates more opportunities"
+        "text": "Live surebetovi: zašto igra uživo otvara više prilika"
       },
       {
         "type": "p",
-        "text": "Before kick-off, prices move slowly. In play, every event shifts the probabilities instantly. A bookmaker that uses a slower data feed, or suspends markets for a few seconds longer, ends up with a price that no longer matches the rest of the market. That gap is a live surebet."
+        "text": "Prije početka utakmice kvote se mijenjaju sporo. Tijekom igre svaki događaj trenutačno mijenja vjerojatnosti. Kladionica koja koristi sporiji izvor podataka ili tržišta zatvori nekoliko sekundi dulje na kraju ima kvotu koja više ne odgovara ostatku tržišta. Taj razmak je live surebet."
       },
       {
         "type": "ul",
         "items": [
-          "**Tennis:** a break of serve changes the odds dramatically, and bookmakers update at different speeds.",
-          "**Football:** goals, red cards and penalties create brief price gaps in 1X2 and over/under markets.",
-          "**Basketball:** fast scoring runs cause frequent swings in two-way markets."
+          "**Tenis:** break servisa drastično mijenja kvote, a kladionice ih ažuriraju različitom brzinom.",
+          "**Nogomet:** golovi, crveni kartoni i jedanaesterci stvaraju kratke razlike u kvotama na tržištima 1X2 i preko/ispod.",
+          "**Košarka:** brze serije koševa uzrokuju česte oscilacije na tržištima s dva ishoda."
         ]
       },
       {
         "type": "h2",
-        "text": "Sports arbitrage in play: a worked example"
+        "text": "Sportska arbitraža uživo: primjer izračuna"
       },
       {
         "type": "example",
-        "title": "Example: live tennis after a break, total stake €800",
+        "title": "Primjer: live tenis nakon breaka, ukupni ulog €800",
         "rows": [
           [
-            "Player A at bookmaker 1, odds 1.72",
-            "Stake €467.63"
+            "Igrač A u kladionici 1, kvota 1.72",
+            "Ulog €467.63"
           ],
           [
-            "Player B at bookmaker 2, odds 2.42",
-            "Stake €332.37"
+            "Igrač B u kladionici 2, kvota 2.42",
+            "Ulog €332.37"
           ],
           [
             "1/1.72 + 1/2.42",
             "0.581 + 0.413 = 0.995"
           ],
           [
-            "Payout whoever wins",
-            "approx. €804.33"
+            "Isplata bez obzira na pobjednika",
+            "oko €804.33"
           ],
           [
-            "Locked-in profit",
-            "approx. €4.33 (0.5%)"
+            "Zajamčena dobit",
+            "oko €4.33 (0.5%)"
           ]
         ],
-        "note": "Live margins are often smaller than pre-match. A higher bet count compensates, but only if your execution is fast and accurate."
+        "note": "Live marže su često manje nego prije utakmice. Veći broj uplata to nadoknađuje, ali samo ako je vaše izvršavanje brzo i točno."
       },
       {
         "type": "example",
-        "title": "Example: over/under after an early goal, total stake €1,000",
+        "title": "Primjer: preko/ispod nakon ranog gola, ukupni ulog €1,000",
         "rows": [
           [
-            "Over 3.5 goals at bookmaker 1, odds 2.30",
-            "Stake €451.07"
+            "Preko 3.5 gola u kladionici 1, kvota 2.30",
+            "Ulog €451.07"
           ],
           [
-            "Under 3.5 goals at bookmaker 2, odds 1.89",
-            "Stake €548.93"
+            "Ispod 3.5 gola u kladionici 2, kvota 1.89",
+            "Ulog €548.93"
           ],
           [
-            "Sum of inverse odds",
+            "Zbroj inverznih kvota",
             "0.435 + 0.529 = 0.964"
           ],
           [
-            "Payout on every result",
-            "approx. €1,037.47"
+            "Isplata za svaki ishod",
+            "oko €1,037.47"
           ],
           [
-            "Locked-in profit",
-            "approx. €37.47 (3.7%)"
+            "Zajamčena dobit",
+            "oko €37.47 (3.7%)"
           ]
         ]
       },
       {
         "type": "h2",
-        "text": "Bet delays and suspended markets: the live risks"
+        "text": "Odgoda uplate i suspendirana tržišta: live rizici"
       },
       {
         "type": "p",
-        "text": "Live betting adds risks that do not exist pre-match. Bookmakers use a bet delay of 3–10 seconds, during which the price can change or the bet can be rejected."
+        "text": "Klađenje uživo donosi rizike kojih prije utakmice nema. Kladionice primjenjuju odgodu uplate od 3–10 sekundi, a u tom se razdoblju kvota može promijeniti ili se uplata može odbiti."
       },
       {
         "type": "ul",
         "items": [
-          "**Bet delay:** your bet is only accepted after a few seconds. If the price moves, it may be rejected.",
-          "**Suspended markets:** after a goal or a break, markets close briefly. Never place the first leg while the second market is suspended.",
-          "**Partial acceptance:** some bookmakers accept only part of your stake live. Check the confirmation before placing the second leg.",
-          "**Recalculate quickly:** if the second leg moves, recalculate in the [surebet calculator](/en/calculator) and cover at the best price available."
+          "**Odgoda uplate:** vaša se uplata prihvaća tek nakon nekoliko sekundi. Ako se kvota promijeni, može biti odbijena.",
+          "**Suspendirana tržišta:** nakon gola ili breaka tržišta se nakratko zatvaraju. Nikad ne uplaćujte prvu okladu dok je tržište druge oklade suspendirano.",
+          "**Djelomično prihvaćanje:** neke kladionice uživo prihvate samo dio vašeg uloga. Prije uplate druge oklade provjerite potvrdu.",
+          "**Brzo preračunajte:** ako se kvota druge oklade promijeni, preračunajte u [kalkulatoru surebetova](/en/calculator) i pokrijte se po najboljoj dostupnoj kvoti."
         ]
       },
       {
         "type": "tip",
-        "text": "Place the leg at the bookmaker with the longest bet delay first. Once it is accepted, place the second leg at the faster bookmaker."
+        "text": "Prvu okladu uplatite u kladionici s najdužom odgodom uplate. Kad bude prihvaćena, uplatite drugu u bržoj kladionici."
       },
       {
         "type": "h2",
-        "text": "Odds comparison live: what your scanner must do"
+        "text": "Usporedba kvota uživo: što vaš skener mora raditi"
       },
       {
         "type": "ul",
         "items": [
-          "**Update every few seconds:** live prices older than 10 seconds are useless.",
-          "**Show the price age:** so you can see how fresh the surebet is.",
-          "**Filter live and pre-match separately:** live surebets need a different approach and lower stakes at first.",
-          "**Log every bet:** live results vary more, so a [bet tracker](/en/guides/bet-tracker) is essential to see if you are actually profitable."
+          "**Osvježavanje svakih nekoliko sekundi:** live kvote starije od 10 sekundi su beskorisne.",
+          "**Prikaz starosti kvote:** da vidite koliko je surebet svjež.",
+          "**Zasebni filtri za live i prematch:** live surebetovi zahtijevaju drukčiji pristup i na početku manje uloge.",
+          "**Bilježite svaku okladu:** live rezultati više variraju, pa je [tracker oklada](/en/guides/bet-tracker) nužan da biste vidjeli jeste li doista u plusu."
         ]
       },
       {
         "type": "p",
-        "text": "Start pre-match if you are new, and move to live once your routine is solid. Read how to [find surebets automatically](/en/guides/find-surebets-automatically) first. When you are ready, [BetTracker AI](/en) shows live surebets with the stake split calculated in real time."
+        "text": "Ako ste novi, počnite s prematch ponudom, a na live prijeđite kad vam rutina bude čvrsta. Prvo pročitajte kako [automatski pronaći surebetove](/en/guides/find-surebets-automatically). Kad budete spremni, [BetTracker AI](/en) prikazuje live surebetove s podjelom uloga izračunatom u stvarnom vremenu."
       }
     ],
     "faq": [
       {
-        "q": "Are live surebets more profitable than pre-match?",
-        "a": "There are more of them, but margins are often smaller and the execution risk is higher. The net result depends on how fast and accurate you are."
+        "q": "Jesu li live surebetovi isplativiji od prematch surebetova?",
+        "a": "Ima ih više, ali su marže često manje, a rizik izvršenja veći. Neto rezultat ovisi o tome koliko ste brzi i precizni."
       },
       {
-        "q": "How fast do I need to be?",
-        "a": "Live surebets often last 10–60 seconds. You should be able to place both legs within that window, so have accounts funded and logged in beforehand."
+        "q": "Koliko brzi moram biti?",
+        "a": "Live surebetovi često traju 10–60 sekundi. Obje oklade trebate moći uplatiti unutar tog vremena, zato unaprijed uplatite sredstva na račune i prijavite se."
       },
       {
-        "q": "Do bookmakers limit live arbers faster?",
-        "a": "Often yes, because live arbing on slow prices is easy to spot. Mix in normal bets and read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+        "q": "Ograničavaju li kladionice live arbere brže?",
+        "a": "Često da, jer je live arbitražu na sporim kvotama lako uočiti. Miješajte ih s običnim okladama i pročitajte kako [izbjeći ograničenja kladionica](/en/guides/avoid-bookmaker-limits)."
       }
     ]
   },
   "find-value-bets-med-ai": {
-    "title": "Find value bets with AI: how an AI odds scanner spots +EV bets",
-    "metaTitle": "Find Value Bets with AI – AI Odds Scanner 2026",
-    "description": "How to find value bets with AI: how an AI odds scanner calculates fair odds, spots +EV bets and what you can expect, with examples in €.",
-    "keyword": "find value bets with ai",
-    "category": "Strategy",
-    "ctaLabel": "Find value bets with AI",
-    "intro": "To find value bets with AI, you use an AI odds scanner that estimates the fair probability of each outcome, typically from sharp bookmaker prices with the margin removed, and compares it with the odds at soft bookmakers. When the offered odds are higher than the fair odds, the bet has positive expected value (+EV). The AI does the comparison across thousands of markets in seconds.",
+    "title": "Pronađite value bet oklade uz AI: kako AI skener kvota prepoznaje +EV oklade",
+    "metaTitle": "Pronađite value bet oklade uz AI – AI skener kvota 2026",
+    "description": "Kako pronaći value bet oklade uz AI: kako AI skener kvota izračunava fer kvote, prepoznaje +EV oklade i što realno možete očekivati, s primjerima u €.",
+    "keyword": "pronađi value bet uz ai",
+    "category": "Strategija",
+    "ctaLabel": "Pronađi value bet oklade uz AI",
+    "intro": "Da biste pronašli value bet oklade uz AI, koristite AI skener kvota koji procjenjuje fer vjerojatnost svakog ishoda, obično na temelju kvota sharp kladionica iz kojih je uklonjena marža, i uspoređuje je s kvotama u soft kladionicama. Kada su ponuđene kvote više od fer kvota, oklada ima pozitivnu očekivanu vrijednost (+EV). AI tu usporedbu radi na tisućama tržišta u nekoliko sekundi.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Value betting: what +EV actually means"
+        "text": "Value betting: što +EV zapravo znači"
       },
       {
         "type": "p",
-        "text": "A value bet is a bet where the odds are higher than the true probability justifies. You can lose any single value bet, but over hundreds of bets the positive expected value turns into profit."
+        "text": "Value bet je oklada kod koje su kvote više nego što opravdava stvarna vjerojatnost. Svaku pojedinu value bet okladu možete izgubiti, ali kroz stotine oklada pozitivna očekivana vrijednost pretvara se u dobit."
       },
       {
         "type": "example",
-        "title": "Example: expected value on a single bet",
+        "title": "Primjer: očekivana vrijednost jedne oklade",
         "rows": [
           [
-            "Fair probability",
-            "50% (fair odds 2.00)"
+            "Fer vjerojatnost",
+            "50% (fer kvota 2.00)"
           ],
           [
-            "Offered odds at soft bookmaker",
+            "Ponuđena kvota u soft kladionici",
             "2.10"
           ],
           [
-            "Expected value",
+            "Očekivana vrijednost",
             "0.50 × 2.10 − 1 = +5%"
           ],
           [
-            "Stake €50",
-            "Expected profit €2.50 per bet"
+            "Ulog €50",
+            "Očekivana dobit €2.50 po okladi"
           ],
           [
-            "300 bets of €50 (€15,000 turnover)",
-            "Expected profit approx. €750"
+            "300 oklada od €50 (promet €15,000)",
+            "Očekivana dobit oko €750"
           ]
         ],
-        "note": "Expected profit is an average. Actual results swing above and below it, especially over a small number of bets."
+        "note": "Očekivana dobit je prosjek. Stvarni rezultati osciliraju iznad i ispod nje, osobito kod malog broja oklada."
       },
       {
         "type": "h2",
-        "text": "AI odds scanner: how fair odds are calculated"
+        "text": "AI skener kvota: kako se izračunavaju fer kvote"
       },
       {
         "type": "p",
-        "text": "Sharp bookmakers have low margins and adjust quickly to professional money, so their prices are the best estimate of the true probability. The AI removes the margin from the sharp price and calculates fair odds."
+        "text": "Sharp kladionice imaju niske marže i brzo se prilagođavaju profesionalnom novcu, pa su njihove kvote najbolja procjena stvarne vjerojatnosti. AI uklanja maržu iz sharp kvote i izračunava fer kvotu."
       },
       {
         "type": "example",
-        "title": "Example: removing the margin from sharp odds",
+        "title": "Primjer: uklanjanje marže iz sharp kvota",
         "rows": [
           [
-            "Sharp odds",
+            "Sharp kvote",
             "1.95 / 1.95"
           ],
           [
-            "Implied probabilities",
+            "Implicirane vjerojatnosti",
             "51.28% + 51.28% = 102.56%"
           ],
           [
-            "Fair probability after margin removal",
+            "Fer vjerojatnost nakon uklanjanja marže",
             "50% / 50%"
           ],
           [
-            "Fair odds",
+            "Fer kvote",
             "2.00 / 2.00"
           ]
         ]
@@ -2247,172 +2247,172 @@
       {
         "type": "ul",
         "items": [
-          "**Market matching:** AI recognises identical events and lines across bookmakers.",
-          "**Speed:** prices are recalculated every few seconds as markets move.",
-          "**Filtering:** the scanner ignores tiny edges and suspicious outliers that are likely to be voided."
+          "**Povezivanje tržišta:** AI prepoznaje identične događaje i linije u različitim kladionicama.",
+          "**Brzina:** kvote se preračunavaju svakih nekoliko sekundi dok se tržišta mijenjaju.",
+          "**Filtriranje:** skener ignorira sitne prednosti i sumnjiva odstupanja koja će vjerojatno biti poništena."
         ]
       },
       {
         "type": "h2",
-        "text": "AI sports betting: value bets vs surebets"
+        "text": "AI i sportsko klađenje: value bet oklade nasuprot surebetovima"
       },
       {
         "type": "ul",
         "items": [
-          "**Surebets:** guaranteed profit on every result, but small margins and fast limits.",
-          "**Value bets:** single bets with higher expected profit, but with variance and losing streaks.",
-          "**Combine them:** many bettors use surebets for steady profit and value bets to increase ROI."
+          "**Surebetovi:** zajamčena dobit na svaki ishod, ali male marže i brza ograničenja računa.",
+          "**Value bet oklade:** pojedinačne oklade s većom očekivanom dobiti, ali s varijancom i nizovima poraza.",
+          "**Kombinirajte ih:** mnogi klađenjem se bave tako da surebetove koriste za stabilnu dobit, a value bet oklade za veći ROI."
         ]
       },
       {
         "type": "p",
-        "text": "Read the full comparison of [value betting vs surebets](/en/guides/value-bets-vs-surebets)."
+        "text": "Pročitajte cijelu usporedbu: [value betting nasuprot surebetovima](/en/guides/value-bets-vs-surebets)."
       },
       {
         "type": "h2",
-        "text": "AI betting in practice: rules that protect you"
+        "text": "AI klađenje u praksi: pravila koja vas štite"
       },
       {
         "type": "ul",
         "items": [
-          "**Stake 1–2% of your bankroll** per value bet. See [bankroll management](/en/guides/bankroll-management).",
-          "**Minimum edge of 2–3%** to leave room for errors in the fair odds estimate.",
-          "**Track closing odds:** beating the closing line consistently is the best sign that your bets have value.",
-          "**Judge after hundreds of bets**, never after one week."
+          "**Ulažite 1–2% bankrolla** po value bet okladi. Pogledajte [upravljanje bankrollom](/en/guides/bankroll-management).",
+          "**Minimalna prednost od 2–3%** kako bi ostalo mjesta za pogreške u procjeni fer kvote.",
+          "**Pratite zatvarajuće kvote:** dosljedno nadmašivanje zatvarajuće linije najbolji je znak da vaše oklade imaju vrijednost.",
+          "**Prosuđujte nakon stotina oklada**, nikada nakon jednog tjedna."
         ]
       },
       {
         "type": "tip",
-        "text": "Log every value bet in a [bet tracker](/en/guides/bet-tracker). After 300–500 bets, your ROI shows whether the edge is real."
+        "text": "Zapisujte svaku value bet okladu u [bet trackeru](/en/guides/bet-tracker). Nakon 300–500 oklada vaš ROI pokazat će je li prednost stvarna."
       },
       {
         "type": "p",
-        "text": "[BetTracker AI](/en) uses AI to scan the bookmakers, calculate fair odds and show value bets and surebets in real time."
+        "text": "[BetTracker AI](/en) koristi AI za skeniranje kladionica, izračun fer kvota i prikaz value bet oklada i surebetova u stvarnom vremenu."
       }
     ],
     "faq": [
       {
-        "q": "Does AI guarantee profit on value bets?",
-        "a": "No. AI finds bets with positive expected value, but individual bets can lose. Profit comes over a large number of bets."
+        "q": "Jamči li AI dobit na value bet okladama?",
+        "a": "Ne. AI pronalazi oklade s pozitivnom očekivanom vrijednošću, ali pojedinačne oklade mogu izgubiti. Dobit dolazi kroz velik broj oklada."
       },
       {
-        "q": "How much can I make with value betting?",
-        "a": "A realistic long-term ROI is often 2–5% of turnover, depending on edge, bookmakers and how long your accounts stay open."
+        "q": "Koliko se može zaraditi value bettingom?",
+        "a": "Realan dugoročni ROI često iznosi 2–5% prometa, ovisno o prednosti, kladionicama i tome koliko dugo vaši računi ostanu otvoreni."
       },
       {
-        "q": "Do bookmakers limit value bettors?",
-        "a": "Yes, soft bookmakers often limit customers who beat the closing line. Read how to [avoid bookmaker limits](/en/guides/avoid-bookmaker-limits)."
+        "q": "Ograničavaju li kladionice value bettere?",
+        "a": "Da, soft kladionice često ograničavaju klijente koji nadmašuju zatvarajuću liniju. Pročitajte kako [izbjeći ograničenja kladionica](/en/guides/avoid-bookmaker-limits)."
       }
     ]
   },
   "bedste-odds-vaerktoej-danmark": {
-    "title": "Best sports betting tools in 2026: AI odds scanners and trackers",
-    "metaTitle": "Best Sports Betting Tools 2026 – AI & Odds Scanners",
-    "description": "The best sports betting tools in 2026: AI odds scanners, odds comparison, surebet calculators and bet trackers, what they cost in € and what to choose.",
-    "keyword": "best sports betting tools",
-    "category": "Strategy",
-    "ctaLabel": "Try BetTracker AI",
-    "intro": "The best sports betting tools are an AI odds scanner that finds surebets and value bets, odds comparison across many bookmakers, a surebet calculator for exact stakes and a bet tracker that measures your ROI. Choose betting software that covers the bookmakers you use, updates prices every few seconds and pays for itself with a realistic turnover.",
+    "title": "Najbolji alati za sportsko klađenje u 2026.: AI skeneri kvota i trackeri",
+    "metaTitle": "Najbolji alati za sportsko klađenje 2026. – AI i skeneri kvota",
+    "description": "Najbolji alati za sportsko klađenje u 2026.: AI skeneri kvota, usporedba kvota, kalkulatori surebetova i bet trackeri, koliko koštaju u € i što odabrati.",
+    "keyword": "najbolji alati za sportsko klađenje",
+    "category": "Strategija",
+    "ctaLabel": "Isprobajte BetTracker AI",
+    "intro": "Najbolji alati za sportsko klađenje su AI skener kvota koji pronalazi surebetove i value bet oklade, usporedba kvota u mnogim kladionicama, kalkulator surebetova za točne uloge i bet tracker koji mjeri vaš ROI. Odaberite softver za klađenje koji pokriva kladionice koje koristite, osvježava kvote svakih nekoliko sekundi i isplati se uz realan promet.",
     "blocks": [
       {
         "type": "h2",
-        "text": "The betting tools every serious bettor needs"
+        "text": "Alati za klađenje koje treba svaki ozbiljan kladioničar"
       },
       {
         "type": "ul",
         "items": [
-          "**AI odds scanner:** finds surebets and value bets automatically across bookmakers.",
-          "**Odds comparison:** shows the best available price for every outcome.",
-          "**Surebet calculator:** splits the stake so the profit is the same on every result. Try the [surebet calculator](/en/calculator).",
-          "**Bet tracker:** logs every bet and calculates ROI. See [bet tracker](/en/guides/bet-tracker)."
+          "**AI skener koeficijenata:** automatski pronalazi surebetove i value betove kod različitih kladionica.",
+          "**Usporedba koeficijenata:** prikazuje najbolji dostupni koeficijent za svaki ishod.",
+          "**Surebet kalkulator:** raspoređuje ulog tako da dobit bude ista bez obzira na rezultat. Isprobajte [surebet kalkulator](/en/calculator).",
+          "**Bet tracker:** bilježi svaku okladu i izračunava ROI. Pogledajte [bet tracker](/en/guides/bet-tracker)."
         ]
       },
       {
         "type": "h2",
-        "text": "AI odds scanner vs manual odds comparison"
+        "text": "AI skener koeficijenata ili ručna usporedba koeficijenata"
       },
       {
         "type": "p",
-        "text": "Manual odds comparison finds the best price for one match. An AI odds scanner compares every market at every bookmaker continuously and only shows the combinations where you have an edge."
+        "text": "Ručnom usporedbom koeficijenata pronaći ćete najbolju kvotu za jednu utakmicu. AI skener koeficijenata neprestano uspoređuje sva tržišta kod svih kladionica i prikazuje samo kombinacije u kojima imate prednost."
       },
       {
         "type": "ul",
         "items": [
-          "**Coverage:** thousands of markets instead of a handful.",
-          "**Speed:** surebets are flagged within seconds, before prices are corrected.",
-          "**Accuracy:** matching and stake calculations are done for you."
+          "**Pokrivenost:** tisuće tržišta umjesto šačice.",
+          "**Brzina:** surebetovi se označe u roku od nekoliko sekundi, prije nego što se koeficijenti isprave.",
+          "**Točnost:** uparivanje oklada i izračun uloga obavljaju se umjesto vas."
         ]
       },
       {
         "type": "h2",
-        "text": "Betting software: what it costs and when it pays off"
+        "text": "Softver za klađenje: koliko košta i kada se isplati"
       },
       {
         "type": "p",
-        "text": "A tool only makes sense if the profit it finds is larger than its price. Calculate the turnover you need to break even."
+        "text": "Alat ima smisla samo ako je dobit koju pronađe veća od njegove cijene. Izračunajte koliki vam je promet potreban da izađete na nulu."
       },
       {
         "type": "example",
-        "title": "Example: break-even for a €33 per month tool",
+        "title": "Primjer: točka isplativosti za alat od €33 mjesečno",
         "rows": [
           [
-            "Subscription",
-            "approx. €33 per month"
+            "Pretplata",
+            "oko €33 mjesečno"
           ],
           [
-            "Average ROI on surebets",
+            "Prosječni ROI na surebetovima",
             "2%"
           ],
           [
-            "Turnover needed to break even",
+            "Promet potreban za izlazak na nulu",
             "€33 / 2% = €1,650"
           ],
           [
-            "Typical turnover (60 surebets × €400)",
+            "Tipičan promet (60 surebetova × €400)",
             "€24,000"
           ],
           [
-            "Profit after subscription",
+            "Dobit nakon pretplate",
             "€480 − €33 = €447"
           ]
         ],
-        "note": "Prices are approximate euro amounts. BetTracker AI costs from approx. €20 per month for Basic and approx. €33 for Premium."
+        "note": "Cijene su okvirni iznosi u eurima. BetTracker AI košta od oko €20 mjesečno za paket Basic i oko €33 za paket Premium."
       },
       {
         "type": "h2",
-        "text": "How to choose the best sports betting tools"
+        "text": "Kako odabrati najbolje alate za sportsko klađenje"
       },
       {
         "type": "ul",
         "items": [
-          "**Bookmaker coverage:** the tool must include the bookmakers you can actually use.",
-          "**Update frequency:** a few seconds for pre-match, faster for [live surebets](/en/guides/live-arbitrage-betting-scanner).",
-          "**Filters:** sport, market, bookmaker and minimum profit.",
-          "**Built-in tracking:** surebets placed from the scanner should be tracked automatically.",
-          "**Fair price:** compare monthly cost with your expected turnover. See the [surebet tool comparison](/en/guides/surebet-tool-comparison)."
+          "**Pokrivenost kladionica:** alat mora obuhvaćati kladionice koje stvarno možete koristiti.",
+          "**Učestalost osvježavanja:** nekoliko sekundi za prematch, a brže za [live surebetove](/en/guides/live-arbitrage-betting-scanner).",
+          "**Filtri:** sport, tržište, kladionica i minimalna dobit.",
+          "**Ugrađeno praćenje:** surebetovi uplaćeni putem skenera trebali bi se pratiti automatski.",
+          "**Poštena cijena:** usporedite mjesečni trošak s očekivanim prometom. Pogledajte [usporedbu surebet alata](/en/guides/surebet-tool-comparison)."
         ]
       },
       {
         "type": "tip",
-        "text": "Start with one tool that combines scanner, calculator and tracker. Juggling separate tools costs time, and time is what surebets do not give you."
+        "text": "Počnite s jednim alatom koji objedinjuje skener, kalkulator i tracker. Žongliranje s odvojenim alatima troši vrijeme, a vrijeme je upravo ono što vam surebetovi ne daju."
       },
       {
         "type": "p",
-        "text": "[BetTracker AI](/en) combines an AI odds scanner, odds comparison, a surebet calculator and a bet tracker in one platform. Read how to [find value bets with AI](/en/guides/find-value-bets-with-ai) and [find surebets automatically](/en/guides/find-surebets-automatically)."
+        "text": "[BetTracker AI](/en) objedinjuje AI skener koeficijenata, usporedbu koeficijenata, surebet kalkulator i bet tracker na jednoj platformi. Pročitajte kako [pronaći value betove uz AI](/en/guides/find-value-bets-with-ai) i [automatski pronaći surebetove](/en/guides/find-surebets-automatically)."
       }
     ],
     "faq": [
       {
-        "q": "Which betting tool should I start with?",
-        "a": "A surebet scanner with a built-in calculator and tracker. It covers finding, placing and measuring in one place."
+        "q": "S kojim alatom za klađenje trebam početi?",
+        "a": "Sa surebet skenerom s ugrađenim kalkulatorom i trackerom. Tako na jednom mjestu pokrivate pronalaženje, uplatu i mjerenje rezultata."
       },
       {
-        "q": "Are free betting tools good enough?",
-        "a": "Free calculators and trackers are fine. Free odds scanners usually show delayed or limited surebets, which are often gone by the time you act."
+        "q": "Jesu li besplatni alati za klađenje dovoljno dobri?",
+        "a": "Besplatni kalkulatori i trackeri sasvim su u redu. Besplatni skeneri koeficijenata obično prikazuju zakašnjele ili ograničene surebetove, koji često nestanu prije nego što stignete reagirati."
       },
       {
-        "q": "Is betting software legal?",
-        "a": "Using tools to compare odds and track bets is legal. Automated bet placing usually breaks bookmaker terms. See [are surebets legal?](/en/guides/are-surebets-legal)"
+        "q": "Je li softver za klađenje legalan?",
+        "a": "Korištenje alata za usporedbu koeficijenata i praćenje oklada legalno je. Automatsko uplaćivanje oklada obično krši uvjete kladionica. Pogledajte [jesu li surebetovi legalni?](/en/guides/are-surebets-legal)"
       }
     ]
   }

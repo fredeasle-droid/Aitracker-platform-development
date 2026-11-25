@@ -1,427 +1,427 @@
 {
   "sport/basketball": {
-    "title": "Surebets on basketball",
-    "metaTitle": "Basketball surebets – guaranteed profit on NBA and Euroleague",
-    "description": "Find basketball surebets on NBA, Euroleague and European leagues. Points markets and handicaps create numerous arbitrage opportunities with licensed bookmakers.",
-    "keyword": "basketball surebets",
-    "intro": "Basketball offers numerous surebets on points totals and handicaps. The NBA features extensive betting markets, and bookmakers adjust their lines at different speeds, creating arbitrage opportunities.",
+    "title": "Surebetovi na košarku",
+    "metaTitle": "Košarkaški surebetovi – zajamčena dobit na NBA i Euroligi",
+    "description": "Pronađite košarkaške surebetove na NBA, Euroligi i europskim ligama. Tržišta poena i hendikepi stvaraju brojne prilike za arbitražu kod licenciranih kladionica.",
+    "keyword": "košarkaški surebetovi",
+    "intro": "Košarka nudi brojne surebetove na ukupne poene i hendikepe. NBA ima opsežnu ponudu tržišta, a kladionice prilagođavaju svoje linije različitom brzinom, što stvara prilike za arbitražu.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Popular markets for basketball arbing"
+        "text": "Popularna tržišta za košarkašku arbitražu"
       },
       {
         "type": "ul",
         "items": [
-          "Match winner including overtime: two outcomes and straightforward calculation.",
-          "Over/under total points, for example over or under 215.5 points.",
-          "Points handicap, where the favourite must win by a specified margin.",
-          "Player-specific markets such as points scored, rebounds and assists."
+          "Pobjednik utakmice uključujući produžetke: dva ishoda i jednostavan izračun.",
+          "Over/under ukupnih poena, na primjer preko ili ispod 215.5 poena.",
+          "Hendikep na poene, gdje favorit mora pobijediti uz zadanu razliku.",
+          "Tržišta na pojedine igrače, poput postignutih poena, skokova i asistencija."
         ]
       },
       {
         "type": "h2",
-        "text": "Middling on points totals"
+        "text": "Middling na ukupnim poenima"
       },
       {
         "type": "p",
-        "text": "With points markets, two bookmakers may offer different lines, for example over 214.5 at one and under 216.5 at another. If the match finishes on exactly 215 or 216 points, you win both bets. This is called a 'middle' and represents an additional profit opportunity in basketball."
+        "text": "Kod tržišta poena dvije kladionice mogu ponuditi različite linije, na primjer preko 214.5 kod jedne i ispod 216.5 kod druge. Ako utakmica završi s točno 215 ili 216 poena, dobivate obje oklade. To se zove 'middle' i predstavlja dodatnu priliku za zaradu u košarci."
       },
       {
         "type": "tip",
-        "text": "Check whether overtime counts. In basketball it almost always does, but not at all bookmakers on every market."
+        "text": "Provjerite računaju li se produžeci. U košarci se gotovo uvijek računaju, ali ne kod svih kladionica na svakom tržištu."
       }
     ],
     "faq": [
       {
-        "q": "Does overtime count in basketball surebets?",
-        "a": "For most markets yes, but always check the specific market rules at each bookmaker. A market excluding overtime cannot be combined with one that includes overtime for arbitrage purposes."
+        "q": "Računaju li se produžeci kod košarkaških surebetova?",
+        "a": "Na većini tržišta da, no uvijek provjerite pravila konkretnog tržišta kod svake kladionice. Tržište koje isključuje produžetke ne može se kombinirati s tržištem koje ih uključuje ako želite arbitražu."
       },
       {
-        "q": "What time are NBA games usually played?",
-        "a": "NBA games are typically played during the evening in North America. Depending on your time zone, many surebets may appear several hours before tip-off, giving you time to place both sides of the arbitrage bet."
+        "q": "U koje se vrijeme obično igraju NBA utakmice?",
+        "a": "NBA utakmice obično se igraju uvečer po sjevernoameričkom vremenu, što je u Hrvatskoj kasno navečer ili tijekom noći. Mnogi se surebetovi pojave nekoliko sati prije početka utakmice, pa imate vremena uplatiti obje strane arbitražne oklade."
       }
     ]
   },
   "sport/ishockey": {
-    "title": "Ice hockey surebets",
-    "metaTitle": "Ice hockey surebets – guaranteed profit on NHL & leagues",
-    "description": "Ice hockey surebets from NHL, SHL and other leagues. Learn the difference between regulation-time and winner markets, and find guaranteed profit opportunities.",
-    "keyword": "ice hockey surebets",
-    "intro": "Ice hockey is an underrated sport for surebets. Many bookmakers price the Nordic leagues differently, and the distinction between regulation-time and winner markets creates additional opportunities for arbitrage betting.",
+    "title": "Surebetovi na hokeju na ledu",
+    "metaTitle": "Surebetovi na hokeju na ledu – zajamčena zarada na NHL-u i drugim ligama",
+    "description": "Surebetovi na hokeju na ledu iz NHL-a, SHL-a i drugih liga. Saznajte razliku između tržišta regularnog vremena i tržišta pobjednika te pronađite prilike za zajamčenu zaradu.",
+    "keyword": "surebetovi na hokeju na ledu",
+    "intro": "Hokej na ledu podcijenjen je sport kad su u pitanju surebetovi. Mnoge kladionice drukčije određuju koeficijente za nordijske lige, a razlika između tržišta regularnog vremena i tržišta pobjednika otvara dodatne prilike za klađenje na arbitražu.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Regulation time or including overtime?"
+        "text": "Regularno vrijeme ili uključujući produžetke?"
       },
       {
         "type": "p",
-        "text": "In ice hockey, there is both a 1X2 market for regulation time only and a winner market including overtime and shootouts. These two must never be mixed in the same surebet. Always check which market you are betting on with each bookmaker before placing your bets."
+        "text": "U hokeju na ledu postoji tržište 1X2 samo za regularno vrijeme i tržište pobjednika koje uključuje produžetke i raspucavanje. Ta se dva tržišta nikada ne smiju miješati u istom surebetu. Prije klađenja uvijek provjerite na kojem tržištu se kladite u svakoj kladionici."
       },
       {
         "type": "h2",
-        "text": "Good leagues for ice hockey surebets"
+        "text": "Dobre lige za surebetove na hokeju na ledu"
       },
       {
         "type": "ul",
         "items": [
-          "NHL: many matches and high maximum stakes.",
-          "SHL and Liiga: popular in the Nordic region and priced differently by bookmakers.",
-          "Domestic leagues: smaller leagues where bookmakers often disagree on pricing."
+          "NHL: puno utakmica i visoki maksimalni ulozi.",
+          "SHL i Liiga: popularne u nordijskoj regiji, a kladionice im određuju različite koeficijente.",
+          "Domaće lige: manje lige u kojima se kladionice često ne slažu oko koeficijenata."
         ]
       },
       {
         "type": "tip",
-        "text": "Ice hockey often offers high profit per surebet, but lower maximum stakes than football."
+        "text": "Hokej na ledu često nudi visoku zaradu po surebetu, ali niže maksimalne uloge nego nogomet."
       }
     ],
     "faq": [
       {
-        "q": "Can you combine 1X2 and winner including overtime in an ice hockey surebet?",
-        "a": "No. These are two different markets. If you combine them, you can lose both bets if the match goes to overtime. Always ensure all legs of your arbitrage bet are on the same market type."
+        "q": "Može li se u surebetu na hokeju na ledu kombinirati 1X2 i pobjednik uključujući produžetke?",
+        "a": "Ne. To su dva različita tržišta. Ako ih kombinirate, možete izgubiti obje oklade ako utakmica ode u produžetak. Uvijek pazite da su sve oklade u vašoj arbitraži na istoj vrsti tržišta."
       },
       {
-        "q": "Are there surebets on smaller ice hockey leagues?",
-        "a": "Yes. Bookmakers often price smaller domestic leagues differently, so arbitrage opportunities arise regularly. Check that bookmakers are licensed to operate in your country before betting."
+        "q": "Postoje li surebetovi na manjim hokejaškim ligama?",
+        "a": "Da. Kladionice često drukčije određuju koeficijente za manje domaće lige pa se prilike za arbitražu redovito pojavljuju. Prije klađenja provjerite imaju li kladionice dozvolu za rad u Hrvatskoj."
       }
     ]
   },
   "sport/fodbold": {
-    "title": "Surebets on football",
-    "metaTitle": "Football surebets – find guaranteed profit on matches",
-    "description": "Find surebets on football in real time. BetTrackerAI scans odds across the Premier League, Champions League and hundreds of other leagues at licensed bookmakers.",
-    "keyword": "football surebets",
-    "intro": "Football produces more surebets than any other sport. Matches are played around the clock, and each fixture offers hundreds of markets that bookmakers price differently.",
+    "title": "Surebetovi na nogometu",
+    "metaTitle": "Surebetovi na nogometu – pronađite zajamčenu zaradu na utakmicama",
+    "description": "Pronađite surebetove na nogometu u stvarnom vremenu. BetTrackerAI skenira koeficijente u Premier ligi, Ligi prvaka i stotinama drugih liga u licenciranim kladionicama.",
+    "keyword": "surebetovi na nogometu",
+    "intro": "Nogomet donosi više surebetova od bilo kojeg drugog sporta. Utakmice se igraju non-stop, a svaki susret nudi stotine tržišta na kojima kladionice određuju različite koeficijente.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why football produces so many surebets"
+        "text": "Zašto nogomet donosi toliko surebetova"
       },
       {
         "type": "p",
-        "text": "Bookmakers must price thousands of football matches every week, from the Champions League down to lower divisions. The smaller the league, the less time bookmakers devote to it, and the greater the likelihood of pricing discrepancies that create arbitrage opportunities."
+        "text": "Kladionice svaki tjedan moraju odrediti koeficijente za tisuće nogometnih utakmica, od Lige prvaka do niželigaša. Što je liga manja, to joj kladionice posvećuju manje vremena i veća je vjerojatnost odstupanja u koeficijentima koja stvaraju prilike za arbitražu."
       },
       {
         "type": "h2",
-        "text": "The most commonly used markets"
+        "text": "Najčešće korištena tržišta"
       },
       {
         "type": "ul",
         "items": [
-          "1X2: home win, draw and away win. Three outcomes, so you need three bets.",
-          "Over/under goals, for example over or under 2.5 goals. Only two outcomes and often high liquidity.",
-          "Asian handicap: two outcomes and low margin, but read the settlement rules for half and whole goals carefully.",
-          "Both teams to score: yes or no. A straightforward market with two outcomes."
+          "1X2: pobjeda domaćina, neriješeno i pobjeda gosta. Tri ishoda, pa trebate tri oklade.",
+          "Preko/ispod golova, na primjer preko ili ispod 2.5 gola. Samo dva ishoda i često visoka likvidnost.",
+          "Azijski hendikep: dva ishoda i niska marža, ali pažljivo pročitajte pravila obračuna za polovične i cijele golove.",
+          "Oba tima daju gol: da ili ne. Jednostavno tržište s dva ishoda."
         ]
       },
       {
         "type": "tip",
-        "text": "Always check whether the market applies to normal time only. Extra time and penalties rarely count in football surebets."
+        "text": "Uvijek provjerite vrijedi li tržište samo za regularno vrijeme. Produžeci i jedanaesterci rijetko se računaju u nogometnim surebetovima."
       },
       {
         "type": "h2",
-        "text": "When do surebets arise?"
+        "text": "Kada nastaju surebetovi?"
       },
       {
         "type": "p",
-        "text": "Many football surebets emerge when team line-ups are announced roughly an hour before kick-off. Some bookmakers adjust quickly, others react more slowly, and pricing differences appear in that window."
+        "text": "Mnogi nogometni surebetovi nastaju kad se objave početne postave, otprilike sat vremena prije početka utakmice. Neke kladionice brzo prilagode koeficijente, druge reagiraju sporije pa se u tom razdoblju pojave razlike u koeficijentima."
       }
     ],
     "faq": [
       {
-        "q": "Which football leagues have the most surebets?",
-        "a": "Smaller leagues often offer higher profit percentages, but major leagues like the Premier League and Champions League have more markets and higher maximum stakes."
+        "q": "Koje nogometne lige imaju najviše surebetova?",
+        "a": "Manje lige često nude veće postotke zarade, ali velike lige poput Premier lige i Lige prvaka imaju više tržišta i veće maksimalne uloge."
       },
       {
-        "q": "Can you place surebets on live football matches?",
-        "a": "Yes, but live odds change very quickly. It requires you to place both bets within a few seconds."
+        "q": "Mogu li se surebetovi igrati na nogometnim utakmicama uživo?",
+        "a": "Da, ali se koeficijenti uživo mijenjaju vrlo brzo. Zato morate obje oklade odigrati u roku od nekoliko sekundi."
       }
     ]
   },
   "sport/esport": {
-    "title": "Surebets on esports",
-    "metaTitle": "Esports surebets – arbitrage betting on CS2, LoL & Dota 2",
-    "description": "Esports is one of the fastest-growing markets for surebets. Find arbitrage betting opportunities on CS2, League of Legends and Dota 2 at licensed bookmakers.",
-    "keyword": "esports surebets",
-    "intro": "Esports features large price differences between bookmakers. The market is relatively new, many bookmakers have fewer specialists in the field, and odds often move significantly before match start.",
+    "title": "Surebetovi na esportu",
+    "metaTitle": "Surebetovi na esportu – klađenje na arbitražu na CS2, LoL i Dota 2",
+    "description": "Esport je jedno od najbrže rastućih tržišta za surebetove. Pronađite prilike za klađenje na arbitražu na CS2, League of Legends i Dota 2 u licenciranim kladionicama.",
+    "keyword": "surebetovi na esportu",
+    "intro": "U esportu postoje velike razlike u koeficijentima među kladionicama. Tržište je relativno novo, mnoge kladionice imaju manje stručnjaka za to područje, a koeficijenti se prije početka meča često znatno mijenjaju.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Why esports yields high profit"
+        "text": "Zašto esport donosi visoku zaradu"
       },
       {
         "type": "p",
-        "text": "Bookmakers dedicate fewer resources to esports than to football, and news about team line-ups spreads quickly within the community. This creates larger odds differences and often higher profit per surebet."
+        "text": "Kladionice esportu posvećuju manje resursa nego nogometu, a vijesti o postavama timova brzo se šire unutar zajednice. Tako nastaju veće razlike u koeficijentima i često viša zarada po surebetu."
       },
       {
         "type": "h2",
-        "text": "Popular games for arbitrage betting"
+        "text": "Popularne igre za klađenje na arbitražu"
       },
       {
         "type": "ul",
         "items": [
-          "Counter-Strike 2: the most matches and markets for map and round handicaps.",
-          "League of Legends: major tournaments with stable markets.",
-          "Dota 2: high odds differences, but lower maximum stakes."
+          "Counter-Strike 2: najviše mečeva i tržišta za hendikepe na mape i runde.",
+          "League of Legends: veliki turniri sa stabilnim tržištima.",
+          "Dota 2: velike razlike u koeficijentima, ali niži maksimalni ulozi."
         ]
       },
       {
         "type": "tip",
-        "text": "Watch out for postponed matches. Bookmakers have different rules for how long a bet remains valid."
+        "text": "Pazite na odgođene mečeve. Kladionice imaju različita pravila o tome koliko dugo oklada ostaje valjana."
       }
     ],
     "faq": [
       {
-        "q": "Are esports good for surebets?",
-        "a": "Yes, the profit is often higher than in traditional sports. However, the maximum stakes are typically lower."
+        "q": "Je li esport dobar za surebetove?",
+        "a": "Da, zarada je često veća nego u tradicionalnim sportovima. No maksimalni ulozi obično su niži."
       },
       {
-        "q": "Which bookmakers offer esports?",
-        "a": "Most major licensed bookmakers offer esports, especially CS2 and League of Legends. Check availability and licence in your country."
+        "q": "Koje kladionice nude esport?",
+        "a": "Većina velikih licenciranih kladionica nudi esport, osobito CS2 i League of Legends. Provjerite dostupnost i dozvolu za rad u Hrvatskoj."
       }
     ]
   },
   "sport/tennis": {
-    "title": "Surebets on Tennis",
-    "metaTitle": "Tennis Surebets – Guaranteed Profit on ATP, WTA & Challenger",
-    "description": "Tennis is ideal for surebets: only two outcomes and year-round matches. Find tennis arbitrage opportunities on ATP, WTA and Challenger tournaments worldwide.",
-    "keyword": "tennis surebets",
-    "intro": "Tennis is the preferred sport for many sure bettors. There are only two outcomes, no draw, and tournaments take place almost every single day of the year.",
+    "title": "Surebetovi na tenisu",
+    "metaTitle": "Surebetovi na tenisu – zajamčena zarada na ATP, WTA i Challenger turnirima",
+    "description": "Tenis je idealan za surebetove: samo dva ishoda i mečevi tijekom cijele godine. Pronađite prilike za arbitražu na ATP, WTA i Challenger turnirima diljem svijeta.",
+    "keyword": "tenis surebetovi",
+    "intro": "Tenis je omiljeni sport mnogih surebet igrača. Postoje samo dva ishoda, nema neriješenog rezultata, a turniri se održavaju gotovo svaki dan u godini.",
     "blocks": [
       {
         "type": "h2",
-        "text": "The Advantages of Tennis"
+        "text": "Prednosti tenisa"
       },
       {
         "type": "ul",
         "items": [
-          "Only two outcomes, so you only need to place two bets.",
-          "No draw, which makes the calculation simple.",
-          "Plenty of matches at Challenger and ITF level, where bookmakers often disagree.",
-          "Matches around the clock due to tournaments in different time zones."
+          "Samo dva ishoda, pa trebate uplatiti samo dvije oklade.",
+          "Nema neriješenog rezultata, zbog čega je izračun jednostavan.",
+          "Mnogo mečeva na Challenger i ITF razini, gdje se kladionice često razilaze u koeficijentima.",
+          "Mečevi u svako doba dana zahvaljujući turnirima u različitim vremenskim zonama."
         ]
       },
       {
         "type": "h2",
-        "text": "Beware of Retired Matches"
+        "text": "Pazite na mečeve s predajom"
       },
       {
         "type": "p",
-        "text": "The biggest risk in tennis is when a player retires from a match. Bookmakers have different rules: some void the bet, others settle it if the first set has been completed. If your two bookmakers use different rules, you could lose both bets."
+        "text": "Najveći rizik u tenisu nastaje kada igrač preda meč. Kladionice imaju različita pravila: neke poništavaju okladu, a druge je obračunavaju ako je završen prvi set. Ako vaše dvije kladionice primjenjuju različita pravila, mogli biste izgubiti obje oklade."
       },
       {
         "type": "tip",
-        "text": "Read the bookmakers' rules for retired tennis matches before placing your first tennis surebet."
+        "text": "Prije prvog tenis surebeta pročitajte pravila kladionica za mečeve u kojima je igrač predao meč."
       },
       {
         "type": "h2",
-        "text": "Other Markets"
+        "text": "Ostala tržišta"
       },
       {
         "type": "p",
-        "text": "Besides the match winner, there are surebets on total games, set handicaps and individual set winners. These markets often have lower maximum stakes."
+        "text": "Osim pobjednika meča, surebetovi postoje i na ukupan broj gemova, hendikep u setovima i pobjednike pojedinih setova. Na tim tržištima maksimalni ulozi često su niži."
       }
     ],
     "faq": [
       {
-        "q": "Is tennis good for surebets?",
-        "a": "Yes. Only two outcomes and plenty of matches make tennis one of the best sports for surebets, especially for beginners."
+        "q": "Je li tenis dobar za surebetove?",
+        "a": "Da. Samo dva ishoda i velik broj mečeva čine tenis jednim od najboljih sportova za surebetove, osobito za početnike."
       },
       {
-        "q": "What happens if a player retires?",
-        "a": "It depends on the bookmaker. Some void all bets, others settle them if a certain number of sets have been played. Check the rules at both bookmakers."
+        "q": "Što se događa ako igrač preda meč?",
+        "a": "Ovisi o kladionici. Neke poništavaju sve oklade, a druge ih obračunavaju ako je odigran određeni broj setova. Provjerite pravila u obje kladionice."
       }
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebets at Bet365",
-    "metaTitle": "Bet365 Surebets – Find Guaranteed Profit Opportunities",
-    "description": "Find surebets at Bet365 in real time. BetTrackerAI compares Bet365 odds with other bookmakers and shows you where to lock in a guaranteed profit.",
-    "keyword": "bet365 surebets",
-    "intro": "Bet365 is one of the world's largest bookmakers and offers one of the widest selections of sports and markets. This makes Bet365 one of the bookmakers most frequently involved in surebets.",
+    "title": "Surebetovi kladionice Bet365",
+    "metaTitle": "Bet365 surebetovi – pronađite prilike za zajamčenu zaradu",
+    "description": "Pronađite surebetove kladionice Bet365 u stvarnom vremenu. BetTrackerAI uspoređuje koeficijente Bet365 s drugim kladionicama i pokazuje vam gdje možete osigurati zajamčenu zaradu.",
+    "keyword": "bet365 surebetovi",
+    "intro": "Bet365 je jedna od najvećih svjetskih kladionica i nudi vrlo širok izbor sportova i tržišta. Zbog toga je Bet365 jedna od kladionica koje se najčešće pojavljuju u surebetovima.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Bet365"
+        "text": "O kladionici Bet365"
       },
       {
         "type": "p",
-        "text": "Bet365 is a licensed bookmaker in multiple jurisdictions and offers odds on a very large number of matches, including minor leagues and live markets. This breadth means that Bet365 often has odds that differ from the rest of the market."
+        "text": "Bet365 je licencirana kladionica u više jurisdikcija i nudi koeficijente na vrlo velik broj utakmica, uključujući niže lige i live tržišta. Zbog te širine Bet365 često ima koeficijente koji se razlikuju od ostatka tržišta."
       },
       {
         "type": "h2",
-        "text": "How to find surebets with Bet365"
+        "text": "Kako pronaći surebetove s kladionicom Bet365"
       },
       {
         "type": "p",
-        "text": "A surebet with Bet365 arises when Bet365 has higher odds on one outcome than other bookmakers have on the opposite outcomes. BetTrackerAI monitors Bet365 odds constantly and compares them with the rest of the market."
+        "text": "Surebet s kladionicom Bet365 nastaje kada Bet365 ima viši koeficijent na jedan ishod od koeficijenata koje druge kladionice nude na suprotne ishode. BetTrackerAI neprekidno prati koeficijente Bet365 i uspoređuje ih s ostatkom tržišta."
       },
       {
         "type": "ul",
         "items": [
-          "Select Bet365 and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a surebet with stable odds.",
-          "Use the calculator to distribute your stake and round the amount.",
-          "Place the bet with the bookmaker offering the most volatile odds first."
+          "Odaberite Bet365 i svoje ostale kladionice pomoću filtra na stranici sa surebetovima.",
+          "Sortirajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
+          "Pomoću kalkulatora rasporedite ulog i zaokružite iznos.",
+          "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers so you don't only use Bet365. This extends the lifespan of your account."
+        "text": "Rasporedite klađenje na više kladionica kako se ne biste oslanjali samo na Bet365. Tako produljujete vijek trajanja svojeg računa."
       }
     ],
     "faq": [
       {
-        "q": "Is arbitrage betting allowed at Bet365?",
-        "a": "Arbitrage betting is legal. However, like all bookmakers, Bet365 may restrict accounts under its terms and conditions if they detect betting patterns that consistently secure guaranteed profit."
+        "q": "Je li arbitražno klađenje dopušteno u kladionici Bet365?",
+        "a": "Arbitražno klađenje je legalno. Ipak, kao i sve kladionice, Bet365 može ograničiti račune prema svojim uvjetima poslovanja ako uoči obrasce klađenja kojima se dosljedno osigurava zajamčena zarada."
       },
       {
-        "q": "Does Bet365 operate under a gambling licence?",
-        "a": "Yes. Bet365 holds licences in multiple regulated markets worldwide. Check your local tax rules, as the treatment of winnings varies by jurisdiction."
+        "q": "Posluje li Bet365 s licencijom za igre na sreću?",
+        "a": "Da. Bet365 posjeduje licencije na više reguliranih tržišta u svijetu. Provjerite porezna pravila koja vrijede za vas, jer se tretman dobitaka razlikuje od jurisdikcije do jurisdikcije."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebets at Unibet",
-    "metaTitle": "Unibet Sure Bets – Find Arbitrage Betting Opportunities",
-    "description": "Find sure bets at Unibet in real time. BetTrackerAI compares Unibet's odds with other bookmakers so you can lock in guaranteed profit through arbitrage betting.",
-    "keyword": "unibet sure bets",
-    "intro": "Unibet is one of the most popular bookmakers worldwide. Unibet uses the Kambi odds platform, so odds at Unibet often resemble those at other Kambi-powered bookmakers.",
+    "title": "Surebetovi kladionice Unibet",
+    "metaTitle": "Unibet surebetovi – pronađite prilike za arbitražno klađenje",
+    "description": "Pronađite surebetove kladionice Unibet u stvarnom vremenu. BetTrackerAI uspoređuje koeficijente Unibeta s drugim kladionicama kako biste arbitražnim klađenjem osigurali zajamčenu zaradu.",
+    "keyword": "unibet surebetovi",
+    "intro": "Unibet je jedna od najpopularnijih kladionica u svijetu. Unibet koristi Kambi platformu za koeficijente, pa su koeficijenti u Unibetu često slični onima u drugim kladionicama koje koriste Kambi.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Unibet"
+        "text": "O kladionici Unibet"
       },
       {
         "type": "p",
-        "text": "Unibet holds licences in multiple regulated markets and offers a wide range of sports. Because Unibet shares its odds platform with several other bookmakers, sure bets most often arise between Unibet and bookmakers on different platforms."
+        "text": "Unibet posjeduje licencije na više reguliranih tržišta i nudi širok izbor sportova. Budući da Unibet dijeli platformu za koeficijente s nekoliko drugih kladionica, surebetovi se najčešće pojavljuju između Unibeta i kladionica koje koriste drugu platformu."
       },
       {
         "type": "h2",
-        "text": "How to find sure bets with Unibet"
+        "text": "Kako pronaći surebetove s kladionicom Unibet"
       },
       {
         "type": "p",
-        "text": "A sure bet with Unibet occurs when Unibet has higher odds on one outcome than other bookmakers have on the opposing outcomes. BetTrackerAI monitors Unibet's odds continuously and compares them with the rest of the market."
+        "text": "Surebet s kladionicom Unibet javlja se kada Unibet ima viši koeficijent na jedan ishod od koeficijenata koje druge kladionice nude na suprotne ishode. BetTrackerAI neprekidno prati koeficijente Unibeta i uspoređuje ih s ostatkom tržišta."
       },
       {
         "type": "ul",
         "items": [
-          "Select Unibet and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a sure bet with stable odds.",
-          "Use the calculator to split your stake and round the amounts.",
-          "Place your bet with the bookmaker offering the most volatile odds first."
+          "Odaberite Unibet i svoje ostale kladionice pomoću filtra na stranici sa surebetovima.",
+          "Sortirajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
+          "Pomoću kalkulatora podijelite ulog i zaokružite iznose.",
+          "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers, so you don't only use Unibet. This will extend the lifespan of your account and help you avoid limits."
+        "text": "Rasporedite klađenje na više kladionica kako se ne biste oslanjali samo na Unibet. Tako ćete produljiti vijek trajanja svojeg računa i lakše izbjeći ograničenja."
       }
     ],
     "faq": [
       {
-        "q": "Is it legal to place sure bets at Unibet?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, Unibet may limit or restrict accounts under its terms and conditions if they only place bets with guaranteed profit."
+        "q": "Je li legalno uplaćivati surebetove u kladionici Unibet?",
+        "a": "Da, arbitražno klađenje je legalno. Ipak, kao i sve kladionice, Unibet može ograničiti račune prema svojim uvjetima poslovanja ako na njima igrači uplaćuju isključivo oklade sa zajamčenom zaradom."
       },
       {
-        "q": "Which bookmakers are similar to Unibet?",
-        "a": "Unibet uses Kambi, which also supplies odds to several other bookmakers. Therefore, combine Unibet with bookmakers on different platforms to find more sure bets."
+        "q": "Koje su kladionice slične kladionici Unibet?",
+        "a": "Unibet koristi Kambi, koji koeficijente isporučuje i nekolicini drugih kladionica. Zato Unibet kombinirajte s kladionicama koje koriste druge platforme kako biste pronašli više surebetova."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebets at Betano",
-    "metaTitle": "Betano surebets – find arbitrage bets at Betano",
-    "description": "Find surebets at Betano in real time. BetTrackerAI compares Betano's odds with other licensed bookmakers and shows where you can lock in a guaranteed profit.",
-    "keyword": "betano surebets",
-    "intro": "Betano is one of the newer bookmakers in the regulated market and uses its own odds-setting platform. This means that Betano's odds often differ from the rest of the market, creating arbitrage betting opportunities.",
+    "title": "Surebetovi kladionice Betano",
+    "metaTitle": "Betano surebetovi – pronađite arbitražne oklade u kladionici Betano",
+    "description": "Pronađite surebetove na Betanu u stvarnom vremenu. BetTrackerAI uspoređuje Betanove koeficijente s koeficijentima drugih kladionica s licencom i pokazuje gdje možete osigurati zajamčenu zaradu.",
+    "keyword": "betano surebet",
+    "intro": "Betano je jedna od novijih kladionica na reguliranom tržištu i koristi vlastitu platformu za određivanje koeficijenata. Zbog toga se Betanovi koeficijenti često razlikuju od ostatka tržišta, što otvara prilike za arbitražno klađenje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About Betano"
+        "text": "O kladionici Betano"
       },
       {
         "type": "p",
-        "text": "Betano holds a licence in multiple jurisdictions and offers a wide range of sports. Because Betano sets odds independently, it is often involved in surebets when compared with established bookmakers."
+        "text": "Betano ima licencu u više jurisdikcija i nudi široku paletu sportova. Budući da koeficijente određuje samostalno, u usporedbi s etabliranim kladionicama često se pojavljuje u surebetovima."
       },
       {
         "type": "h2",
-        "text": "How to find surebets with Betano"
+        "text": "Kako pronaći surebetove s Betanom"
       },
       {
         "type": "p",
-        "text": "A surebet with Betano arises when Betano offers higher odds on one outcome than other bookmakers offer on the opposite outcomes. BetTrackerAI monitors Betano's odds continuously and compares them with the rest of the market."
+        "text": "Surebet s Betanom nastaje kada Betano nudi više koeficijente na jedan ishod nego druge kladionice na suprotne ishode. BetTrackerAI neprekidno prati Betanove koeficijente i uspoređuje ih s ostatkom tržišta."
       },
       {
         "type": "ul",
         "items": [
-          "Select Betano and your other bookmakers using the filter on the surebets page.",
-          "Sort by profit and choose a surebet with stable odds.",
-          "Use the calculator to split your stake and round the amounts.",
-          "Place the bet with the bookmaker that has the most volatile odds first."
+          "Odaberite Betano i ostale svoje kladionice pomoću filtra na stranici sa surebetovima.",
+          "Poredajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
+          "Pomoću kalkulatora podijelite ulog i zaokružite iznose.",
+          "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across multiple bookmakers so you don't only use Betano. This extends the lifespan of your account and helps you avoid restrictions."
+        "text": "Rasporedite klađenje na više kladionica kako ne biste igrali samo na Betanu. Tako produljujete vijek svojeg računa i lakše izbjegavate ograničenja."
       }
     ],
     "faq": [
       {
-        "q": "Are you allowed to place surebets at Betano?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, Betano may limit accounts under its terms and conditions if they detect betting patterns that consistently lock in guaranteed profit."
+        "q": "Smijem li uplaćivati surebetove na Betanu?",
+        "a": "Da, arbitražno klađenje je legalno. No kao i sve kladionice, Betano prema svojim uvjetima poslovanja može ograničiti račune ako uoči obrasce klađenja koji dosljedno osiguravaju zajamčenu zaradu."
       },
       {
-        "q": "Is Betano licensed?",
-        "a": "Yes. Betano is licensed in multiple regulated markets. Check your national gambling regulator to confirm whether Betano holds a licence where you live."
+        "q": "Ima li Betano licencu?",
+        "a": "Da. Betano ima licencu na više reguliranih tržišta. Kod nadležnog regulatora igara na sreću provjerite ima li Betano licencu u zemlji u kojoj živite."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets at LeoVegas",
-    "metaTitle": "LeoVegas Sure Bets – Find Arbitrage Betting Opportunities",
-    "description": "Find sure bets at LeoVegas in real time. BetTrackerAI compares LeoVegas odds with other bookmakers and shows you where you can lock in a guaranteed profit.",
-    "keyword": "leovegas sure bets",
-    "intro": "LeoVegas is known for its casino offering but also provides a wide sports betting selection. The bookmaker uses the Kambi platform and regularly features in arbitrage betting opportunities.",
+    "title": "Surebetovi u kladionici LeoVegas",
+    "metaTitle": "LeoVegas surebetovi – pronađite prilike za arbitražno klađenje",
+    "description": "Pronađite surebetove na LeoVegasu u stvarnom vremenu. BetTrackerAI uspoređuje LeoVegas koeficijente s koeficijentima drugih kladionica i pokazuje gdje možete osigurati zajamčenu zaradu.",
+    "keyword": "leovegas surebet",
+    "intro": "LeoVegas je poznat po ponudi casina, ali nudi i bogat izbor sportskog klađenja. Kladionica koristi platformu Kambi i redovito se pojavljuje u prilikama za arbitražno klađenje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "About LeoVegas"
+        "text": "O kladionici LeoVegas"
       },
       {
         "type": "p",
-        "text": "LeoVegas is a licensed bookmaker with a user-friendly app that makes it quick to place bets. This is important with sure bets, where odds can change in seconds. Check that LeoVegas is licensed and available in your country before opening an account."
+        "text": "LeoVegas je kladionica s licencom i pregledrnom aplikacijom koja omogućuje brzo uplaćivanje oklada. To je važno kod surebetova, gdje se koeficijenti mogu promijeniti u nekoliko sekundi. Prije otvaranja računa provjerite ima li LeoVegas licencu i je li dostupan u vašoj zemlji."
       },
       {
         "type": "h2",
-        "text": "How to find sure bets with LeoVegas"
+        "text": "Kako pronaći surebetove s LeoVegasom"
       },
       {
         "type": "p",
-        "text": "A sure bet with LeoVegas occurs when LeoVegas has higher odds on one outcome than other bookmakers have on the opposite outcomes. BetTrackerAI monitors LeoVegas odds continuously and compares them with bookmakers operating in your market."
+        "text": "Surebet s LeoVegasom nastaje kada LeoVegas nudi više koeficijente na jedan ishod nego druge kladionice na suprotne ishode. BetTrackerAI neprekidno prati LeoVegas koeficijente i uspoređuje ih s kladionicama koje posluju na vašem tržištu."
       },
       {
         "type": "ul",
         "items": [
-          "Select LeoVegas and your other bookmakers using the filter on the sure bets page.",
-          "Sort by profit and choose a sure bet with stable odds.",
-          "Use the calculator to divide your stake, and round the amounts.",
-          "Place your bet with the bookmaker offering the most volatile odds first."
+          "Odaberite LeoVegas i ostale svoje kladionice pomoću filtra na stranici sa surebetovima.",
+          "Poredajte po zaradi i odaberite surebet sa stabilnim koeficijentima.",
+          "Pomoću kalkulatora podijelite ulog i zaokružite iznose.",
+          "Prvo uplatite okladu u kladionici s najnestabilnijim koeficijentima."
         ]
       },
       {
         "type": "tip",
-        "text": "Spread your betting across several bookmakers, so you don't only use LeoVegas. This extends the lifespan of your account and reduces the risk of account limits."
+        "text": "Rasporedite klađenje na nekoliko kladionica kako ne biste igrali samo na LeoVegasu. Tako produljujete vijek svojeg računa i smanjujete rizik od ograničenja računa."
       }
     ],
     "faq": [
       {
-        "q": "Can you place sure bets at LeoVegas?",
-        "a": "Yes, arbitrage betting is legal. However, like all bookmakers, LeoVegas may restrict accounts under its terms and conditions if they detect betting patterns that consistently guarantee profit."
+        "q": "Mogu li uplaćivati surebetove na LeoVegasu?",
+        "a": "Da, arbitražno klađenje je legalno. No kao i sve kladionice, LeoVegas prema svojim uvjetima poslovanja može ograničiti račune ako uoči obrasce klađenja koji dosljedno jamče zaradu."
       },
       {
-        "q": "Is LeoVegas good for sure bets?",
-        "a": "LeoVegas is a good supplementary bookmaker, especially when combined with bookmakers outside the Kambi platform, as this increases the number of arbitrage opportunities available."
+        "q": "Je li LeoVegas dobar za surebetove?",
+        "a": "LeoVegas je dobra dopunska kladionica, osobito u kombinaciji s kladionicama koje ne koriste platformu Kambi, jer se tako povećava broj dostupnih prilika za arbitražu."
       }
     ]
   }
