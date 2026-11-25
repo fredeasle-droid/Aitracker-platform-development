@@ -15,7 +15,10 @@ import { dataMessages } from './data-messages'
 import { homePageMessages } from './home-messages'
 import { canonicalRoute, localizeRoute } from './route-slugs'
 
-export type Locale = 'da' | 'en' | 'sv' | 'no' | 'de' | 'es' | 'br' | 'pt' | 'fr' | 'it' | 'pl' | 'fi' | 'nl'
+import type { BaseLocale, Locale } from './locale-list'
+import { isLaunched, newLocales } from './locale-packs'
+
+export type { Locale }
 
 export const DEFAULT_LOCALE: Locale = 'da'
 export const LOCALE_COOKIE = 'bettracker_locale'
@@ -34,24 +37,47 @@ export const LOCALES: Record<Locale, { label: string; flag: string; countryCode:
   pl: { label: 'Polski', flag: '🇵🇱', countryCode: 'PL', tag: 'pl-PL' },
   fi: { label: 'Suomi', flag: '🇫🇮', countryCode: 'FI', tag: 'fi-FI' },
   nl: { label: 'Nederlands', flag: '🇳🇱', countryCode: 'NL', tag: 'nl-NL' },
+  tr: { label: 'Türkçe', flag: '🇹🇷', countryCode: 'TR', tag: 'tr-TR' },
+  cs: { label: 'Čeština', flag: '🇨🇿', countryCode: 'CZ', tag: 'cs-CZ' },
+  el: { label: 'Ελληνικά', flag: '🇬🇷', countryCode: 'GR', tag: 'el-GR' },
+  hu: { label: 'Magyar', flag: '🇭🇺', countryCode: 'HU', tag: 'hu-HU' },
+  hr: { label: 'Hrvatski', flag: '🇭🇷', countryCode: 'HR', tag: 'hr-HR' },
+  sk: { label: 'Slovenčina', flag: '🇸🇰', countryCode: 'SK', tag: 'sk-SK' },
+  mx: { label: 'Español (México)', flag: '🇲🇽', countryCode: 'MX', tag: 'es-MX' },
+  ar: { label: 'Español (Argentina)', flag: '🇦🇷', countryCode: 'AR', tag: 'es-AR' },
+  ch: { label: 'Deutsch (Schweiz)', flag: '🇨🇭', countryCode: 'CH', tag: 'de-CH' },
+  at: { label: 'Deutsch (Österreich)', flag: '🇦🇹', countryCode: 'AT', tag: 'de-AT' },
+  be: { label: 'Nederlands (België)', flag: '🇧🇪', countryCode: 'BE', tag: 'nl-BE' },
 }
 
+// Markets that are not launched yet are unknown to routing, cookies and the language menus.
 export function isLocale(value: string | undefined | null): value is Locale {
-  return Boolean(value) && Object.prototype.hasOwnProperty.call(LOCALES, value as string)
+  return Boolean(value) && Object.prototype.hasOwnProperty.call(LOCALES, value as string) && isLaunched(value as Locale)
 }
+
+export { LAUNCHED_LOCALES } from './locale-packs'
 
 export const LOCALE_HEADER = 'x-bt-locale'
 
 // Danish is served from the root; the other languages live under a URL prefix on the same domain.
-export const LOCALE_PREFIX: Record<Locale, string> = { da: '', en: 'en', sv: 'se', no: 'no', de: 'de', es: 'es', br: 'br', pt: 'pt', fr: 'fr', it: 'it', pl: 'pl', fi: 'fi', nl: 'nl' }
+export const LOCALE_PREFIX: Record<Locale, string> = {
+  da: '', en: 'en', sv: 'se', no: 'no', de: 'de', es: 'es', br: 'br', pt: 'pt', fr: 'fr', it: 'it', pl: 'pl', fi: 'fi', nl: 'nl',
+  tr: 'tr', cs: 'cz', el: 'gr', hu: 'hu', hr: 'hr', sk: 'sk', mx: 'mx', ar: 'ar', ch: 'ch', at: 'at', be: 'be',
+}
 
-export const HREFLANG: Record<Locale, string> = { da: 'da-DK', en: 'en', sv: 'sv-SE', no: 'nb-NO', de: 'de-DE', es: 'es', br: 'pt-BR', pt: 'pt-PT', fr: 'fr-FR', it: 'it-IT', pl: 'pl-PL', fi: 'fi-FI', nl: 'nl-NL' }
+export const HREFLANG: Record<Locale, string> = {
+  da: 'da-DK', en: 'en', sv: 'sv-SE', no: 'nb-NO', de: 'de-DE', es: 'es', br: 'pt-BR', pt: 'pt-PT', fr: 'fr-FR', it: 'it-IT', pl: 'pl-PL', fi: 'fi-FI', nl: 'nl-NL',
+  tr: 'tr-TR', cs: 'cs-CZ', el: 'el-GR', hu: 'hu-HU', hr: 'hr-HR', sk: 'sk-SK', mx: 'es-MX', ar: 'es-AR', ch: 'de-CH', at: 'de-AT', be: 'nl-BE',
+}
 
-export const OG_LOCALE: Record<Locale, string> = { da: 'da_DK', en: 'en_GB', sv: 'sv_SE', no: 'nb_NO', de: 'de_DE', es: 'es_ES', br: 'pt_BR', pt: 'pt_PT', fr: 'fr_FR', it: 'it_IT', pl: 'pl_PL', fi: 'fi_FI', nl: 'nl_NL' }
+export const OG_LOCALE: Record<Locale, string> = {
+  da: 'da_DK', en: 'en_GB', sv: 'sv_SE', no: 'nb_NO', de: 'de_DE', es: 'es_ES', br: 'pt_BR', pt: 'pt_PT', fr: 'fr_FR', it: 'it_IT', pl: 'pl_PL', fi: 'fi_FI', nl: 'nl_NL',
+  tr: 'tr_TR', cs: 'cs_CZ', el: 'el_GR', hu: 'hu_HU', hr: 'hr_HR', sk: 'sk_SK', mx: 'es_MX', ar: 'es_AR', ch: 'de_CH', at: 'de_AT', be: 'nl_BE',
+}
 
 export function localeFromPrefix(segment: string | undefined): Locale | null {
   if (!segment) return null
-  const match = (Object.keys(LOCALE_PREFIX) as Locale[]).find((key) => LOCALE_PREFIX[key] && LOCALE_PREFIX[key] === segment)
+  const match = (Object.keys(LOCALE_PREFIX) as Locale[]).find((key) => LOCALE_PREFIX[key] && LOCALE_PREFIX[key] === segment && isLaunched(key))
   return match ?? null
 }
 
@@ -212,7 +238,7 @@ const baseTranslations = {
 type BaseKey = keyof typeof baseTranslations.da
 export type TranslationKey = BaseKey | MessageKey
 
-export const translations: Record<Locale, Record<TranslationKey, string>> = {
+const baseLocaleTranslations: Record<BaseLocale, Record<TranslationKey, string>> = {
   da: { ...baseTranslations.da, ...daMessages },
   en: { ...baseTranslations.en, ...enMessages },
   sv: { ...baseTranslations.sv, ...svMessages },
@@ -226,6 +252,11 @@ export const translations: Record<Locale, Record<TranslationKey, string>> = {
   pl: { ...baseTranslations.pl, ...plMessages },
   fi: { ...baseTranslations.fi, ...fiMessages },
   nl: { ...baseTranslations.nl, ...nlMessages },
+}
+
+export const translations: Record<Locale, Record<TranslationKey, string>> = {
+  ...baseLocaleTranslations,
+  ...newLocales(baseLocaleTranslations, (pack, fallback) => ({ ...fallback, ...pack.ui })),
 }
 
 export type TranslateVars = Record<string, string | number>

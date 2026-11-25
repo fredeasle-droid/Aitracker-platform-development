@@ -1,0 +1,428 @@
+{
+  "sport/basketball": {
+    "title": "Surebets auf Basketball",
+    "metaTitle": "Basketball-Surebets – garantierter Gewinn bei NBA und Euroleague",
+    "description": "Finde Basketball-Surebets in der NBA, der Euroleague und europäischen Ligen. Punkte-Märkte und Handicaps bieten zahlreiche Arbitrage-Chancen bei lizenzierten Wettanbietern.",
+    "keyword": "Basketball-Surebets",
+    "intro": "Basketball bietet zahlreiche Surebets bei Punkte-Totals und Handicaps. Die NBA hat ein umfangreiches Wettangebot, und die Wettanbieter passen ihre Linien unterschiedlich schnell an – dadurch entstehen Arbitrage-Chancen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Beliebte Märkte für Basketball-Arbing"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Spielsieger inklusive Verlängerung: zwei mögliche Ausgänge und einfache Berechnung.",
+          "Über/Unter bei den Gesamtpunkten, zum Beispiel über oder unter 215.5 Punkte.",
+          "Punkte-Handicap, bei dem der Favorit mit einem bestimmten Vorsprung gewinnen muss.",
+          "Spielerwetten wie erzielte Punkte, Rebounds und Assists."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Middling bei Punktetotals"
+      },
+      {
+        "type": "p",
+        "text": "Bei Punktemärkten bieten zwei Wettanbieter mitunter unterschiedliche Linien an, etwa über 214.5 bei dem einen und unter 216.5 bei dem anderen. Endet die Partie mit genau 215 oder 216 Punkten, gewinnst du beide Wetten. Das nennt man einen „Middle“ – eine zusätzliche Gewinnchance im Basketball."
+      },
+      {
+        "type": "tip",
+        "text": "Prüfe, ob die Verlängerung zählt. Im Basketball ist das fast immer der Fall, aber nicht bei allen Wettanbietern und nicht auf jedem Markt."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Zählt die Verlängerung bei Basketball-Surebets?",
+        "a": "Bei den meisten Märkten ja, aber wirf immer einen Blick auf die Regeln des jeweiligen Marktes beim einzelnen Wettanbieter. Ein Markt ohne Verlängerung lässt sich für Arbitrage nicht mit einem Markt inklusive Verlängerung kombinieren."
+      },
+      {
+        "q": "Zu welcher Uhrzeit werden NBA-Spiele üblicherweise gespielt?",
+        "a": "NBA-Spiele finden in Nordamerika in der Regel am Abend statt, bei uns also meist in der Nacht. Viele Surebets tauchen schon mehrere Stunden vor dem Sprungball auf, damit hast du genug Zeit, beide Seiten der Arbitrage-Wette zu platzieren."
+      }
+    ]
+  },
+  "sport/ishockey": {
+    "title": "Surebets im Eishockey",
+    "metaTitle": "Eishockey-Surebets – garantierter Gewinn in NHL & Co.",
+    "description": "Eishockey-Surebets aus NHL, SHL und weiteren Ligen. Lerne den Unterschied zwischen regulärer Spielzeit und Siegwetten kennen und finde Chancen auf garantierten Gewinn.",
+    "keyword": "Eishockey Surebets",
+    "intro": "Eishockey ist eine unterschätzte Sportart für Surebets. Viele Wettanbieter bewerten die nordischen Ligen unterschiedlich, und der Unterschied zwischen Wetten auf die reguläre Spielzeit und Siegwetten eröffnet zusätzliche Möglichkeiten für Arbitrage-Wetten.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Reguläre Spielzeit oder inklusive Verlängerung?"
+      },
+      {
+        "type": "p",
+        "text": "Im Eishockey gibt es sowohl einen 1X2-Markt nur für die reguläre Spielzeit als auch einen Siegermarkt inklusive Verlängerung und Penaltyschießen. Diese beiden dürfen in einer Surebet nie vermischt werden. Kontrolliere vor dem Platzieren deiner Wetten bei jedem Wettanbieter genau, auf welchen Markt du setzt."
+      },
+      {
+        "type": "h2",
+        "text": "Gute Ligen für Eishockey-Surebets"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "NHL: viele Spiele und hohe Maximaleinsätze.",
+          "SHL und Liiga: im Norden Europas beliebt und bei den Wettanbietern unterschiedlich bewertet.",
+          "Nationale Ligen: kleinere Ligen, in denen sich die Wettanbieter bei den Quoten oft uneinig sind."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Eishockey bietet oft hohen Gewinn pro Surebet, aber niedrigere Maximaleinsätze als Fußball."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann man in einer Eishockey-Surebet 1X2 und Sieger inklusive Verlängerung kombinieren?",
+        "a": "Nein. Das sind zwei verschiedene Märkte. Kombinierst du sie, kannst du beide Wetten verlieren, wenn das Spiel in die Verlängerung geht. Achte immer darauf, dass alle Teile deiner Arbitrage-Wette auf demselben Markttyp liegen."
+      },
+      {
+        "q": "Gibt es Surebets auch in kleineren Eishockey-Ligen?",
+        "a": "Ja. Wettanbieter bewerten kleinere nationale Ligen oft unterschiedlich, deshalb ergeben sich regelmäßig Arbitrage-Chancen. Prüfe vor dem Wetten, ob die Wettanbieter in Österreich zugelassen sind."
+      }
+    ]
+  },
+  "sport/fodbold": {
+    "title": "Surebets auf Fußball",
+    "metaTitle": "Fußball-Surebets – garantierter Gewinn bei Spielen finden",
+    "description": "Finde Fußball-Surebets in Echtzeit. BetTrackerAI durchsucht die Quoten in der Premier League, der Champions League und Hunderten weiteren Ligen bei lizenzierten Wettanbietern.",
+    "keyword": "Fußball Surebets",
+    "intro": "Fußball liefert mehr Surebets als jede andere Sportart. Gespielt wird rund um die Uhr, und jede Partie bietet Hunderte Märkte, die die Wettanbieter unterschiedlich bewerten.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum es im Fußball so viele Surebets gibt"
+      },
+      {
+        "type": "p",
+        "text": "Wettanbieter müssen jede Woche Tausende Fußballspiele bewerten, von der Champions League bis in die unteren Spielklassen. Je kleiner die Liga, desto weniger Zeit widmen ihr die Wettanbieter, und desto größer ist die Wahrscheinlichkeit für Quotenunterschiede, aus denen Arbitrage-Chancen entstehen."
+      },
+      {
+        "type": "h2",
+        "text": "Die am häufigsten genutzten Märkte"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1X2: Heimsieg, Unentschieden und Auswärtssieg. Drei Ausgänge, du brauchst also drei Wetten.",
+          "Über/Unter bei den Toren, zum Beispiel über oder unter 2.5 Tore. Nur zwei Ausgänge und oft hohe Liquidität.",
+          "Asiatisches Handicap: zwei Ausgänge und niedrige Marge, aber lies die Abrechnungsregeln für halbe und ganze Tore genau durch.",
+          "Beide Teams treffen: Ja oder Nein. Ein einfacher Markt mit zwei Ausgängen."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Prüfe immer, ob sich der Markt nur auf die reguläre Spielzeit bezieht. Verlängerung und Elfmeterschießen zählen bei Fußball-Surebets nur selten."
+      },
+      {
+        "type": "h2",
+        "text": "Wann entstehen Surebets?"
+      },
+      {
+        "type": "p",
+        "text": "Viele Fußball-Surebets entstehen, wenn etwa eine Stunde vor dem Anpfiff die Aufstellungen bekannt gegeben werden. Manche Wettanbieter passen ihre Quoten schnell an, andere reagieren langsamer, und in diesem Zeitfenster zeigen sich Quotenunterschiede."
+      }
+    ],
+    "faq": [
+      {
+        "q": "In welchen Fußballligen gibt es die meisten Surebets?",
+        "a": "Kleinere Ligen bieten oft höhere Gewinnprozente, aber große Ligen wie die Premier League und die Champions League haben mehr Märkte und höhere Maximaleinsätze."
+      },
+      {
+        "q": "Kann man Surebets auch auf Live-Fußballspiele platzieren?",
+        "a": "Ja, aber Live-Quoten ändern sich sehr schnell. Du musst beide Wetten innerhalb weniger Sekunden platzieren."
+      }
+    ]
+  },
+  "sport/esport": {
+    "title": "Surebets auf E-Sport",
+    "metaTitle": "E-Sport-Surebets – Arbitrage-Wetten auf CS2, LoL & Dota 2",
+    "description": "E-Sport zählt zu den am schnellsten wachsenden Märkten für Surebets. Finde Arbitrage-Chancen auf CS2, League of Legends und Dota 2 bei lizenzierten Wettanbietern.",
+    "keyword": "E-Sport Surebets",
+    "intro": "Im E-Sport gibt es große Preisunterschiede zwischen den Wettanbietern. Der Markt ist noch relativ jung, viele Wettanbieter haben nur wenige Spezialisten auf diesem Gebiet, und die Quoten bewegen sich vor Spielbeginn oft deutlich.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Warum E-Sport hohen Gewinn bringt"
+      },
+      {
+        "type": "p",
+        "text": "Wettanbieter setzen für E-Sport weniger Ressourcen ein als für Fußball, und Neuigkeiten zu Team-Aufstellungen verbreiten sich in der Community blitzschnell. Das führt zu größeren Quotenunterschieden und oft zu höherem Gewinn pro Surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Beliebte Spiele für Arbitrage-Wetten"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Counter-Strike 2: die meisten Spiele und Märkte für Map- und Runden-Handicaps.",
+          "League of Legends: große Turniere mit stabilen Märkten.",
+          "Dota 2: hohe Quotenunterschiede, aber niedrigere Maximaleinsätze."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Vorsicht bei verschobenen Spielen. Die Wettanbieter haben unterschiedliche Regeln, wie lange eine Wette gültig bleibt."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Eignet sich E-Sport für Surebets?",
+        "a": "Ja, der Gewinn ist oft höher als bei klassischen Sportarten. Allerdings sind die Maximaleinsätze in der Regel niedriger."
+      },
+      {
+        "q": "Welche Wettanbieter bieten E-Sport an?",
+        "a": "Die meisten großen lizenzierten Wettanbieter haben E-Sport im Programm, vor allem CS2 und League of Legends. Prüfe Verfügbarkeit und Lizenz für Österreich."
+      }
+    ]
+  },
+  "sport/tennis": {
+    "title": "Surebets auf Tennis",
+    "metaTitle": "Tennis-Surebets – Garantierter Gewinn bei ATP, WTA & Challenger",
+    "description": "Tennis eignet sich ideal für Surebets: nur zwei mögliche Ausgänge und das ganze Jahr über Matches. Finde Tennis-Arbitrage-Chancen bei ATP-, WTA- und Challenger-Turnieren weltweit.",
+    "keyword": "tennis surebets",
+    "intro": "Tennis ist für viele Surebetter die liebste Sportart. Es gibt nur zwei mögliche Ausgänge, kein Unentschieden, und Turniere finden fast an jedem Tag des Jahres statt.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Die Vorteile von Tennis"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Nur zwei mögliche Ausgänge, du musst also nur zwei Wetten platzieren.",
+          "Kein Unentschieden, das macht die Berechnung einfach.",
+          "Viele Matches auf Challenger- und ITF-Niveau, bei denen sich die Wettanbieter oft uneinig sind.",
+          "Matches rund um die Uhr, weil Turniere in unterschiedlichen Zeitzonen stattfinden."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Vorsicht bei Aufgaben im Match"
+      },
+      {
+        "type": "p",
+        "text": "Das größte Risiko im Tennis ist die Aufgabe eines Spielers während des Matches. Die Wettanbieter handhaben das unterschiedlich: Manche erklären die Wette für ungültig, andere werten sie, wenn der erste Satz abgeschlossen wurde. Gelten bei deinen beiden Wettanbietern unterschiedliche Regeln, kannst du beide Wetten verlieren."
+      },
+      {
+        "type": "tip",
+        "text": "Lies die Regeln der Wettanbieter zu Aufgaben im Tennis, bevor du deine erste Tennis-Surebet platzierst."
+      },
+      {
+        "type": "h2",
+        "text": "Weitere Märkte"
+      },
+      {
+        "type": "p",
+        "text": "Neben dem Matchsieger gibt es Surebets auf Gesamtgames, Satz-Handicaps und einzelne Satzsieger. Bei diesen Märkten sind die Maximaleinsätze oft niedriger."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Eignet sich Tennis für Surebets?",
+        "a": "Ja. Nur zwei mögliche Ausgänge und viele Matches machen Tennis zu einer der besten Sportarten für Surebets, besonders für Einsteiger."
+      },
+      {
+        "q": "Was passiert, wenn ein Spieler aufgibt?",
+        "a": "Das hängt vom Wettanbieter ab. Manche erklären alle Wetten für ungültig, andere werten sie, wenn eine bestimmte Anzahl an Sätzen gespielt wurde. Sieh dir die Regeln bei beiden Wettanbietern an."
+      }
+    ]
+  },
+  "bookmaker/bet365": {
+    "title": "Surebets bei Bet365",
+    "metaTitle": "Bet365-Surebets – Chancen auf garantierten Gewinn finden",
+    "description": "Finde Surebets bei Bet365 in Echtzeit. BetTrackerAI vergleicht die Quoten von Bet365 mit anderen Wettanbietern und zeigt dir, wo du dir einen garantierten Gewinn sichern kannst.",
+    "keyword": "bet365 surebets",
+    "intro": "Bet365 zählt zu den größten Wettanbietern der Welt und bietet eine der breitesten Auswahlen an Sportarten und Märkten. Deshalb ist Bet365 einer der Wettanbieter, die am häufigsten an Surebets beteiligt sind.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Über Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Bet365 verfügt in mehreren Rechtsordnungen über Lizenzen und bietet Quoten zu einer sehr großen Zahl an Spielen an, darunter auch unterklassige Ligen und Live-Märkte. Durch dieses breite Angebot weichen die Quoten von Bet365 oft vom restlichen Markt ab."
+      },
+      {
+        "type": "h2",
+        "text": "So findest du Surebets mit Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Eine Surebet mit Bet365 entsteht, wenn Bet365 auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die gegenteiligen Ausgänge. BetTrackerAI beobachtet die Quoten von Bet365 laufend und vergleicht sie mit dem restlichen Markt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wähle Bet365 und deine anderen Wettanbieter mit dem Filter auf der Surebets-Seite aus.",
+          "Sortiere nach Gewinn und wähle eine Surebet mit stabilen Quoten.",
+          "Nutze den Rechner, um deinen Einsatz aufzuteilen und den Betrag zu runden.",
+          "Platziere zuerst die Wette beim Wettanbieter mit den volatilsten Quoten."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verteile deine Wetten auf mehrere Wettanbieter, damit du nicht nur Bet365 nutzt. So bleibt dein Konto länger bestehen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist Arbitrage-Wetten bei Bet365 erlaubt?",
+        "a": "Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann Bet365 Konten aber gemäß seinen Geschäftsbedingungen einschränken, wenn Wettmuster erkannt werden, mit denen laufend ein garantierter Gewinn erzielt wird."
+      },
+      {
+        "q": "Hat Bet365 eine Glücksspiellizenz?",
+        "a": "Ja. Bet365 besitzt Lizenzen in mehreren regulierten Märkten weltweit. Informiere dich über die steuerlichen Regeln an deinem Wohnsitz, denn die Behandlung von Gewinnen unterscheidet sich je nach Rechtsordnung."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Surebets bei Unibet",
+    "metaTitle": "Unibet Sure Bets – Arbitrage-Wetten finden",
+    "description": "Finde Sure Bets bei Unibet in Echtzeit. BetTrackerAI vergleicht die Quoten von Unibet mit anderen Wettanbietern, damit du dir mit Arbitrage-Wetten einen garantierten Gewinn sichern kannst.",
+    "keyword": "unibet sure bets",
+    "intro": "Unibet zählt weltweit zu den beliebtesten Wettanbietern. Unibet nutzt die Quotenplattform von Kambi, deshalb ähneln die Quoten bei Unibet oft jenen anderer Wettanbieter auf Kambi-Basis.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Über Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Unibet verfügt in mehreren regulierten Märkten über Lizenzen und bietet eine große Auswahl an Sportarten. Da Unibet seine Quotenplattform mit mehreren anderen Wettanbietern teilt, entstehen Sure Bets meist zwischen Unibet und Wettanbietern auf anderen Plattformen."
+      },
+      {
+        "type": "h2",
+        "text": "So findest du Sure Bets mit Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Eine Sure Bet mit Unibet entsteht, wenn Unibet auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die gegenteiligen Ausgänge. BetTrackerAI beobachtet die Quoten von Unibet laufend und vergleicht sie mit dem restlichen Markt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wähle Unibet und deine anderen Wettanbieter mit dem Filter auf der Surebets-Seite aus.",
+          "Sortiere nach Gewinn und wähle eine Surebet mit stabilen Quoten.",
+          "Nutze den Rechner, um deinen Einsatz aufzuteilen und die Beträge zu runden.",
+          "Platziere zuerst die Wette beim Wettanbieter mit den volatilsten Quoten."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf Unibet. So bleibt dein Konto länger aktiv und du vermeidest Limitierungen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ist es legal, bei Unibet Surebets zu platzieren?",
+        "a": "Ja, Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann Unibet aber gemäß seinen Geschäftsbedingungen Konten limitieren oder einschränken, wenn darüber ausschließlich Wetten mit garantiertem Gewinn platziert werden."
+      },
+      {
+        "q": "Welche Wettanbieter sind mit Unibet vergleichbar?",
+        "a": "Unibet setzt auf Kambi, das auch mehrere andere Wettanbieter mit Quoten beliefert. Kombiniere Unibet daher mit Wettanbietern auf anderen Plattformen, um mehr Surebets zu finden."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebets bei Betano",
+    "metaTitle": "Betano Surebets – Arbitrage-Wetten bei Betano finden",
+    "description": "Finde Surebets bei Betano in Echtzeit. BetTrackerAI vergleicht die Quoten von Betano mit anderen lizenzierten Wettanbietern und zeigt dir, wo du dir einen garantierten Gewinn sichern kannst.",
+    "keyword": "betano surebets",
+    "intro": "Betano zählt zu den neueren Wettanbietern auf dem regulierten Markt und arbeitet mit einer eigenen Plattform zur Quotenberechnung. Deshalb weichen die Quoten von Betano oft vom Rest des Marktes ab, wodurch Arbitrage-Chancen entstehen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Über Betano"
+      },
+      {
+        "type": "p",
+        "text": "Betano besitzt Lizenzen in mehreren Rechtsordnungen und bietet eine große Auswahl an Sportarten. Da Betano seine Quoten eigenständig festlegt, taucht der Wettanbieter im Vergleich mit etablierten Anbietern häufig in Surebets auf."
+      },
+      {
+        "type": "h2",
+        "text": "So findest du Surebets mit Betano"
+      },
+      {
+        "type": "p",
+        "text": "Eine Surebet mit Betano entsteht, wenn Betano auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die jeweiligen Gegenausgänge. BetTrackerAI überwacht die Quoten von Betano laufend und vergleicht sie mit dem restlichen Markt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wähle über den Filter auf der Surebets-Seite Betano und deine anderen Wettanbieter aus.",
+          "Sortiere nach Gewinn und wähle eine Surebet mit stabilen Quoten.",
+          "Nutze den Rechner, um deinen Einsatz aufzuteilen und die Beträge zu runden.",
+          "Platziere zuerst die Wette beim Wettanbieter mit den volatilsten Quoten."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf Betano. So bleibt dein Konto länger aktiv und du vermeidest Einschränkungen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Darf man bei Betano Surebets platzieren?",
+        "a": "Ja, Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann Betano aber gemäß seinen Geschäftsbedingungen Konten limitieren, wenn Wettmuster erkannt werden, mit denen laufend ein garantierter Gewinn erzielt wird."
+      },
+      {
+        "q": "Hat Betano eine Lizenz?",
+        "a": "Ja. Betano ist in mehreren regulierten Märkten lizenziert. Prüfe bei der zuständigen Glücksspielbehörde, ob Betano dort, wo du lebst, eine Lizenz besitzt."
+      }
+    ]
+  },
+  "bookmaker/leovegas": {
+    "title": "Surebets bei LeoVegas",
+    "metaTitle": "LeoVegas Surebets – Arbitrage-Wetten finden",
+    "description": "Finde Surebets bei LeoVegas in Echtzeit. BetTrackerAI vergleicht die Quoten von LeoVegas mit anderen Wettanbietern und zeigt dir, wo du dir einen garantierten Gewinn sichern kannst.",
+    "keyword": "leovegas surebets",
+    "intro": "LeoVegas ist vor allem für sein Casino-Angebot bekannt, bietet aber auch eine große Auswahl an Sportwetten. Der Wettanbieter nutzt die Kambi-Plattform und taucht regelmäßig in Arbitrage-Chancen auf.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Über LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "LeoVegas ist ein lizenzierter Wettanbieter mit einer benutzerfreundlichen App, über die sich Wetten schnell platzieren lassen. Das ist bei Surebets wichtig, denn Quoten können sich innerhalb von Sekunden ändern. Prüfe vor der Kontoeröffnung, ob LeoVegas in Österreich lizenziert und verfügbar ist."
+      },
+      {
+        "type": "h2",
+        "text": "So findest du Surebets mit LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "Eine Surebet mit LeoVegas entsteht, wenn LeoVegas auf einen Ausgang höhere Quoten bietet als andere Wettanbieter auf die jeweiligen Gegenausgänge. BetTrackerAI überwacht die Quoten von LeoVegas laufend und vergleicht sie mit Wettanbietern, die auf dem österreichischen Markt tätig sind."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wähle über den Filter auf der Surebets-Seite LeoVegas und deine anderen Wettanbieter aus.",
+          "Sortiere nach Gewinn und wähle eine Surebet mit stabilen Quoten.",
+          "Nutze den Rechner, um deinen Einsatz aufzuteilen und die Beträge zu runden.",
+          "Platziere zuerst die Wette beim Wettanbieter mit den volatilsten Quoten."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verteile deine Wetten auf mehrere Wettanbieter und setze nicht nur auf LeoVegas. So bleibt dein Konto länger aktiv und das Risiko von Limitierungen sinkt."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kann man bei LeoVegas Surebets platzieren?",
+        "a": "Ja, Arbitrage-Wetten sind legal. Wie alle Wettanbieter kann LeoVegas aber gemäß seinen Geschäftsbedingungen Konten einschränken, wenn Wettmuster erkannt werden, mit denen laufend ein Gewinn garantiert wird."
+      },
+      {
+        "q": "Eignet sich LeoVegas für Surebets?",
+        "a": "LeoVegas ist ein guter ergänzender Wettanbieter, vor allem in Kombination mit Anbietern außerhalb der Kambi-Plattform, da sich dadurch die Zahl der verfügbaren Arbitrage-Chancen erhöht."
+      }
+    ]
+  }
+}

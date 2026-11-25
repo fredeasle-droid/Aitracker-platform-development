@@ -1,0 +1,428 @@
+{
+  "sport/basketball": {
+    "title": "Surebets en basquetbol",
+    "metaTitle": "Surebets de basquetbol: ganancia asegurada en la NBA y la Euroleague",
+    "description": "Encuentra surebets de basquetbol en la NBA, la Euroleague y ligas europeas. Los mercados de puntos y los hándicaps generan muchas oportunidades de arbitraje con casas de apuestas con licencia.",
+    "keyword": "surebets de basquetbol",
+    "intro": "El basquetbol ofrece muchas surebets en totales de puntos y hándicaps. La NBA cuenta con una amplia oferta de mercados, y las casas de apuestas ajustan sus líneas a distinta velocidad, lo que genera oportunidades de arbitraje.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Mercados populares para el arbitraje en basquetbol"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Ganador del partido con tiempo extra: dos resultados posibles y un cálculo sencillo.",
+          "Más/menos de puntos totales, por ejemplo más o menos de 215.5 puntos.",
+          "Hándicap de puntos, donde el favorito debe ganar por un margen determinado.",
+          "Mercados de jugador, como puntos anotados, rebotes y asistencias."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Middling en totales de puntos"
+      },
+      {
+        "type": "p",
+        "text": "En los mercados de puntos, dos casas de apuestas pueden ofrecer líneas distintas, por ejemplo más de 214.5 en una y menos de 216.5 en otra. Si el partido termina justo con 215 o 216 puntos, ganas las dos apuestas. A esto se le llama 'middle' y representa una oportunidad extra de ganancia en el basquetbol."
+      },
+      {
+        "type": "tip",
+        "text": "Revisa si cuenta el tiempo extra. En el basquetbol casi siempre cuenta, pero no en todas las casas de apuestas ni en todos los mercados."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Cuenta el tiempo extra en las surebets de basquetbol?",
+        "a": "En la mayoría de los mercados sí, pero revisa siempre las reglas del mercado en cada casa de apuestas. Un mercado que excluye el tiempo extra no se puede combinar con otro que lo incluya para hacer arbitraje."
+      },
+      {
+        "q": "¿A qué hora suelen jugarse los partidos de la NBA?",
+        "a": "Los partidos de la NBA se juegan normalmente por la tarde-noche en Norteamérica. Según tu zona horaria, muchas surebets pueden aparecer varias horas antes del salto inicial, lo que te da tiempo de colocar ambos lados de la apuesta de arbitraje."
+      }
+    ]
+  },
+  "sport/ishockey": {
+    "title": "Surebets en hockey sobre hielo",
+    "metaTitle": "Surebets de hockey sobre hielo: ganancia asegurada en la NHL y otras ligas",
+    "description": "Surebets de hockey sobre hielo en la NHL, la SHL y otras ligas. Conoce la diferencia entre los mercados de tiempo regular y los de ganador del partido, y encuentra oportunidades de ganancia asegurada.",
+    "keyword": "surebets de hockey sobre hielo",
+    "intro": "El hockey sobre hielo es un deporte subestimado para las surebets. Muchas casas de apuestas fijan los momios de las ligas nórdicas de forma distinta, y la diferencia entre los mercados de tiempo regular y los de ganador del partido genera más oportunidades de arbitraje deportivo.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "¿Tiempo regular o con tiempo extra?"
+      },
+      {
+        "type": "p",
+        "text": "En el hockey sobre hielo hay un mercado 1X2 que solo cubre el tiempo regular y otro de ganador del partido que incluye tiempo extra y shootout. Nunca se deben mezclar en una misma surebet. Antes de apostar, revisa siempre en qué mercado estás apostando en cada casa de apuestas."
+      },
+      {
+        "type": "h2",
+        "text": "Buenas ligas para surebets de hockey sobre hielo"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "NHL: muchos partidos y límites de apuesta altos.",
+          "SHL y Liiga: muy populares en la región nórdica y con momios distintos según la casa de apuestas.",
+          "Ligas nacionales: ligas más pequeñas donde las casas de apuestas suelen discrepar en los momios."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "El hockey sobre hielo suele ofrecer una ganancia alta por surebet, pero con límites de apuesta más bajos que el futbol."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Se puede combinar el 1X2 con el ganador incluyendo tiempo extra en una surebet de hockey sobre hielo?",
+        "a": "No. Son dos mercados distintos. Si los combinas, puedes perder ambas apuestas si el partido se va a tiempo extra. Asegúrate siempre de que todas las apuestas de tu arbitraje sean del mismo tipo de mercado."
+      },
+      {
+        "q": "¿Hay surebets en ligas de hockey sobre hielo más pequeñas?",
+        "a": "Sí. Las casas de apuestas suelen fijar los momios de las ligas nacionales más pequeñas de manera distinta, así que las oportunidades de arbitraje aparecen con frecuencia. Antes de apostar, verifica que la casa de apuestas cuente con licencia para operar en México."
+      }
+    ]
+  },
+  "sport/fodbold": {
+    "title": "Surebets en futbol",
+    "metaTitle": "Surebets de futbol: encuentra ganancia asegurada en los partidos",
+    "description": "Encuentra surebets de futbol en tiempo real. BetTrackerAI analiza los momios de la Premier League, la Champions League y cientos de ligas más en casas de apuestas con licencia.",
+    "keyword": "surebets de futbol",
+    "intro": "El futbol genera más surebets que cualquier otro deporte. Hay partidos a todas horas y cada encuentro ofrece cientos de mercados que las casas de apuestas valoran de forma distinta.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Por qué el futbol genera tantas surebets"
+      },
+      {
+        "type": "p",
+        "text": "Las casas de apuestas tienen que fijar los momios de miles de partidos de futbol cada semana, desde la Champions League hasta las divisiones inferiores. Cuanto más pequeña es la liga, menos tiempo le dedican, y mayor es la probabilidad de que haya diferencias en los momios que generen oportunidades de arbitraje."
+      },
+      {
+        "type": "h2",
+        "text": "Los mercados más utilizados"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1X2: victoria local, empate y victoria visitante. Son tres resultados, así que necesitas tres apuestas.",
+          "Más/menos goles (over/under), por ejemplo más o menos de 2.5 goles. Solo hay dos resultados y suele haber mucha liquidez.",
+          "Hándicap asiático: dos resultados y margen bajo, pero lee con atención las reglas de liquidación para medios goles y goles enteros.",
+          "Ambos equipos anotan: sí o no. Un mercado sencillo con dos resultados."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Revisa siempre si el mercado aplica solo al tiempo regular. El tiempo extra y los penales rara vez cuentan en las surebets de futbol."
+      },
+      {
+        "type": "h2",
+        "text": "¿Cuándo aparecen las surebets?"
+      },
+      {
+        "type": "p",
+        "text": "Muchas surebets de futbol surgen cuando se anuncian las alineaciones, aproximadamente una hora antes del inicio del partido. Algunas casas de apuestas ajustan sus momios rápido y otras reaccionan más lento, y en ese margen aparecen las diferencias."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Qué ligas de futbol tienen más surebets?",
+        "a": "Las ligas más pequeñas suelen ofrecer porcentajes de ganancia más altos, pero las grandes ligas, como la Premier League y la Champions League, tienen más mercados y límites de apuesta más altos."
+      },
+      {
+        "q": "¿Se pueden hacer surebets en partidos de futbol en vivo?",
+        "a": "Sí, pero los momios en vivo cambian muy rápido. Tienes que colocar ambas apuestas en cuestión de segundos."
+      }
+    ]
+  },
+  "sport/esport": {
+    "title": "Surebets en esports",
+    "metaTitle": "Surebets de esports: arbitraje deportivo en CS2, LoL y Dota 2",
+    "description": "Los esports son uno de los mercados de surebets que más rápido crecen. Encuentra oportunidades de arbitraje deportivo en CS2, League of Legends y Dota 2 en casas de apuestas con licencia.",
+    "keyword": "surebets de esports",
+    "intro": "En los esports hay grandes diferencias de momios entre casas de apuestas. El mercado es relativamente nuevo, muchas casas tienen menos especialistas en la materia y los momios suelen moverse bastante antes del inicio del partido.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Por qué los esports dejan tanta ganancia"
+      },
+      {
+        "type": "p",
+        "text": "Las casas de apuestas dedican menos recursos a los esports que al futbol, y las noticias sobre las alineaciones de los equipos se difunden rápido en la comunidad. Esto genera mayores diferencias de momios y, a menudo, una ganancia más alta por surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Juegos populares para el arbitraje deportivo"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Counter-Strike 2: es el que tiene más partidos y más mercados de hándicap por mapas y rondas.",
+          "League of Legends: grandes torneos con mercados estables.",
+          "Dota 2: grandes diferencias de momios, pero con límites de apuesta más bajos."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Ten cuidado con los partidos pospuestos. Cada casa de apuestas tiene reglas distintas sobre cuánto tiempo sigue vigente una apuesta."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Son buenos los esports para las surebets?",
+        "a": "Sí, la ganancia suele ser mayor que en los deportes tradicionales. Eso sí, los límites de apuesta normalmente son más bajos."
+      },
+      {
+        "q": "¿Qué casas de apuestas ofrecen esports?",
+        "a": "La mayoría de las casas de apuestas con licencia más importantes ofrecen esports, sobre todo CS2 y League of Legends. Verifica la disponibilidad y que cuenten con licencia para operar en México."
+      }
+    ]
+  },
+  "sport/tennis": {
+    "title": "Surebets en tenis",
+    "metaTitle": "Surebets de tenis: ganancia asegurada en ATP, WTA y Challenger",
+    "description": "El tenis es ideal para las surebets: solo hay dos resultados posibles y hay partidos todo el año. Encuentra oportunidades de arbitraje en torneos ATP, WTA y Challenger de todo el mundo.",
+    "keyword": "surebets de tenis",
+    "intro": "El tenis es el deporte favorito de muchos apostadores de surebets. Solo hay dos resultados posibles, no existe el empate y hay torneos casi todos los días del año.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Las ventajas del tenis"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Solo hay dos resultados posibles, así que únicamente necesitas hacer dos apuestas.",
+          "No hay empate, lo que vuelve el cálculo muy sencillo.",
+          "Muchos partidos de nivel Challenger e ITF, donde las casas de apuestas suelen no coincidir en sus momios.",
+          "Partidos a cualquier hora del día gracias a los torneos en distintas zonas horarias."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Ojo con los partidos con retiro"
+      },
+      {
+        "type": "p",
+        "text": "El mayor riesgo en el tenis es que un jugador se retire durante el partido. Las casas de apuestas tienen reglas distintas: algunas anulan la apuesta y otras la resuelven si ya se completó el primer set. Si tus dos casas de apuestas aplican reglas diferentes, podrías perder ambas apuestas."
+      },
+      {
+        "type": "tip",
+        "text": "Lee las reglas de las casas de apuestas sobre retiros en partidos de tenis antes de hacer tu primera surebet de tenis."
+      },
+      {
+        "type": "h2",
+        "text": "Otros mercados"
+      },
+      {
+        "type": "p",
+        "text": "Además del ganador del partido, hay surebets en total de juegos, hándicap de sets y ganador de cada set. Estos mercados suelen tener montos máximos de apuesta más bajos."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿El tenis es bueno para las surebets?",
+        "a": "Sí. Solo tiene dos resultados posibles y hay muchísimos partidos, por eso el tenis es uno de los mejores deportes para las surebets, sobre todo si apenas estás empezando."
+      },
+      {
+        "q": "¿Qué pasa si un jugador se retira?",
+        "a": "Depende de la casa de apuestas. Algunas anulan todas las apuestas y otras las resuelven si ya se jugó cierto número de sets. Revisa las reglas de ambas casas de apuestas."
+      }
+    ]
+  },
+  "bookmaker/bet365": {
+    "title": "Surebets en Bet365",
+    "metaTitle": "Surebets en Bet365: encuentra oportunidades de ganancia garantizada",
+    "description": "Encuentra surebets en Bet365 en tiempo real. BetTrackerAI compara los momios de Bet365 con los de otras casas de apuestas y te muestra dónde asegurar una ganancia garantizada.",
+    "keyword": "surebets bet365",
+    "intro": "Bet365 es una de las casas de apuestas más grandes del mundo y ofrece una de las selecciones más amplias de deportes y mercados. Por eso es una de las casas de apuestas que más aparece en las surebets.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Acerca de Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Bet365 es una casa de apuestas con licencia en varias jurisdicciones y ofrece momios en una enorme cantidad de partidos, incluidas ligas menores y mercados en vivo. Esta amplitud hace que Bet365 a menudo tenga momios distintos a los del resto del mercado."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo encontrar surebets con Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Una surebet con Bet365 aparece cuando Bet365 ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de Bet365 de forma constante y los compara con el resto del mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecciona Bet365 y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Ordena por ganancia y elige una surebet con momios estables.",
+          "Usa la calculadora para distribuir tu monto de apuesta y redondear la cantidad.",
+          "Haz primero la apuesta en la casa de apuestas con los momios más volátiles."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Bet365. Así alargas la vida útil de tu cuenta."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Se permite el arbitraje deportivo en Bet365?",
+        "a": "El arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Bet365 puede restringir cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que aseguran una ganancia garantizada de forma constante."
+      },
+      {
+        "q": "¿Bet365 opera con licencia de juego?",
+        "a": "Sí. Bet365 cuenta con licencias en varios mercados regulados del mundo. Consulta las reglas fiscales que te apliquen, ya que el tratamiento de las ganancias varía según la jurisdicción."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Surebets en Unibet",
+    "metaTitle": "Apuestas seguras en Unibet: encuentra oportunidades de arbitraje deportivo",
+    "description": "Encuentra apuestas seguras en Unibet en tiempo real. BetTrackerAI compara los momios de Unibet con los de otras casas de apuestas para que asegures una ganancia garantizada con el arbitraje deportivo.",
+    "keyword": "apuestas seguras unibet",
+    "intro": "Unibet es una de las casas de apuestas más populares del mundo. Unibet usa la plataforma de momios Kambi, por lo que sus momios suelen parecerse a los de otras casas de apuestas que también funcionan con Kambi.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Acerca de Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Unibet cuenta con licencias en varios mercados regulados y ofrece una amplia gama de deportes. Como Unibet comparte su plataforma de momios con otras casas de apuestas, las apuestas seguras aparecen sobre todo entre Unibet y casas de apuestas que usan plataformas distintas."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo encontrar apuestas seguras con Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Una apuesta segura con Unibet se da cuando Unibet ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados opuestos. BetTrackerAI monitorea los momios de Unibet de forma continua y los compara con el resto del mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecciona Unibet y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Ordena por ganancia y elige una apuesta segura con momios estables.",
+          "Usa la calculadora para dividir tu monto de apuesta y redondear las cantidades.",
+          "Haz primero tu apuesta en la casa de apuestas con los momios más volátiles."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Unibet. Así alargarás la vida útil de tu cuenta y evitarás límites."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Es legal hacer apuestas seguras en Unibet?",
+        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Unibet puede limitar o restringir cuentas conforme a sus términos y condiciones si solo se hacen apuestas con ganancia garantizada."
+      },
+      {
+        "q": "¿Qué casas de apuestas se parecen a Unibet?",
+        "a": "Unibet usa Kambi, que también provee momios a varias otras casas de apuestas. Por eso, combina Unibet con casas de apuestas que usen plataformas distintas para encontrar más apuestas seguras."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebets en Betano",
+    "metaTitle": "Surebets en Betano: encuentra apuestas de arbitraje en Betano",
+    "description": "Encuentra surebets en Betano en tiempo real. BetTrackerAI compara los momios de Betano con los de otras casas de apuestas con licencia y te muestra dónde puedes asegurar una ganancia garantizada.",
+    "keyword": "surebets betano",
+    "intro": "Betano es una de las casas de apuestas más nuevas del mercado regulado y usa su propia plataforma para fijar los momios. Por eso, los momios de Betano suelen diferir de los del resto del mercado, lo que genera oportunidades de arbitraje deportivo.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre Betano"
+      },
+      {
+        "type": "p",
+        "text": "Betano cuenta con licencia en varias jurisdicciones y ofrece una amplia variedad de deportes. Como establece sus momios de forma independiente, con frecuencia aparece en surebets al compararla con casas de apuestas más consolidadas."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo encontrar surebets con Betano"
+      },
+      {
+        "type": "p",
+        "text": "Una surebet con Betano surge cuando Betano ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de Betano de forma continua y los compara con los del resto del mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecciona Betano y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Ordena por ganancia y elige una surebet con momios estables.",
+          "Usa la calculadora para repartir tu apuesta y redondear los montos.",
+          "Haz primero la apuesta en la casa de apuestas con los momios más volátiles."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Betano. Así tu cuenta durará más tiempo y evitarás restricciones."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Se permite hacer surebets en Betano?",
+        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Betano puede limitar cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que aseguran ganancias de forma constante."
+      },
+      {
+        "q": "¿Betano tiene licencia?",
+        "a": "Sí. Betano tiene licencia en varios mercados regulados. Consulta a la autoridad reguladora de juegos de azar de tu país para confirmar si Betano cuenta con licencia donde vives."
+      }
+    ]
+  },
+  "bookmaker/leovegas": {
+    "title": "Surebets en LeoVegas",
+    "metaTitle": "Surebets en LeoVegas – Encuentra oportunidades de arbitraje deportivo",
+    "description": "Encuentra surebets en LeoVegas en tiempo real. BetTrackerAI compara los momios de LeoVegas con los de otras casas de apuestas y te muestra dónde puedes asegurar una ganancia garantizada.",
+    "keyword": "surebets leovegas",
+    "intro": "LeoVegas es conocida por su oferta de casino, pero también ofrece una amplia selección de apuestas deportivas. La casa de apuestas usa la plataforma Kambi y aparece con regularidad en oportunidades de arbitraje deportivo.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sobre LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "LeoVegas es una casa de apuestas con licencia y una app fácil de usar que permite apostar rápidamente. Esto es clave en las surebets, donde los momios pueden cambiar en cuestión de segundos. Antes de abrir una cuenta, verifica que LeoVegas tenga licencia y esté disponible en tu país."
+      },
+      {
+        "type": "h2",
+        "text": "Cómo encontrar surebets con LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "Una surebet con LeoVegas se da cuando LeoVegas ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de LeoVegas de forma continua y los compara con los de las casas de apuestas que operan en tu mercado."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecciona LeoVegas y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Ordena por ganancia y elige una surebet con momios estables.",
+          "Usa la calculadora para dividir tu apuesta y redondear los montos.",
+          "Haz primero la apuesta en la casa de apuestas con los momios más volátiles."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo LeoVegas. Así tu cuenta durará más tiempo y se reduce el riesgo de que te la limiten."
+      }
+    ],
+    "faq": [
+      {
+        "q": "¿Se pueden hacer surebets en LeoVegas?",
+        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, LeoVegas puede restringir cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que garantizan ganancias de forma constante."
+      },
+      {
+        "q": "¿LeoVegas es buena opción para surebets?",
+        "a": "LeoVegas es una buena casa de apuestas complementaria, sobre todo si la combinas con casas de apuestas que no usen la plataforma Kambi, ya que así aumentan las oportunidades de arbitraje disponibles."
+      }
+    ]
+  }
+}

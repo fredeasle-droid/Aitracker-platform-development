@@ -1,0 +1,428 @@
+{
+  "sport/basketball": {
+    "title": "Surebets op basketbal",
+    "metaTitle": "Basketbal surebets – gegarandeerde winst op NBA en Euroleague",
+    "description": "Vind basketbal surebets op de NBA, de Euroleague en Europese competities. Puntenmarkten en handicaps zorgen voor tal van arbitragekansen bij bookmakers met licentie.",
+    "keyword": "basketbal surebets",
+    "intro": "Basketbal biedt tal van surebets op totaalpunten en handicaps. De NBA heeft een uitgebreid aanbod aan markten, en bookmakers passen hun lijnen niet even snel aan, waardoor er arbitragekansen ontstaan.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Populaire markten voor arbitrage op basketbal"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Wedstrijdwinnaar inclusief overtime: twee mogelijke uitkomsten en een eenvoudige berekening.",
+          "Over/under op het totaal aantal punten, bijvoorbeeld meer of minder dan 215.5 punten.",
+          "Puntenhandicap, waarbij de favoriet met een bepaald verschil moet winnen.",
+          "Spelersmarkten zoals gescoorde punten, rebounds en assists."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Middling op puntentotalen"
+      },
+      {
+        "type": "p",
+        "text": "Bij puntenmarkten hanteren twee bookmakers soms een verschillende lijn, bijvoorbeeld over 214.5 bij de ene en under 216.5 bij de andere. Eindigt de wedstrijd op exact 215 of 216 punten, dan win je allebei de weddenschappen. Dat noemen we een 'middle' en het is een extra winstkans in basketbal."
+      },
+      {
+        "type": "tip",
+        "text": "Controleer of verlenging meetelt. In basketbal is dat bijna altijd zo, maar niet bij alle bookmakers voor elke markt."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Telt verlenging mee bij surebets op basketbal?",
+        "a": "Bij de meeste markten wel, maar controleer altijd de regels van de specifieke markt bij elke bookmaker. Een markt zonder verlenging kan voor arbitrage niet gecombineerd worden met een markt inclusief verlenging."
+      },
+      {
+        "q": "Hoe laat worden NBA-wedstrijden meestal gespeeld?",
+        "a": "NBA-wedstrijden worden meestal 's avonds in Noord-Amerika gespeeld, wat bij ons vaak laat in de avond of 's nachts is. Veel surebets verschijnen enkele uren voor de tip-off, zodat je de tijd hebt om beide kanten van de arbitrageweddenschap te plaatsen."
+      }
+    ]
+  },
+  "sport/ishockey": {
+    "title": "Surebets op ijshockey",
+    "metaTitle": "Surebets op ijshockey – gegarandeerde winst op NHL en andere competities",
+    "description": "Surebets op ijshockey uit de NHL, SHL en andere competities. Ontdek het verschil tussen markten voor reguliere speeltijd en winnaarmarkten, en vind kansen op gegarandeerde winst.",
+    "keyword": "surebets ijshockey",
+    "intro": "IJshockey is een ondergewaardeerde sport voor surebets. Veel bookmakers prijzen de Noord-Europese competities anders, en het onderscheid tussen markten voor reguliere speeltijd en winnaarmarkten zorgt voor extra kansen bij arbitrage.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Reguliere speeltijd of inclusief verlenging?"
+      },
+      {
+        "type": "p",
+        "text": "Bij ijshockey bestaat er zowel een 1X2-markt voor enkel de reguliere speeltijd als een winnaarmarkt inclusief verlenging en shoot-outs. Die twee mag je nooit combineren in dezelfde surebet. Controleer bij elke bookmaker altijd op welke markt je wedt voor je je weddenschappen plaatst."
+      },
+      {
+        "type": "h2",
+        "text": "Goede competities voor surebets op ijshockey"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "NHL: veel wedstrijden en hoge maximale inzetten.",
+          "SHL en Liiga: populair in Noord-Europa en door bookmakers verschillend geprijsd.",
+          "Nationale competities: kleinere competities waarover bookmakers vaak van mening verschillen bij de prijszetting."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "IJshockey biedt vaak een hoge winst per surebet, maar met lagere maximale inzetten dan voetbal."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kun je 1X2 en winnaar inclusief verlenging combineren in een surebet op ijshockey?",
+        "a": "Nee. Het zijn twee verschillende markten. Als je ze combineert, kun je beide weddenschappen verliezen wanneer de wedstrijd in verlenging gaat. Zorg er altijd voor dat alle onderdelen van je arbitrageweddenschap op hetzelfde markttype staan."
+      },
+      {
+        "q": "Zijn er surebets op kleinere ijshockeycompetities?",
+        "a": "Ja. Bookmakers prijzen kleinere nationale competities vaak anders, waardoor er geregeld arbitragekansen ontstaan. Controleer vóór je wedt of de bookmakers een vergunning hebben om in België actief te zijn."
+      }
+    ]
+  },
+  "sport/fodbold": {
+    "title": "Surebets op voetbal",
+    "metaTitle": "Surebets op voetbal – vind gegarandeerde winst op wedstrijden",
+    "description": "Vind surebets op voetbal in realtime. BetTrackerAI scant de odds in de Premier League, de Champions League en honderden andere competities bij bookmakers met een vergunning.",
+    "keyword": "surebets voetbal",
+    "intro": "Voetbal levert meer surebets op dan eender welke andere sport. Er worden de klok rond wedstrijden gespeeld en elke wedstrijd biedt honderden markten die bookmakers verschillend prijzen.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Waarom voetbal zoveel surebets oplevert"
+      },
+      {
+        "type": "p",
+        "text": "Bookmakers moeten elke week duizenden voetbalwedstrijden prijzen, van de Champions League tot de lagere reeksen. Hoe kleiner de competitie, hoe minder tijd bookmakers eraan besteden, en hoe groter de kans op prijsverschillen die arbitragekansen opleveren."
+      },
+      {
+        "type": "h2",
+        "text": "De meest gebruikte markten"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "1X2: thuiszege, gelijkspel en uitzege. Drie uitkomsten, dus drie weddenschappen.",
+          "Over/under doelpunten, bijvoorbeeld meer of minder dan 2.5 doelpunten. Slechts twee uitkomsten en vaak veel liquiditeit.",
+          "Aziatische handicap: twee uitkomsten en een lage marge, maar lees de afrekeningsregels voor halve en hele doelpunten aandachtig.",
+          "Beide ploegen scoren: ja of nee. Een eenvoudige markt met twee uitkomsten."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Controleer altijd of de markt enkel geldt voor de reguliere speeltijd. Verlengingen en strafschoppen tellen bij surebets op voetbal zelden mee."
+      },
+      {
+        "type": "h2",
+        "text": "Wanneer ontstaan surebets?"
+      },
+      {
+        "type": "p",
+        "text": "Veel surebets op voetbal ontstaan wanneer de opstellingen ongeveer een uur voor de aftrap bekend worden gemaakt. Sommige bookmakers passen hun odds snel aan, andere reageren trager, en in dat tijdsvenster ontstaan prijsverschillen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "In welke voetbalcompetities zijn er de meeste surebets?",
+        "a": "Kleinere competities bieden vaak hogere winstpercentages, maar grote competities zoals de Premier League en de Champions League hebben meer markten en hogere maximale inzetten."
+      },
+      {
+        "q": "Kun je surebets plaatsen op live voetbalwedstrijden?",
+        "a": "Ja, maar live odds veranderen razendsnel. Je moet beide weddenschappen binnen enkele seconden plaatsen."
+      }
+    ]
+  },
+  "sport/esport": {
+    "title": "Surebets op esports",
+    "metaTitle": "Surebets op esports – arbitrage op CS2, LoL en Dota 2",
+    "description": "Esports is een van de snelst groeiende markten voor surebets. Vind arbitragekansen op CS2, League of Legends en Dota 2 bij bookmakers met een vergunning.",
+    "keyword": "surebets esports",
+    "intro": "Bij esports zijn er grote prijsverschillen tussen bookmakers. De markt is relatief nieuw, veel bookmakers hebben minder specialisten in huis en de odds verschuiven vaak sterk voor de start van de wedstrijd.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Waarom esports veel winst oplevert"
+      },
+      {
+        "type": "p",
+        "text": "Bookmakers besteden minder middelen aan esports dan aan voetbal, en nieuws over de opstellingen van teams verspreidt zich razendsnel binnen de community. Dat zorgt voor grotere oddsverschillen en vaak voor meer winst per surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Populaire games voor arbitragewedden"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Counter-Strike 2: de meeste wedstrijden en markten voor map- en roundhandicaps.",
+          "League of Legends: grote toernooien met stabiele markten.",
+          "Dota 2: grote verschillen in odds, maar lagere maximale inzetten."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Let op bij uitgestelde wedstrijden. Bookmakers hanteren verschillende regels over hoelang een weddenschap geldig blijft."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Zijn esports geschikt voor surebets?",
+        "a": "Ja, de winst ligt vaak hoger dan bij traditionele sporten. De maximale inzetten zijn wel meestal lager."
+      },
+      {
+        "q": "Welke bookmakers bieden esports aan?",
+        "a": "De meeste grote bookmakers met een vergunning bieden esports aan, vooral CS2 en League of Legends. Ga na of ze beschikbaar zijn en over een vergunning beschikken in België."
+      }
+    ]
+  },
+  "sport/tennis": {
+    "title": "Surebets op tennis",
+    "metaTitle": "Tennis surebets – gegarandeerde winst op ATP, WTA en Challenger",
+    "description": "Tennis is ideaal voor surebets: slechts twee mogelijke uitkomsten en het hele jaar door wedstrijden. Ontdek arbitragekansen op ATP-, WTA- en Challenger-toernooien over de hele wereld.",
+    "keyword": "tennis surebets",
+    "intro": "Tennis is voor veel surebetters de favoriete sport. Er zijn maar twee mogelijke uitkomsten, geen gelijkspel, en bijna elke dag van het jaar wordt er wel ergens een toernooi gespeeld.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "De voordelen van tennis"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Slechts twee mogelijke uitkomsten, dus je hoeft maar twee weddenschappen te plaatsen.",
+          "Geen gelijkspel, waardoor de berekening eenvoudig blijft.",
+          "Heel veel wedstrijden op Challenger- en ITF-niveau, waar bookmakers vaak van mening verschillen.",
+          "Wedstrijden rond de klok dankzij toernooien in verschillende tijdzones."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Let op bij opgave tijdens een wedstrijd"
+      },
+      {
+        "type": "p",
+        "text": "Het grootste risico bij tennis is dat een speler tijdens een wedstrijd opgeeft. Bookmakers hanteren verschillende regels: sommige annuleren de weddenschap, andere beslechten ze als de eerste set is afgewerkt. Als je twee bookmakers verschillende regels toepassen, kun je beide weddenschappen verliezen."
+      },
+      {
+        "type": "tip",
+        "text": "Lees de regels van de bookmakers over opgave in tennismatchen voor je je eerste tennis-surebet plaatst."
+      },
+      {
+        "type": "h2",
+        "text": "Andere markten"
+      },
+      {
+        "type": "p",
+        "text": "Naast de winnaar van de wedstrijd zijn er ook surebets op het totaal aantal games, sethandicaps en de winnaar van individuele sets. Op die markten gelden vaak lagere maximale inzetten."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is tennis geschikt voor surebets?",
+        "a": "Ja. Met slechts twee mogelijke uitkomsten en heel veel wedstrijden is tennis een van de beste sporten voor surebets, zeker voor beginners."
+      },
+      {
+        "q": "Wat gebeurt er als een speler opgeeft?",
+        "a": "Dat hangt af van de bookmaker. Sommige annuleren alle weddenschappen, andere beslechten ze als er een bepaald aantal sets is gespeeld. Controleer de regels bij beide bookmakers."
+      }
+    ]
+  },
+  "bookmaker/bet365": {
+    "title": "Surebets bij Bet365",
+    "metaTitle": "Bet365 surebets – ontdek kansen op gegarandeerde winst",
+    "description": "Vind surebets bij Bet365 in realtime. BetTrackerAI vergelijkt de odds van Bet365 met die van andere bookmakers en toont je waar je een gegarandeerde winst kunt vastleggen.",
+    "keyword": "bet365 surebets",
+    "intro": "Bet365 is een van de grootste bookmakers ter wereld en biedt een van de breedste aanbiedingen aan sporten en markten. Daardoor is Bet365 een van de bookmakers die het vaakst bij surebets betrokken zijn.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Over Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Bet365 is een bookmaker met vergunningen in meerdere rechtsgebieden en biedt odds aan op een zeer groot aantal wedstrijden, waaronder lagere competities en live markten. Door die brede waaier heeft Bet365 vaak odds die afwijken van de rest van de markt."
+      },
+      {
+        "type": "h2",
+        "text": "Zo vind je surebets met Bet365"
+      },
+      {
+        "type": "p",
+        "text": "Een surebet met Bet365 ontstaat wanneer Bet365 hogere odds heeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van Bet365 voortdurend op en vergelijkt ze met de rest van de markt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecteer Bet365 en je andere bookmakers via de filter op de surebetspagina.",
+          "Sorteer op winst en kies een surebet met stabiele odds.",
+          "Gebruik de calculator om je inzet te verdelen en het bedrag af te ronden.",
+          "Plaats eerst de weddenschap bij de bookmaker met de meest schommelende odds."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Spreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Bet365 gebruikt. Zo gaat je account langer mee."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Is arbitragewedden toegestaan bij Bet365?",
+        "a": "Arbitragewedden is legaal. Net als alle bookmakers kan Bet365 volgens de eigen algemene voorwaarden wel accounts beperken als het gokpatronen opmerkt waarmee consequent gegarandeerde winst wordt behaald."
+      },
+      {
+        "q": "Heeft Bet365 een kansspelvergunning?",
+        "a": "Ja. Bet365 heeft vergunningen in meerdere gereguleerde markten wereldwijd. Informeer je over de fiscale regels die voor jou in België gelden, want de behandeling van winsten verschilt per rechtsgebied."
+      }
+    ]
+  },
+  "bookmaker/unibet": {
+    "title": "Surebets bij Unibet",
+    "metaTitle": "Unibet surebets – ontdek kansen voor arbitragewedden",
+    "description": "Vind surebets bij Unibet in realtime. BetTrackerAI vergelijkt de odds van Unibet met die van andere bookmakers, zodat je met arbitragewedden gegarandeerde winst kunt vastleggen.",
+    "keyword": "unibet surebets",
+    "intro": "Unibet is een van de populairste bookmakers ter wereld. Unibet gebruikt het oddsplatform van Kambi, waardoor de odds bij Unibet vaak lijken op die van andere bookmakers die op Kambi draaien.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Over Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Unibet heeft vergunningen in meerdere gereguleerde markten en biedt een breed aanbod aan sporten. Omdat Unibet zijn oddsplatform deelt met verschillende andere bookmakers, ontstaan surebets meestal tussen Unibet en bookmakers op andere platformen."
+      },
+      {
+        "type": "h2",
+        "text": "Zo vind je surebets met Unibet"
+      },
+      {
+        "type": "p",
+        "text": "Een surebet met Unibet ontstaat wanneer Unibet hogere odds heeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van Unibet voortdurend op en vergelijkt ze met de rest van de markt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecteer Unibet en je andere bookmakers via de filter op de surebetspagina.",
+          "Sorteer op winst en kies een surebet met stabiele odds.",
+          "Gebruik de calculator om je inzet te verdelen en de bedragen af te ronden.",
+          "Plaats je weddenschap eerst bij de bookmaker met de meest volatiele odds."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verspreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Unibet gebruikt. Zo gaat je account langer mee en vermijd je beperkingen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Mag je surebets plaatsen bij Unibet?",
+        "a": "Ja, arbitrage betting is legaal. Zoals alle bookmakers kan Unibet volgens zijn algemene voorwaarden wel accounts beperken of afschermen als ze uitsluitend weddenschappen met gegarandeerde winst plaatsen."
+      },
+      {
+        "q": "Welke bookmakers lijken op Unibet?",
+        "a": "Unibet werkt met Kambi, dat ook de odds levert aan een aantal andere bookmakers. Combineer Unibet dus met bookmakers die op andere platformen draaien, zo vind je meer surebets."
+      }
+    ]
+  },
+  "bookmaker/betano": {
+    "title": "Surebets bij Betano",
+    "metaTitle": "Betano surebets – vind arbitragekansen bij Betano",
+    "description": "Vind surebets bij Betano in real time. BetTrackerAI vergelijkt de odds van Betano met die van andere bookmakers met een vergunning en toont je waar je een gegarandeerde winst kunt vastleggen.",
+    "keyword": "betano surebets",
+    "intro": "Betano is een van de nieuwere bookmakers op de gereguleerde markt en werkt met een eigen platform om odds te bepalen. Daardoor wijken de odds van Betano vaak af van de rest van de markt, wat kansen voor arbitrage betting oplevert.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Over Betano"
+      },
+      {
+        "type": "p",
+        "text": "Betano heeft een vergunning in meerdere rechtsgebieden en biedt een breed aanbod aan sporten. Omdat Betano zijn odds zelfstandig bepaalt, duikt de bookmaker vaak op in surebets wanneer je hem vergelijkt met gevestigde bookmakers."
+      },
+      {
+        "type": "h2",
+        "text": "Zo vind je surebets met Betano"
+      },
+      {
+        "type": "p",
+        "text": "Een surebet met Betano ontstaat wanneer Betano hogere odds geeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van Betano voortdurend op en vergelijkt ze met de rest van de markt."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecteer Betano en je andere bookmakers via de filter op de surebetspagina.",
+          "Sorteer op winst en kies een surebet met stabiele odds.",
+          "Gebruik de calculator om je inzet te verdelen en de bedragen af te ronden.",
+          "Plaats je weddenschap eerst bij de bookmaker met de meest volatiele odds."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verspreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Betano gebruikt. Zo gaat je account langer mee en vermijd je beperkingen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Mag je surebets plaatsen bij Betano?",
+        "a": "Ja, arbitrage betting is legaal. Zoals alle bookmakers kan Betano volgens zijn algemene voorwaarden wel accounts beperken als er gokpatronen worden opgemerkt die consequent een gegarandeerde winst opleveren."
+      },
+      {
+        "q": "Heeft Betano een vergunning?",
+        "a": "Ja. Betano heeft een vergunning in meerdere gereguleerde markten. Controleer bij de Kansspelcommissie of Betano ook in België over een vergunning beschikt."
+      }
+    ]
+  },
+  "bookmaker/leovegas": {
+    "title": "Surebets bij LeoVegas",
+    "metaTitle": "LeoVegas surebets – vind kansen voor arbitrage betting",
+    "description": "Vind surebets bij LeoVegas in real time. BetTrackerAI vergelijkt de odds van LeoVegas met andere bookmakers en toont je waar je een gegarandeerde winst kunt vastleggen.",
+    "keyword": "leovegas surebets",
+    "intro": "LeoVegas staat bekend om zijn casinoaanbod, maar biedt ook een ruime keuze aan sportweddenschappen. De bookmaker werkt met het Kambi-platform en duikt geregeld op in kansen voor arbitrage betting.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Over LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "LeoVegas is een bookmaker met vergunning en een gebruiksvriendelijke app waarmee je snel weddenschappen plaatst. Dat is belangrijk bij surebets, want odds kunnen binnen enkele seconden veranderen. Controleer of LeoVegas een vergunning heeft en beschikbaar is in België voordat je een account aanmaakt."
+      },
+      {
+        "type": "h2",
+        "text": "Zo vind je surebets met LeoVegas"
+      },
+      {
+        "type": "p",
+        "text": "Een surebet met LeoVegas ontstaat wanneer LeoVegas hogere odds geeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van LeoVegas voortdurend op en vergelijkt ze met bookmakers die in België actief zijn."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Selecteer LeoVegas en je andere bookmakers via de filter op de surebetspagina.",
+          "Sorteer op winst en kies een surebet met stabiele odds.",
+          "Gebruik de calculator om je inzet te verdelen en de bedragen af te ronden.",
+          "Plaats je weddenschap eerst bij de bookmaker met de meest volatiele odds."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Verspreid je weddenschappen over meerdere bookmakers, zodat je niet enkel LeoVegas gebruikt. Zo gaat je account langer mee en verklein je het risico op beperkingen."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kun je surebets plaatsen bij LeoVegas?",
+        "a": "Ja, arbitrage betting is legaal. Zoals alle bookmakers kan LeoVegas volgens zijn algemene voorwaarden wel accounts beperken als er gokpatronen worden opgemerkt die consequent winst garanderen."
+      },
+      {
+        "q": "Is LeoVegas geschikt voor surebets?",
+        "a": "LeoVegas is een goede aanvullende bookmaker, vooral in combinatie met bookmakers buiten het Kambi-platform, want zo heb je meer arbitragekansen om uit te kiezen."
+      }
+    ]
+  }
+}

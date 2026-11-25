@@ -1,4 +1,6 @@
 import type { Locale } from '@/lib/i18n'
+import type { BaseLocale } from '@/lib/locale-list'
+import { fillTemplate, newLocales } from '@/lib/locale-packs'
 
 export type SeoStrings = {
   home: string
@@ -30,7 +32,7 @@ export type SeoStrings = {
   categories: Record<'Grundlæggende' | 'Strategi' | 'Regler', string>
 }
 
-export const SEO_STRINGS: Record<Locale, SeoStrings> = {
+const SEO_BASE: Record<BaseLocale, SeoStrings> = {
   da: {
     home: 'Forside',
     breadcrumb: 'Brødkrumme',
@@ -408,4 +410,20 @@ export const SEO_STRINGS: Record<Locale, SeoStrings> = {
     readGuide: 'Lees de gids',
     categories: { Grundlæggende: 'Basis', Strategi: 'Strategie', Regler: 'Regels' },
   },
+}
+
+export const SEO_STRINGS: Record<Locale, SeoStrings> = {
+  ...SEO_BASE,
+  ...newLocales(SEO_BASE, (pack, fallback) => {
+    if (!pack.seo) return fallback
+    const text = pack.seo as Omit<SeoStrings, 'minRead' | 'moreOf'> & { minRead: string; moreOf: string }
+    // Languages that lowercase the label in "More <label>" (e.g. English) keep doing so; German keeps capitals.
+    const lowercase = fallback.moreOf('X') === fallback.moreOf('x')
+    return {
+      ...fallback,
+      ...text,
+      minRead: (minutes) => fillTemplate(text.minRead, { minutes }),
+      moreOf: (label) => fillTemplate(text.moreOf, { label: lowercase ? label.toLowerCase() : label }),
+    }
+  }),
 }

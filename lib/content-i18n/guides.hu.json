@@ -1,0 +1,2419 @@
+{
+  "matched-betting": {
+    "title": "Matched betting: profit a fogadóirodák üdvözlő bónuszaiból",
+    "metaTitle": "Matched betting – hogyan használd ki a fogadóirodák bónuszait",
+    "description": "A matched betting bemutatása: hogyan használhatod az üdvözlő bónuszokat és az ingyenes fogadásokat engedéllyel rendelkező fogadóirodáknál a profit rögzítésére, és miben különbözik a surebetektől.",
+    "keyword": "matched betting",
+    "intro": "A matched betting olyan módszer, amellyel a fogadóirodák bónuszait és ingyenes fogadásait valódi pénzzé válthatod. Ha ugyanarra az eseményre megteszed a fogadást és az ellenfogadást is, minden kimenetelt lefedsz, így az eredmény mindegy – a bónuszból garantált profit marad.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Hogyan működik a matched betting"
+      },
+      {
+        "type": "p",
+        "text": "Amikor igénybe veszel egy ingyenes fogadást vagy bónuszt, azt az egyik fogadóirodánál az egyik kimenetelre teszed meg, majd ugyanezt a kimenetelt megfekteted (ellene fogadsz) egy fogadási tőzsdén, vagy egy másik fogadóirodánál az ellenkező eredményre fogadsz. Mivel az ingyenes fogadás nem kerül a saját pénzedbe, a névértékének nagy részét profitként rögzítheted attól függetlenül, hogy melyik fél nyer."
+      },
+      {
+        "type": "h2",
+        "text": "Bónuszfeltételek és korlátozások"
+      },
+      {
+        "type": "p",
+        "text": "Az üdvözlő bónuszok feltételei fogadóirodánként és országonként eltérnek. Egyes szabályozott piacokon a fogyasztók védelme érdekében felső határt szabnak a bónuszösszegeknek, és korlátozzák a forgatási feltételeket. Bármilyen ajánlat elfogadása előtt mindig olvasd el a konkrét általános szerződési feltételeket."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Ellenőrizd, mekkora minimális oddsra van szükség a bónusz feloldásához – sok fogadóiroda 1.80-as vagy annál magasabb alsó határt szab meg.",
+          "Jegyezd meg a lejárati időt, hogy a bónuszod vagy az ingyenes fogadásod ne évüljön el kihasználatlanul.",
+          "Fontold meg a surebetek (arbitrázsfogadások) használatát: így minimális kockázattal teljesítheted a forgatási feltételeket."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "A matched betting és a surebetek kombinálása"
+      },
+      {
+        "type": "p",
+        "text": "A surebetek ideálisak a bónuszok forgatási feltételeinek teljesítésére, mert nem egyetlen kimenetelre teszed fel a saját pénzedet. Miután teljesítetted a forgatást, promóciók nélkül is folytathatod az arbitrázslehetőségek keresését."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Legális a matched betting?",
+        "a": "Igen. A bónuszok kihasználása a fogadóiroda nyilvánosan közzétett feltételein belül teljesen legális. A fogadóirodák ugyanakkor fenntartják a jogot, hogy visszavonják az ajánlatokat vagy korlátozzák a fiókokat, ha úgy ítélik meg, hogy nem a promóciók szellemében fogadsz, vagy megszeged a feltételeket."
+      },
+      {
+        "q": "Mennyit érnek általában az üdvözlő bónuszok?",
+        "a": "A bónuszok értéke és a forgatási feltételek fogadóirodánként és joghatóságonként eltérnek. Egyes szabályozott piacokon az üdvözlő ajánlatok felső korlátot kaphatnak – például €1,000 vagy €1,000, a bónusz tízszeresének megfelelő maximális forgatással. Mindig ellenőrizd az aktuális feltételeket a kiválasztott fogadóirodánál, és győződj meg róla, hogy az érvényes engedéllyel rendelkezik az országodban."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Aktuális bónuszok megtekintése"
+  },
+  "er-surebets-lovligt": {
+    "title": "Legálisak a surebetek? Szabályok és adózási szempontok",
+    "metaTitle": "Legálisak a surebetek? Szabályok, adózás és fogadóirodai feltételek",
+    "description": "Legális surebeteket fogadni, és kell adózni a nyereség után? Itt a szabályok, és az is, mit tehetnek a fogadóirodák az arbitrázsfogadással szemben.",
+    "keyword": "legálisak a surebetek",
+    "intro": "A rövid válasz: igen. A surebetek fogadása a legtöbb joghatóságban legális. Egyszerűen hagyományos fogadásokat kötsz engedéllyel rendelkező fogadóirodáknál, és az oddsok összehasonlításával megkeresed a legjobb értéket – ebben a folyamatban semmi sem jogellenes.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Mit tehetnek a fogadóirodák?"
+      },
+      {
+        "type": "p",
+        "text": "Bár a surebetek legálisak, a fogadóirodák nem örülnek azoknak az ügyfeleknek, akik rendszeresen garantált profitot hozó fogadásokat kötnek. Az általános szerződési feltételeikben fenntartják a jogot, hogy csökkentsék a maximális tétet, korlátozzák a piacokat vagy a fiókokat. A befizetett összeget azonban mindig vissza kell adniuk, az érvényes nyereményeket pedig ki kell fizetniük."
+      },
+      {
+        "type": "h2",
+        "text": "Kell adózni a nyereség után?"
+      },
+      {
+        "type": "p",
+        "text": "A fogadási nyeremények adózása országonként eltérő. Sok szabályozott piacon a nemzeti szerencsejáték-felügyelet által engedélyezett szolgáltatóktól származó nyeremény a játékos számára adómentes. Ha offshore vagy engedély nélküli szolgáltatókat használsz, a nyereményed adóköteles lehet. Tájékozódj a lakóhelyeden érvényes adószabályokról, és ha bizonytalan vagy a saját helyzetedben, fordulj a helyi adóhatósághoz."
+      },
+      {
+        "type": "tip",
+        "text": "Maradj a nemzeti szabályozó által engedélyezett fogadóirodáknál. Ez jellemzően adózási előnyökkel és a szerencsejáték-felügyelet nyújtotta fogyasztóvédelemmel jár."
+      },
+      {
+        "type": "h2",
+        "text": "Felelős játék"
+      },
+      {
+        "type": "p",
+        "text": "Surebetek mellett is fontos, hogy megőrizd az irányítást a szerencsejátékod felett. Állíts be befizetési limitet, és ha szünetre van szükséged, használd az országodban elérhető önkizárási nyilvántartást. Ha segítségre van szükséged, fordulj egy elismert szerencsejáték-segélyvonalhoz a környéteken."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Megtagadhatja a fogadóiroda a surebet nyereményének kifizetését?",
+        "a": "A fogadóirodának ki kell fizetnie az érvényes nyereményt. Érvénytelenítheti a fogadást, ha az oddsban nyilvánvaló hiba volt, és a jövőben korlátozhatja a fiókot."
+      },
+      {
+        "q": "Kell adóznom a surebet nyeremények után?",
+        "a": "Az országodtól függ. Sok szabályozott piacon az engedélyezett szolgáltatóktól származó nyeremény a játékos számára adómentes. Tájékozódj a lakóhelyeden érvényes adószabályokról."
+      }
+    ],
+    "category": "Szabályok",
+    "ctaLabel": "Surebetek az engedélyezett fogadóirodáknál"
+  },
+  "undgaa-begraensning": {
+    "title": "Hogyan kerüld el a fogadóirodai korlátozásokat, és tartsd tovább nyitva a fiókjaidat",
+    "metaTitle": "Hogyan kerüld el a fogadóirodai korlátozásokat – arbitrázs útmutató 2026",
+    "description": "Hogyan kerüld el a fogadóirodai korlátozásokat arberként: természetesnek tűnő fogadási stratégia, a legjobb fogadóirodák arbitrázsfogadáshoz és példák €-ban.",
+    "keyword": "hogyan kerüld el a fogadóirodai korlátozásokat",
+    "intro": "A fogadóirodai korlátozások elkerüléséhez úgy kell fogadnod, mint egy átlagos ügyfélnek: kerek tétekkel, népszerű piacokon, rendes fogadásokat is keverve közéjük, és nem reagálva azonnal minden oddsváltozásra. A soft fogadóirodák korlátozzák azokat a fiókokat, amelyek rendszeresen megverik a záróoddsot. Örökre nem kerülheted el, de egy okos fogadási stratégiával a fiókjaid hetek helyett hónapokig nyitva maradhatnak.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért korlátozzák a fogadóirodák a fiókokat?"
+      },
+      {
+        "type": "p",
+        "text": "A soft fogadóirodák a szórakozásból fogadókon keresnek, nem azokon az ügyfeleken, akik csak a rosszul beárazott oddsokat viszik el. A kockázatkezelő rendszereik mintázatokat figyelnek: olyan oddsokra fogadsz, amelyek röviddel utána esnek? Csak félreeső piacokon fogadsz? A téteid centre pontosan ki vannak számolva? Ezek mindegyike növeli a kockázati pontszámodat."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**A záróodds megverése:** a legerősebb jelzés. Ha az oddsaid rendre jobbak a végső árnál, megjelölnek.",
+          "**Kerekítetlen tétek:** a €463.27 számológépre emlékeztet. A €460 emberre.",
+          "**Niche piacok:** egy kis bajnokság másodosztályának szögletei felkeltik a figyelmet.",
+          "**Csak kifizetések:** a gyakori kifizetések bónuszok és rendszeres fogadások nélkül profinak tűnnek."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Fogadási stratégia, amellyel nyitva maradnak a fiókjaid"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Kerekítsd a tétjeidet** egész tízesekre. A profit alig változik.",
+          "**Maradj a fősodorbeli piacoknál:** nagy bajnokságok, 1X2, over/under és meccsgyőztes tenniszben.",
+          "**Keverj közé normál fogadásokat:** hetente néhány kisebb, rendes fogadás, lehetőleg nagy meccsekre.",
+          "**Kerüld a extrém árazási hibákat:** a 8–10% feletti surebetek felkeltik a figyelmet, és gyakran amúgy is érvénytelenítik őket.",
+          "**Ne reagálj azonnal:** ha az odds megmozdulásának pillanatában fogadsz, az az arberek klasszikus mintázata.",
+          "**Oszd el a forgalmadat** több fogadóiroda között ahelyett, hogy egyet terhelnél agyon."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Példa: kerekített tétek, teljes tét €1,000",
+        "rows": [
+          [
+            "Pontos felosztás 2.10 / 2.00 oddsnál",
+            "€487.80 / €512.20"
+          ],
+          [
+            "Kerekített felosztás",
+            "€490 / €510"
+          ],
+          [
+            "Nyereség, ha A nyer (2.10)",
+            "€1,029 − €1,000 = €29.00"
+          ],
+          [
+            "Nyereség, ha B nyer (2.00)",
+            "€1,020 − €1,000 = €20.00"
+          ],
+          [
+            "Összehasonlításul a pontos felosztás",
+            "kb. €24.39 bármelyik kimenetelnél"
+          ]
+        ],
+        "note": "A kerekített tétek így is mindkét eredménynél biztos nyereséget hoznak, a fogadóiroda szemében pedig sokkal természetesebbnek tűnnek."
+      },
+      {
+        "type": "h2",
+        "text": "Legjobb fogadóirodák arbitrázsfogadáshoz"
+      },
+      {
+        "type": "p",
+        "text": "Egy jó arbitrázs-felállás kétféle fogadóirodát kombinál. A soft fogadóirodák kínálják a hibásan árazott oddsokat, a sharp fogadóirodák és a fogadási tőzsdék pedig nagy téteket is elfogadnak anélkül, hogy korlátoznák a nyerőket."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Soft fogadóirodák:** a surebetek többségének forrásai, de gyorsan korlátoznak. Óvatosan használd őket.",
+          "**Sharp fogadóirodák:** alacsonyabb árrés és magas limitek. Ideálisak a második lábhoz.",
+          "**Fogadási tőzsdék:** más felhasználók ellen fogadsz, ezért nem korlátoznak a nyeréseid miatt. A jutalék kissé csökkenti a profitot."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Olvasd el a teljes áttekintést a [legjobb fogadóirodákról surebetekhez](/en/guides/best-bookmakers-for-surebets). Mindig az országodban engedéllyel működő fogadóirodákat használd."
+      },
+      {
+        "type": "h2",
+        "text": "Mit tegyél, ha korlátozzák a fiókodat"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Vedd ki az egyenleged**, ha a fiók már nem használható surebetekhez.",
+          "**Ne nyiss új fiókot** más nevén. Ez sérti a szabályzatot, és a nyeremények elkobzásához vezethet.",
+          "**Told át a forgalmat** a többi fiókodra, valamint sharp fogadóirodákhoz vagy tőzsdékre.",
+          "**Fogadóirodánként követd az eredményeket:** egy [fogadáskövető](/en/guides/bet-tracker) megmutatja, mely fiókokat érdemes megvédeni."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Minél több fogadóirodát tudsz használni, annál kisebb forgalom jut egy-egy fiókra. A [BetTracker AI](/en) sok fogadóiroda között talál surebeteket, így szét tudod osztani a fogadásaidat, és a fiókjaid tovább maradnak nyitva."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Teljesen elkerülhetem a fogadóirodai korlátozásokat?",
+        "a": "A soft fogadóirodáknál hosszú távon nem. A természetes fogadási minta viszont hónapokkal késleltetheti a korlátozást, a sharp fogadóirodák és a tőzsdék pedig szinte soha nem korlátoznak."
+      },
+      {
+        "q": "Jogszerű, hogy a fogadóirodák korlátoznak?",
+        "a": "Igen, a fogadóirodák általában maguk dönthetik el, kitől fogadnak el fogadást. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "Hány fogadóirodát használjak?",
+        "a": "Öt-tíz jó kezdés. Így szétoszlik a forgalmad, és több surebet közül választhatsz."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Találj surebeteket több fogadóirodánál"
+  },
+  "surebet-beregner": {
+    "title": "Ingyenes surebet kalkulátor: számold ki a téteket másodpercek alatt",
+    "metaTitle": "Ingyenes surebet kalkulátor – tétek kiszámítása 2026",
+    "description": "Használj ingyenes surebet kalkulátort, hogy két vagy három kimenetel között ossza el a tétedet. A képlet, €-s példák, és hogyan kerekíts biztonságosan.",
+    "keyword": "ingyenes surebet kalkulátor",
+    "intro": "A surebet kalkulátor az összes kimenetel között úgy osztja el a teljes tétedet, hogy a kifizetés bármi történjen, ugyanannyi legyen. Add meg az oddsokat és az összeget, a kalkulátor pedig megmutatja a kimenetelenkénti tétet, a kifizetést és a nyereséget €-ban és %-ban. A képlet egyszerű, de a kalkulátor megelőzi a hibákat, amikor csak percek vannak a fogadások feladására.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Hogyan számold ki a surebet tétjeit: a képlet"
+      },
+      {
+        "type": "p",
+        "text": "Először add össze a fordított oddsokat: 1/A odds + 1/B odds (+ 1/C odds három kimenetelnél). Nevezzük ezt az összeget S-nek. Egy kimenetel tétje: teljes tét × 1/odds, osztva S-sel. A kifizetés: a teljes tét osztva S-sel."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Tét kimenetelenként:** teljes tét × (1/odds) ÷ S",
+          "**Kifizetés:** teljes tét ÷ S",
+          "**Nyereség %-ban:** (1 ÷ S − 1) × 100"
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Példa: két kimenetel, teljes tét €1,500",
+        "rows": [
+          [
+            "A odds 2.10, B odds 2.05",
+            "S = 0.476 + 0.488 = 0.964"
+          ],
+          [
+            "Tét az A kimenetelre",
+            "€740.97"
+          ],
+          [
+            "Tét a B kimenetelre",
+            "€759.03"
+          ],
+          [
+            "Kifizetés bármelyik kimenetelnél",
+            "kb. €1,556.03"
+          ],
+          [
+            "Nyereség",
+            "kb. €56.03 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sportarbitrázs három kimenetellel"
+      },
+      {
+        "type": "p",
+        "text": "A labdarúgás és a jégkorong 1X2 piacain egy harmadik kimenetel is bekerül ugyanabba a képletbe. Kézzel ez fárasztó, és pont itt spórol a legtöbb időt a kalkulátor."
+      },
+      {
+        "type": "example",
+        "title": "Példa: 1X2, teljes tét €1,000",
+        "rows": [
+          [
+            "Hazai győzelem, odds 2.50",
+            "Tét €408.23"
+          ],
+          [
+            "Döntetlen, odds 3.50",
+            "Tét €291.59"
+          ],
+          [
+            "Vendég győzelem, odds 3.40",
+            "Tét €300.17"
+          ],
+          [
+            "A fordított oddsok összege",
+            "0.980"
+          ],
+          [
+            "Nyereség",
+            "kb. €20.58 (2.1%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Kerekítés és egyenetlen tétek"
+      },
+      {
+        "type": "p",
+        "text": "A €740.97-hez hasonló tétek gyanúsnak tűnnek a fogadóirodának. Kerekíts egész euróra vagy tízesekre. Ha €741-re és €759-re kerekítesz, a nyereség kb. €56 marad, a kimenetelek között csak néhány cent a különbség."
+      },
+      {
+        "type": "p",
+        "text": "A téteket szándékosan el is tolhatod. Ha az egyik kimenetelnél csak a befizetett tétedet fedezed, ott €0 a nyereséged, a másikon pedig több. A fenti példában €768.29 az A-ra és €731.71 a B-re €113.41 nyereséget ad, ha A nyer, és €0-t, ha B nyer."
+      },
+      {
+        "type": "tip",
+        "text": "Mindig a fogadói szelvényen ténylegesen megjelenő oddsszal számolj, ne a szkenneren látottal. Az árak a keresés és a kattintás között egy árnyalatnyit elmozdulhatnak."
+      },
+      {
+        "type": "h2",
+        "text": "A surebet kalkulátor mint mindennapi fogadási eszköz"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Fogadás előtt:** ellenőrizd, hogy az odds reciprokainak összege még mindig 1 alatt van.",
+          "**Fogadás közben:** számolj újra, ha változik valamelyik odds.",
+          "**Fogadás után:** rögzítsd az eredményt, hogy egy [fogadáskövetőben](/en/guides/bet-tracker) nyomon követhesd a ROI-dat."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Próbáld ki az ingyenes [surebet kalkulátort](/en/calculator) két vagy három kimenetellel. Ha nem szeretnéd kézzel beírogatni az oddsokat, a [BetTracker AI](/en) megkeresi a surebeteket, és automatikusan kiszámolja a téteket."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ingyenes a surebet kalkulátor?",
+        "a": "Igen, a BetTracker AI kalkulátora ingyenes, és két- és háromkimenetelű piacokkal is működik."
+      },
+      {
+        "q": "Használhatom a kalkulátort fedezésre (hedge)?",
+        "a": "Igen. Add meg az eredeti oddsodat és az ellenkező kimenetel új oddsát, és megmutatja, mekkora tétet kell megtenned a profit rögzítéséhez. Bővebben: [pénzkeresés sportfogadással kockázat nélkül](/en/guides/make-money-betting-without-risk)."
+      },
+      {
+        "q": "Miért mutat a kalkulátor negatív profitot?",
+        "a": "Az odds reciprokainak összege 1 felett van, ezért nincs surebet. Valószínűleg valamelyik odds elmozdult."
+      }
+    ],
+    "category": "Alapok",
+    "ctaLabel": "Surebet kalkulátor megnyitása"
+  },
+  "odds-beregner": {
+    "title": "Hogyan használd az oddskalkulátort",
+    "metaTitle": "Oddskalkulátor – odds átváltása valószínűséggé és nyereménnyé",
+    "description": "Tanuld meg oddskalkulátorral átváltani a tizedes oddsot valószínűséggé, kiszámolni a lehetséges nyereményt, és megtalálni a fogadóiroda árrését.",
+    "keyword": "oddskalkulátor",
+    "intro": "Az oddskalkulátor az oddsot használható információvá alakítja: megmutatja, mennyit nyerhetsz, mennyire tartja valószínűnek a fogadóiroda az adott kimenetelt, és mekkora árrést számol fel. Íme a három számítás, amit érdemes ismerned.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "1. Lehetséges nyeremény"
+      },
+      {
+        "type": "p",
+        "text": "Tizedes oddsnál, amelyet a legtöbb online fogadóiroda használ, a kifizetés a tét és az odds szorzata. A profit a kifizetés mínusz a tét."
+      },
+      {
+        "type": "example",
+        "title": "€200 tét 2.50-es oddsnál",
+        "rows": [
+          [
+            "Kifizetés",
+            "€200 × 2.50 = €500"
+          ],
+          [
+            "Profit",
+            "€500 − €200 = €300"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "2. Implikált valószínűség"
+      },
+      {
+        "type": "p",
+        "text": "A fogadóiroda által számolt valószínűség az odds reciproka, vagyis 1 osztva az oddsszal. A 2.50-es odds 40%-nak felel meg. Ha te úgy gondolod, hogy ennél nagyobb az esély, akkor value bettel van dolgod."
+      },
+      {
+        "type": "h2",
+        "text": "3. A fogadóiroda árrése"
+      },
+      {
+        "type": "p",
+        "text": "Add össze az összes kimenetel implikált valószínűségét. Az összeg 100% fölé fog menni, a többlet pedig a fogadóiroda árrése. Ha különböző fogadóirodák oddsaival az összeg 100% alatt marad, surebetet találtál (más néven arbitrázsfogadást)."
+      },
+      {
+        "type": "example",
+        "title": "Tenisz: 1.85-ös és 1.95-ös odds ugyanannál a fogadóirodánál",
+        "rows": [
+          [
+            "1/1.85 + 1/1.95",
+            "54.1% + 51.3% = 105.4%"
+          ],
+          [
+            "Fogadóirodai árrés",
+            "kb. 5.4%"
+          ]
+        ],
+        "note": "Minél alacsonyabb az árrés, annál jobb oddsokat kapsz fogadóként."
+      },
+      {
+        "type": "tip",
+        "text": "Ingyenes surebet kalkulátorunk mindhárom számítást elvégzi helyetted, és a tétet elosztja a különböző kimenetelek között."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hogyan lehet az oddsot százalékra váltani?",
+        "a": "Osszd el az 1-et az oddsszal, majd szorozd meg 100-zal. A 2.00-s odds 50%-nak, a 4.00-s odds 25%-nak felel meg."
+      },
+      {
+        "q": "Mi a különbség a tizedes és a törtodds között?",
+        "a": "A tizedes odds az egy egységnyi tétre jutó teljes kifizetést mutatja, például 2.50. A törtodds, például a 3/2, csak a profitot adja meg. A legtöbb online fogadóiroda tizedes oddsot használ, a törtodds azonban az Egyesült Királyságban és Írországban továbbra is gyakori."
+      }
+    ],
+    "category": "Alapismeretek",
+    "ctaLabel": "Kalkulátor megnyitása"
+  },
+  "value-betting-vs-surebets": {
+    "title": "Value betting vagy surebet: mi a különbség?",
+    "metaTitle": "Value betting vs surebet – különbségek, kockázat és profit",
+    "description": "A value betting és a surebet is a hibásan árazott oddsokat használja ki, de másképp működnek. Hasonlítsd össze a kockázatot, a profitlehetőséget, és válaszd ki a fogadási stílusodhoz illő stratégiát.",
+    "keyword": "value betting vs surebet",
+    "intro": "A value betting és a surebet is a fogadóirodák árazási hibáit használja ki. A fő különbség: a surebet azonnal garantált profitot rögzít, a value betting viszont csak fogadások nagy mintáján keresztül hoz nyereséget.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Mi az a value betting?"
+      },
+      {
+        "type": "p",
+        "text": "A value bet olyan fogadás, amelynél az odds magasabb, mint amit a valós valószínűség indokolna. Ha egy mérkőzés valóban 50-50 esélyű, a fogadóiroda pedig 2.20-as oddsot kínál, az value bet. Csak egy kimenetelre fogadsz, így az egyes fogadásokat el is veszítheted, de hosszú távon az előny profitot hoz."
+      },
+      {
+        "type": "h2",
+        "text": "Mi az a surebet?"
+      },
+      {
+        "type": "p",
+        "text": "A surebet (arbitrázsfogadás) esetén különböző fogadóirodáknál az összes kimenetelre fogadsz, így az eredménytől függetlenül nyersz. Az egy fogadásra jutó profit kisebb, de minden egyes ügyleten garantált."
+      },
+      {
+        "type": "example",
+        "title": "Összehasonlítás",
+        "rows": [
+          [
+            "Kockázat fogadásonként",
+            "Surebet: alacsony · Value: magas"
+          ],
+          [
+            "Profit fogadásonként",
+            "Surebet: 1–5% · Value: változó"
+          ],
+          [
+            "Fogadások száma a profit megjelenéséig",
+            "Surebet: 1 · Value: több száz"
+          ],
+          [
+            "Szükséges fiókok",
+            "Surebet: több · Value: egy vagy több"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Melyik stratégia illik hozzád?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Válaszd a surebetet, ha nagy kilengések és visszaesések nélküli, stabil profitra vágysz.",
+          "Válaszd a value bettinget, ha elviseled a vesztes szériákat, és elég nagy a bankrollod ahhoz, hogy átvészeld a szóródást.",
+          "Sokan a kettőt kombinálják: surebetekkel biztosítanak egyenletes bevételt, value betekkel pedig a hosszú távú előnyt maximalizálják."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Ha most kezded, indulj surebetekkel. Megtanulod, hogyan működnek a fogadóirodák, anélkül, hogy nagy veszteségeket kockáztatnál."
+      }
+    ],
+    "faq": [
+      {
+        "q": "A value betting jövedelmezőbb, mint a surebet?",
+        "a": "A value betting hosszú távon magasabb profitot hozhat, de sokkal nagyobb a szórása. A surebet minden fogadáson kisebb, de stabilabb hasznot nyújt."
+      },
+      {
+        "q": "A value betting esetén is korlátozzák a fiókodat a fogadóirodák?",
+        "a": "Igen. A fogadóirodák a nyerő ügyfeleket stratégiától függetlenül korlátozzák, bár a value bettinget valamivel nehezebb kiszúrni, mert közben vesztes fogadásokat is megkötsz."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Próbáld ki a surebeteket valós időben"
+  },
+  "bedste-bookmakere-til-surebets": {
+    "title": "A legjobb fogadóirodák surebetekhez",
+    "metaTitle": "A legjobb fogadóirodák surebetekhez (2026)",
+    "description": "Mely fogadóirodákat érdemes használni surebetekhez? Nézd meg, mitől jó egy fogadóiroda arbitrázsfogadáshoz, és hogyan építsd fel a fiókjaid portfólióját.",
+    "keyword": "legjobb fogadóirodák surebet",
+    "intro": "Nincs egyetlen, mindenki számára legjobb fogadóiroda surebetekhez. Az arbitrázsfogadási lehetőségek a fogadóirodák között alakulnak ki, ezért a legfontosabb, hogy több olyan szolgáltatónál legyen fiókod, amelyek eltérő oddsszolgáltatókat használnak, és más-más módon közelítik meg a piacot.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért ad több fogadóiroda több surebetet?"
+      },
+      {
+        "type": "p",
+        "text": "Sok fogadóiroda ugyanazt az oddsplatformot használja, ezért az áraik szinte megegyeznek. Surebet leggyakrabban azon fogadóirodák között alakul ki, amelyek a saját, egymástól eltérő módszerükkel állítják be az oddsokat. Ha csak olyan fogadóirodáknál van fiókod, amelyek ugyanazon a platformon futnak, jóval kevesebb arbitrázsfogadási lehetőséget fogsz látni."
+      },
+      {
+        "type": "h2",
+        "text": "Mire figyelj?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A saját országod szerencsejáték-szabályozó hatósága által engedélyezett, így védelmet élvezel, és utánanézhetsz a nyereményeid adózási kezelésének.",
+          "Gyors befizetések és kifizetések, hogy oda mozgathasd a pénzt, ahol éppen szükség van rá.",
+          "Széles sportági és piaci kínálat, különösen teniszben, labdarúgásban és kosárlabdában.",
+          "Versenyképes oddsok és alacsony fogadóirodai árrés a népszerű piacokon.",
+          "Elfogadható feltételekkel rendelkező üdvözlő bónusz, amelyet surebetekkel is teljesíthetsz."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Hogyan építsd fel a fogadóirodai portfóliódat?"
+      },
+      {
+        "type": "p",
+        "text": "Kezdj öt-nyolc engedélyes fogadóirodával, amelyek különböző platformokon működnek. Így sok lehetőséged lesz anélkül, hogy túl sok egyenleget kellene kezelned. Ha már belejöttél a rutinba, további fogadóirodákkal bővítheted a listát."
+      },
+      {
+        "type": "tip",
+        "text": "A BetTrackerAI-ban pontosan beállíthatod, mely fogadóirodáknál van fiókod, így csak olyan surebeteket látsz, amelyeket tényleg meg is tudsz kötni."
+      },
+      {
+        "type": "h2",
+        "text": "Az saját oddsot készítő fogadóirodák aranyat érnek"
+      },
+      {
+        "type": "p",
+        "text": "Azok a fogadóirodák, amelyek maguk állítják be az oddsaikat, ahelyett hogy megvennék őket, gyakran lassabban vagy másképp reagálnak a hírekre. Pontosan itt alakulnak ki az árkülönbségek. Más szempontból viszont gyakran ők korlátozzák a leggyorsabban a nyerő fiókokat, az úgynevezett gubbinggal."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hány fogadóirodára van szükségem surebetekhez?",
+        "a": "Jó kiindulópont az öt-nyolc szabályozott fogadóiroda. Minél több különböző oddsplatformot fedsz le, annál több surebethez férsz hozzá."
+      },
+      {
+        "q": "Használhatok engedély nélküli fogadóirodákat arbitrázsfogadáshoz?",
+        "a": "Nem ajánlott. Az olyan fogadóirodák, amelyek nem rendelkeznek engedéllyel az adott joghatóságban, blokkolhatók lehetnek, a náluk szerzett nyereményekre eltérő adózási szabályok vonatkozhatnak, vagy hiányozhat a szabályozói védelem. Mindig nézz utána a lakóhelyeden érvényes szabályoknak."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Nézd meg a surebeteket a saját fogadóirodáidnál"
+  },
+  "skat-paa-spillegevinster": {
+    "title": "Adó a szerencsejáték-nyereményeken – nemzetközi fogadási útmutató",
+    "metaTitle": "Adó a szerencsejáték-nyereményeken – amit tudnod kell",
+    "description": "Kell adót fizetni a fogadási nyereményekre és a surebetekre? Ismerd meg, hogyan működnek az adószabályok az engedélyes és az offshore fogadóirodáknál, és mit érdemes dokumentálni.",
+    "keyword": "adó szerencsejáték-nyereményen",
+    "intro": "Sok szabályozott piacon a válasz egyszerű: az engedélyes fogadóirodáknál szerzett nyeremény a játékos számára adómentes. A közterhet a fogadóiroda fizeti be az államnak, nem te. A szabályok azonban attól függnek, hol élsz, és hol fogadsz.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Engedélyes fogadóirodák: jellemzően adómentes"
+      },
+      {
+        "type": "p",
+        "text": "Ha olyan szolgáltatónál fogadsz, amely a saját országod szerencsejáték-szabályozó hatóságától kapott engedélyt, a szolgáltató általában a bevétele után fizet szerencsejáték-adót. A nyereményed ezért általában adómentes, és a legtöbb esetben nem kell bejelentened az adóhatóságnak. Mindig nézz utána a lakóhelyeden érvényes szabályoknak."
+      },
+      {
+        "type": "h2",
+        "text": "Offshore fogadóirodák helyi engedély nélkül"
+      },
+      {
+        "type": "p",
+        "text": "Ha olyan szolgáltatóknál fogadsz, amelyek nem rendelkeznek engedéllyel a te joghatóságodban, a nyeremény adóköteles lehet. A szabályok olyan tényezőktől függnek, mint hogy a szolgáltató rendelkezik-e engedéllyel egy másik országban, illetve hogy hol van az adóügyi illetőséged. Ez az egyik oka annak, hogy gyakran egyszerűbb a szabályozott fogadóirodáknál maradni."
+      },
+      {
+        "type": "h2",
+        "text": "Ez a surebetekre is igaz?"
+      },
+      {
+        "type": "p",
+        "text": "Igen. Adózási szempontból a surebet egyszerűen két vagy három hagyományos fogadás. Az engedélyes fogadóirodáknál szerzett nyeremény általában adómentes, függetlenül attól, hogy surebetet, value bettet vagy szokásos fogadást kötsz. Ugyanazok az elvek érvényesek."
+      },
+      {
+        "type": "tip",
+        "text": "Vezess nyilvántartást a fogadásaidról. Így könnyen igazolhatod a pénz eredetét, ha a bankod rákérdez."
+      },
+      {
+        "type": "h2",
+        "text": "Hivatásszerű szerencsejáték"
+      },
+      {
+        "type": "p",
+        "text": "Ha a fogadás a fő foglalkozásod, jelentős mértékben, bizonyos joghatóságokban eltérő szabályok vonatkozhatnak rád. Ha bizonytalan vagy a saját helyzetedben, fordulj a helyi adóhatósághoz vagy egy képzett könyvelőhöz."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kell adót fizetnem a licenccel rendelkező fogadóirodáktól származó nyereményem után?",
+        "a": "A legtöbb szabályozott piacon nem. A helyi licenccel rendelkező szolgáltatóktól származó nyeremények a játékos számára jellemzően adómentesek. Mindig ellenőrizd a lakóhelyeden érvényes adószabályokat."
+      },
+      {
+        "q": "Honnan tudhatom meg, hogy egy fogadóiroda rendelkezik-e licenccel az országomban?",
+        "a": "Az országod szerencsejáték-felügyeleti hatóságának weboldalán megtalálod az engedélyezett szolgáltatók listáját, a licenccel rendelkező fogadóirodák pedig általában kiteszik a hatóság logóját az oldalukra."
+      }
+    ],
+    "category": "Szabályok",
+    "ctaLabel": "Olvass a surebetekre vonatkozó szabályokról"
+  },
+  "bankroll-management": {
+    "title": "Bankrollkezelési útmutató sportfogadáshoz és arbitrázshoz",
+    "metaTitle": "Bankrollkezelési útmutató sportfogadáshoz 2026",
+    "description": "Bankrollkezelés sportfogadáshoz: hogyan határozd meg a tétet, hogyan osszd szét a pénzt a fogadóirodák között, és hogyan számold ki az ROI-t – számpéldákkal, €-ban.",
+    "keyword": "bankrollkezelési útmutató sportfogadáshoz",
+    "intro": "A jó bankrollkezelés azt jelenti, hogy előre eldöntöd, mennyi pénzt szánsz fogadásra, mekkora tétet teszel meg egy-egy fogadáson, és hogyan oszlik meg a pénz a fogadóirodák között. Value betting esetén fogadásonként a bankrollod 1–2%-át tedd meg tétként. Surebeteknél a korlát a likviditás: a pénzednek a megfelelő fogadóirodáknál kell lennie, amikor felbukkan egy surebet. Mindent kövess nyomon, hogy mérni tudd az ROI-t.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Bankrollkezelés: az alapszabályok"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Különválasztott pénz:** a bankrollod olyan pénz, amelynek elvesztését megengedheted magadnak, és elkülönül a mindennapi pénzügyeidtől.",
+          "**Fix tétszabályok:** a tét méretét a fogadás előtt döntsd el, ne megérzés alapján.",
+          "**Ne hajszold a veszteséget:** a tétemelés vesztés után a leggyorsabb út a bankroll elvesztéséhez.",
+          "**Havi felülvizsgálat:** a tétet a bankrollod alapján emeld vagy csökkentsd, ne egyetlen jó hét alapján."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Tétméretezés value betekhez és surebetekhez"
+      },
+      {
+        "type": "p",
+        "text": "A value betek veszíthetnek, ezért a tétnek elég kicsinek kell lennie ahhoz, hogy átvészeld a vesztes szériákat. A surebetek helyes végrehajtás mellett nem veszítenek, így a kockázat a kivitelezésben rejlik: oddsváltozások, érvénytelenített fogadások és hiányzó szárak."
+      },
+      {
+        "type": "example",
+        "title": "Példa: fix tétezés value betekhez, €2,000 bankrollal",
+        "rows": [
+          [
+            "Tét fogadásonként (1.5%)",
+            "€30"
+          ],
+          [
+            "10 vesztes fogadás egymás után",
+            "−€300 (a bankroll 15%-a)"
+          ],
+          [
+            "Megmaradt bankroll",
+            "€1,700"
+          ],
+          [
+            "Új tét a felülvizsgálat után (1.5%)",
+            "€25.50"
+          ]
+        ],
+        "note": "Az 1–2%-os tét segít bent maradni a játékban azokon a vesztes szériákon át, amelyeket minden value bettor megtapasztal."
+      },
+      {
+        "type": "example",
+        "title": "Példa: surebet bankroll elosztása a fogadóirodák között, €3,000",
+        "rows": [
+          [
+            "6 fogadóiroda × €500",
+            "€3,000"
+          ],
+          [
+            "Egy tipikus surebet teljes tétje",
+            "€400"
+          ],
+          [
+            "60 surebet havonta, átlagosan 2%-os haszonnal",
+            "€400 × 60 × 2% = €480"
+          ],
+          [
+            "Havi hozam a bankrollra vetítve",
+            "€480 / €3,000 = 16%"
+          ]
+        ],
+        "note": "Egy surebeten a profit kicsi, de a bankroll havonta sokszor megfordul. Az eredmények a limitektől és az elérhető surebetektől függően változnak."
+      },
+      {
+        "type": "h2",
+        "text": "Sportfogadási ROI-kalkulátor: mérd meg, mennyit keresel"
+      },
+      {
+        "type": "p",
+        "text": "Az ROI a nettó profit osztva a teljes forgalommal. Megmutatja, mennyit keresel minden megtett € tét után, és ez a legjobb módja a stratégiák, sportágak és fogadóirodák összehasonlításának."
+      },
+      {
+        "type": "example",
+        "title": "Példa: ROI-számítás",
+        "rows": [
+          [
+            "Összes megtett tét",
+            "€18,500"
+          ],
+          [
+            "Összes visszaérkezett összeg",
+            "€18,870"
+          ],
+          [
+            "Nettó profit",
+            "€370"
+          ],
+          [
+            "ROI",
+            "€370 / €18,500 = 2.0%"
+          ]
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Tudj meg többet a [fogadási ROI-ról](/en/guides/roi-betting), vagy ellenőrizd az egyes surebeteket a [surebet kalkulátorban](/en/calculator)."
+      },
+      {
+        "type": "h2",
+        "text": "Kövesd nyomon a fogadásaidat ingyen, és védd a bankrollodat"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Egyenleg fogadóirodánként:** told át a pénzt, mielőtt egy fogadóirodánál kifogy.",
+          "**Profit stratégiánként:** lásd, hogy a surebetek vagy a value betek térülnek-e meg jobban.",
+          "**Drawdown:** vedd észre időben a vesztes időszakokat, és csökkentsd a tétet, mielőtt túl késő lenne."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Tartsd a bankrollod nagyjából 20%-át tartalékban a fogadóirodákon kívül. Így fel tudod tölteni azokat a számlákat, ahol a legtöbb surebet megjelenik."
+      },
+      {
+        "type": "p",
+        "text": "A [fogadáskövető](/en/guides/bet-tracker) automatikussá teszi a bankrollkezelést. A [BetTracker AI](/en) rögzíti a surebetjeidet, megmutatja az egyenlegedet fogadóirodánként, és kiszámolja helyetted az ROI-t."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Mekkora legyen a bankrollom surebetekhez?",
+        "a": "Sokan €1,000–€3,000-val indulnak, 4–6 fogadóiroda között elosztva. Kevesebbel is működik, de az egy surebeten elérhető profit nagyon kicsi lesz."
+      },
+      {
+        "q": "Hány százalékot tegyek meg tétként value beteknél?",
+        "a": "Fogadásonként a bankroll 1–2%-a gyakori, óvatos szabály. A nagyobb tét növeli a csőd kockázatát a vesztes szériák alatt."
+      },
+      {
+        "q": "Hogyan számolom ki a fogadásaim ROI-ját?",
+        "a": "Told el a nettó profitot az összes tétel összegével. €370 profit €18,500 megtett tét mellett 2.0%-os ROI-t jelent."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Kövesd nyomon a bankrollodat ingyen"
+  },
+  "arbitrage-betting": {
+    "title": "Hogyan működik az arbitrázsfogadás? Biztos profit minden kimeneten",
+    "metaTitle": "Hogyan működik az arbitrázsfogadás? Útmutató 2026",
+    "description": "Hogyan működik az arbitrázsfogadás: a képlet, számpéldák €-ban, és lépésről lépésre bemutatjuk, hogyan tedd meg az első surebetedet a garantált profitért.",
+    "keyword": "hogyan működik az arbitrázsfogadás",
+    "intro": "Az arbitrázsfogadás lényege, hogy ugyanazon esemény minden kimenetelére fogadsz különböző fogadóirodáknál, amikor az odds reciprokainak összege 1 alatt van. A tétet úgy osztod el, hogy a kifizetés bármi történjen, ugyanannyi legyen. A teljes tét és a kifizetés közötti különbség a profitod, ami általában surebetenként 1–3%, és nem a szerencse, hanem a matematika biztosítja.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "A surebet magyarázata: amikor két fogadóiroda másképp árazza ugyanazt"
+      },
+      {
+        "type": "p",
+        "text": "Minden fogadóiroda maga határozza meg az oddsait, és 4–7%-os árrést épít beléjük. Sérülésekre, kezdőcsapatokra és nagy összegű fogadásokra viszont eltérő sebességgel reagálnak. Ha az egyik fogadóiroda lassan csökkent egy oddsot, miközben egy másik már megemelte az ellenkező kimenetelét, a két odds együtt többletet hagy maga után. Ez a surebet. Új vagy a témában? Kezdd azzal, [mik azok a surebetek](/en/guides/what-are-surebets)."
+      },
+      {
+        "type": "p",
+        "text": "A próba egyszerű: számold ki minden kimenetelnél az 1 ÷ odds értéket, majd add össze őket. Ha az összeg 1,00 alatt van, arbitrázslehetőséged van. Minél kisebb az összeg, annál nagyobb a profit."
+      },
+      {
+        "type": "example",
+        "title": "Példa: kétkimenetelű teniszmeccs, teljes tét €1,000",
+        "rows": [
+          [
+            "A játékos az 1. fogadóirodánál, odds 2.08",
+            "Tét €492.68"
+          ],
+          [
+            "B játékos a 2. fogadóirodánál, odds 2.02",
+            "Tét €507.32"
+          ],
+          [
+            "1/2.08 + 1/2.02",
+            "0.481 + 0.495 = 0.976"
+          ],
+          [
+            "Kifizetés, bárki nyer",
+            "kb. €1,024.78"
+          ],
+          [
+            "Biztos profit",
+            "kb. €24.78 (2.5%)"
+          ]
+        ],
+        "note": "Az összeg 1 alatt van, így nagyjából €24.78 profitot termelsz, függetlenül attól, hogy ki nyeri a meccset."
+      },
+      {
+        "type": "h2",
+        "text": "Arbitrázsfogadás útmutató: három kimenetel a labdarúgásban"
+      },
+      {
+        "type": "p",
+        "text": "A labdarúgásban három kimenetel van: hazai győzelem, döntetlen és vendéggyőzelem. Az elv ugyanaz, csak három oddsra, gyakran három fogadóirodára van szükséged. Mivel az árrés három kimenetelre oszlik el, az 1X2-es surebetek ritkábbak, a profit pedig általában valamivel alacsonyabb, mint a teniszben."
+      },
+      {
+        "type": "example",
+        "title": "Példa: Premier League-mérkőzés, teljes tét €2,000",
+        "rows": [
+          [
+            "Hazai győzelem, odds 2.15",
+            "Tét €942.69"
+          ],
+          [
+            "Döntetlen, odds 3.60",
+            "Tét €562.99"
+          ],
+          [
+            "Vendéggyőzelem, odds 4.10",
+            "Tét €494.33"
+          ],
+          [
+            "Az odds reciprokainak összege",
+            "0.987"
+          ],
+          [
+            "Kifizetés bármelyik eredménynél",
+            "kb. €2,026.75"
+          ],
+          [
+            "Biztos profit",
+            "kb. €26.75 (1.3%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Hogyan fogadj surebetekre: kézzel vagy szkennerrel"
+      },
+      {
+        "type": "p",
+        "text": "Elvileg egy tucat böngészőfülön is összehasonlíthatod az oddsokat, de a surebetek gyakran csak néhány percig élnek. Mire végigszámolod, az odds általában már változik. Ezért használ a legtöbb fogadó oddsszkennert, amely folyamatosan összeveti a fogadóirodákat. Olvass bővebben arról, hogyan [találhatsz surebeteket automatikusan](/en/guides/find-surebets-automatically)."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Kézzel:** ingyenes, de lassú, és ritkán érsz oda az odds változása előtt.",
+          "**Szkennerrel:** a surebetek már kiszámolt tétmegosztással jelennek meg, így azonnal cselekedhetsz.",
+          "**Kalkulátor:** bármelyik módszert használod, fogadás előtt ellenőrizd a téteket a [surebet kalkulátorban](/en/calculator)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Kockázatmentes fogadás a gyakorlatban: öt lépés az első surebetedig"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**1. Nyiss számlákat** legalább két engedéllyel rendelkező fogadóirodánál, lehetőleg többnél, és előre fizess be.",
+          "**2. Keress egy surebetet,** ahol az odds reciprokainak összege 1,00 alatt van.",
+          "**3. Számold ki a téteket,** hogy a kifizetés minden kimenetelnél azonos legyen.",
+          "**4. Told meg gyorsan mindkét fogadást,** azzal kezdve, amelyiknél nagyobb eséllyel változik az odds.",
+          "**5. Ellenőrizd a szelvényeidet:** a piacnak, a vonalnak és az oddsnak pontosan egyeznie kell a számításoddal."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "A matek kockázatmentes, a kivitelezés viszont nem mindig. Az igazi kockázatot az **odds változása** a második fogadás megtétele közben, az egyértelmű árazási hibák miatti **érvénytelenített fogadások** és a **korlátozott számlák** jelentik. Kezdetben tarts mérsékelt téteket, és olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+      },
+      {
+        "type": "p",
+        "text": "Szeretnél élő surebeteket látni már kiszámolt tétekkel? A [BetTracker AI](/en) helyetted pásztázza a fogadóirodákat, és valós időben mutatja a surebeteket."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Legális az arbitrázsfogadás?",
+        "a": "Igen, egy esemény minden kimenetelére fogadni a legtöbb országban nem tiltott. A fogadóirodák ettől még korlátozhatják a számládat. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
+      },
+      {
+        "q": "Mennyit lehet keresni surebetekkel?",
+        "a": "Egy átlagos surebet a teljes tét 1–3%-át hozza. Surebetenként €1,000 téttel, havi 40 surebettel és átlagosan 1.5%-kal ez nagyjából €600 havonta."
+      },
+      {
+        "q": "Hány fogadóirodára van szükségem?",
+        "a": "Legalább kettőre, de minél több számlád van, annál több surebetet tudsz megfogni. Sok arber öt-tíz fogadóirodával dolgozik."
+      },
+      {
+        "q": "Mi van, ha megváltozik az odds a második fogadásom előtt?",
+        "a": "Számold újra a második fogadást az új oddsszal. Ha az összeg még mindig 1 alatt van, kisebb surebetet kapsz. Ha fölötte, a veszteséget a elérhető legjobb oddsszal való fedezéssel korlátozhatod."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Surebetek keresése most"
+  },
+  "hvad-er-surebets": {
+    "title": "Mik azok a surebetek? Így működnek a garantált oddsok",
+    "metaTitle": "Mik azok a surebetek? Teljes útmutató az arbitrázsfogadáshoz",
+    "description": "Ismerd meg, mik a surebetek, hogyan jönnek létre, és hogyan fogadhatsz minden kimenetelre különböző fogadóirodáknál a garantált profit érdekében.",
+    "keyword": "surebet",
+    "intro": "A surebet – más néven arbitrázsfogadás vagy arbing – olyan oddskombináció különböző fogadóirodáknál, amellyel egy mérkőzés minden lehetséges kimenetelére fogadhatsz, és a végeredménytől függetlenül nyereséget érsz el. Túl szépen hangzik, hogy igaz legyen, pedig tiszta matematika.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért léteznek surebetek?"
+      },
+      {
+        "type": "p",
+        "text": "A fogadóirodák egymástól függetlenül határozzák meg az oddsaikat. Eltérő modelleket használnak, másképp reagálnak a hírekre, és más-más kimenetelekre szeretnének fogadásokat vonzani. Így előfordulhat, hogy az egyik fogadóiroda magas oddsot ad a hazai csapatra, míg a másik a vendégcsapatra. Ha a különbség elég nagy, surebet jön létre."
+      },
+      {
+        "type": "p",
+        "text": "A surebetek jellemzően csak percekig élnek. Amint a fogadóirodák módosítják a szorzókat, a lehetőség eltűnik. Ezért vagy sok órányi kézi keresésre van szükség, vagy egy olyan szkennerre, amely folyamatosan figyeli a piacot."
+      },
+      {
+        "type": "h2",
+        "text": "Honnan tudod, hogy surebetről van szó?"
+      },
+      {
+        "type": "p",
+        "text": "Minden szorzónak kiszámítod a reciprokát (1 osztva a szorzóval), majd összeadod az értékeket. Ha az összeg 1 alatt van, surebetet találtál. Minél kisebb az összeg, annál nagyobb a nyereséged."
+      },
+      {
+        "type": "example",
+        "title": "Példa: tenisz, két lehetséges kimenetellel",
+        "rows": [
+          [
+            "A játékos az 1. fogadóirodánál",
+            "2.10-es szorzó"
+          ],
+          [
+            "B játékos a 2. fogadóirodánál",
+            "2.05-ös szorzó"
+          ],
+          [
+            "1/2.10 + 1/2.05",
+            "0.476 + 0.488 = 0.964"
+          ],
+          [
+            "Garantált nyereség",
+            "kb. 3.7%"
+          ]
+        ],
+        "note": "Az összeg 1 alatt van, vagyis ez a kombináció surebet."
+      },
+      {
+        "type": "h2",
+        "text": "Hogyan oszd el a tétet?"
+      },
+      {
+        "type": "p",
+        "text": "A tétet úgy kell elosztani, hogy a kifizetés ugyanannyi legyen, függetlenül attól, hogy ki nyer. Ha a fenti példában 1,000 egység a teljes tét, nagyjából 494 egységet teszel az A játékosra, és nagyjából 506 egységet a B játékosra. Mindkét kimenetelnél kb. 1,037 egység a kifizetés, vagyis a nyereség nagyjából 37 egység."
+      },
+      {
+        "type": "tip",
+        "text": "Ezt nem neked kell kiszámolnod. Ingyenes surebet-kalkulátorunk automatikusan elosztja a tétet, és megmutatja a garantált nyereségedet."
+      },
+      {
+        "type": "h2",
+        "text": "Mire érdemes figyelni?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A szorzók változhatnak, amíg leadod a fogadásaidat. Először azt a fogadást told meg, amelyiknél a szorzó a legingatagabb.",
+          "Ellenőrizd, hogy a piac mindkét fogadóirodánál pontosan ugyanaz-e, például hogy a hosszabbítás beleszámít-e.",
+          "Tarts egyenleget több fogadóirodánál is, hogy gyorsan tudj cselekedni.",
+          "A fogadóirodák korlátozhatják azokat a fiókokat, amelyek kizárólag surebetekre fogadnak. Olvasd el az útmutatónkat a fiókkorlátozások elkerüléséről."
+        ]
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kockázatmentesek a surebetek?",
+        "a": "Matematikailag a nyereség garantált, ha mindkét fogadást a megfelelő szorzón adtad le. A gyakorlatban a kockázatot a szorzók változása, a törölt fogadások és a piacon előforduló hibák jelentik."
+      },
+      {
+        "q": "Mennyit lehet keresni surebetekkel?",
+        "a": "A legtöbb surebet a tét 1–5%-át hozza vissza nyereségként. A profit abból jön össze, hogy sokszor megismétled, nem pedig az egyes nagy nyereményekből."
+      },
+      {
+        "q": "Hogyan találhatsz surebeteket?",
+        "a": "A szorzókat összehasonlíthatod kézzel is, de ez lassú. Egy surebet-szkenner, például a BetTrackerAI, figyeli a te piacodon működő fogadóirodákat, és a lehetőségeket azonnal megmutatja, amint felbukkannak."
+      }
+    ],
+    "category": "Alapok",
+    "ctaLabel": "Aktuális surebetek megtekintése"
+  },
+  "dutching-betting": {
+    "title": "Dutching: így oszd el a tétet több kimenetel között",
+    "metaTitle": "Dutching fogadás – magyarázat, képlet és példa",
+    "description": "A dutching azt jelenti, hogy a tétet több kimenetel között osztod el, így ugyanannyit kapsz vissza, bármelyik is nyer. Nézd meg a képletet és egy példát.",
+    "keyword": "dutching fogadás",
+    "intro": "A dutching olyan fogadási módszer, amelynél ugyanazon az eseményen belül több kimenetelre fogadsz, és a tétet úgy osztod el, hogy a kifizetés ugyanannyi legyen, bármelyik kiválasztott kimenetel nyer. A módszer különösen hasznos a tornákon és a sok lehetséges kimenetellel rendelkező piacokon.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "A különbség a dutching és a surebet között"
+      },
+      {
+        "type": "p",
+        "text": "Surebetnél az összes kimenetelt lefedi, és az eredménytől függetlenül nyersz. Dutchingnál csak a kimenetelek egy részét fedezed. Ha ezek egyike nyer, ugyanannyit kapsz vissza, de ha egyik sem, a teljes téted elveszik. A dutching ezért nem kockázatmentes."
+      },
+      {
+        "type": "h2",
+        "text": "A képlet"
+      },
+      {
+        "type": "p",
+        "text": "Számold ki az 1/szorzó értéket minden kimenetelre, majd add össze őket. Az összeget nevezzük S-nek. Egy adott kimenetelre tett tét a teljes tét szorozva (1/szorzó)-val, majd osztva S-sel. A kifizetés a teljes tét osztva S-sel."
+      },
+      {
+        "type": "example",
+        "title": "Példa: három játékos egy tornán, teljes tét €1,000",
+        "rows": [
+          [
+            "A játékos, 3.00-s szorzó",
+            "tét kb. €444"
+          ],
+          [
+            "B játékos, 4.00-s szorzó",
+            "tét kb. €333"
+          ],
+          [
+            "C játékos, 6.00-s szorzó",
+            "tét kb. €222"
+          ],
+          [
+            "S = 0.333 + 0.250 + 0.167",
+            "0.750"
+          ],
+          [
+            "Ha a három közül valamelyik nyer",
+            "kifizetés kb. €1,333, nyereség kb. €333"
+          ],
+          [
+            "Ha a három közül egyik sem nyer",
+            "€1,000 veszteség"
+          ]
+        ],
+        "note": "A nyereség csak akkor realizálódik, ha a három játékosod egyike nyer. Neked kell megítélned, mennyire valószínű ez."
+      },
+      {
+        "type": "h2",
+        "text": "Mikor van értelme a dutchingnak?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Ha úgy gondolod, hogy néhány kimenetel adja a valószínűség nagy részét, például egy torna három esélyese.",
+          "Ha egyetlen kimenetel helyett inkább megosztanád a kockázatot.",
+          "Ha több fogadóirodánál is kaphatsz jobb szorzókat, és a tétet el szeretnéd osztani közöttük."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "A dutching nem helyettesíti a surebeteket. Ha garantált nyereséget szeretnél, az összes kimenetelt le kell fedned különböző fogadóirodáknál. A kalkulátor azonnal megmutatja a különbséget."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Ugyanaz a dutching, mint az arbitrázsfogadás?",
+        "a": "Nem. Az arbitrázsfogadásnál (surebetek) az összes kimenetelt lefedi, és az eredménytől függetlenül nyersz. Dutchingnál csak a kimenetelek egy részét fedezed, és a teljes téted elveszítheted."
+      },
+      {
+        "q": "Lehet pénzt veszíteni a dutchinggal?",
+        "a": "Igen. Ha egyik kimenetel sem nyer, amelyre fogadtál, a teljes összes téted elveszik."
+      },
+      {
+        "q": "Hogyan számolod ki a dutching tétjeit?",
+        "a": "Add össze a kimenetelek 1/szorzó értékeit (S). Az egyes kimenetelekre tett tét az összes tét szorozva 1/szorzó értékkel, majd elosztva S-sel."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Használd a kalkulátort a tét elosztásához"
+  },
+  "tennis-surebets": {
+    "title": "Surebetek teniszen: így találhatod meg és játszhatod őket",
+    "metaTitle": "Tenisz surebetek – garantált profit a teniszszorzókon",
+    "description": "A tenisz ideális a surebetekhez, mert csak két kimenetele van egy meccsnek. Nézd meg a számolt példát, és ismerd meg a buktatókat, amelyeket el kell kerülnöd az arbitrázsfogadásnál.",
+    "keyword": "tenisz surebet",
+    "intro": "A tenisz az egyik legegyszerűbb sportág a surebetezéshez. Egy meccsnek csak két kimenetele van, döntetlen nincs, így mindössze két fogadóirodára és két fogadásra van szükséged.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért illik a tenisz a surebetekhez?"
+      },
+      {
+        "type": "p",
+        "text": "Két kimenetelnél egyszerű a számolás, és csak két fogadást kell feladnod. Az időzónáknak köszönhetően minden nap rengeteg meccset játszanak, a fogadóirodák pedig folyamatosan állítanak be új szorzókat, ráadásul nem egységesen."
+      },
+      {
+        "type": "example",
+        "title": "Példa: 1.95 és 2.20 szorzó, összesen €1,000 tét",
+        "rows": [
+          [
+            "A játékos az 1. fogadóirodánál, 1.95 szorzó",
+            "tét kb. €530"
+          ],
+          [
+            "B játékos a 2. fogadóirodánál, 2.20 szorzó",
+            "tét kb. €470"
+          ],
+          [
+            "1/1.95 + 1/2.20",
+            "0.513 + 0.455 = 0.967"
+          ],
+          [
+            "Kifizetés a győztestől függetlenül",
+            "kb. €1,034"
+          ],
+          [
+            "Profit",
+            "kb. €34 (3.4%)"
+          ]
+        ],
+        "note": "Az összeg 1 alatt van, tehát a kombináció surebet."
+      },
+      {
+        "type": "h2",
+        "text": "A tenisz surebetek buktatói"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Feladó játékosok: Ha egy játékos a meccs közben feladja, a fogadóirodák szabályai eltérhetnek. Egyesek érvénytelenítik a fogadást, mások elszámolják. Mindkét helyen olvasd el a szabályzatot.",
+          "A játék nélküli továbbjutás (walkover) és a soha le nem játszott meccsek a fogadások érvénytelenítéséhez és nyitott pozícióhoz vezethetnek.",
+          "Rossz mérkőzés: Ellenőrizd a játékosok nevét és a tornát, különösen a kisebb tornáknál, ahol a nevek hasonlóak lehetnek.",
+          "Az élő szorzók gyorsan változnak. A meccs előtti surebeteket könnyebb időben feladni."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Először ott told meg a tétet, ahol a szorzó a legingadozóbb, és csak utána a másikat. Így minimalizálhatod annak kockázatát, hogy csak fél surebeted marad."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Miért jó a tenisz a surebetekhez?",
+        "a": "Mert csak két kimenetel van, döntetlen nincs. Mindössze két fogadóirodára van szükséged, és két fogadást kell feladnod."
+      },
+      {
+        "q": "Mi történik, ha egy játékos a meccs közben feladja a surebet alatt?",
+        "a": "A fogadóirodák szabályaitól függ. Néhányan érvénytelenítik a fogadást, ha a meccs nem fejeződik be, mások elszámolják. Ez az egyik legnagyobb kockázat a teniszes arbitrázsfogadásnál, ezért előtte olvasd el a szabályzatot."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Aktuális surebetek megtekintése"
+  },
+  "fodbold-surebets": {
+    "title": "Surebetek focin: hogyan fedd le a három kimenetelt",
+    "metaTitle": "Foci surebetek – így told el az 1X2 szorzókat",
+    "description": "A focinak három kimenetele van, ezért a surebethez három fogadás kell. Tudd meg, hogyan ossz el a tétet hazai győzelem, döntetlen és vendéggyőzelem között, és milyen buktatókat kerülj el.",
+    "keyword": "foci surebet",
+    "intro": "A focinak három lehetséges kimenetele van: hazai győzelem, döntetlen és vendéggyőzelem. Az 1X2 piacon ezért a surebethez három fogadás kell, a legjobb szorzókat pedig gyakran három különböző fogadóirodánál találod meg.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Hogyan számold ki a három kimenetelt?"
+      },
+      {
+        "type": "p",
+        "text": "A képlet ugyanaz, mint két kimenetelnél. Add össze mindhárom kimenetel 1/szorzó értékét. Ha az összeg 1 alatt van, surebetet találtál. Az egyes kimenetelekre tett tét az összes tét szorozva 1/szorzó értékkel, majd elosztva az összeggel."
+      },
+      {
+        "type": "example",
+        "title": "Példa: három fogadóiroda, összesen €1,000 tét",
+        "rows": [
+          [
+            "Hazai győzelem az 1. fogadóirodánál, 2.40 szorzó",
+            "tét kb. €424"
+          ],
+          [
+            "Döntetlen a 2. fogadóirodánál, 3.80 szorzó",
+            "tét kb. €268"
+          ],
+          [
+            "Vendéggyőzelem a 3. fogadóirodánál, 3.30 szorzó",
+            "tét kb. €308"
+          ],
+          [
+            "1/2.40 + 1/3.80 + 1/3.30",
+            "0.417 + 0.263 + 0.303 = 0.983"
+          ],
+          [
+            "Kifizetés az eredménytől függetlenül",
+            "kb. €1,017"
+          ],
+          [
+            "Profit",
+            "kb. €17 (1.7%)"
+          ]
+        ],
+        "note": "A profit kisebb, mint teniszen, és három fogadásnál nagyobb a kockázata annak, hogy a szorzók megváltoznak, amíg feladod őket."
+      },
+      {
+        "type": "h2",
+        "text": "A foci surebetek buktatói"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Ellenőrizd, hogy a piac minden fogadóirodánál ugyanarra a játékidőre vonatkozik-e. Az 1X2 általában csak a rendes játékidőt fedi le, de kupameccsek és playoff-mérkőzések esetén nézd meg a szabályokat.",
+          "Az elhalasztott és félbeszakadt meccseket eltérően számolják el, ezért olvasd el a szabályokat minden fogadóirodánál.",
+          "Három fogadásnál nagyobb az esélye a szorzóváltozásnak. A legingadozóbb fogadást told meg először – ez általában a legmagasabb szorzójú, vagy a legkevésbé likvid piacon lévő fogadás.",
+          "Fontold meg a két kimenetelű piacokat, például az ázsiai hendikepet vagy a 2,5 gólos alatt/felett piacot, ha két fogadóirodánál maradnál, és csökkentenéd a szorzóváltozások kockázatát."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "A BetTrackerAI-ban jelöld ki azokat a fogadóirodákat, ahol már van egyenleged, így csak olyan surebeteket látsz, amelyeket tényleg fel tudsz adni."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Miért nehezebbek a foci surebetek, mint a tenisz surebetek?",
+        "a": "Mert két kimenetel helyett három van. Három fogadást kell feladnod, gyakran három különböző fogadóirodánál, és nagyobb a kockázata annak, hogy a szorzók megváltoznak, amíg ezt megteszed."
+      },
+      {
+        "q": "Tartalmazza az 1X2 piac a hosszabbítást?",
+        "a": "Általában nem. Az 1X2 jellemzően csak a 90 percet és a hosszabbításként játszott időt (a ráadást) fedi le, de a szabályok eltérhetnek. Fogadás előtt mindig nézd meg a feltételeket az adott fogadóirodánál."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Aktuális surebetek megtekintése"
+  },
+  "bookmakerens-margin": {
+    "title": "Fogadóirodai árrés: így látod meg, mennyibe kerül valójában az odds",
+    "metaTitle": "Fogadóirodai árrés – overround kiszámítása és jobb oddsok keresése",
+    "description": "A fogadóirodák az oddsokba épített árrésből keresnek. Megmutatjuk, hogyan számold ki, és hogyan találd meg azokat az irodákat, amelyek a legjobb oddsokat adják.",
+    "keyword": "fogadóirodai árrés",
+    "intro": "Ha egy piac implikált valószínűségeit összeadod, az eredmény több mint 100%. A többlet a fogadóiroda árrése, más néven overround. Ez az ára annak, hogy fogadhass.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Hogyan számold ki az árrést?"
+      },
+      {
+        "type": "p",
+        "text": "Számold ki az 1/odds értéket a piac összes kimenetelére, majd add össze őket. Vonj ki az összegből 1-et, és megkapod az árrést."
+      },
+      {
+        "type": "example",
+        "title": "Példa: focimeccs 2.10, 3.40 és 3.60 oddsokkal",
+        "rows": [
+          [
+            "1/2.10 + 1/3.40 + 1/3.60",
+            "0.476 + 0.294 + 0.278 = 1.048"
+          ],
+          [
+            "Fogadóiroda árrése",
+            "kb. 4.8%"
+          ],
+          [
+            "Kifizetési arány",
+            "kb. 95.4%"
+          ],
+          [
+            "Hazai győzelem árrés nélkül",
+            "kb. 45.4%"
+          ]
+        ],
+        "note": "A 2.10-es odds 47.6%-os valószínűségnek felel meg, de az árrés nélkül a valódi valószínűség nagyjából 45.4%."
+      },
+      {
+        "type": "h2",
+        "text": "Miért számít az árrés?"
+      },
+      {
+        "type": "p",
+        "text": "Minél alacsonyabb az árrés, annál jobb oddsot kapsz ugyanarra a valószínűségre. Sok fogadás alatt a 3% és a 7% közötti különbség jelentősen megmutatkozik a bankrolloddon. Ezért érdemes összehasonlítani az árréseket azoknál a fogadóirodáknál, ahol fogadsz, azokon a piacokon, amelyeken a legtöbbet játszol."
+      },
+      {
+        "type": "h2",
+        "text": "Árrés és surebetek"
+      },
+      {
+        "type": "p",
+        "text": "Surebet akkor jön létre, ha több fogadóiroda legjobb oddsainak együttes értéke 1 alatt van. Ilyenkor a fogadóirodák árrését több mint kiegyenlíti, hogy eltérően árazzák az eseményt. A szkenner pontosan ezt keresi."
+      },
+      {
+        "type": "tip",
+        "text": "A kalkulátorunkban megadhatod az oddsokat, és azonnal látod az összegüket. Ha az 1 alatt van, surebetet találtál."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Mi számít jó fogadóirodai árrésnek?",
+        "a": "Minél alacsonyabb, annál jobb. A népszerű foci piacokon általában 3–6% az árrés, a kisebb bajnokságokban és a speciális piacokon pedig gyakran magasabb."
+      },
+      {
+        "q": "Mi az az overround?",
+        "a": "Az overround a fogadóirodai árrés angol szakkifejezése, vagyis az, hogy az implikált valószínűségek összege mennyivel haladja meg a 100%-ot."
+      }
+    ],
+    "category": "Alapok",
+    "ctaLabel": "Számold ki az oddsaid összegét"
+  },
+  "asiatisk-handicap": {
+    "title": "Az ázsiai hendikep magyarázata: egész, fél és negyed vonalak",
+    "metaTitle": "Ázsiai hendikep egyszerűen – útmutató példákkal",
+    "description": "Értsd meg az ázsiai hendikepet: mit jelent a -0.5, a -1 és a -0.25, mikor kapod vissza a tétet, és miért számít a vonal a surebetek megkötésekor.",
+    "keyword": "ázsiai hendikep",
+    "intro": "Az ázsiai hendikep olyan focifogadási piac, ahol a döntetlen kiesik vagy megoszlik. Így csak két kimenetel marad, ezért gyakran használják a surebetet és az arbitrázsfogadási lehetőségeket keresők.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Egész vonalak: döntetlennél visszajár a tét"
+      },
+      {
+        "type": "p",
+        "text": "0 vagy egész számú hendikepnél a tét visszajárhat. A 0-s hazai hendikep azt jelenti, hogy döntetlen esetén visszakapod a pénzed. A hazai -1 azt jelenti, hogy a csapatnak legalább két góllal kell nyernie ahhoz, hogy nyereséged legyen. Ha pontosan egy góllal nyer, visszakapod a tétet."
+      },
+      {
+        "type": "h2",
+        "text": "Fél vonalak: nincs tétvisszatérítés"
+      },
+      {
+        "type": "p",
+        "text": "-0.5-nél a csapatnak nyernie kell. Döntetlen vagy vereség esetén a fogadás elvész. +0.5-nél nyersz, ha a csapat győz vagy döntetlent játszik. Mindig vagy nyersz, vagy veszítesz, a tét pedig soha nem jár vissza."
+      },
+      {
+        "type": "h2",
+        "text": "Negyed vonalak: a tét kettéoszlik"
+      },
+      {
+        "type": "p",
+        "text": "-0.25-nél a tét kettéoszlik: fele a 0-ra, fele a -0.5-re kerül. +0.25-nél fele a 0-ra, fele a +0.5-re. Az eredmény így lehet fél nyeremény vagy fél vesztés is."
+      },
+      {
+        "type": "example",
+        "title": "Hazai csapat -0.25, €100 tét",
+        "rows": [
+          [
+            "A hazai csapat nyer",
+            "mindkét fél nyer"
+          ],
+          [
+            "Döntetlen",
+            "€50 visszajár, €50 elvész"
+          ],
+          [
+            "A hazai csapat veszít",
+            "mindkét fél elvész"
+          ]
+        ],
+        "note": "A vendégcsapat +0.25-ös vonalánál ez fordítva működik: döntetlennél az egyik fél nyer, a másik fél tétje pedig visszajár."
+      },
+      {
+        "type": "h2",
+        "text": "Ázsiai hendikep és surebetek"
+      },
+      {
+        "type": "p",
+        "text": "Mivel a piacnak két kimenetele van, az egyik fogadóirodánál megteheted a hazai -0.5-öt, a másiknál a vendég +0.5-öt, így a surebethez mindössze két fogadóiroda kell. Ügyelj rá, hogy mindkét oldalon a megfelelő vonal szerepeljen: a -0.5 párja a +0.5, a -0.25 párja pedig a +0.25."
+      },
+      {
+        "type": "tip",
+        "text": "Surebet megkötése előtt mindig ellenőrizd a vonalat. Egyetlen negyed vonalnyi eltérés is a garantált nyereményt kockázatos fogadássá változtathatja."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Mit jelent az ázsiai hendikep -0.5?",
+        "a": "A csapatnak meg kell nyernie a meccset, hogy nyereséged legyen. Döntetlen vagy vereség esetén a fogadás elvész."
+      },
+      {
+        "q": "Visszakapom a tétet az ázsiai hendikepnél?",
+        "a": "Egész vonalaknál, például 0 vagy -1 esetén visszakapod a tétet, ha a meccs eredménye pontosan megegyezik a hendikeppel. Fél vonalaknál ez soha nem fordul elő, negyed vonalaknál pedig fél nyeremény vagy fél vesztés is lehet."
+      }
+    ],
+    "category": "Alapok",
+    "ctaLabel": "Aktuális surebetek megtekintése"
+  },
+  "bet-tracker": {
+    "title": "Fogadási táblázat helyett: kövess nyomon minden fogadást automatikusan",
+    "metaTitle": "Fogadási táblázat alternatíva – Bet Tracker 2026",
+    "description": "Cseréld le a fogadási táblázatot bet trackerre: mit érdemes rögzíteni, hogyan számold ki az ROI-t, példák €-ban, és mit kell tudnia a legjobb bet tracker appnak.",
+    "keyword": "fogadási táblázat alternatíva",
+    "intro": "A legjobb fogadási táblázat alternatíva egy bet tracker, amely helyetted rögzít minden fogadást, tétet és eredményt, és automatikusan kiszámítja az ROI-t, a fogadóirodánkénti profitot és az egyenleget. A táblázatok szétesnek, amint hetente több tucat surebetet kötsz: felülíródnak a képletek, hiányoznak a lábak, az érvénytelenített fogadások pedig torzítják a számokat. A tracker másodpercek alatt megmutatja a valós képet.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért mondja fel a szolgálatot a fogadási táblázat"
+      },
+      {
+        "type": "p",
+        "text": "Egy táblázat havi tíz fogadásnál még megteszi. Az arbitrázs fogadásnál viszont minden surebet két-három szárból áll, különböző fogadóirodáknál, így 50 surebet 100–150 sort jelent, amelyet kézzel kell beírni, lezárni és egyeztetni."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Kézi hibák:** egyetlen elírt szorzó vagy tét tönkreteheti az ROI-mutatódat.",
+          "**Hiányzó szárak:** ha az egyik szár nincs rögzítve, a nyertes surebet veszteségnek látszik.",
+          "**Érvénytelenített fogadások és részleges elfogadás:** egyszerű képletekkel nehéz helyesen kezelni.",
+          "**Nincs áttekintés fogadóirodánként:** nehéz átlátni, hol van valójában a pénzed."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Fogadáskövetés: mit rögzíts minden fogadásnál"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Dátum és esemény**, hogy később is megtaláld a fogadást.",
+          "**Fogadóiroda, piac és szorzó**, pontosan úgy, ahogy a szelvényen elfogadták.",
+          "**Tét és eredmény**: nyert, vesztett, érvénytelen, vagy félig nyert az ázsiai vonalaknál.",
+          "**A fogadás típusa**: surebet, value bet vagy sima fogadás, hogy össze tudd hasonlítani a stratégiákat.",
+          "**Záró szorzó** value betingnél, hogy lásd, megverted-e a piacot."
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Példa: egy hónapnyi követett surebet",
+        "rows": [
+          [
+            "Surebetek száma",
+            "60"
+          ],
+          [
+            "Teljes forgalom (minden szár)",
+            "€24,000"
+          ],
+          [
+            "Összes visszaérkezett összeg",
+            "€24,720"
+          ],
+          [
+            "Nettó profit",
+            "€720"
+          ],
+          [
+            "ROI",
+            "€720 / €24,000 = 3.0%"
+          ]
+        ],
+        "note": "Követés nélkül csak azt látod, hogy mozog az egyenleged. Követéssel viszont azt is látod, hogy minden megforgatott €100 után €3-t keresel."
+      },
+      {
+        "type": "h2",
+        "text": "A legjobb fogadáskövető app: mit kell tudnia"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Csoportosítja a surebet szárait**, így az egész arbitrázs egyetlen pozícióként jelenik meg, egyetlen profittal.",
+          "**Automatikusan számolja az ROI-t** havonta, sportáganként, piaconként és fogadóirodánként.",
+          "**Fogadóirodánként mutatja az egyenleget**, hogy tudd, hol érdemes befizetni vagy kivenni.",
+          "**Kezeli az érvénytelenített fogadásokat és a szorzóváltozásokat**, anélkül hogy az összesítések felborulnának.",
+          "**Mobilon is működik**, hiszen útközben is fogadsz."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Akkor rögzítsd a fogadást, amikor elfogadták, ne a nap végén. A követési hibák többsége abból adódik, hogy emlékezetből írod be az adatokat."
+      },
+      {
+        "type": "h2",
+        "text": "Automatikus fogadáskövető app: kövesd ingyen a fogadásaidat"
+      },
+      {
+        "type": "p",
+        "text": "Az automatikus fogadáskövető app megspórolja a gépelést: amikor a szkennerből megteszel egy surebetet, a szárak, a szorzók és a tétek maguktól rögzítődnek. Neked csak az eredményt kell megerősítened. Olvasd el, hogyan [számold ki az ROI-t fogadásnál](/hu/guides/roi-betting), és építsd fel a [bankroll-menedzsmentedet](/hu/guides/bankroll-management) a valós számaid alapján."
+      },
+      {
+        "type": "p",
+        "text": "A [BetTracker AI](/hu) a surebet-szkennert és a fogadáskövetőt egy helyen egyesíti, így minden megtett surebetet automatikusan követ, az ROI-d pedig mindig naprakész."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Használhatok még táblázatot?",
+        "a": "Igen, kevés fogadásnál. Ha hetente néhány surebetnél többet teszel meg, a fogadáskövető gyorsabb, és sokkal kevésbé hibalehetőséges."
+      },
+      {
+        "q": "Mekkora az jó ROI surebetekkel?",
+        "a": "Jellemzően a forgalom 1–4%-a. Ennél magasabb érték is előfordulhat, de gyakran több korlátozással és érvénytelenített fogadással jár."
+      },
+      {
+        "q": "A sima fogadásaimat is érdemes követni?",
+        "a": "Igen. Ha mindent követsz, látod a valódi eredményedet, és kiderül, hogy a sima fogadásaid nem fogyasztják-e el a surebetekből származó profitot."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Kövesd ingyen a fogadásaidat"
+  },
+  "roi-betting": {
+    "title": "ROI fogadásnál: így számold ki a megtérülést",
+    "metaTitle": "ROI fogadásnál – A fogadások megtérülésének kiszámítása",
+    "description": "Tanuld meg kiszámolni az ROI-t és a yieldet fogadásnál, példákkal. Megtudod, mi számít jó megtérülésnek, és miért árul el többet az ROI az összesített profitnál.",
+    "keyword": "fogadás roi",
+    "intro": "Az ROI a return on investment rövidítése, vagyis a befektetés megtérülése: azt mutatja meg, hány százalékot keresel a megtett tétekhez képest. Ez a mutató mondja meg, működik-e a stratégiád, függetlenül attól, mekkora tétekkel fogadsz.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "A képlet"
+      },
+      {
+        "type": "p",
+        "text": "ROI = profit osztva az összes téttel, szorozva 100-zal. A profit a kifizetett összeg mínusz a megtett tét."
+      },
+      {
+        "type": "example",
+        "title": "Példa: egy hónapnyi surebet",
+        "rows": [
+          [
+            "Összes tét",
+            "€40,000"
+          ],
+          [
+            "Összes kifizetés",
+            "€41,000"
+          ],
+          [
+            "Profit",
+            "€1,000"
+          ],
+          [
+            "ROI",
+            "1,000 / 40,000 × 100 = 2.5%"
+          ]
+        ],
+        "note": "Minden megtett fontra 2,5 penny profitot értél el."
+      },
+      {
+        "type": "h2",
+        "text": "Az ROI és a yield ugyanaz"
+      },
+      {
+        "type": "p",
+        "text": "A fogadásnál az ROI és a yield kifejezést gyakran ugyanarra a mutatóra használják: a profitra az összes téthez viszonyítva. Egyesek az ROI-t a bankrollhoz viszonyítva számolják. Ez magasabb értéket ad, mert ugyanazt a bankrollt sokszor megforgatod. Összehasonlítás előtt mindig ellenőrizd, melyik módszerrel számolták ki az adott értéket."
+      },
+      {
+        "type": "h2",
+        "text": "Mi számít jó ROI-nak?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Hagyományos fogadások hosszú távon: a fogadók többsége 0% alatt van, mert a fogadóiroda árrést érvényesít.",
+          "Value betting: 2–5% sok fogadás után jó eredmény.",
+          "Surebetek: jellemzően 1–5% surebetenként, de szinte kockázat nélkül, mert minden kimenetel le van fedve."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Az ROI sok fogadás után a leginkább beszédes. 20 fogadás után az érték még nagyot ingadozhat. Több száz fogadás után viszont megmutatja, hogy helytáll-e a stratégiád."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Hogyan számolom ki az ROI-t fogadásnál?",
+        "a": "Vedd a profitodat, told el az összes téttel, és szorozd meg 100-zal. Ha €10 000-t tettél meg, és €300-t kerestél, az ROI-d 3%."
+      },
+      {
+        "q": "Mi a különbség az ROI és a profit között?",
+        "a": "A profit az az összeg, amelyet kerestél. Az ROI a profit a tét százalékában. Segítségével a különböző téttel elért eredmények is összehasonlíthatók."
+      },
+      {
+        "q": "Láthatom automatikusan az ROI-mat?",
+        "a": "Igen. A BetTrackerAI fiókok a rögzített fogadásaid alapján automatikusan kiszámolják az ROI-dat."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Nézd meg a ROI-dat a fogadási könyvelésben"
+  },
+  "surebet-danmark-alternativ": {
+    "title": "BetTrackerAI vs. Surebet Danmark: a kedvezőbb árú alternatíva",
+    "metaTitle": "Surebet Danmark alternatíva – BetTrackerAI összehasonlítás (2025)",
+    "description": "Hasonlítsd össze a BetTrackerAI-t és a Surebet Danmarkot: árak, funkciók, fogadóirodai lefedettség és fogadáskövetés. Találd meg a számodra megfelelő surebet-eszközt.",
+    "keyword": "surebet eszközök összehasonlítása",
+    "intro": "A Surebet Danmark és a BetTrackerAI egyaránt surebeteket (más néven arbitrázsfogadásokat) keres a licenccel rendelkező fogadóirodáknál. Mindkettő 7 napos ingyenes próbaidőszakot kínál. A fő különbség az árban, valamint a surebet-szkenneren túli eszközökben rejlik.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Dióhéjban"
+      },
+      {
+        "type": "example",
+        "title": "A BetTrackerAI és a Surebet Danmark egymás mellett",
+        "rows": [
+          [
+            "Havi ár",
+            "BetTrackerAI: kb. €20-tól · Surebet Danmark: kb. €134"
+          ],
+          [
+            "Ingyenes próbaidőszak",
+            "Mindkettő: 7 nap"
+          ],
+          [
+            "Fogadóirodák",
+            "Mindkettő: kizárólag licenccel rendelkező fogadóirodák"
+          ],
+          [
+            "Értesítések",
+            "BetTrackerAI: push- és SMS-értesítések (Premium) · Surebet Danmark: élő értesítések"
+          ],
+          [
+            "Fogadási könyvelés",
+            "BetTrackerAI: teljes körű követés ROI-val és fogadóirodánkénti egyenleggel · Surebet Danmark: fogadáskövető"
+          ],
+          [
+            "Ingyenes eszközök és útmutatók",
+            "BetTrackerAI: surebet-kalkulátor és oktató jellegű útmutatók"
+          ]
+        ],
+        "note": "Az árakat mindkét oldalon 2025. november 23-án ellenőriztük, és változhatnak."
+      },
+      {
+        "type": "h2",
+        "text": "Ár: jelentős a különbség"
+      },
+      {
+        "type": "p",
+        "text": "A Surebet Danmark havonta kb. €134-ba kerül. A BetTrackerAI Basic csomagja (legfeljebb 5% profitú surebetek) kb. €20 havonta, a Premium (az összes surebet plusz SMS-értesítések) pedig kb. €33. A Premiummal havonta kb. €100-t spórolsz – ez évi kb. €1,200."
+      },
+      {
+        "type": "p",
+        "text": "Ez azért számít, mert a surebetek fogadásonként jellemzően 1–5% hozamot hoznak. Minél alacsonyabb a havi díj, annál kisebb forgalom kell ahhoz, hogy az előfizetés megtérüljön."
+      },
+      {
+        "type": "h2",
+        "text": "Fogadáskövetés: itt tűnik ki a BetTrackerAI"
+      },
+      {
+        "type": "p",
+        "text": "A surebet csak akkor kifizetődő, ha pontosan tudod, mennyit kerestél. A BetTrackerAI-ban rögzítheted a surebeteket és a befizetéseket, a profitodat, a ROI-dat és az egyenleged pedig fogadóirodánként egy helyen látod. A fogadási szelvényt be is importálhatod, így nem kell kézzel felvinned."
+      },
+      {
+        "type": "h2",
+        "text": "Melyik eszköz illik hozzád?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Válaszd a BetTrackerAI-t, ha alacsonyabb áron szeretnél surebeteket, és közben részletesen követnéd a számláidat.",
+          "Válaszd a Surebet Danmarkot, ha már használod a platformjukat, és elégedett vagy a költségekkel.",
+          "Ha bizonytalan vagy, próbáld ki mindkettőt. Mindkettő 7 napos ingyenes próbaidőszakot kínál, így ugyanazokon az eseményeken összehasonlíthatod a surebeteket."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Bármelyik eszközt választod: mindig azt a fogadást told meg először, amelyiknél a szorzók a leginkább ingadoznak, és ellenőrizd, hogy a piac mindkét fogadóirodánál teljesen azonos."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Olcsóbb a BetTrackerAI, mint a Surebet Danmark?",
+        "a": "Igen. A BetTrackerAI havonta kb. €20-ba vagy kb. €33-ba kerül, a Surebet Danmark viszont kb. €134-ba (2025. november 23-i állapot szerint)."
+      },
+      {
+        "q": "Mindkét eszköz kizárólag licenccel rendelkező fogadóirodákat használ?",
+        "a": "Igen. Mindkét platform a szabályozott, licenccel rendelkező fogadóirodákra összpontosít, így olyan helyeken fogadhatsz, ahol a játékosvédelmi szabályok érvényesek."
+      },
+      {
+        "q": "Kipróbálhatom ingyen a BetTrackerAI-t?",
+        "a": "Igen. 7 napos ingyenes próbaidőszakot kapsz teljes hozzáféréssel, és a próbaidőszak alatt bármikor lemondhatod."
+      }
+    ],
+    "category": "Alapok",
+    "ctaLabel": "Próbáld ki a BetTrackerAI-t 7 napig ingyen"
+  },
+  "betting-regnskab": {
+    "title": "Fogadási könyvelés: így tartsd szemmel a bankrollodat",
+    "metaTitle": "Fogadási könyvelés – kövesd az egyenleged a fogadóirodák között",
+    "description": "Tudd meg, hogyan vezess könyvelést a fogadásaidról: befizetések, kifizetések és egyenleg fogadóirodánként. Ne veszítsd el a fonalat, ha több oldalon is fogadsz.",
+    "keyword": "fogadáskövető",
+    "intro": "Ha surebeteket kötsz, a pénzed egyszerre sok fogadóirodánál van. A fogadási könyvelés megmutatja, hol van a pénzed, és hogy az egészet összeadva mennyit kerestél.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért vész el a fonal"
+      },
+      {
+        "type": "p",
+        "text": "Az arbitrázsfogadásnál az egyik fogadóirodánál nyersz, a másiknál veszítesz. Az egyenleged folyamatosan változik, és rendszeresen be- és kifizetést kell végezned, hogy mindenhol legyen elég pénz. Rendes könyvelés nélkül nehéz átlátni, hogy összességében nyereségben vagy-e."
+      },
+      {
+        "type": "h2",
+        "text": "Mit tartalmazzon a könyvelésed"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "Minden be- és kifizetés fogadóirodánként",
+          "Az aktuális egyenleged minden fogadóirodánál",
+          "Az összes fogadás tétje, szorzója és eredménye",
+          "Az összprofitod: aktuális egyenlegek plusz kifizetések mínusz befizetések"
+        ]
+      },
+      {
+        "type": "example",
+        "title": "Példa: összprofit a fogadóirodák között",
+        "rows": [
+          [
+            "Összes befizetés",
+            "€10,000"
+          ],
+          [
+            "Összes kifizetés",
+            "€3,000"
+          ],
+          [
+            "Jelenlegi egyenleg a fogadóirodáknál",
+            "€7,800"
+          ],
+          [
+            "Profit",
+            "€3,000 + €7,800 − €10,000 = €800"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Jó szokások a bankrollkezeléshez"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "A be- és kifizetéseket még aznap rögzítsd.",
+          "Hetente egyszer vesd össze a saját nyilvántartásodban szereplő egyenleget a fogadóiroda által mutatott egyenleggel.",
+          "Különítsd el a fogadási pénzedet a mindennapi pénzedtől, hogy véletlenül se fogadj olyan összeggel, amelyre másra van szükséged."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "A BetTrackerAI számlakezelése fogadóirodánként mutatja az egyenleget, a befizetéseket és a profitot, így mindig tudod, hol áll a pénzed."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Kell adózni a fogadási nyeremények után?",
+        "a": "A szerencsejáték-nyeremények adózása országonként eltérő. Egyes szabályozott piacokon az engedéllyel rendelkező fogadóirodák nyereményei adómentesek, máshol be kell vallani őket. Nézz utána az adott országban érvényes szabályoknak, vagy kérd helyi szakértő segítségét."
+      },
+      {
+        "q": "Milyen gyakran frissítsem a fogadási naplómat?",
+        "a": "A fogadásokat és a befizetéseket rögzítsd azonnal, az egyenlegeket pedig hetente egyszer egyeztesd."
+      }
+    ],
+    "category": "Stratégia",
+    "ctaLabel": "Nyisd meg a számláidat"
+  },
+  "tjen-penge-paa-odds-uden-risiko": {
+    "title": "Pénzkeresés sportfogadással kockázat nélkül: így működik a fedezés és az arbitrázs",
+    "metaTitle": "Pénzkeresés sportfogadással kockázat nélkül 2026",
+    "description": "Hogyan keress pénzt sportfogadással kockázat nélkül? Surebetek és fedezés kidolgozott példákkal €-ban, reális fogadási stratégia és a valódi buktatók.",
+    "keyword": "pénzkeresés sportfogadással kockázat nélkül",
+    "category": "Stratégia",
+    "ctaLabel": "Garantált profitot hozó surebetek megtekintése",
+    "intro": "Sportfogadással kockázat nélkül is lehet pénzt keresni: ugyanazon esemény minden kimenetelére más-más fogadóirodánál fogadsz, és az összesített odds többet fizet, mint amennyit megtettél. Ez a sportfogadási arbitrázs, vagyis a surebet. A profit már a kezdőrúgás előtt biztos, általában 1–3%. A kockázat nem az eredményben rejlik, hanem az odds mozgásában, a hibákban és a számlakorlátozásokban.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Sportfogadási arbitrázs: miért garantált a profit?"
+      },
+      {
+        "type": "p",
+        "text": "A fogadóiroda azért keres pénzt, mert az általa kínált szorzók együttesen 100% fölötti valószínűséget adnak ki. Ha két fogadóiroda eltérően értékeli ugyanazt az eseményt, mindegyiknél a legjobb árat választod egy-egy különböző kimenetelre. Ha az összesített valószínűség 100% alá esik, a profit garantált. Ez matematikai fogadás, nem tippelgetés. A teljes működést itt magyarázzuk el: [hogyan működik az arbitrázsfogadás?](/en/guides/arbitrage-betting)"
+      },
+      {
+        "type": "example",
+        "title": "Példa: kétkimenetelű kosárlabda-mérkőzés (hosszabbítással), €1,000",
+        "rows": [
+          [
+            "A csapat az 1. fogadóirodánál, odds 1.95",
+            "Tét: €520.88"
+          ],
+          [
+            "B csapat a 2. fogadóirodánál, odds 2.12",
+            "Tét: €479.12"
+          ],
+          [
+            "Az odds reciprokainak összege",
+            "0.513 + 0.472 = 0.985"
+          ],
+          [
+            "Kifizetés, bárki nyer",
+            "kb. €1,015.72"
+          ],
+          [
+            "Garantált profit",
+            "kb. €15.72 (1.6%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Garantált profit fedezéssel: zárd le a már futó fogadást"
+      },
+      {
+        "type": "p",
+        "text": "A fedezés ugyanerre a matematikára épül, de egy már megkötött fogadásból indul ki. Ha a szorzó neked kedvező irányba mozdul, a másik kimenetelre fogadsz egy másik fogadóirodánál, és az eredménytől függetlenül lezárod a profitot."
+      },
+      {
+        "type": "example",
+        "title": "Példa: 2,5 gól feletti fogadás mérkőzés előtt, €500 tétért",
+        "rows": [
+          [
+            "Eredeti fogadás: 2,5 gól felett, odds 2.40",
+            "Tét: €500, lehetséges kifizetés: €1,200"
+          ],
+          [
+            "Egy korai gól után: 2,5 gól alatt, odds 2.60",
+            "Tét: €461.54"
+          ],
+          [
+            "Összes megtett tét",
+            "€961.54"
+          ],
+          [
+            "Kifizetés bármelyik eredménynél",
+            "€1,200"
+          ],
+          [
+            "Lezárt profit",
+            "kb. €238.46 (24.8%)"
+          ]
+        ],
+        "note": "A képlet: fedezeti tét = lehetséges kifizetés ÷ új odds. Itt 1,200 ÷ 2.60 = €461.54."
+      },
+      {
+        "type": "h2",
+        "text": "Fogadási stratégia: kis haszonkulcs, rengeteg fogadás"
+      },
+      {
+        "type": "p",
+        "text": "Egy surebeten garantált profit kicsi, ezért az eredményt a mennyiség és a fegyelem hozza. Egy reális arbitrázsfogadási stratégia így néz ki:"
+      },
+      {
+        "type": "example",
+        "title": "Reális havi számok",
+        "rows": [
+          [
+            "Tét surebetenként",
+            "€1,000"
+          ],
+          [
+            "Átlagos profit",
+            "1.5%"
+          ],
+          [
+            "Surebetek száma havonta",
+            "40"
+          ],
+          [
+            "Várható havi eredmény",
+            "kb. €600"
+          ],
+          [
+            "Ugyanez a felállás €2,500 tétnél surebetenként",
+            "kb. €1,500"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Told szét a fogadásaidat** több fogadóiroda között, hogy egyetlen számla se tűnjön ki.",
+          "**Tarts készenlétben egyenleget** minden fogadóirodánál, hogy perceken belül tudj lépni.",
+          "**Rögzíts minden fogadást**, hogy a valódi ROI-t lásd, ne csak megérzésekre hagyatkozz. Egy [fogadáskövető](/en/guides/bet-tracker) ezt automatikusan elvégzi."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Matematikai fogadás: négy kockázat, aminek semmi köze a matekhoz"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Odds-mozgás:** az első és a második fogadásod között az odds leeshet. A legkevésbé stabil oddsra mindig először fogadj.",
+          "**Érvénytelenített fogadások:** egyértelmű oddshiba esetén a fogadóiroda érvénytelenítheti a fogadást, és egy fedezetlen oldallal maradsz.",
+          "**Eltérő szabályok:** a feladást, a játék nélküli továbbjutást és a hosszabbítást különbözőképpen kezelik. Ellenőrizd, hogy mindkét fogadóiroda ugyanúgy értékeli ki a piacot.",
+          "**Számlakorlátozások:** a fogadóirodák csökkenthetik a maximális tétedet. Olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Okosan fogadni annyit tesz, hogy a gyakorlati kockázatokat is kiiktatod, nem csak a matematikaiakat. A [BetTracker AI](/en) kiszámolt tétmegosztással mutatja a surebeteket, így még azelőtt megkötheted a fogadásokat, hogy az odds elmozdulna."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Tényleg lehet kockázat nélkül pénzt keresni sportfogadáson?",
+        "a": "Egy helyesen megkötött surebetnél az eredmény nem számít. A megmaradó kockázat gyakorlati jellegű: mozgó oddsok, érvénytelenített fogadások és a rossz piac kiválasztása."
+      },
+      {
+        "q": "Mi a különbség a surebet és a fedezeti fogadás (hedging) között?",
+        "a": "A surebetnél az összes kimenetelre egyszerre fogadsz. A hedging egyetlen fogadással indul, az ellenkező kimenetelt pedig később fedezed le, amikor az odds már neked kedvezően mozdult el."
+      },
+      {
+        "q": "Mennyi pénz kell az induláshoz?",
+        "a": "Elindulhatsz €200–500 összeggel, néhány fogadóiroda között elosztva. Kisebb tétek mellett viszont egy surebeten csak néhány euró a nyereség."
+      }
+    ]
+  },
+  "find-surebets-automatisk": {
+    "title": "Surebetek automatikus keresése: így veszi észre az odds-szkenner az árazási hibákat",
+    "metaTitle": "Surebetek automatikus keresése – Odds-szkenner 2026",
+    "description": "Hogyan találhatsz surebeteket automatikusan odds-szkennerrel: hogyan szúrja ki a fogadási szoftver az árazási hibákat, számpéldák €-ban, és mire figyelj.",
+    "keyword": "surebetek automatikus keresése",
+    "category": "Stratégia",
+    "ctaLabel": "Surebet-szkenner indítása",
+    "intro": "Ha automatikusan szeretnél surebeteket találni, használj odds-szkennert, amely néhány másodpercenként összehasonlítja a több tucat fogadóiroda oddsait. Amikor a reciprok oddsok összege 1 alá csökken, a szoftver jelzi a surebetet, a tétek már ki is vannak számolva. Másodpercek alatt megtalálja azokat az árazási hibákat, amelyek kézzel órákig tartanának, ráadásul még azelőtt, hogy a fogadóiroda kijavítaná őket.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Miért működik ritkán a surebetek kézi keresése?"
+      },
+      {
+        "type": "p",
+        "text": "Egyetlen focimeccsen akár 100+ piac is lehet. Szorozd meg ezt 15 fogadóirodával és naponta több száz mérkőzéssel, és máris milliós nagyságrendű árkombinációt kapsz. A legtöbb surebet 2–10 percig él. Mire végignézed a füleket és kiszámolod az összeget, az odds általában már elmozdult."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Mennyiség:** a szkenner minden piacot egyszerre ellenőriz, te csak párat.",
+          "**Sebesség:** a szoftver másodperceken belül reagál az oddsváltozásra.",
+          "**Pontosság:** a tétmegosztást kiszámolja helyetted, így nincs elgépelés."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Szoftver az oddshibák megtalálására: hogyan működik a szkenner?"
+      },
+      {
+        "type": "p",
+        "text": "A fogadási szoftver folyamatosan gyűjti az oddsokat a fogadóirodáktól, összepárosítja az azonos eseményeket és piacokat, majd minden kombinációra kiszámolja a reciprok oddsok összegét. A munka lényege a párosítás: a „Man Utd” és a „Manchester United” ugyanaz a csapat, az „over 2.5” pedig mindkét fogadóirodánál ugyanaz a vonal kell, hogy legyen."
+      },
+      {
+        "type": "example",
+        "title": "Példa: a szkenner által észrevett árazási hiba, teljes tét €1,000",
+        "rows": [
+          [
+            "Több mint 2,5 gól az 1. fogadóirodánál, odds 2.25",
+            "Tét: €461.72"
+          ],
+          [
+            "Kevesebb mint 2,5 gól a 2. fogadóirodánál, odds 1.93",
+            "Tét: €538.28"
+          ],
+          [
+            "1/2.25 + 1/1.93",
+            "0.444 + 0.518 = 0.963"
+          ],
+          [
+            "Kifizetés bármelyik eredménynél",
+            "kb. €1,038.88"
+          ],
+          [
+            "Garantált profit",
+            "kb. €38.88 (3.9%)"
+          ]
+        ],
+        "note": "Az 1. fogadóiroda még nem reagált a csapathírek változására. A szkenner másodperceken belül jelezte az eltérést."
+      },
+      {
+        "type": "h2",
+        "text": "Árazási hibák: az igaziak és a csapdák"
+      },
+      {
+        "type": "p",
+        "text": "Nem minden magas profitú surebet ajándék. A 8–10% feletti profit gyakran inkább arra utal, hogy valami nincs rendben, nem valódi lehetőségre."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Nyilvánvaló hibák:** ha valahol 15.0 az odds, miközben mindenki más 1.50-et kínál, a fogadóiroda gyakran érvényteleníti a fogadást. Kerüld ezeket.",
+          "**Eltérő szabályok:** ha egy tenisz piacot az egyik fogadóiroda feladás esetén elszámol, a másik viszont érvénytelenít, az nem igazi surebet.",
+          "**Eltérő vonalak:** az ázsiai hendikep −0.5 és −0.25 hasonlónak tűnik, de másképp viselkedik. Olvass az [ázsiai hendikepről](/en/guides/asian-handicap).",
+          "**Egészséges surebetek:** az 1–4% profit az elterjedt piacokon az ideális tartomány. A profitod nagy része innen fog származni."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "A szkennerben állíts be 1%-os minimum és kb. 8%-os maximum profitot. Ez kiszűri a zajt és az érvénytelenítésre kerülő hibák nagy részét."
+      },
+      {
+        "type": "h2",
+        "text": "Mire figyelj az odds-szkenner kiválasztásakor?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Fogadóirodák lefedettsége:** minél több fogadóiroda, annál több surebet. Ellenőrizd, hogy azok is szerepelnek, ahol van fiókod.",
+          "**Frissítési gyakoriság:** az oddsokat néhány másodpercenként frissíteni kell, különösen a [live surebetek](/en/guides/live-arbitrage-betting-scanner) esetében.",
+          "**Szűrők:** sportág, piac, minimális profit és fogadóirodák szerint, hogy csak azt lásd, amivel tényleg fogadhatsz.",
+          "**Tétkalkulátor:** beépítve, így azonnal megkötheted a fogadásokat. A számokat a [surebet-kalkulátorban](/en/calculator) is ellenőrizheted.",
+          "**Fogadáskövetés:** ha utólag rögzíted a fogadásaidat, látod a valódi ROI-dat. Lásd: [bet tracker](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Válaszd ki a fogadóirodáidat, állíts be 1%-os minimális profitot, és told meg gyorsan a fogadásokat egymás után. A [BetTracker AI](/en) helyetted pásztázza a fogadóirodákat, és valós időben mutatja a surebeteket, kiszámolt tétmegosztással."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Naponta hány surebetet talál egy szkenner?",
+        "a": "Általában néhány tucattól akár több száz darabig, attól függően, hány fogadóirodát és sportágat választasz, és mekkora a beállított minimális profit."
+      },
+      {
+        "q": "Megkötheti helyettem a fogadásokat automatikusan?",
+        "a": "Az automatizált fogadás a legtöbb fogadóiroda szabályzatába ütközik, és gyorsan a fiók bezárásához vezet. A szkenner találja meg a surebeteket, a fogadásokat pedig told meg te magad."
+      },
+      {
+        "q": "Miért tűnt el a surebet, amikor megnyitom a fogadóirodát?",
+        "a": "A szkennelés óta elmozdult az odds. Mindig ellenőrizd a szelvényen az oddsot, és a feladás előtt számold újra."
+      }
+    ]
+  },
+  "live-arbitrage-betting-scanner": {
+    "title": "Élő arbitrázs fogadási szkenner: így találhatsz élő surebeteket mérkőzés közben",
+    "metaTitle": "Élő arbitrázs fogadási szkenner – élő surebetek 2026",
+    "description": "Hogyan találja meg az élő arbitrázs szkenner a surebeteket a mérkőzések alatt: sebesség, fogadási késleltetés, kidolgozott példák €-ban, és hogyan kerüld el a klasszikus hibákat.",
+    "keyword": "élő arbitrázs fogadási szkenner",
+    "category": "Stratégia",
+    "ctaLabel": "Élő surebetek megtekintése",
+    "intro": "Az élő arbitrázs fogadási szkenner a mérkőzések közben összehasonlítja a fogadóirodák élő oddsait, és abban a pillanatban jelzi a surebetet, amikor az árak eltérnek egymástól. Élő surebet gyakrabban akad, mint meccs előtti, mert a fogadóirodák eltérő sebességgel reagálnak a gólokra, a szünetekre és a piros lapokra. Gyorsabban is tűnnek el, gyakran 10–60 másodpercen belül, ezért a sebesség és a fegyelem minden eddiginél fontosabb.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Élő surebetek: miért kínál több lehetőséget az élő fogadás"
+      },
+      {
+        "type": "p",
+        "text": "A kezdés előtt az árak lassan mozognak. Mérkőzés közben viszont minden esemény azonnal átrendezi a valószínűségeket. Ha egy fogadóiroda lassabb adatforrást használ, vagy néhány másodperccel tovább felfüggeszti a piacokat, az ára már nem egyezik a piac többi részével. Ez az eltérés az élő surebet."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Tenisz:** egy brékkel drasztikusan változik az odds, és a fogadóirodák eltérő sebességgel frissítenek.",
+          "**Labdarúgás:** a gólok, a piros lapok és a tizenegyesek rövid árkülönbségeket teremtenek az 1X2 és a gólszám (over/under) piacokon.",
+          "**Kosárlabda:** a gyors pontsorozatok gyakori kilengéseket okoznak a kétkimenetelű piacokon."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Sportarbitrázs élőben: egy kidolgozott példa"
+      },
+      {
+        "type": "example",
+        "title": "Példa: élő tenisz egy brék után, teljes tét €800",
+        "rows": [
+          [
+            "A játékos az 1. fogadóirodánál, odds 1.72",
+            "Tét €467.63"
+          ],
+          [
+            "B játékos a 2. fogadóirodánál, odds 2.42",
+            "Tét €332.37"
+          ],
+          [
+            "1/1.72 + 1/2.42",
+            "0.581 + 0.413 = 0.995"
+          ],
+          [
+            "Kifizetés, bárki nyer",
+            "kb. €804.33"
+          ],
+          [
+            "Biztosított profit",
+            "kb. €4.33 (0.5%)"
+          ]
+        ],
+        "note": "Az élő marzsok gyakran kisebbek, mint a meccs előttiek. A nagyobb fogadásszám kompenzálja ezt, de csak akkor, ha gyorsan és pontosan hajtod végre a fogadásokat."
+      },
+      {
+        "type": "example",
+        "title": "Példa: gólszám (over/under) egy korai gól után, teljes tét €1,000",
+        "rows": [
+          [
+            "3,5 gól felett az 1. fogadóirodánál, odds 2.30",
+            "Tét €451.07"
+          ],
+          [
+            "3,5 gól alatt a 2. fogadóirodánál, odds 1.89",
+            "Tét €548.93"
+          ],
+          [
+            "Az odds reciprokainak összege",
+            "0.435 + 0.529 = 0.964"
+          ],
+          [
+            "Kifizetés bármelyik kimenetelnél",
+            "kb. €1,037.47"
+          ],
+          [
+            "Biztosított profit",
+            "kb. €37.47 (3.7%)"
+          ]
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Fogadási késleltetés és felfüggesztett piacok: az élő fogadás kockázatai"
+      },
+      {
+        "type": "p",
+        "text": "Az élő fogadás olyan kockázatokat hordoz, amelyek meccs előtt nem léteznek. A fogadóirodák 3–10 másodperces fogadási késleltetést alkalmaznak, ez alatt az odds megváltozhat, vagy a fogadást elutasíthatják."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Fogadási késleltetés:** a fogadásodat csak néhány másodperc múlva fogadják el. Ha közben elmozdul az odds, elutasíthatják.",
+          "**Felfüggesztett piacok:** gól vagy brék után a piacok rövid időre bezárnak. Soha ne told meg az első fogadást, amíg a második piac fel van függesztve.",
+          "**Részleges elfogadás:** egyes fogadóirodák élőben csak a tét egy részét fogadják el. A második fogadás megtétele előtt ellenőrizd a visszaigazolást.",
+          "**Számolj újra gyorsan:** ha a második fogadás odds-a elmozdul, számold újra a [surebet kalkulátorban](/en/calculator), és fedezd le a elérhető legjobb áron."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Először azt a fogadást told meg, amelyiknél a fogadóiroda késleltetése hosszabb. Miután elfogadták, told meg a másodikat a gyorsabb fogadóirodánál."
+      },
+      {
+        "type": "h2",
+        "text": "Élő oddsösszehasonlítás: mit kell tudnia a szkenneredenek"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Néhány másodpercenként frissít:** a 10 másodpercnél régebbi élő árak használhatatlanok.",
+          "**Megmutatja az ár korát:** így látod, mennyire friss a surebet.",
+          "**Külön szűri az élő és a meccs előtti fogadásokat:** az élő surebetek más megközelítést igényelnek, és eleinte alacsonyabb téteket.",
+          "**Naplózz minden fogadást:** az élő eredmények jobban ingadoznak, ezért a [fogadáskövető](/en/guides/bet-tracker) nélkülözhetetlen, hogy lásd, valóban nyereséges vagy-e."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Ha új vagy a területen, kezdd meccs előtti fogadásokkal, és csak akkor válts élőre, amikor már biztos a rutinod. Előbb olvasd el, hogyan [találhatsz surebeteket automatikusan](/en/guides/find-surebets-automatically). Ha készen állsz, a [BetTracker AI](/en) valós időben kiszámolt tétmegosztással mutatja az élő surebeteket."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Az élő surebetek nyereségesebbek, mint a meccs előttiek?",
+        "a": "Több van belőlük, de a marzsok gyakran kisebbek, a végrehajtási kockázat pedig nagyobb. A nettó eredmény azon múlik, milyen gyors és pontos vagy."
+      },
+      {
+        "q": "Milyen gyorsnak kell lennem?",
+        "a": "Az élő surebetek gyakran 10–60 másodpercig élnek. Ezen az időn belül mindkét fogadást meg kell tudnod tenni, ezért előre töltsd fel a számláidat, és jelentkezz be."
+      },
+      {
+        "q": "A fogadóirodák gyorsabban korlátozzák az élő arbitrázsfogadókat?",
+        "a": "Gyakran igen, mert a lassú árakra épülő élő arbitrázst könnyű kiszúrni. Keverj közé normál fogadásokat is, és olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "find-value-bets-med-ai": {
+    "title": "Value fogadások keresése mesterséges intelligenciával: hogyan találja meg az AI oddsszkenner a +EV fogadásokat",
+    "metaTitle": "Value fogadások keresése AI-val – AI oddsszkenner 2026",
+    "description": "Hogyan találhatsz value fogadásokat AI-val: hogyan számolja ki az AI oddsszkenner a fair oddsot, hogyan szúrja ki a +EV fogadásokat, és mire számíthatsz – példákkal, €-ban.",
+    "keyword": "value fogadások keresése ai-val",
+    "category": "Stratégia",
+    "ctaLabel": "Value fogadások keresése AI-val",
+    "intro": "Ha AI-val szeretnél value fogadásokat találni, olyan AI oddsszkennert használsz, amely megbecsüli az egyes kimenetelek fair valószínűségét, jellemzően a sharp fogadóirodák árából, a árrés levonása után, majd összeveti azt a soft fogadóirodák oddsaival. Ha a kínált odds magasabb a fair oddsnál, a fogadásnak pozitív a várható értéke (+EV). Az összehasonlítást az AI másodpercek alatt elvégzi több ezer piacon.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "Value betting: mit jelent valójában a +EV?"
+      },
+      {
+        "type": "p",
+        "text": "A value bet olyan fogadás, amelynek oddsa magasabb, mint amennyit a valós valószínűség indokolna. Bármelyik value fogadást elvesztheted, de több száz fogadás alatt a pozitív várható érték profittá válik."
+      },
+      {
+        "type": "example",
+        "title": "Példa: egyetlen fogadás várható értéke",
+        "rows": [
+          [
+            "Fair valószínűség",
+            "50% (fair odds 2.00)"
+          ],
+          [
+            "Kínált odds a soft fogadóirodánál",
+            "2.10"
+          ],
+          [
+            "Várható érték",
+            "0.50 × 2.10 − 1 = +5%"
+          ],
+          [
+            "Tét: €50",
+            "Várható profit: €2.50 fogadásonként"
+          ],
+          [
+            "300 fogadás á €50 (€15,000 forgalom)",
+            "Várható profit kb. €750"
+          ]
+        ],
+        "note": "A várható profit átlagérték. A tényleges eredmények ingadoznak körülötte, főleg kevés fogadás esetén."
+      },
+      {
+        "type": "h2",
+        "text": "AI oddsszkenner: hogyan számolja ki a fair oddsot?"
+      },
+      {
+        "type": "p",
+        "text": "A sharp fogadóirodák árrése alacsony, és gyorsan reagálnak a profi tőkére, ezért az áraik adják a valós valószínűség legjobb becslését. Az AI kivonja az árrést a sharp árból, és kiszámolja a fair oddsot."
+      },
+      {
+        "type": "example",
+        "title": "Példa: az árrés eltávolítása a sharp oddsból",
+        "rows": [
+          [
+            "Sharp odds",
+            "1.95 / 1.95"
+          ],
+          [
+            "Implikált valószínűségek",
+            "51.28% + 51.28% = 102.56%"
+          ],
+          [
+            "Fair valószínűség az árrés eltávolítása után",
+            "50% / 50%"
+          ],
+          [
+            "Fair odds",
+            "2.00 / 2.00"
+          ]
+        ]
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Piacegyeztetés:** az AI felismeri a azonos eseményeket és vonalakat a különböző fogadóirodáknál.",
+          "**Sebesség:** az árakat néhány másodpercenként újraszámolja, ahogy a piacok mozognak.",
+          "**Szűrés:** a szkenner figyelmen kívül hagyja az apró előnyöket és a gyanús kiugró értékeket, amelyeket valószínűleg érvénytelenítenek."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI sportfogadás: value betek vs. surebetek"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Surebetek:** minden kimenetelnél garantált profit, de kicsi a haszonkulcs, és gyorsan jönnek a korlátozások.",
+          "**Value betek:** egyedi fogadások nagyobb várható profittal, de szórással és vesztes szériákkal.",
+          "**Kombináld őket:** sok fogadó a surebeteket használja a egyenletes profitra, a value beteket pedig a ROI növelésére."
+        ]
+      },
+      {
+        "type": "p",
+        "text": "Olvasd el a teljes összehasonlítást: [value betting vs. surebetek](/en/guides/value-bets-vs-surebets)."
+      },
+      {
+        "type": "h2",
+        "text": "AI fogadás a gyakorlatban: szabályok, amelyek megvédenek"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**A bankrollod 1–2%-át tedd fel** value fogadásonként. Lásd: [bankrollkezelés](/en/guides/bankroll-management).",
+          "**Legalább 2–3%-os előny**, hogy legyen tartalék a fair odds becslésének pontatlanságaira.",
+          "**Kövesd a záró oddsot:** ha tartósan jobb oddsot kapsz a záró vonalnál, az a legjobb jele annak, hogy a fogadásaid value-t hordoznak.",
+          "**Több száz fogadás után ítélkezz**, soha ne egy hét után."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Naplózz minden value fogadást egy [fogadáskövetőben](/en/guides/bet-tracker). 300–500 fogadás után a ROI megmutatja, valódi-e az előnyöd."
+      },
+      {
+        "type": "p",
+        "text": "A [BetTracker AI](/en) mesterséges intelligenciával pásztázza a fogadóirodákat, számolja ki a fair oddsot, és valós időben mutatja a value beteket és a surebeteket."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Garantál az AI profitot a value fogadásokon?",
+        "a": "Nem. Az AI pozitív várható értékű fogadásokat talál, de az egyes fogadások veszíthetnek. A profit nagy számú fogadás alatt jön össze."
+      },
+      {
+        "q": "Mennyit lehet keresni value bettinggel?",
+        "a": "A reális hosszú távú ROI gyakran a forgalom 2–5%-a, az előnytől, a fogadóirodáktól és attól függően, mennyi ideig maradnak nyitva a számláid."
+      },
+      {
+        "q": "Korlátozzák a fogadóirodák a value fogadókat?",
+        "a": "Igen, a soft fogadóirodák gyakran korlátozzák azokat az ügyfeleket, akik rendszeresen jobb oddsot kapnak a záró vonalnál. Olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+      }
+    ]
+  },
+  "bedste-odds-vaerktoej-danmark": {
+    "title": "A legjobb sportfogadási eszközök 2026-ban: AI oddsszkennerek és fogadáskövetők",
+    "metaTitle": "Legjobb sportfogadási eszközök 2026 – AI és oddsszkennerek",
+    "description": "A legjobb sportfogadási eszközök 2026-ban: AI oddsszkennerek, oddsösszehasonlítók, surebet kalkulátorok és fogadáskövetők – mennyibe kerülnek €-ban, és mit érdemes választani.",
+    "keyword": "legjobb sportfogadási eszközök",
+    "category": "Stratégia",
+    "ctaLabel": "Próbáld ki a BetTracker AI-t",
+    "intro": "A legjobb sportfogadási eszközök közé tartozik egy AI oddsszkenner, amely surebeteket és value beteket talál, egy oddsösszehasonlító sok fogadóirodával, egy surebet kalkulátor a pontos tétekhez, és egy fogadáskövető, amely méri a ROI-dat. Olyan fogadási szoftvert válassz, amely lefedi az általad használt fogadóirodákat, néhány másodpercenként frissíti az árakat, és reális forgalom mellett megtérül.",
+    "blocks": [
+      {
+        "type": "h2",
+        "text": "A fogadási eszközök, amelyekre minden komoly fogadónak szüksége van"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**AI oddsszkenner:** automatikusan megtalálja a surebeteket és a value fogadásokat a fogadóirodák kínálatában.",
+          "**Oddsösszehasonlítás:** minden kimenetelnél megmutatja az elérhető legjobb árat.",
+          "**Surebet kalkulátor:** úgy osztja el a tétet, hogy a profit minden eredménynél ugyanannyi legyen. Próbáld ki a [surebet kalkulátort](/en/calculator).",
+          "**Fogadáskövető:** rögzít minden fogadást, és kiszámolja az ROI-t. Nézd meg a [fogadáskövetőt](/en/guides/bet-tracker)."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "AI oddsszkenner vagy kézi oddsösszehasonlítás?"
+      },
+      {
+        "type": "p",
+        "text": "A kézi oddsösszehasonlítással egyetlen mérkőzésre találhatod meg a legjobb árat. Az AI oddsszkenner folyamatosan összeveti az összes fogadóiroda minden piacát, és csak azokat a kombinációkat mutatja, ahol előnyöd van."
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Lefedettség:** néhány piac helyett több ezer.",
+          "**Sebesség:** a surebeteket másodperceken belül jelzi, mielőtt az árak kiigazodnának.",
+          "**Pontosság:** a párosítást és a tétkalkulációt helyetted elvégzi."
+        ]
+      },
+      {
+        "type": "h2",
+        "text": "Fogadási szoftver: mennyibe kerül, és mikor térül meg"
+      },
+      {
+        "type": "p",
+        "text": "Egy eszköz csak akkor éri meg, ha az általa talált profit nagyobb, mint az ára. Számold ki, mekkora forgalomra van szükséged a nullszaldóhoz."
+      },
+      {
+        "type": "example",
+        "title": "Példa: megtérülési pont egy havi €33-s eszköznél",
+        "rows": [
+          [
+            "Előfizetés",
+            "kb. €33 havonta"
+          ],
+          [
+            "Átlagos ROI surebeteknél",
+            "2%"
+          ],
+          [
+            "A megtérüléshez szükséges forgalom",
+            "€33 / 2% = €1,650"
+          ],
+          [
+            "Tipikus forgalom (60 surebet × €400)",
+            "€24,000"
+          ],
+          [
+            "Profit az előfizetés levonása után",
+            "€480 − €33 = €447"
+          ]
+        ],
+        "note": "Az árak hozzávetőleges euróösszegek. A BetTracker AI ára a Basic csomagnál kb. €20 havonta, a Premium csomagnál kb. €33."
+      },
+      {
+        "type": "h2",
+        "text": "Hogyan válaszd ki a legjobb sportfogadási eszközöket?"
+      },
+      {
+        "type": "ul",
+        "items": [
+          "**Fogadóirodák lefedettsége:** az eszköznek olyan fogadóirodákat kell tartalmaznia, amelyeket ténylegesen használhatsz.",
+          "**Frissítési gyakoriság:** mérkőzés előtt néhány másodperc, a [live surebeteknél](/en/guides/live-arbitrage-betting-scanner) ennél is gyorsabb.",
+          "**Szűrők:** sportág, piac, fogadóiroda és minimális profit.",
+          "**Beépített követés:** a szkennerből megkötött surebeteket automatikusan követni kell.",
+          "**Korrekt ár:** vesd össze a havi költséget a várható forgalmaddal. Lásd a [surebet eszközök összehasonlítását](/en/guides/surebet-tool-comparison)."
+        ]
+      },
+      {
+        "type": "tip",
+        "text": "Kezdj egyetlen eszközzel, amely a szkennert, a kalkulátort és a követőt is egyesíti. A különálló eszközök közötti ugrálás időt visz, az idő pedig pont az, amit a surebetek nem adnak meg neked."
+      },
+      {
+        "type": "p",
+        "text": "A [BetTracker AI](/en) egyetlen platformon egyesíti az AI oddsszkennert, az oddsösszehasonlítást, a surebet kalkulátort és a fogadáskövetőt. Olvasd el, hogyan [találhatsz value fogadásokat AI-jal](/en/guides/find-value-bets-with-ai), és hogyan [találhatsz surebeteket automatikusan](/en/guides/find-surebets-automatically)."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Melyik fogadási eszközzel érdemes kezdeni?",
+        "a": "Egy surebet szkennerrel, amely beépített kalkulátort és követőt is tartalmaz. Így a keresést, a megkötést és a mérést egy helyen végezheted."
+      },
+      {
+        "q": "Elegendőek az ingyenes fogadási eszközök?",
+        "a": "Az ingyenes kalkulátorok és követők jól használhatók. Az ingyenes oddsszkennerek viszont általában késleltetett vagy korlátozott számú surebetet mutatnak, amelyek gyakran eltűnnek, mire lépni tudsz."
+      },
+      {
+        "q": "Legális a fogadási szoftver?",
+        "a": "Az oddsok összehasonlítására és a fogadások követésére szolgáló eszközök használata legális. Az automatizált fogadásleadás viszont általában sérti a fogadóirodák szabályzatát. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
+      }
+    ]
+  }
+}

@@ -1,6 +1,8 @@
 import { PRICING, yearlyDiscount } from '@/components/home/data'
 import { COMPANY } from '@/lib/legal'
 import type { Locale } from '@/lib/i18n'
+import type { BaseTranslated } from '@/lib/locale-list'
+import { fillTemplate, newLocales } from '@/lib/locale-packs'
 
 type Qa = { q: string; a: string }
 type Translated = Exclude<Locale, 'da'>
@@ -30,7 +32,7 @@ export type DailyContent = {
   faq: Qa[]
 }
 
-export const DAILY: Record<Translated, DailyContent> = {
+const DAILY_BASE: Record<BaseTranslated, DailyContent> = {
   en: {
     metaTitle: "Today's Surebets – the Best Sure Bets Right Now",
     metaDescription:
@@ -498,7 +500,7 @@ const yearly = `${PRICING.yearly}`
 const discount = yearlyDiscount()
 const mail = COMPANY.email
 
-export const FAQ_PAGE: Record<Translated, FaqContent> = {
+const FAQ_PAGE_BASE: Record<BaseTranslated, FaqContent> = {
   en: {
     metaTitle: 'FAQ – BetTrackerAI',
     metaDescription: 'Answers to the most common questions about surebets, the free trial, subscription, cancellation and the right of withdrawal.',
@@ -847,4 +849,19 @@ export const FAQ_PAGE: Record<Translated, FaqContent> = {
       { q: 'Welke betalingsgegevens slaan jullie op?', a: 'Betalingen worden verwerkt door Stripe. We slaan je kaartgegevens niet op en zien alleen welk abonnement je hebt en of je betaling is geslaagd.' },
     ],
   },
+}
+
+// Packs store the support address as {mail}, so the address stays in one place.
+function withMail<T>(value: T): T {
+  return JSON.parse(fillTemplate(JSON.stringify(value), { mail: COMPANY.email })) as T
+}
+
+export const DAILY: Record<Translated, DailyContent> = {
+  ...DAILY_BASE,
+  ...newLocales(DAILY_BASE, (pack, fallback) => (pack.daily ? { ...fallback, ...withMail(pack.daily) } : fallback)),
+}
+
+export const FAQ_PAGE: Record<Translated, FaqContent> = {
+  ...FAQ_PAGE_BASE,
+  ...newLocales(FAQ_PAGE_BASE, (pack, fallback) => (pack.faqPage ? { ...fallback, ...withMail(pack.faqPage) } : fallback)),
 }

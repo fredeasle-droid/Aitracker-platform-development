@@ -1,11 +1,13 @@
 import type { Locale } from '@/lib/i18n'
+import type { BaseTranslated } from '@/lib/locale-list'
+import { newLocales } from '@/lib/locale-packs'
 
 // Public URLs for the translated sections use words people actually search for in each country.
 // Internally every page still lives at its Danish path; the proxy rewrites localized URLs to it.
 type Section = 'guide' | 'sport' | 'bookmaker'
 type Translated = Exclude<Locale, 'da'>
 
-const SECTION_NAMES: Record<Translated, Record<Section, string>> = {
+export const SECTION_NAMES_BASE: Record<BaseTranslated, Record<Section, string>> = {
   en: { guide: 'guides', sport: 'sports', bookmaker: 'bookmakers' },
   sv: { guide: 'guider', sport: 'sport', bookmaker: 'spelbolag' },
   no: { guide: 'guider', sport: 'sport', bookmaker: 'bookmakere' },
@@ -20,7 +22,7 @@ const SECTION_NAMES: Record<Translated, Record<Section, string>> = {
   nl: { guide: 'gidsen', sport: 'sporten', bookmaker: 'bookmakers' },
 }
 
-const SLUGS: Record<Translated, Record<string, string>> = {
+export const SLUGS_BASE: Record<BaseTranslated, Record<string, string>> = {
   en: {
     'er-surebets-lovligt': 'are-surebets-legal',
     'undgaa-begraensning': 'avoid-bookmaker-limits',
@@ -126,7 +128,7 @@ const SLUGS: Record<Translated, Record<string, string>> = {
 }
 
 // Stand-alone pages that exist in every language. Keys are the canonical (Danish) paths.
-const PAGE_NAMES: Record<Translated, Record<string, string>> = {
+export const PAGE_NAMES_BASE: Record<BaseTranslated, Record<string, string>> = {
   en: { '/dagens-surebets': '/todays-surebets', '/beregn': '/calculator', '/konto': '/account' },
   sv: { '/faq': '/vanliga-fragor', '/beregn': '/kalkylator', '/konto': '/mitt-konto' },
   no: { '/faq': '/vanlige-sporsmal', '/beregn': '/kalkulator' },
@@ -139,6 +141,21 @@ const PAGE_NAMES: Record<Translated, Record<string, string>> = {
   pl: { '/dagens-surebets': '/surebety-dzis', '/beregn': '/kalkulator', '/konto': '/moje-konto', '/faq': '/czeste-pytania' },
   fi: { '/dagens-surebets': '/paivan-surebetit', '/beregn': '/laskuri', '/konto': '/oma-tili', '/faq': '/usein-kysytyt' },
   nl: { '/dagens-surebets': '/surebets-vandaag', '/beregn': '/calculator', '/konto': '/mijn-account', '/faq': '/veelgestelde-vragen' },
+}
+
+const SECTION_NAMES: Record<Translated, Record<Section, string>> = {
+  ...SECTION_NAMES_BASE,
+  ...newLocales(SECTION_NAMES_BASE, (pack, fallback) => ({ ...fallback, ...(pack.sections as Partial<Record<Section, string>>) })),
+}
+
+const SLUGS: Record<Translated, Record<string, string>> = {
+  ...SLUGS_BASE,
+  ...newLocales(SLUGS_BASE, (pack, fallback) => ({ ...fallback, ...pack.slugs })),
+}
+
+const PAGE_NAMES: Record<Translated, Record<string, string>> = {
+  ...PAGE_NAMES_BASE,
+  ...newLocales(PAGE_NAMES_BASE, (pack, fallback) => ({ ...fallback, ...pack.pages })),
 }
 
 const REVERSE_PAGE_NAMES = Object.fromEntries(

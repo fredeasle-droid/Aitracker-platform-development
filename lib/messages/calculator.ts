@@ -1,8 +1,10 @@
 import type { Locale } from '@/lib/i18n'
+import { LOCALE_MONEY, type BaseLocale } from '@/lib/locale-list'
+import { newLocales } from '@/lib/locale-packs'
 
 // Calculator copy per language. Currency and number format follow the visitor's country,
 // so a German visitor calculates in euro and a Swede in kronor.
-const calculator = {
+export const calculatorBase = {
   da: {
     numberTag: 'da-DK',
     currency: 'DKK',
@@ -458,9 +460,14 @@ const calculator = {
     matchGone: 'Deze wedstrijd is niet meer beschikbaar.',
     seeSurebets: 'Bekijk de surebets van vandaag',
   },
-} satisfies Record<Locale, Record<string, string>>
+} satisfies Record<BaseLocale, Record<string, string>>
 
-export type CalculatorText = (typeof calculator)['da']
+export type CalculatorText = (typeof calculatorBase)['da']
+
+const calculator: Record<Locale, CalculatorText> = {
+  ...calculatorBase,
+  ...newLocales(calculatorBase, (pack, fallback, locale) => ({ ...fallback, ...pack.calculator, ...LOCALE_MONEY[locale] })),
+}
 
 export function calculatorText(locale: Locale): CalculatorText {
   return calculator[locale]
