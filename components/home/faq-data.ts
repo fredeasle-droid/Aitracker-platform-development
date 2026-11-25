@@ -16,7 +16,7 @@ export const FAQ_ENTRIES: { q: string; a: string }[] = [
   },
   {
     q: "Hvad koster BetTrackerAI Pro?",
-    a: `${PRICING.monthly} kr./md ved månedlig betaling eller ${PRICING.yearly} kr./md ved årlig betaling – en besparelse på ${yearlyDiscount()}%. Du kan betale med Visa, Mastercard, MobilePay eller bankoverførsel.`,
+    a: `${PRICING.monthly} kr./md ved månedlig betaling eller ${PRICING.yearly} kr./md ved årlig betaling – en besparelse på ${yearlyDiscount()}%. Du kan betale med Visa, Mastercard eller bankoverførsel.`,
   },
   {
     q: "Hvilke bookmakere sammenligner I?",

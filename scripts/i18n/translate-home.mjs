@@ -73,7 +73,7 @@ async function translateChunk(locale, chunk) {
 Rules:
 - Return ONLY a JSON object mapping each exact Danish source string (unchanged key) to its translation.
 - Natural, concise marketing/UI tone for that market. Use "surebet(s)" as the term where the source does.
-- Keep brand and product names unchanged: BetTrackerAI, BetTracker AI, BetTrackerAI Pro, Telegram, Discord, Instagram, YouTube, MobilePay, Visa, Mastercard, bookmaker names, team and league names.
+- Keep brand and product names unchanged: BetTrackerAI, BetTracker AI, BetTrackerAI Pro, Telegram, Discord, Instagram, YouTube, Visa, Mastercard, bookmaker names, team and league names.
 - Keep numbers, percentages, prices and the currency "kr." exactly as written; translate units like "/md" (per month) and "dage" (days).
 - Some strings are fragments of a sentence split around a value (e.g. "Seneste fund:" ... "siden" = "Latest find: <time> ago"). Translate them so they read naturally when joined.
 - Danish-only references (StopSpillet, ROFUS, Spillemyndigheden) stay as names.

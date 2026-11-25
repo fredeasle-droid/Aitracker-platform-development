@@ -2,7 +2,7 @@ import Link from "@/components/localized-link";
 import { localePath } from "@/lib/i18n";
 import { getServerLocale, getServerT } from "@/lib/locale-server";
 import { Landmark } from "lucide-react";
-import { DiscordIcon, InstagramIcon, Logo, MobilePayIcon, TelegramIcon, YoutubeIcon } from "@/components/home/icons";
+import { DiscordIcon, InstagramIcon, Logo, TelegramIcon, YoutubeIcon } from "@/components/home/icons";
 import { copyrightYear } from "@/components/home/data";
 import { MobileResponsibleNotice, ResponsibleNotice } from "@/components/home/ResponsibleNotice";
 import { NewsletterForm } from "@/components/site/newsletter-form";
@@ -72,7 +72,6 @@ const TRANSLATED_HREFS = new Set(["/", "/surebets", "/dagens-surebets", "/guide"
 export async function GlobalFooter() {
   const locale = await getServerLocale();
   const { tx } = await getServerT();
-  const showMobilePay = locale === "da" || locale === "fi";
   const hrefFor = (href: string) => (TRANSLATED_HREFS.has(href) ? localePath(locale, href) : href);
   return (
     <>
@@ -122,11 +121,6 @@ export async function GlobalFooter() {
             <span className="size-[18px] rounded-full bg-destructive" />
             <span className="-ml-[6px] size-[18px] rounded-full bg-mc-orange/90" />
           </span>
-          {showMobilePay && (
-            <span className="flex items-center gap-1.5 text-[13px]">
-              <MobilePayIcon className="size-[18px]" /> MobilePay
-            </span>
-          )}
           <span className="flex items-center gap-1.5 text-[13px] font-semibold">
             <Landmark className="size-[16px] text-gold" aria-hidden="true" /> {tx("Bankoverførsel")}
           </span>
@@ -193,11 +187,6 @@ export async function GlobalFooter() {
                 <span className="size-[28px] rounded-full bg-destructive" />
                 <span className="-ml-[10px] size-[28px] rounded-full bg-mc-orange/90" />
               </span>
-              {showMobilePay && (
-                <span className="flex items-center gap-2 text-[17px]">
-                  <MobilePayIcon className="size-[28px]" /> MobilePay
-                </span>
-              )}
               <span className="flex items-center gap-2 text-[17px] font-semibold">
                 <Landmark className="size-[26px] text-gold" aria-hidden="true" /> {tx("Bankoverførsel")}
               </span>
