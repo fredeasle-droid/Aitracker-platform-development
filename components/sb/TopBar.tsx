@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Search, Bell, ChevronDown, Command } from "lucide-react";
 import { AuthActions } from "@/components/site/global-header";
 import { useLocale } from "@/components/locale-provider";
-import { LOCALES, type Locale } from "@/lib/i18n";
+import { LOCALES, menuLabel, type Locale } from "@/lib/i18n";
 import { FlagImage } from "@/components/flag-image";
 
 const LOCALE_OPTIONS = Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][];
@@ -37,7 +37,7 @@ function LanguageMenu() {
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label={current.label}
+        aria-label={menuLabel(locale)}
         className="glass-pill flex items-center gap-2 rounded-full px-3 py-1.5 text-sm font-semibold transition hover:brightness-125"
       >
         <FlagImage code={current.countryCode.toLowerCase()} label="" className="size-5" />
@@ -59,7 +59,7 @@ function LanguageMenu() {
               className={`flex min-h-10 w-full items-center gap-2.5 rounded-lg px-2.5 text-left text-sm transition hover:bg-surface ${code === locale ? "bg-surface font-bold text-foreground" : "text-foreground/85"}`}
             >
               <FlagImage code={option.countryCode.toLowerCase()} label="" className="size-5" />
-              {option.label}
+              {menuLabel(code)}
             </button>
           ))}
         </div>

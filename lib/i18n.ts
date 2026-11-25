@@ -51,6 +51,20 @@ export const LOCALES: Record<Locale, { label: string; flag: string; countryCode:
   be: { label: 'Nederlands (België)', flag: '🇧🇪', countryCode: 'BE', tag: 'nl-BE' },
 }
 
+// Regional variants show only the country the flag stands for; `label` keeps the full language name for AI prompts and admin.
+const COUNTRY_ONLY_MENU_LABELS: Partial<Record<Locale, string>> = {
+  br: 'Brasil',
+  mx: 'México',
+  ar: 'Argentina',
+  ch: 'Schweiz',
+  at: 'Österreich',
+  be: 'België',
+}
+
+export function menuLabel(locale: Locale): string {
+  return COUNTRY_ONLY_MENU_LABELS[locale] ?? LOCALES[locale].label
+}
+
 // Markets that are not launched yet are unknown to routing, cookies and the language menus.
 export function isLocale(value: string | undefined | null): value is Locale {
   return Boolean(value) && Object.prototype.hasOwnProperty.call(LOCALES, value as string) && isLaunched(value as Locale)

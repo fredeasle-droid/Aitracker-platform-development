@@ -4,10 +4,10 @@ import Link from '@/components/localized-link'
 import { ChevronDown, UserRound } from 'lucide-react'
 import { useEffect, useState, type ReactNode } from 'react'
 import { authClient } from '@/lib/auth-client'
-import { LOCALES, type Locale } from '@/lib/i18n'
+import { LOCALES, menuLabel, type Locale } from '@/lib/i18n'
 import { useLocale } from '@/components/locale-provider'
 
-const countries = (Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]).map(([locale, value]) => ({ locale, code: value.countryCode, name: value.label, flag: value.flag }))
+const countries = (Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]).map(([locale, value]) => ({ locale, code: value.countryCode, name: menuLabel(locale), flag: value.flag }))
 
 export function AccountIconLink() {
   const { t } = useLocale()
