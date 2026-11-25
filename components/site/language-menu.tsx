@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react'
 import { Check, ChevronDown } from 'lucide-react'
 import { FlagImage } from '@/components/flag-image'
 import { useLocale } from '@/components/locale-provider'
-import { LOCALES, type Locale } from '@/lib/i18n'
+import { LAUNCHED_LOCALES, LOCALES, type Locale } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
-const LOCALE_OPTIONS = Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]
+const LOCALE_OPTIONS = (Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]).filter(([locale]) => LAUNCHED_LOCALES.includes(locale))
 
 export function LanguageMenu({ className }: { className?: string }) {
   const { locale, setLocale } = useLocale()

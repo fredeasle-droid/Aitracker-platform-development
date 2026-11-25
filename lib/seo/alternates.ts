@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { HREFLANG, LOCALE_PREFIX, localePath, type Locale } from '@/lib/i18n'
+import { HREFLANG, LAUNCHED_LOCALES, LOCALE_PREFIX, localePath, type Locale } from '@/lib/i18n'
 import { SITE_URL } from '@/lib/site'
 
-export const ALL_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de', 'es', 'br', 'pt', 'fr', 'it', 'pl', 'fi', 'nl']
+export const ALL_LOCALES: Locale[] = LAUNCHED_LOCALES
 
 // Sections whose body copy exists in every language. Everything else is still Danish-only,
 // so its translated URLs point back to the Danish page instead of competing with it.
@@ -12,7 +12,7 @@ export const TRANSLATED_SECTIONS = ['/guide', '/sport', '/bookmaker'] as const
 export const TRANSLATED_PAGES = ['/dagens-surebets', '/faq'] as const
 
 // Languages Google may index. Every language now has its own localised copy and keywords.
-export const INDEXABLE_LOCALES: Locale[] = ['da', 'en', 'sv', 'no', 'de', 'es', 'br', 'pt', 'fr', 'it', 'pl', 'fi', 'nl']
+export const INDEXABLE_LOCALES: Locale[] = LAUNCHED_LOCALES
 
 export function isIndexable(locale: Locale) {
   return INDEXABLE_LOCALES.includes(locale)

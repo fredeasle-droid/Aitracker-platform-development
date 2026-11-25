@@ -1,4 +1,5 @@
 import type { Locale } from '@/lib/i18n'
+import { newLocales } from '@/lib/locale-packs'
 
 type Dictionary = Record<string, string>
 
@@ -1022,4 +1023,9 @@ const nl: Dictionary = {
   'Stripe returnerede ingen betalingssession.': 'Stripe heeft geen betaalsessie geretourneerd.',
 }
 
-export const dataMessages: Record<Exclude<Locale, 'da'>, Dictionary> = { en, sv, no, de, es, br, pt, fr, it, pl, fi, nl }
+const baseDataMessages = { en, sv, no, de, es, br, pt, fr, it, pl, fi, nl }
+
+export const dataMessages: Record<Exclude<Locale, 'da'>, Dictionary> = {
+  ...baseDataMessages,
+  ...newLocales(baseDataMessages, (pack, fallback) => ({ ...fallback, ...pack.data })),
+}

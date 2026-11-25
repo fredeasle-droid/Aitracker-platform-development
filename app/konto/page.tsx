@@ -16,10 +16,12 @@ import { db } from '@/lib/db'
 import { pushSettings, smsAlertSettings } from '@/lib/db/schema'
 import { getOwnerState } from '@/lib/admin'
 import type { Locale } from '@/lib/i18n'
+import type { BaseLocale } from '@/lib/locale-list'
+import { newLocales } from '@/lib/locale-packs'
 import { getServerLocale } from '@/lib/locale-server'
 
 export const dynamic = 'force-dynamic'
-const ACCOUNT_TITLE: Record<Locale, string> = {
+const ACCOUNT_TITLE_BASE: Record<BaseLocale, string> = {
   da: 'Min side – BetTracker',
   en: 'My account – BetTracker',
   sv: 'Mitt konto – BetTracker',
@@ -33,6 +35,11 @@ const ACCOUNT_TITLE: Record<Locale, string> = {
   pl: 'Moje konto – BetTracker',
   fi: 'Oma tili – BetTracker',
   nl: 'Mijn account – BetTracker',
+}
+
+const ACCOUNT_TITLE: Record<Locale, string> = {
+  ...ACCOUNT_TITLE_BASE,
+  ...newLocales(ACCOUNT_TITLE_BASE, (pack, fallback) => (pack.account ? `${pack.account} – BetTracker` : fallback)),
 }
 
 export async function generateMetadata(): Promise<Metadata> {

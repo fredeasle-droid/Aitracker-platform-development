@@ -22,6 +22,28 @@ import guidesFi from './content-i18n/guides.fi.json'
 import landingFi from './content-i18n/landing.fi.json'
 import guidesNl from './content-i18n/guides.nl.json'
 import landingNl from './content-i18n/landing.nl.json'
+import guidesTr from './content-i18n/guides.tr.json'
+import guidesCs from './content-i18n/guides.cs.json'
+import guidesEl from './content-i18n/guides.el.json'
+import guidesHu from './content-i18n/guides.hu.json'
+import guidesHr from './content-i18n/guides.hr.json'
+import guidesSk from './content-i18n/guides.sk.json'
+import guidesMx from './content-i18n/guides.mx.json'
+import guidesAr from './content-i18n/guides.ar.json'
+import guidesCh from './content-i18n/guides.ch.json'
+import guidesAt from './content-i18n/guides.at.json'
+import guidesBe from './content-i18n/guides.be.json'
+import landingTr from './content-i18n/landing.tr.json'
+import landingCs from './content-i18n/landing.cs.json'
+import landingEl from './content-i18n/landing.el.json'
+import landingHu from './content-i18n/landing.hu.json'
+import landingHr from './content-i18n/landing.hr.json'
+import landingSk from './content-i18n/landing.sk.json'
+import landingMx from './content-i18n/landing.mx.json'
+import landingAr from './content-i18n/landing.ar.json'
+import landingCh from './content-i18n/landing.ch.json'
+import landingAt from './content-i18n/landing.at.json'
+import landingBe from './content-i18n/landing.be.json'
 import { GUIDES, type Guide, type GuideBlock } from '@/lib/guides'
 import { BOOKMAKER_PAGES, SPORT_PAGES, type LandingPage } from '@/lib/landing-pages'
 import type { Locale } from '@/lib/i18n'
@@ -53,6 +75,17 @@ const GUIDE_TRANSLATIONS = {
   pl: guidesPl,
   fi: guidesFi,
   nl: guidesNl,
+  tr: guidesTr,
+  cs: guidesCs,
+  el: guidesEl,
+  hu: guidesHu,
+  hr: guidesHr,
+  sk: guidesSk,
+  mx: guidesMx,
+  ar: guidesAr,
+  ch: guidesCh,
+  at: guidesAt,
+  be: guidesBe,
 } as unknown as Record<Exclude<Locale, 'da'>, Record<string, GuideTranslation>>
 
 const LANDING_TRANSLATIONS = {
@@ -68,6 +101,17 @@ const LANDING_TRANSLATIONS = {
   pl: landingPl,
   fi: landingFi,
   nl: landingNl,
+  tr: landingTr,
+  cs: landingCs,
+  el: landingEl,
+  hu: landingHu,
+  hr: landingHr,
+  sk: landingSk,
+  mx: landingMx,
+  ar: landingAr,
+  ch: landingCh,
+  at: landingAt,
+  be: landingBe,
 } as unknown as Record<Exclude<Locale, 'da'>, Record<string, LandingTranslation>>
 
 export type LocalizedGuide = Omit<Guide, 'category'> & { category: string }
