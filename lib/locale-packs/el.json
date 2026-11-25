@@ -1,5 +1,6 @@
 {
   "ready": true,
+  "indexed": true,
   "ui": {
     "login": "Σύνδεση",
     "loggedIn": "Συνδεδεμένος",
