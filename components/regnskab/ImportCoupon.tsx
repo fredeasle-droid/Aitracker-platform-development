@@ -1,4 +1,5 @@
 "use client";
+import { useLocale } from "@/components/locale-provider";
 import { useRef, useState } from "react";
 import { Calculator, Camera, CheckCircle2, CloudUpload, Info, Loader2, X } from "lucide-react";
 import { toast } from "sonner";
@@ -36,6 +37,7 @@ function CouponSlot({
   onImage: (dataUrl: string) => void;
   onClear: () => void;
 }) {
+  const { tx } = useLocale();
   const fileRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
 
@@ -76,7 +78,7 @@ function CouponSlot({
   return (
     <div className="flex flex-col gap-2">
       <div className="flex items-center justify-between text-xs font-bold tracking-[0.14em]">
-        <span className={image ? "text-neon" : "text-muted-foreground"}>KUPON {index + 1}</span>
+        <span className={image ? "text-neon" : "text-muted-foreground"}>{tx("KUPON")}{" "}{index + 1}</span>
         {image && <CheckCircle2 className="h-4 w-4 text-neon" />}
       </div>
       {image ? (
@@ -117,8 +119,8 @@ function CouponSlot({
             className="group flex flex-col items-center justify-center gap-1.5 rounded-l-xl px-2 transition-colors hover:bg-primary/10"
           >
             <CloudUpload className="h-7 w-7 text-primary-glow transition-transform group-hover:-translate-y-1" />
-            <span className="text-sm font-semibold">Upload</span>
-            <span className="text-[11px] text-muted-foreground">JPG, PNG</span>
+            <span className="text-sm font-semibold">{tx("Upload")}</span>
+            <span className="text-[11px] text-muted-foreground">{tx("JPG, PNG")}</span>
           </button>
           <button
             type="button"
@@ -128,8 +130,8 @@ function CouponSlot({
             className="group relative flex flex-col items-center justify-center gap-1.5 rounded-r-xl px-2 transition-colors before:absolute before:inset-y-4 before:left-0 before:w-px before:bg-primary-glow/40 hover:bg-primary/10"
           >
             <Camera className="h-7 w-7 text-primary-glow transition-transform group-hover:scale-110" />
-            <span className="text-sm font-semibold">Screenshot</span>
-            <span className="text-[11px] text-muted-foreground">fra skærmen</span>
+            <span className="text-sm font-semibold">{tx("Screenshot")}</span>
+            <span className="text-[11px] text-muted-foreground">{tx("fra skærmen")}</span>
           </button>
         </div>
       )}
@@ -153,6 +155,7 @@ export function ImportCoupon({
 }: {
   onAnalysed: (images: [string, string], reading: CouponReading) => void;
 }) {
+  const { tx } = useLocale();
   const [images, setImages] = useState<[Slot, Slot]>([null, null]);
   const [busy, setBusy] = useState(false);
   const ready = couponsReady(images);
@@ -183,10 +186,9 @@ export function ImportCoupon({
       <div className="flex items-start gap-4">
         <CloudUpload className="h-9 w-9 shrink-0 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
         <div>
-          <h2 className="font-display text-xl font-semibold">Importer dit surebet coupon</h2>
+          <h2 className="font-display text-xl font-semibold">{tx("Importer dit surebet coupon")}</h2>
           <p className="mt-1.5 text-sm text-muted-foreground">
-            Upload begge kuponer – én fra hver bookmaker. Når begge billeder er uploadet, beregner vi din surebet og profit.
-          </p>
+            {tx("Upload begge kuponer – én fra hver bookmaker. Når begge billeder er uploadet, beregner vi din surebet og profit.")}</p>
         </div>
       </div>
 
@@ -210,12 +212,11 @@ export function ImportCoupon({
         className="mt-5 h-11 rounded-xl rg-bg-gradient-primary text-primary-foreground rg-glow-primary hover:opacity-90 disabled:opacity-40 disabled:shadow-none"
       >
         {busy ? <Loader2 className="h-4 w-4 animate-spin" /> : <Calculator className="h-4 w-4" />}
-        {busy ? "Analyserer kuponer…" : ready ? "Beregn surebet" : `Upload ${2 - count} kupon${2 - count === 1 ? "" : "er"} mere`}
+        {busy ? tx("Analyserer kuponer…") : ready ? tx("Beregn surebet") : `Upload ${2 - count} kupon${2 - count === 1 ? "" : "er"} mere`}
       </Button>
 
       <p className="mt-3 flex items-center justify-center gap-2 text-xs text-muted-foreground">
-        <Info className="h-4 w-4 text-primary-glow" /> {count}/2 kuponer uploadet
-      </p>
+        <Info className="h-4 w-4 text-primary-glow" /> {tx(count)}{tx("/2 kuponer uploadet")}</p>
     </section>
   );
 }

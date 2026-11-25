@@ -15,6 +15,9 @@ const LOCALES = {
   en: 'English (UK)', sv: 'Swedish', no: 'Norwegian Bokmål', de: 'German', es: 'Spanish (Spain)',
   br: 'Brazilian Portuguese', pt: 'European Portuguese', fr: 'French', it: 'Italian', pl: 'Polish',
   fi: 'Finnish', nl: 'Dutch',
+  tr: 'Turkish', cs: 'Czech', el: 'Greek', hu: 'Hungarian', hr: 'Croatian', sk: 'Slovak',
+  mx: 'Mexican Spanish', ar: 'Argentine Spanish (voseo where natural)',
+  ch: 'Swiss Standard German (always "ss", never "ß")', at: 'Austrian German', be: 'Belgian Dutch (Flemish)',
 }
 
 function walk(dir) {
@@ -63,7 +66,15 @@ function collectFaq(keys) {
 }
 
 const keys = new Set()
-for (const f of [...walk(path.join(ROOT, 'components/home')), path.join(ROOT, 'components/site/global-header.tsx'), path.join(ROOT, 'components/site/global-footer.tsx')]) collectLiterals(f, keys)
+const EXTRA = ['components/regnskab', 'components/konto']
+const EXTRA_FILES = ['app/kontakt/page.tsx', 'app/om-os/page.tsx']
+for (const f of [
+  ...walk(path.join(ROOT, 'components/home')),
+  ...EXTRA.flatMap((d) => walk(path.join(ROOT, d))),
+  ...EXTRA_FILES.map((f) => path.join(ROOT, f)),
+  path.join(ROOT, 'components/site/global-header.tsx'),
+  path.join(ROOT, 'components/site/global-footer.tsx'),
+]) collectLiterals(f, keys)
 collectFaq(keys)
 const allKeys = [...keys].filter(Boolean).sort()
 console.log(`Collected ${allKeys.length} source strings`)

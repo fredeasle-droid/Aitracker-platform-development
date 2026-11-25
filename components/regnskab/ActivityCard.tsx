@@ -1,4 +1,5 @@
 "use client";
+import { useLocale } from "@/components/locale-provider";
 import { useState } from "react";
 import { ArrowRight, Check, Clock, Info, Plus, X } from "lucide-react";
 
@@ -29,30 +30,32 @@ function ActivityIcon({ kind }: { kind: Activity["kind"] }) {
 }
 
 function Row({ a }: { a: Activity }) {
+  const { tx } = useLocale();
   return (
     <li className="flex items-center gap-4 border-b border-border/60 py-2.5 last:border-0">
       <ActivityIcon kind={a.kind} />
       <span className="w-24 shrink-0 text-sm tabular-nums text-muted-foreground">{formatDate(a.date)}</span>
-      <span className="text-sm">{a.text}</span>
+      <span className="text-sm">{tx(a.text)}</span>
     </li>
   );
 }
 
 export function ActivityCard({ items }: { items: Activity[] }) {
+  const { tx } = useLocale();
   const [open, setOpen] = useState(false);
   return (
     <section className="rg-glass rounded-2xl p-6">
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <Clock className="h-8 w-8 text-primary-glow drop-shadow-[0_0_10px_var(--primary-glow)]" />
-          <h2 className="font-display text-xl font-semibold">Seneste aktivitet</h2>
+          <h2 className="font-display text-xl font-semibold">{tx("Seneste aktivitet")}</h2>
         </div>
         <button
           type="button"
           onClick={() => setOpen(true)}
           className="flex items-center gap-1 text-sm font-semibold text-primary-glow transition-colors hover:text-neon"
         >
-          <Plus className="h-4 w-4" /> Se alle <ArrowRight className="h-4 w-4" />
+          <Plus className="h-4 w-4" /> {" "}{tx("Se alle")}{" "}<ArrowRight className="h-4 w-4" />
         </button>
       </div>
       <ul className="mt-3">
@@ -64,8 +67,8 @@ export function ActivityCard({ items }: { items: Activity[] }) {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="rg-glass max-h-[85vh] overflow-y-auto border-primary-glow/40 sm:max-w-xl sm:rounded-2xl">
           <DialogHeader>
-            <DialogTitle className="font-display text-2xl">Al aktivitet</DialogTitle>
-            <DialogDescription>{items.length} hændelser i dit surebet-regnskab</DialogDescription>
+            <DialogTitle className="font-display text-2xl">{tx("Al aktivitet")}</DialogTitle>
+            <DialogDescription>{tx(items.length)} {" "}{tx("hændelser i dit surebet-regnskab")}</DialogDescription>
           </DialogHeader>
           <ul>
             {items.map((a) => (

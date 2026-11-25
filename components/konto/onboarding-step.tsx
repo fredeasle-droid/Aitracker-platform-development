@@ -26,6 +26,7 @@ const BOOKMAKER_WORDMARKS: Record<string, string> = {
 }
 
 function BookmakerCardHeading({ id, name }: { id: string; name: string }) {
+  const { tx } = useLocale();
   const [wordmarkFailed, setWordmarkFailed] = useState(false)
   const wordmark = BOOKMAKER_WORDMARKS[id]
 
@@ -42,12 +43,12 @@ function BookmakerCardHeading({ id, name }: { id: string; name: string }) {
             onError={() => setWordmarkFailed(true)}
             className="h-full max-w-full object-contain object-left"
           />
-          <span className="sr-only">{name}</span>
+          <span className="sr-only">{tx(name)}</span>
         </>
       ) : (
         <>
           <BookmakerLogo name={name} className="size-12" />
-          <span className="text-lg font-bold text-white">{name}</span>
+          <span className="text-lg font-bold text-white">{tx(name)}</span>
         </>
       )}
     </h2>
@@ -68,6 +69,7 @@ const ANSWER_OPTIONS: { value: BookmakerAnswer; label: string }[] = [
 ]
 
 export function OnboardingStep({ initialResponses = {} }: { initialResponses?: Record<string, string> }) {
+  const { tx } = useLocale();
   const router = useRouter()
   const { locale } = useLocale()
   const [responses, setResponses] = useState<Record<string, BookmakerAnswer>>(() =>
@@ -98,7 +100,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
 
   return (
     <main className="mx-auto w-full max-w-[1080px] px-1 pb-8 text-foreground">
-      <ol className="mx-auto mb-6 mt-1 flex w-full max-w-[560px]" aria-label="Oprettelse: trin 3 af 3">
+      <ol className="mx-auto mb-6 mt-1 flex w-full max-w-[560px]" aria-label={tx("Oprettelse: trin 3 af 3")}>
         {STEPS.map(({ label, state }, index) => (
           <li key={label} aria-current={state === 'current' ? 'step' : undefined} className="relative flex flex-1 flex-col items-center gap-2">
             {index < STEPS.length - 1 && (
@@ -112,19 +114,18 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
             >
               {state === 'done' ? <Check className="size-5" strokeWidth={3} aria-hidden="true" /> : index + 1}
             </span>
-            <span className="text-center text-[13px] text-[#c3cde2]">{label}</span>
+            <span className="text-center text-[13px] text-[#c3cde2]">{tx(label)}</span>
           </li>
         ))}
       </ol>
 
       <header className="mx-auto mb-6 max-w-[860px] text-center">
         <h1 className="text-balance text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-          Vi anbefaler{' '}
-          <span className="bg-[linear-gradient(90deg,#1593ff_0%,#4a7bff_70%,#7a45f0_100%)] bg-clip-text text-transparent">disse bookmakere</span>
+          {tx("Vi anbefaler")}{' '}
+          <span className="bg-[linear-gradient(90deg,#1593ff_0%,#4a7bff_70%,#7a45f0_100%)] bg-clip-text text-transparent">{tx("disse bookmakere")}</span>
         </h1>
         <p className="mx-auto mt-3 max-w-[760px] text-pretty text-[15px] leading-relaxed text-[#e6ecf7] sm:text-base">
-          Åbn BonusTracker-siden for den bookmaker, du vil oprette dig hos. Når du er færdig, så kom tilbage og markér, om du allerede har en konto eller netop har oprettet dig.
-        </p>
+          {tx("Åbn BonusTracker-siden for den bookmaker, du vil oprette dig hos. Når du er færdig, så kom tilbage og markér, om du allerede har en konto eller netop har oprettet dig.")}</p>
       </header>
 
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -148,11 +149,10 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
                   rel="noopener noreferrer sponsored"
                   className="flex min-h-11 items-center justify-center gap-1.5 rounded-lg bg-primary px-3 text-center text-[13px] font-semibold text-primary-foreground transition-[filter] hover:brightness-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
-                  Opret konto
-                  <ArrowRight className="size-3.5" aria-hidden="true" />
-                  <span className="sr-only"> hos {bookmaker.name} (åbner i en ny fane)</span>
+                  {tx("Opret konto")}<ArrowRight className="size-3.5" aria-hidden="true" />
+                  <span className="sr-only"> {" "}{tx("hos")}{" "}{tx(bookmaker.name)} {" "}{tx("(åbner i en ny fane)")}</span>
                 </a>
-                <p className="text-center text-xs leading-relaxed text-[#c3cde2]">Markér dit svar, når du kommer tilbage.</p>
+                <p className="text-center text-xs leading-relaxed text-[#c3cde2]">{tx("Markér dit svar, når du kommer tilbage.")}</p>
                 <div className="grid grid-cols-1 gap-1.5" role="group" aria-label={`Svar om ${bookmaker.name}`}>
                   {ANSWER_OPTIONS.map(({ value, label }) => (
                     <button
@@ -166,8 +166,8 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
                       )}
                     >
                       {answer === value && <Check className="size-3.5 text-primary" aria-hidden="true" />}
-                      {label}
-                      <span className="sr-only"> hos {bookmaker.name}</span>
+                      {tx(label)}
+                      <span className="sr-only"> {" "}{tx("hos")}{" "}{tx(bookmaker.name)}</span>
                     </button>
                   ))}
                 </div>
@@ -179,7 +179,7 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
 
       {error && (
         <p role="alert" className="mt-4 text-center text-sm text-destructive">
-          {error}
+          {tx(error)}
         </p>
       )}
 
@@ -191,20 +191,18 @@ export function OnboardingStep({ initialResponses = {} }: { initialResponses?: R
       >
         <LayoutGrid className="size-5" aria-hidden="true" />
         <span aria-hidden="true" className="h-6 w-px bg-white/30" />
-        {busy ? 'Gemmer…' : allAnswered ? 'Fortsæt til dashboard' : `Besvar alle bookmakerne (${answeredCount}/${RECOMMENDED_BOOKMAKERS.length})`}
+        {busy ? tx('Gemmer…') : allAnswered ? tx('Fortsæt til dashboard') : `Besvar alle bookmakerne (${answeredCount}/${RECOMMENDED_BOOKMAKERS.length})`}
         {!busy && allAnswered && <ArrowRight className="size-5" aria-hidden="true" />}
       </button>
       <p className="mt-3 text-center text-xs text-[#c3cde2]" aria-live="polite">
-        Vælg for hver bookmaker, om du allerede har en konto eller har oprettet dig via linket.
-      </p>
+        {tx("Vælg for hver bookmaker, om du allerede har en konto eller har oprettet dig via linket.")}</p>
       <button
         type="button"
         onClick={() => window.dispatchEvent(new Event('open-support-chat'))}
         className="mx-auto mt-5 flex min-h-11 items-center justify-center gap-2 rounded-xl border border-[#344861] px-4 text-sm font-semibold text-[#e6ecf7] transition-colors hover:border-primary hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
       >
         <LifeBuoy className="size-4" aria-hidden="true" />
-        Brug for hjælp? Få hjælp nu
-      </button>
+        {tx("Brug for hjælp? Få hjælp nu")}</button>
     </main>
   )
 }

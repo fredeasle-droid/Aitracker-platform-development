@@ -1,5 +1,6 @@
 'use client'
 
+import { useLocale } from "@/components/locale-provider";
 import { useRef, useState } from 'react'
 import { LockKeyhole } from 'lucide-react'
 import { authClient } from '@/lib/auth-client'
@@ -8,6 +9,7 @@ import { Card, FieldLabel, Message, inputClass, primaryButton } from './ui'
 const MIN_LENGTH = 6
 
 export function PasswordForm() {
+  const { tx } = useLocale();
   const formRef = useRef<HTMLFormElement>(null)
   const [pending, setPending] = useState(false)
   const [message, setMessage] = useState<{ kind: 'ok' | 'error'; text: string } | null>(null)
@@ -46,19 +48,19 @@ export function PasswordForm() {
   }
 
   return (
-    <Card title="Adgangskode" icon={<LockKeyhole />}>
+    <Card title={tx("Adgangskode")} icon={<LockKeyhole />}>
       <form ref={formRef} onSubmit={submit} className="space-y-3">
-        <FieldLabel label="Nuværende adgangskode">
+        <FieldLabel label={tx("Nuværende adgangskode")}>
           <input name="current" type="password" required autoComplete="current-password" className={inputClass} />
         </FieldLabel>
-        <FieldLabel label="Ny adgangskode">
+        <FieldLabel label={tx("Ny adgangskode")}>
           <input name="next" type="password" required minLength={MIN_LENGTH} autoComplete="new-password" className={inputClass} />
         </FieldLabel>
-        <FieldLabel label="Gentag ny adgangskode">
+        <FieldLabel label={tx("Gentag ny adgangskode")}>
           <input name="confirm" type="password" required minLength={MIN_LENGTH} autoComplete="new-password" className={inputClass} />
         </FieldLabel>
-        <button type="submit" disabled={pending} className={primaryButton}>{pending ? 'Ændrer…' : 'Skift adgangskode'}</button>
-        {message && <Message kind={message.kind}>{message.text}</Message>}
+        <button type="submit" disabled={pending} className={primaryButton}>{pending ? tx('Ændrer…') : tx('Skift adgangskode')}</button>
+        {message && <Message kind={message.kind}>{tx(message.text)}</Message>}
       </form>
     </Card>
   )

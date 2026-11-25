@@ -1,4 +1,5 @@
 "use client";
+import { useLocale } from "@/components/locale-provider";
 import { useState, type ReactNode } from "react";
 import { CircleCheck, Clock, PenLine, Trash2, Trophy, XCircle } from "lucide-react";
 
@@ -28,6 +29,7 @@ export function SurebetCards({
   onStatus: (id: string, status: SurebetStatus, winner?: 0 | 1) => void;
   onDelete: (id: string) => void;
 }) {
+  const { tx } = useLocale();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = rows.find((r) => r.id === selectedId) ?? null;
   const act = (fn: () => void) => {
@@ -52,12 +54,11 @@ export function SurebetCards({
                   <span className="flex items-center gap-2 text-xs tabular-nums text-muted-foreground">
                     {formatDate(r.date)}
                     <span className="rounded-md border border-neon/30 bg-neon/10 px-1.5 py-0.5 text-[10px] font-bold text-neon">
-                      {pct.format(surebetMargin(r.odds[0], r.odds[1]))}% margin
-                    </span>
+                      {pct.format(surebetMargin(r.odds[0], r.odds[1]))}{tx("% margin")}</span>
                   </span>
-                  <span className={cn("rounded-full border px-2.5 py-0.5 text-[11px] font-bold", statusStyle[r.status])}>{r.status}</span>
+                  <span className={cn("rounded-full border px-2.5 py-0.5 text-[11px] font-bold", statusStyle[r.status])}>{tx(r.status)}</span>
                 </div>
-                <div className="mt-1.5 truncate font-display text-base font-semibold">{r.event}</div>
+                <div className="mt-1.5 truncate font-display text-base font-semibold">{tx(r.event)}</div>
                 <div className="mt-3 grid grid-cols-2 gap-2">
                   {([0, 1] as const).map((i) => (
                     <div
@@ -75,10 +76,10 @@ export function SurebetCards({
                 <div className="mt-3 flex items-center justify-between border-t border-border/60 pt-3 text-sm">
                   <span className="flex flex-col text-xs text-muted-foreground">
                     <span>
-                      Indsats <span className="font-semibold tabular-nums text-foreground">{formatKr(r.stake)}</span>
+                      {tx("Indsats")}{" "}<span className="font-semibold tabular-nums text-foreground">{formatKr(r.stake)}</span>
                     </span>
                     <span>
-                      Forventet gevinst <span className="font-semibold tabular-nums text-foreground">{formatKr(r.expected)}</span>
+                      {tx("Forventet gevinst")}{" "}<span className="font-semibold tabular-nums text-foreground">{formatKr(r.expected)}</span>
                     </span>
                   </span>
                   <span
@@ -101,9 +102,9 @@ export function SurebetCards({
           {selected && (
             <>
               <DrawerHeader className="text-left">
-                <DrawerTitle className="font-display text-xl">{selected.event}</DrawerTitle>
+                <DrawerTitle className="font-display text-xl">{tx(selected.event)}</DrawerTitle>
                 <DrawerDescription>
-                  {formatDate(selected.date)} · Indsats {formatKr(selected.stake)} · Status: {selected.status}
+                  {formatDate(selected.date)} {" "}{tx("· Indsats")}{" "}{formatKr(selected.stake)} {" "}{tx("· Status:")}{" "}{tx(selected.status)}
                 </DrawerDescription>
               </DrawerHeader>
               <div className="flex flex-col gap-2 px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
@@ -114,7 +115,7 @@ export function SurebetCards({
                     onClick={() => act(() => onStatus(selected.id, "Vundet", i))}
                     className="flex h-12 items-center gap-3 rounded-xl border border-border bg-secondary/50 px-4 text-sm font-semibold active:bg-accent"
                   >
-                    <CircleCheck className="h-5 w-5 text-success" /> Vundet hos {selected.bookmakers[i]}
+                    <CircleCheck className="h-5 w-5 text-success" /> {" "}{tx("Vundet hos")}{" "}{tx(selected.bookmakers[i])}
                   </button>
                 ))}
                 <button
@@ -122,22 +123,19 @@ export function SurebetCards({
                   onClick={() => act(() => onStatus(selected.id, "Åben"))}
                   className="flex h-12 items-center gap-3 rounded-xl border border-border bg-secondary/50 px-4 text-sm font-semibold active:bg-accent"
                 >
-                  <Clock className="h-5 w-5 text-primary-glow" /> Markér som åben
-                </button>
+                  <Clock className="h-5 w-5 text-primary-glow" /> {" "}{tx("Markér som åben")}</button>
                 <button
                   type="button"
                   onClick={() => act(() => onStatus(selected.id, "Tabt"))}
                   className="flex h-12 items-center gap-3 rounded-xl border border-border bg-secondary/50 px-4 text-sm font-semibold active:bg-accent"
                 >
-                  <XCircle className="h-5 w-5 text-destructive" /> Markér som tabt
-                </button>
+                  <XCircle className="h-5 w-5 text-destructive" /> {" "}{tx("Markér som tabt")}</button>
                 <button
                   type="button"
                   onClick={() => act(() => onDelete(selected.id))}
                   className="mt-2 flex h-12 items-center justify-center gap-2 rounded-xl border border-destructive/40 bg-destructive/10 px-4 text-sm font-semibold text-destructive"
                 >
-                  <Trash2 className="h-5 w-5" /> Slet surebet
-                </button>
+                  <Trash2 className="h-5 w-5" /> {" "}{tx("Slet surebet")}</button>
               </div>
             </>
           )}
@@ -162,6 +160,7 @@ export function MobileBets({
   onStatus: (id: string, status: SurebetStatus, winner?: 0 | 1) => void;
   onDelete: (id: string) => void;
 }) {
+  const { tx } = useLocale();
   const [filter, setFilter] = useState<Filter>("Alle");
   const shown = filter === "Alle" ? rows : rows.filter((r) => r.status === filter);
   const filters: Filter[] = ["Alle", "Åben", "Vundet", "Tabt"];
@@ -170,18 +169,17 @@ export function MobileBets({
       <div className="flex items-end justify-between gap-3">
         <div>
           <h1 className="font-display text-[26px] font-bold">
-            Dine <span className="underline-neon text-gradient-neon">surebets</span>
+            {tx("Dine")}{" "}<span className="underline-neon text-gradient-neon">{tx("surebets")}</span>
           </h1>
-          <p className="mt-1.5 text-sm text-muted-foreground">{rows.length} registreret</p>
+          <p className="mt-1.5 text-sm text-muted-foreground">{tx(rows.length)} {" "}{tx("registreret")}</p>
         </div>
         <Button variant="outline" onClick={onAdd} className="rg-glass h-10 rounded-xl px-3 text-sm">
-          <PenLine className="h-4 w-4 text-neon" /> Tilføj
-        </Button>
+          <PenLine className="h-4 w-4 text-neon" /> {" "}{tx("Tilføj")}</Button>
       </div>
 
-      {scanCard}
+      {tx(scanCard)}
 
-      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1" role="tablist" aria-label="Filtrér surebets">
+      <div className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-1" role="tablist" aria-label={tx("Filtrér surebets")}>
         {filters.map((f) => {
           const n = f === "Alle" ? rows.length : rows.filter((r) => r.status === f).length;
           return (
@@ -196,8 +194,8 @@ export function MobileBets({
                 filter === f ? "border-primary-glow rg-bg-gradient-primary text-primary-foreground rg-glow-primary" : "border-border bg-secondary/50 text-muted-foreground",
               )}
             >
-              {f === "Åben" ? "Åbne" : f}
-              <span className="text-xs opacity-75 tabular-nums">{n}</span>
+              {f === "Åben" ? tx("Åbne") : f}
+              <span className="text-xs opacity-75 tabular-nums">{tx(n)}</span>
             </button>
           );
         })}
@@ -207,8 +205,8 @@ export function MobileBets({
         <EmptyState
           className="rg-glass rounded-3xl py-10"
           icon={Trophy}
-          title={rows.length ? "Ingen i dette filter" : "Ingen surebets endnu"}
-          text="Scan to kuponer ovenfor eller skriv din første surebet ind."
+          title={rows.length ? tx("Ingen i dette filter") : tx("Ingen surebets endnu")}
+          text={tx("Scan to kuponer ovenfor eller skriv din første surebet ind.")}
           actionLabel="Tilføj surebet"
           onAction={onAdd}
         />

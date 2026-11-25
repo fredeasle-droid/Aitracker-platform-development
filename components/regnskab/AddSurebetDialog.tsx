@@ -1,4 +1,5 @@
 "use client";
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useState } from "react";
 import { AlertTriangle, Sparkles, TrendingUp } from "lucide-react";
 
@@ -47,6 +48,7 @@ export function AddSurebetDialog({
   available?: Partial<Record<Bookmaker, number>>;
   onSave: (s: Omit<Surebet, "id" | "status">) => void;
 }) {
+  const { tx } = useLocale();
   const [draft, setDraft] = useState<SurebetDraft>(initial);
   const [error, setError] = useState<string | null>(null);
 
@@ -88,12 +90,12 @@ export function AddSurebetDialog({
       <DialogContent className="rg-glass max-h-[92vh] overflow-y-auto border-primary-glow/40 sm:max-w-2xl sm:rounded-2xl max-md:inset-x-0 max-md:bottom-0 max-md:left-0 max-md:top-auto max-md:max-w-none max-md:translate-x-0 max-md:translate-y-0 max-md:rounded-t-3xl max-md:rounded-b-none max-md:border-x-0 max-md:border-b-0 max-md:px-5 max-md:pb-[calc(1.5rem+env(safe-area-inset-bottom))] max-md:data-[state=open]:slide-in-from-bottom max-md:data-[state=closed]:slide-out-to-bottom">
         <DialogHeader>
           <DialogTitle className="font-display text-2xl">
-            {imagePreviews?.length ? "Kuponer analyseret" : "Tilføj surebet"}
+            {imagePreviews?.length ? tx("Kuponer analyseret") : tx("Tilføj surebet")}
           </DialogTitle>
           <DialogDescription>
             {imagePreviews?.length
-              ? "Vi har udfyldt felterne ud fra dine 2 kuponer. Tjek dem, før du gemmer."
-              : "Indtast kamp, bookmakere og odds – vi beregner fordelingen og din gevinst."}
+              ? tx("Vi har udfyldt felterne ud fra dine 2 kuponer. Tjek dem, før du gemmer.")
+              : tx("Indtast kamp, bookmakere og odds – vi beregner fordelingen og din gevinst.")}
           </DialogDescription>
         </DialogHeader>
 
@@ -103,32 +105,31 @@ export function AddSurebetDialog({
               <img key={i} src={src} alt={`Kupon ${i + 1}`} className="h-20 w-28 rounded-lg object-cover" />
             ))}
             <div className="flex items-center gap-2 text-sm text-neon">
-              <Sparkles className="h-4 w-4" /> Begge kuponer læst – felterne er udfyldt
-            </div>
+              <Sparkles className="h-4 w-4" /> {" "}{tx("Begge kuponer læst – felterne er udfyldt")}</div>
           </div>
         ) : null}
 
         <form onSubmit={submit} className="grid gap-4">
           <div className="grid gap-4 sm:grid-cols-[1fr_170px]">
             <div className="grid gap-2">
-              <Label htmlFor="event">Kamp / Event</Label>
-              <Input id="event" placeholder="F.eks. Arsenal – Chelsea" value={draft.event} onChange={(e) => set("event", e.target.value)} className="bg-secondary/60" />
+              <Label htmlFor="event">{tx("Kamp / Event")}</Label>
+              <Input id="event" placeholder={tx("F.eks. Arsenal – Chelsea")} value={draft.event} onChange={(e) => set("event", e.target.value)} className="bg-secondary/60" />
             </div>
             <div className="grid gap-2">
-              <Label htmlFor="date">Dato</Label>
+              <Label htmlFor="date">{tx("Dato")}</Label>
               <Input id="date" type="date" value={draft.date} onChange={(e) => set("date", e.target.value)} className="bg-secondary/60" />
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:gap-4">
-            {(["A", "B"] as const).map((side) => {
+            {([tx("A"), tx("B")] as const).map((side) => {
               const bmKey = side === "A" ? "bookmakerA" : "bookmakerB";
               const oddsKey = side === "A" ? "oddsA" : "oddsB";
               return (
                 <div key={side} className="grid gap-3 rounded-xl border border-border bg-secondary/40 p-3 md:p-4">
-                  <div className="text-xs font-bold tracking-[0.14em] text-neon">UDFALD {side === "A" ? "1" : "2"}</div>
+                  <div className="text-xs font-bold tracking-[0.14em] text-neon">{tx("UDFALD")}{" "}{side === "A" ? "1" : "2"}</div>
                   <div className="grid gap-2">
-                    <Label>Bookmaker</Label>
+                    <Label>{tx("Bookmaker")}</Label>
                     <Select value={draft[bmKey]} onValueChange={(v) => set(bmKey, v as Bookmaker)}>
                       <SelectTrigger className="bg-secondary/60" aria-label={`Bookmaker for udfald ${side === "A" ? 1 : 2}`}>
                         <SelectValue />
@@ -143,12 +144,12 @@ export function AddSurebetDialog({
                     </Select>
                   </div>
                   <div className="grid gap-2">
-                    <Label htmlFor={`odds${side}`}>Odds</Label>
+                    <Label htmlFor={`odds${side}`}>{tx("Odds")}</Label>
                     <Input id={`odds${side}`} inputMode="decimal" placeholder="2.10" value={draft[oddsKey]} onChange={(e) => set(oddsKey, e.target.value)} className="bg-secondary/60 text-lg font-semibold" />
                   </div>
                   {valid && (
                     <div className="text-sm text-muted-foreground">
-                      Indsats: <span className="font-semibold text-foreground">{formatKr(side === "A" ? stakeA : stakeB)}</span>
+                      {tx("Indsats:")}{" "}<span className="font-semibold text-foreground">{formatKr(side === "A" ? stakeA : stakeB)}</span>
                     </div>
                   )}
                   {valid && available && (() => {
@@ -157,10 +158,10 @@ export function AddSurebetDialog({
                     return need > free + 0.005 ? (
                       <div className="flex items-start gap-1.5 text-xs text-destructive">
                         <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-                        Du har kun {formatKr(free)} tilgængelig hos {draft[bmKey]}.
+                        {tx("Du har kun")}{" "}{formatKr(free)} {" "}{tx("tilgængelig hos")}{" "}{tx(draft[bmKey])}.
                       </div>
                     ) : (
-                      <div className="text-xs text-muted-foreground">Tilgængelig: {formatKr(free)}</div>
+                      <div className="text-xs text-muted-foreground">{tx("Tilgængelig:")}{" "}{formatKr(free)}</div>
                     );
                   })()}
                 </div>
@@ -169,7 +170,7 @@ export function AddSurebetDialog({
           </div>
 
           <div className="grid gap-2">
-            <Label htmlFor="stake">Samlet indsats (kr.)</Label>
+            <Label htmlFor="stake">{tx("Samlet indsats (kr.)")}</Label>
             <Input id="stake" inputMode="decimal" value={draft.stake} onChange={(e) => set("stake", e.target.value)} className="bg-secondary/60 text-lg font-semibold" />
           </div>
 
@@ -185,10 +186,10 @@ export function AddSurebetDialog({
                 {edge ? <TrendingUp className="h-6 w-6 text-success" /> : <AlertTriangle className="h-6 w-6 text-destructive" />}
                 <div>
                   <div className={edge ? "font-semibold text-success" : "font-semibold text-destructive"}>
-                    {edge ? "Garanteret profit" : "Ikke en surebet"}
+                    {edge ? tx("Garanteret profit") : tx("Ikke en surebet")}
                   </div>
                   <div className="text-xs text-muted-foreground">
-                    Udbetaling {formatKr(payout)} · margin {margin.toFixed(2).replace(".", ",")} %
+                    {tx("Udbetaling")}{" "}{formatKr(payout)} {" "}{tx("· margin")}{" "}{margin.toFixed(2).replace(".", ",")} %
                   </div>
                 </div>
               </div>
@@ -199,15 +200,13 @@ export function AddSurebetDialog({
             </div>
           )}
 
-          {error && <p className="text-sm text-destructive">{error}</p>}
+          {error && <p className="text-sm text-destructive">{tx(error)}</p>}
 
           <DialogFooter className="gap-2">
             <Button type="button" variant="ghost" onClick={() => onOpenChange(false)}>
-              Annuller
-            </Button>
+              {tx("Annuller")}</Button>
             <Button type="submit" className="rounded-xl rg-bg-gradient-primary text-primary-foreground rg-glow-primary hover:opacity-90">
-              Gem surebet
-            </Button>
+              {tx("Gem surebet")}</Button>
           </DialogFooter>
         </form>
       </DialogContent>
