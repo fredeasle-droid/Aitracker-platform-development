@@ -1,0 +1,140 @@
+{
+  "en": {
+    "minAge": 18,
+    "ageLabel": "Only for people aged 18 or over",
+    "text": "Gamble responsibly – 18+ only. Need help? Contact the gambling helpline and self-exclusion service in your country, for example",
+    "links": [{ "label": "BeGambleAware", "href": "https://www.begambleaware.org" }]
+  },
+  "sv": {
+    "minAge": 18,
+    "ageLabel": "Endast för personer över 18 år",
+    "text": "Spela ansvarsfullt – 18 år. Behöver du hjälp? Ring Stödlinjen på 020-81 91 00 eller stäng av dig från spel via",
+    "links": [{ "label": "Spelpaus.se", "href": "https://www.spelpaus.se" }, { "label": "Stödlinjen", "href": "https://www.stodlinjen.se" }]
+  },
+  "no": {
+    "minAge": 18,
+    "ageLabel": "Kun for personer over 18 år",
+    "text": "Spill ansvarlig – 18 år. Trenger du hjelp? Ring Hjelpelinjen for spilleavhengige på 800 800 40 eller besøk",
+    "links": [{ "label": "Hjelpelinjen.no", "href": "https://hjelpelinjen.no" }]
+  },
+  "de": {
+    "minAge": 18,
+    "ageLabel": "Nur für Personen ab 18 Jahren",
+    "text": "Spiel verantwortungsvoll – ab 18 Jahren. Brauchst du Hilfe? Ruf die kostenlose BZgA-Hotline unter 0800 1 37 27 00 an oder besuche",
+    "links": [{ "label": "check-dein-spiel.de", "href": "https://www.check-dein-spiel.de" }]
+  },
+  "es": {
+    "minAge": 18,
+    "ageLabel": "Solo para mayores de 18 años",
+    "text": "Juega con responsabilidad – solo mayores de 18 años. ¿Necesitas ayuda? Puedes inscribirte en el RGIAJ (autoexclusión) o visitar",
+    "links": [{ "label": "Jugarbien.es", "href": "https://www.jugarbien.es" }]
+  },
+  "br": {
+    "minAge": 18,
+    "ageLabel": "Apenas para maiores de 18 anos",
+    "text": "Jogue com responsabilidade – apenas maiores de 18 anos. Precisa de ajuda? Use as ferramentas de autoexclusão da sua casa de apostas autorizada ou fale com o CVV pelo telefone 188.",
+    "links": []
+  },
+  "pt": {
+    "minAge": 18,
+    "ageLabel": "Apenas para maiores de 18 anos",
+    "text": "Jogue com responsabilidade – apenas maiores de 18 anos. Precisa de ajuda? Ligue para a Linha Vida (1414) ou peça a autoexclusão junto do",
+    "links": [{ "label": "SRIJ", "href": "https://www.srij.turismodeportugal.pt" }]
+  },
+  "fr": {
+    "minAge": 18,
+    "ageLabel": "Réservé aux personnes de plus de 18 ans",
+    "text": "Jouez de manière responsable – réservé aux plus de 18 ans. Besoin d'aide ? Appelez Joueurs Info Service au 09 74 75 13 13 ou demandez une interdiction de jeux auprès de l'ANJ.",
+    "links": [{ "label": "Joueurs Info Service", "href": "https://www.joueurs-info-service.fr" }, { "label": "ANJ", "href": "https://anj.fr" }]
+  },
+  "it": {
+    "minAge": 18,
+    "ageLabel": "Vietato ai minori di 18 anni",
+    "text": "Gioca responsabilmente – vietato ai minori di 18 anni. Hai bisogno di aiuto? Chiama il Telefono Verde Nazionale per le problematiche legate al gioco d'azzardo: 800 558 822.",
+    "links": []
+  },
+  "pl": {
+    "minAge": 18,
+    "ageLabel": "Tylko dla osób powyżej 18 lat",
+    "text": "Graj odpowiedzialnie – tylko dla osób powyżej 18 lat. Potrzebujesz pomocy? Skorzystaj z narzędzi samowykluczenia u swojego licencjonowanego bukmachera lub zwróć się do poradni leczenia uzależnień w swojej okolicy.",
+    "links": []
+  },
+  "fi": {
+    "minAge": 18,
+    "ageLabel": "Vain yli 18-vuotiaille",
+    "text": "Pelaa vastuullisesti – vain yli 18-vuotiaille. Tarvitsetko apua? Soita Peluuriin numeroon 0800 100 101 tai käy sivulla",
+    "links": [{ "label": "Peluuri.fi", "href": "https://www.peluuri.fi" }]
+  },
+  "nl": {
+    "minAge": 18,
+    "ageLabel": "Alleen voor personen van 18 jaar en ouder",
+    "text": "Speel bewust – 18+. Hulp nodig? Kijk op Loket Kansspel of schrijf je in bij het CRUKS-register.",
+    "links": [{ "label": "Loket Kansspel", "href": "https://www.loketkansspel.nl" }, { "label": "CRUKS", "href": "https://cruksregister.nl" }]
+  },
+  "tr": {
+    "minAge": 18,
+    "ageLabel": "Yalnızca 18 yaş ve üzeri kişiler için",
+    "text": "Sorumlu oyna – yalnızca 18 yaş ve üzeri. Yardıma mı ihtiyacın var? Yeşilay Danışmanlık Merkezi'ni (YEDAM) 115'ten ara veya ziyaret et:",
+    "links": [{ "label": "YEDAM", "href": "https://www.yedam.org.tr" }]
+  },
+  "cs": {
+    "minAge": 18,
+    "ageLabel": "Pouze pro osoby starší 18 let",
+    "text": "Hraj zodpovědně – pouze od 18 let. Potřebuješ pomoc? Můžeš se zapsat do Rejstříku vyloučených osob nebo se obrátit na adiktologickou poradnu ve svém okolí.",
+    "links": []
+  },
+  "el": {
+    "minAge": 21,
+    "ageLabel": "Μόνο για άτομα άνω των 21 ετών",
+    "text": "Παίξε υπεύθυνα – μόνο για άτομα άνω των 21 ετών. Χρειάζεσαι βοήθεια; Χρησιμοποίησε τα εργαλεία αυτοαποκλεισμού του αδειοδοτημένου παρόχου σου ή επικοινώνησε με μια υπηρεσία υποστήριξης για τον εθισμό στον τζόγο.",
+    "links": []
+  },
+  "hu": {
+    "minAge": 18,
+    "ageLabel": "Csak 18 éven felülieknek",
+    "text": "Játssz felelősen – csak 18 éven felülieknek. Segítségre van szükséged? Fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy egy szenvedélybeteg-segítő szolgálathoz.",
+    "links": []
+  },
+  "hr": {
+    "minAge": 18,
+    "ageLabel": "Samo za osobe starije od 18 godina",
+    "text": "Igraj odgovorno – samo za osobe starije od 18 godina. Trebaš pomoć? Koristi samoisključenje kod svog licenciranog priređivača ili se obrati klubu ovisnika o kockanju u svojoj blizini.",
+    "links": []
+  },
+  "sk": {
+    "minAge": 18,
+    "ageLabel": "Len pre osoby staršie ako 18 rokov",
+    "text": "Hraj zodpovedne – len od 18 rokov. Potrebuješ pomoc? Zapíš sa do Registra vylúčených osôb ÚRHH alebo sa obráť na poradňu pre závislosti vo svojom okolí.",
+    "links": []
+  },
+  "mx": {
+    "minAge": 18,
+    "ageLabel": "Solo para mayores de 18 años",
+    "text": "Juega con responsabilidad – solo mayores de 18 años. ¿Necesitas ayuda? Usa las herramientas de autoexclusión de tu casa de apuestas o acude a",
+    "links": [{ "label": "Centros de Integración Juvenil", "href": "https://www.gob.mx/salud/cij" }]
+  },
+  "ar": {
+    "minAge": 18,
+    "ageLabel": "Solo para mayores de 18 años",
+    "text": "Jugá con responsabilidad – solo mayores de 18 años. ¿Necesitás ayuda? Consultá el programa de Juego Responsable de tu provincia y su registro de autoexclusión.",
+    "links": []
+  },
+  "ch": {
+    "minAge": 18,
+    "ageLabel": "Nur für Personen ab 18 Jahren",
+    "text": "Spiele verantwortungsvoll – ab 18 Jahren. Brauchst du Hilfe? Ruf SOS Spielsucht kostenlos unter 0800 040 080 an oder besuche",
+    "links": [{ "label": "sos-spielsucht.ch", "href": "https://www.sos-spielsucht.ch" }]
+  },
+  "at": {
+    "minAge": 18,
+    "ageLabel": "Nur für Personen ab 18 Jahren",
+    "text": "Spiel verantwortungsvoll – ab 18 Jahren. Brauchst du Hilfe? Wende dich an die",
+    "links": [{ "label": "Spielsuchthilfe", "href": "https://www.spielsuchthilfe.at" }]
+  },
+  "be": {
+    "minAge": 18,
+    "ageLabel": "Alleen voor personen van 18 jaar en ouder",
+    "text": "Speel verantwoord – vanaf 18 jaar. Hulp nodig? Je kunt je laten uitsluiten via het EPIS-register van de",
+    "links": [{ "label": "Kansspelcommissie", "href": "https://www.gamingcommission.be" }]
+  }
+}

@@ -9,6 +9,9 @@ export const USER_COOKIE = 'bt_uid'
 
 const MEMBERS_ONLY_PATHS = ['/beregn', '/kilder']
 
+// Pages written only in Danish (Danish bonuses, contact, company and legal copy).
+const DANISH_ONLY_PATHS = ['/om-os', '/kontakt', '/bonus', '/vilkaar', '/privatlivspolitik', '/surebets']
+
 function isMembersOnly(pathname: string) {
   return MEMBERS_ONLY_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))
 }
@@ -93,7 +96,10 @@ export function proxy(request: NextRequest) {
     response = NextResponse.next({ request: { headers: forwarded } })
   }
 
-  if (locale && !isIndexed(locale)) response.headers.set('X-Robots-Tag', 'noindex, follow')
+  // Danish-only pages served under another locale prefix would be Danish copy on a foreign URL.
+  if (locale && (!isIndexed(locale) || DANISH_ONLY_PATHS.some((p) => path === p || path.startsWith(`${p}/`)))) {
+    response.headers.set('X-Robots-Tag', 'noindex, follow')
+  }
 
   if (uid) {
     response.cookies.set(USER_COOKIE, uid, {

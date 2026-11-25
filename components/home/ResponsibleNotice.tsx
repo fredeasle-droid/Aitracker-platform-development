@@ -1,27 +1,48 @@
 "use client";
 
+import { Fragment } from "react";
 import { useLocale } from "@/components/locale-provider";
+import { localHelp } from "@/lib/responsible-help";
 import { RESPONSIBLE } from "./data";
 
 const linkCls = "font-semibold text-primary-glow underline-offset-2 hover:underline";
 
-function Links() {
-  const { tx } = useLocale();
+function DanishLinks() {
   return (
     <>
-      {tx("Spil ansvarligt – du skal være fyldt")}{" "}{tx(RESPONSIBLE.minAge)} {" "}{tx("år. Brug for hjælp? Ring til StopSpillet på")}{" "}
-      <a href={`tel:${RESPONSIBLE.stopSpilletPhone.replace(/\s/g, "")}`} className={linkCls}>{tx(RESPONSIBLE.stopSpilletPhone)}</a> {" "}{tx("eller besøg")}{" "}
-      <a href={RESPONSIBLE.stopSpilletUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>{tx("StopSpillet.dk")}</a>{tx(". Udeluk dig selv fra spil på")}{" "}
-      <a href={RESPONSIBLE.rofusUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>{tx("ROFUS.nu")}</a>.
+      {"Spil ansvarligt – du skal være fyldt"} {RESPONSIBLE.minAge} {"år. Brug for hjælp? Ring til StopSpillet på"}{" "}
+      <a href={`tel:${RESPONSIBLE.stopSpilletPhone.replace(/\s/g, "")}`} className={linkCls}>{RESPONSIBLE.stopSpilletPhone}</a>{" "}{"eller besøg"}{" "}
+      <a href={RESPONSIBLE.stopSpilletUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>StopSpillet.dk</a>{". Udeluk dig selv fra spil på"}{" "}
+      <a href={RESPONSIBLE.rofusUrl} target="_blank" rel="noopener noreferrer" className={linkCls}>ROFUS.nu</a>.
+    </>
+  );
+}
+
+function Links() {
+  const { locale } = useLocale();
+  const help = localHelp(locale);
+  if (!help) return <DanishLinks />;
+  return (
+    <>
+      {help.text}
+      {help.links.map((link, i) => (
+        <Fragment key={link.href}>
+          {i === 0 ? " " : " · "}
+          <a href={link.href} target="_blank" rel="noopener noreferrer" className={linkCls}>{link.label}</a>
+        </Fragment>
+      ))}
+      {help.links.length > 0 && "."}
     </>
   );
 }
 
 function AgeBadge({ className }: { className: string }) {
-  const { tx } = useLocale();
+  const { locale } = useLocale();
+  const help = localHelp(locale);
+  const minAge = help?.minAge ?? RESPONSIBLE.minAge;
   return (
-    <span aria-label={`Kun for personer over ${RESPONSIBLE.minAge} år`} className={`flex shrink-0 items-center justify-center rounded-full border-2 border-destructive font-black ${className}`}>
-      {tx(RESPONSIBLE.minAge)}+
+    <span aria-label={help?.ageLabel ?? `Kun for personer over ${minAge} år`} className={`flex shrink-0 items-center justify-center rounded-full border-2 border-destructive font-black ${className}`}>
+      {minAge}+
     </span>
   );
 }

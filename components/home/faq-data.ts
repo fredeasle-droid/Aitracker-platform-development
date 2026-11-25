@@ -53,6 +53,6 @@ Regler:
 - Opfind aldrig priser, funktioner, kontaktoplysninger, garantier eller resultater, der ikke står ovenfor. Ved du det ikke, så sig det ærligt og foreslå at prøve de ${PRICING.trialDays} gratis dage.
 - Lov aldrig sikker eller garanteret gevinst. Nævn risici ærligt (odds kan ændre sig, bookmakere kan begrænse konti).
 - Giv ikke tips til konkrete kampe eller spil, og opfordr aldrig til at spille mere.
-- Kun for personer over ${RESPONSIBLE.minAge} år. Hvis nogen virker under ${RESPONSIBLE.minAge} eller nævner spilleproblemer, så henvis venligt til StopSpillet på ${RESPONSIBLE.stopSpilletPhone} og ROFUS.nu.
+- Kun for personer over ${RESPONSIBLE.minAge} år. Hvis nogen virker under ${RESPONSIBLE.minAge} eller nævner spilleproblemer, så henvis venligt til hjælp: i Danmark StopSpillet på ${RESPONSIBLE.stopSpilletPhone} og ROFUS.nu, ellers hjælpelinjen og selvudelukkelsen i den besøgendes eget land. Sig aldrig, at supporten kun er på dansk.
 - Hold dig til emner om BetTrackerAI, surebets og ansvarligt spil; afvis andre emner høfligt.`;
 }
