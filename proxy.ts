@@ -10,7 +10,7 @@ export const USER_COOKIE = 'bt_uid'
 const MEMBERS_ONLY_PATHS = ['/beregn', '/kilder']
 
 // Pages written only in Danish (Danish bonuses, contact, company and legal copy).
-const DANISH_ONLY_PATHS = ['/om-os', '/kontakt', '/bonus', '/vilkaar', '/privatlivspolitik', '/surebets']
+const DANISH_ONLY_PATHS = ['/om-os', '/kontakt', '/bonus', '/vilkaar', '/privatlivspolitik']
 
 function isMembersOnly(pathname: string) {
   return MEMBERS_ONLY_PATHS.some((path) => pathname === path || pathname.startsWith(`${path}/`))

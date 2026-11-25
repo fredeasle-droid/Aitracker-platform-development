@@ -1,5 +1,5 @@
 import { localePath, stripLocalePrefix, type Locale } from '@/lib/i18n'
-import { canonicalRoute, isLocalizedRoute } from '@/lib/route-slugs'
+import { canonicalRoute } from '@/lib/route-slugs'
 
 export function localizedInternalHref(locale: Locale, href: string) {
   if (!href.startsWith('/') || href.startsWith('//')) return href
@@ -10,7 +10,7 @@ export function localizedInternalHref(locale: Locale, href: string) {
   const { locale: sourceLocale, path } = stripLocalePrefix(pathname)
   const source = sourceLocale ?? locale
 
-  if (!isLocalizedRoute(source, path)) return href
+  if (pathname.startsWith('/api/') || pathname === '/api' || pathname.startsWith('/_next/')) return href
 
   return localePath(locale, `${canonicalRoute(source, path)}${suffix}`)
 }

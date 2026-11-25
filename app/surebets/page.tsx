@@ -12,14 +12,20 @@ import { GlobalFooter } from '@/components/site/global-footer'
 import { GlobalHeader } from '@/components/site/global-header'
 import { getSbData } from '@/lib/sb-data'
 import { getAlertPanelData } from '@/lib/alert-panel-data'
+import { getServerLocale, getServerT } from '@/lib/locale-server'
+import { localePath } from '@/lib/i18n'
+import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
 
-export const metadata = {
-  title: 'Surebets i realtid – BetTrackerAI',
-  description:
-    'Find de sikre odds med BetTrackerAI. Vi scanner markedet 24/7 og finder de bedste surebets på tværs af bookmakere.',
-  alternates: { canonical: '/surebets' },
+export async function generateMetadata(): Promise<Metadata> {
+  const [locale, { t }] = await Promise.all([getServerLocale(), getServerT()])
+  return {
+    title: `${t('sbTodaySure')} – BetTrackerAI`,
+    description: t('sbQuick1'),
+    alternates: { canonical: localePath(locale, '/surebets') },
+    ...(locale !== 'da' ? { robots: { index: false, follow: true } } : {}),
+  }
 }
 
 export default async function SurebetsPage() {

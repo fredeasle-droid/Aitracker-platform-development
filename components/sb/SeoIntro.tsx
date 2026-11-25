@@ -1,10 +1,14 @@
 import Link from '@/components/localized-link'
 import { BOOKMAKER_PAGES, SPORT_PAGES } from '@/lib/landing-pages'
+import { getServerLocale } from '@/lib/locale-server'
 
 const linkCls =
   'inline-flex min-h-11 items-center rounded-full border border-border bg-card/60 px-4 text-[14px] font-semibold text-foreground/85 transition-colors hover:border-primary/60 hover:text-foreground'
 
-export function SeoIntro() {
+export async function SeoIntro() {
+  const locale = await getServerLocale()
+  if (locale !== 'da') return null
+
   return (
     <section aria-labelledby="seo-intro-heading" className="mt-10 flex max-w-4xl flex-col gap-4 lg:ml-5">
       <h2 id="seo-intro-heading" className="text-balance text-[22px] font-bold text-foreground lg:text-[26px]">
