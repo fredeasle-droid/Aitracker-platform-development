@@ -111,18 +111,20 @@ export function SupportChat({ chat, phone = false, suggestions = false }: { chat
   return (
     <div className="flex min-h-0 flex-1 flex-col">
       <div ref={scroller} role="log" aria-live="polite" className={`flex min-h-0 flex-1 flex-col overflow-y-auto ${phone ? "gap-3 p-3.5" : "gap-[12px] px-[16px] py-[14px]"}`}>
-        {messages.map((m) =>
-          m.role === "user" ? (
+        {messages.map((m) => {
+          const scripted = m.id === "welcome" || m.id.startsWith("faq-");
+          const shown = scripted ? tx(textOf(m)) : textOf(m);
+          return m.role === "user" ? (
             <div key={m.id} className="bubble-in ml-auto max-w-[85%]">
-              <p className={`bubble-user whitespace-pre-wrap break-words rounded-[14px] rounded-br-[4px] font-medium text-primary-foreground ${phone ? "px-3.5 py-2.5" : "px-[12px] py-[8px]"} ${textCls}`}>{textOf(m)}</p>
+              <p className={`bubble-user whitespace-pre-wrap break-words rounded-[14px] rounded-br-[4px] font-medium text-primary-foreground ${phone ? "px-3.5 py-2.5" : "px-[12px] py-[8px]"} ${textCls}`}>{shown}</p>
             </div>
-          ) : textOf(m) ? (
+          ) : shown ? (
             <div key={m.id} className="bubble-in flex max-w-[92%] items-end gap-[8px]">
               <Avatar phone={phone} />
-              <p className={`bubble-support chat-answer whitespace-pre-wrap break-words rounded-[14px] rounded-bl-[4px] ${phone ? "px-3.5 py-2.5" : "px-[12px] py-[9px]"} ${textCls}`}>{textOf(m)}</p>
+              <p className={`bubble-support chat-answer whitespace-pre-wrap break-words rounded-[14px] rounded-bl-[4px] ${phone ? "px-3.5 py-2.5" : "px-[12px] py-[9px]"} ${textCls}`}>{shown}</p>
             </div>
-          ) : null,
-        )}
+          ) : null;
+        })}
         {waiting && (
           <div className="flex items-end gap-[8px]">
             <Avatar phone={phone} />

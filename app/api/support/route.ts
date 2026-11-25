@@ -7,6 +7,10 @@ import {
 } from 'ai'
 import { getOptionalUserId } from '@/lib/user'
 import { getSubscription } from '@/lib/billing'
+import { getServerLocale } from '@/lib/locale-server'
+import { LOCALES, type Locale } from '@/lib/i18n'
+import { formatMoney } from '@/lib/currency'
+import { localHelp } from '@/lib/responsible-help'
 
 export const maxDuration = 30
 
@@ -37,6 +41,18 @@ Regler for dine svar:
 - Opfordr til ansvarligt spil. Hvis nogen virker til at have spilleproblemer, henvis venligt til StopSpillet.dk (tlf. 70 22 28 25).
 - Du kan ikke se betalingsoplysninger, ændre abonnementer eller tilbagebetale. Ved fejl i betaling, refusion eller noget du ikke kan løse: henvis til support@bettrackerai.com.
 - Opfind aldrig funktioner, priser eller bookmakere der ikke står her. Er du i tvivl, så sig det og henvis til support@bettrackerai.com.`
+
+function marketNote(locale: Locale) {
+  if (locale === 'da') return ''
+  const help = localHelp(locale)
+  return `
+
+Marked: Brugeren er på den ${LOCALES[locale].label}-sprogede version af sitet. Svar ALTID på det sprog brugeren skriver på; skriver brugeren ikke endnu, så brug ${LOCALES[locale].label}.
+- Nævn aldrig Danmark, danske bookmakere, danske love, StopSpillet, ROFUS eller "kr." — tilpas alt til brugerens land.
+- Priser: Basis ${formatMoney(149, locale)}/md., Premium ${formatMoney(249, locale)}/md. (brug præcis disse beløb i markedets valuta).
+- Hvis bookmakere nævnes, så brug kun kendte, licenserede bookmakere i brugerens eget land — og kun hvis du er sikker.
+- Ansvarligt spil: ${help ? `${help.text} ${help.links.map((l) => l.label).join(', ')}.` : 'henvis til den lokale hjælpelinje og selvudelukkelse i brugerens land.'}`
+}
 
 function isValidMessages(value: unknown): value is UIMessage[] {
   return (
@@ -83,7 +99,7 @@ export async function POST(req: Request) {
 
   const result = streamText({
     model: 'openai/gpt-5.4-mini',
-    instructions: `${INSTRUCTIONS}\n\nKontekst: ${await describeUser()}`,
+    instructions: `${INSTRUCTIONS}${marketNote(await getServerLocale())}\n\nKontekst: ${await describeUser()}`,
     messages: await convertToModelMessages(recent),
   })
 
