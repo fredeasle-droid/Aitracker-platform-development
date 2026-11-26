@@ -215,6 +215,51 @@ const REGIONAL_COPY: Partial<Record<NewLocale, Partial<SeoCopy>>> = {
     bookmakersHeading: 'Stávkové kancelárie v našom sprievodcovi',
     bookmakerGuide: 'Prečítajte si sprievodcu najlepšími stávkovými kanceláriami pre surebety',
   },
+  mx: {
+    heading: 'Surebets en tiempo real en casas de apuestas de México',
+    paragraph:
+      'Una surebet combina cuotas de distintas casas de apuestas para cubrir todos los resultados posibles y buscar un rendimiento independientemente del desenlace. BetTrackerAI monitorea las cuotas continuamente y muestra oportunidades con la ganancia estimada y la distribución de apuestas necesaria.',
+    workflow: 'Elige en el filtro las casas de apuestas que utilizas y ordena las oportunidades por ganancia.',
+    sportsHeading: 'Surebets por deporte',
+    bookmakersHeading: 'Casas de apuestas en nuestra guía',
+    bookmakerGuide: 'Lee la guía de casas de apuestas para surebets en México',
+  },
+  ar: {
+    heading: 'Surebets en tiempo real en casas de apuestas de Argentina',
+    paragraph:
+      'Una surebet combina cuotas de distintas casas de apuestas para cubrir todos los resultados posibles y buscar un rendimiento independientemente del desenlace. BetTrackerAI monitorea las cuotas continuamente y muestra oportunidades con la ganancia estimada y la distribución de apuestas necesaria. La disponibilidad y las licencias pueden variar según la provincia.',
+    workflow: 'Elige en el filtro las casas de apuestas que utilizas y ordena las oportunidades por ganancia.',
+    sportsHeading: 'Surebets por deporte',
+    bookmakersHeading: 'Casas de apuestas en nuestra guía',
+    bookmakerGuide: 'Lee la guía de casas de apuestas y licencias para surebets en Argentina',
+  },
+  ch: {
+    heading: 'Surebets in Echtzeit bei Schweizer Wettanbietern',
+    paragraph:
+      'Eine Surebet kombiniert Quoten verschiedener Wettanbieter, um alle möglichen Ausgänge abzudecken und unabhängig vom Ergebnis eine Rendite anzustreben. BetTrackerAI beobachtet die Quoten laufend und zeigt Möglichkeiten mit dem geschätzten Gewinn und der erforderlichen Einsatzverteilung. Prüfe stets die Schweizer Zulassung und die Bedingungen des jeweiligen Anbieters.',
+    workflow: 'Wähle im Filter die von dir genutzten Anbieter aus und sortiere die Möglichkeiten nach Gewinn.',
+    sportsHeading: 'Surebets nach Sportart',
+    bookmakersHeading: 'Wettanbieter in unserem Ratgeber',
+    bookmakerGuide: 'Lies den Ratgeber zu Surebets und Schweizer Wettanbietern',
+  },
+  at: {
+    heading: 'Surebets in Echtzeit bei österreichischen Buchmachern',
+    paragraph:
+      'Eine Surebet kombiniert Quoten verschiedener Buchmacher, um alle möglichen Ausgänge abzudecken und unabhängig vom Ergebnis eine Rendite anzustreben. BetTrackerAI beobachtet die Quoten laufend und zeigt Möglichkeiten mit dem geschätzten Gewinn und der erforderlichen Einsatzverteilung. Prüfe vor der Nutzung die aktuelle österreichische Zulassung und die Bedingungen des jeweiligen Anbieters.',
+    workflow: 'Wähle im Filter die von dir genutzten Buchmacher aus und sortiere die Möglichkeiten nach Gewinn.',
+    sportsHeading: 'Surebets nach Sportart',
+    bookmakersHeading: 'Buchmacher in unserem Ratgeber',
+    bookmakerGuide: 'Lies den Ratgeber zu Surebets und österreichischen Buchmachern',
+  },
+  be: {
+    heading: 'Live surebets bij Belgische bookmakers',
+    paragraph:
+      'Een surebet combineert odds van verschillende bookmakers om alle mogelijke uitkomsten af te dekken en onafhankelijk van de uitslag een rendement na te streven. BetTrackerAI volgt de odds voortdurend en toont kansen met de geschatte winst en de benodigde inzetverdeling. Controleer altijd of de aanbieder in België vergund is en lees de voorwaarden.',
+    workflow: 'Kies in het filter de bookmakers die je gebruikt en sorteer de kansen op winst.',
+    sportsHeading: 'Surebets per sport',
+    bookmakersHeading: 'Bookmakers in onze gids',
+    bookmakerGuide: 'Lees de gids over surebets en vergunde Belgische bookmakers',
+  },
 }
 
 const ACTION_LABELS: Record<BaseTranslated | 'da', { calculator: string; guide: string }> = {
