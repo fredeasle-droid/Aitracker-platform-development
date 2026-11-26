@@ -74,6 +74,10 @@ for (const f of [
   ...EXTRA_FILES.map((f) => path.join(ROOT, f)),
   path.join(ROOT, 'components/site/global-header.tsx'),
   path.join(ROOT, 'components/site/global-footer.tsx'),
+  path.join(ROOT, 'components/sb/AlertsPanel.tsx'),
+  path.join(ROOT, 'components/sb/TelegramPanel.tsx'),
+  path.join(ROOT, 'components/push/install-app.tsx'),
+  path.join(ROOT, 'components/push/ios-install-guide.tsx'),
 ]) collectLiterals(f, keys)
 collectFaq(keys)
 const allKeys = [...keys].filter(Boolean).sort()

@@ -1,3 +1,5 @@
+import { useLocale } from '@/components/locale-provider'
+
 const STEPS = [
   'Åbn BetTracker i Safari.',
   'Tryk på Del-ikonet i bunden af skærmen.',
@@ -19,15 +21,16 @@ export function IosInstallGuide({
   titleClassName?: string
   title?: string
 }) {
+  const { tx } = useLocale()
   return (
     <div className={className}>
-      <p className={`text-[13px] font-semibold ${titleClassName}`}>{title}</p>
+      <p className={`text-[13px] font-semibold ${titleClassName}`}>{tx(title)}</p>
       <ol className="mt-2 flex list-decimal flex-col gap-1 pl-5 text-[13px] leading-5 marker:font-bold">
         {STEPS.map((step) => (
-          <li key={step}>{step}</li>
+          <li key={step}>{tx(step)}</li>
         ))}
       </ol>
-      <p className="mt-2 text-[12px] leading-5 opacity-80">Kræver iOS 16.4 eller nyere. Det er kun nødvendigt første gang.</p>
+      <p className="mt-2 text-[12px] leading-5 opacity-80">{tx('Kræver iOS 16.4 eller nyere. Det er kun nødvendigt første gang.')}</p>
     </div>
   )
 }
