@@ -270,13 +270,15 @@ function SmsTab({ initial, hasPhone, isSubscriber }: { initial: SmsSettingsInput
 }
 
 export function AlertsPanel({ data }: { data: AlertPanelData }) {
-  const { tx } = useLocale();
+  const { tx, locale } = useLocale();
   const [tab, setTab] = useState<Tab>("push");
   const id = useId();
   const tabs: { key: Tab; label: string; icon: typeof Bell }[] = [
     { key: "push", label: "Push", icon: Smartphone },
     { key: "sms", label: "SMS", icon: MessageSquareText },
   ];
+
+  if (locale !== "da") return null;
 
   return (
     <div className="sb-panel edge-light relative p-5">

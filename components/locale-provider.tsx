@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import { LOCALE_COOKIE, LOCALES, localePath, makeTranslator, stripLocalePrefix, type Locale, type Translator } from '@/lib/i18n'
 import { canonicalRoute } from '@/lib/route-slugs'
 
-type LocaleContextValue = Translator & { setLocale: (locale: Locale) => void; tag: string }
+type LocaleContextValue = Translator & { locale: Locale; setLocale: (locale: Locale) => void; tag: string }
 
 const LocaleContext = createContext<LocaleContextValue | null>(null)
 const SPORT_TRANSLATION_KEYS = ['football', 'basketball', 'tennis', 'hockey', 'esports', 'handball'] as const
@@ -36,7 +36,7 @@ export function LocaleProvider({ children, initialLocale }: { children: ReactNod
       const target = `${localePath(next, canonical)}${query ? `?${query}` : ''}${window.location.hash}`
       startTransition(() => router.push(target))
     }
-    return { ...makeTranslator(locale), setLocale, tag: LOCALES[locale].tag }
+    return { ...makeTranslator(locale), locale, setLocale, tag: LOCALES[locale].tag }
   }, [locale, router])
 
   return <LocaleContext.Provider value={value}>{children}</LocaleContext.Provider>

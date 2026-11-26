@@ -104,10 +104,10 @@ function ManualGuide({ mode, className, titleClassName }: { mode: 'ios' | 'andro
 
 /** Row for the side menus. Hidden when the app can't be installed or already is. */
 export function InstallAppMenuItem({ className }: { className?: string }) {
-  const { tx } = useLocale()
+  const { tx, locale } = useLocale()
   const { mode, install } = useInstallApp()
   const [open, setOpen] = useState(false)
-  if (mode === 'hidden' || mode === 'installed') return null
+  if (locale !== 'da' || mode === 'hidden' || mode === 'installed') return null
 
   return (
     <div className={className}>
@@ -136,10 +136,10 @@ const BENEFITS = ['Åbner direkte fra hjemmeskærmen', 'Fuld skærm uden browser
 
 /** Standalone "get the app" card. Push and SMS work without it; this is only about the home-screen app. */
 export function InstallAppCard() {
-  const { tx } = useLocale()
+  const { tx, locale } = useLocale()
   const { mode, install } = useInstallApp()
   const [open, setOpen] = useState(false)
-  if (mode === 'installed') return null
+  if (locale !== 'da' || mode === 'installed') return null
 
   return (
     <section aria-labelledby="install-app-title" className="sb-panel edge-light relative p-5">

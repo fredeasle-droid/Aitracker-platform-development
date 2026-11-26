@@ -8,8 +8,9 @@ const PERKS = [
 ];
 
 export function TelegramPanel() {
-  const { tx } = useLocale();
+  const { tx, locale } = useLocale();
   const url = process.env.NEXT_PUBLIC_TELEGRAM_URL?.trim() || "https://t.me/bettrackerai";
+  if (locale !== "da") return null;
 
   return (
     <div className="sb-panel edge-light relative p-5">
