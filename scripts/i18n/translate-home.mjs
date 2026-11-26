@@ -66,9 +66,10 @@ function collectFaq(keys) {
 }
 
 const keys = new Set()
+const targetedFiles = process.env.I18N_SOURCE_FILES?.split(',').map((file) => file.trim()).filter(Boolean)
 const EXTRA = ['components/regnskab', 'components/konto']
 const EXTRA_FILES = ['app/kontakt/page.tsx', 'app/om-os/page.tsx']
-for (const f of [
+const sourceFiles = targetedFiles?.map((file) => path.join(ROOT, file)) ?? [
   ...walk(path.join(ROOT, 'components/home')),
   ...EXTRA.flatMap((d) => walk(path.join(ROOT, d))),
   ...EXTRA_FILES.map((f) => path.join(ROOT, f)),
@@ -78,8 +79,9 @@ for (const f of [
   path.join(ROOT, 'components/sb/TelegramPanel.tsx'),
   path.join(ROOT, 'components/push/install-app.tsx'),
   path.join(ROOT, 'components/push/ios-install-guide.tsx'),
-]) collectLiterals(f, keys)
-collectFaq(keys)
+]
+for (const file of sourceFiles) collectLiterals(file, keys)
+if (!targetedFiles) collectFaq(keys)
 const allKeys = [...keys].filter(Boolean).sort()
 console.log(`Collected ${allKeys.length} source strings`)
 
@@ -130,7 +132,7 @@ await Promise.all(
 )
 
 for (const [locale, dict] of Object.entries(results)) {
-  const sorted = Object.fromEntries(Object.entries(dict).filter(([k]) => keys.has(k)).sort(([a], [b]) => a.localeCompare(b)))
+  const sorted = Object.fromEntries(Object.entries(dict).sort(([a], [b]) => a.localeCompare(b)))
   fs.writeFileSync(path.join(OUT_DIR, `${locale}.json`), JSON.stringify(sorted, null, 2) + '\n')
 }
 console.log('Done')
