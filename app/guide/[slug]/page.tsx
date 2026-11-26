@@ -79,7 +79,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       author: { '@type': 'Person', name: AUTHOR, url: `${SITE_URL}/om-os` },
       publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     },
-    ...(showVideo ? [videoObjectJsonLd()] : []),
+    ...(showVideo && locale === 'da' ? [videoObjectJsonLd()] : []),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

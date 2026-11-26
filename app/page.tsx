@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
 function homeJsonLd(locale: Locale, description: string) {
   const url = absoluteUrl(locale, '/')
   return JSON.stringify([
-    videoObjectJsonLd(),
+    ...(locale === 'da' ? [videoObjectJsonLd()] : []),
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',

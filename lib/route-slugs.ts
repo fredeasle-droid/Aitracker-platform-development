@@ -211,7 +211,7 @@ const PAGE_NAMES_BASE_WITH_CORE = Object.fromEntries(
 const PAGE_NAMES: Record<Translated, Record<string, string>> = {
   ...PAGE_NAMES_BASE_WITH_CORE,
   ...newLocales(PAGE_NAMES_BASE, (pack, fallback, locale) => {
-    const pages = { ...fallback, ...CORE_PAGE_NAMES[locale], ...PAGE_NAMES_NEW[locale], ...pack.pages }
+    const pages = { ...fallback, ...pack.pages, ...CORE_PAGE_NAMES[locale], ...PAGE_NAMES_NEW[locale] }
     return Object.fromEntries(
       Object.entries(pages).map(([canonical, localized]) => [canonical, localized.startsWith('/') ? localized : `/${localized}`]),
     )

@@ -25,7 +25,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 function jsonLd(locale: Locale, tx: (source: string) => string) {
   return JSON.stringify([
-    videoObjectJsonLd(),
+    ...(locale === 'da' ? [videoObjectJsonLd()] : []),
     {
       '@context': 'https://schema.org',
       '@type': 'AboutPage',
