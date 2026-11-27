@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ChevronRight, Database, LineChart, MessagesSquare, Send, Wrench } from 'lucide-react'
 import { Card } from './ui'
 

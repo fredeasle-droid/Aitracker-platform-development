@@ -2,9 +2,11 @@
 
 import { useState } from 'react'
 import { Play } from 'lucide-react'
+import { useLocale } from '@/components/locale-provider'
 import { EXPLAINER_VIDEO } from '@/lib/video'
 
 export function YoutubeFacade({ className = '' }: { className?: string }) {
+  const { tx } = useLocale()
   const [playing, setPlaying] = useState(false)
 
   return (
@@ -12,7 +14,7 @@ export function YoutubeFacade({ className = '' }: { className?: string }) {
       {playing ? (
         <iframe
           src={`${EXPLAINER_VIDEO.embedUrl}?autoplay=1&rel=0`}
-          title={EXPLAINER_VIDEO.title}
+          title={tx('Afspil videoen')}
           allow="accelerometer; autoplay; encrypted-media; picture-in-picture"
           allowFullScreen
           className="absolute inset-0 size-full"
@@ -21,13 +23,13 @@ export function YoutubeFacade({ className = '' }: { className?: string }) {
         <button
           type="button"
           onClick={() => setPlaying(true)}
-          aria-label={`Afspil video: ${EXPLAINER_VIDEO.title}`}
+          aria-label={tx('Afspil videoen')}
           className="group absolute inset-0 flex size-full items-center justify-center"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={EXPLAINER_VIDEO.thumbnailUrl}
-            alt={`Forsidebillede til videoen ${EXPLAINER_VIDEO.title}`}
+            alt=""
             loading="lazy"
             decoding="async"
             className="absolute inset-0 size-full object-cover"

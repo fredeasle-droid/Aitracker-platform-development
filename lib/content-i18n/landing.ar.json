@@ -82,14 +82,14 @@
       },
       {
         "q": "¿Hay surebets en ligas de hockey sobre hielo más chicas?",
-        "a": "Sí. Las casas de apuestas suelen fijar cuotas distintas en las ligas locales más chicas, así que las oportunidades de arbitraje aparecen con frecuencia. Antes de apostar, verificá que las casas estén habilitadas para operar en tu jurisdicción."
+        "a": "Sí. Las casas de apuestas suelen fijar cuotas distintas en las ligas locales más chicas, así que las oportunidades de arbitraje aparecen con frecuencia. Antes de apostar, verificá que las casas estén habilitadas para operar en tu provincia, ya que las apuestas se licencian provincia por provincia."
       }
     ]
   },
   "sport/fodbold": {
     "title": "Surebets en fútbol",
     "metaTitle": "Surebets en fútbol – encontrá ganancia asegurada en los partidos",
-    "description": "Encontrá surebets en fútbol en tiempo real. BetTrackerAI escanea las cuotas de la Premier League, la Champions League y cientos de ligas más en casas de apuestas habilitadas.",
+    "description": "Encontrá surebets en fútbol en tiempo real. BetTrackerAI escanea las cuotas de la Liga Profesional, la Premier League, la Champions League y cientos de ligas más en casas de apuestas habilitadas en tu provincia.",
     "keyword": "surebets en fútbol",
     "intro": "El fútbol genera más surebets que cualquier otro deporte. Se juega las 24 horas, y cada partido ofrece cientos de mercados que las casas de apuestas cotizan de forma distinta.",
     "blocks": [
@@ -109,7 +109,7 @@
         "type": "ul",
         "items": [
           "1X2: victoria local, empate y victoria visitante. Son tres resultados posibles, así que necesitás tres apuestas.",
-          "Más/menos goles, por ejemplo más o menos de 2.5 goles. Solo dos resultados y, muchas veces, mucha liquidez.",
+          "Más/menos goles, por ejemplo más o menos de 2,5 goles. Solo dos resultados y, muchas veces, mucha liquidez.",
           "Hándicap asiático: dos resultados y margen bajo, pero leé bien las reglas de liquidación para los goles de medio punto y los enteros.",
           "Ambos equipos marcan: sí o no. Un mercado sencillo con dos resultados."
         ]
@@ -141,7 +141,7 @@
   "sport/esport": {
     "title": "Surebets en esports",
     "metaTitle": "Surebets en esports – arbitraje en CS2, LoL y Dota 2",
-    "description": "Los esports son uno de los mercados de surebets que más rápido crecen. Encontrá oportunidades de arbitraje en CS2, League of Legends y Dota 2 en casas de apuestas habilitadas.",
+    "description": "Los esports son uno de los mercados de surebets que más rápido crecen. Encontrá oportunidades de arbitraje en CS2, League of Legends y Dota 2 en casas de apuestas habilitadas en tu provincia.",
     "keyword": "surebets en esports",
     "intro": "En los esports hay grandes diferencias de cuotas entre casas de apuestas. Es un mercado relativamente nuevo, muchas casas tienen menos especialistas en el área y las cuotas suelen moverse bastante antes del inicio del partido.",
     "blocks": [
@@ -177,7 +177,7 @@
       },
       {
         "q": "¿Qué casas de apuestas ofrecen esports?",
-        "a": "La mayoría de las grandes casas de apuestas habilitadas ofrecen esports, sobre todo CS2 y League of Legends. Verificá la disponibilidad y la habilitación en tu jurisdicción."
+        "a": "La mayoría de las grandes casas de apuestas habilitadas, como bet365, Betsson, Betano o Codere, ofrecen esports, sobre todo CS2 y League of Legends. Verificá la disponibilidad y que el operador esté habilitado en tu provincia."
       }
     ]
   },
@@ -246,7 +246,7 @@
       },
       {
         "type": "p",
-        "text": "Bet365 es una casa de apuestas con licencia en varias jurisdicciones y ofrece cuotas para una enorme cantidad de partidos, incluidas ligas menores y mercados en vivo. Esa amplitud hace que Bet365 tenga seguido cuotas que se desvían del resto del mercado."
+        "text": "Bet365 es una casa de apuestas con licencia en varias jurisdicciones y ofrece cuotas para una enorme cantidad de partidos, incluidas ligas menores y mercados en vivo. Esa amplitud hace que Bet365 tenga seguido cuotas que se desvían del resto del mercado. En Argentina las apuestas se habilitan por provincia, así que usá solo operadores autorizados en la tuya."
       },
       {
         "type": "h2",
@@ -267,7 +267,7 @@
       },
       {
         "type": "tip",
-        "text": "Repartí tus apuestas entre varias casas para no usar solamente Bet365. Así tu cuenta dura más."
+        "text": "Repartí tus apuestas entre varias casas autorizadas en tu provincia, como bplay, Codere, Betsson, Betano, BetWarrior o Jugadón, para no usar solamente Bet365. Así tu cuenta dura más."
       }
     ],
     "faq": [
@@ -277,37 +277,37 @@
       },
       {
         "q": "¿Bet365 opera con licencia de juego?",
-        "a": "Sí. Bet365 tiene licencias en varios mercados regulados del mundo. Consultá la normativa impositiva que te corresponda, ya que el tratamiento de las ganancias varía según la jurisdicción."
+        "a": "Bet365 tiene licencias en varios mercados regulados del mundo. En Argentina el juego se habilita por provincia (por ejemplo, el IPLyC en la provincia de Buenos Aires o LOTBA en la Ciudad de Buenos Aires), por lo que debés verificar que el operador esté autorizado en tu provincia antes de apostar. Consultá también las normas impositivas nacionales y provinciales vigentes, ya que el tratamiento de las ganancias puede variar."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebets en Unibet",
-    "metaTitle": "Surebets en Unibet – Encontrá oportunidades de arbitraje deportivo",
-    "description": "Encontrá surebets en Unibet en tiempo real. BetTrackerAI compara las cuotas de Unibet con las de otras casas de apuestas para que asegures ganancia garantizada con arbitraje deportivo.",
-    "keyword": "surebets unibet",
-    "intro": "Unibet es una de las casas de apuestas más populares del mundo. Usa la plataforma de cuotas Kambi, por lo que sus cuotas suelen parecerse a las de otras casas que también funcionan con Kambi.",
+    "title": "Surebets en bet365",
+    "metaTitle": "Surebets en bet365 – Encontrá oportunidades de arbitraje deportivo",
+    "description": "Encontrá surebets en bet365 en tiempo real. BetTrackerAI compara las cuotas de bet365 con las de otras casas de apuestas con licencia en tu provincia para que asegures ganancia garantizada con arbitraje deportivo.",
+    "keyword": "surebets bet365",
+    "intro": "bet365 es una de las casas de apuestas más populares del mundo. Desarrolla su propia plataforma de cuotas, por lo que sus cuotas suelen diferir de las de otras casas y generan más oportunidades de surebet.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Sobre Unibet"
+        "text": "Sobre bet365"
       },
       {
         "type": "p",
-        "text": "Unibet tiene licencias en varios mercados regulados y ofrece una amplia variedad de deportes. Como comparte su plataforma de cuotas con otras casas de apuestas, las surebets aparecen sobre todo entre Unibet y casas que usan plataformas distintas."
+        "text": "bet365 ofrece una amplia variedad de deportes y mercados. En Argentina las apuestas se licencian por provincia, así que usá solamente casas autorizadas en la tuya y revisá que bet365 tenga licencia donde vivís. Como bet365 maneja sus propias cuotas, las surebets aparecen sobre todo entre bet365 y otras casas con licencia en tu provincia, como bplay, Codere, Betsson, Betano, BetWarrior o Jugadón."
       },
       {
         "type": "h2",
-        "text": "Cómo encontrar surebets con Unibet"
+        "text": "Cómo encontrar surebets con bet365"
       },
       {
         "type": "p",
-        "text": "Una surebet con Unibet se da cuando Unibet paga una cuota más alta por un resultado que la que otras casas de apuestas ofrecen por los resultados opuestos. BetTrackerAI monitorea las cuotas de Unibet de forma continua y las compara con el resto del mercado."
+        "text": "Una surebet con bet365 se da cuando bet365 paga una cuota más alta por un resultado que la que otras casas de apuestas ofrecen por los resultados opuestos. BetTrackerAI monitorea las cuotas de bet365 de forma continua y las compara con el resto del mercado."
       },
       {
         "type": "ul",
         "items": [
-          "Elegí Unibet y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Elegí bet365 y tus otras casas de apuestas con el filtro de la página de surebets.",
           "Ordená por ganancia y elegí una surebet con cuotas estables.",
           "Usá la calculadora para dividir tu monto y redondear las cifras.",
           "Hacé primero la apuesta en la casa con las cuotas más volátiles."
@@ -315,17 +315,17 @@
       },
       {
         "type": "tip",
-        "text": "Repartí tus apuestas entre varias casas para no usar solamente Unibet. Así tu cuenta dura más y evitás que te pongan límites."
+        "text": "Repartí tus apuestas entre varias casas para no usar solamente bet365. Así tu cuenta dura más y evitás que te pongan límites. Usá siempre casas con licencia en tu provincia y consultá las reglas nacionales y provinciales vigentes sobre impuestos a las ganancias."
       }
     ],
     "faq": [
       {
-        "q": "¿Es legal hacer surebets en Unibet?",
-        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Unibet puede limitar o restringir cuentas según sus términos y condiciones si solo hacen apuestas con ganancia garantizada."
+        "q": "¿Es legal hacer surebets en bet365?",
+        "a": "El arbitraje deportivo en sí no está prohibido, pero tenés que apostar solo en casas con licencia en tu provincia y revisar las reglas vigentes. Además, como todas las casas de apuestas, bet365 puede limitar o restringir cuentas según sus términos y condiciones si solo hacen apuestas con ganancia garantizada."
       },
       {
-        "q": "¿Qué casas de apuestas son parecidas a Unibet?",
-        "a": "Unibet usa Kambi, que también provee cuotas a otras casas de apuestas. Por eso, combiná Unibet con casas que usen plataformas distintas para encontrar más surebets."
+        "q": "¿Qué casas de apuestas son parecidas a bet365?",
+        "a": "bet365 trabaja con sus propias cuotas, así que combinala con otras casas como bplay, Codere, Betsson, Betano, BetWarrior o Jugadón para encontrar más surebets, siempre que tengan licencia en tu provincia."
       }
     ]
   },
@@ -373,37 +373,37 @@
       },
       {
         "q": "¿Betano tiene licencia?",
-        "a": "Sí. Betano tiene licencia en varios mercados regulados. Consultá con el organismo regulador de juego de tu jurisdicción para confirmar si Betano tiene licencia donde vivís."
+        "a": "Sí. Betano tiene licencia en varios mercados regulados. En Argentina el juego se licencia por provincia, así que consultá con el organismo regulador de tu provincia (por ejemplo, el IPLyC en la provincia de Buenos Aires o LOTBA en la Ciudad de Buenos Aires) para confirmar si Betano tiene licencia donde vivís, y usá solo operadores habilitados en tu provincia."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets en LeoVegas",
-    "metaTitle": "Surebets en LeoVegas – Encontrá oportunidades de arbitraje de apuestas",
-    "description": "Encontrá surebets en LeoVegas en tiempo real. BetTrackerAI compara las cuotas de LeoVegas con las de otras casas de apuestas y te muestra dónde podés asegurar una ganancia garantizada.",
-    "keyword": "surebets leovegas",
-    "intro": "LeoVegas es conocida por su oferta de casino, pero también ofrece una amplia selección de apuestas deportivas. La casa de apuestas usa la plataforma Kambi y aparece con frecuencia en oportunidades de arbitraje de apuestas.",
+    "title": "Surebets en Betsson",
+    "metaTitle": "Surebets en Betsson – Encontrá oportunidades de arbitraje de apuestas",
+    "description": "Encontrá surebets en Betsson en tiempo real. BetTrackerAI compara las cuotas de Betsson con las de otras casas de apuestas y te muestra dónde podés asegurar una ganancia garantizada.",
+    "keyword": "surebets betsson",
+    "intro": "Betsson es conocida por su oferta de casino, pero también ofrece una amplia selección de apuestas deportivas. La casa de apuestas aparece con frecuencia en oportunidades de arbitraje de apuestas.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Sobre LeoVegas"
+        "text": "Sobre Betsson"
       },
       {
         "type": "p",
-        "text": "LeoVegas es una casa de apuestas con licencia y tiene una app fácil de usar que permite apostar rápido. Esto es clave en las surebets, donde las cuotas pueden cambiar en segundos. Antes de abrir una cuenta, verificá que LeoVegas tenga licencia y esté disponible en tu país."
+        "text": "Betsson es una casa de apuestas con licencia y tiene una app fácil de usar que permite apostar rápido. Esto es clave en las surebets, donde las cuotas pueden cambiar en segundos. Antes de abrir una cuenta, verificá que Betsson tenga licencia y esté habilitada en tu provincia, ya que las apuestas se regulan provincia por provincia."
       },
       {
         "type": "h2",
-        "text": "Cómo encontrar surebets con LeoVegas"
+        "text": "Cómo encontrar surebets con Betsson"
       },
       {
         "type": "p",
-        "text": "Una surebet con LeoVegas se da cuando LeoVegas ofrece cuotas más altas en un resultado que las que otras casas de apuestas ofrecen en los resultados opuestos. BetTrackerAI monitorea las cuotas de LeoVegas de forma continua y las compara con las de las casas de apuestas que operan en tu mercado."
+        "text": "Una surebet con Betsson se da cuando Betsson ofrece cuotas más altas en un resultado que las que otras casas de apuestas ofrecen en los resultados opuestos. BetTrackerAI monitorea las cuotas de Betsson de forma continua y las compara con las de casas de apuestas con licencia en tu provincia, como bplay, Codere, bet365, Betano, BetWarrior o Jugadón."
       },
       {
         "type": "ul",
         "items": [
-          "Seleccioná LeoVegas y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Seleccioná Betsson y tus otras casas de apuestas con el filtro de la página de surebets.",
           "Ordená por ganancia y elegí una surebet con cuotas estables.",
           "Usá la calculadora para dividir tu monto a apostar y redondear los importes.",
           "Hacé primero la apuesta en la casa que ofrezca las cuotas más volátiles."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Repartí tus apuestas entre varias casas de apuestas para no usar solamente LeoVegas. Así alargás la vida útil de tu cuenta y reducís el riesgo de que te la limiten."
+        "text": "Repartí tus apuestas entre varias casas de apuestas para no usar solamente Betsson. Así alargás la vida útil de tu cuenta y reducís el riesgo de que te la limiten."
       }
     ],
     "faq": [
       {
-        "q": "¿Se pueden hacer surebets en LeoVegas?",
-        "a": "Sí, el arbitraje de apuestas es legal. Sin embargo, como todas las casas de apuestas, LeoVegas puede restringir cuentas según sus términos y condiciones si detecta patrones de apuestas que garantizan ganancia de forma constante."
+        "q": "¿Se pueden hacer surebets en Betsson?",
+        "a": "Sí, el arbitraje de apuestas es legal. Sin embargo, como todas las casas de apuestas, Betsson puede restringir cuentas según sus términos y condiciones si detecta patrones de apuestas que garantizan ganancia de forma constante. Además, revisá las normas nacionales y provinciales vigentes sobre impuestos a las ganancias."
       },
       {
-        "q": "¿LeoVegas sirve para hacer surebets?",
-        "a": "LeoVegas es una buena casa de apuestas complementaria, sobre todo si la combinás con casas que no usan la plataforma Kambi, ya que así aumenta la cantidad de oportunidades de arbitraje disponibles."
+        "q": "¿Betsson sirve para hacer surebets?",
+        "a": "Betsson es una buena casa de apuestas complementaria, sobre todo si la combinás con otras casas con licencia en tu provincia que ofrezcan cuotas distintas, ya que así aumenta la cantidad de oportunidades de arbitraje disponibles."
       }
     ]
   }

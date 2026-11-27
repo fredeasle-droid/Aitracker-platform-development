@@ -2,6 +2,7 @@ import 'server-only'
 import { getAllOpportunities, type Opportunity } from '@/lib/data'
 import { MAX_OPPORTUNITIES } from '@/lib/limits'
 import { displaySport } from '@/lib/scrapers/types'
+import { LOCAL_BOOKMAKERS, LOCAL_IDS, bookmakerKey } from '@/lib/local-bookmakers'
 import type { BookmakerCategory, BookmakerInfo, LegAlternative, Surebet } from '@/components/sb/data'
 
 export type SbSport = { label: string; count: number }
@@ -18,46 +19,6 @@ export type SbData = {
 
 const EXCHANGES = new Set(['smarkets', 'matchbook', 'betdaq'])
 const CRYPTO = new Set(['1xbet', 'cloudbet', 'bitcasino', 'sportsbet.io', 'thunderpick'])
-
-/** Bookmakers always offered in the filter and shown as local, whether or not the scanner has found a surebet at them. */
-const LOCAL_BOOKMAKERS: { id: string; name: string }[] = [
-  { id: 'bet365', name: 'Bet365' },
-  { id: 'danskespil', name: 'Danske Spil' },
-  { id: 'betano', name: 'Betano' },
-  { id: 'betfair', name: 'Betfair' },
-  { id: 'betinia', name: 'Betinia' },
-  { id: 'campobet', name: 'CampoBet' },
-  { id: 'betsson', name: 'Betsson' },
-  { id: 'nordicbet', name: 'NordicBet' },
-  { id: 'unibet', name: 'Unibet' },
-  { id: '888sport', name: '888sport' },
-  { id: 'bwin', name: 'Bwin' },
-  { id: 'comeon', name: 'ComeOn' },
-  { id: 'bet25', name: 'Bet25' },
-  { id: 'betmaster', name: 'Betmaster' },
-  { id: 'expekt', name: 'Expekt' },
-  { id: 'leovegas', name: 'LeoVegas' },
-  { id: 'marathonbet', name: 'Marathonbet' },
-  { id: 'mrgreen', name: 'Mr Green' },
-  { id: 'pokerstars', name: 'PokerStars Sports' },
-  { id: 'tipwin', name: 'Tipwin' },
-  { id: 'stake', name: 'Stake' },
-  { id: 'getlucky', name: 'GetLucky' },
-  { id: 'swiper', name: 'Swiper' },
-  { id: 'vbet', name: 'Vbet' },
-]
-
-const LOCAL_IDS = new Set(LOCAL_BOOKMAKERS.map((b) => b.id))
-
-/** The same bookmaker under another name in the scans. */
-const ALIASES: Record<string, string> = { oddset: 'danskespil', pokerstarssports: 'pokerstars' }
-
-const rawKey = (name: string) => name.toLowerCase().replace(/[^a-z0-9]/g, '')
-
-export const bookmakerKey = (name: string) => {
-  const key = rawKey(name)
-  return ALIASES[key] ?? key
-}
 
 /** Button text from the source site that older scans stored as a bookmaker name, e.g. "Open Calculator". */
 const NOT_A_BOOKMAKER = /calculator|betslip|bet tracker|\bopen\b|\bclick\b|\bshare\b|\bcopy\b/i
@@ -109,7 +70,7 @@ function categoryOf(key: string): BookmakerCategory {
   if (LOCAL_IDS.has(key)) return 'local'
   if (EXCHANGES.has(key)) return 'exchange'
   if (CRYPTO.has(key)) return 'crypto'
-  return 'local'
+  return 'other'
 }
 
 function leagueShort(league: string) {

@@ -82,7 +82,7 @@
       },
       {
         "q": "Existujú surebety aj na menšie hokejové ligy?",
-        "a": "Áno. Stávkové kancelárie často oceňujú menšie domáce ligy odlišne, takže arbitrážne príležitosti vznikajú pravidelne. Pred stávkovaním si overte, či majú stávkové kancelárie licenciu na prevádzku na Slovensku."
+        "a": "Áno. Stávkové kancelárie často oceňujú menšie domáce ligy odlišne, takže arbitrážne príležitosti vznikajú pravidelne. Pred stávkovaním si overte, či majú stávkové kancelárie licenciu ÚRHH na prevádzku na Slovensku."
       }
     ]
   },
@@ -236,9 +236,9 @@
   "bookmaker/bet365": {
     "title": "Surebety v Bet365",
     "metaTitle": "Bet365 surebety – nájdite príležitosti na garantovaný zisk",
-    "description": "Nájdite surebety v Bet365 v reálnom čase. BetTrackerAI porovnáva kurzy Bet365 s inými stávkovými kanceláriami a ukáže vám, kde si môžete zabezpečiť garantovaný zisk.",
+    "description": "Zistite, ako to je so surebetmi v Bet365. BetTrackerAI porovnáva kurzy s inými stávkovými kanceláriami, no na Slovensku sa zamerajte na kancelárie s licenciou ÚRHH, napríklad Tipsport, Niké či Fortuna.",
     "keyword": "bet365 surebety",
-    "intro": "Bet365 patrí medzi najväčšie stávkové kancelárie na svete a ponúka jeden z najširších výberov športov a trhov. Vďaka tomu je Bet365 jednou zo stávkových kancelárií, ktoré sa v surebetoch objavujú najčastejšie.",
+    "intro": "Bet365 patrí medzi najväčšie stávkové kancelárie na svete a ponúka jeden z najširších výberov športov a trhov. Vďaka tomu sa v surebetoch objavuje veľmi často. Na Slovensku však nemá licenciu Úradu pre reguláciu hazardných hier (ÚRHH), preto ju slovenskí hráči nemajú využívať. Surebety hľadajte u licencovaných prevádzkovateľov, napríklad Niké, Tipsport alebo Fortuna.",
     "blocks": [
       {
         "type": "h2",
@@ -246,20 +246,20 @@
       },
       {
         "type": "p",
-        "text": "Bet365 je licencovaná stávková kancelária vo viacerých jurisdikciách a ponúka kurzy na veľmi veľké množstvo zápasov vrátane nižších líg a live trhov. Vďaka tejto šírke ponuky má Bet365 často kurzy, ktoré sa odlišujú od zvyšku trhu."
+        "text": "Bet365 je licencovaná stávková kancelária vo viacerých jurisdikciách a ponúka kurzy na veľmi veľké množstvo zápasov vrátane nižších líg a live trhov. Na Slovensku však licenciu ÚRHH nemá a nelicencované stránky sú blokované, preto je jej ponuka pre slovenských hráčov nedostupná. Podobne široké trhy a odlišné kurzy nájdete aj u licencovaných kancelárií."
       },
       {
         "type": "h2",
-        "text": "Ako nájsť surebety s Bet365"
+        "text": "Ako nájsť surebety na slovenskom trhu"
       },
       {
         "type": "p",
-        "text": "Surebet s Bet365 vzniká vtedy, keď má Bet365 vyšší kurz na jeden výsledok, než aké majú ostatné stávkové kancelárie na opačné výsledky. BetTrackerAI neustále sleduje kurzy Bet365 a porovnáva ich so zvyškom trhu."
+        "text": "Surebet vzniká vtedy, keď má jedna stávková kancelária vyšší kurz na jeden výsledok, než aké majú ostatné kancelárie na opačné výsledky. BetTrackerAI neustále sleduje kurzy a porovnáva ich so zvyškom trhu. Na Slovensku používajte len licencovaných prevádzkovateľov, napríklad Tipsport, Fortuna, Niké, Doxxbet, Synot Tip, Tipos a Monaco."
       },
       {
         "type": "ul",
         "items": [
-          "Pomocou filtra na stránke so surebetmi vyberte Bet365 a ďalšie svoje stávkové kancelárie.",
+          "Pomocou filtra na stránke so surebetmi vyberte licencované stávkové kancelárie, v ktorých máte účet, napríklad Tipsport, Niké a Fortuna.",
           "Zoraďte podľa zisku a vyberte surebet so stabilnými kurzami.",
           "Pomocou kalkulačky rozdeľte vklad a sumu zaokrúhlite.",
           "Najprv uzavrite stávku v stávkovej kancelárii s najvolatilnejšími kurzami."
@@ -267,26 +267,26 @@
       },
       {
         "type": "tip",
-        "text": "Rozložte svoje stávky medzi viacero stávkových kancelárií, aby ste nestávkovali iba v Bet365. Predĺžite tak životnosť svojho účtu."
+        "text": "Rozložte svoje stávky medzi viacero licencovaných stávkových kancelárií, aby ste nestávkovali iba v jednej. Predĺžite tak životnosť svojich účtov."
       }
     ],
     "faq": [
       {
         "q": "Je arbitrážne stávkovanie v Bet365 povolené?",
-        "a": "Arbitrážne stávkovanie je legálne. Rovnako ako všetky stávkové kancelárie však môže Bet365 podľa svojich obchodných podmienok obmedziť účty, ak zistí stávkové vzorce, ktoré dlhodobo zabezpečujú garantovaný zisk."
+        "a": "Arbitrážne stávkovanie samo osebe nie je zakázané. Bet365 však nemá na Slovensku licenciu ÚRHH, takže ju slovenskí hráči nemajú používať. Licencované stávkové kancelárie môžu podľa svojich obchodných podmienok obmedziť účty, ak zistia stávkové vzorce, ktoré dlhodobo zabezpečujú garantovaný zisk."
       },
       {
-        "q": "Prevádzkuje Bet365 na základe licencie na hazardné hry?",
-        "a": "Áno. Bet365 má licencie vo viacerých regulovaných trhoch po celom svete. Overte si miestne daňové predpisy, pretože zaobchádzanie s výhrami sa v jednotlivých jurisdikciách líši."
+        "q": "Prevádzkuje Bet365 na Slovensku na základe licencie na hazardné hry?",
+        "a": "Nie. Bet365 má licencie vo viacerých regulovaných trhoch, ale nie od ÚRHH, a na Slovensku smú stávky ponúkať len prevádzkovatelia s licenciou ÚRHH. Výhry od licencovaných prevádzkovateľov sú pre hráčov vo všeobecnosti oslobodené od dane, aktuálne pravidlá si však overte. Ak vám hazard spôsobuje problémy, môžete sa zapísať do Registra vylúčených osôb ÚRHH alebo vyhľadať miestnu pomoc pre závislých."
       }
     ]
   },
   "bookmaker/unibet": {
     "title": "Surebety v Unibete",
-    "metaTitle": "Unibet surebety – nájdite príležitosti na arbitrážne stávkovanie",
-    "description": "Nájdite surebety v Unibete v reálnom čase. BetTrackerAI porovnáva kurzy Unibetu s inými stávkovými kanceláriami, aby ste si mohli arbitrážnym stávkovaním zabezpečiť garantovaný zisk.",
+    "metaTitle": "Unibet surebety – prehľad kurzov a arbitrážneho stávkovania",
+    "description": "Prehľad surebetov v Unibete v reálnom čase. BetTrackerAI porovnáva kurzy Unibetu s inými stávkovými kanceláriami. Na Slovensku stávkujte len u prevádzkovateľov s licenciou ÚRHH.",
     "keyword": "unibet surebety",
-    "intro": "Unibet patrí medzi najobľúbenejšie stávkové kancelárie na svete. Unibet využíva platformu kurzov Kambi, preto sa jeho kurzy často podobajú kurzom ďalších stávkových kancelárií postavených na Kambi.",
+    "intro": "Unibet patrí medzi najobľúbenejšie stávkové kancelárie na svete. Unibet využíva platformu kurzov Kambi, preto sa jeho kurzy často podobajú kurzom ďalších stávkových kancelárií postavených na Kambi. Unibet však nepatrí medzi stávkové kancelárie s licenciou ÚRHH, ktoré uvádzame pre slovenský trh.",
     "blocks": [
       {
         "type": "h2",
@@ -294,7 +294,7 @@
       },
       {
         "type": "p",
-        "text": "Unibet má licencie vo viacerých regulovaných trhoch a ponúka široký výber športov. Keďže Unibet zdieľa platformu kurzov s niekoľkými ďalšími stávkovými kanceláriami, surebety najčastejšie vznikajú medzi Unibetom a kanceláriami na iných platformách."
+        "text": "Unibet má licencie vo viacerých regulovaných trhoch a ponúka široký výber športov. Na Slovensku môžu stávky ponúkať iba prevádzkovatelia s licenciou Úradu pre reguláciu hazardných hier (ÚRHH), napríklad Niké, Tipsport, Fortuna, Doxxbet, Synot Tip, Tipos alebo Monaco, a nelicencované weby sú blokované. Informácie o Unibete preto slúžia len na porovnanie kurzov. Keďže Unibet zdieľa platformu kurzov s niekoľkými ďalšími stávkovými kanceláriami, surebety najčastejšie vznikajú medzi kanceláriami na rôznych platformách."
       },
       {
         "type": "h2",
@@ -302,12 +302,12 @@
       },
       {
         "type": "p",
-        "text": "Surebet s Unibetom nastáva vtedy, keď má Unibet vyšší kurz na jeden výsledok, než aké majú ostatné stávkové kancelárie na opačné výsledky. BetTrackerAI nepretržite sleduje kurzy Unibetu a porovnáva ich so zvyškom trhu."
+        "text": "Surebet s Unibetom nastáva vtedy, keď má Unibet vyšší kurz na jeden výsledok, než aké majú ostatné stávkové kancelárie na opačné výsledky. BetTrackerAI nepretržite sleduje kurzy Unibetu a porovnáva ich so zvyškom trhu. Ak stávkujete zo Slovenska, uzatvárajte stávky len v kanceláriách s licenciou ÚRHH."
       },
       {
         "type": "ul",
         "items": [
-          "Pomocou filtra na stránke so surebetmi vyberte Unibet a ďalšie svoje stávkové kancelárie.",
+          "Pomocou filtra na stránke so surebetmi vyberte stávkové kancelárie s licenciou ÚRHH, napríklad Niké, Tipsport alebo Fortuna.",
           "Zoraďte podľa zisku a vyberte surebet so stabilnými kurzami.",
           "Pomocou kalkulačky rozdeľte vklad a sumy zaokrúhlite.",
           "Najprv uzavrite stávku v stávkovej kancelárii s najvolatilnejšími kurzami."
@@ -315,26 +315,26 @@
       },
       {
         "type": "tip",
-        "text": "Rozložte svoje stávky medzi viacero stávkových kancelárií, aby ste nestávkovali iba v Unibete. Predĺžite tak životnosť svojho účtu a pomôžete si vyhnúť sa limitom."
+        "text": "Rozložte svoje stávky medzi viacero licencovaných stávkových kancelárií, napríklad Niké, Tipsport, Fortuna alebo Doxxbet, aby ste nestávkovali iba u jedného prevádzkovateľa. Predĺžite tak životnosť svojho účtu a pomôžete si vyhnúť sa limitom."
       }
     ],
     "faq": [
       {
         "q": "Je legálne uzatvárať surebety v Unibete?",
-        "a": "Áno, arbitrážne stávkovanie je legálne. Rovnako ako všetky stávkové kancelárie však môže Unibet podľa svojich obchodných podmienok obmedziť alebo zablokovať účty, ktoré uzatvárajú iba stávky s garantovaným ziskom."
+        "a": "Arbitrážne stávkovanie samo o sebe nie je zakázané. Na Slovensku však môžete stávkovať len u prevádzkovateľov s licenciou ÚRHH a Unibet medzi nimi v našom zozname nie je. Pred stávkovaním si preto overte aktuálny zoznam licencovaných prevádzkovateľov na stránke ÚRHH. Rovnako ako všetky stávkové kancelárie môže aj licencovaná kancelária podľa svojich obchodných podmienok obmedziť alebo zablokovať účty, ktoré uzatvárajú iba stávky s garantovaným ziskom."
       },
       {
         "q": "Ktoré stávkové kancelárie sú podobné Unibetu?",
-        "a": "Unibet používa Kambi, ktoré dodáva kurzy aj niekoľkým ďalším stávkovým kanceláriám. Preto kombinujte Unibet so stávkovými kanceláriami na iných platformách, aby ste našli viac surebetov."
+        "a": "Unibet používa Kambi, ktoré dodáva kurzy aj niekoľkým ďalším stávkovým kanceláriám. Preto kombinujte stávkové kancelárie na rôznych platformách, aby ste našli viac surebetov. Pre slovenský trh vyberajte spomedzi kancelárií s licenciou ÚRHH, napríklad Niké, Tipsport, Fortuna, Doxxbet, Synot Tip, Tipos alebo Monaco."
       }
     ]
   },
   "bookmaker/betano": {
     "title": "Surebety v Betane",
-    "metaTitle": "Betano surebety – nájdite arbitrážne stávky v Betane",
-    "description": "Nájdite surebety v Betano v reálnom čase. BetTrackerAI porovnáva kurzy Betano s ostatnými licencovanými stávkovými kanceláriami a ukáže vám, kde si viete zabezpečiť garantovaný zisk.",
+    "metaTitle": "Betano surebety – arbitrážne stávky a licencia ÚRHH",
+    "description": "Nájdite surebety v reálnom čase. BetTrackerAI porovnáva kurzy Betano s kurzami licencovaných stávkových kancelárií na Slovensku, napríklad Niké, Tipsport či Fortuna. Ukáže vám, kde si viete zabezpečiť garantovaný zisk.",
     "keyword": "betano surebety",
-    "intro": "Betano patrí medzi novšie stávkové kancelárie na regulovanom trhu a používa vlastnú platformu na tvorbu kurzov. Vďaka tomu sa kurzy Betano často líšia od zvyšku trhu, čo vytvára príležitosti na arbitrážne stávkovanie.",
+    "intro": "Betano je medzinárodná stávková kancelária, ktorá používa vlastnú platformu na tvorbu kurzov. Vďaka tomu sa kurzy Betano často líšia od zvyšku trhu, čo vytvára príležitosti na arbitrážne stávkovanie. Na Slovensku však môžu stávky ponúkať iba prevádzkovatelia s licenciou Úradu pre reguláciu hazardných hier (ÚRHH), preto si najprv overte, či ju Betano má.",
     "blocks": [
       {
         "type": "h2",
@@ -342,7 +342,7 @@
       },
       {
         "type": "p",
-        "text": "Betano má licenciu vo viacerých jurisdikciách a ponúka široký výber športov. Keďže Betano nastavuje kurzy samostatne, pri porovnaní s etablovanými stávkovými kanceláriami sa často objavuje v surebetoch."
+        "text": "Betano má licenciu vo viacerých jurisdikciách a ponúka široký výber športov. Keďže Betano nastavuje kurzy samostatne, pri porovnaní s etablovanými stávkovými kanceláriami sa často objavuje v surebetoch. Na Slovensku sú nelicencované stránky blokované, takže stávkujte len u prevádzkovateľov s licenciou ÚRHH."
       },
       {
         "type": "h2",
@@ -355,7 +355,7 @@
       {
         "type": "ul",
         "items": [
-          "Pomocou filtra na stránke so surebetmi vyberte Betano a svoje ďalšie stávkové kancelárie.",
+          "Pomocou filtra na stránke so surebetmi vyberte Betano a svoje ďalšie licencované stávkové kancelárie, napríklad Niké, Tipsport alebo Fortuna.",
           "Zoraďte ponuky podľa zisku a vyberte surebet so stabilnými kurzami.",
           "Pomocou kalkulačky rozdeľte vklad a zaokrúhlite sumy.",
           "Stávku najprv uzavrite u stávkovej kancelárie s najvolatilnejšími kurzami."
@@ -363,47 +363,47 @@
       },
       {
         "type": "tip",
-        "text": "Stávkujte vo viacerých stávkových kanceláriách, aby ste nesadzali iba u Betano. Predĺžite tak životnosť svojho účtu a pomôžete si vyhnúť sa obmedzeniam."
+        "text": "Stávkujte vo viacerých licencovaných stávkových kanceláriách, napríklad v Niké, Tipsporte, Fortune, Doxxbete, Synot Tipe, Tipose či Monaco, aby ste nesadzali iba u jedného operátora. Predĺžite tak životnosť svojho účtu a pomôžete si vyhnúť sa obmedzeniam. Výhry od licencovaných operátorov sú pre hráčov vo všeobecnosti oslobodené od dane, aktuálne pravidlá si však overte. Hrajte zodpovedne – pomoc nájdete v Registri vylúčených osôb ÚRHH a v lokálnych poradniach pre závislosti."
       }
     ],
     "faq": [
       {
         "q": "Môžete uzatvárať surebety u Betano?",
-        "a": "Áno, arbitrážne stávkovanie je legálne. Betano však, tak ako všetky stávkové kancelárie, môže podľa svojich obchodných podmienok obmedziť účty, ak zistí stávkové vzorce, ktoré dlhodobo zaručujú zisk."
+        "a": "Arbitrážne stávkovanie je samo o sebe legálne. Stávkovať však smiete len u prevádzkovateľov s licenciou ÚRHH, nelicencované stránky sú na Slovensku blokované. Betano, tak ako všetky stávkové kancelárie, môže podľa svojich obchodných podmienok obmedziť účty, ak zistí stávkové vzorce, ktoré dlhodobo zaručujú zisk."
       },
       {
         "q": "Má Betano licenciu?",
-        "a": "Áno. Betano má licenciu vo viacerých regulovaných trhoch. Overte si u regulátora hazardných hier, či Betano drží licenciu aj v krajine, v ktorej žijete."
+        "a": "Betano má licenciu vo viacerých regulovaných trhoch, no to ešte neznamená, že ju má aj na Slovensku. Overte si u ÚRHH, či má Betano platnú slovenskú licenciu. Ak ju nemá, nepoužívajte ho a využite licencovaných operátorov, napríklad Niké, Tipsport alebo Fortunu."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebety v LeoVegas",
-    "metaTitle": "Surebety v LeoVegas – nájdite príležitosti na arbitrážne stávkovanie",
-    "description": "Nájdite surebety v LeoVegas v reálnom čase. BetTrackerAI porovnáva kurzy LeoVegas s ostatnými stávkovými kanceláriami a ukáže vám, kde si viete zabezpečiť garantovaný zisk.",
-    "keyword": "leovegas surebety",
-    "intro": "LeoVegas je známy najmä svojou ponukou kasína, ale ponúka aj široký výber športových stávok. Stávková kancelária používa platformu Kambi a pravidelne sa objavuje v príležitostiach na arbitrážne stávkovanie.",
+    "title": "Surebety v Niké",
+    "metaTitle": "Surebety v Niké – nájdite príležitosti na arbitrážne stávkovanie",
+    "description": "Nájdite surebety v Niké v reálnom čase. BetTrackerAI porovnáva kurzy Niké s ostatnými licencovanými stávkovými kanceláriami a ukáže vám, kde si viete zabezpečiť garantovaný zisk.",
+    "keyword": "nike surebety",
+    "intro": "Niké patrí medzi najznámejšie stávkové kancelárie na slovenskom trhu a ponúka široký výber športových stávok. Pravidelne sa objavuje v príležitostiach na arbitrážne stávkovanie.",
     "blocks": [
       {
         "type": "h2",
-        "text": "O LeoVegas"
+        "text": "O Niké"
       },
       {
         "type": "p",
-        "text": "LeoVegas je licencovaná stávková kancelária s používateľsky príjemnou aplikáciou, v ktorej sa stávky uzatvárajú rýchlo. To je pri surebetoch dôležité, pretože kurzy sa môžu zmeniť v priebehu sekúnd. Pred otvorením účtu si overte, že LeoVegas má licenciu a je dostupný vo vašej krajine."
+        "text": "Niké je stávková kancelária s licenciou Úradu pre reguláciu hazardných hier (ÚRHH) a s používateľsky príjemnou aplikáciou, v ktorej sa stávky uzatvárajú rýchlo. To je pri surebetoch dôležité, pretože kurzy sa môžu zmeniť v priebehu sekúnd. Pred otvorením účtu si overte, že Niké má platnú licenciu ÚRHH a že ho môžete na Slovensku legálne používať."
       },
       {
         "type": "h2",
-        "text": "Ako nájsť surebety s LeoVegas"
+        "text": "Ako nájsť surebety s Niké"
       },
       {
         "type": "p",
-        "text": "Surebet s LeoVegas vzniká vtedy, keď LeoVegas ponúka vyšší kurz na jeden výsledok, než aký majú ostatné stávkové kancelárie na opačné výsledky. BetTrackerAI neustále sleduje kurzy LeoVegas a porovnáva ich so stávkovými kanceláriami pôsobiacimi na vašom trhu."
+        "text": "Surebet s Niké vzniká vtedy, keď Niké ponúka vyšší kurz na jeden výsledok, než aký majú ostatné stávkové kancelárie na opačné výsledky. BetTrackerAI neustále sleduje kurzy Niké a porovnáva ich s ďalšími stávkovými kanceláriami licencovanými ÚRHH, napríklad Tipsport, Fortuna alebo Doxxbet."
       },
       {
         "type": "ul",
         "items": [
-          "Pomocou filtra na stránke so surebetmi vyberte LeoVegas a svoje ďalšie stávkové kancelárie.",
+          "Pomocou filtra na stránke so surebetmi vyberte Niké a svoje ďalšie stávkové kancelárie.",
           "Zoraďte ponuky podľa zisku a vyberte surebet so stabilnými kurzami.",
           "Pomocou kalkulačky rozdeľte vklad a zaokrúhlite sumy.",
           "Stávku najprv uzavrite u stávkovej kancelárie s najvolatilnejšími kurzami."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Stávkujte vo viacerých stávkových kanceláriách, aby ste nesadzali iba v LeoVegas. Predĺžite tak životnosť svojho účtu a znížite riziko obmedzenia."
+        "text": "Stávkujte vo viacerých stávkových kanceláriách, aby ste nesadzali iba v Niké. Predĺžite tak životnosť svojho účtu a znížite riziko obmedzenia."
       }
     ],
     "faq": [
       {
-        "q": "Dajú sa v LeoVegas uzatvárať surebety?",
-        "a": "Áno, arbitrážne stávkovanie je legálne. LeoVegas však, tak ako všetky stávkové kancelárie, môže podľa svojich obchodných podmienok obmedziť účty, ak zistí stávkové vzorce, ktoré dlhodobo zaručujú zisk."
+        "q": "Dajú sa v Niké uzatvárať surebety?",
+        "a": "Áno, arbitrážne stávkovanie je legálne. Niké však, tak ako všetky stávkové kancelárie, môže podľa svojich obchodných podmienok obmedziť účty, ak zistí stávkové vzorce, ktoré dlhodobo zaručujú zisk."
       },
       {
-        "q": "Je LeoVegas vhodný na surebety?",
-        "a": "LeoVegas je dobrým doplnkovým bookmakerom, najmä v kombinácii so stávkovými kanceláriami mimo platformy Kambi, pretože tak získate viac príležitostí na arbitráž."
+        "q": "Je Niké vhodné na surebety?",
+        "a": "Niké je dobrým doplnkovým bookmakerom, najmä v kombinácii s ďalšími licencovanými stávkovými kanceláriami, ako sú Tipsport, Fortuna alebo Tipos, pretože tak získate viac príležitostí na arbitráž."
       }
     ]
   }

@@ -1,11 +1,12 @@
 "use client";
 import { useEffect, useId, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, Bell, MessageSquareText, Smartphone } from "lucide-react";
 
 import { removePushSubscription, savePushSettings, savePushSubscription, sendTestPush, type PushSettingsInput } from "@/app/konto/push-actions";
 import { saveSmsSettings, type SmsSettingsInput } from "@/app/konto/sms-actions";
 import { isIos } from "@/components/push/ios-install-guide";
+import { useLocale } from "@/components/locale-provider";
 import type { AlertPanelData } from "@/lib/alert-panel-data";
 
 const PRESETS = [15, 20, 25, 30];
@@ -42,9 +43,10 @@ function Toggle({ checked, onChange, title, hint }: { checked: boolean; onChange
 }
 
 function MinProfit({ value, onChange }: { value: number; onChange: (value: number) => void }) {
+  const { tx } = useLocale();
   return (
     <fieldset className="flex flex-col gap-1.5">
-      <legend className="mb-1 text-[12px] font-semibold text-muted-foreground">Minimum profit</legend>
+      <legend className="mb-1 text-[12px] font-semibold text-muted-foreground">{tx("Minimumsprofit")}</legend>
       <div className="flex gap-1.5">
         {PRESETS.map((p) => (
           <button
@@ -74,6 +76,7 @@ function NoticeLine({ notice }: { notice: Notice }) {
 }
 
 function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubscriber: boolean }) {
+  const { tx } = useLocale();
   const [settings, setSettings] = useState(initial);
   const [status, setStatus] = useState<PushStatus>("checking");
   const [pending, setPending] = useState(false);
@@ -105,7 +108,7 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
       const permission = await Notification.requestPermission();
       if (permission !== "granted") {
         setStatus(permission === "denied" ? "blocked" : "off");
-        setNotice({ kind: "error", text: 'Tryk "Tillad" i browseren for at få notifikationer.' });
+        setNotice({ kind: "error", text: tx('Tryk "Tillad" i browseren for at få notifikationer.') });
         return;
       }
       const registration = await navigator.serviceWorker.register("/sw.js");
@@ -122,13 +125,13 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
         userAgent: navigator.userAgent,
       });
       if (!result.ok) {
-        setNotice({ kind: "error", text: result.error });
+        setNotice({ kind: "error", text: tx(result.error) });
         return;
       }
       setStatus("on");
-      setNotice({ kind: "ok", text: "Notifikationer er slået til på denne enhed." });
+      setNotice({ kind: "ok", text: tx('Notifikationer er slået til på denne enhed.') });
     } catch {
-      setNotice({ kind: "error", text: "Kunne ikke slå notifikationer til. Prøv igen." });
+      setNotice({ kind: "error", text: tx('Kunne ikke slå notifikationer til. Prøv igen.') });
     } finally {
       setPending(false);
     }
@@ -146,7 +149,7 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
       }
       setStatus("off");
     } catch {
-      setNotice({ kind: "error", text: "Kunne ikke slå notifikationer fra. Prøv igen." });
+      setNotice({ kind: "error", text: tx('Kunne ikke slå notifikationer fra. Prøv igen.') });
     } finally {
       setPending(false);
     }
@@ -157,9 +160,9 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
     setPending(true);
     try {
       const result = await savePushSettings(settings);
-      setNotice(result.ok ? { kind: "ok", text: "Gemt." } : { kind: "error", text: result.error });
+      setNotice(result.ok ? { kind: "ok", text: tx("Gemt.") } : { kind: "error", text: tx(result.error) });
     } catch {
-      setNotice({ kind: "error", text: "Der opstod en forbindelsesfejl. Prøv igen." });
+      setNotice({ kind: "error", text: tx("Der opstod en forbindelsesfejl. Prøv igen.") });
     } finally {
       setPending(false);
     }
@@ -170,7 +173,7 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
     setPending(true);
     try {
       const result = await sendTestPush();
-      setNotice(result.ok ? { kind: "ok", text: result.message ?? "Sendt." } : { kind: "error", text: result.error });
+      setNotice(result.ok ? { kind: "ok", text: result.message ? tx(result.message) : tx("Sendt.") } : { kind: "error", text: tx(result.error) });
     } finally {
       setPending(false);
     }
@@ -178,43 +181,43 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
 
   return (
     <div className="flex flex-col gap-3">
-      {status === "checking" && <p className="text-[13px] text-muted-foreground">Tjekker din enhed…</p>}
+      {status === "checking" && <p className="text-[13px] text-muted-foreground">{tx("Tjekker din enhed…")}</p>}
 
       {status === "unsupported" && (
         <p className="text-[13px] leading-5 text-gold">
           {ios
-            ? "Push er ikke tilgængelig i Safari på iPhone. Brug SMS-fanen, eller hent appen nedenfor."
-            : "Din browser understøtter ikke push. Prøv Chrome, Edge, Firefox eller Safari."}
+            ? tx("Push er ikke tilgængelig i Safari på iPhone. Brug SMS-fanen, eller hent appen nedenfor.")
+            : tx("Din browser understøtter ikke push. Prøv Chrome, Edge, Firefox eller Safari.")}
         </p>
       )}
 
       {status === "blocked" && (
-        <p className="text-[13px] leading-5 text-gold">Notifikationer er blokeret i din browser. Tillad dem for siden i browserens indstillinger, og genindlæs.</p>
+        <p className="text-[13px] leading-5 text-gold">{tx("Notifikationer er blokeret i din browser. Tillad dem for siden i browserens indstillinger, og genindlæs.")}</p>
       )}
 
       {status === "off" && (
         <>
-          <p className="text-[13px] leading-5 text-muted-foreground">Få besked i din browser med det samme, når der er et surebet over din grænse. Gratis.</p>
+          <p className="text-[13px] leading-5 text-muted-foreground">{tx("Få besked i din browser med det samme, når der er et surebet over din grænse. Gratis.")}</p>
           <button type="button" onClick={enable} disabled={pending} className={primaryButton}>
-            {pending ? "Slår til…" : "Slå notifikationer til"}
+            {pending ? tx("Slår til…") : tx("Slå notifikationer til")}
           </button>
         </>
       )}
 
       {status === "on" && (
         <>
-          <Toggle checked={settings.alertsEnabled} onChange={(v) => setSettings((s) => ({ ...s, alertsEnabled: v }))} title="Surebet-alarm" hint="Når vi finder et surebet over din grænse" />
+          <Toggle checked={settings.alertsEnabled} onChange={(v) => setSettings((s) => ({ ...s, alertsEnabled: v }))} title={tx("Surebet-alarm")} hint={tx("Når vi finder et surebet over din grænse")} />
           <MinProfit value={settings.minProfit} onChange={(v) => setSettings((s) => ({ ...s, minProfit: v }))} />
-          {!isSubscriber && <p className="text-[12px] leading-5 text-gold">Surebet-alarmer sendes kun til medlemmer med aktivt abonnement.</p>}
+          {!isSubscriber && <p className="text-[12px] leading-5 text-gold">{tx("Surebet-alarmer sendes kun til medlemmer med aktivt abonnement.")}</p>}
           <button type="button" onClick={save} disabled={pending} className={primaryButton}>
-            {pending ? "Gemmer…" : "Gem"}
+            {pending ? tx("Gemmer…") : tx("Gem")}
           </button>
           <div className="flex gap-2">
             <button type="button" onClick={test} disabled={pending} className={ghostButton}>
-              Send test
+              {tx("Send test")}
             </button>
             <button type="button" onClick={disable} disabled={pending} className={ghostButton}>
-              Slå fra her
+              {tx("Slå fra her")}
             </button>
           </div>
         </>
@@ -225,6 +228,7 @@ function PushTab({ initial, isSubscriber }: { initial: PushSettingsInput; isSubs
 }
 
 function SmsTab({ initial, hasPhone, isSubscriber }: { initial: SmsSettingsInput; hasPhone: boolean; isSubscriber: boolean }) {
+  const { tx } = useLocale();
   const [settings, setSettings] = useState(initial);
   const [pending, setPending] = useState(false);
   const [notice, setNotice] = useState<Notice>(null);
@@ -234,9 +238,9 @@ function SmsTab({ initial, hasPhone, isSubscriber }: { initial: SmsSettingsInput
     setPending(true);
     try {
       const result = await saveSmsSettings(settings);
-      setNotice(result.ok ? { kind: "ok", text: settings.enabled ? "SMS-alarmer er slået til." : "Gemt." } : { kind: "error", text: result.error });
+      setNotice(result.ok ? { kind: "ok", text: settings.enabled ? tx("SMS-alarmer er slået til.") : tx("Gemt.") } : { kind: "error", text: tx(result.error) });
     } catch {
-      setNotice({ kind: "error", text: "Der opstod en forbindelsesfejl. Prøv igen." });
+      setNotice({ kind: "error", text: tx("Der opstod en forbindelsesfejl. Prøv igen.") });
     } finally {
       setPending(false);
     }
@@ -244,21 +248,21 @@ function SmsTab({ initial, hasPhone, isSubscriber }: { initial: SmsSettingsInput
 
   return (
     <div className="flex flex-col gap-3">
-      <p className="text-[13px] leading-5 text-muted-foreground">Få en SMS, når der er et surebet over din grænse. Virker overalt, også uden app.</p>
-      <Toggle checked={settings.enabled} onChange={(v) => setSettings((s) => ({ ...s, enabled: v }))} title="Send mig en SMS" hint="Højst én pr. surebet" />
+      <p className="text-[13px] leading-5 text-muted-foreground">{tx("Få en SMS, når der er et surebet over din grænse. Virker overalt, også uden app.")}</p>
+      <Toggle checked={settings.enabled} onChange={(v) => setSettings((s) => ({ ...s, enabled: v }))} title={tx("Send mig en SMS")} hint={tx("Højst én pr. surebet")} />
       <MinProfit value={settings.minProfit} onChange={(v) => setSettings((s) => ({ ...s, minProfit: v }))} />
       {!hasPhone && (
         <p className="text-[12px] leading-5 text-gold">
-          Tilføj dit mobilnummer under{" "}
+          {tx("Tilføj dit mobilnummer under")}{" "}
           <Link href="/konto" className="font-semibold underline underline-offset-2">
-            Min side
+            {tx("Min side")}
           </Link>{" "}
-          for at modtage SMS.
+          {tx("for at modtage SMS.")}
         </p>
       )}
-      {!isSubscriber && <p className="text-[12px] leading-5 text-gold">SMS-alarmer sendes kun til medlemmer med aktivt abonnement.</p>}
+      {!isSubscriber && <p className="text-[12px] leading-5 text-gold">{tx("SMS-alarmer sendes kun til medlemmer med aktivt abonnement.")}</p>}
       <button type="button" onClick={save} disabled={pending} className={primaryButton}>
-        {pending ? "Gemmer…" : "Gem"}
+        {pending ? tx("Gemmer…") : tx("Gem")}
       </button>
       <NoticeLine notice={notice} />
     </div>
@@ -266,6 +270,7 @@ function SmsTab({ initial, hasPhone, isSubscriber }: { initial: SmsSettingsInput
 }
 
 export function AlertsPanel({ data }: { data: AlertPanelData }) {
+  const { tx, locale } = useLocale();
   const [tab, setTab] = useState<Tab>("push");
   const id = useId();
   const tabs: { key: Tab; label: string; icon: typeof Bell }[] = [
@@ -273,25 +278,27 @@ export function AlertsPanel({ data }: { data: AlertPanelData }) {
     { key: "sms", label: "SMS", icon: MessageSquareText },
   ];
 
+  if (locale !== "da") return null;
+
   return (
     <div className="sb-panel edge-light relative p-5">
       <div className="flex items-center gap-2.5 text-[17px] font-bold">
-        <Bell className="h-6 w-6 fill-gold text-gold drop-shadow-[0_0_8px_var(--gold)]" /> Få alarmer
+        <Bell className="h-6 w-6 fill-gold text-gold drop-shadow-[0_0_8px_var(--gold)]" /> {tx("Få alarmer")}
       </div>
 
       {!data.signedIn ? (
         <>
-          <p className="mt-3 text-[14px] font-medium leading-snug text-foreground/85">Bliv advaret på push eller SMS, så snart vi finder et surebet over din grænse.</p>
+          <p className="mt-3 text-[14px] font-medium leading-snug text-foreground/85">{tx("Bliv advaret på push eller SMS, så snart vi finder et surebet over din grænse.")}</p>
           <Link
             href="/konto?login=1&next=/surebets"
             className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-lg chip-surface border border-border-glow/60 py-2 text-sm font-bold text-primary-glow hover:brightness-125"
           >
-            Log ind for at slå til <ArrowRight className="h-4 w-4" />
+            {tx("Log ind for at slå til")} <ArrowRight className="h-4 w-4" />
           </Link>
         </>
       ) : (
         <>
-          <div role="tablist" aria-label="Alarmtype" className="mt-3 grid grid-cols-2 gap-1 rounded-lg border border-border bg-surface-elevated/40 p-1">
+          <div role="tablist" aria-label={tx("Alarmtype")} className="mt-3 grid grid-cols-2 gap-1 rounded-lg border border-border bg-surface-elevated/40 p-1">
             {tabs.map(({ key, label, icon: Icon }) => (
               <button
                 key={key}
@@ -317,7 +324,7 @@ export function AlertsPanel({ data }: { data: AlertPanelData }) {
             )}
           </div>
           <Link href="/konto" className="mt-3 flex items-center justify-center gap-1 text-[12px] font-semibold text-muted-foreground hover:text-foreground">
-            Flere indstillinger <ArrowRight className="h-3.5 w-3.5" />
+            {tx("Flere indstillinger")} <ArrowRight className="h-3.5 w-3.5" />
           </Link>
         </>
       )}

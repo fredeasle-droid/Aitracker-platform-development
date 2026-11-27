@@ -1,4 +1,5 @@
 "use client";
+import { useLocale } from "@/components/locale-provider";
 import { useEffect, useRef, useState } from "react";
 import { Calculator, Camera, CheckCircle2, ImagePlus, Loader2, Sparkles, X } from "lucide-react";
 import { toast } from "sonner";
@@ -82,6 +83,7 @@ export function useCouponScan(onAnalysed: (images: [string, string], reading: Co
 export type CouponScan = ReturnType<typeof useCouponScan>;
 
 export function MobileImport({ scan }: { scan: CouponScan }) {
+  const { tx } = useLocale();
   const { images, busy, setSlot, readFile, readFiles, calculate } = scan;
   const refs = [useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null)] as const;
   const camRefs = [useRef<HTMLInputElement>(null), useRef<HTMLInputElement>(null)] as const;
@@ -94,13 +96,12 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
         <span className="icon-chip h-8 w-8">
           <Sparkles className="h-4 w-4 text-neon" />
         </span>
-        <h2 className="font-display text-base font-semibold">Scan dine kuponer</h2>
-        <span className="rounded-md border border-neon/30 bg-neon/10 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-neon">AI</span>
-        <span className="ml-auto rounded-full bg-secondary px-2 py-0.5 text-[11px] font-semibold tabular-nums text-muted-foreground">{count}/2</span>
+        <h2 className="font-display text-base font-semibold">{tx("Scan dine kuponer")}</h2>
+        <span className="rounded-md border border-neon/30 bg-neon/10 px-1.5 py-0.5 text-[10px] font-bold tracking-wider text-neon">{tx("AI")}</span>
+        <span className="ml-auto rounded-full bg-secondary px-2 py-0.5 text-[11px] font-semibold tabular-nums text-muted-foreground">{tx(count)}/2</span>
       </div>
       <p className="mt-1 text-xs text-muted-foreground">
-        Upload eller tag billede af begge kuponer – én fra hver bookmaker. Så læser vi dem og sætter alt ind i beregneren for dig.
-      </p>
+        {tx("Upload eller tag billede af begge kuponer – én fra hver bookmaker. Så læser vi dem og sætter alt ind i beregneren for dig.")}</p>
 
       <div className="mt-3 grid grid-cols-2 gap-3">
         {([0, 1] as const).map((i) => {
@@ -111,7 +112,7 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
                 <div className="relative h-32 overflow-hidden rounded-2xl border border-neon/50">
                   <img src={img} alt={`Kupon ${i + 1}`} className="h-full w-full object-cover" />
                   <span className="absolute left-2 top-2 flex items-center gap-1 rounded-full bg-background/80 px-2 py-0.5 text-[10px] font-bold text-neon">
-                    <CheckCircle2 className="h-3 w-3" /> KUPON {i + 1}
+                    <CheckCircle2 className="h-3 w-3" /> {" "}{tx("KUPON")}{" "}{i + 1}
                   </span>
                   <button
                     type="button"
@@ -125,7 +126,7 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
                 </div>
               ) : (
                 <div className="h-32 overflow-hidden rounded-2xl border-2 border-dashed border-primary-glow/50 bg-primary/5">
-                  <div className="flex h-8 items-center justify-center text-[11px] font-bold tracking-[0.14em] text-muted-foreground">KUPON {i + 1}</div>
+                  <div className="flex h-8 items-center justify-center text-[11px] font-bold tracking-[0.14em] text-muted-foreground">{tx("KUPON")}{" "}{i + 1}</div>
                   <div className="grid h-[calc(100%-2rem)] grid-cols-2 divide-x divide-primary-glow/30">
                     <button
                       type="button"
@@ -135,8 +136,8 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
                       className="flex flex-col items-center justify-center gap-1 active:bg-primary/15"
                     >
                       <ImagePlus className="h-6 w-6 text-primary-glow" />
-                      <span className="text-xs font-semibold">Upload</span>
-                      <span className="text-[10px] text-muted-foreground">billede</span>
+                      <span className="text-xs font-semibold">{tx("Upload")}</span>
+                      <span className="text-[10px] text-muted-foreground">{tx("billede")}</span>
                     </button>
                     <button
                       type="button"
@@ -146,8 +147,8 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
                       className="flex flex-col items-center justify-center gap-1 active:bg-primary/15"
                     >
                       <Camera className="h-6 w-6 text-primary-glow" />
-                      <span className="text-xs font-semibold">Kamera</span>
-                      <span className="text-[10px] text-muted-foreground">tag billede</span>
+                      <span className="text-xs font-semibold">{tx("Kamera")}</span>
+                      <span className="text-[10px] text-muted-foreground">{tx("tag billede")}</span>
                     </button>
                   </div>
                 </div>
@@ -186,7 +187,7 @@ export function MobileImport({ scan }: { scan: CouponScan }) {
         className="mt-3 h-12 w-full rounded-2xl rg-bg-gradient-primary text-base font-semibold text-primary-foreground rg-glow-primary disabled:opacity-40 disabled:shadow-none"
       >
         {busy ? <Loader2 className="h-5 w-5 animate-spin" /> : <Calculator className="h-5 w-5" />}
-        {busy ? "Læser kuponer…" : ready ? "Beregn surebet" : `Mangler ${2 - count} kupon${2 - count === 1 ? "" : "er"}`}
+        {busy ? tx("Læser kuponer…") : ready ? tx("Beregn surebet") : `Mangler ${2 - count} kupon${2 - count === 1 ? "" : "er"}`}
       </Button>
     </section>
   );

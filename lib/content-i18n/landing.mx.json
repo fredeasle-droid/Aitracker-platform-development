@@ -82,14 +82,14 @@
       },
       {
         "q": "¿Hay surebets en ligas de hockey sobre hielo más pequeñas?",
-        "a": "Sí. Las casas de apuestas suelen fijar los momios de las ligas nacionales más pequeñas de manera distinta, así que las oportunidades de arbitraje aparecen con frecuencia. Antes de apostar, verifica que la casa de apuestas cuente con licencia para operar en México."
+        "a": "Sí. Las casas de apuestas suelen fijar los momios de las ligas nacionales más pequeñas de manera distinta, así que las oportunidades de arbitraje aparecen con frecuencia. Antes de apostar, verifica que la casa de apuestas cuente con permiso de la SEGOB para operar en México."
       }
     ]
   },
   "sport/fodbold": {
     "title": "Surebets en futbol",
     "metaTitle": "Surebets de futbol: encuentra ganancia asegurada en los partidos",
-    "description": "Encuentra surebets de futbol en tiempo real. BetTrackerAI analiza los momios de la Premier League, la Champions League y cientos de ligas más en casas de apuestas con licencia.",
+    "description": "Encuentra surebets de futbol en tiempo real. BetTrackerAI analiza los momios de la Liga MX, la Premier League, la Champions League y cientos de ligas más en casas de apuestas con licencia.",
     "keyword": "surebets de futbol",
     "intro": "El futbol genera más surebets que cualquier otro deporte. Hay partidos a todas horas y cada encuentro ofrece cientos de mercados que las casas de apuestas valoran de forma distinta.",
     "blocks": [
@@ -130,7 +130,7 @@
     "faq": [
       {
         "q": "¿Qué ligas de futbol tienen más surebets?",
-        "a": "Las ligas más pequeñas suelen ofrecer porcentajes de ganancia más altos, pero las grandes ligas, como la Premier League y la Champions League, tienen más mercados y límites de apuesta más altos."
+        "a": "Las ligas más pequeñas suelen ofrecer porcentajes de ganancia más altos, pero las grandes ligas, como la Liga MX, la Premier League y la Champions League, tienen más mercados y límites de apuesta más altos."
       },
       {
         "q": "¿Se pueden hacer surebets en partidos de futbol en vivo?",
@@ -177,7 +177,7 @@
       },
       {
         "q": "¿Qué casas de apuestas ofrecen esports?",
-        "a": "La mayoría de las casas de apuestas con licencia más importantes ofrecen esports, sobre todo CS2 y League of Legends. Verifica la disponibilidad y que cuenten con licencia para operar en México."
+        "a": "La mayoría de las casas de apuestas con licencia más importantes ofrecen esports, sobre todo CS2 y League of Legends. Verifica la disponibilidad y que cuenten con permiso de la SEGOB para operar en México."
       }
     ]
   },
@@ -246,7 +246,7 @@
       },
       {
         "type": "p",
-        "text": "Bet365 es una casa de apuestas con licencia en varias jurisdicciones y ofrece momios en una enorme cantidad de partidos, incluidas ligas menores y mercados en vivo. Esta amplitud hace que Bet365 a menudo tenga momios distintos a los del resto del mercado."
+        "text": "Bet365 es una casa de apuestas con licencia en varias jurisdicciones y, en México, opera con permiso de la Secretaría de Gobernación (SEGOB). Ofrece momios en una enorme cantidad de partidos, incluidas ligas menores y mercados en vivo. Esta amplitud hace que Bet365 a menudo tenga momios distintos a los del resto del mercado."
       },
       {
         "type": "h2",
@@ -267,7 +267,7 @@
       },
       {
         "type": "tip",
-        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Bet365. Así alargas la vida útil de tu cuenta."
+        "text": "Reparte tus apuestas entre varias casas de apuestas con permiso de SEGOB, como Caliente, Codere, Betway o Betcris, para no usar solo Bet365. Así alargas la vida útil de tu cuenta."
       }
     ],
     "faq": [
@@ -277,37 +277,37 @@
       },
       {
         "q": "¿Bet365 opera con licencia de juego?",
-        "a": "Sí. Bet365 cuenta con licencias en varios mercados regulados del mundo. Consulta las reglas fiscales que te apliquen, ya que el tratamiento de las ganancias varía según la jurisdicción."
+        "a": "Sí. Bet365 cuenta con licencias en varios mercados regulados del mundo y, en México, opera con un permiso de la Secretaría de Gobernación (SEGOB), a través de la Dirección General de Juegos y Sorteos. Las casas de apuestas retienen el ISR sobre las ganancias, así que consulta las reglas fiscales vigentes que te apliquen. Si sientes que el juego se te sale de control, puedes acudir a Centros de Integración Juvenil o usar las herramientas de autoexclusión de la casa de apuestas."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebets en Unibet",
-    "metaTitle": "Apuestas seguras en Unibet: encuentra oportunidades de arbitraje deportivo",
-    "description": "Encuentra apuestas seguras en Unibet en tiempo real. BetTrackerAI compara los momios de Unibet con los de otras casas de apuestas para que asegures una ganancia garantizada con el arbitraje deportivo.",
-    "keyword": "apuestas seguras unibet",
-    "intro": "Unibet es una de las casas de apuestas más populares del mundo. Unibet usa la plataforma de momios Kambi, por lo que sus momios suelen parecerse a los de otras casas de apuestas que también funcionan con Kambi.",
+    "title": "Surebets en bet365",
+    "metaTitle": "Apuestas seguras en bet365: encuentra oportunidades de arbitraje deportivo",
+    "description": "Encuentra apuestas seguras en bet365 en tiempo real. BetTrackerAI compara los momios de bet365 con los de otras casas de apuestas con permiso de SEGOB para que asegures una ganancia garantizada con el arbitraje deportivo.",
+    "keyword": "apuestas seguras bet365",
+    "intro": "bet365 es una de las casas de apuestas más populares del mundo. bet365 usa su propia plataforma de momios, por lo que sus momios suelen ser independientes de los de otras casas de apuestas y abren más oportunidades de arbitraje.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Acerca de Unibet"
+        "text": "Acerca de bet365"
       },
       {
         "type": "p",
-        "text": "Unibet cuenta con licencias en varios mercados regulados y ofrece una amplia gama de deportes. Como Unibet comparte su plataforma de momios con otras casas de apuestas, las apuestas seguras aparecen sobre todo entre Unibet y casas de apuestas que usan plataformas distintas."
+        "text": "bet365 cuenta con licencias en varios mercados regulados, opera en México con permiso de la Secretaría de Gobernación (SEGOB) y ofrece una amplia gama de deportes. Como bet365 usa su propia plataforma de momios, las apuestas seguras pueden aparecer frente a muchas otras casas de apuestas con permiso de SEGOB, como Caliente, Codere o Betway."
       },
       {
         "type": "h2",
-        "text": "Cómo encontrar apuestas seguras con Unibet"
+        "text": "Cómo encontrar apuestas seguras con bet365"
       },
       {
         "type": "p",
-        "text": "Una apuesta segura con Unibet se da cuando Unibet ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados opuestos. BetTrackerAI monitorea los momios de Unibet de forma continua y los compara con el resto del mercado."
+        "text": "Una apuesta segura con bet365 se da cuando bet365 ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados opuestos. BetTrackerAI monitorea los momios de bet365 de forma continua y los compara con el resto del mercado."
       },
       {
         "type": "ul",
         "items": [
-          "Selecciona Unibet y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Selecciona bet365 y tus otras casas de apuestas con el filtro de la página de surebets.",
           "Ordena por ganancia y elige una apuesta segura con momios estables.",
           "Usa la calculadora para dividir tu monto de apuesta y redondear las cantidades.",
           "Haz primero tu apuesta en la casa de apuestas con los momios más volátiles."
@@ -315,47 +315,47 @@
       },
       {
         "type": "tip",
-        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Unibet. Así alargarás la vida útil de tu cuenta y evitarás límites."
+        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo bet365. Así alargarás la vida útil de tu cuenta y evitarás límites."
       }
     ],
     "faq": [
       {
-        "q": "¿Es legal hacer apuestas seguras en Unibet?",
-        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Unibet puede limitar o restringir cuentas conforme a sus términos y condiciones si solo se hacen apuestas con ganancia garantizada."
+        "q": "¿Es legal hacer apuestas seguras en bet365?",
+        "a": "Sí, el arbitraje deportivo es legal, siempre que apuestes en casas de apuestas con permiso de SEGOB. Sin embargo, como todas las casas de apuestas, bet365 puede limitar o restringir cuentas conforme a sus términos y condiciones si solo se hacen apuestas con ganancia garantizada. Además, revisa las reglas vigentes sobre la retención de ISR en tus ganancias."
       },
       {
-        "q": "¿Qué casas de apuestas se parecen a Unibet?",
-        "a": "Unibet usa Kambi, que también provee momios a varias otras casas de apuestas. Por eso, combina Unibet con casas de apuestas que usen plataformas distintas para encontrar más apuestas seguras."
+        "q": "¿Qué casas de apuestas se parecen a bet365?",
+        "a": "bet365 usa su propia plataforma de momios, por lo que sus momios no dependen de los de otras casas de apuestas. Combina bet365 con otras casas de apuestas con permiso de SEGOB, como Caliente, Codere, Strendus, Betway, Playdoit, Betcris o Winpot, para encontrar más apuestas seguras."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Surebets en Betano",
-    "metaTitle": "Surebets en Betano: encuentra apuestas de arbitraje en Betano",
-    "description": "Encuentra surebets en Betano en tiempo real. BetTrackerAI compara los momios de Betano con los de otras casas de apuestas con licencia y te muestra dónde puedes asegurar una ganancia garantizada.",
-    "keyword": "surebets betano",
-    "intro": "Betano es una de las casas de apuestas más nuevas del mercado regulado y usa su propia plataforma para fijar los momios. Por eso, los momios de Betano suelen diferir de los del resto del mercado, lo que genera oportunidades de arbitraje deportivo.",
+    "title": "Surebets en Strendus",
+    "metaTitle": "Surebets en Strendus: encuentra apuestas de arbitraje en Strendus",
+    "description": "Encuentra surebets en Strendus en tiempo real. BetTrackerAI compara los momios de Strendus con los de otras casas de apuestas con permiso de SEGOB, como Caliente, Codere y Betcris, y te muestra dónde puedes asegurar una ganancia garantizada.",
+    "keyword": "surebets strendus",
+    "intro": "Strendus es una de las casas de apuestas más nuevas del mercado regulado de México y usa su propia plataforma para fijar los momios. Por eso, los momios de Strendus suelen diferir de los del resto del mercado, lo que genera oportunidades de arbitraje deportivo.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Sobre Betano"
+        "text": "Sobre Strendus"
       },
       {
         "type": "p",
-        "text": "Betano cuenta con licencia en varias jurisdicciones y ofrece una amplia variedad de deportes. Como establece sus momios de forma independiente, con frecuencia aparece en surebets al compararla con casas de apuestas más consolidadas."
+        "text": "Strendus opera en México con permiso de la Secretaría de Gobernación (SEGOB) y ofrece una amplia variedad de deportes. Como establece sus momios de forma independiente, con frecuencia aparece en surebets al compararla con casas de apuestas más consolidadas como Caliente, Codere o bet365."
       },
       {
         "type": "h2",
-        "text": "Cómo encontrar surebets con Betano"
+        "text": "Cómo encontrar surebets con Strendus"
       },
       {
         "type": "p",
-        "text": "Una surebet con Betano surge cuando Betano ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de Betano de forma continua y los compara con los del resto del mercado."
+        "text": "Una surebet con Strendus surge cuando Strendus ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de Strendus de forma continua y los compara con los del resto del mercado."
       },
       {
         "type": "ul",
         "items": [
-          "Selecciona Betano y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Selecciona Strendus y tus otras casas de apuestas con el filtro de la página de surebets.",
           "Ordena por ganancia y elige una surebet con momios estables.",
           "Usa la calculadora para repartir tu apuesta y redondear los montos.",
           "Haz primero la apuesta en la casa de apuestas con los momios más volátiles."
@@ -363,47 +363,47 @@
       },
       {
         "type": "tip",
-        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Betano. Así tu cuenta durará más tiempo y evitarás restricciones."
+        "text": "Reparte tus apuestas entre varias casas de apuestas con permiso, como Caliente, Codere, Betway o Playdoit, para no usar solo Strendus. Así tu cuenta durará más tiempo y evitarás restricciones."
       }
     ],
     "faq": [
       {
-        "q": "¿Se permite hacer surebets en Betano?",
-        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Betano puede limitar cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que aseguran ganancias de forma constante."
+        "q": "¿Se permite hacer surebets en Strendus?",
+        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Strendus puede limitar cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que aseguran ganancias de forma constante."
       },
       {
-        "q": "¿Betano tiene licencia?",
-        "a": "Sí. Betano tiene licencia en varios mercados regulados. Consulta a la autoridad reguladora de juegos de azar de tu país para confirmar si Betano cuenta con licencia donde vives."
+        "q": "¿Strendus tiene licencia?",
+        "a": "Sí. Strendus opera en México con permiso de la Secretaría de Gobernación (SEGOB), a través de la Dirección General de Juegos y Sorteos. Solo las casas de apuestas con permiso de SEGOB pueden ofrecer apuestas en el país, así que confirma siempre que el permiso esté vigente en el sitio del operador. Además, los operadores retienen el ISR sobre las ganancias; consulta las reglas vigentes."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets en LeoVegas",
-    "metaTitle": "Surebets en LeoVegas – Encuentra oportunidades de arbitraje deportivo",
-    "description": "Encuentra surebets en LeoVegas en tiempo real. BetTrackerAI compara los momios de LeoVegas con los de otras casas de apuestas y te muestra dónde puedes asegurar una ganancia garantizada.",
-    "keyword": "surebets leovegas",
-    "intro": "LeoVegas es conocida por su oferta de casino, pero también ofrece una amplia selección de apuestas deportivas. La casa de apuestas usa la plataforma Kambi y aparece con regularidad en oportunidades de arbitraje deportivo.",
+    "title": "Surebets en Caliente",
+    "metaTitle": "Surebets en Caliente – Encuentra oportunidades de arbitraje deportivo",
+    "description": "Encuentra surebets en Caliente en tiempo real. BetTrackerAI compara los momios de Caliente con los de otras casas de apuestas con permiso de SEGOB y te muestra dónde puedes asegurar una ganancia garantizada.",
+    "keyword": "surebets caliente",
+    "intro": "Caliente es una de las casas de apuestas más conocidas de México y ofrece una amplia selección de apuestas deportivas. Opera con permiso de la Secretaría de Gobernación (SEGOB) y aparece con regularidad en oportunidades de arbitraje deportivo.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Sobre LeoVegas"
+        "text": "Sobre Caliente"
       },
       {
         "type": "p",
-        "text": "LeoVegas es una casa de apuestas con licencia y una app fácil de usar que permite apostar rápidamente. Esto es clave en las surebets, donde los momios pueden cambiar en cuestión de segundos. Antes de abrir una cuenta, verifica que LeoVegas tenga licencia y esté disponible en tu país."
+        "text": "Caliente es una casa de apuestas con permiso de SEGOB y una app fácil de usar que permite apostar rápidamente. Esto es clave en las surebets, donde los momios pueden cambiar en cuestión de segundos. Antes de abrir una cuenta, verifica que Caliente cuente con permiso vigente de SEGOB. Ten en cuenta que los operadores retienen el ISR sobre las ganancias, así que revisa las reglas fiscales vigentes."
       },
       {
         "type": "h2",
-        "text": "Cómo encontrar surebets con LeoVegas"
+        "text": "Cómo encontrar surebets con Caliente"
       },
       {
         "type": "p",
-        "text": "Una surebet con LeoVegas se da cuando LeoVegas ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de LeoVegas de forma continua y los compara con los de las casas de apuestas que operan en tu mercado."
+        "text": "Una surebet con Caliente se da cuando Caliente ofrece momios más altos en un resultado que los que otras casas de apuestas ofrecen en los resultados contrarios. BetTrackerAI monitorea los momios de Caliente de forma continua y los compara con los de casas de apuestas con permiso de SEGOB como Codere, Strendus, bet365, Betway, Playdoit, Betcris y Winpot."
       },
       {
         "type": "ul",
         "items": [
-          "Selecciona LeoVegas y tus otras casas de apuestas con el filtro de la página de surebets.",
+          "Selecciona Caliente y tus otras casas de apuestas con el filtro de la página de surebets.",
           "Ordena por ganancia y elige una surebet con momios estables.",
           "Usa la calculadora para dividir tu apuesta y redondear los montos.",
           "Haz primero la apuesta en la casa de apuestas con los momios más volátiles."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo LeoVegas. Así tu cuenta durará más tiempo y se reduce el riesgo de que te la limiten."
+        "text": "Reparte tus apuestas entre varias casas de apuestas para no usar solo Caliente. Así tu cuenta durará más tiempo y se reduce el riesgo de que te la limiten."
       }
     ],
     "faq": [
       {
-        "q": "¿Se pueden hacer surebets en LeoVegas?",
-        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, LeoVegas puede restringir cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que garantizan ganancias de forma constante."
+        "q": "¿Se pueden hacer surebets en Caliente?",
+        "a": "Sí, el arbitraje deportivo es legal. Sin embargo, como todas las casas de apuestas, Caliente puede restringir cuentas conforme a sus términos y condiciones si detecta patrones de apuestas que garantizan ganancias de forma constante."
       },
       {
-        "q": "¿LeoVegas es buena opción para surebets?",
-        "a": "LeoVegas es una buena casa de apuestas complementaria, sobre todo si la combinas con casas de apuestas que no usen la plataforma Kambi, ya que así aumentan las oportunidades de arbitraje disponibles."
+        "q": "¿Caliente es buena opción para surebets?",
+        "a": "Caliente es una buena casa de apuestas para combinar con otras casas con permiso de SEGOB, como Codere, Betcris o bet365, ya que así aumentan las oportunidades de arbitraje disponibles."
       }
     ]
   }

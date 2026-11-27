@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import {
   ArrowLeft,
   ArrowRight,
@@ -30,6 +30,8 @@ import { plans, type Plan } from '@/app/konto/plans'
 import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { LoginStep } from '@/app/konto/login-step'
 import { OnboardingStep } from '@/components/konto/onboarding-step'
+import { useLocale } from '@/components/locale-provider'
+import { localizedInternalHref } from '@/lib/localized-href'
 
 const STEPS = ['Dine oplysninger', 'Vælg abonnement', 'Betalingsoplysninger'] as const
 
@@ -53,11 +55,12 @@ type Props = {
 }
 
 export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitted, loginMode, setLoginMode, allowTestAccess, returnTo }: Props) {
+  const { locale } = useLocale()
   if (loginMode) {
     return (
       <div className="mx-auto w-full max-w-[520px] pt-6">
         <div className={cn(panel, 'p-8')}>
-          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(returnTo ?? '/')} />
+          <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(localizedInternalHref(locale, returnTo ?? '/'))} />
         </div>
       </div>
     )
@@ -76,6 +79,7 @@ export function DesktopFlow({ step, setStep, plan, setPlan, submitted, onSubmitt
 }
 
 function Stepper({ step }: { step: number }) {
+  const { tx } = useLocale();
   return (
     <ol className="mx-auto mb-10 mt-2 flex w-full max-w-[740px]" aria-label={`Trin ${step} af 3`}>
       {STEPS.map((label, index) => {
@@ -97,7 +101,7 @@ function Stepper({ step }: { step: number }) {
             >
               {done ? <Check className="size-6" aria-hidden="true" /> : number}
             </span>
-            <span className={cn('text-[15px]', current ? 'font-bold text-white' : 'text-[#c3cde2]', done && 'text-[#e6ecf7]')}>{label}</span>
+            <span className={cn('text-[15px]', current ? 'font-bold text-white' : 'text-[#c3cde2]', done && 'text-[#e6ecf7]')}>{tx(label)}</span>
           </li>
         )
       })}
@@ -106,31 +110,34 @@ function Stepper({ step }: { step: number }) {
 }
 
 function Title({ before, accent }: { before?: string; accent: string }) {
+  const { tx } = useLocale();
   return (
     <h1 className="text-balance text-center text-[54px] font-extrabold leading-[1.05] tracking-tight">
-      {before}
-      <span className="bg-[linear-gradient(90deg,#1593ff_0%,#4a7bff_55%,#7a45f0_100%)] bg-clip-text text-transparent">{accent}</span>
+      {tx(before)}
+      <span className="bg-[linear-gradient(90deg,#1593ff_0%,#4a7bff_55%,#7a45f0_100%)] bg-clip-text text-transparent">{tx(accent)}</span>
     </h1>
   )
 }
 
 function Field({ id, label, icon, children, className }: { id: string; label: string; icon: React.ReactNode; children: React.ReactNode; className?: string }) {
+  const { tx } = useLocale();
   return (
     <div className={className}>
       <label htmlFor={id} className="mb-2 block text-[15px] font-semibold text-white">
-        {label}
+        {tx(label)}
       </label>
       <div className={shell}>
         <span className="shrink-0 [&_svg]:size-6" aria-hidden="true">
-          {icon}
+          {tx(icon)}
         </span>
-        {children}
+        {tx(children)}
       </div>
     </div>
   )
 }
 
 function BackButton({ onClick, className }: { onClick: () => void; className?: string }) {
+  const { tx } = useLocale();
   return (
     <button
       type="button"
@@ -138,8 +145,7 @@ function BackButton({ onClick, className }: { onClick: () => void; className?: s
       className={cn('flex items-center justify-center gap-3 text-[18px] text-[#e6ecf7] transition-colors hover:text-white', className)}
     >
       <ArrowLeft className="size-6 text-primary" aria-hidden="true" />
-      Tilbage
-    </button>
+      {tx("Tilbage")}</button>
   )
 }
 
@@ -151,6 +157,7 @@ const BENEFITS = [
 ] as const
 
 function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => void }) {
+  const { tx } = useLocale();
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
@@ -183,17 +190,16 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
 
   return (
     <form onSubmit={submit}>
-      <Title before="Dine " accent="oplysninger" />
+      <Title before="Dine " accent={tx("oplysninger")} />
       <p className="mx-auto mt-4 max-w-[640px] text-center text-[19px] leading-snug text-[#e6ecf7]">
-        Opret din konto og få 7 dages gratis adgang til alle funktioner.
-      </p>
-      <p className="mt-1 text-center text-[16px] text-[#c3cde2]">Ingen binding. Ingen betalingsoplysninger nu.</p>
+        {tx("Opret din konto og få 7 dages gratis adgang til alle funktioner.")}</p>
+      <p className="mt-1 text-center text-[16px] text-[#c3cde2]">{tx("Ingen binding. Ingen betalingsoplysninger nu.")}</p>
 
       <div className={cn(panel, 'mt-8 grid grid-cols-2 gap-x-8 gap-y-5 p-6')}>
-        <Field id="signup-name" label="Fulde navn" icon={<UserRound />}>
-          <input id="signup-name" name="name" required autoComplete="name" placeholder="Fx. Fredreik Aslerin" className={input} />
+        <Field id="signup-name" label={tx("Fulde navn")} icon={<UserRound />}>
+          <input id="signup-name" name="name" required autoComplete="name" placeholder={tx("Fx. Fredreik Aslerin")} className={input} />
         </Field>
-        <Field id="signup-username" label="Brugernavn" icon={<AtSign />}>
+        <Field id="signup-username" label={tx("Brugernavn")} icon={<AtSign />}>
           <input
             id="signup-username"
             name="username"
@@ -201,21 +207,21 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
             minLength={3}
             maxLength={24}
             pattern="[A-Za-z0-9_.\-]+"
-            title="3-24 tegn: bogstaver, tal, punktum, bindestreg eller understreg"
+            title={tx("3-24 tegn: bogstaver, tal, punktum, bindestreg eller understreg")}
             autoComplete="username"
-            placeholder="Vælg et unikt brugernavn"
+            placeholder={tx("Vælg et unikt brugernavn")}
             className={input}
           />
         </Field>
-        <Field id="signup-email" label="E-mail" icon={<Mail />}>
-          <input id="signup-email" name="email" type="email" required autoComplete="email" placeholder="din@email.com" className={input} />
+        <Field id="signup-email" label={tx("E-mail")} icon={<Mail />}>
+          <input id="signup-email" name="email" type="email" required autoComplete="email" placeholder={tx("din@email.com")} className={input} />
         </Field>
-        <Field id="signup-phone" label="Telefonnummer (valgfrit)" icon={<Smartphone />}>
-          <Flag code="dk" label="Danmark" className="size-6" />
+        <Field id="signup-phone" label={tx("Telefonnummer (valgfrit)")} icon={<Smartphone />}>
+          <Flag code="dk" label={tx("Danmark")} className="size-6" />
           <span className="text-[16px] text-white">+45</span>
           <input id="signup-phone" name="phone" type="tel" inputMode="tel" autoComplete="tel-national" placeholder="12 34 56 78" className={input} />
         </Field>
-        <Field id="signup-password" label="Adgangskode" icon={<LockKeyhole />} className="col-span-2">
+        <Field id="signup-password" label={tx("Adgangskode")} icon={<LockKeyhole />} className="col-span-2">
           <input
             id="signup-password"
             name="password"
@@ -223,13 +229,13 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
             required
             minLength={6}
             autoComplete="new-password"
-            placeholder="Mindst 6 tegn"
+            placeholder={tx("Mindst 6 tegn")}
             className={input}
           />
           <button
             type="button"
             onClick={() => setShowPassword((value) => !value)}
-            aria-label={showPassword ? 'Skjul adgangskode' : 'Vis adgangskode'}
+            aria-label={showPassword ? tx('Skjul adgangskode') : tx('Vis adgangskode')}
             aria-pressed={showPassword}
             className="flex size-9 shrink-0 items-center justify-center rounded-lg text-[#c3cde2] hover:bg-[#102744]"
           >
@@ -245,8 +251,8 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
               <Icon className="size-7" fill={Icon === BarsIcon ? 'currentColor' : 'none'} aria-hidden="true" />
             </span>
             <span>
-              <span className="block text-[16px] font-semibold">{title}</span>
-              <span className="mt-1 block text-[14px] leading-snug text-[#c3cde2]">{text}</span>
+              <span className="block text-[16px] font-semibold">{tx(title)}</span>
+              <span className="mt-1 block text-[14px] leading-snug text-[#c3cde2]">{tx(text)}</span>
             </span>
           </li>
         ))}
@@ -255,21 +261,19 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
       <label className="mt-6 flex items-center gap-3 text-[16px] text-[#e6ecf7]">
         <input type="checkbox" name="terms" required defaultChecked className="size-6 shrink-0 rounded-md accent-[#1682ff]" />
         <span>
-          Jeg er mindst 18 år, og jeg accepterer{' '}
+          {tx("Jeg er mindst 18 år, og jeg accepterer")}{' '}
           <Link href="/" className="text-[#42aeff] underline">
-            vilkår
-          </Link>{' '}
-          og{' '}
+            {tx("vilkår")}</Link>{' '}
+          {tx("og")}{' '}
           <Link href="/" className="text-[#42aeff] underline">
-            privatlivspolitikt
-          </Link>
+            {tx("privatlivspolitikt")}</Link>
           .
         </span>
       </label>
 
       {error && (
         <p role="alert" className="mt-4 rounded-xl border border-[#5a2530] bg-[#2a1018] px-4 py-3 text-[15px] text-[#ff9aa6]">
-          {error}
+          {tx(error)}
         </p>
       )}
 
@@ -279,29 +283,28 @@ function DetailsStep({ onNext, onLogin }: { onNext: () => void; onLogin: () => v
           className="flex h-16 w-[183px] shrink-0 items-center justify-center gap-3 rounded-2xl border border-[#1d4c91] bg-[#071428] text-[18px] text-white transition-colors hover:bg-[#0b1d39]"
         >
           <ArrowLeft className="size-6 text-primary" aria-hidden="true" />
-          Tilbage
-        </Link>
+          {tx("Tilbage")}</Link>
         <button type="submit" disabled={busy} className={cn(primaryButton, 'flex-1')}>
-          {busy ? 'Opretter konto…' : 'Videre'}
+          {busy ? tx('Opretter konto…') : tx('Videre')}
           {!busy && <ArrowRight className="size-6" aria-hidden="true" />}
         </button>
       </div>
 
       <p className="mt-6 text-center text-[16px] text-[#c3cde2]">
-        Har du allerede en konto?{' '}
+        {tx("Har du allerede en konto?")}{' '}
         <button type="button" onClick={onLogin} className="text-[#42aeff] underline">
-          Log ind
-        </button>
+          {tx("Log ind")}</button>
       </p>
     </form>
   )
 }
 
 function PlanStep({ plan, setPlan, onBack, onNext, allowTestAccess, onTestAccess }: { plan: Plan; setPlan: (plan: Plan) => void; onBack: () => void; onNext: () => void; allowTestAccess: boolean; onTestAccess: () => void }) {
+  const { tx } = useLocale();
   return (
     <section>
-      <Title before="Vælg dit " accent="abonnement" />
-      <p className="mt-4 text-center text-[20px] text-[#e6ecf7]">Få 7 dage gratis. Opsig når som helst.</p>
+      <Title before="Vælg dit " accent={tx("abonnement")} />
+      <p className="mt-4 text-center text-[20px] text-[#e6ecf7]">{tx("Få 7 dage gratis. Opsig når som helst.")}</p>
 
       <div className="mt-10 grid grid-cols-2 gap-5">
         <PlanCard id="premium" selected={plan === 'premium'} onSelect={() => setPlan('premium')} popular />
@@ -309,16 +312,16 @@ function PlanStep({ plan, setPlan, onBack, onNext, allowTestAccess, onTestAccess
       </div>
 
       <ul className={cn(panel, 'mt-5 grid grid-cols-3 divide-x divide-[#183252] py-4')}>
-        <Assurance icon={<Minus className="size-7" />} title="Ingen binding" text="Opsig når som helst" />
-        <Assurance icon={<Check className="size-7" />} title="7 dage gratis prøve" text="Fuld adgang til alle funktioner" />
-        <Assurance icon={<CreditCard className="size-7" />} title="Sikker betaling via Stripe" text="Dine data er beskyttet" />
+        <Assurance icon={<Minus className="size-7" />} title={tx("Ingen binding")} text={tx("Opsig når som helst")} />
+        <Assurance icon={<Check className="size-7" />} title={tx("7 dage gratis prøve")} text={tx("Fuld adgang til alle funktioner")} />
+        <Assurance icon={<CreditCard className="size-7" />} title={tx("Sikker betaling via Stripe")} text={tx("Dine data er beskyttet")} />
       </ul>
 
       <button type="button" onClick={onNext} className={cn(primaryButton, 'mt-5 w-full')}>
-        Fortsæt med {plans[plan].name}
+        {tx("Fortsæt med")}{" "}{tx(plans[plan].name)}
         <ArrowRight className="size-6" aria-hidden="true" />
       </button>
-      {allowTestAccess && <button type="button" onClick={onTestAccess} className="mt-3 min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] px-4 text-sm font-semibold text-[#e6ecf7] hover:bg-[#102744]">Test uden kort — kun Preview</button>}
+      {allowTestAccess && <button type="button" onClick={onTestAccess} className="mt-3 min-h-12 w-full rounded-xl border border-[#344861] bg-[#0a1725] px-4 text-sm font-semibold text-[#e6ecf7] hover:bg-[#102744]">{tx("Test uden kort — kun Preview")}</button>}
       <BackButton onClick={onBack} className="mx-auto mt-6" />
     </section>
   )
@@ -330,6 +333,7 @@ const FEATURES = {
 } as const
 
 function PlanCard({ id, selected, onSelect, popular = false }: { id: Plan; selected: boolean; onSelect: () => void; popular?: boolean }) {
+  const { tx } = useLocale();
   const plan = plans[id]
   return (
     <button
@@ -345,8 +349,7 @@ function PlanCard({ id, selected, onSelect, popular = false }: { id: Plan; selec
     >
       {popular && (
         <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-[linear-gradient(100deg,#1682ff,#1a63f0)] px-5 py-1.5 text-[15px] font-bold text-white shadow-[0_6px_18px_-6px_var(--primary)]">
-          Mest populær
-        </span>
+          {tx("Mest populær")}</span>
       )}
       <span
         className={cn(
@@ -363,15 +366,15 @@ function PlanCard({ id, selected, onSelect, popular = false }: { id: Plan; selec
           {id === 'premium' ? <Crown className="size-8 fill-current" aria-hidden="true" /> : <span className="size-6 rotate-45 rounded-[4px] border-2 border-current" aria-hidden="true" />}
         </span>
         <span className="flex-1">
-          <span className="block text-[22px] font-extrabold uppercase tracking-wide">{plan.name}</span>
-          <span className="mt-1 block text-[16px] text-[#c3cde2]">{id === 'premium' ? 'Maksimal værdi' : 'Det enkle valg'}</span>
+          <span className="block text-[22px] font-extrabold uppercase tracking-wide">{tx(plan.name)}</span>
+          <span className="mt-1 block text-[16px] text-[#c3cde2]">{id === 'premium' ? tx('Maksimal værdi') : tx('Det enkle valg')}</span>
         </span>
         <span className="mt-8 text-right">
           <span className="block text-[38px] font-extrabold leading-none tabular-nums">
-            {plan.price}
-            <span className="ml-1.5 text-[16px] font-medium text-[#c3cde2]">kr./md.</span>
+            {tx(plan.price)}
+            <span className="ml-1.5 text-[16px] font-medium text-[#c3cde2]">{tx("kr./md.")}</span>
           </span>
-          <span className="mt-2 block text-[17px] font-bold text-[#ffd32a]">7 dage gratis</span>
+          <span className="mt-2 block text-[17px] font-bold text-[#ffd32a]">{tx("7 dage gratis")}</span>
         </span>
       </span>
 
@@ -379,7 +382,7 @@ function PlanCard({ id, selected, onSelect, popular = false }: { id: Plan; selec
         {FEATURES[id].map((feature) => (
           <li key={feature} className="flex items-center gap-3">
             <Check className="size-6 shrink-0 text-[#2fb8ff]" aria-hidden="true" />
-            {feature}
+            {tx(feature)}
           </li>
         ))}
       </ul>
@@ -388,28 +391,30 @@ function PlanCard({ id, selected, onSelect, popular = false }: { id: Plan; selec
 }
 
 function Assurance({ icon, title, text }: { icon: React.ReactNode; title: string; text: string }) {
+  const { tx } = useLocale();
   return (
     <li className="flex items-center gap-4 px-6">
       <span className="flex size-14 shrink-0 items-center justify-center rounded-full border-2 border-[#1b6fd1] bg-[#081c38] text-primary" aria-hidden="true">
-        {icon}
+        {tx(icon)}
       </span>
       <span>
-        <span className="block text-[17px] font-bold">{title}</span>
-        <span className="mt-0.5 block text-[15px] text-[#c3cde2]">{text}</span>
+        <span className="block text-[17px] font-bold">{tx(title)}</span>
+        <span className="mt-0.5 block text-[15px] text-[#c3cde2]">{tx(text)}</span>
       </span>
     </li>
   )
 }
 
 function CardBrands() {
+  const { tx } = useLocale();
   return (
     <span className="flex items-center gap-4" aria-hidden="true">
-      <span className="text-[22px] font-black italic tracking-tight text-white">VISA</span>
+      <span className="text-[22px] font-black italic tracking-tight text-white">{tx("VISA")}</span>
       <span className="relative flex h-7 w-11 items-center">
         <span className="absolute left-0 size-7 rounded-full bg-[#eb001b]" />
         <span className="absolute right-0 size-7 rounded-full bg-[#f79e1b] mix-blend-screen" />
       </span>
-      <span className="flex h-8 w-9 items-center justify-center rounded bg-[#1f8bd6] text-[9px] font-black text-white">AMEX</span>
+      <span className="flex h-8 w-9 items-center justify-center rounded bg-[#1f8bd6] text-[9px] font-black text-white">{tx("AMEX")}</span>
     </span>
   )
 }
@@ -425,13 +430,14 @@ function PaymentStep({
   onChangePlan: () => void
   onSubmit: () => void
 }) {
+  const { tx } = useLocale();
   const selected = plans[plan]
 
   return (
     <section>
-      <Title before="Betalings" accent="oplysninger" />
+      <Title before="Betalings" accent={tx("oplysninger")} />
       <p className="mx-auto mt-4 max-w-[640px] text-balance text-center text-[19px] leading-snug text-[#e6ecf7]">
-        Du betaler ikke i dag. Din 7 dages gratis prøve starter nu, og herefter {selected.price} kr./md. for {selected.name}.
+        {tx("Du betaler ikke i dag. Din 7 dages gratis prøve starter nu, og herefter")}{" "}{tx(selected.price)} {" "}{tx("kr./md. for")}{" "}{tx(selected.name)}.
       </p>
 
       <div className={cn(panel, 'mt-8 flex items-center py-5 pl-6 pr-8')}>
@@ -439,19 +445,18 @@ function PaymentStep({
           <Crown className="size-8 fill-current" aria-hidden="true" />
         </span>
         <div className="ml-5 flex-1">
-          <p className="text-[15px] text-[#c3cde2]">Valgt abonnement</p>
+          <p className="text-[15px] text-[#c3cde2]">{tx("Valgt abonnement")}</p>
           <p className="mt-0.5 flex items-center gap-4 text-[26px] font-extrabold">
-            {selected.name}
-            <span className="rounded-lg bg-[#0d3a36] px-3 py-1 text-[15px] font-semibold text-success">7 dage gratis</span>
+            {tx(selected.name)}
+            <span className="rounded-lg bg-[#0d3a36] px-3 py-1 text-[15px] font-semibold text-success">{tx("7 dage gratis")}</span>
           </p>
         </div>
         <div className="flex items-center gap-8 border-l border-[#183252] pl-8">
           <p className="text-[38px] font-extrabold tabular-nums">
-            {selected.price} <span className="text-[20px] font-medium text-[#e6ecf7]">kr./md.</span>
+            {tx(selected.price)} <span className="text-[20px] font-medium text-[#e6ecf7]">{tx("kr./md.")}</span>
           </p>
           <button type="button" onClick={onChangePlan} className="text-[16px] text-[#42aeff] underline">
-            Skift abonnement
-          </button>
+            {tx("Skift abonnement")}</button>
         </div>
       </div>
 
@@ -460,8 +465,7 @@ function PaymentStep({
       </div>
       <BackButton onClick={onBack} className="mx-auto mt-5" />
       <p className="mt-5 text-center text-[14px] text-[#c3cde2]">
-        Du betaler ikke i dag. Abonnementet starter automatisk efter 7 dage. Du kan opsige når som helst.
-      </p>
+        {tx("Du betaler ikke i dag. Abonnementet starter automatisk efter 7 dage. Du kan opsige når som helst.")}</p>
     </section>
   )
 }

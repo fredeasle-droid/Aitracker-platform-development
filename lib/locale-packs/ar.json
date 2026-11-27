@@ -1,5 +1,6 @@
 {
   "ready": true,
+  "indexed": true,
   "ui": {
     "login": "Iniciar sesión",
     "loggedIn": "Sesión iniciada",
@@ -696,11 +697,11 @@
       },
       {
         "q": "¿Cuánto cuesta BetTrackerAI Pro?",
-        "a": "499 DKK/mes con facturación mensual o 199 DKK/mes con facturación anual, un ahorro del 60%. Podés pagar con Visa, Mastercard, MobilePay o transferencia bancaria."
+        "a": "499 DKK/mes con facturación mensual o 199 DKK/mes con facturación anual, un ahorro del 60%. Podés pagar con Visa, Mastercard o transferencia bancaria."
       },
       {
         "q": "¿Qué casas de apuestas comparan?",
-        "a": "Comparamos cuotas de casas de apuestas danesas e internacionales, entre ellas Danske Spil, bet365, Unibet, LeoVegas, Betano y Pinnacle."
+        "a": "Comparamos cuotas de casas de apuestas con licencia en Argentina, entre ellas bplay, Codere, bet365, Betsson, Betano, BetWarrior y Jugadón. Recordá que las apuestas se habilitan por provincia, así que usá solo operadores autorizados en la tuya."
       },
       {
         "q": "¿Cómo me entero de las nuevas surebets?",
@@ -762,7 +763,6 @@
     "asiatisk-handicap": "handicap-asiatico-explicado",
     "bet-tracker": "registro-de-apuestas-automatico",
     "roi-betting": "roi-en-apuestas-deportivas",
-    "surebet-danmark-alternativ": "comparativa-herramientas-surebets",
     "betting-regnskab": "como-gestionar-tu-bankroll-apuestas",
     "tjen-penge-paa-odds-uden-risiko": "ganar-dinero-apuestas-sin-riesgo",
     "find-surebets-automatisk": "encontrar-surebets-automaticamente",

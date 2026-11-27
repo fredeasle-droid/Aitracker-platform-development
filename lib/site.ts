@@ -6,7 +6,6 @@ export const PUBLIC_PAGES: { path: string; priority: number; changeFrequency: 'h
   { path: '/surebets', priority: 0.9, changeFrequency: 'hourly' },
   { path: '/dagens-surebets', priority: 0.8, changeFrequency: 'hourly' },
   { path: '/om-os', priority: 0.5, changeFrequency: 'monthly' },
-  { path: '/beregn', priority: 0.8, changeFrequency: 'monthly' },
   { path: '/bonus', priority: 0.7, changeFrequency: 'weekly' },
   { path: '/guide', priority: 0.8, changeFrequency: 'weekly' },
   { path: '/faq', priority: 0.6, changeFrequency: 'monthly' },

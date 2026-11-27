@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowRight, Lock } from 'lucide-react'
 import { formatPct, surebetProfitPct } from '@/components/sb/data'
 import { FaqList, faqJsonLd } from '@/components/seo/guide-blocks'

@@ -100,13 +100,6 @@ function hostOf(url: string) {
   }
 }
 
-function guessDomain(name: string) {
-  const clean = name.trim().toLowerCase().replace(/\s+/g, '')
-  if (/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(clean)) return clean
-  const key = normalize(name)
-  return key.length >= 3 ? `${key}.com` : null
-}
-
 const faviconLogo = (domain: string | null) => (domain ? `/api/bookmaker-logo?domain=${encodeURIComponent(domain)}` : undefined)
 
 const SEED_KEYS_LONGEST_FIRST = Object.keys(SEEDS).sort((a, b) => b.length - a.length)
@@ -129,12 +122,9 @@ export function getBookmaker(name: string): BookmakerBrand {
   const seed = matchedKey ? SEEDS[matchedKey] : undefined
 
   if (!seed) {
-    const domain = guessDomain(name)
     return {
       name,
-      url: domain ? `https://${domain}` : '#',
-      logo: faviconLogo(domain),
-      favicon: Boolean(domain),
+      url: '#',
       bg: NAVY,
       fg: WHITE,
       mark: initials(name),

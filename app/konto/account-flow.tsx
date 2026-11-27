@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowLeft, ArrowRight, Check, CreditCard, Crown, LockKeyhole, ShieldCheck, Sparkles, UserRound, X } from 'lucide-react'
 import { LoginStep } from './login-step'
 import { authClient } from '@/lib/auth-client'
@@ -10,10 +10,11 @@ import { StripeCheckout } from '@/components/konto/stripe-checkout'
 import { OnboardingStep } from '@/components/konto/onboarding-step'
 import { plans, type Plan } from './plans'
 import { useLocale } from '@/components/locale-provider'
+import { localizedInternalHref } from '@/lib/localized-href'
 
 
 export function AccountFlow({ aside, startInLogin = false, allowTestAccess = false, returnTo }: { aside: React.ReactNode; startInLogin?: boolean; allowTestAccess?: boolean; returnTo?: string }) {
-  const { t } = useLocale()
+  const { t, locale } = useLocale()
   const [step, setStep] = useState(1)
   const [plan, setPlan] = useState<Plan>('premium')
   const [submitted, setSubmitted] = useState(false)
@@ -57,7 +58,7 @@ export function AccountFlow({ aside, startInLogin = false, allowTestAccess = fal
           ))}
         </div>
 
-        {submitted ? <OnboardingStep /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(returnTo ?? '/konto')} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} allowTestAccess={allowTestAccess} onTestAccess={() => setSubmitted(true)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
+        {submitted ? <OnboardingStep /> : step === 1 ? (loginMode ? <LoginStep onBack={() => setLoginMode(false)} onNext={() => window.location.assign(localizedInternalHref(locale, returnTo ?? '/konto'))} /> : <SignupStep onNext={() => setStep(2)} onLogin={() => setLoginMode(true)} />) : step === 2 ? <PlanStep plan={plan} setPlan={setPlan} onBack={() => setStep(1)} onNext={() => setStep(3)} allowTestAccess={allowTestAccess} onTestAccess={() => setSubmitted(true)} /> : <PaymentStep plan={plans[plan]} planId={plan} onBack={() => setStep(2)} onSubmit={() => setSubmitted(true)} />}
       </div>
     </main>
     </>

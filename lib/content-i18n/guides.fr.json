@@ -2,7 +2,7 @@
   "matched-betting": {
     "title": "Paris combinés : extraire des profits des bonus de bienvenue",
     "metaTitle": "Paris combinés – comment exploiter les bonus des bookmakers",
-    "description": "Paris combinés expliqués : comment utiliser les bonus de bienvenue et les paris gratuits chez des bookmakers agréés pour garantir un profit, et en quoi ils diffèrent des paris sûrs.",
+    "description": "Paris combinés expliqués : comment utiliser les bonus de bienvenue et les paris gratuits chez des bookmakers agréés par l'ANJ pour garantir un profit, et en quoi ils diffèrent des paris sûrs.",
     "keyword": "paris combinés",
     "intro": "Les paris combinés sont une technique permettant de convertir les bonus et paris gratuits des bookmakers en argent réel. En pariant pour et contre le même événement, vous couvrez tous les résultats possibles, peu importe l'issue – ce qui reste est un profit garanti grâce au bonus.",
     "blocks": [
@@ -12,7 +12,7 @@
       },
       {
         "type": "p",
-        "text": "Lorsque vous réclamez un pari gratuit ou un bonus, vous misez sur un résultat chez un bookmaker et vous couvrez (pariez contre) ce même résultat sur une bourse de paris ou en pariant sur le résultat opposé chez un autre bookmaker. Comme le pari gratuit n'engage pas votre propre argent, vous sécurisez la majeure partie de sa valeur faciale en profit, quel que soit le vainqueur."
+        "text": "Lorsque vous réclamez un pari gratuit ou un bonus, vous misez sur un résultat chez un bookmaker et vous couvrez (pariez contre) ce même résultat en pariant sur le résultat opposé chez un autre bookmaker agréé, par exemple Winamax, Betclic ou Unibet. Comme le pari gratuit n'engage pas votre propre argent, vous sécurisez la majeure partie de sa valeur faciale en profit, quel que soit le vainqueur."
       },
       {
         "type": "h2",
@@ -20,7 +20,7 @@
       },
       {
         "type": "p",
-        "text": "Les bonus de bienvenue sont soumis à des conditions différentes selon le bookmaker et le pays dans lequel vous pariez. Dans certains marchés réglementés, les montants des bonus et les exigences de mise peuvent être encadrés afin de protéger les consommateurs. Lisez toujours attentivement les conditions générales avant d'accepter une offre."
+        "text": "Les bonus de bienvenue sont soumis à des conditions différentes selon le bookmaker. En France, seuls les opérateurs agréés par l'Autorité nationale des jeux (ANJ) peuvent proposer des paris sportifs en ligne, et les offres promotionnelles peuvent être encadrées afin de protéger les consommateurs. Lisez toujours attentivement les conditions générales avant d'accepter une offre."
       },
       {
         "type": "ul",
@@ -46,18 +46,18 @@
       },
       {
         "q": "Quelle est la valeur habituelle des bonus de bienvenue ?",
-        "a": "Les montants des bonus et les exigences de mise varient selon le bookmaker et la réglementation en vigueur. Dans certains marchés régulés, les offres de bienvenue peuvent être plafonnées – par exemple à 1 000 € avec un roulement maximum de dix fois le montant du bonus. Vérifiez toujours les conditions actuelles auprès du bookmaker de votre choix et assurez-vous qu'il détient une licence valide dans votre pays."
+        "a": "Les montants des bonus et les exigences de mise varient selon le bookmaker et la réglementation en vigueur, et les offres de bienvenue peuvent être encadrées par l'ANJ. Vérifiez toujours les conditions actuelles auprès du bookmaker de votre choix et assurez-vous qu'il est agréé par l'ANJ pour proposer des paris sportifs en France."
       }
     ],
     "category": "Stratégie",
     "ctaLabel": "Voir les bonus actuels"
   },
   "er-surebets-lovligt": {
-    "title": "Les paris sûrs sont-ils légaux ? Règles et considérations fiscales",
-    "metaTitle": "Les paris sûrs sont-ils légaux ? Règles et fiscalité",
-    "description": "Les paris sûrs sont-ils légaux et faut-il payer des impôts sur les gains ? Voici les règles et ce que les bookmakers peuvent faire face à l'arbitrage sportif.",
+    "title": "Les paris sûrs sont-ils légaux en France ? Règles et considérations fiscales",
+    "metaTitle": "Les paris sûrs sont-ils légaux en France ? Règles et fiscalité",
+    "description": "Les paris sûrs sont-ils légaux en France et faut-il payer des impôts sur les gains ? Voici les règles encadrées par l'ANJ et ce que les bookmakers peuvent faire face à l'arbitrage sportif.",
     "keyword": "paris sûrs légaux",
-    "intro": "La réponse courte est oui. Les paris sûrs sont légaux dans la plupart des pays. Vous placez simplement des mises ordinaires auprès de bookmakers agréés et comparez les cotes pour trouver la meilleure valeur – rien dans cette démarche n'est illégal.",
+    "intro": "La réponse courte est oui. Les paris sûrs ne sont pas interdits en France. Vous placez simplement des mises ordinaires auprès de bookmakers agréés par l'Autorité nationale des jeux (ANJ), comme Winamax, Betclic ou Unibet, et comparez les cotes pour trouver la meilleure valeur – rien dans cette démarche n'est illégal.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Le traitement fiscal des gains de paris varie selon les pays. Dans de nombreux marchés réglementés, les gains issus d'opérateurs agréés par l'autorité nationale de régulation des jeux sont exonérés d'impôt pour le joueur. Si vous utilisez des opérateurs offshore ou non agréés, vos gains peuvent être imposables. Renseignez-vous sur la réglementation fiscale en vigueur dans votre pays, ou consultez votre administration fiscale locale si vous avez le moindre doute sur votre situation."
+        "text": "En France, seuls les opérateurs agréés par l'ANJ peuvent proposer des paris sportifs en ligne. Les taxes sont acquittées par les opérateurs, et les gains ne sont pas imposés pour les joueurs récréatifs. En revanche, les opérateurs non agréés n'ont pas le droit de proposer leurs services en France et n'offrent aucune protection : nous vous déconseillons d'y jouer. Les règles pouvant évoluer, vérifiez la réglementation en vigueur ou consultez l'administration fiscale si vous avez le moindre doute sur votre situation."
       },
       {
         "type": "tip",
-        "text": "Privilégiez les bookmakers agréés par votre autorité nationale de régulation. Cela offre généralement des avantages fiscaux ainsi qu'une protection du consommateur assurée par votre organisme de contrôle des jeux."
+        "text": "Privilégiez les bookmakers agréés par l'ANJ, tels que Winamax, Betclic, Unibet, Parions Sport en ligne (FDJ), PMU, ZEbet, bwin ou PokerStars Sports. Vous bénéficiez ainsi de la protection du consommateur assurée par l'autorité de régulation et d'un cadre de jeu contrôlé."
       },
       {
         "type": "h2",
@@ -85,21 +85,21 @@
       },
       {
         "type": "p",
-        "text": "Même avec les paris sûrs, il est essentiel de garder le contrôle sur votre pratique du jeu. Fixez des limites de dépôt et utilisez le dispositif d'auto-exclusion de votre pays si vous avez besoin d'une pause. Si vous avez besoin d'aide, contactez une ligne d'assistance reconnue dans votre région."
+        "text": "Même avec les paris sûrs, il est essentiel de garder le contrôle sur votre pratique du jeu. Fixez des limites de dépôt et, si vous avez besoin d'une pause, inscrivez-vous au registre national d'auto-exclusion de l'ANJ. Si vous avez besoin d'aide, contactez Joueurs Info Service au 09 74 75 13 13."
       }
     ],
     "faq": [
       {
         "q": "Un bookmaker peut-il refuser de payer les gains issus d'un pari sûr ?",
-        "a": "Un bookmaker est tenu de régler tout gain valide. Il peut annuler un pari en cas d'erreur manifeste dans les cotes, et il peut restreindre le compte par la suite."
+        "a": "Un bookmaker agréé est tenu de régler tout gain valide. Il peut annuler un pari en cas d'erreur manifeste dans les cotes, et il peut restreindre le compte par la suite."
       },
       {
         "q": "Dois-je payer des impôts sur les gains issus de paris sûrs ?",
-        "a": "Cela dépend de votre pays. Dans de nombreux marchés réglementés, les gains provenant d'opérateurs agréés sont exonérés d'impôt pour le joueur. Renseignez-vous sur la réglementation fiscale en vigueur là où vous vivez."
+        "a": "En France, les taxes sont payées par les opérateurs agréés par l'ANJ et les gains ne sont pas imposés pour les joueurs récréatifs. Les règles pouvant évoluer, vérifiez la réglementation en vigueur ou renseignez-vous auprès de l'administration fiscale si vous avez un doute."
       }
     ],
     "category": "Règles",
-    "ctaLabel": "Voir les paris sûrs chez les bookmakers agréés"
+    "ctaLabel": "Voir les paris sûrs chez les bookmakers agréés par l'ANJ"
   },
   "undgaa-begraensning": {
     "title": "Comment éviter les limites des bookmakers et garder vos comptes ouverts plus longtemps",
@@ -137,7 +137,7 @@
           "**Intégrez des paris classiques :** quelques petits paris ordinaires par semaine, idéalement sur de grands matchs.",
           "**Évitez les erreurs de cote extrêmes :** les paris sûrs au-dessus de 8 à 10 % attirent l'attention et sont souvent annulés de toute façon.",
           "**Ne réagissez pas instantanément :** parier dès qu'une cote bouge est un comportement typique de l'arbeur.",
-          "**Répartissez votre volume** sur plusieurs bookmakers plutôt que de concentrer tout sur un seul."
+          "**Répartissez votre volume** sur plusieurs bookmakers agréés par l'ANJ (par exemple Winamax, Betclic, Unibet, Parions Sport en ligne, PMU, ZEbet, bwin ou PokerStars Sports) plutôt que de concentrer tout sur un seul."
         ]
       },
       {
@@ -173,19 +173,19 @@
       },
       {
         "type": "p",
-        "text": "Un bon dispositif d'arbitrage combine deux types de bookmakers. Les bookmakers souples proposent les cotes mal évaluées, tandis que les bookmakers sharp ou les exchanges acceptent des mises importantes sans limiter les gagnants."
+        "text": "Un bon dispositif d'arbitrage combine deux types de bookmakers. Les bookmakers souples proposent les cotes mal évaluées, tandis que les bookmakers sharp acceptent des mises plus importantes sans limiter les gagnants. En France, seuls les opérateurs agréés par l'ANJ peuvent proposer des paris sportifs en ligne : ne sortez pas de ce cadre."
       },
       {
         "type": "ul",
         "items": [
           "**Bookmakers souples :** la principale source de paris sûrs, mais ils limitent rapidement. Utilisez-les avec précaution.",
-          "**Bookmakers sharp :** marges plus faibles et limites élevées. Idéaux pour la deuxième jambe.",
-          "**Exchanges de paris :** vous pariez contre d'autres utilisateurs, vous n'êtes donc pas limité pour avoir gagné. La commission réduit légèrement le profit."
+          "**Bookmakers sharp :** marges plus faibles et limites plus élevées. Idéaux pour la deuxième jambe, lorsqu'ils sont agréés en France.",
+          "**Exchanges de paris :** vous pariez contre d'autres utilisateurs, vous n'êtes donc pas limité pour avoir gagné, et la commission réduit légèrement le profit. Attention : ils ne font pas partie de l'offre des opérateurs agréés ANJ ; n'utilisez jamais de sites non agréés et vérifiez toujours l'agrément."
         ]
       },
       {
         "type": "p",
-        "text": "Consultez le panorama complet des [meilleurs bookmakers pour les paris sûrs](/fr/guides/meilleurs-bookmakers-surebets). Utilisez toujours des bookmakers agréés dans votre pays."
+        "text": "Consultez le panorama complet des [meilleurs bookmakers pour les paris sûrs](/fr/guides/meilleurs-bookmakers-surebets). Utilisez toujours des bookmakers agréés par l'ANJ."
       },
       {
         "type": "h2",
@@ -196,19 +196,19 @@
         "items": [
           "**Retirez votre solde** si le compte ne peut plus être utilisé pour les paris sûrs.",
           "**N'ouvrez pas de nouveau compte** sous le nom d'une autre personne. Cela enfreint les conditions générales et peut entraîner la confiscation de vos gains.",
-          "**Transférez votre volume** vers vos autres comptes et vers des bookmakers sharp ou des exchanges.",
+          "**Transférez votre volume** vers vos autres comptes et vers d'autres bookmakers agréés par l'ANJ, de préférence ceux qui limitent le moins.",
           "**Suivez par bookmaker :** un [suivi de paris](/fr/guides/suivi-paris-sportifs-automatique) vous indique quels comptes méritent d'être protégés."
         ]
       },
       {
         "type": "p",
-        "text": "Plus vous pouvez utiliser de bookmakers, moins chaque compte a besoin de volume. [BetTracker AI](/fr) trouve des paris sûrs auprès de nombreux bookmakers, afin que vous puissiez répartir vos mises et garder vos comptes ouverts plus longtemps."
+        "text": "Plus vous pouvez utiliser de bookmakers, moins chaque compte a besoin de volume. [BetTracker AI](/fr) trouve des paris sûrs auprès de nombreux bookmakers agréés, afin que vous puissiez répartir vos mises et garder vos comptes ouverts plus longtemps. Jouez avec modération : en cas de difficulté, vous pouvez vous inscrire au fichier national d'auto-interdiction de l'ANJ ou contacter Joueurs Info Service au 09 74 75 13 13."
       }
     ],
     "faq": [
       {
         "q": "Puis-je éviter complètement les limites des bookmakers ?",
-        "a": "Pas chez les bookmakers souples sur le long terme. Mais un comportement de pari naturel peut retarder les limites de plusieurs mois, et les bookmakers sharp ainsi que les exchanges limitent rarement leurs clients."
+        "a": "Pas chez les bookmakers souples sur le long terme. Mais un comportement de pari naturel peut retarder les limites de plusieurs mois, et les bookmakers sharp limitent plus rarement leurs clients."
       },
       {
         "q": "Est-il légal pour les bookmakers de me limiter ?",
@@ -216,7 +216,7 @@
       },
       {
         "q": "Combien de bookmakers devrais-je utiliser ?",
-        "a": "Entre cinq et dix, c'est un bon point de départ. Cela répartit votre volume et vous donne accès à davantage de paris sûrs."
+        "a": "Entre cinq et dix, c'est un bon point de départ, à condition qu'ils soient tous agréés par l'ANJ. Cela répartit votre volume et vous donne accès à davantage de paris sûrs."
       }
     ],
     "category": "Stratégie",
@@ -247,7 +247,7 @@
       },
       {
         "type": "example",
-        "title": "Exemple : deux issues, mise totale €1 500",
+        "title": "Exemple : deux issues, mise totale 1 500 €",
         "rows": [
           [
             "Cote A 2,10 et cote B 2,05",
@@ -255,19 +255,19 @@
           ],
           [
             "Mise sur A",
-            "€740,97"
+            "740,97 €"
           ],
           [
             "Mise sur B",
-            "€759,03"
+            "759,03 €"
           ],
           [
             "Gain dans les deux cas",
-            "environ €1 556,03"
+            "environ 1 556,03 €"
           ],
           [
             "Profit",
-            "environ €56,03 (3,7%)"
+            "environ 56,03 € (3,7%)"
           ]
         ]
       },
@@ -277,23 +277,23 @@
       },
       {
         "type": "p",
-        "text": "Sur les marchés 1N2 du football et du hockey sur glace, une troisième issue s'intègre dans la même formule. À la main, le calcul devient vite fastidieux, et c'est précisément là qu'un calculateur fait gagner le plus de temps."
+        "text": "Sur les marchés 1N2 du football et du rugby, une troisième issue s'intègre dans la même formule. À la main, le calcul devient vite fastidieux, et c'est précisément là qu'un calculateur fait gagner le plus de temps."
       },
       {
         "type": "example",
-        "title": "Exemple : 1N2, mise totale €1 000",
+        "title": "Exemple : 1N2, mise totale 1 000 €",
         "rows": [
           [
             "Victoire à domicile, cote 2,50",
-            "Mise €408,23"
+            "Mise 408,23 €"
           ],
           [
             "Match nul, cote 3,50",
-            "Mise €291,59"
+            "Mise 291,59 €"
           ],
           [
             "Victoire à l'extérieur, cote 3,40",
-            "Mise €300,17"
+            "Mise 300,17 €"
           ],
           [
             "Somme des cotes inverses",
@@ -301,7 +301,7 @@
           ],
           [
             "Profit",
-            "environ €20,58 (2,1%)"
+            "environ 20,58 € (2,1%)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "Des mises comme €740,97 peuvent paraître suspectes à un bookmaker. Arrondissez à l'euro ou à la dizaine d'euros près. Si vous arrondissez à €741 et €759, le profit reste d'environ €56, avec seulement quelques centimes d'écart entre les issues."
+        "text": "Des mises comme 740,97 € peuvent paraître suspectes à un bookmaker. Arrondissez à l'euro ou à la dizaine d'euros près. Si vous arrondissez à 741 € et 759 €, le profit reste d'environ 56 €, avec seulement quelques centimes d'écart entre les issues."
       },
       {
         "type": "p",
-        "text": "Vous pouvez également déséquilibrer vos mises intentionnellement. Si vous couvrez uniquement votre mise sur une issue, vous gagnez €0 sur celle-ci et davantage sur l'autre. Dans l'exemple ci-dessus, €768,29 sur A et €731,71 sur B génère un profit de €113,41 si A gagne et €0 si B gagne."
+        "text": "Vous pouvez également déséquilibrer vos mises intentionnellement. Si vous couvrez uniquement votre mise sur une issue, vous gagnez 0 € sur celle-ci et davantage sur l'autre. Dans l'exemple ci-dessus, 768,29 € sur A et 731,71 € sur B génère un profit de 113,41 € si A gagne et 0 € si B gagne."
       },
       {
         "type": "tip",
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Agréé par votre autorité nationale de régulation des jeux, afin d'être protégé et de pouvoir vérifier le traitement fiscal de vos gains.",
+          "Agréé par l'Autorité nationale des jeux (ANJ), afin d'être protégé et de jouer sur un site légal en France. Les taxes sont payées par les opérateurs et les gains des joueurs récréatifs ne sont pas imposés.",
           "Dépôts et retraits rapides, pour déplacer votre argent là où c'est nécessaire.",
           "Large choix de sports et de marchés, notamment le tennis, le football et le basketball.",
           "Cotes compétitives et faible marge du bookmaker sur les marchés populaires.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Commencez par cinq à huit bookmakers agréés répartis sur différentes plateformes. Cela vous offre un bon éventail d'opportunités sans avoir à gérer trop de soldes en même temps. Une fois la routine bien en place, vous pourrez en ajouter d'autres."
+        "text": "Commencez par cinq à huit bookmakers agréés par l'ANJ répartis sur différentes plateformes. Cela vous offre un bon éventail d'opportunités sans avoir à gérer trop de soldes en même temps. Une fois la routine bien en place, vous pourrez en ajouter d'autres."
       },
       {
         "type": "tip",
@@ -561,38 +561,38 @@
     "faq": [
       {
         "q": "Combien de bookmakers faut-il pour faire des paris sûrs ?",
-        "a": "Un bon point de départ est cinq à huit bookmakers régulés. Plus vous couvrez de plateformes de cotes différentes, plus vous aurez accès à des paris sûrs."
+        "a": "Un bon point de départ est cinq à huit bookmakers agréés par l'ANJ. Plus vous couvrez de plateformes de cotes différentes, plus vous aurez accès à des paris sûrs."
       },
       {
         "q": "Puis-je utiliser des bookmakers non agréés pour l'arbitrage ?",
-        "a": "Ce n'est pas recommandé. Les bookmakers sans agrément dans votre pays peuvent être bloqués, et les gains réalisés chez eux peuvent bénéficier d'un traitement différent ou ne pas être couverts par une protection réglementaire. Vérifiez toujours les règles applicables dans votre pays."
+        "a": "Non, c'est fortement déconseillé. En France, seuls les opérateurs agréés par l'ANJ peuvent proposer des paris sportifs en ligne : les sites sans agrément sont illégaux, peuvent être bloqués et n'offrent aucune protection réglementaire. Utilisez uniquement des bookmakers agréés et vérifiez toujours les règles en vigueur."
       }
     ],
     "category": "Stratégie",
     "ctaLabel": "Voir les paris sûrs chez vos bookmakers"
   },
   "skat-paa-spillegevinster": {
-    "title": "Impôt sur les gains de paris – guide international des paris sportifs",
-    "metaTitle": "Impôt sur les Gains de Paris – Ce Qu'il Faut Savoir",
-    "description": "Faut-il payer des impôts sur vos gains de paris et paris sûrs ? Découvrez comment fonctionnent les règles fiscales selon les bookmakers et ce qu'il faut documenter.",
+    "title": "Impôt sur les gains de paris en France – guide des paris sportifs",
+    "metaTitle": "Impôt sur les Gains de Paris en France – Ce Qu'il Faut Savoir",
+    "description": "Faut-il payer des impôts sur vos gains de paris et paris sûrs en France ? Découvrez comment fonctionnent les règles fiscales avec les opérateurs agréés par l'ANJ et ce qu'il faut documenter.",
     "keyword": "impôt sur les gains de paris",
-    "intro": "Dans de nombreux marchés réglementés, la réponse est simple : les gains issus de bookmakers agréés sont exonérés d'impôt pour le joueur. C'est le bookmaker qui s'acquitte des taxes auprès de l'État, pas vous. Mais les règles varient selon votre pays de résidence et le site sur lequel vous pariez.",
+    "intro": "En France, le marché est réglementé : seuls les opérateurs agréés par l'Autorité nationale des jeux (ANJ) peuvent proposer des paris sportifs en ligne. Les gains issus de ces opérateurs ne sont pas imposés pour le joueur occasionnel. C'est l'opérateur qui s'acquitte des taxes auprès de l'État, pas vous. Vérifiez toutefois toujours les règles en vigueur.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Bookmakers agréés : généralement exonérés d'impôt"
+        "text": "Opérateurs agréés par l'ANJ : gains non imposés pour les joueurs occasionnels"
       },
       {
         "type": "p",
-        "text": "Lorsque vous pariez auprès d'un opérateur titulaire d'une licence délivrée par l'autorité de régulation des jeux de votre pays, c'est généralement l'opérateur qui s'acquitte des taxes sur ses revenus. Vos gains sont donc en principe exonérés d'impôt, et dans la plupart des cas vous n'avez pas à les déclarer à l'administration fiscale. Vérifiez toujours les règles applicables dans votre pays."
+        "text": "Lorsque vous pariez auprès d'un opérateur agréé par l'ANJ, comme Winamax, Betclic, Unibet, Parions Sport en ligne (FDJ), PMU, ZEbet, bwin ou PokerStars Sports, c'est l'opérateur qui s'acquitte des taxes sur ses revenus. Vos gains ne sont donc pas imposés si vous pariez en tant que joueur occasionnel, et vous n'avez en principe pas à les déclarer comme revenus. Vérifiez toujours les règles en vigueur auprès de l'administration fiscale."
       },
       {
         "type": "h2",
-        "text": "Bookmakers offshore sans licence locale"
+        "text": "Sites sans agrément ANJ"
       },
       {
         "type": "p",
-        "text": "Si vous pariez auprès d'opérateurs ne disposant pas de licence dans votre pays, vos gains pourraient être imposables. Les règles dépendent de plusieurs facteurs, notamment du pays dans lequel l'opérateur est licencié et de votre propre résidence fiscale. C'est l'une des raisons pour lesquelles il est souvent plus simple de s'en tenir aux bookmakers réglementés."
+        "text": "En France, seuls les opérateurs agréés par l'ANJ sont autorisés à proposer des paris sportifs en ligne. Les sites sans agrément ANJ ne sont pas autorisés sur le marché français, et la situation fiscale de vos gains y est incertaine. Nous vous recommandons de ne parier qu'auprès d'opérateurs agréés : c'est plus simple, plus sûr et mieux encadré."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Oui. Sur le plan fiscal, un pari sûr n'est rien d'autre que deux ou trois paris ordinaires. Les gains issus de bookmakers agréés sont généralement exonérés d'impôt, que vous placiez des paris sûrs, des value bets ou des paris classiques. Les mêmes principes s'appliquent."
+        "text": "Oui. Sur le plan fiscal, un pari sûr n'est rien d'autre que deux ou trois paris ordinaires. Les gains issus d'opérateurs agréés par l'ANJ ne sont pas imposés pour les joueurs occasionnels, que vous placiez des paris sûrs, des value bets ou des paris classiques. Les mêmes principes s'appliquent."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Si les paris constituent votre activité principale à une échelle significative, des règles différentes peuvent s'appliquer dans certaines juridictions. En cas de doute sur votre situation personnelle, contactez votre administration fiscale locale ou un comptable qualifié."
+        "text": "Si les paris constituent votre activité principale à une échelle significative, des règles différentes peuvent s'appliquer. En cas de doute sur votre situation personnelle, contactez l'administration fiscale ou un comptable qualifié, et vérifiez les règles en vigueur."
       }
     ],
     "faq": [
       {
-        "q": "Dois-je payer des impôts sur mes gains issus de bookmakers agréés ?",
-        "a": "Dans la plupart des marchés réglementés, non. Les gains provenant d'opérateurs titulaires d'une licence locale sont généralement exonérés d'impôt pour le joueur. Vérifiez les règles fiscales applicables dans votre pays."
+        "q": "Dois-je payer des impôts sur mes gains issus d'opérateurs agréés par l'ANJ ?",
+        "a": "Non, pas en tant que joueur occasionnel. Les taxes sont payées par les opérateurs, et les gains issus d'opérateurs agréés par l'ANJ ne sont pas imposés pour le joueur occasionnel. Vérifiez les règles fiscales en vigueur pour votre situation."
       },
       {
-        "q": "Comment savoir si un bookmaker est agréé dans mon pays ?",
-        "a": "L'autorité de régulation des jeux de votre pays publie sur son site la liste des opérateurs autorisés, et les bookmakers agréés affichent généralement le logo du régulateur sur leur site."
+        "q": "Comment savoir si un bookmaker est agréé en France ?",
+        "a": "L'Autorité nationale des jeux (ANJ) publie sur son site la liste des opérateurs agréés, et les bookmakers agréés affichent généralement leur agrément ANJ sur leur site. Seuls ces opérateurs sont autorisés à proposer des paris sportifs en ligne en France."
       }
     ],
     "category": "Règles",
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Ouvrez des comptes** auprès d'au moins deux bookmakers agréés, idéalement davantage, et effectuez vos dépôts à l'avance.",
+          "**1. Ouvrez des comptes** auprès d'au moins deux bookmakers agréés par l'ANJ (Winamax, Betclic, Unibet, etc.), idéalement davantage, et effectuez vos dépôts à l'avance.",
           "**2. Trouvez un paris sûr** où la somme des cotes inverses est inférieure à 1,00.",
           "**3. Calculez les mises** de façon à obtenir un gain identique sur chaque issue.",
           "**4. Placez les deux paris rapidement,** en commençant par la cote la plus susceptible de bouger.",
@@ -900,7 +900,7 @@
     "faq": [
       {
         "q": "Les paris d'arbitrage sont-ils légaux ?",
-        "a": "Oui, miser sur chaque issue d'un événement n'est pas illégal dans la plupart des pays. Les bookmakers peuvent toutefois restreindre votre compte. Voir [les paris sûrs sont-ils légaux ?](/fr/guides/surebets-legal-france-fiscalite)"
+        "a": "Miser sur chaque issue d'un événement n'est pas interdit en soi, à condition de jouer uniquement chez des opérateurs agréés par l'ANJ (Winamax, Betclic, Unibet, etc.). Les bookmakers peuvent toutefois restreindre votre compte. Vérifiez les règles en vigueur. Voir [les paris sûrs sont-ils légaux ?](/fr/guides/surebets-legal-france-fiscalite)"
       },
       {
         "q": "Combien peut-on gagner avec les paris sûrs ?",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Votre mise doit être répartie de façon à ce que le gain soit identique quel que soit le vainqueur. Avec une mise totale de 1 000 unités dans l'exemple ci-dessus, vous placez environ 494 unités sur le joueur A et environ 506 unités sur le joueur B. Les deux résultats rapportent environ 1 037 unités, soit un profit d'environ 37 unités."
+        "text": "Votre mise doit être répartie de façon à ce que le gain soit identique quel que soit le vainqueur. Avec une mise totale de 1 000 € dans l'exemple ci-dessus, vous placez environ 494 € sur le joueur A et environ 506 € sur le joueur B. Les deux résultats rapportent environ 1 037 €, soit un profit d'environ 37 €."
       },
       {
         "type": "tip",
@@ -1005,7 +1005,7 @@
       },
       {
         "q": "Comment trouver des paris sûrs ?",
-        "a": "Vous pouvez comparer les cotes manuellement, mais c'est long et fastidieux. Un scanner de paris sûrs comme BetTrackerAI surveille les bookmakers actifs sur votre marché et affiche les opportunités dès qu'elles se présentent."
+        "a": "Vous pouvez comparer les cotes manuellement, mais c'est long et fastidieux. Un scanner de paris sûrs comme BetTrackerAI surveille les bookmakers agréés par l'ANJ actifs sur le marché français, comme Winamax, Betclic, Unibet ou Parions Sport en ligne, et affiche les opportunités dès qu'elles se présentent."
       }
     ],
     "category": "Fondamentaux",
@@ -1036,31 +1036,31 @@
       },
       {
         "type": "example",
-        "title": "Exemple : trois joueurs dans un tournoi, mise totale €1 000",
+        "title": "Exemple : trois joueurs dans un tournoi, mise totale 1 000 €",
         "rows": [
           [
-            "Joueur A, cote 3.00",
-            "mise environ €444"
+            "Joueur A, cote 3,00",
+            "mise environ 444 €"
           ],
           [
-            "Joueur B, cote 4.00",
-            "mise environ €333"
+            "Joueur B, cote 4,00",
+            "mise environ 333 €"
           ],
           [
-            "Joueur C, cote 6.00",
-            "mise environ €222"
+            "Joueur C, cote 6,00",
+            "mise environ 222 €"
           ],
           [
-            "S = 0.333 + 0.250 + 0.167",
-            "0.750"
+            "S = 0,333 + 0,250 + 0,167",
+            "0,750"
           ],
           [
             "Si l'un des trois gagne",
-            "gain environ €1 333, bénéfice environ €333"
+            "gain environ 1 333 €, bénéfice environ 333 €"
           ],
           [
             "Si aucun des trois ne gagne",
-            "perte de €1 000"
+            "perte de 1 000 €"
           ]
         ],
         "note": "Le bénéfice n'est réalisé que si l'un de vos trois joueurs remporte l'épreuve. C'est à vous d'évaluer la probabilité que cela se produise."
@@ -1074,12 +1074,12 @@
         "items": [
           "Lorsque vous estimez que quelques issues concentrent l'essentiel de la probabilité, par exemple les trois favoris d'un tournoi.",
           "Lorsque vous souhaitez diluer le risque plutôt que de miser sur une seule issue.",
-          "Lorsque vous pouvez obtenir de meilleures cotes chez plusieurs bookmakers et que vous souhaitez répartir votre mise entre eux."
+          "Lorsque vous pouvez obtenir de meilleures cotes chez plusieurs bookmakers agréés par l'ANJ et que vous souhaitez répartir votre mise entre eux."
         ]
       },
       {
         "type": "tip",
-        "text": "Le dutching ne remplace pas les paris sûrs. Si vous souhaitez un bénéfice garanti, vous devez couvrir toutes les issues chez différents bookmakers. La calculatrice vous montre la différence en un instant."
+        "text": "Le dutching ne remplace pas les paris sûrs. Si vous souhaitez un bénéfice garanti, vous devez couvrir toutes les issues chez différents bookmakers agréés par l'ANJ. La calculatrice vous montre la différence en un instant."
       }
     ],
     "faq": [
@@ -1189,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Exemple : trois bookmakers, mise totale €1 000",
+        "title": "Exemple : trois bookmakers, mise totale 1 000 €",
         "rows": [
           [
             "Victoire domicile chez le bookmaker 1, cote 2,40",
-            "mise environ €424"
+            "mise environ 424 €"
           ],
           [
             "Match nul chez le bookmaker 2, cote 3,80",
-            "mise environ €268"
+            "mise environ 268 €"
           ],
           [
             "Victoire extérieure chez le bookmaker 3, cote 3,30",
-            "mise environ €308"
+            "mise environ 308 €"
           ],
           [
             "1/2,40 + 1/3,80 + 1/3,30",
@@ -1209,11 +1209,11 @@
           ],
           [
             "Retour quelle que soit l'issue",
-            "environ €1 017"
+            "environ 1 017 €"
           ],
           [
             "Profit",
-            "environ €17 (1,7%)"
+            "environ 17 € (1,7%)"
           ]
         ],
         "note": "Le profit est plus faible qu'au tennis, et trois paris impliquent un risque plus élevé que les cotes évoluent pendant que vous les placez."
@@ -1251,7 +1251,7 @@
   },
   "bookmakerens-margin": {
     "title": "Marge des bookmakers : comprendre le vrai coût des cotes",
-    "metaTitle": "Marge bookmaker – calculer le surcote et trouver les meilleures cotes",
+    "metaTitle": "Marge bookmaker – calculer la surcote et trouver les meilleures cotes",
     "description": "Les bookmakers intègrent une marge dans leurs cotes pour assurer leur profit. Apprenez à la calculer et trouvez les bookmakers qui offrent les meilleures cotes.",
     "keyword": "marge bookmaker",
     "intro": "Lorsque vous additionnez les probabilités implicites d'un marché, le total dépasse 100 %. Cet excédent correspond à la marge du bookmaker, aussi appelée surcote. C'est le prix que vous payez pour parier.",
@@ -1301,11 +1301,11 @@
       },
       {
         "type": "p",
-        "text": "Un paris sûr apparaît lorsque les meilleures cotes issues de plusieurs bookmakers donnent ensemble un total inférieur à 1. La marge de chaque bookmaker est alors plus que compensée par leurs désaccords sur les prix. C'est précisément ce que recherche un scanner."
+        "text": "Un pari sûr apparaît lorsque les meilleures cotes issues de plusieurs bookmakers donnent ensemble un total inférieur à 1. La marge de chaque bookmaker est alors plus que compensée par leurs désaccords sur les prix. C'est précisément ce que recherche un scanner."
       },
       {
         "type": "tip",
-        "text": "Utilisez notre calculateur pour saisir vos cotes et voir le total immédiatement. S'il est inférieur à 1, vous avez un paris sûr."
+        "text": "Utilisez notre calculateur pour saisir vos cotes et voir le total immédiatement. S'il est inférieur à 1, vous avez un pari sûr."
       }
     ],
     "faq": [
@@ -1314,8 +1314,8 @@
         "a": "Plus elle est basse, mieux c'est. Sur les marchés football populaires, une marge de 3 à 6 % est habituelle ; les ligues mineures et les marchés spécialisés affichent souvent des marges plus élevées."
       },
       {
-        "q": "Qu'est-ce que le surcote ?",
-        "a": "Le surcote (ou overround) désigne la marge du bookmaker, c'est-à-dire le montant dont la somme des probabilités implicites dépasse 100 %."
+        "q": "Qu'est-ce que la surcote ?",
+        "a": "La surcote (ou overround) désigne la marge du bookmaker, c'est-à-dire le montant dont la somme des probabilités implicites dépasse 100 %."
       }
     ],
     "category": "Les bases",
@@ -1445,19 +1445,19 @@
           ],
           [
             "Chiffre d'affaires total (toutes sélections)",
-            "€24 000"
+            "24 000 €"
           ],
           [
             "Total récupéré",
-            "€24 720"
+            "24 720 €"
           ],
           [
             "Profit net",
-            "€720"
+            "720 €"
           ],
           [
             "ROI",
-            "€720 / €24 000 = 3,0 %"
+            "720 € / 24 000 € = 3,0 %"
           ]
         ],
         "note": "Sans suivi, vous ne voyez que votre solde évoluer. Avec le suivi, vous constatez que chaque tranche de 100 € misée vous rapporte 3 €."
@@ -1531,19 +1531,19 @@
         "rows": [
           [
             "Mise totale",
-            "€40,000"
+            "5 000 €"
           ],
           [
             "Gain total",
-            "€41,000"
+            "5 125 €"
           ],
           [
             "Profit",
-            "€1,000"
+            "125 €"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "125 / 5 000 × 100 = 2,5 %"
           ]
         ],
         "note": "Vous avez gagné 2,5 € pour chaque 100 € misés."
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Comment calculer le ROI sur mes paris sportifs ?",
-        "a": "Prenez votre profit, divisez-le par votre mise totale et multipliez par 100. Si vous avez misé €10,000 et gagné €300, votre ROI est de 3 %."
+        "a": "Prenez votre profit, divisez-le par votre mise totale et multipliez par 100. Si vous avez misé 2 000 € et gagné 60 €, votre ROI est de 3 %."
       },
       {
         "q": "Quelle est la différence entre le ROI et le profit ?",
@@ -1589,102 +1589,6 @@
     ],
     "category": "Stratégie",
     "ctaLabel": "Consultez votre ROI dans les comptes"
-  },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark : l'alternative plus abordable",
-    "metaTitle": "Alternative Surebet Danmark – BetTrackerAI Comparé (2025)",
-    "description": "Comparez BetTrackerAI et Surebet Danmark : tarifs, fonctionnalités, couverture des bookmakers et suivi des paris. Trouvez l'outil de paris sûrs qui vous convient.",
-    "keyword": "comparatif outils paris sûrs",
-    "intro": "Surebet Danmark et BetTrackerAI scannent tous les deux les paris sûrs (aussi appelés paris d'arbitrage) chez des bookmakers agréés. Les deux proposent un essai gratuit de 7 jours. Les différences essentielles portent sur les tarifs et sur les outils disponibles au-delà du scanner de paris sûrs lui-même.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "En un coup d'œil"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI et Surebet Danmark côte à côte",
-        "rows": [
-          [
-            "Prix par mois",
-            "BetTrackerAI à partir d'environ €20 · Surebet Danmark environ €134"
-          ],
-          [
-            "Essai gratuit",
-            "Les deux : 7 jours"
-          ],
-          [
-            "Bookmakers",
-            "Les deux : bookmakers agréés uniquement"
-          ],
-          [
-            "Notifications",
-            "BetTrackerAI : push et SMS (Premium) · Surebet Danmark : notifications en direct"
-          ],
-          [
-            "Suivi des paris",
-            "BetTrackerAI : suivi complet avec ROI et solde par bookmaker · Surebet Danmark : suivi des paris"
-          ],
-          [
-            "Outils gratuits et guides",
-            "BetTrackerAI : calculateur de paris sûrs et guides pédagogiques"
-          ]
-        ],
-        "note": "Tarifs vérifiés sur les deux sites le 23 novembre 2025, susceptibles d'évoluer."
-      },
-      {
-        "type": "h2",
-        "text": "Le prix : une différence significative"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark coûte environ €134 par mois. BetTrackerAI coûte environ €20 par mois en Basic (paris sûrs jusqu'à 5 % de profit) et environ €33 en Premium (tous les paris sûrs plus les alertes SMS). Avec le Premium, vous économisez environ €100 par mois, soit environ €1 200 par an."
-      },
-      {
-        "type": "p",
-        "text": "C'est un point important car les paris sûrs rapportent généralement 1 à 5 % par pari. Un abonnement mensuel moins élevé signifie que vous avez besoin d'un volume de mises bien moindre avant que l'abonnement soit rentabilisé."
-      },
-      {
-        "type": "h2",
-        "text": "Le suivi des paris : l'atout de BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "Les paris sûrs ne sont rentables que si vous savez exactement ce que vous avez gagné. Dans BetTrackerAI, vous enregistrez vos paris sûrs et vos dépôts, et vous visualisez votre profit, votre ROI et votre solde chez chaque bookmaker en un seul endroit. Vous pouvez également importer un ticket de pari plutôt que de le saisir manuellement."
-      },
-      {
-        "type": "h2",
-        "text": "Quel outil vous correspond ?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Choisissez BetTrackerAI si vous souhaitez accéder aux paris sûrs à moindre coût tout en suivant vos comptes en détail.",
-          "Choisissez Surebet Danmark si vous utilisez déjà leur plateforme et que le tarif vous convient.",
-          "Si vous hésitez, testez les deux. Les deux proposent un essai gratuit de 7 jours, ce qui vous permet de comparer les paris sûrs sur les mêmes événements."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Quel que soit l'outil choisi : misez toujours en premier sur la cote la plus volatile, et vérifiez que le marché est identique chez les deux bookmakers."
-      }
-    ],
-    "faq": [
-      {
-        "q": "BetTrackerAI est-il moins cher que Surebet Danmark ?",
-        "a": "Oui. BetTrackerAI coûte environ €20 ou environ €33 par mois, tandis que Surebet Danmark coûte environ €134 par mois (au 23 novembre 2025)."
-      },
-      {
-        "q": "Les deux outils utilisent-ils uniquement des bookmakers agréés ?",
-        "a": "Oui. Les deux plateformes se concentrent sur des bookmakers réglementés et agréés, ce qui vous garantit de parier légalement et de bénéficier des protections prévues pour les joueurs."
-      },
-      {
-        "q": "Puis-je essayer BetTrackerAI gratuitement ?",
-        "a": "Oui. Vous bénéficiez d'un essai gratuit de 7 jours avec un accès complet, et vous pouvez annuler à tout moment pendant la période d'essai."
-      }
-    ],
-    "category": "Fondamentaux",
-    "ctaLabel": "Essayez BetTrackerAI gratuitement pendant 7 jours"
   },
   "betting-regnskab": {
     "title": "Comptes de paris : comment suivre votre bankroll",
@@ -1720,19 +1624,19 @@
         "rows": [
           [
             "Total des dépôts",
-            "€10,000"
+            "10 000 €"
           ],
           [
             "Total retiré",
-            "€3,000"
+            "3 000 €"
           ],
           [
             "Solde chez les bookmakers actuellement",
-            "€7,800"
+            "7 800 €"
           ],
           [
             "Profit",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3 000 € + 7 800 € − 10 000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1660,7 @@
     "faq": [
       {
         "q": "Dois-je payer des impôts sur mes gains de paris ?",
-        "a": "Le traitement fiscal des gains de jeu varie selon les pays. Dans certains marchés réglementés, les gains réalisés auprès de bookmakers agréés peuvent être exonérés, tandis que dans d'autres cas une déclaration peut être nécessaire. Renseignez-vous auprès des autorités fiscales de votre pays ou consultez un conseiller local."
+        "a": "En France, les taxes sont payées par les opérateurs agréés par l'Autorité nationale des jeux (ANJ), et les gains des joueurs récréatifs ne sont pas imposés. Les règles pouvant évoluer ou différer selon votre situation, vérifiez les règles en vigueur auprès de l'administration fiscale ou d'un conseiller."
       },
       {
         "q": "À quelle fréquence dois-je mettre à jour mon bet tracker ?",
@@ -1773,7 +1677,7 @@
     "keyword": "gagner de l'argent sur les paris sportifs sans risque",
     "category": "Stratégie",
     "ctaLabel": "Voir les paris sûrs à profit garanti",
-    "intro": "Vous pouvez gagner de l'argent sur les paris sportifs sans risque en couvrant chaque issue d'un même événement chez différents bookmakers lorsque les cotes combinées rapportent plus que votre mise totale. C'est ce qu'on appelle l'arbitrage sportif, ou un paris sûr. Le profit est fixé avant le coup d'envoi, généralement entre 1 et 3 %. Le risque ne vient pas du résultat, mais des variations de cotes, des erreurs et des limites de compte.",
+    "intro": "Vous pouvez gagner de l'argent sur les paris sportifs sans risque en couvrant chaque issue d'un même événement chez différents bookmakers lorsque les cotes combinées rapportent plus que votre mise totale. C'est ce qu'on appelle l'arbitrage sportif, ou un pari sûr. Le profit est fixé avant le coup d'envoi, généralement entre 1 et 3 %. Le risque ne vient pas du résultat, mais des variations de cotes, des erreurs et des limites de compte.",
     "blocks": [
       {
         "type": "h2",
@@ -1850,14 +1754,14 @@
       },
       {
         "type": "p",
-        "text": "Le profit garanti par paris sûr est faible, c'est donc le volume et la discipline qui font la différence. Une stratégie d'arbitrage sportif réaliste ressemble à ceci :"
+        "text": "Le profit garanti par pari sûr est faible, c'est donc le volume et la discipline qui font la différence. Une stratégie d'arbitrage sportif réaliste ressemble à ceci :"
       },
       {
         "type": "example",
         "title": "Chiffres mensuels réalistes",
         "rows": [
           [
-            "Mise par paris sûr",
+            "Mise par pari sûr",
             "1 000 €"
           ],
           [
@@ -1873,7 +1777,7 @@
             "environ 600 €"
           ],
           [
-            "Même configuration à 2 500 € par paris sûr",
+            "Même configuration à 2 500 € par pari sûr",
             "environ 1 500 €"
           ]
         ]
@@ -1907,15 +1811,15 @@
     "faq": [
       {
         "q": "Peut-on vraiment gagner de l'argent sur les paris sportifs sans aucun risque ?",
-        "a": "Sur un paris sûr correctement placé, le résultat n'a aucune importance. Le risque restant est pratique : variation des cotes, paris annulés et choix du mauvais marché."
+        "a": "Sur un pari sûr correctement placé, le résultat n'a aucune importance. Le risque restant est pratique : variation des cotes, paris annulés et choix du mauvais marché."
       },
       {
         "q": "Quelle est la différence entre les paris sûrs et le hedging ?",
-        "a": "Un paris sûr couvre toutes les issues simultanément. Le hedging part d'un pari initial et couvre l'issue opposée plus tard, une fois que la cote a évolué en votre faveur."
+        "a": "Un pari sûr couvre toutes les issues simultanément. Le hedging part d'un pari initial et couvre l'issue opposée plus tard, une fois que la cote a évolué en votre faveur."
       },
       {
         "q": "De combien d'argent ai-je besoin pour commencer ?",
-        "a": "Vous pouvez démarrer avec 200 à 500 € répartis sur quelques bookmakers. Avec de petites mises, un paris sûr ne rapporte toutefois que quelques euros."
+        "a": "Vous pouvez démarrer avec 200 à 500 € répartis sur quelques bookmakers. Avec de petites mises, un pari sûr ne rapporte toutefois que quelques euros."
       }
     ]
   },
@@ -2389,7 +2293,7 @@
           "**Fréquence de mise à jour :** quelques secondes pour les paris en prématch, encore plus rapide pour les [paris sûrs en direct](/fr/guides/scanner-arbitrage-sportif-live).",
           "**Filtres :** sport, marché, bookmaker et profit minimum.",
           "**Suivi intégré :** les paris sûrs placés depuis le scanner doivent être enregistrés automatiquement.",
-          "**Tarif justifié :** comparez le coût mensuel avec votre volume de mises attendu. Voir la [comparaison des outils de paris sûrs](/fr/guides/comparatif-outils-surebets-alternative)."
+          "**Tarif justifié :** comparez le coût mensuel avec votre volume de mises attendu."
         ]
       },
       {

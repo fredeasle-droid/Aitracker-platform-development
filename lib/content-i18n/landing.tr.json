@@ -1,10 +1,10 @@
 {
   "sport/basketball": {
     "title": "Basketbolda surebet",
-    "metaTitle": "Basketbol surebet'leri – NBA ve Euroleague'de garantili kâr",
-    "description": "NBA, Euroleague ve Avrupa liglerinde basketbol surebet'lerini bulun. Sayı pazarları ve handikaplar, lisanslı bahis sitelerinde çok sayıda arbitraj fırsatı yaratır.",
+    "metaTitle": "Basketbol surebet'leri – NBA ve Euroleague arbitraj rehberi",
+    "description": "NBA ve Euroleague'de basketbol surebet'lerinin nasıl çalıştığını öğrenin. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğundan bayiler arası surebet mümkün değildir; yine de bahislerinizi takip edebilirsiniz.",
     "keyword": "basketbol surebet",
-    "intro": "Basketbol, toplam sayı ve handikap pazarlarında çok sayıda surebet sunar. NBA'de geniş bir bahis pazarı bulunur ve bahis siteleri oranlarını farklı hızlarda güncelleyerek arbitraj fırsatları doğurur.",
+    "intro": "Basketbol, toplam sayı ve handikap pazarlarıyla surebet mantığını anlamak için iyi bir örnektir. NBA'de geniş bir bahis pazarı bulunur ve oranlar farklı operatörlerde farklı hızlarda güncellenebilir. Ancak Türkiye'de Spor Toto Teşkilatı'nın iddaa sistemi geçerlidir: Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunar, bu yüzden lisanslı bayiler arasında surebet fırsatı oluşmaz. Yurt dışı siteler yasadışıdır ve engellenmiştir; bu siteleri önermiyoruz.",
     "blocks": [
       {
         "type": "h2",
@@ -25,30 +25,30 @@
       },
       {
         "type": "p",
-        "text": "Sayı pazarlarında iki bahis sitesi farklı barajlar sunabilir; örneğin biri 214.5 üst, diğeri 216.5 alt teklif eder. Maç tam 215 ya da 216 sayıyla biterse iki bahsi de kazanırsınız. Buna 'middle' denir ve basketbolda ek bir kâr fırsatı oluşturur."
+        "text": "Birbirinden bağımsız oran belirleyen iki operatör farklı barajlar sunabilir; örneğin biri 214.5 üst, diğeri 216.5 alt teklif eder. Maç tam 215 ya da 216 sayıyla biterse iki bahsi de kazanırsınız. Buna 'middle' denir. Türkiye'de lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını ve barajlarını sunduğundan bu durum bayiler arasında pratikte oluşmaz; bu bilgi yalnızca mantığı anlamanız içindir."
       },
       {
         "type": "tip",
-        "text": "Uzatmaların sayılıp sayılmadığını kontrol edin. Basketbolda neredeyse her zaman sayılır, ancak her bahis sitesinde her pazar için geçerli değildir."
+        "text": "Uzatmaların sayılıp sayılmadığını kontrol edin. Basketbolda neredeyse her zaman sayılır, ancak her pazar için geçerli olmayabilir; iddaa kuponunuzdaki pazar kurallarını mutlaka okuyun. Kazanç kuralları iddaa sistemi tarafından belirlenir, güncel kuralları kontrol edin."
       }
     ],
     "faq": [
       {
         "q": "Basketbol surebet'lerinde uzatmalar sayılır mı?",
-        "a": "Çoğu pazarda evet, ancak her bahis sitesinde ilgili pazarın kurallarını mutlaka kontrol edin. Uzatmaları hariç tutan bir pazar, arbitraj amacıyla uzatmaları dahil eden bir pazarla birleştirilemez."
+        "a": "Çoğu pazarda evet, ancak ilgili pazarın kurallarını mutlaka kontrol edin. Uzatmaları hariç tutan bir pazar, arbitraj amacıyla uzatmaları dahil eden bir pazarla birleştirilemez."
       },
       {
         "q": "NBA maçları genellikle saat kaçta oynanır?",
-        "a": "NBA maçları genellikle Kuzey Amerika'da akşam saatlerinde oynanır. Türkiye saatine göre pek çok surebet, maç başlamadan saatler önce ortaya çıkabilir; bu da arbitraj bahsinin iki tarafını da oynamanız için size zaman tanır."
+        "a": "NBA maçları genellikle Kuzey Amerika'da akşam saatlerinde oynanır; Türkiye saatine göre bu, çoğunlukla gece geç saatlere veya sabaha karşıya denk gelir. Oranlar maç başlamadan önce değişebilir, bu yüzden bahislerinizi ve oran hareketlerini BetTrackerAI ile takip edebilirsiniz. Lisanslı iddaa bayileri aynı oranları sunduğundan bayiler arasında surebet beklememelisiniz."
       }
     ]
   },
   "sport/ishockey": {
     "title": "Buz hokeyi surebet'leri",
-    "metaTitle": "Buz hokeyi surebet'leri – NHL ve diğer liglerde garanti kâr",
-    "description": "NHL, SHL ve diğer liglerden buz hokeyi surebet'leri. Normal süre ile kazanan marketleri arasındaki farkı öğrenin, garanti kâr fırsatlarını yakalayın.",
+    "metaTitle": "Buz hokeyi surebet'leri – NHL ve diğer liglerde market farkları",
+    "description": "NHL, SHL ve diğer liglerde buz hokeyi surebet mantığı. Normal süre ile kazanan marketleri arasındaki farkı öğrenin ve Türkiye'de iddaa sisteminin sınırlarını görün.",
     "keyword": "buz hokeyi surebet",
-    "intro": "Buz hokeyi, surebet için hhak ettiği değeri görmeyen bir spor. Birçok bahis sitesi İskandinav liglerini farklı oranlarla fiyatlıyor; normal süre ve kazanan marketleri arasındaki ayrım da arbitraj bahisleri için ek fırsatlar yaratıyor.",
+    "intro": "Buz hokeyi, surebet mantığını öğrenmek için değerli bir spor: normal süre ve kazanan marketleri arasındaki ayrım, oranları doğru karşılaştırmayı gerektirir. Türkiye'de ise tüm lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı iddaa oranlarını sunduğu için bu bayiler arasında surebet mümkün değildir.",
     "blocks": [
       {
         "type": "h2",
@@ -56,42 +56,42 @@
       },
       {
         "type": "p",
-        "text": "Buz hokeyinde yalnızca normal süreyi kapsayan bir 1X2 marketi ile uzatmalar ve penaltı atışları dahil bir kazanan marketi bulunur. Bu ikisi aynı surebet içinde asla karıştırılmamalıdır. Bahislerinizi yapmadan önce her bahis sitesinde hangi markete oynadığınızı mutlaka kontrol edin."
+        "text": "Buz hokeyinde yalnızca normal süreyi kapsayan bir 1X2 marketi ile uzatmalar ve penaltı atışları dahil bir kazanan marketi bulunur. Bu ikisi aynı surebet hesabında asla karıştırılmamalıdır. Bahislerinizi yapmadan önce oynadığınız marketin tam olarak hangisi olduğunu mutlaka kontrol edin."
       },
       {
         "type": "h2",
-        "text": "Buz hokeyi surebet'leri için iyi ligler"
+        "text": "Buz hokeyi oranlarını takip etmek için iyi ligler"
       },
       {
         "type": "ul",
         "items": [
-          "NHL: çok sayıda maç ve yüksek maksimum bahis limitleri.",
-          "SHL ve Liiga: İskandinav bölgesinde popüler ve bahis siteleri tarafından farklı fiyatlanıyor.",
-          "Yerel ligler: bahis sitelerinin oranlar konusunda sıklıkla ayrıştığı küçük ligler."
+          "NHL: çok sayıda maç ve geniş market çeşitliliği; iddaa programında hangi marketlerin sunulduğunu kontrol edin.",
+          "SHL ve Liiga: popüler İskandinav ligleri; iddaa programında yer alıp almadıklarını ve hangi marketlerin sunulduğunu kontrol edin.",
+          "Daha küçük ligler: Türkiye'deki lisanslı bayilerde oranlar aynı olduğundan bu liglerde de bayiler arasında fark beklenmemelidir."
         ]
       },
       {
         "type": "tip",
-        "text": "Buz hokeyi, surebet başına çoğunlukla yüksek kâr sunar; ancak maksimum bahis limitleri futbola göre daha düşüktür."
+        "text": "Buz hokeyi, oran farkının bulunabildiği piyasalarda çoğunlukla yüksek kâr sunar; ancak maksimum bahis limitleri futbola göre daha düşüktür. Türkiye'de lisanslı iddaa bayileri arasında bu fark oluşmaz; yasa dışı ve engellenmiş siteleri kullanmanızı önermiyoruz."
       }
     ],
     "faq": [
       {
         "q": "Buz hokeyi surebet'inde 1X2 ile uzatmalar dahil kazanan marketi birleştirilebilir mi?",
-        "a": "Hayır. Bunlar iki farklı markettir. Birleştirirseniz maç uzatmaya giderse iki bahsi de kaybedebilirsiniz. Arbitraj bahsinizin tüm ayaklarının aynı market türünde olduğundan her zaman emin olun."
+        "a": "Hayır. Bunlar iki farklı markettir. Birleştirirseniz maç uzatmaya giderse iki bahsi de kaybedebilirsiniz. Arbitraj hesabınızın tüm ayaklarının aynı market türünde olduğundan her zaman emin olun."
       },
       {
         "q": "Daha küçük buz hokeyi liglerinde surebet var mı?",
-        "a": "Evet. Bahis siteleri küçük yerel ligleri çoğu zaman farklı fiyatlar, bu yüzden arbitraj fırsatları düzenli olarak ortaya çıkar. Bahis yapmadan önce bahis sitelerinin ülkenizde faaliyet göstermeye yetkili olup olmadığını kontrol edin."
+        "a": "Türkiye'de hayır. İddaa sisteminde Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi tüm lisanslı bayiler aynı oranları sunduğu için bayiler arasında surebet oluşmaz. Yurt dışı siteler yasa dışıdır ve engellenmiştir; bunları kullanmanızı önermiyoruz. Güncel kuralları ve kazançlara ilişkin düzenlemeleri mutlaka kontrol edin."
       }
     ]
   },
   "sport/fodbold": {
     "title": "Futbolda surebet'ler",
-    "metaTitle": "Futbol surebet'leri – maçlarda garanti kâr bulun",
-    "description": "Futbolda surebet'leri gerçek zamanlı bulun. BetTrackerAI, lisanslı bahis sitelerinde Premier League, Şampiyonlar Ligi ve yüzlerce diğer ligdeki oranları tarar.",
+    "metaTitle": "Futbol surebet'leri – oran farklarını ve Türkiye'deki durumu öğrenin",
+    "description": "Futbolda surebet'in nasıl çalıştığını öğrenin. Türkiye'de Nesine, Bilyoner, Misli gibi lisanslı iddaa bayileri aynı oranları sunduğundan bayiler arasında surebet mümkün değildir; BetTrackerAI oranlarınızı ve bahislerinizi takip etmenize yardımcı olur.",
     "keyword": "futbol surebet",
-    "intro": "Futbol, diğer tüm sporlardan daha fazla surebet üretir. Maçlar günün her saatinde oynanır ve her karşılaşma, bahis sitelerinin farklı fiyatladığı yüzlerce market sunar.",
+    "intro": "Futbol, serbest bahis piyasalarında diğer tüm sporlardan daha fazla surebet üretir. Maçlar günün her saatinde oynanır ve her karşılaşma yüzlerce market sunar. Türkiye'de ise iddaa sistemi devlet denetimindedir; Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunduğu için lisanslı bayiler arasında surebet oluşmaz.",
     "blocks": [
       {
         "type": "h2",
@@ -99,7 +99,7 @@
       },
       {
         "type": "p",
-        "text": "Bahis siteleri her hafta Şampiyonlar Ligi'nden alt liglere kadar binlerce futbol maçına oran vermek zorundadır. Lig ne kadar küçükse bahis sitelerinin ona ayırdığı zaman o kadar azdır; bu da arbitraj fırsatları yaratan fiyat farklarının ortaya çıkma olasılığını artırır."
+        "text": "Serbest piyasalardaki bahis siteleri her hafta Şampiyonlar Ligi'nden alt liglere kadar binlerce futbol maçına oran vermek zorundadır. Lig ne kadar küçükse bahis sitelerinin ona ayırdığı zaman o kadar azdır; bu da arbitraj fırsatları yaratan fiyat farklarının ortaya çıkma olasılığını artırır. Türkiye'de oranlar iddaa sisteminde belirlenir ve lisanslı bayilerde aynıdır; bu nedenle bayiler arasında böyle bir fiyat farkı beklenmemelidir. Yurt dışındaki siteler Türkiye'de yasal değildir ve engellenmiştir; bunları kullanmanızı önermiyoruz."
       },
       {
         "type": "h2",
@@ -124,38 +124,38 @@
       },
       {
         "type": "p",
-        "text": "Birçok futbol surebet'i, takımların ilk 11'leri maçtan yaklaşık bir saat önce açıklandığında ortaya çıkar. Bazı bahis siteleri oranları hızla günceller, bazıları ise daha geç tepki verir; fiyat farkları da bu aralıkta oluşur."
+        "text": "Serbest piyasalarda birçok futbol surebet'i, takımların ilk 11'leri maçtan yaklaşık bir saat önce açıklandığında ortaya çıkar. Bazı bahis siteleri oranları hızla günceller, bazıları ise daha geç tepki verir; fiyat farkları da bu aralıkta oluşur. Türkiye'de iddaa oranları lisanslı bayilerde aynı olduğundan bu tür bir fark oluşmaz; yine de kadro açıklandıktan sonra oran değişimlerini takip edebilirsiniz."
       }
     ],
     "faq": [
       {
         "q": "Hangi futbol liglerinde en çok surebet bulunur?",
-        "a": "Küçük ligler çoğunlukla daha yüksek kâr yüzdeleri sunar; ancak Premier League ve Şampiyonlar Ligi gibi büyük liglerde daha fazla market ve daha yüksek maksimum bahis limitleri vardır."
+        "a": "Serbest piyasalarda küçük ligler çoğunlukla daha yüksek kâr yüzdeleri sunar; ancak Premier League ve Şampiyonlar Ligi gibi büyük liglerde daha fazla market ve daha yüksek maksimum bahis limitleri vardır. Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için lige bakılmaksızın bayiler arası surebet mümkün değildir."
       },
       {
         "q": "Canlı futbol maçlarında surebet oynanabilir mi?",
-        "a": "Evet, ancak canlı oranlar çok hızlı değişir. Bu yüzden iki bahsi de birkaç saniye içinde yapmanız gerekir."
+        "a": "Oranların bağımsız belirlendiği piyasalarda evet, ancak canlı oranlar çok hızlı değişir. Bu yüzden iki bahsi de birkaç saniye içinde yapmanız gerekir. Türkiye'de lisanslı bayiler aynı iddaa oranlarını sunduğundan bayiler arasında canlı surebet de bulunmaz. Kazançlarla ilgili güncel kuralları iddaa sistemi üzerinden kontrol edin."
       }
     ]
   },
   "sport/esport": {
     "title": "E-sporda surebet'ler",
-    "metaTitle": "E-spor surebet'leri – CS2, LoL ve Dota 2'de arbitraj bahisleri",
-    "description": "E-spor, surebet için en hızlı büyüyen pazarlardan biri. Lisanslı bahis sitelerinde CS2, League of Legends ve Dota 2 için arbitraj bahsi fırsatlarını bulun.",
+    "metaTitle": "E-spor surebet'leri – CS2, LoL ve Dota 2'de oran karşılaştırma ve arbitraj",
+    "description": "E-spor, surebet mantığının en çok konuşulduğu pazarlardan biri. Türkiye'de iddaa bayileri aynı oranları sunduğu için aralarında surebet mümkün değil; CS2, League of Legends ve Dota 2 için oran takibini ve bahis kaydını öğrenin.",
     "keyword": "e-spor surebet",
-    "intro": "E-sporda bahis siteleri arasında büyük oran farkları görülür. Pazar nispeten yeni, birçok bahis sitesinin bu alanda uzman sayısı az ve oranlar maç başlamadan önce çoğu zaman belirgin şekilde değişiyor.",
+    "intro": "E-sporda bahis siteleri arasında büyük oran farkları görülebilir. Pazar nispeten yeni, birçok bahis sitesinin bu alanda uzman sayısı az ve oranlar maç başlamadan önce çoğu zaman belirgin şekilde değişiyor. Türkiye'de ise bahis iddaa sistemiyle devlet kontrolünde yürür ve Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunar. Bu yüzden bu bayiler arasında surebet fırsatı oluşmaz.",
     "blocks": [
       {
         "type": "h2",
-        "text": "E-spor neden yüksek kâr sağlar?"
+        "text": "E-spor neden yurt dışında yüksek kâr marjı sağlar?"
       },
       {
         "type": "p",
-        "text": "Bahis siteleri e-spora futbola göre daha az kaynak ayırır ve takım kadrolarıyla ilgili haberler topluluk içinde hızla yayılır. Bu durum daha büyük oran farkları ve çoğunlukla surebet başına daha yüksek kâr yaratır."
+        "text": "Bahis siteleri e-spora futbola göre daha az kaynak ayırır ve takım kadrolarıyla ilgili haberler topluluk içinde hızla yayılır. Bu durum bazı pazarlarda daha büyük oran farkları yaratır. Türkiye'de lisanslı bayilerin oranları aynı olduğu için bu fark burada geçerli değildir; yurt dışı siteler ise yasa dışıdır ve engellidir, bu yüzden onları önermiyoruz."
       },
       {
         "type": "h2",
-        "text": "Arbitraj bahisleri için popüler oyunlar"
+        "text": "Oran takibi için popüler oyunlar"
       },
       {
         "type": "ul",
@@ -167,26 +167,26 @@
       },
       {
         "type": "tip",
-        "text": "Ertelenen maçlara dikkat edin. Bahis sitelerinin bir bahsin ne kadar süre geçerli kalacağına dair kuralları farklıdır."
+        "text": "Ertelenen maçlara dikkat edin. Bir bahsin ne kadar süre geçerli kalacağına dair kuralları iddaa kurallarından ve bayinizin güncel koşullarından kontrol edin."
       }
     ],
     "faq": [
       {
         "q": "E-spor surebet için uygun mu?",
-        "a": "Evet, kâr çoğunlukla geleneksel sporlara göre daha yüksektir. Ancak maksimum bahis limitleri genellikle daha düşüktür."
+        "a": "Türkiye'de değil. Lisanslı iddaa bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) aynı oranları sunduğu için aralarında surebet yapılamaz. Yasa dışı yurt dışı siteleri önermiyoruz. BetTrackerAI'yi oran takibi ve bahis kayıtlarınızı tutmak için kullanabilirsiniz."
       },
       {
         "q": "Hangi bahis siteleri e-spor sunuyor?",
-        "a": "Büyük lisanslı bahis sitelerinin çoğu, özellikle CS2 ve League of Legends olmak üzere e-spor sunar. Ülkenizdeki erişilebilirliği ve lisans durumunu kontrol edin."
+        "a": "Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur lisanslı iddaa bayileridir ve hepsi aynı iddaa programını sunar. E-spor marketlerinin kapsamı iddaa programına bağlıdır, bu yüzden güncel programı kontrol edin. Yurt dışı siteler yasa dışı ve engellidir. Bahis size zarar veriyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) başvurabilirsiniz."
       }
     ]
   },
   "sport/tennis": {
     "title": "Tenis'te Surebet'ler",
-    "metaTitle": "Tenis Surebet'leri – ATP, WTA ve Challenger'da Garanti Kâr",
-    "description": "Tenis surebet için ideal: yalnızca iki sonuç ve yıl boyunca süren maçlar. Dünya genelindeki ATP, WTA ve Challenger turnuvalarında tenis arbitraj fırsatlarını bulun.",
+    "metaTitle": "Tenis Surebet Rehberi – ATP, WTA ve Challenger'da Oran Takibi",
+    "description": "Tenis surebet mantığı için ideal: yalnızca iki sonuç ve yıl boyunca süren maçlar. Türkiye'de iddaa oranları lisanslı bayilerde aynı olduğundan surebet mümkün değildir; ATP, WTA ve Challenger maçlarını takip edin, bahislerinizi kaydedin.",
     "keyword": "tenis surebet",
-    "intro": "Tenis, birçok surebet yapan bahisçinin tercih ettiği spordur. Yalnızca iki sonuç vardır, beraberlik yoktur ve turnuvalar yılın neredeyse her günü oynanır.",
+    "intro": "Tenis, surebet mantığını anlamak için en uygun sporlardan biridir. Yalnızca iki sonuç vardır, beraberlik yoktur ve turnuvalar yılın neredeyse her günü oynanır. Ancak Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunar; bu nedenle bu bayiler arasında surebet mümkün değildir. Yurt dışı bahis siteleri yasa dışıdır ve engellenir, bu yüzden onları önermiyoruz.",
     "blocks": [
       {
         "type": "h2",
@@ -195,9 +195,9 @@
       {
         "type": "ul",
         "items": [
-          "Yalnızca iki sonuç olduğu için sadece iki bahis oynamanız yeterli.",
+          "Yalnızca iki sonuç olduğu için surebet hesabında sadece iki bahis düşünmeniz yeterli.",
           "Beraberlik olmadığı için hesaplama çok basit.",
-          "Bahis sitelerinin sık sık farklı oran verdiği Challenger ve ITF seviyesinde çok sayıda maç.",
+          "Challenger ve ITF seviyesinde çok sayıda maç var; iddaa programında hangi maçların yer aldığını takip etmek için geniş bir alan sunuyor.",
           "Farklı saat dilimlerindeki turnuvalar sayesinde günün her saati maç var."
         ]
       },
@@ -207,11 +207,11 @@
       },
       {
         "type": "p",
-        "text": "Tenisteki en büyük risk, bir oyuncunun maçtan çekilmesidir. Bahis sitelerinin kuralları farklıdır: bazıları bahsi iptal eder, bazıları ise ilk set tamamlanmışsa bahsi sonuçlandırır. İki bahis siteniz farklı kurallar uyguluyorsa, her iki bahsi de kaybedebilirsiniz."
+        "text": "Tenisteki en büyük risk, bir oyuncunun maçtan çekilmesidir. Bahislerin bu durumda nasıl sonuçlanacağı iddaa sisteminin kurallarına göre belirlenir; bazı durumlarda bahis iptal edilebilir, bazı durumlarda ise oynanan set sayısına göre sonuçlanabilir. Kuralları bilmeden oynarsanız beklemediğiniz bir sonuçla karşılaşabilirsiniz."
       },
       {
         "type": "tip",
-        "text": "İlk tenis surebet bahsinizi oynamadan önce, bahis sitelerinin yarıda kalan tenis maçlarına ilişkin kurallarını okuyun."
+        "text": "Tenis bahsi oynamadan önce, iddaa kurallarında yarıda kalan tenis maçlarına ilişkin güncel hükümleri okuyun."
       },
       {
         "type": "h2",
@@ -219,74 +219,74 @@
       },
       {
         "type": "p",
-        "text": "Maç kazananının yanı sıra toplam oyun sayısı, set handikapı ve tek tek set kazananları için de surebet fırsatları bulunur. Bu pazarlarda maksimum bahis limitleri genellikle daha düşüktür."
+        "text": "Maç kazananının yanı sıra toplam oyun sayısı, set handikapı ve tek tek set kazananları gibi pazarlar da iddaa programında yer alabilir. Ancak tüm lisanslı bayiler aynı oranları sunduğu için bu pazarlarda da bayiler arasında surebet oluşmaz. Hangi pazarların sunulduğunu bayinizin güncel programından kontrol edin."
       }
     ],
     "faq": [
       {
         "q": "Tenis surebet için uygun mu?",
-        "a": "Evet. Yalnızca iki sonucun olması ve çok sayıda maç bulunması, tenisi özellikle yeni başlayanlar için surebet açısından en iyi sporlardan biri yapıyor."
+        "a": "Teoride evet: yalnızca iki sonucun olması ve çok sayıda maç bulunması tenisi surebet mantığı için çok uygun kılıyor. Ancak Türkiye'de lisanslı iddaa bayileri aynı oranları sunduğu için bu bayiler arasında surebet mümkün değildir. Yurt dışı siteler yasa dışıdır ve engellenir; kullanmanızı önermiyoruz."
       },
       {
         "q": "Bir oyuncu maçtan çekilirse ne olur?",
-        "a": "Bahis sitesine göre değişir. Bazıları tüm bahisleri iptal eder, bazıları ise belirli sayıda set oynanmışsa bahisleri sonuçlandırır. Her iki bahis sitesinin kurallarını da kontrol edin."
+        "a": "Bu durum iddaa sisteminin kurallarına göre belirlenir. Bazı durumlarda bahisler iptal edilebilir, bazı durumlarda ise belirli sayıda set oynanmışsa sonuçlandırılabilir. Güncel kuralları Spor Toto Teşkilatı'nın (iddaa) ve bayinizin duyurularından kontrol edin."
       }
     ]
   },
   "bookmaker/bet365": {
-    "title": "Bet365'te Surebet",
-    "metaTitle": "Bet365 Surebet – Garanti Kâr Fırsatlarını Keşfedin",
-    "description": "Bet365'teki surebet fırsatlarını gerçek zamanlı bulun. BetTrackerAI, Bet365 oranlarını diğer bahis siteleriyle karşılaştırır ve garanti kârı nerede kilitleyebileceğinizi gösterir.",
-    "keyword": "bet365 surebet",
-    "intro": "Bet365, dünyanın en büyük bahis sitelerinden biridir ve en geniş spor ve bahis pazarı seçeneklerinden birini sunar. Bu nedenle Bet365, surebet fırsatlarında en sık yer alan bahis sitelerinden biridir.",
+    "title": "Nesine'de Surebet",
+    "metaTitle": "Nesine Surebet – iddaa Oranlarını Karşılaştırın",
+    "description": "Nesine iddaa oranlarını BetTrackerAI ile takip edin ve diğer lisanslı bayilerle karşılaştırın. Tüm bayiler aynı iddaa oranlarını sunduğu için surebet çıkmaz. BetTrackerAI bahislerinizi düzenli takip etmenize yardımcı olur.",
+    "keyword": "nesine surebet",
+    "intro": "Nesine, Türkiye'de Spor Toto Teşkilatı'nın (iddaa) yetkilendirdiği lisanslı bayilerden biridir. Türkiye'de bahis iddaa sistemi altında yürütülür ve tüm lisanslı bayiler aynı oranları sunar. Bu nedenle Nesine ile Bilyoner, Misli, Oley, Birebin veya Tuttur arasında surebet fırsatı bulunmaz.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Bet365 Hakkında"
+        "text": "Nesine Hakkında"
       },
       {
         "type": "p",
-        "text": "Bet365, birçok yetki alanında lisanslı bir bahis sitesidir ve alt ligler ile canlı bahis pazarları dahil çok sayıda maça oran sunar. Bu genişlik sayesinde Bet365'in oranları çoğu zaman piyasanın geri kalanından farklılık gösterir."
+        "text": "Nesine, Spor Toto Teşkilatı'nın (iddaa) lisansı kapsamında hizmet veren bir bayidir ve iddaa programındaki maçlara oran sunar. Oranlar iddaa sistemi tarafından belirlendiği için Bilyoner, Misli, Oley, Birebin ve Tuttur'da da aynıdır."
       },
       {
         "type": "h2",
-        "text": "Bet365 ile surebet nasıl bulunur?"
+        "text": "Nesine ile surebet neden bulunamaz?"
       },
       {
         "type": "p",
-        "text": "Bet365'te surebet, Bet365'in bir sonuca diğer bahis sitelerinin karşıt sonuçlara verdiğinden daha yüksek oran vermesiyle ortaya çıkar. BetTrackerAI, Bet365 oranlarını sürekli izler ve piyasanın geri kalanıyla karşılaştırır."
+        "text": "Surebet, bir bahis sitesinin bir sonuca diğerlerinin karşıt sonuçlara verdiğinden daha yüksek oran vermesiyle ortaya çıkar. Türkiye'de lisanslı bayilerin oranları aynı olduğu için bu durum oluşmaz. BetTrackerAI, Nesine oranlarını izler ve diğer lisanslı bayilerle karşılaştırır; böylece farkın olmadığını kendiniz görebilirsiniz. Yurt dışı siteler yasadışıdır ve engellenmiştir, bu yüzden onları önermiyoruz."
       },
       {
         "type": "ul",
         "items": [
-          "Surebet sayfasındaki filtreyi kullanarak Bet365'i ve diğer bahis sitelerinizi seçin.",
-          "Kâra göre sıralayın ve oranları istikrarlı olan bir surebet seçin.",
-          "Hesaplayıcıyı kullanarak bahis tutarınızı dağıtın ve miktarı yuvarlayın.",
-          "Önce oranları en çok değişen bahis sitesinde bahsinizi oynayın."
+          "Oran karşılaştırma sayfasındaki filtreyi kullanarak Nesine'yi ve Bilyoner, Misli gibi diğer lisanslı bayileri seçin.",
+          "Oranların aynı olup olmadığını kontrol edin; fark yoksa surebet yoktur.",
+          "Bahislerinizi ve bütçenizi ₺ cinsinden kaydederek BetTrackerAI ile takip edin.",
+          "Bahis oynamadan önce güncel iddaa kurallarını kontrol edin."
         ]
       },
       {
         "type": "tip",
-        "text": "Bahislerinizi birden fazla bahis sitesine yayın, böylece yalnızca Bet365'i kullanmamış olursunuz. Bu, hesabınızın ömrünü uzatır."
+        "text": "Bahislerinizi yalnızca lisanslı bayilerde oynayın ve kendinize bir bütçe sınırı koyun. Bahis oynamak kontrolünüzden çıkıyorsa Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
-        "q": "Bet365'te arbitraj bahsine izin veriliyor mu?",
-        "a": "Arbitraj bahsi yasaldır. Ancak tüm bahis siteleri gibi Bet365 de sürekli garanti kâr sağlayan bahis düzenlerini tespit ederse, kullanım koşulları uyarınca hesapları kısıtlayabilir."
+        "q": "Türkiye'de arbitraj bahsi mümkün mü?",
+        "a": "Türkiye'de bahis yalnızca Spor Toto Teşkilatı'nın (iddaa) yetkilendirdiği bayilerde yasaldır. Tüm lisanslı bayiler aynı oranları sunduğu için bayiler arasında surebet mümkün değildir. Yurt dışı siteler yasadışıdır ve engellenmiştir; bu sitelerin kullanılmasını önermiyoruz."
       },
       {
-        "q": "Bet365 bir bahis lisansıyla mı faaliyet gösteriyor?",
-        "a": "Evet. Bet365, dünya genelinde düzenlemeye tabi birçok pazarda lisansa sahiptir. Kazançların vergilendirilmesi yetki alanına göre değiştiği için bulunduğunuz yerdeki vergi kurallarını kontrol edin."
+        "q": "Nesine lisanslı bir bayi mi?",
+        "a": "Evet. Nesine, Spor Toto Teşkilatı'nın iddaa sistemi kapsamında hizmet veren lisanslı bir bayidir. Kazançlara ilişkin kurallar iddaa sistemi tarafından belirlendiği için güncel kuralları kontrol edin."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Unibet'te Surebet",
-    "metaTitle": "Unibet Surebet – Arbitraj Bahis Fırsatlarını Keşfedin",
-    "description": "Unibet'teki surebet fırsatlarını gerçek zamanlı bulun. BetTrackerAI, Unibet oranlarını diğer bahis siteleriyle karşılaştırır; böylece arbitraj bahsiyle garanti kârı kilitleyebilirsiniz.",
+    "title": "Unibet'te Surebet ve Türkiye",
+    "metaTitle": "Unibet Surebet – Türkiye'de Durum ve Arbitraj Gerçekleri",
+    "description": "Unibet surebet aramasının Türkiye'de neden mümkün olmadığını öğrenin. BetTrackerAI oranları karşılaştırır ve bahis takibi sunar; ancak iddaa sisteminde lisanslı bayilerin oranları aynıdır.",
     "keyword": "unibet surebet",
-    "intro": "Unibet, dünyanın en popüler bahis sitelerinden biridir. Unibet, Kambi oran platformunu kullanır; bu yüzden Unibet'in oranları çoğu zaman Kambi altyapılı diğer bahis sitelerinin oranlarına benzer.",
+    "intro": "Unibet, dünyanın en popüler bahis sitelerinden biridir ve Kambi oran platformunu kullanır. Ancak Unibet, Türkiye'de lisanslı değildir. Türkiye'de yasal spor bahsi yalnızca Spor Toto Teşkilatı'nın yönettiği iddaa sistemi üzerinden oynanır; yabancı siteler yasa dışıdır ve erişime engellidir. Bu sayfa, Unibet'i kullanmanızı önermez.",
     "blocks": [
       {
         "type": "h2",
@@ -294,134 +294,134 @@
       },
       {
         "type": "p",
-        "text": "Unibet, düzenlemeye tabi birçok pazarda lisansa sahiptir ve geniş bir spor yelpazesi sunar. Unibet oran platformunu başka birçok bahis sitesiyle paylaştığı için surebet fırsatları çoğunlukla Unibet ile farklı platformlardaki bahis siteleri arasında ortaya çıkar."
+        "text": "Unibet, bazı düzenlemeye tabi pazarlarda lisansa sahiptir ve geniş bir spor yelpazesi sunar. Türkiye bu pazarlar arasında değildir. Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayiler aynı iddaa oranlarını sunduğu için bu bayiler arasında surebet fırsatı oluşmaz."
       },
       {
         "type": "h2",
-        "text": "Unibet ile surebet nasıl bulunur?"
+        "text": "Türkiye'de surebet neden bulunamaz?"
       },
       {
         "type": "p",
-        "text": "Unibet'te surebet, Unibet'in bir sonuca diğer bahis sitelerinin karşıt sonuçlara verdiğinden daha yüksek oran vermesiyle oluşur. BetTrackerAI, Unibet oranlarını kesintisiz izler ve piyasanın geri kalanıyla karşılaştırır."
+        "text": "Surebet, bir bahis sitesinin bir sonuca diğerlerinin karşıt sonuçlara verdiğinden daha yüksek oran vermesiyle oluşur. İddaa sisteminde tüm lisanslı bayiler aynı oranları kullandığından bu fark ortaya çıkmaz. BetTrackerAI'yi Türkiye'de oran karşılaştırma ve bahis takibi için kullanabilirsiniz; ancak yasa dışı sitelere yönlendirmeyiz."
       },
       {
         "type": "ul",
         "items": [
-          "Surebet sayfasındaki filtreyi kullanarak Unibet'i ve diğer bahis sitelerinizi seçin.",
-          "Kâra göre sıralayın ve oranları istikrarlı olan bir surebet seçin.",
-          "Hesaplayıcıyı kullanarak bahis tutarınızı bölün ve miktarları yuvarlayın.",
-          "Önce oranları en çok değişen bahis sitesinde bahsinizi oynayın."
+          "Surebet sayfasındaki filtreyi kullanırken yalnızca Türkiye'de yasal olan lisanslı bayileri (Nesine, Bilyoner, Misli, Oley, Birebin, Tuttur) seçin.",
+          "Oranların aynı olduğunu görürseniz bunun surebet olmadığını unutmayın; kâra göre sıralama burada fark yaratmaz.",
+          "Hesaplayıcıyı yalnızca bahis tutarlarını planlamak ve yuvarlamak için kullanın; garanti kâr beklemeyin.",
+          "Bahislerinizi BetTrackerAI ile kaydedin ve sonuçlarınızı takip edin. Yabancı veya erişime engelli sitelerde asla bahis oynamayın."
         ]
       },
       {
         "type": "tip",
-        "text": "Bahislerinizi birden fazla bahis sitesine yayın, böylece yalnızca Unibet'i kullanmamış olursunuz. Bu, hesabınızın ömrünü uzatır ve limitlerden kaçınmanıza yardımcı olur."
+        "text": "Bahis yapmak sizin için kontrolden çıkmaya başladıysa destek almaktan çekinmeyin. Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz. Kazançlarla ilgili güncel kuralları iddaa sisteminden ve resmi kaynaklardan kontrol edin."
       }
     ],
     "faq": [
       {
-        "q": "Unibet'te surebet oynamak yasal mı?",
-        "a": "Evet, arbitraj bahsi yasaldır. Ancak tüm bahis siteleri gibi Unibet de yalnızca garanti kârlı bahis oynayan hesapları kullanım koşulları uyarınca sınırlayabilir veya kısıtlayabilir."
+        "q": "Türkiye'de Unibet'te surebet oynamak yasal mı?",
+        "a": "Hayır. Unibet Türkiye'de lisanslı değildir; yabancı bahis siteleri yasa dışıdır ve erişime engellidir. Türkiye'de yasal bahis yalnızca Spor Toto Teşkilatı'nın iddaa sistemi üzerinden, Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur gibi lisanslı bayilerle oynanır. Bu bayilerin oranları aynı olduğundan aralarında surebet mümkün değildir."
       },
       {
-        "q": "Unibet'e benzeyen bahis siteleri hangileri?",
-        "a": "Unibet, başka birçok bahis sitesine de oran sağlayan Kambi'yi kullanır. Bu nedenle daha fazla surebet bulmak için Unibet'i farklı platformlardaki bahis siteleriyle birlikte kullanın."
+        "q": "Türkiye'de Unibet'e alternatif olarak hangi bahis siteleri kullanılabilir?",
+        "a": "Türkiye'de yasal alternatifler iddaa lisanslı bayilerdir: Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur. Hepsi aynı iddaa oranlarını sunar; bu yüzden aralarında surebet bulunmaz. Güncel kuralları iddaa sisteminden kontrol edin ve yalnızca lisanslı bayileri kullanın."
       }
     ]
   },
   "bookmaker/betano": {
-    "title": "Betano'da Surebet",
-    "metaTitle": "Betano surebet – Betano'da arbitraj bahislerini bulun",
-    "description": "Betano'daki surebet fırsatlarını anlık olarak bulun. BetTrackerAI, Betano oranlarını diğer lisanslı bahis şirketlerinin oranlarıyla karşılaştırır ve garanti kâr elde edebileceğiniz yerleri gösterir.",
-    "keyword": "betano surebet",
-    "intro": "Betano, düzenlenmiş pazarın görece yeni bahis şirketlerinden biridir ve kendi oran belirleme platformunu kullanır. Bu nedenle Betano'nun oranları çoğu zaman piyasanın geri kalanından farklılaşır ve arbitraj bahis fırsatları ortaya çıkar.",
+    "title": "Nesine'de Surebet",
+    "metaTitle": "Nesine surebet – iddaa'da arbitraj bahis mümkün mü?",
+    "description": "Nesine'de surebet var mı? Lisanslı iddaa bayileri aynı oranları sunar. BetTrackerAI ile Nesine oranlarını karşılaştırın, bahislerinizi takip edin ve sınırları öğrenin.",
+    "keyword": "nesine surebet",
+    "intro": "Nesine, Spor Toto Teşkilatı'nın iddaa sisteminde yer alan lisanslı bayilerden biridir. Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunduğundan, lisanslı bayiler arasında surebet (arbitraj) fırsatı ortaya çıkmaz. Bu sayfada durumu dürüstçe anlatıyor ve BetTrackerAI'ın size nasıl yardımcı olabileceğini gösteriyoruz.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Betano hakkında"
+        "text": "Nesine hakkında"
       },
       {
         "type": "p",
-        "text": "Betano birden fazla ülkede lisansa sahiptir ve geniş bir spor yelpazesi sunar. Oranları bağımsız belirlediği için köklü bahis şirketleriyle karşılaştırıldığında sıklıkla surebet fırsatlarında yer alır."
+        "text": "Nesine, Spor Toto Teşkilatı (iddaa) sistemi kapsamında faaliyet gösteren lisanslı bir bayidir. Oranlar bayi tarafından bağımsız belirlenmez, iddaa sisteminden gelir. Bu yüzden Nesine'yi diğer lisanslı bayilerle karşılaştırdığınızda oranlar aynıdır. Yurt dışı bahis siteleri Türkiye'de yasadışıdır ve engellenmiştir; bu sitelerden surebet aramanızı önermiyoruz."
       },
       {
         "type": "h2",
-        "text": "Betano ile surebet nasıl bulunur?"
+        "text": "Nesine ile surebet gerçekçi mi?"
       },
       {
         "type": "p",
-        "text": "Betano ile surebet, Betano'nun bir sonuca diğer bahis şirketlerinin karşıt sonuçlara verdiğinden daha yüksek oran sunması durumunda ortaya çıkar. BetTrackerAI, Betano oranlarını sürekli izler ve piyasanın geri kalanıyla karşılaştırır."
+        "text": "Surebet, bir bahis şirketinin bir sonuca, diğerlerinin karşıt sonuçlara verdiğinden daha yüksek oran sunması durumunda ortaya çıkar. Tüm lisanslı iddaa bayileri aynı oranları kullandığı için Nesine ile diğer lisanslı bayiler arasında bu fark oluşmaz. BetTrackerAI'ı Nesine'de oranları izlemek, bahislerinizi kaydetmek ve sonuçlarınızı takip etmek için kullanabilirsiniz."
       },
       {
         "type": "ul",
         "items": [
-          "Surebet sayfasındaki filtreyi kullanarak Betano'yu ve diğer bahis şirketlerinizi seçin.",
-          "Kâra göre sıralayın ve oranları istikrarlı bir surebet seçin.",
-          "Hesaplayıcıyı kullanarak bahis tutarınızı bölün ve miktarları yuvarlayın.",
-          "Önce oranları en değişken olan bahis şirketinde bahsinizi yapın."
+          "Oran karşılaştırma sayfasında Nesine'yi ve diğer lisanslı bayileri seçin; oranların aynı olduğunu görebilirsiniz.",
+          "Oynadığınız bahisleri kaydedin ve kâr/zararınızı ₺ cinsinden takip edin.",
+          "Hesaplayıcıyı kullanarak bahis tutarınızı planlayın ve miktarları yuvarlayın.",
+          "Kazançlarla ilgili güncel kuralları iddaa sisteminden ve resmi kaynaklardan kontrol edin."
         ]
       },
       {
         "type": "tip",
-        "text": "Bahislerinizi birden fazla bahis şirketine yayın, yalnızca Betano'yu kullanmayın. Bu, hesabınızın ömrünü uzatır ve kısıtlamalarla karşılaşmanıza engel olur."
+        "text": "Bahis garanti bir gelir yolu değildir. Kendinize bir bütçe ve sınır belirleyin. Kontrolü kaybettiğinizi hissediyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM) 115'ten ulaşabilirsiniz."
       }
     ],
     "faq": [
       {
-        "q": "Betano'da surebet oynamak serbest mi?",
-        "a": "Evet, arbitraj bahis yasaldır. Ancak tüm bahis şirketlerinde olduğu gibi Betano da sürekli olarak garanti kâr sağlayan bahis davranışları tespit ederse, kullanım şartları uyarınca hesapları kısıtlayabilir."
+        "q": "Nesine'de surebet oynamak mümkün mü?",
+        "a": "Pratikte hayır. Nesine dahil tüm lisanslı iddaa bayileri aynı oranları sunduğundan aralarında surebet oluşmaz. Yurt dışı siteler Türkiye'de yasadışıdır ve engellenmiştir; bu siteleri kullanmanızı önermiyoruz."
       },
       {
-        "q": "Betano lisanslı mı?",
-        "a": "Evet. Betano, düzenlenmiş birden fazla pazarda lisanslıdır. Betano'nun bulunduğunuz yerde lisansa sahip olup olmadığını öğrenmek için ülkenizdeki kumar düzenleyici kurumu kontrol edin."
+        "q": "Nesine lisanslı mı?",
+        "a": "Evet. Nesine, Spor Toto Teşkilatı'nın iddaa sisteminde yer alan lisanslı bayilerden biridir. Güncel durumu ve geçerli kuralları Spor Toto Teşkilatı'nın resmi kaynaklarından kontrol edin."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "LeoVegas'ta Surebet",
-    "metaTitle": "LeoVegas Surebet – Arbitraj Bahis Fırsatlarını Bulun",
-    "description": "LeoVegas'taki surebet fırsatlarını anlık olarak bulun. BetTrackerAI, LeoVegas oranlarını diğer bahis şirketleriyle karşılaştırır ve garanti kâr elde edebileceğiniz yerleri gösterir.",
-    "keyword": "leovegas surebet",
-    "intro": "LeoVegas daha çok casino teklifiyle tanınır, ancak geniş bir spor bahisleri seçkisi de sunar. Bahis şirketi Kambi platformunu kullanır ve arbitraj bahis fırsatlarında düzenli olarak yer alır.",
+    "title": "Nesine'de Surebet",
+    "metaTitle": "Nesine Surebet – Arbitraj Bahis Gerçeği ve Oran Takibi",
+    "description": "Nesine'de surebet mümkün mü? BetTrackerAI ile Nesine iddaa oranlarını takip edin, oran değişimlerini izleyin ve bahislerinizi kayıt altında tutun.",
+    "keyword": "nesine surebet",
+    "intro": "Nesine, Spor Toto Teşkilatı'nın (iddaa) yetkilendirdiği lisanslı bayilerden biridir. Tüm lisanslı bayiler aynı iddaa oranlarını sunduğu için aralarında surebet mümkün değildir; ancak BetTrackerAI ile oranları takip edebilir ve bahislerinizi düzenli biçimde kayıt altında tutabilirsiniz.",
     "blocks": [
       {
         "type": "h2",
-        "text": "LeoVegas hakkında"
+        "text": "Nesine hakkında"
       },
       {
         "type": "p",
-        "text": "LeoVegas, hızlı bahis yapmayı sağlayan kullanıcı dostu bir uygulamaya sahip lisanslı bir bahis şirketidir. Oranların saniyeler içinde değişebildiği surebet'lerde bu büyük önem taşır. Hesap açmadan önce LeoVegas'ın lisanslı olduğunu ve ülkenizde hizmet verdiğini kontrol edin."
+        "text": "Nesine, hızlı bahis yapmayı sağlayan kullanıcı dostu bir uygulamaya sahip, iddaa sisteminde lisanslı bir bayidir. Oranların takibinde bu büyük önem taşır. Hesap açmadan önce bahis şirketinin iddaa kapsamında lisanslı olduğunu kontrol edin. Yurt dışı siteler yasadışıdır ve engellenmektedir; bu sitelerin kullanılmasını önermiyoruz."
       },
       {
         "type": "h2",
-        "text": "LeoVegas ile surebet nasıl bulunur?"
+        "text": "Nesine ile surebet gerçeği"
       },
       {
         "type": "p",
-        "text": "LeoVegas ile surebet, LeoVegas'ın bir sonuca diğer bahis şirketlerinin karşıt sonuçlara verdiğinden daha yüksek oran sunması durumunda ortaya çıkar. BetTrackerAI, LeoVegas oranlarını sürekli izler ve bulunduğunuz pazarda faaliyet gösteren bahis şirketleriyle karşılaştırır."
+        "text": "Surebet, normalde bir bahis şirketinin bir sonuca diğerlerinin karşıt sonuçlara verdiğinden daha yüksek oran sunması durumunda ortaya çıkar. Türkiye'de Nesine, Bilyoner, Misli, Oley, Birebin ve Tuttur aynı iddaa oranlarını sunduğu için lisanslı bayiler arasında surebet fırsatı oluşmaz. BetTrackerAI ile Nesine oranlarını izleyebilir, oran hareketlerini takip edebilir ve bahislerinizi kaydedebilirsiniz."
       },
       {
         "type": "ul",
         "items": [
-          "Surebet sayfasındaki filtreyi kullanarak LeoVegas'ı ve diğer bahis şirketlerinizi seçin.",
-          "Kâra göre sıralayın ve oranları istikrarlı bir surebet seçin.",
-          "Hesaplayıcıyı kullanarak bahis tutarınızı bölün ve miktarları yuvarlayın.",
-          "Önce oranları en değişken olan bahis şirketinde bahsinizi yapın."
+          "Surebet sayfasındaki filtreyi kullanarak Nesine'yi ve diğer lisanslı bayileri seçin; oranların aynı olduğunu kendiniz görün.",
+          "Listede fırsat çıkmazsa şaşırmayın; lisanslı bayilerde oranlar aynı olduğu için bu normaldir.",
+          "Bahis tutarınızı hesaplayıcıyla planlayın ve miktarları yuvarlayın.",
+          "Bahislerinizi kaydedin ve kâr ile zararınızı düzenli olarak takip edin."
         ]
       },
       {
         "type": "tip",
-        "text": "Bahislerinizi birkaç bahis şirketine yayın, yalnızca LeoVegas'ı kullanmayın. Bu, hesabınızın ömrünü uzatır ve hesap kısıtlaması riskini azaltır."
+        "text": "Yalnızca eğlence amaçlı oynayın ve bütçenizi önceden belirleyin. Kontrolü kaybettiğinizi düşünüyorsanız Yeşilay Danışmanlık Merkezi'ne (YEDAM, 115) ulaşın. Kazançlara ilişkin güncel kuralları iddaa sisteminden kontrol edin."
       }
     ],
     "faq": [
       {
-        "q": "LeoVegas'ta surebet oynanabilir mi?",
-        "a": "Evet, arbitraj bahis yasaldır. Ancak tüm bahis şirketlerinde olduğu gibi LeoVegas da sürekli olarak kâr garantisi sağlayan bahis davranışları tespit ederse, kullanım şartları uyarınca hesapları kısıtlayabilir."
+        "q": "Nesine'de surebet oynanabilir mi?",
+        "a": "Hayır, pratikte mümkün değildir. Nesine dahil tüm lisanslı Türk bayileri aynı iddaa oranlarını sunar, bu yüzden aralarında surebet oluşmaz. Yurt dışı siteler ise yasadışıdır ve engellenmektedir; bu yüzden onları önermiyoruz."
       },
       {
-        "q": "LeoVegas surebet için iyi bir seçenek mi?",
-        "a": "LeoVegas, özellikle Kambi platformu dışındaki bahis şirketleriyle birlikte kullanıldığında iyi bir tamamlayıcı seçenektir; çünkü bu, erişebileceğiniz arbitraj fırsatlarının sayısını artırır."
+        "q": "Nesine oran takibi için iyi bir seçenek mi?",
+        "a": "Nesine, lisanslı ve yaygın bir iddaa bayisi olarak oran takibi ve bahis kaydı için uygun bir seçenektir; ancak surebet için değil. Kazançlara ilişkin kurallar değişebileceğinden güncel düzenlemeleri kontrol edin."
       }
     ]
   }

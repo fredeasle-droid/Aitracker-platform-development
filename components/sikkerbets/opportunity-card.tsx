@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { useLocale } from '@/components/locale-provider'
 import { ArrowRight, Calculator, Info, Lock, LockOpen, Megaphone, Star } from 'lucide-react'
 import { BookmakerLogo } from '@/components/bookmaker-logo'

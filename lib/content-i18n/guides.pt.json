@@ -2,7 +2,7 @@
   "matched-betting": {
     "title": "Matched betting: extrair lucro dos bónus de boas-vindas",
     "metaTitle": "Matched betting – como aproveitar os bónus das casas de apostas",
-    "description": "Matched betting explicado: como usar bónus de boas-vindas e apostas grátis em casas de apostas licenciadas para garantir lucro, e como difere das apostas de arbitragem.",
+    "description": "Matched betting explicado: como usar bónus de boas-vindas e apostas grátis em casas de apostas licenciadas pela SRIJ para garantir lucro, e como difere das apostas de arbitragem.",
     "keyword": "matched betting",
     "intro": "O matched betting é uma técnica para converter os bónus e apostas grátis das casas de apostas em dinheiro real. Ao apostar a favor e contra o mesmo evento, cobres todos os resultados possíveis, pelo que o resultado final não importa – o que fica é um lucro garantido proveniente do bónus.",
     "blocks": [
@@ -20,12 +20,12 @@
       },
       {
         "type": "p",
-        "text": "Os bónus de boas-vindas têm condições diferentes consoante a casa de apostas e o país onde apostas. Em alguns mercados regulados, os montantes dos bónus podem ser limitados e os requisitos de rollover restringidos para proteger os consumidores. Lê sempre os termos e condições específicos antes de aceitares qualquer oferta."
+        "text": "Os bónus de boas-vindas têm condições diferentes consoante a casa de apostas. Em Portugal, só os operadores licenciados pela SRIJ (com domínio .pt), como a Betano, a Betclic, o Placard ou a Solverde, podem oferecer apostas online, e as promoções têm de respeitar as regras em vigor. Lê sempre os termos e condições específicos antes de aceitares qualquer oferta e confirma as regras atuais junto da SRIJ."
       },
       {
         "type": "ul",
         "items": [
-          "Verifica as odds mínimas exigidas para desbloquear o bónus – muitas casas de apostas definem um mínimo de 1.80 ou superior.",
+          "Verifica as odds mínimas exigidas para desbloquear o bónus – muitas casas de apostas definem um mínimo de 1,80 ou superior.",
           "Nota o prazo de validade para que o teu bónus ou aposta grátis não expire sem ser utilizado.",
           "Considera usar apostas de arbitragem (surebets) para cumprir os requisitos de rollover com risco mínimo."
         ]
@@ -42,11 +42,11 @@
     "faq": [
       {
         "q": "O matched betting é legal?",
-        "a": "Sim. Aproveitar bónus dentro dos termos publicados pela casa de apostas é perfeitamente legal. No entanto, as casas de apostas reservam-se o direito de retirar ofertas ou limitar contas caso considerem que não estás a apostar dentro do espírito das suas promoções ou se violares os respetivos termos."
+        "a": "Sim. Aproveitar bónus dentro dos termos publicados por uma casa de apostas licenciada pela SRIJ é perfeitamente legal. No entanto, as casas de apostas reservam-se o direito de retirar ofertas ou limitar contas caso considerem que não estás a apostar dentro do espírito das suas promoções ou se violares os respetivos termos."
       },
       {
         "q": "Qual o valor típico dos bónus de boas-vindas?",
-        "a": "Os valores dos bónus e os requisitos de rollover variam consoante a casa de apostas e a jurisdição. Em alguns mercados regulados, as ofertas de boas-vindas podem estar sujeitas a limites – por exemplo, até €1,000 com um rollover máximo de dez vezes o valor do bónus. Consulta sempre os termos atuais na casa de apostas que escolheres e confirma que esta possui uma licença válida no teu país."
+        "a": "Os valores dos bónus e os requisitos de rollover variam consoante a casa de apostas e mudam com frequência. Consulta sempre os termos atuais na casa de apostas que escolheres (por exemplo, Betano, Betclic, bwin, Solverde ou Luckia) e confirma que esta possui uma licença válida da SRIJ. Se tiveres dúvidas sobre as regras em vigor para promoções em Portugal, consulta a informação atualizada da SRIJ."
       }
     ],
     "category": "Estratégia",
@@ -54,10 +54,10 @@
   },
   "er-surebets-lovligt": {
     "title": "As surebets são legais? Regras e considerações fiscais",
-    "metaTitle": "As surebets são legais? Regras, impostos e termos",
-    "description": "É legal fazer surebets e tem de pagar impostos sobre os ganhos? Conheça as regras e o que os bookmakers podem fazer em relação às apostas de arbitragem.",
+    "metaTitle": "As surebets são legais em Portugal? Regras, impostos e termos",
+    "description": "É legal fazer surebets em Portugal e tem de pagar impostos sobre os ganhos? Conheça as regras e o que as casas de apostas licenciadas podem fazer em relação às apostas de arbitragem.",
     "keyword": "surebets são legais",
-    "intro": "A resposta curta é sim. Fazer surebets é legal na maioria das jurisdições. Está simplesmente a fazer apostas normais em bookmakers licenciados e a comparar odds para encontrar o melhor valor — nada neste processo é ilegal.",
+    "intro": "A resposta curta é sim. Fazer surebets não é ilegal em Portugal. Está simplesmente a fazer apostas normais em bookmakers licenciados pelo SRIJ e a comparar odds para encontrar o melhor valor — nada neste processo é ilegal.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "O tratamento fiscal dos ganhos de apostas varia consoante o país. Em muitos mercados regulados, os ganhos obtidos junto de operadores licenciados pelo regulador nacional do jogo são isentos de imposto para o jogador. Se utilizar operadores offshore ou não licenciados, os seus ganhos poderão estar sujeitos a tributação. Consulte as regras fiscais aplicáveis no seu país ou contacte a autoridade tributária local caso tenha dúvidas sobre a sua situação."
+        "text": "Em Portugal, o imposto sobre as apostas desportivas é cobrado ao operador e, em geral, os ganhos não são tributados para o jogador. Isto aplica-se às apostas feitas junto de operadores licenciados pelo SRIJ (Serviço de Regulação e Inspeção de Jogos), com domínios .pt. Em Portugal, só os operadores licenciados pelo SRIJ podem oferecer apostas online, e os sites não licenciados não oferecem qualquer proteção. As regras podem mudar, por isso consulte as regras fiscais em vigor ou contacte a Autoridade Tributária caso tenha dúvidas sobre a sua situação."
       },
       {
         "type": "tip",
-        "text": "Aposte apenas em bookmakers licenciados pelo regulador nacional. Isso oferece geralmente vantagens fiscais e proteção ao consumidor por parte da entidade reguladora do jogo."
+        "text": "Aposte apenas em bookmakers licenciados pelo SRIJ, como a Betano, a Betclic, o Placard ou a Solverde. Isso garante que está a apostar num operador legal em Portugal e com a proteção do consumidor assegurada pela entidade reguladora do jogo."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Mesmo com surebets, é importante manter o controlo sobre as suas apostas. Defina limites de depósito e utilize o registo de autoexclusão do seu país se precisar de uma pausa. Se necessitar de apoio, contacte uma linha de apoio ao jogador reconhecida na sua região."
+        "text": "Mesmo com surebets, é importante manter o controlo sobre as suas apostas. Defina limites de depósito e, se precisar de uma pausa, utilize a autoexclusão do SRIJ. Se necessitar de apoio, contacte a Linha Vida ou os serviços de apoio do SICAD."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Tenho de pagar impostos sobre os ganhos de surebets?",
-        "a": "Depende do seu país. Em muitos mercados regulados, os ganhos obtidos junto de operadores licenciados são isentos de imposto para o jogador. Consulte as regras fiscais aplicáveis no seu país."
+        "a": "Em Portugal, o imposto sobre as apostas desportivas é cobrado ao operador e, em geral, os ganhos obtidos junto de operadores licenciados pelo SRIJ não são tributados para o jogador. Consulte as regras fiscais em vigor se tiver dúvidas."
       }
     ],
     "category": "Regras",
@@ -180,12 +180,12 @@
         "items": [
           "**Casas de apostas soft:** a principal fonte de apostas de arbitragem, mas limitam rapidamente. Usa-as com cuidado.",
           "**Casas de apostas sharp:** margens mais baixas e limites elevados. Ideais para a segunda perna.",
-          "**Exchanges de apostas:** apostas contra outros utilizadores, pelo que não és limitado por ganhar. A comissão reduz ligeiramente o lucro."
+          "**Exchanges de apostas:** apostas contra outros utilizadores, pelo que não és limitado por ganhar. A comissão reduz ligeiramente o lucro. Em Portugal, usa apenas operadores licenciados pela SRIJ."
         ]
       },
       {
         "type": "p",
-        "text": "Lê a análise completa das [melhores casas de apostas para apostas de arbitragem](/pt/guias/melhores-casas-apostas-surebets). Usa sempre casas de apostas licenciadas no teu país."
+        "text": "Lê a análise completa das [melhores casas de apostas para apostas de arbitragem](/pt/guias/melhores-casas-apostas-surebets). Usa sempre casas de apostas licenciadas pela SRIJ (domínios .pt), como a Betano, a Betclic, o Placard, a Solverde, a bwin, a ESC Online, a Luckia ou a Lebull."
       },
       {
         "type": "h2",
@@ -255,19 +255,19 @@
           ],
           [
             "Aposta em A",
-            "€740,97"
+            "€740,96"
           ],
           [
             "Aposta em B",
-            "€759,03"
+            "€759,04"
           ],
           [
             "Pagamento em qualquer caso",
-            "aprox. €1.556,03"
+            "aprox. €1.556,02"
           ],
           [
             "Lucro",
-            "aprox. €56,03 (3,7%)"
+            "aprox. €56,02 (3,7%)"
           ]
         ]
       },
@@ -277,7 +277,7 @@
       },
       {
         "type": "p",
-        "text": "Nos mercados 1X2 de futebol e hóquei no gelo, um terceiro resultado entra na mesma fórmula. Fazer este cálculo à mão torna-se fastidioso, e é precisamente aqui que uma calculadora poupa mais tempo."
+        "text": "Nos mercados 1X2 de futebol e andebol, um terceiro resultado entra na mesma fórmula. Fazer este cálculo à mão torna-se fastidioso, e é precisamente aqui que uma calculadora poupa mais tempo."
       },
       {
         "type": "example",
@@ -311,7 +311,7 @@
       },
       {
         "type": "p",
-        "text": "Apostas como €740,97 podem parecer suspeitas a uma casa de apostas. Arredonde para euros inteiros ou dezenas. Se arredondar para €741 e €759, o lucro mantém-se em cerca de €56, com apenas alguns cêntimos de diferença entre os resultados."
+        "text": "Apostas como €740,96 podem parecer suspeitas a uma casa de apostas. Arredonde para euros inteiros ou dezenas. Se arredondar para €741 e €759, o lucro mantém-se em cerca de €56, com apenas alguns cêntimos de diferença entre os resultados."
       },
       {
         "type": "p",
@@ -517,7 +517,7 @@
     "blocks": [
       {
         "type": "h2",
-        "text": "Por que ter várias casas de apostas dá acesso a mais surebets"
+        "text": "Porque é que ter várias casas de apostas dá acesso a mais surebets"
       },
       {
         "type": "p",
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Licenciada pelo regulador nacional de jogo, para estar protegido e poder verificar o tratamento fiscal dos seus ganhos.",
+          "Licenciada pelo SRIJ (Serviço de Regulação e Inspeção de Jogos) e com domínio .pt, para estar protegido e poder verificar o tratamento fiscal dos seus ganhos.",
           "Depósitos e levantamentos rápidos, para poder movimentar o dinheiro onde é necessário.",
           "Grande variedade de desportos e mercados, especialmente ténis, futebol e basquetebol.",
           "Odds competitivas e margem reduzida da casa nos mercados mais populares.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Comece com cinco a oito casas de apostas licenciadas distribuídas por plataformas diferentes. Isto dá-lhe uma boa variedade de oportunidades sem ter de gerir demasiados saldos em simultâneo. Quando já tiver a rotina estabelecida, pode expandir com mais contas."
+        "text": "Comece com cinco a oito casas de apostas licenciadas pela SRIJ, distribuídas por plataformas diferentes (por exemplo, Betano, Betclic, Placard, Solverde, bwin, ESC Online, Luckia ou Lebull). Isto dá-lhe uma boa variedade de oportunidades sem ter de gerir demasiados saldos em simultâneo. Quando já tiver a rotina estabelecida, pode expandir com mais contas."
       },
       {
         "type": "tip",
@@ -561,38 +561,38 @@
     "faq": [
       {
         "q": "De quantas casas de apostas preciso para fazer surebets?",
-        "a": "Um bom ponto de partida são cinco a oito casas de apostas regulamentadas. Quanto mais plataformas de odds diferentes cobrir, mais surebets terá ao seu alcance."
+        "a": "Um bom ponto de partida são cinco a oito casas de apostas licenciadas pela SRIJ. Quanto mais plataformas de odds diferentes cobrir, mais surebets terá ao seu alcance."
       },
       {
         "q": "Posso usar casas de apostas sem licença para apostas de arbitragem?",
-        "a": "Não é recomendado. As casas de apostas sem licença na sua jurisdição podem estar bloqueadas, e os ganhos obtidas através delas podem ter um tratamento fiscal diferente ou não beneficiar de proteção regulatória. Verifique sempre as regras em vigor no seu país."
+        "a": "Não é recomendado. Em Portugal, apenas os operadores licenciados pela SRIJ (com domínio .pt) podem oferecer apostas online. As casas de apostas sem licença podem estar bloqueadas, e os ganhos obtidos através delas podem ter um tratamento fiscal diferente ou não beneficiar de proteção regulatória. Verifique sempre as regras em vigor."
       }
     ],
     "category": "Estratégia",
     "ctaLabel": "Ver surebets nas suas casas de apostas"
   },
   "skat-paa-spillegevinster": {
-    "title": "Imposto sobre ganhos em apostas – guia internacional de apostas",
-    "metaTitle": "Imposto sobre Ganhos em Apostas – O Que Precisa de Saber",
-    "description": "Precisa de pagar imposto sobre ganhos em apostas e apostas de arbitragem? Saiba como funcionam as regras fiscais para casas de apostas licenciadas e offshore.",
+    "title": "Imposto sobre ganhos em apostas em Portugal – guia de apostas",
+    "metaTitle": "Imposto sobre Ganhos em Apostas em Portugal – O Que Precisa de Saber",
+    "description": "Precisa de pagar imposto sobre ganhos em apostas e apostas de arbitragem em Portugal? Saiba como funcionam as regras fiscais para casas de apostas licenciadas pelo SRIJ e para sites sem licença.",
     "keyword": "imposto sobre ganhos em apostas",
-    "intro": "Em muitos mercados regulados, a resposta é simples: os ganhos obtidos em casas de apostas licenciadas são isentos de imposto para o jogador. É a casa de apostas que paga os impostos ao Estado, não o apostador. Mas as regras dependem do país onde vive e de onde aposta.",
+    "intro": "Em Portugal, a resposta é simples: os ganhos obtidos em casas de apostas licenciadas pelo SRIJ (Serviço de Regulação e Inspeção de Jogos) são, em geral, isentos de imposto para o jogador. É a casa de apostas que paga os impostos ao Estado, não o apostador. Ainda assim, convém confirmar sempre as regras em vigor.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Casas de apostas licenciadas: geralmente isentas de imposto"
+        "text": "Casas de apostas licenciadas pelo SRIJ: geralmente isentas de imposto"
       },
       {
         "type": "p",
-        "text": "Quando aposta numa casa de apostas licenciada pelo regulador nacional de jogo, é a própria casa de apostas que paga os impostos sobre as suas receitas. Os seus ganhos são, por isso, geralmente isentos de imposto e, na maioria dos casos, não precisa de os declarar às autoridades fiscais. Verifique sempre as regras em vigor no seu país."
+        "text": "Quando aposta numa casa de apostas licenciada pelo SRIJ, como a Betano, a Betclic, o Placard, a Solverde, a bwin, a ESC Online, a Luckia ou a Lebull, é a própria casa de apostas que paga os impostos sobre a sua atividade. Os seus ganhos são, por isso, geralmente isentos de imposto e, na maioria dos casos, não precisa de os declarar às autoridades fiscais. Verifique sempre as regras em vigor."
       },
       {
         "type": "h2",
-        "text": "Casas de apostas offshore sem licença local"
+        "text": "Casas de apostas sem licença em Portugal"
       },
       {
         "type": "p",
-        "text": "Se apostar em casas de apostas que não possuam licença na sua jurisdição, os ganhos podem ser tributáveis. As regras dependem de fatores como o país onde a casa de apostas está licenciada e a sua própria residência fiscal. Esta é uma das razões pelas quais é geralmente mais simples apostar em casas de apostas reguladas."
+        "text": "Em Portugal, só os operadores licenciados pelo SRIJ (com domínio .pt) podem oferecer apostas online. Apostar em sites sem licença portuguesa não é uma opção segura: não tem a proteção do regulador e a situação fiscal dos ganhos pode ser incerta. Esta é uma das razões pelas quais é mais simples e seguro apostar apenas em casas de apostas licenciadas. Em caso de dúvida, consulte as regras em vigor."
       },
       {
         "type": "h2",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Se as apostas constituírem a sua atividade principal a uma escala significativa, poderão aplicar-se regras diferentes em determinadas jurisdições. Se tiver dúvidas sobre a sua situação específica, contacte a autoridade tributária local ou um contabilista certificado."
+        "text": "Se as apostas constituírem a sua atividade principal a uma escala significativa, poderão aplicar-se regras diferentes. Se tiver dúvidas sobre a sua situação específica, contacte a Autoridade Tributária ou um contabilista certificado."
       }
     ],
     "faq": [
       {
         "q": "Preciso de pagar imposto sobre os ganhos obtidos em casas de apostas licenciadas?",
-        "a": "Na maioria dos mercados regulados, não. Os ganhos provenientes de casas de apostas licenciadas localmente são tipicamente isentos de imposto para o jogador. Verifique as regras fiscais em vigor no seu país."
+        "a": "Em Portugal, em geral, não. O imposto sobre as apostas desportivas recai sobre o operador, e os ganhos provenientes de casas de apostas licenciadas pelo SRIJ são, por norma, isentos de imposto para o jogador. Verifique as regras fiscais em vigor."
       },
       {
-        "q": "Como posso saber se uma casa de apostas está licenciada no meu país?",
-        "a": "O regulador nacional de jogo disponibiliza no seu site uma lista de operadores autorizados, e as casas de apostas licenciadas costumam exibir o logótipo do regulador no seu próprio site."
+        "q": "Como posso saber se uma casa de apostas está licenciada em Portugal?",
+        "a": "O SRIJ disponibiliza no seu site uma lista de operadores autorizados, e as casas de apostas licenciadas operam em sites com domínio .pt e costumam exibir a informação da licença e o logótipo do regulador no seu próprio site."
       }
     ],
     "category": "Regras",
@@ -830,7 +830,7 @@
       },
       {
         "type": "example",
-        "title": "Exemplo: jogo da Premier League, total apostado €2.000",
+        "title": "Exemplo: jogo da Primeira Liga, total apostado €2.000",
         "rows": [
           [
             "Vitória da equipa da casa, odds 2,15",
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Abra contas** em pelo menos duas casas de apostas licenciadas, idealmente mais, e deposite com antecedência.",
+          "**1. Abra contas** em pelo menos duas casas de apostas licenciadas pelo SRIJ (domínios .pt), idealmente mais, e deposite com antecedência.",
           "**2. Encontre uma surebet** em que a soma dos inversos das odds seja inferior a 1,00.",
           "**3. Calcule as apostas** de forma a que o pagamento seja igual em todos os resultados.",
           "**4. Coloque as duas apostas rapidamente,** começando pela odd com maior probabilidade de mudar.",
@@ -900,7 +900,7 @@
     "faq": [
       {
         "q": "O betting de arbitragem é legal?",
-        "a": "Sim, apostar em todos os resultados de um evento não é ilegal na maioria dos países. As casas de apostas podem ainda assim limitar a sua conta. Veja [as surebets são legais?](/pt/guias/surebets-sao-legais)"
+        "a": "Sim, apostar em todos os resultados de um evento não é ilegal em Portugal, desde que use operadores licenciados pelo SRIJ (domínios .pt). As casas de apostas podem ainda assim limitar a sua conta. Confirme sempre as regras em vigor. Veja [as surebets são legais?](/pt/guias/surebets-sao-legais)"
       },
       {
         "q": "Quanto se pode ganhar com surebets?",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "O valor apostado deve ser dividido de forma a que o retorno seja igual independentemente do vencedor. Com um total de 1.000 unidades no exemplo acima, coloca-se aproximadamente 494 unidades no jogador A e aproximadamente 506 unidades no jogador B. Ambos os resultados devolvem aproximadamente 1.037 unidades, ou seja, um lucro de cerca de 37 unidades."
+        "text": "O valor apostado deve ser dividido de forma a que o retorno seja igual independentemente do vencedor. Com um total de 1.000 € no exemplo acima, coloca-se aproximadamente 494 € no jogador A e aproximadamente 506 € no jogador B. Ambos os resultados devolvem aproximadamente 1.037 €, ou seja, um lucro de cerca de 37 €."
       },
       {
         "type": "tip",
@@ -1108,7 +1108,7 @@
     "blocks": [
       {
         "type": "h2",
-        "text": "Por que o ténis é ideal para surebets"
+        "text": "Porque é que o ténis é ideal para surebets"
       },
       {
         "type": "p",
@@ -1116,15 +1116,15 @@
       },
       {
         "type": "example",
-        "title": "Exemplo: odds 1.95 e 2.20, aposta total €1.000",
+        "title": "Exemplo: odds 1.95 e 2.20, aposta total 1.000 €",
         "rows": [
           [
             "Jogador A na casa 1, odds 1.95",
-            "aposta aprox. €530"
+            "aposta aprox. 530 €"
           ],
           [
             "Jogador B na casa 2, odds 2.20",
-            "aposta aprox. €470"
+            "aposta aprox. 470 €"
           ],
           [
             "1/1.95 + 1/2.20",
@@ -1132,11 +1132,11 @@
           ],
           [
             "Pagamento independentemente do vencedor",
-            "aprox. €1.034"
+            "aprox. 1.034 €"
           ],
           [
             "Lucro",
-            "aprox. €34 (3,4%)"
+            "aprox. 34 € (3,4%)"
           ]
         ],
         "note": "A soma é inferior a 1, portanto a combinação é uma surebet."
@@ -1161,7 +1161,7 @@
     ],
     "faq": [
       {
-        "q": "Por que é que o ténis é bom para surebets?",
+        "q": "Porque é que o ténis é bom para surebets?",
         "a": "Porque só existem dois resultados possíveis e não há empate. Basta ter duas casas de apostas e colocar duas apostas."
       },
       {
@@ -1170,7 +1170,7 @@
       }
     ],
     "category": "Estratégia",
-    "ctaLabel": "Ver surebets actuais"
+    "ctaLabel": "Ver surebets atuais"
   },
   "fodbold-surebets": {
     "title": "Surebets no futebol: como cobrir três resultados",
@@ -1486,7 +1486,7 @@
       },
       {
         "type": "p",
-        "text": "Uma app de acompanhamento automático poupa-te a digitação: quando colocas uma surebet a partir do scanner, as parcelas, odds e valores apostados são registados por ti. Só tens de confirmar o resultado. Lê como [calcular o ROI em apostas](/pt/guias/roi-em-apostas-desportivas) e configurar a [gestão de bankroll](/pt/guias/bankroll-management-apostas-desportivas) com base nos teus números reais."
+        "text": "Uma app de acompanhamento automático poupa-te a introdução manual de dados: quando colocas uma surebet a partir do scanner, as parcelas, odds e valores apostados são registados por ti. Só tens de confirmar o resultado. Lê como [calcular o ROI em apostas](/pt/guias/roi-em-apostas-desportivas) e configurar a [gestão de bankroll](/pt/guias/bankroll-management-apostas-desportivas) com base nos teus números reais."
       },
       {
         "type": "p",
@@ -1531,19 +1531,19 @@
         "rows": [
           [
             "Total apostado",
-            "€40,000"
+            "40 000 €"
           ],
           [
             "Total recebido",
-            "€41,000"
+            "41 000 €"
           ],
           [
             "Lucro",
-            "€1,000"
+            "1 000 €"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2,5%"
+            "1 000 / 40 000 × 100 = 2,5%"
           ]
         ],
         "note": "Ganhou 2,5% sobre cada euro apostado."
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Como calculo o ROI em apostas?",
-        "a": "Divida o seu lucro pelo total apostado e multiplique por 100. Se apostou €10,000 e ganhou €300, o seu ROI é de 3%."
+        "a": "Divida o seu lucro pelo total apostado e multiplique por 100. Se apostou 10 000 € e ganhou 300 €, o seu ROI é de 3%."
       },
       {
         "q": "Qual é a diferença entre ROI e lucro?",
@@ -1589,102 +1589,6 @@
     ],
     "category": "Estratégia",
     "ctaLabel": "Veja o seu ROI nas contas"
-  },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: a alternativa mais acessível",
-    "metaTitle": "Alternativa ao Surebet Danmark – BetTrackerAI Comparado (2025)",
-    "description": "Compare o BetTrackerAI e o Surebet Danmark: preços, funcionalidades, cobertura de casas de apostas e registo de apostas. Encontre a ferramenta de apostas de arbitragem ideal para si.",
-    "keyword": "comparação de ferramentas de apostas de arbitragem",
-    "intro": "O Surebet Danmark e o BetTrackerAI analisam ambos apostas de arbitragem (também chamadas surebets) em casas de apostas licenciadas. Ambos oferecem um período de teste gratuito de 7 dias. As principais diferenças residem no preço e nas funcionalidades disponíveis para além do próprio scanner de surebets.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Resumo rápido"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI e Surebet Danmark frente a frente",
-        "rows": [
-          [
-            "Preço por mês",
-            "BetTrackerAI a partir de aprox. €20 · Surebet Danmark aprox. €134"
-          ],
-          [
-            "Período de teste",
-            "Ambos: 7 dias"
-          ],
-          [
-            "Casas de apostas",
-            "Ambos: apenas casas de apostas licenciadas"
-          ],
-          [
-            "Notificações",
-            "BetTrackerAI: push e SMS (Premium) · Surebet Danmark: notificações em tempo real"
-          ],
-          [
-            "Registo de apostas",
-            "BetTrackerAI: acompanhamento completo com ROI e saldo por casa de apostas · Surebet Danmark: registo de apostas"
-          ],
-          [
-            "Ferramentas e guias gratuitos",
-            "BetTrackerAI: calculadora de surebets e guias educativos"
-          ]
-        ],
-        "note": "Preços verificados em ambos os sites a 23 de novembro de 2025 e sujeitos a alteração."
-      },
-      {
-        "type": "h2",
-        "text": "Preço: uma diferença significativa"
-      },
-      {
-        "type": "p",
-        "text": "O Surebet Danmark custa aprox. €134 por mês. O BetTrackerAI custa aprox. €20 por mês no plano Basic (surebets até 5% de lucro) e aprox. €33 no plano Premium (todas as surebets mais alertas por SMS). Com o Premium poupa aprox. €100 por mês – ou seja, aprox. €1.200 por ano."
-      },
-      {
-        "type": "p",
-        "text": "Isto é relevante porque as apostas de arbitragem rendem tipicamente entre 1% e 5% por aposta. Uma mensalidade mais baixa significa que precisa de um volume de apostas muito menor para que a subscrição se pague a si própria."
-      },
-      {
-        "type": "h2",
-        "text": "Registo de apostas: onde o BetTrackerAI se destaca"
-      },
-      {
-        "type": "p",
-        "text": "As surebets só são lucrativas se souber exatamente quanto ganhou. No BetTrackerAI regista as suas surebets e depósitos, e visualiza o seu lucro, ROI e saldo em cada casa de apostas num único lugar. Também pode importar um boletim de aposta em vez de o introduzir manualmente."
-      },
-      {
-        "type": "h2",
-        "text": "Qual a ferramenta mais indicada para si?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Escolha o BetTrackerAI se pretende fazer surebets a um preço mais baixo e acompanhar as suas contas em detalhe.",
-          "Escolha o Surebet Danmark se já utiliza a plataforma deles e está satisfeito com o custo.",
-          "Se ainda tem dúvidas, experimente ambos. Os dois oferecem períodos de teste gratuitos de 7 dias, pelo que pode comparar surebets nos mesmos eventos."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Independentemente da ferramenta que escolher: coloque sempre primeiro a aposta com as odds mais voláteis e confirme que o mercado é idêntico nas duas casas de apostas."
-      }
-    ],
-    "faq": [
-      {
-        "q": "O BetTrackerAI é mais barato do que o Surebet Danmark?",
-        "a": "Sim. O BetTrackerAI custa aprox. €20 ou aprox. €33 por mês, enquanto o Surebet Danmark custa aprox. €134 por mês (a 23 de novembro de 2025)."
-      },
-      {
-        "q": "As duas ferramentas utilizam apenas casas de apostas licenciadas?",
-        "a": "Sim. Ambas as plataformas focam-se em casas de apostas reguladas e licenciadas, garantindo que aposta de forma legal e com as devidas proteções ao jogador."
-      },
-      {
-        "q": "Posso experimentar o BetTrackerAI gratuitamente?",
-        "a": "Sim. Tem acesso a um período de teste gratuito de 7 dias com acesso completo, podendo cancelar a qualquer momento durante esse período."
-      }
-    ],
-    "category": "Fundamentos",
-    "ctaLabel": "Experimente o BetTrackerAI gratuitamente durante 7 dias"
   },
   "betting-regnskab": {
     "title": "Contas de apostas: como controlar o seu bankroll",
@@ -1720,19 +1624,19 @@
         "rows": [
           [
             "Total de depósitos",
-            "€10,000"
+            "10 000 €"
           ],
           [
             "Total levantado",
-            "€3,000"
+            "3 000 €"
           ],
           [
             "Saldo nas casas de apostas atualmente",
-            "€7,800"
+            "7 800 €"
           ],
           [
             "Lucro",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3 000 € + 7 800 € − 10 000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1660,7 @@
     "faq": [
       {
         "q": "Pago impostos sobre os ganhos de apostas?",
-        "a": "O tratamento fiscal dos ganhos de jogo varia consoante a jurisdição. Em alguns mercados regulados, os ganhos obtidos em casas de apostas licenciadas estão isentos de imposto, enquanto noutros poderá ser necessário declará-los. Consulte as regras fiscais aplicáveis no seu país ou fale com um consultor local."
+        "a": "Em Portugal, o imposto sobre as apostas desportivas é cobrado ao operador licenciado pelo SRIJ e, em geral, os ganhos não são tributados para o jogador. As regras fiscais podem mudar, por isso confirme sempre as regras em vigor ou fale com um consultor fiscal."
       },
       {
         "q": "Com que frequência devo atualizar o meu bet tracker?",
@@ -1939,7 +1843,7 @@
       {
         "type": "ul",
         "items": [
-          "**Volume:** um scanner verifica todos os mercados de uma vez; você verifica apenas alguns.",
+          "**Volume:** um scanner verifica todos os mercados de uma vez; manualmente, só é possível verificar alguns.",
           "**Velocidade:** o software reage em segundos após uma alteração de preço.",
           "**Precisão:** a divisão de apostas é calculada automaticamente, eliminando erros de digitação."
         ]
@@ -1954,15 +1858,15 @@
       },
       {
         "type": "example",
-        "title": "Exemplo: erro de preço detetado pelo scanner, aposta total €1.000",
+        "title": "Exemplo: erro de preço detetado pelo scanner, aposta total 1.000 €",
         "rows": [
           [
             "Mais de 2.5 golos na casa de apostas 1, odds 2.25",
-            "Aposta €461,72"
+            "Aposta 461,72 €"
           ],
           [
             "Menos de 2.5 golos na casa de apostas 2, odds 1.93",
-            "Aposta €538,28"
+            "Aposta 538,28 €"
           ],
           [
             "1/2.25 + 1/1.93",
@@ -1970,11 +1874,11 @@
           ],
           [
             "Pagamento em qualquer resultado",
-            "aprox. €1.038,88"
+            "aprox. 1.038,88 €"
           ],
           [
             "Lucro garantido",
-            "aprox. €38,88 (3,9%)"
+            "aprox. 38,88 € (3,9%)"
           ]
         ],
         "note": "A casa de apostas 1 não tinha reagido a uma atualização sobre a equipa. O scanner assinalou a diferença em segundos."
@@ -2009,7 +1913,7 @@
         "items": [
           "**Cobertura de casas de apostas:** quanto mais casas de apostas, mais surebets. Certifique-se de que as casas onde tem conta estão incluídas.",
           "**Frequência de atualização:** os preços têm de ser atualizados a cada poucos segundos, especialmente para [surebets em direto](/pt/guias/live-arbitrage-betting-scanner).",
-          "**Filtros:** desporto, mercado, lucro mínimo e casas de apostas, para ver apenas o que pode efetivamente jogar.",
+          "**Filtros:** desporto, mercado, lucro mínimo e casas de apostas, para ver apenas o que pode efetivamente apostar.",
           "**Calculadora de apostas:** integrada, para poder colocar as apostas de imediato. Pode também verificar os valores na [calculadora de surebets](/pt/calculadora).",
           "**Registo de apostas:** registar as suas apostas a posteriori mostra o seu ROI real. Consulte o [bet tracker](/pt/guias/registo-automatico-de-apostas)."
         ]
@@ -2026,7 +1930,7 @@
       },
       {
         "q": "Posso colocar apostas automaticamente?",
-        "a": "A colocação automática de apostas viola os termos e condições da maioria das casas de apostas e leva ao encerramento rápido das contas. Deixe o scanner encontrar as surebets e coloque as apostas você mesmo."
+        "a": "A colocação automática de apostas viola os termos e condições da maioria das casas de apostas e leva ao encerramento rápido das contas. Deixe o scanner encontrar as surebets e coloque as apostas manualmente."
       },
       {
         "q": "Por que razão desapareceu a surebet quando abri a casa de apostas?",
@@ -2065,15 +1969,15 @@
       },
       {
         "type": "example",
-        "title": "Exemplo: ténis ao vivo após um break, aposta total €800",
+        "title": "Exemplo: ténis ao vivo após um break, aposta total 800 €",
         "rows": [
           [
             "Jogador A na casa de apostas 1, odds 1.72",
-            "Aposta €467.63"
+            "Aposta 467,63 €"
           ],
           [
             "Jogador B na casa de apostas 2, odds 2.42",
-            "Aposta €332.37"
+            "Aposta 332,37 €"
           ],
           [
             "1/1.72 + 1/2.42",
@@ -2081,26 +1985,26 @@
           ],
           [
             "Pagamento independentemente do vencedor",
-            "aprox. €804.33"
+            "aprox. 804,33 €"
           ],
           [
             "Lucro garantido",
-            "aprox. €4.33 (0.5%)"
+            "aprox. 4,33 € (0,5%)"
           ]
         ],
         "note": "As margens ao vivo são frequentemente inferiores às do pré-jogo. Um maior número de apostas compensa, mas apenas se a execução for rápida e precisa."
       },
       {
         "type": "example",
-        "title": "Exemplo: mais/menos golos após um golo precoce, aposta total €1.000",
+        "title": "Exemplo: mais/menos golos após um golo precoce, aposta total 1.000 €",
         "rows": [
           [
             "Mais de 3.5 golos na casa de apostas 1, odds 2.30",
-            "Aposta €451.07"
+            "Aposta 451,07 €"
           ],
           [
             "Menos de 3.5 golos na casa de apostas 2, odds 1.89",
-            "Aposta €548.93"
+            "Aposta 548,93 €"
           ],
           [
             "Soma das odds inversas",
@@ -2108,11 +2012,11 @@
           ],
           [
             "Pagamento em qualquer resultado",
-            "aprox. €1.037,47"
+            "aprox. 1.037,47 €"
           ],
           [
             "Lucro garantido",
-            "aprox. €37.47 (3.7%)"
+            "aprox. 37,47 € (3,7%)"
           ]
         ]
       },
@@ -2389,7 +2293,7 @@
           "**Frequência de atualização:** poucos segundos para pré-jogo, mais rápido para [apostas de arbitragem em direto](/pt/guias/live-arbitrage-betting-scanner).",
           "**Filtros:** desporto, mercado, bookmaker e lucro mínimo.",
           "**Registo integrado:** as apostas de arbitragem realizadas a partir do scanner devem ser registadas automaticamente.",
-          "**Preço justo:** compare o custo mensal com o volume de apostas esperado. Veja a [comparação de ferramentas de apostas de arbitragem](/pt/guias/comparacao-ferramentas-surebet)."
+          "**Preço justo:** compare o custo mensal com o volume de apostas esperado."
         ]
       },
       {

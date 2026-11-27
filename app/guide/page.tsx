@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowRight, BookOpen, Clock } from 'lucide-react'
 import { getLocalizedGuides } from '@/lib/content-i18n'
 import { LOCALES, OG_LOCALE, localePath } from '@/lib/i18n'

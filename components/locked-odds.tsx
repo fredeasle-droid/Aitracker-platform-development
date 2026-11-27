@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { LockKeyhole } from 'lucide-react'
 import useSWR from 'swr'
 import { getHasOddsAccess } from '@/app/access-actions'

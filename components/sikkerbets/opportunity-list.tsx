@@ -21,6 +21,20 @@ const AUTO_REFRESH_MS = 30_000
 const MAIN_SPORTS = ['Fodbold', 'Basketball', 'Tennis'] as const
 const MORE_SPORTS = ['Ishockey', 'Håndbold'] as const
 const SPORT_KEYS: Record<string, keyof typeof import('@/lib/i18n').translations.da> = { Fodbold: 'football', Basketball: 'basketball', Tennis: 'tennis', Ishockey: 'hockey', Håndbold: 'handball', Favoritter: 'favorites' }
+const SPORT_QUERY_OPTIONS = [
+  { value: 'Fodbold', key: 'football' },
+  { value: 'Basketball', key: 'basketball' },
+  { value: 'Tennis', key: 'tennis' },
+  { value: 'Ishockey', key: 'hockey' },
+  { value: 'Håndbold', key: 'handball' },
+  { value: 'Esport', key: 'esports' },
+] as const
+
+function canonicalSportFromQuery(value: string | null, translate: (key: (typeof SPORT_QUERY_OPTIONS)[number]['key']) => string) {
+  if (!value) return 'Alle'
+  return SPORT_QUERY_OPTIONS.find((option) => value === option.value || value === translate(option.key))?.value ?? value
+}
+
 const MARGINS = [0, 1, 2, 3, 4, 5]
 const SORTS = [
   { id: 'newest', key: 'newest' },
@@ -63,9 +77,10 @@ const filterBtn =
   'flex h-[30px] w-full min-w-0 items-center justify-between gap-2 rounded-[10px] border border-[#1a2f4d] bg-[#081123] px-2.5 text-[9.5px] text-foreground hover:bg-accent lg:h-auto lg:min-h-11 lg:rounded-xl lg:border-border lg:px-3 lg:text-[14px]'
 
 export function OpportunityList({ initial }: { initial: Opportunity[] }) {
-  const [items, setItems] = useState(initial)
-  const [sport, setSport] = useState<string>('Alle')
   const params = useSearchParams()
+  const { t, tx } = useLocale()
+  const [items, setItems] = useState(initial)
+  const [sport, setSport] = useState<string>(() => canonicalSportFromQuery(params.get('sport'), t))
   const [bookmakers, setBookmakers] = useState<string[]>(() => parseBookmakers(params.get('bookmaker')))
   const [bookmakerSearch, setBookmakerSearch] = useState('')
   const [bookmakerGeo, setBookmakerGeo] = useState<'Local' | 'Offshore' | 'Global' | 'Exchanges' | 'Live Betting'>('Local')
@@ -82,7 +97,6 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
     onSuccess: (next) => setItems(next),
   })
   const loggedIn = useHasAccess()
-  const { t, tx } = useLocale()
 
   const [market, setMarket] = useState<string>('Alle')
   const urlKey = params.toString()
@@ -98,7 +112,7 @@ export function OpportunityList({ initial }: { initial: Opportunity[] }) {
   const [prevUrlKey, setPrevUrlKey] = useState(urlKey)
   if (urlKey !== prevUrlKey) {
     setPrevUrlKey(urlKey)
-    setSport(params.get('sport') ?? 'Alle')
+    setSport(canonicalSportFromQuery(params.get('sport'), t))
     setBookmakers(parseBookmakers(params.get('bookmaker')))
   }
 

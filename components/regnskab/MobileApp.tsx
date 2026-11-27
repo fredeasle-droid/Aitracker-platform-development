@@ -1,4 +1,5 @@
 "use client";
+import { useLocale } from "@/components/locale-provider";
 import { useRef, useState } from "react";
 import { Camera, ImagePlus, Landmark, PenLine } from "lucide-react";
 
@@ -26,6 +27,7 @@ export function MobileApp(props: {
   onStatus: (id: string, status: SurebetStatus, winner?: 0 | 1) => void;
   onDelete: (id: string) => void;
 }) {
+  const { tx } = useLocale();
   const [tab, setTab] = useState<MobileTab>("overblik");
   const [newOpen, setNewOpen] = useState(false);
 
@@ -132,8 +134,8 @@ export function MobileApp(props: {
       <Drawer open={newOpen} onOpenChange={setNewOpen}>
         <DrawerContent className="rg-glass border-border">
           <DrawerHeader className="text-left">
-            <DrawerTitle className="font-display text-xl">Hvad vil du tilføje?</DrawerTitle>
-            <DrawerDescription>Vælg hvordan du vil registrere.</DrawerDescription>
+            <DrawerTitle className="font-display text-xl">{tx("Hvad vil du tilføje?")}</DrawerTitle>
+            <DrawerDescription>{tx("Vælg hvordan du vil registrere.")}</DrawerDescription>
           </DrawerHeader>
           <div className="flex flex-col gap-2 px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom))]">
             {choices.map((c) => (
@@ -150,8 +152,8 @@ export function MobileApp(props: {
                   <c.icon className="h-5 w-5" />
                 </span>
                 <span>
-                  <span className="block font-semibold">{c.title}</span>
-                  <span className="block text-xs text-muted-foreground">{c.text}</span>
+                  <span className="block font-semibold">{tx(c.title)}</span>
+                  <span className="block text-xs text-muted-foreground">{tx(c.text)}</span>
                 </span>
               </button>
             ))}

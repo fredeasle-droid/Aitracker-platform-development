@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { Check, ChevronDown } from 'lucide-react'
 import { FlagImage } from '@/components/flag-image'
 import { useLocale } from '@/components/locale-provider'
-import { LAUNCHED_LOCALES, LOCALES, type Locale } from '@/lib/i18n'
+import { LAUNCHED_LOCALES, LOCALES, menuLabel, type Locale } from '@/lib/i18n'
 import { cn } from '@/lib/utils'
 
 const LOCALE_OPTIONS = (Object.entries(LOCALES) as [Locale, (typeof LOCALES)[Locale]][]).filter(([locale]) => LAUNCHED_LOCALES.includes(locale))
@@ -38,7 +38,7 @@ export function LanguageMenu({ className }: { className?: string }) {
         onClick={() => setOpen((value) => !value)}
         aria-expanded={open}
         aria-haspopup="listbox"
-        aria-label={`${current.label} – ${current.countryCode}`}
+        aria-label={`${menuLabel(locale)} – ${current.countryCode}`}
         className="flex h-10 items-center gap-2 rounded-full border border-border bg-background-deep/70 px-2.5 text-[13px] font-semibold text-foreground transition-colors hover:bg-card md:h-9 md:px-3"
       >
         <FlagImage code={current.countryCode.toLowerCase()} label="" className="size-5" />
@@ -69,7 +69,7 @@ export function LanguageMenu({ className }: { className?: string }) {
                 )}
               >
                 <FlagImage code={option.countryCode.toLowerCase()} label="" className="size-5" />
-                <span className="flex-1">{option.label}</span>
+                <span className="flex-1">{menuLabel(code)}</span>
                 {selected && <Check className="size-4 text-primary-glow" aria-hidden="true" />}
               </button>
             )

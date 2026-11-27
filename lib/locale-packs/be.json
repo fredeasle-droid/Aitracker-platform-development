@@ -1,5 +1,6 @@
 {
   "ready": true,
+  "indexed": true,
   "ui": {
     "login": "Inloggen",
     "loggedIn": "Ingelogd",
@@ -625,7 +626,7 @@
     "findOnSport": "Vind sure bets voor jouw sport",
     "surebetsAtBookmakers": "Sure bets bij de bookmakers",
     "guideIndexTitle": "Sure bet- en arbitragegidsen – BetTrackerAI",
-    "guideIndexDescription": "Leer sure bets van de grond af: wat ze zijn, hoe je je inzetten berekent, de regels en belasting in Denemarken, en hoe je voorkomt dat je gelimiteerd wordt.",
+    "guideIndexDescription": "Leer sure bets van de grond af: wat ze zijn, hoe je je inzetten berekent, de regels en belasting in België, en hoe je voorkomt dat je gelimiteerd wordt.",
     "guideIndexH1": "Alles wat je moet weten over sure bets",
     "guideIndexLead": "Korte, praktische gidsen geschreven voor bettors in België. Van je eerste berekening tot het openhouden van je accounts.",
     "guideIndexName": "Sure bet-gidsen",
@@ -638,7 +639,7 @@
   },
   "daily": {
     "metaTitle": "Surebets van vandaag – de beste surebets op dit moment",
-    "metaDescription": "Bekijk de beste surebets van vandaag bij Deense en internationale bookmakers, voortdurend bijgewerkt. Sport, wedstrijd, markt en gegarandeerde winst voor de sterkste kansen op dit moment.",
+    "metaDescription": "Bekijk de beste surebets van vandaag bij Belgische bookmakers met een vergunning van de Kansspelcommissie, voortdurend bijgewerkt. Sport, wedstrijd, markt en gegarandeerde winst voor de sterkste kansen op dit moment.",
     "name": "Surebets van vandaag",
     "h1": "Surebets van vandaag",
     "empty": "Er zijn momenteel geen actieve surebets. De scanner draait dag en nacht, dus kom binnenkort nog eens terug.",
@@ -696,11 +697,11 @@
       },
       {
         "q": "Wat kost BetTrackerAI Pro?",
-        "a": "499 DKK/maand bij maandelijkse facturatie of 199 DKK/maand bij jaarlijkse facturatie – een besparing van 60%. Je kan betalen met Visa, Mastercard, MobilePay of overschrijving."
+        "a": "499 DKK/maand bij maandelijkse facturatie of 199 DKK/maand bij jaarlijkse facturatie – een besparing van 60%. Je kan betalen met Visa, Mastercard of overschrijving."
       },
       {
         "q": "Welke bookmakers vergelijken jullie?",
-        "a": "We vergelijken odds van Deense en internationale bookmakers, waaronder Danske Spil, bet365, Unibet, LeoVegas, Betano en Pinnacle."
+        "a": "We vergelijken odds van Belgische bookmakers met een vergunning van de Kansspelcommissie, waaronder Napoleon Sports, Unibet, Bingoal, Ladbrokes, Betfirst, Circus, Golden Palace en Scooore."
       },
       {
         "q": "Hoe word ik op de hoogte gebracht van nieuwe surebets?",
@@ -762,7 +763,6 @@
     "asiatisk-handicap": "aziatisch-handicap-uitgelegd-lijnen",
     "bet-tracker": "weddenschappen-bijhouden-automatisch",
     "roi-betting": "roi-sportweddenschappen-berekenen",
-    "surebet-danmark-alternativ": "surebet-tool-vergelijken-goedkoper",
     "betting-regnskab": "bankroll-beheren-weddenschap-overzicht",
     "tjen-penge-paa-odds-uden-risiko": "geld-verdienen-weddenschappen-zonder-risico",
     "find-surebets-automatisk": "surebets-automatisch-vinden-scanner",

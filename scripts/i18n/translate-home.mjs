@@ -15,6 +15,9 @@ const LOCALES = {
   en: 'English (UK)', sv: 'Swedish', no: 'Norwegian Bokmål', de: 'German', es: 'Spanish (Spain)',
   br: 'Brazilian Portuguese', pt: 'European Portuguese', fr: 'French', it: 'Italian', pl: 'Polish',
   fi: 'Finnish', nl: 'Dutch',
+  tr: 'Turkish', cs: 'Czech', el: 'Greek', hu: 'Hungarian', hr: 'Croatian', sk: 'Slovak',
+  mx: 'Mexican Spanish', ar: 'Argentine Spanish (voseo where natural)',
+  ch: 'Swiss Standard German (always "ss", never "ß")', at: 'Austrian German', be: 'Belgian Dutch (Flemish)',
 }
 
 function walk(dir) {
@@ -63,8 +66,22 @@ function collectFaq(keys) {
 }
 
 const keys = new Set()
-for (const f of [...walk(path.join(ROOT, 'components/home')), path.join(ROOT, 'components/site/global-header.tsx'), path.join(ROOT, 'components/site/global-footer.tsx')]) collectLiterals(f, keys)
-collectFaq(keys)
+const targetedFiles = process.env.I18N_SOURCE_FILES?.split(',').map((file) => file.trim()).filter(Boolean)
+const EXTRA = ['components/regnskab', 'components/konto']
+const EXTRA_FILES = ['app/kontakt/page.tsx', 'app/om-os/page.tsx']
+const sourceFiles = targetedFiles?.map((file) => path.join(ROOT, file)) ?? [
+  ...walk(path.join(ROOT, 'components/home')),
+  ...EXTRA.flatMap((d) => walk(path.join(ROOT, d))),
+  ...EXTRA_FILES.map((f) => path.join(ROOT, f)),
+  path.join(ROOT, 'components/site/global-header.tsx'),
+  path.join(ROOT, 'components/site/global-footer.tsx'),
+  path.join(ROOT, 'components/sb/AlertsPanel.tsx'),
+  path.join(ROOT, 'components/sb/TelegramPanel.tsx'),
+  path.join(ROOT, 'components/push/install-app.tsx'),
+  path.join(ROOT, 'components/push/ios-install-guide.tsx'),
+]
+for (const file of sourceFiles) collectLiterals(file, keys)
+if (!targetedFiles) collectFaq(keys)
 const allKeys = [...keys].filter(Boolean).sort()
 console.log(`Collected ${allKeys.length} source strings`)
 
@@ -73,7 +90,7 @@ async function translateChunk(locale, chunk) {
 Rules:
 - Return ONLY a JSON object mapping each exact Danish source string (unchanged key) to its translation.
 - Natural, concise marketing/UI tone for that market. Use "surebet(s)" as the term where the source does.
-- Keep brand and product names unchanged: BetTrackerAI, BetTracker AI, BetTrackerAI Pro, Telegram, Discord, Instagram, YouTube, MobilePay, Visa, Mastercard, bookmaker names, team and league names.
+- Keep brand and product names unchanged: BetTrackerAI, BetTracker AI, BetTrackerAI Pro, Telegram, Discord, Instagram, YouTube, Visa, Mastercard, bookmaker names, team and league names.
 - Keep numbers, percentages, prices and the currency "kr." exactly as written; translate units like "/md" (per month) and "dage" (days).
 - Some strings are fragments of a sentence split around a value (e.g. "Seneste fund:" ... "siden" = "Latest find: <time> ago"). Translate them so they read naturally when joined.
 - Danish-only references (StopSpillet, ROFUS, Spillemyndigheden) stay as names.
@@ -115,7 +132,7 @@ await Promise.all(
 )
 
 for (const [locale, dict] of Object.entries(results)) {
-  const sorted = Object.fromEntries(Object.entries(dict).filter(([k]) => keys.has(k)).sort(([a], [b]) => a.localeCompare(b)))
+  const sorted = Object.fromEntries(Object.entries(dict).sort(([a], [b]) => a.localeCompare(b)))
   fs.writeFileSync(path.join(OUT_DIR, `${locale}.json`), JSON.stringify(sorted, null, 2) + '\n')
 }
 console.log('Done')

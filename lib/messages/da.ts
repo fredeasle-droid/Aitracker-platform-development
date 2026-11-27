@@ -389,7 +389,7 @@ export const da = {
   sbCatCrypto: 'Crypto bookmakere',
   sbCatCryptoHint: 'Ind- og udbetaling i krypto',
   sbCatOther: 'Andre bookmakere',
-  sbCatOtherHint: 'Udenlandske bookmakere',
+  sbCatOtherHint: 'Dansk licens ikke bekræftet',
   sbCalcAria: 'Beregn indsats: {home} mod {away}',
   sbBestNow: 'Bedst lige nu',
   sbBestShort: 'Bedst nu',

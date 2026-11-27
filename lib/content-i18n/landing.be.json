@@ -89,7 +89,7 @@
   "sport/fodbold": {
     "title": "Surebets op voetbal",
     "metaTitle": "Surebets op voetbal – vind gegarandeerde winst op wedstrijden",
-    "description": "Vind surebets op voetbal in realtime. BetTrackerAI scant de odds in de Premier League, de Champions League en honderden andere competities bij bookmakers met een vergunning.",
+    "description": "Vind surebets op voetbal in realtime. BetTrackerAI scant de odds in de Jupiler Pro League, de Champions League en honderden andere competities bij bookmakers met een vergunning van de Kansspelcommissie.",
     "keyword": "surebets voetbal",
     "intro": "Voetbal levert meer surebets op dan eender welke andere sport. Er worden de klok rond wedstrijden gespeeld en elke wedstrijd biedt honderden markten die bookmakers verschillend prijzen.",
     "blocks": [
@@ -130,7 +130,7 @@
     "faq": [
       {
         "q": "In welke voetbalcompetities zijn er de meeste surebets?",
-        "a": "Kleinere competities bieden vaak hogere winstpercentages, maar grote competities zoals de Premier League en de Champions League hebben meer markten en hogere maximale inzetten."
+        "a": "Kleinere competities bieden vaak hogere winstpercentages, maar grote competities zoals de Premier League, de Jupiler Pro League en de Champions League hebben meer markten en hogere maximale inzetten."
       },
       {
         "q": "Kun je surebets plaatsen op live voetbalwedstrijden?",
@@ -177,7 +177,7 @@
       },
       {
         "q": "Welke bookmakers bieden esports aan?",
-        "a": "De meeste grote bookmakers met een vergunning bieden esports aan, vooral CS2 en League of Legends. Ga na of ze beschikbaar zijn en over een vergunning beschikken in België."
+        "a": "De meeste grote bookmakers met een vergunning bieden esports aan, vooral CS2 en League of Legends. Ga na of ze beschikbaar zijn en over een vergunning van de Kansspelcommissie beschikken in België."
       }
     ]
   },
@@ -207,7 +207,7 @@
       },
       {
         "type": "p",
-        "text": "Het grootste risico bij tennis is dat een speler tijdens een wedstrijd opgeeft. Bookmakers hanteren verschillende regels: sommige annuleren de weddenschap, andere beslechten ze als de eerste set is afgewerkt. Als je twee bookmakers verschillende regels toepassen, kun je beide weddenschappen verliezen."
+        "text": "Het grootste risico bij tennis is dat een speler tijdens een wedstrijd opgeeft. Bookmakers hanteren verschillende regels: sommige annuleren de weddenschap, andere beslechten ze als de eerste set is afgewerkt. Als twee bookmakers verschillende regels toepassen, kun je beide weddenschappen verliezen."
       },
       {
         "type": "tip",
@@ -234,32 +234,32 @@
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebets bij Bet365",
-    "metaTitle": "Bet365 surebets – ontdek kansen op gegarandeerde winst",
-    "description": "Vind surebets bij Bet365 in realtime. BetTrackerAI vergelijkt de odds van Bet365 met die van andere bookmakers en toont je waar je een gegarandeerde winst kunt vastleggen.",
-    "keyword": "bet365 surebets",
-    "intro": "Bet365 is een van de grootste bookmakers ter wereld en biedt een van de breedste aanbiedingen aan sporten en markten. Daardoor is Bet365 een van de bookmakers die het vaakst bij surebets betrokken zijn.",
+    "title": "Surebets bij Unibet",
+    "metaTitle": "Unibet surebets – ontdek kansen op gegarandeerde winst",
+    "description": "Vind surebets bij Unibet in realtime. BetTrackerAI vergelijkt de odds van Unibet met die van andere bookmakers met een Belgische vergunning en toont je waar je een gegarandeerde winst kunt vastleggen.",
+    "keyword": "unibet surebets",
+    "intro": "Unibet is een van de grootste bookmakers van Europa en biedt een van de breedste aanbiedingen aan sporten en markten. Daardoor is Unibet een van de bookmakers die het vaakst bij surebets betrokken zijn.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Over Bet365"
+        "text": "Over Unibet"
       },
       {
         "type": "p",
-        "text": "Bet365 is een bookmaker met vergunningen in meerdere rechtsgebieden en biedt odds aan op een zeer groot aantal wedstrijden, waaronder lagere competities en live markten. Door die brede waaier heeft Bet365 vaak odds die afwijken van de rest van de markt."
+        "text": "Unibet is een bookmaker met vergunningen in meerdere rechtsgebieden, waaronder een vergunning van de Kansspelcommissie voor België. Unibet biedt odds aan op een zeer groot aantal wedstrijden, waaronder lagere competities en live markten. Door die brede waaier heeft Unibet vaak odds die afwijken van de rest van de markt."
       },
       {
         "type": "h2",
-        "text": "Zo vind je surebets met Bet365"
+        "text": "Zo vind je surebets met Unibet"
       },
       {
         "type": "p",
-        "text": "Een surebet met Bet365 ontstaat wanneer Bet365 hogere odds heeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van Bet365 voortdurend op en vergelijkt ze met de rest van de markt."
+        "text": "Een surebet met Unibet ontstaat wanneer Unibet hogere odds heeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van Unibet voortdurend op en vergelijkt ze met de rest van de markt, bijvoorbeeld met Napoleon Sports, Bingoal, Betfirst of Circus."
       },
       {
         "type": "ul",
         "items": [
-          "Selecteer Bet365 en je andere bookmakers via de filter op de surebetspagina.",
+          "Selecteer Unibet en je andere bookmakers via de filter op de surebetspagina.",
           "Sorteer op winst en kies een surebet met stabiele odds.",
           "Gebruik de calculator om je inzet te verdelen en het bedrag af te ronden.",
           "Plaats eerst de weddenschap bij de bookmaker met de meest schommelende odds."
@@ -267,17 +267,17 @@
       },
       {
         "type": "tip",
-        "text": "Spreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Bet365 gebruikt. Zo gaat je account langer mee."
+        "text": "Spreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Unibet gebruikt. Zo gaat je account langer mee."
       }
     ],
     "faq": [
       {
-        "q": "Is arbitragewedden toegestaan bij Bet365?",
-        "a": "Arbitragewedden is legaal. Net als alle bookmakers kan Bet365 volgens de eigen algemene voorwaarden wel accounts beperken als het gokpatronen opmerkt waarmee consequent gegarandeerde winst wordt behaald."
+        "q": "Is arbitragewedden toegestaan bij Unibet?",
+        "a": "Arbitragewedden is legaal. Net als alle bookmakers kan Unibet volgens de eigen algemene voorwaarden wel accounts beperken als het gokpatronen opmerkt waarmee consequent gegarandeerde winst wordt behaald."
       },
       {
-        "q": "Heeft Bet365 een kansspelvergunning?",
-        "a": "Ja. Bet365 heeft vergunningen in meerdere gereguleerde markten wereldwijd. Informeer je over de fiscale regels die voor jou in België gelden, want de behandeling van winsten verschilt per rechtsgebied."
+        "q": "Heeft Unibet een kansspelvergunning?",
+        "a": "Ja. Unibet heeft een vergunning van de Kansspelcommissie om online weddenschappen aan te bieden in België, naast vergunningen in andere gereguleerde markten. Winsten zijn voor spelers in België in principe belastingvrij, maar controleer altijd de actuele regels, want die kunnen wijzigen."
       }
     ]
   },
@@ -294,7 +294,7 @@
       },
       {
         "type": "p",
-        "text": "Unibet heeft vergunningen in meerdere gereguleerde markten en biedt een breed aanbod aan sporten. Omdat Unibet zijn oddsplatform deelt met verschillende andere bookmakers, ontstaan surebets meestal tussen Unibet en bookmakers op andere platformen."
+        "text": "Unibet heeft vergunningen in meerdere gereguleerde markten, waaronder België (Kansspelcommissie), en biedt een breed aanbod aan sporten. Omdat Unibet zijn oddsplatform deelt met verschillende andere bookmakers, ontstaan surebets meestal tussen Unibet en bookmakers op andere platformen."
       },
       {
         "type": "h2",
@@ -334,7 +334,7 @@
     "metaTitle": "Betano surebets – vind arbitragekansen bij Betano",
     "description": "Vind surebets bij Betano in real time. BetTrackerAI vergelijkt de odds van Betano met die van andere bookmakers met een vergunning en toont je waar je een gegarandeerde winst kunt vastleggen.",
     "keyword": "betano surebets",
-    "intro": "Betano is een van de nieuwere bookmakers op de gereguleerde markt en werkt met een eigen platform om odds te bepalen. Daardoor wijken de odds van Betano vaak af van de rest van de markt, wat kansen voor arbitrage betting oplevert.",
+    "intro": "Betano is een van de nieuwere bookmakers op gereguleerde markten en werkt met een eigen platform om odds te bepalen. Daardoor wijken de odds van Betano vaak af van de rest van de markt, wat kansen voor arbitrage betting oplevert. In België mag je alleen online wedden bij operators met een vergunning van de Kansspelcommissie.",
     "blocks": [
       {
         "type": "h2",
@@ -342,7 +342,7 @@
       },
       {
         "type": "p",
-        "text": "Betano heeft een vergunning in meerdere rechtsgebieden en biedt een breed aanbod aan sporten. Omdat Betano zijn odds zelfstandig bepaalt, duikt de bookmaker vaak op in surebets wanneer je hem vergelijkt met gevestigde bookmakers."
+        "text": "Betano heeft een vergunning in meerdere rechtsgebieden en biedt een breed aanbod aan sporten. Omdat Betano zijn odds zelfstandig bepaalt, duikt de bookmaker vaak op in surebets wanneer je hem vergelijkt met gevestigde bookmakers zoals Napoleon Sports, Unibet of Bingoal. Controleer wel eerst of Betano in België over een vergunning beschikt."
       },
       {
         "type": "h2",
@@ -363,47 +363,47 @@
       },
       {
         "type": "tip",
-        "text": "Verspreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Betano gebruikt. Zo gaat je account langer mee en vermijd je beperkingen."
+        "text": "Verspreid je weddenschappen over meerdere bookmakers met een Belgische vergunning, zodat je niet enkel Betano gebruikt. Zo gaat je account langer mee en vermijd je beperkingen."
       }
     ],
     "faq": [
       {
         "q": "Mag je surebets plaatsen bij Betano?",
-        "a": "Ja, arbitrage betting is legaal. Zoals alle bookmakers kan Betano volgens zijn algemene voorwaarden wel accounts beperken als er gokpatronen worden opgemerkt die consequent een gegarandeerde winst opleveren."
+        "a": "Ja, arbitrage betting is op zich legaal, zolang je wedt bij een operator met een vergunning van de Kansspelcommissie. Zoals alle bookmakers kan Betano volgens zijn algemene voorwaarden wel accounts beperken als er gokpatronen worden opgemerkt die consequent een gegarandeerde winst opleveren."
       },
       {
         "q": "Heeft Betano een vergunning?",
-        "a": "Ja. Betano heeft een vergunning in meerdere gereguleerde markten. Controleer bij de Kansspelcommissie of Betano ook in België over een vergunning beschikt."
+        "a": "Betano heeft een vergunning in meerdere gereguleerde markten. Controleer bij de Kansspelcommissie of Betano ook in België over een vergunning beschikt. Alleen operators met een Belgische vergunning mogen online weddenschappen aanbieden, dus gebruik geen sites zonder die vergunning."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebets bij LeoVegas",
-    "metaTitle": "LeoVegas surebets – vind kansen voor arbitrage betting",
-    "description": "Vind surebets bij LeoVegas in real time. BetTrackerAI vergelijkt de odds van LeoVegas met andere bookmakers en toont je waar je een gegarandeerde winst kunt vastleggen.",
-    "keyword": "leovegas surebets",
-    "intro": "LeoVegas staat bekend om zijn casinoaanbod, maar biedt ook een ruime keuze aan sportweddenschappen. De bookmaker werkt met het Kambi-platform en duikt geregeld op in kansen voor arbitrage betting.",
+    "title": "Surebets bij Unibet",
+    "metaTitle": "Unibet surebets – vind kansen voor arbitrage betting",
+    "description": "Vind surebets bij Unibet in real time. BetTrackerAI vergelijkt de odds van Unibet met andere bookmakers en toont je waar je een gegarandeerde winst kunt vastleggen.",
+    "keyword": "unibet surebets",
+    "intro": "Unibet staat bekend om zijn ruime aanbod aan sportweddenschappen en is ook actief met casino. De bookmaker heeft een vergunning van de Kansspelcommissie en duikt geregeld op in kansen voor arbitrage betting.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Over LeoVegas"
+        "text": "Over Unibet"
       },
       {
         "type": "p",
-        "text": "LeoVegas is een bookmaker met vergunning en een gebruiksvriendelijke app waarmee je snel weddenschappen plaatst. Dat is belangrijk bij surebets, want odds kunnen binnen enkele seconden veranderen. Controleer of LeoVegas een vergunning heeft en beschikbaar is in België voordat je een account aanmaakt."
+        "text": "Unibet is een bookmaker met een vergunning van de Kansspelcommissie en een gebruiksvriendelijke app waarmee je snel weddenschappen plaatst. Dat is belangrijk bij surebets, want odds kunnen binnen enkele seconden veranderen. Controleer altijd of een bookmaker een geldige Belgische vergunning heeft voordat je een account aanmaakt."
       },
       {
         "type": "h2",
-        "text": "Zo vind je surebets met LeoVegas"
+        "text": "Zo vind je surebets met Unibet"
       },
       {
         "type": "p",
-        "text": "Een surebet met LeoVegas ontstaat wanneer LeoVegas hogere odds geeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van LeoVegas voortdurend op en vergelijkt ze met bookmakers die in België actief zijn."
+        "text": "Een surebet met Unibet ontstaat wanneer Unibet hogere odds geeft op één uitkomst dan andere bookmakers op de tegenovergestelde uitkomsten. BetTrackerAI volgt de odds van Unibet voortdurend op en vergelijkt ze met bookmakers die een vergunning hebben in België, zoals Napoleon Sports, Bingoal en Betfirst."
       },
       {
         "type": "ul",
         "items": [
-          "Selecteer LeoVegas en je andere bookmakers via de filter op de surebetspagina.",
+          "Selecteer Unibet en je andere bookmakers via de filter op de surebetspagina.",
           "Sorteer op winst en kies een surebet met stabiele odds.",
           "Gebruik de calculator om je inzet te verdelen en de bedragen af te ronden.",
           "Plaats je weddenschap eerst bij de bookmaker met de meest volatiele odds."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Verspreid je weddenschappen over meerdere bookmakers, zodat je niet enkel LeoVegas gebruikt. Zo gaat je account langer mee en verklein je het risico op beperkingen."
+        "text": "Verspreid je weddenschappen over meerdere bookmakers, zodat je niet enkel Unibet gebruikt. Zo gaat je account langer mee en verklein je het risico op beperkingen."
       }
     ],
     "faq": [
       {
-        "q": "Kun je surebets plaatsen bij LeoVegas?",
-        "a": "Ja, arbitrage betting is legaal. Zoals alle bookmakers kan LeoVegas volgens zijn algemene voorwaarden wel accounts beperken als er gokpatronen worden opgemerkt die consequent winst garanderen."
+        "q": "Kun je surebets plaatsen bij Unibet?",
+        "a": "Ja, arbitrage betting is op zich niet verboden. Zoals alle bookmakers kan Unibet volgens zijn algemene voorwaarden wel accounts beperken als er gokpatronen worden opgemerkt die consequent winst garanderen. Controleer de actuele voorwaarden en de geldende regels in België."
       },
       {
-        "q": "Is LeoVegas geschikt voor surebets?",
-        "a": "LeoVegas is een goede aanvullende bookmaker, vooral in combinatie met bookmakers buiten het Kambi-platform, want zo heb je meer arbitragekansen om uit te kiezen."
+        "q": "Is Unibet geschikt voor surebets?",
+        "a": "Unibet is een goede aanvullende bookmaker, vooral in combinatie met andere bookmakers met een Belgische vergunning, zoals Napoleon Sports, Bingoal of Betfirst, want zo heb je meer arbitragekansen om uit te kiezen."
       }
     ]
   }

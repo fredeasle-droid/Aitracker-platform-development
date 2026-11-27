@@ -41,7 +41,7 @@ export function SocialFollow() {
           <a
             key={name}
             href="#"
-            aria-label={`Følg BetTrackerAI på ${name}`}
+            aria-label={`${name} – ${tx("Følg os")}`}
             style={{ "--brand": brand, "--play": "var(--youtube)" } as CSSProperties}
             className="social-tile group relative flex h-[96px] flex-col items-center overflow-hidden rounded-[14px] border pt-[12px] text-center"
           >

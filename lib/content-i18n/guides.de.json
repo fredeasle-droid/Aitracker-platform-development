@@ -32,7 +32,7 @@
       },
       {
         "type": "p",
-        "text": "Selbst mit Surebets ist es wichtig, die Kontrolle über Ihr Wettverhalten zu behalten. Setzen Sie Limits für Ihre Einzahlungen und nutzen Sie bei Bedarf das OASIS-Sperrsystem für eine Spielpause. Lizenzierte Anbieter unterliegen zudem einem anbieterübergreifenden Einzahlungslimit von 1.000 Euro pro Monat (LUGAS). Wenn Sie Unterstützung benötigen, können Sie sich an die BZgA oder andere Beratungsstellen wenden."
+        "text": "Selbst mit Surebets ist es wichtig, die Kontrolle über Ihr Wettverhalten zu behalten. Setzen Sie Limits für Ihre Einzahlungen und nutzen Sie bei Bedarf das OASIS-Sperrsystem für eine Spielpause. Informieren Sie sich außerdem über die aktuell geltenden Einzahlungslimits bei lizenzierten Anbietern. Wenn Sie Unterstützung benötigen, können Sie sich an die BZgA-Hotline (check-dein-spiel.de) oder andere Beratungsstellen wenden."
       }
     ],
     "faq": [
@@ -69,7 +69,7 @@
       },
       {
         "type": "p",
-        "text": "In Deutschland regelt der Glücksspielstaatsvertrag auch Willkommensboni: Die Bedingungen variieren je Anbieter, aber alle lizenzierenden Wettanbieter unterliegen der monatlichen Einzahlungsobergrenze von 1.000 Euro (LUGAS-System). Lesen Sie daher immer die konkreten Bonusbedingungen, bevor Sie einen Bonus annehmen. Wichtig: Achten Sie darauf, dass der Anbieter eine deutsche Lizenz der GGL besitzt."
+        "text": "In Deutschland dürfen nur Wettanbieter mit GGL-Lizenz (Gemeinsame Glücksspielbehörde der Länder) Sportwetten anbieten, zum Beispiel Tipico, bwin, Interwetten, bet-at-home, Betway, Merkur Bets, bet365 oder ODDSET. Die Bonusbedingungen variieren je Anbieter, und für lizenzierte Anbieter gelten gesetzliche Vorgaben wie Einzahlungslimits. Lesen Sie daher immer die konkreten Bonusbedingungen, bevor Sie einen Bonus annehmen, und prüfen Sie die aktuell geltenden Regeln. Wichtig: Achten Sie darauf, dass der Anbieter auf der GGL-Whitelist steht."
       },
       {
         "type": "ul",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Surebets eignen sich gut, um Bonusgeld umzusetzen, weil Sie das Geld nicht auf ein einzelnes Ergebnis riskieren. Beachten Sie jedoch die 5,3 % Wettsteuer auf den Einsatz in Deutschland: Viele Anbieter ziehen diese vom Einsatz ab, was die Marge bei Surebets und Matched Betting schmälert. Nur Margen, die deutlich über diesem Steuereffekt liegen, sind daher lohnenswert. Wenn der Bonus umgesetzt ist, können Sie mit normalen Surebets oder Value Bets weitermachen."
+        "text": "Surebets eignen sich gut, um Bonusgeld umzusetzen, weil Sie das Geld nicht auf ein einzelnes Ergebnis riskieren. Beachten Sie jedoch die 5,3 % Wettsteuer in Deutschland: Viele Anbieter geben diese an die Spieler weiter, etwa indem sie sie vom Einsatz abziehen, was die Marge bei Surebets und Matched Betting schmälert. Nur Margen, die deutlich über diesem Steuereffekt liegen, sind daher lohnenswert. Wenn der Bonus umgesetzt ist, können Sie mit normalen Surebets oder Value Bets weitermachen."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Wie hoch sind Willkommensboni in Deutschland?",
-        "a": "Die Höhe variiert je Anbieter. Achten Sie auf Umsatzbedingungen, Mindestquoten und die monatliche Einzahlungsobergrenze von 1.000 Euro, die für alle lizenzierten Anbieter in Deutschland gilt."
+        "a": "Die Höhe variiert je Anbieter. Achten Sie auf Umsatzbedingungen, Mindestquoten und die gesetzlichen Einzahlungslimits für lizenzierte Anbieter in Deutschland. Prüfen Sie dazu immer die aktuell geltenden Regeln."
       }
     ],
     "category": "Strategie",
@@ -200,7 +200,7 @@
       },
       {
         "type": "tip",
-        "text": "Rechne immer mit den Quoten, die tatsächlich auf deinem Wettschein stehen, nicht mit denen aus dem Scanner. Zieht ein Anbieter Wettsteuer ab, trage die Nettoquote ein, also etwa Quote × 0,95."
+        "text": "Rechne immer mit den Quoten, die tatsächlich auf deinem Wettschein stehen, nicht mit denen aus dem Scanner. Gibt ein Anbieter die Wettsteuer (5,3 %) an dich weiter, trage die Nettoquote ein, also etwa Quote × 0,95."
       },
       {
         "type": "h2",
@@ -492,7 +492,7 @@
       },
       {
         "type": "tip",
-        "text": "In Deutschland fallen auf Sportwetten 5,3 % Wettsteuer an. Zieht ein Anbieter sie vom Einsatz oder Gewinn ab, sinkt deine effektive Quote um rund 5 %. Rechne Value Bets und Surebets deshalb immer mit Nettoquoten oder nutze Anbieter, die die Steuer selbst tragen."
+        "text": "In Deutschland zahlen Wettanbieter 5,3 % Wettsteuer auf Sportwetten, und viele geben sie an die Spieler weiter. Zieht ein Anbieter sie vom Einsatz oder Gewinn ab, sinkt deine effektive Quote um rund 5 %. Rechne Value Bets und Surebets deshalb immer mit Nettoquoten oder nutze Anbieter, die die Steuer selbst tragen."
       },
       {
         "type": "h2",
@@ -577,7 +577,7 @@
     "faq": [
       {
         "q": "Wie viele Wettanbieter brauche ich für Surebets?",
-        "a": "Ein guter Ausgangspunkt sind 5–8 Wettanbieter mit deutscher Lizenz. Je mehr verschiedene Quotenplattformen Sie abdecken, desto mehr Surebets erhalten Sie Zugang zu. Achten Sie dabei auf die 5,3 % Wettsteuer, die viele Anbieter weitergeben und die Ihre Marge direkt reduziert."
+        "a": "Ein guter Ausgangspunkt sind 5–8 Wettanbieter mit deutscher Lizenz. Je mehr verschiedene Quotenplattformen Sie abdecken, desto mehr Surebets stehen Ihnen offen. Achten Sie dabei auf die 5,3 % Wettsteuer, die viele Anbieter weitergeben und die Ihre Marge direkt reduziert."
       },
       {
         "q": "Darf ich ausländische Wettanbieter für Surebets nutzen?",
@@ -806,7 +806,7 @@
         "items": [
           "Quoten können sich ändern, während Sie Ihre Wetten platzieren. Platzieren Sie zuerst die Wette mit der instabilsten Quote.",
           "Prüfen Sie genau, ob der Markt bei beiden Anbietern identisch ist – z. B. ob Verlängerung und Elfmeterschießen eingeschlossen sind.",
-          "Halten Sie Guthaben bei mehreren Wettanbietern bereit, damit Sie schnell handeln können. Beachten Sie: In Deutschland gilt ein kombiniertes monatliches Einzahlungslimit von 1.000 € bei allen lizenzierten Anbietern (LUGAS).",
+          "Halten Sie Guthaben bei mehreren Wettanbietern bereit, damit Sie schnell handeln können. Beachten Sie: In Deutschland gelten bei lizenzierten Anbietern Einzahlungslimits, die auch anbieterübergreifend greifen können – prüfen Sie die aktuellen Regeln.",
           "Wettanbieter können Konten limitieren, die nur Arbitrage Wetten spielen. Lesen Sie unseren Leitfaden zur Vermeidung von Kontolimitierungen.",
           "Die 5,3 % Wettsteuer frisst direkt in die Marge. Nur Surebets mit rechnerischem Gewinn über ca. 6 % bleiben nach Steuer lohnenswert."
         ]
@@ -850,7 +850,7 @@
       },
       {
         "type": "p",
-        "text": "Bei einem Surebet (Arbitrage Wette) setzen Sie auf alle möglichen Ergebnisse bei verschiedenen Wettanbietern, sodass Sie unabhängig vom Spielausgang garantiert gewinnen. Der Gewinn pro Wette ist geringer, aber er ist sofort und ohne Risiko gesichert. Wichtig in Deutschland: Die 5,3 % Wettsteuer auf den Einsatz schmälert die Marge erheblich – nur Surebets mit ausreichend hoher Marge über diesem Steuersatz bleiben lohnenswert."
+        "text": "Bei einem Surebet (Arbitrage Wette) setzen Sie auf alle möglichen Ergebnisse bei verschiedenen Wettanbietern, sodass Sie unabhängig vom Spielausgang garantiert gewinnen. Der Gewinn pro Wette ist geringer, aber er ist sofort und ohne Risiko gesichert. Wichtig in Deutschland: Die 5,3 % Wettsteuer, die viele Wettanbieter an die Spieler weitergeben, schmälert die Marge erheblich – nur Surebets mit ausreichend hoher Marge über diesem Steuersatz bleiben lohnenswert."
       },
       {
         "type": "example",
@@ -894,7 +894,7 @@
     "faq": [
       {
         "q": "Sind Value Bets profitabler als Surebets?",
-        "a": "Value Bets können langfristig höhere Renditen erzielen, gehen jedoch mit deutlich größeren Schwankungen und längeren Verlustphasen einher. Surebets liefern geringeren, aber sofort sicheren und stabilen Profit – wobei in Deutschland die 5,3 % Wettsteuer die Margen beider Strategien schmälert."
+        "a": "Value Bets können langfristig höhere Renditen erzielen, gehen jedoch mit deutlich größeren Schwankungen und längeren Verlustphasen einher. Surebets liefern geringeren, aber sofort sicheren und stabilen Profit – wobei in Deutschland die 5,3 % Wettsteuer, sofern der Wettanbieter sie weitergibt, die Margen beider Strategien schmälert."
       },
       {
         "q": "Werden Konten auch bei Value Betting limitiert?",
@@ -955,11 +955,11 @@
         "rows": [
           [
             "1/1,85 + 1/1,95",
-            "54,1 % + 51,3 % = 105,4 %"
+            "54,05 % + 51,28 % = 105,33 %"
           ],
           [
             "Marge des Anbieters",
-            "ca. 5,4 %"
+            "ca. 5,3 %"
           ]
         ],
         "note": "Je niedriger die Marge, desto bessere Quoten erhalten Sie als Kunde."
@@ -1003,7 +1003,7 @@
       },
       {
         "type": "p",
-        "text": "Wenn Sie bei Anbietern ohne gültige deutsche Lizenz wetten, bewegen Sie sich rechtlich in einer Grauzone. Die steuerliche Behandlung solcher Gewinne ist nicht eindeutig geregelt. Prüfen Sie stets die Verfügbarkeit und Lizenz eines Anbieters in Deutschland. Es ist grundsätzlich empfehlenswert, sich an in Deutschland zugelassene Wettanbieter zu halten."
+        "text": "In Deutschland dürfen nur Anbieter auf der GGL-Whitelist legal Sportwetten anbieten. Wetten bei Anbietern ohne gültige deutsche Lizenz sind rechtlich riskant, und Sie haben dort keinen deutschen Spielerschutz. Die steuerliche Behandlung solcher Gewinne ist nicht eindeutig geregelt – prüfen Sie daher die aktuellen Regeln. Prüfen Sie stets die Lizenz eines Anbieters in Deutschland und halten Sie sich an in Deutschland zugelassene Wettanbieter."
       },
       {
         "type": "h2",
@@ -1179,7 +1179,7 @@
       },
       {
         "type": "p",
-        "text": "Ein Surebet entsteht, wenn die besten Quoten mehrerer Wettanbieter zusammen eine Summe unter 1 ergeben. Dann wird die eingebaute Buchmacher-Marge durch unterschiedliche Bewertungen mehr als ausgeglichen. Genau danach sucht ein Quotenvergleich-Scanner. Wichtig in Deutschland: Beachten Sie, dass auf Sportwetten eine Wettsteuer von 5,3 % auf den Einsatz erhoben wird, die viele Anbieter an die Kunden weitergeben. Diese Steuer wirkt sich direkt auf die Arbitrage-Marge aus – nur Margen oberhalb dieses Steuereffekts bleiben profitabel."
+        "text": "Ein Surebet entsteht, wenn die besten Quoten mehrerer Wettanbieter zusammen eine Summe unter 1 ergeben. Dann wird die eingebaute Buchmacher-Marge durch unterschiedliche Bewertungen mehr als ausgeglichen. Genau danach sucht ein Quotenvergleich-Scanner. Wichtig in Deutschland: Auf Sportwetten fällt eine Wettsteuer von 5,3 % an, die die Anbieter abführen und viele an ihre Kunden weitergeben. Diese Steuer wirkt sich direkt auf die Arbitrage-Marge aus – nur Margen oberhalb dieses Steuereffekts bleiben profitabel. Prüfen Sie dabei, wie Ihr Anbieter die Steuer berechnet und weitergibt."
       },
       {
         "type": "tip",
@@ -1328,7 +1328,7 @@
       },
       {
         "type": "p",
-        "text": "Da dieser Markt nur zwei Ergebnisse hat, können Sie Heimmannschaft -0,5 bei einem Wettanbieter mit Auswärtsmannschaft +0,5 bei einem anderen kombinieren und benötigen nur zwei Wettanbieter. Achten Sie darauf, dass beide Seiten die entsprechende Linie haben: -0,5 gehört zu +0,5, und -0,25 gehört zu +0,25. Wichtig: In Deutschland unterliegen Sportwetten einer Wettsteuer von 5,3 % auf den Einsatz. Viele Anbieter geben diese Steuer an die Kunden weiter, was die Surebet-Marge direkt reduziert. Nur Margen, die deutlich über diesem Steuersatz liegen, bleiben lohnenswert. Prüfen Sie außerdem immer, ob die gewählten Anbieter in Deutschland lizenziert sind."
+        "text": "Da dieser Markt nur zwei Ergebnisse hat, können Sie Heimmannschaft -0,5 bei einem Wettanbieter mit Auswärtsmannschaft +0,5 bei einem anderen kombinieren und benötigen nur zwei Wettanbieter. Achten Sie darauf, dass beide Seiten die entsprechende Linie haben: -0,5 gehört zu +0,5, und -0,25 gehört zu +0,25. Wichtig: In Deutschland unterliegen Sportwetten einer Wettsteuer von 5,3 %. Viele Anbieter geben diese Steuer an die Kunden weiter, was die Surebet-Marge direkt reduziert. Nur Margen, die deutlich über diesem Steuersatz liegen, bleiben lohnenswert. Prüfen Sie außerdem immer, ob die gewählten Anbieter in Deutschland lizenziert sind (GGL-Whitelist)."
       },
       {
         "type": "tip",
@@ -1502,7 +1502,7 @@
         "a": "Erfassen Sie Wetten, Einzahlungen und Auszahlungen möglichst sofort und gleichen Sie die Guthaben mindestens einmal pro Woche mit den tatsächlichen Kontoständen ab."
       }
     ],
-    "category": "Strategi",
+    "category": "Strategie",
     "ctaLabel": "Öffnen Sie Ihre Buchhaltung"
   },
   "roi-betting": {
@@ -1582,7 +1582,7 @@
         "a": "Ja. Die Buchhaltung in BetTrackerAI berechnet Ihren ROI basierend auf den Wetten, die Sie registrieren."
       }
     ],
-    "category": "Strategi",
+    "category": "Strategie",
     "ctaLabel": "Sehen Sie Ihren ROI in der Buchhaltung"
   },
   "bet-tracker": {
@@ -1706,107 +1706,11 @@
       },
       {
         "q": "Brauche ich einen Bet Tracker für die Steuer?",
-        "a": "In Deutschland zahlt der Anbieter die Wettsteuer, Gewinne aus privaten Sportwetten sind für dich in der Regel steuerfrei. Eine saubere Buchführung hilft trotzdem, deine Gewinne nachzuweisen."
+        "a": "In Deutschland zahlt der Anbieter die Wettsteuer (5,3 %), viele Anbieter geben sie jedoch an die Spieler weiter. Gewinne aus privaten Sportwetten sind für dich in der Regel steuerfrei. Eine saubere Buchführung hilft trotzdem, deine Gewinne nachzuweisen. Prüfe die aktuellen Regeln im Zweifel selbst."
       }
     ],
     "category": "Strategie",
     "ctaLabel": "Bet Tracker kostenlos testen"
-  },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: die günstigere Alternative",
-    "metaTitle": "Surebet Danmark Alternative – BetTrackerAI Vergleich 2026",
-    "description": "Vergleich BetTrackerAI und Surebet Danmark: Preis, Funktionen, Wettanbieter und Tracking. Finden Sie das passende Arbitrage-Wetten-Tool für Deutschland.",
-    "keyword": "Arbitrage Wetten Tool Vergleich",
-    "intro": "BetTrackerAI und Surebet Danmark sind zwei Tools, die Surebets bei lizenzierten Wettanbietern finden. Beide bieten Ihnen 7 Tage kostenlosen Test. Der Unterschied liegt im Preis, in der Verfügbarkeit für den deutschen Markt und darin, was Sie zusätzlich zur reinen Surebet-Liste erhalten.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Kurz gesagt"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI und Surebet Danmark im Vergleich",
-        "rows": [
-          [
-            "Preis pro Monat",
-            "BetTrackerAI ab ca. 20 € · Surebet Danmark ca. 134 €"
-          ],
-          [
-            "Kostenlose Testphase",
-            "Beide: 7 Tage"
-          ],
-          [
-            "Wettanbieter",
-            "BetTrackerAI: internationaler Quotenvergleich · Surebet Danmark: auf dänischen Markt fokussiert"
-          ],
-          [
-            "Benachrichtigungen",
-            "BetTrackerAI: Push und SMS (Premium) · Surebet Danmark: Live-Benachrichtigungen"
-          ],
-          [
-            "Wett-Tracking",
-            "BetTrackerAI: vollständige Buchhaltung mit ROI und Bankroll pro Wettanbieter · Surebet Danmark: Bet Tracker"
-          ],
-          [
-            "Kostenloser Rechner und Anleitungen",
-            "BetTrackerAI: Surebet-Rechner und deutschsprachige Anleitungen"
-          ]
-        ],
-        "note": "Die Preise wurden am 23. November 2026 auf beiden Seiten überprüft und können sich ändern. Prüfen Sie die Verfügbarkeit und Lizenz der Wettanbieter in Ihrem Land."
-      },
-      {
-        "type": "h2",
-        "text": "Preis: der Unterschied ist erheblich"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark kostet ca. 134 € pro Monat. BetTrackerAI kostet ca. 20 € pro Monat für Basis mit Surebets bis zu 5 % Gewinn und ca. 33 € für Premium mit allen Surebets und SMS-Benachrichtigungen. Mit Premium sparen Sie ca. 100 € pro Monat, also rund 1.200 € pro Jahr. Abgerechnet wird in dänischen Kronen, daher sind die Euro-Beträge gerundet."
-      },
-      {
-        "type": "p",
-        "text": "Das ist wichtig, weil Arbitrage-Wetten typischerweise 1–5 % pro Wette bringen – in Deutschland jedoch nach Abzug der 5,3 % Wettsteuer oft deutlich weniger. Mit einem niedrigen Monatspreis müssen Sie deutlich weniger umsetzen, bevor sich das Abonnement amortisiert hat."
-      },
-      {
-        "type": "h2",
-        "text": "Buchhaltung: hier unterscheidet sich BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "Surebets sind nur profitabel, wenn Sie genau wissen, wie viel Sie verdient haben. In BetTrackerAI erfassen Sie Ihre Sportwetten Arbitrage und Einzahlungen und sehen Ihren Gewinn, Ihren ROI und Ihr Guthaben bei jedem Wettanbieter an einem Ort. Sie können auch einen Wettschein importieren, anstatt ihn manuell einzugeben. So behalten Sie Ihr Bankroll-Management im Blick."
-      },
-      {
-        "type": "h2",
-        "text": "Für wen passt was?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Wählen Sie BetTrackerAI, wenn Sie Surebets zu einem günstigen Preis suchen und gleichzeitig Ihre Buchhaltung und Ihr Bankroll-Management professionell führen möchten. Prüfen Sie, welche Wettanbieter in Ihrem Markt verfügbar sind.",
-          "Wählen Sie Surebet Danmark, wenn Sie deren System bereits nutzen, Zugang zu den dort gelisteten Wettanbietern haben und mit dem Preis zufrieden sind.",
-          "Wenn Sie unsicher sind, probieren Sie beide aus. Beide bieten 7 Tage kostenlose Testphase, sodass Sie Surebets bei denselben Spielen vergleichen können."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Unabhängig davon, welches Tool Sie wählen: Platzieren Sie immer zuerst die Wette mit der instabilsten Quote und prüfen Sie, dass der Markt bei beiden Wettanbietern derselbe ist. Beachten Sie in Deutschland die 5,3 % Wettsteuer – nur Surebets mit Margen deutlich über diesem Wert bleiben nach Steuer profitabel."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Ist BetTrackerAI günstiger als Surebet Danmark?",
-        "a": "Ja. BetTrackerAI kostet ca. 20 oder 33 € pro Monat, während Surebet Danmark ca. 134 € pro Monat kostet (Stand: 23. November 2026)."
-      },
-      {
-        "q": "Welche Wettanbieter vergleichen beide Tools?",
-        "a": "Surebet Danmark konzentriert sich auf Wettanbieter mit dänischer Lizenz. BetTrackerAI vergleicht Quoten über internationale Wettanbieter – prüfen Sie die Verfügbarkeit und Lizenz (GGL) der Anbieter in Ihrem Land."
-      },
-      {
-        "q": "Kann ich BetTrackerAI kostenlos testen?",
-        "a": "Ja. Sie erhalten 7 Tage kostenlose Testphase mit vollem Zugang und können jederzeit während der Testphase kündigen."
-      }
-    ],
-    "category": "Grundlagen",
-    "ctaLabel": "BetTrackerAI 7 Tage kostenlos testen"
   },
   "tjen-penge-paa-odds-uden-risiko": {
     "title": "Mit Sportwetten ohne Risiko Geld verdienen: so funktioniert Gewinnabsicherung",
@@ -1930,7 +1834,7 @@
       },
       {
         "type": "tip",
-        "text": "In Deutschland fällt auf Sportwetten 5,3 % Wettsteuer an. Gibt ein Anbieter sie an dich weiter, sinkt deine effektive Quote um rund 5 %, und ein Surebet mit 2,5 % Marge wird zum Verlust. Nutze für Surebets nur Anbieter, die die Steuer selbst tragen, oder rechne mit Nettoquoten."
+        "text": "In Deutschland zahlen die Anbieter 5,3 % Wettsteuer auf Sportwetten, und viele geben sie an die Spieler weiter. Dann sinkt deine effektive Quote um rund 5 %, und ein Surebet mit 2,5 % Marge wird zum Verlust. Nutze für Surebets nur Anbieter mit GGL-Lizenz, die die Steuer selbst tragen, oder rechne mit Nettoquoten."
       },
       {
         "type": "h2",
@@ -2114,11 +2018,11 @@
         "rows": [
           [
             "Spieler A bei Anbieter 1, Quote 1,55",
-            "Einsatz 523,81 €"
+            "Einsatz 524,45 €"
           ],
           [
             "Spieler B bei Anbieter 2, Quote 2,95",
-            "Einsatz 276,19 €"
+            "Einsatz 275,55 €"
           ],
           [
             "1/1,55 + 1/2,95",
@@ -2252,7 +2156,7 @@
       {
         "type": "ul",
         "items": [
-          "**Quoten sammeln:** Der Scanner liest laufend die Quoten vieler Anbieter in Deutschland und international.",
+          "**Quoten sammeln:** Der Scanner liest laufend die Quoten vieler Anbieter, auch internationaler Referenzmärkte. Wetten solltest du nur bei Anbietern mit deutscher GGL-Lizenz platzieren.",
           "**Marge entfernen:** Aus den Quoten scharfer Anbieter rechnet er die Buchmacher-Marge heraus, um faire Quoten zu erhalten.",
           "**Abweichungen finden:** Er vergleicht jede angebotene Quote mit der fairen Quote und berechnet den Value.",
           "**Filtern:** Nur Wetten über deinem Mindest-Value, in Märkten mit genug Liquidität und mit frischen Quoten."
@@ -2321,7 +2225,7 @@
       },
       {
         "q": "Gibt es einen KI-Quotenscanner für Deutschland?",
-        "a": "Ja. BetTracker AI vergleicht Quoten von Anbietern, die in Deutschland verfügbar sind, und zeigt dir Chancen mit fertiger Berechnung."
+        "a": "Ja. BetTracker AI vergleicht Quoten von Anbietern mit deutscher GGL-Lizenz, zum Beispiel Tipico, bwin oder bet365, und zeigt dir Chancen mit fertiger Berechnung."
       }
     ]
   },
@@ -2393,7 +2297,7 @@
       },
       {
         "type": "p",
-        "text": "Ein reiner Quotenvergleich ist oft kostenlos, findet aber keine Surebets für dich. Spezialisierte Surebet-Dienste kosten häufig über 100 € pro Monat. **BetTracker AI kostet ab ca. 20 € pro Monat für Basis und ca. 33 € für Premium**, mit Scanner, Rechner und Bet Tracker in einem. Einen ausführlichen Vergleich findest du im Ratgeber [Arbitrage-Wetten-Tools im Vergleich](/de/ratgeber/surebet-danmark-alternativ)."
+        "text": "Ein reiner Quotenvergleich ist oft kostenlos, findet aber keine Surebets für dich. Spezialisierte Surebet-Dienste kosten häufig über 100 € pro Monat. **BetTracker AI kostet ab ca. 20 € pro Monat für Basis und ca. 33 € für Premium**, mit Scanner, Rechner und Bet Tracker in einem."
       },
       {
         "type": "tip",

@@ -2,7 +2,7 @@
   "matched-betting": {
     "title": "Matched Betting: So holst du Gewinn aus Willkommensboni",
     "metaTitle": "Matched Betting – so nutzt du Wettanbieter-Boni aus",
-    "description": "Matched Betting erklärt: Wie du Willkommensboni und Gratiswetten bei lizenzierten Wettanbietern nutzt, um dir einen Gewinn zu sichern, und wo der Unterschied zu Sure Bets liegt.",
+    "description": "Matched Betting erklärt: Wie du Willkommensboni und Gratiswetten bei in Österreich lizenzierten Wettanbietern nutzt, um dir einen Gewinn zu sichern, und wo der Unterschied zu Sure Bets liegt.",
     "keyword": "Matched Betting",
     "intro": "Matched Betting ist eine Technik, mit der du Boni und Gratiswetten von Wettanbietern in echtes Geld verwandelst. Indem du dasselbe Ereignis sowohl mit einer Normalwette als auch mit einer Gegenwette abdeckst, sind alle Ausgänge abgesichert und das Ergebnis spielt keine Rolle. Übrig bleibt ein garantierter Gewinn aus dem Bonus.",
     "blocks": [
@@ -12,7 +12,7 @@
       },
       {
         "type": "p",
-        "text": "Wenn du eine Gratiswette oder einen Bonus einlöst, setzt du sie bei einem Wettanbieter auf einen Ausgang und wettest bei einer Wettbörse dagegen (Lay-Wette) oder setzt bei einem anderen Wettanbieter auf das gegenteilige Ergebnis. Da du bei der Gratiswette kein eigenes Geld einsetzt, sicherst du dir unabhängig vom Ausgang den Großteil ihres Nennwerts als Gewinn."
+        "text": "Wenn du eine Gratiswette oder einen Bonus einlöst, setzt du sie bei einem Wettanbieter auf einen Ausgang und wettest bei einem anderen in Österreich lizenzierten Wettanbieter auf das gegenteilige Ergebnis. Eine Lay-Wette bei einer Wettbörse ist nur möglich, wenn das Angebot für dich in Österreich zulässig ist. Da du bei der Gratiswette kein eigenes Geld einsetzt, sicherst du dir unabhängig vom Ausgang den Großteil ihres Nennwerts als Gewinn."
       },
       {
         "type": "h2",
@@ -20,12 +20,12 @@
       },
       {
         "type": "p",
-        "text": "Willkommensboni sind je nach Wettanbieter und Land, in dem du wettest, an unterschiedliche Bedingungen geknüpft. In manchen regulierten Märkten werden Bonusbeträge gedeckelt und Umsatzbedingungen begrenzt, um Konsumentinnen und Konsumenten zu schützen. Lies daher immer die genauen Geschäftsbedingungen, bevor du ein Angebot annimmst."
+        "text": "Willkommensboni sind je nach Wettanbieter und Bundesland, in dem du wettest, an unterschiedliche Bedingungen geknüpft, denn Sportwetten sind in Österreich landesrechtlich geregelt. Bonusbeträge können gedeckelt und Umsatzbedingungen begrenzt sein, um Konsumentinnen und Konsumenten zu schützen. Lies daher immer die genauen Geschäftsbedingungen, bevor du ein Angebot annimmst."
       },
       {
         "type": "ul",
         "items": [
-          "Achte auf die Mindestquote, die zum Freischalten des Bonus nötig ist – viele Wettanbieter verlangen mindestens 1.80.",
+          "Achte auf die Mindestquote, die zum Freischalten des Bonus nötig ist – viele Wettanbieter verlangen mindestens 1,80.",
           "Merke dir die Gültigkeitsdauer, damit dein Bonus oder deine Gratiswette nicht ungenutzt verfällt.",
           "Überlege, Sure Bets (Arbitrage-Wetten) einzusetzen, um Umsatzbedingungen mit minimalem Risiko zu erfüllen."
         ]
@@ -46,18 +46,18 @@
       },
       {
         "q": "Wie viel sind typische Willkommensboni wert?",
-        "a": "Bonushöhe und Umsatzbedingungen unterscheiden sich je nach Wettanbieter und Rechtsraum. In manchen regulierten Märkten können Willkommensangebote gedeckelt sein – zum Beispiel bei €1,000 oder €1,000 mit einem maximalen Rollover vom Zehnfachen des Bonus. Prüfe immer die aktuellen Bedingungen beim gewählten Wettanbieter und vergewissere dich, dass er in deinem Land über eine gültige Lizenz verfügt."
+        "a": "Bonushöhe und Umsatzbedingungen unterscheiden sich je nach Wettanbieter und Bundesland. Willkommensangebote können gedeckelt sein – zum Beispiel bei 1.000 € mit einem maximalen Rollover vom Zehnfachen des Bonus. Prüfe immer die aktuellen Bedingungen beim gewählten Wettanbieter und vergewissere dich, dass er in Österreich über eine gültige Lizenz verfügt."
       }
     ],
     "category": "Strategie",
     "ctaLabel": "Aktuelle Boni ansehen"
   },
   "er-surebets-lovligt": {
-    "title": "Sind Surebets legal? Regeln und steuerliche Aspekte",
-    "metaTitle": "Sind Surebets legal? Regeln, Steuern und Wettanbieter-Bedingungen",
-    "description": "Ist es legal, Surebets zu platzieren, und muss man Gewinne versteuern? Hier erfährst du die Regeln und was Wettanbieter gegen Arbitrage-Wetten unternehmen können.",
-    "keyword": "sind Surebets legal",
-    "intro": "Die kurze Antwort lautet: Ja. Surebets zu platzieren ist in den meisten Rechtsräumen legal. Du gibst ganz normale Wetten bei lizenzierten Wettanbietern ab und vergleichst Quoten, um den besten Wert zu finden – an diesem Vorgehen ist nichts illegal.",
+    "title": "Sind Surebets in Österreich legal? Regeln und steuerliche Aspekte",
+    "metaTitle": "Sind Surebets in Österreich legal? Regeln, Steuern und Wettanbieter-Bedingungen",
+    "description": "Ist es in Österreich legal, Surebets zu platzieren, und muss man Gewinne versteuern? Hier erfährst du die Regeln und was Wettanbieter gegen Arbitrage-Wetten unternehmen können.",
+    "keyword": "sind Surebets in Österreich legal",
+    "intro": "Die kurze Antwort lautet: Ja. Surebets zu platzieren ist in Österreich grundsätzlich legal. Du gibst ganz normale Wetten bei lizenzierten Wettanbietern ab und vergleichst Quoten, um den besten Wert zu finden – an diesem Vorgehen ist nichts illegal.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Die steuerliche Behandlung von Wettgewinnen ist von Land zu Land unterschiedlich. In vielen regulierten Märkten sind Gewinne von Anbietern, die von der nationalen Glücksspielbehörde lizenziert sind, für die Spielerin bzw. den Spieler steuerfrei. Bei Offshore-Anbietern oder Anbietern ohne Lizenz können Gewinne steuerpflichtig sein. Informiere dich über die steuerlichen Regeln an deinem Wohnort oder wende dich an die zuständige Steuerbehörde, wenn du dir bei deiner Situation nicht sicher bist."
+        "text": "In Österreich zahlen die Wettanbieter eine Wettgebühr, und Wettgewinne sind für private Spielerinnen und Spieler in der Regel steuerfrei. Bei Anbietern ohne österreichische Lizenz kann die Situation anders aussehen. Informiere dich über die aktuellen steuerlichen Regeln, etwa beim Bundesministerium für Finanzen, oder wende dich an eine Steuerberatung, wenn du dir bei deiner Situation nicht sicher bist."
       },
       {
         "type": "tip",
-        "text": "Bleib bei Wettanbietern, die von der Aufsichtsbehörde deines Landes lizenziert sind. Das bringt in der Regel steuerliche Vorteile und den Verbraucherschutz durch deine Glücksspielbehörde."
+        "text": "Bleib bei Wettanbietern, die in Österreich lizenziert sind, zum Beispiel tipp3, Admiral, win2day, bet-at-home, Interwetten, bwin, Tipico oder bet365. Die Sportwetten werden in Österreich durch die Bundesländer geregelt. Das bringt in der Regel steuerliche Klarheit und den Verbraucherschutz durch die Landesregelungen."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Auch bei Surebets ist es wichtig, die Kontrolle über dein Spielverhalten zu behalten. Setze dir Einzahlungslimits und nutze das Selbstsperrsystem deines Landes, wenn du eine Pause brauchst. Wenn du Unterstützung benötigst, wende dich an eine anerkannte Hilfsstelle für Glücksspielprobleme in deiner Region."
+        "text": "Auch bei Surebets ist es wichtig, die Kontrolle über dein Spielverhalten zu behalten. Setze dir Einzahlungslimits und nutze die Selbstsperre bei lizenzierten Anbietern, wenn du eine Pause brauchst. Wenn du Unterstützung benötigst, wende dich an die Spielsuchthilfe in deinem Bundesland."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Muss ich Gewinne aus Surebets versteuern?",
-        "a": "Das hängt von deinem Land ab. In vielen regulierten Märkten sind Gewinne von lizenzierten Anbietern für die Spielerin bzw. den Spieler steuerfrei. Informiere dich über die steuerlichen Regeln an deinem Wohnort."
+        "a": "In Österreich sind Wettgewinne für private Spielerinnen und Spieler in der Regel steuerfrei, die Wettgebühr zahlt der Anbieter. Prüfe trotzdem die aktuellen Regeln, vor allem wenn du bei Anbietern ohne österreichische Lizenz spielst."
       }
     ],
     "category": "Regeln",
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**Die Closing Line schlagen:** das stärkste Signal. Wenn deine Quoten regelmäßig besser sind als der Schlusskurs, wirst du markiert.",
-          "**Krumme Einsätze:** €463.27 wirkt wie ein Taschenrechner. €460 wirkt wie ein Mensch.",
+          "**Krumme Einsätze:** € 463,27 wirkt wie ein Taschenrechner. € 460 wirkt wie ein Mensch.",
           "**Nischenmärkte:** Eckbälle in der zweiten Liga eines kleinen Landes ziehen Aufmerksamkeit auf sich.",
           "**Nur auszahlen:** häufige Auszahlungen ohne Bonusse oder reguläre Wetten wirken professionell."
         ]
@@ -142,27 +142,27 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: gerundete Einsätze, Gesamteinsatz €1,000",
+        "title": "Beispiel: gerundete Einsätze, Gesamteinsatz € 1.000",
         "rows": [
           [
-            "Exakte Aufteilung bei den Quoten 2.10 / 2.00",
-            "€487.80 / €512.20"
+            "Exakte Aufteilung bei den Quoten 2,10 / 2,00",
+            "€ 487,80 / € 512,20"
           ],
           [
             "Gerundete Aufteilung",
-            "€490 / €510"
+            "€ 490 / € 510"
           ],
           [
-            "Gewinn, wenn A gewinnt (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "Gewinn, wenn A gewinnt (2,10)",
+            "€ 1.029 − € 1.000 = € 29,00"
           ],
           [
-            "Gewinn, wenn B gewinnt (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "Gewinn, wenn B gewinnt (2,00)",
+            "€ 1.020 − € 1.000 = € 20,00"
           ],
           [
             "Exakte Aufteilung zum Vergleich",
-            "ca. €24.39 in beiden Fällen"
+            "ca. € 24,39 in beiden Fällen"
           ]
         ],
         "note": "Auch mit den gerundeten Einsätzen sicherst du dir bei beiden Ergebnissen einen Gewinn, und sie wirken für den Wettanbieter viel natürlicher."
@@ -247,27 +247,27 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: zwei Ausgänge, Gesamteinsatz €1,500",
+        "title": "Beispiel: zwei Ausgänge, Gesamteinsatz € 1.500",
         "rows": [
           [
-            "Quote A 2.10 und Quote B 2.05",
-            "S = 0.476 + 0.488 = 0.964"
+            "Quote A 2,10 und Quote B 2,05",
+            "S = 0,476 + 0,488 = 0,964"
           ],
           [
             "Einsatz auf A",
-            "€740.97"
+            "€ 740,97"
           ],
           [
             "Einsatz auf B",
-            "€759.03"
+            "€ 759,03"
           ],
           [
             "Auszahlung in jedem Fall",
-            "ca. €1,556.03"
+            "ca. € 1.556,03"
           ],
           [
             "Gewinn",
-            "ca. €56.03 (3.7%)"
+            "ca. € 56,03 (3,7 %)"
           ]
         ]
       },
@@ -297,7 +297,7 @@
           ],
           [
             "Summe der Kehrwerte der Quoten",
-            "0.980"
+            "0,980"
           ],
           [
             "Gewinn",
@@ -376,11 +376,11 @@
         "rows": [
           [
             "Auszahlung",
-            "€200 × 2.50 = €500"
+            "€ 200 × 2,50 = € 500"
           ],
           [
             "Gewinn",
-            "€500 − €200 = €300"
+            "€ 500 − € 200 = € 300"
           ]
         ]
       },
@@ -405,8 +405,8 @@
         "title": "Tennis: Quoten von 1,85 und 1,95 beim selben Wettanbieter",
         "rows": [
           [
-            "1/1.85 + 1/1.95",
-            "54.1% + 51.3% = 105.4%"
+            "1/1,85 + 1/1,95",
+            "54,1 % + 51,3 % = 105,4 %"
           ],
           [
             "Marge des Wettanbieters",
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Lizenz der für dich zuständigen Glücksspielbehörde, damit du geschützt bist und die steuerliche Behandlung deiner Gewinne prüfen kannst.",
+          "Eine Lizenz nach dem Landesrecht der österreichischen Bundesländer, damit du geschützt bist. Gewinne sind für Privatspieler in der Regel steuerfrei, die Wettgebühr zahlt der Anbieter – prüfe aber immer die aktuellen Regeln.",
           "Schnelle Ein- und Auszahlungen, damit du dein Geld dorthin bringst, wo du es brauchst.",
           "Breites Angebot an Sportarten und Wettmärkten, besonders bei Tennis, Fußball und Basketball.",
           "Konkurrenzfähige Quoten und niedrige Wettanbieter-Marge bei beliebten Märkten.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Starte mit fünf bis acht lizenzierten Wettanbietern, die auf verschiedene Plattformen verteilt sind. So hast du eine gute Auswahl an Chancen, ohne zu viele Kontostände im Blick behalten zu müssen. Sobald du Routine hast, kannst du weitere dazunehmen."
+        "text": "Starte mit fünf bis acht in Österreich lizenzierten Wettanbietern, die auf verschiedene Plattformen verteilt sind, zum Beispiel tipp3, Admiral, Interwetten, bwin, Tipico oder bet365. So hast du eine gute Auswahl an Chancen, ohne zu viele Kontostände im Blick behalten zu müssen. Sobald du Routine hast, kannst du weitere dazunehmen."
       },
       {
         "type": "tip",
@@ -561,22 +561,22 @@
     "faq": [
       {
         "q": "Wie viele Wettanbieter brauche ich für Surebets?",
-        "a": "Ein guter Startpunkt sind fünf bis acht regulierte Wettanbieter. Je mehr verschiedene Quotenplattformen du abdeckst, desto mehr Surebets stehen dir zur Verfügung."
+        "a": "Ein guter Startpunkt sind fünf bis acht in Österreich lizenzierte Wettanbieter. Je mehr verschiedene Quotenplattformen du abdeckst, desto mehr Surebets stehen dir zur Verfügung."
       },
       {
         "q": "Kann ich für Arbitrage-Wetten auch Wettanbieter ohne Lizenz nutzen?",
-        "a": "Das ist nicht empfehlenswert. Wettanbieter ohne Lizenz in deinem Rechtsraum können gesperrt werden, und Gewinne von dort können steuerlich anders behandelt werden oder ohne behördlichen Schutz bleiben. Informiere dich immer über die Regeln an deinem Wohnort."
+        "a": "Das ist nicht empfehlenswert. Wettanbieter ohne Lizenz nach österreichischem Landesrecht können gesperrt werden, und bei Problemen bleibst du ohne behördlichen Schutz. Auch die rechtliche Lage kann für dich unklar sein. Nutze daher nur in Österreich lizenzierte Anbieter und informiere dich immer über die aktuellen Regeln."
       }
     ],
     "category": "Strategie",
     "ctaLabel": "Surebets bei deinen Wettanbietern ansehen"
   },
   "skat-paa-spillegevinster": {
-    "title": "Steuer auf Wettgewinne – internationaler Wettratgeber",
-    "metaTitle": "Steuer auf Wettgewinne – was du wissen musst",
-    "description": "Musst du auf Wettgewinne und Surebets Steuern zahlen? Erfahre, wie die Steuerregeln bei lizenzierten und Offshore-Wettanbietern funktionieren und was du dokumentieren solltest.",
-    "keyword": "Steuer auf Wettgewinne",
-    "intro": "In vielen regulierten Märkten ist die Antwort einfach: Gewinne bei lizenzierten Wettanbietern sind für die Spieler steuerfrei. Die Abgaben führt der Wettanbieter an den Staat ab, nicht du. Die Regeln hängen aber davon ab, wo du lebst und wo du wettest.",
+    "title": "Steuer auf Wettgewinne in Österreich – Wettratgeber",
+    "metaTitle": "Steuer auf Wettgewinne in Österreich – was du wissen musst",
+    "description": "Musst du in Österreich auf Wettgewinne und Surebets Steuern zahlen? Erfahre, wie die Regeln bei in Österreich lizenzierten Wettanbietern funktionieren, warum du auf Anbieter ohne Lizenz verzichten solltest und was du dokumentieren solltest.",
+    "keyword": "Steuer auf Wettgewinne Österreich",
+    "intro": "In Österreich ist die Antwort für Privatspieler in der Regel einfach: Gewinne bei lizenzierten Wettanbietern sind im Allgemeinen steuerfrei. Die Wettgebühr führt der Wettanbieter ab, nicht du. Prüfe trotzdem immer die aktuell geltenden Regeln, denn sie können sich ändern und hängen von deiner persönlichen Situation ab.",
     "blocks": [
       {
         "type": "h2",
@@ -584,15 +584,15 @@
       },
       {
         "type": "p",
-        "text": "Wenn du bei einem Anbieter wettest, der von der für dich zuständigen Glücksspielbehörde lizenziert ist, zahlt der Anbieter in der Regel die Glücksspielabgabe auf seine Einnahmen. Deine Gewinne sind daher im Allgemeinen steuerfrei, und meistens musst du sie nicht bei deiner Steuerbehörde melden. Informiere dich immer über die Regeln an deinem Wohnort."
+        "text": "Wenn du bei einem Anbieter wettest, der in Österreich lizenziert ist, etwa tipp3, Admiral, Interwetten, bwin oder bet-at-home, zahlt der Anbieter die Wettgebühr auf seine Einnahmen. Sportwetten werden in Österreich über die Bundesländer lizenziert und reguliert. Deine Gewinne sind daher als Privatspieler im Allgemeinen steuerfrei, und meistens musst du sie nicht beim Finanzamt melden. Informiere dich immer über die aktuellen Regeln."
       },
       {
         "type": "h2",
-        "text": "Offshore-Wettanbieter ohne lokale Lizenz"
+        "text": "Wettanbieter ohne österreichische Lizenz"
       },
       {
         "type": "p",
-        "text": "Wenn du bei Anbietern wettest, die in deinem Land keine Lizenz haben, können die Gewinne steuerpflichtig sein. Die Regeln hängen von mehreren Faktoren ab, etwa davon, ob der Anbieter in einem anderen Land lizenziert ist, und von deinem eigenen steuerlichen Wohnsitz. Das ist ein Grund, warum es oft einfacher ist, bei regulierten Wettanbietern zu bleiben."
+        "text": "Bei Anbietern ohne Lizenz in Österreich ist die rechtliche und steuerliche Lage unklarer. Sie hängt von mehreren Faktoren ab, etwa davon, ob der Anbieter in einem anderen Land lizenziert ist, und von deinem eigenen steuerlichen Wohnsitz. Zudem hast du dort weniger Schutz. Das ist ein Grund, warum es einfacher und sicherer ist, bei in Österreich lizenzierten Wettanbietern zu bleiben. Bei Fragen wende dich an das Bundesministerium für Finanzen oder an einen Steuerberater bzw. eine Steuerberaterin."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Ja. Steuerlich ist eine Surebet einfach nur zwei oder drei ganz normale Wetten. Gewinne bei lizenzierten Wettanbietern sind in der Regel steuerfrei, egal ob du Surebets, Value Bets oder gewöhnliche Wetten platzierst. Es gelten dieselben Grundsätze."
+        "text": "Ja. Steuerlich ist eine Surebet einfach nur zwei oder drei ganz normale Wetten. Gewinne bei lizenzierten Wettanbietern sind für Privatspieler in der Regel steuerfrei, egal ob du Surebets, Value Bets oder gewöhnliche Wetten platzierst. Es gelten dieselben Grundsätze."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Wenn Wetten deine Haupttätigkeit in großem Umfang ist, können in manchen Ländern andere Regeln gelten. Wenn du dir bei deiner eigenen Situation unsicher bist, wende dich an das zuständige Finanzamt oder an einen Steuerberater bzw. eine Steuerberaterin."
+        "text": "Wenn Wetten deine Haupttätigkeit in großem Umfang ist, können andere Regeln gelten. Wenn du dir bei deiner eigenen Situation unsicher bist, wende dich an das zuständige Finanzamt oder an einen Steuerberater bzw. eine Steuerberaterin."
       }
     ],
     "faq": [
       {
         "q": "Muss ich Gewinne von lizenzierten Wettanbietern versteuern?",
-        "a": "In den meisten regulierten Märkten nicht. Gewinne bei lokal lizenzierten Anbietern sind für Spielerinnen und Spieler üblicherweise steuerfrei. Informiere dich über die steuerlichen Regeln an deinem Wohnort."
+        "a": "In Österreich in der Regel nicht. Gewinne bei in Österreich lizenzierten Anbietern sind für Privatspielerinnen und Privatspieler üblicherweise steuerfrei, da der Anbieter die Wettgebühr abführt. Prüfe aber die aktuell geltenden steuerlichen Regeln."
       },
       {
-        "q": "Woran erkenne ich, ob ein Wettanbieter in meinem Land lizenziert ist?",
-        "a": "Die Glücksspielaufsicht deines Landes veröffentlicht auf ihrer Website in der Regel eine Liste der zugelassenen Anbieter, und lizenzierte Wettanbieter zeigen meist das Logo der Behörde auf ihrer Seite an."
+        "q": "Woran erkenne ich, ob ein Wettanbieter in Österreich lizenziert ist?",
+        "a": "Sportwetten werden in Österreich von den Bundesländern lizenziert. Lizenzierte Anbieter weisen ihre Konzession in der Regel auf ihrer Website aus, und bei den zuständigen Stellen des jeweiligen Bundeslandes kannst du dich über zugelassene Anbieter informieren."
       }
     ],
     "category": "Regeln",
@@ -662,7 +662,7 @@
         "rows": [
           [
             "Einsatz pro Wette (1,5 %)",
-            "€30"
+            "€ 30"
           ],
           [
             "10 verlorene Wetten in Folge",
@@ -670,11 +670,11 @@
           ],
           [
             "Verbleibende Bankroll",
-            "€1,700"
+            "€ 1.700"
           ],
           [
             "Neuer Einsatz nach der Überprüfung (1,5 %)",
-            "€25.50"
+            "€ 25,50"
           ]
         ],
         "note": "Mit einem Einsatz von 1–2 % bleibst du auch bei den Verlustserien im Spiel, die jeder Value-Bettor erlebt."
@@ -685,19 +685,19 @@
         "rows": [
           [
             "6 Buchmacher × € 500",
-            "€3,000"
+            "€ 3.000"
           ],
           [
             "Typischer Gesamteinsatz pro Surebet",
-            "€400"
+            "€ 400"
           ],
           [
             "60 Surebets pro Monat bei durchschnittlich 2 %",
-            "€400 × 60 × 2% = €480"
+            "€ 400 × 60 × 2 % = € 480"
           ],
           [
             "Monatliche Rendite auf die Bankroll",
-            "€480 / €3,000 = 16%"
+            "€ 480 / € 3.000 = 16 %"
           ]
         ],
         "note": "Der Gewinn pro Surebet ist klein, aber die Bankroll wird mehrmals im Monat umgeschlagen. Die Ergebnisse hängen von Limits und verfügbaren Surebets ab."
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Gesamteinsatz",
-            "€18,500"
+            "€ 18.500"
           ],
           [
             "Gesamtauszahlung",
-            "€18,870"
+            "€ 18.870"
           ],
           [
             "Nettogewinn",
-            "€370"
+            "€ 370"
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "€ 370 / € 18.500 = 2,0 %"
           ]
         ]
       },
@@ -764,11 +764,11 @@
       },
       {
         "q": "Wie viel Prozent sollte ich bei Value Bets einsetzen?",
-        "a": "1–2% deiner Bankroll pro Wette gelten als gängige, konservative Faustregel. Höhere Einsätze erhöhen bei Verlustserien das Risiko, die gesamte Bankroll zu verlieren."
+        "a": "1–2 % deiner Bankroll pro Wette gelten als gängige, konservative Faustregel. Höhere Einsätze erhöhen bei Verlustserien das Risiko, die gesamte Bankroll zu verlieren."
       },
       {
         "q": "Wie berechne ich den ROI meiner Wetten?",
-        "a": "Teile den Nettogewinn durch die gesamten Einsätze. €370 Gewinn bei €18,500 Einsatz ergeben einen ROI von 2.0%."
+        "a": "Teile den Nettogewinn durch die gesamten Einsätze. € 370 Gewinn bei € 18.500 Einsatz ergeben einen ROI von 2,0 %."
       }
     ],
     "category": "Strategie",
@@ -791,34 +791,34 @@
       },
       {
         "type": "p",
-        "text": "Der Test ist einfach: Berechne für jedes Ergebnis 1 ÷ Quote und addiere die Werte. Liegt die Summe unter 1.00, hast du eine Arbitrage-Chance. Je niedriger die Summe, desto höher der Gewinn."
+        "text": "Der Test ist einfach: Berechne für jedes Ergebnis 1 ÷ Quote und addiere die Werte. Liegt die Summe unter 1,00, hast du eine Arbitrage-Chance. Je niedriger die Summe, desto höher der Gewinn."
       },
       {
         "type": "example",
-        "title": "Beispiel: Tennismatch mit zwei Ausgängen, Gesamteinsatz €1,000",
+        "title": "Beispiel: Tennismatch mit zwei Ausgängen, Gesamteinsatz € 1.000",
         "rows": [
           [
-            "Spieler A bei Wettanbieter 1, Quote 2.08",
-            "Einsatz €492.68"
+            "Spieler A bei Wettanbieter 1, Quote 2,08",
+            "Einsatz € 492,68"
           ],
           [
-            "Spieler B bei Wettanbieter 2, Quote 2.02",
-            "Einsatz €507.32"
+            "Spieler B bei Wettanbieter 2, Quote 2,02",
+            "Einsatz € 507,32"
           ],
           [
-            "1/2.08 + 1/2.02",
-            "0.481 + 0.495 = 0.976"
+            "1/2,08 + 1/2,02",
+            "0,481 + 0,495 = 0,976"
           ],
           [
             "Auszahlung, egal wer gewinnt",
-            "ca. €1,024.78"
+            "ca. € 1.024,78"
           ],
           [
             "Gesicherter Gewinn",
-            "ca. €24.78 (2.5%)"
+            "ca. € 24,78 (2,5%)"
           ]
         ],
-        "note": "Die Summe liegt unter 1, also verdienst du rund €24.78, unabhängig davon, wer das Match gewinnt."
+        "note": "Die Summe liegt unter 1, also verdienst du rund € 24,78, unabhängig davon, wer das Match gewinnt."
       },
       {
         "type": "h2",
@@ -830,31 +830,31 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: Premier-League-Spiel, Gesamteinsatz €2,000",
+        "title": "Beispiel: Premier-League-Spiel, Gesamteinsatz € 2.000",
         "rows": [
           [
-            "Heimsieg, Quote 2.15",
-            "Einsatz €942.69"
+            "Heimsieg, Quote 2,15",
+            "Einsatz € 942,69"
           ],
           [
-            "Unentschieden, Quote 3.60",
-            "Einsatz €562.99"
+            "Unentschieden, Quote 3,60",
+            "Einsatz € 562,99"
           ],
           [
-            "Auswärtssieg, Quote 4.10",
-            "Einsatz €494.33"
+            "Auswärtssieg, Quote 4,10",
+            "Einsatz € 494,33"
           ],
           [
             "Summe der Kehrwerte der Quoten",
-            "0.987"
+            "0,987"
           ],
           [
             "Auszahlung bei jedem Ergebnis",
-            "ca. €2,026.75"
+            "ca. € 2.026,75"
           ],
           [
             "Gesicherter Gewinn",
-            "ca. €26.75 (1.3%)"
+            "ca. € 26,75 (1,3%)"
           ]
         ]
       },
@@ -864,7 +864,7 @@
       },
       {
         "type": "p",
-        "text": "Theoretisch kannst du die Quoten in einem Dutzend Browser-Tabs vergleichen, aber Surebets halten oft nur wenige Minuten. Bis du fertig gerechnet hast, hat sich die Quote meist schon verändert. Deshalb nutzen die meisten Wettende einen Quotenscanner, der die Wettanbieter laufend vergleicht. Mehr dazu, wie du [Surebets automatisch findest](/en/guides/find-surebets-automatically)."
+        "text": "Theoretisch kannst du die Quoten in einem Dutzend Browser-Tabs vergleichen, aber Surebets halten oft nur wenige Minuten. Bis du fertig gerechnet hast, hat sich die Quote meist schon verändert. Deshalb nutzen die meisten Wettenden einen Quotenscanner, der die Wettanbieter laufend vergleicht. Mehr dazu, wie du [Surebets automatisch findest](/en/guides/find-surebets-automatically)."
       },
       {
         "type": "ul",
@@ -881,8 +881,8 @@
       {
         "type": "ul",
         "items": [
-          "**1. Konten eröffnen** bei mindestens zwei lizenzierten Wettanbietern, am besten bei mehr, und vorab einzahlen.",
-          "**2. Surebet finden,** bei der die Summe der Kehrwerte der Quoten unter 1.00 liegt.",
+          "**1. Konten eröffnen** bei mindestens zwei in Österreich lizenzierten Wettanbietern (z. B. bwin, Admiral oder Interwetten), am besten bei mehr, und vorab einzahlen.",
+          "**2. Surebet finden,** bei der die Summe der Kehrwerte der Quoten unter 1,00 liegt.",
           "**3. Einsätze berechnen,** sodass die Auszahlung bei jedem Ausgang gleich hoch ist.",
           "**4. Beide Wetten rasch platzieren,** und zwar zuerst jene mit der Quote, die sich am ehesten ändert.",
           "**5. Wettscheine kontrollieren:** Markt, Linie und Quote müssen exakt mit deiner Berechnung übereinstimmen."
@@ -900,11 +900,11 @@
     "faq": [
       {
         "q": "Ist Arbitrage-Betting legal?",
-        "a": "Ja, in den meisten Ländern ist es nicht verboten, auf alle Ausgänge eines Ereignisses zu wetten. Wettanbieter können dein Konto trotzdem limitieren. Siehe [Sind Surebets legal?](/en/guides/are-surebets-legal)"
+        "a": "Auf alle Ausgänge eines Ereignisses zu wetten ist in der Regel nicht verboten. Wettanbieter können dein Konto trotzdem limitieren. Nutze nur in Österreich lizenzierte Anbieter und prüfe die aktuellen Regeln der Bundesländer. Siehe [Sind Surebets legal?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Wie viel kann man mit Surebets verdienen?",
-        "a": "Eine typische Surebet bringt 1–3% des Gesamteinsatzes. Bei €1,000 pro Surebet, 40 Surebets im Monat und durchschnittlich 1.5% sind das rund €600 im Monat."
+        "a": "Eine typische Surebet bringt 1–3% des Gesamteinsatzes. Bei € 1.000 pro Surebet, 40 Surebets im Monat und durchschnittlich 1,5% sind das rund € 600 im Monat."
       },
       {
         "q": "Wie viele Wettanbieter brauche ich?",
@@ -951,19 +951,19 @@
         "rows": [
           [
             "Spieler A bei Wettanbieter 1",
-            "Quote 2.10"
+            "Quote 2,10"
           ],
           [
             "Spieler B bei Wettanbieter 2",
-            "Quote 2.05"
+            "Quote 2,05"
           ],
           [
-            "1/2.10 + 1/2.05",
-            "0.476 + 0.488 = 0.964"
+            "1/2,10 + 1/2,05",
+            "0,476 + 0,488 = 0,964"
           ],
           [
             "Garantierter Gewinn",
-            "ca. 3.7%"
+            "ca. 3,7 %"
           ]
         ],
         "note": "Die Summe liegt unter 1, also ist diese Kombination eine Surebet."
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Dein Einsatz muss so aufgeteilt werden, dass die Auszahlung gleich hoch ist, egal wer gewinnt. Bei einem Gesamteinsatz von 1,000 Einheiten setzt du im obigen Beispiel ungefähr 494 Einheiten auf Spieler A und ungefähr 506 Einheiten auf Spieler B. Beide Ausgänge bringen rund 1,037 Einheiten zurück, also einen Gewinn von etwa 37 Einheiten."
+        "text": "Dein Einsatz muss so aufgeteilt werden, dass die Auszahlung gleich hoch ist, egal wer gewinnt. Bei einem Gesamteinsatz von 1.000 € setzt du im obigen Beispiel ungefähr 494 € auf Spieler A und ungefähr 506 € auf Spieler B. Beide Ausgänge bringen rund 1.037 € zurück, also einen Gewinn von etwa 37 €."
       },
       {
         "type": "tip",
@@ -1001,11 +1001,11 @@
       },
       {
         "q": "Wie viel kann man mit Surebets verdienen?",
-        "a": "Die meisten Surebets bringen zwischen 1 und 5% deines Einsatzes. Der Gewinn entsteht durch die Wiederholung, nicht durch einzelne große Treffer."
+        "a": "Die meisten Surebets bringen zwischen 1 und 5 % deines Einsatzes. Der Gewinn entsteht durch die Wiederholung, nicht durch einzelne große Treffer."
       },
       {
         "q": "Wie findest du Surebets?",
-        "a": "Du kannst Quoten von Hand vergleichen, das ist aber mühsam und langsam. Ein Surebet-Scanner wie BetTrackerAI überwacht die für dich verfügbaren Wettanbieter und zeigt dir Chancen, sobald sie entstehen."
+        "a": "Du kannst Quoten von Hand vergleichen, das ist aber mühsam und langsam. Ein Surebet-Scanner wie BetTrackerAI überwacht die für dich verfügbaren, in Österreich lizenzierten Wettanbieter und zeigt dir Chancen, sobald sie entstehen."
       }
     ],
     "category": "Grundlagen",
@@ -1036,31 +1036,31 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: drei Spieler in einem Turnier, Gesamteinsatz €1,000",
+        "title": "Beispiel: drei Spieler in einem Turnier, Gesamteinsatz € 1.000",
         "rows": [
           [
-            "Spieler A, Quote 3.00",
-            "Einsatz ca. €444"
+            "Spieler A, Quote 3,00",
+            "Einsatz ca. € 444"
           ],
           [
-            "Spieler B, Quote 4.00",
-            "Einsatz ca. €333"
+            "Spieler B, Quote 4,00",
+            "Einsatz ca. € 333"
           ],
           [
-            "Spieler C, Quote 6.00",
-            "Einsatz ca. €222"
+            "Spieler C, Quote 6,00",
+            "Einsatz ca. € 222"
           ],
           [
-            "S = 0.333 + 0.250 + 0.167",
-            "0.750"
+            "S = 0,333 + 0,250 + 0,167",
+            "0,750"
           ],
           [
             "Wenn einer der drei gewinnt",
-            "Auszahlung ca. €1,333, Gewinn ca. €333"
+            "Auszahlung ca. € 1.333, Gewinn ca. € 333"
           ],
           [
             "Wenn keiner der drei gewinnt",
-            "Verlust von €1,000"
+            "Verlust von € 1.000"
           ]
         ],
         "note": "Der Gewinn tritt nur ein, wenn einer deiner drei Spieler gewinnt. Wie wahrscheinlich das ist, musst du selbst einschätzen."
@@ -1116,27 +1116,27 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: Quoten 1.95 und 2.20, Gesamteinsatz €1,000",
+        "title": "Beispiel: Quoten 1,95 und 2,20, Gesamteinsatz € 1.000",
         "rows": [
           [
-            "Spieler A bei Wettanbieter 1, Quote 1.95",
-            "Einsatz ca. €530"
+            "Spieler A bei Wettanbieter 1, Quote 1,95",
+            "Einsatz ca. € 530"
           ],
           [
-            "Spieler B bei Wettanbieter 2, Quote 2.20",
-            "Einsatz ca. €470"
+            "Spieler B bei Wettanbieter 2, Quote 2,20",
+            "Einsatz ca. € 470"
           ],
           [
-            "1/1.95 + 1/2.20",
-            "0.513 + 0.455 = 0.967"
+            "1/1,95 + 1/2,20",
+            "0,513 + 0,455 = 0,967"
           ],
           [
             "Auszahlung unabhängig vom Sieger",
-            "ca. €1,034"
+            "ca. € 1.034"
           ],
           [
             "Gewinn",
-            "ca. €34 (3.4%)"
+            "ca. € 34 (3,4 %)"
           ]
         ],
         "note": "Die Summe liegt unter 1, daher ist die Kombination eine Surebet."
@@ -1189,31 +1189,31 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: drei Wettanbieter, Gesamteinsatz €1,000",
+        "title": "Beispiel: drei Wettanbieter, Gesamteinsatz € 1.000",
         "rows": [
           [
-            "Heimsieg bei Wettanbieter 1, Quote 2.40",
-            "Einsatz ca. €424"
+            "Heimsieg bei Wettanbieter 1, Quote 2,40",
+            "Einsatz ca. € 424"
           ],
           [
-            "Unentschieden bei Wettanbieter 2, Quote 3.80",
-            "Einsatz ca. €268"
+            "Unentschieden bei Wettanbieter 2, Quote 3,80",
+            "Einsatz ca. € 268"
           ],
           [
-            "Auswärtssieg bei Wettanbieter 3, Quote 3.30",
-            "Einsatz ca. €308"
+            "Auswärtssieg bei Wettanbieter 3, Quote 3,30",
+            "Einsatz ca. € 308"
           ],
           [
-            "1/2.40 + 1/3.80 + 1/3.30",
-            "0.417 + 0.263 + 0.303 = 0.983"
+            "1/2,40 + 1/3,80 + 1/3,30",
+            "0,417 + 0,263 + 0,303 = 0,983"
           ],
           [
             "Auszahlung unabhängig vom Ausgang",
-            "ca. €1,017"
+            "ca. € 1.017"
           ],
           [
             "Gewinn",
-            "ca. €17 (1.7%)"
+            "ca. € 17 (1,7 %)"
           ]
         ],
         "note": "Der Gewinn fällt kleiner aus als beim Tennis, und bei drei Wetten ist das Risiko höher, dass sich die Quoten ändern, während du sie platzierst."
@@ -1228,7 +1228,7 @@
           "Prüfe, ob der Markt bei allen Wettanbietern für dieselbe Spielzeit gilt. 1X2 umfasst normalerweise nur die reguläre Spielzeit, kontrolliere aber bei Cupspielen und Play-off-Partien die Regeln.",
           "Verschobene und abgebrochene Spiele werden unterschiedlich abgerechnet. Lies daher die Regeln bei jedem Wettanbieter nach.",
           "Bei drei Wetten steigt das Risiko, dass sich die Quoten ändern. Platziere die volatilste Wette zuerst – meist ist das die Wette mit der höchsten Quote oder auf dem am wenigsten liquiden Markt.",
-          "Greife am besten zu Zwei-Weg-Märkten wie dem Asiatischen Handicap oder Über/Unter 2.5 Tore, wenn du bei zwei Wettanbietern bleiben und das Risiko von Quotenänderungen verringern möchtest."
+          "Greife am besten zu Zwei-Weg-Märkten wie dem Asiatischen Handicap oder Über/Unter 2,5 Tore, wenn du bei zwei Wettanbietern bleiben und das Risiko von Quotenänderungen verringern möchtest."
         ]
       },
       {
@@ -1266,26 +1266,26 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: Fußballspiel mit den Quoten 2.10, 3.40 und 3.60",
+        "title": "Beispiel: Fußballspiel mit den Quoten 2,10, 3,40 und 3,60",
         "rows": [
           [
-            "1/2.10 + 1/3.40 + 1/3.60",
-            "0.476 + 0.294 + 0.278 = 1.048"
+            "1/2,10 + 1/3,40 + 1/3,60",
+            "0,476 + 0,294 + 0,278 = 1,048"
           ],
           [
             "Marge des Wettanbieters",
-            "ca. 4.8%"
+            "ca. 4,8%"
           ],
           [
             "Auszahlungsquote",
-            "ca. 95.4%"
+            "ca. 95,4%"
           ],
           [
             "Heimsieg ohne Marge",
-            "ca. 45.4%"
+            "ca. 45,4%"
           ]
         ],
-        "note": "Die Quote 2.10 entspricht 47.6%, ohne Marge liegt die tatsächliche Wahrscheinlichkeit aber bei rund 45.4%."
+        "note": "Die Quote 2,10 entspricht 47,6%, ohne Marge liegt die tatsächliche Wahrscheinlichkeit aber bei rund 45,4%."
       },
       {
         "type": "h2",
@@ -1445,22 +1445,22 @@
           ],
           [
             "Gesamtumsatz (alle Wetten)",
-            "€24,000"
+            "24.000 €"
           ],
           [
             "Gesamtauszahlung",
-            "€24,720"
+            "24.720 €"
           ],
           [
             "Nettogewinn",
-            "€720"
+            "720 €"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "720 € / 24.000 € = 3,0 %"
           ]
         ],
-        "note": "Ohne Tracking siehst du nur, wie sich dein Kontostand bewegt. Mit Tracking siehst du, dass du mit jedem umgesetzten €100 einen Gewinn von €3 machst."
+        "note": "Ohne Tracking siehst du nur, wie sich dein Kontostand bewegt. Mit Tracking siehst du, dass du mit jedem umgesetzten 100 € einen Gewinn von 3 € machst."
       },
       {
         "type": "h2",
@@ -1531,22 +1531,22 @@
         "rows": [
           [
             "Gesamteinsatz",
-            "€40,000"
+            "€40.000"
           ],
           [
             "Gesamtauszahlung",
-            "€41,000"
+            "€41.000"
           ],
           [
             "Gewinn",
-            "€1,000"
+            "€1.000"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "1.000 / 40.000 × 100 = 2,5%"
           ]
         ],
-        "note": "Du hast pro eingesetztem Pfund 2,5 Pence verdient."
+        "note": "Du hast pro eingesetztem Euro 2,5 Cent verdient."
       },
       {
         "type": "h2",
@@ -1590,102 +1590,6 @@
     "category": "Strategie",
     "ctaLabel": "Deinen ROI in der Wettbuchhaltung ansehen"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: die günstigere Alternative",
-    "metaTitle": "Surebet Danmark Alternative – BetTrackerAI im Vergleich (2025)",
-    "description": "BetTrackerAI und Surebet Danmark im Vergleich: Preise, Funktionen, Wettanbieter-Abdeckung und Wett-Tracking. Finde das Surebet-Tool, das zu dir passt.",
-    "keyword": "Surebet-Tool Vergleich",
-    "intro": "Surebet Danmark und BetTrackerAI suchen beide nach Surebets (auch Arbitrage-Wetten genannt) bei lizenzierten Wettanbietern. Beide bieten eine 7-tägige kostenlose Testphase. Die wichtigsten Unterschiede liegen im Preis und in den Tools, die du zusätzlich zum Surebet-Scanner bekommst.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Auf einen Blick"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI und Surebet Danmark im direkten Vergleich",
-        "rows": [
-          [
-            "Preis pro Monat",
-            "BetTrackerAI ab ca. €20 · Surebet Danmark ca. €134"
-          ],
-          [
-            "Kostenlose Testphase",
-            "Beide: 7 Tage"
-          ],
-          [
-            "Wettanbieter",
-            "Beide: ausschließlich lizenzierte Wettanbieter"
-          ],
-          [
-            "Benachrichtigungen",
-            "BetTrackerAI: Push und SMS (Premium) · Surebet Danmark: Live-Benachrichtigungen"
-          ],
-          [
-            "Wettbuchhaltung",
-            "BetTrackerAI: vollständiges Tracking mit ROI und Kontostand pro Wettanbieter · Surebet Danmark: Wett-Tracker"
-          ],
-          [
-            "Kostenlose Tools und Ratgeber",
-            "BetTrackerAI: Surebet-Rechner und Ratgeber zum Lernen"
-          ]
-        ],
-        "note": "Preise am 23. November 2025 auf beiden Websites geprüft, Änderungen vorbehalten."
-      },
-      {
-        "type": "h2",
-        "text": "Preis: ein deutlicher Unterschied"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark kostet ca. €134 pro Monat. BetTrackerAI kostet ca. €20 pro Monat für Basic (Surebets bis 5% Gewinn) und ca. €33 für Premium (alle Surebets plus SMS-Benachrichtigungen). Mit Premium sparst du ca. €100 pro Monat – das sind ca. €1.200 im Jahr."
-      },
-      {
-        "type": "p",
-        "text": "Das ist wichtig, weil Surebets üblicherweise 1–5% pro Wette abwerfen. Je niedriger die monatliche Gebühr, desto weniger Umsatz brauchst du, bis sich das Abo rechnet."
-      },
-      {
-        "type": "h2",
-        "text": "Wett-Tracking: Hier punktet BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "Surebets lohnen sich nur, wenn du genau weißt, was du verdient hast. In BetTrackerAI erfasst du deine Surebets und Einzahlungen und siehst Gewinn, ROI und Kontostand bei jedem Wettanbieter an einem Ort. Außerdem kannst du einen Wettschein importieren, statt ihn von Hand einzugeben."
-      },
-      {
-        "type": "h2",
-        "text": "Welches Tool passt zu dir?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Entscheide dich für BetTrackerAI, wenn du Surebets zu einem günstigeren Preis willst und deine Konten gleichzeitig detailliert verfolgen möchtest.",
-          "Entscheide dich für Surebet Danmark, wenn du deren Plattform bereits nutzt und mit den Kosten zufrieden bist.",
-          "Wenn du dir unsicher bist, probier beide aus. Beide bieten eine 7-tägige kostenlose Testphase, du kannst also Surebets bei denselben Events vergleichen."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Egal, für welches Tool du dich entscheidest: Platziere immer zuerst die Wette mit den schwankungsanfälligeren Quoten und prüfe, ob der Markt bei beiden Wettanbietern identisch ist."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Ist BetTrackerAI günstiger als Surebet Danmark?",
-        "a": "Ja. BetTrackerAI kostet ca. €20 bzw. ca. €33 pro Monat, Surebet Danmark dagegen ca. €134 pro Monat (Stand 23. November 2025)."
-      },
-      {
-        "q": "Nutzen beide Tools nur lizenzierte Wettanbieter?",
-        "a": "Ja. Beide Plattformen setzen auf regulierte, lizenzierte Wettanbieter – für legales Wetten mit Spielerschutz."
-      },
-      {
-        "q": "Kann ich BetTrackerAI kostenlos testen?",
-        "a": "Ja. Du bekommst eine 7-tägige kostenlose Testphase mit vollem Zugriff und kannst jederzeit während der Testphase kündigen."
-      }
-    ],
-    "category": "Grundlagen",
-    "ctaLabel": "BetTrackerAI 7 Tage kostenlos testen"
-  },
   "betting-regnskab": {
     "title": "Wettbuchhaltung: So behältst du den Überblick über deine Bankroll",
     "metaTitle": "Wettbuchhaltung – Kontostand bei allen Wettanbietern im Blick",
@@ -1720,19 +1624,19 @@
         "rows": [
           [
             "Einzahlungen gesamt",
-            "€10,000"
+            "10.000 €"
           ],
           [
             "Auszahlungen gesamt",
-            "€3,000"
+            "3.000 €"
           ],
           [
             "Aktuelles Guthaben bei den Wettanbietern",
-            "€7,800"
+            "7.800 €"
           ],
           [
             "Gewinn",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "3.000 € + 7.800 € − 10.000 € = 800 €"
           ]
         ]
       },
@@ -1756,7 +1660,7 @@
     "faq": [
       {
         "q": "Muss ich auf Wettgewinne Steuern zahlen?",
-        "a": "Wie Glücksspielgewinne besteuert werden, ist von Land zu Land unterschiedlich. In manchen regulierten Märkten sind Gewinne bei lizenzierten Wettanbietern steuerfrei, in anderen musst du sie unter Umständen angeben. Informiere dich über die Steuerregeln an deinem Wohnort oder frag eine Steuerberaterin bzw. einen Steuerberater."
+        "a": "In Österreich zahlen die Wettanbieter eine Wettgebühr, und Gewinne aus Sportwetten sind für Privatspielerinnen und Privatspieler im Allgemeinen steuerfrei. Da sich Regeln ändern können und deine persönliche Situation entscheidend ist, informiere dich über die aktuellen Bestimmungen (z. B. beim Bundesministerium für Finanzen) oder frag eine Steuerberaterin bzw. einen Steuerberater."
       },
       {
         "q": "Wie oft sollte ich mein Wett-Tracking aktualisieren?",
@@ -1785,27 +1689,27 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: Basketballspiel mit zwei Ausgängen (inkl. Verlängerung), €1,000",
+        "title": "Beispiel: Basketballspiel mit zwei Ausgängen (inkl. Verlängerung), 1.000 €",
         "rows": [
           [
-            "Team A bei Wettanbieter 1, Quote 1.95",
-            "Einsatz €520.88"
+            "Team A bei Wettanbieter 1, Quote 1,95",
+            "Einsatz 520,88 €"
           ],
           [
-            "Team B bei Wettanbieter 2, Quote 2.12",
-            "Einsatz €479.12"
+            "Team B bei Wettanbieter 2, Quote 2,12",
+            "Einsatz 479,12 €"
           ],
           [
             "Summe der Kehrwerte der Quoten",
-            "0.513 + 0.472 = 0.985"
+            "0,513 + 0,472 = 0,985"
           ],
           [
             "Auszahlung, egal wer gewinnt",
-            "ca. €1,015.72"
+            "ca. 1.015,72 €"
           ],
           [
             "Garantierter Gewinn",
-            "ca. €15.72 (1.6%)"
+            "ca. 15,72 € (1,6%)"
           ]
         ]
       },
@@ -1819,30 +1723,30 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: Über 2.5 Tore, vor Spielbeginn mit €500 gesetzt",
+        "title": "Beispiel: Über 2,5 Tore, vor Spielbeginn mit 500 € gesetzt",
         "rows": [
           [
-            "Ursprüngliche Wette: Über 2.5 Tore, Quote 2.40",
-            "Einsatz €500, möglicher Gewinnbetrag €1,200"
+            "Ursprüngliche Wette: Über 2,5 Tore, Quote 2,40",
+            "Einsatz 500 €, möglicher Gewinnbetrag 1.200 €"
           ],
           [
-            "Nach einem frühen Tor: Unter 2.5 Tore, Quote 2.60",
-            "Einsatz €461.54"
+            "Nach einem frühen Tor: Unter 2,5 Tore, Quote 2,60",
+            "Einsatz 461,54 €"
           ],
           [
             "Gesamteinsatz",
-            "€961.54"
+            "961,54 €"
           ],
           [
             "Auszahlung bei jedem Ergebnis",
-            "€1,200"
+            "1.200 €"
           ],
           [
             "Gesicherter Gewinn",
-            "ca. €238.46 (24.8%)"
+            "ca. 238,46 € (24,8%)"
           ]
         ],
-        "note": "Die Formel: Hedge-Einsatz = möglicher Gewinnbetrag ÷ neue Quote. Hier: 1,200 ÷ 2.60 = €461.54."
+        "note": "Die Formel: Hedge-Einsatz = möglicher Gewinnbetrag ÷ neue Quote. Hier: 1.200 ÷ 2,60 = 461,54 €."
       },
       {
         "type": "h2",
@@ -1858,11 +1762,11 @@
         "rows": [
           [
             "Einsatz pro Surebet",
-            "€1,000"
+            "1.000 €"
           ],
           [
             "Durchschnittlicher Gewinn",
-            "1.5%"
+            "1,5%"
           ],
           [
             "Surebets pro Monat",
@@ -1870,11 +1774,11 @@
           ],
           [
             "Erwartetes Monatsergebnis",
-            "ca. €600"
+            "ca. 600 €"
           ],
           [
-            "Gleiches Setup mit €2,500 pro Surebet",
-            "ca. €1,500"
+            "Gleiches Setup mit 2.500 € pro Surebet",
+            "ca. 1.500 €"
           ]
         ]
       },
@@ -1915,7 +1819,7 @@
       },
       {
         "q": "Wie viel Geld brauche ich zum Start?",
-        "a": "Du kannst mit €200–500 starten, verteilt auf einige Wettanbieter. Bei kleineren Einsätzen bringt eine Surebet allerdings nur wenige Euro."
+        "a": "Du kannst mit 200–500 € starten, verteilt auf einige Wettanbieter. Bei kleineren Einsätzen bringt eine Surebet allerdings nur wenige Euro."
       }
     ]
   },
@@ -1950,31 +1854,31 @@
       },
       {
         "type": "p",
-        "text": "Wettsoftware sammelt laufend die Quoten der Wettanbieter, gleicht identische Ereignisse und Märkte ab und berechnet für jede Kombination die Summe der Kehrwerte. Der Kern der Arbeit ist das Matching: „Man Utd“ und „Manchester United“ müssen als dasselbe Team erkannt werden, und „Über 2.5“ muss bei beiden Wettanbietern dieselbe Linie sein."
+        "text": "Wettsoftware sammelt laufend die Quoten der Wettanbieter, gleicht identische Ereignisse und Märkte ab und berechnet für jede Kombination die Summe der Kehrwerte. Der Kern der Arbeit ist das Matching: „Man Utd“ und „Manchester United“ müssen als dasselbe Team erkannt werden, und „Über 2,5“ muss bei beiden Wettanbietern dieselbe Linie sein."
       },
       {
         "type": "example",
-        "title": "Beispiel: Vom Scanner erkannter Quotenfehler, Gesamteinsatz €1,000",
+        "title": "Beispiel: Vom Scanner erkannter Quotenfehler, Gesamteinsatz 1.000 €",
         "rows": [
           [
-            "Über 2.5 Tore bei Wettanbieter 1, Quote 2.25",
-            "Einsatz €461.72"
+            "Über 2,5 Tore bei Wettanbieter 1, Quote 2,25",
+            "Einsatz 461,72 €"
           ],
           [
-            "Unter 2.5 Tore bei Wettanbieter 2, Quote 1.93",
-            "Einsatz €538.28"
+            "Unter 2,5 Tore bei Wettanbieter 2, Quote 1,93",
+            "Einsatz 538,28 €"
           ],
           [
-            "1/2.25 + 1/1.93",
-            "0.444 + 0.518 = 0.963"
+            "1/2,25 + 1/1,93",
+            "0,444 + 0,518 = 0,963"
           ],
           [
             "Auszahlung bei jedem Ergebnis",
-            "ca. €1,038.88"
+            "ca. 1.038,88 €"
           ],
           [
             "Fixer Gewinn",
-            "ca. €38.88 (3.9%)"
+            "ca. 38,88 € (3,9%)"
           ]
         ],
         "note": "Wettanbieter 1 hatte noch nicht auf ein Update zu den Teamnews reagiert. Der Scanner meldete die Lücke binnen Sekunden."
@@ -1990,9 +1894,9 @@
       {
         "type": "ul",
         "items": [
-          "**Offensichtliche Fehler:** Quoten von 15.0, wo alle anderen 1.50 anbieten, werden vom Wettanbieter oft storniert. Lass die Finger davon.",
+          "**Offensichtliche Fehler:** Quoten von 15,0, wo alle anderen 1,50 anbieten, werden vom Wettanbieter oft storniert. Lass die Finger davon.",
           "**Unterschiedliche Regeln:** Ein Tennis-Markt, der bei einem Wettanbieter bei Aufgabe gewertet und beim anderen storniert wird, ist keine echte Surebet.",
-          "**Unterschiedliche Linien:** Asiatisches Handicap −0.5 und −0.25 sehen ähnlich aus, verhalten sich aber verschieden. Mehr dazu im Ratgeber zum [Asiatischen Handicap](/en/guides/asian-handicap).",
+          "**Unterschiedliche Linien:** Asiatisches Handicap −0,5 und −0,25 sehen ähnlich aus, verhalten sich aber verschieden. Mehr dazu im Ratgeber zum [Asiatischen Handicap](/en/guides/asian-handicap).",
           "**Gesunde Surebets:** 1–4% Gewinn auf gängigen Märkten sind der Sweet Spot. Daher kommt der Großteil deines Gewinns."
         ]
       },
@@ -2065,54 +1969,54 @@
       },
       {
         "type": "example",
-        "title": "Beispiel: Live-Tennis nach einem Break, Gesamteinsatz €800",
+        "title": "Beispiel: Live-Tennis nach einem Break, Gesamteinsatz € 800",
         "rows": [
           [
-            "Spieler A bei Wettanbieter 1, Quote 1.72",
-            "Einsatz €467.63"
+            "Spieler A bei Wettanbieter 1, Quote 1,72",
+            "Einsatz € 467,63"
           ],
           [
-            "Spieler B bei Wettanbieter 2, Quote 2.42",
-            "Einsatz €332.37"
+            "Spieler B bei Wettanbieter 2, Quote 2,42",
+            "Einsatz € 332,37"
           ],
           [
-            "1/1.72 + 1/2.42",
-            "0.581 + 0.413 = 0.995"
+            "1/1,72 + 1/2,42",
+            "0,581 + 0,413 = 0,995"
           ],
           [
             "Auszahlung, egal wer gewinnt",
-            "ca. €804.33"
+            "ca. € 804,33"
           ],
           [
             "Gesicherter Gewinn",
-            "ca. €4.33 (0.5%)"
+            "ca. € 4,33 (0,5 %)"
           ]
         ],
         "note": "Live-Margen sind oft kleiner als vor dem Spiel. Eine höhere Anzahl an Wetten gleicht das aus – aber nur, wenn du schnell und sauber arbeitest."
       },
       {
         "type": "example",
-        "title": "Beispiel: Über/Unter nach einem frühen Tor, Gesamteinsatz €1,000",
+        "title": "Beispiel: Über/Unter nach einem frühen Tor, Gesamteinsatz € 1.000",
         "rows": [
           [
-            "Über 3.5 Tore bei Wettanbieter 1, Quote 2.30",
-            "Einsatz €451.07"
+            "Über 3,5 Tore bei Wettanbieter 1, Quote 2,30",
+            "Einsatz € 451,07"
           ],
           [
-            "Unter 3.5 Tore bei Wettanbieter 2, Quote 1.89",
-            "Einsatz €548.93"
+            "Unter 3,5 Tore bei Wettanbieter 2, Quote 1,89",
+            "Einsatz € 548,93"
           ],
           [
             "Summe der Kehrwerte der Quoten",
-            "0.435 + 0.529 = 0.964"
+            "0,435 + 0,529 = 0,964"
           ],
           [
             "Auszahlung bei jedem Ausgang",
-            "ca. €1,037.47"
+            "ca. € 1.037,47"
           ],
           [
             "Gesicherter Gewinn",
-            "ca. €37.47 (3.7%)"
+            "ca. € 37,47 (3,7 %)"
           ]
         ]
       },
@@ -2193,23 +2097,23 @@
         "rows": [
           [
             "Faire Wahrscheinlichkeit",
-            "50% (faire Quote 2.00)"
+            "50% (faire Quote 2,00)"
           ],
           [
             "Angebotene Quote beim Soft-Wettanbieter",
-            "2.10"
+            "2,10"
           ],
           [
             "Erwartungswert",
-            "0.50 × 2.10 − 1 = +5%"
+            "0,50 × 2,10 − 1 = +5%"
           ],
           [
-            "Einsatz €50",
-            "Erwarteter Gewinn €2.50 pro Wette"
+            "Einsatz € 50",
+            "Erwarteter Gewinn € 2,50 pro Wette"
           ],
           [
-            "300 Wetten à €50 (€15,000 Umsatz)",
-            "Erwarteter Gewinn ca. €750"
+            "300 Wetten à € 50 (€ 15.000 Umsatz)",
+            "Erwarteter Gewinn ca. € 750"
           ]
         ],
         "note": "Der erwartete Gewinn ist ein Durchschnittswert. Die tatsächlichen Ergebnisse schwanken darüber und darunter, besonders bei wenigen Wetten."
@@ -2228,11 +2132,11 @@
         "rows": [
           [
             "Sharpe Quoten",
-            "1.95 / 1.95"
+            "1,95 / 1,95"
           ],
           [
             "Implizierte Wahrscheinlichkeiten",
-            "51.28% + 51.28% = 102.56%"
+            "51,28% + 51,28% = 102,56%"
           ],
           [
             "Faire Wahrscheinlichkeit nach Margenbereinigung",
@@ -2240,7 +2144,7 @@
           ],
           [
             "Faire Quoten",
-            "2.00 / 2.00"
+            "2,00 / 2,00"
           ]
         ]
       },
@@ -2365,11 +2269,11 @@
           ],
           [
             "Nötiger Umsatz bis zum Break-even",
-            "€33 / 2% = €1,650"
+            "€33 / 2% = €1.650"
           ],
           [
             "Typischer Umsatz (60 Surebets × €400)",
-            "€24,000"
+            "€24.000"
           ],
           [
             "Gewinn nach Abzug des Abos",
@@ -2385,11 +2289,11 @@
       {
         "type": "ul",
         "items": [
-          "**Abdeckung der Wettanbieter:** Das Tool muss die Wettanbieter enthalten, die du tatsächlich nutzen kannst.",
+          "**Abdeckung der Wettanbieter:** Das Tool muss die in Österreich lizenzierten Wettanbieter enthalten, die du tatsächlich nutzen kannst, z. B. Admiral, bwin oder Interwetten.",
           "**Aktualisierungsfrequenz:** wenige Sekunden bei Pre-Match, schneller bei [Live-Surebets](/en/guides/live-arbitrage-betting-scanner).",
           "**Filter:** Sportart, Markt, Wettanbieter und Mindestgewinn.",
           "**Integriertes Tracking:** Surebets, die du über den Scanner platzierst, sollten automatisch erfasst werden.",
-          "**Fairer Preis:** Vergleiche die monatlichen Kosten mit deinem erwarteten Umsatz. Siehe den [Vergleich von Surebet-Tools](/en/guides/surebet-tool-comparison)."
+          "**Fairer Preis:** Vergleiche die monatlichen Kosten mit deinem erwarteten Umsatz."
         ]
       },
       {

@@ -1,5 +1,6 @@
 {
   "ready": true,
+  "indexed": true,
   "ui": {
     "login": "Anmelden",
     "loggedIn": "Angemeldet",
@@ -625,7 +626,7 @@
     "findOnSport": "Surebets für deine Sportart finden",
     "surebetsAtBookmakers": "Surebets bei den Buchmachern",
     "guideIndexTitle": "Ratgeber zu Surebets und Arbitrage-Wetten – BetTrackerAI",
-    "guideIndexDescription": "Surebets von Grund auf lernen: was sie sind, wie du den Einsatz berechnest, Regeln und Steuern in Dänemark und wie du Limitierungen vermeidest.",
+    "guideIndexDescription": "Surebets von Grund auf lernen: was sie sind, wie du den Einsatz berechnest, Regeln und Steuern in der Schweiz und wie du Limitierungen vermeidest.",
     "guideIndexH1": "Alles, was du über Surebets wissen musst",
     "guideIndexLead": "Kurze, konkrete Ratgeber für Spieler in der Schweiz. Von der ersten Berechnung bis zur Frage, wie du deine Konten offen hältst.",
     "guideIndexName": "Surebet-Ratgeber",
@@ -638,7 +639,7 @@
   },
   "daily": {
     "metaTitle": "Surebets heute – die besten Sure Bets im Überblick",
-    "metaDescription": "Die besten Surebets von heute bei dänischen und internationalen Buchmachern, laufend aktualisiert. Sportart, Spiel, Markt und garantierter Gewinn der stärksten Chancen im Moment.",
+    "metaDescription": "Die besten Surebets von heute bei Schweizer Anbietern, laufend aktualisiert. Sportart, Spiel, Markt und garantierter Gewinn der stärksten Chancen im Moment. Da der Schweizer Markt auf Swisslos und Loterie Romande beschränkt ist, sind Surebets zwischen lizenzierten Anbietern sehr begrenzt.",
     "name": "Surebets heute",
     "h1": "Surebets heute",
     "empty": "Aktuell gibt es keine aktiven Surebets. Der Scanner läuft rund um die Uhr, schau also gleich noch einmal vorbei.",
@@ -696,11 +697,11 @@
       },
       {
         "q": "Was kostet BetTrackerAI Pro?",
-        "a": "499 DKK/Monat bei monatlicher Zahlung oder 199 DKK/Monat bei jährlicher Zahlung – eine Ersparnis von 60 %. Du kannst mit Visa, Mastercard, MobilePay oder per Banküberweisung bezahlen."
+        "a": "499 DKK/Monat bei monatlicher Zahlung oder 199 DKK/Monat bei jährlicher Zahlung – eine Ersparnis von 60 %. Du kannst mit Visa, Mastercard oder per Banküberweisung bezahlen."
       },
       {
         "q": "Welche Buchmacher vergleicht ihr?",
-        "a": "Wir vergleichen Quoten dänischer und internationaler Buchmacher, unter anderem Danske Spil, bet365, Unibet, LeoVegas, Betano und Pinnacle."
+        "a": "Wir vergleichen Quoten lizenzierter Schweizer Anbieter wie Swisslos Sporttip und Jouez Sport (Loterie Romande). Da der Schweizer Sportwettenmarkt auf diese beiden Lotteriegesellschaften beschränkt ist, sind Surebets zwischen lizenzierten Anbietern sehr begrenzt. Wir empfehlen keine nicht lizenzierten oder gesperrten Seiten."
       },
       {
         "q": "Wie erfahre ich von neuen Surebets?",
@@ -758,7 +759,6 @@
     "asiatisk-handicap": "asiatisches-handicap",
     "bet-tracker": "wetten-verfolgen",
     "roi-betting": "roi-wetten",
-    "surebet-danmark-alternativ": "arbitrage-wetten-tool-vergleich",
     "betting-regnskab": "wettbuchhaltung",
     "tjen-penge-paa-odds-uden-risiko": "sportwetten-ohne-risiko",
     "find-surebets-automatisk": "surebets-automatisch-finden",

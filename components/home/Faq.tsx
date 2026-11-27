@@ -2,7 +2,7 @@
 
 import { useLocale } from "@/components/locale-provider";
 import { useState } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import {
   ArrowRight, BellRing, Building2, ChevronRight, CreditCard, Gift, Headphones, MessageCircleQuestion, ShieldCheck, Target, UserCheck,
   type LucideIcon,
@@ -17,11 +17,15 @@ const ICONS: LucideIcon[] = [Target, ShieldCheck, Gift, CreditCard, Building2, B
 export const FAQ = FAQ_ENTRIES.map((e, k) => ({ ...e, Icon: ICONS[k] ?? MessageCircleQuestion }));
 
 /** All questions and answers as structured data, so search engines see every answer. */
-const FAQ_JSON_LD = JSON.stringify({
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: FAQ.map(({ q, a }) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })),
-});
+function FaqJsonLd() {
+  const { tx } = useLocale();
+  const json = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map(({ q, a }) => ({ "@type": "Question", name: tx(q), acceptedAnswer: { "@type": "Answer", text: tx(a) } })),
+  }).replace(/</g, "\\u003c");
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />;
+}
 
 const num = (k: number) => String(k + 1).padStart(2, "0");
 
@@ -73,7 +77,7 @@ export function FaqSection() {
 
   return (
     <section id="faq" className="reveal panel faq-panel relative ml-[28px] mt-[80px] w-[969px] scroll-mt-[80px] overflow-hidden rounded-[22px] px-[30px] py-[22px]">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }} />
+      <FaqJsonLd />
 
       <div className="flex items-end justify-between gap-[24px]">
         <div>
@@ -129,7 +133,7 @@ export function MobileFaq() {
   const call = useSupportCall();
   return (
     <section id="faq-mobile" className="panel faq-panel relative scroll-mt-6 overflow-hidden rounded-[18px] p-4">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: FAQ_JSON_LD }} />
+      <FaqJsonLd />
       <Eyebrow phone />
       <h2 className="mt-3 text-[24px] font-bold leading-[28px] tracking-[-0.3px]">
         {tx("Spørg løs –")}{" "}<span className="text-gradient-brand">{tx("vi svarer på dansk.")}</span>

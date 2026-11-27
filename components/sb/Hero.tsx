@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, Zap, Trophy, Layers, Play } from "lucide-react";
 import { formatPct } from "./data";
 import { useSurebets } from "./surebets-context";

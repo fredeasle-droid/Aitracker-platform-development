@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "@/components/locale-provider";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { PRICING, REVIEWS, REVIEW_SECONDS } from "../data";
 import { useReviewRotation } from "../Reviews";
@@ -64,7 +64,7 @@ export function ReviewsShowcase() {
             <img
               key={review.name}
               src={review.photo}
-              alt={`${review.name}, BetTrackerAI-kunde`}
+              alt={`${review.name}, ${tx("BetTrackerAI-kunde")}`}
               loading="lazy"
               width={1280}
               height={800}

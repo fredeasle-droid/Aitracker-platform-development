@@ -25,7 +25,7 @@
       {
         "type": "ul",
         "items": [
-          "Sprawdź minimalne kursy wymagane do odblokowania bonusu – wielu bukmacherów ustala próg na poziomie 1.80 lub wyższym.",
+          "Sprawdź minimalne kursy wymagane do odblokowania bonusu – wielu bukmacherów ustala próg na poziomie 1,80 lub wyższym.",
           "Zwróć uwagę na termin ważności, aby Twój bonus lub free bet nie przepadł niewykorzystany.",
           "Rozważ wykorzystanie surebet (zakładów arbitrażowych) do spełnienia wymagań obrotu przy minimalnym ryzyku."
         ]
@@ -46,7 +46,7 @@
       },
       {
         "q": "Ile są warte typowe bonusy powitalne?",
-        "a": "Wartości bonusów i wymagania dotyczące obrotu różnią się w zależności od bukmachera i jurysdykcji. Na niektórych regulowanych rynkach oferty powitalne mogą być ograniczone – na przykład do €1,000 z maksymalnym obrotem dziesięciokrotności bonusu. Zawsze sprawdzaj aktualne warunki u wybranego bukmachera i upewnij się, że posiada on ważną licencję w Twoim kraju."
+        "a": "Wartości bonusów i wymagania dotyczące obrotu różnią się w zależności od bukmachera i jurysdykcji. Na niektórych regulowanych rynkach oferty powitalne mogą być ograniczone – na przykład do 4 000 zł z maksymalnym obrotem dziesięciokrotności bonusu. Zawsze sprawdzaj aktualne warunki u wybranego bukmachera i upewnij się, że posiada on ważne zezwolenie Ministerstwa Finansów w Polsce. Pamiętaj też, by zapoznać się z aktualnymi przepisami podatkowymi."
       }
     ],
     "category": "Strategia",
@@ -55,9 +55,9 @@
   "er-surebets-lovligt": {
     "title": "Czy zakłady arbitrażowe są legalne? Przepisy i kwestie podatkowe",
     "metaTitle": "Czy zakłady arbitrażowe są legalne? Przepisy i bukmacherzy",
-    "description": "Czy stawianie zakładów arbitrażowych jest legalne i czy trzeba płacić podatek od wygranych? Sprawdź przepisy i co bukmacherzy mogą zrobić z arbitrażem.",
+    "description": "Czy stawianie zakładów arbitrażowych w Polsce jest legalne i jak wygląda opodatkowanie zakładów? Sprawdź przepisy i co bukmacherzy mogą zrobić z arbitrażem.",
     "keyword": "czy zakłady arbitrażowe są legalne",
-    "intro": "Krótka odpowiedź brzmi: tak. Stawianie zakładów arbitrażowych jest legalne w większości krajów. Po prostu obstawiasz zwykłe zakłady u licencjonowanych bukmacherów i porównujesz kursy, aby znaleźć najlepszą wartość – żaden element tego procesu nie jest nielegalny.",
+    "intro": "Krótka odpowiedź brzmi: tak. Stawianie zakładów arbitrażowych w Polsce jest legalne, o ile korzystasz z bukmacherów posiadających licencję Ministerstwa Finansów, takich jak STS, Fortuna, Betclic, Superbet, Totolotek, LV BET, eToto czy Betfan. Po prostu obstawiasz zwykłe zakłady u licencjonowanych bukmacherów i porównujesz kursy, aby znaleźć najlepszą wartość – żaden element tego procesu nie jest nielegalny.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "Opodatkowanie wygranych z zakładów różni się w zależności od kraju. Na wielu regulowanych rynkach wygrane u operatorów posiadających licencję krajowego regulatora są zwolnione z podatku po stronie gracza. Jeśli korzystasz z operatorów zagranicznych lub nieposiadających licencji, Twoje wygrane mogą podlegać opodatkowaniu. Sprawdź przepisy podatkowe obowiązujące w Twoim kraju lub skonsultuj się z lokalnym urzędem skarbowym, jeśli masz wątpliwości dotyczące swojej sytuacji."
+        "text": "W Polsce u licencjonowanych bukmacherów od każdego zakładu odliczany jest podatek od gier w wysokości 12% stawki, a wyższe wygrane mogą dodatkowo podlegać podatkowi dochodowemu. Podatek od stawki wpływa na realną opłacalność zakładów arbitrażowych, dlatego warto uwzględnić go w kalkulacjach. Przepisy mogą się zmieniać, więc sprawdź aktualne zasady lub skonsultuj się z urzędem skarbowym albo doradcą podatkowym, jeśli masz wątpliwości dotyczące swojej sytuacji."
       },
       {
         "type": "tip",
-        "text": "Korzystaj wyłącznie z bukmacherów posiadających licencję krajowego regulatora. Zazwyczaj wiąże się to z korzyściami podatkowymi oraz ochroną konsumenta zapewnianą przez organ nadzoru nad hazardem."
+        "text": "Korzystaj wyłącznie z bukmacherów posiadających licencję Ministerstwa Finansów. Strony bez licencji znajdują się na oficjalnej liście blokad, a gra na nich nie daje Ci żadnej ochrony konsumenckiej. Licencjonowani operatorzy działają natomiast w ramach polskich przepisów i pod nadzorem państwa."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Nawet przy zakładach arbitrażowych ważne jest zachowanie kontroli nad swoim hazardem. Ustaw limity depozytów i skorzystaj z krajowego rejestru samowykluczeń, jeśli potrzebujesz przerwy. Jeśli potrzebujesz wsparcia, skontaktuj się z uznaną infolinią pomocową dla graczy w swoim regionie."
+        "text": "Nawet przy zakładach arbitrażowych ważne jest zachowanie kontroli nad swoim hazardem. Ustaw limity depozytów i skorzystaj z narzędzi samowykluczenia dostępnych u operatorów, jeśli potrzebujesz przerwy. Jeśli potrzebujesz wsparcia, skontaktuj się z infolinią Krajowego Biura ds. Przeciwdziałania Narkomanii."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Czy muszę płacić podatek od wygranych z zakładów arbitrażowych?",
-        "a": "To zależy od kraju. Na wielu regulowanych rynkach wygrane u licencjonowanych operatorów są zwolnione z podatku po stronie gracza. Sprawdź przepisy podatkowe obowiązujące w Twoim kraju."
+        "a": "W Polsce licencjonowany bukmacher odlicza od każdej stawki podatek od gier w wysokości 12%, a większe wygrane mogą podlegać podatkowi dochodowemu. Przepisy mogą się zmieniać, dlatego sprawdź aktualne zasady podatkowe."
       }
     ],
     "category": "Przepisy",
@@ -104,7 +104,7 @@
   "undgaa-begraensning": {
     "title": "Jak unikać limitów u bukmacherów i dłużej utrzymywać konta",
     "metaTitle": "Jak Unikać Limitów u Bukmacherów – Poradnik 2026",
-    "description": "Jak unikać limitów u bukmacherów przy zakładach arbitrażowych: strategia wyglądająca naturalnie, najlepsi bukmacherzy do arbitrażu i przykłady w €.",
+    "description": "Jak unikać limitów u bukmacherów przy zakładach arbitrażowych: strategia wyglądająca naturalnie, najlepsi bukmacherzy do arbitrażu i przykłady w zł.",
     "keyword": "jak unikać limitów u bukmacherów",
     "intro": "Aby unikać limitów u bukmacherów, musisz obstawiać jak zwykły klient: okrągłe stawki, popularne rynki, mieszanka zwykłych zakładów i brak natychmiastowej reakcji na każdy spadek kursu. Bukmacherzy miękcy limitują konta, które konsekwentnie biją kurs zamknięcia. Nie da się tego uniknąć na zawsze, ale sprytna strategia może utrzymać Twoje konta otwarte przez miesiące zamiast tygodni.",
     "blocks": [
@@ -114,13 +114,13 @@
       },
       {
         "type": "p",
-        "text": "Bukmacherzy miękcy zarabiają na graczach rekreacyjnych, a nie na klientach, którzy wyłącznie korzystają z błędnie wycenionych kursów. Ich systemy ryzyka analizują wzorce: czy obstawiasz kursy, które wkrótce potem spadają? Czy grasz tylko na niszowych rynkach? Czy Twoje stawki są wyliczone co do centa? Każdy z tych sygnałów podnosi Twój wskaźnik ryzyka."
+        "text": "Bukmacherzy miękcy zarabiają na graczach rekreacyjnych, a nie na klientach, którzy wyłącznie korzystają z błędnie wycenionych kursów. Ich systemy ryzyka analizują wzorce: czy obstawiasz kursy, które wkrótce potem spadają? Czy grasz tylko na niszowych rynkach? Czy Twoje stawki są wyliczone co do grosza? Każdy z tych sygnałów podnosi Twój wskaźnik ryzyka."
       },
       {
         "type": "ul",
         "items": [
           "**Bicie kursu zamknięcia:** najsilniejszy sygnał. Jeśli Twoje kursy są konsekwentnie lepsze od ceny końcowej, zostaniesz oflagowany.",
-          "**Nierówne stawki:** €463,27 wygląda jak kalkulator. €460 wygląda jak człowiek.",
+          "**Nierówne stawki:** 463,27 zł wygląda jak kalkulator. 460 zł wygląda jak człowiek.",
           "**Niszowe rynki:** rzuty rożne w drugiej lidze małej ligi przyciągają uwagę.",
           "**Tylko wypłaty:** częste wypłaty bez bonusów ani regularnych zakładów wyglądają profesjonalnie."
         ]
@@ -142,30 +142,30 @@
       },
       {
         "type": "example",
-        "title": "Przykład: zaokrąglone stawki, łączna stawka €1 000",
+        "title": "Przykład: zaokrąglone stawki, łączna stawka 1 000 zł",
         "rows": [
           [
             "Dokładny podział przy kursach 2,10 / 2,00",
-            "€487,80 / €512,20"
+            "487,80 zł / 512,20 zł"
           ],
           [
             "Zaokrąglony podział",
-            "€490 / €510"
+            "490 zł / 510 zł"
           ],
           [
             "Zysk przy wygranej A (2,10)",
-            "€1 029 − €1 000 = €29,00"
+            "1 029 zł − 1 000 zł = 29,00 zł"
           ],
           [
             "Zysk przy wygranej B (2,00)",
-            "€1 020 − €1 000 = €20,00"
+            "1 020 zł − 1 000 zł = 20,00 zł"
           ],
           [
             "Dokładny podział dla porównania",
-            "ok. €24,39 w obu przypadkach"
+            "ok. 24,39 zł w obu przypadkach"
           ]
         ],
-        "note": "Zaokrąglone stawki nadal gwarantują zysk przy obu wynikach, a przy tym wyglądają znacznie bardziej naturalnie dla bukmachera."
+        "note": "Zaokrąglone stawki nadal gwarantują zysk przy obu wynikach, a przy tym wyglądają znacznie bardziej naturalnie dla bukmachera. Przykład nie uwzględnia podatku od stawek (12%) ani innych podatków – sprawdź aktualne przepisy."
       },
       {
         "type": "h2",
@@ -180,12 +180,12 @@
         "items": [
           "**Bukmacherzy miękcy:** źródło większości zakładów arbitrażowych, ale szybko limitują. Korzystaj z nich ostrożnie.",
           "**Bukmacherzy ostrzy:** niższe marże i wysokie limity. Idealni na drugą nogę.",
-          "**Giełdy zakładów:** obstawiasz przeciwko innym użytkownikom, więc nie zostaniesz zlimitowany za wygrywanie. Prowizja nieznacznie obniża zysk."
+          "**Giełdy zakładów:** obstawiasz przeciwko innym użytkownikom, więc nie zostaniesz zlimitowany za wygrywanie. Prowizja nieznacznie obniża zysk. Korzystaj wyłącznie z operatorów legalnie działających w Polsce."
         ]
       },
       {
         "type": "p",
-        "text": "Przeczytaj pełny przegląd [najlepszych bukmacherów do zakładów arbitrażowych](/pl/poradniki/najlepsi-bukmacherzy-do-surebet). Zawsze korzystaj z licencjonowanych bukmacherów w swoim kraju."
+        "text": "Przeczytaj pełny przegląd [najlepszych bukmacherów do zakładów arbitrażowych](/pl/poradniki/najlepsi-bukmacherzy-do-surebet). Zawsze korzystaj z bukmacherów licencjonowanych przez Ministerstwo Finansów, takich jak STS, Fortuna, Betclic, Superbet, Totolotek, LV BET, eToto czy Betfan. Strony spoza licencji znajdują się na oficjalnej liście zablokowanych."
       },
       {
         "type": "h2",
@@ -225,9 +225,9 @@
   "surebet-beregner": {
     "title": "Darmowy kalkulator surebet: oblicz stawki w kilka sekund",
     "metaTitle": "Darmowy Kalkulator Surebet – Oblicz Stawki 2026",
-    "description": "Użyj darmowego kalkulatora surebet, aby podzielić stawkę na dwa lub trzy wyniki. Wzór, przykłady w € i jak bezpiecznie zaokrąglać stawki.",
+    "description": "Użyj darmowego kalkulatora surebet, aby podzielić stawkę na dwa lub trzy wyniki. Wzór, przykłady w zł i jak bezpiecznie zaokrąglać stawki.",
     "keyword": "darmowy kalkulator surebet",
-    "intro": "Kalkulator surebet dzieli Twoją łączną stawkę na każdy możliwy wynik tak, aby wypłata była taka sama niezależnie od rezultatu. Wpisz kursy i kwotę, a kalkulator pokaże stawkę na każdy wynik, wypłatę oraz zysk w € i %. Wzór jest prosty, ale kalkulator eliminuje błędy, gdy masz tylko chwilę na postawienie zakładów.",
+    "intro": "Kalkulator surebet dzieli Twoją łączną stawkę na każdy możliwy wynik tak, aby wypłata była taka sama niezależnie od rezultatu. Wpisz kursy i kwotę, a kalkulator pokaże stawkę na każdy wynik, wypłatę oraz zysk w zł i %. Wzór jest prosty, ale kalkulator eliminuje błędy, gdy masz tylko chwilę na postawienie zakładów.",
     "blocks": [
       {
         "type": "h2",
@@ -247,7 +247,7 @@
       },
       {
         "type": "example",
-        "title": "Przykład: dwa wyniki, łączna stawka €1 500",
+        "title": "Przykład: dwa wyniki, łączna stawka 5 000 zł",
         "rows": [
           [
             "Kurs A 2,10 i kurs B 2,05",
@@ -255,19 +255,19 @@
           ],
           [
             "Stawka na A",
-            "€740,97"
+            "2 469,88 zł"
           ],
           [
             "Stawka na B",
-            "€759,03"
+            "2 530,12 zł"
           ],
           [
             "Wypłata w obu przypadkach",
-            "ok. €1 556,03"
+            "ok. 5 186,75 zł"
           ],
           [
             "Zysk",
-            "ok. €56,03 (3,7%)"
+            "ok. 186,75 zł (3,7%)"
           ]
         ]
       },
@@ -281,19 +281,19 @@
       },
       {
         "type": "example",
-        "title": "Przykład: 1X2, łączna stawka €1 000",
+        "title": "Przykład: 1X2, łączna stawka 4 000 zł",
         "rows": [
           [
             "Wygrana gospodarzy, kurs 2,50",
-            "Stawka €408,23"
+            "Stawka 1 632,93 zł"
           ],
           [
             "Remis, kurs 3,50",
-            "Stawka €291,59"
+            "Stawka 1 166,38 zł"
           ],
           [
             "Wygrana gości, kurs 3,40",
-            "Stawka €300,17"
+            "Stawka 1 200,69 zł"
           ],
           [
             "Suma odwrotności kursów",
@@ -301,7 +301,7 @@
           ],
           [
             "Zysk",
-            "ok. €20,58 (2,1%)"
+            "ok. 82,33 zł (2,1%)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "Stawki takie jak €740,97 mogą wzbudzić podejrzenia bukmachera. Zaokrąglaj do pełnych euro lub dziesiątek. Jeśli zaokrąglisz do €741 i €759, zysk pozostanie na poziomie ok. €56, a różnica między wynikami wyniesie zaledwie kilka centów."
+        "text": "Stawki takie jak 2 469,88 zł mogą wzbudzić podejrzenia bukmachera. Zaokrąglaj do pełnych złotych lub dziesiątek. Jeśli zaokrąglisz do 2 470 zł i 2 530 zł, zysk pozostanie na poziomie ok. 187 zł, a różnica między wynikami wyniesie zaledwie kilkadziesiąt groszy."
       },
       {
         "type": "p",
-        "text": "Możesz też celowo rozłożyć stawki nierównomiernie. Jeśli na jednym wyniku chcesz jedynie odzyskać stawkę, zarabiasz €0 przy tym wyniku, a więcej przy pozostałych. W powyższym przykładzie €768,29 na A i €731,71 na B daje zysk €113,41 przy wygranej A i €0 przy wygranej B."
+        "text": "Możesz też celowo rozłożyć stawki nierównomiernie. Jeśli na jednym wyniku chcesz jedynie odzyskać stawkę, zarabiasz 0 zł przy tym wyniku, a więcej przy pozostałych. W powyższym przykładzie 2 560,98 zł na A i 2 439,02 zł na B daje zysk 378,06 zł przy wygranej A i 0 zł przy wygranej B."
       },
       {
         "type": "tip",
@@ -368,19 +368,19 @@
       },
       {
         "type": "p",
-        "text": "W przypadku kursów dziesiętnych, stosowanych przez większość bukmacherów internetowych, wypłata to stawka pomnożona przez kurs. Zysk to wypłata pomniejszona o stawkę."
+        "text": "W przypadku kursów dziesiętnych, stosowanych przez większość bukmacherów internetowych, wypłata to stawka pomnożona przez kurs. Zysk to wypłata pomniejszona o stawkę. W Polsce od każdej stawki potrącany jest podatek od gier w wysokości 12%, więc rzeczywista wypłata może być niższa niż w przykładzie poniżej – sprawdź aktualne przepisy."
       },
       {
         "type": "example",
-        "title": "Stawka €200 przy kursie 2.50",
+        "title": "Stawka 200 zł przy kursie 2.50",
         "rows": [
           [
             "Wypłata",
-            "€200 × 2.50 = €500"
+            "200 zł × 2.50 = 500 zł"
           ],
           [
             "Zysk",
-            "€500 − €200 = €300"
+            "500 zł − 200 zł = 300 zł"
           ]
         ]
       },
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Licencja krajowego regulatora hazardowego – zapewnia ochronę i możliwość weryfikacji zasad rozliczania wygranych.",
+          "Licencja Ministerstwa Finansów – zapewnia ochronę i możliwość weryfikacji zasad rozliczania wygranych, a bukmacher nie znajduje się na oficjalnej liście blokad.",
           "Szybkie wpłaty i wypłaty, dzięki którym możesz sprawnie przenosić środki tam, gdzie są potrzebne.",
           "Szeroka oferta sportów i rynków, zwłaszcza tenisa, piłki nożnej i koszykówki.",
           "Konkurencyjne kursy i niska marża bukmachera na popularnych rynkach.",
@@ -543,7 +543,7 @@
       },
       {
         "type": "p",
-        "text": "Zacznij od pięciu do ośmiu licencjonowanych bukmacherów działających na różnych platformach. Daje to dobry zakres okazji bez konieczności zarządzania zbyt wieloma saldami. Gdy opanujesz rutynę, możesz rozszerzać portfel o kolejnych operatorów."
+        "text": "Zacznij od pięciu do ośmiu licencjonowanych bukmacherów działających na różnych platformach, na przykład spośród STS, Fortuna, Betclic, Superbet, Totolotek, LV BET, eToto i Betfan. Daje to dobry zakres okazji bez konieczności zarządzania zbyt wieloma saldami. Gdy opanujesz rutynę, możesz rozszerzać portfel o kolejnych operatorów."
       },
       {
         "type": "tip",
@@ -565,34 +565,34 @@
       },
       {
         "q": "Czy mogę korzystać z nielicencjonowanych bukmacherów do zakładów arbitrażowych?",
-        "a": "Nie jest to zalecane. Bukmacherzy bez licencji w Twoim kraju mogą być blokowani, a wygrane u nich mogą podlegać innym zasadom rozliczenia lub nie być objęte ochroną regulatora. Zawsze sprawdzaj obowiązujące przepisy w swoim miejscu zamieszkania."
+        "a": "Nie jest to zalecane. Bukmacherzy bez licencji Ministerstwa Finansów mogą znajdować się na oficjalnej liście blokad, a wygrane u nich mogą podlegać innym zasadom rozliczenia lub nie być objęte ochroną. Pamiętaj też, że u licencjonowanych bukmacherów od stawki odliczany jest podatek od gier w wysokości 12%, a wyższe wygrane mogą podlegać podatkowi dochodowemu. Zawsze sprawdzaj aktualne przepisy."
       }
     ],
     "category": "Strategia",
     "ctaLabel": "Zobacz surebety u swoich bukmacherów"
   },
   "skat-paa-spillegevinster": {
-    "title": "Podatek od wygranych w zakładach – międzynarodowy przewodnik po bukmacherce",
-    "metaTitle": "Podatek od Wygranych w Zakładach – Co Musisz Wiedzieć",
-    "description": "Czy musisz płacić podatek od wygranych w zakładach i zakładach arbitrażowych? Dowiedz się, jak działają przepisy podatkowe u legalnych i zagranicznych bukmacherów.",
+    "title": "Podatek od wygranych w zakładach – przewodnik po bukmacherce w Polsce",
+    "metaTitle": "Podatek od Wygranych w Zakładach w Polsce – Co Musisz Wiedzieć",
+    "description": "Czy musisz płacić podatek od wygranych w zakładach i zakładach arbitrażowych? Dowiedz się, jak w Polsce działa podatek od gier i jak wyglądają zasady u licencjonowanych bukmacherów.",
     "keyword": "podatek od wygranych w zakładach",
-    "intro": "Na wielu uregulowanych rynkach odpowiedź jest prosta: wygrane u licencjonowanych bukmacherów są wolne od podatku dla gracza. To bukmacher odprowadza należności do państwa, nie Ty. Jednak zasady zależą od tego, gdzie mieszkasz i gdzie obstawiasz.",
+    "intro": "W Polsce u licencjonowanych bukmacherów obowiązuje 12% podatek od gier, który jest potrącany z każdej Twojej stawki. Wyższe wygrane mogą ponadto podlegać podatkowi dochodowemu. Zasady mogą się zmieniać, dlatego zawsze sprawdzaj aktualne przepisy.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Licencjonowani bukmacherzy: zazwyczaj bez podatku"
+        "text": "Licencjonowani bukmacherzy: 12% podatku od stawki"
       },
       {
         "type": "p",
-        "text": "Gdy obstawiasz u bukmachera posiadającego licencję krajowego regulatora ds. hazardu, to on zazwyczaj odprowadza podatek od swoich przychodów. Twoje wygrane są więc co do zasady wolne od podatku i w większości przypadków nie musisz ich zgłaszać do urzędu skarbowego. Zawsze sprawdzaj obowiązujące przepisy w swoim kraju."
+        "text": "Gdy obstawiasz u bukmachera posiadającego licencję Ministerstwa Finansów (np. STS, Fortuna, Betclic, Superbet, Totolotek, LV BET, eToto czy Betfan), od każdej stawki potrącany jest 12% podatek od gier. Przykładowo, przy stawce 100 zł podatek wynosi 12 zł, więc do gry trafia 88 zł. Wyższe wygrane mogą dodatkowo podlegać podatkowi dochodowemu. Zawsze sprawdzaj aktualne przepisy i obowiązujące zasady rozliczeń."
       },
       {
         "type": "h2",
-        "text": "Zagraniczni bukmacherzy bez lokalnej licencji"
+        "text": "Zagraniczni bukmacherzy bez polskiej licencji"
       },
       {
         "type": "p",
-        "text": "Jeśli obstawiasz u bukmacherów nieposiadających licencji w Twoim kraju, wygrane mogą podlegać opodatkowaniu. Zasady zależą od takich czynników jak to, czy dostawca posiada licencję w innym kraju, oraz od Twojego miejsca zamieszkania dla celów podatkowych. To jeden z powodów, dla których korzystanie z licencjonowanych bukmacherów jest często prostszym rozwiązaniem."
+        "text": "Bukmacherzy bez licencji Ministerstwa Finansów znajdują się na oficjalnej liście blokowanych stron i nie są legalną opcją na polskim rynku. Nie korzystaj z nich – nie masz tam ochrony, jaką zapewnia licencjonowany operator, a kwestie podatkowe mogą być znacznie bardziej skomplikowane. Dlatego w Polsce warto obstawiać wyłącznie u licencjonowanych bukmacherów. W razie wątpliwości sprawdź aktualne przepisy."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Tak. Z podatkowego punktu widzenia zakład arbitrażowy to po prostu dwa lub trzy zwykłe zakłady. Wygrane u licencjonowanych bukmacherów są co do zasady wolne od podatku, niezależnie od tego, czy obstawiasz zakłady arbitrażowe, value bety czy zwykłe zakłady. Obowiązują te same zasady."
+        "text": "Tak. Z podatkowego punktu widzenia zakład arbitrażowy to po prostu dwa lub trzy zwykłe zakłady. 12% podatek od gier jest potrącany od stawki u każdego licencjonowanego bukmachera, niezależnie od tego, czy obstawiasz zakłady arbitrażowe, value bety czy zwykłe zakłady. Warto uwzględnić go w kalkulacjach, ponieważ wpływa na realny zysk. Obowiązują te same zasady."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Jeśli obstawianie zakładów jest Twoim głównym zajęciem na znaczną skalę, w niektórych jurysdykcjach mogą obowiązywać inne przepisy. Jeśli nie jesteś pewien swojej sytuacji, skontaktuj się z lokalnym urzędem skarbowym lub wykwalifikowanym doradcą podatkowym."
+        "text": "Jeśli obstawianie zakładów jest Twoim głównym zajęciem na znaczną skalę, mogą obowiązywać inne przepisy. Jeśli nie jesteś pewien swojej sytuacji, skontaktuj się z lokalnym urzędem skarbowym lub wykwalifikowanym doradcą podatkowym."
       }
     ],
     "faq": [
       {
-        "q": "Czy muszę płacić podatek od wygranych u licencjonowanych bukmacherów?",
-        "a": "Na większości uregulowanych rynków – nie. Wygrane u lokalnie licencjonowanych bukmacherów są zazwyczaj wolne od podatku dla gracza. Sprawdź przepisy podatkowe obowiązujące w Twoim kraju."
+        "q": "Czy muszę płacić podatek od zakładów u licencjonowanych bukmacherów?",
+        "a": "Tak. U licencjonowanych w Polsce bukmacherów 12% podatek od gier jest potrącany z każdej stawki. Wyższe wygrane mogą dodatkowo podlegać podatkowi dochodowemu. Sprawdź aktualne przepisy podatkowe."
       },
       {
-        "q": "Jak sprawdzić, czy bukmacher posiada licencję w moim kraju?",
-        "a": "Krajowy regulator ds. hazardu publikuje na swojej stronie internetowej listę zatwierdzonych bukmacherów, a licencjonowani operatorzy zazwyczaj wyświetlają logo regulatora na swojej witrynie."
+        "q": "Jak sprawdzić, czy bukmacher posiada licencję w Polsce?",
+        "a": "Ministerstwo Finansów publikuje na swojej stronie internetowej informacje o licencjonowanych operatorach oraz oficjalną listę blokowanych stron, a licencjonowani bukmacherzy zazwyczaj informują o licencji na swojej witrynie."
       }
     ],
     "category": "Przepisy",
@@ -631,7 +631,7 @@
   "bankroll-management": {
     "title": "Przewodnik po zarządzaniu bankrollem w zakładach sportowych i arbitrażu",
     "metaTitle": "Zarządzanie Bankrollem w Zakładach Sportowych 2026",
-    "description": "Zarządzanie bankrollem w zakładach sportowych: jak ustalać stawki, dzielić środki między bukmacherów i obliczać ROI – z przykładami w €.",
+    "description": "Zarządzanie bankrollem w zakładach sportowych: jak ustalać stawki, dzielić środki między bukmacherów i obliczać ROI – z przykładami w zł.",
     "keyword": "zarządzanie bankrollem w zakładach sportowych",
     "intro": "Dobre zarządzanie bankrollem oznacza wcześniejsze ustalenie, ile pieniędzy przeznaczasz na zakłady, ile stawiasz na jeden zakład i jak rozdzielasz środki między bukmacherów. W przypadku value bettingu stawiaj 1–2% bankrolla na zakład. W przypadku zakładów arbitrażowych ograniczeniem jest płynność: Twoje pieniądze muszą znajdować się u odpowiednich bukmacherów w momencie pojawienia się okazji. Śledź wszystko, aby mierzyć ROI.",
     "blocks": [
@@ -658,46 +658,46 @@
       },
       {
         "type": "example",
-        "title": "Przykład: stałe stawki w value bettingu, bankroll €2 000",
+        "title": "Przykład: stałe stawki w value bettingu, bankroll 10 000 zł",
         "rows": [
           [
             "Stawka na zakład (1,5%)",
-            "€30"
+            "150 zł"
           ],
           [
             "10 przegranych zakładów z rzędu",
-            "−€300 (15% bankrolla)"
+            "−1 500 zł (15% bankrolla)"
           ],
           [
             "Pozostały bankroll",
-            "€1 700"
+            "8 500 zł"
           ],
           [
             "Nowa stawka po przeglądzie (1,5%)",
-            "€25,50"
+            "127,50 zł"
           ]
         ],
         "note": "Stawka 1–2% pozwala przetrwać serie przegranych, których doświadcza każdy gracz value bettingowy."
       },
       {
         "type": "example",
-        "title": "Przykład: podział bankrolla na zakłady arbitrażowe między bukmacherów, €3 000",
+        "title": "Przykład: podział bankrolla na zakłady arbitrażowe między bukmacherów, 15 000 zł",
         "rows": [
           [
-            "6 bukmacherów × €500",
-            "€3 000"
+            "6 bukmacherów × 2 500 zł",
+            "15 000 zł"
           ],
           [
             "Typowa łączna stawka na zakład arbitrażowy",
-            "€400"
+            "2 000 zł"
           ],
           [
             "60 zakładów arbitrażowych miesięcznie przy średnim zysku 2%",
-            "€400 × 60 × 2% = €480"
+            "2 000 zł × 60 × 2% = 2 400 zł"
           ],
           [
             "Miesięczny zwrot z bankrolla",
-            "€480 / €3 000 = 16%"
+            "2 400 zł / 15 000 zł = 16%"
           ]
         ],
         "note": "Zysk z pojedynczego zakładu arbitrażowego jest niewielki, ale bankroll obraca się wielokrotnie w ciągu miesiąca. Wyniki zależą od limitów i dostępnych okazji."
@@ -708,7 +708,7 @@
       },
       {
         "type": "p",
-        "text": "ROI to zysk netto podzielony przez łączny obrót. Pokazuje, ile zarabiasz na każde postawione € i jest najlepszym sposobem na porównanie strategii, dyscyplin sportowych i bukmacherów."
+        "text": "ROI to zysk netto podzielony przez łączny obrót. Pokazuje, ile zarabiasz na każdej postawionej złotówce i jest najlepszym sposobem na porównanie strategii, dyscyplin sportowych i bukmacherów."
       },
       {
         "type": "example",
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Łącznie postawiono",
-            "€18 500"
+            "90 000 zł"
           ],
           [
             "Łącznie zwrócono",
-            "€18 870"
+            "91 800 zł"
           ],
           [
             "Zysk netto",
-            "€370"
+            "1 800 zł"
           ],
           [
             "ROI",
-            "€370 / €18 500 = 2,0%"
+            "1 800 zł / 90 000 zł = 2,0%"
           ]
         ]
       },
@@ -760,7 +760,7 @@
     "faq": [
       {
         "q": "Jak duży bankroll potrzebuję do zakładów arbitrażowych?",
-        "a": "Wielu graczy zaczyna od €1 000–€3 000 rozłożonych na 4–6 bukmacherów. Można zacząć od mniejszej kwoty, ale zysk z pojedynczego zakładu będzie bardzo niewielki."
+        "a": "Wielu graczy zaczyna od 5 000–15 000 zł rozłożonych na 4–6 bukmacherów. Można zacząć od mniejszej kwoty, ale zysk z pojedynczego zakładu będzie bardzo niewielki."
       },
       {
         "q": "Jaki procent bankrolla powinienem stawiać na value bety?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Jak obliczyć ROI swoich zakładów?",
-        "a": "Podziel zysk netto przez łączne stawki. Zysk €370 przy łącznych stawkach €18 500 daje ROI na poziomie 2,0%."
+        "a": "Podziel zysk netto przez łączne stawki. Zysk 1 800 zł przy łącznych stawkach 90 000 zł daje ROI na poziomie 2,0%."
       }
     ],
     "category": "Strategia",
@@ -777,7 +777,7 @@
   "arbitrage-betting": {
     "title": "Jak działa arbitraż bukmacherski? Zablokuj zysk na każdy wynik",
     "metaTitle": "Jak Działa Arbitraż Bukmacherski? Poradnik 2026",
-    "description": "Jak działają zakłady arbitrażowe: wzór, przykłady w €, i jak postawić pierwszy surebet krok po kroku, aby zagwarantować sobie zysk.",
+    "description": "Jak działają zakłady arbitrażowe: wzór, przykłady w zł, i jak postawić pierwszy surebet krok po kroku, aby zagwarantować sobie zysk.",
     "keyword": "jak działa arbitraż bukmacherski",
     "intro": "Arbitraż bukmacherski polega na obstawianiu każdego wyniku tego samego zdarzenia u różnych bukmacherów, gdy suma odwrotności kursów jest poniżej 1. Dzielisz stawkę tak, aby wypłata była identyczna niezależnie od wyniku. Różnica między łączną stawką a wypłatą to Twój zysk – zazwyczaj 1–3% na każdy surebet, zagwarantowany matematyką, a nie szczęściem.",
     "blocks": [
@@ -795,15 +795,15 @@
       },
       {
         "type": "example",
-        "title": "Przykład: mecz tenisowy, łączna stawka €1 000",
+        "title": "Przykład: mecz tenisowy, łączna stawka 1 000 zł",
         "rows": [
           [
             "Zawodnik A u bukmachera 1, kurs 2,08",
-            "Stawka €492,68"
+            "Stawka 492,68 zł"
           ],
           [
             "Zawodnik B u bukmachera 2, kurs 2,02",
-            "Stawka €507,32"
+            "Stawka 507,32 zł"
           ],
           [
             "1/2,08 + 1/2,02",
@@ -811,14 +811,14 @@
           ],
           [
             "Wypłata niezależnie od wyniku",
-            "ok. €1 024,78"
+            "ok. 1 024,78 zł"
           ],
           [
             "Zagwarantowany zysk",
-            "ok. €24,78 (2,5%)"
+            "ok. 24,78 zł (2,5%)"
           ]
         ],
-        "note": "Suma jest poniżej 1, więc zarabiasz około €24,78 bez względu na to, kto wygra mecz."
+        "note": "Suma jest poniżej 1, więc zarabiasz około 24,78 zł bez względu na to, kto wygra mecz. Przykład nie uwzględnia podatku od gier (12% stawki) – sprawdź aktualne przepisy."
       },
       {
         "type": "h2",
@@ -830,19 +830,19 @@
       },
       {
         "type": "example",
-        "title": "Przykład: mecz piłkarski, łączna stawka €2 000",
+        "title": "Przykład: mecz piłkarski, łączna stawka 2 000 zł",
         "rows": [
           [
             "Wygrana gospodarzy, kurs 2,15",
-            "Stawka €942,69"
+            "Stawka 942,69 zł"
           ],
           [
             "Remis, kurs 3,60",
-            "Stawka €562,99"
+            "Stawka 562,99 zł"
           ],
           [
             "Wygrana gości, kurs 4,10",
-            "Stawka €494,33"
+            "Stawka 494,33 zł"
           ],
           [
             "Suma odwrotności kursów",
@@ -850,11 +850,11 @@
           ],
           [
             "Wypłata przy każdym wyniku",
-            "ok. €2 026,75"
+            "ok. 2 026,75 zł"
           ],
           [
             "Zagwarantowany zysk",
-            "ok. €26,75 (1,3%)"
+            "ok. 26,75 zł (1,3%)"
           ]
         ]
       },
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Załóż konta** u co najmniej dwóch licencjonowanych bukmacherów – najlepiej więcej – i wpłać środki z wyprzedzeniem.",
+          "**1. Załóż konta** u co najmniej dwóch licencjonowanych bukmacherów (np. STS, Fortuna, Betclic, Superbet) – najlepiej więcej – i wpłać środki z wyprzedzeniem.",
           "**2. Znajdź surebet,** w którym suma odwrotności kursów jest poniżej 1,00.",
           "**3. Oblicz stawki** tak, aby wypłata była równa przy każdym wyniku.",
           "**4. Postaw oba zakłady szybko,** zaczynając od kursu, który najprawdopodobniej się zmieni.",
@@ -900,11 +900,11 @@
     "faq": [
       {
         "q": "Czy arbitraż bukmacherski jest legalny?",
-        "a": "Tak, obstawianie każdego wyniku zdarzenia nie jest nielegalne w większości krajów. Bukmacherzy mogą jednak ograniczyć Twoje konto. Zobacz [czy surebety są legalne?](/pl/poradniki/czy-surebety-sa-legalne)"
+        "a": "Samo obstawianie każdego wyniku zdarzenia nie jest zabronione, o ile korzystasz wyłącznie z bukmacherów licencjonowanych przez Ministerstwo Finansów (np. STS, Fortuna, Betclic, Superbet, Totolotek). Strony bez licencji znajdują się na oficjalnej liście blokad i nie należy z nich korzystać. Bukmacherzy mogą jednak ograniczyć Twoje konto. Sprawdź też aktualne zasady podatkowe. Zobacz [czy surebety są legalne?](/pl/poradniki/czy-surebety-sa-legalne)"
       },
       {
         "q": "Ile można zarobić na surebet?",
-        "a": "Typowy surebet przynosi 1–3% łącznej stawki. Przy €1 000 na surebet, 40 surebet miesięcznie i średniej 1,5% daje to około €600 miesięcznie."
+        "a": "Typowy surebet przynosi 1–3% łącznej stawki. Przy 1 000 zł na surebet, 40 surebetach miesięcznie i średniej 1,5% daje to około 600 zł miesięcznie. Pamiętaj, że w Polsce od stawki pobierany jest podatek od gier w wysokości 12%, który może zniwelować taki zysk – sprawdź aktualne przepisy."
       },
       {
         "q": "Ile kont u bukmacherów potrzebuję?",
@@ -966,7 +966,7 @@
             "ok. 3,7%"
           ]
         ],
-        "note": "Suma jest mniejsza niż 1, więc ta kombinacja to zakład arbitrażowy."
+        "note": "Suma jest mniejsza niż 1, więc ta kombinacja to zakład arbitrażowy. Przykład pokazuje czystą matematykę kursów i nie uwzględnia podatku od gier (w Polsce potrącanego od stawki) – sprawdź aktualne przepisy, bo wpływa on na realny wynik."
       },
       {
         "type": "h2",
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Stawkę należy podzielić tak, aby wypłata była taka sama niezależnie od tego, kto wygra. Przy łącznej stawce 1 000 jednostek w powyższym przykładzie obstawiasz około 494 jednostki na zawodnika A i około 506 jednostek na zawodnika B. Oba wyniki zwracają około 1 037 jednostek, co oznacza zysk rzędu 37 jednostek."
+        "text": "Stawkę należy podzielić tak, aby wypłata była taka sama niezależnie od tego, kto wygra. Przy łącznej stawce 1 000 zł w powyższym przykładzie obstawiasz około 494 zł na zawodnika A i około 506 zł na zawodnika B. Oba wyniki zwracają około 1 037 zł, co oznacza zysk rzędu 37 zł."
       },
       {
         "type": "tip",
@@ -989,7 +989,7 @@
         "items": [
           "Kursy mogą się zmienić w trakcie obstawiania. Najpierw postaw zakład przy kursie najbardziej podatnym na zmiany.",
           "Upewnij się, że rynek jest dokładnie taki sam u obu bukmacherów – na przykład czy dogrywka jest wliczana do wyniku.",
-          "Trzymaj środki u kilku bukmacherów, aby móc działać szybko.",
+          "Trzymaj środki u kilku licencjonowanych bukmacherów, np. w STS, Fortunie czy Betclic, aby móc działać szybko.",
           "Bukmacherzy mogą ograniczać konta, które obstawiają wyłącznie zakłady arbitrażowe. Przeczytaj nasz przewodnik o unikaniu gubbing i limitów kont."
         ]
       }
@@ -1036,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Przykład: trzech zawodników w turnieju, łączna stawka €1 000",
+        "title": "Przykład: trzech zawodników w turnieju, łączna stawka 1 000 zł",
         "rows": [
           [
             "Zawodnik A, kurs 3.00",
-            "stawka ok. €444"
+            "stawka ok. 444 zł"
           ],
           [
             "Zawodnik B, kurs 4.00",
-            "stawka ok. €333"
+            "stawka ok. 333 zł"
           ],
           [
             "Zawodnik C, kurs 6.00",
-            "stawka ok. €222"
+            "stawka ok. 222 zł"
           ],
           [
             "S = 0.333 + 0.250 + 0.167",
@@ -1056,11 +1056,11 @@
           ],
           [
             "Jeśli jeden z trzech wygra",
-            "wypłata ok. €1 333, zysk ok. €333"
+            "wypłata ok. 1 333 zł, zysk ok. 333 zł"
           ],
           [
             "Jeśli żaden z trzech nie wygra",
-            "strata €1 000"
+            "strata 1 000 zł"
           ]
         ],
         "note": "Zysk zostaje zrealizowany tylko wtedy, gdy jeden z trzech wybranych zawodników wygra. Samodzielnie musisz ocenić, jak duże jest na to prawdopodobieństwo."
@@ -1116,15 +1116,15 @@
       },
       {
         "type": "example",
-        "title": "Przykład: kursy 1,95 i 2,20, łączna stawka 1 000 €",
+        "title": "Przykład: kursy 1,95 i 2,20, łączna stawka 4 000 zł",
         "rows": [
           [
             "Zawodnik A u bukmachera 1, kurs 1,95",
-            "stawka ok. 530 €"
+            "stawka ok. 2 120 zł"
           ],
           [
             "Zawodnik B u bukmachera 2, kurs 2,20",
-            "stawka ok. 470 €"
+            "stawka ok. 1 880 zł"
           ],
           [
             "1/1,95 + 1/2,20",
@@ -1132,11 +1132,11 @@
           ],
           [
             "Wypłata niezależnie od zwycięzcy",
-            "ok. 1 034 €"
+            "ok. 4 135 zł"
           ],
           [
             "Zysk",
-            "ok. 34 € (3,4%)"
+            "ok. 135 zł (3,4%)"
           ]
         ],
         "note": "Suma jest poniżej 1, więc kombinacja stanowi surebet."
@@ -1189,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Przykład: trzech bukmacherów, łączna stawka €1 000",
+        "title": "Przykład: trzech bukmacherów, łączna stawka 1 000 zł",
         "rows": [
           [
             "Wygrana gospodarzy u bukmachera 1, kurs 2,40",
-            "stawka ok. €424"
+            "stawka ok. 424 zł"
           ],
           [
             "Remis u bukmachera 2, kurs 3,80",
-            "stawka ok. €268"
+            "stawka ok. 268 zł"
           ],
           [
             "Wygrana gości u bukmachera 3, kurs 3,30",
-            "stawka ok. €308"
+            "stawka ok. 308 zł"
           ],
           [
             "1/2,40 + 1/3,80 + 1/3,30",
@@ -1209,14 +1209,14 @@
           ],
           [
             "Zwrot niezależnie od wyniku",
-            "ok. €1 017"
+            "ok. 1 017 zł"
           ],
           [
             "Zysk",
-            "ok. €17 (1,7%)"
+            "ok. 17 zł (1,7%)"
           ]
         ],
-        "note": "Zysk jest mniejszy niż w tenisie, a trzy zakłady oznaczają większe ryzyko zmiany kursów w trakcie ich obstawiania."
+        "note": "Zysk jest mniejszy niż w tenisie, a trzy zakłady oznaczają większe ryzyko zmiany kursów w trakcie ich obstawiania. Przykład nie uwzględnia 12% podatku od gier pobieranego od stawki – sprawdź aktualne przepisy."
       },
       {
         "type": "h2",
@@ -1342,7 +1342,7 @@
       },
       {
         "type": "p",
-        "text": "Przy -0.5 drużyna musi wygrać. Remis lub przegrana oznacza przegraną zakład. Przy +0.5 wygrywasz, jeśli drużyna wygra lub zremisuje. Wynik to zawsze wygrana albo przegrana – stawka nigdy nie jest zwracana."
+        "text": "Przy -0.5 drużyna musi wygrać. Remis lub przegrana oznacza przegraną zakładu. Przy +0.5 wygrywasz, jeśli drużyna wygra lub zremisuje. Wynik to zawsze wygrana albo przegrana – stawka nigdy nie jest zwracana."
       },
       {
         "type": "h2",
@@ -1354,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Handicap -0.25 dla gospodarzy przy stawce €100",
+        "title": "Handicap -0.25 dla gospodarzy przy stawce 500 zł",
         "rows": [
           [
             "Gospodarze wygrywają",
@@ -1362,7 +1362,7 @@
           ],
           [
             "Remis",
-            "€50 zwrócone, €50 przegrane"
+            "250 zł zwrócone, 250 zł przegrane"
           ],
           [
             "Gospodarze przegrywają",
@@ -1400,7 +1400,7 @@
   "bet-tracker": {
     "title": "Alternatywa dla arkusza kalkulacyjnego: śledź każdy zakład automatycznie",
     "metaTitle": "Alternatywa dla Arkusza Zakładów – Bet Tracker 2026",
-    "description": "Zamień arkusz kalkulacyjny na bet tracker: co rejestrować, jak liczyć ROI, przykłady w € i co powinna robić najlepsza aplikacja do śledzenia zakładów.",
+    "description": "Zamień arkusz kalkulacyjny na bet tracker: co rejestrować, jak liczyć ROI, przykłady w zł i co powinna robić najlepsza aplikacja do śledzenia zakładów.",
     "keyword": "alternatywa dla arkusza zakładów bukmacherskich",
     "intro": "Najlepsza alternatywa dla arkusza kalkulacyjnego to bet tracker, który automatycznie rejestruje każdy zakład, stawkę i wynik oraz oblicza ROI, zysk na bukmachera i saldo. Arkusze przestają działać, gdy zaczynasz obstawiać dziesiątki zakładów arbitrażowych tygodniowo: formuły się nadpisują, nogi znikają, a anulowane zakłady fałszują wyniki. Tracker daje ci prawdziwy obraz sytuacji w kilka sekund.",
     "blocks": [
@@ -1445,22 +1445,22 @@
           ],
           [
             "Łączny obrót (wszystkie nogi)",
-            "€24,000"
+            "100 000 zł"
           ],
           [
             "Łączny zwrot",
-            "€24,720"
+            "103 000 zł"
           ],
           [
             "Zysk netto",
-            "€720"
+            "3 000 zł"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3,0%"
+            "3 000 zł / 100 000 zł = 3,0%"
           ]
         ],
-        "note": "Bez śledzenia widzisz tylko ruch salda. Ze śledzeniem widzisz, że na każde obrócone €100 zarabiasz €3."
+        "note": "Bez śledzenia widzisz tylko ruch salda. Ze śledzeniem widzisz, że na każde obrócone 100 zł zarabiasz 3 zł."
       },
       {
         "type": "h2",
@@ -1531,22 +1531,22 @@
         "rows": [
           [
             "Łączna stawka",
-            "€40,000"
+            "40 000 zł"
           ],
           [
             "Łączna wypłata",
-            "€41,000"
+            "41 000 zł"
           ],
           [
             "Zysk",
-            "€1,000"
+            "1 000 zł"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2,5%"
+            "1 000 / 40 000 × 100 = 2,5%"
           ]
         ],
-        "note": "Zarobiłeś 2,5% na każdym euro, które postawiłeś."
+        "note": "Zarobiłeś 2,5% na każdej złotówce, którą postawiłeś."
       },
       {
         "type": "h2",
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Jak obliczyć ROI w zakładach?",
-        "a": "Podziel zysk przez łączną stawkę i pomnóż przez 100. Jeśli postawiłeś €10,000 i zarobiłeś €300, twój ROI wynosi 3%."
+        "a": "Podziel zysk przez łączną stawkę i pomnóż przez 100. Jeśli postawiłeś 10 000 zł i zarobiłeś 300 zł, twój ROI wynosi 3%."
       },
       {
         "q": "Jaka jest różnica między ROI a zyskiem?",
@@ -1589,102 +1589,6 @@
     ],
     "category": "Strategia",
     "ctaLabel": "Sprawdź swój ROI w kontach"
-  },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: tańsza alternatywa",
-    "metaTitle": "Alternatywa dla Surebet Danmark – BetTrackerAI (2025)",
-    "description": "Porównaj BetTrackerAI i Surebet Danmark: ceny, funkcje, zasięg bukmacherów i śledzenie zakładów. Znajdź narzędzie do zakładów arbitrażowych idealne dla Ciebie.",
-    "keyword": "porównanie narzędzi do zakładów arbitrażowych",
-    "intro": "Surebet Danmark i BetTrackerAI skanują zakłady arbitrażowe (zwane też surebet) u licencjonowanych bukmacherów. Oba oferują 7-dniowy bezpłatny okres próbny. Kluczowe różnice dotyczą ceny oraz narzędzi dostępnych poza samym skanerem zakładów arbitrażowych.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "W skrócie"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI i Surebet Danmark – porównanie",
-        "rows": [
-          [
-            "Cena miesięczna",
-            "BetTrackerAI od ok. €20 · Surebet Danmark ok. €134"
-          ],
-          [
-            "Bezpłatny okres próbny",
-            "Oba: 7 dni"
-          ],
-          [
-            "Bukmacherzy",
-            "Oba: wyłącznie licencjonowani bukmacherzy"
-          ],
-          [
-            "Powiadomienia",
-            "BetTrackerAI: push i SMS (Premium) · Surebet Danmark: powiadomienia na żywo"
-          ],
-          [
-            "Rozliczanie zakładów",
-            "BetTrackerAI: pełne śledzenie z ROI i saldem u każdego bukmachera · Surebet Danmark: tracker zakładów"
-          ],
-          [
-            "Bezpłatne narzędzia i poradniki",
-            "BetTrackerAI: kalkulator surebet i poradniki edukacyjne"
-          ]
-        ],
-        "note": "Ceny sprawdzone na obu stronach 23 listopada 2025 r. i mogą ulec zmianie."
-      },
-      {
-        "type": "h2",
-        "text": "Cena: znacząca różnica"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark kosztuje ok. €134 miesięcznie. BetTrackerAI kosztuje ok. €20 miesięcznie w planie Basic (zakłady arbitrażowe do 5% zysku) i ok. €33 w planie Premium (wszystkie zakłady arbitrażowe plus alerty SMS). Wybierając Premium, oszczędzasz ok. €100 miesięcznie – to ok. €1 200 rocznie."
-      },
-      {
-        "type": "p",
-        "text": "Ma to duże znaczenie, ponieważ zakłady arbitrażowe zazwyczaj przynoszą 1–5% zysku na zakład. Niższa miesięczna opłata oznacza, że potrzebujesz znacznie mniejszego obrotu, zanim subskrypcja zacznie się zwracać."
-      },
-      {
-        "type": "h2",
-        "text": "Śledzenie zakładów: przewaga BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "Zakłady arbitrażowe są opłacalne tylko wtedy, gdy dokładnie wiesz, ile zarobiłeś. W BetTrackerAI rejestrujesz swoje zakłady arbitrażowe i depozyty, a w jednym miejscu widzisz swój zysk, ROI i saldo u każdego bukmachera. Możesz też zaimportować kupon zamiast wprowadzać go ręcznie."
-      },
-      {
-        "type": "h2",
-        "text": "Które narzędzie jest dla Ciebie?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Wybierz BetTrackerAI, jeśli chcesz obstawiać zakłady arbitrażowe w niższej cenie i jednocześnie szczegółowo śledzić swoje konta.",
-          "Wybierz Surebet Danmark, jeśli już korzystasz z ich platformy i jesteś zadowolony z kosztów.",
-          "Jeśli nie jesteś pewny, wypróbuj oba. Oba oferują 7-dniowe bezpłatne okresy próbne, dzięki czemu możesz porównać zakłady arbitrażowe na tych samych wydarzeniach."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Niezależnie od wybranego narzędzia: zawsze najpierw obstawiaj zakład przy kursach najbardziej zmiennych i upewnij się, że rynek jest identyczny u obu bukmacherów."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Czy BetTrackerAI jest tańszy niż Surebet Danmark?",
-        "a": "Tak. BetTrackerAI kosztuje ok. €20 lub ok. €33 miesięcznie, podczas gdy Surebet Danmark kosztuje ok. €134 miesięcznie (stan na 23 listopada 2025 r.)."
-      },
-      {
-        "q": "Czy oba narzędzia korzystają wyłącznie z licencjonowanych bukmacherów?",
-        "a": "Tak. Obie platformy skupiają się na regulowanych, licencjonowanych bukmacherach, dzięki czemu obstawiasz legalnie i z zachowaniem ochrony gracza."
-      },
-      {
-        "q": "Czy mogę wypróbować BetTrackerAI za darmo?",
-        "a": "Tak. Otrzymujesz 7-dniowy bezpłatny okres próbny z pełnym dostępem i możesz zrezygnować w dowolnym momencie w trakcie okresu próbnego."
-      }
-    ],
-    "category": "Podstawy",
-    "ctaLabel": "Wypróbuj BetTrackerAI bezpłatnie przez 7 dni"
   },
   "betting-regnskab": {
     "title": "Konta bukmacherskie: jak kontrolować swój bankroll",
@@ -1720,19 +1624,19 @@
         "rows": [
           [
             "Łączne wpłaty",
-            "€10,000"
+            "40 000 zł"
           ],
           [
             "Łączne wypłaty",
-            "€3,000"
+            "12 000 zł"
           ],
           [
             "Aktualne saldo u bukmacherów",
-            "€7,800"
+            "31 200 zł"
           ],
           [
             "Zysk",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "12 000 zł + 31 200 zł − 40 000 zł = 3 200 zł"
           ]
         ]
       },
@@ -1756,7 +1660,7 @@
     "faq": [
       {
         "q": "Czy muszę płacić podatek od wygranych bukmacherskich?",
-        "a": "Zasady opodatkowania wygranych z zakładów różnią się w zależności od przepisów obowiązujących w danym kraju. W niektórych regulowanych rynkach wygrane u licencjonowanych bukmacherów są zwolnione z podatku, w innych może być konieczne ich zgłoszenie. Sprawdź przepisy podatkowe obowiązujące w Twoim miejscu zamieszkania lub skonsultuj się z lokalnym doradcą."
+        "a": "W Polsce licencjonowany bukmacher potrąca 12% podatku od gier z każdej stawki, więc ten podatek jest odprowadzany jeszcze przed postawieniem zakładu. Wyższe wygrane mogą dodatkowo podlegać podatkowi dochodowemu. Przepisy mogą się zmieniać, dlatego sprawdź aktualne zasady lub skonsultuj się z doradcą podatkowym."
       },
       {
         "q": "Jak często powinienem aktualizować swój bet tracker?",
@@ -1769,7 +1673,7 @@
   "tjen-penge-paa-odds-uden-risiko": {
     "title": "Zarabiaj na zakładach sportowych bez ryzyka: jak działają hedging i arbitraż",
     "metaTitle": "Zarabiaj na Zakładach Sportowych Bez Ryzyka 2026",
-    "description": "Jak zarabiać na zakładach sportowych bez ryzyka: zakłady arbitrażowe i hedging z przykładami w €, realistyczna strategia oraz prawdziwe pułapki.",
+    "description": "Jak zarabiać na zakładach sportowych bez ryzyka: zakłady arbitrażowe i hedging z przykładami w zł, realistyczna strategia oraz prawdziwe pułapki.",
     "keyword": "zarabianie na zakładach sportowych bez ryzyka",
     "category": "Strategia",
     "ctaLabel": "Zobacz zakłady arbitrażowe z gwarantowanym zyskiem",
@@ -1785,15 +1689,15 @@
       },
       {
         "type": "example",
-        "title": "Przykład: mecz koszykówki z dwoma wynikami (wliczając dogrywkę), €1 000",
+        "title": "Przykład: mecz koszykówki z dwoma wynikami (wliczając dogrywkę), 4 000 zł",
         "rows": [
           [
             "Drużyna A u bukmachera 1, kurs 1,95",
-            "Stawka €520,88"
+            "Stawka 2 083,54 zł"
           ],
           [
             "Drużyna B u bukmachera 2, kurs 2,12",
-            "Stawka €479,12"
+            "Stawka 1 916,46 zł"
           ],
           [
             "Suma odwrotności kursów",
@@ -1801,11 +1705,11 @@
           ],
           [
             "Wypłata niezależnie od wyniku",
-            "ok. €1 015,72"
+            "ok. 4 062,89 zł"
           ],
           [
             "Gwarantowany zysk",
-            "ok. €15,72 (1,6%)"
+            "ok. 62,89 zł (1,6%)"
           ]
         ]
       },
@@ -1819,30 +1723,30 @@
       },
       {
         "type": "example",
-        "title": "Przykład: zakład na ponad 2,5 gola postawiony przed meczem za €500",
+        "title": "Przykład: zakład na ponad 2,5 gola postawiony przed meczem za 2 000 zł",
         "rows": [
           [
             "Pierwotny zakład: ponad 2,5 gola, kurs 2,40",
-            "Stawka €500, potencjalna wypłata €1 200"
+            "Stawka 2 000 zł, potencjalna wypłata 4 800 zł"
           ],
           [
             "Po wczesnym golu: poniżej 2,5 gola, kurs 2,60",
-            "Stawka €461,54"
+            "Stawka 1 846,15 zł"
           ],
           [
             "Łączna stawka",
-            "€961,54"
+            "3 846,15 zł"
           ],
           [
             "Wypłata przy każdym wyniku",
-            "€1 200"
+            "4 800 zł"
           ],
           [
             "Zabezpieczony zysk",
-            "ok. €238,46 (24,8%)"
+            "ok. 953,85 zł (24,8%)"
           ]
         ],
-        "note": "Wzór: stawka hedgingowa = potencjalna wypłata ÷ nowy kurs. Tu: 1 200 ÷ 2,60 = €461,54."
+        "note": "Wzór: stawka hedgingowa = potencjalna wypłata ÷ nowy kurs. Tu: 4 800 ÷ 2,60 = 1 846,15 zł."
       },
       {
         "type": "h2",
@@ -1850,7 +1754,7 @@
       },
       {
         "type": "p",
-        "text": "Gwarantowany zysk z pojedynczego zakładu arbitrażowego jest niewielki, dlatego wyniki zależą od wolumenu i dyscypliny. Realistyczna strategia arbitrażu sportowego wygląda następująco:"
+        "text": "Gwarantowany zysk z pojedynczego zakładu arbitrażowego jest niewielki, dlatego wyniki zależą od wolumenu i dyscypliny. Pamiętaj też, że w Polsce od każdej stawki potrącany jest podatek 12%, a wyższe wygrane mogą podlegać podatkowi dochodowemu, co istotnie wpływa na rachunek. Przykłady poniżej go nie uwzględniają, więc sprawdź aktualne przepisy. Realistyczna strategia arbitrażu sportowego wygląda następująco:"
       },
       {
         "type": "example",
@@ -1858,7 +1762,7 @@
         "rows": [
           [
             "Stawka na jeden zakład arbitrażowy",
-            "€1 000"
+            "4 000 zł"
           ],
           [
             "Średni zysk",
@@ -1870,11 +1774,11 @@
           ],
           [
             "Oczekiwany miesięczny wynik",
-            "ok. €600"
+            "ok. 2 400 zł"
           ],
           [
-            "Ten sam schemat przy stawce €2 500 za zakład",
-            "ok. €1 500"
+            "Ten sam schemat przy stawce 10 000 zł za zakład",
+            "ok. 6 000 zł"
           ]
         ]
       },
@@ -1915,14 +1819,14 @@
       },
       {
         "q": "Ile pieniędzy potrzebuję na start?",
-        "a": "Możesz zacząć od €200–500 rozłożonych na kilku bukmacherów. Przy mniejszych stawkach jeden zakład arbitrażowy przynosi jednak zaledwie kilka euro zysku."
+        "a": "Możesz zacząć od 1 000–2 000 zł rozłożonych na kilku licencjonowanych bukmacherów, takich jak STS, Fortuna czy Betclic. Przy mniejszych stawkach jeden zakład arbitrażowy przynosi jednak zaledwie kilkanaście złotych zysku."
       }
     ]
   },
   "find-surebets-automatisk": {
     "title": "Znajdź surebety automatycznie: jak skaner kursów wykrywa błędy w wycenach",
     "metaTitle": "Znajdź Surebety Automatycznie – Skaner Kursów 2026",
-    "description": "Jak znajdować surebety automatycznie za pomocą skanera kursów: jak oprogramowanie wykrywa błędy w wycenach, przykłady w € i na co zwracać uwagę.",
+    "description": "Jak znajdować surebety automatycznie za pomocą skanera kursów: jak oprogramowanie wykrywa błędy w wycenach, przykłady w zł i na co zwracać uwagę.",
     "keyword": "znajdź surebety automatycznie",
     "category": "Strategia",
     "ctaLabel": "Uruchom skaner surebet",
@@ -1954,15 +1858,15 @@
       },
       {
         "type": "example",
-        "title": "Przykład: błąd w wycenie wykryty przez skaner, łączna stawka €1 000",
+        "title": "Przykład: błąd w wycenie wykryty przez skaner, łączna stawka 1 000 zł",
         "rows": [
           [
             "Powyżej 2,5 gola u bukmachera 1, kurs 2,25",
-            "Stawka €461,72"
+            "Stawka 461,72 zł"
           ],
           [
             "Poniżej 2,5 gola u bukmachera 2, kurs 1,93",
-            "Stawka €538,28"
+            "Stawka 538,28 zł"
           ],
           [
             "1/2,25 + 1/1,93",
@@ -1970,14 +1874,14 @@
           ],
           [
             "Wypłata przy każdym wyniku",
-            "ok. €1 038,88"
+            "ok. 1 038,88 zł"
           ],
           [
             "Zagwarantowany zysk",
-            "ok. €38,88 (3,9%)"
+            "ok. 38,88 zł (3,9%)"
           ]
         ],
-        "note": "Bukmacher 1 nie zareagował na aktualizację dotyczącą składu drużyny. Skaner wykrył rozbieżność w ciągu kilku sekund."
+        "note": "Bukmacher 1 nie zareagował na aktualizację dotyczącą składu drużyny. Skaner wykrył rozbieżność w ciągu kilku sekund. Przykład nie uwzględnia podatku od gier (12% od stawki), który obniża realny zysk – sprawdź aktualne zasady."
       },
       {
         "type": "h2",
@@ -2007,7 +1911,7 @@
       {
         "type": "ul",
         "items": [
-          "**Liczba bukmacherów:** im więcej bukmacherów, tym więcej surebet. Upewnij się, że ci, u których masz konta, są uwzględnieni.",
+          "**Liczba bukmacherów:** im więcej bukmacherów, tym więcej surebet. Upewnij się, że ci, u których masz konta (np. STS, Fortuna, Betclic czy Superbet), są uwzględnieni.",
           "**Częstotliwość aktualizacji:** kursy muszą być odświeżane co kilka sekund, szczególnie w przypadku [surebet na żywo](/pl/poradniki/live-arbitraz-bukmacherski-skaner).",
           "**Filtry:** sport, rynek, minimalny zysk i bukmacherzy – tak, abyś widział tylko to, co możesz faktycznie zagrać.",
           "**Kalkulator stawek:** wbudowany, dzięki czemu możesz natychmiast składać zakłady. Możesz też sprawdzić liczby w [kalkulatorze surebet](/pl/kalkulator).",
@@ -2037,7 +1941,7 @@
   "live-arbitrage-betting-scanner": {
     "title": "Skaner arbitrażu na żywo: jak łapać live surebety w trakcie meczu",
     "metaTitle": "Skaner Arbitrażu Na Żywo – Live Zakłady Arbitrażowe 2026",
-    "description": "Jak skaner arbitrażu na żywo wykrywa zakłady arbitrażowe w trakcie meczów: szybkość, opóźnienia zakładów, przykłady w € i jak unikać klasycznych błędów.",
+    "description": "Jak skaner arbitrażu na żywo wykrywa zakłady arbitrażowe w trakcie meczów: szybkość, opóźnienia zakładów, przykłady w zł i jak unikać klasycznych błędów.",
     "keyword": "skaner arbitrażu na żywo",
     "category": "Strategia",
     "ctaLabel": "Zobacz live surebety",
@@ -2065,15 +1969,15 @@
       },
       {
         "type": "example",
-        "title": "Przykład: live tenis po przełamaniu, łączna stawka €800",
+        "title": "Przykład: live tenis po przełamaniu, łączna stawka 4 000 zł",
         "rows": [
           [
             "Zawodnik A u bukmachera 1, kurs 1.72",
-            "Stawka €467.63"
+            "Stawka 2 338,17 zł"
           ],
           [
             "Zawodnik B u bukmachera 2, kurs 2.42",
-            "Stawka €332.37"
+            "Stawka 1 661,83 zł"
           ],
           [
             "1/1.72 + 1/2.42",
@@ -2081,26 +1985,26 @@
           ],
           [
             "Wypłata niezależnie od wyniku",
-            "ok. €804.33"
+            "ok. 4 021,65 zł"
           ],
           [
             "Zagwarantowany zysk",
-            "ok. €4.33 (0.5%)"
+            "ok. 21,65 zł (0.5%)"
           ]
         ],
         "note": "Marże na żywo są często mniejsze niż przed meczem. Większa liczba zakładów to rekompensuje, ale tylko wtedy, gdy działasz szybko i precyzyjnie."
       },
       {
         "type": "example",
-        "title": "Przykład: powyżej/poniżej po wczesnym golu, łączna stawka €1,000",
+        "title": "Przykład: powyżej/poniżej po wczesnym golu, łączna stawka 5 000 zł",
         "rows": [
           [
             "Powyżej 3.5 goli u bukmachera 1, kurs 2.30",
-            "Stawka €451.07"
+            "Stawka 2 255,37 zł"
           ],
           [
             "Poniżej 3.5 goli u bukmachera 2, kurs 1.89",
-            "Stawka €548.93"
+            "Stawka 2 744,63 zł"
           ],
           [
             "Suma odwrotności kursów",
@@ -2108,11 +2012,11 @@
           ],
           [
             "Wypłata przy każdym wyniku",
-            "ok. €1,037.47"
+            "ok. 5 187,35 zł"
           ],
           [
             "Zagwarantowany zysk",
-            "ok. €37.47 (3.7%)"
+            "ok. 187,35 zł (3.7%)"
           ]
         ]
       },
@@ -2173,7 +2077,7 @@
   "find-value-bets-med-ai": {
     "title": "Znajdź value bety z AI: jak skaner kursów AI wykrywa zakłady +EV",
     "metaTitle": "Value Bety z AI – Skaner Kursów AI 2026",
-    "description": "Jak znajdować value bety z AI: jak skaner kursów AI oblicza sprawiedliwe kursy, wykrywa zakłady +EV i czego się spodziewać – z przykładami w €.",
+    "description": "Jak znajdować value bety z AI: jak skaner kursów AI oblicza sprawiedliwe kursy, wykrywa zakłady +EV i czego się spodziewać – z przykładami w zł.",
     "keyword": "value bety z AI",
     "category": "Strategia",
     "ctaLabel": "Znajdź value bety z AI",
@@ -2204,12 +2108,12 @@
             "0.50 × 2.10 − 1 = +5%"
           ],
           [
-            "Stawka €50",
-            "Oczekiwany zysk €2.50 na zakład"
+            "Stawka 200 zł",
+            "Oczekiwany zysk 10 zł na zakład"
           ],
           [
-            "300 zakładów po €50 (obrót €15,000)",
-            "Oczekiwany zysk ok. €750"
+            "300 zakładów po 200 zł (obrót 60 000 zł)",
+            "Oczekiwany zysk ok. 3 000 zł"
           ]
         ],
         "note": "Oczekiwany zysk to wartość średnia. Rzeczywiste wyniki wahają się powyżej i poniżej tej wartości, szczególnie przy małej liczbie zakładów."
@@ -2357,7 +2261,7 @@
         "rows": [
           [
             "Subskrypcja",
-            "ok. €33 miesięcznie"
+            "ok. €33 miesięcznie (ok. 140 zł)"
           ],
           [
             "Średni ROI na zakładach arbitrażowych",
@@ -2365,18 +2269,18 @@
           ],
           [
             "Obrót potrzebny do wyjścia na zero",
-            "€33 / 2% = €1 650"
+            "140 zł / 2% = 7 000 zł"
           ],
           [
-            "Typowy obrót (60 zakładów × €400)",
-            "€24 000"
+            "Typowy obrót (60 zakładów × 1 500 zł)",
+            "90 000 zł"
           ],
           [
             "Zysk po odliczeniu subskrypcji",
-            "€480 − €33 = €447"
+            "1 800 zł − 140 zł = 1 660 zł"
           ]
         ],
-        "note": "Podane kwoty są orientacyjnymi wartościami w euro. BetTracker AI kosztuje od ok. €20 miesięcznie w planie Basic i ok. €33 w planie Premium."
+        "note": "Podane kwoty są orientacyjne; cenę subskrypcji przeliczono na złote po przybliżonym kursie, a przykład nie uwzględnia podatku od gier (12% od stawki) ani podatku dochodowego od większych wygranych – sprawdź aktualne przepisy. BetTracker AI kosztuje od ok. €20 miesięcznie w planie Basic i ok. €33 w planie Premium."
       },
       {
         "type": "h2",
@@ -2389,7 +2293,7 @@
           "**Częstotliwość aktualizacji:** kilka sekund dla rynków przedmeczowych, szybciej dla [zakładów arbitrażowych na żywo](/pl/poradniki/live-arbitraz-bukmacherski-skaner).",
           "**Filtry:** sport, rynek, bukmacher i minimalny zysk.",
           "**Wbudowany tracking:** zakłady arbitrażowe zawierane ze skanera powinny być śledzone automatycznie.",
-          "**Uczciwa cena:** porównaj miesięczny koszt z oczekiwanym obrotem. Zobacz [porównanie narzędzi do zakładów arbitrażowych](/pl/poradniki/porownanie-narzedzi-surebet)."
+          "**Uczciwa cena:** porównaj miesięczny koszt z oczekiwanym obrotem."
         ]
       },
       {
@@ -2412,7 +2316,7 @@
       },
       {
         "q": "Czy oprogramowanie bukmacherskie jest legalne?",
-        "a": "Korzystanie z narzędzi do porównywania kursów i śledzenia zakładów jest legalne. Automatyczne zawieranie zakładów zazwyczaj narusza regulaminy bukmacherów. Zobacz [czy zakłady arbitrażowe są legalne?](/pl/poradniki/czy-surebety-sa-legalne)"
+        "a": "Korzystanie z narzędzi do porównywania kursów i śledzenia zakładów jest legalne. Automatyczne zawieranie zakładów zazwyczaj narusza regulaminy bukmacherów. Zakładaj się wyłącznie u operatorów licencjonowanych przez Ministerstwo Finansów. Zobacz [czy zakłady arbitrażowe są legalne?](/pl/poradniki/czy-surebety-sa-legalne)"
       }
     ]
   }

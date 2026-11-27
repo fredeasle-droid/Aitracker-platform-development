@@ -2,7 +2,7 @@
 
 import { useLocale } from "@/components/locale-provider";
 import { type CSSProperties } from "react";
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { ArrowRight, Clock } from "lucide-react";
 import { TeamCrest, useHomeData, type HomeFind } from "./home-data";
 

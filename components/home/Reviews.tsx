@@ -47,12 +47,13 @@ export function ReviewAvatar({ review, className = "" }: { review: Review; class
 
 /** The customer's photo for the current review; fades in each time the review changes. */
 export function ReviewPhoto({ review, className = "" }: { review: Review; className?: string }) {
+  const { tx } = useLocale();
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <img
         key={review.name}
         src={review.photo}
-        alt={`${review.name}, BetTrackerAI-kunde`}
+        alt={`${review.name}, ${tx("BetTrackerAI-kunde")}`}
         loading="lazy"
         width={1280}
         height={800}

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { ArrowLeft, LogOut } from 'lucide-react'
 import { ProfileForm } from '@/components/konto/min-side/profile-form'
 import { PasswordForm } from '@/components/konto/min-side/password-form'

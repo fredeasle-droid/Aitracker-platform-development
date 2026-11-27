@@ -138,14 +138,6 @@ async function findPinnacleEvent(home: string, away: string, kickoffTs: number, 
   return null
 }
 
-// Affiliate templates may contain {url}; the deep link is inserted there so the
-// affiliate tracking redirect lands the user directly on the match.
-function withAffiliate(bookmaker: string, target: string) {
-  const affiliate = getBookmaker(bookmaker).affiliate
-  if (!affiliate) return target
-  return affiliate.includes('{url}') ? affiliate.replace('{url}', encodeURIComponent(target)) : affiliate
-}
-
 export async function resolveMatchLink(
   bookmaker: string,
   home: string,
@@ -159,7 +151,7 @@ export async function resolveMatchLink(
   if (kambi) eventUrl = await findKambiEvent(kambi, home, away, kickoffTs)
   else if (key === 'pinnacle') eventUrl = await findPinnacleEvent(home, away, kickoffTs, ctx)
   return {
-    url: withAffiliate(bookmaker, eventUrl ?? getBookmaker(bookmaker).url),
+    url: eventUrl ?? getBookmaker(bookmaker).url,
     exact: Boolean(eventUrl),
   }
 }

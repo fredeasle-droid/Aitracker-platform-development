@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState } from 'react'
 import { ArrowRight, BarChart3, Check, ChartPie, ChevronDown, Crown, Disc, Gamepad2, Gift, House, PieChart, Radio, Star, Volleyball } from 'lucide-react'
@@ -96,7 +96,13 @@ export function SidebarBody({
   const desk = variant === 'desktop'
   const pathname = canonicalPathname(usePathname())
   const params = useSearchParams()
-  const activeSport = params.get('sport') ?? (pathname === '/beregn' ? 'Fodbold' : null)
+  const { t, tx, locale } = useLocale()
+  const requestedSport = params.get('sport')
+  const activeSport = requestedSport
+    ? SPORTS.find(({ key, value }) => requestedSport === t(key) || requestedSport === value)?.key ?? requestedSport
+    : pathname === '/beregn'
+      ? 'football'
+      : null
   const activeBookmaker = params.get('bookmaker')
   const selectedBookmakers = parseBookmakers(activeBookmaker)
   const { data: bookmakerList = [] } = useSWR<{ id: string; name: string }[]>('/api/bookmakers', (url: string) =>
@@ -108,7 +114,6 @@ export function SidebarBody({
   ]
   const [leaguesOpen, setLeaguesOpen] = useState(bookmakersDefaultOpen)
   const { data: session } = authClient.useSession()
-  const { t, locale } = useLocale()
 
   return (
     <div
@@ -117,7 +122,7 @@ export function SidebarBody({
         if (onNavigate && (e.target as HTMLElement).closest('a')) onNavigate()
       }}
     >
-      <nav aria-label="Hovedmenu">
+      <nav aria-label={tx('Hovedmenu')}>
         <ul className={cn('flex flex-col gap-1', desk && 'short:gap-0.5')}>
           {NAV.map(({ href, key, icon: Icon }) => {
             const label = desk && locale === 'da' && DESK_LABELS[key] ? DESK_LABELS[key] : t(key)
@@ -167,11 +172,11 @@ export function SidebarBody({
           return (
           <li key={sportKey}>
             <Link
-              href={`/surebets?sport=${encodeURIComponent(value)}`}
-              aria-current={activeSport === value ? 'true' : undefined}
+              href={`/surebets?sport=${encodeURIComponent(t(sportKey))}`}
+              aria-current={activeSport === sportKey ? 'true' : undefined}
               className={cn(
                 desk ? cn(deskRow, 'gap-3 px-3 text-[14.5px]') : row,
-                activeSport === value &&
+                activeSport === sportKey &&
                   (desk ? 'bg-gradient-active font-bold text-foreground ring-1 ring-primary/30' : 'bg-[#0d1f38] text-[#65c1ff]'),
               )}
             >
@@ -336,14 +341,15 @@ export function SidebarBody({
 }
 
 export function DesktopSidebar() {
+  const { tx } = useLocale()
   return (
     <aside
-      aria-label="Sidemenu"
+      aria-label={tx('Menu')}
       className={`sb-root ${jakarta.variable} sticky top-0 z-10 hidden h-dvh w-[230px] shrink-0 !min-h-0 !bg-transparent lg:block`}
     >
       <div className="flex h-full flex-col overflow-y-auto bg-sidebar/95 px-4 pb-4 pt-6 backdrop-blur-xl short:pb-3 short:pt-4 [scrollbar-width:thin]">
         <div className="mb-6 px-1 short:mb-4">
-          <Link href="/" aria-label="BetTrackerAI forside" className="block">
+          <Link href="/" aria-label={tx('BetTrackerAI forside')} className="block">
             <SbLogo />
           </Link>
         </div>

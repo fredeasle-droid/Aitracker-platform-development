@@ -1,5 +1,6 @@
 {
   "ready": true,
+  "indexed": true,
   "ui": {
     "login": "Belépés",
     "loggedIn": "Bejelentkezve",
@@ -625,7 +626,7 @@
     "findOnSport": "Találj surebeteket a kedvenc sportágadban",
     "surebetsAtBookmakers": "Surebetek a fogadóirodáknál",
     "guideIndexTitle": "Surebet és arbitrázsfogadás útmutatók – BetTrackerAI",
-    "guideIndexDescription": "Ismerd meg a surebeteket az alapoktól: mik ezek, hogyan számold ki a tétjeidet, milyen a dániai szabályozás és adózás, és hogyan kerüld el a korlátozást.",
+    "guideIndexDescription": "Ismerd meg a surebeteket az alapoktól: mik ezek, hogyan számold ki a tétjeidet, milyen a magyarországi szabályozás és adózás, és mit érdemes tudni a korlátozásról.",
     "guideIndexH1": "Minden, amit a surebetekről tudni érdemes",
     "guideIndexLead": "Rövid, gyakorlatias útmutatók magyar fogadóknak. Az első kalkulációtól a számláid nyitva tartásáig.",
     "guideIndexName": "Surebet útmutatók",
@@ -696,11 +697,11 @@
       },
       {
         "q": "Mennyibe kerül a BetTrackerAI Pro?",
-        "a": "Havi számlázással 499 DKK/hó, éves számlázással 199 DKK/hó – ez 60% megtakarítás. Fizethetsz Visával, Mastercarddal, MobilePay-jel vagy banki átutalással."
+        "a": "Havi számlázással 499 DKK/hó, éves számlázással 199 DKK/hó – ez 60% megtakarítás. Fizethetsz Visával, Mastercarddal-jel vagy banki átutalással."
       },
       {
         "q": "Mely fogadóirodákat hasonlítjátok össze?",
-        "a": "Dán és nemzetközi fogadóirodák szorzóit hasonlítjuk össze, köztük a Danske Spil, bet365, Unibet, LeoVegas, Betano és Pinnacle kínálatát."
+        "a": "A magyar piacon a Tippmix (Szerencsejáték Zrt.) engedélyezett kínálatának szorzóit követjük. Mivel az online sportfogadás gyakorlatilag állami monopólium, a szabályozott magyar fogadóirodák között surebet nem lehetséges."
       },
       {
         "q": "Hogyan értesülök az új surebetekről?",
@@ -751,7 +752,6 @@
     "fodbold-surebets": "labdarugas-surebet",
     "bookmakerens-margin": "fogadoiroda-marzs",
     "asiatisk-handicap": "azsiai-hendikep",
-    "surebet-danmark-alternativ": "surebet-eszkozok-osszehasonlitasa",
     "betting-regnskab": "fogadasi-szamlak",
     "tjen-penge-paa-odds-uden-risiko": "penzkereses-fogadassal-kockazat-nelkul",
     "find-surebets-automatisk": "surebet-keresese-automatikusan",

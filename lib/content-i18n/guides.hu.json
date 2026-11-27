@@ -1,10 +1,10 @@
 {
   "matched-betting": {
-    "title": "Matched betting: profit a fogadóirodák üdvözlő bónuszaiból",
-    "metaTitle": "Matched betting – hogyan használd ki a fogadóirodák bónuszait",
-    "description": "A matched betting bemutatása: hogyan használhatod az üdvözlő bónuszokat és az ingyenes fogadásokat engedéllyel rendelkező fogadóirodáknál a profit rögzítésére, és miben különbözik a surebetektől.",
+    "title": "Matched betting Magyarországon: bónuszok és ingyenes fogadások",
+    "metaTitle": "Matched betting – hogyan működik, és mi a helyzet Magyarországon",
+    "description": "A matched betting bemutatása: hogyan működik az üdvözlő bónuszok és az ingyenes fogadások kihasználása, miben különbözik a surebetektől, és miért korlátozott a lehetőség Magyarországon, ahol csak a Tippmix (Szerencsejáték Zrt.) működik legálisan.",
     "keyword": "matched betting",
-    "intro": "A matched betting olyan módszer, amellyel a fogadóirodák bónuszait és ingyenes fogadásait valódi pénzzé válthatod. Ha ugyanarra az eseményre megteszed a fogadást és az ellenfogadást is, minden kimenetelt lefedsz, így az eredmény mindegy – a bónuszból garantált profit marad.",
+    "intro": "A matched betting olyan módszer, amellyel a fogadóirodák bónuszait és ingyenes fogadásait valódi pénzzé válthatod. Ha ugyanarra az eseményre megteszed a fogadást és az ellenfogadást is, minden kimenetelt lefedsz, így az eredmény mindegy – a bónuszból garantált profit marad. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt. – Tippmix), ezért ez a módszer itt jellemzően nem alkalmazható legálisan.",
     "blocks": [
       {
         "type": "h2",
@@ -12,7 +12,7 @@
       },
       {
         "type": "p",
-        "text": "Amikor igénybe veszel egy ingyenes fogadást vagy bónuszt, azt az egyik fogadóirodánál az egyik kimenetelre teszed meg, majd ugyanezt a kimenetelt megfekteted (ellene fogadsz) egy fogadási tőzsdén, vagy egy másik fogadóirodánál az ellenkező eredményre fogadsz. Mivel az ingyenes fogadás nem kerül a saját pénzedbe, a névértékének nagy részét profitként rögzítheted attól függetlenül, hogy melyik fél nyer."
+        "text": "Azokon a piacokon, ahol több engedéllyel rendelkező szolgáltató működik, az ingyenes fogadást vagy bónuszt az egyik fogadóirodánál az egyik kimenetelre teszed meg, majd ugyanezt a kimenetelt megfekteted (ellene fogadsz) egy fogadási tőzsdén, vagy egy másik fogadóirodánál az ellenkező eredményre fogadsz. Mivel az ingyenes fogadás nem kerül a saját pénzedbe, a névértékének nagy részét profitként rögzítheted attól függetlenül, hogy melyik fél nyer. Magyarországon ehhez hiányzik a második engedélyezett szolgáltató, a külföldi oldalak pedig blokkoltak."
       },
       {
         "type": "h2",
@@ -20,14 +20,14 @@
       },
       {
         "type": "p",
-        "text": "Az üdvözlő bónuszok feltételei fogadóirodánként és országonként eltérnek. Egyes szabályozott piacokon a fogyasztók védelme érdekében felső határt szabnak a bónuszösszegeknek, és korlátozzák a forgatási feltételeket. Bármilyen ajánlat elfogadása előtt mindig olvasd el a konkrét általános szerződési feltételeket."
+        "text": "Az üdvözlő bónuszok feltételei szolgáltatónként és országonként eltérnek. Egyes szabályozott piacokon a fogyasztók védelme érdekében felső határt szabnak a bónuszösszegeknek, és korlátozzák a forgatási feltételeket. Magyarországon a Tippmix (Szerencsejáték Zrt.) promócióira az SZTFH által felügyelt keretek vonatkoznak. Bármilyen ajánlat elfogadása előtt mindig olvasd el a konkrét általános szerződési feltételeket, és ellenőrizd az aktuális helyi szabályokat."
       },
       {
         "type": "ul",
         "items": [
           "Ellenőrizd, mekkora minimális oddsra van szükség a bónusz feloldásához – sok fogadóiroda 1.80-as vagy annál magasabb alsó határt szab meg.",
           "Jegyezd meg a lejárati időt, hogy a bónuszod vagy az ingyenes fogadásod ne évüljön el kihasználatlanul.",
-          "Fontold meg a surebetek (arbitrázsfogadások) használatát: így minimális kockázattal teljesítheted a forgatási feltételeket."
+          "A surebetek (arbitrázsfogadások) elvileg minimális kockázattal teljesíthetik a forgatási feltételeket, de Magyarországon engedélyezett fogadóirodák között nem használhatók, mert csak a Tippmix működik legálisan. Engedély nélküli vagy blokkolt oldalakat ne használj."
         ]
       },
       {
@@ -36,28 +36,28 @@
       },
       {
         "type": "p",
-        "text": "A surebetek ideálisak a bónuszok forgatási feltételeinek teljesítésére, mert nem egyetlen kimenetelre teszed fel a saját pénzedet. Miután teljesítetted a forgatást, promóciók nélkül is folytathatod az arbitrázslehetőségek keresését."
+        "text": "Több engedélyezett szolgáltatóval rendelkező piacokon a surebetek ideálisak a bónuszok forgatási feltételeinek teljesítésére, mert nem egyetlen kimenetelre teszed fel a saját pénzedet. Magyarországon ez jelenleg nem megvalósítható, de az odds- és surebet-ismeretek más piacokon vagy a fogadásaid nyomon követésénél hasznosak lehetnek."
       }
     ],
     "faq": [
       {
         "q": "Legális a matched betting?",
-        "a": "Igen. A bónuszok kihasználása a fogadóiroda nyilvánosan közzétett feltételein belül teljesen legális. A fogadóirodák ugyanakkor fenntartják a jogot, hogy visszavonják az ajánlatokat vagy korlátozzák a fiókokat, ha úgy ítélik meg, hogy nem a promóciók szellemében fogadsz, vagy megszeged a feltételeket."
+        "a": "A bónuszok kihasználása a szolgáltató nyilvánosan közzétett feltételein belül önmagában nem tiltott, a szolgáltatók azonban fenntartják a jogot, hogy visszavonják az ajánlatokat vagy korlátozzák a fiókokat, ha úgy ítélik meg, hogy nem a promóciók szellemében fogadsz, vagy megszeged a feltételeket. Magyarországon a teljes matched betting módszerhez szükséges ellenfogadás egy másik szolgáltatónál vagy tőzsdén engedély nélküli, blokkolt oldalt jelentene, ezért ezt nem javasoljuk. A Szerencsejáték Zrt.-től származó nyeremények a játékosok számára adómentesek. Ha a játék problémát okoz, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
       },
       {
         "q": "Mennyit érnek általában az üdvözlő bónuszok?",
-        "a": "A bónuszok értéke és a forgatási feltételek fogadóirodánként és joghatóságonként eltérnek. Egyes szabályozott piacokon az üdvözlő ajánlatok felső korlátot kaphatnak – például €1,000 vagy €1,000, a bónusz tízszeresének megfelelő maximális forgatással. Mindig ellenőrizd az aktuális feltételeket a kiválasztott fogadóirodánál, és győződj meg róla, hogy az érvényes engedéllyel rendelkezik az országodban."
+        "a": "A bónuszok értéke és a forgatási feltételek szolgáltatónként és joghatóságonként eltérnek. Egyes szabályozott piacokon az üdvözlő ajánlatok felső korlátot kaphatnak – például 400 000 Ft-ot, a bónusz tízszeresének megfelelő maximális forgatással. Mindig ellenőrizd az aktuális feltételeket a Tippmixnél (Szerencsejáték Zrt.), és csak az országodban érvényes engedéllyel rendelkező szolgáltatót használd."
       }
     ],
     "category": "Stratégia",
     "ctaLabel": "Aktuális bónuszok megtekintése"
   },
   "er-surebets-lovligt": {
-    "title": "Legálisak a surebetek? Szabályok és adózási szempontok",
-    "metaTitle": "Legálisak a surebetek? Szabályok, adózás és fogadóirodai feltételek",
-    "description": "Legális surebeteket fogadni, és kell adózni a nyereség után? Itt a szabályok, és az is, mit tehetnek a fogadóirodák az arbitrázsfogadással szemben.",
+    "title": "Legálisak a surebetek? Szabályok és adózási szempontok Magyarországon",
+    "metaTitle": "Legálisak a surebetek? Szabályok, adózás és a magyar piac helyzete",
+    "description": "Legális surebeteket fogadni, és kell adózni a nyereség után? Itt a magyarországi szabályok, a Tippmix-monopólium hatása, és az is, mit tehetnek a fogadóirodák az arbitrázsfogadással szemben.",
     "keyword": "legálisak a surebetek",
-    "intro": "A rövid válasz: igen. A surebetek fogadása a legtöbb joghatóságban legális. Egyszerűen hagyományos fogadásokat kötsz engedéllyel rendelkező fogadóirodáknál, és az oddsok összehasonlításával megkeresed a legjobb értéket – ebben a folyamatban semmi sem jogellenes.",
+    "intro": "A rövid válasz: maga az oddsok összehasonlítása és a hagyományos fogadások kötése nem jogellenes. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium: az egyetlen engedéllyel rendelkező szolgáltató a Szerencsejáték Zrt. (Tippmix), a külföldi oldalak pedig blokkolva vannak. Ezért engedélyezett magyar fogadóirodák között surebetet kötni nem lehetséges, mert nincs mivel összehasonlítani a Tippmix oddsait. Engedély nélküli vagy blokkolt oldalakat nem ajánlunk.",
     "blocks": [
       {
         "type": "h2",
@@ -65,7 +65,7 @@
       },
       {
         "type": "p",
-        "text": "Bár a surebetek legálisak, a fogadóirodák nem örülnek azoknak az ügyfeleknek, akik rendszeresen garantált profitot hozó fogadásokat kötnek. Az általános szerződési feltételeikben fenntartják a jogot, hogy csökkentsék a maximális tétet, korlátozzák a piacokat vagy a fiókokat. A befizetett összeget azonban mindig vissza kell adniuk, az érvényes nyereményeket pedig ki kell fizetniük."
+        "text": "Azokban az országokban, ahol több szolgáltató működik, a fogadóirodák nem örülnek az olyan ügyfeleknek, akik rendszeresen garantált profitot hozó fogadásokat kötnek. Az általános szerződési feltételeikben fenntartják a jogot, hogy csökkentsék a maximális tétet, korlátozzák a piacokat vagy a fiókokat. A befizetett összeget azonban mindig vissza kell adniuk, az érvényes nyereményeket pedig ki kell fizetniük. Magyarországon a Tippmix feltételeit mindig olvasd el, és az SZTFH által szabályozott keretek között játssz."
       },
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "A fogadási nyeremények adózása országonként eltérő. Sok szabályozott piacon a nemzeti szerencsejáték-felügyelet által engedélyezett szolgáltatóktól származó nyeremény a játékos számára adómentes. Ha offshore vagy engedély nélküli szolgáltatókat használsz, a nyereményed adóköteles lehet. Tájékozódj a lakóhelyeden érvényes adószabályokról, és ha bizonytalan vagy a saját helyzetedben, fordulj a helyi adóhatósághoz."
+        "text": "A Szerencsejáték Zrt.-nél (Tippmix) szerzett nyeremények a játékos számára adómentesek. Az engedély nélküli vagy offshore szolgáltatók használata nem megengedett, és ott a nyereményed kezelése bizonytalan lehet, ezért ne használj ilyen oldalakat. Mindig tájékozódj az aktuális adószabályokról, és ha bizonytalan vagy a saját helyzetedben, fordulj az adóhatósághoz."
       },
       {
         "type": "tip",
-        "text": "Maradj a nemzeti szabályozó által engedélyezett fogadóirodáknál. Ez jellemzően adózási előnyökkel és a szerencsejáték-felügyelet nyújtotta fogyasztóvédelemmel jár."
+        "text": "Maradj a Szabályozott Tevékenységek Felügyeleti Hatósága (SZTFH) által engedélyezett szolgáltatónál, vagyis a Szerencsejáték Zrt.-nél (Tippmix). Ez biztosítja a szabályozott keretek közötti fogyasztóvédelmet."
       },
       {
         "type": "h2",
@@ -85,28 +85,28 @@
       },
       {
         "type": "p",
-        "text": "Surebetek mellett is fontos, hogy megőrizd az irányítást a szerencsejátékod felett. Állíts be befizetési limitet, és ha szünetre van szükséged, használd az országodban elérhető önkizárási nyilvántartást. Ha segítségre van szükséged, fordulj egy elismert szerencsejáték-segélyvonalhoz a környéteken."
+        "text": "Fogadáskövetés mellett is fontos, hogy megőrizd az irányítást a szerencsejátékod felett. Állíts be befizetési limitet, és ha szünetre van szükséged, használd a Szerencsejáték Zrt. felelős játékot támogató programjának eszközeit. Ha segítségre van szükséged, fordulj az országos addiktológiai segélyvonalhoz."
       }
     ],
     "faq": [
       {
-        "q": "Megtagadhatja a fogadóiroda a surebet nyereményének kifizetését?",
-        "a": "A fogadóirodának ki kell fizetnie az érvényes nyereményt. Érvénytelenítheti a fogadást, ha az oddsban nyilvánvaló hiba volt, és a jövőben korlátozhatja a fiókot."
+        "q": "Megtagadhatja a fogadóiroda a fogadásom nyereményének kifizetését?",
+        "a": "A fogadóirodának ki kell fizetnie az érvényes nyereményt. Érvénytelenítheti a fogadást, ha az oddsban nyilvánvaló hiba volt, és a jövőben korlátozhatja a fiókot. A Tippmix esetében mindig az aktuális szabályzat az irányadó."
       },
       {
-        "q": "Kell adóznom a surebet nyeremények után?",
-        "a": "Az országodtól függ. Sok szabályozott piacon az engedélyezett szolgáltatóktól származó nyeremény a játékos számára adómentes. Tájékozódj a lakóhelyeden érvényes adószabályokról."
+        "q": "Kell adóznom a fogadási nyeremények után?",
+        "a": "A Szerencsejáték Zrt.-től (Tippmix) származó nyeremények a játékos számára adómentesek. Engedély nélküli szolgáltatókat ne használj, és az aktuális szabályokról mindig tájékozódj."
       }
     ],
     "category": "Szabályok",
-    "ctaLabel": "Surebetek az engedélyezett fogadóirodáknál"
+    "ctaLabel": "Oddsok és fogadások követése a BetTrackerAI-jal"
   },
   "undgaa-begraensning": {
     "title": "Hogyan kerüld el a fogadóirodai korlátozásokat, és tartsd tovább nyitva a fiókjaidat",
     "metaTitle": "Hogyan kerüld el a fogadóirodai korlátozásokat – arbitrázs útmutató 2026",
-    "description": "Hogyan kerüld el a fogadóirodai korlátozásokat arberként: természetesnek tűnő fogadási stratégia, a legjobb fogadóirodák arbitrázsfogadáshoz és példák €-ban.",
+    "description": "Hogyan kerüld el a fogadóirodai korlátozásokat arberként: természetesnek tűnő fogadási stratégia, fogadóirodák típusai arbitrázsfogadáshoz és példák Ft-ban – a magyar piac sajátosságaival.",
     "keyword": "hogyan kerüld el a fogadóirodai korlátozásokat",
-    "intro": "A fogadóirodai korlátozások elkerüléséhez úgy kell fogadnod, mint egy átlagos ügyfélnek: kerek tétekkel, népszerű piacokon, rendes fogadásokat is keverve közéjük, és nem reagálva azonnal minden oddsváltozásra. A soft fogadóirodák korlátozzák azokat a fiókokat, amelyek rendszeresen megverik a záróoddsot. Örökre nem kerülheted el, de egy okos fogadási stratégiával a fiókjaid hetek helyett hónapokig nyitva maradhatnak.",
+    "intro": "A fogadóirodai korlátozások elkerüléséhez úgy kell fogadnod, mint egy átlagos ügyfélnek: kerek tétekkel, népszerű piacokon, rendes fogadásokat is keverve közéjük, és nem reagálva azonnal minden oddsváltozásra. A soft fogadóirodák korlátozzák azokat a fiókokat, amelyek rendszeresen megverik a záróoddsot. Örökre nem kerülheted el, de egy okos fogadási stratégiával a fiókjaid hetek helyett hónapokig nyitva maradhatnak. Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt. – Tippmix), ezért ez az útmutató főként általános tudnivalókat ad.",
     "blocks": [
       {
         "type": "h2",
@@ -114,13 +114,13 @@
       },
       {
         "type": "p",
-        "text": "A soft fogadóirodák a szórakozásból fogadókon keresnek, nem azokon az ügyfeleken, akik csak a rosszul beárazott oddsokat viszik el. A kockázatkezelő rendszereik mintázatokat figyelnek: olyan oddsokra fogadsz, amelyek röviddel utána esnek? Csak félreeső piacokon fogadsz? A téteid centre pontosan ki vannak számolva? Ezek mindegyike növeli a kockázati pontszámodat."
+        "text": "A soft fogadóirodák a szórakozásból fogadókon keresnek, nem azokon az ügyfeleken, akik csak a rosszul beárazott oddsokat viszik el. A kockázatkezelő rendszereik mintázatokat figyelnek: olyan oddsokra fogadsz, amelyek röviddel utána esnek? Csak félreeső piacokon fogadsz? A téteid forintra pontosan ki vannak számolva? Ezek mindegyike növeli a kockázati pontszámodat."
       },
       {
         "type": "ul",
         "items": [
           "**A záróodds megverése:** a legerősebb jelzés. Ha az oddsaid rendre jobbak a végső árnál, megjelölnek.",
-          "**Kerekítetlen tétek:** a €463.27 számológépre emlékeztet. A €460 emberre.",
+          "**Kerekítetlen tétek:** a 48 763 Ft számológépre emlékeztet. A 49 000 Ft emberre.",
           "**Niche piacok:** egy kis bajnokság másodosztályának szögletei felkeltik a figyelmet.",
           "**Csak kifizetések:** a gyakori kifizetések bónuszok és rendszeres fogadások nélkül profinak tűnnek."
         ]
@@ -132,60 +132,60 @@
       {
         "type": "ul",
         "items": [
-          "**Kerekítsd a tétjeidet** egész tízesekre. A profit alig változik.",
+          "**Kerekítsd a tétjeidet** egész ezresekre. A profit alig változik.",
           "**Maradj a fősodorbeli piacoknál:** nagy bajnokságok, 1X2, over/under és meccsgyőztes tenniszben.",
           "**Keverj közé normál fogadásokat:** hetente néhány kisebb, rendes fogadás, lehetőleg nagy meccsekre.",
-          "**Kerüld a extrém árazási hibákat:** a 8–10% feletti surebetek felkeltik a figyelmet, és gyakran amúgy is érvénytelenítik őket.",
+          "**Kerüld az extrém árazási hibákat:** a 8–10% feletti surebetek felkeltik a figyelmet, és gyakran amúgy is érvénytelenítik őket.",
           "**Ne reagálj azonnal:** ha az odds megmozdulásának pillanatában fogadsz, az az arberek klasszikus mintázata.",
-          "**Oszd el a forgalmadat** több fogadóiroda között ahelyett, hogy egyet terhelnél agyon."
+          "**Oszd el a forgalmadat** több fogadóiroda között ahelyett, hogy egyet terhelnél agyon – ahol erre jogszerűen lehetőséged van."
         ]
       },
       {
         "type": "example",
-        "title": "Példa: kerekített tétek, teljes tét €1,000",
+        "title": "Példa: kerekített tétek, teljes tét 100 000 Ft",
         "rows": [
           [
             "Pontos felosztás 2.10 / 2.00 oddsnál",
-            "€487.80 / €512.20"
+            "48 780 Ft / 51 220 Ft"
           ],
           [
             "Kerekített felosztás",
-            "€490 / €510"
+            "49 000 Ft / 51 000 Ft"
           ],
           [
             "Nyereség, ha A nyer (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "102 900 Ft − 100 000 Ft = 2 900 Ft"
           ],
           [
             "Nyereség, ha B nyer (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "102 000 Ft − 100 000 Ft = 2 000 Ft"
           ],
           [
             "Összehasonlításul a pontos felosztás",
-            "kb. €24.39 bármelyik kimenetelnél"
+            "kb. 2 439 Ft bármelyik kimenetelnél"
           ]
         ],
-        "note": "A kerekített tétek így is mindkét eredménynél biztos nyereséget hoznak, a fogadóiroda szemében pedig sokkal természetesebbnek tűnnek."
+        "note": "A kerekített tétek így is mindkét eredménynél biztos nyereséget hoznak, a fogadóiroda szemében pedig sokkal természetesebbnek tűnnek. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékosnak adómentesek; más esetben ellenőrizd az aktuális helyi szabályokat."
       },
       {
         "type": "h2",
-        "text": "Legjobb fogadóirodák arbitrázsfogadáshoz"
+        "text": "Fogadóirodák arbitrázsfogadáshoz"
       },
       {
         "type": "p",
-        "text": "Egy jó arbitrázs-felállás kétféle fogadóirodát kombinál. A soft fogadóirodák kínálják a hibásan árazott oddsokat, a sharp fogadóirodák és a fogadási tőzsdék pedig nagy téteket is elfogadnak anélkül, hogy korlátoznák a nyerőket."
+        "text": "Egy jó arbitrázs-felállás kétféle fogadóirodát kombinál. A soft fogadóirodák kínálják a hibásan árazott oddsokat, a sharp fogadóirodák és a fogadási tőzsdék pedig nagy téteket is elfogadnak anélkül, hogy korlátoznák a nyerőket. Magyarországon viszont a Tippmix (Szerencsejáték Zrt.) az egyetlen engedélyes szolgáltató, a külföldi oldalak blokkoltak, így engedélyes magyar fogadóirodák között surebetezni nem lehet. Az alábbi áttekintés általános háttérinformáció."
       },
       {
         "type": "ul",
         "items": [
           "**Soft fogadóirodák:** a surebetek többségének forrásai, de gyorsan korlátoznak. Óvatosan használd őket.",
-          "**Sharp fogadóirodák:** alacsonyabb árrés és magas limitek. Ideálisak a második lábhoz.",
-          "**Fogadási tőzsdék:** más felhasználók ellen fogadsz, ezért nem korlátoznak a nyeréseid miatt. A jutalék kissé csökkenti a profitot."
+          "**Sharp fogadóirodák:** alacsonyabb árrés és magas limitek. Ideálisak a második lábhoz, de Magyarországon nem engedélyezettek.",
+          "**Fogadási tőzsdék:** más felhasználók ellen fogadsz, ezért nem korlátoznak a nyeréseid miatt. A jutalék kissé csökkenti a profitot. Magyarországon engedélyes tőzsde nem érhető el."
         ]
       },
       {
         "type": "p",
-        "text": "Olvasd el a teljes áttekintést a [legjobb fogadóirodákról surebetekhez](/en/guides/best-bookmakers-for-surebets). Mindig az országodban engedéllyel működő fogadóirodákat használd."
+        "text": "Olvasd el a teljes áttekintést a [legjobb fogadóirodákról surebetekhez](/en/guides/best-bookmakers-for-surebets). Magyarországon jelenleg csak a Tippmix (Szerencsejáték Zrt.) működik engedéllyel az SZTFH felügyelete alatt; az engedély nélküli vagy blokkolt oldalakat ne használd."
       },
       {
         "type": "h2",
@@ -196,13 +196,13 @@
         "items": [
           "**Vedd ki az egyenleged**, ha a fiók már nem használható surebetekhez.",
           "**Ne nyiss új fiókot** más nevén. Ez sérti a szabályzatot, és a nyeremények elkobzásához vezethet.",
-          "**Told át a forgalmat** a többi fiókodra, valamint sharp fogadóirodákhoz vagy tőzsdékre.",
+          "**Told át a forgalmat** a többi, jogszerűen elérhető fiókodra. Ne válts engedély nélküli vagy blokkolt oldalakra.",
           "**Fogadóirodánként követd az eredményeket:** egy [fogadáskövető](/en/guides/bet-tracker) megmutatja, mely fiókokat érdemes megvédeni."
         ]
       },
       {
         "type": "p",
-        "text": "Minél több fogadóirodát tudsz használni, annál kisebb forgalom jut egy-egy fiókra. A [BetTracker AI](/en) sok fogadóiroda között talál surebeteket, így szét tudod osztani a fogadásaidat, és a fiókjaid tovább maradnak nyitva."
+        "text": "Minél több fogadóirodát tudsz jogszerűen használni, annál kisebb forgalom jut egy-egy fiókra. A [BetTracker AI](/en) oddsokat hasonlít össze és fogadásokat követ; Magyarországon engedélyes fogadóirodák között surebet nem lehetséges, így itt főként a saját fogadásaid áttekintésére használhatod. Ha a fogadás problémát okoz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a nemzeti addiktológiai segélyvonaltól."
       }
     ],
     "faq": [
@@ -212,22 +212,22 @@
       },
       {
         "q": "Jogszerű, hogy a fogadóirodák korlátoznak?",
-        "a": "Igen, a fogadóirodák általában maguk dönthetik el, kitől fogadnak el fogadást. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
+        "a": "Igen, a fogadóirodák általában maguk dönthetik el, kitől fogadnak el fogadást. A pontos szabályokat ellenőrizd az aktuális helyi előírásoknál. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Hány fogadóirodát használjak?",
-        "a": "Öt-tíz jó kezdés. Így szétoszlik a forgalmad, és több surebet közül választhatsz."
+        "a": "Ott, ahol több engedélyes fogadóiroda is elérhető, öt-tíz jó kezdés: így szétoszlik a forgalmad, és több surebet közül választhatsz. Magyarországon jelenleg csak a Tippmix engedélyes, ezért ne nyiss fiókot engedély nélküli vagy blokkolt oldalakon."
       }
     ],
     "category": "Stratégia",
-    "ctaLabel": "Találj surebeteket több fogadóirodánál"
+    "ctaLabel": "Kövesd a fogadásaidat és hasonlítsd össze az oddsokat"
   },
   "surebet-beregner": {
     "title": "Ingyenes surebet kalkulátor: számold ki a téteket másodpercek alatt",
     "metaTitle": "Ingyenes surebet kalkulátor – tétek kiszámítása 2026",
-    "description": "Használj ingyenes surebet kalkulátort, hogy két vagy három kimenetel között ossza el a tétedet. A képlet, €-s példák, és hogyan kerekíts biztonságosan.",
+    "description": "Használj ingyenes surebet kalkulátort, hogy két vagy három kimenetel között ossza el a tétedet. A képlet, Ft-os példák, és hogyan kerekíts biztonságosan.",
     "keyword": "ingyenes surebet kalkulátor",
-    "intro": "A surebet kalkulátor az összes kimenetel között úgy osztja el a teljes tétedet, hogy a kifizetés bármi történjen, ugyanannyi legyen. Add meg az oddsokat és az összeget, a kalkulátor pedig megmutatja a kimenetelenkénti tétet, a kifizetést és a nyereséget €-ban és %-ban. A képlet egyszerű, de a kalkulátor megelőzi a hibákat, amikor csak percek vannak a fogadások feladására.",
+    "intro": "A surebet kalkulátor az összes kimenetel között úgy osztja el a teljes tétedet, hogy a kifizetés bármi történjen, ugyanannyi legyen. Add meg az oddsokat és az összeget, a kalkulátor pedig megmutatja a kimenetelenkénti tétet, a kifizetést és a nyereséget forintban és %-ban. A képlet egyszerű, de a kalkulátor megelőzi a hibákat, amikor csak percek vannak a fogadások feladására.",
     "blocks": [
       {
         "type": "h2",
@@ -247,27 +247,27 @@
       },
       {
         "type": "example",
-        "title": "Példa: két kimenetel, teljes tét €1,500",
+        "title": "Példa: két kimenetel, teljes tét 150 000 Ft",
         "rows": [
           [
-            "A odds 2.10, B odds 2.05",
-            "S = 0.476 + 0.488 = 0.964"
+            "A odds 2,10, B odds 2,05",
+            "S = 0,476 + 0,488 = 0,964"
           ],
           [
             "Tét az A kimenetelre",
-            "€740.97"
+            "74 096 Ft"
           ],
           [
             "Tét a B kimenetelre",
-            "€759.03"
+            "75 904 Ft"
           ],
           [
             "Kifizetés bármelyik kimenetelnél",
-            "kb. €1,556.03"
+            "kb. 155 603 Ft"
           ],
           [
             "Nyereség",
-            "kb. €56.03 (3.7%)"
+            "kb. 5 603 Ft (3,7%)"
           ]
         ]
       },
@@ -281,27 +281,27 @@
       },
       {
         "type": "example",
-        "title": "Példa: 1X2, teljes tét €1,000",
+        "title": "Példa: 1X2, teljes tét 100 000 Ft",
         "rows": [
           [
-            "Hazai győzelem, odds 2.50",
-            "Tét €408.23"
+            "Hazai győzelem, odds 2,50",
+            "Tét 40 824 Ft"
           ],
           [
-            "Döntetlen, odds 3.50",
-            "Tét €291.59"
+            "Döntetlen, odds 3,50",
+            "Tét 29 159 Ft"
           ],
           [
-            "Vendég győzelem, odds 3.40",
-            "Tét €300.17"
+            "Vendég győzelem, odds 3,40",
+            "Tét 30 017 Ft"
           ],
           [
             "A fordított oddsok összege",
-            "0.980"
+            "0,980"
           ],
           [
             "Nyereség",
-            "kb. €20.58 (2.1%)"
+            "kb. 2 058 Ft (2,1%)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "A €740.97-hez hasonló tétek gyanúsnak tűnnek a fogadóirodának. Kerekíts egész euróra vagy tízesekre. Ha €741-re és €759-re kerekítesz, a nyereség kb. €56 marad, a kimenetelek között csak néhány cent a különbség."
+        "text": "A 74 096 Ft-hoz hasonló tétek gyanúsnak tűnnek a fogadóirodának. Kerekíts százasokra vagy ezresekre. Ha 74 100 Ft-ra és 75 900 Ft-ra kerekítesz, a nyereség kb. 5 600 Ft marad, a kimenetelek között csak néhány forint a különbség."
       },
       {
         "type": "p",
-        "text": "A téteket szándékosan el is tolhatod. Ha az egyik kimenetelnél csak a befizetett tétedet fedezed, ott €0 a nyereséged, a másikon pedig több. A fenti példában €768.29 az A-ra és €731.71 a B-re €113.41 nyereséget ad, ha A nyer, és €0-t, ha B nyer."
+        "text": "A téteket szándékosan el is tolhatod. Ha az egyik kimenetelnél csak a befizetett tétedet fedezed, ott 0 Ft a nyereséged, a másikon pedig több. A fenti példában 76 829 Ft az A-ra és 73 171 Ft a B-re 11 341 Ft nyereséget ad, ha A nyer, és kb. 0 Ft-ot, ha B nyer."
       },
       {
         "type": "tip",
@@ -335,7 +335,7 @@
       },
       {
         "type": "p",
-        "text": "Próbáld ki az ingyenes [surebet kalkulátort](/en/calculator) két vagy három kimenetellel. Ha nem szeretnéd kézzel beírogatni az oddsokat, a [BetTracker AI](/en) megkeresi a surebeteket, és automatikusan kiszámolja a téteket."
+        "text": "Próbáld ki az ingyenes [surebet kalkulátort](/en/calculator) két vagy három kimenetellel. Fontos tudni: Magyarországon az online sportfogadást gyakorlatilag a Szerencsejáték Zrt. (Tippmix) működteti, a külföldi oldalak pedig blokkoltak, ezért engedélyezett magyar fogadóirodák között surebet nem kivitelezhető. A kalkulátor itt számolási és tanulási eszköz, nem javasoljuk engedély nélküli oldalak használatát. A Szerencsejáték Zrt.-nél szerzett nyeremény a játékosnak adómentes, de a hatályos szabályokat mindig ellenőrizd az SZTFH oldalán. Ha a fogadás már nem szórakozás, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programján vagy a nemzeti addiktológiai segélyvonalon keresztül. Ha nem szeretnéd kézzel beírogatni az oddsokat, a [BetTracker AI](/en) az oddsösszehasonlításban és a tétek automatikus kiszámolásában segít."
       }
     ],
     "faq": [
@@ -372,15 +372,15 @@
       },
       {
         "type": "example",
-        "title": "€200 tét 2.50-es oddsnál",
+        "title": "20 000 Ft tét 2.50-es oddsnál",
         "rows": [
           [
             "Kifizetés",
-            "€200 × 2.50 = €500"
+            "20 000 Ft × 2.50 = 50 000 Ft"
           ],
           [
             "Profit",
-            "€500 − €200 = €300"
+            "50 000 Ft − 20 000 Ft = 30 000 Ft"
           ]
         ]
       },
@@ -398,7 +398,7 @@
       },
       {
         "type": "p",
-        "text": "Add össze az összes kimenetel implikált valószínűségét. Az összeg 100% fölé fog menni, a többlet pedig a fogadóiroda árrése. Ha különböző fogadóirodák oddsaival az összeg 100% alatt marad, surebetet találtál (más néven arbitrázsfogadást)."
+        "text": "Add össze az összes kimenetel implikált valószínűségét. Az összeg 100% fölé fog menni, a többlet pedig a fogadóiroda árrése. Ha különböző fogadóirodák oddsaival az összeg 100% alatt maradna, az surebet (más néven arbitrázsfogadás) lenne. Magyarországon azonban a szabályozott online sportfogadást gyakorlatilag csak a Szerencsejáték Zrt. (Tippmix) kínálja, így licencelt magyar fogadóirodák között surebetezni nem lehet. Engedély nélküli vagy blokkolt oldalakat nem ajánlunk. A Szerencsejáték Zrt.-nél szerzett nyeremény a játékosoknak adómentes, de a hatályos szabályokat érdemes mindig ellenőrizni."
       },
       {
         "type": "example",
@@ -417,7 +417,7 @@
       },
       {
         "type": "tip",
-        "text": "Ingyenes surebet kalkulátorunk mindhárom számítást elvégzi helyetted, és a tétet elosztja a különböző kimenetelek között."
+        "text": "Ingyenes surebet kalkulátorunk mindhárom számítást elvégzi helyetted, és a tétet elosztja a különböző kimenetelek között. Magyarországon elsősorban az árrés és a valószínűségek megértéséhez használd. Fogadj felelősen: ha úgy érzed, kicsúszik az irányítás a kezedből, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
       }
     ],
     "faq": [
@@ -438,7 +438,7 @@
     "metaTitle": "Value betting vs surebet – különbségek, kockázat és profit",
     "description": "A value betting és a surebet is a hibásan árazott oddsokat használja ki, de másképp működnek. Hasonlítsd össze a kockázatot, a profitlehetőséget, és válaszd ki a fogadási stílusodhoz illő stratégiát.",
     "keyword": "value betting vs surebet",
-    "intro": "A value betting és a surebet is a fogadóirodák árazási hibáit használja ki. A fő különbség: a surebet azonnal garantált profitot rögzít, a value betting viszont csak fogadások nagy mintáján keresztül hoz nyereséget.",
+    "intro": "A value betting és a surebet is a fogadóirodák árazási hibáit használja ki. A fő különbség: a surebet azonnal garantált profitot rögzít, a value betting viszont csak fogadások nagy mintáján keresztül hoz nyereséget. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt., Tippmix), ezért a surebet itt a gyakorlatban nem kivitelezhető.",
     "blocks": [
       {
         "type": "h2",
@@ -446,7 +446,7 @@
       },
       {
         "type": "p",
-        "text": "A value bet olyan fogadás, amelynél az odds magasabb, mint amit a valós valószínűség indokolna. Ha egy mérkőzés valóban 50-50 esélyű, a fogadóiroda pedig 2.20-as oddsot kínál, az value bet. Csak egy kimenetelre fogadsz, így az egyes fogadásokat el is veszítheted, de hosszú távon az előny profitot hoz."
+        "text": "A value bet olyan fogadás, amelynél az odds magasabb, mint amit a valós valószínűség indokolna. Ha egy mérkőzés valóban 50-50 esélyű, a fogadóiroda pedig 2.20-as oddsot kínál, az value bet. Csak egy kimenetelre fogadsz, így az egyes fogadásokat el is veszítheted, de hosszú távon az előny profitot hoz. Ehhez elég egyetlen fogadóiroda is, például a Tippmix (Szerencsejáték Zrt.), de a hosszú távú eredmény itt sem garantált."
       },
       {
         "type": "h2",
@@ -454,7 +454,7 @@
       },
       {
         "type": "p",
-        "text": "A surebet (arbitrázsfogadás) esetén különböző fogadóirodáknál az összes kimenetelre fogadsz, így az eredménytől függetlenül nyersz. Az egy fogadásra jutó profit kisebb, de minden egyes ügyleten garantált."
+        "text": "A surebet (arbitrázsfogadás) esetén különböző fogadóirodáknál az összes kimenetelre fogadsz, így az eredménytől függetlenül nyersz. Az egy fogadásra jutó profit kisebb, de minden egyes ügyleten garantált. Fontos: Magyarországon a szabályozott piacot a Szerencsejáték Zrt. (Tippmix) uralja, a külföldi oldalak pedig blokkoltak, így hazai, engedélyes fogadóirodák között surebetet nem lehet kötni. Engedély nélküli oldalak használatát nem javasoljuk."
       },
       {
         "type": "example",
@@ -485,20 +485,20 @@
       {
         "type": "ul",
         "items": [
-          "Válaszd a surebetet, ha nagy kilengések és visszaesések nélküli, stabil profitra vágysz.",
+          "Válaszd a surebetet, ha nagy kilengések és visszaesések nélküli, stabil profitra vágysz – de vedd figyelembe, hogy ehhez több engedélyes fogadóirodára van szükség, ami a magyar piacon jelenleg nem adott.",
           "Válaszd a value bettinget, ha elviseled a vesztes szériákat, és elég nagy a bankrollod ahhoz, hogy átvészeld a szóródást.",
-          "Sokan a kettőt kombinálják: surebetekkel biztosítanak egyenletes bevételt, value betekkel pedig a hosszú távú előnyt maximalizálják."
+          "Sokan a kettőt kombinálják: surebetekkel biztosítanak egyenletes bevételt, value betekkel pedig a hosszú távú előnyt maximalizálják. Ez azonban olyan piacokon működik, ahol több engedélyes fogadóiroda is elérhető."
         ]
       },
       {
         "type": "tip",
-        "text": "Ha most kezded, indulj surebetekkel. Megtanulod, hogyan működnek a fogadóirodák, anélkül, hogy nagy veszteségeket kockáztatnál."
+        "text": "Ha most kezded, először ismerd meg az alapokat: hogyan működnek az oddsok és a fogadóirodák, anélkül, hogy nagy veszteségeket kockáztatnál. Fogadj mindig felelősen, csak annyit, amennyit megengedhetsz magadnak. Ha a fogadás problémát okoz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a nemzeti addiktológiai segélyvonaltól."
       }
     ],
     "faq": [
       {
         "q": "A value betting jövedelmezőbb, mint a surebet?",
-        "a": "A value betting hosszú távon magasabb profitot hozhat, de sokkal nagyobb a szórása. A surebet minden fogadáson kisebb, de stabilabb hasznot nyújt."
+        "a": "A value betting hosszú távon magasabb profitot hozhat, de sokkal nagyobb a szórása. A surebet minden fogadáson kisebb, de stabilabb hasznot nyújt. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékosok számára adómentesek, de az aktuális szabályokat mindig ellenőrizd."
       },
       {
         "q": "A value betting esetén is korlátozzák a fiókodat a fogadóirodák?",
@@ -509,11 +509,11 @@
     "ctaLabel": "Próbáld ki a surebeteket valós időben"
   },
   "bedste-bookmakere-til-surebets": {
-    "title": "A legjobb fogadóirodák surebetekhez",
-    "metaTitle": "A legjobb fogadóirodák surebetekhez (2026)",
-    "description": "Mely fogadóirodákat érdemes használni surebetekhez? Nézd meg, mitől jó egy fogadóiroda arbitrázsfogadáshoz, és hogyan építsd fel a fiókjaid portfólióját.",
+    "title": "A legjobb fogadóirodák surebetekhez Magyarországon",
+    "metaTitle": "A legjobb fogadóirodák surebetekhez Magyarországon (2026)",
+    "description": "Mely fogadóirodákat érdemes használni surebetekhez? Nézd meg, mitől jó egy fogadóiroda arbitrázsfogadáshoz, és hogy a magyar piacon, ahol a Tippmix az egyetlen engedélyes szolgáltató, mi lehetséges és mi nem.",
     "keyword": "legjobb fogadóirodák surebet",
-    "intro": "Nincs egyetlen, mindenki számára legjobb fogadóiroda surebetekhez. Az arbitrázsfogadási lehetőségek a fogadóirodák között alakulnak ki, ezért a legfontosabb, hogy több olyan szolgáltatónál legyen fiókod, amelyek eltérő oddsszolgáltatókat használnak, és más-más módon közelítik meg a piacot.",
+    "intro": "Nincs egyetlen, mindenki számára legjobb fogadóiroda surebetekhez. Az arbitrázsfogadási lehetőségek a fogadóirodák között alakulnak ki, ezért általában az a legfontosabb, hogy több, eltérő oddsszolgáltatót használó szolgáltatónál legyen fiókod. Magyarországon viszont az online sportfogadás gyakorlatilag állami monopólium: a Szerencsejáték Zrt. (Tippmix) az egyetlen engedélyes szolgáltató, a külföldi oldalak pedig blokkoltak. Őszintén: a hazai engedélyes fogadóirodák között surebetet kötni nem lehetséges.",
     "blocks": [
       {
         "type": "h2",
@@ -521,7 +521,7 @@
       },
       {
         "type": "p",
-        "text": "Sok fogadóiroda ugyanazt az oddsplatformot használja, ezért az áraik szinte megegyeznek. Surebet leggyakrabban azon fogadóirodák között alakul ki, amelyek a saját, egymástól eltérő módszerükkel állítják be az oddsokat. Ha csak olyan fogadóirodáknál van fiókod, amelyek ugyanazon a platformon futnak, jóval kevesebb arbitrázsfogadási lehetőséget fogsz látni."
+        "text": "Sok fogadóiroda ugyanazt az oddsplatformot használja, ezért az áraik szinte megegyeznek. Surebet leggyakrabban azon fogadóirodák között alakul ki, amelyek a saját, egymástól eltérő módszerükkel állítják be az oddsokat. Ha csak olyan fogadóirodáknál van fiókod, amelyek ugyanazon a platformon futnak, jóval kevesebb arbitrázsfogadási lehetőséget fogsz látni. Surebethez legalább két, egymástól független szolgáltatóra van szükség, Magyarországon pedig jelenleg csak a Tippmix érhető el engedélyesen."
       },
       {
         "type": "h2",
@@ -530,11 +530,11 @@
       {
         "type": "ul",
         "items": [
-          "A saját országod szerencsejáték-szabályozó hatósága által engedélyezett, így védelmet élvezel, és utánanézhetsz a nyereményeid adózási kezelésének.",
+          "A Szabályozott Tevékenységek Felügyeleti Hatósága (SZTFH) felügyelete alatt működő, engedélyes szolgáltató (Magyarországon a Tippmix, Szerencsejáték Zrt.), így védelmet élvezel, és a Szerencsejáték Zrt.-nél szerzett nyeremények a játékosok számára adómentesek.",
           "Gyors befizetések és kifizetések, hogy oda mozgathasd a pénzt, ahol éppen szükség van rá.",
           "Széles sportági és piaci kínálat, különösen teniszben, labdarúgásban és kosárlabdában.",
           "Versenyképes oddsok és alacsony fogadóirodai árrés a népszerű piacokon.",
-          "Elfogadható feltételekkel rendelkező üdvözlő bónusz, amelyet surebetekkel is teljesíthetsz."
+          "Elfogadható feltételekkel rendelkező üdvözlő bónusz, ha az adott szolgáltató kínál ilyet."
         ]
       },
       {
@@ -543,56 +543,56 @@
       },
       {
         "type": "p",
-        "text": "Kezdj öt-nyolc engedélyes fogadóirodával, amelyek különböző platformokon működnek. Így sok lehetőséged lesz anélkül, hogy túl sok egyenleget kellene kezelned. Ha már belejöttél a rutinba, további fogadóirodákkal bővítheted a listát."
+        "text": "Olyan piacokon, ahol több engedélyes fogadóiroda működik, érdemes öt-nyolc, különböző platformon futó szolgáltatóval kezdeni. Magyarországon ez jelenleg nem megvalósítható: egyetlen engedélyes szolgáltató van, a Tippmix, ezért hazai surebetportfóliót sem lehet felépíteni. Ne regisztrálj blokkolt vagy engedély nélküli külföldi oldalakon, ezt nem ajánljuk."
       },
       {
         "type": "tip",
-        "text": "A BetTrackerAI-ban pontosan beállíthatod, mely fogadóirodáknál van fiókod, így csak olyan surebeteket látsz, amelyeket tényleg meg is tudsz kötni."
+        "text": "A BetTrackerAI-t Magyarországon oddsösszehasonlításra és fogadáskövetésre használhatod: nyomon követheted a Tippmixen megkötött fogadásaidat, a tétjeidet (Ft-ban) és az eredményeidet. Mindig ellenőrizd az aktuális hazai szabályokat."
       },
       {
         "type": "h2",
-        "text": "Az saját oddsot készítő fogadóirodák aranyat érnek"
+        "text": "A saját oddsot készítő fogadóirodák aranyat érnek"
       },
       {
         "type": "p",
-        "text": "Azok a fogadóirodák, amelyek maguk állítják be az oddsaikat, ahelyett hogy megvennék őket, gyakran lassabban vagy másképp reagálnak a hírekre. Pontosan itt alakulnak ki az árkülönbségek. Más szempontból viszont gyakran ők korlátozzák a leggyorsabban a nyerő fiókokat, az úgynevezett gubbinggal."
+        "text": "Azok a fogadóirodák, amelyek maguk állítják be az oddsaikat, ahelyett hogy megvennék őket, gyakran lassabban vagy másképp reagálnak a hírekre. Pontosan itt alakulnak ki az árkülönbségek. Más szempontból viszont gyakran ők korlátozzák a leggyorsabban a nyerő fiókokat, az úgynevezett gubbinggal. Ez a több szolgáltatós piacokra jellemző; a magyar piacon egyetlen engedélyes szolgáltató van, így az árkülönbségek kihasználása itt nem járható út."
       }
     ],
     "faq": [
       {
         "q": "Hány fogadóirodára van szükségem surebetekhez?",
-        "a": "Jó kiindulópont az öt-nyolc szabályozott fogadóiroda. Minél több különböző oddsplatformot fedsz le, annál több surebethez férsz hozzá."
+        "a": "Surebethez legalább két, egymástól független fogadóiroda kell, a gyakorlatban jó kiindulópont az öt-nyolc szabályozott szolgáltató. Magyarországon viszont csak egy engedélyes szolgáltató van, a Tippmix (Szerencsejáték Zrt.), ezért a hazai engedélyes fogadóirodák között surebet nem lehetséges."
       },
       {
         "q": "Használhatok engedély nélküli fogadóirodákat arbitrázsfogadáshoz?",
-        "a": "Nem ajánlott. Az olyan fogadóirodák, amelyek nem rendelkeznek engedéllyel az adott joghatóságban, blokkolhatók lehetnek, a náluk szerzett nyereményekre eltérő adózási szabályok vonatkozhatnak, vagy hiányozhat a szabályozói védelem. Mindig nézz utána a lakóhelyeden érvényes szabályoknak."
+        "a": "Nem ajánlott. Magyarországon a külföldi, engedély nélküli fogadóirodák blokkoltak, nem élveznek SZTFH-s szabályozói védelmet, és a náluk szerzett nyereményekre eltérő adózási szabályok vonatkozhatnak (az adómentesség a Szerencsejáték Zrt.-nél szerzett nyereményekre igaz). Mindig nézz utána az aktuális hazai szabályoknak. Ha úgy érzed, hogy a fogadás kicsúszik az irányításod alól, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy az országos addiktológiai segélyvonalhoz."
       }
     ],
     "category": "Stratégia",
-    "ctaLabel": "Nézd meg a surebeteket a saját fogadóirodáidnál"
+    "ctaLabel": "Nézd meg az oddsokat és kövesd a fogadásaidat"
   },
   "skat-paa-spillegevinster": {
-    "title": "Adó a szerencsejáték-nyereményeken – nemzetközi fogadási útmutató",
-    "metaTitle": "Adó a szerencsejáték-nyereményeken – amit tudnod kell",
-    "description": "Kell adót fizetni a fogadási nyereményekre és a surebetekre? Ismerd meg, hogyan működnek az adószabályok az engedélyes és az offshore fogadóirodáknál, és mit érdemes dokumentálni.",
+    "title": "Adó a szerencsejáték-nyereményeken Magyarországon – fogadási útmutató",
+    "metaTitle": "Adó a szerencsejáték-nyereményeken Magyarországon – amit tudnod kell",
+    "description": "Kell adót fizetni a fogadási nyereményekre? Ismerd meg, hogyan működnek az adószabályok a Szerencsejáték Zrt. (Tippmix) esetében, mi a helyzet a surebetekkel, és mit érdemes dokumentálni.",
     "keyword": "adó szerencsejáték-nyereményen",
-    "intro": "Sok szabályozott piacon a válasz egyszerű: az engedélyes fogadóirodáknál szerzett nyeremény a játékos számára adómentes. A közterhet a fogadóiroda fizeti be az államnak, nem te. A szabályok azonban attól függnek, hol élsz, és hol fogadsz.",
+    "intro": "Magyarországon az online sportfogadás gyakorlatilag állami monopólium: a Szerencsejáték Zrt. (Tippmix) működteti, a szabályozott tevékenységeket pedig a Szabályozott Tevékenységek Felügyeleti Hatósága (SZTFH) felügyeli. A Szerencsejáték Zrt.-nél szerzett nyeremény a játékos számára adómentes. A külföldi fogadóoldalak blokkoltak. Az aktuális szabályokat mindig ellenőrizd.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Engedélyes fogadóirodák: jellemzően adómentes"
+        "text": "Szerencsejáték Zrt. (Tippmix): a nyeremény adómentes"
       },
       {
         "type": "p",
-        "text": "Ha olyan szolgáltatónál fogadsz, amely a saját országod szerencsejáték-szabályozó hatóságától kapott engedélyt, a szolgáltató általában a bevétele után fizet szerencsejáték-adót. A nyereményed ezért általában adómentes, és a legtöbb esetben nem kell bejelentened az adóhatóságnak. Mindig nézz utána a lakóhelyeden érvényes szabályoknak."
+        "text": "Ha a Szerencsejáték Zrt.-nél, például a Tippmixen fogadsz, a nyereményed a játékos számára adómentes, így utána neked nem kell adót fizetned, és a legtöbb esetben bejelentened sem kell azt. A szolgáltatót az SZTFH felügyeli. Mindig nézz utána az aktuálisan érvényes szabályoknak."
       },
       {
         "type": "h2",
-        "text": "Offshore fogadóirodák helyi engedély nélkül"
+        "text": "Külföldi, engedély nélküli oldalak"
       },
       {
         "type": "p",
-        "text": "Ha olyan szolgáltatóknál fogadsz, amelyek nem rendelkeznek engedéllyel a te joghatóságodban, a nyeremény adóköteles lehet. A szabályok olyan tényezőktől függnek, mint hogy a szolgáltató rendelkezik-e engedéllyel egy másik országban, illetve hogy hol van az adóügyi illetőséged. Ez az egyik oka annak, hogy gyakran egyszerűbb a szabályozott fogadóirodáknál maradni."
+        "text": "Magyarországon a külföldi fogadóoldalak blokkoltak, és nem rendelkeznek hazai engedéllyel. Használatukat nem javasoljuk. Az ilyen oldalakon szerzett nyeremény adózási kezelése bizonytalan lehet, és jogi kockázatot is jelenthet, ezért ellenőrizd a hatályos szabályokat, vagy kérj szakértői tanácsot. Ez az egyik oka annak, hogy egyszerűbb és biztonságosabb a szabályozott szolgáltatónál maradni."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Igen. Adózási szempontból a surebet egyszerűen két vagy három hagyományos fogadás. Az engedélyes fogadóirodáknál szerzett nyeremény általában adómentes, függetlenül attól, hogy surebetet, value bettet vagy szokásos fogadást kötsz. Ugyanazok az elvek érvényesek."
+        "text": "Adózási szempontból a surebet egyszerűen két vagy három hagyományos fogadás, ugyanazok az elvek érvényesek. Magyarországon viszont gyakorlatilag egyetlen engedélyes szolgáltató van, a Szerencsejáték Zrt. (Tippmix), így engedélyes fogadóirodák között surebetezni nem lehetséges. Itt a BetTrackerAI elsősorban a fogadásaid követésére és az oddsok összehasonlítására használható. Engedély nélküli oldalak használatát nem javasoljuk."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Ha a fogadás a fő foglalkozásod, jelentős mértékben, bizonyos joghatóságokban eltérő szabályok vonatkozhatnak rád. Ha bizonytalan vagy a saját helyzetedben, fordulj a helyi adóhatósághoz vagy egy képzett könyvelőhöz."
+        "text": "Ha a fogadás a fő foglalkozásod, vagy jelentős mértékű, eltérő szabályok vonatkozhatnak rád. Ha bizonytalan vagy a saját helyzetedben, ellenőrizd az aktuális helyi szabályokat, és fordulj az adóhatósághoz vagy egy képzett könyvelőhöz."
       }
     ],
     "faq": [
       {
-        "q": "Kell adót fizetnem a licenccel rendelkező fogadóirodáktól származó nyereményem után?",
-        "a": "A legtöbb szabályozott piacon nem. A helyi licenccel rendelkező szolgáltatóktól származó nyeremények a játékos számára jellemzően adómentesek. Mindig ellenőrizd a lakóhelyeden érvényes adószabályokat."
+        "q": "Kell adót fizetnem a Tippmixen szerzett nyereményem után?",
+        "a": "Nem. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékos számára adómentesek. Az aktuális adószabályokat azért mindig ellenőrizd."
       },
       {
-        "q": "Honnan tudhatom meg, hogy egy fogadóiroda rendelkezik-e licenccel az országomban?",
-        "a": "Az országod szerencsejáték-felügyeleti hatóságának weboldalán megtalálod az engedélyezett szolgáltatók listáját, a licenccel rendelkező fogadóirodák pedig általában kiteszik a hatóság logóját az oldalukra."
+        "q": "Honnan tudhatom meg, hogy egy fogadóiroda rendelkezik-e licenccel Magyarországon?",
+        "a": "Az SZTFH weboldalán tájékozódhatsz az engedélyezett szolgáltatókról. Magyarországon az online sportfogadást gyakorlatilag a Szerencsejáték Zrt. (Tippmix) kínálja, a külföldi oldalak pedig blokkoltak."
       }
     ],
     "category": "Szabályok",
@@ -631,9 +631,9 @@
   "bankroll-management": {
     "title": "Bankrollkezelési útmutató sportfogadáshoz és arbitrázshoz",
     "metaTitle": "Bankrollkezelési útmutató sportfogadáshoz 2026",
-    "description": "Bankrollkezelés sportfogadáshoz: hogyan határozd meg a tétet, hogyan osszd szét a pénzt a fogadóirodák között, és hogyan számold ki az ROI-t – számpéldákkal, €-ban.",
+    "description": "Bankrollkezelés sportfogadáshoz: hogyan határozd meg a tétet, hogyan osszd szét a pénzt a fogadóirodák között, és hogyan számold ki az ROI-t – számpéldákkal, forintban (Ft).",
     "keyword": "bankrollkezelési útmutató sportfogadáshoz",
-    "intro": "A jó bankrollkezelés azt jelenti, hogy előre eldöntöd, mennyi pénzt szánsz fogadásra, mekkora tétet teszel meg egy-egy fogadáson, és hogyan oszlik meg a pénz a fogadóirodák között. Value betting esetén fogadásonként a bankrollod 1–2%-át tedd meg tétként. Surebeteknél a korlát a likviditás: a pénzednek a megfelelő fogadóirodáknál kell lennie, amikor felbukkan egy surebet. Mindent kövess nyomon, hogy mérni tudd az ROI-t.",
+    "intro": "A jó bankrollkezelés azt jelenti, hogy előre eldöntöd, mennyi pénzt szánsz fogadásra, mekkora tétet teszel meg egy-egy fogadáson, és hogyan oszlik meg a pénz a fogadóirodák között. Value betting esetén fogadásonként a bankrollod 1–2%-át tedd meg tétként. Surebeteknél a korlát a likviditás: a pénzednek a megfelelő fogadóirodáknál kell lennie, amikor felbukkan egy surebet. Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt. – Tippmix), ezért licencelt magyar fogadóirodák között surebetezni nem lehet. Mindent kövess nyomon, hogy mérni tudd az ROI-t.",
     "blocks": [
       {
         "type": "h2",
@@ -642,7 +642,7 @@
       {
         "type": "ul",
         "items": [
-          "**Különválasztott pénz:** a bankrollod olyan pénz, amelynek elvesztését megengedheted magadnak, és elkülönül a mindennapi pénzügyeidtől.",
+          "**Különválasztott pénz:** a bankrollod olyan pénz, amelynek elvesztését megengedheted magadnak, és elkülönül a mindennapi pénzügyeidtől. Ha úgy érzed, hogy elveszíted az irányítást, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjánál vagy a nemzeti addiktológiai segélyvonalon.",
           "**Fix tétszabályok:** a tét méretét a fogadás előtt döntsd el, ne megérzés alapján.",
           "**Ne hajszold a veszteséget:** a tétemelés vesztés után a leggyorsabb út a bankroll elvesztéséhez.",
           "**Havi felülvizsgálat:** a tétet a bankrollod alapján emeld vagy csökkentsd, ne egyetlen jó hét alapján."
@@ -654,53 +654,53 @@
       },
       {
         "type": "p",
-        "text": "A value betek veszíthetnek, ezért a tétnek elég kicsinek kell lennie ahhoz, hogy átvészeld a vesztes szériákat. A surebetek helyes végrehajtás mellett nem veszítenek, így a kockázat a kivitelezésben rejlik: oddsváltozások, érvénytelenített fogadások és hiányzó szárak."
+        "text": "A value betek veszíthetnek, ezért a tétnek elég kicsinek kell lennie ahhoz, hogy átvészeld a vesztes szériákat. A surebetek helyes végrehajtás mellett nem veszítenek, így a kockázat a kivitelezésben rejlik: oddsváltozások, érvénytelenített fogadások és hiányzó szárak. Magyarországon ez a gyakorlatban csak elméleti kérdés, mert egyetlen licencelt szolgáltató (Tippmix) van, így nincs mit összehasonlítani."
       },
       {
         "type": "example",
-        "title": "Példa: fix tétezés value betekhez, €2,000 bankrollal",
+        "title": "Példa: fix tétezés value betekhez, 500 000 Ft bankrollal",
         "rows": [
           [
-            "Tét fogadásonként (1.5%)",
-            "€30"
+            "Tét fogadásonként (1,5%)",
+            "7 500 Ft"
           ],
           [
             "10 vesztes fogadás egymás után",
-            "−€300 (a bankroll 15%-a)"
+            "−75 000 Ft (a bankroll 15%-a)"
           ],
           [
             "Megmaradt bankroll",
-            "€1,700"
+            "425 000 Ft"
           ],
           [
-            "Új tét a felülvizsgálat után (1.5%)",
-            "€25.50"
+            "Új tét a felülvizsgálat után (1,5%)",
+            "6 375 Ft"
           ]
         ],
         "note": "Az 1–2%-os tét segít bent maradni a játékban azokon a vesztes szériákon át, amelyeket minden value bettor megtapasztal."
       },
       {
         "type": "example",
-        "title": "Példa: surebet bankroll elosztása a fogadóirodák között, €3,000",
+        "title": "Példa (elméleti): surebet bankroll elosztása több fogadóiroda között, 600 000 Ft",
         "rows": [
           [
-            "6 fogadóiroda × €500",
-            "€3,000"
+            "6 fogadóiroda × 100 000 Ft",
+            "600 000 Ft"
           ],
           [
             "Egy tipikus surebet teljes tétje",
-            "€400"
+            "80 000 Ft"
           ],
           [
             "60 surebet havonta, átlagosan 2%-os haszonnal",
-            "€400 × 60 × 2% = €480"
+            "80 000 Ft × 60 × 2% = 96 000 Ft"
           ],
           [
             "Havi hozam a bankrollra vetítve",
-            "€480 / €3,000 = 16%"
+            "96 000 Ft / 600 000 Ft = 16%"
           ]
         ],
-        "note": "Egy surebeten a profit kicsi, de a bankroll havonta sokszor megfordul. Az eredmények a limitektől és az elérhető surebetektől függően változnak."
+        "note": "Egy surebeten a profit kicsi, de a bankroll havonta sokszor megfordul. Az eredmények a limitektől és az elérhető surebetektől függően változnak. Ez a számítás csak szemléltetés: Magyarországon licencelt fogadóirodák között surebet nem lehetséges, és nem ajánljuk nem engedélyezett vagy blokkolt oldalak használatát."
       },
       {
         "type": "h2",
@@ -708,7 +708,7 @@
       },
       {
         "type": "p",
-        "text": "Az ROI a nettó profit osztva a teljes forgalommal. Megmutatja, mennyit keresel minden megtett € tét után, és ez a legjobb módja a stratégiák, sportágak és fogadóirodák összehasonlításának."
+        "text": "Az ROI a nettó profit osztva a teljes forgalommal. Megmutatja, mennyit keresel minden megtett forint tét után, és ez a legjobb módja a stratégiák, sportágak és fogadási lehetőségek összehasonlításának. A Szerencsejáték Zrt.-nél elért nyeremények a játékosok számára adómentesek, de az aktuális szabályokat mindig ellenőrizd."
       },
       {
         "type": "example",
@@ -716,19 +716,19 @@
         "rows": [
           [
             "Összes megtett tét",
-            "€18,500"
+            "370 000 Ft"
           ],
           [
             "Összes visszaérkezett összeg",
-            "€18,870"
+            "377 400 Ft"
           ],
           [
             "Nettó profit",
-            "€370"
+            "7 400 Ft"
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "7 400 Ft / 370 000 Ft = 2,0%"
           ]
         ]
       },
@@ -750,17 +750,17 @@
       },
       {
         "type": "tip",
-        "text": "Tartsd a bankrollod nagyjából 20%-át tartalékban a fogadóirodákon kívül. Így fel tudod tölteni azokat a számlákat, ahol a legtöbb surebet megjelenik."
+        "text": "Tartsd a bankrollod nagyjából 20%-át tartalékban a fogadási számlákon kívül. Így fel tudod tölteni azt a számlát, ahol éppen szükséged van rá."
       },
       {
         "type": "p",
-        "text": "A [fogadáskövető](/en/guides/bet-tracker) automatikussá teszi a bankrollkezelést. A [BetTracker AI](/en) rögzíti a surebetjeidet, megmutatja az egyenlegedet fogadóirodánként, és kiszámolja helyetted az ROI-t."
+        "text": "A [fogadáskövető](/en/guides/bet-tracker) automatikussá teszi a bankrollkezelést. A [BetTracker AI](/en) rögzíti a fogadásaidat, megmutatja az egyenlegedet fogadóirodánként, és kiszámolja helyetted az ROI-t."
       }
     ],
     "faq": [
       {
         "q": "Mekkora legyen a bankrollom surebetekhez?",
-        "a": "Sokan €1,000–€3,000-val indulnak, 4–6 fogadóiroda között elosztva. Kevesebbel is működik, de az egy surebeten elérhető profit nagyon kicsi lesz."
+        "a": "Sokan 400 000–1 200 000 Ft-tal indulnak, 4–6 fogadóiroda között elosztva. Kevesebbel is működik, de az egy surebeten elérhető profit nagyon kicsi lesz. Magyarországon azonban licencelt fogadóirodák között surebet nem lehetséges, mert az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt. – Tippmix), ezért ez inkább más szabályozott piacokra vonatkozik."
       },
       {
         "q": "Hány százalékot tegyek meg tétként value beteknél?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Hogyan számolom ki a fogadásaim ROI-ját?",
-        "a": "Told el a nettó profitot az összes tétel összegével. €370 profit €18,500 megtett tét mellett 2.0%-os ROI-t jelent."
+        "a": "Told el a nettó profitot az összes tétel összegével. 7 400 Ft profit 370 000 Ft megtett tét mellett 2,0%-os ROI-t jelent."
       }
     ],
     "category": "Stratégia",
@@ -777,7 +777,7 @@
   "arbitrage-betting": {
     "title": "Hogyan működik az arbitrázsfogadás? Biztos profit minden kimeneten",
     "metaTitle": "Hogyan működik az arbitrázsfogadás? Útmutató 2026",
-    "description": "Hogyan működik az arbitrázsfogadás: a képlet, számpéldák €-ban, és lépésről lépésre bemutatjuk, hogyan tedd meg az első surebetedet a garantált profitért.",
+    "description": "Hogyan működik az arbitrázsfogadás: a képlet, számpéldák Ft-ban, és lépésről lépésre bemutatjuk, hogyan működik egy surebet a garantált profitért.",
     "keyword": "hogyan működik az arbitrázsfogadás",
     "intro": "Az arbitrázsfogadás lényege, hogy ugyanazon esemény minden kimenetelére fogadsz különböző fogadóirodáknál, amikor az odds reciprokainak összege 1 alatt van. A tétet úgy osztod el, hogy a kifizetés bármi történjen, ugyanannyi legyen. A teljes tét és a kifizetés közötti különbség a profitod, ami általában surebetenként 1–3%, és nem a szerencse, hanem a matematika biztosítja.",
     "blocks": [
@@ -795,15 +795,15 @@
       },
       {
         "type": "example",
-        "title": "Példa: kétkimenetelű teniszmeccs, teljes tét €1,000",
+        "title": "Példa: kétkimenetelű teniszmeccs, teljes tét 400 000 Ft",
         "rows": [
           [
             "A játékos az 1. fogadóirodánál, odds 2.08",
-            "Tét €492.68"
+            "Tét 197 073 Ft"
           ],
           [
             "B játékos a 2. fogadóirodánál, odds 2.02",
-            "Tét €507.32"
+            "Tét 202 927 Ft"
           ],
           [
             "1/2.08 + 1/2.02",
@@ -811,14 +811,14 @@
           ],
           [
             "Kifizetés, bárki nyer",
-            "kb. €1,024.78"
+            "kb. 409 912 Ft"
           ],
           [
             "Biztos profit",
-            "kb. €24.78 (2.5%)"
+            "kb. 9 912 Ft (2,5%)"
           ]
         ],
-        "note": "Az összeg 1 alatt van, így nagyjából €24.78 profitot termelsz, függetlenül attól, hogy ki nyeri a meccset."
+        "note": "Az összeg 1 alatt van, így nagyjából 9 912 Ft profitot termelsz, függetlenül attól, hogy ki nyeri a meccset."
       },
       {
         "type": "h2",
@@ -830,19 +830,19 @@
       },
       {
         "type": "example",
-        "title": "Példa: Premier League-mérkőzés, teljes tét €2,000",
+        "title": "Példa: Premier League-mérkőzés, teljes tét 800 000 Ft",
         "rows": [
           [
             "Hazai győzelem, odds 2.15",
-            "Tét €942.69"
+            "Tét 377 072 Ft"
           ],
           [
             "Döntetlen, odds 3.60",
-            "Tét €562.99"
+            "Tét 225 196 Ft"
           ],
           [
             "Vendéggyőzelem, odds 4.10",
-            "Tét €494.33"
+            "Tét 197 732 Ft"
           ],
           [
             "Az odds reciprokainak összege",
@@ -850,11 +850,11 @@
           ],
           [
             "Kifizetés bármelyik eredménynél",
-            "kb. €2,026.75"
+            "kb. 810 705 Ft"
           ],
           [
             "Biztos profit",
-            "kb. €26.75 (1.3%)"
+            "kb. 10 705 Ft (1,3%)"
           ]
         ]
       },
@@ -881,7 +881,7 @@
       {
         "type": "ul",
         "items": [
-          "**1. Nyiss számlákat** legalább két engedéllyel rendelkező fogadóirodánál, lehetőleg többnél, és előre fizess be.",
+          "**1. Nyiss számlákat** legalább két engedéllyel rendelkező fogadóirodánál, és előre fizess be. Magyarországon ez jelenleg nem megvalósítható, mert az online sportfogadás gyakorlatilag állami monopólium, és csak a Tippmix (Szerencsejáték Zrt.) engedélyes. Külföldi, nem engedélyezett oldalakat ne használj.",
           "**2. Keress egy surebetet,** ahol az odds reciprokainak összege 1,00 alatt van.",
           "**3. Számold ki a téteket,** hogy a kifizetés minden kimenetelnél azonos legyen.",
           "**4. Told meg gyorsan mindkét fogadást,** azzal kezdve, amelyiknél nagyobb eséllyel változik az odds.",
@@ -890,7 +890,7 @@
       },
       {
         "type": "p",
-        "text": "A matek kockázatmentes, a kivitelezés viszont nem mindig. Az igazi kockázatot az **odds változása** a második fogadás megtétele közben, az egyértelmű árazási hibák miatti **érvénytelenített fogadások** és a **korlátozott számlák** jelentik. Kezdetben tarts mérsékelt téteket, és olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+        "text": "A matek kockázatmentes, a kivitelezés viszont nem mindig. Az igazi kockázatot az **odds változása** a második fogadás megtétele közben, az egyértelmű árazási hibák miatti **érvénytelenített fogadások** és a **korlátozott számlák** jelentik. Kezdetben tarts mérsékelt téteket, és olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits). Ha a fogadás problémát okoz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy az országos addiktológiai segélyvonaltól."
       },
       {
         "type": "p",
@@ -900,19 +900,19 @@
     "faq": [
       {
         "q": "Legális az arbitrázsfogadás?",
-        "a": "Igen, egy esemény minden kimenetelére fogadni a legtöbb országban nem tiltott. A fogadóirodák ettől még korlátozhatják a számládat. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
+        "a": "Egy esemény minden kimenetelére fogadni a legtöbb országban nem tiltott, de Magyarországon az online sportfogadás gyakorlatilag állami monopólium: csak a Szerencsejáték Zrt. (Tippmix) működik engedéllyel az SZTFH felügyelete alatt, a külföldi oldalak pedig blokkoltak. Nem engedélyezett oldalakat ne használj, és a hatályos szabályokat mindig ellenőrizd. A fogadóirodák ettől még korlátozhatják a számládat. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Mennyit lehet keresni surebetekkel?",
-        "a": "Egy átlagos surebet a teljes tét 1–3%-át hozza. Surebetenként €1,000 téttel, havi 40 surebettel és átlagosan 1.5%-kal ez nagyjából €600 havonta."
+        "a": "Egy átlagos surebet a teljes tét 1–3%-át hozza. Surebetenként 400 000 Ft téttel, havi 40 surebettel és átlagosan 1,5%-kal ez nagyjából 240 000 Ft havonta. Ez elméleti számítás: Magyarországon engedélyes fogadóirodák között nem lehet surebetezni. A Szerencsejáték Zrt.-nél elért nyeremények a játékosok számára adómentesek."
       },
       {
         "q": "Hány fogadóirodára van szükségem?",
-        "a": "Legalább kettőre, de minél több számlád van, annál több surebetet tudsz megfogni. Sok arber öt-tíz fogadóirodával dolgozik."
+        "a": "Legalább kettőre, de minél több számlád van, annál több surebetet tudsz megfogni. Sok arber öt-tíz fogadóirodával dolgozik. Magyarországon viszont csak a Tippmix (Szerencsejáték Zrt.) engedélyes, így hazai engedélyes fogadóirodák között surebetezni nem lehet."
       },
       {
         "q": "Mi van, ha megváltozik az odds a második fogadásom előtt?",
-        "a": "Számold újra a második fogadást az új oddsszal. Ha az összeg még mindig 1 alatt van, kisebb surebetet kapsz. Ha fölötte, a veszteséget a elérhető legjobb oddsszal való fedezéssel korlátozhatod."
+        "a": "Számold újra a második fogadást az új oddsszal. Ha az összeg még mindig 1 alatt van, kisebb surebetet kapsz. Ha fölötte, a veszteséget az elérhető legjobb oddsszal való fedezéssel korlátozhatod."
       }
     ],
     "category": "Stratégia",
@@ -921,9 +921,9 @@
   "hvad-er-surebets": {
     "title": "Mik azok a surebetek? Így működnek a garantált oddsok",
     "metaTitle": "Mik azok a surebetek? Teljes útmutató az arbitrázsfogadáshoz",
-    "description": "Ismerd meg, mik a surebetek, hogyan jönnek létre, és hogyan fogadhatsz minden kimenetelre különböző fogadóirodáknál a garantált profit érdekében.",
+    "description": "Ismerd meg, mik a surebetek, hogyan jönnek létre, és hogyan működik az arbitrázsfogadás elméletben. Magyarországon a Tippmix az egyetlen engedélyes szolgáltató.",
     "keyword": "surebet",
-    "intro": "A surebet – más néven arbitrázsfogadás vagy arbing – olyan oddskombináció különböző fogadóirodáknál, amellyel egy mérkőzés minden lehetséges kimenetelére fogadhatsz, és a végeredménytől függetlenül nyereséget érsz el. Túl szépen hangzik, hogy igaz legyen, pedig tiszta matematika.",
+    "intro": "A surebet – más néven arbitrázsfogadás vagy arbing – olyan oddskombináció különböző fogadóirodáknál, amellyel egy mérkőzés minden lehetséges kimenetelére fogadhatsz, és a végeredménytől függetlenül nyereséget érsz el. Túl szépen hangzik, hogy igaz legyen, pedig tiszta matematika. Fontos tudni, hogy Magyarországon az online sportfogadás gyakorlatilag állami monopólium: az SZTFH felügyelete alatt a Szerencsejáték Zrt. (Tippmix) működik, ezért itthon engedélyes fogadóirodák között surebetezni nem lehet.",
     "blocks": [
       {
         "type": "h2",
@@ -931,7 +931,7 @@
       },
       {
         "type": "p",
-        "text": "A fogadóirodák egymástól függetlenül határozzák meg az oddsaikat. Eltérő modelleket használnak, másképp reagálnak a hírekre, és más-más kimenetelekre szeretnének fogadásokat vonzani. Így előfordulhat, hogy az egyik fogadóiroda magas oddsot ad a hazai csapatra, míg a másik a vendégcsapatra. Ha a különbség elég nagy, surebet jön létre."
+        "text": "A fogadóirodák egymástól függetlenül határozzák meg az oddsaikat. Eltérő modelleket használnak, másképp reagálnak a hírekre, és más-más kimenetelekre szeretnének fogadásokat vonzani. Így előfordulhat, hogy az egyik fogadóiroda magas oddsot ad a hazai csapatra, míg a másik a vendégcsapatra. Ha a különbség elég nagy, surebet jön létre. Ez a verseny azonban csak több, egymástól független engedélyes szolgáltatóval rendelkező piacokon alakul ki."
       },
       {
         "type": "p",
@@ -951,19 +951,19 @@
         "rows": [
           [
             "A játékos az 1. fogadóirodánál",
-            "2.10-es szorzó"
+            "2,10-es szorzó"
           ],
           [
             "B játékos a 2. fogadóirodánál",
-            "2.05-ös szorzó"
+            "2,05-ös szorzó"
           ],
           [
-            "1/2.10 + 1/2.05",
-            "0.476 + 0.488 = 0.964"
+            "1/2,10 + 1/2,05",
+            "0,476 + 0,488 = 0,964"
           ],
           [
             "Garantált nyereség",
-            "kb. 3.7%"
+            "kb. 3,7%"
           ]
         ],
         "note": "Az összeg 1 alatt van, vagyis ez a kombináció surebet."
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "A tétet úgy kell elosztani, hogy a kifizetés ugyanannyi legyen, függetlenül attól, hogy ki nyer. Ha a fenti példában 1,000 egység a teljes tét, nagyjából 494 egységet teszel az A játékosra, és nagyjából 506 egységet a B játékosra. Mindkét kimenetelnél kb. 1,037 egység a kifizetés, vagyis a nyereség nagyjából 37 egység."
+        "text": "A tétet úgy kell elosztani, hogy a kifizetés ugyanannyi legyen, függetlenül attól, hogy ki nyer. Ha a fenti példában 100 000 Ft a teljes tét, nagyjából 49 400 Ft-ot teszel az A játékosra, és nagyjából 50 600 Ft-ot a B játékosra. Mindkét kimenetelnél kb. 103 700 Ft a kifizetés, vagyis a nyereség nagyjából 3 700 Ft."
       },
       {
         "type": "tip",
@@ -989,7 +989,7 @@
         "items": [
           "A szorzók változhatnak, amíg leadod a fogadásaidat. Először azt a fogadást told meg, amelyiknél a szorzó a legingatagabb.",
           "Ellenőrizd, hogy a piac mindkét fogadóirodánál pontosan ugyanaz-e, például hogy a hosszabbítás beleszámít-e.",
-          "Tarts egyenleget több fogadóirodánál is, hogy gyorsan tudj cselekedni.",
+          "Ott, ahol több engedélyes szolgáltató működik, érdemes egyenleget tartani többnél is, hogy gyorsan tudj cselekedni. Magyarországon erre nincs lehetőség, mert a Tippmix (Szerencsejáték Zrt.) az egyetlen engedélyes szolgáltató, a külföldi oldalak pedig blokkoltak; engedély nélküli oldalakat nem javasolunk.",
           "A fogadóirodák korlátozhatják azokat a fiókokat, amelyek kizárólag surebetekre fogadnak. Olvasd el az útmutatónkat a fiókkorlátozások elkerüléséről."
         ]
       }
@@ -1001,11 +1001,11 @@
       },
       {
         "q": "Mennyit lehet keresni surebetekkel?",
-        "a": "A legtöbb surebet a tét 1–5%-át hozza vissza nyereségként. A profit abból jön össze, hogy sokszor megismétled, nem pedig az egyes nagy nyereményekből."
+        "a": "A legtöbb surebet a tét 1–5%-át hozza vissza nyereségként. A profit abból jön össze, hogy sokszor megismétled, nem pedig az egyes nagy nyereményekből. Magyarországon a Szerencsejáték Zrt.-nél elért nyeremények a játékosok számára adómentesek, de a mindenkori helyi szabályokat érdemes ellenőrizni. Ha a fogadás problémát okoz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a nemzeti addiktológiai segélyvonaltól."
       },
       {
         "q": "Hogyan találhatsz surebeteket?",
-        "a": "A szorzókat összehasonlíthatod kézzel is, de ez lassú. Egy surebet-szkenner, például a BetTrackerAI, figyeli a te piacodon működő fogadóirodákat, és a lehetőségeket azonnal megmutatja, amint felbukkannak."
+        "a": "A szorzókat összehasonlíthatod kézzel is, de ez lassú. Egy surebet-szkenner, például a BetTrackerAI, a piacon elérhető fogadóirodák oddsait figyeli, és a lehetőségeket azonnal megmutatja, amint felbukkannak. Magyarországon azonban csak a Tippmix (Szerencsejáték Zrt.) engedélyes, így itthon engedélyes fogadóirodák között surebet nem található. Letiltott vagy engedély nélküli oldalak használatát nem javasoljuk."
       }
     ],
     "category": "Alapok",
@@ -1036,19 +1036,19 @@
       },
       {
         "type": "example",
-        "title": "Példa: három játékos egy tornán, teljes tét €1,000",
+        "title": "Példa: három játékos egy tornán, teljes tét 100 000 Ft",
         "rows": [
           [
             "A játékos, 3.00-s szorzó",
-            "tét kb. €444"
+            "tét kb. 44 444 Ft"
           ],
           [
             "B játékos, 4.00-s szorzó",
-            "tét kb. €333"
+            "tét kb. 33 333 Ft"
           ],
           [
             "C játékos, 6.00-s szorzó",
-            "tét kb. €222"
+            "tét kb. 22 222 Ft"
           ],
           [
             "S = 0.333 + 0.250 + 0.167",
@@ -1056,11 +1056,11 @@
           ],
           [
             "Ha a három közül valamelyik nyer",
-            "kifizetés kb. €1,333, nyereség kb. €333"
+            "kifizetés kb. 133 333 Ft, nyereség kb. 33 333 Ft"
           ],
           [
             "Ha a három közül egyik sem nyer",
-            "€1,000 veszteség"
+            "100 000 Ft veszteség"
           ]
         ],
         "note": "A nyereség csak akkor realizálódik, ha a három játékosod egyike nyer. Neked kell megítélned, mennyire valószínű ez."
@@ -1074,12 +1074,12 @@
         "items": [
           "Ha úgy gondolod, hogy néhány kimenetel adja a valószínűség nagy részét, például egy torna három esélyese.",
           "Ha egyetlen kimenetel helyett inkább megosztanád a kockázatot.",
-          "Ha több fogadóirodánál is kaphatsz jobb szorzókat, és a tétet el szeretnéd osztani közöttük."
+          "Ha ugyanazon a piacon belül, például a Tippmixen (Szerencsejáték Zrt.) több kimenetelre is fogadnál, és a tétet el szeretnéd osztani közöttük."
         ]
       },
       {
         "type": "tip",
-        "text": "A dutching nem helyettesíti a surebeteket. Ha garantált nyereséget szeretnél, az összes kimenetelt le kell fedned különböző fogadóirodáknál. A kalkulátor azonnal megmutatja a különbséget."
+        "text": "A dutching nem helyettesíti a surebeteket. Ha garantált nyereséget szeretnél, az összes kimenetelt le kell fedned különböző fogadóirodáknál. Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Tippmix, Szerencsejáték Zrt.), ezért az engedélyezett fogadóirodák közötti surebetezés nem megoldható, engedély nélküli oldalakat pedig nem ajánlunk. A kalkulátor azonnal megmutatja a különbséget."
       }
     ],
     "faq": [
@@ -1104,7 +1104,7 @@
     "metaTitle": "Tenisz surebetek – garantált profit a teniszszorzókon",
     "description": "A tenisz ideális a surebetekhez, mert csak két kimenetele van egy meccsnek. Nézd meg a számolt példát, és ismerd meg a buktatókat, amelyeket el kell kerülnöd az arbitrázsfogadásnál.",
     "keyword": "tenisz surebet",
-    "intro": "A tenisz az egyik legegyszerűbb sportág a surebetezéshez. Egy meccsnek csak két kimenetele van, döntetlen nincs, így mindössze két fogadóirodára és két fogadásra van szükséged.",
+    "intro": "A tenisz az egyik legegyszerűbb sportág a surebetezéshez. Egy meccsnek csak két kimenetele van, döntetlen nincs, így elméletben mindössze két fogadóirodára és két fogadásra van szükséged. Magyarországon viszont az online sportfogadás gyakorlatilag állami monopólium (Tippmix, Szerencsejáték Zrt.), így engedélyezett magyar fogadóirodák között surebet nem lehetséges. Ez az útmutató a működést mutatja be; engedély nélküli vagy blokkolt oldalakat nem javasolunk.",
     "blocks": [
       {
         "type": "h2",
@@ -1112,19 +1112,19 @@
       },
       {
         "type": "p",
-        "text": "Két kimenetelnél egyszerű a számolás, és csak két fogadást kell feladnod. Az időzónáknak köszönhetően minden nap rengeteg meccset játszanak, a fogadóirodák pedig folyamatosan állítanak be új szorzókat, ráadásul nem egységesen."
+        "text": "Két kimenetelnél egyszerű a számolás, és csak két fogadást kell feladnod. Az időzónáknak köszönhetően minden nap rengeteg meccset játszanak, a fogadóirodák pedig folyamatosan állítanak be új szorzókat, ráadásul nem egységesen. Ez a többszereplős piacokra igaz, a magyar piacon azonban a Tippmix egyedüli szolgáltatóként működik."
       },
       {
         "type": "example",
-        "title": "Példa: 1.95 és 2.20 szorzó, összesen €1,000 tét",
+        "title": "Példa: 1.95 és 2.20 szorzó, összesen 100 000 Ft tét",
         "rows": [
           [
             "A játékos az 1. fogadóirodánál, 1.95 szorzó",
-            "tét kb. €530"
+            "tét kb. 53 000 Ft"
           ],
           [
             "B játékos a 2. fogadóirodánál, 2.20 szorzó",
-            "tét kb. €470"
+            "tét kb. 47 000 Ft"
           ],
           [
             "1/1.95 + 1/2.20",
@@ -1132,14 +1132,14 @@
           ],
           [
             "Kifizetés a győztestől függetlenül",
-            "kb. €1,034"
+            "kb. 103 400 Ft"
           ],
           [
             "Profit",
-            "kb. €34 (3.4%)"
+            "kb. 3 400 Ft (3.4%)"
           ]
         ],
-        "note": "Az összeg 1 alatt van, tehát a kombináció surebet."
+        "note": "Az összeg 1 alatt van, tehát a kombináció surebet. Ez csak szemléltető számítás: a Szerencsejáték Zrt.-nél szerzett nyeremény adómentes, de két engedélyezett magyar fogadóiroda közötti surebetre nincs lehetőség."
       },
       {
         "type": "h2",
@@ -1162,7 +1162,7 @@
     "faq": [
       {
         "q": "Miért jó a tenisz a surebetekhez?",
-        "a": "Mert csak két kimenetel van, döntetlen nincs. Mindössze két fogadóirodára van szükséged, és két fogadást kell feladnod."
+        "a": "Mert csak két kimenetel van, döntetlen nincs. Elméletben mindössze két fogadóirodára van szükséged, és két fogadást kell feladnod. Magyarországon azonban a Tippmix (Szerencsejáték Zrt.) az egyetlen engedélyezett szolgáltató, így itt surebetre nincs lehetőség. A külföldi oldalak blokkoltak, ezért ne használj engedély nélküli szolgáltatókat. A játékot mindig tartsd kézben; ha problémát érzékelsz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a nemzeti addiktológiai segélyvonaltól."
       },
       {
         "q": "Mi történik, ha egy játékos a meccs közben feladja a surebet alatt?",
@@ -1175,9 +1175,9 @@
   "fodbold-surebets": {
     "title": "Surebetek focin: hogyan fedd le a három kimenetelt",
     "metaTitle": "Foci surebetek – így told el az 1X2 szorzókat",
-    "description": "A focinak három kimenetele van, ezért a surebethez három fogadás kell. Tudd meg, hogyan ossz el a tétet hazai győzelem, döntetlen és vendéggyőzelem között, és milyen buktatókat kerülj el.",
+    "description": "A focinak három kimenetele van, ezért a surebethez három fogadás kell. Tudd meg, hogyan ossz el a tétet hazai győzelem, döntetlen és vendéggyőzelem között, és mi a helyzet Magyarországon.",
     "keyword": "foci surebet",
-    "intro": "A focinak három lehetséges kimenetele van: hazai győzelem, döntetlen és vendéggyőzelem. Az 1X2 piacon ezért a surebethez három fogadás kell, a legjobb szorzókat pedig gyakran három különböző fogadóirodánál találod meg.",
+    "intro": "A focinak három lehetséges kimenetele van: hazai győzelem, döntetlen és vendéggyőzelem. Az 1X2 piacon ezért a surebethez három fogadás kell, a legjobb szorzók pedig elméletileg három különböző fogadóirodánál lehetnek. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium (Tippmix, Szerencsejáték Zrt.), így licencelt magyar fogadóirodák között surebetezni nem lehet. Az alábbi cikk a módszert mutatja be; külföldi, blokkolt vagy engedély nélküli oldalakat nem ajánlunk.",
     "blocks": [
       {
         "type": "h2",
@@ -1189,19 +1189,19 @@
       },
       {
         "type": "example",
-        "title": "Példa: három fogadóiroda, összesen €1,000 tét",
+        "title": "Elméleti példa: három fogadóiroda, összesen 100 000 Ft tét",
         "rows": [
           [
             "Hazai győzelem az 1. fogadóirodánál, 2.40 szorzó",
-            "tét kb. €424"
+            "tét kb. 42 400 Ft"
           ],
           [
             "Döntetlen a 2. fogadóirodánál, 3.80 szorzó",
-            "tét kb. €268"
+            "tét kb. 26 800 Ft"
           ],
           [
             "Vendéggyőzelem a 3. fogadóirodánál, 3.30 szorzó",
-            "tét kb. €308"
+            "tét kb. 30 800 Ft"
           ],
           [
             "1/2.40 + 1/3.80 + 1/3.30",
@@ -1209,14 +1209,14 @@
           ],
           [
             "Kifizetés az eredménytől függetlenül",
-            "kb. €1,017"
+            "kb. 101 700 Ft"
           ],
           [
             "Profit",
-            "kb. €17 (1.7%)"
+            "kb. 1 700 Ft (1,7%)"
           ]
         ],
-        "note": "A profit kisebb, mint teniszen, és három fogadásnál nagyobb a kockázata annak, hogy a szorzók megváltoznak, amíg feladod őket."
+        "note": "A profit kisebb, mint teniszen, és három fogadásnál nagyobb a kockázata annak, hogy a szorzók megváltoznak, amíg feladod őket. A példa csak szemléltetés: Magyarországon a Tippmix az egyetlen szabályozott online fogadási lehetőség, ezért licencelt irodák között ez a számítás a gyakorlatban nem hajtható végre."
       },
       {
         "type": "h2",
@@ -1233,17 +1233,17 @@
       },
       {
         "type": "tip",
-        "text": "A BetTrackerAI-ban jelöld ki azokat a fogadóirodákat, ahol már van egyenleged, így csak olyan surebeteket látsz, amelyeket tényleg fel tudsz adni."
+        "text": "A BetTrackerAI-ban követheted a Tippmixen leadott fogadásaidat, és összehasonlíthatod a szorzókat. Magyarországon licencelt irodák között surebet nem lehetséges, ezért soha ne használj engedély nélküli vagy blokkolt oldalakat. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékos számára adómentesek, de az aktuális szabályokat mindig ellenőrizd. Fogadj felelősen: segítséget a Szerencsejáték Zrt. felelős játékszervezési programja és a nemzeti addiktológiai segélyvonal nyújt."
       }
     ],
     "faq": [
       {
         "q": "Miért nehezebbek a foci surebetek, mint a tenisz surebetek?",
-        "a": "Mert két kimenetel helyett három van. Három fogadást kell feladnod, gyakran három különböző fogadóirodánál, és nagyobb a kockázata annak, hogy a szorzók megváltoznak, amíg ezt megteszed."
+        "a": "Mert két kimenetel helyett három van. Három fogadást kell feladnod, gyakran három különböző fogadóirodánál, és nagyobb a kockázata annak, hogy a szorzók megváltoznak, amíg ezt megteszed. Magyarországon ráadásul csak a Tippmix szabályozott, így a gyakorlatban nincs több licencelt iroda, amely között surebetezhetnél."
       },
       {
         "q": "Tartalmazza az 1X2 piac a hosszabbítást?",
-        "a": "Általában nem. Az 1X2 jellemzően csak a 90 percet és a hosszabbításként játszott időt (a ráadást) fedi le, de a szabályok eltérhetnek. Fogadás előtt mindig nézd meg a feltételeket az adott fogadóirodánál."
+        "a": "Általában nem. Az 1X2 jellemzően csak a 90 percet és a hosszabbításként játszott időt (a ráadást) fedi le, de a szabályok eltérhetnek. Fogadás előtt mindig nézd meg a feltételeket a Tippmix szabályzatában, illetve az adott fogadóirodánál."
       }
     ],
     "category": "Stratégia",
@@ -1251,8 +1251,8 @@
   },
   "bookmakerens-margin": {
     "title": "Fogadóirodai árrés: így látod meg, mennyibe kerül valójában az odds",
-    "metaTitle": "Fogadóirodai árrés – overround kiszámítása és jobb oddsok keresése",
-    "description": "A fogadóirodák az oddsokba épített árrésből keresnek. Megmutatjuk, hogyan számold ki, és hogyan találd meg azokat az irodákat, amelyek a legjobb oddsokat adják.",
+    "metaTitle": "Fogadóirodai árrés – overround kiszámítása és az oddsok értékelése",
+    "description": "A fogadóirodák az oddsokba épített árrésből keresnek. Megmutatjuk, hogyan számold ki, és hogyan mérd fel a Tippmix oddsainak valódi költségét.",
     "keyword": "fogadóirodai árrés",
     "intro": "Ha egy piac implikált valószínűségeit összeadod, az eredmény több mint 100%. A többlet a fogadóiroda árrése, más néven overround. Ez az ára annak, hogy fogadhass.",
     "blocks": [
@@ -1293,7 +1293,7 @@
       },
       {
         "type": "p",
-        "text": "Minél alacsonyabb az árrés, annál jobb oddsot kapsz ugyanarra a valószínűségre. Sok fogadás alatt a 3% és a 7% közötti különbség jelentősen megmutatkozik a bankrolloddon. Ezért érdemes összehasonlítani az árréseket azoknál a fogadóirodáknál, ahol fogadsz, azokon a piacokon, amelyeken a legtöbbet játszol."
+        "text": "Minél alacsonyabb az árrés, annál jobb oddsot kapsz ugyanarra a valószínűségre. Sok fogadás alatt a 3% és a 7% közötti különbség jelentősen megmutatkozik a bankrolloddon. Magyarországon az online sportfogadás gyakorlatilag a Tippmix (Szerencsejáték Zrt.) kezében van, ezért itt azt érdemes összehasonlítani, mekkora az árrés a különböző sportokon és azokon a piacokon, amelyeken a legtöbbet játszol."
       },
       {
         "type": "h2",
@@ -1301,11 +1301,11 @@
       },
       {
         "type": "p",
-        "text": "Surebet akkor jön létre, ha több fogadóiroda legjobb oddsainak együttes értéke 1 alatt van. Ilyenkor a fogadóirodák árrését több mint kiegyenlíti, hogy eltérően árazzák az eseményt. A szkenner pontosan ezt keresi."
+        "text": "Elméletben surebet akkor jön létre, ha több fogadóiroda legjobb oddsainak együttes értéke 1 alatt van: ilyenkor a fogadóirodák árrését több mint kiegyenlíti, hogy eltérően árazzák az eseményt. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium, a külföldi oldalak pedig blokkoltak, így a szabályozott magyar fogadóirodák között surebetezni nem lehet. Nem engedélyezett oldalak használatát nem javasoljuk."
       },
       {
         "type": "tip",
-        "text": "A kalkulátorunkban megadhatod az oddsokat, és azonnal látod az összegüket. Ha az 1 alatt van, surebetet találtál."
+        "text": "A kalkulátorunkban megadhatod az oddsokat, és azonnal látod az összegüket, ami az árrés megértéséhez is hasznos. Ha az 1 alatt van, az elméletben surebet, de a magyar piacon ez a gyakorlatban nem kihasználható."
       }
     ],
     "faq": [
@@ -1324,7 +1324,7 @@
   "asiatisk-handicap": {
     "title": "Az ázsiai hendikep magyarázata: egész, fél és negyed vonalak",
     "metaTitle": "Ázsiai hendikep egyszerűen – útmutató példákkal",
-    "description": "Értsd meg az ázsiai hendikepet: mit jelent a -0.5, a -1 és a -0.25, mikor kapod vissza a tétet, és miért számít a vonal a surebetek megkötésekor.",
+    "description": "Értsd meg az ázsiai hendikepet: mit jelent a -0.5, a -1 és a -0.25, mikor kapod vissza a tétet, és miért számít a vonal a surebetek értelmezésekor.",
     "keyword": "ázsiai hendikep",
     "intro": "Az ázsiai hendikep olyan focifogadási piac, ahol a döntetlen kiesik vagy megoszlik. Így csak két kimenetel marad, ezért gyakran használják a surebetet és az arbitrázsfogadási lehetőségeket keresők.",
     "blocks": [
@@ -1354,7 +1354,7 @@
       },
       {
         "type": "example",
-        "title": "Hazai csapat -0.25, €100 tét",
+        "title": "Hazai csapat -0.25, 40 000 Ft tét",
         "rows": [
           [
             "A hazai csapat nyer",
@@ -1362,7 +1362,7 @@
           ],
           [
             "Döntetlen",
-            "€50 visszajár, €50 elvész"
+            "20 000 Ft visszajár, 20 000 Ft elvész"
           ],
           [
             "A hazai csapat veszít",
@@ -1377,11 +1377,11 @@
       },
       {
         "type": "p",
-        "text": "Mivel a piacnak két kimenetele van, az egyik fogadóirodánál megteheted a hazai -0.5-öt, a másiknál a vendég +0.5-öt, így a surebethez mindössze két fogadóiroda kell. Ügyelj rá, hogy mindkét oldalon a megfelelő vonal szerepeljen: a -0.5 párja a +0.5, a -0.25 párja pedig a +0.25."
+        "text": "Mivel a piacnak két kimenetele van, elméletben két különböző fogadóirodánál lehet megtenni a hazai -0.5-öt és a vendég +0.5-öt, így a surebethez mindössze két fogadóiroda kell. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium: az egyetlen engedélyezett szolgáltató a Szerencsejáték Zrt. (Tippmix), a külföldi oldalak pedig blokkoltak. Engedélyezett magyar fogadóirodák között ezért surebet nem köthető, és nem ajánljuk engedély nélküli oldalak használatát. Ha mégis összehasonlítasz vonalakat, ügyelj rá, hogy mindkét oldalon a megfelelő vonal szerepeljen: a -0.5 párja a +0.5, a -0.25 párja pedig a +0.25. A hatályos szabályokat az SZTFH oldalán ellenőrizd."
       },
       {
         "type": "tip",
-        "text": "Surebet megkötése előtt mindig ellenőrizd a vonalat. Egyetlen negyed vonalnyi eltérés is a garantált nyereményt kockázatos fogadássá változtathatja."
+        "text": "Bármilyen fogadás vagy összehasonlítás előtt mindig ellenőrizd a vonalat. Egyetlen negyed vonalnyi eltérés is a garantált nyereményt kockázatos fogadássá változtathatja."
       }
     ],
     "faq": [
@@ -1400,7 +1400,7 @@
   "bet-tracker": {
     "title": "Fogadási táblázat helyett: kövess nyomon minden fogadást automatikusan",
     "metaTitle": "Fogadási táblázat alternatíva – Bet Tracker 2026",
-    "description": "Cseréld le a fogadási táblázatot bet trackerre: mit érdemes rögzíteni, hogyan számold ki az ROI-t, példák €-ban, és mit kell tudnia a legjobb bet tracker appnak.",
+    "description": "Cseréld le a fogadási táblázatot bet trackerre: mit érdemes rögzíteni, hogyan számold ki az ROI-t, példák forintban, és mit kell tudnia a legjobb bet tracker appnak.",
     "keyword": "fogadási táblázat alternatíva",
     "intro": "A legjobb fogadási táblázat alternatíva egy bet tracker, amely helyetted rögzít minden fogadást, tétet és eredményt, és automatikusan kiszámítja az ROI-t, a fogadóirodánkénti profitot és az egyenleget. A táblázatok szétesnek, amint hetente több tucat surebetet kötsz: felülíródnak a képletek, hiányoznak a lábak, az érvénytelenített fogadások pedig torzítják a számokat. A tracker másodpercek alatt megmutatja a valós képet.",
     "blocks": [
@@ -1445,22 +1445,22 @@
           ],
           [
             "Teljes forgalom (minden szár)",
-            "€24,000"
+            "8 000 000 Ft"
           ],
           [
             "Összes visszaérkezett összeg",
-            "€24,720"
+            "8 240 000 Ft"
           ],
           [
             "Nettó profit",
-            "€720"
+            "240 000 Ft"
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "240 000 Ft / 8 000 000 Ft = 3,0%"
           ]
         ],
-        "note": "Követés nélkül csak azt látod, hogy mozog az egyenleged. Követéssel viszont azt is látod, hogy minden megforgatott €100 után €3-t keresel."
+        "note": "Követés nélkül csak azt látod, hogy mozog az egyenleged. Követéssel viszont azt is látod, hogy minden megforgatott 100 000 Ft után 3 000 Ft-ot keresel."
       },
       {
         "type": "h2",
@@ -1490,7 +1490,7 @@
       },
       {
         "type": "p",
-        "text": "A [BetTracker AI](/hu) a surebet-szkennert és a fogadáskövetőt egy helyen egyesíti, így minden megtett surebetet automatikusan követ, az ROI-d pedig mindig naprakész."
+        "text": "A [BetTracker AI](/hu) a surebet-szkennert és a fogadáskövetőt egy helyen egyesíti, így minden megtett surebetet automatikusan követ, az ROI-d pedig mindig naprakész. Fontos tudni: Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt., Tippmix), a külföldi oldalak blokkoltak, ezért engedélyezett magyar fogadóirodák között surebetezni nem lehet; engedély nélküli oldalakat pedig nem ajánlunk. A Szerencsejáték Zrt.-nél szerzett nyeremények a játékosok számára adómentesek, de az aktuális szabályokat mindig ellenőrizd az SZTFH-nál. Ha a fogadás már nem szórakozás, kérj segítséget a Szerencsejáték Zrt. felelős játék programjánál vagy a nemzeti addiktológiai segélyvonalon."
       }
     ],
     "faq": [
@@ -1527,26 +1527,26 @@
       },
       {
         "type": "example",
-        "title": "Példa: egy hónapnyi surebet",
+        "title": "Példa: egy hónapnyi surebet (szemléltető számokkal)",
         "rows": [
           [
             "Összes tét",
-            "€40,000"
+            "4 000 000 Ft"
           ],
           [
             "Összes kifizetés",
-            "€41,000"
+            "4 100 000 Ft"
           ],
           [
             "Profit",
-            "€1,000"
+            "100 000 Ft"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "100 000 / 4 000 000 × 100 = 2,5%"
           ]
         ],
-        "note": "Minden megtett fontra 2,5 penny profitot értél el."
+        "note": "Minden megtett 100 forintra 2,5 Ft profitot értél el. A példa csak szemléltetés: Magyarországon a Tippmix (Szerencsejáték Zrt.) az egyetlen engedélyezett szolgáltató, ezért engedélyezett fogadóirodák között surebetezni nem lehet."
       },
       {
         "type": "h2",
@@ -1565,7 +1565,7 @@
         "items": [
           "Hagyományos fogadások hosszú távon: a fogadók többsége 0% alatt van, mert a fogadóiroda árrést érvényesít.",
           "Value betting: 2–5% sok fogadás után jó eredmény.",
-          "Surebetek: jellemzően 1–5% surebetenként, de szinte kockázat nélkül, mert minden kimenetel le van fedve."
+          "Surebetek: elméletben jellemzően 1–5% surebetenként, szinte kockázat nélkül, mert minden kimenetel le van fedve. Magyarországon viszont a Tippmix az egyetlen engedélyezett szolgáltató, így engedélyezett fogadóirodák között ez a módszer nem használható. Engedély nélküli oldalakat ne használj."
         ]
       },
       {
@@ -1576,7 +1576,7 @@
     "faq": [
       {
         "q": "Hogyan számolom ki az ROI-t fogadásnál?",
-        "a": "Vedd a profitodat, told el az összes téttel, és szorozd meg 100-zal. Ha €10 000-t tettél meg, és €300-t kerestél, az ROI-d 3%."
+        "a": "Vedd a profitodat, told el az összes téttel, és szorozd meg 100-zal. Ha 1 000 000 forintot tettél meg, és 30 000 forintot kerestél, az ROI-d 3%."
       },
       {
         "q": "Mi a különbség az ROI és a profit között?",
@@ -1590,108 +1590,12 @@
     "category": "Stratégia",
     "ctaLabel": "Nézd meg a ROI-dat a fogadási könyvelésben"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: a kedvezőbb árú alternatíva",
-    "metaTitle": "Surebet Danmark alternatíva – BetTrackerAI összehasonlítás (2025)",
-    "description": "Hasonlítsd össze a BetTrackerAI-t és a Surebet Danmarkot: árak, funkciók, fogadóirodai lefedettség és fogadáskövetés. Találd meg a számodra megfelelő surebet-eszközt.",
-    "keyword": "surebet eszközök összehasonlítása",
-    "intro": "A Surebet Danmark és a BetTrackerAI egyaránt surebeteket (más néven arbitrázsfogadásokat) keres a licenccel rendelkező fogadóirodáknál. Mindkettő 7 napos ingyenes próbaidőszakot kínál. A fő különbség az árban, valamint a surebet-szkenneren túli eszközökben rejlik.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "Dióhéjban"
-      },
-      {
-        "type": "example",
-        "title": "A BetTrackerAI és a Surebet Danmark egymás mellett",
-        "rows": [
-          [
-            "Havi ár",
-            "BetTrackerAI: kb. €20-tól · Surebet Danmark: kb. €134"
-          ],
-          [
-            "Ingyenes próbaidőszak",
-            "Mindkettő: 7 nap"
-          ],
-          [
-            "Fogadóirodák",
-            "Mindkettő: kizárólag licenccel rendelkező fogadóirodák"
-          ],
-          [
-            "Értesítések",
-            "BetTrackerAI: push- és SMS-értesítések (Premium) · Surebet Danmark: élő értesítések"
-          ],
-          [
-            "Fogadási könyvelés",
-            "BetTrackerAI: teljes körű követés ROI-val és fogadóirodánkénti egyenleggel · Surebet Danmark: fogadáskövető"
-          ],
-          [
-            "Ingyenes eszközök és útmutatók",
-            "BetTrackerAI: surebet-kalkulátor és oktató jellegű útmutatók"
-          ]
-        ],
-        "note": "Az árakat mindkét oldalon 2025. november 23-án ellenőriztük, és változhatnak."
-      },
-      {
-        "type": "h2",
-        "text": "Ár: jelentős a különbség"
-      },
-      {
-        "type": "p",
-        "text": "A Surebet Danmark havonta kb. €134-ba kerül. A BetTrackerAI Basic csomagja (legfeljebb 5% profitú surebetek) kb. €20 havonta, a Premium (az összes surebet plusz SMS-értesítések) pedig kb. €33. A Premiummal havonta kb. €100-t spórolsz – ez évi kb. €1,200."
-      },
-      {
-        "type": "p",
-        "text": "Ez azért számít, mert a surebetek fogadásonként jellemzően 1–5% hozamot hoznak. Minél alacsonyabb a havi díj, annál kisebb forgalom kell ahhoz, hogy az előfizetés megtérüljön."
-      },
-      {
-        "type": "h2",
-        "text": "Fogadáskövetés: itt tűnik ki a BetTrackerAI"
-      },
-      {
-        "type": "p",
-        "text": "A surebet csak akkor kifizetődő, ha pontosan tudod, mennyit kerestél. A BetTrackerAI-ban rögzítheted a surebeteket és a befizetéseket, a profitodat, a ROI-dat és az egyenleged pedig fogadóirodánként egy helyen látod. A fogadási szelvényt be is importálhatod, így nem kell kézzel felvinned."
-      },
-      {
-        "type": "h2",
-        "text": "Melyik eszköz illik hozzád?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Válaszd a BetTrackerAI-t, ha alacsonyabb áron szeretnél surebeteket, és közben részletesen követnéd a számláidat.",
-          "Válaszd a Surebet Danmarkot, ha már használod a platformjukat, és elégedett vagy a költségekkel.",
-          "Ha bizonytalan vagy, próbáld ki mindkettőt. Mindkettő 7 napos ingyenes próbaidőszakot kínál, így ugyanazokon az eseményeken összehasonlíthatod a surebeteket."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Bármelyik eszközt választod: mindig azt a fogadást told meg először, amelyiknél a szorzók a leginkább ingadoznak, és ellenőrizd, hogy a piac mindkét fogadóirodánál teljesen azonos."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Olcsóbb a BetTrackerAI, mint a Surebet Danmark?",
-        "a": "Igen. A BetTrackerAI havonta kb. €20-ba vagy kb. €33-ba kerül, a Surebet Danmark viszont kb. €134-ba (2025. november 23-i állapot szerint)."
-      },
-      {
-        "q": "Mindkét eszköz kizárólag licenccel rendelkező fogadóirodákat használ?",
-        "a": "Igen. Mindkét platform a szabályozott, licenccel rendelkező fogadóirodákra összpontosít, így olyan helyeken fogadhatsz, ahol a játékosvédelmi szabályok érvényesek."
-      },
-      {
-        "q": "Kipróbálhatom ingyen a BetTrackerAI-t?",
-        "a": "Igen. 7 napos ingyenes próbaidőszakot kapsz teljes hozzáféréssel, és a próbaidőszak alatt bármikor lemondhatod."
-      }
-    ],
-    "category": "Alapok",
-    "ctaLabel": "Próbáld ki a BetTrackerAI-t 7 napig ingyen"
-  },
   "betting-regnskab": {
     "title": "Fogadási könyvelés: így tartsd szemmel a bankrollodat",
-    "metaTitle": "Fogadási könyvelés – kövesd az egyenleged a fogadóirodák között",
-    "description": "Tudd meg, hogyan vezess könyvelést a fogadásaidról: befizetések, kifizetések és egyenleg fogadóirodánként. Ne veszítsd el a fonalat, ha több oldalon is fogadsz.",
+    "metaTitle": "Fogadási könyvelés – kövesd az egyenleged és a profitod",
+    "description": "Tudd meg, hogyan vezess könyvelést a Tippmixen tett fogadásaidról: befizetések, kifizetések és egyenleg. Ne veszítsd el a fonalat, és mindig lásd, hol tartasz.",
     "keyword": "fogadáskövető",
-    "intro": "Ha surebeteket kötsz, a pénzed egyszerre sok fogadóirodánál van. A fogadási könyvelés megmutatja, hol van a pénzed, és hogy az egészet összeadva mennyit kerestél.",
+    "intro": "Magyarországon az online sportfogadás gyakorlatilag a Szerencsejáték Zrt. (Tippmix) monopóliuma, ezért az engedéllyel rendelkező fogadóirodák közötti surebetezés itt nem lehetséges. A fogadási könyvelés ettől még megmutatja, mennyit fizettél be, mennyit vettél ki, és hogy az egészet összeadva mennyit nyertél vagy veszítettél.",
     "blocks": [
       {
         "type": "h2",
@@ -1699,7 +1603,7 @@
       },
       {
         "type": "p",
-        "text": "Az arbitrázsfogadásnál az egyik fogadóirodánál nyersz, a másiknál veszítesz. Az egyenleged folyamatosan változik, és rendszeresen be- és kifizetést kell végezned, hogy mindenhol legyen elég pénz. Rendes könyvelés nélkül nehéz átlátni, hogy összességében nyereségben vagy-e."
+        "text": "Az arbitrázsfogadás (surebet) lényege, hogy több fogadóirodánál fogadsz, de Magyarországon ez az engedélyezett piacon nem megoldható, mert csak a Tippmix működik legálisan. A külföldi oldalak blokkoltak, használatukat nem javasoljuk. Az egyenleged így is folyamatosan változik, és rendes könyvelés nélkül nehéz átlátni, hogy összességében nyereségben vagy-e."
       },
       {
         "type": "h2",
@@ -1708,31 +1612,31 @@
       {
         "type": "ul",
         "items": [
-          "Minden be- és kifizetés fogadóirodánként",
-          "Az aktuális egyenleged minden fogadóirodánál",
+          "Minden be- és kifizetés dátummal",
+          "Az aktuális egyenleged a Tippmix-számládon",
           "Az összes fogadás tétje, szorzója és eredménye",
-          "Az összprofitod: aktuális egyenlegek plusz kifizetések mínusz befizetések"
+          "Az összprofitod: aktuális egyenleg plusz kifizetések mínusz befizetések"
         ]
       },
       {
         "type": "example",
-        "title": "Példa: összprofit a fogadóirodák között",
+        "title": "Példa: összprofit",
         "rows": [
           [
             "Összes befizetés",
-            "€10,000"
+            "400 000 Ft"
           ],
           [
             "Összes kifizetés",
-            "€3,000"
+            "120 000 Ft"
           ],
           [
-            "Jelenlegi egyenleg a fogadóirodáknál",
-            "€7,800"
+            "Jelenlegi egyenleg a fogadóirodánál",
+            "312 000 Ft"
           ],
           [
             "Profit",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "120 000 Ft + 312 000 Ft − 400 000 Ft = 32 000 Ft"
           ]
         ]
       },
@@ -1744,19 +1648,19 @@
         "type": "ul",
         "items": [
           "A be- és kifizetéseket még aznap rögzítsd.",
-          "Hetente egyszer vesd össze a saját nyilvántartásodban szereplő egyenleget a fogadóiroda által mutatott egyenleggel.",
+          "Hetente egyszer vesd össze a saját nyilvántartásodban szereplő egyenleget a Tippmix által mutatott egyenleggel.",
           "Különítsd el a fogadási pénzedet a mindennapi pénzedtől, hogy véletlenül se fogadj olyan összeggel, amelyre másra van szükséged."
         ]
       },
       {
         "type": "tip",
-        "text": "A BetTrackerAI számlakezelése fogadóirodánként mutatja az egyenleget, a befizetéseket és a profitot, így mindig tudod, hol áll a pénzed."
+        "text": "A BetTrackerAI számlakezelése megmutatja az egyenleget, a befizetéseket és a profitot, így mindig tudod, hol áll a pénzed."
       }
     ],
     "faq": [
       {
         "q": "Kell adózni a fogadási nyeremények után?",
-        "a": "A szerencsejáték-nyeremények adózása országonként eltérő. Egyes szabályozott piacokon az engedéllyel rendelkező fogadóirodák nyereményei adómentesek, máshol be kell vallani őket. Nézz utána az adott országban érvényes szabályoknak, vagy kérd helyi szakértő segítségét."
+        "a": "Magyarországon a Szerencsejáték Zrt. (Tippmix) nyereményei a játékosok számára adómentesek. A szabályok azonban változhatnak, ezért mindig nézz utána az aktuális előírásoknak, vagy kérd szakértő segítségét."
       },
       {
         "q": "Milyen gyakran frissítsem a fogadási naplómat?",
@@ -1769,11 +1673,11 @@
   "tjen-penge-paa-odds-uden-risiko": {
     "title": "Pénzkeresés sportfogadással kockázat nélkül: így működik a fedezés és az arbitrázs",
     "metaTitle": "Pénzkeresés sportfogadással kockázat nélkül 2026",
-    "description": "Hogyan keress pénzt sportfogadással kockázat nélkül? Surebetek és fedezés kidolgozott példákkal €-ban, reális fogadási stratégia és a valódi buktatók.",
+    "description": "Hogyan keress pénzt sportfogadással kockázat nélkül? Surebetek és fedezés kidolgozott példákkal forintban (Ft), reális fogadási stratégia, a magyar piac korlátai és a valódi buktatók.",
     "keyword": "pénzkeresés sportfogadással kockázat nélkül",
     "category": "Stratégia",
     "ctaLabel": "Garantált profitot hozó surebetek megtekintése",
-    "intro": "Sportfogadással kockázat nélkül is lehet pénzt keresni: ugyanazon esemény minden kimenetelére más-más fogadóirodánál fogadsz, és az összesített odds többet fizet, mint amennyit megtettél. Ez a sportfogadási arbitrázs, vagyis a surebet. A profit már a kezdőrúgás előtt biztos, általában 1–3%. A kockázat nem az eredményben rejlik, hanem az odds mozgásában, a hibákban és a számlakorlátozásokban.",
+    "intro": "Elméletben sportfogadással kockázat nélkül is lehet pénzt keresni: ugyanazon esemény minden kimenetelére más-más fogadóirodánál fogadsz, és az összesített odds többet fizet, mint amennyit megtettél. Ez a sportfogadási arbitrázs, vagyis a surebet. A profit már a kezdőrúgás előtt biztos, általában 1–3%. A kockázat nem az eredményben rejlik, hanem az odds mozgásában, a hibákban és a számlakorlátozásokban. Fontos tudni: Magyarországon az online sportfogadás gyakorlatilag a Szerencsejáték Zrt. (Tippmix) állami monopóliuma, ezért engedélyezett hazai fogadóirodák között surebetezni nem lehet. Az alábbi példák a módszer megértését szolgálják.",
     "blocks": [
       {
         "type": "h2",
@@ -1781,19 +1685,19 @@
       },
       {
         "type": "p",
-        "text": "A fogadóiroda azért keres pénzt, mert az általa kínált szorzók együttesen 100% fölötti valószínűséget adnak ki. Ha két fogadóiroda eltérően értékeli ugyanazt az eseményt, mindegyiknél a legjobb árat választod egy-egy különböző kimenetelre. Ha az összesített valószínűség 100% alá esik, a profit garantált. Ez matematikai fogadás, nem tippelgetés. A teljes működést itt magyarázzuk el: [hogyan működik az arbitrázsfogadás?](/en/guides/arbitrage-betting)"
+        "text": "A fogadóiroda azért keres pénzt, mert az általa kínált szorzók együttesen 100% fölötti valószínűséget adnak ki. Ha két fogadóiroda eltérően értékeli ugyanazt az eseményt, mindegyiknél a legjobb árat választod egy-egy különböző kimenetelre. Ha az összesített valószínűség 100% alá esik, a profit garantált. Ez matematikai fogadás, nem tippelgetés. Magyarországon azonban a szabályozott piacot a Szerencsejáték Zrt. (Tippmix) adja, a külföldi oldalak pedig blokkoltak, ezért ez a módszer itthon az engedélyezett szolgáltatók között nem alkalmazható, engedély nélküli oldalakat pedig nem javasolunk. A teljes működést itt magyarázzuk el: [hogyan működik az arbitrázsfogadás?](/en/guides/arbitrage-betting)"
       },
       {
         "type": "example",
-        "title": "Példa: kétkimenetelű kosárlabda-mérkőzés (hosszabbítással), €1,000",
+        "title": "Szemléltető példa: kétkimenetelű kosárlabda-mérkőzés (hosszabbítással), 400 000 Ft",
         "rows": [
           [
             "A csapat az 1. fogadóirodánál, odds 1.95",
-            "Tét: €520.88"
+            "Tét: 208 354 Ft"
           ],
           [
             "B csapat a 2. fogadóirodánál, odds 2.12",
-            "Tét: €479.12"
+            "Tét: 191 646 Ft"
           ],
           [
             "Az odds reciprokainak összege",
@@ -1801,11 +1705,11 @@
           ],
           [
             "Kifizetés, bárki nyer",
-            "kb. €1,015.72"
+            "kb. 406 290 Ft"
           ],
           [
             "Garantált profit",
-            "kb. €15.72 (1.6%)"
+            "kb. 6 290 Ft (1.6%)"
           ]
         ]
       },
@@ -1815,34 +1719,34 @@
       },
       {
         "type": "p",
-        "text": "A fedezés ugyanerre a matematikára épül, de egy már megkötött fogadásból indul ki. Ha a szorzó neked kedvező irányba mozdul, a másik kimenetelre fogadsz egy másik fogadóirodánál, és az eredménytől függetlenül lezárod a profitot."
+        "text": "A fedezés ugyanerre a matematikára épül, de egy már megkötött fogadásból indul ki. Ha a szorzó neked kedvező irányba mozdul, a másik kimenetelre is fogadsz, és az eredménytől függetlenül lezárod a profitot. Magyarországon ez a Tippmixen belül is megtehető, amennyiben a piac mindkét oldalt kínálja."
       },
       {
         "type": "example",
-        "title": "Példa: 2,5 gól feletti fogadás mérkőzés előtt, €500 tétért",
+        "title": "Példa: 2,5 gól feletti fogadás mérkőzés előtt, 200 000 Ft tétért",
         "rows": [
           [
             "Eredeti fogadás: 2,5 gól felett, odds 2.40",
-            "Tét: €500, lehetséges kifizetés: €1,200"
+            "Tét: 200 000 Ft, lehetséges kifizetés: 480 000 Ft"
           ],
           [
             "Egy korai gól után: 2,5 gól alatt, odds 2.60",
-            "Tét: €461.54"
+            "Tét: 184 615 Ft"
           ],
           [
             "Összes megtett tét",
-            "€961.54"
+            "384 615 Ft"
           ],
           [
             "Kifizetés bármelyik eredménynél",
-            "€1,200"
+            "480 000 Ft"
           ],
           [
             "Lezárt profit",
-            "kb. €238.46 (24.8%)"
+            "kb. 95 385 Ft (24.8%)"
           ]
         ],
-        "note": "A képlet: fedezeti tét = lehetséges kifizetés ÷ új odds. Itt 1,200 ÷ 2.60 = €461.54."
+        "note": "A képlet: fedezeti tét = lehetséges kifizetés ÷ új odds. Itt 480 000 ÷ 2.60 = 184 615 Ft."
       },
       {
         "type": "h2",
@@ -1850,7 +1754,7 @@
       },
       {
         "type": "p",
-        "text": "Egy surebeten garantált profit kicsi, ezért az eredményt a mennyiség és a fegyelem hozza. Egy reális arbitrázsfogadási stratégia így néz ki:"
+        "text": "Egy surebeten garantált profit kicsi, ezért az eredményt a mennyiség és a fegyelem hozza. Egy reális arbitrázsfogadási stratégia (olyan piacon, ahol több engedélyezett szolgáltató működik) így néz ki:"
       },
       {
         "type": "example",
@@ -1858,7 +1762,7 @@
         "rows": [
           [
             "Tét surebetenként",
-            "€1,000"
+            "400 000 Ft"
           ],
           [
             "Átlagos profit",
@@ -1870,19 +1774,19 @@
           ],
           [
             "Várható havi eredmény",
-            "kb. €600"
+            "kb. 240 000 Ft"
           ],
           [
-            "Ugyanez a felállás €2,500 tétnél surebetenként",
-            "kb. €1,500"
+            "Ugyanez a felállás 1 000 000 Ft tétnél surebetenként",
+            "kb. 600 000 Ft"
           ]
         ]
       },
       {
         "type": "ul",
         "items": [
-          "**Told szét a fogadásaidat** több fogadóiroda között, hogy egyetlen számla se tűnjön ki.",
-          "**Tarts készenlétben egyenleget** minden fogadóirodánál, hogy perceken belül tudj lépni.",
+          "**Maradj a szabályozott keretek között:** Magyarországon a Tippmix (Szerencsejáték Zrt.) az engedélyezett szolgáltató, ezért a fogadások több engedélyezett fogadóiroda közötti szétosztása itthon nem lehetséges. Engedély nélküli vagy blokkolt oldalakat ne használj.",
+          "**Tervezd meg előre a keretedet**, és csak olyan összeget tegyél fel, amelynek elvesztését megengedheted magadnak.",
           "**Rögzíts minden fogadást**, hogy a valódi ROI-t lásd, ne csak megérzésekre hagyatkozz. Egy [fogadáskövető](/en/guides/bet-tracker) ezt automatikusan elvégzi."
         ]
       },
@@ -1901,13 +1805,13 @@
       },
       {
         "type": "p",
-        "text": "Okosan fogadni annyit tesz, hogy a gyakorlati kockázatokat is kiiktatod, nem csak a matematikaiakat. A [BetTracker AI](/en) kiszámolt tétmegosztással mutatja a surebeteket, így még azelőtt megkötheted a fogadásokat, hogy az odds elmozdulna."
+        "text": "Okosan fogadni annyit tesz, hogy a gyakorlati kockázatokat is kiiktatod, nem csak a matematikaiakat. A [BetTracker AI](/en) kiszámolt tétmegosztással mutatja a surebeteket, így még azelőtt megkötheted a fogadásokat, hogy az odds elmozdulna. Magyarországon a Szerencsejáték Zrt.-nél szerzett nyeremény a játékosnak adómentes, de a szabályokat mindig ellenőrizd az aktuális hazai előírások szerint. Ha a fogadás kezd kicsúszni az irányításod alól, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
       }
     ],
     "faq": [
       {
         "q": "Tényleg lehet kockázat nélkül pénzt keresni sportfogadáson?",
-        "a": "Egy helyesen megkötött surebetnél az eredmény nem számít. A megmaradó kockázat gyakorlati jellegű: mozgó oddsok, érvénytelenített fogadások és a rossz piac kiválasztása."
+        "a": "Egy helyesen megkötött surebetnél az eredmény nem számít. A megmaradó kockázat gyakorlati jellegű: mozgó oddsok, érvénytelenített fogadások és a rossz piac kiválasztása. Magyarországon ráadásul az engedélyezett piacot a Szerencsejáték Zrt. (Tippmix) adja, így engedélyezett fogadóirodák közötti surebetezésre itt nincs lehetőség."
       },
       {
         "q": "Mi a különbség a surebet és a fedezeti fogadás (hedging) között?",
@@ -1915,18 +1819,18 @@
       },
       {
         "q": "Mennyi pénz kell az induláshoz?",
-        "a": "Elindulhatsz €200–500 összeggel, néhány fogadóiroda között elosztva. Kisebb tétek mellett viszont egy surebeten csak néhány euró a nyereség."
+        "a": "Olyan piacokon, ahol az arbitrázs engedélyezett, elindulhatsz 80 000–200 000 Ft összeggel, néhány fogadóiroda között elosztva. Kisebb tétek mellett viszont egy surebeten csak néhány ezer forint a nyereség."
       }
     ]
   },
   "find-surebets-automatisk": {
     "title": "Surebetek automatikus keresése: így veszi észre az odds-szkenner az árazási hibákat",
     "metaTitle": "Surebetek automatikus keresése – Odds-szkenner 2026",
-    "description": "Hogyan találhatsz surebeteket automatikusan odds-szkennerrel: hogyan szúrja ki a fogadási szoftver az árazási hibákat, számpéldák €-ban, és mire figyelj.",
+    "description": "Hogyan találhatsz surebeteket automatikusan odds-szkennerrel: hogyan szúrja ki a fogadási szoftver az árazási hibákat, számpéldák Ft-ban, és mire figyelj Magyarországon.",
     "keyword": "surebetek automatikus keresése",
     "category": "Stratégia",
     "ctaLabel": "Surebet-szkenner indítása",
-    "intro": "Ha automatikusan szeretnél surebeteket találni, használj odds-szkennert, amely néhány másodpercenként összehasonlítja a több tucat fogadóiroda oddsait. Amikor a reciprok oddsok összege 1 alá csökken, a szoftver jelzi a surebetet, a tétek már ki is vannak számolva. Másodpercek alatt megtalálja azokat az árazási hibákat, amelyek kézzel órákig tartanának, ráadásul még azelőtt, hogy a fogadóiroda kijavítaná őket.",
+    "intro": "Ha automatikusan szeretnél surebeteket találni, használj odds-szkennert, amely néhány másodpercenként összehasonlítja a több tucat fogadóiroda oddsait. Amikor a reciprok oddsok összege 1 alá csökken, a szoftver jelzi a surebetet, a tétek már ki is vannak számolva. Másodpercek alatt megtalálja azokat az árazási hibákat, amelyek kézzel órákig tartanának, ráadásul még azelőtt, hogy a fogadóiroda kijavítaná őket. Fontos: Magyarországon az online sportfogadás gyakorlatilag állami monopólium, csak a Szerencsejáték Zrt. (Tippmix) legális, ezért két hazai, engedélyezett iroda között surebetezni nem lehet.",
     "blocks": [
       {
         "type": "h2",
@@ -1954,15 +1858,15 @@
       },
       {
         "type": "example",
-        "title": "Példa: a szkenner által észrevett árazási hiba, teljes tét €1,000",
+        "title": "Példa (elvi szemléltetés): a szkenner által észrevett árazási hiba, teljes tét 100 000 Ft",
         "rows": [
           [
             "Több mint 2,5 gól az 1. fogadóirodánál, odds 2.25",
-            "Tét: €461.72"
+            "Tét: 46 172 Ft"
           ],
           [
             "Kevesebb mint 2,5 gól a 2. fogadóirodánál, odds 1.93",
-            "Tét: €538.28"
+            "Tét: 53 828 Ft"
           ],
           [
             "1/2.25 + 1/1.93",
@@ -1970,14 +1874,14 @@
           ],
           [
             "Kifizetés bármelyik eredménynél",
-            "kb. €1,038.88"
+            "kb. 103 888 Ft"
           ],
           [
             "Garantált profit",
-            "kb. €38.88 (3.9%)"
+            "kb. 3 888 Ft (3,9%)"
           ]
         ],
-        "note": "Az 1. fogadóiroda még nem reagált a csapathírek változására. A szkenner másodperceken belül jelezte az eltérést."
+        "note": "Az 1. fogadóiroda még nem reagált a csapathírek változására. A szkenner másodperceken belül jelezte az eltérést. Ez csak számpélda: Magyarországon jelenleg a Tippmix (Szerencsejáték Zrt.) az egyetlen legális online fogadási lehetőség, így két hazai iroda között ilyen fogadás nem köthető, és engedély nélküli vagy blokkolt oldalakat nem javaslunk."
       },
       {
         "type": "h2",
@@ -2007,7 +1911,7 @@
       {
         "type": "ul",
         "items": [
-          "**Fogadóirodák lefedettsége:** minél több fogadóiroda, annál több surebet. Ellenőrizd, hogy azok is szerepelnek, ahol van fiókod.",
+          "**Fogadóirodák lefedettsége:** minél több fogadóiroda, annál több surebet. Magyarországon azonban csak a Tippmix (Szerencsejáték Zrt.) legális, a külföldi oldalak blokkoltak, engedély nélküli irodát pedig ne használj.",
           "**Frissítési gyakoriság:** az oddsokat néhány másodpercenként frissíteni kell, különösen a [live surebetek](/en/guides/live-arbitrage-betting-scanner) esetében.",
           "**Szűrők:** sportág, piac, minimális profit és fogadóirodák szerint, hogy csak azt lásd, amivel tényleg fogadhatsz.",
           "**Tétkalkulátor:** beépítve, így azonnal megkötheted a fogadásokat. A számokat a [surebet-kalkulátorban](/en/calculator) is ellenőrizheted.",
@@ -2016,13 +1920,13 @@
       },
       {
         "type": "p",
-        "text": "Válaszd ki a fogadóirodáidat, állíts be 1%-os minimális profitot, és told meg gyorsan a fogadásokat egymás után. A [BetTracker AI](/en) helyetted pásztázza a fogadóirodákat, és valós időben mutatja a surebeteket, kiszámolt tétmegosztással."
+        "text": "Az odds-szkenner és a [BetTracker AI](/en) segít az oddsok összehasonlításában, a tétmegosztás kiszámolásában és a fogadásaid követésében. Magyarországon a Szerencsejáték Zrt. (Tippmix) nyereményei adómentesek a játékosoknak, de surebetezésre hazai, engedélyezett irodák között nincs lehetőség. Ne használj engedély nélküli oldalakat, és játs​szál felelősen: segítséget a Szerencsejáték Zrt. felelős játékszervezési programja és a nemzeti addiktológiai segélyvonal nyújt."
       }
     ],
     "faq": [
       {
         "q": "Naponta hány surebetet talál egy szkenner?",
-        "a": "Általában néhány tucattól akár több száz darabig, attól függően, hány fogadóirodát és sportágat választasz, és mekkora a beállított minimális profit."
+        "a": "Általában néhány tucattól akár több száz darabig, attól függően, hány fogadóirodát és sportágat választasz, és mekkora a beállított minimális profit. Magyarországon, ahol csak a Tippmix legális, a hazai irodák között gyakorlatilag nincs surebet."
       },
       {
         "q": "Megkötheti helyettem a fogadásokat automatikusan?",
@@ -2037,11 +1941,11 @@
   "live-arbitrage-betting-scanner": {
     "title": "Élő arbitrázs fogadási szkenner: így találhatsz élő surebeteket mérkőzés közben",
     "metaTitle": "Élő arbitrázs fogadási szkenner – élő surebetek 2026",
-    "description": "Hogyan találja meg az élő arbitrázs szkenner a surebeteket a mérkőzések alatt: sebesség, fogadási késleltetés, kidolgozott példák €-ban, és hogyan kerüld el a klasszikus hibákat.",
+    "description": "Hogyan találja meg az élő arbitrázs szkenner a surebeteket a mérkőzések alatt: sebesség, fogadási késleltetés, kidolgozott példák forintban (Ft), és hogyan kerüld el a klasszikus hibákat.",
     "keyword": "élő arbitrázs fogadási szkenner",
     "category": "Stratégia",
     "ctaLabel": "Élő surebetek megtekintése",
-    "intro": "Az élő arbitrázs fogadási szkenner a mérkőzések közben összehasonlítja a fogadóirodák élő oddsait, és abban a pillanatban jelzi a surebetet, amikor az árak eltérnek egymástól. Élő surebet gyakrabban akad, mint meccs előtti, mert a fogadóirodák eltérő sebességgel reagálnak a gólokra, a szünetekre és a piros lapokra. Gyorsabban is tűnnek el, gyakran 10–60 másodpercen belül, ezért a sebesség és a fegyelem minden eddiginél fontosabb.",
+    "intro": "Az élő arbitrázs fogadási szkenner a mérkőzések közben összehasonlítja a fogadóirodák élő oddsait, és abban a pillanatban jelzi a surebetet, amikor az árak eltérnek egymástól. Élő surebet gyakrabban akad, mint meccs előtti, mert a fogadóirodák eltérő sebességgel reagálnak a gólokra, a szünetekre és a piros lapokra. Gyorsabban is tűnnek el, gyakran 10–60 másodpercen belül, ezért a sebesség és a fegyelem minden eddiginél fontosabb. Magyarországon azonban az online sportfogadás gyakorlatilag állami monopólium (Szerencsejáték Zrt., Tippmix), ezért a hazai engedélyes fogadóirodák között surebetezni nem lehet; az alábbi példák az elvet mutatják be.",
     "blocks": [
       {
         "type": "h2",
@@ -2065,15 +1969,15 @@
       },
       {
         "type": "example",
-        "title": "Példa: élő tenisz egy brék után, teljes tét €800",
+        "title": "Példa: élő tenisz egy brék után, teljes tét 200 000 Ft",
         "rows": [
           [
             "A játékos az 1. fogadóirodánál, odds 1.72",
-            "Tét €467.63"
+            "Tét 116 908 Ft"
           ],
           [
             "B játékos a 2. fogadóirodánál, odds 2.42",
-            "Tét €332.37"
+            "Tét 83 092 Ft"
           ],
           [
             "1/1.72 + 1/2.42",
@@ -2081,26 +1985,26 @@
           ],
           [
             "Kifizetés, bárki nyer",
-            "kb. €804.33"
+            "kb. 201 082 Ft"
           ],
           [
             "Biztosított profit",
-            "kb. €4.33 (0.5%)"
+            "kb. 1 082 Ft (0.5%)"
           ]
         ],
         "note": "Az élő marzsok gyakran kisebbek, mint a meccs előttiek. A nagyobb fogadásszám kompenzálja ezt, de csak akkor, ha gyorsan és pontosan hajtod végre a fogadásokat."
       },
       {
         "type": "example",
-        "title": "Példa: gólszám (over/under) egy korai gól után, teljes tét €1,000",
+        "title": "Példa: gólszám (over/under) egy korai gól után, teljes tét 250 000 Ft",
         "rows": [
           [
             "3,5 gól felett az 1. fogadóirodánál, odds 2.30",
-            "Tét €451.07"
+            "Tét 112 768 Ft"
           ],
           [
             "3,5 gól alatt a 2. fogadóirodánál, odds 1.89",
-            "Tét €548.93"
+            "Tét 137 232 Ft"
           ],
           [
             "Az odds reciprokainak összege",
@@ -2108,11 +2012,11 @@
           ],
           [
             "Kifizetés bármelyik kimenetelnél",
-            "kb. €1,037.47"
+            "kb. 259 366 Ft"
           ],
           [
             "Biztosított profit",
-            "kb. €37.47 (3.7%)"
+            "kb. 9 366 Ft (3.7%)"
           ]
         ]
       },
@@ -2130,7 +2034,7 @@
           "**Fogadási késleltetés:** a fogadásodat csak néhány másodperc múlva fogadják el. Ha közben elmozdul az odds, elutasíthatják.",
           "**Felfüggesztett piacok:** gól vagy brék után a piacok rövid időre bezárnak. Soha ne told meg az első fogadást, amíg a második piac fel van függesztve.",
           "**Részleges elfogadás:** egyes fogadóirodák élőben csak a tét egy részét fogadják el. A második fogadás megtétele előtt ellenőrizd a visszaigazolást.",
-          "**Számolj újra gyorsan:** ha a második fogadás odds-a elmozdul, számold újra a [surebet kalkulátorban](/en/calculator), és fedezd le a elérhető legjobb áron."
+          "**Számolj újra gyorsan:** ha a második fogadás odds-a elmozdul, számold újra a [surebet kalkulátorban](/en/calculator), és fedezd le az elérhető legjobb áron."
         ]
       },
       {
@@ -2139,7 +2043,7 @@
       },
       {
         "type": "h2",
-        "text": "Élő oddsösszehasonlítás: mit kell tudnia a szkenneredenek"
+        "text": "Élő oddsösszehasonlítás: mit kell tudnia a szkennernek"
       },
       {
         "type": "ul",
@@ -2147,12 +2051,12 @@
           "**Néhány másodpercenként frissít:** a 10 másodpercnél régebbi élő árak használhatatlanok.",
           "**Megmutatja az ár korát:** így látod, mennyire friss a surebet.",
           "**Külön szűri az élő és a meccs előtti fogadásokat:** az élő surebetek más megközelítést igényelnek, és eleinte alacsonyabb téteket.",
-          "**Naplózz minden fogadást:** az élő eredmények jobban ingadoznak, ezért a [fogadáskövető](/en/guides/bet-tracker) nélkülözhetetlen, hogy lásd, valóban nyereséges vagy-e."
+          "**Naplózz minden fogadást:** az élő eredmények jobban ingadoznak, ezért a [fogadáskövető](/en/guides/bet-tracker) nélkülözhetetlen, hogy lásd, valóban nyereséges vagy-e. A Szerencsejáték Zrt.-nél (Tippmix) szerzett nyeremények a játékosok számára adómentesek, a követés mégis segít átlátni az eredményeidet."
         ]
       },
       {
         "type": "p",
-        "text": "Ha új vagy a területen, kezdd meccs előtti fogadásokkal, és csak akkor válts élőre, amikor már biztos a rutinod. Előbb olvasd el, hogyan [találhatsz surebeteket automatikusan](/en/guides/find-surebets-automatically). Ha készen állsz, a [BetTracker AI](/en) valós időben kiszámolt tétmegosztással mutatja az élő surebeteket."
+        "text": "Fontos tudni, hogy Magyarországon az online sportfogadás gyakorlatilag állami monopólium: egyedül a Szerencsejáték Zrt. (Tippmix) működik, a külföldi oldalakat pedig blokkolják, így a hazai engedélyes fogadóirodák között surebetet nem lehet kivitelezni. Nem ajánlunk és nem támogatunk engedély nélküli vagy blokkolt oldalakat; a szabályozást az SZTFH felügyeli, az aktuális szabályokat mindig ellenőrizd. Ha új vagy a területen, kezdd az elmélettel és meccs előtti példákkal, és csak akkor válts élőre, amikor már biztos a rutinod. Előbb olvasd el, hogyan [találhatsz surebeteket automatikusan](/en/guides/find-surebets-automatically). A [BetTracker AI](/en) valós időben kiszámolt tétmegosztással mutatja az élő surebeteket, a fogadásaidat pedig követheted is benne. Ha a fogadás problémát okoz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a nemzeti addiktológiai segélyvonaltól."
       }
     ],
     "faq": [
@@ -2166,18 +2070,18 @@
       },
       {
         "q": "A fogadóirodák gyorsabban korlátozzák az élő arbitrázsfogadókat?",
-        "a": "Gyakran igen, mert a lassú árakra épülő élő arbitrázst könnyű kiszúrni. Keverj közé normál fogadásokat is, és olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+        "a": "Gyakran igen, mert a lassú árakra épülő élő arbitrázst könnyű kiszúrni. Magyarországon ráadásul a Tippmix mellett nincs másik engedélyes fogadóiroda, így az itteni fogadók számára az élő arbitrázs a gyakorlatban nem járható út. Az általános tudnivalókról olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
       }
     ]
   },
   "find-value-bets-med-ai": {
     "title": "Value fogadások keresése mesterséges intelligenciával: hogyan találja meg az AI oddsszkenner a +EV fogadásokat",
     "metaTitle": "Value fogadások keresése AI-val – AI oddsszkenner 2026",
-    "description": "Hogyan találhatsz value fogadásokat AI-val: hogyan számolja ki az AI oddsszkenner a fair oddsot, hogyan szúrja ki a +EV fogadásokat, és mire számíthatsz – példákkal, €-ban.",
+    "description": "Hogyan találhatsz value fogadásokat AI-val: hogyan számolja ki az AI oddsszkenner a fair oddsot, hogyan szúrja ki a +EV fogadásokat, és mire számíthatsz a magyar piacon – példákkal, Ft-ban.",
     "keyword": "value fogadások keresése ai-val",
     "category": "Stratégia",
     "ctaLabel": "Value fogadások keresése AI-val",
-    "intro": "Ha AI-val szeretnél value fogadásokat találni, olyan AI oddsszkennert használsz, amely megbecsüli az egyes kimenetelek fair valószínűségét, jellemzően a sharp fogadóirodák árából, a árrés levonása után, majd összeveti azt a soft fogadóirodák oddsaival. Ha a kínált odds magasabb a fair oddsnál, a fogadásnak pozitív a várható értéke (+EV). Az összehasonlítást az AI másodpercek alatt elvégzi több ezer piacon.",
+    "intro": "Ha AI-val szeretnél value fogadásokat találni, olyan AI oddsszkennert használsz, amely megbecsüli az egyes kimenetelek fair valószínűségét, jellemzően a sharp piacok árából, az árrés levonása után, majd összeveti azt a Tippmix (Szerencsejáték Zrt.) oddsaival. Ha a kínált odds magasabb a fair oddsnál, a fogadásnak pozitív a várható értéke (+EV). Az összehasonlítást az AI másodpercek alatt elvégzi több ezer piacon.",
     "blocks": [
       {
         "type": "h2",
@@ -2196,7 +2100,7 @@
             "50% (fair odds 2.00)"
           ],
           [
-            "Kínált odds a soft fogadóirodánál",
+            "Kínált odds a Tippmixnél",
             "2.10"
           ],
           [
@@ -2204,15 +2108,15 @@
             "0.50 × 2.10 − 1 = +5%"
           ],
           [
-            "Tét: €50",
-            "Várható profit: €2.50 fogadásonként"
+            "Tét: 20 000 Ft",
+            "Várható profit: 1 000 Ft fogadásonként"
           ],
           [
-            "300 fogadás á €50 (€15,000 forgalom)",
-            "Várható profit kb. €750"
+            "300 fogadás á 20 000 Ft (6 000 000 Ft forgalom)",
+            "Várható profit kb. 300 000 Ft"
           ]
         ],
-        "note": "A várható profit átlagérték. A tényleges eredmények ingadoznak körülötte, főleg kevés fogadás esetén."
+        "note": "A várható profit átlagérték. A tényleges eredmények ingadoznak körülötte, főleg kevés fogadás esetén. A példa csak szemléltet: a Tippmixnél valóban elérhető oddsokat és a nyeremények aktuális adózási szabályait ellenőrizd (a Szerencsejáték Zrt.-nél szerzett nyeremény a játékosoknak adómentes)."
       },
       {
         "type": "h2",
@@ -2220,7 +2124,7 @@
       },
       {
         "type": "p",
-        "text": "A sharp fogadóirodák árrése alacsony, és gyorsan reagálnak a profi tőkére, ezért az áraik adják a valós valószínűség legjobb becslését. Az AI kivonja az árrést a sharp árból, és kiszámolja a fair oddsot."
+        "text": "A sharp piacok árrése alacsony, és gyorsan reagálnak a profi tőkére, ezért az áraik adják a valós valószínűség legjobb becslését. Az AI ezeket csak referenciaként használja: kivonja az árrést a sharp árból, és kiszámolja a fair oddsot."
       },
       {
         "type": "example",
@@ -2247,7 +2151,7 @@
       {
         "type": "ul",
         "items": [
-          "**Piacegyeztetés:** az AI felismeri a azonos eseményeket és vonalakat a különböző fogadóirodáknál.",
+          "**Piacegyeztetés:** az AI felismeri a azonos eseményeket és vonalakat a különböző forrásoknál.",
           "**Sebesség:** az árakat néhány másodpercenként újraszámolja, ahogy a piacok mozognak.",
           "**Szűrés:** a szkenner figyelmen kívül hagyja az apró előnyöket és a gyanús kiugró értékeket, amelyeket valószínűleg érvénytelenítenek."
         ]
@@ -2259,9 +2163,9 @@
       {
         "type": "ul",
         "items": [
-          "**Surebetek:** minden kimenetelnél garantált profit, de kicsi a haszonkulcs, és gyorsan jönnek a korlátozások.",
+          "**Surebetek:** minden kimenetelnél garantált profit, de kicsi a haszonkulcs, és gyorsan jönnek a korlátozások. Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Tippmix, Szerencsejáték Zrt.), ezért engedélyezett magyar fogadóirodák között surebetezni nem lehetséges. Engedély nélküli vagy blokkolt oldalak használatát nem javasoljuk.",
           "**Value betek:** egyedi fogadások nagyobb várható profittal, de szórással és vesztes szériákkal.",
-          "**Kombináld őket:** sok fogadó a surebeteket használja a egyenletes profitra, a value beteket pedig a ROI növelésére."
+          "**Kombináld őket:** ahol több engedélyezett szolgáltató van, sok fogadó a surebeteket használja a egyenletes profitra, a value beteket pedig a ROI növelésére. Magyarországon ez a lehetőség a piac szerkezete miatt korlátozott."
         ]
       },
       {
@@ -2278,7 +2182,7 @@
           "**A bankrollod 1–2%-át tedd fel** value fogadásonként. Lásd: [bankrollkezelés](/en/guides/bankroll-management).",
           "**Legalább 2–3%-os előny**, hogy legyen tartalék a fair odds becslésének pontatlanságaira.",
           "**Kövesd a záró oddsot:** ha tartósan jobb oddsot kapsz a záró vonalnál, az a legjobb jele annak, hogy a fogadásaid value-t hordoznak.",
-          "**Több száz fogadás után ítélkezz**, soha ne egy hét után."
+          "**Több száz fogadás után ítélkezz**, soha ne egy hét után. Ha úgy érzed, hogy a fogadás kicsúszik az irányításod alól, fordulj a Szerencsejáték Zrt. felelős játékszervezési programjához vagy a nemzeti addiktológiai segélyvonalhoz."
         ]
       },
       {
@@ -2287,7 +2191,7 @@
       },
       {
         "type": "p",
-        "text": "A [BetTracker AI](/en) mesterséges intelligenciával pásztázza a fogadóirodákat, számolja ki a fair oddsot, és valós időben mutatja a value beteket és a surebeteket."
+        "text": "A [BetTracker AI](/en) mesterséges intelligenciával elemzi az oddsokat, számolja ki a fair oddsot, és valós időben mutatja a value beteket. Fogadni kizárólag az SZTFH által szabályozott, engedélyezett szolgáltatónál, a Tippmixnél (Szerencsejáték Zrt.) érdemes."
       }
     ],
     "faq": [
@@ -2297,11 +2201,11 @@
       },
       {
         "q": "Mennyit lehet keresni value bettinggel?",
-        "a": "A reális hosszú távú ROI gyakran a forgalom 2–5%-a, az előnytől, a fogadóirodáktól és attól függően, mennyi ideig maradnak nyitva a számláid."
+        "a": "A reális hosszú távú ROI gyakran a forgalom 2–5%-a, az előnytől és a rendelkezésre álló fogadási lehetőségektől függően. Magyarországon, ahol csak a Tippmix érhető el legálisan, ez a lehetőség szűkebb. Az adózás aktuális szabályait ellenőrizd; a Szerencsejáték Zrt.-nél szerzett nyeremény a játékosoknak adómentes."
       },
       {
         "q": "Korlátozzák a fogadóirodák a value fogadókat?",
-        "a": "Igen, a soft fogadóirodák gyakran korlátozzák azokat az ügyfeleket, akik rendszeresen jobb oddsot kapnak a záró vonalnál. Olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
+        "a": "Sok országban igen: a soft fogadóirodák gyakran korlátozzák azokat az ügyfeleket, akik rendszeresen jobb oddsot kapnak a záró vonalnál. Magyarországon a Tippmix működésének feltételeit mindig a jelenlegi szabályzatban ellenőrizd. Olvasd el, hogyan [kerülheted el a fogadóirodai korlátozásokat](/en/guides/avoid-bookmaker-limits)."
       }
     ]
   },
@@ -2312,7 +2216,7 @@
     "keyword": "legjobb sportfogadási eszközök",
     "category": "Stratégia",
     "ctaLabel": "Próbáld ki a BetTracker AI-t",
-    "intro": "A legjobb sportfogadási eszközök közé tartozik egy AI oddsszkenner, amely surebeteket és value beteket talál, egy oddsösszehasonlító sok fogadóirodával, egy surebet kalkulátor a pontos tétekhez, és egy fogadáskövető, amely méri a ROI-dat. Olyan fogadási szoftvert válassz, amely lefedi az általad használt fogadóirodákat, néhány másodpercenként frissíti az árakat, és reális forgalom mellett megtérül.",
+    "intro": "A legjobb sportfogadási eszközök közé tartozik egy AI oddsszkenner, amely surebeteket és value beteket talál, egy oddsösszehasonlító, egy surebet kalkulátor a pontos tétekhez, és egy fogadáskövető, amely méri a ROI-dat. Olyan fogadási szoftvert válassz, amely lefedi a számodra legálisan elérhető fogadóirodát (Magyarországon ez a Tippmix, a Szerencsejáték Zrt. szolgáltatása), gyorsan frissíti az árakat, és reális forgalom mellett megtérül.",
     "blocks": [
       {
         "type": "h2",
@@ -2333,7 +2237,7 @@
       },
       {
         "type": "p",
-        "text": "A kézi oddsösszehasonlítással egyetlen mérkőzésre találhatod meg a legjobb árat. Az AI oddsszkenner folyamatosan összeveti az összes fogadóiroda minden piacát, és csak azokat a kombinációkat mutatja, ahol előnyöd van."
+        "text": "A kézi oddsösszehasonlítással egyetlen mérkőzésre találhatod meg a legjobb árat. Az AI oddsszkenner folyamatosan összeveti a piacokat a rendelkezésre álló fogadóirodák között, és csak azokat a kombinációkat mutatja, ahol előnyöd van. Magyarországon az engedélyezett online fogadás a Tippmixre korlátozódik, ezért itt a követés és a kalkulátor a leghasznosabb."
       },
       {
         "type": "ul",
@@ -2353,11 +2257,11 @@
       },
       {
         "type": "example",
-        "title": "Példa: megtérülési pont egy havi €33-s eszköznél",
+        "title": "Példa: megtérülési pont egy havi €33-s (kb. 13 200 Ft) eszköznél",
         "rows": [
           [
             "Előfizetés",
-            "kb. €33 havonta"
+            "kb. €33 havonta (kb. 13 200 Ft)"
           ],
           [
             "Átlagos ROI surebeteknél",
@@ -2365,18 +2269,18 @@
           ],
           [
             "A megtérüléshez szükséges forgalom",
-            "€33 / 2% = €1,650"
+            "13 200 Ft / 2% = 660 000 Ft"
           ],
           [
-            "Tipikus forgalom (60 surebet × €400)",
-            "€24,000"
+            "Tipikus forgalom (60 surebet × 160 000 Ft)",
+            "9 600 000 Ft"
           ],
           [
             "Profit az előfizetés levonása után",
-            "€480 − €33 = €447"
+            "192 000 Ft − 13 200 Ft = 178 800 Ft"
           ]
         ],
-        "note": "Az árak hozzávetőleges euróösszegek. A BetTracker AI ára a Basic csomagnál kb. €20 havonta, a Premium csomagnál kb. €33."
+        "note": "Az árak hozzávetőleges euróösszegek, a forintos értékek 1 € ≈ 400 Ft árfolyammal számolt, kerekített példák. A BetTracker AI ára a Basic csomagnál kb. €20 havonta, a Premium csomagnál kb. €33. A példa csak a számítást szemlélteti: a surebetekhez több fogadóirodára van szükség, Magyarországon pedig engedélyezett fogadóirodák között ez nem megvalósítható."
       },
       {
         "type": "h2",
@@ -2385,11 +2289,11 @@
       {
         "type": "ul",
         "items": [
-          "**Fogadóirodák lefedettsége:** az eszköznek olyan fogadóirodákat kell tartalmaznia, amelyeket ténylegesen használhatsz.",
+          "**Fogadóirodák lefedettsége:** az eszköznek olyan fogadóirodákat kell tartalmaznia, amelyeket ténylegesen, legálisan használhatsz. Magyarországon az online sportfogadás gyakorlatilag állami monopólium (Tippmix, Szerencsejáték Zrt.), a külföldi oldalak blokkoltak, ezért engedélyezett magyar fogadóirodák között surebetezni nem lehet.",
           "**Frissítési gyakoriság:** mérkőzés előtt néhány másodperc, a [live surebeteknél](/en/guides/live-arbitrage-betting-scanner) ennél is gyorsabb.",
           "**Szűrők:** sportág, piac, fogadóiroda és minimális profit.",
           "**Beépített követés:** a szkennerből megkötött surebeteket automatikusan követni kell.",
-          "**Korrekt ár:** vesd össze a havi költséget a várható forgalmaddal. Lásd a [surebet eszközök összehasonlítását](/en/guides/surebet-tool-comparison)."
+          "**Korrekt ár:** vesd össze a havi költséget a várható forgalmaddal."
         ]
       },
       {
@@ -2412,7 +2316,7 @@
       },
       {
         "q": "Legális a fogadási szoftver?",
-        "a": "Az oddsok összehasonlítására és a fogadások követésére szolgáló eszközök használata legális. Az automatizált fogadásleadás viszont általában sérti a fogadóirodák szabályzatát. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
+        "a": "Az oddsok összehasonlítására és a fogadások követésére szolgáló eszközök használata legális. Az automatizált fogadásleadás viszont általában sérti a fogadóirodák szabályzatát. Magyarországon az online sportfogadás a Szerencsejáték Zrt. (Tippmix) kezében van, a felügyeletet az SZTFH látja el, a külföldi oldalak blokkoltak, és nem javasoljuk az engedély nélküli oldalak használatát. A Szerencsejáték Zrt.-től származó nyeremények a játékosok számára adómentesek, de az aktuális szabályokat mindig ellenőrizd. Ha a fogadás problémát okoz, kérj segítséget a Szerencsejáték Zrt. felelős játékszervezési programjától vagy a nemzeti addiktológiai segélyvonaltól. Lásd: [legálisak a surebetek?](/en/guides/are-surebets-legal)"
       }
     ]
   }

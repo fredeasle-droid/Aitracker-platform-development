@@ -20,7 +20,7 @@
       },
       {
         "type": "p",
-        "text": "Welkomstbonussen hebben andere voorwaarden naargelang de bookmaker en het land waarin je wedt. Sommige gereguleerde markten leggen een maximumbedrag voor bonussen op en beperken de omzetvoorwaarden om de consument te beschermen. Lees altijd de specifieke algemene voorwaarden voor je een aanbieding aanvaardt."
+        "text": "Welkomstbonussen hebben andere voorwaarden naargelang de bookmaker en het land waarin je wedt. Sommige gereguleerde markten leggen een maximumbedrag voor bonussen op en beperken de omzetvoorwaarden om de consument te beschermen. Controleer daarom altijd de actuele regels in België en lees de specifieke algemene voorwaarden voor je een aanbieding aanvaardt."
       },
       {
         "type": "ul",
@@ -46,7 +46,7 @@
       },
       {
         "q": "Hoeveel zijn gangbare welkomstbonussen waard?",
-        "a": "De waarde van bonussen en de omzetvoorwaarden verschillen per bookmaker en per rechtsgebied. In sommige gereguleerde markten kunnen welkomstaanbiedingen aan een maximum gebonden zijn, bijvoorbeeld €1,000 of €1,000 met een maximale rollover van tien keer de bonus. Controleer altijd de actuele voorwaarden bij de bookmaker van je keuze en ga na of die een geldige vergunning heeft om in België aan te bieden."
+        "a": "De waarde van bonussen en de omzetvoorwaarden verschillen per bookmaker en per rechtsgebied. In sommige gereguleerde markten kunnen welkomstaanbiedingen aan een maximum gebonden zijn, bijvoorbeeld €100 met een maximale rollover van tien keer de bonus. Controleer altijd de actuele voorwaarden bij de bookmaker van je keuze en ga na of die een geldige vergunning van de Kansspelcommissie heeft om in België aan te bieden."
       }
     ],
     "category": "Strategie",
@@ -57,7 +57,7 @@
     "metaTitle": "Zijn surebets legaal? Regels, belastingen en bookmakervoorwaarden",
     "description": "Mag je surebets plaatsen, en moet je belasting betalen op winsten? Dit zijn de regels en dit kunnen bookmakers doen tegen arbitragewedden.",
     "keyword": "zijn surebets legaal",
-    "intro": "Het korte antwoord is ja. Surebets plaatsen is in de meeste rechtsgebieden legaal. Je plaatst gewoon gewone weddenschappen bij bookmakers met een vergunning en vergelijkt odds om de beste waarde te vinden. Daar is niets illegaal aan.",
+    "intro": "Het korte antwoord is ja. Surebets plaatsen is in België legaal, zolang je bij bookmakers speelt die een vergunning van de Kansspelcommissie hebben. Je plaatst gewoon gewone weddenschappen en vergelijkt odds om de beste waarde te vinden. Daar is niets illegaal aan.",
     "blocks": [
       {
         "type": "h2",
@@ -73,11 +73,11 @@
       },
       {
         "type": "p",
-        "text": "De fiscale behandeling van gokwinsten verschilt van land tot land. In veel gereguleerde markten zijn winsten bij operatoren met een vergunning van de nationale kansspelregulator belastingvrij voor de speler. Gebruik je offshore operatoren of operatoren zonder vergunning, dan kunnen je winsten belastbaar zijn. Ga na welke belastingregels in jouw situatie gelden, of vraag advies aan de bevoegde belastingdienst als je twijfelt."
+        "text": "In België zijn gokwinsten bij operatoren met een vergunning van de Kansspelcommissie in het algemeen belastingvrij voor de speler. Gebruik je operatoren zonder Belgische vergunning, dan mag je er in België niet legaal terecht en kunnen je winsten belastbaar zijn. Regels kunnen wijzigen, dus ga na welke belastingregels in jouw situatie gelden, of vraag advies aan de FOD Financiën als je twijfelt."
       },
       {
         "type": "tip",
-        "text": "Hou je aan bookmakers die over een vergunning beschikken in België. Dat biedt doorgaans fiscale voordelen en consumentenbescherming via de bevoegde kansspelautoriteit."
+        "text": "Hou je aan bookmakers die over een Belgische vergunning van de Kansspelcommissie beschikken, zoals Napoleon Sports, Unibet, Bingoal, Betfirst, Circus of Scooore. Dat biedt doorgaans fiscale voordelen en consumentenbescherming via de Kansspelcommissie."
       },
       {
         "type": "h2",
@@ -85,7 +85,7 @@
       },
       {
         "type": "p",
-        "text": "Ook met surebets is het belangrijk om controle te houden over je gokgedrag. Stel stortingslimieten in en maak gebruik van het zelfuitsluitingsregister als je een pauze nodig hebt. Heb je nood aan hulp, neem dan contact op met een erkende hulplijn voor gokproblemen in je regio."
+        "text": "Ook met surebets is het belangrijk om controle te houden over je gokgedrag. Stel stortingslimieten in en schrijf je in op EPIS, het nationale register voor uitsluiting, als je een pauze nodig hebt. Heb je nood aan hulp, neem dan contact op met Stop Gokken of de Druglijn."
       }
     ],
     "faq": [
@@ -95,7 +95,7 @@
       },
       {
         "q": "Moet ik belasting betalen op winsten uit surebets?",
-        "a": "Dat hangt af van je land. In veel gereguleerde markten zijn winsten bij operatoren met een vergunning belastingvrij voor de speler. Ga na welke belastingregels voor jou gelden."
+        "a": "In België zijn winsten bij operatoren met een vergunning van de Kansspelcommissie in het algemeen belastingvrij voor de speler. Controleer altijd de actuele regels die voor jouw situatie gelden."
       }
     ],
     "category": "Regels",
@@ -120,7 +120,7 @@
         "type": "ul",
         "items": [
           "**De closing line verslaan:** het sterkste signaal. Als je odds consequent beter zijn dan de slotkoers, word je gemarkeerd.",
-          "**Ongelijke inzetten:** €463.27 lijkt het werk van een rekenmachine. €460 lijkt het werk van een gewone speler.",
+          "**Ongelijke inzetten:** €463,27 lijkt het werk van een rekenmachine. €460 lijkt het werk van een gewone speler.",
           "**Niche-markten:** hoekschoppen in de tweede divisie van een kleine competitie trekken de aandacht.",
           "**Enkel geld opnemen:** regelmatige opnames zonder bonussen of gewone weddenschappen komen professioneel over."
         ]
@@ -142,27 +142,27 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: afgeronde inzetten, totale inzet €1,000",
+        "title": "Voorbeeld: afgeronde inzetten, totale inzet €1.000",
         "rows": [
           [
-            "Exacte verdeling bij odds 2.10 / 2.00",
-            "€487.80 / €512.20"
+            "Exacte verdeling bij odds 2,10 / 2,00",
+            "€487,80 / €512,20"
           ],
           [
             "Afgeronde verdeling",
             "€490 / €510"
           ],
           [
-            "Winst als A wint (2.10)",
-            "€1,029 − €1,000 = €29.00"
+            "Winst als A wint (2,10)",
+            "€1.029 − €1.000 = €29,00"
           ],
           [
-            "Winst als B wint (2.00)",
-            "€1,020 − €1,000 = €20.00"
+            "Winst als B wint (2,00)",
+            "€1.020 − €1.000 = €20,00"
           ],
           [
             "Exacte verdeling ter vergelijking",
-            "ca. €24.39 in beide gevallen"
+            "ca. €24,39 in beide gevallen"
           ]
         ],
         "note": "Met de afgeronde inzetten verzeker je nog altijd een winst op beide uitkomsten, en ze ogen veel natuurlijker voor de bookmaker."
@@ -185,7 +185,7 @@
       },
       {
         "type": "p",
-        "text": "Lees het volledige overzicht van de [beste bookmakers voor surebets](/en/guides/best-bookmakers-for-surebets). Gebruik altijd bookmakers met een vergunning voor België."
+        "text": "Lees het volledige overzicht van de [beste bookmakers voor surebets](/en/guides/best-bookmakers-for-surebets). Gebruik altijd bookmakers met een vergunning van de Kansspelcommissie voor België."
       },
       {
         "type": "h2",
@@ -247,27 +247,27 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: twee uitkomsten, totale inzet €1,500",
+        "title": "Voorbeeld: twee uitkomsten, totale inzet €1.500",
         "rows": [
           [
-            "Odds A 2.10 en odds B 2.05",
-            "S = 0.476 + 0.488 = 0.964"
+            "Odds A 2,10 en odds B 2,05",
+            "S = 0,476 + 0,488 = 0,964"
           ],
           [
             "Inzet op A",
-            "€740.97"
+            "€740,97"
           ],
           [
             "Inzet op B",
-            "€759.03"
+            "€759,03"
           ],
           [
             "Uitbetaling in beide gevallen",
-            "ca. €1,556.03"
+            "ca. €1.556,03"
           ],
           [
             "Winst",
-            "ca. €56.03 (3.7%)"
+            "ca. €56,03 (3,7%)"
           ]
         ]
       },
@@ -281,27 +281,27 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: 1X2, totale inzet €1,000",
+        "title": "Voorbeeld: 1X2, totale inzet €1.000",
         "rows": [
           [
-            "Thuiszege, odds 2.50",
-            "Inzet €408.23"
+            "Thuiszege, odds 2,50",
+            "Inzet €408,23"
           ],
           [
-            "Gelijkspel, odds 3.50",
-            "Inzet €291.59"
+            "Gelijkspel, odds 3,50",
+            "Inzet €291,59"
           ],
           [
-            "Uitzege, odds 3.40",
-            "Inzet €300.17"
+            "Uitzege, odds 3,40",
+            "Inzet €300,17"
           ],
           [
             "Som van de inverse odds",
-            "0.980"
+            "0,980"
           ],
           [
             "Winst",
-            "ca. €20.58 (2.1%)"
+            "ca. €20,58 (2,1%)"
           ]
         ]
       },
@@ -311,11 +311,11 @@
       },
       {
         "type": "p",
-        "text": "Inzetten zoals €740.97 vallen op bij een bookmaker. Rond af op hele euro's of tientallen. Als je afrondt op €741 en €759, blijft de winst rond €56 liggen, met slechts een paar cent verschil tussen de uitkomsten."
+        "text": "Inzetten zoals €740,97 vallen op bij een bookmaker. Rond af op hele euro's of tientallen. Als je afrondt op €741 en €759, blijft de winst rond €56 liggen, met slechts een paar cent verschil tussen de uitkomsten."
       },
       {
         "type": "p",
-        "text": "Je kunt de inzetten ook bewust scheeftrekken. Als je op slechts één uitkomst je inzet dekt, win je daar €0 en op de andere uitkomst meer. In het voorbeeld hierboven levert €768.29 op A en €731.71 op B een winst van €113.41 op als A wint en €0 als B wint."
+        "text": "Je kunt de inzetten ook bewust scheeftrekken. Als je op slechts één uitkomst je inzet dekt, win je daar €0 en op de andere uitkomst meer. In het voorbeeld hierboven levert €768,29 op A en €731,71 op B een winst van €113,41 op als A wint en €0 als B wint."
       },
       {
         "type": "tip",
@@ -406,11 +406,11 @@
         "rows": [
           [
             "1/1.85 + 1/1.95",
-            "54.1% + 51.3% = 105.4%"
+            "54.1% + 51.3% ≈ 105.3%"
           ],
           [
             "Marge van de bookmaker",
-            "ca. 5.4%"
+            "ca. 5.3%"
           ]
         ],
         "note": "Hoe lager de marge, hoe betere odds je als gokker krijgt."
@@ -530,7 +530,7 @@
       {
         "type": "ul",
         "items": [
-          "Beschikt over een vergunning in België, zodat je beschermd bent en de fiscale behandeling van je winsten kunt nagaan.",
+          "Beschikt over een vergunning van de Kansspelcommissie in België, zodat je beschermd bent en de fiscale behandeling van je winsten kunt nagaan.",
           "Snelle stortingen en uitbetalingen, zodat je geld snel kunt verplaatsen waar het nodig is.",
           "Een breed aanbod aan sporten en markten, vooral tennis, voetbal en basketbal.",
           "Competitieve odds en een lage bookmakermarge op populaire markten.",
@@ -565,34 +565,34 @@
       },
       {
         "q": "Kan ik bookmakers zonder vergunning gebruiken voor arbitragebetting?",
-        "a": "Dat raden we af. Bookmakers zonder vergunning in België kunnen geblokkeerd worden, en winsten daarbij kunnen fiscaal anders behandeld worden of zonder wettelijke bescherming zijn. Controleer altijd de regels die voor jou gelden."
+        "a": "Dat raden we af. Bookmakers zonder vergunning van de Kansspelcommissie in België kunnen geblokkeerd worden, en winsten daarbij kunnen fiscaal anders behandeld worden of zonder wettelijke bescherming zijn. Controleer altijd de regels die voor jou gelden."
       }
     ],
     "category": "Strategie",
     "ctaLabel": "Bekijk surebets bij jouw bookmakers"
   },
   "skat-paa-spillegevinster": {
-    "title": "Belasting op gokwinsten – internationale gids voor sportweddenschappen",
-    "metaTitle": "Belasting op gokwinsten – wat je moet weten",
-    "description": "Moet je belasting betalen op winsten uit weddenschappen en surebets? Ontdek hoe de belastingregels werken voor bookmakers met en zonder vergunning, en wat je best bijhoudt.",
+    "title": "Belasting op gokwinsten in België – gids voor sportweddenschappen",
+    "metaTitle": "Belasting op gokwinsten in België – wat je moet weten",
+    "description": "Moet je belasting betalen op winsten uit weddenschappen en surebets in België? Ontdek hoe de regels werken voor bookmakers met en zonder vergunning van de Kansspelcommissie, en wat je best bijhoudt.",
     "keyword": "belasting op gokwinsten",
-    "intro": "In veel gereguleerde markten is het antwoord eenvoudig: winsten bij bookmakers met een vergunning zijn voor de speler belastingvrij. De bookmaker betaalt belasting aan de staat, niet jij. Maar de regels hangen af van waar je woont en waar je gokt.",
+    "intro": "In België is het antwoord eenvoudig: winsten bij bookmakers met een vergunning van de Kansspelcommissie zijn voor de speler over het algemeen belastingvrij. De bookmaker betaalt belasting aan de staat, niet jij. Maar regels kunnen veranderen en hangen ook af van je persoonlijke situatie, dus controleer altijd de actuele regels.",
     "blocks": [
       {
         "type": "h2",
-        "text": "Bookmakers met een vergunning: doorgaans belastingvrij"
+        "text": "Bookmakers met een Belgische vergunning: doorgaans belastingvrij"
       },
       {
         "type": "p",
-        "text": "Wanneer je gokt bij een aanbieder met een vergunning van de kansspelautoriteit van je eigen land, betaalt die aanbieder doorgaans kansspelbelasting op zijn inkomsten. Je winsten zijn daardoor over het algemeen belastingvrij en in de meeste gevallen hoef je ze niet aan te geven bij de belastingdienst. Controleer altijd de regels die voor jou gelden."
+        "text": "Wanneer je gokt bij een aanbieder met een vergunning van de Kansspelcommissie, zoals Napoleon Sports, Unibet, Bingoal, Ladbrokes, Betfirst, Circus, Golden Palace of Scooore, betaalt die aanbieder zelf de verschuldigde belastingen op zijn inkomsten. Je winsten zijn daardoor over het algemeen belastingvrij en in de meeste gevallen hoef je ze niet aan te geven bij de belastingdienst. Controleer altijd de regels die voor jou gelden."
       },
       {
         "type": "h2",
-        "text": "Offshorebookmakers zonder lokale vergunning"
+        "text": "Aanbieders zonder Belgische vergunning"
       },
       {
         "type": "p",
-        "text": "Wed je bij aanbieders die geen vergunning hebben in jouw rechtsgebied, dan kunnen je winsten belastbaar zijn. De regels hangen af van factoren zoals of de aanbieder een vergunning heeft in een ander land en waar je fiscaal inwoner bent. Dat is een van de redenen waarom het vaak eenvoudiger is om bij gereguleerde bookmakers te blijven."
+        "text": "In België mogen enkel operatoren met een vergunning van de Kansspelcommissie online weddenschappen aanbieden. Wed je bij aanbieders zonder die vergunning, dan ben je niet beschermd als speler en kunnen je winsten fiscaal anders worden behandeld. De regels hangen af van je persoonlijke situatie. Dat is een van de redenen waarom het veel eenvoudiger en veiliger is om bij bookmakers met een Belgische vergunning te blijven."
       },
       {
         "type": "h2",
@@ -600,7 +600,7 @@
       },
       {
         "type": "p",
-        "text": "Ja. Fiscaal gezien is een surebet gewoon een combinatie van twee of drie gewone weddenschappen. Winsten bij bookmakers met een vergunning zijn doorgaans belastingvrij, of je nu surebets, value bets of gewone weddenschappen plaatst. Dezelfde principes zijn van toepassing."
+        "text": "Ja. Fiscaal gezien is een surebet gewoon een combinatie van twee of drie gewone weddenschappen. Winsten bij bookmakers met een Belgische vergunning zijn doorgaans belastingvrij, of je nu surebets, value bets of gewone weddenschappen plaatst. Dezelfde principes zijn van toepassing."
       },
       {
         "type": "tip",
@@ -612,17 +612,17 @@
       },
       {
         "type": "p",
-        "text": "Als wedden je hoofdbezigheid is en je dat op grote schaal doet, kunnen in sommige rechtsgebieden andere regels gelden. Twijfel je over je eigen situatie? Neem dan contact op met de bevoegde belastingadministratie of met een gekwalificeerde boekhouder of fiscalist."
+        "text": "Als wedden je hoofdbezigheid is en je dat op grote schaal doet, kunnen er andere fiscale regels gelden. Twijfel je over je eigen situatie? Neem dan contact op met de FOD Financiën of met een gekwalificeerde boekhouder of fiscalist."
       }
     ],
     "faq": [
       {
         "q": "Moet ik belasting betalen op winsten bij bookmakers met een vergunning?",
-        "a": "In de meeste gereguleerde markten niet. Winsten bij aanbieders met een lokale vergunning zijn voor de speler doorgaans belastingvrij. Controleer wel de fiscale regels die gelden waar je woont."
+        "a": "In België over het algemeen niet. Winsten bij aanbieders met een vergunning van de Kansspelcommissie zijn voor de speler doorgaans belastingvrij. Controleer wel de actuele fiscale regels voor jouw situatie."
       },
       {
-        "q": "Hoe kan ik nagaan of een bookmaker een vergunning heeft in mijn land?",
-        "a": "De nationale kansspelautoriteit publiceert op haar website een lijst van erkende aanbieders. Bookmakers met een vergunning tonen meestal ook het logo van de toezichthouder op hun site."
+        "q": "Hoe kan ik nagaan of een bookmaker een vergunning heeft in België?",
+        "a": "De Kansspelcommissie publiceert op haar website een lijst van erkende aanbieders. Bookmakers met een vergunning, zoals Napoleon Sports, Unibet, Bingoal, Ladbrokes, Betfirst, Circus, Golden Palace en Scooore, werken met een .be-site en tonen meestal ook hun vergunningsinformatie op hun site."
       }
     ],
     "category": "Regels",
@@ -658,7 +658,7 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: vaste inzet voor value bets, bankroll €2,000",
+        "title": "Voorbeeld: vaste inzet voor value bets, bankroll €2.000",
         "rows": [
           [
             "Inzet per weddenschap (1,5%)",
@@ -670,22 +670,22 @@
           ],
           [
             "Resterende bankroll",
-            "€1,700"
+            "€1.700"
           ],
           [
             "Nieuwe inzet na evaluatie (1,5%)",
-            "€25.50"
+            "€25,50"
           ]
         ],
         "note": "Met een inzet van 1–2% blijf je in het spel tijdens de verliesreeksen die elke value bettor meemaakt."
       },
       {
         "type": "example",
-        "title": "Voorbeeld: surebetbankroll verdeeld over bookmakers, €3,000",
+        "title": "Voorbeeld: surebetbankroll verdeeld over bookmakers, €3.000",
         "rows": [
           [
             "6 bookmakers × €500",
-            "€3,000"
+            "€3.000"
           ],
           [
             "Typische totale inzet per surebet",
@@ -697,7 +697,7 @@
           ],
           [
             "Maandelijks rendement op de bankroll",
-            "€480 / €3,000 = 16%"
+            "€480 / €3.000 = 16%"
           ]
         ],
         "note": "De winst per surebet is klein, maar je bankroll draait meerdere keren per maand rond. De resultaten hangen af van limieten en van de beschikbare surebets."
@@ -716,11 +716,11 @@
         "rows": [
           [
             "Totaal ingezet",
-            "€18,500"
+            "€18.500"
           ],
           [
             "Totaal uitbetaald",
-            "€18,870"
+            "€18.870"
           ],
           [
             "Nettowinst",
@@ -728,7 +728,7 @@
           ],
           [
             "ROI",
-            "€370 / €18,500 = 2.0%"
+            "€370 / €18.500 = 2,0%"
           ]
         ]
       },
@@ -760,7 +760,7 @@
     "faq": [
       {
         "q": "Hoe groot moet mijn bankroll zijn voor surebets?",
-        "a": "Veel mensen starten met €1,000–€3,000, verdeeld over 4–6 bookmakers. Met minder kan het ook, maar dan wordt de winst per surebet heel klein."
+        "a": "Veel mensen starten met €1.000–€3.000, verdeeld over 4–6 bookmakers. Met minder kan het ook, maar dan wordt de winst per surebet heel klein."
       },
       {
         "q": "Welk percentage moet ik inzetten op value bets?",
@@ -768,7 +768,7 @@
       },
       {
         "q": "Hoe bereken ik de ROI van mijn weddenschappen?",
-        "a": "Deel de nettowinst door de totale inzetten. €370 winst op €18,500 inzet geeft een ROI van 2.0%."
+        "a": "Deel de nettowinst door de totale inzetten. €370 winst op €18.500 inzet geeft een ROI van 2,0%."
       }
     ],
     "category": "Strategie",
@@ -791,34 +791,34 @@
       },
       {
         "type": "p",
-        "text": "De test is eenvoudig: bereken voor elke uitkomst 1 ÷ odds en tel alles op. Is het totaal lager dan 1.00, dan heb je een arbitragekans. Hoe lager het totaal, hoe groter de winst."
+        "text": "De test is eenvoudig: bereken voor elke uitkomst 1 ÷ odds en tel alles op. Is het totaal lager dan 1,00, dan heb je een arbitragekans. Hoe lager het totaal, hoe groter de winst."
       },
       {
         "type": "example",
-        "title": "Voorbeeld: tennismatch met twee uitkomsten, totale inzet €1,000",
+        "title": "Voorbeeld: tennismatch met twee uitkomsten, totale inzet €1.000",
         "rows": [
           [
-            "Speler A bij bookmaker 1, odds 2.08",
-            "Inzet €492.68"
+            "Speler A bij bookmaker 1, odds 2,08",
+            "Inzet €492,68"
           ],
           [
-            "Speler B bij bookmaker 2, odds 2.02",
-            "Inzet €507.32"
+            "Speler B bij bookmaker 2, odds 2,02",
+            "Inzet €507,32"
           ],
           [
-            "1/2.08 + 1/2.02",
-            "0.481 + 0.495 = 0.976"
+            "1/2,08 + 1/2,02",
+            "0,481 + 0,495 = 0,976"
           ],
           [
             "Uitbetaling, wie er ook wint",
-            "ca. €1,024.78"
+            "ca. €1.024,78"
           ],
           [
             "Verzekerde winst",
-            "ca. €24.78 (2.5%)"
+            "ca. €24,78 (2,5%)"
           ]
         ],
-        "note": "Het totaal ligt onder 1, dus je maakt ongeveer €24.78 winst, ongeacht wie de match wint."
+        "note": "Het totaal ligt onder 1, dus je maakt ongeveer €24,78 winst, ongeacht wie de match wint."
       },
       {
         "type": "h2",
@@ -830,31 +830,31 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: Premier League-match, totale inzet €2,000",
+        "title": "Voorbeeld: Premier League-match, totale inzet €2.000",
         "rows": [
           [
-            "Thuiszege, odds 2.15",
-            "Inzet €942.69"
+            "Thuiszege, odds 2,15",
+            "Inzet €942,69"
           ],
           [
-            "Gelijkspel, odds 3.60",
-            "Inzet €562.99"
+            "Gelijkspel, odds 3,60",
+            "Inzet €562,99"
           ],
           [
-            "Uitzege, odds 4.10",
-            "Inzet €494.33"
+            "Uitzege, odds 4,10",
+            "Inzet €494,33"
           ],
           [
             "Som van de omgekeerde odds",
-            "0.987"
+            "0,987"
           ],
           [
             "Uitbetaling bij elke uitkomst",
-            "ca. €2,026.75"
+            "ca. €2.026,75"
           ],
           [
             "Verzekerde winst",
-            "ca. €26.75 (1.3%)"
+            "ca. €26,75 (1,3%)"
           ]
         ]
       },
@@ -881,8 +881,8 @@
       {
         "type": "ul",
         "items": [
-          "**1. Open rekeningen** bij minstens twee bookmakers met een vergunning, liefst meer, en stort vooraf geld.",
-          "**2. Zoek een surebet** waarbij de som van de omgekeerde odds onder 1.00 ligt.",
+          "**1. Open rekeningen** bij minstens twee bookmakers met een vergunning van de Kansspelcommissie, liefst meer, en stort vooraf geld.",
+          "**2. Zoek een surebet** waarbij de som van de omgekeerde odds onder 1,00 ligt.",
           "**3. Bereken de inzetten** zodat de uitbetaling bij elke uitkomst gelijk is.",
           "**4. Plaats beide weddenschappen snel,** te beginnen met de odds die het meest kans maken om te wijzigen.",
           "**5. Controleer je wedstrookjes:** markt, lijn en odds moeten exact overeenkomen met je berekening."
@@ -900,11 +900,11 @@
     "faq": [
       {
         "q": "Is arbitragebetting legaal?",
-        "a": "Ja, wedden op alle uitkomsten van een wedstrijd is in de meeste landen niet verboden. Bookmakers kunnen je account wel beperken. Zie [zijn surebets legaal?](/en/guides/are-surebets-legal)"
+        "a": "Ja, wedden op alle uitkomsten van een wedstrijd is in de meeste landen niet verboden. In België mag je online enkel wedden bij operatoren met een vergunning van de Kansspelcommissie. Bookmakers kunnen je account wel beperken. Zie [zijn surebets legaal?](/en/guides/are-surebets-legal)"
       },
       {
         "q": "Hoeveel kun je verdienen met surebets?",
-        "a": "Een typische surebet levert 1–3% van de totale inzet op. Met €1,000 per surebet, 40 surebets per maand en een gemiddelde van 1.5% is dat ongeveer €600 per maand."
+        "a": "Een typische surebet levert 1–3% van de totale inzet op. Met €1.000 per surebet, 40 surebets per maand en een gemiddelde van 1,5% is dat ongeveer €600 per maand."
       },
       {
         "q": "Hoeveel bookmakers heb ik nodig?",
@@ -951,19 +951,19 @@
         "rows": [
           [
             "Speler A bij bookmaker 1",
-            "odds 2.10"
+            "odds 2,10"
           ],
           [
             "Speler B bij bookmaker 2",
-            "odds 2.05"
+            "odds 2,05"
           ],
           [
-            "1/2.10 + 1/2.05",
-            "0.476 + 0.488 = 0.964"
+            "1/2,10 + 1/2,05",
+            "0,476 + 0,488 = 0,964"
           ],
           [
             "Gegarandeerde winst",
-            "ca. 3.7%"
+            "ca. 3,7%"
           ]
         ],
         "note": "De som ligt onder 1, dus deze combinatie is een surebet."
@@ -974,7 +974,7 @@
       },
       {
         "type": "p",
-        "text": "Je moet je inzet zo verdelen dat de uitbetaling hetzelfde is, wie er ook wint. Bij een totale inzet van 1,000 units in het voorbeeld hierboven zet je ongeveer 494 units op speler A en ongeveer 506 units op speler B. Beide uitkomsten leveren ongeveer 1,037 units op, wat neerkomt op een winst van ongeveer 37 units."
+        "text": "Je moet je inzet zo verdelen dat de uitbetaling hetzelfde is, wie er ook wint. Bij een totale inzet van €1.000 in het voorbeeld hierboven zet je ongeveer €494 op speler A en ongeveer €506 op speler B. Beide uitkomsten leveren ongeveer €1.037 op, wat neerkomt op een winst van ongeveer €37."
       },
       {
         "type": "tip",
@@ -1036,31 +1036,31 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: drie spelers in een toernooi, totale inzet €1,000",
+        "title": "Voorbeeld: drie spelers in een toernooi, totale inzet €1.000",
         "rows": [
           [
-            "Speler A, odds 3.00",
+            "Speler A, odds 3,00",
             "inzet ca. €444"
           ],
           [
-            "Speler B, odds 4.00",
+            "Speler B, odds 4,00",
             "inzet ca. €333"
           ],
           [
-            "Speler C, odds 6.00",
+            "Speler C, odds 6,00",
             "inzet ca. €222"
           ],
           [
-            "S = 0.333 + 0.250 + 0.167",
-            "0.750"
+            "S = 0,333 + 0,250 + 0,167",
+            "0,750"
           ],
           [
             "Als één van de drie wint",
-            "uitbetaling ca. €1,333, winst ca. €333"
+            "uitbetaling ca. €1.333, winst ca. €333"
           ],
           [
             "Als geen van de drie wint",
-            "verlies van €1,000"
+            "verlies van €1.000"
           ]
         ],
         "note": "De winst is er enkel als één van je drie spelers wint. Je moet zelf inschatten hoe waarschijnlijk dat is."
@@ -1116,27 +1116,27 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: odds 1.95 en 2.20, totale inzet €1,000",
+        "title": "Voorbeeld: odds 1,95 en 2,20, totale inzet €1.000",
         "rows": [
           [
-            "Speler A bij bookmaker 1, odds 1.95",
+            "Speler A bij bookmaker 1, odds 1,95",
             "inzet ca. €530"
           ],
           [
-            "Speler B bij bookmaker 2, odds 2.20",
+            "Speler B bij bookmaker 2, odds 2,20",
             "inzet ca. €470"
           ],
           [
-            "1/1.95 + 1/2.20",
-            "0.513 + 0.455 = 0.967"
+            "1/1,95 + 1/2,20",
+            "0,513 + 0,455 = 0,967"
           ],
           [
             "Uitbetaling ongeacht de winnaar",
-            "ca. €1,034"
+            "ca. €1.034"
           ],
           [
             "Winst",
-            "ca. €34 (3.4%)"
+            "ca. €34 (3,4%)"
           ]
         ],
         "note": "De som is lager dan 1, dus de combinatie is een surebet."
@@ -1189,31 +1189,31 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: drie bookmakers, totale inzet €1,000",
+        "title": "Voorbeeld: drie bookmakers, totale inzet €1.000",
         "rows": [
           [
-            "Thuiszege bij bookmaker 1, odds 2.40",
+            "Thuiszege bij bookmaker 1, odds 2,40",
             "inzet ca. €424"
           ],
           [
-            "Gelijkspel bij bookmaker 2, odds 3.80",
+            "Gelijkspel bij bookmaker 2, odds 3,80",
             "inzet ca. €268"
           ],
           [
-            "Uitzege bij bookmaker 3, odds 3.30",
+            "Uitzege bij bookmaker 3, odds 3,30",
             "inzet ca. €308"
           ],
           [
-            "1/2.40 + 1/3.80 + 1/3.30",
-            "0.417 + 0.263 + 0.303 = 0.983"
+            "1/2,40 + 1/3,80 + 1/3,30",
+            "0,417 + 0,263 + 0,303 = 0,983"
           ],
           [
             "Uitbetaling ongeacht de uitkomst",
-            "ca. €1,017"
+            "ca. €1.017"
           ],
           [
             "Winst",
-            "ca. €17 (1.7%)"
+            "ca. €17 (1,7%)"
           ]
         ],
         "note": "De winst is kleiner dan bij tennis, en met drie weddenschappen is er meer kans dat de odds veranderen terwijl je ze plaatst."
@@ -1228,7 +1228,7 @@
           "Controleer of de markt bij alle bookmakers geldt voor dezelfde speeltijd. 1X2 slaat normaal enkel op de reguliere speeltijd, maar kijk de regels na voor bekerwedstrijden en play-offs.",
           "Uitgestelde en gestaakte wedstrijden worden op een andere manier afgehandeld, dus lees het reglement van elke bookmaker goed na.",
           "Bij drie weddenschappen is de kans groter dat de odds veranderen. Plaats de meest volatiele weddenschap eerst, meestal die met de hoogste odds of op de minst liquide markt.",
-          "Overweeg markten met twee uitkomsten, zoals Asian handicap of meer/minder dan 2.5 goals, als je bij twee bookmakers wilt blijven en minder blootgesteld wilt zijn aan oddsschommelingen."
+          "Overweeg markten met twee uitkomsten, zoals Asian handicap of meer/minder dan 2,5 goals, als je bij twee bookmakers wilt blijven en minder blootgesteld wilt zijn aan oddsschommelingen."
         ]
       },
       {
@@ -1445,11 +1445,11 @@
           ],
           [
             "Totale omzet (alle legs)",
-            "€24,000"
+            "€24.000"
           ],
           [
             "Totaal uitbetaald",
-            "€24,720"
+            "€24.720"
           ],
           [
             "Nettowinst",
@@ -1457,7 +1457,7 @@
           ],
           [
             "ROI",
-            "€720 / €24,000 = 3.0%"
+            "€720 / €24.000 = 3,0%"
           ]
         ],
         "note": "Zonder tracking zie je alleen je saldo bewegen. Met tracking zie je dat je voor elke €100 omzet €3 verdient."
@@ -1472,7 +1472,7 @@
           "**Legs van een surebet groeperen**, zodat de hele arbitrage als één positie met één winst wordt getoond.",
           "**ROI automatisch berekenen** per maand, sport, markt en bookmaker.",
           "**Het saldo per bookmaker tonen**, zodat je weet waar je moet storten of opnemen.",
-          "**Geannuleerde weddenschappen en oddswijzigingen verwerken** zonder dat de totalen kloppen niet meer.",
+          "**Geannuleerde weddenschappen en oddswijzigingen verwerken** zonder dat de totalen niet meer kloppen.",
           "**Werken op je smartphone**, want je plaatst je weddenschappen onderweg."
         ]
       },
@@ -1531,22 +1531,22 @@
         "rows": [
           [
             "Totale inzet",
-            "€40,000"
+            "€40.000"
           ],
           [
             "Totale uitbetaling",
-            "€41,000"
+            "€41.000"
           ],
           [
             "Winst",
-            "€1,000"
+            "€1.000"
           ],
           [
             "ROI",
-            "1,000 / 40,000 × 100 = 2.5%"
+            "1.000 / 40.000 × 100 = 2,5%"
           ]
         ],
-        "note": "Je hebt 2,5 pence verdiend voor elk pond dat je hebt ingezet."
+        "note": "Je hebt 2,5 cent verdiend voor elke euro die je hebt ingezet."
       },
       {
         "type": "h2",
@@ -1590,102 +1590,6 @@
     "category": "Strategie",
     "ctaLabel": "Bekijk je ROI in de boekhouding"
   },
-  "surebet-danmark-alternativ": {
-    "title": "BetTrackerAI vs. Surebet Danmark: het voordeligere alternatief",
-    "metaTitle": "Alternatief voor Surebet Danmark – BetTrackerAI vergeleken (2025)",
-    "description": "Vergelijk BetTrackerAI en Surebet Danmark: prijs, functies, aanbod aan bookmakers en bet tracking. Ontdek welke surebettool bij jou past.",
-    "keyword": "surebettools vergelijken",
-    "intro": "Surebet Danmark en BetTrackerAI scannen allebei op surebets (ook arbitragebets genoemd) bij bookmakers met een vergunning. Beide bieden een gratis proefperiode van 7 dagen. De belangrijkste verschillen zitten in de prijs en in de tools die je naast de surebetscanner zelf krijgt.",
-    "blocks": [
-      {
-        "type": "h2",
-        "text": "In een oogopslag"
-      },
-      {
-        "type": "example",
-        "title": "BetTrackerAI en Surebet Danmark naast elkaar",
-        "rows": [
-          [
-            "Prijs per maand",
-            "BetTrackerAI vanaf ca. €20 · Surebet Danmark ca. €134"
-          ],
-          [
-            "Gratis proefperiode",
-            "Beide: 7 dagen"
-          ],
-          [
-            "Bookmakers",
-            "Beide: enkel bookmakers met een vergunning"
-          ],
-          [
-            "Meldingen",
-            "BetTrackerAI: push en sms (Premium) · Surebet Danmark: live meldingen"
-          ],
-          [
-            "Gokboekhouding",
-            "BetTrackerAI: volledige tracking met ROI en saldo per bookmaker · Surebet Danmark: bet tracker"
-          ],
-          [
-            "Gratis tools en gidsen",
-            "BetTrackerAI: surebetcalculator en educatieve gidsen"
-          ]
-        ],
-        "note": "Prijzen gecontroleerd op beide websites op 23 november 2025 en kunnen wijzigen."
-      },
-      {
-        "type": "h2",
-        "text": "Prijs: een aanzienlijk verschil"
-      },
-      {
-        "type": "p",
-        "text": "Surebet Danmark kost ca. €134 per maand. BetTrackerAI kost ca. €20 per maand voor Basic (surebets tot 5% winst) en ca. €33 voor Premium (alle surebets plus sms-meldingen). Met Premium bespaar je ca. €100 per maand, of ca. €1.200 per jaar."
-      },
-      {
-        "type": "p",
-        "text": "Dat is belangrijk, want surebets leveren doorgaans 1–5% per weddenschap op. Met een lagere maandprijs heb je veel minder omzet nodig voordat je abonnement zichzelf terugbetaalt."
-      },
-      {
-        "type": "h2",
-        "text": "Bet tracking: waar BetTrackerAI uitblinkt"
-      },
-      {
-        "type": "p",
-        "text": "Surebets zijn enkel winstgevend als je precies weet wat je verdiend hebt. In BetTrackerAI registreer je je surebets en stortingen, en zie je je winst, ROI en saldo bij elke bookmaker op één plaats. Je kunt ook een wedslip importeren in plaats van alles manueel in te voeren."
-      },
-      {
-        "type": "h2",
-        "text": "Welke tool past bij jou?"
-      },
-      {
-        "type": "ul",
-        "items": [
-          "Kies BetTrackerAI als je surebets tegen een lagere prijs wilt en tegelijk je rekeningen in detail wilt opvolgen.",
-          "Kies Surebet Danmark als je hun platform al gebruikt en tevreden bent over de kostprijs.",
-          "Twijfel je? Probeer ze allebei. Beide bieden een gratis proefperiode van 7 dagen, zodat je surebets voor dezelfde wedstrijden kunt vergelijken."
-        ]
-      },
-      {
-        "type": "tip",
-        "text": "Welke tool je ook kiest: plaats altijd eerst de weddenschap met de odds die het meest schommelen, en controleer dat de markt bij beide bookmakers identiek is."
-      }
-    ],
-    "faq": [
-      {
-        "q": "Is BetTrackerAI goedkoper dan Surebet Danmark?",
-        "a": "Ja. BetTrackerAI kost ca. €20 of ca. €33 per maand, terwijl Surebet Danmark ca. €134 per maand kost (op 23 november 2025)."
-      },
-      {
-        "q": "Gebruiken beide tools enkel bookmakers met een vergunning?",
-        "a": "Ja. Beide platformen richten zich op gereguleerde bookmakers met een vergunning, zodat je binnen een wettelijk kader en met spelersbescherming gokt."
-      },
-      {
-        "q": "Kan ik BetTrackerAI gratis uitproberen?",
-        "a": "Ja. Je krijgt een gratis proefperiode van 7 dagen met volledige toegang, en je kunt op elk moment tijdens die periode opzeggen."
-      }
-    ],
-    "category": "Basis",
-    "ctaLabel": "Probeer BetTrackerAI 7 dagen gratis"
-  },
   "betting-regnskab": {
     "title": "Gokboekhouding: zo hou je overzicht over je bankroll",
     "metaTitle": "Gokboekhouding – volg je saldo bij alle bookmakers",
@@ -1720,19 +1624,19 @@
         "rows": [
           [
             "Totaal gestort",
-            "€10,000"
+            "€10.000"
           ],
           [
             "Totaal opgenomen",
-            "€3,000"
+            "€3.000"
           ],
           [
             "Saldo bij bookmakers nu",
-            "€7,800"
+            "€7.800"
           ],
           [
             "Winst",
-            "€3,000 + €7,800 − €10,000 = €800"
+            "€3.000 + €7.800 − €10.000 = €800"
           ]
         ]
       },
@@ -1756,7 +1660,7 @@
     "faq": [
       {
         "q": "Betaal ik belasting op gokwinsten?",
-        "a": "De fiscale behandeling van gokwinsten verschilt per rechtsgebied. In sommige gereguleerde markten zijn winsten bij vergunde bookmakers belastingvrij, in andere moet je ze mogelijk aangeven. Informeer je over de belastingregels in het land waar je woont of raadpleeg een lokale adviseur."
+        "a": "In België zijn winsten die spelers behalen bij bookmakers met een vergunning van de Kansspelcommissie in het algemeen belastingvrij. Regels kunnen echter veranderen en jouw persoonlijke situatie kan verschillen, dus controleer altijd de actuele regels of raadpleeg een erkend adviseur."
       },
       {
         "q": "Hoe vaak moet ik mijn bettracker bijwerken?",
@@ -1785,27 +1689,27 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: basketbalmatch met twee uitkomsten (inclusief verlenging), €1,000",
+        "title": "Voorbeeld: basketbalmatch met twee uitkomsten (inclusief verlenging), €1.000",
         "rows": [
           [
-            "Team A bij bookmaker 1, odds 1.95",
-            "Inzet €520.88"
+            "Team A bij bookmaker 1, odds 1,95",
+            "Inzet €520,88"
           ],
           [
-            "Team B bij bookmaker 2, odds 2.12",
-            "Inzet €479.12"
+            "Team B bij bookmaker 2, odds 2,12",
+            "Inzet €479,12"
           ],
           [
             "Som van de omgekeerde odds",
-            "0.513 + 0.472 = 0.985"
+            "0,513 + 0,472 = 0,985"
           ],
           [
             "Uitbetaling, wie er ook wint",
-            "ca. €1,015.72"
+            "ca. €1.015,72"
           ],
           [
             "Gegarandeerde winst",
-            "ca. €15.72 (1.6%)"
+            "ca. €15,72 (1,6%)"
           ]
         ]
       },
@@ -1819,30 +1723,30 @@
       },
       {
         "type": "example",
-        "title": "Voorbeeld: over 2.5 goals vóór de match gespeeld voor €500",
+        "title": "Voorbeeld: over 2,5 goals vóór de match gespeeld voor €500",
         "rows": [
           [
-            "Oorspronkelijke weddenschap: over 2.5 goals, odds 2.40",
-            "Inzet €500, mogelijke uitbetaling €1,200"
+            "Oorspronkelijke weddenschap: over 2,5 goals, odds 2,40",
+            "Inzet €500, mogelijke uitbetaling €1.200"
           ],
           [
-            "Na een vroege goal: under 2.5 goals, odds 2.60",
-            "Inzet €461.54"
+            "Na een vroege goal: under 2,5 goals, odds 2,60",
+            "Inzet €461,54"
           ],
           [
             "Totale inzet",
-            "€961.54"
+            "€961,54"
           ],
           [
             "Uitbetaling bij elke uitslag",
-            "€1,200"
+            "€1.200"
           ],
           [
             "Vastgelegde winst",
-            "ca. €238.46 (24.8%)"
+            "ca. €238,46 (24,8%)"
           ]
         ],
-        "note": "De formule: hedge-inzet = mogelijke uitbetaling ÷ nieuwe odds. Hier 1,200 ÷ 2.60 = €461.54."
+        "note": "De formule: hedge-inzet = mogelijke uitbetaling ÷ nieuwe odds. Hier 1.200 ÷ 2,60 = €461,54."
       },
       {
         "type": "h2",
@@ -1858,11 +1762,11 @@
         "rows": [
           [
             "Inzet per surebet",
-            "€1,000"
+            "€1.000"
           ],
           [
             "Gemiddelde winst",
-            "1.5%"
+            "1,5%"
           ],
           [
             "Surebets per maand",
@@ -1873,8 +1777,8 @@
             "ca. €600"
           ],
           [
-            "Dezelfde aanpak met €2,500 per surebet",
-            "ca. €1,500"
+            "Dezelfde aanpak met €2.500 per surebet",
+            "ca. €1.500"
           ]
         ]
       },
@@ -2068,51 +1972,51 @@
         "title": "Voorbeeld: live tennis na een break, totale inzet €800",
         "rows": [
           [
-            "Speler A bij bookmaker 1, odds 1.72",
-            "Inzet €467.63"
+            "Speler A bij bookmaker 1, odds 1,72",
+            "Inzet €467,63"
           ],
           [
-            "Speler B bij bookmaker 2, odds 2.42",
-            "Inzet €332.37"
+            "Speler B bij bookmaker 2, odds 2,42",
+            "Inzet €332,37"
           ],
           [
-            "1/1.72 + 1/2.42",
-            "0.581 + 0.413 = 0.995"
+            "1/1,72 + 1/2,42",
+            "0,581 + 0,413 = 0,995"
           ],
           [
             "Uitbetaling, wie er ook wint",
-            "ca. €804.33"
+            "ca. €804,33"
           ],
           [
             "Vastgelegde winst",
-            "ca. €4.33 (0.5%)"
+            "ca. €4,33 (0,5%)"
           ]
         ],
         "note": "Live marges zijn vaak kleiner dan voor de wedstrijd. Een groter aantal weddenschappen compenseert dat, maar enkel als je snel en nauwkeurig uitvoert."
       },
       {
         "type": "example",
-        "title": "Voorbeeld: over/under na een vroege goal, totale inzet €1,000",
+        "title": "Voorbeeld: over/under na een vroege goal, totale inzet €1.000",
         "rows": [
           [
-            "Over 3.5 goals bij bookmaker 1, odds 2.30",
-            "Inzet €451.07"
+            "Over 3,5 goals bij bookmaker 1, odds 2,30",
+            "Inzet €451,07"
           ],
           [
-            "Under 3.5 goals bij bookmaker 2, odds 1.89",
-            "Inzet €548.93"
+            "Under 3,5 goals bij bookmaker 2, odds 1,89",
+            "Inzet €548,93"
           ],
           [
             "Som van de omgekeerde odds",
-            "0.435 + 0.529 = 0.964"
+            "0,435 + 0,529 = 0,964"
           ],
           [
             "Uitbetaling bij elke uitslag",
-            "ca. €1,037.47"
+            "ca. €1.037,47"
           ],
           [
             "Vastgelegde winst",
-            "ca. €37.47 (3.7%)"
+            "ca. €37,47 (3,7%)"
           ]
         ]
       },
@@ -2193,22 +2097,22 @@
         "rows": [
           [
             "Eerlijke waarschijnlijkheid",
-            "50% (eerlijke odds 2.00)"
+            "50% (eerlijke odds 2,00)"
           ],
           [
             "Aangeboden odds bij de softe bookmaker",
-            "2.10"
+            "2,10"
           ],
           [
             "Verwachte waarde",
-            "0.50 × 2.10 − 1 = +5%"
+            "0,50 × 2,10 − 1 = +5%"
           ],
           [
             "Inzet €50",
-            "Verwachte winst €2.50 per weddenschap"
+            "Verwachte winst €2,50 per weddenschap"
           ],
           [
-            "300 weddenschappen van €50 (€15,000 omzet)",
+            "300 weddenschappen van €50 (€15.000 omzet)",
             "Verwachte winst ca. €750"
           ]
         ],
@@ -2228,11 +2132,11 @@
         "rows": [
           [
             "Sharp odds",
-            "1.95 / 1.95"
+            "1,95 / 1,95"
           ],
           [
             "Impliciete waarschijnlijkheden",
-            "51.28% + 51.28% = 102.56%"
+            "51,28% + 51,28% = 102,56%"
           ],
           [
             "Eerlijke waarschijnlijkheid na verwijdering van de marge",
@@ -2240,7 +2144,7 @@
           ],
           [
             "Eerlijke odds",
-            "2.00 / 2.00"
+            "2,00 / 2,00"
           ]
         ]
       },
@@ -2365,11 +2269,11 @@
           ],
           [
             "Omzet nodig om break-even te draaien",
-            "€33 / 2% = €1,650"
+            "€33 / 2% = €1.650"
           ],
           [
             "Typische omzet (60 surebets × €400)",
-            "€24,000"
+            "€24.000"
           ],
           [
             "Winst na aftrek van het abonnement",
@@ -2389,7 +2293,7 @@
           "**Ververssnelheid:** enkele seconden voor prematch, sneller voor [live surebets](/en/guides/live-arbitrage-betting-scanner).",
           "**Filters:** sport, markt, bookmaker en minimale winst.",
           "**Ingebouwde tracking:** surebets die je vanuit de scanner plaatst, moeten automatisch worden bijgehouden.",
-          "**Faire prijs:** vergelijk de maandelijkse kost met de omzet die je verwacht. Bekijk de [vergelijking van surebettools](/en/guides/surebet-tool-comparison)."
+          "**Faire prijs:** vergelijk de maandelijkse kost met de omzet die je verwacht."
         ]
       },
       {

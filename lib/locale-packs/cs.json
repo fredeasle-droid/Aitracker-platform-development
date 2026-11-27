@@ -1,5 +1,6 @@
 {
   "ready": true,
+  "indexed": true,
   "ui": {
     "login": "Přihlásit se",
     "loggedIn": "Přihlášen",
@@ -625,7 +626,7 @@
     "findOnSport": "Najděte surebety ve svém sportu",
     "surebetsAtBookmakers": "Surebety u sázkových kanceláří",
     "guideIndexTitle": "Průvodci surebety a arbitrážním sázením – BetTrackerAI",
-    "guideIndexDescription": "Naučte se surebety od základů: co to je, jak spočítat vklady, pravidla a daně v Dánsku a jak se vyhnout omezení účtu.",
+    "guideIndexDescription": "Naučte se surebety od základů: co to je, jak spočítat vklady, pravidla a daně v Česku a jak se vyhnout omezení účtu.",
     "guideIndexH1": "Vše, co potřebujete vědět o surebetech",
     "guideIndexLead": "Struční a praktičtí průvodci psaní pro české sázkaře. Od prvního výpočtu až po to, jak si udržet otevřené účty.",
     "guideIndexName": "Průvodci surebety",
@@ -638,7 +639,7 @@
   },
   "daily": {
     "metaTitle": "Dnešní surebety – nejlepší surebety právě teď",
-    "metaDescription": "Podívejte se na dnešní nejlepší surebety u dánských i mezinárodních sázkových kanceláří, průběžně aktualizované. Sport, zápas, trh a garantovaný zisk u nejsilnějších příležitostí právě teď.",
+    "metaDescription": "Podívejte se na dnešní nejlepší surebety u sázkových kanceláří licencovaných v Česku, průběžně aktualizované. Sport, zápas, trh a garantovaný zisk u nejsilnějších příležitostí právě teď.",
     "name": "Dnešní surebety",
     "h1": "Dnešní surebety",
     "empty": "Momentálně nejsou aktivní žádné surebety. Skener běží nepřetržitě, zkuste to tedy za chvíli znovu.",
@@ -696,11 +697,11 @@
       },
       {
         "q": "Kolik stojí BetTrackerAI Pro?",
-        "a": "499 DKK/měsíc při měsíční fakturaci nebo 199 DKK/měsíc při roční fakturaci – úspora 60 %. Platit můžete kartou Visa, Mastercard, přes MobilePay nebo bankovním převodem."
+        "a": "499 DKK/měsíc při měsíční fakturaci nebo 199 DKK/měsíc při roční fakturaci – úspora 60 %. Platit můžete kartou Visa, Mastercard nebo bankovním převodem."
       },
       {
         "q": "Které sázkové kanceláře porovnáváte?",
-        "a": "Porovnáváme kurzy dánských i mezinárodních sázkových kanceláří, mezi nimi Danske Spil, bet365, Unibet, LeoVegas, Betano a Pinnacle."
+        "a": "Porovnáváme kurzy sázkových kanceláří licencovaných v Česku Ministerstvem financí ČR, mezi nimi Tipsport, Fortuna, Chance, Betano, Synot Tip a Sazka bet."
       },
       {
         "q": "Jak se dozvím o nových surebetech?",
@@ -751,7 +752,6 @@
     "fodbold-surebets": "fotbalove-surebety",
     "bookmakerens-margin": "marze-sazkove-kancelare",
     "asiatisk-handicap": "asijsky-handicap",
-    "surebet-danmark-alternativ": "srovnani-surebet-nastroju",
     "betting-regnskab": "sazkove-ucty",
     "tjen-penge-paa-odds-uden-risiko": "vydelek-na-kurzech-bez-rizika",
     "find-surebets-automatisk": "automaticke-hledani-surebetu",

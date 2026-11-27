@@ -1,6 +1,6 @@
 'use client'
 
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { Bell, ChevronRight } from 'lucide-react'
 import { useLocale } from '@/components/locale-provider'
 import { Popover } from '@/components/menu'

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { HREFLANG, LAUNCHED_LOCALES, LOCALE_PREFIX, localePath, type Locale } from '@/lib/i18n'
+import { INDEXED_LOCALES } from '@/lib/locale-packs'
 import { SITE_URL } from '@/lib/site'
 
 export const ALL_LOCALES: Locale[] = LAUNCHED_LOCALES
@@ -11,8 +12,8 @@ export const TRANSLATED_SECTIONS = ['/guide', '/sport', '/bookmaker'] as const
 // Stand-alone pages with full copy in every language.
 export const TRANSLATED_PAGES = ['/dagens-surebets', '/faq'] as const
 
-// Languages Google may index. Every language now has its own localised copy and keywords.
-export const INDEXABLE_LOCALES: Locale[] = LAUNCHED_LOCALES
+// Languages Google may index: base languages plus new markets whose country-specific copy is approved.
+export const INDEXABLE_LOCALES: Locale[] = INDEXED_LOCALES
 
 export function isIndexable(locale: Locale) {
   return INDEXABLE_LOCALES.includes(locale)

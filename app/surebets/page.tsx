@@ -12,14 +12,29 @@ import { GlobalFooter } from '@/components/site/global-footer'
 import { GlobalHeader } from '@/components/site/global-header'
 import { getSbData } from '@/lib/sb-data'
 import { getAlertPanelData } from '@/lib/alert-panel-data'
+import { getServerLocale, getServerT } from '@/lib/locale-server'
+import { localePath, OG_LOCALE } from '@/lib/i18n'
+import { SITE_NAME } from '@/lib/site'
+import { absoluteUrl } from '@/lib/seo/alternates'
+import type { Metadata } from 'next'
 
 export const dynamic = 'force-dynamic'
 
-export const metadata = {
-  title: 'Surebets i realtid – BetTrackerAI',
-  description:
-    'Find de sikre odds med BetTrackerAI. Vi scanner markedet 24/7 og finder de bedste surebets på tværs af bookmakere.',
-  alternates: { canonical: '/surebets' },
+export async function generateMetadata(): Promise<Metadata> {
+  const [locale, { t }] = await Promise.all([getServerLocale(), getServerT()])
+  const title = locale === 'da' ? 'Dagens surebets hos danske bookmakere – BetTrackerAI' : `${t('sbTodaySure')} – BetTrackerAI`
+  const description = locale === 'da'
+    ? 'Find aktuelle surebets hos danske bookmakere. Se kamp, odds og beregnet profit, og brug beregneren til at fordele indsatsen.'
+    : t('sbQuick1')
+  const url = absoluteUrl(locale, '/surebets')
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: { type: 'website', siteName: SITE_NAME, url, locale: OG_LOCALE[locale], title, description },
+    twitter: { card: 'summary_large_image', title, description },
+    ...(locale !== 'da' ? { robots: { index: false, follow: true } } : {}),
+  }
 }
 
 export default async function SurebetsPage() {

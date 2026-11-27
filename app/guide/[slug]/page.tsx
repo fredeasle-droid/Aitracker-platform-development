@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
+import Link from '@/components/localized-link'
 import { notFound } from 'next/navigation'
 import { ArrowRight, ChevronRight, Clock } from 'lucide-react'
 import { Block, FaqList } from '@/components/seo/guide-blocks'
@@ -79,7 +79,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       author: { '@type': 'Person', name: AUTHOR, url: `${SITE_URL}/om-os` },
       publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
     },
-    ...(showVideo ? [videoObjectJsonLd()] : []),
+    ...(showVideo && locale === 'da' ? [videoObjectJsonLd()] : []),
     {
       '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',

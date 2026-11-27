@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Link from "@/components/localized-link";
 import { localePath } from "@/lib/i18n";
 import { getServerLocale, getServerT } from "@/lib/locale-server";
 import { Landmark } from "lucide-react";
-import { DiscordIcon, InstagramIcon, Logo, MobilePayIcon, TelegramIcon, YoutubeIcon } from "@/components/home/icons";
+import { DiscordIcon, InstagramIcon, Logo, TelegramIcon, YoutubeIcon } from "@/components/home/icons";
 import { copyrightYear } from "@/components/home/data";
 import { MobileResponsibleNotice, ResponsibleNotice } from "@/components/home/ResponsibleNotice";
 import { NewsletterForm } from "@/components/site/newsletter-form";
@@ -67,7 +67,7 @@ function FooterWaves() {
   );
 }
 
-const TRANSLATED_HREFS = new Set(["/", "/surebets", "/dagens-surebets", "/guide", "/faq"]);
+const TRANSLATED_HREFS = new Set(["/", "/surebets", "/dagens-surebets", "/guide", "/faq", "/om-os", "/kontakt"]);
 
 export async function GlobalFooter() {
   const locale = await getServerLocale();
@@ -82,16 +82,16 @@ export async function GlobalFooter() {
         <p className="mt-1 pl-[38px] text-[14px] text-foreground/90">{tx("Scan. Find. Vind.")}</p>
 
         <div className="mt-6 grid grid-cols-2 gap-x-6">
-          <nav aria-label="Links">
-            <p className="mb-2 text-[14px] font-semibold text-foreground">Links</p>
+          <nav aria-label={tx("Links")}>
+            <p className="mb-2 text-[14px] font-semibold text-foreground">{tx("Links")}</p>
             {LINKS.map((l) => (
               <Link key={tx(l.label)} href={hrefFor(l.href)} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
                 {tx(l.label)}
               </Link>
             ))}
           </nav>
-          <nav aria-label="Support">
-            <p className="mb-2 text-[14px] font-semibold text-foreground">Support</p>
+          <nav aria-label={tx("Support")}>
+            <p className="mb-2 text-[14px] font-semibold text-foreground">{tx("Support")}</p>
             {SUPPORT.map((l) => (
               <Link key={tx(l.label)} href={hrefFor(l.href)} className="block py-[5px] text-[14px] leading-[17px] text-foreground/85 transition-colors hover:text-primary-glow">
                 {tx(l.label)}
@@ -104,7 +104,7 @@ export async function GlobalFooter() {
         <ul className="mt-3 flex items-center gap-5 text-social">
           {SOCIAL.map(({ href, label, Icon }) => (
             <li key={label}>
-              <Link href={href} aria-label={label} className="block transition-colors hover:text-primary-glow">
+              <Link href={href} aria-label={`${label} – ${tx("Følg os")}`} className="block transition-colors hover:text-primary-glow">
                 <Icon className="size-[22px]" />
               </Link>
             </li>
@@ -120,9 +120,6 @@ export async function GlobalFooter() {
           <span className="flex" aria-label="Mastercard">
             <span className="size-[18px] rounded-full bg-destructive" />
             <span className="-ml-[6px] size-[18px] rounded-full bg-mc-orange/90" />
-          </span>
-          <span className="flex items-center gap-1.5 text-[13px]">
-            <MobilePayIcon className="size-[18px]" /> MobilePay
           </span>
           <span className="flex items-center gap-1.5 text-[13px] font-semibold">
             <Landmark className="size-[16px] text-gold" aria-hidden="true" /> {tx("Bankoverførsel")}
@@ -144,8 +141,8 @@ export async function GlobalFooter() {
               <p className="text-[17px] text-foreground/90 lg:pl-[65px]">{tx("Scan. Find. Vind.")}</p>
             </div>
 
-            <nav aria-label="Links" className="lg:pl-12">
-              <p className={headingCls}>Links</p>
+            <nav aria-label={tx("Links")} className="lg:pl-12">
+              <p className={headingCls}>{tx("Links")}</p>
               {LINKS.map((l) => (
                 <Link key={tx(l.label)} href={hrefFor(l.href)} className={linkCls}>
                   {tx(l.label)}
@@ -153,8 +150,8 @@ export async function GlobalFooter() {
               ))}
             </nav>
 
-            <nav aria-label="Support" className="lg:pl-6">
-              <p className={headingCls}>Support</p>
+            <nav aria-label={tx("Support")} className="lg:pl-6">
+              <p className={headingCls}>{tx("Support")}</p>
               {SUPPORT.map((l) => (
                 <Link key={tx(l.label)} href={hrefFor(l.href)} className={linkCls}>
                   {tx(l.label)}
@@ -167,7 +164,7 @@ export async function GlobalFooter() {
               <ul className="mt-4 flex items-center gap-5 text-social">
                 {SOCIAL.map(({ href, label, Icon }) => (
                   <li key={label}>
-                    <Link href={href} aria-label={label} className="block transition-colors hover:text-primary-glow">
+                    <Link href={href} aria-label={`${label} – ${tx("Følg os")}`} className="block transition-colors hover:text-primary-glow">
                       <Icon className="size-7" />
                     </Link>
                   </li>
@@ -189,9 +186,6 @@ export async function GlobalFooter() {
               <span className="flex" aria-label="Mastercard">
                 <span className="size-[28px] rounded-full bg-destructive" />
                 <span className="-ml-[10px] size-[28px] rounded-full bg-mc-orange/90" />
-              </span>
-              <span className="flex items-center gap-2 text-[17px]">
-                <MobilePayIcon className="size-[28px]" /> MobilePay
               </span>
               <span className="flex items-center gap-2 text-[17px] font-semibold">
                 <Landmark className="size-[26px] text-gold" aria-hidden="true" /> {tx("Bankoverførsel")}

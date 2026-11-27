@@ -234,32 +234,32 @@
     ]
   },
   "bookmaker/bet365": {
-    "title": "Surebety u Bet365",
-    "metaTitle": "Bet365 surebety – najděte příležitosti k jistému zisku",
-    "description": "Najděte surebety u Bet365 v reálném čase. BetTrackerAI porovnává kurzy Bet365 s ostatními sázkovými kancelářemi a ukáže vám, kde si zajistit jistý zisk.",
-    "keyword": "bet365 surebety",
-    "intro": "Bet365 je jednou z největších sázkových kanceláří na světě a nabízí jednu z nejširších nabídek sportů a trhů. Díky tomu patří Bet365 mezi sázkové kanceláře, které se v surebetech objevují nejčastěji.",
+    "title": "Surebety u Tipsportu",
+    "metaTitle": "Tipsport surebety – najděte příležitosti k jistému zisku",
+    "description": "Najděte surebety u Tipsportu v reálném čase. BetTrackerAI porovnává kurzy Tipsportu s ostatními licencovanými sázkovými kancelářemi a ukáže vám, kde si zajistit jistý zisk.",
+    "keyword": "tipsport surebety",
+    "intro": "Tipsport je jednou z největších sázkových kanceláří v Česku a nabízí velmi širokou nabídku sportů a trhů. Díky tomu patří Tipsport mezi sázkové kanceláře, které se v surebetech objevují nejčastěji.",
     "blocks": [
       {
         "type": "h2",
-        "text": "O Bet365"
+        "text": "O Tipsportu"
       },
       {
         "type": "p",
-        "text": "Bet365 je licencovaná sázková kancelář v několika jurisdikcích a nabízí kurzy na obrovské množství zápasů, včetně nižších soutěží a živých trhů. Díky této šíři má Bet365 často kurzy, které se liší od zbytku trhu."
+        "text": "Tipsport je sázková kancelář licencovaná Ministerstvem financí ČR a nabízí kurzy na obrovské množství zápasů, včetně nižších soutěží a živých trhů. Díky této šíři má Tipsport často kurzy, které se liší od zbytku trhu."
       },
       {
         "type": "h2",
-        "text": "Jak najít surebety s Bet365"
+        "text": "Jak najít surebety s Tipsportem"
       },
       {
         "type": "p",
-        "text": "Surebet s Bet365 vzniká tehdy, když má Bet365 vyšší kurz na jeden výsledek, než nabízejí ostatní sázkové kanceláře na opačné výsledky. BetTrackerAI kurzy Bet365 neustále sleduje a porovnává je se zbytkem trhu."
+        "text": "Surebet s Tipsportem vzniká tehdy, když má Tipsport vyšší kurz na jeden výsledek, než nabízejí ostatní sázkové kanceláře na opačné výsledky. BetTrackerAI kurzy Tipsportu neustále sleduje a porovnává je se zbytkem trhu."
       },
       {
         "type": "ul",
         "items": [
-          "Pomocí filtru na stránce se surebety vyberte Bet365 a své další sázkové kanceláře.",
+          "Pomocí filtru na stránce se surebety vyberte Tipsport a své další sázkové kanceláře.",
           "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
           "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete ji.",
           "Sázku nejdříve vsaďte u sázkové kanceláře s nejvolatilnějšími kurzy."
@@ -267,47 +267,47 @@
       },
       {
         "type": "tip",
-        "text": "Rozdělte své sázky mezi více sázkových kanceláří, abyste nesázeli jen u Bet365. Prodloužíte tak životnost svého účtu."
+        "text": "Rozdělte své sázky mezi více licencovaných sázkových kanceláří, například Fortuna, Chance nebo Betano, abyste nesázeli jen u Tipsportu. Prodloužíte tak životnost svého účtu."
       }
     ],
     "faq": [
       {
-        "q": "Je arbitrážní sázení u Bet365 povolené?",
-        "a": "Arbitrážní sázení je legální. Stejně jako každá sázková kancelář však může Bet365 podle svých obchodních podmínek omezit účty, u nichž zjistí sázkové vzorce, které soustavně zajišťují jistý zisk."
+        "q": "Je arbitrážní sázení u Tipsportu povolené?",
+        "a": "Arbitrážní sázení je legální. Stejně jako každá sázková kancelář však může Tipsport podle svých obchodních podmínek omezit účty, u nichž zjistí sázkové vzorce, které soustavně zajišťují jistý zisk."
       },
       {
-        "q": "Provozuje Bet365 svou činnost na základě licence na hazardní hry?",
-        "a": "Ano. Bet365 má licence na několika regulovaných trzích po celém světě. Zjistěte si platná daňová pravidla ve své zemi, protože zdanění výher se v jednotlivých jurisdikcích liší."
+        "q": "Provozuje Tipsport svou činnost na základě licence na hazardní hry?",
+        "a": "Ano. Tipsport provozuje sázky na základě licence od Ministerstva financí ČR, které povoluje nabízet sázky v Česku pouze licencovaným provozovatelům. Výhry od licencovaných provozovatelů jsou do vysokého limitu na jednu výhru osvobozeny od daně, aktuální pravidla si ale vždy ověřte."
       }
     ]
   },
   "bookmaker/unibet": {
-    "title": "Surebety u Unibet",
-    "metaTitle": "Unibet surebety – najděte příležitosti pro arbitrážní sázení",
-    "description": "Najděte surebety u Unibet v reálném čase. BetTrackerAI porovnává kurzy Unibet s ostatními sázkovými kancelářemi, abyste si mohli arbitrážním sázením zajistit jistý zisk.",
-    "keyword": "unibet surebety",
-    "intro": "Unibet patří k nejoblíbenějším sázkovým kancelářím na světě. Unibet využívá platformu kurzů Kambi, takže kurzy u Unibet se často podobají kurzům u dalších sázkových kanceláří provozovaných na Kambi.",
+    "title": "Surebety u Tipsportu",
+    "metaTitle": "Tipsport surebety – najděte příležitosti pro arbitrážní sázení",
+    "description": "Najděte surebety u Tipsportu v reálném čase. BetTrackerAI porovnává kurzy Tipsportu s ostatními licencovanými sázkovými kancelářemi, abyste si mohli arbitrážním sázením zajistit jistý zisk.",
+    "keyword": "tipsport surebety",
+    "intro": "Tipsport patří k nejoblíbenějším sázkovým kancelářím v Česku. Kurzy u Tipsportu se od nabídky dalších licencovaných kanceláří, jako jsou Fortuna, Chance nebo Betano, často liší, a právě tyto rozdíly vytvářejí příležitosti pro surebety.",
     "blocks": [
       {
         "type": "h2",
-        "text": "O Unibet"
+        "text": "O Tipsportu"
       },
       {
         "type": "p",
-        "text": "Unibet má licence na několika regulovaných trzích a nabízí širokou škálu sportů. Protože Unibet sdílí platformu kurzů s několika dalšími sázkovými kancelářemi, vznikají surebety nejčastěji mezi Unibet a kancelářemi na jiných platformách."
+        "text": "Tipsport provozuje sázky na základě licence od Ministerstva financí ČR a nabízí širokou škálu sportů. Surebety vznikají nejčastěji mezi Tipsportem a dalšími licencovanými kancelářemi, například Fortunou, Chance, Betano, Synot Tip nebo Sazka bet."
       },
       {
         "type": "h2",
-        "text": "Jak najít surebety s Unibet"
+        "text": "Jak najít surebety s Tipsportem"
       },
       {
         "type": "p",
-        "text": "Surebet s Unibet vzniká tehdy, když má Unibet vyšší kurz na jeden výsledek, než nabízejí ostatní sázkové kanceláře na opačné výsledky. BetTrackerAI kurzy Unibet nepřetržitě sleduje a porovnává je se zbytkem trhu."
+        "text": "Surebet s Tipsportem vzniká tehdy, když má Tipsport vyšší kurz na jeden výsledek, než nabízejí ostatní sázkové kanceláře na opačné výsledky. BetTrackerAI kurzy Tipsportu nepřetržitě sleduje a porovnává je se zbytkem trhu."
       },
       {
         "type": "ul",
         "items": [
-          "Pomocí filtru na stránce se surebety vyberte Unibet a své další sázkové kanceláře.",
+          "Pomocí filtru na stránce se surebety vyberte Tipsport a své další licencované sázkové kanceláře.",
           "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
           "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete jednotlivé sázky.",
           "Sázku nejdříve vsaďte u sázkové kanceláře s nejvolatilnějšími kurzy."
@@ -315,17 +315,17 @@
       },
       {
         "type": "tip",
-        "text": "Rozdělte své sázky mezi více sázkových kanceláří, abyste nesázeli jen u Unibet. Prodloužíte tak životnost svého účtu a pomůžete si vyhnout se limitům."
+        "text": "Rozdělte své sázky mezi více licencovaných sázkových kanceláří, abyste nesázeli jen u Tipsportu. Prodloužíte tak životnost svého účtu a pomůžete si vyhnout se limitům."
       }
     ],
     "faq": [
       {
-        "q": "Je legální vsázet surebety u Unibet?",
-        "a": "Ano, arbitrážní sázení je legální. Stejně jako každá sázková kancelář však může Unibet podle svých obchodních podmínek omezit účty, na nichž se sází pouze s jistým ziskem."
+        "q": "Je legální vsázet surebety u Tipsportu?",
+        "a": "Ano, arbitrážní sázení u licencovaných sázkových kanceláří je legální. Stejně jako každá sázková kancelář však může Tipsport podle svých obchodních podmínek omezit účty, na nichž se sází pouze s jistým ziskem. Aktuální pravidla včetně zdanění výher si vždy ověřte."
       },
       {
-        "q": "Které sázkové kanceláře jsou podobné Unibet?",
-        "a": "Unibet používá Kambi, které dodává kurzy i několika dalším sázkovým kancelářím. Kombinujte proto Unibet se sázkovými kancelářemi na jiných platformách, abyste našli více surebetů."
+        "q": "Které sázkové kanceláře jsou podobné Tipsportu?",
+        "a": "V Česku působí několik dalších kanceláří licencovaných Ministerstvem financí ČR, například Fortuna, Chance, Betano, Synot Tip, Sazka bet, Kingsbet nebo Merkur. Kombinujte Tipsport s více z nich, abyste našli více surebetů."
       }
     ]
   },
@@ -334,7 +334,7 @@
     "metaTitle": "Betano surebety – najděte arbitrážní sázky u Betano",
     "description": "Najděte surebety u Betana v reálném čase. BetTrackerAI porovnává kurzy Betana s dalšími licencovanými sázkovými kancelářemi a ukáže vám, kde si můžete zajistit garantovaný zisk.",
     "keyword": "betano surebety",
-    "intro": "Betano patří mezi novější sázkové kanceláře na regulovaném trhu a používá vlastní platformu pro tvorbu kurzů. Kurzy Betana se proto často liší od zbytku trhu, a vznikají tak příležitosti pro arbitrážní sázení.",
+    "intro": "Betano patří mezi novější sázkové kanceláře na regulovaném českém trhu a používá vlastní platformu pro tvorbu kurzů. Kurzy Betana se proto často liší od zbytku trhu, a vznikají tak příležitosti pro arbitrážní sázení.",
     "blocks": [
       {
         "type": "h2",
@@ -373,37 +373,37 @@
       },
       {
         "q": "Má Betano licenci?",
-        "a": "Ano. Betano má licenci na několika regulovaných trzích. U svého národního regulátora hazardních her si ověřte, zda má Betano licenci i tam, kde žijete."
+        "a": "Ano. Betano má licenci na několika regulovaných trzích, včetně České republiky, kde licence uděluje Ministerstvo financí ČR. Aktuální seznam licencovaných provozovatelů si před sázením ověřte na webu ministerstva."
       }
     ]
   },
   "bookmaker/leovegas": {
-    "title": "Surebety u LeoVegas",
-    "metaTitle": "Surebety LeoVegas – najděte příležitosti pro arbitrážní sázení",
-    "description": "Najděte surebety u LeoVegas v reálném čase. BetTrackerAI porovnává kurzy LeoVegas s dalšími sázkovými kancelářemi a ukáže vám, kde si můžete zajistit garantovaný zisk.",
-    "keyword": "leovegas surebety",
-    "intro": "LeoVegas je známé hlavně nabídkou kasina, ale nabízí i širokou paletu sportovních sázek. Sázková kancelář využívá platformu Kambi a pravidelně se objevuje v příležitostech pro arbitrážní sázení.",
+    "title": "Surebety u Betano",
+    "metaTitle": "Surebety Betano – najděte příležitosti pro arbitrážní sázení",
+    "description": "Najděte surebety u Betano v reálném čase. BetTrackerAI porovnává kurzy Betano s dalšími licencovanými sázkovými kancelářemi v ČR, například Tipsport, Fortuna nebo Chance, a ukáže vám, kde si můžete zajistit garantovaný zisk.",
+    "keyword": "betano surebety",
+    "intro": "Betano je v České republice licencovaná sázková kancelář s širokou nabídkou sportovních sázek i kasinových her. Kurzy Betano se pravidelně objevují v příležitostech pro arbitrážní sázení.",
     "blocks": [
       {
         "type": "h2",
-        "text": "O LeoVegas"
+        "text": "O Betano"
       },
       {
         "type": "p",
-        "text": "LeoVegas je licencovaná sázková kancelář s přehlednou aplikací, ve které vsadíte rychle. U surebetů, kde se kurzy mohou změnit během několika sekund, je to důležité. Před založením účtu si ověřte, že LeoVegas má licenci a je dostupné ve vaší zemi."
+        "text": "Betano je sázková kancelář s přehlednou aplikací, ve které vsadíte rychle. U surebetů, kde se kurzy mohou změnit během několika sekund, je to důležité. V Česku smí sázky nabízet jen provozovatelé s licencí Ministerstva financí ČR, proto si před založením účtu ověřte aktuální licenci Betano. Sázet byste měli pouze u licencovaných kanceláří, nelicencované weby jsou v ČR blokované."
       },
       {
         "type": "h2",
-        "text": "Jak najít surebety s LeoVegas"
+        "text": "Jak najít surebety s Betano"
       },
       {
         "type": "p",
-        "text": "Surebet s LeoVegas nastává tehdy, když LeoVegas nabízí vyšší kurz na jeden výsledek, než jaký nabízejí jiné sázkové kanceláře na protichůdné výsledky. BetTrackerAI kurzy LeoVegas nepřetržitě sleduje a porovnává je se sázkovými kancelářemi působícími na vašem trhu."
+        "text": "Surebet s Betano nastává tehdy, když Betano nabízí vyšší kurz na jeden výsledek, než jaký nabízejí jiné sázkové kanceláře na protichůdné výsledky. BetTrackerAI kurzy Betano nepřetržitě sleduje a porovnává je s licencovanými sázkovými kancelářemi působícími v České republice, například Tipsport, Fortuna, Chance, Synot Tip, Sazka bet, Kingsbet nebo Merkur."
       },
       {
         "type": "ul",
         "items": [
-          "Pomocí filtru na stránce surebetů vyberte LeoVegas a své další sázkové kanceláře.",
+          "Pomocí filtru na stránce surebetů vyberte Betano a své další sázkové kanceláře.",
           "Seřaďte nabídku podle zisku a vyberte surebet se stabilními kurzy.",
           "Pomocí kalkulačky rozdělte vsazenou částku a zaokrouhlete výsledné sumy.",
           "Nejprve vsaďte u sázkové kanceláře s nejvíce kolísavými kurzy."
@@ -411,17 +411,17 @@
       },
       {
         "type": "tip",
-        "text": "Rozdělte své sázky mezi více sázkových kanceláří, ať nesázíte jen u LeoVegas. Prodloužíte tím životnost svého účtu a snížíte riziko jeho omezení."
+        "text": "Rozdělte své sázky mezi více licencovaných sázkových kanceláří, ať nesázíte jen u Betano. Prodloužíte tím životnost svého účtu a snížíte riziko jeho omezení."
       }
     ],
     "faq": [
       {
-        "q": "Dá se u LeoVegas sázet na surebety?",
-        "a": "Ano, arbitrážní sázení je legální. LeoVegas však stejně jako všechny sázkové kanceláře může podle svých obchodních podmínek omezit účty, u kterých zjistí sázkové vzorce, jež soustavně zaručují zisk."
+        "q": "Dá se u Betano sázet na surebety?",
+        "a": "Ano, arbitrážní sázení samo o sobě není zakázané. Betano však stejně jako všechny sázkové kanceláře může podle svých obchodních podmínek omezit účty, u kterých zjistí sázkové vzorce, jež soustavně zaručují zisk. Aktuální pravidla a daňové podmínky si vždy ověřte."
       },
       {
-        "q": "Hodí se LeoVegas na surebety?",
-        "a": "LeoVegas je dobrá doplňková sázková kancelář, zejména v kombinaci se sázkovými kancelářemi mimo platformu Kambi, protože tak získáte více příležitostí pro arbitráž."
+        "q": "Hodí se Betano na surebety?",
+        "a": "Betano je dobrá doplňková sázková kancelář, zejména v kombinaci s dalšími licencovanými kancelářemi, například Tipsport, Fortuna nebo Chance, protože tak získáte více příležitostí pro arbitráž."
       }
     ]
   }

@@ -14,9 +14,7 @@ type MatchLink = { url: string; exact: boolean }
 const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? (r.json() as Promise<MatchLink>) : null))
 
 export function fallbackLink(bookmaker: string): MatchLink {
-  const brand = getBookmaker(bookmaker)
-  const plainAffiliate = brand.affiliate && !brand.affiliate.includes('{url}') ? brand.affiliate : null
-  return { url: plainAffiliate ?? brand.url, exact: false }
+  return { url: getBookmaker(bookmaker).url, exact: false }
 }
 
 export function GoToBookmaker({
