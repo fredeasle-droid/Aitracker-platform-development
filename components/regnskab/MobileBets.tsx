@@ -79,7 +79,7 @@ export function SurebetCards({
                       {tx("Indsats")}{" "}<span className="font-semibold tabular-nums text-foreground">{formatKr(r.stake)}</span>
                     </span>
                     <span>
-                      {tx("Forventet gevinst")}{" "}<span className="font-semibold tabular-nums text-foreground">{formatKr(r.expected)}</span>
+                      {tx("Forventet gevinst")}{" "}<span className="font-semibold tabular-nums text-foreground">{formatKr(r.expected - r.stake)}</span>
                     </span>
                   </span>
                   <span

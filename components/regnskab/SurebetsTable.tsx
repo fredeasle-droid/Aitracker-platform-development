@@ -70,7 +70,7 @@ export function SurebetsTable({
                   {r.odds[0].toFixed(2)} / {r.odds[1].toFixed(2)}
                 </td>
                 <td className="px-3 py-3 tabular-nums">{formatKr(r.stake)}</td>
-                <td className="px-3 py-3 tabular-nums">{formatKr(r.expected)}</td>
+                <td className="px-3 py-3 tabular-nums">{formatKr(r.expected - r.stake)}</td>
                 <td className="px-3 py-3">
                   <span className={cn("inline-flex min-w-[72px] justify-center rounded-full px-3 py-1 text-xs font-bold", statusStyle[r.status])}>
                     {tx(r.status)}

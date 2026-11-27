@@ -1,10 +1,12 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useLocale } from "@/components/locale-provider";
 import { toast } from "sonner";
 
 import { Topbar } from "./Topbar";
 import { KpiCards } from "./KpiCards";
 import { ImportCoupon } from "./ImportCoupon";
+import { InvestmentDistribution } from "./InvestmentDistribution";
 import { ProfitChart } from "./ProfitChart";
 import { SurebetsTable } from "./SurebetsTable";
 import { BankrollCard } from "./BankrollCard";
@@ -27,6 +29,7 @@ import {
   buildBankroll,
   formatKr,
   summarize,
+  surebetProfit,
   type Activity,
   type Bookmaker,
   type ChartRange,
@@ -38,6 +41,7 @@ import {
 type SaveResult = { ok: true } | { ok: false; message: string };
 
 export function RegnskabApp({ initial }: { initial: RegnskabData }) {
+  const { tx } = useLocale();
   const [range, setRange] = useState<ChartRange>("30");
   const [surebets, setSurebets] = useState<Surebet[]>(initial.surebets);
   const [deposits, setDeposits] = useState<Deposit[]>(initial.deposits);
@@ -55,6 +59,17 @@ export function RegnskabApp({ initial }: { initial: RegnskabData }) {
   const bankroll = buildBankroll(deposits, surebets);
   const available = Object.fromEntries(bankroll.map((r) => [r.bookmaker, r.balance - r.active])) as Partial<Record<Bookmaker, number>>;
   const summary = summarize(surebets, bankroll, range, today);
+  const settled = surebets.filter((surebet) => surebet.status !== "Åben");
+  const settledStake = settled.reduce((total, surebet) => total + surebet.stake, 0);
+  const dashboardSummary = {
+    invested: surebets.reduce((total, surebet) => total + surebet.stake, 0),
+    profit: settled.reduce((total, surebet) => total + surebetProfit(surebet), 0),
+    roi: settledStake > 0 ? (settled.reduce((total, surebet) => total + surebetProfit(surebet), 0) / settledStake) * 100 : 0,
+    bankroll: bankroll.reduce((total, row) => total + row.balance, 0),
+    surebetCount: surebets.length,
+    openCount: surebets.length - settled.length,
+    bookmakerCount: bankroll.length,
+  };
 
   const persist = (result: Promise<SaveResult>) =>
     result.then((r) => {
@@ -142,15 +157,29 @@ export function RegnskabApp({ initial }: { initial: RegnskabData }) {
       </div>
       <div className="mx-auto hidden max-w-[1500px] flex-col gap-5 p-4 sm:p-6 md:flex lg:p-8">
         <Topbar range={range} onRangeChange={setRange} />
-        <KpiCards summary={summary} />
-        <div className="grid gap-5 xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
-          <ImportCoupon onAnalysed={openFromCoupons} />
-          {mounted && !isMobile && <ProfitChart surebets={surebets} today={today} range={range} onRangeChange={setRange} />}
+        <KpiCards summary={dashboardSummary} />
+        <div className="grid gap-4 lg:grid-cols-5 lg:gap-5">
+          <div className="min-w-0 lg:col-span-3">
+            {mounted && !isMobile && <ProfitChart surebets={surebets} today={today} range={range} onRangeChange={setRange} />}
+          </div>
+          <div className="min-w-0 lg:col-span-2">
+            <InvestmentDistribution surebets={surebets} />
+          </div>
         </div>
+        <details className="rg-glass rounded-2xl p-4">
+          <summary className="cursor-pointer select-none text-sm font-semibold">{tx("Importer kuponer med AI")}</summary>
+          <div className="mt-4">
+            <ImportCoupon onAnalysed={openFromCoupons} />
+          </div>
+        </details>
         <SurebetsTable rows={surebets} onAdd={openAdd} onStatus={setStatus} onDelete={remove} />
-        <div className="grid gap-5 xl:grid-cols-2">
-          <BankrollCard rows={bankroll} onAdd={() => setDepositOpen(true)} />
-          <ActivityCard items={activity} />
+        <div className="grid gap-4 lg:grid-cols-5 lg:gap-5">
+          <div className="min-w-0 lg:col-span-3">
+            <BankrollCard rows={bankroll} onAdd={() => setDepositOpen(true)} />
+          </div>
+          <div className="min-w-0 lg:col-span-2">
+            <ActivityCard items={activity} />
+          </div>
         </div>
       </div>
       <AddSurebetDialog open={dialogOpen} onOpenChange={setDialogOpen} initial={draft} imagePreviews={previews} available={available} onSave={save} />
